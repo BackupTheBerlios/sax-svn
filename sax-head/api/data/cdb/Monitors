@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Jul 27 14:51:49 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Aug 18 10:09:20 2004
 #
 # Template for monitor data
 # --------------------------
@@ -13636,8 +13636,10 @@ GOLDSTAR:78T5  {
 # CS788C
 #----------------------------------------------
 GOLDSTAR:CS788C  {
+ DDC=GSM4293
  Option=DPMS
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-160
 }
 

@@ -189,7 +189,7 @@ sub init {
 	# Keyboard specification                   #
 	#------------------------------------------#
 	$var{InputDevice}{0}{Identifier}            = "Keyboard[0]";
-	$var{InputDevice}{0}{Driver}                = "Keyboard";
+	$var{InputDevice}{0}{Driver}                = "kbd";
 	$var{InputDevice}{0}{Option}{Protocol}      = "Standard";
 	$var{InputDevice}{0}{Option}{XkbRules}      = "xfree86";
 	$var{InputDevice}{0}{Option}{XkbModel}      = "pc101";
