@@ -73,8 +73,10 @@ sub init {
 	if ( $result != 1 ) {
 		usage();
 	}
+	if ( ! defined $ListSection ) {
 	if (qx(whoami) !~ /root/) {
 		die "ISaX: only root can do this";
+	}
 	}
 	if (defined $PrintYCP) {
 		$PrintYCP = "ycp";
