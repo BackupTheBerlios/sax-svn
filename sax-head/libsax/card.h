@@ -63,7 +63,7 @@ class SaXManipulateCardIF : public SaXException {
 	virtual int getHeads ( void ) = 0;
 
 	public:
-	bool isNoteBook ( void );
+	virtual bool isNoteBook ( void );
 
 	public:
 	virtual bool selectCard ( int ) = 0;
