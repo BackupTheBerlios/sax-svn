@@ -366,7 +366,6 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/sax/init.pl
 /usr/X11R6/%{_lib}/sax/xc.pl
 /usr/X11R6/%{_lib}/sax/xw.pl
-/usr/X11R6/%{_lib}/sax/wmstart
 /usr/X11R6/%{_lib}/sax/xapi
 /usr/X11R6/%{_lib}/sax/xrun.pl
 /usr/X11R6/%{_lib}/sax/pci.pl
