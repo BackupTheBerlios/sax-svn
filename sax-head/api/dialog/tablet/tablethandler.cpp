@@ -861,7 +861,7 @@ void XTablet::addTablet (void) {
 		}
 		// port...
 		QString* tabletport = new QString (
-			qx (GETTABLETPORT,STDNONE)
+			qx (GETTABLETPORT,STDOUT)
 		);
 		switch (mPort->currentItem()) {
 			case 0:
