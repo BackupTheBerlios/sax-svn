@@ -86,7 +86,7 @@ HEADERS   += dialog/vnc/vnc.h
 HEADERS   += xquery.h
 
 CONFIG    += thread warn_on release
-unix:LIBS += -lm -lXss -lxkbfile -lGL -lcrypt
+unix:LIBS += -lm -lXss -lxkbfile -lcrypt
 TARGET    += xapi
 
 QMAKE_CXXFLAGS  += `../tools/check_loader.sh`

@@ -319,7 +319,7 @@ void ScanXStuff::Scan (void) {
 
 		// save fbtiming only for primary device...
 		// -----------------------------------------
-		if (i==0) {
+		if ((i==0) && (stuff[0].dtype == "CRT")) {
 		if ((stuff[i].vesacount == -1) && (fb != NULL) && (ddc == 1)) {
 			stuff[i].fbtiming  = fbstring;
 			stuff[i].vesacount = 1;
