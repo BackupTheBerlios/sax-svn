@@ -72,6 +72,7 @@ void clk(str clk) {
 
 zeile    : ausdruck         { }     /* realize line itteration */
          | zeile ausdruck   { } 
+         ;
 
 ausdruck : error 			{ yyerrok;yyclearin; }
          | Section 			{ }
