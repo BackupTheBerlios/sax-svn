@@ -36,7 +36,7 @@ STATUS        : Status: Up-to-date
 #define MIN_Y     600
 #define MIN_DEPTH 15
 
-#define FVWMRC    "/usr/X11R6/share/fvwm/fvwmrc"
+#define FVWMRC    "/usr/X11R6/share/fvwm/fvwmrc.notitle"
 
 //======================================
 // Globals

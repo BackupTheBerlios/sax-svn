@@ -35,7 +35,7 @@ STATUS        : Status: Up-to-date
 #define  FVWM        "/usr/X11R6/lib/sax/tools/wmstart"
 #define  XIDLE       "/usr/X11R6/lib/sax/xapi"
 #define  TWMRC       "/usr/X11R6/lib/sax/api/data/twmrc"
-#define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc"
+#define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc.sax"
 #define  TDOMAIN     "/usr/share/locale"
 #define  DISPSIZE    255
 
