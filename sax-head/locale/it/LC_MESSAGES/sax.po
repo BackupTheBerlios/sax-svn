@@ -1,4 +1,7 @@
-# translation of sax.it.po to 
+# translation of sax.it.po to
+# translation of sax.it.po to
+# translation of sax.it.po to
+# translation of sax.it.po to
 # domain sax.mo
 # Italian message file for sax2 (sax.it).
 # Copyright (C) SuSE GmbH, 2000.
@@ -9,13 +12,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.it\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-03-11 16:22+0100\n"
+"PO-Revision-Date: 2003-09-16 22:26+0200\n"
 "Last-Translator: \n"
-"Language-Team:  <de@li.org>\n"
+"Language-Team:  <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -48,41 +51,39 @@ msgstr "Non disponibile"
 
 #. Maximum length: 40  characters
 msgid "Use the following AccessX settings"
-msgstr ""
+msgstr "Utilizza le seguenti impostazioni AccessX"
 
 #. Maximum length: 40  characters
 msgid "Disable AccessX"
 msgstr "Disabilita AccessX"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Primary Setup"
-msgstr "Dispositivo primario"
+msgstr "Configurazione primaria"
 
 #. Maximum length: 60  characters
 msgid "Additional Layout(s)"
-msgstr ""
+msgstr "Layout aggiuntivo/i"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Layout"
-msgstr "Disposizione dello schermo"
+msgstr "Layout"
 
 #. Maximum length: 60  characters
 msgid "Status"
-msgstr ""
+msgstr "Stato"
 
 #. Maximum length: 60  characters
 msgid "Keytable"
-msgstr ""
+msgstr "Keytable"
 
 #. Maximum length: 60  characters
 msgid "Variant"
-msgstr ""
+msgstr "Variante"
 
 #. Maximum length: 60  characters
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #. Maximum length: 60  characters
 msgid "This screen is selected"
@@ -90,7 +91,7 @@ msgstr "Questo schermo è selezionato"
 
 #. Maximum length: 20  characters
 msgid "at"
-msgstr ""
+msgstr "a"
 
 #. Maximum length: 20  characters
 msgid "Mouse"
@@ -218,7 +219,7 @@ msgstr "Tavoletta"
 
 #. Maximum length: 20  characters
 msgid "Touchscreen"
-msgstr "Touchscreen"
+msgstr "Schermo tattile"
 
 #. Maximum length: 40  characters
 msgid "Select Keyboard Layout"
@@ -262,27 +263,27 @@ msgstr "Modello Monitor"
 
 #. Maximum length: 25 characters
 msgid "Shift/Lock Group"
-msgstr "Shift/Lock Group"
+msgstr "Gruppo Shift/Lock "
 
 #. Maximum length: 25 characters
 msgid "Ctrl Mapping"
-msgstr "Ctrl Mapping"
+msgstr "Mappare Ctrl"
 
 #. Maximum length: 25 characters
 msgid "LeftAlt mapping"
-msgstr "LeftAlt mapping"
+msgstr "Mappare LeftAlt"
 
 #. Maximum length: 25 characters
 msgid "RightAlt mapping"
-msgstr "RightAlt mapping"
+msgstr "Mappare RightAlt"
 
 #. Maximum length: 25 characters
 msgid "ScrollLock mapping"
-msgstr "ScrollLock mapping"
+msgstr "Mappare BlocScorr"
 
 #. Maximum length: 25 characters
 msgid "RightCtl mapping"
-msgstr "RightCtl mapping"
+msgstr "Mappare RightCtl"
 
 #. Maximum length: 50 characters
 msgid "Default"
@@ -418,6 +419,9 @@ msgid ""
 "warning only but make sure your keyboard model is able to map all the keys "
 "needed for the selected layout."
 msgstr ""
+"<b>Il presente layout e modello non si coniugano bene</b><hr>Questo è solo "
+"un avviso ma assicuratevi che il modello della vostra tastriera è in grado "
+"di mappare tutti i tasti richiesti per il layout selezionato."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
@@ -497,9 +501,9 @@ msgid ""
 "acceleration."
 msgstr ""
 "<b>Impossibile disabilitare accelerazione OpenGL</b><hr>Il sottosistema 3D "
-"si basa su i driver commerciali di nVidia. Per disabilitare 3D dovete "
-"disinstallareil driver tramite l'installer di nVidia. Questo processo "
-"ripristineràil driver originario XFree86 che non fornisce accelerazione "
+"si basa sui driver commerciali di nVidia. Per disabilitare 3D dovete "
+"disinstallare il driver tramite l'installer di nVidia. Questo processo "
+"ripristinerà il driver originario XFree86 che non fornisce accelerazione "
 "hardware 3D."
 
 #. Maximum length: 70 characters
@@ -520,8 +524,8 @@ msgid ""
 "disk or incorrectly formatted information files on the disk."
 msgstr ""
 "<b>Errore di lettura</b><hr>Impossibile leggere dal dischetto. Il dischetto "
-"potrebbe essere danneggiato, oppure le informazioni presenti sul dischetto "
-"sono in un formato errato."
+"potrebbe essere danneggiato, oppure le file info sul dischetto sono stati "
+"formatati in modo errato."
 
 #. RTF text: no limit
 msgid ""
@@ -530,8 +534,8 @@ msgid ""
 "resolution list."
 msgstr ""
 "<b>Aggiunta risoluzione definita dall'utente</b><hr>Immettete i valori (in "
-"pixel) per l'asse X e l'asse Y e fate clic sul pulsante 'Aggiungi' per "
-"includere la nuova risoluzione nella lista delle risoluzioni standard"
+"pixel) per l'asse X e l'asse Y, e fate clic sul pulsante 'Aggiungi' per "
+"includere la nuova risoluzione nella lista delle risoluzioni standard."
 
 #. Maximum length: 70 characters per line 3 lines allowed
 msgid "Available configuration components are:"
@@ -599,7 +603,7 @@ msgid ""
 "<b>Configuration has been saved:</b><hr>Your modifications will take effect "
 "the next time the graphics system is restarted."
 msgstr ""
-"<b>Configurazione salvata:</b><hr>Le modifiche saranno effettive solo dal "
+"<b>Configurazione salvata:</b><hr>Le modifiche saranno rese effettive al "
 "prossimo avvio del sistema grafico."
 
 #. RTF text: no limit
@@ -628,8 +632,8 @@ msgstr ""
 "<br><br> A causa dello stato in un certo senso sperimentale dei driver "
 "OpenGL, non siamo in grado di fornire alcun supporto all' installazione per "
 "la configurazione dell'accelerazione hardware 3D nel caso dovessero "
-"verificarsi dei problemi.<br><br><b>Volete abilitare il supporto 3D per "
-"questascheda?</b>"
+"verificarsi delle difficoltà.<br><br><b>Volete abilitare il supporto 3D per "
+"questa scheda?</b>"
 
 #. RTF text: no limit
 msgid ""
@@ -664,9 +668,9 @@ msgid ""
 "update). Start the online update?"
 msgstr ""
 "<b>Aggiornamento software</b><hr>Sul Vostro computer è ancora installato il "
-"driver nvidia ridotto senza accelerazione 3D fornito con SuSE Linux; è "
-"pertanto necessario installare i driver nvidia ufficiali dal server FTP "
-"nvidia con YOU (YaST2 Online Update). Volete iniziare l'aggiornamento?"
+"driver nvidia dummy (qui ridotto) senza accelerazione 3D fornito con SuSE "
+"Linux; è pertanto necessario installare i driver nvidia ufficiali dal server "
+"FTP nvidia con YOU (YaST2 Online Update). Volete iniziare l'aggiornamento?"
 
 #. RTF text: no limit
 msgid ""
@@ -693,7 +697,7 @@ msgid ""
 "selected monitor model is correct or select a lower resolution than:"
 msgstr ""
 "<b>Risoluzione selezionata non disponibile</b><hr>La risoluzione selezionata "
-"non è valida per l'intervallo di sincr. dello schermo Verificate se avete "
+"non è valida per l'intervallo di sincr. dello schermo. Verificate se avete "
 "selezionato il modello di schermo correttooppure selezionate una risoluzione "
 "inferiore di:"
 
@@ -835,7 +839,7 @@ msgid ""
 "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer of "
 "this product is</nobr><br>Marcus Schaefer"
 msgstr ""
-"<b>Sax è (c) 2000 SuSE GmbH:</b><hr><nobr>L'autore e manutentore di questo "
+"<b>Sax2 è (c) 2000 SuSE AG:</b><hr><nobr>L'autore e manutentore di questo "
 "prodotto è</nobr><br>Marcus Schaefer"
 
 #. Maximum length: 40  characters
@@ -898,7 +902,7 @@ msgstr ""
 
 #. RTF text: no limit
 msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
-msgstr "<b>Interrempi dialogo:</b><hr>Volete interrompere questo dialogo?"
+msgstr "<b>Interrompi dialogo:</b><hr>Volete interrompere questo dialogo?"
 
 #. RTF text: no limit
 msgid ""
@@ -908,11 +912,9 @@ msgstr ""
 "dispositivo grafico."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
 msgstr ""
-"<b>Configurazione non valida:</b><hr>Bisogna configurare almeno un "
-"dispositivo grafico."
+"<b>Configurazione non valida:</b><hr>Bisogna configurare almeno uno schermo."
 
 #. RTF text: no limit
 msgid ""
@@ -920,7 +922,7 @@ msgid ""
 "and start the selected one?"
 msgstr ""
 "<b>Dialogo in esecuzione:</b><hr>Un dialogo è già aperto. Volete chiudere il "
-"dialogo in esecuzione e avviare il dialogoselezionato?"
+"dialogo in esecuzione e avviare il dialogo selezionato?"
 
 #. RTF text: no limit
 msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
@@ -939,8 +941,8 @@ msgid ""
 msgstr ""
 "<b>Ultimi passi:</b><hr>L'ultimo passo consiste nel salvare la nuova "
 "configurazione. Vi suggeriamo di provare la nuova configurazione prima di "
-"salvarla. Se il server di prova appare con un desktop errato, premete:"
-"<br><br><b>[ Ctrl-Alt-Backspace ] </b><br><br>per terminare il server..."
+"salvarla. Se il server di prova  mostra un desktop corrotto, premete:"
+"<br><br><b>[ Ctrl-Alt-Backspace ] </b><br><br>per terminare il server."
 
 #. RTF text: no limit
 msgid ""
@@ -949,10 +951,10 @@ msgid ""
 "be rebooted first to activate the changes for resolution and/or color "
 "settings."
 msgstr ""
-"<b>Ultimi passi:</b><hr>L'ultimo passo consiste nel salvare la nuova "
-"configurazione. Tenete presente che la configurazione si basa su  "
-"<i>Framebuffer</i> e che dovete prima riavviare il vostro sistema prima che "
-"le modifiche della risoluzione e/o colore vengano applicate"
+"<b>Ultimo passo:</b><hr>L'ultimo passo consiste nel salvare la nuova "
+"configurazione. Tenete presente che la configurazione si basa sul<i>frame "
+"buffer</i> e dovete prima riavviare il vostro sistema per applicarele "
+"modifiche apportate alla impostazione della risoluzione e/o colore."
 
 #. RTF text: no limit
 msgid ""
@@ -961,9 +963,8 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>Suggerimento di SaX2</b><hr>Il sistema grafico attualmente in uso si basa "
-"sulle impostazioni consigliate da SaX2. Se vi piacciono queste impostazioni "
-"fate clic su <b>OK</b>, in caso contrario siete liberi di effettuare le "
-"modifiche che desiderate."
+"sulle impostazioni consigliate da SaX2. Se queste impostazioni va benefate "
+"clic su <b>OK</b>, in caso contrario modificate la configurazione."
 
 #. Dynamic length: Please do not oversize key up to 30%
 msgid "Unknown Graphics Card..."
@@ -983,26 +984,24 @@ msgid "Unknown Monitor..."
 msgstr "Schermo sconosciuto..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Impossibile rilevare il monitor</b><hr>Configurate manualmente il Vostro "
-"monitor. Volete avviare ora la procedura di configurazione per impostare il "
-"monitor?"
+"<b>Impossibile rilevare il monitor (%1) </b><hr>Configurate manualmente il "
+"Vostro monitor. Volete avviare ora la procedura di configurazione per "
+"impostare il monitor?"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Impossibile rilevare monitor con ID %1</b><hr>Configurate manualmente il "
-"Vostro monitor. Volete avviare ora la procedura di configurazione per "
-"impostare il monitor?"
+"<b>Impossibile rilevare monitor (%1) con ID %2</b><hr>Configurate "
+"manualmente il Vostro monitor. Volete avviare ora la procedura di "
+"configurazione per impostare il monitor?"
 
 #. Dynamic length: Please do not oversize key up to 10%
 msgid "Automatic graphics system set up"
@@ -1046,7 +1045,8 @@ msgstr ""
 
 #. Maximum length: 70  characters
 msgid "To start, double-click  an item in the component list."
-msgstr "Per iniziare, fate doppio clic su una voce nella lista dei componenti."
+msgstr ""
+"Per iniziare, eseguite un doppio clic su una voce nella lista dei componenti."
 
 #. Maximum length: 50  characters
 msgid "X11 System Setup"
@@ -1090,7 +1090,7 @@ msgstr "&Opzioni..."
 
 #. Maximum length: 70  characters
 msgid "Key Mappings"
-msgstr "Key Mappings"
+msgstr "Mappatura dei tasti"
 
 #. Maximum length: 40  characters
 msgid "&Current sync frequencies"
@@ -1146,11 +1146,11 @@ msgstr "Interrompi"
 
 #. Maximum length: 100  characters
 msgid "Configure XAccess: Mouse over keypad..."
-msgstr "Configurazione AccessX: mouse tramite tastierino numerico..."
+msgstr "Configura AccessX: mouse tramite tastierino numerico..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
-msgstr "Configurazione dispositivi di input: configurazione mouse..."
+msgstr "Configura dispositivi di input: configurazione mouse..."
 
 #. Maximum length: 100  characters
 msgid "Configure 3D/OpenGL subsystem..."
@@ -1158,19 +1158,19 @@ msgstr "Configurazione sottosistema 3D/OpenGL..."
 
 #. Maximum length: 100  characters
 msgid "Configure virtual resolutions..."
-msgstr "Configurazione risoluzione virtuale..."
+msgstr "Configuraz risoluzione virtuale..."
 
 #. Maximum length: 100  characters
 msgid "Configure graphics cards..."
-msgstr "Configurazione scheda grafica..."
+msgstr "Configura scheda grafica..."
 
 #. Maximum length: 100  characters
 msgid "Configure Desktop: Colors and Resolutions..."
-msgstr "Configurazione desktop: colori e risoluzione..."
+msgstr "Configura desktop: colori e risoluzione..."
 
 #. Maximum length: 100  characters
 msgid "Configure touch screens..."
-msgstr "Configurazione schermo tattile..."
+msgstr "Configura schermo tattile..."
 
 #. Maximum length: 100  characters
 msgid "Set up picture geometry..."
@@ -1194,11 +1194,11 @@ msgstr ""
 
 #. Maximum length: 100  characters
 msgid "Configure graphics tablet"
-msgstr "Configurazione tavoletta grafica"
+msgstr "Configura tavoletta grafica"
 
 #. Maximum length: 100  characters
 msgid "Configure keyboard..."
-msgstr "Configurazione tastiera..."
+msgstr "Configura tastiera..."
 
 #. Maximum length: 40  characters
 msgid "Add new card..."
@@ -1209,9 +1209,8 @@ msgid "Remove selected card"
 msgstr "Rimuovi la scheda selezionata"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Remove selected monitor"
-msgstr "&Rimuovi il mouse selezionato"
+msgstr "Rimuovi il mouse selezionato"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1299,7 +1298,7 @@ msgstr "&Colori"
 
 #. Maximum length: 50  characters
 msgid "&Resolution(s) for %1 colors"
-msgstr "&Risoluzione(i) per % colori"
+msgstr "&Risoluzione(i) per %1 colori"
 
 #. Maximum length: 50  characters
 msgid "Resolution Y"
@@ -1310,9 +1309,8 @@ msgid "Possible"
 msgstr "Possibile"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "&Add this resolution"
-msgstr "&Aggiungi questa risoluzione..."
+msgstr "&Aggiungi questa risoluzione"
 
 #. Maximum length: 50  characters
 msgid "Enable 3-button emulation"
@@ -1320,7 +1318,7 @@ msgstr "Abilita emulazione terzo tasto"
 
 #. Maximum length: 50  characters
 msgid "Enable Mouse Wheel"
-msgstr "Abilita rotellina"
+msgstr "Abilita rotellina del mouse"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
@@ -1396,7 +1394,7 @@ msgid ""
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
 "<b>Sottosistema OpenGL:</b><hr>Qui è possibile impostare le funzionalità 3D "
-"della scheda grafica. XFree86 include Direct Rendering Interface "
+"della scheda grafica. XFree86 include la direct rendering interface "
 "(interfaccia diretta per il rendering) per usare le capacità 3D della scheda "
 "video. Se la Vostra scheda e il relativo driver supportano l'accelerazione "
 "hardware 3D, è possibile abilitarle tramite questa procedura."
@@ -1409,9 +1407,9 @@ msgid ""
 "up if you leave the edges of your monitor with the mouse. This area is "
 "called a virtual resolution."
 msgstr ""
-"<b>Risoluzione virtuale:</b><hr>Ogni singolo desktop ha la propria "
+"<b>Risoluzione virtuale:</b><hr>ogni singolo desktop ha la propria "
 "risoluzione reale che è interamente visualizzabile. Oltre alla risoluzione "
-"potete impostare una risoluzione che all'infuori dell'area visibile del "
+"potete impostare una risoluzione che è all'infuori dell'area visibile del "
 "vostro monitor che si rendere visibile non appena con il mouse superate il "
 "limite del vostro monitor. Quest'aria particolare viene chiamata risoluzione "
 "virtuale."
@@ -1449,14 +1447,12 @@ msgstr ""
 "indica le modeline attualmente in uso."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
 "language environment with which it should work."
 msgstr ""
 "<b>Proprietà della tastiera:</b><hr>Qui è possibile impostare il tipo di "
-"tastiera e la lingua della tastiera. È inoltre possibile impostare i tipi di "
-"carattere da usare."
+"tastiera e la lingua della tastiera. "
 
 #. RTF text: no limit
 msgid ""
@@ -1470,7 +1466,7 @@ msgstr ""
 "siete nella cosiddetta modalità multimonitor. Qui è possibile impostare la "
 "disposizione dei monitor collegati semplicemente tramite drag&drop. Se non "
 "siete sicuri quale monitor appartenga all'icona cliccateci sopra due volte e "
-"vedrete una comunicazione sullo schermo relativo."
+"vedrete una comunicazione sul rispettivo schermo relativo."
 
 #. RTF text: no limit
 msgid ""
@@ -1488,7 +1484,7 @@ msgid ""
 "mouse pointer as well as settings like button emulation or wheel functions."
 msgstr ""
 "<b>Proprietà del mouse:</b><hr>Qui è possibile configurare il puntatore del "
-"mouse primario come impostazioni riguardanti l'emulazione dei ù tasti o il "
+"mouse primario come le impostazioni riguardanti l'emulazione dei tasti o il "
 "funzionamento della rotellina."
 
 #. RTF text: no limit
@@ -1511,7 +1507,7 @@ msgstr ""
 #. RTF text: no limit
 msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
 msgstr ""
-"<b>Schermo tattile:</b><hr>Qui è possibile gli schermi sensibili al tocco."
+"<b>Schermo tattile:</b><hr>Qui potete impostare schermi sensibili al tocco."
 
 #. Maximum length: 20  characters
 msgid "Disabled"
@@ -1611,936 +1607,900 @@ msgid "C&hange Size"
 msgstr "Cam&bia dimensione"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "No video mode tuning available"
-msgstr "Non disponibile"
+msgstr "Non è disponibile il tuning del video mode"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Rimangono..."
 
 #. RTF text: no limit
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx Series"
 
 #. RTF text: no limit
 msgid "Canadian"
-msgstr ""
+msgstr "Canadese"
 
 #. RTF text: no limit
 msgid "Brazilian"
-msgstr ""
+msgstr "Brasiliana"
 
 #. RTF text: no limit
 msgid "Bosnian"
-msgstr ""
+msgstr "Bosniaca"
 
 #. RTF text: no limit
 msgid "Lithuanian qwerty (numeric)"
-msgstr ""
+msgstr "Lituana qwerty (numerico)"
 
 #. RTF text: no limit
 msgid "Georgian (russian)"
-msgstr ""
+msgstr "Giorgiana (russa)"
 
 #. RTF text: no limit
 msgid "Latvian"
-msgstr ""
+msgstr "Lettone"
 
 #. RTF text: no limit
 msgid "Belarusian"
-msgstr ""
+msgstr "Bielorussa"
 
 #. RTF text: no limit
 msgid "Czech (qwerty)"
-msgstr ""
+msgstr "Ceca (qwerty)"
 
 #. RTF text: no limit
 msgid "Northern Saami (Finland)"
-msgstr ""
+msgstr "Saami settentrionale (Finlandia)"
 
 #. RTF text: no limit
 msgid "Macedonian"
-msgstr ""
+msgstr "Macedone"
 
 #. RTF text: no limit
 msgid "U.S. English w/ deadkeys"
-msgstr ""
+msgstr "Americana con \"tasti morti\" (deadkeys)"
 
 #. RTF text: no limit
 msgid "Malayalam"
-msgstr ""
+msgstr "Malayalam"
 
 #. RTF text: no limit
 msgid "Burmese"
-msgstr ""
+msgstr "Burmese"
 
 #. RTF text: no limit
 msgid "Kannada"
-msgstr ""
+msgstr "Canada"
 
 #. RTF text: no limit
 msgid "Mongolian"
-msgstr ""
+msgstr "Mongolia"
 
 #. RTF text: no limit
 msgid "Bengali"
-msgstr ""
+msgstr "Bengali"
 
 #. RTF text: no limit
 msgid "Romanian"
-msgstr ""
+msgstr "Rumena"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Croatian"
-msgstr "Opzioni della scheda"
+msgstr "Croata"
 
 #. RTF text: no limit
 msgid "U.S. English w/ ISO9995-3"
-msgstr ""
+msgstr "Americana con ISO9995-3"
 
 #. RTF text: no limit
 msgid "Lithuanian azerty standard"
-msgstr ""
+msgstr "s"
 
 #. RTF text: no limit
 msgid "Maltese"
-msgstr ""
+msgstr "Maltese"
 
 #. RTF text: no limit
 msgid "German"
-msgstr ""
+msgstr "Tedesca"
 
 #. RTF text: no limit
 msgid "Hungarian"
-msgstr ""
+msgstr "Ungherese"
 
 #. RTF text: no limit
 msgid "Russian"
-msgstr ""
+msgstr "Russa"
 
 #. RTF text: no limit
 msgid "Swedish"
-msgstr ""
+msgstr "Svedese"
 
 #. RTF text: no limit
 msgid "Turkish (F)"
-msgstr ""
+msgstr "Turca (F)"
 
 #. RTF text: no limit
 msgid "Oriya"
-msgstr ""
+msgstr "Oriya"
 
 #. RTF text: no limit
 msgid "Slovenian"
-msgstr ""
+msgstr "Slovena"
 
 #. RTF text: no limit
 msgid "Slovak (qwerty)"
-msgstr ""
+msgstr "Slovacca (qwerty)"
 
 #. RTF text: no limit
 msgid "Czech"
-msgstr ""
+msgstr "Ceca"
 
 #. RTF text: no limit
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Danish"
-msgstr "Termi&na"
+msgstr "Danese"
 
 #. RTF text: no limit
 msgid "Dvorak"
-msgstr ""
+msgstr "Dvorak"
 
 #. RTF text: no limit
 msgid "Slovak"
-msgstr ""
+msgstr "Slovacca"
 
 #. RTF text: no limit
 msgid "Dutch"
-msgstr ""
+msgstr "Olandese"
 
 #. RTF text: no limit
 msgid "Israeli"
-msgstr ""
+msgstr "Israeliana"
 
 #. RTF text: no limit
 msgid "Tamil"
-msgstr ""
+msgstr "Tamil"
 
 #. RTF text: no limit
 msgid "Ogham"
-msgstr ""
+msgstr "Ogham"
 
 #. RTF text: no limit
 msgid "Norwegian"
-msgstr ""
+msgstr "Norvegese"
 
 #. RTF text: no limit
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #. RTF text: no limit
 msgid "Serbian"
-msgstr ""
+msgstr "Serba"
 
 #. RTF text: no limit
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #. RTF text: no limit
 msgid "Icelandic"
-msgstr ""
+msgstr "Islandese"
 
 #. RTF text: no limit
 msgid "Italian"
-msgstr ""
+msgstr "Italiana"
 
 #. RTF text: no limit
 msgid "Estonian"
-msgstr ""
+msgstr "Estone"
 
 #. RTF text: no limit
 msgid "Inuktitut"
-msgstr ""
+msgstr "Inuktitut"
 
 #. RTF text: no limit
 msgid "Swiss French"
-msgstr ""
+msgstr "Francese (Svizzera)"
 
 #. RTF text: no limit
 msgid "Swiss German"
-msgstr ""
+msgstr "Tedesca (Svizzera)"
 
 #. RTF text: no limit
 msgid "Thai"
-msgstr ""
+msgstr "Tailandese"
 
 #. RTF text: no limit
 msgid "Tajik"
-msgstr ""
+msgstr "Tajil"
 
 #. RTF text: no limit
 msgid "Greek"
-msgstr ""
+msgstr "Greca"
 
 #. RTF text: no limit
 msgid "Japanese"
-msgstr ""
+msgstr "Giapponese"
 
 #. RTF text: no limit
 msgid "Georgian (latin)"
-msgstr ""
+msgstr "Giorgiana (latina)"
 
 #. RTF text: no limit
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ucraina"
 
 #. RTF text: no limit
 msgid "Polish (qwertz)"
-msgstr ""
+msgstr "Polacca (qwertz)"
 
 #. RTF text: no limit
 msgid "Syriac"
-msgstr ""
+msgstr "Siriana"
 
 #. RTF text: no limit
 msgid "Turkish"
-msgstr ""
+msgstr "Turca"
 
 #. RTF text: no limit
 msgid "Spanish"
-msgstr ""
+msgstr "Spagnola"
 
 #. RTF text: no limit
 msgid "Northern Saami (Sweden)"
-msgstr ""
+msgstr "Saami settentrionale (Svezia)"
 
 #. RTF text: no limit
 msgid "Yugoslavian"
-msgstr ""
+msgstr "Jugoslava"
 
 #. RTF text: no limit
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Finnish"
-msgstr "Termi&na"
+msgstr "Finlandese"
 
 #. RTF text: no limit
 msgid "French (alternative)"
-msgstr ""
+msgstr "Francese (alternativa)"
 
 #. RTF text: no limit
 msgid "Hungarian (qwerty)"
-msgstr ""
+msgstr "Ungherese (qwerty)"
 
 #. RTF text: no limit
 msgid "Russian (cyrillic phonetic)"
-msgstr ""
+msgstr "Russa (cirillico)"
 
 #. RTF text: no limit
 msgid "Albanian"
-msgstr ""
+msgstr "Albanese"
 
 #. RTF text: no limit
 msgid "Polish"
-msgstr ""
+msgstr "Polacca"
 
 #. RTF text: no limit
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #. RTF text: no limit
 msgid "Armenian"
-msgstr ""
+msgstr "Armena"
 
 #. RTF text: no limit
 msgid "Northern Saami (Norway)"
-msgstr ""
+msgstr "Saami settentrionale (Norvegia)"
 
 #. RTF text: no limit
 msgid "Latin America"
-msgstr ""
+msgstr "America Latina"
 
 #. RTF text: no limit
 msgid "French"
-msgstr ""
+msgstr "Francese"
 
 #. RTF text: no limit
 msgid "United Kingdom"
-msgstr ""
+msgstr "Regno Unito"
 
 #. RTF text: no limit
 msgid "Arabic"
-msgstr ""
+msgstr "Araba"
 
 #. RTF text: no limit
 msgid "U.S. English"
-msgstr ""
+msgstr "Americana"
 
 #. RTF text: no limit
 msgid "Maltese (US layout)"
-msgstr ""
+msgstr "Maltese (mappatura americana)"
 
 #. RTF text: no limit
 msgid "French Canadian"
-msgstr ""
+msgstr "Francese (Canada)"
 
 #. RTF text: no limit
 msgid "Portuguese"
-msgstr ""
+msgstr "Portoghese"
 
 #. RTF text: no limit
 msgid "Belgian"
-msgstr ""
+msgstr "Belga"
 
 #. RTF text: no limit
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgara"
 
 #. RTF text: no limit
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Azerbaigiana"
 
 #. RTF text: no limit
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamese"
 
 #. RTF text: no limit
 msgid "Lao"
-msgstr ""
+msgstr "Lao"
 
 #. RTF text: no limit
 msgid "Microsoft Natural"
-msgstr ""
+msgstr "Microsoft Natural"
 
 #. RTF text: no limit
 msgid "Ennyah DKB-1008"
-msgstr ""
+msgstr "Ennyah DKB-1008"
 
 #. RTF text: no limit
 msgid "Logitech Deluxe Access Keyboard"
-msgstr ""
+msgstr "Logitech Deluxe Access Keyboard"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard"
-msgstr ""
+msgstr "Microsoft Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4500P"
-msgstr ""
+msgstr "Samsung SDM 4500P"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd"
 
 #. RTF text: no limit
 msgid "Dell"
-msgstr ""
+msgstr "Dell"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GF"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access"
-msgstr ""
+msgstr "IBM Rapid Access"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (alternate option2)"
 
 #. RTF text: no limit
 msgid "Memorex MX1998"
-msgstr ""
+msgstr "Memorex MX1998"
 
 #. RTF text: no limit
 msgid "Trust Wireless Keyboard Classic"
-msgstr ""
+msgstr "Trust Wireless Keyboard Classic"
 
 #. RTF text: no limit
 msgid "Dell 101-key PC"
-msgstr ""
+msgstr "Dell 101-key PC"
 
 #. RTF text: no limit
 msgid "Brother Internet Keyboard"
-msgstr ""
+msgstr "Brother Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II"
-msgstr ""
+msgstr "IBM Rapid Access II"
 
 #. RTF text: no limit
 msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr ""
+msgstr "Logitech iTouch Cordless Keyboard (model Y-RB6)"
 
 #. RTF text: no limit
 msgid "Trust Direct Access Keyboard"
-msgstr ""
+msgstr "Trust Direct Access Keyboard"
 
 #. RTF text: no limit
 msgid "Logitech Internet Navigator Keyboard"
-msgstr ""
+msgstr "Logitech Internet Navigator Keyboard"
 
 #. RTF text: no limit
 msgid "SK-7100"
-msgstr ""
+msgstr "SK-7100"
 
 #. RTF text: no limit
 msgid "Acer AirKey V"
-msgstr ""
+msgstr "Acer AirKey V"
 
 #. RTF text: no limit
 msgid "BTC 9000A"
-msgstr ""
+msgstr "BTC 9000A"
 
 #. RTF text: no limit
 msgid "Toshiba Satellite S3000"
-msgstr ""
+msgstr "Toshiba Satellite S3000"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (13 keys)"
-msgstr ""
+msgstr "Compaq Internet Keyboard (13 tasti)"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XT1000"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XT1000"
 
 #. RTF text: no limit
 msgid "Logitech iTouch"
-msgstr ""
+msgstr "Logitech iTouch"
 
 #. RTF text: no limit
 msgid "SK-6200"
-msgstr ""
+msgstr "SK-6200"
 
 #. RTF text: no limit
 msgid "Compaq iPaq Keyboard"
-msgstr ""
+msgstr "Compaq iPaq Keyboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (alternate option)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Desktop Navigator"
 
 #. RTF text: no limit
 msgid "QTronix Scorpius 98N+"
-msgstr ""
+msgstr "QTronix Scorpius 98N+"
 
 #. RTF text: no limit
 msgid "Symplon PaceBook (tablet PC)"
-msgstr ""
+msgstr "Symplon PaceBook (tablet PC)"
 
 #. RTF text: no limit
 msgid "Winbook Model XP5"
-msgstr ""
+msgstr "Winbook Model XP5"
 
 #. RTF text: no limit
 msgid "BTC 5113RF Multimedia"
-msgstr ""
+msgstr "BTC 5113RF Multimedia"
 
 #. RTF text: no limit
 msgid "Diamond 9801 / 9802 series"
-msgstr ""
+msgstr "Diamond 9801 / 9802 series"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Optical"
-msgstr ""
+msgstr "Logitech Cordless Desktop Optical"
 
 #. RTF text: no limit
 msgid "Logitech Internet Keyboard"
-msgstr ""
+msgstr "Logitech Internet Keyboard"
 
 #. RTF text: no limit
 msgid "BTC 9000"
-msgstr ""
+msgstr "BTC 9000"
 
 #. RTF text: no limit
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr ""
+msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Freedom/Desktop Navigator"
 
 #. RTF text: no limit
 msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr ""
+msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
 
 #. RTF text: no limit
 msgid "Propeller Voyager (KTEZ-1000)"
-msgstr ""
+msgstr "Propeller Voyager (KTEZ-1000)"
 
 #. RTF text: no limit
 msgid "Brazilian ABNT2"
-msgstr ""
+msgstr "Brazilian ABNT2"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (7 keys)"
-msgstr ""
+msgstr "Compaq Internet Keyboard (7 tasti)"
 
 #. RTF text: no limit
 msgid "Honeywell Euroboard"
-msgstr ""
+msgstr "Honeywell Euroboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop"
-msgstr ""
+msgstr "Logitech Cordless Desktop"
 
 #. RTF text: no limit
 msgid "Yahoo! Internet Keyboard"
-msgstr ""
+msgstr "Yahoo! Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (18 keys)"
-msgstr ""
+msgstr "Compaq Internet Keyboard (18 tasti)"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr ""
+msgstr "Laptop/notebook Dell Inspiron 8xxx"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II (alternate option)"
-msgstr ""
+msgstr "IBM Rapid Access II (alternate option)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro"
 
 #. RTF text: no limit
 msgid "Advance Scorpius KI"
-msgstr ""
+msgstr "Advance Scorpius KI"
 
 #. RTF text: no limit
 msgid "BTC 5126T"
-msgstr ""
+msgstr "BTC 5126T"
 
 #. RTF text: no limit
 msgid "Dexxa Wireless Desktop Keyboard"
-msgstr ""
+msgstr "Dexxa Wireless Desktop Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 5xx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 5xx"
 
 #. RTF text: no limit
 msgid "Memorex MX2750"
-msgstr ""
+msgstr "Memorex MX2750"
 
 #. RTF text: no limit
 msgid "SK-1300"
-msgstr ""
+msgstr "SK-1300"
 
 #. RTF text: no limit
 msgid "Generic 101-key PC"
-msgstr ""
+msgstr "Generic 101-key PC"
 
 #. RTF text: no limit
 msgid "Northgate OmniKey 101"
-msgstr ""
+msgstr "Northgate OmniKey 101"
 
 #. RTF text: no limit
 msgid "ACPI Standard"
-msgstr ""
+msgstr "Standard ACPI"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd (alternate option)"
 
 #. RTF text: no limit
 msgid "Chicony Internet Keyboard"
-msgstr ""
+msgstr "Chicony Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2501 Multimedia Keyboard"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4510P"
-msgstr ""
+msgstr "Samsung SDM 4510P"
 
 #. RTF text: no limit
 msgid "SK-2500"
-msgstr ""
+msgstr "SK-2500"
 
 #. RTF text: no limit
 msgid "SVEN Ergonomic 2500"
-msgstr ""
+msgstr "SVEN Ergonomic 2500"
 
 #. RTF text: no limit
 msgid "Generic 102-key (Intl) PC"
-msgstr ""
+msgstr "Generic 102-key (Intl) PC"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop iTouch"
-msgstr ""
+msgstr "Logitech Cordless Desktop iTouch"
 
 #. RTF text: no limit
 msgid "Chicony KB-9885"
-msgstr ""
+msgstr "Chicony KB-9885"
 
 #. RTF text: no limit
 msgid "Compaq Easy Access Keyboard"
-msgstr ""
+msgstr "Compaq Easy Access Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard 5181 Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 500 FA"
 
 #. RTF text: no limit
 msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr ""
+msgstr "Memorex MX2500 EZ-Access Keyboard"
 
 #. RTF text: no limit
 msgid "Generic 104-key PC"
-msgstr ""
+msgstr "Generic 104-key PC"
 
 #. RTF text: no limit
 msgid "Everex STEPnote"
-msgstr ""
+msgstr "Everex STEPnote"
 
 #. RTF text: no limit
 msgid "Japanese 106-key"
-msgstr ""
+msgstr "Japanese 106-key"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xx"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr ""
+msgstr "Hewlett-Packard Pavilion ZT11xx"
 
 #. RTF text: no limit
 msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr ""
+msgstr "Logitech iTouch keyboard Internet Navigator"
 
 #. RTF text: no limit
 msgid "Generic 105-key (Intl) PC"
-msgstr ""
+msgstr "Generic 105-key (Intl) PC"
 
 #. RTF text: no limit
 msgid "Keytronic FlexPro"
-msgstr ""
+msgstr "Keytronic FlexPro"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2505 Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr ""
+msgstr "Microsoft Internet Keyboard Pro, Swedish"
 
 #. RTF text: no limit
 msgid "Microsoft Office Keyboard"
-msgstr ""
+msgstr "Microsoft Office Keyboard"
 
 #. RTF text: no limit
 msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr ""
+msgstr "Oretec MCK-800 MM/Internet keyboard"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Ctrl keys together change group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Entrambi tasti Ctrl cambiano gruppo"
 
 #. RTF text: no limit
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "Comportamento del tasto CapsLock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Win-keys switch group while pressed"
-msgstr "R-Alt cambia gruppo se premuto"
+msgstr "Entrambi tasti win cambiano gruppo se premuti"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Alt key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto Alt sinistro cambia gruppo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto Win sinistro cambia gruppo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Shift key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto Shift destro cambia gruppo"
 
 #. RTF text: no limit
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Comportamento tasto Alt/Win"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "usa maiuscole interne. Tasto Shift non cancella Caps"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "R-Alt switches group while pressed"
-msgstr "R-Alt cambia gruppo se premuto"
+msgstr "Tasto Alt destro cambia gruppo se premuto"
 
 #. RTF text: no limit
 msgid "Right Win-key is Compose"
-msgstr ""
+msgstr "Tasto Win destro è tasto Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Ctrl key changes group"
-msgstr "Alt e Ctrl cambiano gruppo"
+msgstr "Tasto Ctrl destro cambia gruppo"
 
 #. RTF text: no limit
 msgid "Press any of Win-keys to choose 3rd level"
-msgstr ""
+msgstr "Premete un tasto Win qualsiasi per selezionare il terzo livello"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at bottom left"
-msgstr "Tasto Ctrl alla sinistra"
+msgstr "Tasto Ctrl alla sinistra "
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Shift keys together change group"
 msgstr "Entrambi tasti Shift cambiano gruppo"
 
 #. RTF text: no limit
 msgid "Third level choosers"
-msgstr ""
+msgstr "Third level chooser"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at left of 'A'"
-msgstr "Tasto Ctrl alla sinistra di <A> "
+msgstr "Tasto Ctrl alla sinistra di 'A' "
 
 #. RTF text: no limit
 msgid "Scroll_Lock LED shows alternative group"
-msgstr ""
+msgstr "LED BlocScorr mostra gruppo alternativo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt is Compose"
-msgstr "RightAlt mapping"
+msgstr "Alt (destro) è il tasto compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto win destro cambia gruppo"
 
 #. RTF text: no limit
 msgid "Press Left Win-key to choose 3rd level"
-msgstr ""
+msgstr "Premete il tasto Win sinistro per selezionare il terzo livello"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Make CapsLock an additional Control"
-msgstr "CapsLock come controllo aggiuntivo"
+msgstr "CapsLock come tasto Ctrl aggiuntivo"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+msgstr "usa maiuscole interne. Shift cancella Caps"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "si comporta come Shift con blocco. Shift non cancella Caps."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key switches group while pressed"
-msgstr "R-Alt cambia gruppo se premuto"
+msgstr "Tasto Win sinistro cambia gruppo se premuto"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Shift key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto Shift sinistro cambia gruppo"
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
-msgstr ""
+msgstr "LED di NumBlocc mostra gruppo alternativo"
 
 #. RTF text: no limit
 msgid "Caps_Lock LED shows alternative group"
-msgstr ""
+msgstr "LED CapsLock mostrano gruppo alternativo"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "Il tasto meta è mappato sul tasto Win sinistro"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Caps Lock key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasti CapsLocl cambiano gruppo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Alt keys together change group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Entrambi tasti Alt cambiano gruppo"
 
 #. RTF text: no limit
 msgid "Menu is Compose"
-msgstr ""
+msgstr "Menu è compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto Alt destro cambia gruppo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control Key Position"
-msgstr "Cambia &posizione"
+msgstr "Posizione tasto Ctrl"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Swap Control and Caps Lock"
-msgstr "Scambia Ctrl e CapsLock"
+msgstr "Scambia tasto Ctrl e CapsLock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control+Shift changes group"
-msgstr "Crtl e Shift cambiano gruppo"
+msgstr "Crtl e Shift cambiano gruppo "
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Shift changes group"
-msgstr "Crtl e Shift cambiano gruppo"
+msgstr "Altl + Shift cambiano gruppo"
 
 #. RTF text: no limit
 msgid "Press Right Control to choose 3rd level"
-msgstr ""
+msgstr "Premete il tasto Ctrl destro per selezionare il terzo livello"
 
 #. RTF text: no limit
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Aggiungi il comportamento standard al tasto menu."
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Tasto Alt e meta sui tasti Alt (default)"
 
 #. RTF text: no limit
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Super è mappato su tasti Win (default)"
 
 #. RTF text: no limit
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Hyper è mappato su tasti Win"
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+msgstr "Premere tasto Win destro per selezionare il terzo livell"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
-msgstr ""
+msgstr "Usa LED della tastiera per mostrare i gruppi alternativi"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+msgstr "si comporta come Shift e blocco. Shift cancella Caps."
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Comportamento gruppo Shift/Blocc"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key switches group while pressed"
-msgstr "R-Alt cambia gruppo se premuto"
+msgstr "Tasto Win destro cambia gruppo se premuto"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Control changes group"
-msgstr "Alt e Ctrl cambiano gruppo"
+msgstr "Alt + Ctrl cambiano gruppo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Menu key changes group"
-msgstr "Entrambi tasti Shift cambiano gruppo"
+msgstr "Tasto menu cambia gruppo"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Ctrl key changes group"
-msgstr "Alt e Ctrl cambiano gruppo"
+msgstr "Tasto Ctrl sinistro cambia gruppo"
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
-msgstr ""
+msgstr "Premere il tasto menu per selezionare il terzo livello"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
-
-#~ msgid "Enable AccessX"
-#~ msgstr "Abilita AccessX"
-
-#~ msgid "add"
-#~ msgstr "aggiungi"
+msgstr "Il tasto meta è mappato su tasti Win."
