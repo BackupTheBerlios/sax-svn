@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Mar 29 13:05:14 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 31 10:35:47 2004
 #
 # Template for monitor data
 # --------------------------
@@ -13297,6 +13297,7 @@ GATEWAY:EV500A  {
  DDC=GWY138C
  Option=DPMS
  Hsync=30-60
+ Resolution=1024x768
  Vsync=60-80
 }
 
@@ -13307,6 +13308,7 @@ GATEWAY:EV500B  {
  DDC=GWY1390
  Option=DPMS
  Hsync=30-70
+ Resolution=1024x768
  Vsync=60-160
 }
 
