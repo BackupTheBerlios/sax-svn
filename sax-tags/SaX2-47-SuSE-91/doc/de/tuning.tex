@@ -1,0 +1,53 @@
+\chapter{XFine tuning}
+\label{cha:xfi}
+\minitoc
+XFine2 ist ein SaX2 Programm-Modul mit dem die Bildgeometrie
+in Lage und Gr"o"se angepasst werden kann. Die "Anderungen pro
+Aufl"osung (Modeline) werden dabei in einer Datei im Verzeichnis:
+\begin{itemize}
+\item /var/cache/xfine
+\end{itemize}
+gehalten. Das Einlesen und verarbeiten der Modeline "Anderungsinformation
+wird durch das ISaX Modul implementiert. Ist die Variable 
+\textbf{ImportXFineCache} in der ISaX Eingabedatei gesetzt so werden
+die Daten in \textit{/var/cache/xfine} verarbeitet und in
+der XFree86 Konfigurationsdatei \textbf{/etc/X11/XF86Config} gespeichert.
+XFine2 wird aus \textbf{xapi} heraus gestartet.
+
+\section{Name und Format der "Anderungsdateien}
+Pro Aufl"osung wird eine Datei mit "Anderungsinformationen erzeugt.
+Die Dateinamen unterliegen der Konvention \textit{SCREEN:XxY}.
+Das Format der Dateien unterliegt folgender Konvention:
+\begin{verbatim}
+   SCREEN:OLDMODE:NEWMODE:DACSPEED
+\end{verbatim}
+
+Das Einlesen und Verarbeiten der Informationen ist im Modul
+\textbf{XFineControl.pm} implementiert. Das Kernst"uck in der 
+Verwendung von XFineControl.pm liegt in der Erzeugung des 
+sogenannten \textit{tune} Hashes. Dieser Hash dient 
+als Referenz f"ur ge"anderte Modelines. Der \textit{tune} Hash wird
+aus einer als Referenz angegebenen Konfigurationsdatei heraus
+erzeugt und enth"alt die original Modeline, die zuletzt ge"anderte 
+Modeline und die aktuelle Modeline. XFine2 kann bei der Verwendung
+von SaX2 oder YaST2 in folgenden F"allen zum Einsatz kommen:
+\begin{itemize}
+\item Bei der Rekonfiguration einer bereits aktiven X11 Umgebung.
+\item Beim Test einer ge"anderten X11 Konfiguration
+\end{itemize}
+Als Referenzkonfiguration dient in beiden F"allen die zuvor
+erzeuge Konfigurationsdatei\\
+\textit{/var/cache/sax/files/XF86Config}
+die beim Speichern nach \textit{/etc/X11/XF86Config} kopiert wird.
+Die Referenzkonfiguration wird "uber das Skript \textbf{getconfig}
+erzeugt. Dieses Skript erzeugt aus den GUI Datendateien im Verzeichnis
+\textit{/var/cache/sax/files/} eine ISaX Eingabedatei und ruft den
+ISaX mit dieser Datei auf. Entsprechend des Return-Codes von XFine2 
+f"ugt \textbf{xapi} nur noch die Zeile:
+\begin{verbatim}
+ 0 : ImportXFineCache : yes
+\end{verbatim}
+in die Datei: \textit{/var/cache/sax/files/desktop} ein.
+Anschlie"send wird erneut \textbf{getconfig} aufgerufen und damit werden
+die Modeline-"Anderungsinformationen dauerhaft in der XF86Config
+gespeichert.

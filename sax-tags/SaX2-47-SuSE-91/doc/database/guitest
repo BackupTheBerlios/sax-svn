@@ -1,0 +1,81 @@
+#!/bin/sh
+# Copyright (c) 1996 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2000
+# GUI test script 
+# 
+# guitest <po file>
+# --
+# naming convention of po file:
+# <name>.<locale>.po
+#
+
+# test parameter
+# ----------------
+xdpyinfo 2>/dev/null >/dev/null
+if [ ! $? = 0 ];then
+	echo "could not acces X-Server"
+	echo
+	echo "the user who was primarly logged in should"
+	echo "first perform:   xhost +"
+	exit 1
+fi
+
+if [ ! $UID = 0 ];then
+	echo "only root can do this"
+	exit 1
+fi
+
+if [ -z "$1" ];then
+	echo "no po file given"
+	exit 1
+fi
+
+LOCALE=`echo $1 | cut -f2 -d.`
+if [ ! -d "/usr/lib/locale/$LOCALE" ];then
+	echo "wrong locale in name -> $1"
+	echo "naming convention is: <name>.<locale>.po"
+	echo
+	echo "for example: guitest sax.en_US.po"
+	exit 1
+fi
+
+# create single locale...
+# -------------------------
+MYLANG=$LOCALE
+LOCALE=`echo $LOCALE | cut -f1 -d_`
+
+# creating mo file
+# -----------------
+msgfmt -o "/usr/share/locale/$LOCALE/LC_MESSAGES/sax.mo" $1
+if [ ! $? = 0 ];then
+	echo "error during mo creation"
+	exit 1
+fi
+
+# create sample registry
+# -----------------------
+API="/var/cache/sax/files/config"
+if [ -f "$API" ];then
+	cp -f $API /tmp/sax2_config
+fi
+cp -f /usr/X11R6/lib/sax/doc/config $API
+
+# export language according to po file
+# --------------------------------------
+export LANG=$MYLANG
+
+# run the SaX2 GUI for a test
+# ----------------------------
+/usr/X11R6/lib/sax/xapi.pl
+
+# restore registry
+# -----------------
+rm -f "/var/cache/sax/files/config"
+if [ -f "/tmp/sax2_config" ];then
+	cp -f /tmp/sax2_config $API
+fi
+
+echo "do not forget the: \"xhost -\" command if necessary"
+echo "by :-)"
+

@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2000
+# This is a little tool to see if the comments in the .gtx file 
+# are valid according to the current key length
+# 
+# Status : development
+#
+
+while(<>) {
+ chomp($_);
+
+ if ($_ =~ /^# Maximum length:(.*)characters/) {
+  $l = $1;
+  $l =~ s/ +//g;
+  #print "MAX:  $l\n";
+ }
+ if ($_ =~ /(.*)=(.*)/) {
+  $t = $2;
+  @list = split(/\\n/,$t);
+
+  $max = length($list[0]);
+  foreach $n (@list) {
+   if (length($n) > $max) {
+    $max = length($n);
+   }  
+  }
+
+  if (($max > $l) && ($l != 0)) {  
+   print "$1: MAX=$l -> REAL=$max\n";
+  }
+  $l = 0;
+ }
+}
+

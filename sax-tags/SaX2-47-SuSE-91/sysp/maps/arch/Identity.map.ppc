@@ -1,0 +1,93 @@
+#/.../
+# Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Maintainer: Marcus Schaefer <sax@suse.de>, 2001
+# Identity.map file to identify PCI/AGP cards
+#
+# Format:
+# -------
+# NAME          = <vendor name of device>
+# DEVICE        = <device name of device>
+# VID           = <vendor ID hex>
+# DID           = <device ID hex>
+# SERVER        = <server module name>
+# EXT           = [+-]e1,[+-]e2,..
+# OPT           = o1,o2,..
+# RAW           = r1,r2,..
+# PROFILE       = <file name of profile file>
+# SCRIPT3D      = <script name of 3D environment script>
+# PACKAGE3D     = <package list needed to enable 3D>
+# FLAG          = <flag to perform a user decision [ 3D, DEFAULT ]>
+# SUBVENDOR     = Subvendor ID
+# SUBDEVICE     = Subdevice ID
+#
+# --> field seperator is the § sign
+#
+# Note:
+# -----
+#  - each description needs a single line
+#  - every line needs to specify all keywords even if there
+#    is no setting for it
+#
+
+#-----------------------------------#
+# 3Dfx Interactive, Inc. Cards
+#-----------------------------------#
+NAME=3Dfx§DEVICE=Voodoo Banshee§VID=0x121a§DID=0x0003§SERVER=fbdev§EXT=§OPT=§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# ATI Technologies Inc Cards
+#-----------------------------------#
+NAME=ATI§DEVICE=3D Rage Pro§VID=0x1002§DID=0x4749§SERVER=ati§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=3D Rage Pro 215GP§VID=0x1002§DID=0x4750§SERVER=ati§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=3D Rage I/II 215GT §VID=0x1002§DID=0x4754§SERVER=ati§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=3D Rage IIC 215IIC §VID=0x1002§DID=0x4756§SERVER=ati§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=210888GX §VID=0x1002§DID=0x4758§SERVER=fbdev§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Mobility M3 AGP 2x§VID=0x1002§DID=0x4c46§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Mobility M3 AGP 2x§VID=0x1002§DID=0x4c46§SERVER=r128§EXT=glx,dri§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=switch2xf86_glx§PACKAGE3D=xf86_glx§FLAG=3D
+NAME=ATI§DEVICE=3D Rage L Mobility AGP 2x§VID=0x1002§DID=0x4c4e§SERVER=ati§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=3D Rage LT Pro§VID=0x1002§DID=0x4c50§SERVER=ati§EXT=§OPT=dpms§RAW=Option "reference_clock" "29.498928 Mhz",§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Rage 128 PF§VID=0x1002§DID=0x5046§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Rage 128 PF§VID=0x1002§DID=0x5046§SERVER=r128§EXT=glx,dri§OPT=dpms,usefbdev§RAW=§PROFILE=§SCRIPT3D=switch2xf86_glx§PACKAGE3D=xf86_glx§FLAG=3D
+NAME=ATI§DEVICE=Rage 128 PR§VID=0x1002§DID=0x5052§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=ati_r128_rl§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Rage 128 PR§VID=0x1002§DID=0x5052§SERVER=r128§EXT=glx,dri§OPT=usefbdev,dpms§RAW=ati_r128_rl§PROFILE=§SCRIPT3D=switch2xf86_glx§PACKAGE3D=xf86_glx§FLAG=3D
+NAME=ATI§DEVICE=Rage 128 RE§VID=0x1002§DID=0x5245§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Rage 128 RE§VID=0x1002§DID=0x5245§SERVER=r128§EXT=glx,dri§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=switch2xf86_glx§PACKAGE3D=xf86_glx§FLAG=3D
+NAME=ATI§DEVICE=Rage 128 RF§VID=0x1002§DID=0x5246§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Rage 128 RL§VID=0x1002§DID=0x524c§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Radeon QG§VID=0x1002§DID=0x5147§SERVER=radeon§EXT=§OPT=§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Radeon QF§VID=0x1002§DID=0x5146§SERVER=radeon§EXT=§OPT=§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Radeon QD§VID=0x1002§DID=0x5144§SERVER=radeon§EXT=§OPT=§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Radeon QE§VID=0x1002§DID=0x5145§SERVER=radeon§EXT=§OPT=§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Rage 128 Pro TR (AGP)§VID=0x1002§DID=0x5452§SERVER=r128§EXT=§OPT=usefbdev,dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=264VT4 §VID=0x1002§DID=0x5656§SERVER=ati§EXT=§OPT=dpms,usefbdev§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=3D Rage LT-G 215LG§VID=0x1002§DID=0x4c47§SERVER=fbdev§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Mach64 LI§VID=0x1002§DID=0x4c49§SERVER=ati§EXT=§OPT=dpms§RAW=Option "reference_clock" "29.498928 Mhz",§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Mach64 VT§VID=0x1002§DID=0x5654§SERVER=fbdev§EXT=§OPT=dpms§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=ATI§DEVICE=Radeon LY§VID=0x1002§DID=0x4c59§SERVER=radeon§EXT=§OPT=§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# Cirrus Logic Cards
+#-----------------------------------#
+NAME=Cirrus Logic§DEVICE=GD 5446§VID=0x1013§DID=0x00b8§SERVER=fbdev§EXT=§OPT=dpms,usefbdev§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# Matrox Graphics, Inc. Cards
+#-----------------------------------#
+NAME=Matrox§DEVICE=MGA G200§VID=0x102b§DID=0x0520§SERVER=fbdev§EXT=§OPT=dpms,hw_cursor§RAW=DacSpeed 200 200 200 200§PROFILE=PPC_Matrox_G200§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=Matrox§DEVICE=MGA 2064W §VID=0x102b§DID=0x0519§SERVER=mga§EXT=§OPT=hw_cursor,dpms,DDCInfo§RAW=§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+NAME=Matrox§DEVICE=MGA 1064SG §VID=0x102b§DID=0x051a§SERVER=fbdev§EXT=§OPT=dpms,hw_cursor§RAW=DacSpeed 200§PROFILE=§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# nVidia Corporation Cards
+#-----------------------------------#
+
+#-----------------------------------#
+# Unclassified Card
+#-----------------------------------#
+NAME=Unclassified§DEVICE=Graphics§VID=0x1234§DID=0x5678§SERVER=fbdev§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# VESA Framebuffer
+#-----------------------------------#
+NAME=VESA§DEVICE=Framebuffer Graphics§VID=0x1234§DID=0x5678§SERVER=fbdev§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT

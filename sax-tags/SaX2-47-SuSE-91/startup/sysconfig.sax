@@ -1,0 +1,10 @@
+## Path:        Hardware/Keyboard/X11
+## Description: Special keyboard settings (X11)
+## Type:        yesno
+## Default:     no
+#
+# On some Toshiba based keyboards an unusual sequence of keyboard
+# events are produced. To prevent this for the X-Window system you can
+# set the following variable to: (yes).
+#
+KBD_BOUNCE_FIX="no"

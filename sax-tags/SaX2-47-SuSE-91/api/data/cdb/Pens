@@ -1,0 +1,86 @@
+# /.../
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+# Author: Marcus Schaefer <sax@suse.de>, 2001
+#
+# Template for pen data
+# -----------------------
+# <VENDOR NAME>:<DEVICE NAME>  {
+#  Driver               = driver...
+#  Protocol             = protocol...
+#  Device               = device name...
+#  BaudRate             = baud rate...
+#  SampleRate           = sample rate...
+#  Emulate3Buttons      = <on> or <off>
+#  Emulate3Timeout      = timeout val...
+#  ChordMiddle          = <on> or <off>
+#  MinX                 = area border...
+#  MaxX                 = area border...
+#  MinY                 = area border...
+#  MaxY                 = area border...
+#  ScreenNumber         = integer...
+#  ReportingMode        = mode...
+#  ButtonThreshold      = integer...
+#  ButtonNumber         = integer...
+#  SendCoreEvents       = <on> or <off>
+#  ClearRTS             = <on> or <off>
+#  ClearDTR             = <on> or <off>
+#  ZAxisMapping         = [ N M ] or X or Y 
+#  TabletType           = string
+#  TabletMode           = string
+#  Load                 = string
+#  Option               = string,string
+# }
+
+#-----------------------#
+# Wacom Intuos Eraser   #
+#-----------------------#
+WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "BottomX" "30000"
+}
+
+#-----------------------#
+# Wacom Intuos Stylus   #
+#-----------------------#
+WACOM:GRAPHIRE / INTUOS Stylus (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "BottomX" "30000"
+}
+
+#-----------------------#
+# Wacom Intuos Eraser   #
+#-----------------------#
+WACOM:GRAPHIRE / INTUOS Eraser (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ Option              = USB,Tilt
+ SendCoreEvents      = on
+ ButtonThreshold     = 5
+ RawOption           = "BottomX" "30000","BottomY" "24000"
+}
+
+#-----------------------#
+# Wacom Intuos Stylus   #
+#-----------------------#
+WACOM:GRAPHIRE / INTUOS Stylus (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ Option              = USB,Tilt
+ ButtonThreshold     = 5
+ SendCoreEvents      = on
+ RawOption           = "BottomX" "30000","BottomY" "24000"
+}
