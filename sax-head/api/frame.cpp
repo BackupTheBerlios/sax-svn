@@ -1039,6 +1039,7 @@ void XFrame::slotFinish (void) {
 	mb->setButtonText ( TEST  , xText["Test"] );
 	mb->setButtonText ( SAVE  , xText["Save"] );
 	mb->setButtonText ( CANCEL, xText["Cancel"] );
+	mb->setButtonFocus (1);
 	int choose = mb->exec();
 	enterEvent ( 0 );
 	delete (mb);

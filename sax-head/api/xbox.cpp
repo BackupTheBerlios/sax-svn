@@ -200,7 +200,7 @@ XBox::XBox (
 
 		if ( button0 ) {
 			mBtn1 = new QPushButton ( mFrame );
-			mBtn1 -> setAutoDefault (true);
+			mBtn1 -> setDefault (true);
 			layer4 -> addWidget  ( mBtn1 );
 			if ( button1 ) {
 				layer4 -> addSpacing ( 10 );
@@ -375,6 +375,29 @@ void XBox::setButtonText (Button nr,const QString& text) {
 //============================================
 // set button texts
 //--------------------------------------------
+void XBox::setButtonFocus (int nr) {
+	mBtn1 -> setDefault (false);
+	switch (nr) {
+	case 0:
+		mBtn1 -> setDefault (true);
+		mBtn1 -> setFocus ();
+	break;
+	case 1:
+		mBtn2 -> setDefault (true);
+		mBtn2 -> setFocus ();
+	break;
+	case 2:
+		mBtn3 -> setDefault (true);
+		mBtn3 -> setFocus ();
+	break;
+	default:
+	break;
+	}
+}
+
+//============================================
+// set button texts
+//--------------------------------------------
 void XBox::setButtonText (int nr,const QString& text) {
 	setButtonText ((Button)nr,text);
 }
@@ -491,7 +514,9 @@ void XBox::showEvent ( QShowEvent* ) {
 		setMinimumWidth (400);
 	}
 	enterEvent (NULL);
-	mBtn1->setFocus();
+	if (mBtn1->isDefault()) {
+		mBtn1->setFocus();
+	}
 }
 
 //=====================================

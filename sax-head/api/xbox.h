@@ -97,6 +97,7 @@ class XBox : public QWidget {
 	int getSpinBoxCount ( void );
 	void setButtonText (Button,const QString&);
 	void setButtonText (int,const QString&);
+	void setButtonFocus (int);
 	int exec (void);
 
 	protected:
