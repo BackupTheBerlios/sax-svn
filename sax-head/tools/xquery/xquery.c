@@ -370,7 +370,7 @@ int main (int argc, char*argv[]) {
 			hdisp,hsyncstart,hsyncend,htotal,
 			vdisp,vsyncstart,vsyncend,vtotal
 		);
-		if (! BadValue) {
+		if (! badValue) {
 			ApplyModeline (dpy,userscreen);
 		}
 		break;
