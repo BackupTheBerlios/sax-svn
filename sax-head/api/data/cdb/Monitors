@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 16 09:44:01 2005
+# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 16 10:59:24 2005
 #
 # Template for monitor data
 # --------------------------
@@ -22613,6 +22613,28 @@ MEDION:1569A  {
 MEDION:MD1772IE  {
  Option=DPMS
  Hsync=30-72
+ Vsync=50-120
+}
+
+#==============================================
+# MD1772T
+#----------------------------------------------
+MEDION:MD1772T  {
+ DDC=API9702
+ Option=DPMS
+ Hsync=30-72
+ Resolution=1024x768
+ Vsync=50-120
+}
+
+#==============================================
+# MD1998LM
+#----------------------------------------------
+MEDION:MD1998LM  {
+ DDC=MED2960
+ Option=DPMS
+ Hsync=30-98
+ Resolution=1280x1024
  Vsync=50-120
 }
 
