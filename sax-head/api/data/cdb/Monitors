@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Jul 13 11:28:14 2004
+# Author: Marcus Schaefer <sax@suse.de>, Mon Jul 26 11:02:11 2004
 #
 # Template for monitor data
 # --------------------------
@@ -5354,6 +5354,28 @@ BELINEA:108095  {
 }
 
 #==============================================
+# FP783 (Analog)
+#----------------------------------------------
+BENQ:FP783 (ANALOG)  {
+ DDC=BNQ7667
+ Option=DPMS
+ Hsync=31-83
+ Resolution=1280x1024
+ Vsync=56-76
+}
+
+#==============================================
+# FP783 (Digital)
+#----------------------------------------------
+BENQ:FP783 (DIGITAL)  {
+ DDC=BNQ7668
+ Option=DPMS
+ Hsync=31-83
+ Resolution=1280x1024
+ Vsync=56-76
+}
+
+#==============================================
 # 2082-LR
 #----------------------------------------------
 BERMON:2082-LR  {
@@ -9404,6 +9426,17 @@ DELL:ES-17  {
  DDC=DEL635E
  Hsync=31-85
  Vsync=50-100
+}
+
+#==============================================
+# Latitude D600
+#----------------------------------------------
+DELL:LATITUDE D600  {
+ DDC=SEC3450
+ Option=DPMS
+ Hsync=31-65
+ Resolution=1024x768
+ Vsync=58-78
 }
 
 #==============================================
