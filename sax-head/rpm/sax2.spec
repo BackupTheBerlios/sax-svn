@@ -215,7 +215,7 @@ fi
 )
 # check for the xf86 options file at /etc/X11/CardModules...
 # ------------------------------------------------------------
-%ifarch ix86
+%ifarch %ix86
 if [ -f "/usr/X11R6/bin/xsload" ];then
 	mv /usr/X11R6/lib/modules/drivers/ati_drv.o /tmp
 	mv /usr/X11R6/lib/modules/drivers/radeon_drv.o /tmp
