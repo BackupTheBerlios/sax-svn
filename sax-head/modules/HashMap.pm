@@ -34,6 +34,27 @@ sub HSetValue {
 	return(%var);
 }
 
+#----[ HRemoveValue ]-------#
+sub HRemoveValue {
+#----------------------------------------------------------
+# this function is used to remove data from a given
+# hash
+#
+	my (%var) = %{$_[0]};     # the hash
+	my ($str) = $_[1];        # the hash path to remove
+
+	my @keys;                 # single hash keys
+	my $eval;                 # evaluation string
+
+	@keys = split(/->/, $str);
+	$eval = "delete \$var";
+	foreach (@keys) {
+		$eval .= "{'$_'}";
+	}
+	eval ($eval);
+	return (%var);
+}
+
 #----[ HMoveBranch ]--------#
 sub HMoveBranch {
 #----------------------------------------------------------

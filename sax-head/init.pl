@@ -943,6 +943,9 @@ sub SetBatchMode {
 	open (FD,$profile) || die "init: could not open file: $profile";
 	while(<FD>) {
 		chomp($_);
+		if ($_ =~ /^#/) {
+			next;
+		}
 		SWITCH: for ($_) {
 		/^.*\[X\].*/         && do {
 			$_ =~ s/\[X\]/0/g;
@@ -952,8 +955,20 @@ sub SetBatchMode {
 			$id = $1;
 			$_ =~ s/\[X\+[1-9]\]/$id/g;
 		};
+
+		/\[REMOVE\]/         && do {
+		if ($_ =~ /(.*)=.*/) {
+			$line    = $1;
+			$line    =~ s/ +//g;
+			@v       = split (/->/,$line);
+			$search  = join("->",@v);
+			%var = HRemoveValue (\%var,$search);
 		}
-		push(@ProfileData,$_);
+		};
+		}
+		if ($_ !~ /\[REMOVE\]/) {
+			push(@ProfileData,$_);
+		}
 	}
 	close(FD);
 	$ProfileSize = @ProfileData;
@@ -965,21 +980,19 @@ sub SetBatchMode {
 		# look for eventually defined variables in the
 		# profile data stream...
 		# -----------------------
-		if ($_ =~ /(.*)=.*{(.*)}.*/) {
-			$data      = $1;
-			$line      = $2;
+		while ($_ =~ /{(.*?)}/) {
+			$line      = $1;
 			$line      =~ s/ +//g;
 			@v         = split(/->/,$line);
-			$search    = join("->",@v);
+			$search    = join ("->",@v);
 			$size      = @v;
 			$ViewValue = "";
 			$ViewRef   = "";
 			$ViewValue = HGetValue(\%var,$search);
 			$ViewValue =~ s/^ +//g;
 			$ViewValue =~ s/ +$//g;
-			$_ = "$data = $ViewValue\n";
+			$_ =~ s/{.*?}/$ViewValue/;
 		}
-
 		# push stream data...
 		# --------------------
 		push(@plist,$_);
