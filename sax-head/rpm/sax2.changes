@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Mar 26 11:50:55 CET 2004 - ms@suse.de
+
+- changed testX to set the windowmanager as the first X client
+  started, this will prevent testX to remain open as separate
+  client consuming memory (#37035)
+
+-------------------------------------------------------------------
 Wed Mar 24 11:16:23 CET 2004 - ms@suse.de
 
 - fixed possible loop at installation. set different exit codes 

@@ -57,26 +57,33 @@ int RunWindowManager (void);
 int main (int argc, char **argv) {
 	Cursor cursor;
 	Display *display;
-	Window root, blub, *blubs = NULL;
-	unsigned clients;
+	Window root;
 	unsigned long pixel;
 	char *cname;
 	XColor color;
-	int cnt;
 	Atom prop;
 	Pixmap save_pixmap = (Pixmap)None;
 
+	//============================================
+	// open display and check if we got a display
+	//--------------------------------------------
 	display = XOpenDisplay(NULL);
-	if (!display) return 1;
+	if (!display) {
+		exit (1);
+	}
+	//============================================
+	// check the resolution
+	//--------------------------------------------
 	if (!validResolution(display)) {
 		fprintf (stderr,
 			"testX: invalid dimensions, must be >= %dx%d Pixels\n", MIN_X,MIN_Y
 		);
 		exit (2);
 	}
-
+	//============================================
+	// install color map for background pixels
+	//--------------------------------------------
 	cname = argc == 2 ? argv[1] : "black";
-
 	screen = DefaultScreen(display);
 	root = RootWindow(display, screen);
 	pixel = BlackPixel(display, screen);
@@ -86,59 +93,48 @@ int main (int argc, char **argv) {
 		pixel = color.pixel;
 	}
 	}
-
 	XSetWindowBackground(display, root, pixel);
-	XClearWindow(display, root);
+	XClearWindow (display, root);
+
+	//============================================
+	// set watch cursor
+	//--------------------------------------------
 	cursor = CreateCursorFromName(display,"watch");
 	if (cursor) {
 		XDefineCursor (display, root, cursor);
 		XFreeCursor (display, cursor);
 	}
 	
-	if (fork() == 0) {
-		Window win;
-		XEvent xev;
+	//============================================
+	// run the windowmanager (FVWM)
+	//--------------------------------------------
+	RunWindowManager();
 
-		close(0); close(1); close(2);
-		chdir("/");
-
-		display = XOpenDisplay(NULL);
-
-		// open a client...
-		if (display) {
-			win = XCreateSimpleWindow (
-				display, root, 0, 0, 1, 1, 0, 0, pixel
-			);
-			XSync(display, False);
-		}
-		// wait within event loop...
-		for(;;) XNextEvent(display, &xev);
-	}
-
-	// wait until the child has opened a client
-	cnt = 100;
-	do {
-	if (!XQueryTree (display, root, &blub, &blub, &blubs, &clients)) {
-		XCloseDisplay(display);
-		return 0;
-	}
-	usleep(50000);
-	} while(clients < 1 && cnt--);
-
-	save_pixmap = XCreatePixmap (display, root, 1, 1, 1);
+	//============================================
+	// save background as pixmap
+	//--------------------------------------------
+	save_pixmap = XCreatePixmap (
+		display, root, 1, 1, 1
+	);
 	prop = XInternAtom (display, "_XSETROOT_ID", False);
 	XChangeProperty (
 		display, root, prop, XA_PIXMAP, 32, 
 		PropModeReplace, (unsigned char *) &save_pixmap, 1
 	);
-	XSetCloseDownMode (display, RetainPermanent);
+	XSetCloseDownMode (
+		display, RetainPermanent
+	);
 
-	// enable accessX
+	//============================================
+	// enable accessX modifiers
+	//--------------------------------------------
 	// XAccess (display,NULL);
-	XCloseDisplay(display);
 
-	RunWindowManager();
-	return 0;
+	//============================================
+	// close display and exit
+	//--------------------------------------------
+	XCloseDisplay(display);
+	exit (0);
 }
 
 //=========================================
