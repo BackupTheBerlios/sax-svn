@@ -62,7 +62,7 @@ class SaXConfigIF : public SaXException {
 
 	public:
 	virtual bool createConfiguration  ( void ) = 0;
-	virtual void installConfiguration ( void ) = 0;
+	virtual void commitConfiguration ( void ) = 0;
 	virtual bool testConfiguration    ( void ) = 0;
 
 	public:
@@ -105,7 +105,7 @@ class SaXConfig : public SaXConfigIF {
 
 	public:
 	bool createConfiguration  ( void );
-	void installConfiguration ( void );
+	void commitConfiguration ( void );
 	bool testConfiguration    ( void );
 
 	public:

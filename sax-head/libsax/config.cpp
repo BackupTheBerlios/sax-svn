@@ -243,9 +243,9 @@ bool SaXConfig::createConfiguration (void) {
 }
 
 //====================================
-// installConfiguration...
+// commitConfiguration...
 //------------------------------------
-void SaXConfig::installConfiguration (void) {
+void SaXConfig::commitConfiguration (void) {
 	// .../
 	// install the configuration file as /etc/X11/xorg.conf
 	// installing the file should only be done when
