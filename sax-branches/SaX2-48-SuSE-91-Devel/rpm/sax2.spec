@@ -420,6 +420,9 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/share/locale/ja/LC_MESSAGES/sax.mo
 /usr/share/locale/bg/LC_MESSAGES/sax.mo
 /usr/share/locale/pl_PL/LC_MESSAGES/sax.mo
+/usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
+/usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
+/usr/share/locale/pt_BR/LC_MESSAGES/sax.mo
 /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
 /usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu.pm
 /usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu/XS.pm
