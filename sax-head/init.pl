@@ -1201,7 +1201,7 @@ sub ReadProfile {
 		# should run before the profile is opened
 		#------------------------------------------
 		if (-f "$file.sh") {
-			print "SaX: calling [Card:$c] profile script: $file.sh...\n";
+			print "SaX: calling [Card:$c] profile script: $data{$c}.sh...\n";
 			qx ($file.sh);
 		}
 		#==========================================
