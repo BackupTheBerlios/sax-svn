@@ -3,6 +3,9 @@ Mon Sep 22 09:45:37 CEST 2003 - ms@suse.de
 
 - update Identity, add riva128 profile (#31486)
 - write Buttons instead of ButtonNumber (#31453)
+- fixed parsing of CalcAlgorithm value, which indicates for
+  example if the XServerPool should be used, which switched
+  off the modeline calculation (#31360)
 
 -------------------------------------------------------------------
 Sat Sep 20 12:15:25 CEST 2003 - kukuk@suse.de

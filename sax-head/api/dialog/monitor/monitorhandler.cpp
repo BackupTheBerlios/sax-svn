@@ -149,7 +149,6 @@ void XMonitor::initPage (void) {
 	// include modeline algorithms...
 	// ------------------------------
 	mMode->insertItem ("CheckDesktopGeometry");
-	//mMode->insertItem ("IteratePrecisely");
 	mMode->insertItem ("UseFrameBufferTiming");
 	mMode->insertItem ("XServerPool");
 }
@@ -289,14 +288,11 @@ void XMonitor::setupTop ( void ) {
 	if (mode == "CheckDesktopGeometry") {
 		index = 0;
 	}
-	if (mode == "IteratePrecisely") {
+	if (mode == "UseFrameBufferTiming") {
 		index = 1;
 	}
-	if (mode == "UseFrameBufferTiming") {
-		index = 2;
-	}
 	if (mode == "XServerPool") {
-		index = 3;
+		index = 2;
 	}
 	}
 	mMode -> setCurrentItem (index);
