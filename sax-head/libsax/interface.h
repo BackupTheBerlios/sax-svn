@@ -135,6 +135,15 @@ struct EntryPoint {
 //------------------------------------
 using namespace SaX;
 
+//====================================
+// namespace LML
+//------------------------------------
+/*! \brief LML -  LiMal namespace.
+*
+* This namespace contains the factory for all constructors
+* implemented within libsax. LML should be exclusively used
+* for dynamic loading of libsax
+*/
 namespace LML {
 //====================================
 // Class saxPluglib abstract...

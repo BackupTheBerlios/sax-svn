@@ -31,6 +31,16 @@ STATUS        : Status: Development
 #include <fcntl.h>
 #include <sys/file.h>
 
+//====================================
+// namespace SaX
+//------------------------------------
+/*! \brief SaX -  SaX namespace.
+*
+* This namespace contains all objects prefixed with the string
+* SaX. The namespace will be automatically used by including the
+* main sax.h header file which includes interface.h which itself
+* makes use of the namespace SaX
+*/
 namespace SaX {
 //====================================
 // Defines (macros)...
