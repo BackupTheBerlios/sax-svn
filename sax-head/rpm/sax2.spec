@@ -349,6 +349,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wrap
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wmstart
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_ddc.sh
 rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %suse_update_desktop_file -i %name System SystemSetup
 
