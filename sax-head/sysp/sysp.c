@@ -475,9 +475,24 @@ void CheckRoot(void) {
 void PrintMouseData(ScanMouse m) {
 	MouseData data;
 	int mouse = 0;
- 
+
+	// create a cache for all device names
+	str devs[m.Count()];
 	for (int i = m.Count(); i > 0; i--) {
 		data = m.Pop();
+		strcpy (devs[i],data.device);
+	}
+	m.Reset();
+
+ 	// print all devices. take care about multiple
+	// device names. 
+	for (int i = m.Count(); i > 0; i--) {
+		data = m.Pop();
+		for (int n = i - 1; n > 0; n--) {
+		if (strcmp (devs[n],data.device) == 0) {
+			continue;
+		}
+		}
 		if (mouse > 0) {
 			printf("\n");
 		}
@@ -486,6 +501,7 @@ void PrintMouseData(ScanMouse m) {
 		printf("Mouse%d    =>  Buttons    : %d\n",mouse,data.buttons);
 		printf("Mouse%d    =>  Wheel      : %d\n",mouse,data.wheel);
 		printf("Mouse%d    =>  Emulate    : %d\n",mouse,data.emulate);
+		printf("Mouse%d    =>  Name       : %s\n",mouse,data.name);
 		mouse++;
 	}
 	fflush(stdout);

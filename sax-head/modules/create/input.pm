@@ -26,10 +26,28 @@ sub CreateInputDeviceSection {
 	my $i;                       # loop counter
 	my $n;                       # loop counter
 	my $l;                       # loop counter
-	my $section;                 # section number
+
+	#my %entity;
+	#===========================================
+	# merge common InputDevices...
+	#-------------------------------------------
+	#foreach my $section (sort keys %{$var{InputDevice}}) {
+	#	my $driver = $var{InputDevice}{$section}{Driver};
+	#	my $device = $var{InputDevice}{$section}{Option}{Device};
+	#	if (defined $entity{$driver}{$device}) {
+	#		my $pre_section = $entity{$driver}{$device};
+	#		foreach my $opt (keys %{$var{InputDevice}{$section}{Option}}) {
+	#			my $optval = $var{InputDevice}{$section}{Option}{$opt};
+	#			$var{InputDevice}{$pre_section}{Option}{$opt} = $optval;
+	#		}
+	#		delete $var{InputDevice}{$section};
+	#		next;
+	#	}
+	#	$entity{$driver}{$device} = $section;
+	#}
 
 	@result = ();
-	foreach $section (sort keys %{$var{InputDevice}}) { 
+	foreach my $section (sort keys %{$var{InputDevice}}) { 
 	push(@result,"Section \"InputDevice\"\n");
 	#===========================================
 	# create body...

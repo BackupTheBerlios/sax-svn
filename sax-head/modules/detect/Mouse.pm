@@ -12,6 +12,7 @@ sub AutoDetectMouse {
 	my @btn_list;          # list of button numbers
 	my @whl_list;          # list of wheel numbers
 	my @emu_list;          # list of emulate btn flags
+	my @name_list;         # list of Mouse names
 	my $mouse;             # mouse key in query hash
 	my $value;             # hash value 
 	my $i;                 # hash count
@@ -27,6 +28,7 @@ sub AutoDetectMouse {
 		push (@btn_list, $query{$mouse}{Buttons});
 		push (@whl_list, $query{$mouse}{Wheel});
 		push (@emu_list, $query{$mouse}{Emulate});
+		push (@name_list,$query{$mouse}{Name});
 	}
 	}
 	# /.../
@@ -37,7 +39,7 @@ sub AutoDetectMouse {
 	for($i=0;$i<@prot_list;$i++) {
 		$var{InputDevice}{$index}{Identifier}       = "Mouse\[$index\]"; 
 		$var{InputDevice}{$index}{Option}{Vendor}   = "Sysp";
-		$var{InputDevice}{$index}{Option}{Name}     = "Autodetection";
+		$var{InputDevice}{$index}{Option}{Name}     = $name_list[$i];
 		$var{InputDevice}{$index}{Option}{Protocol} = $prot_list[$i];
 		if ($prot_list[$i] =~ /AUTO/i) {
 			$var{InputDevice}{$index}{Option}{Option}  = "AutoSoft";

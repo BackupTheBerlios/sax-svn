@@ -10,6 +10,19 @@
 # --------
 # Status: Up-to-date
 #
+#---[ haveExtensions ]----#
+sub haveExtensions {
+#----------------------------------------------
+# check libxf86config Extensions support
+#
+	my $loader = "/usr/X11R6/bin/XFree86";
+	my $symbol = "xf86parseExtensionsSection";
+	my $data = qx (strings $loader | grep $symbol);
+	if ( $data ne "" ) {
+		return 1;
+	}
+	return 0;
+}
 
 #---[ CreateExtensionsSection ]----#
 sub CreateExtensionsSection {
@@ -23,6 +36,11 @@ sub CreateExtensionsSection {
 	my @list;                    # generic list
 	my $i;                       # loop counter
 	my $n;                       # loop counter
+
+	# check library...
+	if (! haveExtensions()) {
+		return;
+	}
 
 	# create header line...
 	@result = ();

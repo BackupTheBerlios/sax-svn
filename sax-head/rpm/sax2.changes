@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Sep 29 15:29:19 CEST 2004 - ms@suse.de
+
+- include HW mouse name to configuration
+- fixed import of extensions section on older versions
+- remove multiple InputDevice sections which are bound to the
+  same device and driver. related to (#44815)
+
+-------------------------------------------------------------------
 Tue Sep 28 11:46:24 CEST 2004 - ms@suse.de
 
 - fixed detect/Mouse and ImportAPI modules: Do not include
