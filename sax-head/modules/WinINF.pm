@@ -10,69 +10,79 @@
 #
 use strict;
 
-#---[ mountDisk ]----#
-sub mountDisk {
-#----------------------------------------------
-# mount a disk and return the mountpoint of the
-# filesystem where the data lives
+#---[ mountMedia ]----#
+sub mountMedia {
+#------------------------------------------------------
+# mount a disk or CD and return the .inf file location
+# on the medium. If no .inf file is found undef is returned
 #
-	my $mountpoint = "/tmp/mydisk.$$";
+	my $media  = $_[0];
+
+	my @result = ();
+	my $device = "/dev/fd0";
+	my $mountpoint = "/tmp/mymedia.$$";
 	if (! -d $mountpoint) {
 		mkdir ($mountpoint,0500);
 	}
-	qx (mount /dev/fd0 $mountpoint >/dev/null 2>&1);
+	if ($media eq "CD") {
+		$device = "/dev/cdrom";
+	}
+	qx (mount $device $mountpoint >/dev/null 2>&1);
 	my $error = $? >> 8;
 	if ($error) {
-		rmdir ($mountpoint);
-		return ("/");
+		rmdir  ($mountpoint);
+		return (undef);
 	}
-	opendir (FD,$mountpoint);
-	my @files = readdir(FD);
-	closedir(FD);
-	foreach my $file (@files) {
-	if ($file =~ /.*\.inf/) {
-		return ("$mountpoint/$file");
+	open (FD,"find $mountpoint -name '*.inf'|");
+	while (my $file = <FD>) {
+		chomp $file; push (@result,$file);
 	}
+	if (@result > 0) {
+		return (@result);
 	}
-	return ("/");
+	return (undef);
 }
 
-#---[ umountDisk ]---#
-sub umountDisk {
+#---[ umountMedia ]---#
+sub umountMedia {
 #----------------------------------------------
 # unmount disk and remove the mountpoint
 # directory
 #
-	my $mountpoint = "/tmp/mydisk.$$";
-	qx (umount -l /dev/fd0 >/dev/null 2>&1);
+	my $mountpoint = "/tmp/mymedia.$$";
+	qx (umount -l $mountpoint >/dev/null 2>&1);
 	rmdir ($mountpoint);
 }
 
 #---[ readDisk ]---#
 sub readDisk {
 #----------------------------------------------
-# read first .inf file from the disk and
+# read first .inf file from the CD or Disk and
 # return a list of data lines
 #
-	my $file = mountDisk();
 	my @data = ();
-	if ($file eq "/") {
-		umountDisk();
+	my @files = mountMedia("CD");
+	if (! defined @files) {
+		umountMedia();
+		@files = mountMedia();
+	}
+	if (! defined @files) {
+		umountMedia();
 		return (@data);
 	}
-	if ( ! open(FD,"$file") ) {
-		umountDisk();
-		return (@data);
+	foreach my $file (@files) {
+		if ( ! open(FD,"$file") ) {
+			next;
+		}
+		while (<FD>) {
+		if (($_ !~ /^;/) && ($_ !~ /^.$/)) {
+			chomp ($_); push (@data,$_);
+		}
+		}
+		push (@data,"[]");
+		close (FD);
 	}
-	while (<FD>) {
-	if (($_ !~ /^;/) && ($_ !~ /^.$/)) {
-		chomp ($_);
-		push (@data,$_);
-	}
-	}
-	push (@data,"[]");
-	close (FD);
-	umountDisk();
+	umountMedia();
 	return (@data);
 }
 

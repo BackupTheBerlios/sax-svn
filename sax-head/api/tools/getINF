@@ -15,6 +15,23 @@ use Env;
 
 use WinINF;
 
+#---[ splitData ]----#
+sub splitData {
+#-----------------------------------------------
+# split data stream according to [] seperator
+# into multiple records used for importINFData()
+#
+	my @data;
+	my @full = readDisk();
+	foreach (@full) {
+		push (@data,$_);
+		if ($_ eq "[]") {
+			importINFData (@data);
+			@data = ();
+		}
+	}
+}
+
 #---[ importINFData ]----#
 sub importINFData {
 #-----------------------------------------------
@@ -22,7 +39,7 @@ sub importINFData {
 # formatted output used within xapi 
 # (disk button)
 #
-	my @data = readDisk();
+	my @data = @_;
 	my $size = @data;
 	if ($size == 0) {
 		return (0);
@@ -40,9 +57,5 @@ sub importINFData {
 	return (1);
 }
 
-my $string = "";
-if ( ! ($string = importINFData()) ) {
-	exit (1);
-}
-print $string;
+splitData();
 exit (0);
