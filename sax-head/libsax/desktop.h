@@ -41,9 +41,9 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual void calculateModelines ( bool ) = 0;
 	virtual void setResolution ( int,int,int ) = 0;
 	virtual void addResolution ( int,int,int ) = 0;
-	virtual void deleteResolution ( int,int,int ) = 0;
+	virtual void removeResolution ( int,int,int ) = 0;
 	virtual void setVirtualResolution ( int,int,int ) = 0;
-	virtual void deleteVirtualResolution ( int ) = 0;
+	virtual void removeVirtualResolution ( int ) = 0;
 	virtual void setColorDepth ( int ) = 0;
 	virtual bool enable3D  ( void ) = 0;
 	virtual bool disable3D ( void ) = 0;
@@ -93,9 +93,9 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	void calculateModelines ( bool );
 	void setResolution ( int,int,int );
 	void addResolution ( int,int,int );
-	void deleteResolution ( int,int,int );
+	void removeResolution ( int,int,int );
 	void setVirtualResolution ( int,int,int );
-	void deleteVirtualResolution ( int );
+	void removeVirtualResolution ( int );
 	void setColorDepth ( int );
 	bool enable3D  ( void );
 	bool disable3D ( void );

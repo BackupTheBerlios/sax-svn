@@ -46,8 +46,8 @@ class SaXManipulateDevicesIF : public SaXException {
 	virtual int addInputDevice   ( const char* ) = 0;
 
 	public:
-	virtual int deleteDesktopDevice ( int ) = 0;
-	virtual int deleteInputDevice   ( int ) = 0;
+	virtual int removeDesktopDevice ( int ) = 0;
+	virtual int removeInputDevice   ( int ) = 0;
 
 	public:
 	virtual ~SaXManipulateDevicesIF ( void ) { }
@@ -74,8 +74,8 @@ class SaXManipulateDevices : public SaXManipulateDevicesIF {
 	int addInputDevice   ( const char* );
 
 	public:
-	int deleteDesktopDevice ( int );
-	int deleteInputDevice   ( int );
+	int removeDesktopDevice ( int );
+	int removeInputDevice   ( int );
 
 	public:
 	SaXManipulateDevices ( SaXImport*,SaXImport*,SaXImport* );

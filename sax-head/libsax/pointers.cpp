@@ -191,11 +191,11 @@ void SaXManipulatePointers::addOption (
 }
 
 //====================================
-// deleteOption
+// removeOption
 //------------------------------------
-void SaXManipulatePointers::deleteOption (const QString& value) {
+void SaXManipulatePointers::removeOption (const QString& value) {
 	// .../
-	// delete a pointer option from the currently selected
+	// remove a pointer option from the currently selected
 	// pointer device. If the value is set to NULL the
 	// value will be removed from the "Option" list otherwise
 	// the option is removed from the "RawOption" list 
@@ -207,14 +207,14 @@ void SaXManipulatePointers::deleteOption (const QString& value) {
 	QString str = mImport->getItem("RawOption");
 	if (! str.contains ("\""+val+"\"")) {
 		//====================================
-		// delete bool option
+		// remove bool option
 		//------------------------------------
-		mImport->deleteItem ("Option",val);
+		mImport->removeItem ("Option",val);
 	} else {
 		//====================================
-		// delete value added option
+		// remove value added option
 		//------------------------------------
-		mImport->deleteRawItem ("RawOption","\""+val+"\"");
+		mImport->removeRawItem ("RawOption","\""+val+"\"");
 	}
 }
 
@@ -844,11 +844,11 @@ int SaXManipulateTablets::addPen (const QString& group) {
 }
 
 //====================================
-// deletePen
+// removePen
 //------------------------------------
-int SaXManipulateTablets::deletePen ( int id ) {
+int SaXManipulateTablets::removePen ( int id ) {
 	// .../
-	// delete the Pen or Eraser located at section ID <id>
+	// remove the Pen or Eraser located at section ID <id>
 	// If the InputFashion type is a valid SAX_INPUT_PEN or
 	// SAX_INPUT_ERASER the method will remove the pointer
 	// device and return the new current ID
@@ -867,7 +867,7 @@ int SaXManipulateTablets::deletePen ( int id ) {
 		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
 		return -1;
 	}
-	return mManipInputDevices->deleteInputDevice (id);
+	return mManipInputDevices->removeInputDevice (id);
 }
 
 //====================================

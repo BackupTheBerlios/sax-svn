@@ -81,8 +81,8 @@ void SaXManipulateVNC::enableVNC (void) {
 	// will enable VNC by loading the vnc module and applying the
 	// usevnc option into the Device section
 	// ----
-	deleteCardOption ("usevnc");
-	mManipModules->deleteLoadableModule ("vnc");
+	removeCardOption ("usevnc");
+	mManipModules->removeLoadableModule ("vnc");
 	addCardOption ("usevnc","yes");
 	mManipModules->addLoadableModule ("vnc");
 }
@@ -97,9 +97,9 @@ void SaXManipulateVNC::disableVNC (void) {
 	// NOTE: The X-Server must be restarted in order the
 	// changes to become effective
 	// ----
-	deleteCardOption ("usevnc");
+	removeCardOption ("usevnc");
 	addCardOption ("usevnc","no");
-	mManipModules->deleteLoadableModule ("vnc");
+	mManipModules->removeLoadableModule ("vnc");
 }
 
 //====================================
@@ -154,7 +154,7 @@ void SaXManipulateVNC::disablePasswordProtection (void) {
 	// passwd file. Only the rfbauth option is removed which
 	// will disable the password prompt while connecting
 	// ----
-	deleteCardOption ("rfbauth");
+	removeCardOption ("rfbauth");
 }
 
 //====================================
@@ -181,8 +181,8 @@ void SaXManipulateVNC::disableHTTPAccess (void) {
 	// disable HTTP access by removing the httpdir and
 	// httpport options
 	// ----
-	deleteCardOption ("httpdir");
-	deleteCardOption ("httpport");
+	removeCardOption ("httpdir");
+	removeCardOption ("httpport");
 }
 
 //====================================
@@ -194,10 +194,10 @@ void SaXManipulateVNC::allowMultipleConnections (bool allow) {
 	// is to allow only one connection at the same time
 	// ----
 	if (allow) {
-		deleteCardOption ("alwaysshared");
+		removeCardOption ("alwaysshared");
 		addCardOption    ("alwaysshared");
 	} else {
-		deleteCardOption ("alwaysshared");
+		removeCardOption ("alwaysshared");
 	}
 }
 
@@ -239,31 +239,31 @@ void SaXManipulateVNC::addVNCMouse (void) {
 }
 
 //====================================
-// deleteVNCMouse
+// removeVNCMouse
 //------------------------------------
-void SaXManipulateVNC::deleteVNCMouse (void) {
+void SaXManipulateVNC::removeVNCMouse (void) {
 	// .../
-	// delete the VNC mouse -> no mouse events in VNC session
+	// remove the VNC mouse -> no mouse events in VNC session
 	//
 	if (! mLayout) {
 		return;
 	}
-	mManipPointer->deleteInputDevice (mVNCMouse);
+	mManipPointer->removeInputDevice (mVNCMouse);
 	mLayout -> setItem ("VNC","");
 	mVNCMouse = -1;
 }
 
 //====================================
-// deleteVNCKeyboard
+// removeVNCKeyboard
 //------------------------------------
-void SaXManipulateVNC::deleteVNCKeyboard (void) {
+void SaXManipulateVNC::removeVNCKeyboard (void) {
 	// .../
-	// delete the VNC keyboard -> no kbd events in VNC session
+	// remove the VNC keyboard -> no kbd events in VNC session
 	// ----
 	if (! mLayout) {
 		return;
 	}
-	mManipKeyboard->deleteInputDevice (mVNCKeyboard);
+	mManipKeyboard->removeInputDevice (mVNCKeyboard);
 	mLayout -> setItem ("VNC","");
 	mVNCKeyboard = -1;
 }

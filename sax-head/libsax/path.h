@@ -33,17 +33,17 @@ class SaXManipulatePathIF : public SaXException {
 	public:
 	virtual void setFontPath ( const QString& ) = 0;
 	virtual void addFontPath ( const QString& ) = 0;
-	virtual void deleteFontPath ( const QString& ) = 0;
+	virtual void removeFontPath ( const QString& ) = 0;
 
 	public:
 	virtual void setLoadableModule ( const QString& ) = 0;
 	virtual void addLoadableModule ( const QString& ) = 0;
-	virtual void deleteLoadableModule ( const QString& ) = 0;
+	virtual void removeLoadableModule ( const QString& ) = 0;
 
 	public:
 	virtual void setServerFlag ( const QString& ) = 0;
 	virtual void addServerFlag ( const QString& ) = 0;
-	virtual void deleteServerFlag ( const QString& ) = 0;
+	virtual void removeServerFlag ( const QString& ) = 0;
 
 	public:
 	virtual QList<QString> getFontPaths   ( void ) = 0;
@@ -67,17 +67,17 @@ class SaXManipulatePath : public SaXManipulatePathIF {
 	public:
 	void setFontPath ( const QString& );
 	void addFontPath ( const QString& );
-	void deleteFontPath ( const QString& );
+	void removeFontPath ( const QString& );
 
 	public:
 	void setLoadableModule ( const QString& );
 	void addLoadableModule ( const QString& );
-	void deleteLoadableModule ( const QString& );
+	void removeLoadableModule ( const QString& );
 
 	public:
 	void setServerFlag ( const QString& );
 	void addServerFlag ( const QString& );
-	void deleteServerFlag ( const QString& );
+	void removeServerFlag ( const QString& );
 
 	public:
 	QList<QString> getFontPaths   ( void );

@@ -80,11 +80,11 @@ void SaXManipulatePath::addFontPath (const QString& path) {
 }
 
 //====================================
-// deleteFontPath
+// removeFontPath
 //------------------------------------
-void SaXManipulatePath::deleteFontPath (const QString& path) {
+void SaXManipulatePath::removeFontPath (const QString& path) {
 	// .../
-	// delete the given font path <path> from the current
+	// remove the given font path <path> from the current
 	// list of font pathes. If the path doesn't exist nothing
 	// will be changed
 	// ----
@@ -94,7 +94,7 @@ void SaXManipulatePath::deleteFontPath (const QString& path) {
 	QString val (path);
 	QString key ("FontPath");
 	if (! mImport -> getItem (key).isEmpty()) {
-		mImport -> deleteItem (key,val);
+		mImport -> removeItem (key,val);
 	}
 }
 
@@ -133,11 +133,11 @@ void SaXManipulatePath::addLoadableModule (const QString& module) {
 }
 
 //====================================
-// deleteLoadableModule
+// removeLoadableModule
 //------------------------------------
-void SaXManipulatePath::deleteLoadableModule (const QString& module) {
+void SaXManipulatePath::removeLoadableModule (const QString& module) {
 	// .../
-	// delete the given module <module> from the current
+	// remove the given module <module> from the current
 	// list of modules. If the module doesn't exist nothing
 	// will be changed
 	// ----
@@ -147,7 +147,7 @@ void SaXManipulatePath::deleteLoadableModule (const QString& module) {
 	QString val (module);
 	QString key ("ModuleLoad");
 	if (! mImport -> getItem (key).isEmpty()) {
-		mImport -> deleteItem (key,val);
+		mImport -> removeItem (key,val);
 	}
 }
 
@@ -186,11 +186,11 @@ void SaXManipulatePath::addServerFlag (const QString& flag) {
 }
 
 //====================================
-// deleteServerFlag
+// removeServerFlag
 //------------------------------------
-void SaXManipulatePath::deleteServerFlag (const QString& flag) {
+void SaXManipulatePath::removeServerFlag (const QString& flag) {
 	// .../
-	// delete the given flag <flag> from the current
+	// remove the given flag <flag> from the current
 	// list of flags. If the flag doesn't exist nothing
 	// will be changed
 	// ----
@@ -200,7 +200,7 @@ void SaXManipulatePath::deleteServerFlag (const QString& flag) {
 	QString val (flag);
 	QString key ("ServerFlags");
 	if (! mImport -> getItem (key).isEmpty()) {
-		mImport -> deleteItem (key,val);
+		mImport -> removeItem (key,val);
 	}
 }
 

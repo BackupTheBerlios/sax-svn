@@ -62,8 +62,8 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 	public:
 	virtual void addVNCKeyboard    ( void ) = 0;
 	virtual void addVNCMouse       ( void ) = 0;
-	virtual void deleteVNCMouse    ( void ) = 0;
-	virtual void deleteVNCKeyboard ( void ) = 0;
+	virtual void removeVNCMouse    ( void ) = 0;
+	virtual void removeVNCKeyboard ( void ) = 0;
 
 	public:
 	virtual void enableVNC   ( void ) = 0;
@@ -104,8 +104,8 @@ class SaXManipulateVNC : public SaXManipulateVNCIF {
 	public:
 	void addVNCKeyboard    ( void );
 	void addVNCMouse       ( void );
-	void deleteVNCMouse    ( void );
-	void deleteVNCKeyboard ( void );
+	void removeVNCMouse    ( void );
+	void removeVNCKeyboard ( void );
 
 	public:
 	void enableVNC   ( void );

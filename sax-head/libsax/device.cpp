@@ -27,7 +27,7 @@ SaXManipulateDevices::SaXManipulateDevices (
 	SaXImport* desktop ,SaXImport* card ,SaXImport* layout
 ) {
 	// .../
-	// an object of this type is used to create or delete new
+	// an object of this type is used to create or remove new
 	// desktops for further configuration. A desktop is defined
 	// by the Monitor,Modes,Screen and ServerLayout sections.
 	// Adding a new desktop will add a new Monitor,Modes and Screen
@@ -71,7 +71,7 @@ SaXManipulateDevices::SaXManipulateDevices (
 	SaXImport* input, SaXImport* layout
 ) {
 	// .../
-	// an object of this type is used to create or delete new
+	// an object of this type is used to create or remove new
 	// input devices. An input device is a mouse,tablet,touchscreen
 	// or keyboard. An input device is defined by its InputDevice
 	// section and is activated within the global ServerLayout
@@ -234,11 +234,11 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 }
 
 //====================================
-// deleteDesktopDevice
+// removeDesktopDevice
 //------------------------------------
-int SaXManipulateDevices::deleteDesktopDevice (int id) {
+int SaXManipulateDevices::removeDesktopDevice (int id) {
 	// .../
-	// delete the desktop of the given id <id> and return the
+	// remove the desktop of the given id <id> and return the
 	// previous desktop id. The current desktop is set to this
 	// previous desktop id. If the desktop does not exist or
 	// the desktop id is the core (0) desktop the method will
@@ -256,7 +256,7 @@ int SaXManipulateDevices::deleteDesktopDevice (int id) {
 		return -1;
 	}
 	//====================================
-	// delete desktop...
+	// remove desktop...
 	//------------------------------------
 	if (! mCard->delID (id)) {
 		return -1;
@@ -278,11 +278,11 @@ int SaXManipulateDevices::deleteDesktopDevice (int id) {
 }
 
 //====================================
-// deleteInputDevice
+// removeInputDevice
 //------------------------------------
-int SaXManipulateDevices::deleteInputDevice (int id) {
+int SaXManipulateDevices::removeInputDevice (int id) {
 	// .../
-	// delete the input device of the given id <id> and return the
+	// remove the input device of the given id <id> and return the
 	// previous input device id. The current input device id is set
 	// to this previous input device id. If the input device does
 	// not exist or the input device id is the core (0|1) mouse or
@@ -300,7 +300,7 @@ int SaXManipulateDevices::deleteInputDevice (int id) {
 		return -1;
 	}
 	//====================================
-	// delete input devices...
+	// remove input devices...
 	//------------------------------------
 	if (! mInput->delID (id)) {
 		return -1;
@@ -375,7 +375,7 @@ void SaXManipulateDevices::updateLayout (int newID) {
 	//------------------------------------
 	for (int n=0;n<=newID;n++) {
 		QString idString; idString.sprintf ("%d",n);
-		mLayout -> deleteEntry (QString("Screen:Screen["+ idString + "]"));
+		mLayout -> removeEntry (QString("Screen:Screen["+ idString + "]"));
 	}
 	//====================================
 	// check number of existing screens

@@ -41,7 +41,7 @@ class SaXManipulateCardIF : public SaXException {
 	virtual void setCardDriver ( const QString& ) = 0;
 	virtual void setCardOption ( const QString& , const QString& = 0 ) = 0;
 	virtual void addCardOption ( const QString& , const QString& = 0 ) = 0;
-	virtual void deleteCardOption ( const QString& ) = 0;
+	virtual void removeCardOption ( const QString& ) = 0;
 	virtual void setBusID ( const QString& ) = 0;
 	virtual void setScreenID ( int ) = 0;
 
@@ -84,7 +84,7 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	void setCardDriver ( const QString& );
 	void setCardOption ( const QString& , const QString& = 0 );
 	void addCardOption ( const QString& , const QString& = 0 );
-	void deleteCardOption ( const QString& );
+	void removeCardOption ( const QString& );
 	void setBusID ( const QString& );
 	void setScreenID ( int );
 

@@ -44,7 +44,7 @@ class SaXManipulatePointersIF : public SaXException {
 	virtual void setNamePair  ( const QString& , const QString& ) = 0;
 	virtual void setOption    ( const QString& , const QString& = 0 ) = 0;
 	virtual void addOption    ( const QString& , const QString& = 0 ) = 0;
-	virtual void deleteOption ( const QString& ) = 0;
+	virtual void removeOption ( const QString& ) = 0;
 
 	public:
 	virtual QString getDevice ( void ) = 0;
@@ -73,7 +73,7 @@ class SaXManipulatePointers : public SaXManipulatePointersIF {
 	void setNamePair  ( const QString& , const QString& );
 	void setOption    ( const QString& , const QString& = 0 );
 	void addOption    ( const QString& , const QString& = 0 );
-	void deleteOption ( const QString& );
+	void removeOption ( const QString& );
 
 	public:
 	QString getDevice ( void );
@@ -147,7 +147,7 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	virtual void setType   ( const QString& ) = 0;
 	virtual void setMode   ( const QString& ) = 0;
 	virtual int  addPen    ( const QString& ) = 0;
-	virtual int  deletePen ( int ) = 0;
+	virtual int  removePen ( int ) = 0;
 
 	public:
 	virtual QString getName   ( void ) = 0;
@@ -191,7 +191,7 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	void setType   ( const QString& );
 	void setMode   ( const QString& );
 	int  addPen    ( const QString& );
-	int  deletePen ( int );
+	int  removePen ( int );
 
 	public:
 	QString getName   ( void );

@@ -155,7 +155,7 @@ void SaXConfig::enableXFineCache (bool enable) {
 	if (enable) {
 		mDesktop -> setItem ("ImportXFineCache","yes");
 	} else {
-		mDesktop -> deleteEntry ("ImportXFineCache");
+		mDesktop -> removeEntry ("ImportXFineCache");
 	}
 }
 

@@ -137,11 +137,11 @@ void SaXManipulateDesktop::addResolution (int c,int x,int y) {
 }
 
 //====================================
-// deleteResolution
+// removeResolution
 //------------------------------------
-void SaXManipulateDesktop::deleteResolution (int c,int x,int y) {
+void SaXManipulateDesktop::removeResolution (int c,int x,int y) {
 	// .../
-	// delete the resolution <X>x<Y> for colordepth <c> from
+	// remove the resolution <X>x<Y> for colordepth <c> from
 	// the current Modes value
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
@@ -152,7 +152,7 @@ void SaXManipulateDesktop::deleteResolution (int c,int x,int y) {
 	key.sprintf ("Modes:%d",c);
 	val.sprintf ("%dx%d",x,y);
 	if (! mDesktop -> getItem (key).isEmpty()) {
-		mDesktop -> deleteItem (key,val);
+		mDesktop -> removeItem (key,val);
 	}
 }
 
@@ -175,11 +175,11 @@ void SaXManipulateDesktop::setVirtualResolution (int c,int x,int y) {
 }
 
 //====================================
-// deleteVirtualResolution
+// removeVirtualResolution
 //------------------------------------
-void SaXManipulateDesktop::deleteVirtualResolution (int c) {
+void SaXManipulateDesktop::removeVirtualResolution (int c) {
 	// .../
-	// delete the virtual resolution <X>x<Y> set for
+	// remove the virtual resolution <X>x<Y> set for
 	// colordepth <c>.
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
@@ -316,7 +316,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 		//----------------------------------------
 		if (extends) {
 			SaXManipulatePath pathInfo (mPath);
-			pathInfo.deleteLoadableModule (*extends);
+			pathInfo.removeLoadableModule (*extends);
 			pathInfo.addLoadableModule (*extends);
 		}
 		//========================================
@@ -404,11 +404,11 @@ bool SaXManipulateDesktop::disable3D (void) {
 			return true;
 		}
 		//========================================
-		// have extension, delete it
+		// have extension, remove it
 		//----------------------------------------
 		if (extends) {
 			SaXManipulatePath pathInfo (mPath);
-			pathInfo.deleteLoadableModule (*extends);
+			pathInfo.removeLoadableModule (*extends);
 		}
 		//========================================
 		// set driver to use with 2D

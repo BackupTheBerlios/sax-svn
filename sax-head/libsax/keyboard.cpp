@@ -268,11 +268,11 @@ void SaXManipulateKeyboard::addXKBLayout (const QString& layout) {
 }
 
 //====================================
-// deleteXKBLayout
+// removeXKBLayout
 //------------------------------------
-void SaXManipulateKeyboard::deleteXKBLayout (const QString& layout) {
+void SaXManipulateKeyboard::removeXKBLayout (const QString& layout) {
 	// .../
-	// delete the given layout <layout> from the current
+	// remove the given layout <layout> from the current
 	// list of keyboard layouts
 	// ----
 	if (! mImport) {
@@ -281,7 +281,7 @@ void SaXManipulateKeyboard::deleteXKBLayout (const QString& layout) {
 	QString val (layout);
 	QString key ("XkbLayout");
 	if (! mImport -> getItem (key).isEmpty()) {
-		mImport -> deleteItem (key,val);
+		mImport -> removeItem (key,val);
 	}
 }
 
@@ -320,11 +320,11 @@ void SaXManipulateKeyboard::addXKBOption (const QString& option) {
 }
 
 //====================================
-// deleteXKBOption
+// removeXKBOption
 //------------------------------------
-void SaXManipulateKeyboard::deleteXKBOption (const QString& option) {
+void SaXManipulateKeyboard::removeXKBOption (const QString& option) {
 	// .../
-	// delete a keyboard option. If the option <option>
+	// remove a keyboard option. If the option <option>
 	// does not exist nothing will happen
 	// ----
 	if (! mImport) {
@@ -333,7 +333,7 @@ void SaXManipulateKeyboard::deleteXKBOption (const QString& option) {
 	QString val (option);
 	QString key ("XkbOptions");
 	if (! mImport -> getItem (key).isEmpty()) {
-		mImport -> deleteItem (key,val);
+		mImport -> removeItem (key,val);
 	}
 }
 
@@ -376,11 +376,11 @@ void SaXManipulateKeyboard::setXKBVariant (
 }
 
 //====================================
-// deleteXKBVariant
+// removeXKBVariant
 //------------------------------------
-void SaXManipulateKeyboard::deleteXKBVariant ( const QString& layout ) {
+void SaXManipulateKeyboard::removeXKBVariant ( const QString& layout ) {
 	// .../
-	// delete the variant set for the layout <layout>. This
+	// remove the variant set for the layout <layout>. This
 	// method simply call setXKBVariant() with an empty variant
 	// ----
 	setXKBVariant (layout,"");

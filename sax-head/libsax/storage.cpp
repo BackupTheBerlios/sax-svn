@@ -65,11 +65,11 @@ void SaXStorage::addItem ( const QString & key, const QString & val ) {
 }
 
 //====================================
-// delete standard key/value item...
+// remove standard key/value item...
 //------------------------------------
-void SaXStorage::deleteItem ( const QString & key, const QString & val ) {
+void SaXStorage::removeItem ( const QString & key, const QString & val ) {
 	// .../
-	// delete the value <val> from the current value list stored
+	// remove the value <val> from the current value list stored
 	// behind the key <key>. If the value is not found the list
 	// won't be changed
 	// ----
@@ -91,11 +91,11 @@ void SaXStorage::deleteItem ( const QString & key, const QString & val ) {
 }
 
 //====================================
-// delete key/value entry...
+// remove key/value entry...
 //------------------------------------
-void SaXStorage::deleteEntry ( const QString & key ) {
+void SaXStorage::removeEntry ( const QString & key ) {
 	// .../
-	// delete a complete entry from the data dictionary
+	// remove a complete entry from the data dictionary
 	// The entry is searched as key named <key>
 	// ----
 	mData.at (mCurrentID) -> remove (key);
@@ -172,14 +172,14 @@ void SaXStorage::addRawItem (
 //====================================
 // Delete from raw item...
 //------------------------------------
-void SaXStorage::deleteRawItem (
+void SaXStorage::removeRawItem (
 	const QString & key, const QString & optname
 ) {
 	// .../
 	// set special item value used for options including a value
 	// if the key is some sort of Raw* the value behind this key
 	// is a comma separated list of key value pairs separated by
-	// a space each. This method will delete such a value pair
+	// a space each. This method will remove such a value pair
 	// ----
 	QString expression (",");
 	if (key == "RawData") {
@@ -245,11 +245,11 @@ bool SaXStorage::addID ( int id ) {
 }
 
 //====================================
-// delete and reorganize section ID...
+// remove and reorganize section ID...
 //------------------------------------
 bool SaXStorage::delID ( int id ) {
 	// .../
-	// delete a data record and adapt the Identifier strings
+	// remove a data record and adapt the Identifier strings
 	// to provide consistency
 	// ----
 	if ((! mData.at (id)) || (mData.at(id)->isEmpty())) {

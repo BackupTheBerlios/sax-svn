@@ -97,16 +97,16 @@ class SaXManipulateKeyboardIF : public SaXKeyRules {
 	public:
 	virtual void setXKBLayout      ( const QString& ) = 0;
 	virtual void addXKBLayout      ( const QString& ) = 0;
-    virtual void deleteXKBLayout   ( const QString& ) = 0;
+	virtual void removeXKBLayout   ( const QString& ) = 0;
 
 	public:
 	virtual void setXKBOption      ( const QString& ) = 0;
 	virtual void addXKBOption      ( const QString& ) = 0;
-	virtual void deleteXKBOption   ( const QString& ) = 0;
+	virtual void removeXKBOption   ( const QString& ) = 0;
 
 	public:
 	virtual void setXKBVariant     ( const QString& , const QString& ) = 0;
-	virtual void deleteXKBVariant  ( const QString& ) = 0;
+	virtual void removeXKBVariant  ( const QString& ) = 0;
 
 	public:
 	virtual void setMapping        ( const QString& , const QString& ) = 0;
@@ -147,16 +147,16 @@ class SaXManipulateKeyboard : public SaXManipulateKeyboardIF {
 	public:
 	void setXKBLayout      ( const QString& );
 	void addXKBLayout      ( const QString& );
-    void deleteXKBLayout   ( const QString& );
+    void removeXKBLayout   ( const QString& );
 
 	public:
 	void setXKBOption      ( const QString& );
 	void addXKBOption      ( const QString& );
-	void deleteXKBOption   ( const QString& );
+	void removeXKBOption   ( const QString& );
 
 	public:
 	void setXKBVariant     ( const QString& , const QString& );
-	void deleteXKBVariant  ( const QString& );
+	void removeXKBVariant  ( const QString& );
 
 	public:
 	void setMapping        ( const QString& , const QString& );

@@ -134,11 +134,11 @@ void SaXManipulateCard::addCardOption (
 }
 
 //====================================
-// deleteCardOption
+// removeCardOption
 //------------------------------------
-void SaXManipulateCard::deleteCardOption (const QString& value) {
+void SaXManipulateCard::removeCardOption (const QString& value) {
 	// .../
-	//! delete an option which has been set to the currently
+	//! removes an option which has been set to the currently
 	//! selected device. If the option does not exist nothing
 	//! will happen
 	// ----
@@ -149,14 +149,14 @@ void SaXManipulateCard::deleteCardOption (const QString& value) {
 	QString str = mImport->getItem("RawData");
 	if (! str.contains ("\""+val+"\"")) {
 		//====================================
-		// delete bool option
+		// remove bool option
 		//------------------------------------
-		mImport->deleteItem ("Option",val);
+		mImport->removeItem ("Option",val);
 	} else {
 		//====================================
-		// delete value added option
+		// remove value added option
 		//------------------------------------
-		mImport->deleteRawItem ("RawData","Option \""+val+"\"");
+		mImport->removeRawItem ("RawData","Option \""+val+"\"");
 	}
 }
 

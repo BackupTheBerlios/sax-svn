@@ -47,8 +47,8 @@ class SaXStorageIF : public SaXException {
 	public:
 	virtual void setItem ( const QString &, const QString & ) = 0;
 	virtual void addItem ( const QString &, const QString & ) = 0;
-	virtual void deleteItem  ( const QString &, const QString & ) = 0;
-	virtual void deleteEntry ( const QString & ) = 0;
+	virtual void removeItem  ( const QString &, const QString & ) = 0;
+	virtual void removeEntry ( const QString & ) = 0;
 	virtual void setDenomination (
 		const QString &, const QString &,const QString &
 	) = 0;
@@ -58,7 +58,7 @@ class SaXStorageIF : public SaXException {
 	virtual void addRawItem (
 		const QString &, const QString &,const QString &
 	) = 0;
-	virtual void deleteRawItem ( const QString &, const QString & ) = 0;
+	virtual void removeRawItem ( const QString &, const QString & ) = 0;
 	virtual QString getItem ( const QString & ) = 0;
 
 	public:
@@ -98,8 +98,8 @@ class SaXStorage : public SaXStorageIF {
 	public:
 	void setItem ( const QString &, const QString & );
 	void addItem ( const QString &, const QString & );
-	void deleteItem  ( const QString &, const QString & );
-	void deleteEntry ( const QString & );
+	void removeItem  ( const QString &, const QString & );
+	void removeEntry ( const QString & );
 	void setDenomination (
 		const QString &, const QString &,const QString &
 	);
@@ -109,7 +109,7 @@ class SaXStorage : public SaXStorageIF {
 	void addRawItem (
 		const QString &, const QString &,const QString &
 	);
-	void deleteRawItem ( const QString &, const QString & );
+	void removeRawItem ( const QString &, const QString & );
 	QString getItem ( const QString & );
 
 	public:
