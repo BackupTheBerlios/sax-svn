@@ -25,7 +25,7 @@ MouseData* MouseGetData(void) {
 	MouseData* data  = NULL;
 	MouseData* first = NULL;
 	MouseData* last  = NULL;
-	hd_t *hd;
+	hd_t *hd         = NULL;
 	hd_t *first_dev;
 
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
