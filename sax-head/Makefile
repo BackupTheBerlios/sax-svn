@@ -5,7 +5,7 @@
 # Makefile for SaX2
 # X-Server configuration program
 #
-# Version 4.8
+# Version 7.1
 # Status: Up-to-date
 #
 # Build init

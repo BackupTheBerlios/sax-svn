@@ -598,7 +598,7 @@ void setMouseCursor (const QString& cursorName) {
 // usage...
 //-------------------------------------
 void usage (void) {
-	printf ("Linux SaX2 Version 4.8 startup level (xapi)\n");
+	printf ("Linux SaX2 Version 7.1 startup level (xapi)\n");
 	printf ("(C) Copyright 2002 SuSE GmbH\n");
 	printf ("\n");
 	printf ("usage: xapi [ options ]\n");

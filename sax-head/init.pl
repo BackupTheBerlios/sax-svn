@@ -963,7 +963,7 @@ sub SetBatchMode {
 
 	if ($profile eq "interactive") {
 		print "\n";
-		print "Linux SaX Version 4.8 startup level (init) (2001-04-06)\n";
+		print "Linux SaX Version 7.1 startup level (init) (2001-04-06)\n";
 		print "(C) Copyright 2001 - SuSE GmbH\n";
 		print "\n";
 	}
@@ -1500,7 +1500,7 @@ sub usage {
 #------------------------------------------------------
 # if you need help :-)
 #
-	print "Linux SaX Version 4.8 level (init) (2001-03-22)\n";
+	print "Linux SaX Version 7.1 level (init) (2001-03-22)\n";
 	print "(C) Copyright 2001 - SuSE GmbH\n";
 	print "\n";
 

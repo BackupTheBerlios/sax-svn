@@ -1,5 +1,5 @@
 #
-# spec file for package sax2 (Version 4.8)
+# spec file for package sax2 (Version 7.1)
 #
 # Copyright (c) 2004 SUSE LINUX AG, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
@@ -27,7 +27,7 @@ Requires:     XFree86-server
 Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration
-Version:      4.8
+Version:      7.1
 Release:      117
 Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL

@@ -102,7 +102,7 @@ STATUS        : Status: Development
 //====================================
 // Defines...
 //------------------------------------
-#define SAX_VERSION "4.8"
+#define SAX_VERSION "7.1"
 
 //====================================
 // Includes...

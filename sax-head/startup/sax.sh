@@ -18,7 +18,7 @@ PCI="/usr/share/sax/pci.pl"
 XFT="/var/cache/xfine/*"
 ERR="/var/log/SaX.log"
 REF="/var/cache/sax/files/xorg.conf.first"
-CVSB="/usr/share/sax/svnbuild"
+SVNB="/usr/share/sax/svnbuild"
 
 #==================================
 # Init option variables
@@ -80,12 +80,12 @@ function StopGPM() {
 function version() {
 	ID='$Id: sax.sh,v 1.49 2003/03/17 13:39:51 ms Exp $'
 	ID=`echo $ID | cut -f3-4 -d" "`
-	echo "SaX2 version 4.8 - CVS Release: $ID" 
+	echo "SaX2 version 7.1 - SVN Release: $ID" 
 }
 function usage() {
 	/sbin/killproc $DOTS
 	# ...
-	echo "Linux SaX Version 4.8 (2002-03-22)"
+	echo "Linux SaX Version 7.1 (2005-03-22)"
 	echo "(C) Copyright 2002 - SuSE GmbH <Marcus Schaefer sax@suse.de>"
 	echo 
 	echo "usage: SaX [ options ]"
@@ -306,8 +306,8 @@ fi
 # add ver. and commandline to log
 #----------------------------------
 BNR="unknown"
-if [ -f "$CVSB" ];then
-	BNR=`cat $CVSB`
+if [ -f "$SVNB" ];then
+	BNR=`cat $SVNB`
 fi
 CVS=`version`
 DATE=`LANG=POSIX date`

@@ -5,7 +5,7 @@
 # Makefile for SaX2 tools area
 # X-Server configuration program
 #
-# Version 4.8
+# Version 7.1
 # Status: Up-to-date
 #
 #====================================
@@ -15,7 +15,7 @@ buildroot   = /
 sax_tools   = ${buildroot}/usr/share/sax/tools
 
 CFLAGS      = -Wall
-VERSION     = 4.8
+VERSION     = 7.1
 
 export
 
