@@ -156,6 +156,16 @@ for i in `find -regex ".*\.\(h\|pm\)"`;do
 	fi
 )
 done
+#=================================================
+# adapt programs moved to other directories *grr*
+#-------------------------------------------------
+for i in `find -name "*" | xargs grep -l "/usr/sbin/fbset"`;do
+(
+	cat $i | \
+		sed -e 's@/usr/sbin/fbset@/sbin/fbset@g' \
+	> $i.sed; mv $i.sed $i
+)
+done
 test -e /.buildenv && . /.buildenv
 
 %build
