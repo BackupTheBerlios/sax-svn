@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Sep  9 11:05:56 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Sep 15 12:56:20 2004
 #
 # Template for monitor data
 # --------------------------
@@ -9173,6 +9173,17 @@ DELL:1701FP(DIGITAL)  {
  DDC=DEL3001
  Hsync=31-80
  Vsync=56-76
+}
+
+#==============================================
+# 1703FP
+#----------------------------------------------
+DELL:1703FP  {
+ DDC=DEL3010
+ Option=DPMS
+ Hsync=31-82
+ Resolution=1280x1024
+ Vsync=58-75
 }
 
 #==============================================
