@@ -47,18 +47,6 @@ sub getMouseSection {
 	}
 }
 
-#---[ prepareUSBMouse ]----#
-sub prepareUSBMouse {
-#----------------------------------------------------
-# if there is a USB mouse connected we need to check
-# for the USB mousedev module
-#
-	my $device = readlink ("/dev/mouse");
-	if ($device =~ /\/dev\/input\/mice/) {
-		qx (modprobe mousedev);
-	} 
-}
-
 # /.../
 # now exchange the mouse section with the real detected
 # input device section using xmset -c feature
@@ -66,8 +54,6 @@ sub prepareUSBMouse {
 my @list   = readConfig();
 my @point  = getMouseSection (@list);
 my @detect = split (/\n/,qx (/usr/X11R6/bin/xmset -c));
-
-prepareUSBMouse ();
 
 for (my $i=0;$i < $point[0] - 1;$i++) {
 	print $list[$i];
