@@ -35,10 +35,24 @@ sub vendorName {
 	}	
 	}
 	if ($driver =~ /^nv/) {
-		return ("The XFree86 Project");
+		if (installed ("XFree86")) {
+			return ("The XFree86 Project");
+		} else {
+			return ("X.Org Foundation");
+		}
 	} else {
 		return ("<none>");
 	}
+}
+
+sub installed {
+	my $pac = $_[0];
+	qx (rpm -q $pac);
+	my $code = $? >> 8;
+	if ($code >= 1) {
+		return undef;
+	}
+	return 1;
 }
 
 my $vendor = vendorName ( $ARGV[0] );

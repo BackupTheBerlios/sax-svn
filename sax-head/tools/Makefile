@@ -105,7 +105,7 @@ install:
 	install -m 644 ./xbanner/demo   ${sax_tools}
 	install -m 644 ./xbanner/screen ${sax_tools}
 	mv ${sax_tools}/isax.pl ${sax_tools}/isax
-	${MAKE} -C ./plog install \
+	${MAKE} -C ./plog -f Makefile.Linux install \
 		buildroot=${buildroot} lib_prefix=${lib_prefix}
 	rm -f ${sax_tools}/config.status
 	rm -f ${sax_tools}/configure

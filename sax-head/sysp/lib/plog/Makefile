@@ -8,24 +8,25 @@
 CC       = g++
 CFLAGS   = -O2 -Wall -fpic
 LIBS     = -lfl
-YACC     = yacc
+YACC     = bison
 FLEX     = flex -i
 
 SRC      = plog.cc parse.cc
-OBJ      = y.tab.o plog.o parse.o 
+OBJ      = parse.tab.o plog.o parse.o
 
 # build...
 # ---------
 all:${OBJ}
 
 parse.cc:
-	@echo "parse.c is not a target for me... skip"
+	@echo "parse.cc is not a target for me... skip"
 
-y.tab.o: y.tab.c lex.yy.c
-	${CC} -c -fpic y.tab.c -I.
+parse.tab.o: parse.tab.cc lex.yy.c
+	${CC} -O2 -fpic -c parse.tab.cc -I.
 
-y.tab.c:  parse.y
-	$(YACC) parse.y
+parse.tab.cc: parse.yc
+	$(YACC) -d parse.yc
+	mv parse.tab.hc parse.tab.h
 
 lex.yy.c: parse.l
 	$(FLEX) parse.l
@@ -36,9 +37,13 @@ plog.o:plog.cc ../syslib.h
 parse.o:parse.cc ../syslib.h
 	${CC} ${CFLAGS} -c parse.cc
 
+plog_test:
+	${CC} plog_test.cc ${CFLAGS} -o plog_test ${OBJ} -lfl
 
 clean:
 	rm -f lex.yy.c
-	rm -f y.tab.c
+	rm -f parse.tab.h
+	rm -f parse.tab.cc
+	rm -f plog_test
 	rm -f *.o
 

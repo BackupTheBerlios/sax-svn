@@ -1,7 +1,7 @@
 %{
-#include <stdlib.h>
+#include <stdio.h>
+#include "parse.tab.h"
 
-int  tokenwert = NICHTS;
 int  zeilennr  = 1;
 
 %}
@@ -55,7 +55,7 @@ R {F}[ \t]*-[ \t]*{F}
 {F}[xX]{F}                    {strcpy(yylval.string,yytext);return(RESO);      }
 "Manufacturer:".*"Model:"     {strcpy(yylval.string,yytext);return(DDC);       }
 "vmware_colordepth:"          {strcpy(yylval.string,yytext);return(VMWARE);    }
-"Max H-Image Size [cm]: horiz.:"  {strcpy(yylval.string,yytext);return(DPIX);      }
+"Max H-Image Size [cm]: horiz.:"  {strcpy(yylval.string,yytext);return(DPIX);  }
 "vert.:"                      {strcpy(yylval.string,yytext);return(DPIY);      }
 
 {S}                           {strcpy(yylval.string,yytext);return(STRING);    }
@@ -63,5 +63,3 @@ R {F}[ \t]*-[ \t]*{F}
 .                             {strcpy(yylval.string,yytext);return(TRASH);     }
 
 %%
-
-

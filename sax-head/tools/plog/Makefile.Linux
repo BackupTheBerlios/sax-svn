@@ -18,10 +18,10 @@ usr_prefix     = ${buildroot}/usr/X11R6
 LIBDIR         = ${usr_prefix}/${lib_prefix}/
 MODDIR         = ${usr_prefix}/${lib_prefix}/sax/modules/
 CC             = g++
+LD             = g++
 LIB            = ../../sysp/lib/libsysp.a -lfl
 
 all:
-	cp Makefile Makefile.Linux
 	@echo "compiling C stuff (plog)..."
 	${MAKE} -C ../../sysp/lib all
 	${CC} -Wall -O2 plog.c -o plog ${LIB}
@@ -30,7 +30,7 @@ all:
 	swig -perl5 PLog.i
 
 	@echo "generating Makefile..."
-	perl Makefile.PL CC=${CC}
+	perl Makefile.PL CC=${CC} LD=${LD}
 
 	@echo "compiling PLog perl stuff..."
 	make
@@ -40,7 +40,6 @@ all:
 	rm -f PLog_wrap.*
 	rm -f PLog.bs
 	rm -f Makefile
-	mv Makefile.Linux Makefile
 
 install:
 	install -d -m 755 ${LIBDIR} ${MODDIR}

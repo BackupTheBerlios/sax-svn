@@ -19,7 +19,8 @@ profile="$profile.tmp"
 # Check if profile is valid
 #------------------------------------
 vendor=$(/usr/X11R6/lib/sax/sysp/script/vendor.pl nvidia)
-if [ "$vendor" = "The XFree86 Project" ];then
+if [ "$vendor" = "The XFree86 Project" ] || \
+   [ "$vendor" = "X.Org Foundation" ];then
 	echo "Desktop -> [X] ->  CalcModelines = no"            > $profile
 	echo "Monitor -> [X] ->  CalcAlgorithm = XServerPool"  >> $profile
 fi

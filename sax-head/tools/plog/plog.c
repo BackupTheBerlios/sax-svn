@@ -43,23 +43,27 @@ char* PLogGetDisplaySize (MsgDetect* pm);
 //=================================
 // Test in main...
 //---------------------------------
-int main(void) {
- str log = "/var/log/XFree86.99.log";
- MsgDetect *parse = NULL;
- char *bla;
+int main (int argc,char* argv[]) {
+	MsgDetect *parse = NULL;
+	char *bla;
 
- parse = PLogParse(log);
- if (parse) {
- bla = PLogGetVideoRam(parse);
- printf("%s\n",bla);
+	if ( ! argv[1] ) {
+		printf ("No file given... abort\n");
+		exit (1);
+	}
 
- bla = PLogGetResolution(parse);
- printf("%s\n",bla);
+	parse = PLogParse(argv[1]);
+	if (parse) {
+		bla = PLogGetVideoRam(parse);
+		printf("%s\n",bla);
 
- bla = PLogGetDisplaySize(parse);
- printf("%s\n",bla);
- }
- exit(0);
+		bla = PLogGetResolution(parse);
+		printf("%s\n",bla);
+
+		bla = PLogGetDisplaySize(parse);
+		printf("%s\n",bla);
+	}
+	exit(0);
 }
 
 
@@ -67,63 +71,63 @@ int main(void) {
 // Implementation...
 //---------------------------------
 MsgDetect* PLogParse (str logfile) {
- MsgDetect *parse = NULL;
- parse = PLogGetData(logfile);
- return(parse);
+	MsgDetect *parse = NULL;
+	parse = PLogGetData(logfile);
+	return(parse);
 }
 
 char* PLogGetVideoRam (MsgDetect* pm) {
- char *vram = NULL;
- vram = (char*)malloc(MAX_PROGRAM_SIZE);
- sprintf(vram,"%ld",pm[0].memory);
- return(vram);
+	char *vram = NULL;
+	vram = (char*)malloc(MAX_PROGRAM_SIZE);
+	sprintf(vram,"%ld",pm[0].memory);
+	return(vram);
 }
 
 char* PLogGetResolution (MsgDetect* pm) {
- char *result = NULL;
- int n = 0;
- str res;
+	char *result = NULL;
+	int n = 0;
+	str res;
 
- if (pm[0].vesacount <= 0) {
-  result = (char*)malloc(MAX_PROGRAM_SIZE);
-  strcpy(result,"none");
-  return(result);
- }
+	if (pm[0].vesacount <= 0) {
+		result = (char*)malloc(MAX_PROGRAM_SIZE);
+		strcpy(result,"none");
+		return(result);
+	}
 
- result = (char*)malloc(MAX_PROGRAM_SIZE*pm[0].vesacount);
- strcpy(result,"");
- for (n=0;n<pm[0].vesacount;n++) {
-  sprintf(res,"%dx%d:",pm[0].vmodes[n].x,pm[0].vmodes[n].y);
-  strcat(result,res);
- }
- result[strlen(result)-1] = '\0';
- return(result);
+	result = (char*)malloc(MAX_PROGRAM_SIZE*pm[0].vesacount);
+	strcpy(result,"");
+	for (n=0;n<pm[0].vesacount;n++) {
+		sprintf(res,"%dx%d:",pm[0].vmodes[n].x,pm[0].vmodes[n].y);
+		strcat(result,res);
+	}
+	result[strlen(result)-1] = '\0';
+	return(result);
 }
 
 char* PLogGetMonitorManufacturer (MsgDetect* pm) {
- char *ddc = NULL;
- ddc = (char*)malloc(MAX_PROGRAM_SIZE);
- sprintf(ddc,"%s",pm[0].ddc);
- return(ddc);
+	char *ddc = NULL;
+	ddc = (char*)malloc(MAX_PROGRAM_SIZE);
+	sprintf(ddc,"%s",pm[0].ddc);
+	return(ddc);
 }
 
 char* PLogCheckDisplay (MsgDetect* pm) {
- char *type = NULL;
- type = (char*)malloc(MAX_PROGRAM_SIZE);
- sprintf(type,"%s",pm[0].displaytype);
- return(type);
+	char *type = NULL;
+	type = (char*)malloc(MAX_PROGRAM_SIZE);
+	sprintf(type,"%s",pm[0].displaytype);
+	return(type);
 }
 
 char* PLogGetVMwareColorDepth (MsgDetect* pm) {
- char *vmdepth = NULL;
- vmdepth = (char*)malloc(MAX_PROGRAM_SIZE);
- sprintf(vmdepth,"%d",pm[0].vmdepth);
- return(vmdepth);
+	char *vmdepth = NULL;
+	vmdepth = (char*)malloc(MAX_PROGRAM_SIZE);
+	sprintf(vmdepth,"%d",pm[0].vmdepth);
+	return(vmdepth);
 }
 
 char* PLogGetDisplaySize (MsgDetect* pm) {
- char *dpi = NULL;
- dpi = (char*)malloc(MAX_PROGRAM_SIZE);
- sprintf(dpi,"%dx%d",pm[0].dpix,pm[0].dpiy);
- return(dpi);
+	char *dpi = NULL;
+	dpi = (char*)malloc(MAX_PROGRAM_SIZE);
+	sprintf(dpi,"%dx%d",pm[0].dpix,pm[0].dpiy);
+	return(dpi);
 }

@@ -26,7 +26,7 @@ sub CreateHeaderSection {
 		$builder = "SaX2";
 	}
 	push(@result,"# /.../\n");
-	push(@result,"# SaX generated XFree86 config file\n");
+	push(@result,"# SaX generated X11 config file\n");
 	push(@result,"# Created on: $date.\n");
 	push(@result,"#\n");
 	push(@result,"# Version: $Version\n");

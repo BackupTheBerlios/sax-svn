@@ -52,7 +52,7 @@ sub GetDisplay {
 		# X11 R6 v4.x will hold the display number
 		# in the log file name
 		# ---
-		if ($log =~ /XFree86\.(.*)\.log/) {
+		if ($log =~ /[XFree86|Xorg]\.(.*)\.log/) {
 			my @list = split(/\./,$1);
 			$list[0] =~ s/://;
 			push (@display,$list[0]);
@@ -125,7 +125,7 @@ sub GetPids {
 	my $file = "/proc/$_/exe";
 	if (-l $file) {
 		my $link = readlink ($file);
-		if (($link =~ /XFree86/) || ($link =~ /XF.*_/)) {
+		if (($link =~ /XFree86|Xorg/) || ($link =~ /XF.*_/)) {
 			push(@pids,$_);
 		}
 	}

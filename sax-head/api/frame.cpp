@@ -1062,7 +1062,7 @@ void XFrame::slotFinish (void) {
 		//    1 abort -> EXIT_NOSAVE
 		// ---
 		QString optd ("-d");
-		QString dpy  (":99.0");
+		QString dpy  (":99");
 		qApp->processEvents();
 		qApp->setOverrideCursor ( 
 			Qt::forbiddenCursor 
@@ -1082,7 +1082,7 @@ void XFrame::slotFinish (void) {
 		switch (code.toInt()) {
 		case 0:
 			{
-			QString logFile ("/var/log/XFree86.99.0.log");
+			QString logFile ( TEST_LOG );
 			QString logData = qx (GETLOG,STDOUT,1,"%s",
 				logFile.ascii()
 			);

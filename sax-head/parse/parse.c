@@ -33,13 +33,11 @@ STATUS        : Status: Up-to-date
 #define XF86CONF_HSKEW     0x0200 
 
 #define SIZE               20000
-#define XFree86            "/usr/X11R6/bin/XFree86"
 #define BUF_SIZE           22
 
 /******************
  Prototypes
 ******************/
-int XF86GetVersion(char *name);
 XF86ConfigPtr ReadConfigFile (char *filename); 
 
 /* Files Section... */
@@ -81,7 +79,6 @@ int main (int argc, char *argv[]) {
  char *config = NULL;                    /* config file name */
  XF86ConfigPtr conf;
 
- printf("XFree86 Version: %d\n",XF86GetVersion(argv[0]));
  conf = ReadConfigFile("/etc/X11/XF86Config");
  
  printf("%p\n",conf->conf_flags);
@@ -99,60 +96,6 @@ int main (int argc, char *argv[]) {
 /*---------------------------------------------------------------------------
  Next part is the implementaion of all functions 
 ---------------------------------------------------------------------------*/
-int XF86GetVersion(char *name) {
- char *args[3];
- char param[80]    = "-version";
- char logfile[20]  = "/tmp/xversion";
- char buf[80]      = "";
- char ver[80]      = "";
- char *token       = NULL;
- FILE *handle      = NULL;
- int i,n,version;
-
- token   = (char*)malloc(sizeof(char)*80);
- args[0] = (char*)malloc(strlen(name)+1);
- args[1] = (char*)malloc(strlen(param)+1);
-
- strcpy(args[0],name);
- strcpy(args[1],param);
- args[2] = NULL;
-
- switch(fork()) {
-  case -1:
-  perror("fork");
-  exit(1);
-
-  case 0:
-  // child process...
-  // -----------------
-  freopen(logfile,"w",stderr);
-  execv(XFree86,args);
-
-  default:
-  // parent process...
-  // ------------------
-  wait(NULL);
-  handle = fopen(logfile,"r");
-  fread(&buf,BUF_SIZE,1,handle);
-  fclose(handle);
-  buf[BUF_SIZE+1] = '\0';
-
-  token = strtok(buf," ");
-  token = strtok(NULL," ");
-  token = strtok(NULL," ");
-
-  n = 0;
-  for(i=0;i<strlen(token);i+=2) {
-   ver[n] = token[i];
-   n++;
-  }
-  ver[n]  = '\0';
-  version = atoi(ver);
-  unlink(logfile);
-  return(version);
- }
-}
-
 XF86ConfigPtr ReadConfigFile (char *filename) {
  const char *file = NULL; 
  XF86ConfigPtr conf;
@@ -162,7 +105,7 @@ XF86ConfigPtr ReadConfigFile (char *filename) {
          "%P/etc/X11/%X,%P/lib/X11/%X.%H,%P/lib/X11/%X";
 
  //===================================
- // XFree86 version 4.1 or higher...
+ // X11 version 4.1 or higher...
  //-----------------------------------
  if (!(file = (char*)xf86openConfigFile (CONFPATH, filename, NULL))) {
   fprintf (stderr, "Unable to open config file\n");

@@ -147,7 +147,6 @@ STATUS        : Status: Up-to-date
 #define DEMO            "/usr/X11R6/lib/sax/tools/demo.sh" 
 #define XQUERY          "/usr/X11R6/lib/sax/tools/xquery"
 #define XRUN            "/usr/X11R6/lib/sax/xrun.pl"
-#define XFREE86         "/usr/X11R6/bin/XFree86"
 #define XVERSION        "/usr/X11R6/lib/sax/api/tools/getversion"
 #define GETPROFILE      "/usr/X11R6/lib/sax/api/tools/getprofile"
 #define GETCONFIG       "/usr/X11R6/lib/sax/api/tools/getconfig"
@@ -168,6 +167,12 @@ STATUS        : Status: Up-to-date
 #define XSET            "/usr/X11R6/bin/xset"
 #define XSETROOT        "/usr/X11R6/bin/xsetroot"
 #define NV_INSTALLER    "/usr/bin/nvidia-installer"
+
+#ifdef XORG_LOADER
+#define TEST_LOG        "/var/log/Xorg.99.log"
+#else
+#define TEST_LOG        "/var/log/XFree86.99.log"
+#endif
 
 //==============================
 // Init files...

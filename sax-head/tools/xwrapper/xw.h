@@ -30,7 +30,6 @@ STATUS        : Status: Up-to-date
 #define  XScreenFile "/usr/X11R6/lib/sax/tools/screen"
 #define  XBanner     "/usr/X11R6/bin/xbanner"
 #define  XLook       "/usr/X11R6/lib/sax/tools/xlook"
-#define  XFree86     "/usr/X11R6/bin/XFree86"
 #define  TWM         "/usr/X11R6/bin/twm"
 #define  FVWM        "/usr/X11R6/lib/sax/tools/wmstart"
 #define  XIDLE       "/usr/X11R6/lib/sax/xapi"
@@ -38,6 +37,12 @@ STATUS        : Status: Up-to-date
 #define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc.sax"
 #define  TDOMAIN     "/usr/share/locale"
 #define  DISPSIZE    255
+
+#ifdef XORG_LOADER
+#define  XLOADER     "/usr/X11R6/bin/Xorg"
+#else
+#define  XLOADER     "/usr/X11R6/bin/XFree86"
+#endif
 
 struct mirror {
 	int x1,y1,width,height;

@@ -47,7 +47,7 @@ MsgDetect MonitorGetData (void) {
 	}
 	sprintf(display.model,hd->model);
 	sprintf(display.vendor,vend_id2str(hd->vendor.id));
-	if (strcmp (display.vendor,"0000") == NULL) {
+	if (strcmp (display.vendor,"0000") == 0) {
 		sprintf(display.vendor,"Generic");
 	}
     //printf("+++ %s\n",hd->id);

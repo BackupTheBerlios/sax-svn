@@ -13,7 +13,6 @@ LIBDIR = /usr/lib/perl5/5.6.0/i586-linux/auto/XFree
 MODDIR = /usr/lib/perl5/5.6.0/XFree
 
 all:
-	cp Makefile Makefile.Linux
 	@echo "compiling C stuff..."
 	gcc -O2 parse.c -o parse -L/usr/X11R6/lib -L/usr/X11R6/lib64 \
 		-I/usr/X11R6/include \
@@ -25,7 +24,6 @@ all:
 
 	@echo "generating Makefile..."
 	perl Makefile.PL
-	touch *
 
 	@echo "compiling XFree perl stuff..."
 	make
@@ -35,7 +33,6 @@ all:
 	rm -f XFree_wrap.*
 	rm -f XFree.bs
 	rm -f Makefile
-	mv Makefile.Linux Makefile
 
 install:
 	install -d -m 755 ${LIBDIR} ${MODDIR}
@@ -45,3 +42,4 @@ install:
 
 clean:
 	rm -rf blib/
+	rm -rf parse

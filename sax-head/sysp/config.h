@@ -41,7 +41,7 @@ STATUS        : Status: Up-to-date
 #define TEXT_3D           "Do you want to enable 3D for this card ?"
 #define TMP_CONFIG        "/tmp/sysdata"
 #define XW_LOG            "/tmp/xwlog"
-#define XFree86           "/usr/X11R6/lib/sax/xw.pl"
+#define XWRAPPER          "/usr/X11R6/lib/sax/xw.pl"
 #define PROBE             "-probeonly"
 #define CONFIG            "-xf86config"
 #define BLANK             "-blank"
@@ -78,6 +78,14 @@ STATUS        : Status: Up-to-date
 #define DIAG              "/usr/X11R6/lib/sax/sysp/script/diag.pl"
 #define GETVENDOR         "/usr/X11R6/lib/sax/sysp/script/vendor.pl"
 #define VBIOS             "/usr/X11R6/lib/sax/sysp/script/vbios.pl"
+
+#ifdef XORG_LOADER
+#define  LOADER_NAME      "Xorg"
+#define  MODULE_VENDOR    "X.Org Foundation"
+#else
+#define  LOADER_NAME      "XFree86"
+#define  MODULE_VENDOR    "The XFree86 Project"
+#endif
 
 #endif
 

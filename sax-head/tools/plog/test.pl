@@ -2,7 +2,12 @@
 
 use PLogData;
 
-$ptr = ParseLog("/var/log/XFree86.99.log");
+$logfile = $ARGV[0];
+if (! -f $logfile) {
+	die "PlogData: $!";
+}
+
+$ptr = ParseLog ($logfile);
 $mem = GetVideoRam($ptr);
 print "$mem\n";
 

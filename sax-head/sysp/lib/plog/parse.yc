@@ -21,8 +21,11 @@ int ActClk      = 0;
 int ParseError  = 0;
 str ErrorString = ""; 
 
-struct LOGSTRUCT detect[200]; int detectindex = 0;
-struct CLKSTRUCT clocks[200]; int clocksindex = 0;
+int detectindex = 0;
+int clocksindex = 0;
+
+struct LOGSTRUCT detect[200];
+struct CLKSTRUCT clocks[200];
 
 
 /*----FUNCTIONS-----------*/
@@ -103,7 +106,4 @@ Clocks   : FLOAT          { clk($1); }
 
 %%
 
-
 #include "lex.yy.c"
-
-

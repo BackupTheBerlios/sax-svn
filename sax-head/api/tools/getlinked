@@ -20,10 +20,13 @@ sub LinkConfiguration {
 # 
 	my $final  = "/etc/X11/XF86Config";
 	my $save   = "/etc/X11/XF86Config.saxsave";
-	my $server = "/usr/X11R6/bin/XFree86";
+	my $server = "/usr/X11R6/bin/Xorg";
 	my $new    = "/var/cache/sax/files/XF86Config";
 	my $ref    = "/var/cache/sax/files/XF86Config.first";
 
+	if (! -f $server) {
+		$server = "/usr/X11R6/bin/XFree86";
+	} 
 	if (-f $final) {
 		qx (cp $final $save);
 	}

@@ -170,7 +170,7 @@ int main(int argc,char *argv[]) {
 			data = freopen (logfile,"w",stderr );
 			setvbuf ( data,(char*)NULL,_IONBF,0 );
 		}
-		execv (XFree86,args);
+		execv (XLOADER,args);
 	break;
 	default:
 		// ...

@@ -169,7 +169,7 @@ void Scan3D::Scan (void) {
 		if (vendor == "NVIDIA Corporation") {
 			flag = "NVReal";
 		}
-		if (vendor == "The XFree86 Project") {
+		if (vendor == MODULE_VENDOR) {
 			flag = "NVDummy";
 		}
 		}

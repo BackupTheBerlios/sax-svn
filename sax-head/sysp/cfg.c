@@ -301,7 +301,7 @@ void XF86ConfigFile::SetSectionID (int nr) {
 void XF86ConfigFile::CallXF86Loader (str file) {
 	int dpy  = GetDisplay();
 	str scr  ; sprintf(scr,":%d",dpy);
-	str log  ; sprintf(log,"/var/log/XFree86.%d.log",dpy);
+	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,dpy);
 	str lock ; sprintf(lock,"/tmp/.X%d-lock",dpy);
 	MsgDetect *parse = NULL;
 	Display   *disp  = NULL;
@@ -311,7 +311,7 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 
 	unlink(log);
 	string proc = qx(
-		XFree86,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
+		XWRAPPER,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
 	);
 	disp = XOpenDisplay (scr);
 	if (disp) {

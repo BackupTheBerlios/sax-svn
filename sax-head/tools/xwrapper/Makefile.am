@@ -9,4 +9,5 @@ xw_LDFLAGS = \
 	-lX11 -lXext -lXmu -lm -lXft
 
 xw_CFLAGS = `/usr/X11R6/bin/xft-config --cflags`
+xw_CFLAGS += `../check_loader.sh`
 xw_LDADD = -lXinerama

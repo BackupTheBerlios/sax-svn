@@ -54,7 +54,7 @@ all:
 	# /.../
 	# building config parser and system profiler...
 	# ---------------------------------------------
-	${MAKE} -C ./parse all
+	${MAKE} -C ./parse -f Makefile.Linux all
 	${MAKE} -C ./sysp  all
 
 	# building GUI and tools...

@@ -689,6 +689,9 @@ sub LinkConfiguration {
 	my $save   = "/etc/X11/XF86Config.saxsave";
 	my $server = "/usr/X11R6/bin/XFree86";
 
+	if (! -f $server) {
+		$server = "/usr/X11R6/bin/Xorg";
+	}
 	if (-f $final) {
 		qx(cp $final $save);
 	}
