@@ -1,3 +1,4 @@
+# translation of sax.po to
 # translation of sax.it.po to
 # translation of sax.it.po to
 # translation of sax.it.po to
@@ -6,13 +7,13 @@
 # Italian message file for sax2 (sax.it).
 # Copyright (C) SuSE GmbH, 2000.
 # Federico Cozzi <federico.cozzi@sns.it>, 2002.
-# Franca Delcarlo <francd@attglobal.net>, 2000,2003.
+# Franca Delcarlo <francd@attglobal.net>, 2000,2003, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.it\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-09-16 22:26+0200\n"
+"PO-Revision-Date: 2004-03-31 12:53+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,24 +36,23 @@ msgstr "con"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Relativo"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Interrompi"
+msgstr "Assoluto"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -88,7 +88,7 @@ msgstr "Layout aggiuntivo/i"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Vari"
 
 #. Maximum length: 60  characters
 msgid "Layout"
@@ -156,7 +156,7 @@ msgstr "Double button click: Done"
 
 #. Maximum length: 40  characters
 msgid "Wheel is moving..."
-msgstr "Rotelina si muove..."
+msgstr "Rotellina si muove..."
 
 #. Maximum length: 40  characters
 msgid "Button pressed..."
@@ -446,8 +446,8 @@ msgid ""
 "needed for the selected layout."
 msgstr ""
 "<b>Il presente layout e modello non si coniugano bene</b><hr>Questo è solo "
-"un avviso ma assicuratevi che il modello della vostra tastriera è in grado "
-"di mappare tutti i tasti richiesti per il layout selezionato."
+"un avviso ma assicuratevi che il modello della vostra tastiera è in grado di "
+"mappare tutti i tasti richiesti per il layout selezionato."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
@@ -516,9 +516,16 @@ msgid ""
 "location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
 "XFree86/nvidia-installer-HOWTO</b>"
 msgstr ""
+"<b>Impossibile abilitare l'accelerazione OpenGL</b><hr>Per attivare il "
+"sottosistema 3D per la scheda dovete prima installare il driver commerciale "
+"di nVidia. Installate il driver tramite <b>YaST Online Update</b> e "
+"selezionate la patch di driver di nVidia.<br><br>Se avete già installato il "
+"driver tramite YaST Online Update ed in seguito disinstallato, dovete "
+"installare il driver manualmente. Le istruzioni da seguire sono reperibili "
+"sotto:<br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/ "
+"nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -526,34 +533,32 @@ msgid ""
 "XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do "
 "you want to continue?</b>"
 msgstr ""
-"<b>Impossibile disabilitare accelerazione OpenGL</b><hr>Il sottosistema 3D "
-"si basa sui driver commerciali di nVidia. Per disabilitare 3D dovete "
-"disinstallare il driver tramite l'installer di nVidia. Questo processo "
-"ripristinerà il driver originario XFree86 che non fornisce accelerazione "
-"hardware 3D."
+"<b>Disabilita accelerazione OpenGL</b><hr>Il sottosistema 3D si basa sul "
+"driver commerciale di nVidia. SaX2 richiede che venga disinstallato il "
+"driver ricorrendo all'installer di nVidia. Questo processo ripristinerà il "
+"driver originario XFree86 che non fornisce accelerazione hardware 3D."
+"<br><br><b>Continuare?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
 msgstr "Dischetto di utilità..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Inserire dischetto</b><hr>Inserite il dischetto di utilità del monitor "
-"fornito dal produttore"
+"<b>Inserire CD o dischetto</b><hr>Inserite il dischetto o CD di utilità del "
+"monitor fornito dal produttore."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Errore di lettura</b><hr>Impossibile leggere dal dischetto. Il dischetto "
-"potrebbe essere danneggiato, oppure le file info sul dischetto sono stati "
-"formatati in modo errato."
+"<b>Errore di lettura</b><hr>Impossibile leggere dal dischetto o CD. La causa "
+"potrebbe essere un supporto dati danneggiato o file info formatati in modo "
+"errato sul supporto dati."
 
 #. RTF text: no limit
 msgid ""
@@ -726,8 +731,8 @@ msgid ""
 msgstr ""
 "<b>Risoluzione selezionata non disponibile</b><hr>La risoluzione selezionata "
 "non è valida per l'intervallo di sincr. dello schermo. Verificate se avete "
-"selezionato il modello di schermo correttooppure selezionate una risoluzione "
-"inferiore di:"
+"selezionato il modello di schermo corretto oppure selezionate una "
+"risoluzione inferiore di:"
 
 #. RTF text: no limit
 msgid ""
@@ -982,7 +987,7 @@ msgid ""
 msgstr ""
 "<b>Ultimo passo:</b><hr>L'ultimo passo consiste nel salvare la nuova "
 "configurazione. Tenete presente che la configurazione si basa sul<i>frame "
-"buffer</i> e dovete prima riavviare il vostro sistema per applicarele "
+"buffer</i> e dovete prima riavviare il vostro sistema per applicarle "
 "modifiche apportate alla impostazione della risoluzione e/o colore."
 
 #. RTF text: no limit
@@ -992,7 +997,7 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>Suggerimento di SaX2</b><hr>Il sistema grafico attualmente in uso si basa "
-"sulle impostazioni consigliate da SaX2. Se queste impostazioni va benefate "
+"sulle impostazioni consigliate da SaX2. Se queste impostazioni va bene fate "
 "clic su <b>OK</b>, in caso contrario modificate la configurazione."
 
 #. Dynamic length: Please do not oversize key up to 30%
@@ -1242,14 +1247,12 @@ msgid "Remove selected monitor"
 msgstr "Rimuovi il mouse selezionato"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "&Proprietà..."
+msgstr "Proprietà..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "&Opzioni..."
+msgstr "&Opzioni"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1366,7 +1369,7 @@ msgstr "<big><b>Stato AccessX attualmente configurato</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-msgstr "<big><b>Stato attuale 3D/OpenGL</b></big<hr>"
+msgstr "<big><b>Stato attuale 3D/OpenGL</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
@@ -1566,9 +1569,8 @@ msgid "&Port"
 msgstr "&Porta"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Modalità:"
+msgstr "&Modalità"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -2488,7 +2490,7 @@ msgstr "Crtl e Shift cambiano gruppo "
 
 #. RTF text: no limit
 msgid "Alt+Shift changes group"
-msgstr "Altl + Shift cambiano gruppo"
+msgstr "Alt + Shift cambiano gruppo"
 
 #. RTF text: no limit
 msgid "Press Right Control to choose 3rd level"
@@ -2512,7 +2514,7 @@ msgstr "Hyper è mappato su tasti Win"
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr "Premere tasto Win destro per selezionare il terzo livell"
+msgstr "Premere tasto Win destro per selezionare il terzo livello"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
@@ -2549,16 +2551,3 @@ msgstr "Premere il tasto menu per selezionare il terzo livello"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Il tasto meta è mappato su tasti Win."
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to use the commercial driver from nVidia. Please "
-#~ "download the nVidia installer from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. After you have installed the driver you can enable "
-#~ "3D with SaX2."
-#~ msgstr ""
-#~ "<b>Driver ufficiale NVidia non installato</b><hr>Per abilitare il "
-#~ "sottosistema 3D per questa scheda servono i pacchetti ufficiali diNVidia. "
-#~ "Scaricate prima l'installer di nVidia dal server web di nVidia <i>(http://"
-#~ "www.nvidia.com)</i>. Dopo aver installato il driver potrete abilitare il "
-#~ "3D con SaX2."
