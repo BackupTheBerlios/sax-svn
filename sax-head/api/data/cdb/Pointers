@@ -414,9 +414,8 @@ Logitech:Cordless Trackman FX (USB) {
 
 Logitech:TrackMan Marble FX (PS/2) {
  Driver       = mouse
- Protocol     = MouseManPlusPS/2
+ Protocol     = ExplorerPS/2
  Device       = /dev/psaux
- RawOption    = "XAxisMapping" "4 5","YAxisMapping" "6 7","EmulateWheelInertia" "12"
  EmulateWheel = 4
  Buttons      = 4
 }
