@@ -488,6 +488,9 @@ void PrintMouseData(ScanMouse m) {
 		data = m.Pop();
 		strcpy (devs[i],data.device);
 		strcpy (profiles[i],data.profile);
+		if (i == m.Count()) {
+			strcpy (mouseName,data.name);
+		}
 		if (strcmp(data.profile,"<undefined>") == 0) {
 			if (data.wheel > wheelCount) {
 				wheelCount = data.wheel;
