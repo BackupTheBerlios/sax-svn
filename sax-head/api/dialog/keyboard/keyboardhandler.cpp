@@ -98,6 +98,32 @@ void XKeyboard::resetPage (int reload) {
 		} else {
 		workingKeyboard.setPair ("XkbVariant", "");
 		}
+		// 5) XkbOptions LeftAlt RightAlt ScrollLock RightCtl
+		if (mKeyboardOptions["XkbOptions"]) {
+		workingKeyboard.setPair (
+			"XkbOptions", mKeyboardOptions["XkbOptions"]
+		);
+		}
+		if (mKeyboardOptions["LeftAlt"]) {
+		workingKeyboard.setPair (
+			"LeftAlt", mKeyboardOptions["LeftAlt"]
+		);
+		}
+		if (mKeyboardOptions["RightAlt"]) {
+		workingKeyboard.setPair (
+			"RightAlt", mKeyboardOptions["RightAlt"]
+		);
+		}
+		if (mKeyboardOptions["ScrollLock"]) {
+		workingKeyboard.setPair (
+			"ScrollLock", mKeyboardOptions["ScrollLock"]
+		);
+		}
+		if (mKeyboardOptions["RightCtl"]) {
+		workingKeyboard.setPair (
+			"RightCtl", mKeyboardOptions["RightCtl"]
+		);
+		}
 	}
 
 	mStatus -> clear();
@@ -530,17 +556,12 @@ void XKeyboard::setupTop ( void ) {
 	// is created to configure options for the selected
 	// keyboard type
 	// ---
-	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
-	XWrapPointer<XData> workingKeyboard (
-		mFiles["sys_KEYBOARD"]->getDevice (0)
-	);
-	// ...
 	// lookup AutoRepeat value to init slider
 	// values within the options dialog
 	// ---
-	if (workingKeyboard["AutoRepeat"]) {
+	if (mKeyboardOptions["AutoRepeat"]) {
 		XStringList valList;
-		valList.setText (workingKeyboard["AutoRepeat"]);
+		valList.setText (mKeyboardOptions["AutoRepeat"]);
 		valList.setSeperator (" ");
 		QList<char> kbd = valList.getList();
 		mCurrentDelay = atoi(kbd.at(0));
@@ -556,12 +577,12 @@ void XKeyboard::setupTop ( void ) {
 	// init all XKB values in the key-mapping dialog
 	// overwrite the default setup with it
 	// ---
-	for (int i=0;i<6;i++) {
+	for (int i=0;i<=6;i++) {
 		mXkbOption[i]->setCurrentItem (0);
 	}
-	if (workingKeyboard["XkbOptions"]) {
+	if (mKeyboardOptions["XkbOptions"]) {
 		XStringList optList;
-		optList.setText (workingKeyboard["XkbOptions"]);
+		optList.setText (mKeyboardOptions["XkbOptions"]);
 		optList.setSeperator (",");
 		QList<char> opt = optList.getList();
 		QListIterator<char> it (opt);
@@ -588,24 +609,24 @@ void XKeyboard::setupTop ( void ) {
 			}
 		}
 	}
-	if (workingKeyboard["LeftAlt"]) {
+	if (mKeyboardOptions["LeftAlt"]) {
 		mXkbOption[2]->setCurrentItem (
-		getItem (mXkbOption[2],workingKeyboard["LeftAlt"])
+		getItem (mXkbOption[2],mKeyboardOptions["LeftAlt"])
 		);
 	}
-	if (workingKeyboard["RightAlt"]) {
+	if (mKeyboardOptions["RightAlt"]) {
 		mXkbOption[3]->setCurrentItem (
-		getItem (mXkbOption[3],workingKeyboard["RightAlt"])
+		getItem (mXkbOption[3],mKeyboardOptions["RightAlt"])
 		);
 	}
-	if (workingKeyboard["ScrollLock"]) {
+	if (mKeyboardOptions["ScrollLock"]) {
 		mXkbOption[4]->setCurrentItem (
-		getItem (mXkbOption[3],workingKeyboard["ScrollLock"])
+		getItem (mXkbOption[3],mKeyboardOptions["ScrollLock"])
 		);
 	}
-	if (workingKeyboard["RightCtl"]) {
+	if (mKeyboardOptions["RightCtl"]) {
 		mXkbOption[5]->setCurrentItem (
-		getItem (mXkbOption[3],workingKeyboard["RightCtl"])
+		getItem (mXkbOption[3],mKeyboardOptions["RightCtl"])
 		);
 	}
 }
@@ -651,7 +672,7 @@ void XKeyboard::slotTopOk ( void ) {
 	QString* LeftAlt    = NULL;
 	QString* RightAlt   = NULL;
 	QString* RightCtl   = NULL;
-	for (int i=0;i<6;i++) {
+	for (int i=0;i<=6;i++) {
 		QString selection = mXkbOption[i]->currentText();
 		QDictIterator<char> it (mOptionHash);
 		for (; it.current(); ++it) {
@@ -665,21 +686,18 @@ void XKeyboard::slotTopOk ( void ) {
 		}
 		switch (i) {
 		case 0:
-			if (! XkbOptions) {
-				XkbOptions = new QString (selection);
-			} else {
-				XkbOptions -> sprintf ("%s,%s",
-					XkbOptions->ascii(),selection.ascii()
-				);
-			}
-		break;
 		case 1:
+		case 6:
 			if (! XkbOptions) {
 				XkbOptions = new QString (selection);
 			} else {
-				XkbOptions -> sprintf ("%s,%s",
-					XkbOptions->ascii(),selection.ascii()
-				);
+				if (XkbOptions->isEmpty()) {
+					XkbOptions -> sprintf ("%s",selection.ascii());
+				} else {
+					XkbOptions -> sprintf ("%s,%s",
+						XkbOptions->ascii(),selection.ascii()
+					);
+				}
 			}
 		break;
 		case 2:
@@ -710,19 +728,19 @@ void XKeyboard::slotTopOk ( void ) {
 		mFiles["sys_KEYBOARD"]->getDevice (0)
 	);
 	if (XkbOptions) {
-		workingKeyboard.setPair ("XkbOptions",XkbOptions->ascii());
+		mKeyboardOptions.insert ("XkbOptions",XkbOptions->ascii());
 	}
 	if (LeftAlt) {
-		workingKeyboard.setPair ("LeftAlt",LeftAlt->ascii());
+		mKeyboardOptions.insert ("LeftAlt",LeftAlt->ascii());
 	}
 	if (RightAlt) {
-		workingKeyboard.setPair ("RightAlt",RightAlt->ascii());
+		mKeyboardOptions.insert ("RightAlt",RightAlt->ascii());
 	}
 	if (ScrollLock) {
-		workingKeyboard.setPair ("ScrollLock",ScrollLock->ascii());
+		mKeyboardOptions.insert ("ScrollLock",ScrollLock->ascii());
 	}
 	if (RightCtl) {
-		workingKeyboard.setPair ("RightCtl",RightCtl->ascii());
+		mKeyboardOptions.insert ("RightCtl",RightCtl->ascii());
 	}
 	// ...
 	// save the values of the auto repeat sliders, if one
@@ -736,7 +754,7 @@ void XKeyboard::slotTopOk ( void ) {
 		autoRepeat->sprintf("%d %d",
 			mDelay->value(),mRepeat->value()
 		);
-		workingKeyboard.setPair (
+		mKeyboardOptions.insert (
 			"AutoRepeat",autoRepeat->ascii()
 		);
 	}
@@ -841,13 +859,9 @@ bool XKeyboard::apply ( void ) {
 	}
 	}
 	// 5) options
-	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
-	XWrapPointer<XData> workingKeyboard (
-		mFiles["sys_KEYBOARD"]->getDevice (0)
-	);
-	if (workingKeyboard["XkbOptions"]) {
-	if (! workingKeyboard["XkbOptions"].isEmpty()) {
-		XkbOptions = new QString (workingKeyboard["XkbOptions"]);
+	if (mKeyboardOptions["XkbOptions"]) {
+	if (! QString(mKeyboardOptions["XkbOptions"]).isEmpty()) {
+		XkbOptions = new QString (mKeyboardOptions["XkbOptions"]);
 	}
 	}
 	QString optm ("-model");

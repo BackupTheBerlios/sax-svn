@@ -67,6 +67,7 @@ class XKeyboard : public XTemplate {
 	QDict<char>   mLayoutHash;
 	QDict<char>   mModelHash;
 	QDict<char>   mOptionHash;
+	QDict<char>   mKeyboardOptions;
 	int           mCurrentDelay;
 	int           mCurrentKrate;
 	int           mViewStatus;
