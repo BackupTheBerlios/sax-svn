@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Jul  1 14:51:48 2003
+# Author: Marcus Schaefer <sax@suse.de>, Tue Jul  1 14:58:47 2003
 #
 # Template for monitor data
 # --------------------------
@@ -19364,6 +19364,15 @@ KDS:VSX-7  {
 }
 
 #==============================================
+# XF-70
+#----------------------------------------------
+KDS:XF-70  {
+ DDC=STC0777
+ Hsync=30-70
+ Vsync=50-160
+}
+
+#==============================================
 # DATA SYSTEMS AVITRON AV-5T
 #----------------------------------------------
 KOREA:DATA SYSTEMS AVITRON AV-5T  {
@@ -31494,6 +31503,14 @@ SONY:17SE  {
 SONY:17SE II  {
  Hsync=31-85
  Vsync=48-150
+}
+
+#==============================================
+# 17SE1T
+#----------------------------------------------
+SONY:17SE1T  {
+ Hsync=31-82
+ Vsync=50-150
 }
 
 #==============================================
