@@ -1089,7 +1089,7 @@ sub ApiImportLayout {
 		for ($i=1;$i<@list;$i++) {
 			my $driver = $api{Mouse}{"$count Driver"};
 			my $device = $api{Mouse}{"$count Device"};
-			if ((! defined $entity{$driver}{$device}) || ($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event\//)) {
+			if ((! defined $entity{$driver}{$device}) || ($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/)) {
 				my $l = "ServerLayout";
 				$var{$l}{all}{InputDevice}{$count}{id}    = $list[$i];
 				$var{$l}{all}{InputDevice}{$count}{usage} = "SendCoreEvents";
