@@ -188,7 +188,7 @@ if (VERBOSE==255)
  printf("\n\nMake sure that none of the above exceeds the specifications\n");
  printf("of your hardware. If one does then DO NOT use the calculated\n");
  printf("mode line values, because bad settings can damage your system!\n\n");
- printf("If they are OK then use the line below in your XF86Config file:\n\n");
+ printf("If they are OK then use the line below in your xorg.conf file:\n\n");
 }
  
 printf("%d\n%d\n",(int)(DCF*1e3/HFL),(int)(DCF*1e6/(HFL*VFL)));     

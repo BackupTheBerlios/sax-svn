@@ -17,7 +17,7 @@ DOTS="/usr/X11R6/lib/sax/tools/dots"
 PCI="/usr/X11R6/lib/sax/pci.pl"
 XFT="/var/cache/xfine/*"
 ERR="/var/log/SaX.log"
-REF="/var/cache/sax/files/XF86Config.first"
+REF="/var/cache/sax/files/xorg.conf.first"
 CVSB="/usr/X11R6/lib/sax/svnbuild"
 
 #==================================
@@ -322,7 +322,7 @@ echo "             : about detection, startup and configuration."       >> $ERR
 echo "             : There are three parts of logging:"                 >> $ERR
 echo "             : ---"                                               >> $ERR
 echo "             : 1) INIT     ( detection, 3D )"                     >> $ERR
-echo "             : 2) STARTUP  ( XF86Config, X11 log, glxinfo )"      >> $ERR
+echo "             : 2) STARTUP  ( xorg.conf, X11 log, glxinfo )"       >> $ERR
 echo "             : 3) CONFIG   ( config actions )"                    >> $ERR
 echo "             : ---"                                               >> $ERR
 echo "             :"                                                   >> $ERR

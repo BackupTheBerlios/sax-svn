@@ -11,7 +11,7 @@ gehalten. Das Einlesen und verarbeiten der Modeline "Anderungsinformation
 wird durch das ISaX Modul implementiert. Ist die Variable 
 \textbf{ImportXFineCache} in der ISaX Eingabedatei gesetzt so werden
 die Daten in \textit{/var/cache/xfine} verarbeitet und in
-der X11 Konfigurationsdatei \textbf{/etc/X11/XF86Config} gespeichert.
+der X11 Konfigurationsdatei \textbf{/etc/X11/xorg.conf} gespeichert.
 XFine2 wird aus \textbf{xapi} heraus gestartet.
 
 \section{Name und Format der "Anderungsdateien}
@@ -37,8 +37,8 @@ von SaX2 oder YaST2 in folgenden F"allen zum Einsatz kommen:
 \end{itemize}
 Als Referenzkonfiguration dient in beiden F"allen die zuvor
 erzeuge Konfigurationsdatei\\
-\textit{/var/cache/sax/files/XF86Config}
-die beim Speichern nach \textit{/etc/X11/XF86Config} kopiert wird.
+\textit{/var/cache/sax/files/xorg.conf}
+die beim Speichern nach \textit{/etc/X11/xorg.conf} kopiert wird.
 Die Referenzkonfiguration wird "uber das Skript \textbf{getconfig}
 erzeugt. Dieses Skript erzeugt aus den GUI Datendateien im Verzeichnis
 \textit{/var/cache/sax/files/} eine ISaX Eingabedatei und ruft den
@@ -49,5 +49,5 @@ f"ugt \textbf{xapi} nur noch die Zeile:
 \end{verbatim}
 in die Datei: \textit{/var/cache/sax/files/desktop} ein.
 Anschlie"send wird erneut \textbf{getconfig} aufgerufen und damit werden
-die Modeline-"Anderungsinformationen dauerhaft in der XF86Config
+die Modeline-"Anderungsinformationen dauerhaft in der xorg.conf
 gespeichert.

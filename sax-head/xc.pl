@@ -507,7 +507,7 @@ sub init {
 	$spec{HWFlag}      = "/var/cache/sax/files/hardware.chg";
 	$spec{LogFile}     = "/var/log/SaX.log";
 	$spec{XpidFile}    = "/var/log/SaX.pid";
-	$spec{AutoConf}    = "/tmp/$TmpDir/XF86Config";
+	$spec{AutoConf}    = "/tmp/$TmpDir/xorg.conf";
 	$spec{Xmsg}        = "/var/log/xlog";
 	$spec{X}           = "/usr/X11R6/lib/sax/xw.pl";
 	$spec{Xapi}        = "/usr/X11R6/lib/sax/xapi";
@@ -682,11 +682,11 @@ sub Logger {
 sub LinkConfiguration {
 #-----------------------------------------------------
 # this function is called to copy the temporar config
-# file to /etc/X11/XF86Config and create the symbolic 
+# file to /etc/X11/xorg.conf and create the symbolic 
 # X links
 # 
-	my $final  = "/etc/X11/XF86Config";
-	my $save   = "/etc/X11/XF86Config.saxsave";
+	my $final  = "/etc/X11/xorg.conf";
+	my $save   = "/etc/X11/xorg.conf.saxsave";
 	my $server = "/usr/X11R6/bin/XFree86";
 
 	if (! -f $server) {
@@ -809,7 +809,7 @@ sub Kill {
 #---[ headerOK ]------#
 sub headerOK {
 #-------------------------------------------
-# check the XF86Config header if the given
+# check the xorg.conf header if the given
 # file was created using SaX2 / ISaX
 #
 	my $file = $_[0];
@@ -868,7 +868,7 @@ sub HeaderOK {
 # create from SaX2/ISaX... otherwhise this
 # file shouldn't be read
 #
-	my $config = "/etc/X11/XF86Config";
+	my $config = "/etc/X11/xorg.conf";
 	open (FD,$config) || return 0;
 	my $check = <FD>;
 	chomp ($check);

@@ -2,7 +2,7 @@
 # Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Marcus Schaefer <sax@suse.de>, 2002
-# xapi script: create XF86Config configuration file using ISaX
+# xapi script: create xorg.conf configuration file using ISaX
 # --
 #
 # CVS ID:
@@ -33,7 +33,7 @@ sub init {
 	$spec{CDir}  = "/var/cache/sax/files";
 	$spec{ISaX}  = "/usr/X11R6/lib/sax/tools/isax";
 
-	qx (rm -f $spec{CDir}/XF86Config);
+	qx (rm -f $spec{CDir}/xorg.conf);
 }
 
 #---[ createSecureDir ]-----#
@@ -59,8 +59,8 @@ sub cleanTmp {
 	qx (rm -rf /tmp/isax*);
 }
 
-#---[ createXF86Config ]-----#
-sub createXF86Config {
+#---[ createXOrgConfig ]-----#
+sub createXOrgConfig {
 #----------------------------------------------
 # create configuration file using ISaX
 #
@@ -138,9 +138,9 @@ sub createXF86Config {
 	# /.../
 	# call the ISaX now...
 	# ---
-	qx ($spec{ISaX} -f $secure/apidata -c $secure/XF86Config);
-	if (-f "$secure/XF86Config") {
-		qx (cp $secure/XF86Config $spec{CDir}/XF86Config);
+	qx ($spec{ISaX} -f $secure/apidata -c $secure/xorg.conf);
+	if (-f "$secure/xorg.conf") {
+		qx (cp $secure/xorg.conf $spec{CDir}/xorg.conf);
 	}
 	cleanTmp();
 }
@@ -150,7 +150,7 @@ sub createXF86Config {
 # Run... 
 #-------------------------------------
 init();
-createXF86Config();
+createXOrgConfig();
 for (my $i=0;$i<3;$i++) {
 	qx(/bin/sync);
 }

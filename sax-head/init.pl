@@ -625,7 +625,7 @@ sub init {
 			my $result;
 			if (($HWScanNeeded) || 
 				(-f "$spec{DbmDir}/hardware.chg") || 
-				(! -f "/etc/X11/XF86Config")
+				(! -f "/etc/X11/xorg.conf")
 			) {
 				$result = qx (
 				$spec{ISaX} -l $imode -b -plusycp 2>$xapiFile

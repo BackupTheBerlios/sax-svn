@@ -36,12 +36,7 @@ Source1:      sax2_pixmaps.tar.bz2
 Source2:      sax2_nvidia.tar.bz2
 Source3:      sax2.desktop
 NoSource:     2
-%if %{suse_version} < 810
-Patch:        sax2_binmode.dif
-%endif
-Patch2:       sax2_slec.dif
-Patch3:       sax2_date.dif
-Patch4:       sax2_monitor-profile.dif
+Patch:        sax2_monitor-profile.dif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 %if %{suse_version} > 820
 Provides:     sax xfine
@@ -128,13 +123,7 @@ if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
 	fi
 	cp nvidia_drv.o /usr/X11R6/%{_lib}/modules/drivers/
 fi
-%if %{suse_version} < 810
 %patch
-%endif
-%if %{suse_version} <= 820
-%patch3
-%endif
-%patch4
 #=================================================
 # adapt lib environment to currently used %_{lib}
 #-------------------------------------------------
@@ -169,9 +158,6 @@ for i in `find -regex ".*\.\(h\|pm\)"`;do
 )
 done
 test -e /.buildenv && . /.buildenv
-if [ "$BUILD_BASENAME" = "sles8-slec-i386" ];then
-%patch2
-fi
 
 %build
 test -e /.buildenv && . /.buildenv

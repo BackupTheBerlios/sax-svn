@@ -64,8 +64,8 @@ sub main {
 	$var{Xpid}          = "/var/log/SaX.pid";
 	$var{SaXLog}        = "/var/log/SaX.log";
 	$var{LastLog}       = "/var/cache/sax/files/lastlog";
-	$var{ConfigFile}    = "/var/cache/sax/files/XF86Config";
-	$var{FirstConfig}   = "/var/cache/sax/files/XF86Config.first";
+	$var{ConfigFile}    = "/var/cache/sax/files/xorg.conf";
+	$var{FirstConfig}   = "/var/cache/sax/files/xorg.conf.first";
 	$var{StartOptions}  = "/var/cache/sax/files/xapi.opt";
 	$var{Xidle}         = "/usr/X11R6/lib/sax/xapi";
 	$var{XFine}         = "/usr/X11R6/lib/xfine/xfine";

@@ -87,6 +87,14 @@ card. The format is the following:
 .I Card:XxY@VSync
 Example: 0:1024x768@85
 .TP
+--sysconfig
+this option tell SaX2 to import the system wide
+config file even if SaX2 was started from a textconsole
+which normaly will import the SaX2 HW detection data
+.TP
+--fullscreen
+start in fullscreen mode
+.TP
 -i
 This option will disable the use of profiles which are normally applied
 automatically if defined for a specifc card or chipset

@@ -25,7 +25,7 @@ durch YaST2 geforderteten YCP Datenformat.
 Die in der dritten Schicht bereitgestellten Daten zur X11 Konfiguration
 werden beim Speichern der Konfiguration dem ISaX als so genannte 
 Variablen API Datei zur Verf"ugung gestellt. Der ISaX generiert daraus
-dann die finale XF86Config. Das Format und die zur Verfuegung stehenden
+dann die finale xorg.conf. Das Format und die zur Verfuegung stehenden
 Konfigurationsvariablen dieser Variablen API Datei sind im Kapitel 
 ~\ref{cha:api} beschrieben.
 
@@ -103,7 +103,7 @@ xc (X-Configuration) wird repres"antiert durch xc.pl und
       wichtigen Pakete und danach wird in den Level 3 (xapi)
       verzweigt. Die Ausgangsposition zur Konfiguration bildet nun
       die aktuelle Konfiguration gemessen am Inhalt der Datei
-      \textit{/etc/X11/XF86Config}.
+      \textit{/etc/X11/xorg.conf}.
 \item Das Verzweigen in den Level 3 (xapi) bedeutet den Start der 
       graphischen Oberfl"ache. Die Oberfl"ache selbst basiert auf
       den aktuellen Qt Bibliotheken. Je nach dem welche Ausgangsposition

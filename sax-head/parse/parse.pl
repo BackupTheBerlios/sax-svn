@@ -21,8 +21,8 @@ print "ok 1\n";
 # (correspondingly "not ok 13") depending on the success of chunk 13
 # of the test code):
 
-$ptr = XFree::ReadConfigFile("/etc/X11/XF86Config");
-#$ptr = XFree::ReadConfigFile("/suse/ms/XF86Config");
+$ptr = XFree::ReadConfigFile("/etc/X11/xorg.conf");
+#$ptr = XFree::ReadConfigFile("/suse/ms/xorg.conf");
 
 # print "+++ $ptr\n";
 

@@ -5,7 +5,7 @@ use strict;
 #---[ isSecureMiscExtension ]---#
 sub isSecureMiscExtension {
 #----------------------------------------------------
-# check if the XF86Config parser knows about the
+# check if the xorg.conf parser knows about the
 # InputDevice keyword within the files section. If this
 # keyword is present I assume the misc extension to
 # contain the input device security fix which requires

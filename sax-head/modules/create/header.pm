@@ -4,7 +4,7 @@
 # Author: Marcus Schaefer <sax@suse.de>, 2001
 #
 # CreateSections.pm configuration level 2
-# Create the header section of the XF86Config
+# Create the header section of the xorg.conf
 #
 # CVS ID:
 # --------
@@ -14,7 +14,7 @@
 #---[ CreateHeaderSection ]-----#
 sub CreateHeaderSection {
 #---------------------------------------------------
-# create the XF86Config header according to the
+# create the xorg.conf header according to the
 # builder program (SaX2 or ISaX)
 #
 	my $builder = $_[0];

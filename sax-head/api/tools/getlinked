@@ -2,7 +2,7 @@
 # Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Marcus Schaefer <sax@suse.de>, 2002
-# xapi script: install XF86Config and create the links
+# xapi script: install xorg.conf and create the links
 # --
 #
 # CVS ID:
@@ -18,11 +18,11 @@ sub LinkConfiguration {
 # install the config file and create the needed
 # links to startup X successfully
 # 
-	my $final  = "/etc/X11/XF86Config";
-	my $save   = "/etc/X11/XF86Config.saxsave";
+	my $final  = "/etc/X11/xorg.conf";
+	my $save   = "/etc/X11/xorg.conf.saxsave";
 	my $server = "/usr/X11R6/bin/Xorg";
-	my $new    = "/var/cache/sax/files/XF86Config";
-	my $ref    = "/var/cache/sax/files/XF86Config.first";
+	my $new    = "/var/cache/sax/files/xorg.conf";
+	my $ref    = "/var/cache/sax/files/xorg.conf.first";
 
 	if (! -f $server) {
 		$server = "/usr/X11R6/bin/Xorg";

@@ -92,11 +92,11 @@ sub init {
 	# verify option -c is optional...
 	# --------------------------------
 	if (! defined $OutputFile) {
-		$OutputFile = "/etc/X11/XF86Config";
+		$OutputFile = "/etc/X11/xorg.conf";
 	}
 	$init{TmpDir}      = CreateSecureDir(); 
 	$init{Xmode}       = "/usr/X11R6/lib/sax/tools/xmode";
-	$init{ConfigFile}  = "/etc/X11/XF86Config";
+	$init{ConfigFile}  = "/etc/X11/xorg.conf";
 	$init{BinaryFile}  = "/var/cache/sax/files/config";
 	$init{DbmNew}      = "/var/cache/sax/files/config.new";
 	$init{XFineCache}  = "/var/cache/xfine";
@@ -164,7 +164,7 @@ sub ImportConfig {
 
 	if (! defined $ImportBinary) {
 	# /.../
-	# we will read the XF86Config and merge all the
+	# we will read the xorg.conf and merge all the
 	# information into the global hash structure
 	# -------------------------------------------
 	my $cp = XFree::ReadConfigFile($init{ConfigFile});
@@ -750,7 +750,7 @@ sub usage {
 	print "  output\n";
 	print "[ -c | --config < output file > ]\n";
 	print "  set name of output file default is\n";
-	print "  /etc/X11/XF86Config\n";
+	print "  /etc/X11/xorg.conf\n";
 	print "[ -p | --profile < file name > ]\n";
 	print "  set profile to include for this isax call\n";
 	print "  Note:\n";

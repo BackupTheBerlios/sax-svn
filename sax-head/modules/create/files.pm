@@ -4,7 +4,7 @@
 # Author: Marcus Schaefer <sax@suse.de>, 2001
 #
 # CreateSections.pm configuration level 2
-# Create the Files section of the XF86Config
+# Create the Files section of the xorg.conf
 #
 # CVS ID:
 # --------

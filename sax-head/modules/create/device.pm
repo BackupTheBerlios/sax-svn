@@ -4,7 +4,7 @@
 # Author: Marcus Schaefer <sax@suse.de>, 2001
 #
 # CreateSections.pm configuration level 2
-# Create the Device section of the XF86Config
+# Create the Device section of the xorg.conf
 #
 # CVS ID:
 # --------
@@ -152,7 +152,7 @@ sub CreateDeviceSection {
 #---[ prepare_setting ]---#
 sub prepare_setting {
 #-----------------------------------------
-# prepare XF86Config setting....
+# prepare xorg.conf setting....
 #
 	my $setting = $_[0];
 	$setting =~ s/^ +//g; # remove blanks

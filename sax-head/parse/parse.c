@@ -81,7 +81,7 @@ int main (int argc, char *argv[]) {
 	char *config = NULL;                    /* config file name */
 	XF86ConfigPtr conf;
 
-	conf = ReadConfigFile("/etc/X11/XF86Config");
+	conf = ReadConfigFile("/etc/X11/xorg.conf");
  
 	printf("%p\n",conf->conf_flags);
 	printf("%p\n",conf->conf_input_lst);
