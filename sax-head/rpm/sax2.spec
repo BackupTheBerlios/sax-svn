@@ -297,9 +297,9 @@ if [ -d "/usr/man/man3" ];then
 fi
 # sysconfig variables...
 # ----------------------
-FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
-mkdir -p $FILLUP_DIR
-install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
+#FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
+#mkdir -p $FILLUP_DIR
+#install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 # install script variants of xupdate and xkbctrl...
 # --------------------------------------------------
 mv $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl.pl \
@@ -340,10 +340,10 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %suse_update_desktop_file -i %name System SystemSetup
 
 %post
-%{fillup_and_insserv -npY sax}
+#%{fillup_and_insserv -npY sax}
 
 %postun
-%{insserv_cleanup}
+#%{insserv_cleanup}
 #=================================================
 # SaX files...      
 #-------------------------------------------------
@@ -363,7 +363,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-/var/adm/fillup-templates/sysconfig.sax
+#/var/adm/fillup-templates/sysconfig.sax
 /usr/X11R6/share/fvwm/fvwmrc.sax
 /usr/X11R6/%{_lib}/sax/doc/config
 /usr/X11R6/%{_lib}/sax/doc/guitest
