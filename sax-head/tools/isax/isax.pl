@@ -1107,10 +1107,12 @@ sub ConstructInputOptions {
 		foreach my $opt (keys %{$input{InputDevice}{$id}{Option}}) {
 		if (! defined $InputOptions{$opt}) {
 			my $optval = $input{InputDevice}{$id}{Option}{$opt};
-			$option = "$option,\"$opt\" \"$optval\"";
-			$option =~ s/^,//;
-			$input{InputDevice}{$id}{Option}{RawOption} = $option;
-			delete $input{InputDevice}{$id}{Option}{$opt};
+			if ($optval ne "") {
+				$option = "$option,\"$opt\" \"$optval\"";
+				$option =~ s/^,//;
+				$input{InputDevice}{$id}{Option}{RawOption} = $option;
+				delete $input{InputDevice}{$id}{Option}{$opt};
+			}
 		}
 		}
 	}
