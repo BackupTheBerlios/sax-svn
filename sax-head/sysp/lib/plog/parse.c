@@ -404,7 +404,7 @@ void init(MsgDetect *msg,int anz) {
 void trim(char *message) {
  int n=strlen(message);
  char *erg = NULL;
- int i,count;
+ int i,a,count;
 
  for(i=n;i>=0;i--) {
   if ( (message[i] != ' ')    &&
@@ -430,7 +430,7 @@ void trim(char *message) {
   }
  }
  erg = (char*)malloc(sizeof(char)*(n+1));
- for (int a=0;a<n;a++) { erg[a] = '\0'; }
+ for (a=0;a<n;a++) { erg[a] = '\0'; }
  for(i=count;i<n;i++) {
   erg[i-count] = message[i];
  }
