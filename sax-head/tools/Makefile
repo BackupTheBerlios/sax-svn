@@ -12,9 +12,7 @@
 # Variable setup...
 #------------------------------------
 buildroot   = /
-lib_prefix  = lib
-usr_prefix  = ${buildroot}/usr/X11R6
-sax_tools   = ${usr_prefix}/${lib_prefix}/sax/tools
+sax_tools   = ${buildroot}/usr/share/sax/tools
 
 CFLAGS      = -Wall
 VERSION     = 4.8
@@ -53,12 +51,12 @@ build: configure
 	automake --add-missing
 	./configure
 	automake
+	${MAKE} -C ./plog -f Makefile.Linux
 	for i in `ls -1`; do \
-	if ([ -d ./$$i ] && [ $$i != "CVS" ]);then \
+	if ([ -d ./$$i ] && [ $$i != ".svn" ] && [ $$i != "autom4te.cache" ]);then \
 		${MAKE} -C ./$$i all ;\
 	fi \
 	done
-	${MAKE} -C ./plog -f Makefile.Linux
 	${MAKE} -C ./xkbset xkbctrl
 	${MAKE} -C ./xmset xupdate
 
@@ -75,6 +73,7 @@ clean:
 		fi \
 	fi \
 	done
+	${MAKE} -C ./plog -f Makefile.Linux clean
 	rm -f whois/whois
 	rm -f setmode/SetMode
 	rm -f setmode/SecureMode
@@ -100,17 +99,14 @@ clean:
 #------------------------------------
 install:
 	install -d -m 755 ${sax_tools}
-	for i in `find -type f -perm 755 | grep -v libX | grep -v test.pl`;do \
+	for i in `find -type f -perm 755 | grep -v libX | grep -v plog.pl`;do \
 		install -m 755 $$i ${sax_tools} ;\
 	done
 	install -m 644 ./xbanner/demo   ${sax_tools}
 	install -m 644 ./xbanner/screen ${sax_tools}
 	mv ${sax_tools}/isax.pl ${sax_tools}/isax
-	${MAKE} -C ./plog -f Makefile.Linux install \
-		buildroot=${buildroot} lib_prefix=${lib_prefix}
+	${MAKE} -C ./plog DESTDIR=${buildroot} install_vendor
 	rm -f ${sax_tools}/config.status
 	rm -f ${sax_tools}/configure
-	rm -f ${sax_tools}/PLog.so
 	rm -f ${sax_tools}/xw
 	rm -f ${sax_tools}/prepare
-	rm -f ${sax_tools}/plog
