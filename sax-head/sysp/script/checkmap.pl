@@ -38,7 +38,7 @@ sub CheckMap {
 	my $fh = new FileHandle;
 	if ($fh->open("< $kbd")) {
 	while (my $line = <$fh>) {
-		if ($line =~ /^$map.*/) {
+		if ($line =~ /^\Q$map\E.*/) {
 			$ok = 1; last;
 		}		
 	}

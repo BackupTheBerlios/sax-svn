@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Jul 26 11:02:11 2004
+# Author: Marcus Schaefer <sax@suse.de>, Tue Jul 27 14:51:49 2004
 #
 # Template for monitor data
 # --------------------------
@@ -13630,6 +13630,15 @@ GOLDSTAR:78T  {
 GOLDSTAR:78T5  {
  Hsync=30-85
  Vsync=50-120
+}
+
+#==============================================
+# CS788C
+#----------------------------------------------
+GOLDSTAR:CS788C  {
+ Option=DPMS
+ Hsync=30-70
+ Vsync=50-160
 }
 
 #==============================================
@@ -37653,7 +37662,10 @@ VIEWSONIC:E655-2  {
 # E70
 #----------------------------------------------
 VIEWSONIC:E70  {
+ DDC=MEI0C95
+ Option=DPMS
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-160
 }
 
