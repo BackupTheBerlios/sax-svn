@@ -532,21 +532,16 @@ msgstr ""
 "scaricandoli dal server web di nVidia <i>(http://www.nvidia.com)</i> ."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Impossibile abilitare l'accelerazione OpenGL</b><hr>Per attivare il "
-"sottosistema 3D per la scheda dovete prima installare il driver commerciale "
-"di nVidia. Installate il driver tramite <b>YaST Online Update</b> e "
-"selezionate la patch di driver di nVidia.<br><br>Se avete già installato il "
-"driver tramite YaST Online Update ed in seguito disinstallato, dovete "
-"installare il driver manualmente. Le istruzioni da seguire sono reperibili "
-"sotto:<br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/ "
-"nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
 #, fuzzy
@@ -2656,3 +2651,19 @@ msgstr "Premere il tasto menu per selezionare il terzo livello"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Il tasto meta è mappato su tasti Win."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Impossibile abilitare l'accelerazione OpenGL</b><hr>Per attivare il "
+#~ "sottosistema 3D per la scheda dovete prima installare il driver "
+#~ "commerciale di nVidia. Installate il driver tramite <b>YaST Online "
+#~ "Update</b> e selezionate la patch di driver di nVidia.<br><br>Se avete "
+#~ "già installato il driver tramite YaST Online Update ed in seguito "
+#~ "disinstallato, dovete installare il driver manualmente. Le istruzioni da "
+#~ "seguire sono reperibili sotto:<br><br><b>ftp://ftp.suse.com/pub/suse/i386/"
+#~ "supplementary/X/XFree86/ nvidia-installer-HOWTO</b>"

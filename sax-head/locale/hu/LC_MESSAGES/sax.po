@@ -573,21 +573,16 @@ msgstr ""
 "(YaST2 Online frissítés)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Az OpenGL gyorsítást nem lehet bekapcsolni</b><hr>Az OpenGL gyorsítás nem "
-"fog működni, mert nincsenek telepítve a hivatalos nVidia csomagok. Kérem,"
-"telepítse az nVidia meghajtót a <b>YaST Online Update</b> modul (YOU) "
-"segítségével(YaST2 Online frissítés).<br><br>Ha már egyszer telepítette a "
-"meghajtót a YOU segítségével és azóta eltávolította azt, valószínűleg kézzel "
-"kell telepítenie a megfelelő meghajtót. Az erre vonatkozó leírás itt "
-"található:<br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
-"XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
 #, fuzzy
@@ -2778,3 +2773,19 @@ msgstr "Menü gomb megnyomása a 3. szintű funkciók eléréséhez"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta hozzárendelése a Win billentyűkhöz."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Az OpenGL gyorsítást nem lehet bekapcsolni</b><hr>Az OpenGL gyorsítás "
+#~ "nem fog működni, mert nincsenek telepítve a hivatalos nVidia csomagok. "
+#~ "Kérem,telepítse az nVidia meghajtót a <b>YaST Online Update</b> modul "
+#~ "(YOU) segítségével(YaST2 Online frissítés).<br><br>Ha már egyszer "
+#~ "telepítette a meghajtót a YOU segítségével és azóta eltávolította azt, "
+#~ "valószínűleg kézzel kell telepítenie a megfelelő meghajtót. Az erre "
+#~ "vonatkozó leírás itt található:<br><br><b>ftp://ftp.suse.com/pub/suse/"
+#~ "i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"

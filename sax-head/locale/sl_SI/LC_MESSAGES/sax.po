@@ -526,20 +526,16 @@ msgstr ""
 "i>). Posodobitev lahko naredite tudi z YOU (YaST2 Online Update)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Vključitev OpenGL pospeševanja ni možna</b><hr>Za vključitev 3D "
-"podsistema grafične kartice, najprej namestite komercialni gonilnik podjetja "
-"nVidia. Namestite gonilnik z YOU (YaST2 Online Update) in izbiro posodobitve "
-"gonilnika nVidia.<br><br>Če ste gonilnik že namestili in ga kasneje "
-"odstranili, ga morate ponovno namestiti ročno. Navodila za ročno namestitev "
-"so na voljo na naslednji spletni strani:<br><br><b>ftp://ftp.suse.com/pub/"
-"suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
 #, fuzzy
@@ -2646,3 +2642,18 @@ msgstr "Pritisnite tipko Menu za izbiro tretjega nivoja"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Tipka Meta je preslikana v Win-tipke."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Vključitev OpenGL pospeševanja ni možna</b><hr>Za vključitev 3D "
+#~ "podsistema grafične kartice, najprej namestite komercialni gonilnik "
+#~ "podjetja nVidia. Namestite gonilnik z YOU (YaST2 Online Update) in izbiro "
+#~ "posodobitve gonilnika nVidia.<br><br>Če ste gonilnik že namestili in ga "
+#~ "kasneje odstranili, ga morate ponovno namestiti ročno. Navodila za ročno "
+#~ "namestitev so na voljo na naslednji spletni strani:<br><br><b>ftp://ftp."
+#~ "suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"

@@ -526,19 +526,16 @@ msgstr ""
 "(YaST2 Online Update) gedaan worden."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Voor het "
-"activeren van het 3D subsysteem voor deze kaart dient u de commerciële "
-"driver van nVidia te gebruiken. Download aub eerst het nVidia "
-"installatieprogramma van de nVidia webserver <i>(http://www.nvidia.com)</i>. "
-"Nadat u de driver heeft geïnstalleerd kunt u 3D met behulp van SaX2 "
-"activeren."
 
 #. RTF text: no limit
 #, fuzzy
@@ -2653,3 +2650,17 @@ msgstr "Druk op de Menu toets om het 3de level te selecteren"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta is aan de Win-toetsen toegewezen."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Voor het "
+#~ "activeren van het 3D subsysteem voor deze kaart dient u de commerciële "
+#~ "driver van nVidia te gebruiken. Download aub eerst het nVidia "
+#~ "installatieprogramma van de nVidia webserver <i>(http://www.nvidia.com)</"
+#~ "i>. Nadat u de driver heeft geïnstalleerd kunt u 3D met behulp van SaX2 "
+#~ "activeren."

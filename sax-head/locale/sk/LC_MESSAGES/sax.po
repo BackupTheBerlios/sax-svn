@@ -529,17 +529,16 @@ msgstr ""
 "com)</i>. Doká¾e to aj veµmi pohodlne YOU (YaST2 Online Update)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Nie je mo¾né zapnú» akceleráciu OpenGL</b><hr>Pre zapnutie 3D subsystému "
-"tejto karty musíte pou¾i» komerèný ovládaè firmy nVidia. Prosím, siahnite si "
-"in¹talátor firmy nVidia z jej webového serveru <i>(http://www.nvidia.com)</"
-"i>. Po jeho nain¹talovaní zapnite 3D pomocou SaX2."
 
 #. RTF text: no limit
 #, fuzzy
@@ -2628,3 +2627,16 @@ msgstr "Stlaèenie klávesu Menu vyberá 3. úroveò"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta je mapovaný na Win-klávesy."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Nie je mo¾né zapnú» akceleráciu OpenGL</b><hr>Pre zapnutie 3D "
+#~ "subsystému tejto karty musíte pou¾i» komerèný ovládaè firmy nVidia. "
+#~ "Prosím, siahnite si in¹talátor firmy nVidia z jej webového serveru <i>"
+#~ "(http://www.nvidia.com)</i>. Po jeho nain¹talovaní zapnite 3D pomocou "
+#~ "SaX2."

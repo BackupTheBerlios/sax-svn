@@ -352,7 +352,7 @@ pacsmissing=<b>Required base packages are missing</b><hr>Cannot enable OpenGL ac
 dummydriver=<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide the official 2D/3D/OpenGL driver from nVidia. Update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 Online Update).
 
 # RTF text: no limit
-nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for this card you need to install the commercial driver from nVidia first. Install the driver by using <b>YaST Online Update</b> and selecting the nVidia driver patch.
+nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for this card you need to install the commercial driver from nVidia first. Install the driver by using <b>YaST Online Update</b>. Inside YOU select <b>Installable and Installed Patches</b> as <b>Patch Category</b> and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at the bottom of the list). Note, that you need to mark the patch as <b>Update</b> (right mouse click) if you already installed it before and the driver was uninstalled - for whatever reason.
 
 # RTF text: no limit
 nvidia3Ddisable=<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the commercial driver from nVidia. SaX2 needs to uninstall the driver using the nVidia installer. The uninstall process will reset the original driver from X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you want to continue?</b>

@@ -527,21 +527,16 @@ msgstr ""
 "kan du også enkelt gjøre med YOU (YaST2 Online-oppdatering)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Kan ikke aktivere OpenGL-akselerasjon</b><hr>For å aktivere 3D-"
-"undersystemet fordette kortet du må du installere den kommersielle driveren "
-"fra fra nVidia først.Installer driveren med <b>YaST Online-oppdatering</b> "
-"og velgoppdateringspakken nVidia driver.<br><br>Hvis du allerede har "
-"installert driveren viaYaST Online-oppdatering og deretter avinstallert den, "
-"må du installeredriveren manuelt. Veiledning om dette finner du her: "
-"<br><br><b>FTP://FTP.suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-"
-"installer-HOWTO</b>"
 
 #. RTF text: no limit
 #, fuzzy
@@ -2629,3 +2624,19 @@ msgstr "Trykk på menytasten for å velge 3. nivå"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta på Win-tastene"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Kan ikke aktivere OpenGL-akselerasjon</b><hr>For å aktivere 3D-"
+#~ "undersystemet fordette kortet du må du installere den kommersielle "
+#~ "driveren fra fra nVidia først.Installer driveren med <b>YaST Online-"
+#~ "oppdatering</b> og velgoppdateringspakken nVidia driver.<br><br>Hvis du "
+#~ "allerede har installert driveren viaYaST Online-oppdatering og deretter "
+#~ "avinstallert den, må du installeredriveren manuelt. Veiledning om dette "
+#~ "finner du her: <br><br><b>FTP://FTP.suse.com/pub/suse/i386/supplementary/"
+#~ "X/XFree86/nvidia-installer-HOWTO</b>"

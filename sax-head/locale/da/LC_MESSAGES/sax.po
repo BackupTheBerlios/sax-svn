@@ -616,17 +616,16 @@ msgstr ""
 "Update) først."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Officielle NVidia driver ikke installeret</b><hr>Kunne ikke aktivere "
-"OpenGL-acceleration fordi systemmet ikke bruger de officelle  NVidia pakker. "
-"Opdater pakkerne <b>NVIDIA_GLX og NVIDIA_kernel</b> med YOU (YaST2 Online "
-"Update) først."
 
 #. RTF text: no limit
 msgid ""
@@ -2864,6 +2863,18 @@ msgstr ""
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Officielle NVidia driver ikke installeret</b><hr>Kunne ikke aktivere "
+#~ "OpenGL-acceleration fordi systemmet ikke bruger de officelle  NVidia "
+#~ "pakker. Opdater pakkerne <b>NVIDIA_GLX og NVIDIA_kernel</b> med YOU "
+#~ "(YaST2 Online Update) først."
 
 #~ msgid "Enable AccessX"
 #~ msgstr "Aktiver AccessX"

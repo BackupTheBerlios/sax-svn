@@ -527,21 +527,16 @@ msgstr ""
 "Online Update)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>OpenGL-Beschleunigung kann nicht aktiviert werden</b><hr>Zum Aktivieren "
-"des 3D-Subsystems für diese Karte müssen Sie zuerst den kommerziellen "
-"Treiber von nVidia installieren.Installieren Sie den Treiber mit dem <b>YaST "
-"Online-Update</b> und wählen Sie den nVidia-Treiber-Patch.<br><br>Haben Sie "
-"den Treiber bereits über das YaST Online-Update installiert und ihn dann "
-"deinstalliert, müssen Sie den Treiber manuell installieren. Anweisungen "
-"dafür finden Sie unter: <br><br> <b>ftp://ftp.suse.com/pub/suse/i386/"
-"supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
 #, fuzzy
@@ -2664,3 +2659,20 @@ msgstr "Drücken Sie die Menütaste, um in den dritten Level zu gelangen"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta ist auf die Win-Tasten umgelegt."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>OpenGL-Beschleunigung kann nicht aktiviert werden</b><hr>Zum "
+#~ "Aktivieren des 3D-Subsystems für diese Karte müssen Sie zuerst den "
+#~ "kommerziellen Treiber von nVidia installieren.Installieren Sie den "
+#~ "Treiber mit dem <b>YaST Online-Update</b> und wählen Sie den nVidia-"
+#~ "Treiber-Patch.<br><br>Haben Sie den Treiber bereits über das YaST Online-"
+#~ "Update installiert und ihn dann deinstalliert, müssen Sie den Treiber "
+#~ "manuell installieren. Anweisungen dafür finden Sie unter: <br><br> "
+#~ "<b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-"
+#~ "installer-HOWTO</b>"

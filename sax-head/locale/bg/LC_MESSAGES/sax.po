@@ -522,21 +522,16 @@ msgstr ""
 "се направи съвсем удобно и чрез YOU (YaST2 Online Update)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch."
+"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
+"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
+"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
+"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
+"b> (right mouse click) if you already installed it before and the driver was "
+"uninstalled - for whatever reason."
 msgstr ""
-"<b>Не може да се разреши OpenGL ускорение</b><hr>За да активирате3D "
-"подсистемата за тази карта ще трябва първо да инсталирате комерсиалния "
-"драйвер от nVidia. Можете да направите това от <b>YaST онлайн подновяването</"
-"b> като изберете кръпката за nVidia драйвера. <br><br>Ако сте инсталирали "
-"вече този драйвер през YaST онлайн подновяването и след това сте го махнали, "
-"ще трябва да инсталирате драйвера ръчно. Инструкции как може да бъде "
-"направено това могат да се намерят на: <br><br><b>ftp://ftp.suse.com/pub/"
-"suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
 #, fuzzy
@@ -2635,3 +2630,20 @@ msgstr "Натиснете клавиша Menu за да изберете тре
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta е определен за Win клавишите."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b> and "
+#~ "selecting the nVidia driver patch."
+#~ msgstr ""
+#~ "<b>Не може да се разреши OpenGL ускорение</b><hr>За да активирате3D "
+#~ "подсистемата за тази карта ще трябва първо да инсталирате комерсиалния "
+#~ "драйвер от nVidia. Можете да направите това от <b>YaST онлайн "
+#~ "подновяването</b> като изберете кръпката за nVidia драйвера. <br><br>Ако "
+#~ "сте инсталирали вече този драйвер през YaST онлайн подновяването и след "
+#~ "това сте го махнали, ще трябва да инсталирате драйвера ръчно. Инструкции "
+#~ "как може да бъде направено това могат да се намерят на: <br><br><b>ftp://"
+#~ "ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-"
+#~ "HOWTO</b>"
