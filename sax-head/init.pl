@@ -301,6 +301,11 @@ sub init {
 	$dpy = $displayStatus[0];
 	if ($displayStatus[1] eq "grant") {
 		$haveServer = 1;
+		print ("SaX: access to your display has been granted\n");
+		print ("SaX: the current configuration will be used\n");
+	} else {
+		print ("SaX: no X-Server running or display access denied\n");
+		print ("SaX: the current configuration will not be used\n");
 	}
 	}
 
