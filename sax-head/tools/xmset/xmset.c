@@ -114,7 +114,8 @@ int IsRoot(void);
 int catchErrors (Display *dpy, XErrorEvent *ev);
 XF86MiscMouseSettings GetMouse(Display *dpy);
 Display* XOpen(str name);
-void showConfig (void);
+void showMouseConfig (void);
+void showMonitorConfig (void);
 void usage(void);
 
 //================================================
@@ -394,10 +395,11 @@ int main (int argc, char*argv[]) {
 		{"disable"  , 0 , 0 , 'D'},
 		{"version"  , 0 , 0 , 'v'},
 		{"config"   , 0 , 0 , 'c'},
+		{"monitor"  , 0 , 0 , 'm'},
 		{0          , 0 , 0 , 0  }
 	};
 
-	c = getopt_long (argc, argv, "hsa:d:l:EDvc",long_options, &option_index);
+	c = getopt_long (argc, argv, "hsa:d:l:EDvcm",long_options, &option_index);
 	if (c == -1)
 	break;
 
@@ -416,8 +418,12 @@ int main (int argc, char*argv[]) {
 	break;
 
 	case 'c':
-		showConfig();
+		showMouseConfig();
 	break;	
+
+	case 'm':
+		showMonitorConfig();
+	break;
 
 	case 's':
 		show  = True;
@@ -615,9 +621,23 @@ int catchErrors (Display *dpy, XErrorEvent *ev) {
 }
 
 //========================================
+// show monitor configuration...
+//----------------------------------------
+void showMonitorConfig (void) {
+	MsgDetect display = MonitorGetData();
+	if ( ((display.dpix > 0) && (display.dpix < 100)) && 
+		 ((display.dpiy > 0) && (display.dpiy < 100))
+	) {
+		int x = display.dpix * 10;
+		int y = display.dpiy * 10;
+		printf ("DisplaySize  %d %d",x,y);
+	}
+}
+
+//========================================
 // show mouse configuration...
 //----------------------------------------
-void showConfig (void) {
+void showMouseConfig (void) {
 	MouseData* lp = NULL;
 	MouseData* mp = MouseGetData();
 	int haveMouse = 0;

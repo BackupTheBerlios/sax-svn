@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Oct 21 15:22:14 CEST 2004 - ms@suse.de
+
+- added DisplaySize entry to X11 config file used for
+  installation if patched via xupdate (#46632)
+
+-------------------------------------------------------------------
 Fri Oct 15 15:36:50 CEST 2004 - ms@suse.de
 
 - fixed map check in keyboardhandler.cpp (#46891)
@@ -12,7 +18,7 @@ Wed Oct 13 17:20:58 CEST 2004 - ms@suse.de
 Thu Oct  7 16:53:20 CEST 2004 - ms@suse.de
 
 - added input device profile handling based on Vendor/Device ID's
-  for special input devices like synaptics touchpads
+  for special input devices like synaptics touchpads (#46649)
 
 -------------------------------------------------------------------
 Thu Oct  7 11:20:11 CEST 2004 - ms@suse.de

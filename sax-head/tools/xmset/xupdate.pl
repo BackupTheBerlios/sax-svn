@@ -47,6 +47,30 @@ sub getMouseSection {
 	}
 }
 
+#---[ getMonitorSection ]-----#
+sub getMonitorSection {
+#--------------------------------------------------
+# get monitor section coordinates
+#
+	my @point = ();
+	my $count = 0;
+	my $start = 0;
+	foreach my $line (@_) {
+	$count++;
+	if ($line =~ /Section.*Monitor.*/) {
+		$start = $count;
+		next;
+	}
+	if ($line =~ /Identifier.*Monitor\[0\].*/) {
+		$point[0] = $start;
+	}
+	if ((defined $point[0]) && ($line =~ "EndSection")) {
+		$point[1] = $count;
+		return @point;
+	}
+	}
+}
+
 #---[ getServerLayoutSection ]-----#
 sub getServerLayoutSection {
 #--------------------------------------------------
@@ -113,8 +137,10 @@ sub getPointerLayout {
 # ---
 my @list   = readConfig();
 my @point1 = getMouseSection (@list);
-my @point2 = getServerLayoutSection (@list);
+my @point2 = getMonitorSection (@list);
+my @point3 = getServerLayoutSection (@list);
 my @detect = split (/\n/,qx (/usr/X11R6/bin/xmset -c));
+my $size   = qx (/usr/X11R6/bin/xmset -m);
 my @layout = getPointerLayout (@detect);
 
 for (my $i=0;$i < $point1[0] - 1;$i++) {
@@ -123,12 +149,22 @@ for (my $i=0;$i < $point1[0] - 1;$i++) {
 foreach my $line (@detect) {
 	print "$line\n";
 }
-for (my $i=$point1[1];$i <= $point2[0] - 2;$i++) {
+for (my $i=$point1[1];$i <= $point2[1];$i++) {
+	if ($list[$i] !~ /DisplaySize/) {
+		print $list[$i];
+	}
+	if ($list[$i] =~ /Identifier/) {
+	if ($size ne "") {
+		print "  $size\n";
+	}
+	}
+}
+for (my $i=$point2[1];$i <= $point3[0] - 2;$i++) {
 	print $list[$i];
 }
 foreach (@layout) {
-	print "  $_\n";
+   print "  $_\n";
 }
-for (my $i=$point2[0];$i <= @list;$i++) {
-	print $list[$i];
+for (my $i=$point3[0];$i <= @list;$i++) {
+	print "$list[$i]";
 }

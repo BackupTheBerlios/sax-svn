@@ -30,24 +30,58 @@ STATUS        : development
 #define HD_VERSION 1
 #endif
 
+#define MAXVESA    100
+
 //===================================
 // Types...
 //-----------------------------------
 typedef char str[512];
 
+typedef struct {
+	int x;
+	int y;
+	int hsync;
+	int vsync;
+} mode;
+
 typedef struct MouseData_t {
- str name;
- str protocol;
- str device;
- int emulate;
- int wheel;
- int buttons;
- struct MouseData_t* next;
+	str name;
+	str protocol;
+	str device;
+	int emulate;
+	int wheel;
+	int buttons;
+	struct MouseData_t* next;
 } MouseData;
+
+typedef struct {
+	str id;
+	int cards;
+	long memory;
+	int dacspeed;
+	int clkcount;
+	float *clocks;
+	int vesacount;
+	mode vmodes[MAXVESA];
+	int hsync_max;
+	int vsync_max;
+	str chipset;
+	str primary;
+	str ddc;
+	str dds;
+	str clkstr;
+	str displaytype;
+	int vmdepth;
+	int dpix;
+	int dpiy;
+	str model;
+	str vendor;
+} MsgDetect;
 
 //===================================
 // Prototypes...
 //-----------------------------------
-MouseData* MouseGetData (void);
+MouseData* MouseGetData   (void);
+MsgDetect  MonitorGetData (void);
 
 #endif
