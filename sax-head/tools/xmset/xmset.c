@@ -624,6 +624,9 @@ void showConfig (void) {
 
 	int count = 1;
 	for (lp=mp; lp; lp=lp->next) {
+		if (! lp->device) {
+			continue;
+		}
 		printf("Section \"InputDevice\"\n");
 		printf("  Driver     \"mouse\"\n");
 		printf("  Identifier \"Mouse[%d]\"\n",count);
@@ -658,8 +661,8 @@ void showConfig (void) {
 			printf("  Option     \"EmulateWheelButton\" \"4\"\n");
 		}
 		}
-		haveMouse = 1;
 		printf("EndSection\n\n");
+		haveMouse = 1;
 		count += 2;
 		//break;
 	}
