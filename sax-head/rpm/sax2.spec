@@ -12,7 +12,7 @@
 
 Name:         sax2
 Requires:     perl xbanner perl-gettext XFree86-server fbset saxident saxtools qt3 fvwm2 3ddiag
-%if %{suse_version} >= 801
+%if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
 Summary:      SuSE advanced X-Configuration (XFree86 4.x)
@@ -24,7 +24,7 @@ Source:       sax2.tar.bz2
 Source1:      sax2_pixmaps.tar.bz2
 Source2:      sax2_nvidia.tar.bz2
 NoSource:     2
-%if %{suse_version} < 801
+%if %{suse_version} < 810
 Patch:        sax2_binmode.dif
 %endif
 Patch1:       sax2_monitor.dif
@@ -87,10 +87,10 @@ if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
 	fi
 	cp nvidia_drv.o /usr/X11R6/%{_lib}/modules/drivers/
 fi
-%if %{suse_version} < 801
+%if %{suse_version} < 810
 %patch
 %endif
-%if %{suse_version} < 803
+%if %{suse_version} < 830
 %patch3
 %endif
 %patch1
@@ -145,12 +145,12 @@ test -e /.buildenv && . /.buildenv
 #=================================================
 # patch files.pm according to misc extension
 #-------------------------------------------------
-%define isSecureMisc %(./modules/create/.patch && echo "0" || echo "1"; exit 0)
-%if ! %{isSecureMisc}
+. modules/create/.patch.sh
+if [ "$SECURE_MISC" = "no" ];then
 	cat ./modules/create/files.pm | \
 	sed -e s@miscExitCode=1@miscExitCode=0@ > ./modules/create/files.pm.new
 	mv ./modules/create/files.pm.new ./modules/create/files.pm
-%endif
+fi
 #=================================================
 # add SuSE version to sax.sh script...
 #-------------------------------------------------
