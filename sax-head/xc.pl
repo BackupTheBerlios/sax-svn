@@ -49,6 +49,7 @@ my $NoIntro;               # prevent intro appearance
 my $NoBorder;              # suppress border around main window
 my $UniFont;               # force usage of UniCode font
 my $FrameWidth = 0;        # default frame width for xapi
+my $DialogToStartWith;     # dialog to start with (xapi option)
 
 main();
 #==================================================
@@ -388,6 +389,9 @@ sub main {
 		print OPT $apiopt;
 		close OPT;
 	}
+	if (defined $DialogToStartWith) {
+		$apiopt = "$apiopt -O $DialogToStartWith";
+	}
 	if ($haveServer == 0) {
 		if ((defined $StartWithSystemConfig) && (HeaderOK())) {
 		system ("$spec{Xapi} $apiopt -display $disp");
@@ -529,6 +533,7 @@ sub init {
 	undef ($UniFont);
 	undef ($EnableXF86AutoMode);
 	undef ($StartWithSystemConfig);
+	undef ($DialogToStartWith);
 	undef (%tune);
 
 	my $result = GetOptions(
@@ -542,6 +547,7 @@ sub init {
 		"unifont"        => \$UniFont,
 		"nointro|n"      => \$NoIntro,
 		"framewidth|w=i" => \$FrameWidth,
+		"dialog|O=s"     => \$DialogToStartWith,
 		"help|h"         => \&usage,
 		"<>"             => \&usage
 	);
