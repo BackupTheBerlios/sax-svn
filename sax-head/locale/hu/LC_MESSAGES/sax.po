@@ -1,3 +1,5 @@
+# translation of sax.po to
+# translation of sax.hu.po to Hungarian
 # translation of merge.po to hungarian
 # translation of sax.hu.po to hungarian
 # Hungarian message file for SaX.
@@ -5,18 +7,18 @@
 # Rev. 2000.11.24 Marcel Hilzinger <hilzinger@matavnet.hu>
 # Rev. 8.1: 2002.07.23 Marcel Hilzinger <hili@suselinux.hu>
 # Steve Varadi <svaradi@usa.com>, 2000.
-# Marcel Hilzinger <hili@suselinux.hu>, 2003
+# Marcel Hilzinger <hili@suselinux.hu>, 2003.
+# Peter Breuer <comp@suselinux.hu>, 2003.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.hu\n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-02-18 17:53+0100\n"
+"PO-Revision-Date: 2003-09-12 18:32+0200\n"
 "Last-Translator: Marcel Hilzinger <hili@suselinux.hu>\n"
-"Language-Team: hungarian <hu@li.org>\n"
+"Language-Team: hungarian <kde-lista@sophia.jpte.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -46,11 +48,11 @@ msgstr "Nincs beállítva"
 # /tmp/xapi:41
 #. Maximum length: 60  characters
 msgid "Not available"
-msgstr "Nem elérhető"
+msgstr "Nem elérhető "
 
 #. Maximum length: 40  characters
 msgid "Use the following AccessX settings"
-msgstr ""
+msgstr "Az alábbi AccessX beállítások használata"
 
 # /tmp/xapi:235
 #. Maximum length: 40  characters
@@ -58,34 +60,32 @@ msgid "Disable AccessX"
 msgstr "AccessX tiltása"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Primary Setup"
-msgstr "Elsődleges eszköz"
+msgstr "Elsődleges beállítás"
 
 #. Maximum length: 60  characters
 msgid "Additional Layout(s)"
-msgstr ""
+msgstr "További elrendezés(ek)"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Layout"
 msgstr "Képernyők elrendezése"
 
 #. Maximum length: 60  characters
 msgid "Status"
-msgstr ""
+msgstr "Állapot"
 
 #. Maximum length: 60  characters
 msgid "Keytable"
-msgstr ""
+msgstr "Billentyűkiosztás"
 
 #. Maximum length: 60  characters
 msgid "Variant"
-msgstr ""
+msgstr "Variáns"
 
 #. Maximum length: 60  characters
 msgid "Type"
-msgstr ""
+msgstr "Típus"
 
 #. Maximum length: 60  characters
 msgid "This screen is selected"
@@ -93,7 +93,7 @@ msgstr "Ezt a képernyőt választotta ki"
 
 #. Maximum length: 20  characters
 msgid "at"
-msgstr ""
+msgstr "és"
 
 # /tmp/xapi:113
 #. Maximum length: 20  characters
@@ -124,7 +124,7 @@ msgstr "Ismeretlen képernyő"
 
 #. Maximum length: 40  characters
 msgid "Mouse test field: Ready..."
-msgstr "Egér tesztmező: Rajta..."
+msgstr "Egértesztmező: Rajta..."
 
 #. Maximum length: 40  characters
 msgid "Single button click: Done"
@@ -141,12 +141,12 @@ msgstr "A görgő forog..."
 # /tmp/xapi:155
 #. Maximum length: 40  characters
 msgid "Button pressed..."
-msgstr "Gombot nyomva..."
+msgstr "Gomb lenyomva..."
 
 # /tmp/xapi:155
 #. Maximum length: 40  characters
 msgid "Button released..."
-msgstr "Gombot elengedve..."
+msgstr "Gomb elengedve..."
 
 #. Maximum length: 40  characters
 msgid "Wheel stopped: Done"
@@ -319,15 +319,15 @@ msgstr "Alapértelmezett"
 
 #. Maximum length: 50 characters
 msgid "R-Alt switch group while pressed"
-msgstr "R-Alt megnyomása a csoportváltáshoz"
+msgstr "Jobb Alt megnyomása a csoportváltáshoz"
 
 #. Maximum length: 50 characters
 msgid "R-Alt switch group"
-msgstr "R-Alt a csoportváltáshoz"
+msgstr "Jobb Alt a csoportváltáshoz"
 
 #. Maximum length: 50 characters
 msgid "Both Shift Keys change group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Mindkét Shift billentyű változtassa a csoportot"
 
 #. Maximum length: 50 characters
 msgid "Ctrl and Shift change group"
@@ -347,7 +347,7 @@ msgstr "Ctrl és CapsLock átkapcsolása"
 
 #. Maximum length: 50 characters
 msgid "Ctrl Key at left of <A>"
-msgstr "Baloldali Ctrl billentyű emellett:<A>"
+msgstr "Bal Ctrl billentyű mellett:<A>"
 
 #. Maximum length: 50 characters
 msgid "Ctrl Key at bottom left"
@@ -458,6 +458,9 @@ msgid ""
 "warning only but make sure your keyboard model is able to map all the keys "
 "needed for the selected layout."
 msgstr ""
+"<b>Úgy tűnik, hogy a jelenlegi elrendezés és típus nem a legjobb választás</b><hr> "
+"Ez csak egy figyelmeztetés, azonban célszerű ellenőrizni, hogy a kiválasztott "
+"beállítással minden betű a helyén van-e."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
@@ -522,7 +525,7 @@ msgid ""
 "i> first. After you have installed the driver you can enable 3D with SaX2."
 msgstr ""
 "<b>Az OpenGL gyorsítást nem lehet bekapcsolni</b><hr>Az OpenGL gyorsítás nem "
-"fog működni, mert nincsenek telepítve a hivatalos NVidia csomagok. Kérem,"
+"fog működni, mert nincsenek telepítve a hivatalos nVidia csomagok. Kérem,"
 "frissítse az <b>NVIDIA_GLX</b> és az <b>NVIDIA_kernel</b> csomagokat az "
 "nVidia honlapjáról <i>(http://www.nvidia.com)</i>, majd ezt követően "
 "kapcsolja be a 3D gyorsítást a SaX2-ben."
@@ -536,7 +539,7 @@ msgid ""
 "acceleration."
 msgstr ""
 "<b>Az OpenGL gyorsítást nem lehet kikapcsolni</b><hr>A rendszer a hivatalos "
-"NVidia RPM-csomagokat használja a 3D gyorsításhoz. A 3D gyorsítás "
+"nVidia RPM-csomagokat használja a 3D gyorsításhoz. A 3D gyorsítás "
 "kikapcsolásához távolítsa el a meghajtót az nVidia uninstaller program "
 "segítségével. Az uninstall program visszaállítja az eredeti XFree86 "
 "meghajtót, mely nem tartalmaz 3D gyorsítást. "
@@ -551,8 +554,7 @@ msgstr "Segédlemez..."
 msgid ""
 "<b>Insert disk</b><hr>Insert the display utility disk from the monitor "
 "vendor."
-msgstr ""
-"<b>Tegye be a lemezt</b><hr>Kérem a monitorhoz mellékelt meghajtó lemezt"
+msgstr "<b>Tegye be a lemezt</b><hr>Kérem a monitorhoz mellékelt meghajtó lemezt"
 
 # /tmp/xapi:481
 #. RTF text: no limit
@@ -627,8 +629,7 @@ msgstr ""
 "billentyűkkel vezérelni"
 
 #. RTF text: no limit
-msgid ""
-"<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the system?"
+msgid "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the system?"
 msgstr ""
 "<b>Rajztábla eltávolítása:</b><hr>Valóban törölni akarja az elektronikus "
 "rajztáblát a rendszerből ?"
@@ -701,9 +702,9 @@ msgid ""
 "update). Start the online update?"
 msgstr ""
 "<b>Szoftver frissítés</b><hr>Az Ön Linux rendszerén még mindig a helykitöltő "
-"nvidia meghajtó van telepítve, mely nem támogatja a hardveres 3D gyorsítást. "
+"nVidia meghajtó van telepítve, mely nem támogatja a hardveres 3D gyorsítást. "
 "Javasoljuk, hogy a YaST2 YOU segítségével töltse le a hivatalos nVidia "
-"meghajtókat az nvidia FTP szerveréről. Elindítsam most az online frissítést?"
+"meghajtókat az nVidia FTP szerveréről. Elindítsam most az online frissítést?"
 
 #. RTF text: no limit
 msgid ""
@@ -891,7 +892,7 @@ msgid ""
 "this product is</nobr><br>Marcus Schaefer"
 msgstr ""
 "<b>SaX2 (c) 2000 SuSE Linux AG:</b><hr><nobr>A program szerzője és "
-"karbantartója: </nobr><br>Marcus Schaefer<br>Fordította: Hilzinger Marcel"
+"karbantartója: </nobr><br>Marcus Schaefer<br>Fordította: Hilzinger Marcel, Breuer Péter"
 
 # /tmp/xapi:113
 #. Maximum length: 40  characters
@@ -960,18 +961,14 @@ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
 msgstr "<b>Megszakítás:</b><hr>Kilép a párbeszédablakból?"
 
 #. RTF text: no limit
-msgid ""
-"<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+msgid "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
 msgstr ""
 "<b>Érvénytelen beállítás:</b><hr>Be kell állítania legalább egy grafikus "
 "kártyát."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-msgstr ""
-"<b>Érvénytelen beállítás:</b><hr>Be kell állítania legalább egy grafikus "
-"kártyát."
+msgstr "<b>Érvénytelen beállítás:</b><hr>Be kell állítania legalább egy képernyőt."
 
 #. RTF text: no limit
 msgid ""
@@ -984,13 +981,12 @@ msgstr ""
 # /tmp/xapi:51
 #. RTF text: no limit
 msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
-msgstr ""
-"<b>Beállítás befejezése:</b><hr>Befejezi most a beállításokat, majd kilép ?"
+msgstr "<b>Beállítás befejezése:</b><hr>Befejezi most a beállításokat, majd kilép ?"
 
 # /tmp/xapi:51
 #. RTF text: no limit
 msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
-msgstr "<b>Kilépés:</b><hr>Ki akar lépni a SaX2-ből?"
+msgstr "<b>Kilépés:</b><br>Ki akar lépni a SaX2-ből?"
 
 #. RTF text: no limit
 msgid ""
@@ -1045,24 +1041,22 @@ msgid "Unknown Monitor..."
 msgstr "Ismeretlen képernyő..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>A monitor felismerése nem sikerült</b><hr>Kérem, állítsa be kézzel. Be "
+"<b>A(z) %1 monitor felismerése nem sikerült</b><hr>Kérem, állítsa be kézzel. Be "
 "akarja most állítani a monitorát?"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>A(z) %1. számú képernyő nem található</b><hr>Kérem, állítsa be kézzel. "
-"Elindítsa a SaX2 most a megfelelő párbeszédablakot?"
+"<b>A(z) %1, %2 ID-vel rendelkező képernyő nem található</b><hr> "
+"Kérem, állítsa be kézzel. Elindítsa a SaX2 most a megfelelő párbeszédablakot?"
 
 #. Dynamic length: Please do not oversize key up to 10%
 msgid "Automatic graphics system set up"
@@ -1261,7 +1255,7 @@ msgstr "Érintőképernyők beállítása..."
 
 #. Maximum length: 100  characters
 msgid "Set up picture geometry..."
-msgstr "Képgeométria beállítása..."
+msgstr "Képgeometria beállítása..."
 
 #. Maximum length: 100  characters
 msgid "Configure multihead mode..."
@@ -1299,9 +1293,8 @@ msgid "Remove selected card"
 msgstr "Kiválasztott kártya eltávolítása"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Remove selected monitor"
-msgstr "Kiválasztott egér &eltávolítása"
+msgstr "Kiválasztott képernyő eltávolítása"
 
 # /tmp/xapi:111
 #. Maximum length: 40  characters
@@ -1413,7 +1406,6 @@ msgid "Possible"
 msgstr "Lehetséges"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "&Add this resolution"
 msgstr "Felbontás &hozzáadása..."
 
@@ -1497,7 +1489,7 @@ msgid ""
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
 "<b>OpenGL rendszer:</b><hr>Állítsa be grafikus kártyájának 3D képességeit. "
-"Az XFree86 az úgynevezett 'közvetlen rendering interfészen' keresztül (DRI) "
+"Az XFree86 az úgynevezett 'közvetlen leképezés interfészen' keresztül (DRI) "
 "tudja kihasználni a grafikus 3D képességeit. Amennyiben grafikus kártyája "
 "támogatja a hardveres 3D gyorsítást, itt be tudja kapcsolni ezt a képességet."
 
@@ -1543,18 +1535,16 @@ msgid ""
 "displayed by the monitor. The table below point to the current used Modeline"
 "(s)."
 msgstr ""
-"<b>Képgeométria:</b><hr>Állítsa be a megjelenített kép méretét és "
+"<b>Képgeometria:</b><hr>Állítsa be a megjelenített kép méretét és "
 "elhelyezését. Az alábbi táblázatban a használt modeline értékeket láthatja."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
 "language environment with which it should work."
 msgstr ""
 "<b>Billentyűzet beállítások:</b><hr>Állítsa be billentyűzetének típusát és "
-"nyelvét. Szintén ebben a párbeszédablakban beállíthatja a használandó "
-"betűkészleteket."
+"nyelvét."
 
 #. RTF text: no limit
 msgid ""
@@ -1565,8 +1555,8 @@ msgid ""
 "corresponding screen."
 msgstr ""
 "<b>Munkaasztalok elrendezése:</b><hr>Több grafikus kártyák esetén ún. "
-"multihead környezetről beszélünk. Ebben a párbeszédablakban beállíthatja az "
-"egyes képernyők elrendezését a fogd&vidd technikával. Az alábbi táblázaton a "
+"multihead (\"többfejes\") környezetről beszélünk. Ebben a párbeszédablakban beállíthatja az "
+"egyes képernyők elrendezését a fogd és vidd technikával. Az alábbi táblázaton a "
 "jelenlegi elrendezést láthatja. "
 
 #. RTF text: no limit
@@ -1719,988 +1709,911 @@ msgstr "&Méretének változtatása"
 
 # /tmp/xapi:44
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "No video mode tuning available"
-msgstr ""
-":UBA munkaasztal beállításai:\n"
-"A SaX segítségével a következő beállításokat végezheti el munkaasztalával\n"
-"kapcsolatban:\n"
-"\n"
-"° Képernyő beállítása\n"
-"° Színmélység\n"
-"° Felbontás(ok) színmélységenként\n"
-"° További beállítási lehetőségek (szakértő)\n"
-"\n"
-"A képernyő, színmélység és felbontás összeségét munkaasztalnak hívják.\n"
-"Videókártyánként rendelkezésére áll egy munkaasztal. A munkaasztal "
-"tulajdonságai\n"
-"módosításához következőképpen kell eljárnia: Jelölje ki a kívánt "
-"munkaasztalt a\n"
-"bal egérgombbal. Ilyenkor sem számít, hogy az ikont vagy csak egy "
-"tulajdonságot\n"
-"jelöl ki. Aztán kattintson a <Tulajdonságok> gombra. A felbukkanó\n"
-"párbeszédablakban a következő menüpontok között választhat:\n"
-"\n"
-":UBSzínek:\n"
-"Ennél a menüpontnál először a kívánt színmélységet kell beállítania, aztán "
-"meg\n"
-"kell adnia az ennél a színmélységnél kívánt felbontásokat. Kérjük vegye\n"
-"figyelembe, hogy egy adott színmélységnél több felbontást is megadhat és "
-"hogy\n"
-"több felbontásnál lényeges azoknak a sorrendje. Az első felbontás a listán "
-"az\n"
-"alapértelmezett felbontás.\n"
-"\n"
-":UBKépernyő:\n"
-"Ennél a menüpontnál ki kell választania egy monitort típust a listából, "
-"illetve\n"
-"használhatja a monitor gyártó által mellékelt meghajtólemezt.\n"
-"\n"
-":UBFrekvenciák:\n"
-"Amennyiben a képernyője nem szerepel a monitor listán és nem is rendelkezik\n"
-"meghajtólemezzel, kézzel meg kell adnia a monitora adatait. Ebben az\n"
-"esetben mindenképpen nézzen utána a szükséges frekvenciáknak a monitora\n"
-"kézikönyvében. Semmiképpen ne adjon olyan szinkron értéket, melyről nem "
-"biztos,\n"
-"hogy a képernyője tudja kezelni.\n"
-"\n"
-":UBSzakértő:\n"
-"Ennél a menüpontnál különleges beállításokat végezhet el. Ezek a "
-"beállítások\n"
-"viszont egy mély ismeretet igényelnek az X11-témakörben. További információt "
-"az\n"
-"X11-hez a kézikönyvben találhatók."
+msgstr "Nem elérhető videomód hangolás"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Tétlenség időzítő..."
 
 #. RTF text: no limit
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx sorozat"
 
 #. RTF text: no limit
 msgid "Canadian"
-msgstr ""
+msgstr "Kanadai"
 
 #. RTF text: no limit
 msgid "Brazilian"
-msgstr ""
+msgstr "Brazil"
 
 #. RTF text: no limit
 msgid "Bosnian"
-msgstr ""
+msgstr "Boszniai"
 
 #. RTF text: no limit
 msgid "Lithuanian qwerty (numeric)"
-msgstr ""
+msgstr "Litván qwerty (numerikus)"
 
 #. RTF text: no limit
 msgid "Georgian (russian)"
-msgstr ""
+msgstr "Georgiai (orosz)"
 
 #. RTF text: no limit
 msgid "Latvian"
-msgstr ""
+msgstr "Lett"
 
 #. RTF text: no limit
 msgid "Belarusian"
-msgstr ""
+msgstr "Belorusz"
 
 #. RTF text: no limit
 msgid "Czech (qwerty)"
-msgstr ""
+msgstr "Cseh (qwerty)"
 
 #. RTF text: no limit
 msgid "Northern Saami (Finland)"
-msgstr ""
+msgstr "Észak Szuomi (Finnország)"
 
 #. RTF text: no limit
 msgid "Macedonian"
-msgstr ""
+msgstr "Macedón"
 
 #. RTF text: no limit
 msgid "U.S. English w/ deadkeys"
-msgstr ""
+msgstr "Amerikai angol vezérlőgombokkal"
 
 #. RTF text: no limit
 msgid "Malayalam"
-msgstr ""
+msgstr "Maláj"
 
 #. RTF text: no limit
 msgid "Burmese"
-msgstr ""
+msgstr "Burmai"
 
 #. RTF text: no limit
 msgid "Kannada"
-msgstr ""
+msgstr "Kanadai"
 
 #. RTF text: no limit
 msgid "Mongolian"
-msgstr ""
+msgstr "Mongol"
 
 #. RTF text: no limit
 msgid "Bengali"
-msgstr ""
+msgstr "Bengáli"
 
 #. RTF text: no limit
 msgid "Romanian"
-msgstr ""
+msgstr "Román"
 
 # /tmp/xapi:299
 #. RTF text: no limit
-#, fuzzy
 msgid "Croatian"
-msgstr "Kártya tulajdonságai"
+msgstr "Horvát"
 
 #. RTF text: no limit
 msgid "U.S. English w/ ISO9995-3"
-msgstr ""
+msgstr "Amerikai angol / ISO9995-3"
 
 #. RTF text: no limit
 msgid "Lithuanian azerty standard"
-msgstr ""
+msgstr "Litván szabványos azerty"
 
 #. RTF text: no limit
 msgid "Maltese"
-msgstr ""
+msgstr "Máltai"
 
 #. RTF text: no limit
 msgid "German"
-msgstr ""
+msgstr "Német"
 
 #. RTF text: no limit
 msgid "Hungarian"
-msgstr ""
+msgstr "Magyar"
 
 #. RTF text: no limit
 msgid "Russian"
-msgstr ""
+msgstr "Orosz"
 
 #. RTF text: no limit
 msgid "Swedish"
-msgstr ""
+msgstr "Svéd"
 
 #. RTF text: no limit
 msgid "Turkish (F)"
-msgstr ""
+msgstr "Török (F)"
 
 #. RTF text: no limit
 msgid "Oriya"
-msgstr ""
+msgstr "Orija"
 
 #. RTF text: no limit
 msgid "Slovenian"
-msgstr ""
+msgstr "Szlovén"
 
 #. RTF text: no limit
 msgid "Slovak (qwerty)"
-msgstr ""
+msgstr "Szlovák (qwerty)"
 
 #. RTF text: no limit
 msgid "Czech"
-msgstr ""
+msgstr "Cseh"
 
 #. RTF text: no limit
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 # /tmp/xapi:55
 #. RTF text: no limit
-#, fuzzy
 msgid "Danish"
-msgstr "&Kész"
+msgstr "Dán"
 
 #. RTF text: no limit
 msgid "Dvorak"
-msgstr ""
+msgstr "Dvorák"
 
 #. RTF text: no limit
 msgid "Slovak"
-msgstr ""
+msgstr "Szlovák"
 
 #. RTF text: no limit
 msgid "Dutch"
-msgstr ""
+msgstr "Holland"
 
 #. RTF text: no limit
 msgid "Israeli"
-msgstr ""
+msgstr "Izraeli"
 
 #. RTF text: no limit
 msgid "Tamil"
-msgstr ""
+msgstr "Tamil"
 
 #. RTF text: no limit
 msgid "Ogham"
-msgstr ""
+msgstr "Ogham"
 
 #. RTF text: no limit
 msgid "Norwegian"
-msgstr ""
+msgstr "Norvég"
 
 #. RTF text: no limit
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmuki"
 
 #. RTF text: no limit
 msgid "Serbian"
-msgstr ""
+msgstr "Szerb"
 
 #. RTF text: no limit
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #. RTF text: no limit
 msgid "Icelandic"
-msgstr ""
+msgstr "Izlandi"
 
 #. RTF text: no limit
 msgid "Italian"
-msgstr ""
+msgstr "Olasz"
 
 #. RTF text: no limit
 msgid "Estonian"
-msgstr ""
+msgstr "Észt"
 
 #. RTF text: no limit
 msgid "Inuktitut"
-msgstr ""
+msgstr "Inuit"
 
 #. RTF text: no limit
 msgid "Swiss French"
-msgstr ""
+msgstr "Svájci (francia)"
 
 #. RTF text: no limit
 msgid "Swiss German"
-msgstr ""
+msgstr "Svájci (német)"
 
 #. RTF text: no limit
 msgid "Thai"
-msgstr ""
+msgstr "Thai"
 
 #. RTF text: no limit
 msgid "Tajik"
-msgstr ""
+msgstr "Tadzsik"
 
 #. RTF text: no limit
 msgid "Greek"
-msgstr ""
+msgstr "Görög"
 
 #. RTF text: no limit
 msgid "Japanese"
-msgstr ""
+msgstr "Japán"
 
 #. RTF text: no limit
 msgid "Georgian (latin)"
-msgstr ""
+msgstr "Georgiai (latin)"
 
 #. RTF text: no limit
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukrán"
 
 #. RTF text: no limit
 msgid "Polish (qwertz)"
-msgstr ""
+msgstr "Lengyel (qwertz)"
 
 #. RTF text: no limit
 msgid "Syriac"
-msgstr ""
+msgstr "Szíriai"
 
 #. RTF text: no limit
 msgid "Turkish"
-msgstr ""
+msgstr "Török"
 
 #. RTF text: no limit
 msgid "Spanish"
-msgstr ""
+msgstr "Spanyol"
 
 #. RTF text: no limit
 msgid "Northern Saami (Sweden)"
-msgstr ""
+msgstr "Észak Szuomi (Svéd)"
 
 #. RTF text: no limit
 msgid "Yugoslavian"
-msgstr ""
+msgstr "Jugoszláv"
 
 #. RTF text: no limit
 msgid "Hindi"
-msgstr ""
+msgstr "Hindu"
 
 # /tmp/xapi:55
 #. RTF text: no limit
-#, fuzzy
 msgid "Finnish"
-msgstr "&Kész"
+msgstr "Finn"
 
 #. RTF text: no limit
 msgid "French (alternative)"
-msgstr ""
+msgstr "Francia (alternatív)"
 
 #. RTF text: no limit
 msgid "Hungarian (qwerty)"
-msgstr ""
+msgstr "Magyar (qwerty)"
 
 #. RTF text: no limit
 msgid "Russian (cyrillic phonetic)"
-msgstr ""
+msgstr "Orosz (cirill betűs)"
 
 #. RTF text: no limit
 msgid "Albanian"
-msgstr ""
+msgstr "Albán"
 
 #. RTF text: no limit
 msgid "Polish"
-msgstr ""
+msgstr "Lengyel"
 
 #. RTF text: no limit
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #. RTF text: no limit
 msgid "Armenian"
-msgstr ""
+msgstr "Örmény"
 
 #. RTF text: no limit
 msgid "Northern Saami (Norway)"
-msgstr ""
+msgstr "Észak Szuomi (Norvég)"
 
 #. RTF text: no limit
 msgid "Latin America"
-msgstr ""
+msgstr "Latin Amerikai"
 
 #. RTF text: no limit
 msgid "French"
-msgstr ""
+msgstr "Francia"
 
 #. RTF text: no limit
 msgid "United Kingdom"
-msgstr ""
+msgstr "Angol"
 
 #. RTF text: no limit
 msgid "Arabic"
-msgstr ""
+msgstr "Arab"
 
 #. RTF text: no limit
 msgid "U.S. English"
-msgstr ""
+msgstr "Amerikai angol"
 
 #. RTF text: no limit
 msgid "Maltese (US layout)"
-msgstr ""
+msgstr "Máltai (amerikai kiosztás)"
 
 #. RTF text: no limit
 msgid "French Canadian"
-msgstr ""
+msgstr "Kanadai francia"
 
 #. RTF text: no limit
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugál"
 
 #. RTF text: no limit
 msgid "Belgian"
-msgstr ""
+msgstr "Belga"
 
 #. RTF text: no limit
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bolgár"
 
 #. RTF text: no limit
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Azerbajdzsáni"
 
 #. RTF text: no limit
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnámi"
 
 #. RTF text: no limit
 msgid "Lao"
-msgstr ""
+msgstr "Lao"
 
 #. RTF text: no limit
 msgid "Microsoft Natural"
-msgstr ""
+msgstr "Microsoft Natural billentyűzet"
 
 #. RTF text: no limit
 msgid "Ennyah DKB-1008"
-msgstr ""
+msgstr "Ennyah DKB-1008 billentyűzet"
 
 #. RTF text: no limit
 msgid "Logitech Deluxe Access Keyboard"
-msgstr ""
+msgstr "Logitech Deluxe Access billentyűzet"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard"
-msgstr ""
+msgstr "Microsoft Internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4500P"
-msgstr ""
+msgstr "Samsung SDM 4500P billentyűzet"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd billentyűzet"
 
 #. RTF text: no limit
 msgid "Dell"
-msgstr ""
+msgstr "Dell"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GF"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access"
-msgstr ""
+msgstr "IBM Rapid Access"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (alternatív opció 2)"
 
 #. RTF text: no limit
 msgid "Memorex MX1998"
-msgstr ""
+msgstr "Memorex MX1998"
 
 #. RTF text: no limit
 msgid "Trust Wireless Keyboard Classic"
-msgstr ""
+msgstr "Trust klasszikus vezetéknélküli billentyűzet"
 
 #. RTF text: no limit
 msgid "Dell 101-key PC"
-msgstr ""
+msgstr "Dell 101-gombos PC"
 
 #. RTF text: no limit
 msgid "Brother Internet Keyboard"
-msgstr ""
+msgstr "Brother internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (Armada) Laptop billentyűzet"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (Presario) internet billentyűzet"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II"
-msgstr ""
+msgstr "IBM Rapid Access II"
 
 #. RTF text: no limit
 msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr ""
+msgstr "Logitech iTouch vezetéknélküli billentyűzet (Y-RB6)"
 
 #. RTF text: no limit
 msgid "Trust Direct Access Keyboard"
-msgstr ""
+msgstr "Trust Direct Access billentyűzet"
 
 #. RTF text: no limit
 msgid "Logitech Internet Navigator Keyboard"
-msgstr ""
+msgstr "Logitech Internet Navigator billentyűzet"
 
 #. RTF text: no limit
 msgid "SK-7100"
-msgstr ""
+msgstr "SK-7100"
 
 #. RTF text: no limit
 msgid "Acer AirKey V"
-msgstr ""
+msgstr "Acer AirKey V"
 
 #. RTF text: no limit
 msgid "BTC 9000A"
-msgstr ""
+msgstr "BTC 9000A"
 
 #. RTF text: no limit
 msgid "Toshiba Satellite S3000"
-msgstr ""
+msgstr "Toshiba Satellite S3000"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (13 keys)"
-msgstr ""
+msgstr "Compaq internet billentyűzet (13 gombos)"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XT1000"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XT1000"
 
 #. RTF text: no limit
 msgid "Logitech iTouch"
-msgstr ""
+msgstr "Logitech iTouch"
 
 #. RTF text: no limit
 msgid "SK-6200"
-msgstr ""
+msgstr "SK-6200"
 
 #. RTF text: no limit
 msgid "Compaq iPaq Keyboard"
-msgstr ""
+msgstr "Compaq iPaq billentyűzet"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (alternatív opció)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Desktop Navigator"
 
 #. RTF text: no limit
 msgid "QTronix Scorpius 98N+"
-msgstr ""
+msgstr "QTronix Scorpius 98N+"
 
 #. RTF text: no limit
 msgid "Symplon PaceBook (tablet PC)"
-msgstr ""
+msgstr "Symplon PaceBook (tablet PC)"
 
 #. RTF text: no limit
 msgid "Winbook Model XP5"
-msgstr ""
+msgstr "Winbook Model XP5"
 
 #. RTF text: no limit
 msgid "BTC 5113RF Multimedia"
-msgstr ""
+msgstr "BTC 5113RF multimédia billentyűzet"
 
 #. RTF text: no limit
 msgid "Diamond 9801 / 9802 series"
-msgstr ""
+msgstr "Diamond 9801 / 9802 sorozat"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE4xxx és ZE4xxx"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Optical"
-msgstr ""
+msgstr "Logitech Cordless Desktop optikai "
 
 #. RTF text: no limit
 msgid "Logitech Internet Keyboard"
-msgstr ""
+msgstr "Logitech internet billentyűzet"
 
 #. RTF text: no limit
 msgid "BTC 9000"
-msgstr ""
+msgstr "BTC 9000"
 
 #. RTF text: no limit
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr ""
+msgstr "Genius Comfy KB-16M / Genius MM billentyűzet KWD-910"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Freedom/Desktop Navigator"
 
 #. RTF text: no limit
 msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr ""
+msgstr "Microsoft Natural Pro / Microsoft internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Propeller Voyager (KTEZ-1000)"
-msgstr ""
+msgstr "Propeller Voyager (KTEZ-1000)"
 
 #. RTF text: no limit
 msgid "Brazilian ABNT2"
-msgstr ""
+msgstr "Brazil ABNT2 billentyűzet"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (7 keys)"
-msgstr ""
+msgstr "Compaq internet billentyűzet (7 gombos)"
 
 #. RTF text: no limit
 msgid "Honeywell Euroboard"
-msgstr ""
+msgstr "Honeywell Euroboard billentyűzet"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop"
-msgstr ""
+msgstr "Logitech Cordless Desktop"
 
 #. RTF text: no limit
 msgid "Yahoo! Internet Keyboard"
-msgstr ""
+msgstr "Yahoo! internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (18 keys)"
-msgstr ""
+msgstr "Compaq internet billentyűzet (18 gombos)"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr ""
+msgstr "Laptop/notebook Dell Inspiron 8xxx"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II (alternate option)"
-msgstr ""
+msgstr "IBM Rapid Access II (alternatív opció)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro"
 
 #. RTF text: no limit
 msgid "Advance Scorpius KI"
-msgstr ""
+msgstr "Advance Scorpius KI"
 
 #. RTF text: no limit
 msgid "BTC 5126T"
-msgstr ""
+msgstr "BTC 5126T"
 
 #. RTF text: no limit
 msgid "Dexxa Wireless Desktop Keyboard"
-msgstr ""
+msgstr "Dexxa Wireless Desktop billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 5xx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 5xx"
 
 #. RTF text: no limit
 msgid "Memorex MX2750"
-msgstr ""
+msgstr "Memorex MX2750"
 
 #. RTF text: no limit
 msgid "SK-1300"
-msgstr ""
+msgstr "SK-1300"
 
 #. RTF text: no limit
 msgid "Generic 101-key PC"
-msgstr ""
+msgstr "Általános 101-gombos PC"
 
 #. RTF text: no limit
 msgid "Northgate OmniKey 101"
-msgstr ""
+msgstr "Northgate OmniKey 101"
 
 #. RTF text: no limit
 msgid "ACPI Standard"
-msgstr ""
+msgstr "ACPI szabvány"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd (alternatív opció)"
 
 #. RTF text: no limit
 msgid "Chicony Internet Keyboard"
-msgstr ""
+msgstr "Chicony internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2501 multimédia billentyűzet"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4510P"
-msgstr ""
+msgstr "Samsung SDM 4510P"
 
 #. RTF text: no limit
 msgid "SK-2500"
-msgstr ""
+msgstr "SK-2500"
 
 #. RTF text: no limit
 msgid "SVEN Ergonomic 2500"
-msgstr ""
+msgstr "SVEN Ergonomic 2500"
 
 #. RTF text: no limit
 msgid "Generic 102-key (Intl) PC"
-msgstr ""
+msgstr "Általános 102-gombos (nemzetközi) PC"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop iTouch"
-msgstr ""
+msgstr "Logitech Cordless Desktop iTouch"
 
 #. RTF text: no limit
 msgid "Chicony KB-9885"
-msgstr ""
+msgstr "Chicony KB-9885"
 
 #. RTF text: no limit
 msgid "Compaq Easy Access Keyboard"
-msgstr ""
+msgstr "Compaq Easy Access billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard 5181 internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 500 FA"
 
 #. RTF text: no limit
 msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr ""
+msgstr "Memorex MX2500 EZ-Access billentyűzet"
 
 #. RTF text: no limit
 msgid "Generic 104-key PC"
-msgstr ""
+msgstr "Általános 104-gombos PC"
 
 #. RTF text: no limit
 msgid "Everex STEPnote"
-msgstr ""
+msgstr "Everex STEPnote"
 
 #. RTF text: no limit
 msgid "Japanese 106-key"
-msgstr ""
+msgstr "Japán 106-gombos"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE és Pavilion N5xxx"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr ""
+msgstr "Hewlett-Packard Pavilion ZT11xx"
 
 #. RTF text: no limit
 msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr ""
+msgstr "Logitech iTouch billentyűzet, Internet Navigator"
 
 #. RTF text: no limit
 msgid "Generic 105-key (Intl) PC"
-msgstr ""
+msgstr "Általános 105-gombos (nemzetközi) PC"
 
 #. RTF text: no limit
 msgid "Keytronic FlexPro"
-msgstr ""
+msgstr "Keytronic FlexPro"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2505 internet billentyűzet"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr ""
+msgstr "Microsoft Internet Keyboard Pro, Svéd"
 
 #. RTF text: no limit
 msgid "Microsoft Office Keyboard"
-msgstr ""
+msgstr "Microsoft Office billentyűzet"
 
 #. RTF text: no limit
 msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr ""
+msgstr "Oretec MCK-800 MM/internet billentyűzet"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Ctrl keys together change group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Mindkét Ctrl billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "CapsLock billentyű viselkedése"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Win-keys switch group while pressed"
-msgstr "R-Alt megnyomása a csoportváltáshoz"
+msgstr "Mindkét Win megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Alt key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Bal Alt billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Bal Win billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Shift key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Jobb Shift billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Alt/Win billentyűk viselkedése"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "belső Caps funkciót használ. A Shift nem szakítja meg a Caps módot."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "R-Alt switches group while pressed"
-msgstr "R-Alt megnyomása a csoportváltáshoz"
+msgstr "Jobb Alt megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
 msgid "Right Win-key is Compose"
-msgstr ""
+msgstr "Jobb Win billentyű a Compose-hoz"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Ctrl key changes group"
-msgstr "Csoportváltás az Alt és a Ctrl billentyűkkel"
+msgstr "Jobb Ctrl megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
 msgid "Press any of Win-keys to choose 3rd level"
-msgstr ""
+msgstr "Bármely Win billentyű megnyomása a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at bottom left"
-msgstr "Bal alsó Ctrl billentyű"
+msgstr "Ctrl billentyű a bal alsó sarokban"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Shift keys together change group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Mindkét Shift billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Third level choosers"
-msgstr ""
+msgstr "Harmadik szintű funkciók elérése"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at left of 'A'"
-msgstr "Baloldali Ctrl billentyű emellett:<A>"
+msgstr "'A' melletti Control billentyű"
 
 #. RTF text: no limit
 msgid "Scroll_Lock LED shows alternative group"
-msgstr ""
+msgstr "A ScrollLock LED mutassa meg az alternatív csoportokat"
 
 # /tmp/xapi:255
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt is Compose"
-msgstr "Jobb Alt értelmezése"
+msgstr "Jobb Alt a Compose funkció"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "A jobboldali Win billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Press Left Win-key to choose 3rd level"
-msgstr ""
+msgstr "Nyomja meg a baloldali Win billentyűt a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Make CapsLock an additional Control"
 msgstr "A CapsLock használata külön vezérlőelemnek"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+msgstr "belső Caps funkciót használ. A Shift feloldja a Caps módot."
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "ugyanúgy működik, mint Shift zárással. A Shift nem oldja fel a Caps módot."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key switches group while pressed"
-msgstr "R-Alt megnyomása a csoportváltáshoz"
+msgstr "Baloldali Win billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Shift key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Baloldali Shift billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
-msgstr ""
+msgstr "A NumLock LED mutassa meg az alternatív csoportokat"
 
 #. RTF text: no limit
 msgid "Caps_Lock LED shows alternative group"
-msgstr ""
+msgstr "A CapsLock LED mutassa meg az alternatív csoportokat"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "A baloldali Win billentyű látja el a Meta funkciót."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Caps Lock key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "A CapsLock billentyű változtassa a csoportot"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Alt keys together change group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "Mind két Alt billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Menu is Compose"
-msgstr ""
+msgstr "A Compose billentyű a Menü"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "A jobboldali Alt billentyű változtassa a csoportot"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control Key Position"
-msgstr "&Pozíció változtatása"
+msgstr "Vezérlőbillentyűk elhelyezése"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Swap Control and Caps Lock"
-msgstr "Ctrl és CapsLock átkapcsolása"
+msgstr "Ctrl és CapsLock felcserélése"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control+Shift changes group"
-msgstr "Csoportváltás a Shift és a Ctrl billentyűkkel"
+msgstr "Csoportváltás a Ctrl+Shift billentyűkkel"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Shift changes group"
-msgstr "Csoportváltás a Shift és a Ctrl billentyűkkel"
+msgstr "Csoportváltás az Alt+Shift billentyűkkel"
 
 #. RTF text: no limit
 msgid "Press Right Control to choose 3rd level"
-msgstr ""
+msgstr "Jobb Ctrl gomb megnyomása a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Alapértelmezett viselkedés hozzáadása a Menü billentyűhöz"
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Alt és Meta az Alt billentyűkkel (alapértelmezett)."
 
 #. RTF text: no limit
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Super hozzárendelése a Win billentyűkhöz (alapértelmezett)."
 
 #. RTF text: no limit
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Hyper hozzárendelése a Win billentyűkhöz (alapértelmezett)."
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+msgstr "Jobboldali Win gomb megnyomása a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
-msgstr ""
+msgstr "Billentyűzet LED-ek használata az alternatív csoportok megjelenítéséhez"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+msgstr "ugyanúgy működik, mint Shift zárással. A Shift feloldja a kapitális módot."
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Shift/CapsLock csoport viselkedése"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key switches group while pressed"
-msgstr "R-Alt megnyomása a csoportváltáshoz"
+msgstr "Jobboldali Win billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Control changes group"
 msgstr "Csoportváltás az Alt és a Ctrl billentyűkkel"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Menu key changes group"
-msgstr "Mind két Shift billentyű változtassa a csoportot"
+msgstr "A Menü billentyű változtassa a csoportot"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Ctrl key changes group"
-msgstr "Csoportváltás az Alt és a Ctrl billentyűkkel"
+msgstr "A baloldali Ctrl billentyű változtassa meg a csoportot"
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
-msgstr ""
+msgstr "Menü gomb megnyomása a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
+msgstr "Meta hozzárendelése a Win billentyűkhöz."
 
 #~ msgid "Enable AccessX"
 #~ msgstr "AccessX engedélyezése"
 
 #~ msgid "add"
 #~ msgstr "hozzáadás"
+
