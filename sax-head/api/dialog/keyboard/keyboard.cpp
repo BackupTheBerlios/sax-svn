@@ -328,6 +328,33 @@ void XKeyboard::dialogCreate (void) {
 	mStack -> addWidget  ( mDialog , mIndex );
 }
 
+//===========================================
+// XKeyboard set Warning (OK) message box...
+//-------------------------------------------
+void XKeyboard::setMessage (
+	const QString& textKey,XBox::Icon icon,const QString& addon
+) {
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+	QString text;
+	QTextOStream (&text)
+		<< mText[textKey] << " " << addon;
+	XBox mb (
+		mText["hint"],text,
+		icon,XBox::Ok, 0,0,mFrame,
+		globalFrameWidth
+	);
+	mb.setButtonText (
+		XBox::Ok, mText["Ok"]
+	);
+	mb.exec();
+	if (mTop->isVisible()) {
+		mTop -> enterEvent ( 0 );
+	} else {
+		mFrame -> enterEvent ( 0 );
+	}
+}
+
+
 //=====================================
 // XKeyboard slotRun...
 //-------------------------------------

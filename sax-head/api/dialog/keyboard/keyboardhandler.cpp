@@ -234,6 +234,17 @@ bool XKeyboard::slotRun (int index) {
 	QString XKBModel    = keyboardInfo["XkbModel"];
 
 	//=====================================
+	// clean QListView data fields
+	//-------------------------------------
+	mAddView -> clearSelection();
+	QListViewItemIterator itAdd (mAddView);
+	for ( ; itAdd.current(); ++itAdd ) {
+		QCheckListItem* item = (QCheckListItem*)itAdd.current();
+		item -> setOn   ( false );
+		item -> setText ( 3 , "" );
+	}
+
+	//=====================================
 	// select base keyboard model
 	//-------------------------------------
 	QDictIterator<char> itModel (mModelHash);
@@ -353,8 +364,11 @@ void XKeyboard::slotAddVariant ( int ) {
 	// changed this dialog is called
 	// ---
 	QListViewItem* item = mAddView -> selectedItem();
-	item -> setText (3, mAddVariant->currentText());
-	apply();
+	item -> setText (3,"");
+	if (mAddVariant->currentText() != "basic") {
+		item -> setText (3, mAddVariant->currentText());
+		apply();
+	}
 }
 
 //=====================================
@@ -373,39 +387,86 @@ void XKeyboard::slotVariant ( int ) {
 // XKeyboard::Layout/Model check
 //-------------------------------------
 void XKeyboard::validateLayout ( void ) {
-	// TODO...
+	// log(L_INFO,"XKeyboard::validateLayout() called\n");
+	// ...
+	// this function check if the currently used combination
+	// of layout and model is valid according to the Keyboard.map
+	// if not we will provide a warning
+	// ---
+	QString XkbModel;
+	QString XkbLayout;
+	QDictIterator<char> itModel (mModelHash);
+	for (; itModel.current(); ++itModel) {
+	if (QString(itModel.current()) == mType -> currentText()) {
+		XkbModel = itModel.currentKey();
+	}
+	}
+	// 2) primary XKB layout
+	QDictIterator<char> itLayout (mLayoutHash);
+	for (; itLayout.current(); ++itLayout) {
+	if (QString(itLayout.current()) == mLayout -> currentText()) {
+		XkbLayout = itLayout.currentKey();
+	}
+	}
+	QString isValid = qx ( VALIDATELAYOUT,STDOUT,2,"%s %s",
+		XkbModel.ascii(),XkbLayout.ascii()
+	);
+	if (! isValid.toInt()) {
+		setMessage ("noValidLayout");
+	}
 }
 
 //=====================================
 // XKeyboard::update all variant lists
 //-------------------------------------
 void XKeyboard::updateVariants ( void ) {
+	// log(L_INFO,"XKeyboard::updateVariants() called\n");
+	// ...
+	// this function will update the variant lists for the
+	// primary variant combobox and the additional variant
+	// combobox. Currently set variants will be resetted
+	// after the list update
+	// ---
+	// 1) Additional Variants...
+	// ---
 	mAddVariant -> clear();
 	QListViewItem* item = mAddView -> selectedItem();
 	if (item) {
-	mAddVariant -> insertStringList ( 
-		mRules.getVariants (item->text (2)) 
-	);
-	mAddVariant->setCurrentText ("basic");
-	if (item->text(3)) {
-		mAddVariant -> setCurrentText (item->text(3));
+		QStringList list = mRules.getVariants (item->text (2));
+		if (! list.empty()) {
+			mAddVariant -> insertStringList ( list );
+		} else {
+			mAddVariant -> insertItem ("basic");
+		}
+		mAddVariant->setCurrentText ("basic");
+		if ((item->text(3)) && (! item->text(3).isEmpty())) {
+			mAddVariant -> setCurrentText (item->text(3));
+		}
 	}
-	}
+	// 2) Primary Variant...
+	// ---
 	int curItem = mVariant -> currentItem();
 	QString curText = mVariant -> currentText();
 	mVariant -> clear();
 	QDictIterator<char> it (mRules.getLayouts());
+	bool emptyVariantList = true;
 	for (; it.current(); ++it) {
 	if (QString(it.current()) == mLayout->currentText()) {
-		mVariant -> insertStringList (
-			mRules.getVariants (it.currentKey())
-		);
+		QStringList list = mRules.getVariants (it.currentKey());
+		if (! list.empty()) {
+			mVariant -> insertStringList ( list );
+			emptyVariantList = false;
+		} else {
+			mVariant -> insertItem ("basic");
+		}
 		break;
 	}
 	}
 	mVariant->setCurrentText ("basic");
-	if (mVariant->text(curItem) == curText) {
+	if (! emptyVariantList) {
+	if (mVariant->text (curItem) == curText) {
 		mVariant->setCurrentItem (curItem);
+	}
 	}
 }
 
@@ -702,6 +763,8 @@ bool XKeyboard::apply ( void ) {
 	// apply the keyboard to the X-Server for immediate
 	// usage. This call will use the XKB extension
     // ---
+	// hallo
+	return (true);
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 
 	QString* XkbModel   = NULL;

@@ -86,6 +86,7 @@ void XMonitor::dialogCreate (void) {
 
 	monitorList = new QListBox    ( mDialog );
 	mSetup      = new QPushButton ( mText["confmonitor"],mDialog );
+	mRemove     = new QPushButton ( mText["removemonitor"],mDialog );
 
 	// create tab dialog widgets...
 	// ----------------------------
@@ -218,7 +219,9 @@ void XMonitor::dialogCreate (void) {
 	layer2 -> addWidget  ( topic );
 	layer2 -> addStretch ( 10 );
 	layer4 -> addWidget  ( monitorList );
-	layer5 -> addWidget  ( mSetup );
+	layer5 -> addWidget  ( mSetup  );
+	layer5 -> addSpacing ( 5 );
+	layer5 -> addWidget  ( mRemove );
 	layer5 -> addStretch ( 50 );
 
 	// connect me to the world...
@@ -230,6 +233,10 @@ void XMonitor::dialogCreate (void) {
 	QObject::connect (
 		mSetup, SIGNAL (clicked (void)),
 		this, SLOT (slotSetup (void))
+	);
+	QObject::connect (
+		mRemove, SIGNAL (clicked (void)),
+		this, SLOT (slotRemove (void))
 	);
 	QObject::connect (
 		mVendor, SIGNAL (clicked (QListBoxItem *)),

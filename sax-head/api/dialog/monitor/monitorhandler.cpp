@@ -326,6 +326,22 @@ void XMonitor::slotSetup (void) {
 }
 
 //=====================================
+// XMonitor remove Monitor/Card...
+//-------------------------------------
+void XMonitor::slotRemove (void) {
+	// log (L_INFO,"XMonitor::slotRemove() called\n");
+	// ...
+	// this function is called if a montor resp. the
+	// card it belongs to should be removed.
+	// ---
+	XCard* cardDialog;
+	cardDialog = (XCard*) mIntro -> retrieve (Card);
+	cardDialog -> mSelected = mSelected;
+	cardDialog -> slotRemove ();
+	monitorList-> removeItem (mSelected);
+}
+
+//=====================================
 // XMonitor select monitor vendor...
 //-------------------------------------
 void XMonitor::slotVendor ( QListBoxItem* item ) {

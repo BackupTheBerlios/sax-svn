@@ -46,6 +46,7 @@ class XMonitor : public XTemplate {
 	QDict<XFile>* mFilePtr;
 	XTabDialog*   mTop;
 	QPushButton*  mSetup;
+	QPushButton*  mRemove;
 	QListBox*     monitorList;
 	QCheckBox*    mDPMS;
 	QListBox*     mVendor;
@@ -83,6 +84,7 @@ class XMonitor : public XTemplate {
 
 	public slots:
 	void slotSetup     ( void );
+	void slotRemove    ( void );
 	void slotSelect    ( QListBoxItem* );
 	void slotVendor    ( QListBoxItem *);
 	void slotName      ( QListBoxItem *);

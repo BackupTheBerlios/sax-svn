@@ -80,6 +80,11 @@ class XKeyboard : public XTemplate {
     XKeyboard  ( void );
     void addTo ( XFrame* xf,XIntro* xi );
 
+	public:
+	void setMessage ( 
+		const QString&,XBox::Icon = XBox::Warning,const QString& = 0
+	);
+
     private:
     void dialogCreate ( void );
 	int  getItem      ( QComboBox* , const QString& );

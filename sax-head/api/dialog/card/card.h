@@ -71,7 +71,6 @@ class XCard : public XTemplate {
 	QLabel*       mPixExpert;
 
 	private:
-	int           mSelected;
 	int           mState;
 	int           mWorkingIndex;
 	XFile*        pLayout;
@@ -90,6 +89,9 @@ class XCard : public XTemplate {
 	bool          mCheckBoxStatus;
 	bool          mShowSetupWindow;
 	bool          mCheckType;
+
+	public:
+	int           mSelected;
 
     public:
     XCard ( XFrame*,XIntro* );

@@ -160,6 +160,7 @@ STATUS        : Status: Up-to-date
 #define GETACTIVATED    "/usr/X11R6/lib/sax/api/tools/getActivated"
 #define GETINSTALLED    "/usr/X11R6/lib/sax/api/tools/getInstalled"
 #define GETPACKAGE      "/usr/X11R6/lib/sax/api/tools/getPackage"
+#define VALIDATELAYOUT  "/usr/X11R6/lib/sax/api/tools/getLayout"
 #define MD5             "/usr/bin/md5sum"
 #define XSET            "/usr/X11R6/bin/xset"
 #define XSETROOT        "/usr/X11R6/bin/xsetroot"
