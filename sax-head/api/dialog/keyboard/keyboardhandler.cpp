@@ -45,14 +45,16 @@ void XKeyboard::resetPage (int reload) {
 		// 1) primary XKB model
 		QDictIterator<char> itModel (mModelHash);
 		for (; itModel.current(); ++itModel) {
-		if (QString(itModel.current()) == mType -> currentText()) {
+		if (QString::fromLocal8Bit(itModel.current()) == mType->currentText()) {
 			XkbModel = new QString (itModel.currentKey());
 		}
 		}
 		// 2) primary XKB layout
 		QDictIterator<char> itLayout (mLayoutHash);
 		for (; itLayout.current(); ++itLayout) {
-		if (QString(itLayout.current()) == mLayout -> currentText()) {
+		if (
+			QString::fromLocal8Bit(itLayout.current()) == mLayout->currentText()
+		) {
 			XkbLayout = new QString (itLayout.currentKey());
 		}
 		}
@@ -256,7 +258,7 @@ bool XKeyboard::slotRun (int index) {
 	QDictIterator<char> itModel (mModelHash);
 	for (; itModel.current(); ++itModel) {
 	if (itModel.currentKey() == XKBModel) {
-		mType -> setCurrentText (itModel.current());
+		mType -> setCurrentText (QString::fromLocal8Bit (itModel.current()));
 	}
 	}
 	
@@ -283,7 +285,7 @@ bool XKeyboard::slotRun (int index) {
 	QDictIterator<char> itLayout (mLayoutHash);
 	for (; itLayout.current(); ++itLayout) {
 	if (itLayout.currentKey() == baseLayout) {
-		mLayout -> setCurrentText (itLayout.current());
+		mLayout -> setCurrentText (QString::fromLocal8Bit (itLayout.current()));
 	}
 	}
 	// 2)
@@ -403,14 +405,14 @@ void XKeyboard::validateLayout ( void ) {
 	QString XkbLayout;
 	QDictIterator<char> itModel (mModelHash);
 	for (; itModel.current(); ++itModel) {
-	if (QString(itModel.current()) == mType -> currentText()) {
+	if (QString::fromLocal8Bit(itModel.current()) == mType->currentText()) {
 		XkbModel = itModel.currentKey();
 	}
 	}
 	// 2) primary XKB layout
 	QDictIterator<char> itLayout (mLayoutHash);
 	for (; itLayout.current(); ++itLayout) {
-	if (QString(itLayout.current()) == mLayout -> currentText()) {
+	if (QString::fromLocal8Bit(itLayout.current()) == mLayout->currentText()) {
 		XkbLayout = itLayout.currentKey();
 	}
 	}
@@ -457,7 +459,7 @@ void XKeyboard::updateVariants ( void ) {
 	QDictIterator<char> it (mRules.getLayouts());
 	bool emptyVariantList = true;
 	for (; it.current(); ++it) {
-	if (QString(it.current()) == mLayout->currentText()) {
+	if (QString::fromLocal8Bit (it.current()) == mLayout->currentText()) {
 		QStringList list = mRules.getVariants (it.currentKey());
 		if (! list.empty()) {
 			mVariant -> insertStringList ( list );
@@ -785,14 +787,14 @@ bool XKeyboard::apply ( void ) {
 	// 1) primary XKB model
 	QDictIterator<char> itModel (mModelHash);
 	for (; itModel.current(); ++itModel) {
-	if (QString(itModel.current()) == mType -> currentText()) {
+	if (QString::fromLocal8Bit (itModel.current()) == mType->currentText()) {
 		XkbModel = new QString (itModel.currentKey());
 	}
 	}
 	// 2) primary XKB layout
 	QDictIterator<char> itLayout (mLayoutHash);
 	for (; itLayout.current(); ++itLayout) {
-	if (QString(itLayout.current()) == mLayout -> currentText()) {
+	if (QString::fromLocal8Bit(itLayout.current()) == mLayout->currentText()) {
 		XkbLayout = new QString (itLayout.currentKey());
 	}
 	}
@@ -840,10 +842,12 @@ bool XKeyboard::apply ( void ) {
 			opto.ascii(),XkbOptions->ascii(),optv.ascii(),XkbVariant->ascii()
 		);
 		#endif
+		#if 1
 		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s %s %s %s %s",
 			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
 			opto.ascii(),XkbOptions->ascii(),optv.ascii(),XkbVariant->ascii()
 		);
+		#endif
 	} else if (XkbVariant) {
 		#if 0
 		printf("%s %s %s %s %s %s\n",
@@ -851,10 +855,12 @@ bool XKeyboard::apply ( void ) {
 			optv.ascii(),XkbVariant->ascii()
 		);
 		#endif
+		#if 1
 		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s %s %s",
 			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
 			optv.ascii(),XkbVariant->ascii()
 		);
+		#endif
 	} else if (XkbOptions) {
 		#if 0
 		printf("%s %s %s %s %s %s\n",
@@ -862,19 +868,23 @@ bool XKeyboard::apply ( void ) {
 			opto.ascii(),XkbOptions->ascii()
 		);
 		#endif
+		#if 1
 		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s %s %s",
 			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
 			opto.ascii(),XkbOptions->ascii()
 		);
+		#endif
 	} else {
 		#if 0
 		printf("%s %s %s %s\n",
 			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii()
 		);
 		#endif
+		#if 1
 		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s",
 			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii()
 		);
+		#endif
 	}
 	return (true);
 }

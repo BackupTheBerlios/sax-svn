@@ -386,7 +386,7 @@ void XKeyboard::slotIntro (int index) {
 	QDictIterator<char> itModel (mModelHash);
 	for (; itModel.current(); ++itModel) {
 	if (itModel.currentKey() == XKBModel) {
-		XKBModel = itModel.current();
+		XKBModel = QString::fromLocal8Bit (itModel.current());
 		break;
 	}
 	}
@@ -396,7 +396,7 @@ void XKeyboard::slotIntro (int index) {
 	QDictIterator<char> itLayout (mLayoutHash);
 	for (; itLayout.current(); ++itLayout) {
 	if (itLayout.currentKey() == XKBLayout) {
-		XKBLayout = itLayout.current();
+		XKBLayout = QString::fromLocal8Bit (itLayout.current());
 	}
 	}
 	// first row
