@@ -319,7 +319,8 @@ bool XTablet::slotRun (int index) {
 		// e)
 		if (workingTablet["Device"]) {
 			QString device = workingTablet ["Device"];
-			if (device == "/dev/input/event0") {
+			QRegExp identifier ("/dev/input/event");
+			if (identifier.search (device,0)) {
 				mPort -> setCurrentItem ( 0 );
 			}
 			if (device == "/dev/ttyS0") {
@@ -516,7 +517,8 @@ void XTablet::slotName (QListBoxItem*) {
 		// select port (Device) node
 		// ---
 		QString device = selectedTablet ["Device"];
-		if (device == "/dev/input/event0") {
+		QRegExp identifier ("/dev/input/event");
+		if (identifier.search (device,0)) {
 			mPort -> setCurrentItem ( 0 );
 		}
 		if (device == "/dev/ttyS0") {
@@ -866,12 +868,18 @@ void XTablet::addTablet (void) {
 		switch (mPort->currentItem()) {
 			case 0:
 				workingTablet.setPair ("Device",*tabletport);
+				if (pen)    { newPen -> setPair ("Device",*tabletport);    }
+				if (eraser) { newEraser -> setPair ("Device",*tabletport); }
 			break;
 			case 1:
 				workingTablet.setPair ("Device","/dev/ttyS0");
+				if (pen)    { newPen -> setPair ("Device","/dev/ttyS0");    }
+				if (eraser) { newEraser -> setPair ("Device","/dev/ttyS0"); }
 			break;
 			case 2:
 				workingTablet.setPair ("Device","/dev/ttyS1");
+				if (pen)    { newPen -> setPair ("Device","/dev/ttyS1");    }
+				if (eraser) { newEraser -> setPair ("Device","/dev/ttyS1"); }
 			break;
 		}
 		// mode...
