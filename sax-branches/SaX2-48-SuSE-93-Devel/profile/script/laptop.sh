@@ -202,7 +202,7 @@ if ($module eq "nvidia") {
     send_stringoption ($module, "TwinViewOrientation",      "Clone");
     send_stringoption ($module, "SecondMonitorHorizSync",   "30-120");
     send_stringoption ($module, "SecondMonitorVertRefresh", "58-65");
-    send_metamodes    ($module, "MetaModes", ",", "; ",     \@modes);
+    send_metamodes    ($module, "MetaModes", ",", ";",      \@modes);
     send_modes        ($module, "Modes",                    \@modes);
 
 
