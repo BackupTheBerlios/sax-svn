@@ -1,16 +1,16 @@
 #
 # spec file for package sax2 (Version 4.8)
 #
-# Copyright (c) 2004 SUSE LINUX AG, Nuernberg, Germany.
+# Copyright (c) 2005 SUSE LINUX Products GmbH, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  flex hwinfo hwinfo-devel qt3-devel-packages swig udev update-desktop-files x-devel-packages xorg-x11-driver-options xorg-x11-server yacc fbset
+# neededforbuild  fbset flex hwinfo hwinfo-devel qt3-devel-packages swig udev update-desktop-files wireless-tools x-devel-packages xorg-x11-driver-options xorg-x11-server yacc
 
-BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv less libacl libattr libgcc libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server fbset
+BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libgcc libnscd libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fbset fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel rpm swig udev update-desktop-files wireless-tools xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
 
 Name:         sax2
 Requires:     perl perl-gettext fbset sax2-ident perl-TermReadLine-Gnu
@@ -28,7 +28,7 @@ Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration
 Version:      4.8
-Release:      117
+Release:      153
 Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
@@ -56,7 +56,7 @@ Authors:
 
 %package -n sax2-tools
 Version:      2.3
-Release:      11
+Release:      47
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     sax2-ident
@@ -75,7 +75,7 @@ Authors:
 
 %package -n sax2-ident
 Version:      1.2
-Release:      11
+Release:      47
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
@@ -98,7 +98,7 @@ Authors:
 %package -n sax2-gui
 Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Version:      1.2
-Release:      11
+Release:      47
 Requires:     sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
@@ -501,3 +501,4 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/X11R6/%{_lib}/sax/sysp/maps/Driver.map
 /usr/X11R6/%{_lib}/sax/api/data/cdb/*
 /usr/X11R6/%{_lib}/sax/profile
+
