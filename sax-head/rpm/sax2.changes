@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Sep  2 16:42:23 CEST 2003 - ms@suse.de
+
+- make use of the flags.fast structure during mouse probing
+  there are too many systems blocking during ioctl() call for
+  serial mouse detection
+
+-------------------------------------------------------------------
 Tue Sep  2 15:15:21 CEST 2003 - ms@suse.de
 
 - fixed segfault in d3.c
