@@ -99,7 +99,7 @@ void XTablet::dialogCreate (void) {
 	mTabletOptions -> setSelectionMode ( QListBox::Multi );
 	mTabletOptions -> setDisabled ( true );
 
-	mPort = new QComboBox ( false, port);
+	mPort = new QComboBox ( true, port);
 	mPort -> insertItem ( mText["usb"] );
 	mPort -> insertItem ( mText["serial1"] );
 	mPort -> insertItem ( mText["serial2"] );

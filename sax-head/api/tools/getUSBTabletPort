@@ -11,22 +11,22 @@
 #
 use strict;
 
-my @list = ();
-open (CMD,"cat /proc/bus/usb/devices*|");
-while (<CMD>) {
-	my $line = $_; chomp ($line);
-	push (@list,$line);
-}
-close CMD;
+my $input = "/sys/class/input";
+my @tabletDrivers = (
+	"wacom"
+);
 
-for (my $i=0;$i< @list; $i++) {
-	if ($list[$i] =~ /Tablet/) {
-	if ($list[$i-3] =~ /Dev#= +(\d)/) {
-		my $devnr = $1 + 1;
-		print "/dev/input/event$devnr\n";
-		exit (0);
+foreach my $file (<$input/event*>) {
+if (-l "$file/driver") {
+	my $link = readlink ("$file/driver");
+	foreach my $validDriver (@tabletDrivers) {
+		if ($link =~ /$validDriver/) {
+			my $eventNr = chop ($file);
+			print "/dev/input/event$eventNr\n";
+			exit (0);
+		}
 	}
-	}
+}
 }
 
 print "/dev/input/event0\n";

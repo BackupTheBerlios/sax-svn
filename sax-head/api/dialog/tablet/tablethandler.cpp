@@ -320,8 +320,9 @@ bool XTablet::slotRun (int index) {
 		if (workingTablet["Device"]) {
 			QString device = workingTablet ["Device"];
 			QRegExp identifier ("/dev/input/event");
-			if (identifier.search (device,0)) {
+			if (identifier.search (device) >= 0) {
 				mPort -> setCurrentItem ( 0 );
+				mPort -> setCurrentText (device);
 			}
 			if (device == "/dev/ttyS0") {
 				mPort -> setCurrentItem ( 1 );
@@ -518,7 +519,7 @@ void XTablet::slotName (QListBoxItem*) {
 		// ---
 		QString device = selectedTablet ["Device"];
 		QRegExp identifier ("/dev/input/event");
-		if (identifier.search (device,0)) {
+		if (identifier.search (device) >= 0) {
 			mPort -> setCurrentItem ( 0 );
 		}
 		if (device == "/dev/ttyS0") {
@@ -881,6 +882,11 @@ void XTablet::addTablet (void) {
 				if (pen)    { newPen -> setPair ("Device","/dev/ttyS1");    }
 				if (eraser) { newEraser -> setPair ("Device","/dev/ttyS1"); }
 			break;
+		}
+		// has somebody entered a device path manually...
+		QString* portText = new QString (mPort->currentText());
+		if (*portText[0] == '/') {
+			workingTablet.setPair ("Device",*portText);
 		}
 		// mode...
 		if (mModeRelative -> isOn()) {
