@@ -77,6 +77,7 @@ class XMonitor : public XTemplate {
     void pageCalled   ( int );
 	void initPage     ( void );
 	void setupTop     ( void );
+	bool validatePage ( void );
 
     protected:
     bool slotRun   ( int );

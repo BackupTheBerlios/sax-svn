@@ -34,7 +34,14 @@ void XMonitor::resetPage (int reload) {
 	// and the changes will be lost.
 	// ---
 	QString update = "sys_DESKTOP";
-
+	if (reload == PAGE_RELOAD) {
+		if (! validatePage()) {
+			return;
+		}
+		XLayout* layoutDialog;
+		layoutDialog = (XLayout*) mIntro -> retrieve (Layout);
+		layoutDialog -> updateServerLayout();
+	}
 	mStatus -> clear();
 	if (reload == PAGE_RELOAD) {
 		mFilePtr = mIntro->getFiles();
@@ -56,6 +63,45 @@ void XMonitor::resetPage (int reload) {
 	XTemplate::resetPage ();
 	mStack -> raiseWidget (Intro);
 }
+
+//=====================================
+// XMonitor validatePage...
+//-------------------------------------
+bool XMonitor::validatePage (void) {
+	// log (L_INFO,"XMonitor::validatePage() called\n");
+	// ...
+	// this function is called if the finish button is
+	// pressed to validate the current page setup
+	// ---
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+	bool valid = false;
+    
+	// ...
+	// check the monitor number in monitorList
+	// ---
+	if (monitorList->count() >= 1) {
+		valid = true;
+	}
+
+	// ...
+	// give notify message if not valid
+	// ---
+	if (! valid) {
+		XBox mb ( 
+		mText["dialoginfo"], mText["monitorinvalid"],
+		XBox::Warning,
+		XBox::Ok,0,0,mFrame,
+		globalFrameWidth
+		);
+		mb.setButtonText (
+		XBox::Ok,mText["Ok"]
+		);
+		mb.exec();
+		mFrame -> enterEvent ( 0 );
+	}
+	return (valid);
+}
+
 
 //=====================================
 // XMonitor internal page called...
