@@ -74,7 +74,7 @@ all:
 	${MAKE} -C ./xfine all
 
 install:
-	install -d -m 755 ${BINVZ} ${APIVZ} ${APIDATAVZ}
+	install -d -m 755 ${BINVZ} ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
 	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
