@@ -9,7 +9,7 @@ BELONGS TO    : configuration tool for the X window system
               : released under the GPL license
               :
 DESCRIPTION   : xapi (X11-Application-Interface)
-              : configure accessx for XFree86. accessx provide
+              : configure accessx for X11. accessx provide
               : the possibility to handle the mouse via the
               : number pad
               :

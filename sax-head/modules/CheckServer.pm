@@ -49,7 +49,7 @@ sub GetDisplay {
 	my $log = readlink("/proc/$pid/fd/0");
 	if (-f $log) {
 		# /.../
-		# XFree86 4.x will hold the display number
+		# X11 R6 v4.x will hold the display number
 		# in the log file name
 		# ---
 		if ($log =~ /XFree86\.(.*)\.log/) {
@@ -59,7 +59,7 @@ sub GetDisplay {
 		}
 	} else {
 		# /.../
-		# XFree86 3.3.x will hold the display number
+		# X11 R6 v3.3.x will hold the display number
 		# int the socket number above 6000
 		# ---
 		my $log = qx(socklist | grep $pid | tail -n 1);
@@ -113,7 +113,7 @@ sub GetPids {
 #----------------------------------------------------
 # this function search for a list of X Server PIDs. 
 # We will look at FD [0] of the descriptor list
-# to decide if this is an XFree86 server or not
+# to decide if this is an X11 server or not
 #
 	my $table = qx(ps axh | cut -c0-6);
 	$table =~ s/ +//g;

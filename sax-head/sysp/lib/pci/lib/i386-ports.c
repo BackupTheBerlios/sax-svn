@@ -46,7 +46,7 @@ conf12_cleanup(struct pci_access * UNUSED a)
  * Before we decide to use direct hardware access mechanisms, we try to do some
  * trivial checks to ensure it at least _seems_ to be working -- we just test
  * whether bus 00 contains a host bridge (this is similar to checking
- * techniques used in XFree86, but ours should be more reliable since we
+ * techniques used in X11, but ours should be more reliable since we
  * attempt to make use of direct access hints provided by the PCI BIOS).
  *
  * This should be close to trivial, but it isn't, because there are buggy

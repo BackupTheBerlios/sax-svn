@@ -3,7 +3,7 @@ FILE          : catch.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.0
               :  
 DESCRIPTION   : catch catches the mouse into a rectangele of
               : specific coordinates

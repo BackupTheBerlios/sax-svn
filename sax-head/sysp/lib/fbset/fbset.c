@@ -528,13 +528,13 @@ static void DisplayVModeInfo(struct VideoMode *vmode) {
 	if (vmode->csync)
 	    printf(" \"Composite\"");
 	if (vmode->extsync)
-	    puts("    # Warning: XFree86 doesn't support extsync\n");
+	    puts("    # Warning: X11 doesn't support extsync\n");
 	if (vmode->bcast)
 	    printf(" \"bcast\"");
 	if (vmode->accel_flags)
-	    puts("    # Warning: XFree86 doesn't support accel\n");
+	    puts("    # Warning: X11 doesn't support accel\n");
 	if (vmode->grayscale)
-	    puts("    # Warning: XFree86 doesn't support grayscale\n");
+	    puts("    # Warning: X11 doesn't support grayscale\n");
 	puts("\nEndMode\n");
     }
 }

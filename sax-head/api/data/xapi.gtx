@@ -352,10 +352,10 @@ pacsmissing=<b>Required base packages are missing</b><hr>Cannot enable OpenGL ac
 dummydriver=<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide the official 2D/3D/OpenGL driver from nVidia. Update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 Online Update).
 
 # RTF text: no limit
-nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for this card you need to install the commercial driver from nVidia first. Install the driver by using <b>YaST Online Update</b> and selecting the nVidia driver patch.<br><br>If you have already installed the driver via YaST Online Update before and uninstalled it afterwards you need to install the driver manually. Instructions for this can be found at the following location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>
+nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for this card you need to install the commercial driver from nVidia first. Install the driver by using <b>YaST Online Update</b> and selecting the nVidia driver patch.<br><br>If you have already installed the driver via YaST Online Update before and uninstalled it afterwards you need to install the driver manually. Instructions for this can be found at the following location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/xorg-x11/nvidia-installer-HOWTO</b>
 
 # RTF text: no limit
-nvidia3Ddisable=<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the commercial driver from nVidia. SaX2 needs to uninstall the driver using the nVidia installer. The uninstall process will reset the original driver from XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do you want to continue?</b>
+nvidia3Ddisable=<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the commercial driver from nVidia. SaX2 needs to uninstall the driver using the nVidia installer. The uninstall process will reset the original driver from X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you want to continue?</b>
 
 # Maximum length: 70 characters
 sizeinfo=Display size unknown...
@@ -949,7 +949,7 @@ accessx_info=<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the m
 xvnc_info=<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop and all its programs remotely via a VNC viewer program
 
 # RTF text: no limit
-opengl_info=<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card here. XFree86 includes the direct rendering interface to use the 3D capabilities of your graphics card. If your card and the corresponding driver support 3D hardware acceleration, enable it in this dialog.
+opengl_info=<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card here. X.Org includes the direct rendering interface to use the 3D capabilities of your graphics card. If your card and the corresponding driver support 3D hardware acceleration, enable it in this dialog.
 
 # RTF text: no limit
 virtual_info=<b>Virtual resolution:</b><hr>Every single desktop has its real resolution which is completely viewable. Beside this resolution you can setup a resolution which lives outside the viewable area of your monitor and comes up if you leave the edges of your monitor with the mouse. This area is called a virtual resolution.

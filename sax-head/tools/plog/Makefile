@@ -2,7 +2,7 @@
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 # Author: Marcus Schaefer <sax@suse.de>, 2001
 #
-# Makefile to build XFree86 log file parser
+# Makefile to build X11 log file parser
 # --
 # PLog.pm
 # 

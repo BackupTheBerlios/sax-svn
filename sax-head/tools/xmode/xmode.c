@@ -3,7 +3,7 @@ FILE          : xmode.c
 ***************
 PROJECT       : X11 Modeline algorithm
               :
-BELONGS TO    : XFree86 Inc.
+BELONGS TO    : X11 Inc.
               :  
               :
 DESCRIPTION   : xmode provides the libXmode to 
@@ -22,7 +22,7 @@ STATUS        : Status: Up-to-date
 #include "xmode.h"
 
 //================================================
-// calculate the fbmode from the XFree86 timings
+// calculate the fbmode from the X11 timings
 // -----------------------------------------------
 int XmodeFbTiming (struct xtiming *t) {
 	return (0);

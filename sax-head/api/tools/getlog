@@ -16,7 +16,7 @@ use Env;
 sub getLog {
 #-----------------------------------------------
 # get (EE) and (WW) warn/error messages from
-# XFree86 log file
+# X11 log file
 #
 	my $info;
 	my $file = $_[0];

@@ -2,7 +2,7 @@
 # Copyright (c) 2003 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Marcus Schaefer <sax@suse.de>, 2003
-# sysp script: read vendor string from XFree86 driver module
+# sysp script: read vendor string from X11 driver modules
 # --
 # This script is called via the 3D scan
 #

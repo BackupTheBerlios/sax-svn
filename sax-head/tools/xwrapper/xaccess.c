@@ -3,7 +3,7 @@ FILE          : xaccess.c
 ***************
 PROJECT       : SaX2 ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.x
+BELONGS TO    : Configuration tool X11 version 4.x
               :  
 DESCRIPTION   : XAccess use the XKB extension to use the
               : numeric keyblock as virtual mouse. This will 

@@ -3,7 +3,7 @@ FILE          : xidle.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.0
               :  
 DESCRIPTION   : idle looks if there is any action on the
               : display after a few seconds

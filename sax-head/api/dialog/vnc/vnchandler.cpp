@@ -9,7 +9,7 @@ BELONGS TO    : configuration tool for the X window system
               : released under the GPL license
               :
 DESCRIPTION   : xapi (X11-Application-Interface)
-              : configure VNC for XFree86. The VNC protocol provides
+              : configure VNC for X11. The VNC protocol provides
               : the possibility to export the X-Server desktop
               : for remote access
               :

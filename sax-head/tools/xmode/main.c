@@ -3,7 +3,7 @@ FILE          : main.c
 ***************
 PROJECT       : X11 Modeline algorithm
               :
-BELONGS TO    : XFree86 Inc.
+BELONGS TO    : X11 Inc.
               :  
 DESCRIPTION   : xmode provides the libXmode to 
               : calculate modelines with a minimum on
@@ -82,7 +82,7 @@ int main(int argc,char *argv[]) {
 	);
 	} else {
 	//=====================================
-	// XFree86 Modeline...
+	// X11 Modeline...
 	//-------------------------------------
 	printf (
 		"Modeline \"%dx%d\" %.2f %d %d %d %d %d %d %d %d",

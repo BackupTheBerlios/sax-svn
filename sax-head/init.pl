@@ -369,7 +369,7 @@ sub init {
 
 	# /.../
 	# call the autodetect functions to prepare the
-	# XFree86 configuration data
+	# X11 configuration data
 	# ---
 	detect();
 	

@@ -43,7 +43,7 @@ sub CheckThisSplit {
 sub ReadConfig {
 #----------------------------------------------
 # this function start the parse process
-# using the libxf86config.a XFree86 lib
+# using the libxf86config.a X11 lib
 # 
 	my $ptr;
 	my $file = $_[0];
@@ -56,7 +56,7 @@ sub ParseFileSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 Files section
+# from the X11 Files section
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -116,7 +116,7 @@ sub ParseModuleSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 Module section
+# from the X11 Module section
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -162,7 +162,7 @@ sub ParseInputDeviceSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 InputDevice sections
+# from the X11 InputDevice sections
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -264,7 +264,7 @@ sub ParseServerFlagsSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 ServerFlags section
+# from the X11 ServerFlags section
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -297,7 +297,7 @@ sub ParseServerLayoutSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 ServerLayout sections
+# from the X11 ServerLayout sections
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -370,7 +370,7 @@ sub ParseDeviceSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 Device sections
+# from the X11 Device sections
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -575,7 +575,7 @@ sub ParseModesSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 Modes sections
+# from the X11 Modes sections
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -647,7 +647,7 @@ sub ParseMonitorSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 Monitor sections
+# from the X11 Monitor sections
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash
@@ -791,7 +791,7 @@ sub ParseScreenSection {
 #---------------------------------------------
 # this function create a hash array
 # containing the configuration information
-# from the XFree86 Device sections
+# from the X11 Device sections
 #
 	my $ptr = $_[0];     # config pointer
 	my %parse;           # result hash

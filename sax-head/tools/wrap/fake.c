@@ -3,7 +3,7 @@ FILE          : fake.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.0
               :  
 DESCRIPTION   : fake bind mouse buttons to a specific key
               : to be invoked as it would be the mouse itself

@@ -4,7 +4,7 @@
 # Author: Marcus Schaefer <sax@suse.de>, 2000
 #
 # PLogData.pm saxtools
-# provide parse functions for the XFree86 log 
+# provide parse functions for the X11 log 
 # file data
 #
 # CVS ID:

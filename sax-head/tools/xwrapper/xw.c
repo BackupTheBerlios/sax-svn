@@ -4,7 +4,7 @@ FILE          : xw.c
 PROJECT       : SaX2 ( SuSE advanced X11 configuration )
               :
 DESCRIPTION   : xw.c is used to work as X-Server wrapper.
-              : It will start the XFree86 loader where the first
+              : It will start the X11 loader where the first
               : is used as file for the X-log.
               :
               : if the server is ready the fvwm windowmanager is started 

@@ -3,7 +3,7 @@ FILE          : xmset.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.0
               :  
               :
 BESCHREIBUNG  : xmset change the mouse properties on the

@@ -3,7 +3,7 @@ FILE          : xbound.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.x
               :  
 DESCRIPTION   : xbound create a bounding rectangle around
               : the display to show the screen borders

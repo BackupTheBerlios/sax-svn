@@ -3,7 +3,7 @@ FILE          : xtest.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.x
               : YaST2 inst-sys tools
               :  
 DESCRIPTION   : Checks if the X server is ok and sets the root

@@ -3,7 +3,7 @@ FILE          : xaccess.h
 ***************
 PROJECT       : SaX2 ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.x
+BELONGS TO    : Configuration tool X11 version 4.x
               :  
 DESCRIPTION   : header file for XAccess...
               : 

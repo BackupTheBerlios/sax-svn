@@ -8,7 +8,7 @@ AUTHOR        : Marcus Schäfer <ms@suse.de>
 BELONGS TO    : configuration tool for the X window system 
               : released under the GPL license
               :
-DESCRIPTION   : PLog.pm perl module for parsing XFree86   
+DESCRIPTION   : PLog.pm perl module for parsing X11
               : log files
               :
               :

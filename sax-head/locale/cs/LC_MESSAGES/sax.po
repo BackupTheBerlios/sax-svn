@@ -528,6 +528,7 @@ msgstr ""
 "</i>."
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
@@ -535,8 +536,8 @@ msgid ""
 "nVidia driver patch.<br><br>If you have already installed the driver via "
 "YaST Online Update before and uninstalled it afterwards you need to install "
 "the driver manually. Instructions for this can be found at the following "
-"location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
-"XFree86/nvidia-installer-HOWTO</b>"
+"location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/xorg-"
+"x11/nvidia-installer-HOWTO</b>"
 msgstr ""
 "<b>Nelze aktivovat OpenGL akceleraci</b><hr>Abyste mohli používat "
 "3Dsubsystém této grafické karty, musíte si nejdřív nainstalovat komerční "
@@ -547,12 +548,13 @@ msgstr ""
 "suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
 "nVidia installer. The uninstall process will reset the original driver from "
-"XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do "
-"you want to continue?</b>"
+"X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
+"want to continue?</b>"
 msgstr ""
 "<b>Nelze deaktivovat akceleraci OpenGL</b><hr>3D subsystém je založen na "
 "komerčních ovladačích od firmy nVidia. K deaktivaci 3D je třeba odinstalovat "
@@ -1515,9 +1517,10 @@ msgid ""
 msgstr ""
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
-"here. XFree86 includes the direct rendering interface to use the 3D "
+"here. X.Org includes the direct rendering interface to use the 3D "
 "capabilities of your graphics card. If your card and the corresponding "
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""

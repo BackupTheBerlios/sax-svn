@@ -187,7 +187,7 @@ while true ; do
 		SYS_CONFIG="-s"         # instead of the HW detection data
 	shift ;;                    # only take effect if SaX2 start its own server
 
-	-u|--automode)              # do not set my mode suggestion, let XFree86
+	-u|--automode)              # do not set my mode suggestion, let X11
 		AUTOMODE="-u"           # select the resolution
 	shift ;;
 
@@ -197,7 +197,7 @@ while true ; do
 	-v|--version)               # print version information...
 		version; exit 0 ;;
 
-	-x|--xmode)                 # do not use my modelines use the XFree86
+	-x|--xmode)                 # do not use my modelines use the X11
 		XMODE="-x"; shift ;;    # mode pool instead
 
 	-m|--modules)               # set module(x) to use for card X...
@@ -305,7 +305,7 @@ echo "             : about detection, startup and configuration."       >> $ERR
 echo "             : There are three parts of logging:"                 >> $ERR
 echo "             : ---"                                               >> $ERR
 echo "             : 1) INIT     ( detection, 3D )"                     >> $ERR
-echo "             : 2) STARTUP  ( XF86Config, XFree86 log, glxinfo )"  >> $ERR
+echo "             : 2) STARTUP  ( XF86Config, X11 log, glxinfo )"      >> $ERR
 echo "             : 3) CONFIG   ( config actions )"                    >> $ERR
 echo "             : ---"                                               >> $ERR
 echo "             :"                                                   >> $ERR

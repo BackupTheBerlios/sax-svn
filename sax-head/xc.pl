@@ -264,11 +264,11 @@ sub main {
 			print "    further information about the driver status\n";
 			print "    please have a look at:\n";
 			print "\n";
-			print "    http://www.xfree86.org/4.2.0/Status.html\n";
+			print "    http://http://www.x.org\n";
 			print "\n";
 			print "  - the card was not detected correctly. In\n"; 
 			print "    this case please get the information which\n"; 
-			print "    XFree86 module provide support for the card\n";
+			print "    X11 module provide support for the card\n";
 			print "    and set the module using the following\n"; 
 			print "    command:\n";
 			print "\n";
@@ -332,7 +332,7 @@ sub main {
 	}
 
 	# /.../
-	# add the config file and the XFree86 log file
+	# add the config file and the X11 log file
 	# to the SaX.log file
 	# ---
 	if ($haveServer == 0) {
@@ -810,7 +810,7 @@ sub headerOK {
 # file was created using SaX2 / ISaX
 #
 	my $file = $_[0];
-	my $hunk = "SaX generated XFree86 config file";
+	my $hunk = "SaX generated X11 config file";
 
 	# /.../
 	# first check if the file exist and could

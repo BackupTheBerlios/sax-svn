@@ -1388,7 +1388,7 @@ sub GetFramebufferResolution {
 #----[ GetFramebufferTimings ]-----#
 sub GetFramebufferTimings {
 #-------------------------------------------------
-# get the XFree86 modeline timings for the 
+# get the X11 modeline timings for the 
 # framebuffer mode
 #
 	my $fbset = $_[0];
@@ -1554,7 +1554,7 @@ sub CheckSyncRange {
 sub ReadFbModes {
 #-----------------------------------------------------
 # this function is used to read the /etc/fb.modes 
-# file and save the data as XFree86 configured list
+# file and save the data as X11 configured list
 #
 	my $file = "/etc/fb.modes";
 	my $nr   = 0;

@@ -3,7 +3,7 @@ FILE          : xmode.h
 ***************
 PROJECT       : X11 Modeline algorithm
               :
-BELONGS TO    : XFree86 Inc.
+BELONGS TO    : X11 Inc.
               :  
               :
 DESCRIPTION   : header file for xmode.c

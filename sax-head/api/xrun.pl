@@ -3,7 +3,7 @@
 # Author: Marcus Schaefer <sax@suse.de>, 2000
 #
 # xrun.pl configuration level 3
-# perl script to start XFree86 and the tuning tool
+# perl script to start X11 and the tuning tool
 # This is part of the xapi.pl configuration step
 #
 # CVS ID:

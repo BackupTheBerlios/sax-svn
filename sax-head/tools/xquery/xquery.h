@@ -3,7 +3,7 @@ FILE          : xquery.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.x
               :  
               :
 BESCHREIBUNG  : xquery delivers display information and take

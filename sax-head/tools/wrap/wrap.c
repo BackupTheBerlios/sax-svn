@@ -3,7 +3,7 @@ FILE          : warp.c
 ***************
 PROJECT       : SaX ( SuSE advanced X configuration )
               :
-BELONGS TO    : Configuration tool XFree86 version 4.0
+BELONGS TO    : Configuration tool X11 version 4.0
               :  
 DESCRIPTION   : wrap set the mouse to a new position 
               : given through commandline x y data

@@ -154,7 +154,7 @@ void Scan3D::Scan (void) {
 	}
 	// ...
 	// call xsload to check if the driver used is not an
-	// XFree86 driver and set special flags according to
+	// X11 driver and set special flags according to
 	// this driver:
 	// ---
 	// . At the moment only nvidia is affected. 
@@ -197,7 +197,7 @@ void Scan3D::Scan (void) {
 	//--------------------------------------
 	if ((device > 1) || (graphics.module == "vmware")) {
 		// ...
-		// Unfortunatelly XFree86 does not support 3D for
+		// Unfortunatelly X11 does not support 3D for
 		// multihead we will generally disable this feature on
 		// multihead requests...
 		// -----------------------

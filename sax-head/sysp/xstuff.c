@@ -226,7 +226,7 @@ void ScanXStuff::Scan (void) {
 		}
 	}
 	// ...
-	// read the parse data from the XFree86 log
+	// read the parse data from the X11 log
 	// and save it to parse...
 	// -------------------------
 	if ((graphics.size() > 1) || (graphics[0].module == "vmware")) {

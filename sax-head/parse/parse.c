@@ -3,7 +3,7 @@ FILE          : parse.c
 ***************
 PROJECT       : SaX - SuSE advanced X-configuration
               :
-BELONGS TO    : Parser for XFree 4.0 configuration file 
+BELONGS TO    : Parser for X11 R6 v4.x configuration file 
               :  
               :
 BESCHREIBUNG  : parse.c provide functions to use the 
