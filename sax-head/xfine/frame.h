@@ -90,7 +90,7 @@ class XFineWindow : public QMainWindow {
 
 	private:
 	void updateStep ( int );
-	void setFrame   ( int,int,bool,bool );
+	void setFrame   ( int,int,bool,bool,bool );
 	void initScreen ( bool,bool );
 
 	private slots:

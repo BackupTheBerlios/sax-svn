@@ -27,6 +27,7 @@ STATUS        : Status: Up-to-date
 #include <X11/Xlib.h>
 extern "C" {
 #include <X11/extensions/Xinerama.h>
+#include <GL/glx.h>
 }
 
 #include "frame.h"
@@ -318,6 +319,34 @@ void signalSave (int) {
 void signalReset (int) {
 	xfine -> resize (XAbort);
 	exit (0);
+}
+
+//=====================================
+// check for render extension
+//-------------------------------------
+bool hasDirectRendering (int screen) {
+	Display *dpy = QApplication::desktop()->x11Display();
+	int attribSingle[] = {
+		GLX_RGBA,
+		GLX_RED_SIZE,   1,
+		GLX_GREEN_SIZE, 1,
+		GLX_BLUE_SIZE,  1,
+		None
+	};
+	XVisualInfo* visinfo = glXChooseVisual (
+		dpy, screen, attribSingle
+	);
+	if (visinfo) {
+		GLXContext ctx = glXCreateContext ( dpy, visinfo, NULL, True );
+		if (glXIsDirect(dpy, ctx)) {
+			glXDestroyContext (dpy,ctx);
+			return true;
+		}
+		glXDestroyContext (dpy,ctx);
+		return false;
+	} else {
+		return false;
+	}
 }
 
 //=====================================

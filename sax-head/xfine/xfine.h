@@ -24,6 +24,7 @@ STATUS        : Status: Up-to-date
 // Prototypes...
 //-----------------------------------
 void usage (void);
+bool hasDirectRendering (int);
 bool accessAllowed (void);
 void signalActivateSave (int);
 void signalQuit (int);

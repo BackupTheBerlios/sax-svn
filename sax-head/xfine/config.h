@@ -24,6 +24,8 @@ STATUS        : Status: Up-to-date
 #define XFINEGTX        "/usr/X11R6/lib/xfine/xfine.gtx"
 
 #define LOGO            PIXDIR "suse.gif"
+#define DRI_ENABLED     PIXDIR "dri-enabled.gif"
+#define DRI_DISABLED    PIXDIR "dri-disabled.gif" 
 #define PIXRIGHT        PIXDIR "xfine-right.xpm"
 #define PIXLEFT         PIXDIR "xfine-left.xpm"
 #define PIXUP           PIXDIR "xfine-up.xpm"

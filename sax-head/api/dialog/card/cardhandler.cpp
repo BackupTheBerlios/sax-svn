@@ -1629,6 +1629,7 @@ void XCard::slot3D (void) {
 	// check the currently used colordepth
 	// and show a warning if not in 16 bit color depth
 	// ---
+	#if 0
 	if (enable) {
 		XData* sysData = mFiles["sys_DESKTOP"] -> getDevice(0);
 		if ( sysData ) {
@@ -1639,6 +1640,7 @@ void XCard::slot3D (void) {
 		}
 		}
 	}
+	#endif
 	// ...
 	// check for the packages and flags needed to enable/disable
 	// 3D if not all packages installed or the flag value point

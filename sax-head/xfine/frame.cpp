@@ -68,8 +68,9 @@ XFineWindow::XFineWindow (int x,int y,int screen,bool uniFont) :
 
 	// ...
 	// create the GUI for one screen
-	// ---	
-	setFrame (x,y,mAdjustable,uniFont);
+	// ---
+	bool has3D = hasDirectRendering ( screen );
+	setFrame (x,y,mAdjustable,uniFont,has3D);
 	installEventFilter (this);
 
 	// ...
@@ -86,7 +87,9 @@ XFineWindow::XFineWindow (int x,int y,int screen,bool uniFont) :
 //=====================================
 // XFineWindow create and init GUI...
 //-------------------------------------
-void XFineWindow::setFrame (int x,int y, bool adjustable, bool uniFont) {
+void XFineWindow::setFrame (
+	int x,int y, bool adjustable, bool uniFont,bool has3D
+) {
 	XWrapText< QDict<char> > mText (mTextPtr);
 	setCaption ("XFine2");
 	setGeometry (
@@ -170,6 +173,18 @@ void XFineWindow::setFrame (int x,int y, bool adjustable, bool uniFont) {
 	mSview -> setFrameStyle(QFrame::NoFrame);
 	mSview -> addChild(mImage);
 	mSview -> setMaximumWidth (35);
+	// 3D label...
+	QLabel* sizeIndicator3D = new QLabel (sizeFrame);
+	QLabel* posIndicator3D  = new QLabel (posFrame);
+	if (has3D) {
+		QPixmap* DRIenabled  = new QPixmap (DRI_ENABLED);
+		sizeIndicator3D -> setPixmap (*DRIenabled);
+		posIndicator3D  -> setPixmap (*DRIenabled);
+	} else {
+		QPixmap* DRIdisabled = new QPixmap (DRI_DISABLED);
+		sizeIndicator3D -> setPixmap (*DRIdisabled);
+		posIndicator3D  -> setPixmap (*DRIdisabled);
+	}
 	// seperator...
 	QFrame *seperator = new QFrame(mFrame);
 	seperator -> setFixedHeight(2);
@@ -298,6 +313,12 @@ void XFineWindow::setFrame (int x,int y, bool adjustable, bool uniFont) {
 	layer8 -> addWidget  ( right ,  1,2 );
 	layer8 -> addWidget  ( up    ,  0,1 );
 	layer8 -> addWidget  ( down  ,  2,1 );
+
+	//==============================================
+	// set 3D indicators to the middle of the grid
+	//----------------------------------------------
+	layer7 -> addWidget  ( sizeIndicator3D , 1,1 );
+	layer8 -> addWidget  ( posIndicator3D  , 1,1 );
 
 	//==============================================
 	// disable dialog if not vidmode adjustable...
