@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed May 19 12:22:01 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Jun 16 11:24:48 2004
 #
 # Template for monitor data
 # --------------------------
@@ -18979,6 +18979,17 @@ IIYAMA:MT9017T  {
  Option=DPMS
  Hsync=27-92
  Vsync=50-160
+}
+
+#==============================================
+# Pro Lite E481S
+#----------------------------------------------
+IIYAMA:PRO LITE E481S  {
+ DDC=IVM480A
+ Option=DPMS
+ Hsync=24-83
+ Resolution=1280x1024
+ Vsync=55-76
 }
 
 #==============================================
