@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Dec  9 15:31:01 2004
+# Author: Marcus Schaefer <sax@suse.de>, Mon Dec 13 17:26:38 2004
 #
 # Template for monitor data
 # --------------------------
@@ -10729,6 +10729,17 @@ EIZO:L671-K  {
 }
 
 #==============================================
+# L985EX
+#----------------------------------------------
+EIZO:L985EX  {
+ DDC=ENC1674
+ Option=DPMS
+ Hsync=31-76
+ Resolution=1600x1200
+ Vsync=59-61
+}
+
+#==============================================
 # NANAO FLEXSCAN FX-C7
 #----------------------------------------------
 EIZO:NANAO FLEXSCAN FX-C7  {
@@ -13136,6 +13147,17 @@ FUJITSU:X191  {
 FUJITSU SIEMENS:19P1N  {
  Option=DPMS
  Hsync=30-96
+ Vsync=50-160
+}
+
+#==============================================
+# 19P2
+#----------------------------------------------
+FUJITSU SIEMENS:19P2  {
+ DDC=FUS0150
+ Option=DPMS
+ Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -27856,6 +27878,17 @@ PHILIPS:BRILLIANCE 109P10  {
 }
 
 #==============================================
+# Brilliance 109P4
+#----------------------------------------------
+PHILIPS:BRILLIANCE 109P4  {
+ DDC=PHL0008
+ Option=DPMS
+ Hsync=30-111
+ Resolution=1280x1024
+ Vsync=50-160
+}
+
+#==============================================
 # BRILLIANCE 150P
 #----------------------------------------------
 PHILIPS:BRILLIANCE 150P  {
@@ -31394,6 +31427,17 @@ SAMSUNG:SYNCMASTER 950P PLUS(T)  {
 }
 
 #==============================================
+# SYNCMASTER 955DF
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 955DF  {
+ DDC=SAM002D
+ Option=DPMS
+ Hsync=30-85
+ Resolution=1280x1024
+ Vsync=160-50
+}
+
+#==============================================
 # SYNCMASTER 955DF(T)
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 955DF(T)  {
@@ -31761,6 +31805,17 @@ SCEPTRE:LT12W  {
  Option=DPMS
  Hsync=24-38
  Vsync=50-90
+}
+
+#==============================================
+# X7G KOMODO2
+#----------------------------------------------
+SCEPTRE:X7G KOMODO2  {
+ DDC=SPT1731
+ Option=DPMS
+ Hsync=30-80
+ Resolution=1280x1024
+ Vsync=60-75
 }
 
 #==============================================
