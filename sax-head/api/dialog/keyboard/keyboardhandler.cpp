@@ -95,6 +95,8 @@ void XKeyboard::resetPage (int reload) {
 		workingKeyboard.setPair ("XkbVariant",
 			XkbVariant->ascii()
 		);
+		} else {
+		workingKeyboard.setPair ("XkbVariant", "");
 		}
 	}
 
@@ -179,6 +181,7 @@ void XKeyboard::initPage (void) {
 	);
 	mXkbOption[0]->insertItem (*xkbDefault);
 	mXkbOption[1]->insertItem (*xkbDefault);
+	mXkbOption[6]->insertItem (*xkbDefault);
 	QDictIterator<char> itOption (mOptionHash);
 	for (; itOption.current(); ++itOption) {
 		XStringList completeOption (itOption.currentKey());
@@ -189,9 +192,14 @@ void XKeyboard::initPage (void) {
 			QString::fromLocal8Bit (itOption.current())
 		);
 		}
-		if (optkey == "ctrl") {
+		else if (optkey == "ctrl") {
 		mXkbOption[1] -> insertItem (
 			QString::fromLocal8Bit (itOption.current()) 
+		);
+		}
+		else {
+		mXkbOption[6] -> insertItem (
+			QString::fromLocal8Bit (itOption.current())
 		);
 		}
 	}
@@ -559,11 +567,15 @@ void XKeyboard::setupTop ( void ) {
 				);
 				int index0 = getItem ( mXkbOption[0],optionText );
 				int index1 = getItem ( mXkbOption[1],optionText );
+				int index2 = getItem ( mXkbOption[6],optionText );
 				if (index0 != 0) {
 					mXkbOption[0] -> setCurrentItem ( index0 );
 				}
 				if (index1 != 0) {
 					mXkbOption[1] -> setCurrentItem ( index1 );
+				}
+				if (index2 != 0) {
+					mXkbOption[6] -> setCurrentItem ( index2 );
 				}
 			}
 			}

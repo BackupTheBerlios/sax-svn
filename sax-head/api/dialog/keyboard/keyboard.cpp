@@ -140,6 +140,9 @@ void XKeyboard::dialogCreate (void) {
 	QHBox* shiftLockBox  = new QHBox ( layer1 );
 	layer1 -> setSpacing (10);
 	QHBox* ctrlMapBox    = new QHBox ( layer1 );
+	layer1 -> setSpacing (10);
+	QHBox* miscBox       = new QHBox ( layer1 );
+	layer1 -> setSpacing (10);
 	QHBox* dummyBox1 = new QHBox ( layer1 );
 	QFrame* line = new QFrame ( dummyBox1 );
 	line -> setFrameStyle (
@@ -156,7 +159,7 @@ void XKeyboard::dialogCreate (void) {
 	QHBox* rightCtrlBox  = new QHBox ( layer1 );
 	QHBox* dummyBox2 = new QHBox ( layer1 );
 	layer1 -> setStretchFactor  ( dummyBox2,4 );
-
+	// ...
 	QLabel* shiftLockLabel  = new QLabel ( shiftLockBox );
 	shiftLockLabel -> setText (
 		mText["ShiftLockGroup"]
@@ -164,6 +167,7 @@ void XKeyboard::dialogCreate (void) {
 	shiftLockLabel -> setFixedWidth ( 200 );
 	mXkbOption[0] = new QComboBox ( FALSE,shiftLockBox );
 	shiftLockBox -> setStretchFactor ( mXkbOption[0],2 );
+	// ...
 	QLabel* ctrlMapLabel    = new QLabel ( ctrlMapBox );
 	ctrlMapLabel -> setText (
 		mText["CtrlPos"]
@@ -171,6 +175,15 @@ void XKeyboard::dialogCreate (void) {
 	ctrlMapLabel -> setFixedWidth ( 200 );
 	mXkbOption[1] = new QComboBox ( FALSE,ctrlMapBox );
 	ctrlMapBox -> setStretchFactor ( mXkbOption[1],2 );
+	// ...
+	QLabel* miscLabel       = new QLabel ( miscBox );
+	miscLabel -> setText (
+		mText["kbdmisc"]
+	);
+	miscLabel -> setFixedWidth ( 200 );
+	mXkbOption[6] = new QComboBox ( FALSE,miscBox );
+	miscBox -> setStretchFactor ( mXkbOption[6],2 );
+	// ...
 	QLabel* leftAltLabel    = new QLabel ( leftAltBox );
 	leftAltLabel -> setText (
 		mText["LeftAlt"]

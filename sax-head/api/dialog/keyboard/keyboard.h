@@ -55,7 +55,7 @@ class XKeyboard : public XTemplate {
 	QListView*    mAddView;
 	QPushButton*  mOption;
 	QLineEdit*    mTest;
-	QComboBox*    mXkbOption[6];
+	QComboBox*    mXkbOption[7];
 	QLCDNumber*   mRepeatLCD;
 	QLCDNumber*   mDelayLCD;
 	QSlider*      mRepeat;
