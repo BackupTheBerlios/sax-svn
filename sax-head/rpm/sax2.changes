@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Wed Aug 18 09:28:30 CEST 2004 - ms@suse.de
+
+- changed testX to use fvwmrc.yast2, remove fvwmrc.yast2 from
+  package sax2 -> moved to YaST2 (#43796)
+
+-------------------------------------------------------------------
+Fri Aug  6 15:42:44 CEST 2004 - meissner@suse.de
+
+- %_lib fix to make it build on lib64 archs.
+
+-------------------------------------------------------------------
 Thu Jul 29 14:44:19 CEST 2004 - ms@suse.de
 
 - added profile for i915G chipset, update card database

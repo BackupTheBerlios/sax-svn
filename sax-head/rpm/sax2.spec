@@ -10,7 +10,7 @@
 
 # neededforbuild  flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig udev update-desktop-files x-devel-packages xorg-x11-driver-options xorg-x11-server yacc
 
-BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv kbd less libacl libattr libgcc libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
+BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv less libacl libattr libgcc libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
 
 Name:         sax2
 Requires:     perl perl-gettext fbset sax2-ident
@@ -26,11 +26,11 @@ Requires:     XFree86-server
 %else
 Requires:     xloader
 %endif
-Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
+Summary:      SuSE advanced X Window System-configuration
 Version:      4.8
-Release:      108
+Release:      117
 Group:        System/X11/Utilities
-License:      GPL
+License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
 Source1:      sax2_pixmaps.tar.bz2
 Source2:      sax2_nvidia.tar.bz2
@@ -52,7 +52,7 @@ Requires:     sax2_sbus
 %endif
 
 %description
-This package contains the SuSE Advanced X-Configuration (XFree86 4.x)
+This package contains the SuSE Advanced X-Configuration
 
 
 
@@ -62,7 +62,7 @@ Authors:
 
 %package -n sax2-tools
 Version:      2.3
-Release:      2
+Release:      11
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     sax2-ident
@@ -81,7 +81,7 @@ Authors:
 
 %package -n sax2-ident
 Version:      1.2
-Release:      2
+Release:      11
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
@@ -104,15 +104,14 @@ Authors:
 %package -n sax2-gui
 Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Version:      1.2
-Release:      2
+Release:      11
 Requires:     sax2
-Summary:      SuSE advanced X Window System-configuration GUI (XFree86 4.x)
+Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
 
 %description -n sax2-gui
 This package contains the GUI for the SuSE Advanced X-Configuration
-(XFree86 4.x)
 
 
 
@@ -328,8 +327,9 @@ mv $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl \
 %endif
 # remove unpacked sources...
 # --------------------------
-rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/cdb/Monitors.orig
+rm -f $RPM_BUILD_ROOT/usr/X11R6/%_lib/sax/api/data/cdb/Monitors.orig
 rm -f $RPM_BUILD_ROOT/usr/X11R6/share/fvwm/fvwmrc.yast2
+rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/fvwmrc.yast2
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_loader.sh
 rm -f $RPM_BUILD_ROOT/var/adm/perl-modules/sax2
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SecureMode
