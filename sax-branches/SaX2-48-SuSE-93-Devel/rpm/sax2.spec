@@ -465,6 +465,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/share/locale/pl_PL/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
+/usr/share/locale/uk/LC_MESSAGES/sax.mo
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------
