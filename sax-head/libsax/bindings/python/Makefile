@@ -1,5 +1,6 @@
 DESTDIR = /
-PACKDIR = ${DESTDIR}/usr/lib/python/site-packages
+PYTHON  = `readlink /usr/lib/python`
+PACKDIR = ${DESTDIR}/usr/lib/${PYTHON}/site-packages
 MODDIR  = ${PACKDIR}/SaX
 
 export LD_LIBRARY_PATH=../../
