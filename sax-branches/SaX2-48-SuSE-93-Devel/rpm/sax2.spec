@@ -390,7 +390,6 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/X11R6/%{_lib}/sax/doc/config
 /usr/X11R6/%{_lib}/sax/doc/guitest
 /usr/X11R6/%{_lib}/sax/doc/README
-/usr/X11R6/%{_lib}/sax/doc/README.profile
 /usr/X11R6/%{_lib}/sax/svnbuild
 /usr/X11R6/%{_lib}/sax/init.pl
 /usr/X11R6/%{_lib}/sax/xc.pl
