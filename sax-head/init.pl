@@ -963,6 +963,15 @@ sub SetBatchMode {
 	# ------------------------------
 	@ProfileData = ();
 	print "SaX: including profile: $profile...\n";
+	#==========================================
+	# Check if there is a profile script which
+	# should run before the profile is opened
+	#------------------------------------------
+	if (-f "$profile.sh") {
+		print "SaX: calling profile script: $profile.sh\n";
+		qx ($profile.sh);
+		$profile = "$profile.tmp";
+	}
 	open (FD,$profile) || die "init: could not open file: $profile";
 	while(<FD>) {
 		chomp($_);

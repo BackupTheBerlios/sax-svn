@@ -34,6 +34,9 @@ MouseData* MouseGetData(void) {
 	first_dev = hd;
 
 	for(; hd; hd = hd->next) {
+		if (! hd->unix_dev_name) {
+			continue;
+		}
 		//===================================
 		// create new element and defaults...
 		// -----------------------------------
