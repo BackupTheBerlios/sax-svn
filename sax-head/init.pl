@@ -1489,7 +1489,7 @@ sub help {
 # using help within the shell
 #
 	print "variable format:\n";
-	print "  » var->var->...->var = value «\n";
+	print "  var -> var ->...-> var = value\n";
 	print "\n";
 	print "commands:\n";
 	print "  variable list:    list [ /<regexp>/ ]\n";
