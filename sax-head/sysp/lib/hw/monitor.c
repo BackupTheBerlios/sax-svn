@@ -46,6 +46,7 @@ MsgDetect MonitorGetData (void) {
 		return (display);
 	}
 	sprintf(display.model,hd->model);
+	sprintf(display.vendor,vend_id2str(hd->vendor.id));
     //printf("+++ %s\n",hd->id);
 	// ...
 	// Check for LCD panel with data located in the VESA

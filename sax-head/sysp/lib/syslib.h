@@ -65,6 +65,7 @@ typedef struct {
  int dpix;
  int dpiy;
  str model;
+ str vendor;
 } MsgDetect;
 
 typedef struct PciData_t {

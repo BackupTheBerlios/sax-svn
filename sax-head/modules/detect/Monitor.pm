@@ -24,6 +24,7 @@ sub AutoDetectSyncRanges {
 	my @hsync_list;        # Hsync list
 	my @ddc_list;          # list of monitor manufacturer ID`s
 	my @model_list;        # list of monitor names
+	my @vendor_list;       # list of monitor vendor names
 	my @vesa_list;         # vesa mode list
 	my @dtype_list;        # display type list
 	my $size;              # number of cards
@@ -73,6 +74,12 @@ sub AutoDetectSyncRanges {
 			/^Name/          && do {
 			push (@model_list,$query{$card}{$i});
             last SWITCH;
+			};
+			# Vendor Name list...
+			# ---------------------
+			/^Vendor/          && do {
+			push (@vendor_list,$query{$card}{$i});
+			last SWITCH;
 			};
 			# display type list...
 			# ---------------------
@@ -144,7 +151,10 @@ sub AutoDetectSyncRanges {
 		next;
 	}
 	$ddc_list[$i] =~ s/ +//g;
-	@record = GetDDCRecord($ddc_list[$i],$model_list[$i]);
+	@record = GetDDCRecord(
+		$ddc_list[$i],$model_list[$i],$vendor_list[$i],
+		$hsync_list[$i],$vsync_list[$i],$spec{Monitors}
+	);
 	$rsize  = @record;
 
 	if ($rsize > 0) {
@@ -227,7 +237,7 @@ sub AutoDetectSyncRanges {
 #----[ GetDDCRecord ]----------#
 sub GetDDCRecord {
 #-----------------------------------------------
-# this function returns a list which DDC data
+# this function returns a list including CDB data
 # according to a DDC ID. The list has the 
 # following structure:
 #
@@ -241,9 +251,13 @@ sub GetDDCRecord {
 # 7 -> profile  if exist
 # 8 -> resolution if exist
 #
-	my $id     = $_[0];
-	my $model  = $_[1];
-	my %result = %MonitorList;
+	my $id      = $_[0];
+	my $model   = $_[1];
+	my $vendstr = $_[2];
+	my $hsync   = $_[3];
+	my $vsync   = $_[4];
+	my $CDBFile = $_[5];
+	my %result  = %MonitorList;
 
 	my @ddc;
 	my $vendor;
@@ -336,6 +350,30 @@ sub GetDDCRecord {
 	}
 	if (defined $ddc[0]) {
 		return (@ddc);
+	}
+	#=========================================
+	# If ID wasn't found but detected, add it
+	#-----------------------------------------
+	if ($id ne "<undefined>") {
+		if (! open (FD,">>$CDBFile")) {
+			return;
+		}
+		$id      = uc ($id);
+		$vendstr = uc ($vendstr);
+		$model   = uc ($model);
+		print FD "#==============================================\n";
+		print FD "# Entry created from init stage\n";
+		print FD "#----------------------------------------------\n";
+		print FD "$vendstr:$model \{\n";
+		print FD " DDC=$id\n";
+		print FD " Hsync=30-$hsync\n";
+		print FD " Vsync=43-$vsync\n";
+		print FD "\}\n";
+		close FD;
+		%MonitorList = GetMonitorList ( $CDBFile );
+		return ( GetDDCRecord (
+			$id,$model,$vendstr,$hsync,$vsync,$CDBFile
+		));
 	}
 	return;
 }

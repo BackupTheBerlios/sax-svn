@@ -578,6 +578,7 @@ void PrintStuffData(ScanXStuff s) {
 		}
 		printf ("Card%d     =>  DDC        : %s\n",card,data.ddc.c_str());
 		printf ("Card%d     =>  Name       : %s\n",card,data.model.c_str());
+		printf ("Card%d     =>  Vendor     : %s\n",card,data.vendor.c_str());
 		printf ("Card%d     =>  Primary    : %s\n",card,data.primary.c_str());
 		printf ("Card%d     =>  Chipset    : %s\n",card,data.chipset.c_str());
 		printf ("Card%d     =>  Vsync      : %d\n",card,data.vsync);

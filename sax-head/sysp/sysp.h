@@ -129,6 +129,7 @@ struct ParseData {
 	string ddc;
 	string dtype;
 	string model;
+	string vendor;
 	string primary;
 	int pbus;
 	int pslot;
@@ -177,6 +178,7 @@ struct StuffData {
 	string chipset;
 	string dtype;
 	string model;
+	string vendor;
 	int hsync;
 	int vsync;
 	int vesacount;
@@ -198,6 +200,7 @@ struct StuffData_S {
 	str ddc;
 	str dtype;
 	str model;
+	str vendor;
 	str primary;
 	str chipset;
 	int hsync;

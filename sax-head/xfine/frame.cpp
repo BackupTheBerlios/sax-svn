@@ -326,7 +326,6 @@ void XFineWindow::setFrame (
 	if ( ! adjustable) {
 		menuBar() -> setDisabled (true);
 		mTab -> setDisabled (true);
-		mSave -> setDisabled (true);
 	}
 
 	setCentralWidget ( mFrame );
@@ -454,6 +453,9 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 // XFineWindow save mode to CACHE...
 //-------------------------------------
 void XFineWindow::saveMode (void) {
+	if ( ! adjustable) {
+		return;
+	}
 	QFile* mHandle = new QFile (mFileName);
 	if (! mHandle -> open(IO_WriteOnly)) {
 	log (L_ERROR,

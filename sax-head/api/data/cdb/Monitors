@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Apr  1 12:25:37 2004
+# Author: Marcus Schaefer <sax@suse.de>, Tue Apr 13 10:58:59 2004
 #
 # Template for monitor data
 # --------------------------
@@ -5046,7 +5046,10 @@ BELINEA:106050  {
 # 106055
 #----------------------------------------------
 BELINEA:106055  {
+ DDC=MAX17A7
+ Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 

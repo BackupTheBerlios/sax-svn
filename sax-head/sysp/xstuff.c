@@ -134,15 +134,16 @@ void ScanXStuff::Scan (void) {
 	// X-Server...
 	// ------------
 	if ((graphics.size() == 1) && (graphics[0].module != "vmware")) {
-		parse[0].dtype = display.displaytype;
-		parse[0].model = display.model;
-		parse[0].bus   = graphics[0].bus;
-		parse[0].slot  = graphics[0].slot;
-		parse[0].func  = graphics[0].func;
-		parse[0].pbus  = graphics[0].bus;
-		parse[0].pslot = graphics[0].slot;
-		parse[0].pfunc = graphics[0].func;
-		parse[0].ddc   = "<undefined>";
+		parse[0].dtype  = display.displaytype;
+		parse[0].model  = display.model;
+		parse[0].vendor = display.vendor;
+		parse[0].bus    = graphics[0].bus;
+		parse[0].slot   = graphics[0].slot;
+		parse[0].func   = graphics[0].func;
+		parse[0].pbus   = graphics[0].bus;
+		parse[0].pslot  = graphics[0].slot;
+		parse[0].pfunc  = graphics[0].func;
+		parse[0].ddc    = "<undefined>";
 		if (VBEmem > 0) {
 			parse[0].videoram = VBEmem;
 		} else {
@@ -268,9 +269,13 @@ void ScanXStuff::Scan (void) {
 		sprintf(primary,"%02d-%02d-%d",
 		parse[mapnr].pbus,parse[mapnr].pslot,parse[mapnr].pfunc);  
 
-		stuff[i].model = "<undefined>";
+		stuff[i].model  = "<undefined>";
+		stuff[i].vendor = "<undefined>";
 		if (parse[mapnr].model != "") {
 			stuff[i].model = parse[mapnr].model;
+		}
+		if (parse[mapnr].vendor != "") {
+			stuff[i].vendor = parse[mapnr].vendor;
 		}
 		stuff[i].vmdepth   = parse[mapnr].vmdepth;
 		stuff[i].ddc       = parse[mapnr].ddc;
@@ -474,6 +479,7 @@ int ScanXStuff::Save (void) {
 		strcpy(part1.fbtiming  , data.fbtiming.c_str());
 		strcpy(part1.dtype     , data.dtype.c_str());
 		strcpy(part1.model     , data.model.c_str());
+		strcpy(part1.vendor    , data.vendor.c_str());
 		part1.vmdepth          = data.vmdepth;
 		part1.hsync            = data.hsync;
 		part1.vsync            = data.vsync;
@@ -523,6 +529,7 @@ int ScanXStuff::Read (void) {
 		data.ddc       = part1.ddc;
 		data.dtype     = part1.dtype;
 		data.model     = part1.model;
+		data.vendor    = part1.vendor;
 		data.primary   = part1.primary;
 		data.chipset   = part1.chipset;
 		data.hsync     = part1.hsync;
