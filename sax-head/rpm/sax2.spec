@@ -8,7 +8,7 @@
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig update-desktop-files yacc
+# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig update-desktop-files yacc x-devel-packages
 
 Name:         sax2
 Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
