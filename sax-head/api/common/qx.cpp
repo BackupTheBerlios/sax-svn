@@ -22,6 +22,7 @@ STATUS        : development
 #include <string.h>
 #include <errno.h>
 #include <signal.h>
+#include <libgen.h>
 
 #include "qx.h"
 #include "log.h"
@@ -47,7 +48,7 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 	// prepare arguments for execv...
 	//---------------------------------
 	arg[0] = (char*)malloc(sizeof(char)*MAX_PROGRAM_SIZE);
-	strcpy(arg[0],command);
+	strcpy(arg[0],basename (command));
 	arg[anz+1] = NULL;
 
 	// prepare data file...
@@ -57,17 +58,18 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 	// get arguments...
 	// ----------------- 
 	if (format != NULL) {
-	va_start(ap, format);
-	while (*format) {
-		switch(*format++) {
-		case 's':
-		arg[n] = va_arg(ap, char*);
-		n++;
-		break;
+		va_start(ap, format);
+		while (*format) {
+			switch(*format++) {
+			case 's':
+			arg[n] = strdup(va_arg(ap, char*));
+			n++;
+			break;
+			}
 		}
+		va_end(ap);
 	}
-	va_end(ap);
-	}
+	arg[n] = NULL;
 
 	//=================================
 	// call the program...
@@ -97,13 +99,14 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 		unlink (data);
 	}
 	log(L_ERROR,
-		"qx: could not execute command: %s\n",arg
+		"qx: could not execute command: %s\n",command
 	);
+	exit (0);
 
 	default:
 	// parent process...
 	// ------------------
-	waitpid (child,NULL,WNOHANG);
+	waitpid (child,NULL,0);
 	if ((channel == 0) || (channel == 1)) {
 	while (getproc(data)) {
 		usleep(500);
