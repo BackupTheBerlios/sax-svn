@@ -159,7 +159,10 @@ if ($module eq "nvidia") {
 
     $_ = $xorg_probe = probe_x11 ($module, "");
 
-    if (/^\(..\) NVIDIA\([0-9]+\): Virtual screen size determined to be\s*([0-9]+)\s*x\s*([0-9]+)\s*$/m) {
+    if (/^\(..\) NVIDIA\([0-9]+\): EDID reported maximum dimensions for display device DFP(-[0-9]+)?:\s*.*?width\s*:\s*([0-9]+)\s*.*?height\s*:\s*([0-9]+)\s*$/ms) {
+        print STDERR "Maximum resolution: $2x$3\n";
+	($maxwidth, $maxheight) = ($2, $3);
+    } elsif (/^\(..\) NVIDIA\([0-9]+\): Virtual screen size determined to be\s*([0-9]+)\s*x\s*([0-9]+)\s*$/m) {
         print STDERR "Maximum resolution: $1x$2\n";
 	($maxwidth, $maxheight) = ($1, $2);
     } else {
