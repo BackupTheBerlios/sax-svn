@@ -1654,7 +1654,7 @@ void XCard::slot3D (void) {
 		QString installed = qx (
 			GETPACKAGE,STDOUT,1,"%s",pacs.ascii()
 		);
-		if (! installed.toInt() ) {
+		if ((! installed.toInt()) && (! pacs.isEmpty()) ) {
 			setMessage ("pacsmissing",XBox::Critical,pacs);
 			mCheck3D -> setChecked ( false );
 			return;
