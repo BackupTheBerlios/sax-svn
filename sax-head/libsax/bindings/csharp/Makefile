@@ -4,7 +4,7 @@ all:
 		-fno-strict-aliasing -pipe -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 \
 		-O2 -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o SaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
-		-L/suse/ms/libsax -lm -lxf86config -lqt-mt -lsax -lxkbfile
+		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	mcs -nologo -o test.exe *.cs
 
 clean:

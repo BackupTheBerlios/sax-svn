@@ -62,14 +62,12 @@ all:
 	# building libsax and bindings...
 	# -------------------------------
 	${MAKE} -C ./libsax all
-	(
-	cd libsax
+	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \
 		if [ -d ./bindings/$$i ];then \
 			( cd ./bindings/$$i && make -f Makefile.swig && make ) ;\
 		fi \
-	done
-	)
+	done )
 
 	# building GUI and tools...
 	# -------------------------
