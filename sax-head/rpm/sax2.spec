@@ -1,14 +1,15 @@
 #
 # spec file for package sax2 (Version 4.8)
 #
-# Copyright (c) 2003 SuSE Linux AG, Nuernberg, Germany.
+# Copyright (c) 2004 SuSE Linux AG, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig update-desktop-files x-devel-packages yacc
+# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig udev update-desktop-files x-devel-packages yacc
+# usedforbuild    aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv kbd less libacl libattr libgcc libselinux libstdc++ libxcrypt m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed sendmail strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel XFree86-Mesa XFree86-Mesa-devel XFree86-devel XFree86-driver-options XFree86-libs XFree86-server autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files
 
 Name:         sax2
 Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
@@ -22,7 +23,7 @@ Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.8
-Release:      576
+Release:      39
 Group:        System/X11/Utilities
 License:      LGPL, Other License(s), see package
 Source:       sax2.tar.bz2
@@ -55,7 +56,7 @@ Authors:
 
 %package -n saxtools
 Version:      2.2
-Release:      1125
+Release:      1349
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     saxident
@@ -72,7 +73,7 @@ Authors:
 
 %package -n saxident
 Version:      1.1
-Release:      834
+Release:      1055
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
