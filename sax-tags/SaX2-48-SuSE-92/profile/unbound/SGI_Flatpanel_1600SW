@@ -1,0 +1,16 @@
+# SGI Flatpanel profile: 1600 series
+# -----------------------------------
+Monitor -> [X] -> HorizSync        = 31-72
+Monitor -> [X] -> VertRefresh      = 30-60
+Monitor -> [X] -> VendorName       = SGI
+Monitor -> [X] -> ModelName        = 1600SW FLATPANEL
+Screen  -> [X] -> Depth->16->Modes = 1600x1024
+Desktop -> [X] -> CalcModelines    = no
+Desktop -> [X] -> Modelines        = Modeline "1600x1024" 106.9 1600 1632 1656 1672 1024 1027 1030 1067
+Monitor -> [X] -> Modeline->0->1600x1024 = 106.9 1600 1632 1656 1672 1024 1027 1030 1067
+
+# Enable the following Option(s) if you are using the
+# digital Flatpanel version
+# --------------------------
+# Device->[X]->Raw->0->Option  = "ConnectedMonitor" "DFP"
+# Screen->[X]->Option          = "IgnoreEDID"

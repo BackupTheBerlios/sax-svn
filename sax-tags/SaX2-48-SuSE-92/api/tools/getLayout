@@ -1,0 +1,60 @@
+#!/usr/bin/perl
+# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2002
+# xapi script: validate Keyboard Mode/Layout combination
+# --
+#
+# CVS ID:
+# --------
+# Status: Up-to-date
+#
+use strict;
+use Env;
+
+#---[ readKeyboardMap ]----#
+sub readKeyboardMap {
+#------------------------------------------------
+# read the Keyboard.map and create a result list
+# with has references for Model and Layout
+#
+	my $map = "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map";
+	my @result;
+	open (MAP,$map)
+		|| die "could not open KBD::map: $!";
+	while (my $line = <MAP>) {
+		chomp $line;
+		my %item;
+		my @list = split (/\s*:\s/,$line);
+		if (defined $list[1]) {
+			$item{Model}  = $list[1];
+			$item{Layout} = $list[2];
+			push (@result,\%item);
+		}
+	}
+	return @result;
+}
+
+#---[ validateLayout ]---#
+sub validateLayout {
+#------------------------------------------------
+# check if there is a model/layout combination
+# which fits into the Keyboard.map
+#
+# exit 1 -> Fine
+# exit 0 -> Warning
+#
+	my ($model,$layout) = @_;
+	my @mapList = readKeyboardMap();
+	foreach my $map (@mapList) {
+	if (($map->{Model} eq $model) && ($map->{Layout} eq $layout)) {
+		return 1;
+	}
+	}
+	return 0;
+}
+
+my $status = validateLayout (
+	$ARGV[0],$ARGV[1]
+);
+print "$status\n";

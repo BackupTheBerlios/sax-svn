@@ -1,0 +1,15 @@
+# /.../
+# ATI Kyro profile:
+# setup Kyro-II graphics engine
+# -----------------------------
+Device  -> [X] -> Driver       = powervr
+Device  -> [X] -> Chipset      = 
+Device  -> [X] -> Option       = 
+Monitor -> [X] -> Modeline     = ""
+Monitor -> [X] -> HorizSync    = 30-50
+Monitor -> [X] -> VertRefresh  = 30-75
+Screen  -> [X] -> Depth->4     = ""
+Screen  -> [X] -> DefaultDepth = 16
+Screen  -> [X] -> Depth->16->Modes = 800x600
+
+Module -> 0 -> Load = dbe,type1,speedo,freetype,extmod,glx,dri

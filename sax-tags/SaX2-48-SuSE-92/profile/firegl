@@ -1,0 +1,5 @@
+# Fire GL-X Profile
+# ------------------
+Screen->[X]->DefaultDepth    = 24
+Device->[X]->Raw->11->Option = "UseInternalAGPGART" "no"
+Module->[X]->Load            = dbe,type1,freetype,extmod,glx,v4l,dri

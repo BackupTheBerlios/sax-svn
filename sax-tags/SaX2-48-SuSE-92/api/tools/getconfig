@@ -1,0 +1,156 @@
+#!/usr/bin/perl
+# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2002
+# xapi script: create XF86Config configuration file using ISaX
+# --
+#
+# CVS ID:
+# --------
+# Status: Up-to-date
+#
+use lib '/usr/X11R6/lib/sax/modules';
+use strict;
+use Env;
+use FileHandle;
+
+#=====================================
+# Globals 
+#-------------------------------------
+my %spec;
+my $secure;
+
+#---[ init ]----#
+sub init {
+#----------------------------------------------
+# init global specifications in %spec hash
+#
+	my $user = qx(whoami);
+	if ($user !~ /root/i) {
+		print "cfg: only root can do this\n";
+		exit (1);
+	}
+	$spec{CDir}  = "/var/cache/sax/files";
+	$spec{ISaX}  = "/usr/X11R6/lib/sax/tools/isax";
+
+	qx (rm -f $spec{CDir}/XF86Config);
+}
+
+#---[ createSecureDir ]-----#
+sub createSecureDir {
+#----------------------------------------------
+# this function create a secure tmp directory
+# and return the name of the directory
+#
+	$secure = "/tmp/isax-$$";
+	my $result = mkdir($secure,0700);
+	if ($result == 0) {
+		print "cfg: could not create tmp dir... abort\n";
+		exit (2);
+	}
+	return($secure);
+}
+
+#---[ cleanTmp ]-----#
+sub cleanTmp {
+#----------------------------------------------
+# clean up tmp secure tmp directory
+#
+	qx (rm -rf /tmp/isax*);
+}
+
+#---[ createXF86Config ]-----#
+sub createXF86Config {
+#----------------------------------------------
+# create configuration file using ISaX
+#
+	createSecureDir();
+	my @configFile = (
+		"card",
+		"desktop",
+		"input",
+		"keyboard",
+		"layout",
+		"path",
+		"extensions"
+	);
+	# /.../
+	# create apidata file within the secure
+	# directory...
+	# ---
+	my $api = new FileHandle "> $secure/apidata";
+	if (! defined $api) {
+		print "cfg: could not create $secure/apidata\n";
+		exit (3);
+	}
+	foreach my $file (@configFile) {
+		my $handle = new FileHandle;
+		if ($handle -> open("< $spec{CDir}/$file")) {
+			SWITCH: for ($file) {
+			/^card/     && do {
+			print $api "Card \{\n";
+			last SWITCH;
+			};
+			/^desktop/  && do {
+			print $api "Desktop \{\n";
+			# ...
+			# enable XFine2 cache lookup
+			# ---
+			my $line = sprintf (" 0 %-20s =     %s\n",
+				"ImportXFineCache","yes"
+			);
+			print $api $line;
+			last SWITCH;
+			};
+			/^input/      && do {
+			print $api "Mouse \{\n";
+			last SWITCH;
+			};
+			/^keyboard/   && do {
+			print $api "Keyboard \{\n";
+			last SWITCH;
+			};
+			/^layout/     && do {
+			print $api "Layout \{\n";
+			last SWITCH;
+			};
+			/^path/       && do {
+			print $api "Path \{\n";
+			last SWITCH;
+			};
+			/^extensions/ && do {
+			print $api "Extensions \{\n";
+			last SWITCH;
+			};
+			}
+			while (<$handle>) {
+				chomp ($_); my @list = split (/ : /,$_);
+				my $line = sprintf (" %s %-20s =     %s\n",
+					$list[0],$list[1],$list[2]
+				);
+				print $api $line;
+			}
+			print $api "\}\n\n";
+		}
+		$handle->close;
+	}
+	$api->close();
+	# /.../
+	# call the ISaX now...
+	# ---
+	qx ($spec{ISaX} -f $secure/apidata -c $secure/XF86Config);
+	if (-f "$secure/XF86Config") {
+		qx (cp $secure/XF86Config $spec{CDir}/XF86Config);
+	}
+	cleanTmp();
+}
+
+
+#=====================================
+# Run... 
+#-------------------------------------
+init();
+createXF86Config();
+for (my $i=0;$i<3;$i++) {
+	qx(/bin/sync);
+}
