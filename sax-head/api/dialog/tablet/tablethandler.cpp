@@ -185,9 +185,9 @@ bool XTablet::slotRun (int index) {
 			XWrapPointer<XData> workingPen (
 				mFiles["sys_INPUT"] -> getDevice (IDPen)
 			);
-			if (workingPen["Mode"]) {
-				QString* data = new QString (workingPen["Mode"]);
-				mToolDataPen.insert ("Mode",*data);
+			if (workingPen["TabletMode"]) {
+				QString* data = new QString (workingPen["TabletMode"]);
+				mToolDataPen.insert ("TabletMode",*data);
 			}
 			if (workingPen["Option"]) {
 				QString* data = new QString (workingPen["Option"]);
@@ -227,9 +227,9 @@ bool XTablet::slotRun (int index) {
 			XWrapPointer<XData> workingEraser (
 				mFiles["sys_INPUT"] -> getDevice (IDEraser)
 			);
-			if (workingEraser["Mode"]) {
-				QString* data = new QString (workingEraser["Mode"]);
-				mToolDataEraser.insert ("Mode",*data);
+			if (workingEraser["TabletMode"]) {
+				QString* data = new QString (workingEraser["TabletMode"]);
+				mToolDataEraser.insert ("TabletMode",*data);
 			}
 			if (workingEraser["Option"]) {
 				QString* data = new QString (workingEraser["Option"]);
@@ -333,8 +333,8 @@ bool XTablet::slotRun (int index) {
 		}
 
 		// f)
-		if (workingTablet ["Mode"]) {
-		if (QString(workingTablet ["Mode"])	== "Absolute") {
+		if (workingTablet ["TabletMode"]) {
+		if (QString(workingTablet ["TabletMode"])	== "Absolute") {
 			mModeAbsolute -> setChecked ( true );
 		} else {
 			mModeRelative -> setChecked ( true );
@@ -531,7 +531,7 @@ void XTablet::slotName (QListBoxItem*) {
 		// ...
 		// select mode
 		// ---
-		QString mode = selectedTablet ["Mode"];
+		QString mode = selectedTablet ["TabletMode"];
 		if (mode == "Absolute") {
 			mModeAbsolute -> setChecked ( true );
 		}
@@ -783,8 +783,8 @@ void XTablet::addTablet (void) {
 				}
 			}
 			// mode...
-			if (mToolDataPen["Mode"]) {
-				newPen -> setPair ("Mode",mToolDataPen["Mode"]);
+			if (mToolDataPen["TabletMode"]) {
+				newPen -> setPair ("TabletMode",mToolDataPen["TabletMode"]);
 			}
 		}
 		// ...
@@ -824,8 +824,8 @@ void XTablet::addTablet (void) {
 				}
 			}
 			// mode...
-			if (mToolDataEraser["Mode"]) { 
-				newEraser -> setPair ("Mode",mToolDataEraser["Mode"]);
+			if (mToolDataEraser["TabletMode"]) { 
+				newEraser->setPair ("TabletMode",mToolDataEraser["TabletMode"]);
 			}
 		}
 		// ...
@@ -890,9 +890,9 @@ void XTablet::addTablet (void) {
 		}
 		// mode...
 		if (mModeRelative -> isOn()) {
-			workingTablet.setPair ("Mode","Relative");
+			workingTablet.setPair ("TabletMode","Relative");
 		} else {
-			workingTablet.setPair ("Mode","Absolute");
+			workingTablet.setPair ("TabletMode","Absolute");
 		}
 	}
 }
@@ -937,10 +937,10 @@ void XTablet::slotTopOk (void) {
 	// ---
 	QDict<char> data;
 	if (mToolModeRelative -> isChecked()) {
-		data.insert ("Mode","Relative");
+		data.insert ("TabletMode","Relative");
 	}
 	if (mToolModeAbsolute -> isChecked()) {
-		data.insert ("Mode","Absolute");
+		data.insert ("TabletMode","Absolute");
 	}
 	QStringList options;
 	for (unsigned int i=0;i<mToolTabletOptions->count();i++) {
@@ -1061,9 +1061,9 @@ void XTablet::setupTop (const QString& which) {
 		);
 		if (eraser) {
 			XWrapPointer< QDict<char> > selectedEraser (eraser);
-			if (selectedEraser["Mode"]) {
-				QString* mode = new QString (selectedEraser["Mode"]);
-				mToolDataEraser.replace ("Mode",*mode);
+			if (selectedEraser["TabletMode"]) {
+				QString* mode = new QString (selectedEraser["TabletMode"]);
+				mToolDataEraser.replace ("TabletMode",*mode);
 			}
 			if (selectedEraser["Option"]) {
 				QString* opts = new QString (selectedEraser["Option"]);
@@ -1110,9 +1110,9 @@ void XTablet::setupTop (const QString& which) {
 		);
 		if (pen) {
 			XWrapPointer< QDict<char> > selectedPen (pen);
-			if (selectedPen["Mode"]) {
-				QString* mode = new QString (selectedPen["Mode"]);
-				mToolDataPen.replace ("Mode",*mode);
+			if (selectedPen["TabletMode"]) {
+				QString* mode = new QString (selectedPen["TabletMode"]);
+				mToolDataPen.replace ("TabletMode",*mode);
 			}
 			if (selectedPen["Option"]) {
 				QString* opts = new QString (selectedPen["Option"]);
@@ -1162,8 +1162,8 @@ void XTablet::setupTop (const QString& which) {
 	if (which == "pen") {
 		data = mToolDataPen;
 	}
-	if (data["Mode"]) {
-		if (QString(data["Mode"]) == "Absolute") {
+	if (data["TabletMode"]) {
+		if (QString(data["TabletMode"]) == "Absolute") {
 			mToolModeAbsolute -> setChecked ( true );
 		} else {
 			mToolModeRelative -> setChecked ( true );

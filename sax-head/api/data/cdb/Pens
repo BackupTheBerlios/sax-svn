@@ -26,7 +26,7 @@
 #  ClearDTR             = <on> or <off>
 #  ZAxisMapping         = [ N M ] or X or Y 
 #  TabletType           = string
-#  Mode                 = string
+#  TabletMode           = string
 #  Load                 = string
 #  Option               = string,string
 # }
@@ -36,7 +36,7 @@
 #-----------------------#
 WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {
  Device              = /dev/ttyS0
- Mode                = Absolute
+ TabletMode          = Absolute
  Driver              = wacom
  Protocol            = Auto
  TabletType          = eraser
@@ -48,7 +48,7 @@ WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {
 #-----------------------#
 WACOM:GRAPHIRE / INTUOS Stylus (SERIAL) {
  Device              = /dev/ttyS0
- Mode                = Absolute
+ TabletMode          = Absolute
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
@@ -60,7 +60,7 @@ WACOM:GRAPHIRE / INTUOS Stylus (SERIAL) {
 #-----------------------#
 WACOM:GRAPHIRE / INTUOS Eraser (USB) {
  Device              = /dev/input/event0
- Mode                = Absolute
+ TabletMode          = Absolute
  Driver              = wacom
  Protocol            = Auto
  TabletType          = eraser
@@ -75,7 +75,7 @@ WACOM:GRAPHIRE / INTUOS Eraser (USB) {
 #-----------------------#
 WACOM:GRAPHIRE / INTUOS Stylus (USB) {
  Device              = /dev/input/event0
- Mode                = Absolute
+ TabletMode          = Absolute
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
