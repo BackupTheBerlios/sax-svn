@@ -23,6 +23,8 @@ STATUS        : Status: Development
 XShowMouse::XShowMouse ( 
 	QDict<char>* textPtr, QWidget* parent 
 ) : XInputEvent ( parent ) {
+	mX = 0;
+	mY = 0;
 	mTextPtr = textPtr;
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 	setBackgroundMode( NoBackground );
