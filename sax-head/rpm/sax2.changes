@@ -1,14 +1,21 @@
 -------------------------------------------------------------------
 Tue Apr  6 14:17:20 CEST 2004 - ms@suse.de
 
+- include sax2_nvidia-msg.dif (#38438)
 - fixed sv-latin1 keyboard configuration (#38440)
 - added [ ja ] translation from Novell
 
 -------------------------------------------------------------------
-Fri Apr  2 14:44:15 CEST 2004 - ms@suse.de
+Fri Apr  6 14:02:15 CEST 2004 - ms@suse.de
 
 - fixed mouse setup if a Tablet has been connected. The tablet
   shouldn't be handled as normal pointer device
+
+-------------------------------------------------------------------
+Tue Apr  6 12:56:56 CEST 2004 - sndirsch@suse.de
+
+- sax2_nvidia-msg.dif:
+  * fixed size of 3D nvidia warning window (Bug #38438)
 
 -------------------------------------------------------------------
 Thu Apr  1 10:15:39 CEST 2004 - ms@suse.de

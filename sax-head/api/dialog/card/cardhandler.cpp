@@ -1657,7 +1657,7 @@ void XCard::slot3D (void) {
 			return;
 		}
 		if (flag3D == "NVDummy") {
-			setMessage ("nvidia3Denable",XBox::Critical,NULL,600);
+			setMessage ("nvidia3Denable",XBox::Critical);
 			mCheck3D -> setChecked ( false );
 			return;
 		}
