@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Apr 16 11:35:12 2003
+# Author: Marcus Schaefer <sax@suse.de>, Tue May  6 10:16:59 2003
 #
 # Template for monitor data
 # --------------------------
@@ -34129,6 +34129,16 @@ TARGA:TM5496-10  {
 TARGA:TM6896-1  {
  Option=DPMS
  Hsync=30-96
+ Vsync=50-150
+}
+
+#==============================================
+# Visionary V1770 C2
+#----------------------------------------------
+TARGA:VISIONARY V1770 C2  {
+ DDC=ACTE002
+ Option=DPMS
+ Hsync=30-70
  Vsync=50-150
 }
 
