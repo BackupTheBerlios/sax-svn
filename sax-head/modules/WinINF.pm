@@ -43,8 +43,8 @@ sub umountDisk {
 # unmount disk and remove the mountpoint
 # directory
 #
-	my $mountpoint = $_[0];
-	qx (umount /dev/fd0 >/dev/null 2>&1);
+	my $mountpoint = "/tmp/mydisk.$$";
+	qx (umount -l /dev/fd0 >/dev/null 2>&1);
 	rmdir ($mountpoint);
 }
 
@@ -57,9 +57,11 @@ sub readDisk {
 	my $file = mountDisk();
 	my @data = ();
 	if ($file eq "/") {
+		umountDisk();
 		return (@data);
 	}
 	if ( ! open(FD,"$file") ) {
+		umountDisk();
 		return (@data);
 	}
 	while (<FD>) {
@@ -69,7 +71,8 @@ sub readDisk {
 	}
 	}
 	push (@data,"[]");
-	close (FD); umountDisk();
+	close (FD);
+	umountDisk();
 	return (@data);
 }
 
