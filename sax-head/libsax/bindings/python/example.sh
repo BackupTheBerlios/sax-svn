@@ -1,2 +1,2 @@
-export LD_LIBRARY_PATH=/suse/ms/libsax
+export LD_LIBRARY_PATH=/suse/ms/sax/libsax
 python example.py
