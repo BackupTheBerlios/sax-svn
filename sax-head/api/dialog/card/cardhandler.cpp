@@ -468,7 +468,7 @@ void XCard::setupTop (int state) {
 			}
 			if (cleanOptionList.count() == 2) {
 			QString option;
-			option.sprintf("%s --> %s",
+			option.sprintf("%s >>> %s",
 				cleanOptionList.at(0),cleanOptionList.at(1)
 			);
 			QListBoxItem* item = mOptions -> findItem (
@@ -1367,7 +1367,7 @@ void XCard::slotName (QListBoxItem*) {
 			}
 			if (cleanOptionList.count() == 2) {
 			QString option;
-			option.sprintf("%s --> %s",
+			option.sprintf("%s >>> %s",
 				cleanOptionList.at(0),cleanOptionList.at(1)
 			);
 			QListBoxItem* item = mOptions -> findItem (
@@ -1407,7 +1407,7 @@ void XCard::slotOption (QListBoxItem*) {
 	if (mOptions->currentText()) {
 		XStringList opt;
 		opt.setText (current);
-		opt.setSeperator (" --> ");
+		opt.setSeperator (" >>> ");
 		current = opt.getList().at(0);
 		flag = mOptFlags[current];
 	}
@@ -1424,7 +1424,7 @@ void XCard::slotOption (QListBoxItem*) {
 			mOptions -> setSelected ( index,false );
 		} else {
 			QString newText;
-			newText.sprintf("%s --> %d",current.ascii(),mTypeValue);
+			newText.sprintf("%s >>> %d",current.ascii(),mTypeValue);
 			mOptions -> changeItem (newText,index);
 			mOptions -> setSelected (index,true);
 		}
@@ -1436,7 +1436,7 @@ void XCard::slotOption (QListBoxItem*) {
 			mOptions -> setSelected ( index,false );
 		} else {
 			QString newText;
-			newText.sprintf("%s --> %s",current.ascii(),mTypeString.ascii());
+			newText.sprintf("%s >>> %s",current.ascii(),mTypeString.ascii());
 			mOptions -> changeItem (newText,index);
 			mOptions -> setSelected (index,true);
 		}
@@ -1458,7 +1458,7 @@ void XCard::slotOption (QListBoxItem*) {
 	if (mOptions -> isSelected(item)) {
 		XStringList opt;
 		opt.setText (mOptions->text(i));
-		opt.setSeperator (" --> ");
+		opt.setSeperator (" >>> ");
 		QList<char> optList = opt.getList();
 		if (optList.count() == 1) {
 			mCardOptions->sprintf (
@@ -1480,7 +1480,7 @@ void XCard::slotOption (QListBoxItem*) {
 	if (mOptions -> isSelected(item)) {
 		XStringList opt;
 		opt.setText (mOptions->text(i));
-		opt.setSeperator (" --> ");
+		opt.setSeperator (" >>> ");
 		QList<char> optList = opt.getList();
 		if (optList.count() == 2) {
 			mCardRawOptions->sprintf (

@@ -16,7 +16,7 @@ Monitor -> [X+1] = [REMOVE]
 
 # setup twinview options
 # ----------------------
-Device  -> [X] ->  Raw -> 10 -> Option = "TwinView"
+Device  -> [X] -> Option = TwinView
 Device  -> [X] ->  Raw -> 11 -> Option = "SecondMonitorHorizSync" "{Monitor->[X]->HorizSync}"
 Device  -> [X] ->  Raw -> 12 -> Option = "SecondMonitorVertRefresh" "{Monitor->[X]->VertRefresh}"
 Device  -> [X] ->  Raw -> 13 -> Option = "MetaModes" "{Screen->[X]->Depth->16->Modes},{Screen->[X]->Depth->16->Modes}"
