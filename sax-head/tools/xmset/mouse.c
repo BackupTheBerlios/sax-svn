@@ -29,7 +29,7 @@ MouseData* MouseGetData(void) {
 	hd_t *first_dev    = NULL;
 
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
-	hd_data->flags.fast = 1;
+	//hd_data->flags.fast = 1;
 	hd = hd_list(hd_data, hw_mouse, 1, NULL);
 	first_dev = hd;
 

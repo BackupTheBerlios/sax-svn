@@ -25,11 +25,14 @@ sub CheckThisSplit {
 #
 	my @list   = @_;
 	my @result = ();
+	my $count  = -1;
 	for (my $i=0;$i<@list;$i++) {
 		if ($list[$i] !~ /:/) {
-			$list[$i-1] = $list[$i-1].",".$list[$i];
+			$list[$count].=",$list[$i]";
 			delete $list[$i];
+			next;
 		}
+		$count++;
 	}
 	foreach (@list) {
 	if (defined $_) {

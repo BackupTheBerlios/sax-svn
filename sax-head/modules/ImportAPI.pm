@@ -1761,13 +1761,25 @@ sub CheckSplit {
 #
 	my @list   = @_;
 	my @result = ();
+	my $count  = 0;
+	my $joined;
 	for (my $i=0;$i<@list;$i++) {
 		my $signs = split (/[^\"]*/,$list[$i]);
-		if ( ($signs > 0) && ($signs % 2 == 0) ) {
-			$list[$i] = $list[$i].",".$list[$i+1];
-			delete $list[$i+1];
+		if ( $signs % 2 == 0 ) {
+			$joined.=",$list[$i]";
+		} else {
+			$result[$count] = $list[$i];
+			$count++;
+			if ($joined ne "") {
+				$joined =~ s/^,//;
+				$result[$count] = $joined;
+				$joined = "";
+				$count++;
+			}
 		}
 	}
+	@list   = @result;
+	@result = ();
 	foreach (@list) {
 	if (defined $_) {
 		push (@result,$_);

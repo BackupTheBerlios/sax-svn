@@ -19,22 +19,34 @@ sub CheckSplit {
 # splitted in a correct way. This function will check
 # for the number ["] signs and make sure there was
 # no split between optionslist which mustn't splitted
-#   
-    my @list   = @_;
-    my @result = ();
-    for (my $i=0;$i<@list;$i++) {
-        my $signs = split (/[^\"]*/,$list[$i]);
-        if ( ($signs > 0) && ($signs % 2 == 0) ) {
-            $list[$i] = $list[$i].",".$list[$i+1];
-            delete $list[$i+1];
-        }
-    }
-    foreach (@list) {
-    if (defined $_) {
-        push (@result,$_);
-    }
-    }
-    return @result;
+#
+	my @list   = @_;
+	my @result = ();
+	my $count  = 0;
+	my $joined;
+	for (my $i=0;$i<@list;$i++) {
+		my $signs = split (/[^\"]*/,$list[$i]);
+		if ( $signs % 2 == 0 ) {
+			$joined.=",$list[$i]";
+		} else {
+			$result[$count] = $list[$i];
+			$count++;
+			if ($joined ne "") {
+				$joined =~ s/^,//;
+				$result[$count] = $joined;
+				$joined = "";
+				$count++;
+			}
+		}
+	}
+	@list   = @result;
+	@result = ();
+	foreach (@list) {
+	if (defined $_) {
+		push (@result,$_);
+	}
+	}
+	return @result;
 }
 
 my @list = ();
