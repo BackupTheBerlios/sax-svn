@@ -1,21 +1,28 @@
-# Hungarian translation of sax.
-# Copyright (C) 2000 SuSE GmbH.
-# Copyright (C) 2004 Novell, Inc.
+# translation of sax.po to
+# translation of sax.hu.po to Hungarian
+# translation of merge.po to hungarian
+# translation of sax.hu.po to hungarian
+# Hungarian message file for SaX.
+# Copyright (C) SuSE GmbH, 2000.
+# Rev. 2000.11.24 Marcel Hilzinger <hilzinger@matavnet.hu>
+# Rev. 8.1: 2002.07.23 Marcel Hilzinger <hili@suselinux.hu>
 # Steve Varadi <svaradi@usa.com>, 2000.
-# Marcel Hilzinger <marcel.hilzinger@suselinux.hu>, 2000, 2002, 2003, 2004.
+# Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Peter Breuer <comp@suselinux.hu>, 2003.
-# Laszlo Dvornik <dvornik@gnome.hu>, 2004.
-#
+# Marcel Hilzinger <marcel.hilzinger@suselinux.hu>, 2004.
+# Szabolcs Varga <shirokuma@shirokuma.hu>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-09-28 14:06+0200\n"
-"Last-Translator: Laszlo Dvornik <dvornik@gnome.hu>\n"
-"Language-Team: Hungarian <gnome@gnome.hu>\n"
+"PO-Revision-Date: 2004-12-07 11:51+0100\n"
+"Last-Translator: Szabolcs Varga <shirokuma@shirokuma.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -65,11 +72,11 @@ msgstr "Nincs beállítva"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr "<Új jelszó megadása...>"
+msgstr "<Adja meg az új jelszót...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr "<Jelszó megváltoztatása...>"
+msgstr "<Jelszó módosítása...>"
 
 # /tmp/xapi:41
 #. Maximum length: 60  characters
@@ -198,7 +205,7 @@ msgstr "Tesztmező"
 
 #. Maximum length: 50  characters
 msgid "Mouse speed in pixels/sec"
-msgstr "Egérsebesség (képpontok/mp)"
+msgstr "Egérsebesség (képpont/mp)"
 
 # /tmp/intro:67 /tmp/xapi:379
 #. Maximum length: 50  characters
@@ -237,7 +244,7 @@ msgstr "Görgő emulációja egérgombbal:"
 
 #. Maximum length: 50  characters
 msgid "Repeat rate: (Symbols/sec)"
-msgstr "Ismétlési ráta: (karakter/mp)"
+msgstr "Ismétlési sebesség: (karakter/mp)"
 
 # /tmp/xapi:109
 #. Maximum length: 50  characters
@@ -273,7 +280,7 @@ msgstr "Válasszon billentyűkiosztást"
 
 #. Maximum length: 40  characters
 msgid "Symbol recurrence"
-msgstr "Karakterismétlési ráta"
+msgstr "Karakterismétlési sebesség"
 
 #. Maximum length: 40  characters
 msgid "<nobr><h3>Keyboard Type</h3></nobr>"
@@ -378,7 +385,7 @@ msgstr "Ctrl és CapsLock átkapcsolása"
 
 #. Maximum length: 50 characters
 msgid "Ctrl Key at left of <A>"
-msgstr "Bal Ctrl billentyű mellett: <A>"
+msgstr "Bal Ctrl billentyű mellett:<A>"
 
 #. Maximum length: 50 characters
 msgid "Ctrl Key at bottom left"
@@ -402,7 +409,7 @@ msgstr "Színek / Felbontás"
 # /tmp/intro:68 /tmp/xapi:465
 #. Maximum length: 20  characters
 msgid "Virtual Resolution"
-msgstr "Virtuális Felbontás"
+msgstr "Virtuális felbontás"
 
 # /tmp/xapi:275 /tmp/xapi:287
 #. Maximum length: 40  characters
@@ -457,7 +464,7 @@ msgstr "AccessX engedélyezése / tiltása"
 
 #. Maximum length: 40  characters
 msgid "Enable 3D features"
-msgstr "3D képességek engedélyezése"
+msgstr "3D funkciók engedélyezése"
 
 #. Maximum length: 50  characters
 msgid "Enable DPMS"
@@ -493,7 +500,7 @@ msgstr ""
 
 #. Maximum length: 70 characters
 msgid "Click 'Apply' to test your settings."
-msgstr "A beállítások ellenőrzéséhez kattintson az 'Alkalmazás' gombra."
+msgstr "A beállítások ellenőrzéséhez kattintson az 'Alkalmazás' gombra"
 
 #. RTF text: no limit
 msgid ""
@@ -524,8 +531,8 @@ msgid ""
 "<b>3D Acceleration impossible</b><hr>The installed card cannot use hardware "
 "3D/OpenGL acceleration."
 msgstr ""
-"<b>Nem lehet bekapcsolni a 3D gyorsítást</b><hr>A kártya nem támogatja a "
-"hardveres 3D/OpenGL gyorsítást."
+"<b>Nem lehet bekapcsolni a 3D gyorsítást</b><hr>Az Ön videókártyája nem "
+"támogatja a hardveres 3D/OpenGL gyorsítást."
 
 #. RTF text: no limit
 msgid ""
@@ -544,8 +551,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
-"<b>Jelszavak nem egyeznek</b><hr>A jelszó első és második változata nem "
-"egyezik meg! Próbálja újra."
+"<b>A jelszavak nem egyeznek</b><hr>A jelszó első és második változata nem "
+"egyezik! Próbálkozzon újra."
 
 #. RTF text: no limit
 msgid ""
@@ -553,8 +560,8 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
-"<b>Jelszóhiba</b><hr>A jelszó mező üresen lett hagyva vagy túl rövid a "
-"jelszó. Legalább hat karakterből álló jelszót adjon meg!"
+"<b>Jelszóhiba</b><hr>A jelszómező üresen maradt, vagy a jelszó túl rövid. "
+"Adjon meg egy legalább hatkarakteres jelszót."
 
 #. RTF text: no limit
 msgid ""
@@ -588,15 +595,16 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
-"<b>Nem lehet bekapcsolni az OpenGL-gyorsítást</b><hr>A kártya 3D "
-"alrendszerének aktiválásához először telepítenie kell az nVidia kereskedelmi "
-"meghajtóját. A <b>YaST Online Update</b> használatával telepítse a "
-"meghajtót. A YOU-n belül válassza ki a <b>Telepíthető és telepített patch-"
-"ek</b>-et mint <b>Patch kategóriát</b> és válassza ki az <b>NVIDIA(r) "
-"grafikus meghajtó letöltését</b> a patchlistából (általában a lista alján "
-"van). Megjegyzés: a patch-et <b>Frissítés</b>-ként kell megjelölnie (jobb "
-"gombos kattintás), ha már telepítette és, ha a meghajtó el lett távolítva "
-"valamilyen okból."
+"<b>Az OpenGL gyorsítás nem kapcsolható be</b><hr>A 3D alrendszer e kártyához "
+"aktiválásához először telepítenie kell az nVidia hivatalos "
+"meghajtóprogramját. A meghajtóprogram a <b>YaST Online frissítés</b> (YOU) "
+"segítségével telepíthető. A YOU programban válassza ki a <b>Javítás "
+"kategóriák</b> közül a <b>Telepíthető és telepített javítások</b> "
+"lehetőséget, majd a javítások listájából az <b>NVIDIA(r) grafikus meghajtó "
+"letöltése</b> elemet (általában a lista alján látható). Ügyelje rá, hogy a "
+"javítást mint <b>Frissítést</b> (jobb egérgomb) kell megjelölnie, ha már "
+"egyszer telepítette és bármilyen okból a meghajtóprogram eltávolításra "
+"került."
 
 #. RTF text: no limit
 msgid ""
@@ -606,16 +614,16 @@ msgid ""
 "X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
 "want to continue?</b>"
 msgstr ""
-"<b>OpenGL gyorsítás kikapcsolása</b><hr>A 3D-alrendszer a kereskedelmi "
-"nVidia meghajtón alapul. A SaX2-höz el kell távolítani a meghajtót az nVidia "
-"telepítőjének használatával. Az eltávolítása folyamat visszaállítja az "
-"eredeti X.Org meghajtót, amely nem tartalmaz 3D gyorsítást."
-"<br><br><b>Folytatni szeretné?</b>"
+"<b>OpenGL gyorsítás kikapcsolása</b><hr>A rendszer a hivatalos nVidia RPM-"
+"csomagokat használja a 3D gyorsításhoz. A 3D gyorsítás kikapcsolásához el "
+"kell távolítani az nVidia meghajtót.A SaX2 visszaállítja az eredeti XFree86 "
+"meghajtót, mely nem tartalmaz 3D gyorsítást. <br><br><b>Folytatja a 3D "
+"kikapcsolásával?</b>"
 
 # /tmp/xapi:281
 #. Maximum length: 70 characters
 msgid "Display size unknown..."
-msgstr "Ismeretlen képernyőméret..."
+msgstr "Képernyő mérete ismeretlen..."
 
 #. RTF text: no limit
 msgid ""
@@ -627,13 +635,13 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
-"<b>Adja meg az X/Y-képernyőméretet mm-ben</b><hr>A képernyő geometriáját nem "
-"lehetett felismerni. A számítógépes grafikai alkalmazásoknak (pl. <b>Gimp</"
-"b>) vagy a betűkészlet megjelenítő programkönyvtáraknak (pl. <b>Xft</b>) a "
-"megfelelő működéshez tudniuk kell a képernyő valós fizikai méretét. A "
-"megfelelő vízszintes (X) és függőleges (Y) irányok értékeihez lapozza fel a "
-"monitor kézikönyvét. Az értékeket mm-ben kell megadnia. <br><br><b>Be "
-"szeretné állítani a képernyőméretet?</b>"
+"<b>Képernyő X/Y méret megadása [ mm ] egységben</b><hr>A képernyő "
+"geometriája nem állapítható meg. A <b>Gimp</b>-hez hasonló grafikus "
+"alkalmazásoknak, illeve az  <b>Xft</b>-hez hasonló betűrajzoló könyvtáraknak "
+"ismerniük kell a monitor valódi fizikai méretét. A monitor kézikönyve "
+"alapján írja be a vízszintes (X) és függőleges (Y) irányok helyes "
+"méretértékeit. Az értékeket [ mm ] egységben kell megadnia."
+"<br><br><b>Kívánja beállítani a képernyő méretét ?</b>"
 
 # /tmp/xapi:353
 #. Maximum length: 70 characters
@@ -646,8 +654,8 @@ msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Tegye be a CD-t vagy a lemezt</b><hr>Kérem a monitorhoz mellékelt "
-"meghajtó lemezt illetve CD-t."
+"<b>Tegye be a lemezt</b><hr>Kérem a monitorhoz mellékelt meghajtó lemezt "
+"illetve CD-t."
 
 # /tmp/xapi:481
 #. RTF text: no limit
@@ -656,7 +664,7 @@ msgid ""
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
 "<b>Olvasási hiba</b><hr>A lemezről nem lehet olvasni. Lehet hogy sérült a "
-"lemez, vagy rossz formájú [ xxx.inf ] fájl van a lemezen."
+"lemez, vagy rossz formátumú információs [ xxx.inf ] fájl van a lemezen."
 
 #. RTF text: no limit
 msgid ""
@@ -702,7 +710,7 @@ msgid ""
 "<b>Note:</b><hr>Wrong sync ranges may damage your monitor. Consult the "
 "monitor manual for the following settings."
 msgstr ""
-"<b>Figyelem:</b> <hr>A rossz szinkron beállítás tönkreteheti a képernyőjét! "
+"<b>Figyelem:</b> <hr>A rossz szinkronbeállítás tönkreteheti a képernyőjét! "
 "Kérem olvassa el a képernyő kézikönyvét az alábbi beállításokhoz."
 
 #. RTF text: no limit
@@ -711,15 +719,15 @@ msgid ""
 "<b>number pad keys</b>. Test the behavior using the number pad."
 msgstr ""
 "<b>AccessX bekapcsolva:</b><hr>Az egérmutatót most a <b>numerikus "
-"billentyűkkel</b> vezérelheti. Kérem ellenőrizze annak működését."
+"billentyűkkel</b> vezérelheti. Kérem ellenőrizze annak működését"
 
 #. RTF text: no limit
 msgid ""
 "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the number "
 "pad is <b>disabled</b> now."
 msgstr ""
-"<b>AccessX kikapcsolva:</b><hr>Az egérmutatót <b>nem lehet</b> a numerikus "
-"billentyűkkel vezérelni."
+"<b>AccessX kikapcsolva:</b><hr>Az egérmutatót most <b>nem lehet</b> a "
+"numerikus billentyűkkel vezérelni."
 
 #. RTF text: no limit
 msgid ""
@@ -733,7 +741,7 @@ msgid ""
 "<b>Configuration has been saved:</b><hr>Your modifications will take effect "
 "the next time the graphics system is restarted."
 msgstr ""
-"<b>Beállítások mentése sikerült:</b><hr>Vegye figyelembe, hogy a módosítások "
+"<b>Beállítások mentése sikerült:</b><hr>Vegye figyelembe, hogy a módsítások "
 "csak a grafikus felület következő újraindításakor lépnek érvénybe."
 
 #. RTF text: no limit
@@ -756,13 +764,13 @@ msgid ""
 "you want to enable 3D for this card?</b>"
 msgstr ""
 "<b>3D kártyát találtam: <u>%1</u></b><hr>Jelenleg minden linuxos 3D meghajtó "
-"még fejlesztési állapotban van, egyesek még igen kísérleti jellegűek. Mivel "
+"még fejlesztési állapotban van, egyesek még igen kisérleti jellegűek. Mivel "
 "azonban nagyon sokan Linux alatt is szeretnék kihasználni a grafikus kártya "
 "3D képességeit, disztribúciónk tartalmazza a megfelelő meghajtókat.<br> "
-"<br>Az OpenGL meghajtók említett kísérleti állapota miatt azonban semmilyen "
-"segítséget nem tudunk nyújtani a 3D gyorsítás beállításakor, ha ezzel "
-"kapcsolatosan bármilyen hiba lép fel a rendszerben.<br><br><b>Be szeretné "
-"kapcsolni a 3D gyorsítást a kártyához?</b>"
+"<br>Az OpenGL meghajtók, említett kisérleti állapota miatt azonban semmilyen "
+"segítséget nem tudunk nyújtani a 3D gyorsítás beállításakor, ha evvel "
+"kapcsolatosan bármilyen hiba lép fel a rendszerben. <br><br>Be szeretné "
+"állítani a 3D gyorsítást az alábbi kártyához?"
 
 #. RTF text: no limit
 msgid ""
@@ -795,7 +803,7 @@ msgid ""
 "official nvidia drivers from the nvidia ftp server with YOU (YaST2 online "
 "update). Start the online update?"
 msgstr ""
-"<b>Szoftver frissítés</b><hr>Az Ön Linux rendszerén még mindig a helykitöltő "
+"<b>Szoftverfrissítés</b><hr>Az Ön Linux rendszerén még mindig a \"buta\" "
 "nVidia meghajtó van telepítve, mely nem támogatja a hardveres 3D gyorsítást. "
 "Javasoljuk, hogy a YaST2 YOU segítségével töltse le a hivatalos nVidia "
 "meghajtókat az nVidia FTP szerveréről. Elindítsam most az online frissítést?"
@@ -805,8 +813,8 @@ msgid ""
 "<b>Software installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>Hiányzó csomagok:</b><hr>Beállítása néhány új csomagot igényel. Akarja "
-"ezeket most telepíteni ?"
+"<b>Hiányzó csomagok:</b><hr>A megadott beállítás néhány új csomagot igényel. "
+"Akarja ezeket most telepíteni ?"
 
 #. RTF text: no limit
 msgid ""
@@ -814,9 +822,8 @@ msgid ""
 "resolution is not adjustable within framebuffer mode. Please select another "
 "resolution than:"
 msgstr ""
-"<b>Érvénytelen felbontás az FBdev módhoz</b><hr>A jelenleg kiválasztott "
-"felbontás nem állítható be a framebuffer módon belül. Válasszon egy másik "
-"felbontást:"
+"<b>Érvénytelen felbontás:</b><hr>Ennél az összeállításnál nem állíthatja be "
+"a kiválasztott felbontást. Kérem, válasszon egy másik felbontást a listából."
 
 #. RTF text: no limit
 msgid ""
@@ -939,7 +946,7 @@ msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr "X-kiszolgáló hozzáférhető a VNC-protokollon keresztül:"
+msgstr "VNC protokollon keresztül elérhető X-szerver:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
@@ -982,7 +989,7 @@ msgstr "&Kilépés"
 # /tmp/xapi:13
 #. Maximum length: 40  characters
 msgid "&About..."
-msgstr "&Névjegy..."
+msgstr "&Névjegy"
 
 #. Maximum length: 60  characters
 msgid "About the author"
@@ -1061,7 +1068,7 @@ msgid ""
 "configuration."
 msgstr ""
 "<b>Többképernyős mód nem lehetséges:</b><hr>Rendszerében csak egy grafikus "
-"kártya található, a többképernyős módhoz azonban legalább kettő kell."
+"kártya található, a többképernyős módhoz azonban legalább kettő kell. "
 
 # /tmp/xapi:51
 #. RTF text: no limit
@@ -1085,8 +1092,8 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
-"<b>A monitort nem lehet eltávolítani:</b><hr>A rendszer pontosan egy "
-"monitorbeállítást tartalmaz. Nem távolíthatja el a fő entitást."
+"<b>A monitor nem távolítható el:</b><hr>A rendszerben pontosan egy "
+"monitorkonfiuguráció található. Ezt a fontos bejegyzést nem távolíthatja el."
 
 #. RTF text: no limit
 msgid ""
@@ -1094,7 +1101,7 @@ msgid ""
 "and start the selected one?"
 msgstr ""
 "<b>Nyitott párbeszédablak:</b><hr>Egy ilyen a párbeszédablak már nyitva van. "
-"Kilép abból az ablakból, hogy ezzel folytathassa?"
+"Kilép abból az ablakból, hogy ezzel folytathassa? "
 
 # /tmp/xapi:51
 #. RTF text: no limit
@@ -1116,8 +1123,8 @@ msgid ""
 msgstr ""
 "<b>Utolsó lépések:</b><hr>Utolsó lépésként menteni kell az új konfigurációt. "
 "Javasoljuk, hogy a mentés előtt tesztelje az új beállításokat. Ha nem tiszta "
-"a kép, csíkos vagy nagyon vibrál, nyomja meg a <b>[ Ctrl+Alt+Backspace ]</b> "
-"billentyűket a szerver leállításához."
+"a kép, csíkos vagy nagyon vibrál, nyomja meg a<br> <br><b>[ Ctrl+Alt"
+"+Backspace ]</b><br> <br> billentyűket az X szerver leállításához..."
 
 #. RTF text: no limit
 msgid ""
@@ -1128,7 +1135,7 @@ msgid ""
 msgstr ""
 "<b>Utolsó lépés:</b><hr>Utolsó lépésként menteni kell az új konfigurációt. "
 "Vegye figyelembe, hogy az új beállítások a <i>Framebuffer</i> eszközt "
-"használják, így a felbontás illetve színmélység módosításához szükséges a "
+"használják, így a felbontás, illetve a színmélység módosításához szükséges a "
 "rendszer újraindítása."
 
 #. RTF text: no limit
@@ -1138,9 +1145,9 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>Ez a SaX2 javaslata</b><hr>A most látható grafikus felület a SaX2 "
-"javaslata az automatikus beállításhoz. Ha tetszik ez a beállítás, egyszerűen "
+"javaslata azautomatikus beállításhoz. Ha tetszik ez a beállítás, egyszerűen "
 "kattintson az <b>OK</b> gombra. Ha nem megfelelő a beállítás, "
-"megváltoztathatja a beállításokat."
+"megváltoztathatja a beállításokat. "
 
 # /tmp/xapi:317
 #. Dynamic length: Please do not oversize key up to 30%
@@ -1174,7 +1181,7 @@ msgid ""
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>A(z) %1, %2 ID-vel rendelkező képernyő nem található</b><hr> Kérem, "
+"<b>A(z) %1, %2 azonosítójú rendelkező képernyő nem található</b><hr> Kérem, "
 "állítsa be kézzel. Elindítsa a SaX2 most a megfelelő párbeszédablakot?"
 
 #. Dynamic length: Please do not oversize key up to 10%
@@ -1270,7 +1277,7 @@ msgstr "Y:"
 # /tmp/xapi:309
 #. Maximum length: 40  characters
 msgid "Bus ID:"
-msgstr "Busz azonosító:"
+msgstr "Buszazonosító:"
 
 # /tmp/xapi:299
 #. Maximum length: 40  characters
@@ -1290,7 +1297,7 @@ msgstr "Billentyűk különleges értelmezése"
 # /tmp/xapi:351
 #. Maximum length: 40  characters
 msgid "&Current sync frequencies"
-msgstr "&Jelenlegi szinkron frekvenciák"
+msgstr "&Jelenlegi szinkronfrekvenciák"
 
 # /tmp/xapi:341
 #. Maximum length: 40  characters
@@ -1357,7 +1364,7 @@ msgstr "AccessX -- az egérmozgató billentyűk beállítása..."
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr "VNC beállítása: Képernyő exportálása a VNC-protokoll használatával..."
+msgstr "VNC beállítása: Képernyő exportálása a VNC protokoll segítségével..."
 
 # /tmp/xapi:409
 #. Maximum length: 100  characters
@@ -1395,15 +1402,15 @@ msgstr "Többképernyős mód beállítása..."
 # /tmp/xapi:115
 #. Maximum length: 100  characters
 msgid "Set up monitor properties..."
-msgstr "Képernyő tulajdonságok beállítása..."
+msgstr "Képernyőtulajdonságok beállítása..."
 
 #. Maximum length: 100  characters
 msgid ""
 "Set up screen layout of your desktops (Double-click an icon will identify "
 "the real screen)..."
 msgstr ""
-"Állítsa a be a monitor elrendezését (a képernyő kiválasztásához kattintson "
-"duplán a megfelelő ikonra)..."
+"Állítsa a be az asztalok elrendezését (az igazi képernyő kiválasztásához "
+"kattintson duplán a megfelelő ikonra)..."
 
 #. Maximum length: 100  characters
 msgid "Configure graphics tablet"
@@ -1412,7 +1419,7 @@ msgstr "Rajztábla beállítása"
 # /tmp/xapi:67
 #. Maximum length: 100  characters
 msgid "Configure keyboard..."
-msgstr "Billentyűzet beállítása..."
+msgstr "Billentűzet beállítása..."
 
 # /tmp/xapi:303
 #. Maximum length: 40  characters
@@ -1440,20 +1447,20 @@ msgstr "&Beállítások"
 # /tmp/xapi:327
 #. Maximum length: 20  characters
 msgid "VNC Options"
-msgstr "VNC beállítása"
+msgstr "VNC beállítások"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr "Hozzáférés engedélyezése a képernyőhöz a VNC-protokoll használatával"
+msgstr "Hozzáférés a képernyőhöz a VNC protokoll segítségével"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr "Jelszavas védelem engedélyezése"
+msgstr "Jelszavas védelem bekapcsolása"
 
 # /tmp/xapi:111
 #. Maximum length: 40  characters
 msgid "&Properties..."
-msgstr "&Tulajdonságok..."
+msgstr "&Tulajdonságok"
 
 #. Maximum length: 40  characters
 msgid "Password"
@@ -1461,24 +1468,24 @@ msgstr "Jelszó"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr "Jelszó ellenőrzése"
+msgstr "Jelszó mégegyszer"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr "Csak megtekintés mód engedélyezése"
+msgstr "Csak figyelési mód bekapcsolása"
 
 # /tmp/xapi:235
 #. Maximum length: 40  characters
 msgid "Enable HTTP Access"
-msgstr "HTTP-hozzáférés engedélyezése"
+msgstr "HTTP-hozzáférés bekapcsolása"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr "HTTP-port"
+msgstr "HTTP port"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr "Több VNC-csatlakozás engedélyezése"
+msgstr "Több VNC-kapcsolat engedélyezése"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1506,7 +1513,7 @@ msgstr "<nobr><h3><u>Jelenleg beállított egerek:</u></h3></nobr>"
 
 #. Maximum length: 50  characters
 msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-msgstr "<nobr><h3><u>Jelenlegi képernyő-elrendezés:</u></h3></nobr>"
+msgstr "<nobr><h3><u>Jelenlegi képernyőelrendezés:</u></h3></nobr>"
 
 #. Maximum length: 50  characters
 msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
@@ -1545,7 +1552,7 @@ msgstr "Gyártó"
 # /tmp/xapi:115
 #. Maximum length: 50  characters
 msgid "Special mouse properties..."
-msgstr "Különleges egér tulajdonságok..."
+msgstr "Különleges egértulajdonságok..."
 
 # /tmp/xapi:271
 #. Maximum length: 50  characters
@@ -1555,7 +1562,7 @@ msgstr "Színmélység kiválasztása..."
 # /tmp/xapi:355
 #. Maximum length: 50  characters
 msgid "Manual sync frequency set up..."
-msgstr "Kézi szinkron frekvencia beállítás..."
+msgstr "Kézi szinkronfrekvencia-beállítás..."
 
 # /tmp/xapi:187 /tmp/xapi:189 /tmp/xapi:191 /tmp/xapi:193
 #. Maximum length: 50  characters
@@ -1579,7 +1586,7 @@ msgstr "&Felbontás(ok) %1 színmélység mellett"
 # /tmp/intro:68 /tmp/xapi:465
 #. Maximum length: 50  characters
 msgid "Resolution Y"
-msgstr "Felbontás Y"
+msgstr "Y felbontás"
 
 #. Maximum length: 50  characters
 msgid "Possible"
@@ -1587,7 +1594,7 @@ msgstr "Lehetséges"
 
 #. Maximum length: 50  characters
 msgid "&Add this resolution"
-msgstr "Felbontás &hozzáadása"
+msgstr "Felbontás &hozzáadása..."
 
 #. Maximum length: 50  characters
 msgid "Enable 3-button emulation"
@@ -1603,7 +1610,7 @@ msgstr "<big><b>Jelenlegi AccessX beállítás állapota</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Jelenlegi VNC állapota</b></big><hr>"
+msgstr "<big><b>Jelenlegi VNC beállítás állapota</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1639,7 +1646,7 @@ msgstr "<big><b>Jelenleg beállított képernyők</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-msgstr "<big><b>Jelenleg beállított mutató eszközök</b></big><hr>"
+msgstr "<big><b>Jelenleg beállított mutatóeszközök</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently configured multihead status</b></big><hr>"
@@ -1663,16 +1670,16 @@ msgid ""
 "the keypad. The table below points to the current status of AccessX."
 msgstr ""
 "<b>Virtuális egér:</b><hr>Állítsa be a numerikus billentyűket úgy, hogy "
-"segítségével irányíthassa az egérmutatót. Az alábbi táblázat az AccessX "
-"jelenlegi állapotára utal."
+"segítségével irányíthassa az egérmutatót. "
 
 #. RTF text: no limit
 msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
-"<b>VNC-kiszolgáló:</b><hr>Állítsa be az X-kiszolgálót, hogy távolról, a VNC-"
-"néző programmal hozzá tudjon férni a munkaasztalhoz és az összes programhoz"
+"<b>VNC szerver:</b><hr>Az X-szerver beállítása úgy, hogy az asztal és a "
+"rajta látható programok távolról, egy VNC megjelenítő programmal "
+"megtekinthetők legyenek."
 
 #. RTF text: no limit
 msgid ""
@@ -1681,11 +1688,10 @@ msgid ""
 "capabilities of your graphics card. If your card and the corresponding "
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
-"<b>OpenGL-alrendszer:</b><hr>Állítsa be grafikus kártyájának 3D képességeit. "
-"Az X.Org az úgynevezett 'közvetlen leképezés interfészen' keresztül (DRI) "
-"tudja kihasználni a grafikus kártya 3D képességeit. Amennyiben grafikus "
-"kártyája és annak meghajtója támogatja a hardveres 3D gyorsítást, itt be "
-"tudja kapcsolni ezt a képességet."
+"<b>OpenGL rendszer:</b><hr>Itt állíthatók be a grafikus kártyája 3D funkciói."
+"Az XFree86 az úgynevezett 'közvetlen leképezés csatolón (DRI) keresztültudja "
+"kihasználni a grafikus 3D képességeit. Amennyiben grafikus kártyája "
+"támogatja a hardveres 3D gyorsítást, itt be tudja kapcsolni ezt a funkciót."
 
 #. RTF text: no limit
 msgid ""
@@ -1698,8 +1704,8 @@ msgstr ""
 "<b>Virtuális felbontás:</b><hr>Minden egyes képernyő egy \"szokványos\" "
 "felbontással rendelkezik, mely teljes egészében látható. Emellett a "
 "felbontás mellett be lehet állítani egy virtuális felbontást, mely nagyobb a "
-"képernyő felbontásánál. Virtuális felbontás esetén nem látjuk az egész "
-"képernyőt és a kép \"mozog\", ha az egérmutatót a kép szélére mozgatjuk."
+"képernyő felbontásánál. Virtuális felbontás esetén nem látható az egész "
+"képernyő, hanem a kép \"mozog\", ha az egérmutatót a kép szélére mozgatjuk."
 
 #. RTF text: no limit
 msgid ""
@@ -1708,10 +1714,10 @@ msgid ""
 "called <i>multihead environment</i> which consists of at least two cards up "
 "to a maximum of 16 cards."
 msgstr ""
-"<b>Grafikus kártya:</b><hr>Itt állíthatja be grafikus kártyáját. A grafikus "
+"<b>Videokártya:</b><hr>Itt állíthatja be grafikus kártyáját. A grafikus "
 "rendszer legalább egy grafikus kártyából áll, azonban <i>többkártyás mód</"
-"i>ban is működik, ha a számítógépben legalább 2 és legfeljebb 16 grafikus "
-"kártya található."
+"i>ban is működik, ha a számítógépben legalább 2 és legfeljebb 16videokártya "
+"található."
 
 #. RTF text: no limit
 msgid ""
@@ -1737,7 +1743,7 @@ msgid ""
 "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
 "language environment with which it should work."
 msgstr ""
-"<b>Billentyűzet beállítások:</b><hr>Állítsa be billentyűzetének típusát és "
+"<b>Billentyűzetbeállítások:</b><hr>Állítsa be billentyűzetének típusát és "
 "nyelvét."
 
 #. RTF text: no limit
@@ -1748,11 +1754,10 @@ msgid ""
 "the icon just double-click on it and you will see a message on the "
 "corresponding screen."
 msgstr ""
-"<b>Munkaasztalok elrendezése:</b><hr>Több grafikus kártya esetén ún. "
-"multihead (\"többfejes\") környezetről beszélünk. Ebben a párbeszédablakban "
-"beállíthatja az egyes képernyők elrendezését a fogd és vidd technikával. Ha "
-"nem tudja, hogy melyik ikonhoz melyik monitor tartozik, egyszerűen "
-"kattintson duplán az ikonra és üzenetet fog látni a megfelelő képernyőn."
+"<b>Munkaasztalok elrendezése:</b><hr> Több grafikus kártya esetén ún. "
+"multihead (\"többképernyős\" környezetről beszélünk. Ebben a "
+"párbeszédablakban állíthatja be az egyes képernyők elrendezését egyszerű "
+"egérműveletekkel. Az alábbi táblázaton a jelenlegi elrendezést láthatja. "
 
 #. RTF text: no limit
 msgid ""
@@ -1762,8 +1767,8 @@ msgid ""
 msgstr ""
 "<b>A monitor tulajdonságai:</b><hr>Állítsa be a grafikus kártyára csatlakozó "
 "képernyőt. Kérem, legyen óvatos a képernyő beállításakor. Helytelen "
-"frekvencia értékekkel tönkre tudja tenni monitorát! Az alábbi táblázat "
-"megmutatja a jelenleg beállított szinkrón értékeket."
+"frekvenciaértékekkel tönkre tudja tenni monitorát! Az alábbi táblázat "
+"megmutatja a jelenleg beállított szinkronértékeket."
 
 #. RTF text: no limit
 msgid ""
@@ -1771,7 +1776,8 @@ msgid ""
 "mouse pointer as well as settings like button emulation or wheel functions."
 msgstr ""
 "<b>Egérbeállítások:</b><hr>Itt végezheti el az egér és a görgő alapvető "
-"beállítását, valamint a görgő és a harmadik gomb emulációját."
+"beállítását, valamint a görgő funkcióinak, illetve a harmadik gomb "
+"emulációjának konfigurációját."
 
 #. RTF text: no limit
 msgid ""
@@ -1779,7 +1785,7 @@ msgid ""
 "multihead environment. Set up the multihead functioning here."
 msgstr ""
 "<b>Többképernyős mód:</b><hr>Ha több grafikus kártya van a gépben, akkor itt "
-"be tudja állítani a többképernyős környezetet (multihead)."
+"lehet beállítani a többképernyős (multihead) környezetet."
 
 #. RTF text: no limit
 msgid ""
@@ -1793,7 +1799,7 @@ msgstr ""
 msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
 msgstr ""
 "<b>Érintőképernyő beállítása:</b><hr>Ebben a párbeszédablakban állíthatja be "
-"az érintkezésre érzékeny képernyőt."
+"az érintésre érzékeny képernyőt."
 
 # /tmp/xapi:185
 #. Maximum length: 20  characters
@@ -1812,7 +1818,7 @@ msgstr "Görgő támogatása"
 # /tmp/xapi:389
 #. Maximum length: 30  characters
 msgid "&Port"
-msgstr "&Kapu"
+msgstr "&Port"
 
 #. Maximum length: 30  characters
 msgid "&Mode"
@@ -1820,7 +1826,7 @@ msgstr "&Mód"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
-msgstr "Gomb emuláció"
+msgstr "Gomb emulációja"
 
 #. Maximum length: 40  characters
 msgid "Primary Device:"
@@ -1850,7 +1856,7 @@ msgstr "Hagyományos módban"
 
 #. Maximum length: 40  characters
 msgid "Screens Layout Active"
-msgstr "Jelenlegi képernyő-elrendezések"
+msgstr "Jelenlegi képernyőelrendezések"
 
 # /tmp/xapi:281
 #. Maximum length: 70  characters
@@ -1860,7 +1866,7 @@ msgstr "Képernyő"
 # /tmp/xapi:49
 #. Maximum length: 70  characters
 msgid "Configuration on display"
-msgstr "Beállítása a képernyőn"
+msgstr "Beállítás a képernyőn"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1873,19 +1879,19 @@ msgstr "&Lépések"
 
 #. Maximum length: 40  characters
 msgid "Small"
-msgstr "kicsi"
+msgstr "Kicsi"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "szokványos"
+msgstr "Szokványos"
 
 #. Maximum length: 40  characters
 msgid "Big"
-msgstr "nagy"
+msgstr "Nagy"
 
 #. Maximum length: 40  characters
 msgid "Huge"
-msgstr "óriási"
+msgstr "Óriási"
 
 # /tmp/intro:67 /tmp/xapi:379
 #. Maximum length: 40  characters
@@ -1909,7 +1915,7 @@ msgstr "&Méretének változtatása"
 # /tmp/xapi:44
 #. Maximum length: 60  characters
 msgid "No video mode tuning available"
-msgstr "Nem elérhető videomód hangolás"
+msgstr "Nincs elérhető videomód-hangolás"
 
 msgid "Idle timer..."
 msgstr "Tétlenség időzítő..."
@@ -1936,7 +1942,7 @@ msgstr "Litván qwerty (numerikus)"
 
 #. RTF text: no limit
 msgid "Georgian (russian)"
-msgstr "Georgiai (orosz)"
+msgstr "Grúz (cirill)"
 
 #. RTF text: no limit
 msgid "Latvian"
@@ -1952,7 +1958,7 @@ msgstr "Cseh (qwerty)"
 
 #. RTF text: no limit
 msgid "Northern Saami (Finland)"
-msgstr "Észak Szuomi (Finnország)"
+msgstr "Északi szuomi (Finnország)"
 
 #. RTF text: no limit
 msgid "Macedonian"
@@ -1972,7 +1978,7 @@ msgstr "Burmai"
 
 #. RTF text: no limit
 msgid "Kannada"
-msgstr "Kanadai"
+msgstr "Kannada"
 
 #. RTF text: no limit
 msgid "Mongolian"
@@ -2041,7 +2047,7 @@ msgstr "Cseh"
 
 #. RTF text: no limit
 msgid "Gujarati"
-msgstr "Gujarati"
+msgstr "Gudzsaráti"
 
 # /tmp/xapi:55
 #. RTF text: no limit
@@ -2086,7 +2092,7 @@ msgstr "Szerb"
 
 #. RTF text: no limit
 msgid "Farsi"
-msgstr "Farsi"
+msgstr "Fárszi"
 
 #. RTF text: no limit
 msgid "Icelandic"
@@ -2102,15 +2108,15 @@ msgstr "Észt"
 
 #. RTF text: no limit
 msgid "Inuktitut"
-msgstr "Inuit"
+msgstr "Inuktitut"
 
 #. RTF text: no limit
 msgid "Swiss French"
-msgstr "Svájci (francia)"
+msgstr "Svájci francia"
 
 #. RTF text: no limit
 msgid "Swiss German"
-msgstr "Svájci (német)"
+msgstr "Svájci német"
 
 #. RTF text: no limit
 msgid "Thai"
@@ -2130,7 +2136,7 @@ msgstr "Japán"
 
 #. RTF text: no limit
 msgid "Georgian (latin)"
-msgstr "Georgiai (latin)"
+msgstr "Grúz (latin)"
 
 #. RTF text: no limit
 msgid "Ukrainian"
@@ -2154,7 +2160,7 @@ msgstr "Spanyol"
 
 #. RTF text: no limit
 msgid "Northern Saami (Sweden)"
-msgstr "Észak Szuomi (Svéd)"
+msgstr "Északi Szuomi (Svéd)"
 
 #. RTF text: no limit
 msgid "Yugoslavian"
@@ -2162,7 +2168,7 @@ msgstr "Jugoszláv"
 
 #. RTF text: no limit
 msgid "Hindi"
-msgstr "Hindu"
+msgstr "Hindi"
 
 # /tmp/xapi:55
 #. RTF text: no limit
@@ -2179,7 +2185,7 @@ msgstr "Magyar (qwerty)"
 
 #. RTF text: no limit
 msgid "Russian (cyrillic phonetic)"
-msgstr "Orosz (cirill betűs)"
+msgstr "Orosz (cirill fonetikus)"
 
 #. RTF text: no limit
 msgid "Albanian"
@@ -2199,11 +2205,11 @@ msgstr "Örmény"
 
 #. RTF text: no limit
 msgid "Northern Saami (Norway)"
-msgstr "Észak Szuomi (Norvég)"
+msgstr "Északi Szuomi (Norvég)"
 
 #. RTF text: no limit
 msgid "Latin America"
-msgstr "Latin Amerikai"
+msgstr "Latin-amerikai"
 
 #. RTF text: no limit
 msgid "French"
@@ -2211,7 +2217,7 @@ msgstr "Francia"
 
 #. RTF text: no limit
 msgid "United Kingdom"
-msgstr "Angol"
+msgstr "Brit angol"
 
 #. RTF text: no limit
 msgid "Arabic"
@@ -2247,7 +2253,7 @@ msgstr "Azerbajdzsáni"
 
 #. RTF text: no limit
 msgid "Vietnamese"
-msgstr "Vietnami"
+msgstr "Vietnámi"
 
 #. RTF text: no limit
 msgid "Lao"
@@ -2303,19 +2309,19 @@ msgstr "Trust klasszikus vezetéknélküli billentyűzet"
 
 #. RTF text: no limit
 msgid "Dell 101-key PC"
-msgstr "Dell 101-gombos PC"
+msgstr "Dell 101 gombos PC"
 
 #. RTF text: no limit
 msgid "Brother Internet Keyboard"
-msgstr "Brother internet billentyűzet"
+msgstr "Brother internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr "Laptop/notebook Compaq (Armada) Laptop billentyűzet"
+msgstr "Noteszgép - Compaq (Armada) noteszgép-billentyűzet"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr "Laptop/notebook Compaq (Presario) internet billentyűzet"
+msgstr "Noteszgép - Compaq (Presario) internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II"
@@ -2351,7 +2357,7 @@ msgstr "Toshiba Satellite S3000"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (13 keys)"
-msgstr "Compaq internet billentyűzet (13 gombos)"
+msgstr "Compaq internetes billentyűzet (13 gombos)"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XT1000"
@@ -2407,7 +2413,7 @@ msgstr "Logitech Cordless Desktop optikai "
 
 #. RTF text: no limit
 msgid "Logitech Internet Keyboard"
-msgstr "Logitech internet billentyűzet"
+msgstr "Logitech internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "BTC 9000"
@@ -2419,7 +2425,7 @@ msgstr "Genius Comfy KB-16M / Genius MM billentyűzet KWD-910"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Internet Keyboard"
-msgstr "Hewlett-Packard internet billentyűzet"
+msgstr "Hewlett-Packard internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Freedom/Desktop Navigator"
@@ -2427,7 +2433,7 @@ msgstr "Logitech Cordless Freedom/Desktop Navigator"
 
 #. RTF text: no limit
 msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr "Microsoft Natural Pro / Microsoft internet billentyűzet"
+msgstr "Microsoft Natural Pro / Microsoft internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Propeller Voyager (KTEZ-1000)"
@@ -2439,7 +2445,7 @@ msgstr "Brazil ABNT2 billentyűzet"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (7 keys)"
-msgstr "Compaq internet billentyűzet (7 gombos)"
+msgstr "Compaq internetes billentyűzet (7 gombos)"
 
 #. RTF text: no limit
 msgid "Honeywell Euroboard"
@@ -2451,15 +2457,15 @@ msgstr "Logitech Cordless Desktop"
 
 #. RTF text: no limit
 msgid "Yahoo! Internet Keyboard"
-msgstr "Yahoo! internet billentyűzet"
+msgstr "Yahoo! internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (18 keys)"
-msgstr "Compaq internet billentyűzet (18 gombos)"
+msgstr "Compaq internetes billentyűzet (18 gombos)"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr "Laptop/notebook Dell Inspiron 8xxx"
+msgstr "Noteszgép - Dell Inspiron 8xxx"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II (alternate option)"
@@ -2495,7 +2501,7 @@ msgstr "SK-1300"
 
 #. RTF text: no limit
 msgid "Generic 101-key PC"
-msgstr "Általános 101-gombos PC"
+msgstr "Általános 101 gombos PC"
 
 #. RTF text: no limit
 msgid "Northgate OmniKey 101"
@@ -2511,7 +2517,7 @@ msgstr "Cherry Blue Line CyBo@rd (alternatív opció)"
 
 #. RTF text: no limit
 msgid "Chicony Internet Keyboard"
-msgstr "Chicony internet billentyűzet"
+msgstr "Chicony internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
@@ -2531,7 +2537,7 @@ msgstr "SVEN Ergonomic 2500"
 
 #. RTF text: no limit
 msgid "Generic 102-key (Intl) PC"
-msgstr "Általános 102-gombos (nemzetközi) PC"
+msgstr "Általános 102 gombos (nemzetközi) PC"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop iTouch"
@@ -2547,7 +2553,7 @@ msgstr "Compaq Easy Access billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr "Hewlett-Packard 5181 internet billentyűzet"
+msgstr "Hewlett-Packard 5181 internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 500 FA"
@@ -2559,7 +2565,7 @@ msgstr "Memorex MX2500 EZ-Access billentyűzet"
 
 #. RTF text: no limit
 msgid "Generic 104-key PC"
-msgstr "Általános 104-gombos PC"
+msgstr "Általános 104 gombos PC"
 
 #. RTF text: no limit
 msgid "Everex STEPnote"
@@ -2567,7 +2573,7 @@ msgstr "Everex STEPnote"
 
 #. RTF text: no limit
 msgid "Japanese 106-key"
-msgstr "Japán 106-gombos"
+msgstr "Japán 106 gombos"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
@@ -2583,7 +2589,7 @@ msgstr "Logitech iTouch billentyűzet, Internet Navigator"
 
 #. RTF text: no limit
 msgid "Generic 105-key (Intl) PC"
-msgstr "Általános 105-gombos (nemzetközi) PC"
+msgstr "Általános 105 gombos (nemzetközi) PC"
 
 #. RTF text: no limit
 msgid "Keytronic FlexPro"
@@ -2591,11 +2597,11 @@ msgstr "Keytronic FlexPro"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr "Hewlett-Packard SK-2505 internet billentyűzet"
+msgstr "Hewlett-Packard SK-2505 internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr "Microsoft Internet Keyboard Pro, Svéd"
+msgstr "Microsoft Internet Keyboard Pro, svéd"
 
 #. RTF text: no limit
 msgid "Microsoft Office Keyboard"
@@ -2603,11 +2609,11 @@ msgstr "Microsoft Office billentyűzet"
 
 #. RTF text: no limit
 msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr "Oretec MCK-800 MM/internet billentyűzet"
+msgstr "Oretec MCK-800 MM/internetes billentyűzet"
 
 #. RTF text: no limit
 msgid "Both Ctrl keys together change group"
-msgstr "Mindkét Ctrl billentyű változtassa a csoportot"
+msgstr "A két Ctrl billentyű együtt változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "CapsLock key behavior"
@@ -2671,7 +2677,7 @@ msgstr "'A' melletti Control billentyű"
 
 #. RTF text: no limit
 msgid "Scroll_Lock LED shows alternative group"
-msgstr "A ScrollLock LED mutassa meg az alternatív csoportokat"
+msgstr "A ScrollLock LED az alternatív csoportokat jelzi"
 
 # /tmp/xapi:255
 #. RTF text: no limit
@@ -2680,15 +2686,15 @@ msgstr "Jobb Alt a Compose funkció"
 
 #. RTF text: no limit
 msgid "Right Win-key changes group"
-msgstr "A jobb oldali Win billentyű változtassa a csoportot"
+msgstr "A jobboldali Win billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Press Left Win-key to choose 3rd level"
-msgstr "Nyomja meg a bal oldali Win billentyűt a 3. szintű funkciók eléréséhez"
+msgstr "Nyomja meg a baloldali Win billentyűt a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
 msgid "Make CapsLock an additional Control"
-msgstr "A CapsLock használata külön vezérlőelemnek"
+msgstr "A CapsLock is vezérlőelem"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
@@ -2701,11 +2707,11 @@ msgstr ""
 
 #. RTF text: no limit
 msgid "Left Win-key switches group while pressed"
-msgstr "Bal oldali Win billentyű megnyomása a csoportváltáshoz"
+msgstr "Baloldali Win billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
 msgid "Left Shift key changes group"
-msgstr "Bal oldali Shift billentyű változtassa a csoportot"
+msgstr "Baloldali Shift billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
@@ -2717,7 +2723,7 @@ msgstr "A CapsLock LED mutassa meg az alternatív csoportokat"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
-msgstr "A bal oldali Win billentyű látja el a Meta funkciót."
+msgstr "A baloldali Win billentyű látja el a Meta funkciót."
 
 #. RTF text: no limit
 msgid "Caps Lock key changes group"
@@ -2733,7 +2739,7 @@ msgstr "A Compose billentyű a Menü"
 
 #. RTF text: no limit
 msgid "Right Alt key changes group"
-msgstr "A jobb oldali Alt billentyű változtassa a csoportot"
+msgstr "A jobboldali Alt billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Control Key Position"
@@ -2757,7 +2763,7 @@ msgstr "Jobb Ctrl gomb megnyomása a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
 msgid "Add the standard behavior to Menu key."
-msgstr "Alapértelmezett viselkedés hozzáadása a Menü billentyűhöz."
+msgstr "Alapértelmezett viselkedés hozzáadása a Menü billentyűhöz"
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
@@ -2773,7 +2779,7 @@ msgstr "Hyper hozzárendelése a Win billentyűkhöz (alapértelmezett)."
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr "Jobb oldali Win gomb megnyomása a 3. szintű funkciók eléréséhez"
+msgstr "Jobboldali Win gomb megnyomása a 3. szintű funkciók eléréséhez"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
@@ -2791,7 +2797,7 @@ msgstr "Shift/CapsLock csoport viselkedése"
 
 #. RTF text: no limit
 msgid "Right Win-key switches group while pressed"
-msgstr "Jobb oldali Win billentyű megnyomása a csoportváltáshoz"
+msgstr "Jobboldali Win billentyű megnyomása a csoportváltáshoz"
 
 #. RTF text: no limit
 msgid "Alt+Control changes group"
@@ -2803,7 +2809,7 @@ msgstr "A Menü billentyű változtassa a csoportot"
 
 #. RTF text: no limit
 msgid "Left Ctrl key changes group"
-msgstr "A bal oldali Ctrl billentyű változtassa meg a csoportot"
+msgstr "A baloldali Ctrl billentyű változtassa meg a csoportot"
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
