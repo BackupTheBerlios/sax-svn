@@ -8,7 +8,7 @@
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  XFree86-driver-options XFree86-server flex freetype2 freetype2-devel hwinfo hwinfo-devel mesa-devel-packages qt3-devel-packages readline-devel swig x-devel-packages yacc
+# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig update-desktop-files yacc
 
 Name:         sax2
 Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
@@ -22,12 +22,13 @@ Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.7
-Release:      395
+Release:      495
 Group:        System/X11/Utilities
 License:      LGPL, Other License(s), see package
 Source:       sax2.tar.bz2
 Source1:      sax2_pixmaps.tar.bz2
 Source2:      sax2_nvidia.tar.bz2
+Source3:      sax2.desktop
 NoSource:     2
 %if %{suse_version} < 810
 Patch:        sax2_binmode.dif
@@ -47,20 +48,24 @@ Requires:     sax2_sbus
 %description
 This package contains the SuSE Advanced X-Configuration (XFree86 4.x)
 
+
+
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
 %package -n saxtools
 Version:      2.2
-Release:      942
+Release:      1043
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     saxident
 
 %description -n saxtools
-Some small X Window System tools to handle input devices,
-for example, mouse and keyboard.
+Some small X Window System tools to handle input devices, for example,
+mouse and keyboard.
+
+
 
 Authors:
 --------
@@ -68,16 +73,19 @@ Authors:
 
 %package -n saxident
 Version:      1.1
-Release:      652
+Release:      753
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
 Provides:     saxtools:/usr/X11R6/lib/sax/sysp/maps/Identity.map
 
 %description -n saxident
-This package contains information about the supported graphics hardware and
-its special parameters. For some graphics cards a profile is needed to describe
-configuration parameters outside the ordinary way of setting up the card with SaX2.
+This package contains information about the supported graphics hardware
+and its special parameters. For some graphics cards a profile is needed
+to describe configuration parameters outside the ordinary way of
+setting up the card with SaX2.
+
+
 
 Authors:
 --------
@@ -278,20 +286,17 @@ fi
 FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
 mkdir -p $FILLUP_DIR
 install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
-
 # install script variants of xupdate and xkbctrl...
 # --------------------------------------------------
 mv $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl.pl \
    $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl
 mv $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl \
    $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate
-
 # check perl .packlist...
 # --------------------------
 %if %{suse_version} > 820
 %perl_process_packlist
 %endif
-
 # remove unpacked sources...
 # --------------------------
 rm -f $RPM_BUILD_ROOT/var/adm/perl-modules/sax2
@@ -316,6 +321,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*/*-linux-thread-multi/perllocal.pod
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm,v
+%suse_update_desktop_file -i %name System SystemSetup
 
 %post
 %{fillup_and_insserv -npY sax}
@@ -327,6 +333,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 #-------------------------------------------------
 
 %files
+%defattr(-,root,root)
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
 %dir /usr/lib/perl5/*_perl/*/*/Term
@@ -387,6 +394,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/XFree.so
 /usr/X11R6/%{_lib}/PLog.so
 /usr/sbin/sysp
+/usr/share/applications/sax2.desktop
 /usr/share/locale/de/LC_MESSAGES/sax.mo
 /usr/share/locale/en_US/LC_MESSAGES/sax.mo
 /usr/share/locale/en_GB/LC_MESSAGES/sax.mo
@@ -424,6 +432,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 # ------------------------------------------------
 
 %files -n saxtools
+%defattr(-,root,root)
 %doc /usr/X11R6/man/man1/*
 /usr/X11R6/bin/xbounce
 /usr/X11R6/bin/xupdate
@@ -440,6 +449,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 # ------------------------------------------------
 
 %files -n saxident
+%defattr(-,root,root)
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/api
 %dir /usr/X11R6/%{_lib}/sax/api/data/cdb
