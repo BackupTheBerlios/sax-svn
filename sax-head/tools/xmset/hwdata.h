@@ -81,6 +81,7 @@ typedef struct {
 //===================================
 // Prototypes...
 //-----------------------------------
+char *vend_id2str(unsigned vend);
 MouseData* MouseGetData   (void);
 MsgDetect  MonitorGetData (void);
 

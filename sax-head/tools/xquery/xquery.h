@@ -121,7 +121,7 @@ void SwitchMode (Display *dpy, int call, int scr);
 Bool GetModeLineData (Display* dpy, int scr);
 void ShowModeline (void);
 void ApplyModeline (Display *dpy, int scr);
-void PrepareModeline (
+int PrepareModeline (
     int h1,int h2,int h3,int h4,int v1,int v2,int v3,int v4
 );
 Bool IsXinerama (Display *dpy);

@@ -345,6 +345,7 @@ int main (int argc, char*argv[]) {
 	if (applymode == TRUE) {
 		int hdisp,hsyncstart,hsyncend,htotal;
 		int vdisp,vsyncstart,vsyncend,vtotal;
+		int badValue;
 		str left;
 		strsplit(timing,' ',left,timing);
 		userscreen = atoi(left);
@@ -365,11 +366,13 @@ int main (int argc, char*argv[]) {
 		strsplit(timing,' ',left,timing);
 		vtotal = atoi(left);
 
-		PrepareModeline (
+		badValue = PrepareModeline (
 			hdisp,hsyncstart,hsyncend,htotal,
 			vdisp,vsyncstart,vsyncend,vtotal
 		);
-		ApplyModeline (dpy,userscreen);
+		if (! BadValue) {
+			ApplyModeline (dpy,userscreen);
+		}
 		break;
 	}
 
@@ -582,9 +585,15 @@ void ApplyModeline (Display *dpy, int scr) {
 //=====================
 // PrepareModeline()
 //---------------------
-void PrepareModeline (
+int PrepareModeline (
 	int h1,int h2,int h3,int h4,int v1,int v2,int v3,int v4
 ) {
+	if (
+		h2 < h1 || h3 < h2 || h4 < h3 ||
+		v2 < v1 || v3 < v2 || v4 < v3
+	) {
+		return 1;
+	}
 	AppRes.field[HDisplay].val   =h1;
 	AppRes.field[HSyncStart].val =h2;
 	AppRes.field[HSyncEnd].val   =h3;
@@ -594,6 +603,7 @@ void PrepareModeline (
 	AppRes.field[VSyncStart].val =v2;
 	AppRes.field[VSyncEnd].val   =v3;
 	AppRes.field[VTotal].val     =v4;
+	return 0;
 }
 
 //=====================
