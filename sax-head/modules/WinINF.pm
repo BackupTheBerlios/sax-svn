@@ -114,7 +114,7 @@ sub getSections {
 	my @data;
 	my $count = 0; 
 	foreach (@_) {
-	if ($_ =~ /^\[(.*)\]/) {
+	if ($_ =~ /^ *\[(.*)\]/) {
 		if ( $count == 1 ) {
 			my @save = @data;
 			$sections{$sname} = \@save;
