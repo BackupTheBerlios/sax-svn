@@ -1,16 +1,14 @@
 # settings for screen 0
 # ------------------------
-Device  -> [X]   ->  VendorName       = ATI
-Device  -> [X]   ->  BoardName        = Radeon 8500
 Device  -> [X]   ->  Driver           = radeon
 Device  -> [X]   ->  Screen           = 0
 
 # new device for Screen 1
 # ------------------------
 Device  -> [X+1] ->  BusID            = {Device -> [X] -> BusID}
-Device  -> [X+1] ->  VendorName       = ATI
+Device  -> [X+1] ->  VendorName       = {Device -> [X] -> VendorName}
+Device  -> [X+1] ->  BoardName        = {Device -> [X] -> BoardName}
 Device  -> [X+1] ->  Identifier       = Device[[X+1]]
-Device  -> [X+1] ->  BoardName        = Radeon 8500
 Device  -> [X+1] ->  Driver           = radeon
 Device  -> [X+1] ->  Screen           = 1
 
