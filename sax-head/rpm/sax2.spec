@@ -8,7 +8,7 @@
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig update-desktop-files yacc x-devel-packages
+# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig update-desktop-files x-devel-packages yacc
 
 Name:         sax2
 Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
@@ -22,7 +22,7 @@ Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.7
-Release:      495
+Release:      576
 Group:        System/X11/Utilities
 License:      LGPL, Other License(s), see package
 Source:       sax2.tar.bz2
@@ -37,9 +37,9 @@ Patch1:       sax2_monitor.dif
 Patch2:       sax2_slec.dif
 Patch3:       sax2_date.dif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
-%ifarch ppc sparc sparc64
-Provides:     sax
-Obsoletes:    sax
+%if %{suse_version} > 820
+Provides:     sax xfine
+Obsoletes:    sax xfine
 %endif
 %ifarch sparc sparc64
 Requires:     sax2_sbus
@@ -56,7 +56,7 @@ Authors:
 
 %package -n saxtools
 Version:      2.2
-Release:      1043
+Release:      1125
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     saxident
@@ -73,7 +73,7 @@ Authors:
 
 %package -n saxident
 Version:      1.1
-Release:      753
+Release:      834
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
