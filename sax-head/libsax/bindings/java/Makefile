@@ -11,6 +11,8 @@ all:
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	${JAVAC} *.java
 
+install_vendor:
+
 clean:
 	rm -f SaX*.java SaX_* SaX.so *.class
 	rm -f SWIGTYPE*

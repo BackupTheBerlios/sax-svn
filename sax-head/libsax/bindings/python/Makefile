@@ -5,6 +5,8 @@ all:
 	g++ -shared SaX_wrap.o -o _SaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 
+install_vendor:
+
 clean:
 	rm -f  SaX_wrap.cxx
 	rm -f  Makefile.old

@@ -88,6 +88,15 @@ install:
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${FONTVZ} ${VARVZ} ${CREATEVZ}
 	install -d -m 755 ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
 
+	# install bindings...
+	# ---------------------
+	( cd libsax && \
+	for i in `ls -1 ./bindings`; do \
+		if [ -d ./bindings/$$i ];then \
+			( cd ./bindings/$$i && make DESTDIR=${buildroot} install_vendor ) ;\
+		fi \
+	done )
+
 	# install NLS support...
 	# -----------------------
 	( cd ./locale && ./.locale )

@@ -7,6 +7,8 @@ all:
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	mcs -nologo -o test.exe *.cs
 
+install_vendor:
+
 clean:
 	rm -f SaX*.cs SaX_* SaX.so
 	rm -f SWIGTYPE*
