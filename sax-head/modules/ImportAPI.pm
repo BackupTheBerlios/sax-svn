@@ -1188,6 +1188,7 @@ sub GetModelines {
 			$_ =~ s/Modeline//;
 			$_ =~ s/^ +//; $_ =~ s/ +$//;
 			@param = split(/ +/,$_);
+			$param[0] =~ s/\"//g;
 			if ($param[0] =~ /$r/i) {
 				$dcf = $param[1]; $dcf = $dcf * 1e6;
 				$hfl = $param[5]; 
