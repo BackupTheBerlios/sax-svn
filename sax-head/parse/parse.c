@@ -72,7 +72,9 @@ char* GetModesSpecs (XF86ConfigPtr conf);
 char* GetDisplaySpecs (XF86ConfigPtr conf);
 
 /* Extensions Section... */
+#ifdef HAVE_EXTENSIONS_SECTION
 char* GetExtensions (XF86ConfigPtr conf);
+#endif
 
 /*---------------------------------------------------------------------------
  Next part is the main function which build the logical layer of the module
@@ -353,6 +355,7 @@ char* GetFlags (XF86ConfigPtr conf) {
 /********************
  Extensions Section... 
 ********************/
+#ifdef HAVE_EXTENSIONS_SECTION
 char* GetExtensions (XF86ConfigPtr conf) {
 	// TODO...
 	char line[SIZE]   = "";
@@ -392,6 +395,7 @@ char* GetExtensions (XF86ConfigPtr conf) {
 	}
 	return(result);
 }
+#endif
 
 /************************
  ServerLayout Section... 

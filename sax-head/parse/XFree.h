@@ -23,7 +23,9 @@ extern char* GetInputSpecs (XF86ConfigPtr conf);
 extern char* GetFlags (XF86ConfigPtr conf);
 
 /* Extensions Section... */
+#ifdef HAVE_EXTENSIONS_SECTION
 extern char* GetExtensions (XF86ConfigPtr conf);
+#endif
 
 /* ServerLayout Section... */
 extern char* GetLayoutSpecs (XF86ConfigPtr conf);

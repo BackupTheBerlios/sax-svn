@@ -11,12 +11,13 @@
 #
 LIBDIR = /usr/lib/perl5/5.6.0/i586-linux/auto/XFree
 MODDIR = /usr/lib/perl5/5.6.0/XFree
+EXTSEC = `./check_exts.sh`
 
 all:
 	@echo "compiling C stuff..."
 	gcc -O2 parse.c -o parse -L/usr/X11R6/lib -L/usr/X11R6/lib64 \
 		-I/usr/X11R6/include \
-		-DX_BYTE_ORDER=X_LITTLE_ENDIAN -DNEW_INPUT -DNDEBUG \
+		-DX_BYTE_ORDER=X_LITTLE_ENDIAN -DNEW_INPUT -DNDEBUG -D${EXTSEC} \
 		-lxf86config -lm
 
 	@echo "running swig..."
