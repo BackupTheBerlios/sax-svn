@@ -28,7 +28,7 @@ if [ -d $i/LC_MESSAGES ];then
 	notYet=$(echo $notYet)
 	fuzzyCount=$(cat $i/LC_MESSAGES/sax.po | grep -v "#~" | grep fuzzy | wc -l)
 	fuzzyCount=$(echo $fuzzyCount)
-	removed=$(cat $i/LC_MESSAGES/sax.po | grep "#~" | wc -l)
+	removed=$(cat $i/LC_MESSAGES/sax.po | grep "#~ msgid" | wc -l)
 	removed=$(echo $removed)
 	locale=$(basename $i)
 	lines=$(cat /tmp/lines)

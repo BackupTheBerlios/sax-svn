@@ -33,10 +33,14 @@ sub get3DPackages {
 	my $flag;       # special flags
 	my $result;     # query result
 
-	if (defined $noscan) {
+	if ($noscan ne "scan") {
 		$result = qx ($sysp -q 3d);
 	} else {
-		$result = qx ($sysp -s 3d --nocheckflag);
+		if ($noscan eq "scan_nocheckflag") {
+			$result = qx ($sysp -s 3d --nocheckflag);
+		} else {
+			$result = qx ($sysp -s 3d);
+		}
 	}
 	my @list = split(/\n/,$result);
 	foreach (@list) {

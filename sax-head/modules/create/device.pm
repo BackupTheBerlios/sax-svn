@@ -38,7 +38,11 @@ sub CreateDeviceSection {
 		if ($setting eq "") { 
 			next; 
 		}
-		@list = split(/,/,$setting);
+		if ($i !~ /^VendorName|BoardName/) {
+			@list = split(/,/,$setting);
+		} else {
+			$list[0] = $setting;
+		}
 		$size = @list;
 		SWITCH: for ($i) {
 		#===========================================

@@ -1657,18 +1657,28 @@ void XCard::slot3D (void) {
 			return;
 		}
 		if (flag3D == "NVDummy") {
-			setMessage ("nvidia3Denable",XBox::Critical);
+			setMessage ("nvidia3Denable",XBox::Critical,NULL,600);
 			mCheck3D -> setChecked ( false );
 			return;
 		}
 	} else {
-		#if 1
 		if (flag3D == "NVReal") {
-			setMessage ("nvidia3Ddisable",XBox::Critical);
+			int uninstall = setActionMessage (
+				"nvidia3Ddisable",XBox::Critical
+			);
+			if (uninstall == XBox::Yes) {
+				QString uninst ("--uninstall");
+				QString quiet  ("-s");
+				qx (NV_INSTALLER,STDNONE,2,"%s %s",
+					uninst.ascii(),quiet.ascii()
+				);
+				get3Dstatus ("scan");
+				mCheck3D -> setChecked ( false );
+				return;
+			}
 			mCheck3D -> setChecked ( true );
 			return;
 		}
-		#endif
 	}
 	// ...
 	// show a 3D warning message because 3D for
@@ -1711,8 +1721,7 @@ void XCard::slot3D (void) {
 //=====================================
 // XCard get sysp 3D data...
 //-------------------------------------
-QList<char> XCard::get3Dstatus (void) {
-	QString noscan ("noscan");
+QList<char> XCard::get3Dstatus (const QString & noscan) {
 	XStringList packageInfo ( 
 		qx (GET3D,STDOUT,1,"%s",noscan.ascii())
 	);
@@ -1763,7 +1772,7 @@ bool XCard::validatePage (void) {
 // XCard set OK message box...
 //-------------------------------------
 void XCard::setMessage (
-	const QString& textKey,XBox::Icon icon,const QString& addon
+	const QString& textKey,XBox::Icon icon,const QString& addon,int width
 ) {
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 	QString text;
@@ -1774,6 +1783,9 @@ void XCard::setMessage (
 		icon,XBox::Ok, 0,0,mFrame,
 		globalFrameWidth
 	);
+	if (width) {
+		mb.setFixedWidth (width);
+	}
 	mb.setButtonText (
 		XBox::Ok, mText["Ok"]
 	);
@@ -1783,6 +1795,27 @@ void XCard::setMessage (
 	} else {
 		mFrame -> enterEvent ( 0 );
 	}
+}
+
+//=====================================
+// XCard set simple OK/Cancel box...
+//-------------------------------------
+int XCard::setActionMessage (
+	const QString& textKey,XBox::Icon icon
+) {
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+	XBox mb (
+		mText["hint"],mText[textKey],
+		icon,XBox::Yes, XBox::No,0,mFrame,
+		globalFrameWidth
+	);
+	mb.setButtonText (
+		XBox::Yes, mText["Yes"]
+	);
+	mb.setButtonText (
+		XBox::No, mText["No"]
+	);
+	return mb.exec();
 }
 
 //=====================================

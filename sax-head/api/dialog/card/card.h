@@ -112,14 +112,17 @@ class XCard : public XTemplate {
 	void initPage     ( void );
 	void setupTop     ( int );
 	bool validatePage ( void );
-	QList<char> get3Dstatus ( void );
+	QList<char> get3Dstatus ( const QString& = "noscan" );
 
 	public:
 	int setTypedMessage (
 		const QString&,XBox::Icon = XBox::Warning,const QString& = 0,int=1
 	);
 	void setMessage ( 
-		const QString&,XBox::Icon = XBox::Warning,const QString& = 0 
+		const QString&,XBox::Icon = XBox::Warning,const QString& = 0,int=0
+	);
+	int setActionMessage (
+		const QString&,XBox::Icon = XBox::Warning
 	);
 
     protected:

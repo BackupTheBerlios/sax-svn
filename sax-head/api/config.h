@@ -165,6 +165,7 @@ STATUS        : Status: Up-to-date
 #define MD5             "/usr/bin/md5sum"
 #define XSET            "/usr/X11R6/bin/xset"
 #define XSETROOT        "/usr/X11R6/bin/xsetroot"
+#define NV_INSTALLER    "/usr/bin/nvidia-installer"
 
 //==============================
 // Init files...

@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Tue Oct 14 11:27:22 CEST 2003 - ms@suse.de
+
+- added workflow to uninstall the nvidia driver if one want
+  to disable 3D while the binary only nvidia module is used (#31788)
+- fixed wrong handling if card vendor/board names contains
+  a comma in its CDB name. In this case the comma was used as seperator
+  which caused wrong vendor/name specifications while saving the
+  config file. The written configuration was parsed wrong if it
+  has been imported again
+
+-------------------------------------------------------------------
 Mon Oct 13 14:19:18 CEST 2003 - ms@suse.de
 
 - added kde/fonts path to be available in core font list

@@ -322,10 +322,10 @@ pacsmissing=<b>Required base packages are missing</b><hr>Cannot enable OpenGL ac
 dummydriver=<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide the official 2D/3D/OpenGL driver from nVidia. Update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 Online Update).
 
 # RTF text: no limit
-nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for this card you need to use the commercial driver from nVidia. Please download the nVidia installer from the nVidia web server <i>(http://www.nvidia.com)</i> first. After you have installed the driver you can enable 3D with SaX2.
+nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for this card you need to install the commercial driver from nVidia first. Install the driver by using <b>YaST Online Update</b> and selecting the nVidia driver patch.<br><br>If you have already installed the driver via YaST Online Update before and uninstalled it afterwards you need to install the driver manually. Instructions for this can be found at the following location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>
 
 # RTF text: no limit
-nvidia3Ddisable=<b>Cannot disable OpenGL acceleration</b><hr>The 3D subsystem is based on the commercial driver from nVidia. To disable 3D you need to uninstall the driver using the nVidia installer. The uninstall process will reset the original driver from XFree86 which does not provide any 3D hardware acceleration.
+nvidia3Ddisable=<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the commercial driver from nVidia. SaX2 needs to uninstall the driver using the nVidia installer. The uninstall process will reset the original driver from XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do you want to continue?</b>
 
 # Maximum length: 70 characters
 diskinfo=Utility Disk...
