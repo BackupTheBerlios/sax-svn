@@ -274,6 +274,10 @@ FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
 mkdir -p $FILLUP_DIR
 install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 
+# check perl .packlist...
+# --------------------------
+%perl_process_packlist
+
 # remove unpacked sources...
 # --------------------------
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SecureMode
