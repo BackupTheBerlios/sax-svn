@@ -1764,8 +1764,8 @@ sub CheckSplit {
 	my $count  = 0;
 	my $joined;
 	for (my $i=0;$i<@list;$i++) {
-		my $signs = split (/[^\"]*/,$list[$i]);
-		if ( $signs % 2 == 0 ) {
+		my $signs = countDoubleQuote ($list[$i]);
+		if ( ($signs == 0) || ($signs % 2 != 0) ) {
 			$joined.=",$list[$i]";
 		} else {
 			$result[$count] = $list[$i];
@@ -1792,5 +1792,20 @@ sub CheckSplit {
 	return @result;
 }
 
-1;
+#---[ countDoubleQuote ]----#
+sub countDoubleQuote {
+#---------------------------------------
+# count double quotes in a string and
+# return the result
+#   
+	my $str = $_[0];
+	my $cnt = 0;
+	while (length ($str)) {
+		if (chop($str) eq "\"") {
+			$cnt++;
+		}
+	}
+	return $cnt;
+}
 
+1;
