@@ -529,16 +529,17 @@ msgstr ""
 "atnaujinimu internetu)."
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
 "Install the driver by using <b>YaST Online Update</b> and selecting the "
-"nVidia driver patch.<br><br>If you have already installed the driver via "
-"YaST Online Update before and uninstalled it afterwards you need to install "
-"the driver manually. Instructions for this can be found at the following "
-"location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/xorg-"
-"x11/nvidia-installer-HOWTO</b>"
+"nVidia driver patch."
 msgstr ""
+"<b>Neádiegta oficiali NVidia tvarkyklë</b><hr>Nepavyksta ájungti OpenGL "
+"spartinimo, kadangi sistema nepateikia oficialiø NVidia paketø. Praðome "
+"pirma atnaujinti paketus <b>NVIDIA_GLX ir NVIDIA_kernel</b> su YOU (YaST2 "
+"atnaujinimu internetu)."
 
 #. RTF text: no limit
 msgid ""
@@ -2666,19 +2667,6 @@ msgstr ""
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to use the commercial driver from nVidia. Please "
-#~ "download the nVidia installer from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. After you have installed the driver you can enable "
-#~ "3D with SaX2."
-#~ msgstr ""
-#~ "<b>Neádiegta oficiali NVidia tvarkyklë</b><hr>Nepavyksta ájungti OpenGL "
-#~ "spartinimo, kadangi sistema nepateikia oficialiø NVidia paketø. Praðome "
-#~ "pirma atnaujinti paketus <b>NVIDIA_GLX ir NVIDIA_kernel</b> su YOU (YaST2 "
-#~ "atnaujinimu internetu)."
 
 #~ msgid "Enable AccessX"
 #~ msgstr "Ájungti AccessX"
