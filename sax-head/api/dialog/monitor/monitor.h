@@ -59,6 +59,7 @@ class XMonitor : public XTemplate {
 	QComboBox*    mMode;
 	QSpinBox*     mXspin;
 	QSpinBox*     mYspin;
+	QVBox*        layer11;
 
 	private:
 	int           mSelected;

@@ -183,6 +183,7 @@ bool XMonitor::slotRun (int index) {
 	QString topic;
 	XData* sysData;
 	QDict<char> monitorInfo;
+	bool havePrimaryDisplaySize = false;
 	int monitors;
 	monitors = mFiles["sys_DESKTOP"]->getDeviceCount();
 	for (int n=0; n<=monitors; n++) {
@@ -191,6 +192,19 @@ bool XMonitor::slotRun (int index) {
 			continue;
 		}
 		monitorInfo = sysData -> getData();
+		if ( (n==0) && (monitorInfo["DisplaySize"]) ) {
+			QString sizestr (monitorInfo["DisplaySize"]);
+			XStringList dpi (sizestr);
+			dpi.setSeperator (" ");
+			QList<char> size = dpi.getList();
+			if (size.count() == 2) {
+				QString x (size.at(0));
+				QString y (size.at(1));
+				if ( (x.toInt() > 0) && (y.toInt() > 0) ) {
+					havePrimaryDisplaySize = true;
+				} 
+			}
+		}
 		QString model (monitorInfo["VendorName"]);
 		QString name  (monitorInfo["ModelName"]);
 		if (model != name) {
@@ -212,6 +226,30 @@ bool XMonitor::slotRun (int index) {
 		mSelected = 0;
 	} else {
 		mSetup -> setDisabled (true);
+	}
+	// ...
+	// check for valid DisplaySize on primary display
+	// ---
+	if (! havePrimaryDisplaySize) {
+		XBox* mb = new XBox (
+			mText["sizeinfo"],mText["sizetext"],
+			XBox::Information, XBox::Ok, XBox::Cancel, 0,mFrame,
+			globalFrameWidth
+		);
+		mb->setButtonText (
+			XBox::Ok,mText["Ok"]
+		);
+		mb->setButtonText (
+			XBox::Cancel, mText["Cancel"]
+		);
+		int choose = mb->exec();
+		switch (choose) {
+		case XBox::Ok: {
+			slotSetup();
+			mTop -> showPage (layer11);
+		}
+		}
+		delete (mb);
 	}
 	}
 	return (TRUE);

@@ -425,6 +425,9 @@ void XIntro::checkDetected (void) {
 	if (! data) {
 		continue;
 	}
+	if (n > 0) {
+		continue;
+	}
 	QString cardNr;
 	cardNr.sprintf("%d",n);
 	QDict<char> desktop = data -> getData();

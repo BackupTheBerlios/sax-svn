@@ -173,7 +173,7 @@ void XMonitor::dialogCreate (void) {
 	// ----------------------------
 	// Expert
 	// ============================
-	QVBox* layer11   = new QVBox ( mTop );
+	layer11   = new QVBox ( mTop );
 	QButtonGroup* algorithm = new QButtonGroup (
 		1,Horizontal,mText["algorithm"],layer11
 	);

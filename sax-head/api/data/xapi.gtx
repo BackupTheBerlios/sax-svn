@@ -358,6 +358,12 @@ nvidia3Denable=<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D su
 nvidia3Ddisable=<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the commercial driver from nVidia. SaX2 needs to uninstall the driver using the nVidia installer. The uninstall process will reset the original driver from XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do you want to continue?</b>
 
 # Maximum length: 70 characters
+sizeinfo=Display size unknown...
+
+# RTF text: no limit
+sizetext=<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display couldn't be detected. Applications dealing with computer graphics like <b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know about the real physical size of your display to work properly. Please refer to your monitor manual to obtain the correct size values for the horizontal (X) and vertical (Y) direction. The values are required to be entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>
+
+# Maximum length: 70 characters
 diskinfo=Utility Disk...
 
 # RTF text: no limit
