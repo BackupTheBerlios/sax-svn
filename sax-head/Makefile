@@ -187,7 +187,7 @@ install:
 	# install API data files...
 	#--------------------------------------------
 	for i in `find ./api/data -maxdepth 1 -name "*"`; do \
-	if [ -f $$i ] && [ ! $$i = ".testgtx" ];then \
+	if [ -f $$i ] && [ ! $$i = "./api/data/.testgtx" ];then \
 		install -m 644 $$i  ${APIDATAVZ} ;\
 	fi \
 	done
