@@ -152,8 +152,6 @@ int main(int argc,char*argv[]) {
 	// screen and multihead environments to call itself with
 	// initWindow = true
 	// ---
-	signal (SIGUSR1,signalSave);
-	signal (SIGTERM,signalReset);
 	if (initWindow) {
 	// ... /
 	// build the application window
@@ -170,6 +168,8 @@ int main(int argc,char*argv[]) {
 	xfine = new XFineWindow (
 		xmiddle,ymiddle,screen,uniFont
 	);
+	signal (SIGUSR1,signalSave);
+	signal (SIGTERM,signalReset);
 	app.setMainWidget (xfine);
 	xfine->show();
 	cursorName.sprintf("top_left_arrow");
