@@ -130,6 +130,22 @@ void XDesktop::resetPage (int reload) {
 	#endif
 
 	// ...
+	// Check if there really is no need to calculate
+	// modelines. If someone add own resolutions this must be
+	// corrected
+	// ---
+	if (mNewResAdded) {
+	for (int n=0; n<mFiles["sys_DESKTOP"]->getDeviceCount(); n++) {
+		XWrapPointer<XData> workingDesktop (
+			mFiles["sys_DESKTOP"]->getDevice ( n )
+		);
+		workingDesktop.setPair (
+			"CalcModelines","on"
+		);
+	}
+	}
+
+	// ...
 	// walk through all cards and check if one is fbdev
 	// based
 	// ---
@@ -829,10 +845,11 @@ void XDesktop::slotAdd (void) {
 		}
 	}
 	if (! added) {
-	QCheckListItem* item = new XCheckListItem (
-		mResolution,newRes,QCheckListItem::CheckBox,mIntro
-	);
-	item -> setOn (true);
+		QCheckListItem* item = new XCheckListItem (
+			mResolution,newRes,QCheckListItem::CheckBox,mIntro
+		);
+		item -> setOn (true);
+		mNewResAdded = true;
 	}
 	slotUsed (NULL);
 	mAdd -> setDisabled (true);

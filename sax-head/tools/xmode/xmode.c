@@ -17,233 +17,336 @@ STATUS        : Status: Up-to-date
 #include <getopt.h>
 #include <stdlib.h>
 #include <string.h>
-#include "xmode.h"
+#include <math.h>
 
-int HGTn = 7;
+#include "xmode.h"
 
 //================================================
 // calculate the fbmode from the XFree86 timings
 // -----------------------------------------------
-int XmodeCalculateFbMode (struct xmode *data,struct xtiming *t) {
-	int pixclock;
-	int left_margin;
-	int right_margin;
-	int upper_margin;
-	int lower_margin;
-	int hsync_len;
-	int vsync_len;
-
-	// clock...
-	// ----------
-	pixclock     = 1000000 / (data->dac/1e6);
-
-	// horizontal fb timing...
-	// ------------------------
-	left_margin  = t->htotal - t->hsyncend;
-	right_margin = t->hsyncstart - t->hdisp; 
-	hsync_len    = t->hsyncend - t->hsyncstart;
-
-	// vertical fb timing...
-	// -----------------------
-	upper_margin = t->vtotal - t->vsyncend;
-	lower_margin = t->vsyncstart - t->vdisp;
-	vsync_len    = t->vsyncend - t->vsyncstart;
-
-	// save framebuffer timings to the XFree86 timings
-	// ------------------------------------------------
-	data->dac     = pixclock;
-	t->hdisp      = left_margin;
-	t->hsyncstart = right_margin;
-	t->hsyncend   = lower_margin;   // hsync_len
-	t->htotal     = 0;
-
-	t->vdisp      = upper_margin;
-	t->vsyncstart = hsync_len;      // lower_margin
-	t->vsyncend   = vsync_len;
-	t->vtotal     = 0;
-
-	return(0);
-}
-
-//================================================
-// check horizontal and vertical timings
-//------------------------------------------------
-int XmodeValidate (struct xtiming *t) {
-	int ht = 0;
-	int vt = 0;
-
-	// check horizontal timing...
-	if ((t->hdisp < t->hsyncstart)     &&
-		(t->hsyncstart < t->hsyncend)  && 
-		(t->hsyncend < t->htotal)      
-	) {
-		ht = 1;
-	}
-
-	// check vertical timing...
-	if ((t->vdisp <= t->vsyncstart)    &&
-		(t->vsyncstart <= t->vsyncend) && 
-		(t->vsyncend <= t->vtotal)     
-	) {
-		vt = 1;
-	}
-	if ((ht == 0) || (vt == 0)) {
-		return(0);
-	}
-	return(1);
-}
-
-//================================================
-// get properties hsync and vsync from the timing
-//------------------------------------------------
-int XmodeProp (struct xmode *data,struct xtiming *t,float *zf,float *rr) {
-	float hsync;
-	float vsync;
-
-	*zf = 0;
-	*rr = 0;
-	hsync = data->dac / t->htotal;
-	vsync = hsync / t->vtotal;
-	if ((hsync <= 0) || (vsync <= 0)) {
-		return(-1);
-	}
-	*zf = hsync;
-	*rr = vsync;
-	return(0);
-}
-
-//================================================
-// check size and position and correct it
-//------------------------------------------------
-int XmodeCheck (struct xmode *data,struct xtiming *t) {
-	int step = (data->x + data->vsync - data->y) / 100;
-	int corr = 8*step*step;
-	int nstart;
-	int nend;
-
-	// check size...
-	t->htotal = t->htotal + corr;
-
-	// check position...
-	nstart = t->hsyncstart + corr;
-	nend   = t->hsyncend   + corr;
-	if ((t->hdisp >= nstart) && (nend >= t->htotal)) {
-		t->hsyncstart = nstart;
-		t->hsyncend   = nend;
-	} 
-	return(0);
+int XmodeFbTiming (struct xtiming *t) {
+	return (0);
 }
 
 //================================================
 // calculate horizontal/vertical timing values
 //------------------------------------------------
 int XmodeTiming (struct xmode *data,struct xtiming *ht) {
-	struct xmode *saveData = NULL;
-	double HConst  = 1.3;    // 1.3
-	double VConst  = 1.045;  // 1.045
-	double HSP_min = 1;
-	double DCF;
-	double HSP_us;
-	double RR;
+	float h_pixels_rnd;
+	float v_lines_rnd;
+	float v_field_rate_rqd;
+	float top_margin;
+	float bottom_margin;
+	float interlace;
+	float h_period_est;
+	float vsync_plus_bp;
+	float v_back_porch;
+	float total_v_lines;
+	float v_field_rate_est;
+	float h_period;
+	float v_field_rate;
+	float v_frame_rate;
+	float left_margin;
+	float right_margin;
+	float total_active_pixels;
+	float ideal_duty_cycle;
+	float h_blank;
+	float total_pixels;
+	float pixel_freq;
+	float h_freq;
 
-	int HFL;                // Horizontal frame length
-	int VFL;                // Vertical frame length
-	int HFT_us;             // Horizontal frame timing in u sec 
-	int HSP;                // Number of horizontal sync impuls
-	int VSP;                // Number of vertical sync impulse
+	float h_sync;
+	float h_front_porch;
+	float v_odd_front_porch_lines;
 
-	int HGT1    = 16;
-	int HGT2    = HGTn*16;
-	int iterate = 255;
-
-	saveData = (struct xmode*) malloc (sizeof(struct xmode));
-	memcpy (saveData,data,sizeof(struct xmode));
-	while(iterate != 0) {
-		iterate = 0;
- 
-		// calculate...
-		// -------------- 
-		HFL = (int)(data->x * HConst);
-		HFL = (HFL / 8) * 8;        
-		DCF = (HFL * (data->hsync/1000)) / 1000;
-
-		HSP = HFL - (data->x + HGT1 + HGT2);
-		HSP_us = HSP / DCF;
-
-		VFL = (int)(data->y * VConst);
-		HFT_us = (int)(HFL / DCF);
-		VSP = 150 / HFT_us;
-
-		RR = ( ((DCF / HFL) * 1000) / VFL)*1000;
-
-		// check...
-		// ---------
-		if (DCF > (data->dac/1e6)) {
-			data->hsync-=100; iterate = 255;
-		}
-		if (RR > data->vsync) {
-			data->hsync-=100; iterate = 255;
-		}
-		if (HSP_us < HSP_min) {
-			data->hsync-=100; iterate = 255;
-		}
-	}
-
-	if ( (data->hsync / VFL) > data->vsync_orig) {
-		data->vsync = data->vsync_orig;
-		data->hsync = data->y * data->vsync;
-		data->dac = ((int)((data->x * 1.3) / 8)) *8 *data->hsync;
-		XmodeTiming (data,ht);
-	}
-
-	ht->flag       = data->flag; 
-	ht->hdisp      = data->x;
-	ht->hsyncstart = data->x + HGT1;
-	ht->hsyncend   = data->x + HGT1 + HSP;
-	ht->htotal     = HFL;
-	ht->vdisp      = data->y;
-	ht->vsyncstart = data->y;
-	ht->vsyncend   = data->y + VSP;
-	ht->vtotal     = VFL;
-
-	if (! XmodeValidate (ht)) {
-	if ( HGTn >= 0) {
-		HGTn--;
-		memcpy (data,saveData,sizeof(struct xmode));
-		free (saveData);
-		XmodeTiming (data,ht);
-	}
-	}
-	// Nvidia Modeline Checks
-	// 1) vsyncend - vsyncstart <= 16
+	// .../
+	// 1. In order to give correct results, the number of horizontal
+    // pixels requested is first processed to ensure that it is divisible
+    // by the character size, by rounding it to the nearest character
+    // cell boundary:
+    // ---
+    // [H PIXELS RND] = ((ROUND([H PIXELS]/[CELL GRAN RND],0))*[CELLGRAN RND])
 	// ---
-	if (ht->vsyncend - ht->vsyncstart > 16) {
-		ht->vsyncend = ht->vsyncstart + 16;
-	}
-	// 2) [ Add missing checks here ]
+	h_pixels_rnd = rint((float) data->x / CELL_GRAN) * CELL_GRAN;
+
+	// .../
+	// 2. If interlace is requested, the number of vertical lines assumed
+	// by the calculation must be halved, as the computation calculates
+	// the number of vertical lines per field. In either case, the
+	// number of lines is rounded to the nearest integer.
 	// ---
-	return(0); 
+	// [V LINES RND]=IF([INT RQD?]="y",ROUND([V LINES]/2,0),ROUND([V LINES],0))
+	// ---
+	if (data->interlaced) {
+		v_lines_rnd = rint((float) data->y) / 2.0;
+	} else {
+		v_lines_rnd = rint((float) data->y);
+	}
+
+	// .../
+	// 3. Find the frame rate required:
+	// ---
+	// [V FIELD RATE RQD]=IF([INT RQD?]="y", [I/P FREQ RQD]*2,*[I/P FREQ RQD])
+	// ---
+	if (data->interlaced) {
+		v_field_rate_rqd = data->vsync * 2.0;
+	} else {
+		v_field_rate_rqd = data->vsync;
+	}
+
+	// .../
+	// 4. Find number of lines in Top margin:
+	// ---
+	// [TOP MARGIN (LINES)] = IF([MARGINS RQD?]="Y",
+	//         ROUND(([MARGIN%]/100*[V LINES RND]),0),0)
+	// ---
+	if (data->margins) {
+		top_margin = rint(MARGIN_PERCENT / 100.0 * v_lines_rnd);
+	} else {
+		top_margin = 0.0;
+	}
+
+	// .../
+	// 5. Find number of lines in Bottom margin:
+	// ---
+	// [BOT MARGIN (LINES)] = IF([MARGINS RQD?]="Y",
+	//         ROUND(([MARGIN%]/100*[V LINES RND]),0),*0)
+	// ---
+	if (data->margins) {
+	    bottom_margin = rint(MARGIN_PERCENT/100.0 * v_lines_rnd);
+	} else {
+		bottom_margin = 0.0;
+	}
+
+	// .../
+	// 6. If interlace is required, then set variable [INTERLACE]=0.5:
+	// ---  
+	// [INTERLACE]=(IF([INT RQD?]="y",0.5,0))
+	// ---
+	if (data->interlaced) {
+		interlace = 0.5;
+	} else {
+		interlace = 0.0;
+	}
+
+	// .../
+	// 7. Estimate the Horizontal period
+	// ---
+	// [H PERIOD EST] = ((1/[V FIELD RATE RQD]) - [MIN VSYNC+BP]/1000000) /
+	//                   ([V LINES RND] + (2*[TOP MARGIN (LINES)]) +
+	//                    [MIN PORCH RND]+[INTERLACE]) * 1000000
+	// ---
+	h_period_est = (
+		((1.0/v_field_rate_rqd) - (MIN_VSYNC_PLUS_BP/1000000.0)) / 
+		(v_lines_rnd + (2*top_margin) + MIN_PORCH + interlace) * 1000000.0
+	);
+
+	// .../
+	// 8. Find the number of lines in V sync + back porch:
+	// ---
+	// [V SYNC+BP] = ROUND(([MIN VSYNC+BP]/[H PERIOD EST]),0)
+	// ---
+	vsync_plus_bp = rint(MIN_VSYNC_PLUS_BP/h_period_est);
+
+	// .../
+	// 9. Find the number of lines in V back porch alone:
+	// ---
+	// [V BACK PORCH] = [V SYNC+BP] - [V SYNC RQD]
+	// ---
+	v_back_porch = vsync_plus_bp - V_SYNC_RQD;
+
+	// .../
+	// 10. Find the total number of lines in Vertical field period:
+	// ---
+	// [TOTAL V LINES] = [V LINES RND] + [TOP MARGIN (LINES)] +
+	//                    [BOT MARGIN (LINES)] + [V SYNC+BP] + [INTERLACE] +
+	//                    [MIN PORCH RND]
+	// ---
+	total_v_lines = v_lines_rnd + top_margin + bottom_margin +
+					vsync_plus_bp + interlace + MIN_PORCH;
+
+	// .../
+	// 11. Estimate the Vertical field frequency:
+	// ---
+	// [V FIELD RATE EST] = 1 / [H PERIOD EST] / [TOTAL V LINES] * 1000000
+	// ---
+	v_field_rate_est = 1.0 / h_period_est / total_v_lines * 1000000.0;
+
+	// .../
+	// 12. Find the actual horizontal period:
+	// ---
+	// [H PERIOD] = [H PERIOD EST] / ([V FIELD RATE RQD] / [V FIELD RATE EST])
+	// ---
+	h_period = h_period_est / (v_field_rate_rqd / v_field_rate_est);
+
+	// .../
+	// 13. Find the actual Vertical field frequency:
+	// ---
+	// [V FIELD RATE] = 1 / [H PERIOD] / [TOTAL V LINES] * 1000000
+	// ---
+	v_field_rate = 1.0 / h_period / total_v_lines * 1000000.0;
+
+	// .../
+	// 14. Find the Vertical frame frequency:
+	// ---
+	// [V FRAME RATE] = (IF([INT RQD?]="y", [V FIELD RATE]/2, [V FIELD RATE]))
+	// ---
+	if (data->interlaced) {
+		v_frame_rate = v_field_rate / 2.0;
+	} else {
+		v_frame_rate = v_field_rate;
+	}
+
+	// .../
+	// 15. Find number of pixels in left margin:
+	// ---
+	// [LEFT MARGIN (PIXELS)] = (IF( [MARGINS RQD?]="Y",
+	//         (ROUND( ([H PIXELS RND] * [MARGIN%] / 100 /
+	//                  [CELL GRAN RND]),0)) * [CELL GRAN RND],
+	//         0))
+	// ---
+	if (data->margins) {
+	    left_margin = rint(
+			h_pixels_rnd * MARGIN_PERCENT / 100.0 / CELL_GRAN
+		) * CELL_GRAN;
+	} else {
+		left_margin = 0.0;
+	}
+
+	// .../
+	// 16. Find number of pixels in right margin:
+	// ---
+	// [RIGHT MARGIN (PIXELS)] = (IF( [MARGINS RQD?]="Y",
+	//          (ROUND( ([H PIXELS RND] * [MARGIN%] / 100 /
+	//                   [CELL GRAN RND]),0)) * [CELL GRAN RND],
+	//          0))
+	// ---
+	if (data->margins) {
+		right_margin = rint(
+			h_pixels_rnd * MARGIN_PERCENT / 100.0 / CELL_GRAN
+		) * CELL_GRAN;
+	} else {
+		right_margin = 0.0;
+	}
+
+	// .../
+	// 17. Find total number of active pixels in image and left and right
+	//  margins:
+	// ---
+	// [TOTAL ACTIVE PIXELS] = [H PIXELS RND] + [LEFT MARGIN (PIXELS)] +
+	//                          [RIGHT MARGIN (PIXELS)]
+	// ---
+	total_active_pixels = h_pixels_rnd + left_margin + right_margin;
+
+	// .../
+	// 18. Find the ideal blanking duty cycle from the blanking duty cycle
+	// equation:
+	// ---
+	// [IDEAL DUTY CYCLE] = [C'] - ([M']*[H PERIOD]/1000)
+	// ---
+	ideal_duty_cycle = C_PRIME - (M_PRIME * h_period / 1000.0);
+
+	// .../
+	// 19. Find the number of pixels in the blanking time to the nearest
+	// double character cell:
+	// ---
+	// [H BLANK (PIXELS)] = (ROUND(([TOTAL ACTIVE PIXELS] *
+	//                               [IDEAL DUTY CYCLE] /
+	//                               (100-[IDEAL DUTY CYCLE]) /
+	//                               (2*[CELL GRAN RND])), 0))
+	//                       * (2*[CELL GRAN RND])
+	// ---
+	h_blank = rint (
+		total_active_pixels * ideal_duty_cycle /
+		(100.0 - ideal_duty_cycle) /
+		(2.0 * CELL_GRAN)
+	) * (2.0 * CELL_GRAN);
+
+	// .../
+	// 20. Find total number of pixels:
+	// ---
+	// [TOTAL PIXELS] = [TOTAL ACTIVE PIXELS] + [H BLANK (PIXELS)]
+	// ---
+	total_pixels = total_active_pixels + h_blank;
+
+	// .../
+	// 21. Find pixel clock frequency:
+	// ---
+	// [PIXEL FREQ] = [TOTAL PIXELS] / [H PERIOD]
+	// ---
+	pixel_freq = total_pixels / h_period;
+
+	// .../
+	// 22. Find horizontal frequency:
+	// ---
+	// [H FREQ] = 1000 / [H PERIOD]
+	// ---
+	h_freq = 1000.0 / h_period;
+	
+	//==============================================
+	// Stage 1 done now... Stage 2 follows
+	//----------------------------------------------
+	// 17. Find the number of pixels in the horizontal sync period:
+	// ---
+	// [H SYNC (PIXELS)] =(ROUND(([H SYNC%] / 100 * [TOTAL PIXELS] /
+	//                             [CELL GRAN RND]),0))*[CELL GRAN RND]
+	// ---
+	h_sync = rint(H_SYNC_PERCENT/100.0 * total_pixels / CELL_GRAN) * CELL_GRAN;
+
+	// .../
+	// 18. Find the number of pixels in the horizontal front porch period:
+	// ---
+	// [H FRONT PORCH (PIXELS)] = ([H BLANK (PIXELS)]/2)-[H SYNC (PIXELS)]
+	// ---
+	h_front_porch = (h_blank / 2.0) - h_sync;
+
+	// .../
+	// 36. Find the number of lines in the odd front porch period:
+	// ---
+	// [V ODD FRONT PORCH(LINES)]=([MIN PORCH RND]+[INTERLACE])
+	// ---
+	v_odd_front_porch_lines = MIN_PORCH + interlace;
+
+	//==============================================
+	// Save results to timing struct
+	//----------------------------------------------
+	ht->hdisp  = (int) (h_pixels_rnd);
+	ht->hsyncstart = (int) (h_pixels_rnd + h_front_porch);
+	ht->hsyncend = (int) (h_pixels_rnd + h_front_porch + h_sync);
+	ht->htotal = (int) (total_pixels);
+
+	ht->vdisp  = (int) (v_lines_rnd);
+	ht->vsyncstart = (int) (v_lines_rnd + v_odd_front_porch_lines);
+	ht->vsyncend = (int) (int) (v_lines_rnd+v_odd_front_porch_lines+V_SYNC_RQD);
+	ht->vtotal = (int) (total_v_lines);
+
+	ht->dac   = pixel_freq;
+	ht->hsync = h_freq;
+	ht->vsync = data->vsync;
+
+	return (0); 
 }
 
 //================================================
 // init data and look at the options
 //------------------------------------------------
-int XmodeInit (int argc,char *argv[],struct xmode *data,int *check) {
+int XmodeInit (int argc,char *argv[],struct xmode *data) {
 	int  dacdefined     = FALSE;
 	int  hsyncdef       = FALSE;
 	int  vsyncdef       = FALSE; 
 	int  nocheckdefined = FALSE;
 	int  c;
-	int  sum;
 
 	data->x     = 640;
 	data->y     = 480;
 	data->vsync = 60;
-	data->hsync = data->y * data->vsync;
-	data->dac   = ((int)((data->x * 1.3) / 8)) *8 *data->hsync;
+	data->hsync = 0;
+	data->dac   = 0;
 	data->fbdev = 0;
 	data->flag  = 0;
-	data->vsync_orig = data->vsync;
+
+	data->interlaced = 0;
+	data->margins    = 0;
 
 	while (1) {
 	int option_index = 0;
@@ -280,13 +383,12 @@ int XmodeInit (int argc,char *argv[],struct xmode *data,int *check) {
 
 	case 'r':
 		vsyncdef = TRUE;
-		data->vsync = atof(optarg);
-		data->vsync_orig = data->vsync;
+		data->vsync = atof(optarg) - 2;
 	break;
 
 	case 's':
 		hsyncdef = TRUE; 
-		data->hsync = atof(optarg) * 1e3;
+		data->hsync = atof(optarg) - 1;
 	break;
 
 	case 'x':
@@ -299,7 +401,7 @@ int XmodeInit (int argc,char *argv[],struct xmode *data,int *check) {
    
 	case 'd':
 		dacdefined = TRUE;
-		data->dac = atof(optarg) * 1e6;
+		data->dac = atof(optarg);
 	break;
 
 	case 'f':
@@ -314,40 +416,6 @@ int XmodeInit (int argc,char *argv[],struct xmode *data,int *check) {
 		return(-1);
 	}
 	}
-
-	// if no check is defined add 3 Hz for exactly matching
-	// -----------------------------------------------------
-	if (nocheckdefined == TRUE) {
-		data->vsync += 3;
-	}
-
-	// use doublescan lines for resolutions
-	// lower than 320x200
-	// ----
-	sum = data->x + data->y;
-	if (sum < 1120) {
-		data->vsync *= 2;
-		data->vsync_orig = data->vsync;
-		data->flag = FLAG_DOUBLE_SCAN;
-	}
-
-	// look which sync frequencies we will use
-	// -----------------------------------------
-	if ((hsyncdef == TRUE) && (vsyncdef == TRUE)) {
-	if ((data->hsync/1e3) > data->vsync) { 
-		data->hsync = data->y * data->vsync;
-	} else {
-		data->vsync = data->hsync / data->y;
-	}
-	} else if (hsyncdef == TRUE) {
-		data->vsync = data->hsync / data->y;
-	} else if (vsyncdef == TRUE) {
-		data->hsync = data->y * data->vsync;
-	}
-	if (dacdefined == FALSE) {
-		data->dac = ((int)((data->x * 1.3) / 8)) *8 *data->hsync;
-	}
-	*check = nocheckdefined;
 	return(0);
 }
 
@@ -367,8 +435,6 @@ void XmodeUsage(void) {
 	printf("    X - dimension in pixels\n");
 	printf("  [ -y | --ydim ]\n");
 	printf("    Y - dimension in pixels\n");
-	printf("  [ -n | --nocheck ]\n");
-	printf("    do not check the geometry\n");
 	printf("  [ -f | --fbdev ]\n");
 	printf("    calculate framebuffer mode\n");
 	exit(0);

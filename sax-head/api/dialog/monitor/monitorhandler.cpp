@@ -90,7 +90,7 @@ void XMonitor::initPage (void) {
 	// include modeline algorithms...
 	// ------------------------------
 	mMode->insertItem ("CheckDesktopGeometry");
-	mMode->insertItem ("IteratePrecisely");
+	//mMode->insertItem ("IteratePrecisely");
 	mMode->insertItem ("UseFrameBufferTiming");
 	mMode->insertItem ("XServerPool");
 }
@@ -810,7 +810,7 @@ void XMonitor::slotTopOk (void) {
 	// 1) if frequencies were changed
 	// 2) if the calc algorithm method has changed
 	// 3) if the primary resolution has changed. This is made
-	//    in the action.c source at the desktop tree
+	//    in the handler source at the desktop tree
 	// ---
 	bool recalc = false;
 	workingMonitor.setPair("CalcModelines","no");

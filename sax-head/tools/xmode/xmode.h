@@ -20,7 +20,21 @@ STATUS        : Status: Up-to-date
 //-------------------------------------------
 #define TRUE  1
 #define FALSE 0
-#define FLAG_DOUBLE_SCAN 7
+#define FLAG_DOUBLE_SCAN  7
+
+#define MARGIN_PERCENT    1.8   // % of active vertical image
+#define CELL_GRAN         8.0   // assumed character cell granularity
+#define MIN_PORCH         1     // minimum front porch
+#define V_SYNC_RQD        3     // width of vsync in lines
+#define H_SYNC_PERCENT    8.0   // width of hsync as % of total line
+#define MIN_VSYNC_PLUS_BP 550.0 // min time of vsync + back porch (microsec)
+#define M                 600.0 // blanking formula gradient
+#define C                 40.0  // blanking formula offset
+#define K                 128.0 // blanking formula scaling factor
+#define J                 20.0  // blanking formula scaling factor
+
+#define C_PRIME           (((C - J) * K/256.0) + J)
+#define M_PRIME           (K/256.0 * M)
 
 //===========================================
 // Structs...
@@ -29,11 +43,12 @@ struct xmode {
  double dac;
  float  hsync;
  float  vsync;
- float  vsync_orig;
  int    x;
  int    y;
  int    fbdev;
  int    flag;
+ int    interlaced;
+ int    margins;
 };
 
 struct xtiming {
@@ -46,17 +61,17 @@ struct xtiming {
  int vsyncend;
  int vtotal;
  int flag;
+ double dac;
+ float hsync;
+ float vsync;
 };
 
 //===========================================
 // Prototypes...
 //-------------------------------------------
-int XmodeInit (int argc,char *argv[],struct xmode *data,int *check);
-int XmodeTiming (struct xmode *data,struct xtiming *vt);
-int XmodeCheck (struct xmode *data,struct xtiming *t);
-int XmodeProp (struct xmode *data,struct xtiming *t,float *zf,float *rr);
-void XmodeUsage(void);
-int XmodeValidate (struct xtiming *t);
-int XmodeCalculateFbMode (struct xmode *data,struct xtiming *t);
+int  XmodeInit     (int argc,char *argv[],struct xmode *data);
+int  XmodeTiming   (struct xmode *data,struct xtiming *vt);
+int  XmodeFbTiming (struct xtiming *t);
+void XmodeUsage    (void);
 
 #endif

@@ -29,6 +29,7 @@ extern int globalFrameWidth;
 //-------------------------------------
 XDesktop::XDesktop (void) {
 	mFramebufferUsed = false;
+	mNewResAdded = false;
 	mSelected = -1;
 }
 
@@ -37,6 +38,7 @@ XDesktop::XDesktop (void) {
 //-------------------------------------
 XDesktop::XDesktop (XFrame* xf,XIntro* xi) : XTemplate(xf,xi) {
 	mFramebufferUsed = false;
+	mNewResAdded = false;
 	mSelected = -1;
     addTo (xf,xi);
 }

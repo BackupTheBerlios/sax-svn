@@ -59,6 +59,7 @@ class XDesktop : public XTemplate {
 	private:
 	int           mSelected;
 	bool          mFramebufferUsed;
+	bool          mNewResAdded;
 	QDict<XFile>* mFilePtr;
 	QDict<char>*  mColorPtr;
 	QDict<char>*  mFBResPtr;

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue May 20 23:19:34 CEST 2003 - ms@suse.de
+
+- fixed broken CheckSplit() function which caused the system
+  to include comma's where no commas are allowed
+- use GTF for modeline calculation
+
+-------------------------------------------------------------------
 Mon May 19 15:45:35 CEST 2003 - ms@suse.de
 
 - add check for vertical sync width (VSW) to modeline calculator

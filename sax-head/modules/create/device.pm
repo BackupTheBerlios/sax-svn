@@ -171,8 +171,10 @@ sub CheckSplit {
 	for (my $i=0;$i<@list;$i++) {
 		my $signs = split (/[^\"]*/,$list[$i]);
 		if ( ($signs > 0) && ($signs % 2 == 0) ) {
+		if ( defined $list[$i+1] ) {
 			$list[$i] = $list[$i].",".$list[$i+1];
 			delete $list[$i+1];
+		}
 		}
 	}
 	foreach (@list) {
