@@ -33,17 +33,6 @@
 # }
 
 #----------------------#
-# XYBERNAUT Touchpad   #
-#----------------------#
-XYBERNAUT:P00018 {
- Driver               = gunze
- Device               = /dev/ttyS0
- BaudRate             = 9600
- RawOption            = "Smoothness" "9"
- SendCoreEvents       = on
-}
-
-#----------------------#
 # Mutouch Touchpad     #
 #----------------------#
 MUTOUCH:TOUCHSCREEN  {
@@ -93,17 +82,4 @@ ELO:2300-TOUCHSCREEN  {
  ButtonThreshold      = 17
  ButtonNumber         = 1
  SendCoreEvents       = on
-}
-
-#----------------------#
-# Paceblade Tablet PC  #
-#----------------------#
-PACEBLADE:PACEBOOK {
- Driver               = pacebook
- Device               = /dev/ttyS0
- ButtonNumber         = 1
- SendCoreEvents       = on
- Rotation             = 0
- BaudRate             = 19200
- RawOption            = "SwapXY" "0","horizontalMax" "987","verticalMax" "950","horizontalMin" "24","verticalMin" "75","HistorySize" "0"
 }
