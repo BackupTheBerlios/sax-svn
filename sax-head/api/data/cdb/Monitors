@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep  1 17:53:00 2003
+# Author: Marcus Schaefer <sax@suse.de>, Fri Sep 12 12:09:04 2003
 #
 # Template for monitor data
 # --------------------------
@@ -10005,14 +10005,6 @@ EIZO:FLEXSCAN F550I-M  {
 }
 
 #==============================================
-# FLEXSCAN F550I-W
-#----------------------------------------------
-EIZO:FLEXSCAN F550I-W  {
- Hsync=27-65
- Vsync=55-90
-}
-
-#==============================================
 # FLEXSCAN F550IW
 #----------------------------------------------
 EIZO:FLEXSCAN F550IW  {
@@ -18463,7 +18455,7 @@ IIYAMA:LP-1013  {
 IIYAMA:MA901U VISIONMASTER PRO 452  {
  DDC=IVM1928
  Option=DPMS
- Hsync=30-96
+ Hsync=30-93
  Vsync=50-180
 }
 
@@ -19284,7 +19276,7 @@ IIYAMA:VISION MASTER PRO 451 (A902MT)  {
 #----------------------------------------------
 IIYAMA:VISION MASTER PRO 452 (MA901U)  {
  Option=DPMS
- Hsync=30-96
+ Hsync=30-93
  Vsync=50-180
 }
 
