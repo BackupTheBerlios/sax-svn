@@ -104,10 +104,10 @@ class XCard : public XTemplate {
 	bool isChecked   ( void );
 	bool slotRun     ( int  );
 	int  getSelected ( void );
+	void resetPage   ( int = PAGE_NOLOAD );
 
     private:
     void dialogCreate ( void );
-    void resetPage    ( int = PAGE_NOLOAD );
     void pageCalled   ( int );
 	void initPage     ( void );
 	void setupTop     ( int );

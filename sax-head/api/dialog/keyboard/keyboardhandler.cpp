@@ -159,9 +159,12 @@ void XKeyboard::initPage (void) {
 	// include available models
 	//------------------------------------------------
 	QDictIterator<char> itModel (mModelHash);
+	QListBox* typeBox = new QListBox();
 	for (; itModel.current(); ++itModel) {
-		mType -> insertItem ( QString::fromLocal8Bit (itModel.current()) );
+		typeBox -> insertItem ( QString::fromLocal8Bit (itModel.current()) );
     }
+	typeBox -> sort ( true );
+	mType -> setListBox ( typeBox );
 	mAddView -> setSorting (1);
 	//================================================
 	// include available options

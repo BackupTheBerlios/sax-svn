@@ -58,6 +58,11 @@ void XMonitor::resetPage (int reload) {
 			mFiles [update] -> isModified ( mFrame );
 		}
 	}
+	if (reload != PAGE_RELOAD) {
+		XCard* cardDialog;
+		cardDialog = (XCard*) mIntro -> retrieve (Card);
+		cardDialog -> resetPage (PAGE_CANCEL);
+	}
 	mIntro -> importFile (update);
 	slotIntro (mIndex);
 	XTemplate::resetPage ();
@@ -387,6 +392,9 @@ void XMonitor::slotSetup (void) {
 	// configure button to setup the selected 
 	// desktop
 	// ---
+	if ( ! monitorList->isSelected (mSelected) ) {
+		return;
+	}
 	setupTop ();
 	mTop -> show();
 	mTop -> enterEvent ( 0 );
