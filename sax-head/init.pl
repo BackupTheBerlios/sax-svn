@@ -1285,38 +1285,41 @@ sub ReadProfile {
 		# /.../
 		# read all profiles and select the card number
 		# it belongs to within the current card setup
-		# --------------------------------------------- 
-		$file = "$spec{ProfileDir}$data{$c}";
-		print   "SaX: including [$topic:$c] profile: $data{$c}...\n";
-		if (-f $file) {
-			#==========================================
-			# Check if there is a profile script which
-			# should run before the profile is opened
-			#------------------------------------------
-			if (-f "$file.sh") {
-				print "SaX: calling [$topic:$c] profile script: $data{$c}.sh\n";
-				qx ($file.sh);
-				$file = "$file.tmp";
-			}
-			#==========================================
-			# Save profile information
-			#------------------------------------------
-			open (DATA,"$file");
-			while ($l = <DATA>) {
-				chomp($l);
-				SWITCH: for ($l) {
-				/^.*\[X\].*/         && do {
-					$l =~ s/\[X\]/$c/g;
-				};
-				/^.*\[X\+([1-9]).*/  && do {
-					$new = $c + $1;
-					$l =~ s/\[X\+[1-9]\]/$new/g;
-					push(@ProfileAddSections,$new);
-				};
+		# ---------------------------------------------
+		my @drvplist = split (/,/,$data{$c});
+		foreach my $name (@drvplist) {
+			$file = "$spec{ProfileDir}$name";
+			print   "SaX: including [$topic:$c] profile: $name...\n";
+			if (-f $file) {
+				#==========================================
+				# Check if there is a profile script which
+				# should run before the profile is opened
+				#------------------------------------------
+				if (-f "$file.sh") {
+					print "SaX: calling [$topic:$c] profile script: $name.sh\n";
+					qx ($file.sh);
+					$file = "$file.tmp";
 				}
-				push(@result,$l);
+				#==========================================
+				# Save profile information
+				#------------------------------------------
+				open (DATA,"$file");
+				while ($l = <DATA>) {
+					chomp($l);
+					SWITCH: for ($l) {
+					/^.*\[X\].*/         && do {
+						$l =~ s/\[X\]/$c/g;
+					};
+					/^.*\[X\+([1-9]).*/  && do {
+						$new = $c + $1;
+						$l =~ s/\[X\+[1-9]\]/$new/g;
+						push(@ProfileAddSections,$new);
+					};
+					}
+					push(@result,$l);
+				}
+				close(DATA);
 			}
-			close(DATA);
 		}
 		}
 	}
