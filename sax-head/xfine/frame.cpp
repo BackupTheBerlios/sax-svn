@@ -453,7 +453,10 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 // XFineWindow save mode to CACHE...
 //-------------------------------------
 void XFineWindow::saveMode (void) {
-	if ( ! adjustable) {
+	if ( ! mAdjustable ) {
+		log (L_INFO,
+			"XFineWindow::saveMode: not adjustable, abort saving"
+		);
 		return;
 	}
 	QFile* mHandle = new QFile (mFileName);
