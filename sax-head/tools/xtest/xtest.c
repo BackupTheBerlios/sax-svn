@@ -72,13 +72,13 @@ int main (int argc, char **argv) {
 		fprintf (stderr,
 			"testX: invalid color depth, must be >= %d Bit\n", MIN_DEPTH
 		);
-		return 1;
+		return 2;
 	}
 	if (!validResolution(display)) {
 		fprintf (stderr,
 			"testX: invalid dimensions, must be >= %dx%d Pixels\n", MIN_X,MIN_Y
 		);
-		return 1;
+		return 2;
 	}
 
 	cname = argc == 2 ? argv[1] : "black";

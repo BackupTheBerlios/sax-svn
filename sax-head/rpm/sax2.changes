@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Mar 24 11:16:23 CET 2004 - ms@suse.de
+
+- fixed possible loop at installation. set different exit codes 
+  according to the possible exceptions. Handle the exit codes in
+  installation/scripts/YaST2 (#36794)
+
+-------------------------------------------------------------------
 Tue Mar 23 10:15:07 CET 2004 - ms@suse.de
 
 - provide additional fvwmrc.notitle configuration file (#36488)
