@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Apr  1 11:14:38 2004
+# Author: Marcus Schaefer <sax@suse.de>, Thu Apr  1 12:25:37 2004
 #
 # Template for monitor data
 # --------------------------
@@ -10556,6 +10556,17 @@ EIZO:L557-A  {
  Hsync=31-64
  Resolution=1280x1024
  Vsync=59-61
+}
+
+#==============================================
+# L565 (Analog)
+#----------------------------------------------
+EIZO:L565 (ANALOG)  {
+ DDC=ENC1651
+ Option=DPMS
+ Hsync=24-81
+ Resolution=1280x1024
+ Vsync=49-75
 }
 
 #==============================================
