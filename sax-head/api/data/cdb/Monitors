@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 10 14:37:47 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 10 15:01:07 2003
 #
 # Template for monitor data
 # --------------------------
@@ -22954,6 +22954,15 @@ MODIS:MS-19H  {
  Option=DPMS
  Hsync=30-95
  Vsync=40-160
+}
+
+#==============================================
+# LN-917 PS
+#----------------------------------------------
+MOTOROLA:LN-917 PS  {
+ Option=DPMS
+ Hsync=24-82
+ Vsync=50-120
 }
 
 #==============================================
