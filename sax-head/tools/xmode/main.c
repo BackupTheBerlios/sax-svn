@@ -39,18 +39,25 @@ int main(int argc,char *argv[]) {
 	//========================================
 	// Calculate GTF timings
 	//----------------------------------------
-	if (data->dac > 0) {
-	while (timing->dac < data->dac) {
+	while (1) {
 		XmodeTiming ( data,timing );
-		data->vsync++;
-	}
-	} else if (data->hsync > 0) {
-	while (timing->hsync < data->hsync) {
-		XmodeTiming ( data,timing );
-		data->vsync++;
-	}
-	} else {
-		XmodeTiming ( data,timing );
+		if (data->dac == 0) {	
+			data->dac = timing->dac;
+		}
+		if (data->hsync == 0) {
+			data->hsync = timing->hsync;
+		}
+		if (data->vsync == 0) {
+			data->vsync = timing->vsync;
+		}
+		if (
+			(timing->hsync <= data->hsync) &&
+			(timing->vsync <= data->vsync) &&
+			(timing->dac <= data->dac)
+		) {
+			break;
+		}
+		data->vsync--;
 	}
 
 	//========================================

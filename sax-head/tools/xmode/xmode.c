@@ -339,7 +339,7 @@ int XmodeInit (int argc,char *argv[],struct xmode *data) {
 
 	data->x     = 640;
 	data->y     = 480;
-	data->vsync = 60;
+	data->vsync = 140;
 	data->hsync = 0;
 	data->dac   = 0;
 	data->fbdev = 0;
@@ -415,6 +415,17 @@ int XmodeInit (int argc,char *argv[],struct xmode *data) {
 	default:
 		return(-1);
 	}
+	}
+	if (vsyncdef && hsyncdef) {
+		#if 0
+		int khz = (int)((data->y * data->hsync) / 1000);
+		int hz  = (int)((data->hsync * 1000) / data->y);
+		int delta_khz = (data->hsync - khz) * -1;
+		int delta_hz  = (data->vsync - hz)  * -1;
+		if (delta_hz < delta_khz) {
+			data->vsync = hz;
+		}
+		#endif
 	}
 	return(0);
 }
