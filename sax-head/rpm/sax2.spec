@@ -349,7 +349,23 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /sbin/SaX2
 /sbin/sax2
 /sbin/sysp
-/usr/share/sax/api/data/*????
+/sbin/xw
+/usr/share/sax/api/data/Card3DModules
+/usr/share/sax/api/data/CardModules
+/usr/share/sax/api/data/KbdLanguage
+/usr/share/sax/api/data/LangCodes
+/usr/share/sax/api/data/LangFirstPath
+/usr/share/sax/api/data/MonitorColors
+/usr/share/sax/api/data/MonitorFBResolution
+/usr/share/sax/api/data/MonitorRatio
+/usr/share/sax/api/data/MonitorResolution
+/usr/share/sax/api/data/MonitorTraversal
+/usr/share/sax/api/data/MonitorVisual
+/usr/share/sax/api/data/PointerDevice
+/usr/share/sax/api/data/StaticFontPathList
+/usr/share/sax/api/data/TabletModules
+/usr/share/sax/api/data/fvwmrc.sax
+/usr/share/sax/api/data/twmrc
 /usr/share/sax/sysp/script/installed.pl
 /usr/share/sax/sysp/script/killdot.pl
 /usr/share/sax/sysp/script/vbios.pl
@@ -384,6 +400,7 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /usr/share/sax/api/pixmaps
 /usr/share/xfine/pixmaps
 /usr/share/xfine/xfine.gtx
+/usr/share/sax/api/data/xapi.gtx
 /usr/share/locale/de/LC_MESSAGES/sax.mo
 /usr/share/locale/en_US/LC_MESSAGES/sax.mo
 /usr/share/locale/en_GB/LC_MESSAGES/sax.mo
@@ -411,7 +428,6 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
 /sbin/xapi
 /sbin/xfine
-/sbin/xw
 %if %{suse_version} > 820
 /usr/share/applications/sax2.desktop
 %endif

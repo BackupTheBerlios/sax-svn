@@ -309,13 +309,13 @@ BNR="unknown"
 if [ -f "$SVNB" ];then
 	BNR=`cat $SVNB`
 fi
-CVS=`version`
+SVN=`version`
 DATE=`LANG=POSIX date`
 FBSET=`fbset -i 2>/dev/null`
 echo "/*************"                                                   >> $ERR
-echo "SaX2 log     : $CVS"                                              >> $ERR
+echo "SaX2 log     : $SVN"                                              >> $ERR
 echo "**************"                                                   >> $ERR
-echo "CVS BUILD    : $BNR"                                              >> $ERR
+echo "SVN BUILD    : $BNR"                                              >> $ERR
 echo "             :"                                                   >> $ERR
 echo "DESCRIPTION  : X11 configuration log file to collect information" >> $ERR
 echo "             : about detection, startup and configuration."       >> $ERR
