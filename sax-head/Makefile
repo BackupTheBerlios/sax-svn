@@ -35,7 +35,6 @@ APIDATAVZ      = ${sax_prefix}/api/data
 CDBVZ          = ${sax_prefix}/api/data/cdb
 PIXVZ          = ${sax_prefix}/api/pixmaps
 LANGVZ         = ${sax_prefix}/api/lang
-DOCVZ          = ${sax_prefix}/doc
 MODULEVZ       = ${sax_prefix}/modules
 DETECTVZ       = ${sax_prefix}/modules/detect
 CREATEVZ       = ${sax_prefix}/modules/create
@@ -102,7 +101,7 @@ install:
 	# Install base directories
 	#--------------------------------------------
 	install -d -m 755 ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
-	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ} ${INCVZ}
+	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${INCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}

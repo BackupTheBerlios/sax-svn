@@ -326,7 +326,6 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
 %dir /usr/share/sax
-%dir /usr/share/sax/doc
 %dir /usr/share/sax/sysp/script
 %dir /usr/share/sax/sysp
 %dir /var/cache/sax/sysp
@@ -346,7 +345,6 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /sbin/SaX2
 /sbin/sax2
 /sbin/sysp
-/sbin/xw
 /usr/share/sax/api/data/Card3DModules
 /usr/share/sax/api/data/CardModules
 /usr/share/sax/api/data/KbdLanguage
@@ -463,6 +461,7 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /sbin/xmset
 /sbin/xquery
 /sbin/xupdate
+/sbin/xw
 
 #=================================================
 # SaX-Ident file list...  
