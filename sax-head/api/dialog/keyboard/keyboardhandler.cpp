@@ -279,7 +279,7 @@ bool XKeyboard::slotRun (int index) {
 	QString baseLayout = layoutList.getFirst();
 	layoutList.removeFirst();
 
-	QStringList completeVariant = QStringList::split(",", XKBVariants,True);
+	QStringList completeVariant = QStringList::split (",", XKBVariants,True);
 	QList<char> variantList;
 	QStringList::Iterator in;
 	for (in = completeVariant.begin(); in != completeVariant.end(); ++in) {
