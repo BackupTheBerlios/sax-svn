@@ -106,6 +106,7 @@ install:
 	mv ${sax_tools}/xkbctrl.pl ${sax_tools}/xkbctrl
 	mv ${sax_tools}/xupdate.pl ${sax_tools}/xupdate
 	${MAKE} -C ./plog DESTDIR=${buildroot} install_vendor
+	rm -f ${sax_tools}/.static
 	rm -f ${sax_tools}/config.status
 	rm -f ${sax_tools}/configure
 	rm -f ${sax_tools}/prepare
