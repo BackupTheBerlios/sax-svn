@@ -71,6 +71,7 @@ void XShowMouse::paintEvent( QPaintEvent* ) {
 	pDC.drawPixmap ( mX,mY,*mPixmap[mID] );
 	bitBlt( this, 0, 0, mBuffer );
 	pDC.end();
+	show();
 }
 
 //====================================

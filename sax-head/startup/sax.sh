@@ -45,6 +45,7 @@ DBMNEW=""
 IGNORE_PROFILE=""
 DIALOG=""
 REINIT=0
+FULLSCREEN=""
 
 #==================================
 # Functions...
@@ -149,6 +150,9 @@ function usage() {
 	echo "  remove detection database and re-init the"
 	echo "  hardware database"
 	echo
+	echo "[ -f | --fullscreen ]"
+	echo "  start in fullscreen mode"
+	echo
 	echo "[ -v | --version ]"
 	echo "  print version information and exit"
 }
@@ -156,7 +160,7 @@ function usage() {
 #==================================
 # get options
 #----------------------------------
-TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:i --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog: \
+TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:if --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog:,fullscreen \
 -n 'SaX' -- "$@"`
 
 if [ $? != 0 ] ; then usage ; exit 1 ; fi
@@ -174,6 +178,10 @@ while true ; do
 
 	-r|--reinit)                # remove /var/cache/sax/files to reinit
 		REINIT=1                # hardware database
+	shift ;;
+
+	-f|--fullscreen)            # start in fullscreen mode
+		FULLSCREEN="-f"
 	shift ;;
 
 	-d|--dbmnew)                # use the config.new file instead of the
@@ -347,7 +355,7 @@ fi
 #==================================
 # set option strings...
 #----------------------------------
-XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG $DIALOG"
+XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG $DIALOG $FULLSCREEN"
 IN_OPT="$LOW_RES $BATCH_MODE $MODLIST $AUTOMODE $CHIP"
 IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $QUIET $IGNORE_PROFILE"
 
