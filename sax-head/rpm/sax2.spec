@@ -193,7 +193,7 @@ Authors:
 %package -n sax2-libsax-csharp
 Version:      7.1
 Release:      11
-Requires:     sax2-libsax mono-core mono-basic
+Requires:     sax2-libsax mono
 Summary:      SuSE advanced X Window System-configuration Java binding
 Group:        System/X11/Libraries
 
