@@ -52,6 +52,7 @@ int main(int argc,char*argv[]) {
 	bool uniFont    = false;
 	bool noBorder   = false;
 	bool fastSetup  = false;
+	bool withDialog = false;
 	bool yastMode   = false;
 	bool useHwData  = false;
 	bool fullScreen = false;
@@ -94,9 +95,10 @@ int main(int argc,char*argv[]) {
 	//=====================================
 	// get additional options...
 	//-------------------------------------
-	QString* idlePID    = NULL;
-	QString* cardName3D = NULL;
-	QString* cardDriver = NULL;
+	QString* idlePID     = NULL;
+	QString* cardName3D  = NULL;
+	QString* popUpDialog = NULL;
+	QString* cardDriver  = NULL;
 	while (1) {
 	int option_index = 0;
 	static struct option long_options[] =
@@ -110,6 +112,7 @@ int main(int argc,char*argv[]) {
 		{"3d"         , 1 , 0 , 'D'},
 		{"driver"     , 1 , 0 , 'd'},
 		{"frameWidth" , 1 , 0 , 'w'},
+		{"dialog"     , 1 , 0 , 'O'},
 		{"unifont"    , 0 , 0 , 'U'},
 		{"xidle"      , 0 , 0 , 'x'},
 		{"pid"        , 1 , 0 , 'p'},
@@ -118,7 +121,7 @@ int main(int argc,char*argv[]) {
 		{0            , 0 , 0 , 0  }
 	};
 	int c = getopt_long (
-		argc, argv, "uicD:fhxlw:d:yp:nU",long_options, &option_index
+		argc, argv, "uicD:fhxlw:d:yp:nUO:",long_options, &option_index
 	);
 	if (c == -1)
 	break;
@@ -137,6 +140,11 @@ int main(int argc,char*argv[]) {
 
 	case 'U':
 		uniFont  = true;
+	break;
+
+	case 'O':
+		withDialog  = true;
+		popUpDialog = new QString (optarg);
 	break;
 
 	case 'n':
@@ -479,7 +487,19 @@ int main(int argc,char*argv[]) {
 	xapi -> enterEvent ( 0 );
 	xapi -> activateFirstItem();
 	setMouseCursor();
-	intro -> checkDetected();
+	if (! withDialog) {
+		intro -> checkDetected();
+	} else {
+		if ( *popUpDialog == "Monitor" ) {
+			xapi -> runDialog (Monitor);
+		} else
+		if ( *popUpDialog == "Card") {
+			xapi -> runDialog (Card);
+		} else {
+			fprintf (stderr,"xapi: no such dialog: %s\n",popUpDialog->ascii());
+			exit (1);
+		}
+	}
 	return app.exec();
 }
 
@@ -586,6 +606,9 @@ void usage (void) {
 	printf ("   via init.pl. Usefull if SaX2 start its own X-Server\n");
 	printf ("[ -U | --unifont ]\n");
 	printf ("   force usage of Uni-Code font\n");
+	printf ("[ -O | --dialog <nane> ]\n");
+	printf ("   start SaX2 with the given dialog name. Available are\n");
+	printf ("   the following names: Monitor,Card\n");
 	printf ("[ -f | --fast ]\n");
 	printf ("   fast startup, prevent ISaX calls and read\n");
 	printf ("   the currently existing setup files\n");
