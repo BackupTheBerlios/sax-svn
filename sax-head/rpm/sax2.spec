@@ -600,9 +600,7 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 
 %files -n sax2-libsax
 %defattr(-,root,root)
-%docdir %{_defaultdocdir}/libsax
-%docdir %{_defaultdocdir}/libsax/html
-%doc %{_defaultdocdir}/libsax/html/*
+%doc %{_defaultdocdir}/libsax/html
 /usr/%{_lib}/libsax.so*
 
 #=================================================
