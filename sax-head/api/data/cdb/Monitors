@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Mar 18 15:31:57 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Apr  4 08:22:18 2005
 #
 # Template for monitor data
 # --------------------------
@@ -9240,6 +9240,17 @@ DELL:1726T-HS/D1025HT  {
 #----------------------------------------------
 DELL:2000FP  {
  Hsync=31-80
+ Vsync=56-76
+}
+
+#==============================================
+# 2001FP
+#----------------------------------------------
+DELL:2001FP  {
+ DDC=DELA007
+ Option=DPMS
+ Hsync=31-80
+ Resolution=1600x1200
  Vsync=56-76
 }
 
