@@ -173,7 +173,7 @@ sub UpdateBundle {
 	qx (cd locale && ./.lastchange > /tmp/lastchange);
 	$subject = "$var{Subject} $prefix : $date...";
 	$dest = $var{Address}.'@suse.de -c ms@suse.de';
-	qx(mail -s \"$subject\" $dest -a /tmp/fuzzy < /tmp/lastchange);
+	qx(cat /tmp/lastchange /tmp/fuzzy | mail -s \"$subject\" $dest);
 }
 
 #----[ PutOnFtp ]------------#

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SaX\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-26 12:46+0100\n"
+"PO-Revision-Date: 2004-08-18 23:32+0200\n"
 "Last-Translator: Mike Fabian <mfabian@suse.de>\n"
 "Language-Team: Japanese <suse-i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
@@ -60,11 +60,11 @@ msgstr "まだ設定されていません"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<新しいパスワードを入力してください...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<パスワードを変更してください...>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -432,9 +432,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX の設定 ...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>AccessX の設定 ...</u></h3></nobr>"
+msgstr "<nobr><h3><u>VNC の設定...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -495,6 +494,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
+"<b>パスワードが不一致です</b><hr>最初と次のパスワードが一致しません。もう一度"
+"入力してください。"
 
 #. RTF text: no limit
 msgid ""
@@ -502,6 +503,8 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>パスワードが不正</b><hr>パスワードに何も入力されなかったか、パスワードが短"
+"すぎます。少なくとも 6 文字を含むパスワードを入力してください。"
 
 #. RTF text: no limit
 msgid ""
@@ -519,12 +522,11 @@ msgid ""
 "NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> "
 "first. This can also be done comfortably with YOU (YaST2 Online Update)."
 msgstr ""
-"<b>OpenGL 加速を有効にすることができません。</b><hr>\n"
-"NVidia 社のドライバがインストールされていないのが理由です。\n"
-"ハードウェア加速化の 3D/OpenGL を使用する場合は、NVIDIA_GLX と \n"
-"NVIDIA_kernel のパッケージを nVidia のウェブサーバからアップデートして\n"
-"下さい (http://www.nvidia.com)。YOU (YaST2 Online Update) を使用しても\n"
-"簡単にアップデートができます。"
+"<b>OpenGL アクセラレーションを有効にすることができません。</b><hr>NVidia 社の"
+"ドライバがインストールされていないのが理由です。ハードウェアアクセラレーショ"
+"ンの 3D/OpenGL を使用する場合は、NVIDIA_GLX と NVIDIA_kernel のパッケージを "
+"nVidia のウェブサーバからアップデートして下さい (http://www.nvidia.com)。YOU "
+"(YaST2 Online Update) を使用しても簡単にアップデートができます。"
 
 #. RTF text: no limit
 msgid ""
@@ -537,9 +539,16 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>OpenGL アクセラレーションを有効にすることができません。</b><hr>3D サブシス"
+"テムを有効にするには、まず nVidia 製のコマーシャルドライバをインストールする"
+"必要があります。<b>YaST オンラインアップデート</b>を用いてインストールしてく"
+"ださい。YOU の中で、<b>パッチカテゴリー</b>で<b>インストール可能とインストー"
+"ル済みのパッチ</b>を選択し、<b>NVIDIA(r) Graphics Driver</b> をパッチリストか"
+"ら選んでください(通常リストの最後尾にあります)。注意: 以前に一度インストール"
+"した後にドライバを削除した場合は、パッチを<b>アップデート</b>(マウスの右ク"
+"リック)としてマークする必要があります。"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -547,18 +556,18 @@ msgid ""
 "X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
 "want to continue?</b>"
 msgstr ""
-"<b>OpenGL 加速を無効にする</b><hr>\n"
+"<b>OpenGL アクセラレーションを無効にする</b><hr>\n"
 "3D サブシステムには nVidia 社のコマーシャルドライバを用いています。\n"
 "SaX2 は nVidia インストーラを用いてドライバをアンインストールする必要がありま"
 "す。\n"
-"アンインストールの際に、3D ハードウェア加速をサポートしていない XFree86 の\n"
+"アンインストールの際に、3D ハードウェアアクセラレーションをサポートしていな"
+"い X.Org の\n"
 "ドライバに置き換えます。<br><br><br>\n"
 "続けますか。</b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "画像領域の幅と高さ"
+msgstr "未知の画像領域..."
 
 #. RTF text: no limit
 msgid ""
@@ -570,6 +579,12 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>画面の縦横サイズを mm 単位で入力してください</b><hr>ご使用のディスプレイの"
+"サイズを検出できませんでした。<b>Gimp</b> のようなグラフィックを扱うアプリ"
+"ケーションや <b>Xft</b> のようなフォントレンダリングライブラリでは、画面の物"
+"理的なサイズを知る必要があります。ご使用のモニターのマニュアルを参照して、水"
+"平方向 (X) および垂直方向 (Y) の正しいサイズを入力してください。値は mm 単位"
+"で入力してください。<br><br><b>画面のサイズの設定を行いますか？</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
@@ -873,15 +888,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "VNC プロトコルでアクセス可能な X サーバ:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "アクセスコントール"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -1015,6 +1030,8 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>モニターを削除できません:</b><hr>システム上には一つのモニター設定しかあり"
+"ません。この設定を削除することはできません。"
 
 #. RTF text: no limit
 msgid ""
@@ -1129,11 +1146,11 @@ msgstr "いいえ (&N)"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>はい</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>いいえ</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1261,7 +1278,7 @@ msgstr "XAccess の設定: キーパッドでマウスを動かす ..."
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
+msgstr "VNC の設定: VNC プロトコルを用いて画面をエクスポートする..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1336,17 +1353,16 @@ msgid "&Options"
 msgstr "オプション ... (&O)"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "オプション ... (&O)"
+msgstr "VNC オプション"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "VNC プロトコルを用いてのアクセスを許可する"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "パスワード保護を有効にする"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1354,28 +1370,27 @@ msgstr "特性 ... (&P)"
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "パスワード"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "パスワードの確認"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "閲覧モードを有効にする"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "AccessX を無効にする"
+msgstr "HTTP アクセスを有効にする"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP ポート"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "複数の VNC 接続を許可する"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1487,9 +1502,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>現在設定されている AccessX の状況</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>現在設定されている 3D/OpenGL の状況</b></big><hr>"
+msgstr "<big><b>現在設定されている VNC の状況</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1557,9 +1571,10 @@ msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>VNC サーバ:</b><hr>VNC ビューアプログラムを介してデスクトップやプログラム"
+"を遠隔アクセス可能にするように、X サーバの設定を行います。"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
@@ -1567,10 +1582,12 @@ msgid ""
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
 "<b>OpenGL サブシステム:</b><hr>\n"
-"ここで、グラフィックスカードの 3D 加速を設定することができます。\n"
-"XFree86 には、御使用のグラフィックカードの 3D 機能を用いた\n"
+"ここで、グラフィックスカードの 3D アクセラレーションを設定することができま"
+"す。\n"
+"X.Org には、ご使用のグラフィックカードの 3D 機能を用いた\n"
 "直接レンダリングインタフェースが含まれています。\n"
-"3D ハードウェア加速をサポートするには、このダイアログで有効にできます。"
+"3D ハードウェア悪せられーしょんをサポートするには、このダイアログで有効にでき"
+"ます。"
 
 #. RTF text: no limit
 msgid ""
@@ -2685,24 +2702,3 @@ msgstr "メニューキーで 3 番目のレベルを選択"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta をウィンドウズキーに割り当て"
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>OpenGL 加速を有効にできません</b><hr>\n"
-#~ "このカードで 3D サブシステムを有効にするには、nVidia 社のコマーシャルドラ"
-#~ "イバ\n"
-#~ "をまずインストールする必要があります。<b>YaST オンラインアップデート</b> "
-#~ "で\n"
-#~ "nVidia ドライバパッチを選択してドライバをインストールして下さい。"
-#~ "<br><br>\n"
-#~ "もし既に YaST オンラインアップデートでドライバをインストールして、その後既"
-#~ "に\n"
-#~ "アンインストールしてしまった場合は、手動でドライバを再度インストールして下"
-#~ "さい。\n"
-#~ "以下の URL にインストール方が記述してあります:<br><br><b>ftp://ftp.suse."
-#~ "com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
