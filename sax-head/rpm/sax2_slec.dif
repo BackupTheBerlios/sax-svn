@@ -1,0 +1,172 @@
+--- api/tools/getconfig
++++ api/tools/getconfig	2003/03/18 09:05:21
+@@ -30,8 +30,9 @@
+ 		print "cfg: only root can do this\n";
+ 		exit (1);
+ 	}
+-	$spec{CDir}  = "/var/cache/sax/files";
+-	$spec{ISaX}  = "/usr/X11R6/lib/sax/tools/isax";
++	$spec{CDir}   = "/var/cache/sax/files";
++	$spec{ISaX}   = "/usr/X11R6/lib/sax/tools/isax";
++	$spec{PColor} = "/usr/X11R6/lib/sax/api/tools/getconfigDepth";
+ 
+ 	qx (rm -f $spec{CDir}/XF86Config);
+ }
+@@ -137,10 +138,92 @@
+ 	if (-f "$secure/XF86Config") {
+ 		qx (cp $secure/XF86Config $spec{CDir}/XF86Config);
+ 	}
++
++	# /.../
++	# create other config files for switching. The following
++	# code will modify the existing apidata file and write
++	# configuration clones which differs only in the resolution.
++	# the created config files are saved into the SaX2 cache
++	# directory and a status file containing the sync values
++	# of the used Modelines is created too.
++	# ---
++	my @modelines  = ();
++	my %modecache  = {};
++	my @resolution = (
++		"640x480",
++		"800x600",
++		"1024x768",
++		"1152x864",
++		"1280x1024",
++		"1600x1200"
++	);
++	my $status = new FileHandle "> $secure/status";
++	for (my $i=0;$i<@resolution;$i++) {
++		#===============================================
++		# 1) change apidate Modes line according to res
++		#-----------------------------------------------
++		my $hsmax = "";
++		my $vsmax = "";
++		my $set = new FileHandle "> $secure/apidata.$i";
++		my $res = $resolution[$i];
++		@modelines = ();
++		%modecache = ();
++		$api->open("< $secure/apidata");
++		while (my $line = <$api>) {
++			chomp($line);
++			if ($line =~ /VertRefresh.*=.*-(.*)/) {
++				$vsmax = $1;
++			}
++			if ($line =~ /HorizSync.*=.*-(.*)/) {
++				$hsmax = $1;
++			}
++			if ($line =~ /^(.*) CalcModelines/) {
++				#print $set "$1 CalcModelines=     no\n";
++				print $set "$1 CalcModelines=     on\n";
++			} elsif ($line =~ /^(.*) Modes:(.*)=/) {
++				print $set "$1 Modes:$2=     $res\n";
++			} else {
++				print $set "$line\n";
++			}
++		}
++		$api->close();
++		#===============================================
++		# 2) call ISaX with new apidata file
++		#-----------------------------------------------
++		qx ($spec{ISaX} -f $secure/apidata.$i -c $secure/XF86Config.$i);
++		$api->open("< $secure/XF86Config.$i");
++		while (my $line = <$api>) {
++			chomp($line);
++			if ($line =~ /Modeline.*(\".*\".*)/) {
++				push (@modelines,$1);
++			}
++		}
++		$api->close();
++		#===============================================
++		# 3) create Modeline cache according to config
++		#-----------------------------------------------
++		%modecache = getModelineCache (
++			$hsmax,$vsmax,@modelines
++		);
++		my $hz  = "X-Pool";
++		my $khz = "X-Pool";
++		if (defined $modecache{$res}) {
++			$hz  = "$modecache{$res}{Hz} Hz";
++			$khz = "$modecache{$res}{Khz} Khz";
++		}
++		#===============================================
++		# 4) create color depth dependant parts
++		#-----------------------------------------------
++		for (my $n=8;$n<=24;$n+=8) {
++			qx ($spec{PColor} $n $i $secure/XF86Config.$i $spec{CDir});
++			printf $status "%s-%-4s:%-10s:%s\n",$i,$n,$res,$hz
++		}
++	}
++	qx (cp $secure/status $spec{CDir}/status);
++	$status -> close();
+ 	cleanTmp();
+ }
+ 
+-
+ #=====================================
+ # Run... 
+ #-------------------------------------
+@@ -149,3 +232,30 @@
+ for (my $i=0;$i<3;$i++) {
+ 	qx(/bin/sync);
+ }
++
++#---[ getModelineCache ]----#
++sub getModelineCache {
++#------------------------------------------------
++# create modeline cache. Obtain Hsync/Vsync max
++# for the given modelines and return a hash with
++# the resolution as key
++#
++	my %result;
++	my $hsmax = shift (@_);
++	my $vsmax = shift (@_);
++	foreach my $modeline (@_) {
++		my @mode = split(/ +/,$modeline);
++		my $zf = $mode[1] * 1e6 / $mode[5];
++		my $rr = int ($zf / $mode[9]);
++		$zf = int ($zf / 1e3);
++		$mode[0] =~ s/\"+//g;
++
++		if (($zf > $hsmax) || ($rr > $vsmax)) {
++			next;
++		}
++
++		$result{$mode[0]}{Khz} = $zf;
++		$result{$mode[0]}{Hz}  = $rr;
++	}
++	return (%result);
++}
+--- api/tools/getconfigDepth
++++ api/tools/getconfigDepth	2003/03/18 09:05:48
+@@ -0,0 +1,20 @@
++#!/bin/sh
++# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
++#
++# Author: Marcus Schaefer <sax@suse.de>, 2002
++# This script will change the DefaultDepth entry in the
++# given source file with the value stored in $1. The result
++# is saved with a uniqe file name into the directory given
++# with $3
++# ---
++# $1 -> color depth to set
++# $2 -> config file index
++# $3 -> source file name
++# $4 -> destination directory
++#
++cat $3 | sed -e \
++	s@"DefaultDepth 8"@"DefaultDepth $1"@ -e \
++	s@"DefaultDepth 15"@"DefaultDepth $1"@ -e \
++	s@"DefaultDepth 16"@"DefaultDepth $1"@ -e \
++	s@"DefaultDepth 24"@"DefaultDepth $1"@ \
++> "$4/XF86Config.$2-$1"
+--- xc.pl
++++ xc.pl	2003/04/08 13:45:19
+@@ -630,6 +630,7 @@
+ 	# save configuration to /etc/X11...
+ 	# ----------------------------------
+ 	qx(cp $spec{AutoConf} $final);
++	qx(/usr/X11R6/lib/sax/api/tools/getconfig);
+ 
+ 	# create links...
+ 	# ----------------

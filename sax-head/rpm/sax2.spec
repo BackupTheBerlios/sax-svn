@@ -28,6 +28,7 @@ NoSource:     2
 Patch:        sax2_binmode.dif
 %endif
 Patch1:       sax2_monitor.dif
+Patch2:       sax2_slec.dif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 %ifarch ppc sparc sparc64
 Provides:     sax
@@ -122,6 +123,10 @@ for i in `find -regex ".*\.\(h\|pm\)"`;do
 	fi
 )
 done
+test -e /.buildenv && . /.buildenv
+if [ "$BUILD_BASENAME" = "sles8-slec-i386" ];then
+%patch2
+fi
 
 %build
 test -e /.buildenv && . /.buildenv
