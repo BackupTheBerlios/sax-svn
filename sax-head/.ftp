@@ -57,7 +57,7 @@ function ClearFtp {
 init
 echo "put on ftp...."
 cd /suse/ms/compiled
-for i in 8.0 8.1;do
+for i in 8.0 8.1 8.2;do
 if [ -d "/suse/ms/compiled/$i" ];then
 	cd /suse/ms/compiled/$i
 	ClearFtp $i
