@@ -299,6 +299,19 @@ void XMonitor::slotSelect ( QListBoxItem* item ) {
 	// ---
 	if (monitorList->isSelected (item)) {
 		mSelected = monitorList -> currentItem();
+	}
+}
+
+//=====================================
+// XMonitor double click on desktop...
+//-------------------------------------
+void XMonitor::slotDoubleSelect ( QListBoxItem* item ) {
+	// log (L_INFO,"XMonitor::slotDoubleSelect() called\n");
+	// ...
+	// this function is called if a double click changes
+	// desktop main selection
+	// ---
+	if (monitorList->isSelected (item)) {
 		QString* text = new QString;
 		QTextOStream (text)
 			<< mSelected << ", ,This screen is selected";

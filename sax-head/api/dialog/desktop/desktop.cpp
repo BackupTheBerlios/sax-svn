@@ -196,6 +196,10 @@ void XDesktop::dialogCreate (void) {
 		this, SLOT (slotSelect (QListBoxItem *))
 	);
 	QObject::connect (
+		mDesktopList, SIGNAL (doubleClicked (QListBoxItem *)),
+		this, SLOT (slotDoubleSelect (QListBoxItem *))
+	);
+	QObject::connect (
 		mDesktopList, SIGNAL (selectionChanged (QListBoxItem *)),
 		this, SLOT (slotSelect (QListBoxItem *))
 	);

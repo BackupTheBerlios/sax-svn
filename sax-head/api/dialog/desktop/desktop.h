@@ -97,7 +97,8 @@ class XDesktop : public XTemplate {
 	void slotIntro ( int );
 
 	public slots:
-	void slotSelect    ( QListBoxItem* );
+	void slotSelect       ( QListBoxItem* );
+	void slotDoubleSelect ( QListBoxItem* );
 	void slotSetup     ( void );
 	void slotColor     ( int );
 	void slotUsed      ( QListViewItem* );

@@ -83,11 +83,12 @@ class XMonitor : public XTemplate {
 	void slotIntro ( int );
 
 	public slots:
+	void slotSelect       ( QListBoxItem* );
+	void slotDoubleSelect ( QListBoxItem* );
+	void slotVendor       ( QListBoxItem *);
+	void slotName         ( QListBoxItem *);
 	void slotSetup     ( void );
 	void slotRemove    ( void );
-	void slotSelect    ( QListBoxItem* );
-	void slotVendor    ( QListBoxItem *);
-	void slotName      ( QListBoxItem *);
 	void slotTopOk     ( void );
     void slotTopCancel ( void );
 	void slotDisk      ( void );

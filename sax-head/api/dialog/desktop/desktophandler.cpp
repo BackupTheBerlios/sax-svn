@@ -487,6 +487,19 @@ void XDesktop::slotSelect ( QListBoxItem* item ) {
 	// ---
 	if (mDesktopList->isSelected (item)) {
 		mSelected = mDesktopList -> currentItem();
+	}
+}
+
+//=====================================
+// XDesktop double click on desktop...
+//-------------------------------------
+void XDesktop::slotDoubleSelect ( QListBoxItem* item ) {
+	// log (L_INFO,"XDesktop::slotSelect() called\n");
+	// ...
+	// this function is called if a double click will
+	// select an item from the main desktop list
+	// ---
+	if (mDesktopList->isSelected (item)) {
 		QString* text = new QString;
 		QTextOStream (text)
 			<< mSelected << ", ,This screen is selected";
