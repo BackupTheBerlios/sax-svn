@@ -42,6 +42,7 @@ TYPE=""
 NOSCAN=""
 SYS_CONFIG=""
 DBMNEW=""
+DIALOG=""
 REINIT=0
 
 #==================================
@@ -150,7 +151,7 @@ function usage() {
 #==================================
 # get options
 #----------------------------------
-TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:d --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew \
+TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO: --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,dialog: \
 -n 'SaX' -- "$@"`
 
 if [ $? != 0 ] ; then usage ; exit 1 ; fi
@@ -173,6 +174,10 @@ while true ; do
 	-d|--dbmnew)                # use the config.new file instead of the
 		DBMNEW="--dbmnew"       # normal config storable file
 	shift;;
+
+	-O|--dialog)                # start with custom dialog
+		DIALOG="-O $2"
+	shift 2 ;;
 
 	-l|--lowres)                # enable 640x480 virtual screen to make
 		LOW_RES="-v"            # sure this mode is used for config
@@ -333,7 +338,7 @@ fi
 #==================================
 # set option strings...
 #----------------------------------
-XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG"
+XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG $DIALOG"
 IN_OPT="$LOW_RES $BATCH_MODE $MODLIST $AUTOMODE $CHIP"
 IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $QUIET"
 
