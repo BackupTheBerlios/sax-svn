@@ -3,12 +3,13 @@ all:
 		-D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS \
 		-fno-strict-aliasing -pipe -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 \
 		-O2 -fPIC SaX_wrap.cxx
-	g++ -shared SaX_wrap.o -o SaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
+	g++ -shared SaX_wrap.o -o libSaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
-	mcs -nologo -o test.exe *.cs
+	mcs -nologo -o SaX.dll -t:library SaX*.cs SWIGTYPE* && \
+		rm -f SaX*.cs SWIGTYPE*
 
 install_vendor:
 
 clean:
-	rm -f SaX*.cs SaX_* SaX.so
-	rm -f SWIGTYPE*
+	rm -f SaX*.cs SaX_* libSaX.so
+	rm -f SWIGTYPE* *.exe SaX.dll
