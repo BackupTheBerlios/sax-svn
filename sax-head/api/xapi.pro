@@ -46,6 +46,8 @@ SOURCES   += dialog/multihead/multihead.cpp
 SOURCES   += dialog/multihead/multiheadhandler.cpp
 SOURCES   += dialog/touchscreen/touchscreen.cpp
 SOURCES   += dialog/touchscreen/touchhandler.cpp
+SOURCES   += dialog/vnc/vnc.cpp
+SOURCES   += dialog/vnc/vnchandler.cpp
 SOURCES   += xquery.cpp
 
 HEADERS   += frame.h
@@ -80,8 +82,9 @@ HEADERS   += dialog/keyboard/rules.h
 HEADERS   += dialog/monitor/monitor.h
 HEADERS   += dialog/multihead/multihead.h
 HEADERS   += dialog/touchscreen/touchscreen.h
+HEADERS   += dialog/vnc/vnc.h
 HEADERS   += xquery.h
 
 CONFIG    += thread warn_on release
-unix:LIBS += -lm -lXss -lxkbfile -lGL
+unix:LIBS += -lm -lXss -lxkbfile -lGL -lcrypt
 TARGET    += xapi

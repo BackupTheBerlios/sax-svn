@@ -34,6 +34,12 @@ opengl=3D Acceleration
 notConfigured=Not configured
 
 # Maximum length: 60  characters
+newpwd=<Enter new password...>
+
+# Maximum length: 60  characters
+pwdchange=<Change password...>
+
+# Maximum length: 60  characters
 unavailable=Not available
 
 # Maximum length: 40  characters
@@ -309,6 +315,9 @@ openglsetup=<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>
 # Maximum length: 40  characters
 infoaccessx=<nobr><h3><u>AccessX setup...</u></h3></nobr>
 
+# Maximum length: 40  characters
+infovnc=<nobr><h3><u>VNC setup...</u></h3></nobr>
+
 # Maximum length: 60 characters
 subdialog=Selected component:
 
@@ -329,6 +338,12 @@ no3Dcard=<b>3D Acceleration impossible</b><hr>The installed card cannot use hard
 
 # RTF text: no limit
 require16bit=<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL drivers require a color depth of <b>16 Bit (65536)</b> to work properly. The currently used color setup does not fulfill this requirement. Verify the current default color depth setup.
+
+# RTF text: no limit
+pwdmismatch=<b>Password mismatch</b><hr>The first and the second version of the password don't match ! Please try again.
+
+# RTF text: no limit
+pwdtooshort=<b>Password fault</b><hr>The password field has been left empty or the password is too short. Please enter a password with at least six characters !.
 
 # RTF text: no limit
 pacsmissing=<b>Required base packages are missing</b><hr>Cannot enable OpenGL acceleration because the following packages are missing:
@@ -468,6 +483,15 @@ modeline=Modeline
 # Maximum length: 20  characters
 xaccess=AccessX
 
+# Maximum length: 20  characters
+vnc=VNC
+
+# Maximum length: 60  characters
+vncexport=X-Server accessable via VNC protocol:
+
+# Maximum length: 25  characters
+xaccesscontrol=Access Control
+
 # Maximum length: 50  characters
 corepointer=<b>Core Pointer...</b>
 
@@ -600,6 +624,12 @@ Yes=&Yes
 # Dynamic length: Please do not oversize key up to 10%
 No=&No
 
+# Maximum length: 20  characters
+yes=<b>Yes</b>
+
+# Maximum length: 20  characters
+no=<b>No</b>
+
 # Maximum length: 50  characters
 file=File
 
@@ -691,6 +721,9 @@ Abort=Abort
 RunXAccess=Configure XAccess: Mouse over keypad...
 
 # Maximum length: 100  characters
+RunXVNC=Configure VNC: Export display using the VNC protocol...
+
+# Maximum length: 100  characters
 RunXMouse=Configure input devices: Mouse configuration...
 
 # Maximum length: 100  characters
@@ -741,8 +774,29 @@ conftablet=Properties...
 # Maximum length: 20  characters
 tabletopts=&Options
 
+# Maximum length: 20  characters
+vncoptions=VNC Options
+
+# Maximum length: 60  characters
+enablevnc=Allow access to display using VNC protocol
+
+# Maximum length: 60  characters
+pwdprotect=Enable password protection
+
 # Maximum length: 40  characters
 confcard=&Properties...
+
+# Maximum length: 40  characters
+password=Password
+
+# Maximum length: 40  characters
+passwordverify=Verify password
+
+# Maximum length: 40  characters
+vncviewonly=Enable View-Only mode
+
+# Maximum length: 40  characters
+vncshared=Allow multiple VNC connections
 
 # Maximum length: 40  characters
 conftouch=&Properties...
@@ -841,6 +895,9 @@ enablewheel=Enable Mouse Wheel
 accessx_header=<big><b>Currently configured AccessX Status</b></big><hr>
 
 # Maximum length: 60  characters
+xvnc_header=<big><b>Current VNC status</b></big><hr>
+
+# Maximum length: 60  characters
 opengl_header=<big><b>Current 3D/OpenGL status</b></big><hr>
 
 # Maximum length: 60  characters
@@ -881,6 +938,9 @@ no_info=<b><nobr>No information available</nobr></b>
 
 # RTF text: no limit
 accessx_info=<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse with the keypad. The table below points to the current status of AccessX.
+
+# RTF text: no limit
+xvnc_info=<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop and all its programs remotely via a VNC viewer program
 
 # RTF text: no limit
 opengl_info=<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card here. XFree86 includes the direct rendering interface to use the 3D capabilities of your graphics card. If your card and the corresponding driver support 3D hardware acceleration, enable it in this dialog.

@@ -1018,7 +1018,7 @@ sub ApiImportLayout {
 	my %var;
 
 	$screen = 0;
-	foreach (keys %{$api{Layout}}) {
+	foreach (sort keys %{$api{Layout}}) {
 	$value = $api{Layout}{$_};
 	@pair = split(/ /,$_);
 	$card = $pair[0];
@@ -1031,8 +1031,16 @@ sub ApiImportLayout {
 		};
 
 		/^Keyboard/         && do {
-		$var{ServerLayout}{all}{InputDevice}{0}{id}    = $value;
+		@list = split(/,/,$value);
+		$var{ServerLayout}{all}{InputDevice}{0}{id}    = $list[0];
 		$var{ServerLayout}{all}{InputDevice}{0}{usage} = "CoreKeyboard";
+
+		$count = 2;
+		for ($i=1;$i<@list;$i++) {
+		$var{ServerLayout}{all}{InputDevice}{$count}{id}    = $list[$i];
+		$var{ServerLayout}{all}{InputDevice}{$count}{usage} = "CoreKeyboard";
+		$count+=2;
+		}
 		last SWITCH;
 		};
 
@@ -1059,11 +1067,22 @@ sub ApiImportLayout {
 		last SWITCH;
 		};
 
-		/^Clone/         && do {
+		/^Clone/            && do {
 		if ($value =~ /on/i) {
 			$var{ServerLayout}{all}{Option}{Clone} = "on";
 		} else {
 			$var{ServerLayout}{all}{Option}{Clone} = "off";
+		}
+		last SWITCH;
+		};
+
+		/^VNC/              && do {
+		$var{ServerLayout}{all}{Option}{VNC} = $value;
+		if ($value =~ /(\d) (\d)/) {
+			my $mID = $1;
+			my $kID = $2;
+			$var{ServerLayout}{all}{InputDevice}{$mID}{usage} = "ExtraPointer";
+			$var{ServerLayout}{all}{InputDevice}{$kID}{usage} = "ExtraKeyboard";
 		}
 		last SWITCH;
 		};

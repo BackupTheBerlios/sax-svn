@@ -169,7 +169,7 @@ void XFrame::setInit (void) {
 	mInit.insert("paper"            , PAPER);
 	mInit.insert("gtxfile"			, XAPI);
 	mInit.insert("pix_geo"          , PIXGEO);
-	mInit.insert("pix_accessx"      , PIXACCESSX);
+	mInit.insert("pix_xcontrol"     , PIXXCONTROL);
 	mInit.insert("pix_desktop"      , PIXDESKTOP);
 	mInit.insert("pix_card"         , PIXCARD);
 	mInit.insert("pix_input"        , PIXINPUT);
@@ -403,6 +403,7 @@ void XFrame::setFrame (void) {
 	mSview = new QScrollView (mainFrame);
     mImage = new QLabel      (mSview->viewport());
 	mImage -> setPixmap (*logo); 
+	//component -> setMaximumWidth (190);
 	mImage -> adjustSize();
 	mSview -> setHScrollBarMode (QScrollView::AlwaysOff);
 	mSview -> setVScrollBarMode (QScrollView::AlwaysOff);
@@ -412,7 +413,7 @@ void XFrame::setFrame (void) {
 
 	// component list
 	//----------------
-	QListView*     component = new QListView (mainFrame);
+	QListView* component = new QListView (mainFrame);
 	//component -> setMaximumWidth (190);
 	component -> setFixedWidth   (200);
 	component -> addColumn(xText["component"]);
@@ -421,8 +422,8 @@ void XFrame::setFrame (void) {
 	component -> setSorting ( -1 );
 	component -> setItemMargin ( 2 );
 
-	IDaccessx = new QListViewItem (
-		component,xText["xaccess"]
+	IDxcontrol = new QListViewItem (
+		component,xText["xaccesscontrol"]
 	);
 	IDinput = new QListViewItem (
 		component,xText["input"]
@@ -438,19 +439,22 @@ void XFrame::setFrame (void) {
 	if ((! useHwData) && (mAdjustable)) {
 	IDgeo      = new QListViewItem (IDdesktop, xText["geometry"]);
 	}
-	ID3D       = new QListViewItem (IDdesktop, xText["opengl"]);
-	IDvirtual  = new QListViewItem (IDdesktop, xText["virtual"]);
-	IDcolor    = new QListViewItem (IDdesktop, xText["color"]);
-	IDcard     = new QListViewItem (IDdesktop, xText["card"]);
-	IDmonitor  = new QListViewItem (IDdesktop, xText["monitor"]);
+	ID3D       = new QListViewItem (IDdesktop , xText["opengl"]);
+	IDvirtual  = new QListViewItem (IDdesktop , xText["virtual"]);
+	IDcolor    = new QListViewItem (IDdesktop , xText["color"]);
+	IDcard     = new QListViewItem (IDdesktop , xText["card"]);
+	IDmonitor  = new QListViewItem (IDdesktop , xText["monitor"]);
 
-	IDtoucher  = new QListViewItem (IDinput  , xText["toucher"]);
-	IDtablet   = new QListViewItem (IDinput  , xText["tablet"]);
-	IDkeyboard = new QListViewItem (IDinput  , xText["keyboard"]);
-	IDmouse    = new QListViewItem (IDinput  , xText["mouse"]);
+	IDtoucher  = new QListViewItem (IDinput   , xText["toucher"]);
+	IDtablet   = new QListViewItem (IDinput   , xText["tablet"]);
+	IDkeyboard = new QListViewItem (IDinput   , xText["keyboard"]);
+	IDmouse    = new QListViewItem (IDinput   , xText["mouse"]);
 
-	IDlayout   = new QListViewItem (IDmulti  , xText["mlayout"]);
-	IDmode     = new QListViewItem (IDmulti  , xText["modus"]);
+	IDlayout   = new QListViewItem (IDmulti   , xText["mlayout"]);
+	IDmode     = new QListViewItem (IDmulti   , xText["modus"]);
+
+	IDaccessx  = new QListViewItem (IDxcontrol, xText["xaccess"]);
+	IDvnc      = new QListViewItem (IDxcontrol, xText["vnc"]);
 
 	IDmulti -> setSelectable(false);
 	IDmulti -> setPixmap ( 
@@ -464,9 +468,9 @@ void XFrame::setFrame (void) {
 	IDdesktop -> setPixmap ( 
 		0,QPixmap( mInit["pix_desktop"] ) 
 	);
-	IDaccessx -> setSelectable(true);
-	IDaccessx -> setPixmap ( 
-		0,QPixmap( mInit["pix_accessx"] ) 
+	IDxcontrol -> setSelectable(true);
+	IDxcontrol -> setPixmap ( 
+		0,QPixmap( mInit["pix_xcontrol"] ) 
 	);
 
 	mTree.insert ( xText["mouse"]   , "2" );
@@ -482,6 +486,7 @@ void XFrame::setFrame (void) {
 	mTree.insert ( xText["xaccess"],  "12");
 	mTree.insert ( xText["opengl"],   "13");
 	mTree.insert ( xText["virtual"],  "14");
+	mTree.insert ( xText["vnc"],      "15");
 
 	component->show();
 	mView = component;
@@ -918,6 +923,9 @@ void XFrame::slotWhatsThis (void) {
 	break;
 	case Xaccess:
 		QWhatsThis::add (widget,xText["accessx_info"]);
+	break;
+	case XVnc:
+		QWhatsThis::add (widget,xText["xvnc_info"]);
 	break;
 	case OpenGL:
 		QWhatsThis::add (widget,xText["opengl_info"]);

@@ -640,16 +640,7 @@ void showConfig (void) {
 			printf("  Option     \"Protocol\" \"%s\"\n",lp->protocol);
 		}
 		if (lp->device) {
-			int error = 0;
-			str mouseLink = "/dev/mouse";
-			error = unlink  (mouseLink);
-			error = symlink (lp->device,mouseLink);
-			if (error == -1) {
-			fprintf(stderr,"Could not create mouse link: %s -> %s\n",
-				mouseLink,lp->device
-			);
-			}
-			printf("  Option     \"Device\"   \"%s\"\n",mouseLink);
+			printf("  Option     \"Device\"   \"%s\"\n",lp->device);
 		}
 		if ((lp->wheel) && (lp->wheel >= 1)) {
 			int btns = 5;

@@ -54,6 +54,7 @@ class XTextBrowser;
 #include "touchscreen/touchscreen.h"
 #include "opengl/opengl.h"
 #include "virtual/virtual.h"
+#include "vnc/vnc.h"
 
 //====================================
 // Class XQuery...

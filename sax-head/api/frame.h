@@ -69,7 +69,8 @@ enum Modules {
 	Card     = 11,
 	Xaccess  = 12,
 	OpenGL   = 13,
-	Virtual  = 14
+	Virtual  = 14,
+	XVnc     = 15
 };
 
 //=====================================
@@ -147,6 +148,8 @@ class XFrame : public QWidget {
 	QListViewItem*  IDlayout;
 	QListViewItem*  IDaccessx;
 	QListViewItem*  IDvirtual;
+	QListViewItem*  IDxcontrol;
+	QListViewItem*  IDvnc;
 	QListViewItem*  ID3D;
 	QGridLayout*    layer8;
 

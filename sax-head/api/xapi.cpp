@@ -381,6 +381,7 @@ int main(int argc,char*argv[]) {
 	XTouchScreen*	toucher  = new XTouchScreen();
 	XOpenGL*        opengl   = new XOpenGL();
 	XVirtual*       virtuals = new XVirtual();
+	Xvnc*           vnc      = new Xvnc();
 
 	intro     -> addTo (xapi);
 	xaccess   -> addTo (xapi,intro);
@@ -396,6 +397,7 @@ int main(int argc,char*argv[]) {
 	toucher   -> addTo (xapi,intro);
 	opengl    -> addTo (xapi,intro);
 	virtuals  -> addTo (xapi,intro);
+	vnc       -> addTo (xapi,intro);
 
 	//=====================================
 	// save intro pointer...

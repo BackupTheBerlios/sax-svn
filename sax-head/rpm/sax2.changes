@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Apr 16 11:22:41 CEST 2004 - ms@suse.de
+
+- added SaX2 VNC configuration (#26492)
+- changed xmset to use the device reported from libhd instead of
+  linking it to /dev/mouse
+
+-------------------------------------------------------------------
 Sun Apr 11 20:09:06 CEST 2004  - ms@suse.de
 
 - check for adjustable flag in saveMode function (#38640)

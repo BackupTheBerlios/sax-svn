@@ -17,7 +17,7 @@ Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
 %if %{suse_version} > 810
-Requires:     XFree86-server
+Requires:     XFree86-server tightvnc
 %else
 Requires:     xloader
 %endif
