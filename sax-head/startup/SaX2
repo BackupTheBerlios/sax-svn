@@ -24,7 +24,7 @@ function validRunlevel {
 	TTY=`tty | cut -c 6`
 	RUN=`/sbin/runlevel | cut -f2 -d" "`
 	if [ "$TTY" = "t" ];then
-	if [ "$RUN" != "3" ];then
+	if [ "$RUN" -gt "3" ] || [ "$RUN" -lt "2" ];then
 		echo "SaX2: Invalid runlevel for console mode"
 		echo "SaX2: Please switch to runlevel 3 first"
 		echo 
