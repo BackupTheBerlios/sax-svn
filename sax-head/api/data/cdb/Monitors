@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Mar 11 12:25:29 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Mar 14 11:56:07 2005
 #
 # Template for monitor data
 # --------------------------
@@ -14335,6 +14335,17 @@ HEWLETT-PACKARD:A4331A 20-INCH DISPLAY  {
 HEWLETT-PACKARD:A4576A (P1100) 21-INCH DISPLAY  {
  Hsync=30-107
  Vsync=50-160
+}
+
+#==============================================
+# Compaq nc6220
+#----------------------------------------------
+HEWLETT-PACKARD:COMPAQ NC6220  {
+ DDC=AUO0E11
+ Option=DPMS
+ Hsync=31-60
+ Resolution=1024x768
+ Vsync=30-62
 }
 
 #==============================================
