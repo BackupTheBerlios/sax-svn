@@ -46,6 +46,10 @@ void XMonitor::resetPage (int reload) {
 		if (mFiles [update] -> sysSerialize()) {
 			mFiles [update] -> isModified ( mFrame );
 		}
+		update = "sys_LAYOUT";
+		if (mFiles [update] -> sysSerialize()) {
+			mFiles [update] -> isModified ( mFrame );
+		}
 	}
 	mIntro -> importFile (update);
 	slotIntro (mIndex);
