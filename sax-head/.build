@@ -20,7 +20,7 @@ init
 # build sax for some versions...
 #----------------------------------------
 rm -rf /suse/ms/compiled/*
-for i in 8.2 8.1 8.0;do
+for i in 8.3 8.2 8.1 8.0;do
 	ROOT="/abuild/kussl/$i"
 	if [ ! -d $ROOT ];then
 		mkdir -p $ROOT
@@ -30,7 +30,7 @@ for i in 8.2 8.1 8.0;do
 	fi
 	export BUILD_ROOT=$ROOT
 	export BUILD_DIST=$i-i386
-	if [ "$i" = "8.2" ];then
+	if [ "$i" = "8.3" ];then
 		export BUILD_DIST=i386
 	fi
 	echo -n "building SaX2 for SuSE Linux $i... "
