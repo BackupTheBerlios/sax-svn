@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Mar 18 14:38:29 2003
+# Author: Marcus Schaefer <sax@suse.de>, Wed Apr 16 11:35:12 2003
 #
 # Template for monitor data
 # --------------------------
@@ -14340,6 +14340,7 @@ HIGHSCREEN:LE64P  {
 # LE95P
 #----------------------------------------------
 HIGHSCREEN:LE95P  {
+ DDC=VOB3130
  Option=DPMS
  Hsync=30-65
  Vsync=50-90
