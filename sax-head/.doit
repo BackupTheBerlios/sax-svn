@@ -133,16 +133,18 @@ sub checkout {
 # ready to go to /work/src/done
 #
 	my $pacdir = svnup (@_);
+	my $svndir = "sax-head";
 	chdir $pacdir;
-	qx( mv sax/rpm/* . );
+	qx( mv sax/$svndir/rpm/* . );
 	if (defined $Build) {
-		qx( mv sax/.build . );
+		qx( mv sax/$svndir/.build . );
 	}
-	chdir $pacdir."/sax";
+	qx (mv sax/$svndir sax/sax);
+	chdir $pacdir."/sax/sax";
 	qx (./.archive);
 	qx (tar -cjf sax2_pixmaps.tar.bz2 api/pixmaps/*.*);
 	chdir $pacdir;
-	qx( mv sax/*.bz2 . );
+	qx( mv sax/sax/*.bz2 . );
 	qx( rm -rf sax );
 	return $pacdir;
 }
