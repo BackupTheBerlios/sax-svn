@@ -99,7 +99,7 @@ bool SaXExport::doExport (void) {
 		mHandle -> close();
 		return false;
 	}
-	for (int id=0; id < mImport->count();id++) {
+	for (int id=0; id < mImport->getCount();id++) {
 		QDict<QString>* data = mImport->getTablePointer (id);
 		if ( ! data ) {
 			excNoStorage(id);

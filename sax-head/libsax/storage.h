@@ -78,7 +78,7 @@ class SaXStorageIF : public SaXException {
 	virtual QDict<QString>* getTablePointer ( int  ) = 0;
     virtual QDict<QString>* getCurrentTablePointer ( void ) = 0;
 	virtual void merge ( QList< QDict<QString> > ) = 0;
-	virtual int count ( bool = false ) = 0;
+	virtual int getCount ( bool = false ) = 0;
 
 	public:
 	virtual void addGroup (
@@ -157,7 +157,7 @@ class SaXStorage : public SaXStorageIF {
 	QDict<QString>* getTablePointer ( int  );
     QDict<QString>* getCurrentTablePointer ( void );
 	void merge ( QList< QDict<QString> > );
-	int count ( bool = false );
+	int getCount ( bool = false );
 
 	public:
 	void addGroup (

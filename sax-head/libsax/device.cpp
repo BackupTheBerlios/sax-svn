@@ -119,7 +119,7 @@ int SaXManipulateDevices::addDesktopDevice (void) {
 	//====================================
 	// determine new card/desktop ID...
 	//------------------------------------
-	int newID = mCard->count();
+	int newID = mCard->getCount();
 	if (! mCard->addID ( newID )) {
 		return -1;
 	}
@@ -192,14 +192,14 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 		baseDriver = "rfbmouse";
 	}
 	QDict<QString>* data = mInput->getTablePointer (0);
-	int newID = mInput->count (true) * 2 + 1;
+	int newID = mInput->getCount (true) * 2 + 1;
 	if ((data) && (! data->isEmpty())) {
 		baseDriver ="kbd";
 		if (fashion == SAX_INPUT_VNC) {
 			baseDriver = "rfbkeyb";
 		}
 		baseID = "Keyboard";
-		newID  = mInput->count (true) * 2;
+		newID  = mInput->getCount (true) * 2;
 	}
 	if (! mInput -> addID (newID)) {
 		return -1;
@@ -238,7 +238,7 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 //------------------------------------
 int SaXManipulateDevices::removeDesktopDevice (int id) {
 	// .../
-	//! remove the desktop of the given id <id> and return the
+	//! remove the desktop of the given id (id) and return the
 	//! previous desktop id. The current desktop is set to this
 	//! previous desktop id. If the desktop does not exist or
 	//! the desktop id is the core (0) desktop the method will
@@ -273,7 +273,7 @@ int SaXManipulateDevices::removeDesktopDevice (int id) {
 	//====================================
     // update screen layout definition...
     //------------------------------------
-	updateLayout (mDesktop->count());
+	updateLayout (mDesktop->getCount());
 	return mDesktop -> getCurrentID();
 }
 
@@ -282,7 +282,7 @@ int SaXManipulateDevices::removeDesktopDevice (int id) {
 //------------------------------------
 int SaXManipulateDevices::removeInputDevice (int id) {
 	// .../
-	//! remove the input device of the given id <id> and return the
+	//! remove the input device of the given id (id) and return the
 	//! previous input device id. The current input device id is set
 	//! to this previous input device id. If the input device does
 	//! not exist or the input device id is the core (0|1) mouse or

@@ -206,7 +206,7 @@ SaXManipulateKeyboard::SaXManipulateKeyboard (
 bool SaXManipulateKeyboard::selectKeyboard (int ptr) {
 	// .../
 	//! select the keyboard device the changes should be applied to
-	//! if the device does not exist <false> is returned
+	//! if the device does not exist (false) is returned
 	// ----
 	if (! mImport) {
 		return false;
@@ -272,7 +272,7 @@ void SaXManipulateKeyboard::addXKBLayout (const QString& layout) {
 //------------------------------------
 void SaXManipulateKeyboard::removeXKBLayout (const QString& layout) {
 	// .../
-	//! remove the given layout <layout> from the current
+	//! remove the given layout (layout) from the current
 	//! list of keyboard layouts
 	// ----
 	if (! mImport) {
@@ -324,7 +324,7 @@ void SaXManipulateKeyboard::addXKBOption (const QString& option) {
 //------------------------------------
 void SaXManipulateKeyboard::removeXKBOption (const QString& option) {
 	// .../
-	//! remove a keyboard option. If the option <option>
+	//! remove a keyboard option. If the option (option)
 	//! does not exist nothing will happen
 	// ----
 	if (! mImport) {
@@ -380,7 +380,7 @@ void SaXManipulateKeyboard::setXKBVariant (
 //------------------------------------
 void SaXManipulateKeyboard::removeXKBVariant ( const QString& layout ) {
 	// .../
-	//! remove the variant set for the layout <layout>. This
+	//! remove the variant set for the layout (layout). This
 	//! method simply call setXKBVariant() with an empty variant
 	// ----
 	setXKBVariant (layout,"");
@@ -476,7 +476,7 @@ QList<QString> SaXManipulateKeyboard::getXKBVariantList (void) {
 //------------------------------------
 QString SaXManipulateKeyboard::getXKBVariant ( const QString& layout ) {
 	// .../
-	//! return the variant defined for the given layout <layout>
+	//! return the variant defined for the given layout (layout)
 	//! if there is no variant defined for the layout an empty string
 	//! is returned. if the layout doesn't exist and exception will
 	//! be throwed and an empty string is returned
@@ -521,7 +521,7 @@ QString SaXManipulateKeyboard::getXKBModel (void) {
 //------------------------------------
 int SaXManipulateKeyboard::findLayout (const QString& layout) {
 	// .../
-	//! find the position of the given layout <layout> in the
+	//! find the position of the given layout (layout) in the
 	//! current layout list and return the position or -1 if the
 	//! layout does not exist
 	// ----

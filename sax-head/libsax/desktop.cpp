@@ -66,7 +66,7 @@ SaXManipulateDesktop::SaXManipulateDesktop (
 bool SaXManipulateDesktop::selectDesktop (int desktop) {
 	// .../
 	//! select the desktop device the changes should be applied to
-	//! if the device does not exist <false> is returned
+	//! if the device does not exist (false) is returned
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return false;
@@ -102,7 +102,7 @@ void SaXManipulateDesktop::calculateModelines (bool calc) {
 //------------------------------------
 void SaXManipulateDesktop::setResolution (int c,int x,int y) {
 	// .../
-	//! set resolution <X>x<Y> for colordepth <c>. Using this
+	//! set resolution (X)x(Y) for colordepth (c). Using this
 	//! member will overwrite the current resolution setting
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
@@ -120,7 +120,7 @@ void SaXManipulateDesktop::setResolution (int c,int x,int y) {
 //------------------------------------
 void SaXManipulateDesktop::addResolution (int c,int x,int y) {
 	// .../
-	//! add resolution <X>x<Y> for colordepth <c>. Using this
+	//! add resolution (X)x(Y) for colordepth (c). Using this
 	//! member will add the resolution to the current setting
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
@@ -141,7 +141,7 @@ void SaXManipulateDesktop::addResolution (int c,int x,int y) {
 //------------------------------------
 void SaXManipulateDesktop::removeResolution (int c,int x,int y) {
 	// .../
-	//! remove the resolution <X>x<Y> for colordepth <c> from
+	//! remove the resolution (X)x(Y) for colordepth (c) from
 	//! the current Modes value
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
@@ -161,7 +161,7 @@ void SaXManipulateDesktop::removeResolution (int c,int x,int y) {
 //------------------------------------
 void SaXManipulateDesktop::setVirtualResolution (int c,int x,int y) {
 	// .../
-	//! set virtual resolution <X>x<Y> for colordepth <c>. This
+	//! set virtual resolution (X)x(Y) for colordepth (c). This
 	//! call will overwrite the current setting
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
@@ -179,8 +179,8 @@ void SaXManipulateDesktop::setVirtualResolution (int c,int x,int y) {
 //------------------------------------
 void SaXManipulateDesktop::removeVirtualResolution (int c) {
 	// .../
-	//! remove the virtual resolution <X>x<Y> set for
-	//! colordepth <c>.
+	//! remove the virtual resolution (X)x(Y) set for
+	//! colordepth (c).
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return;

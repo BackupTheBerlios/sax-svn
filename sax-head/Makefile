@@ -68,6 +68,7 @@ all:
 			( cd ./bindings/$$i && make -f Makefile.swig && make ) ;\
 		fi \
 	done )
+	( cd libsax && doxygen sax.dox )
 
 	# building GUI and tools...
 	# -------------------------

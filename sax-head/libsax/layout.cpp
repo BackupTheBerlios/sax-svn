@@ -86,7 +86,7 @@ bool SaXManipulateLayout::setXOrgLayout (
 	int screen, int left, int right, int top, int bottom
 ) {
 	// .../
-	//! set the layout for the given screen <screen>. The parameters
+	//! set the layout for the given screen (screen). The parameters
 	//! define the neighbour IDs at the positions left , right , top
 	//! and bottom. If there is no neighbour at position X a negative
 	//! value must be set
@@ -135,9 +135,9 @@ int SaXManipulateLayout::getMultiheadMode ( void ) {
 	//====================================
 	// check for nvidia TwinView mode...
 	//------------------------------------
-	if (mCard->count() == 1) {
+	if (mCard->getCount() == 1) {
 		SaXManipulateCard cardData (mCard);
-		for (int card=0;card<mCard->count();card++) {
+		for (int card=0;card<mCard->getCount();card++) {
 			cardData.selectCard (card);
 			QDict<QString> options = cardData.getOptions();
 			if (options["TwinView"]) {
@@ -155,7 +155,7 @@ int SaXManipulateLayout::getMultiheadMode ( void ) {
 	//====================================
 	// check for traditional mode...
 	//------------------------------------
-	if ((clone == "off") && (xrama == "off") && (mCard->count() > 1)) {
+	if ((clone == "off") && (xrama == "off") && (mCard->getCount() > 1)) {
 		return SAX_TRADITIONAL;
 	}
 	//====================================
@@ -184,7 +184,7 @@ int SaXManipulateLayout::getMultiheadMode ( void ) {
 //------------------------------------
 QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	// .../
-	//! return the layout for the given screen <screen>. The
+	//! return the layout for the given screen (screen). The
 	//! returned list has four elements which defines the
 	//! (left | right | top | bottom) neighbours of the requested
 	//! screen

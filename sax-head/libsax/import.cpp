@@ -261,7 +261,7 @@ void SaXImportProfile::splitImport (void) {
 	//!   baseImport->merge (profile->getTablePointerDATA());
 	//! \endcode
 	// ----
-	for (int n=0;n < count();n++) {
+	for (int n=0;n < getCount();n++) {
 		QDict<QString>* table = getTablePointer ( n );
 		QDictIterator<QString> it (*table);
 		for (; it.current(); ++it) {

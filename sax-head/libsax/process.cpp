@@ -39,7 +39,7 @@ SaXProcess::SaXProcess ( void ) {
 //------------------------------------
 void SaXProcess::start ( QList<char> args, int prog ) {
 	// .../
-	//! This start method will check if <prog> is a valid
+	//! This start method will check if (prog) is a valid
 	//! program and call it by adding the options set in
 	//! args. After the call the appropriate evaluation
 	//! method is called to store the data

@@ -301,10 +301,9 @@ class SaXImportCDBIF : public SaXProcess {
 *
 * - CDB_TOUCHERS\n
 *   Provides information about the supported touch screens refering to the
-*   file <filename>cdb/Touchscreens</filename>. Each data record contains
-*   information about the various options to configure a touch screen. The
-*   information is usefull in combination with an ISAX imported
-*   SaXImport(SAX_POINTERS) object
+*   file cdb/Touchscreens. Each data record contains information about the
+*   various options to configure a touch screen. The information is usefull
+*   in combination with an ISAX imported SaXImport(SAX_POINTERS) object
 *
 * Example:
 * \code

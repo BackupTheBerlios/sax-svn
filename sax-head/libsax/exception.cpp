@@ -355,7 +355,7 @@ void SaXException::excLayoutImportBindFailed (int id) {
 	emit saxLayoutImportBindFailed (id);
 }
 
-//! the /usr/X11R6/lib/X11/xkb/rules/<rule> file couldn't be opened
+//! the /usr/X11R6/lib/X11/xkb/rules/(rule) file couldn't be opened
 void SaXException::excXKBLoadRulesFailed (void) {
 	setErrorCode (ENOENT);
 	emit saxXKBLoadRulesFailed ();
@@ -375,7 +375,7 @@ void SaXException::excWrongInputFashion (const char* fashion) {
 	emit saxWrongInputFashion (fashion);
 }
 
-//! setID could not find a record with ID <id>
+//! setID could not find a record with ID (id)
 void SaXException::excSetStorageIDFailed (int id) {
 	setErrorCode (ERECORD,ERECORDID);
 	setErrorValue (id);
@@ -415,7 +415,7 @@ void SaXException::excLockUnsetFailed (int error) {
 	emit saxLockUnsetFailed (error);
 }
 
-//! empty screen definition in layout section for screen ID <id> 
+//! empty screen definition in layout section for screen ID (id)
 void SaXException::excGetScreenLayoutFailed (int id) {
 	setErrorCode (ESCREEN,ESCREENID);
 	setErrorValue (id);

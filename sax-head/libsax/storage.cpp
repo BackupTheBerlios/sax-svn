@@ -50,8 +50,8 @@ void SaXStorage::setItem ( const QString & key, const QString & val ) {
 //------------------------------------
 void SaXStorage::addItem ( const QString & key, const QString & val ) {
 	// .../
-	//! add a value to the current value of <key> seperated by
-	//! the comma sign. If there is no data behind <key> nothing
+	//! add a value to the current value of (key) seperated by
+	//! the comma sign. If there is no data behind (key) nothing
 	//! will happen
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
@@ -69,8 +69,8 @@ void SaXStorage::addItem ( const QString & key, const QString & val ) {
 //------------------------------------
 void SaXStorage::removeItem ( const QString & key, const QString & val ) {
 	// .../
-	//! remove the value <val> from the current value list stored
-	//! behind the key <key>. If the value is not found the list
+	//! remove the value (val) from the current value list stored
+	//! behind the key (key). If the value is not found the list
 	//! won't be changed
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
@@ -96,7 +96,7 @@ void SaXStorage::removeItem ( const QString & key, const QString & val ) {
 void SaXStorage::removeEntry ( const QString & key ) {
 	// .../
 	//! remove a complete entry from the data dictionary
-	//! The entry is searched as key named <key>
+	//! The entry is searched as key named (key)
 	// ----
 	mData.at (mCurrentID) -> remove (key);
 }
@@ -207,7 +207,7 @@ void SaXStorage::removeRawItem (
 //------------------------------------
 void SaXStorage::merge (QList< QDict<QString> > data) {
 	// .../
-	//! merge the data records from the list <data> into
+	//! merge the data records from the list (data) into
 	//! the corresponding data records of the object. If
 	//! a record does not exist it will be created 
 	// ----
@@ -336,8 +336,8 @@ bool SaXStorage::delID ( int id ) {
 //------------------------------------
 bool SaXStorage::setID ( int id ) {
 	// .../
-	//! change the current data record ID to the new ID <id>
-	//! If there is no data for ID <id> an exception is throwed
+	//! change the current data record ID to the new ID (id)
+	//! If there is no data for ID (id) an exception is throwed
 	//! and the current ID won't become changed
 	// ----
 	if (! mData.at (id)) {
@@ -364,7 +364,7 @@ int SaXStorage::getCurrentID ( void ) {
 //------------------------------------
 QDict<QString> SaXStorage::getTable ( int id ) {
 	// .../
-	//! return a copy of the data dictionary for the given ID <id>
+	//! return a copy of the data dictionary for the given ID (id)
 	// ----
 	return *mData.at (id);
 }
@@ -384,7 +384,7 @@ QDict<QString> SaXStorage::getCurrentTable ( void ) {
 //------------------------------------
 QDict<QString>* SaXStorage::getTablePointer ( int id ) {
 	// .../
-	//! return a pointer to the data dictionary at ID <id>
+	//! return a pointer to the data dictionary at ID (id)
 	// ----
     return mData.at (id);
 }
@@ -402,7 +402,7 @@ QDict<QString>* SaXStorage::getCurrentTablePointer ( void ) {
 //====================================
 // Get number of elements
 //------------------------------------
-int SaXStorage::count (bool noEmptyItem) {
+int SaXStorage::getCount (bool noEmptyItem) {
 	// .../
 	//! if noEmptyItem is set to true this method will calculate
 	//! the number of non empty data records. If noEmptyItem is set
@@ -431,8 +431,8 @@ void SaXStorage::addGroup (
 ) {
 	// .../
 	//! A method for the CDB interface only. This function will
-	//! use <group> as first key and <key> as second key to store 
-	//! the value <value> in a two dimensional data dictionary 
+	//! use (group) as first key and (key) as second key to store 
+	//! the value (value) in a two dimensional data dictionary 
 	// ----
 	if ( ! mCDB[group] ) {
 		mCDB.insert (group, new QDict<QString>);
@@ -460,7 +460,7 @@ QList< QDict<QString> > SaXStorage::getTablePointerCDB_DATA (
 ) {
 	// .../
 	//! A method for the CDB interface only. Returns a pointer
-	//! to the dictionary found under the key <group>. The pointer
+	//! to the dictionary found under the key (group). The pointer
 	//! is appended to a list because in most cases the return
 	//! value is used as parmeter to the merge() method
 	// ----

@@ -84,7 +84,7 @@ void SaXManipulatePath::addFontPath (const QString& path) {
 //------------------------------------
 void SaXManipulatePath::removeFontPath (const QString& path) {
 	// .../
-	//! remove the given font path <path> from the current
+	//! remove the given font path (path) from the current
 	//! list of font pathes. If the path doesn't exist nothing
 	//! will be changed
 	// ----
@@ -137,7 +137,7 @@ void SaXManipulatePath::addLoadableModule (const QString& module) {
 //------------------------------------
 void SaXManipulatePath::removeLoadableModule (const QString& module) {
 	// .../
-	//! remove the given module <module> from the current
+	//! remove the given module (module) from the current
 	//! list of modules. If the module doesn't exist nothing
 	//! will be changed
 	// ----
@@ -190,7 +190,7 @@ void SaXManipulatePath::addServerFlag (const QString& flag) {
 //------------------------------------
 void SaXManipulatePath::removeServerFlag (const QString& flag) {
 	// .../
-	//! remove the given flag <flag> from the current
+	//! remove the given flag (flag) from the current
 	//! list of flags. If the flag doesn't exist nothing
 	//! will be changed
 	// ----

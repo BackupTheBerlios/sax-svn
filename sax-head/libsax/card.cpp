@@ -52,7 +52,7 @@ SaXManipulateCard::SaXManipulateCard (SaXImport* in, int card) {
 bool SaXManipulateCard::selectCard (int card) {
 	// .../
 	//! select the card device the changes should be applied to
-	//! if the device does not exist <false> is returned
+	//! if the device does not exist (false) is returned
 	// ----
 	if (! mImport) {
 		return false;
@@ -309,7 +309,7 @@ QList<QString> SaXManipulateCard::getCardDrivers ( void ) {
 QDict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 	// .../
 	//! retrieve a list of card options for the given driver
-	//! name <driver>. A list of drivers can be obtained using the
+	//! name (driver). A list of drivers can be obtained using the
 	//! getCardDrivers() member method
 	// ----
 	mCDBCardOptions.clear();

@@ -49,7 +49,7 @@ SaXManipulatePointers::SaXManipulatePointers (SaXImport* in, int ptr) {
 bool SaXManipulatePointers::selectPointer (int ptr) {
 	// .../
 	//! select the pointer device the changes should be applied to
-	//! if the device does not exist <false> is returned
+	//! if the device does not exist (false) is returned
 	// ----
 	if (! mImport) {
 		return false;
@@ -324,7 +324,7 @@ void SaXManipulateMice::enableWheelEmulation (int btn) {
 	// .../
 	//! for mice without a wheel one button can be set
 	//! to emulate a wheel while pressed. This method will
-	//! setup the wheel emulation on button <btn>
+	//! setup the wheel emulation on button (btn)
 	// ----
 	if (! mImport) {
 		return;
@@ -660,7 +660,7 @@ QList<QString> SaXManipulateTablets::getTabletDrivers (void) {
 QDict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
 	// .../
 	//! retrieve a list of tablet options refering to the tablet
-	//! driver specified by <driver>. The result is a dictionary
+	//! driver specified by (driver). The result is a dictionary
 	//! saving the option name as key and the optional value as value.
 	//! the value specify the type of the option (bool,any,string) and
 	//! may contain additional information if type=string
@@ -848,7 +848,7 @@ int SaXManipulateTablets::addPen (const QString& group) {
 //------------------------------------
 int SaXManipulateTablets::removePen ( int id ) {
 	// .../
-	//! remove the Pen or Eraser located at section ID <id>
+	//! remove the Pen or Eraser located at section ID (id)
 	//! If the InputFashion type is a valid SAX_INPUT_PEN or
 	//! SAX_INPUT_ERASER the method will remove the pointer
 	//! device and return the new current ID
