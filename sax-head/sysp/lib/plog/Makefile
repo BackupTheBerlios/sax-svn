@@ -11,14 +11,14 @@ LIBS     = -lfl
 YACC     = yacc
 FLEX     = flex -i
 
-SRC      = plog.c parse.c
+SRC      = plog.cc parse.cc
 OBJ      = y.tab.o plog.o parse.o 
 
 # build...
 # ---------
 all:${OBJ}
 
-parse.c:
+parse.cc:
 	@echo "parse.c is not a target for me... skip"
 
 y.tab.o: y.tab.c lex.yy.c
@@ -30,11 +30,11 @@ y.tab.c:  parse.y
 lex.yy.c: parse.l
 	$(FLEX) parse.l
 
-plog.o:plog.c ../syslib.h
-	${CC} ${CFLAGS} -c plog.c
+plog.o:plog.cc ../syslib.h
+	${CC} ${CFLAGS} -c plog.cc
 
-parse.o:parse.c ../syslib.h
-	${CC} ${CFLAGS} -c parse.c
+parse.o:parse.cc ../syslib.h
+	${CC} ${CFLAGS} -c parse.cc
 
 
 clean:
