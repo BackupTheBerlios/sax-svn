@@ -122,7 +122,7 @@ sub main {
 	}
 	qx (cp $archive /tmp/sax);
 	qx (cp ./$Template/* ./$Help/sax*.txt ./sax.changes /tmp/sax 2>/dev/null);
-	qx (.fuzzy > /tmp/sax/Status);
+	qx (./.fuzzy > /tmp/sax/Status);
  
 	my $dir;
 	my $date;
