@@ -320,6 +320,7 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 /usr/X11R6/%{_lib}/xfine/xfine.gtx
 /usr/X11R6/%{_lib}/sax/sysp/script/installed.pl
 /usr/X11R6/%{_lib}/sax/sysp/script/killdot.pl
+/usr/X11R6/%{_lib}/sax/sysp/script/vbios.pl
 /usr/X11R6/%{_lib}/sax/sysp/script/machine.pl
 /usr/X11R6/%{_lib}/sax/sysp/script/preparelog.pl
 /usr/X11R6/%{_lib}/sax/sysp/script/checkmap.pl

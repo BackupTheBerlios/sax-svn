@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Tue Apr 29 17:49:49 CEST 2003 - ms@suse.de
+
+- changed fallback order of server detection to
+  real-driver > framebuffer > vesa > vga
+- add vbios script to check for valid VESA BIOS
+- update SLEC patch to disable windowmanager in testX
+- add NVidia Quadro4 multihead Profile
+- fixed profile handler in cardhandler.c to copy the
+  same name and vendor as used for the primary device
+- update Identity's
+
+-------------------------------------------------------------------
 Tue Apr 29 15:53:22 CEST 2003 - ms@suse.de
 
 - SLEC changes in sax2_slec.dif:
