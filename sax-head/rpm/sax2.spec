@@ -126,6 +126,23 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+
+%package -n sax2-libsax-devel
+Version:      1.2
+Release:      11
+Requires:     sax2-libsax
+Summary:      SuSE advanced X Window System-configuration library header files
+Group:        System/X11/Libraries
+Provides:     sax2:/usr/include/sax/sax.h
+
+%description -n sax2-libsax-devel
+This package contains the core library headers for the
+SuSE Advanced X-Configuration development
+
+Authors:
+--------
+    Marcus Schäfer <ms@suse.de>
+
 %prep
 %setup -n sax -a 1
 if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
@@ -514,7 +531,6 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/X11R6/%{_lib}/sax/sysp/maps/Driver.map
 /usr/X11R6/%{_lib}/sax/api/data/cdb/*
 /usr/X11R6/%{_lib}/sax/profile
-
 #=================================================
 # SaX-libsax file list...  
 # ------------------------------------------------
@@ -522,3 +538,12 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %files -n sax2-libsax
 %defattr(-,root,root)
 /usr/%{_lib}/libsax.so*
+#=================================================
+# SaX-libsax-devel file list...  
+# ------------------------------------------------
+
+%files -n sax2-libsax-devel
+%defattr(-,root,root)
+%dir /usr/include/sax
+/usr/include/sax
+

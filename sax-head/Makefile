@@ -39,6 +39,7 @@ APITOOLS     = ${usr_prefix}/${lib_prefix}/sax/api/tools
 FILES        = ${var_prefix}/sax/files
 LIBVZ        = ${usr_prefix}/${lib_prefix}
 USRLIBVZ     = ${prefix}/${lib_prefix}
+INCVZ        = ${prefix}/include/sax
 VARVZ        = ${var_prefix}/sax
 LOCALEVZ     = ${prefix}/share/locale
 LC           = LC_MESSAGES
@@ -75,7 +76,7 @@ all:
 
 install:
 	install -d -m 755 ${BINVZ} ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
-	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ}
+	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ} ${INCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${FONTVZ} ${VARVZ} ${CREATEVZ}
@@ -135,6 +136,7 @@ install:
 	# install library files...
 	# -------------------------
 	cp ./libsax/libsax.so*  ${USRLIBVZ}
+	cp ./libsax/*.h         ${INCVZ}
 
 	# install API data files...
 	# --------------------------
