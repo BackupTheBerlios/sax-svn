@@ -176,6 +176,10 @@ void XMouse::dialogCreate (void) {
 		mouseList     , SIGNAL ( clicked    (QListBoxItem *) ),
 		this          , SLOT   ( slotSelect (QListBoxItem *) )
 	);
+	QObject::connect (
+		mouseList     , SIGNAL ( selectionChanged (QListBoxItem *) ),
+		this          , SLOT   ( slotSelect       (QListBoxItem *) )
+	);
 	QObject::connect ( 
 		mAdd          , SIGNAL ( clicked() ),
 		this          , SLOT   ( slotAdd() ) 

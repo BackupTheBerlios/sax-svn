@@ -186,8 +186,12 @@ void XCard::dialogCreate (void) {
 	// connect me to the world...
 	// ---------------------------
 	QObject::connect ( 
-		mCardList  , SIGNAL ( clicked    (QListBoxItem *) ),
+		mCardList , SIGNAL ( clicked    (QListBoxItem *) ),
 		this      , SLOT   ( slotSelect (QListBoxItem *) )
+	);
+	QObject::connect (
+		mCardList , SIGNAL ( selectionChanged (QListBoxItem *) ),
+		this      , SLOT   ( slotSelect       (QListBoxItem *) )
 	);
 	QObject::connect ( 
 		mAdd      , SIGNAL ( clicked() ),

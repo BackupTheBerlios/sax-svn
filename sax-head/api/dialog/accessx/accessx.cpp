@@ -79,8 +79,8 @@ void XAccessX::dialogCreate (void) {
 		1,Horizontal,mDialog
 	);
 	activate -> setFrameStyle(QFrame::NoFrame);
-	mEnable = new QRadioButton ( mText["enableacx"],activate );
 	mDisable= new QRadioButton ( mText["disableacx"],activate );
+	mEnable = new QRadioButton ( mText["enableacx"],activate );
 	mDisable -> setChecked   ( TRUE );
 	mControl = new QButtonGroup ( 
 		1,Horizontal,mText["speed"],mDialog 

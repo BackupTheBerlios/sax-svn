@@ -231,6 +231,10 @@ void XMonitor::dialogCreate (void) {
 		this, SLOT (slotSelect (QListBoxItem *))
 	);
 	QObject::connect (
+		monitorList, SIGNAL (selectionChanged (QListBoxItem *)),
+		this, SLOT (slotSelect (QListBoxItem *))
+	);
+	QObject::connect (
 		mSetup, SIGNAL (clicked (void)),
 		this, SLOT (slotSetup (void))
 	);

@@ -140,6 +140,10 @@ void XTouchScreen::dialogCreate (void) {
 		this     , SLOT   ( slotSelect (QListBoxItem *) )
 	);
 	QObject::connect (
+		touchList, SIGNAL ( selectionChanged (QListBoxItem *) ),
+		this     , SLOT   ( slotSelect       (QListBoxItem *) )
+	);
+	QObject::connect (
 		mTop     , SIGNAL ( applyButtonPressed() ),
 		this     , SLOT   ( slotTopOk() )
     );
