@@ -30,7 +30,7 @@ Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.8
 Release:      108
 Group:        System/X11/Utilities
-License:      LGPL, Other License(s), see package
+License:      GPL
 Source:       sax2.tar.bz2
 Source1:      sax2_pixmaps.tar.bz2
 Source2:      sax2_nvidia.tar.bz2
@@ -267,7 +267,7 @@ fi
 if [ ! -d $RPM_BUILD_ROOT%{_defaultdocdir}/sax2 ];then
 	mkdir -p $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 fi
-install -m 644 ./doc/LICENCE $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
+install -m 644 ./LICENSE $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/README  $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/en/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/de/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
@@ -423,7 +423,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
 /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
 /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
-%doc %{_defaultdocdir}/sax2/LICENCE
+%doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.en.ps
 %doc %{_defaultdocdir}/sax2/sax.en.dvi

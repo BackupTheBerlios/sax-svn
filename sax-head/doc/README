@@ -13,45 +13,20 @@ or directly
 
 How to build and install SaX2
 ------------------------------
- 1) first you have to extract the package:
+ 1) Install the source RPM (sax2.spm) with YaST2
 
-	tar -xjvf sax2.tar.bz2
+ 2) Enter the source directory:
 
- 2) now change to the sax directory and 
-    apply the patches
+	su root
+	cd /usr/src/packages/SPECS
 
-	cd sax
-	tar -xvjf ../sax2_pixmaps.tar.bz2
-	patch -p0 < ../sax2_binmode.dif
-	patch -p0 < ../sax2_monitor.dif
+ 3) Build the package:
 
- 2) run make now
+	rpmbuild -ba sax2.spec
 
-	make
+ 4) Find the RPM packages at:
 
- 3) install the package data:
-
-	export ASK_FOR_CHANGELOG=no
-	export TEMPLATE_CHECK=no
-
-	make install
-	
- 4) create startup links
-
-	rm -f /usr/X11R6/bin/sax2 
-	cd /usr/X11R6/bin && ln -s SaX2 sax2
-	rm -f /usr/X11R6/bin/xfine2
-	cd /usr/X11R6/bin && ln -s /usr/X11R6/lib/xfine/xfine.pl xfine2
-	rm -f /usr/sbin/sysp
-	cd /usr/sbin && ln -s /usr/X11R6/lib/sax/sysp.pl sysp
-
- 5) create XFine2 cache directory
-
-	mkdir -p /var/cache/xfine
-	
- 6) install fvwm config
-
-	install -m 644 api/data/fvwmrc /usr/X11R6/share/fvwm/fvwmrc
+	/usr/src/packages/RPMS/...
 
 --
 remember to have fun :-)
