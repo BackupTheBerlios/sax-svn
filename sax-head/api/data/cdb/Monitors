@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 29 16:44:56 2003
+# Author: Marcus Schaefer <sax@suse.de>, Fri Oct 24 15:14:24 2003
 #
 # Template for monitor data
 # --------------------------
@@ -13149,6 +13149,17 @@ FUJITSU SIEMENS:X180F  {
 }
 
 #==============================================
+# C900
+#----------------------------------------------
+FUJITSU SIEMENS:C900  {
+ DDC=FUS0360
+ Option=DPMS
+ Hsync=30-96
+ Resolution=1280x1024
+ Vsync=50-160
+}
+
+#==============================================
 # 17GD
 #----------------------------------------------
 FUNAI:17GD  {
@@ -23614,6 +23625,17 @@ NEC:LCD 400SF  {
 NEC:LCD1810X  {
  Hsync=24-80
  Vsync=56-75
+}
+
+#==============================================
+# LCD1830
+#----------------------------------------------
+NEC:LCD1830  {
+ DDC=NEC65B1
+ Option=DPMS
+ Hsync=24-80
+ Resolution=1280x1024
+ Vsync=55-80
 }
 
 #==============================================
