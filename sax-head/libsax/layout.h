@@ -73,7 +73,7 @@ class SaXManipulateLayoutIF : public SaXException {
 * how to check for the multihead mode currently used:
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

@@ -165,7 +165,7 @@ class SaXManipulateKeyboardIF : public SaXKeyRules {
 * how to add an additional keyboard layout to the core layout:
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

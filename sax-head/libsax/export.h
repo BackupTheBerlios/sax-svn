@@ -80,7 +80,7 @@ class SaXExportIF : public SaXException {
 * /var/lib/sax
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * SaXImport* import = new SaXImport (SAX_DESKTOP);
 * SaXExport* export = new SaXExport (import,NULL);

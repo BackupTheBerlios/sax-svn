@@ -103,7 +103,7 @@ class SaXManipulateDesktopIF : public SaXException {
 * a new standard resolution in 24 bit color depth:
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

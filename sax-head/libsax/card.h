@@ -85,7 +85,7 @@ class SaXManipulateCardIF : public SaXException {
 * card manipulator to force setting up the PanelSize on a radeon based
 * NoteBook which reports the wrong size in its DDC record
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

@@ -77,7 +77,7 @@ class SaXManipulatePathIF : public SaXException {
 * sequence has no special meaning and is  passed to clients.
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

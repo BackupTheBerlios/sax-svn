@@ -108,7 +108,7 @@ class SaXProcessIF : public SaXStorage {
 * provided by the SaXStorage class.
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * QList<char> sysp_options;
 * sysp_options.append ( "-q" );

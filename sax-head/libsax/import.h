@@ -113,7 +113,7 @@ class SaXImportIF : public SaXProcess {
 *
 * Example:
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * SaXImport* card = new SaXImport (SAX_CARD);
 * card->doImport();
@@ -207,7 +207,7 @@ class SaXImportSyspIF : public SaXProcess {
 *
 * Example:
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * SaXImportSysp* card = new SaXImportSysp (SYSP_CARD);
 * card->doImport();
@@ -308,7 +308,7 @@ class SaXImportCDBIF : public SaXProcess {
 *
 * Example:
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * SaXImportCDB* cards = new SaXImportCDB (CDB_CARDS);
 * cards->doImport();

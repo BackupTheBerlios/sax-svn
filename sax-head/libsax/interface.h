@@ -57,7 +57,7 @@ typedef void* (*Factory) ();
 * #include <stdlib.h>
 * #include <dlfcn.h>
 *
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * using namespace LML;
 *

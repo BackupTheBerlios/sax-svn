@@ -111,7 +111,7 @@ class SaXConfigIF : public SaXException {
 * using the getParseError* methods
 * 
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int importID[7] = {
 *     SAX_CARD,

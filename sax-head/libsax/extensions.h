@@ -118,7 +118,7 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 * configuration:
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

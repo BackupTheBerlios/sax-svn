@@ -68,7 +68,7 @@ class SaXInitIF : public SaXException {
 * that more detailed:
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * SaXInit init;
 * if (init.needInit()) {

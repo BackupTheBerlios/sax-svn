@@ -146,7 +146,7 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 * following example demonstrate how to disable the mouse wheel.
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);
@@ -254,7 +254,7 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 * demonstrate how to add a tablet with one stylus-pen applied
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);
@@ -383,7 +383,7 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 * demonstrate how to add a touch panel to the configuration.
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);

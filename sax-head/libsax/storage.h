@@ -107,7 +107,7 @@ class SaXStorageIF : public SaXException {
 * dictionaries
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * SaXStorage container;
 * container.setItem ("Identifier","Monitor[0]");

@@ -87,7 +87,7 @@ class SaXManipulateDevicesIF : public SaXException {
 * for adding a new Tablet to the configuration:
 *
 * \code
-* #include <sax.h>
+* #include <sax/sax.h>
 *
 * int main (void) {
 *     SaXException().setDebug (true);
