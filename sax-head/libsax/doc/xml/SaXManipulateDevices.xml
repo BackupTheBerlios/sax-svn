@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC
+    "-//OASIS//DTD DocBook XML V4.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+>
+<refentry id="SaXManipulateDevices">
+
+<!--
+#=============================================
+# Header settings...
+#=============================================
+-->
+<refentryinfo><title>libsax class reference</title></refentryinfo>
+<refentryinfo><date>January 2005</date></refentryinfo>
+<refentryinfo><productname>libsax-4.8</productname></refentryinfo>
+<refmeta>
+<refentrytitle>SaX::ManipulateDevices</refentrytitle>
+<manvolnum>3</manvolnum>
+</refmeta>
+<refnamediv>
+<refname>SaXManipulateDevices</refname>
+<refpurpose>Handler for adding/removing desktop and input devices</refpurpose>
+</refnamediv>
+
+<!--
+#=============================================
+# SYNOPSIS...
+#=============================================
+-->
+<refsynopsisdiv>
+<synopsis>
+#include &lt;sax.h&gt;
+</synopsis>
+Inherits <filename>SaXException</filename>
+</refsynopsisdiv>
+
+<!--
+#=============================================
+# Public Members...
+#=============================================
+-->
+<refsect2><title>Public Members</title>
+<para>
+	<itemizedlist>
+	<listitem><para>
+		<function>SaXManipulateDevices</function> ( SaXImport*,SaXImport*,SaXImport* )
+	</para></listitem>
+	<listitem><para>
+		<function>SaXManipulateDevices</function> ( SaXImport*,SaXImport* )
+	</para></listitem>
+	<listitem><para>
+		int <function>addDesktopDevice</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		int <function>addInputDevice</function>   ( const char* )
+	</para></listitem>
+	<listitem><para>
+		int <function>deleteDesktopDevice</function> ( int )
+	</para></listitem>
+	<listitem><para>
+		int <function>deleteInputDevice</function>   ( int )
+	</para></listitem>
+</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# Private Members...
+#=============================================
+-->
+<refsect2><title>Private Members</title>
+<para>
+    <itemizedlist>		
+	<listitem><para>
+		void <function>updateLayout</function> (int)
+	</para></listitem>
+	</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# DESCRIPTION...
+#=============================================
+-->
+<refsect1><title>Description</title>
+<para>
+The device manipulator is either used to create a new desktop- or
+a new input-Device. A new input-Device needs to be transformed into a
+standard Keyboard,Mouse,Tablet or Touchscreen device before it can
+be handled by the appropriate manipulator for the device. A new
+desktop-Device instead can be handled by the DesktopManipulator
+directly after the device has been created. To create a new input
+device the device manipulator requires two imports
+<function>Pointers</function> and <function>Layout</function>
+whereas the constructor to create a new desktop device requires
+three imports <function>Desktop,Card</function> and
+<function>Layout</function>. The following example will show
+how to use the device manipulator for adding a new Tablet to
+the configuration:
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# EXAMPLES...
+#=============================================
+-->
+<refsect2><title>Example</title>
+<programlisting>
+#include &lt;sax.h&gt;
+
+int main (void) {
+    SaXException().setDebug (true);
+    QDict&lt;SaXImport&gt; section;
+    int importID[] = {
+        SAX_POINTERS,
+        SAX_LAYOUT
+    };
+    printf ("Importing data...\n");
+    SaXConfig* config = new SaXConfig;
+    for (int id=0; id&lt;2; id++) {
+        SaXImport* import = new SaXImport ( importID[id] );
+        import -&gt; setSource ( SAX_SYSTEM_CONFIG );
+        import -&gt; doImport();
+        config -&gt; addImport (import);
+        section.insert (
+            import-&gt;getSectionName(),import
+        );
+    }
+    printf ("Adding new pointer device... ");
+    SaXManipulateDevices dev (
+        section["Pointers"],section["Layout"]
+    );
+    int tabletID = dev.addInputDevice (SAX_INPUT_TABLET);
+    printf ("ID: %d [SAX_INPUT_TABLET] added\n",tabletID);
+
+    printf ("Setting up tablet data... ");
+    SaXManipulateTablets pointer (
+        section["Pointers"],section["Layout"]
+    );
+    if (pointer.selectPointer (tabletID)) {
+        QList&lt;QString&gt; tabletList = pointer.getTabletList();
+        QString* myTablet = tabletList.at (3);
+        pointer.setTablet( *myTablet );
+        printf ("[%s]\n",myTablet-&gt;ascii());
+    }
+    printf ("writing configuration\n");
+    config -&gt; setMode (SAX_MERGE);
+    if ( ! config -&gt; createConfiguration() ) {
+        printf ("%s\n",config-&gt;errorString().ascii());
+        printf ("%s\n",config-&gt;getParseErrorValue().ascii());
+        return 1;
+    }
+    return (0);
+}
+</programlisting>
+</refsect2>
+
+<!--
+#=============================================
+# MEMBER FUNCTION DOCUMENTATION...
+#=============================================
+-->
+<refsect1><title>MEMBER FUNCTION DOCUMENTATION</title>
+<variablelist>
+<varlistentry>
+<term><function>SaXManipulateDevices::SaXManipulateDevices</function> ( SaXImport* desktop ,SaXImport* card ,SaXImport* layout )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>SaXManipulateDevices::SaXManipulateDevices</function> ( SaXImport* input, SaXImport* layout )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateDevices::addDesktopDevice</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateDevices::addInputDevice</function> (const char* fashion)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateDevices::deleteDesktopDevice</function> (int id)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateDevices::deleteInputDevice</function> (int id)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateDevices::updateLayout</function> (int newID)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# POSSIBLE EXCEPTIONS...
+#=============================================
+-->
+<refsect1><title>POSSIBLE EXCEPTIONS</title>
+<variablelist>
+<varlistentry>
+<term><function>excNullPointerArgument</function></term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excDesktopImportBindFailed</function> ( id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excCardImportBindFailed</function> ( id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excLayoutImportBindFailed</function> ( id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excPointerImportBindFailed</function> ( id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excWrongInputFashion</function> ( fashionType )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excInvalidArgument</function> ( argument )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# COPYRIGHT...
+#=============================================
+-->
+<refsect1><title>COPYRIGHT</title>
+<para>
+(C) Copyright 2000-2005 - SuSE GmbH, <ulink>http://www.suse.de</ulink>.
+See the license file included in the distribution for a complete license
+statement.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# AUTHOR...
+#=============================================
+-->
+<refsect1><title>AUTHOR</title>
+<para>
+Marcus Schäfer <email>ms@suse.de</email>
+</para>
+</refsect1>
+</refentry>

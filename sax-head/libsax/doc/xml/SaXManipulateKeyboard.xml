@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC
+    "-//OASIS//DTD DocBook XML V4.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+>
+<refentry id="SaXManipulateKeyboard">
+
+<!--
+#=============================================
+# Header settings...
+#=============================================
+-->
+<refentryinfo><title>libsax class reference</title></refentryinfo>
+<refentryinfo><date>January 2005</date></refentryinfo>
+<refentryinfo><productname>libsax-4.8</productname></refentryinfo>
+<refmeta>
+<refentrytitle>SaX::ManipulateKeyboard</refentrytitle>
+<manvolnum>3</manvolnum>
+</refmeta>
+<refnamediv>
+<refname>SaXManipulateKeyboard</refname>
+<refpurpose>Set of Keyboard configuration methods</refpurpose>
+</refnamediv>
+
+<!--
+#=============================================
+# SYNOPSIS...
+#=============================================
+-->
+<refsynopsisdiv>
+<synopsis>
+#include &lt;sax.h&gt;
+</synopsis>
+Inherits <filename>SaXKeyRules</filename>
+</refsynopsisdiv>
+
+<!--
+#=============================================
+# Public Members...
+#=============================================
+-->
+<refsect2><title>Public Members</title>
+<para>
+	<itemizedlist>
+	<listitem><para>
+		<function>SaXManipulateKeyboard</function> ( SaXImport*, int = 0 )
+	</para></listitem>
+	<listitem><para>
+		void <function>setXKBModel</function>       ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setXKBLayout</function>      ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>addXKBLayout</function>      ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>deleteXKBLayout</function>   ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setXKBOption</function>      ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>addXKBOption</function>      ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>deleteXKBOption</function>   ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setXKBVariant</function>     ( const QString&amp; , const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>deleteXKBVariant</function>  ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setMapping</function>        ( const QString&amp; , const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getXKBVariant</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getXKBModel</function>   ( void  )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getXKBOptionList</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getXKBLayout</function>     ( void )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getXKBVariantList</function>    ( void )
+	</para></listitem>
+	<listitem><para>
+		bool <function>selectKeyboard</function> ( int )
+	</para></listitem>
+</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# Private Members...
+#=============================================
+-->
+<refsect2><title>Private Members</title>
+<para>
+    <itemizedlist>		
+	<listitem><para>
+		int <function>findLayout</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>createList</function> ( const QString&amp; )
+	</para></listitem>
+	</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# DESCRIPTION...
+#=============================================
+-->
+<refsect1><title>Description</title>
+<para>
+The keyboard manipulator requires one import object (Keyboard) to become
+created. Once created the manipulator object is able to get/set specific
+keyboard options and is able to access the XKB file extension to know
+about the supported keyboards. The following example will demonstrate
+how to add an additional keyboard layout to the core layout:
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# EXAMPLES...
+#=============================================
+-->
+<refsect2><title>Example</title>
+<programlisting>
+#include &lt;sax.h&gt;
+
+int main (void) {
+    SaXException().setDebug (true);
+    QDict&lt;SaXImport&gt; section;
+
+    printf ("Importing data...\n");
+    SaXConfig* config = new SaXConfig;
+    SaXImport* import = new SaXImport ( SAX_KEYBOARD );
+    import -&gt; setSource ( SAX_SYSTEM_CONFIG );
+    import -&gt; doImport();
+    config -&gt; addImport (import);
+    section.insert (
+        import-&gt;getSectionName(),import
+    );
+    printf ("Add czech keyboard layout...\n");
+    SaXManipulateKeyboard mKeyboard (
+        section["Keyboard"]
+    );
+    if (mKeyboard.selectKeyboard (SAX_CORE_KBD)) {
+        mKeyboard.addXKBLayout ("cz");
+    }
+    printf ("Writing configuration\n");
+    config -&gt; setMode (SAX_MERGE);
+    if ( ! config -&gt; createConfiguration() ) {
+        printf ("%s\n",config-&gt;errorString().ascii());
+        printf ("%s\n",config-&gt;getParseErrorValue().ascii());
+        return 1;
+    }
+    return 0;
+}
+
+</programlisting>
+</refsect2>
+
+<!--
+#=============================================
+# MEMBER FUNCTION DOCUMENTATION...
+#=============================================
+-->
+<refsect1><title>MEMBER FUNCTION DOCUMENTATION</title>
+<variablelist>
+<varlistentry>
+<term><function>SaXManipulateKeyboard::SaXManipulateKeyboard</function> (SaXImport* in, int kbd) : SaXKeyRules ()</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXManipulateKeyboard::selectKeyboard</function> (int ptr)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::setXKBModel</function> (const QString&amp; model)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::setXKBLayout</function> (const QString&amp; layout)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::addXKBLayout</function> (const QString&amp; layout)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::deleteXKBLayout</function> (const QString&amp; layout)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::setXKBOption</function> (const QString&amp; option)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::addXKBOption</function> (const QString&amp; option)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::deleteXKBOption</function> (const QString&amp; option)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::setXKBVariant</function> ( const QString&amp; layout, const QString&amp; variant )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::deleteXKBVariant</function> ( const QString&amp; layout )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateKeyboard::setMapping</function> ( const QString&amp; type,const QString&amp; mapping )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateKeyboard::getXKBOptionList</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateKeyboard::getXKBLayout</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateKeyboard::getXKBVariantList</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXManipulateKeyboard::getXKBVariant</function> ( const QString&amp; layout )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXManipulateKeyboard::getXKBModel</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateKeyboard::findLayout</function> (const QString&amp; layout)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateKeyboard::createList</function> ( const QString&amp; data)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# POSSIBLE EXCEPTIONS...
+#=============================================
+-->
+<refsect1><title>POSSIBLE EXCEPTIONS</title>
+<variablelist>
+<varlistentry>
+<term><function>excXKBLoadRulesFailed</function></term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excNullPointerArgument</function></term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excKeyboardImportBindFailed</function> ( id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excXKBLayoutUndefined</function> ( layout )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excInvalidArgument</function> ( argument )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# COPYRIGHT...
+#=============================================
+-->
+<refsect1><title>COPYRIGHT</title>
+<para>
+(C) Copyright 2000-2005 - SuSE GmbH, <ulink>http://www.suse.de</ulink>.
+See the license file included in the distribution for a complete license
+statement.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# AUTHOR...
+#=============================================
+-->
+<refsect1><title>AUTHOR</title>
+<para>
+Marcus Schäfer <email>ms@suse.de</email>
+</para>
+</refsect1>
+</refentry>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC
+    "-//OASIS//DTD DocBook XML V4.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+>
+<refentry id="SaXManipulateTablets">
+
+<!--
+#=============================================
+# Header settings...
+#=============================================
+-->
+<refentryinfo><title>libsax class reference</title></refentryinfo>
+<refentryinfo><date>January 2005</date></refentryinfo>
+<refentryinfo><productname>libsax-4.8</productname></refentryinfo>
+<refmeta>
+<refentrytitle>SaX::ManipulateTablets</refentrytitle>
+<manvolnum>3</manvolnum>
+</refmeta>
+<refnamediv>
+<refname>SaXManipulateTablets</refname>
+<refpurpose>Set of Tablet configuration methods</refpurpose>
+</refnamediv>
+
+<!--
+#=============================================
+# SYNOPSIS...
+#=============================================
+-->
+<refsynopsisdiv>
+<synopsis>
+#include &lt;sax.h&gt;
+</synopsis>
+Inherits <filename>SaXManipulatePointers</filename>
+</refsynopsisdiv>
+
+<!--
+#=============================================
+# Public Members...
+#=============================================
+-->
+<refsect2><title>Public Members</title>
+<para>
+	<itemizedlist>
+	<listitem><para>
+		<function>SaXManipulateTablets</function> ( SaXImport*, SaXImport* , int = 1 )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getTabletList</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getPenList</function>    ( void )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getTabletDrivers</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		QDict&lt;QString&gt; <function>getTabletOptions</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setTablet</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setType</function>   ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setMode</function>   ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		int  <function>addPen</function>    ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		int  <function>deletePen</function> ( int )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getName</function>   ( void )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getVendor</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getType</function>   ( void )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getMode</function>   ( void )
+	</para></listitem>
+	<listitem><para>
+		bool <function>isTablet</function>     ( void )
+	</para></listitem>
+	<listitem><para>
+		bool <function>isPen</function>        ( void )
+	</para></listitem>
+	<listitem><para>
+		bool <function>isEraser</function>     ( void )
+	</para></listitem>
+	</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# DESCRIPTION...
+#=============================================
+-->
+<refsect1><title>Description</title>
+<para>
+The tablet manipulator requires two import object (Pointers and Layout) to
+become created. Once created the manipulator object is able to get/set tablet
+configuration information. To set up a tablet a new input device needs
+to created first which get transformed into a tablet using the <function>
+setTablet()</function> method. Based on this tablet device the manipulator
+is able to add additional input devices using the <function>addPen()</function>
+method which results in a stylus or an eraser pointer for this tablet.
+The following example demonstrate how to add a tablet with one stylus-pen
+applied
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# EXAMPLES...
+#=============================================
+-->
+<refsect2><title>Example</title>
+<programlisting>
+#include &lt;sax.h&gt;
+
+int main (void) {
+    SaXException().setDebug (true);
+    QDict&lt;SaXImport&gt; section;
+    int importID[] = {
+        SAX_POINTERS,
+        SAX_LAYOUT
+    };
+    printf ("Importing data...\n");
+    SaXConfig* config = new SaXConfig;
+    for (int id=0; id&lt;2; id++) {
+        SaXImport* import = new SaXImport ( importID[id] );
+        import -&gt; setSource ( SAX_SYSTEM_CONFIG );
+        import -&gt; doImport();
+        config -&gt; addImport (import);
+        section.insert (
+            import-&gt;getSectionName(),import
+        );
+    }
+    printf ("Adding new pointer device... ");
+    SaXManipulateDevices dev (
+        section["Pointers"],section["Layout"]
+    );
+    int tabletID = dev.addInputDevice (SAX_INPUT_TABLET);
+    printf ("ID: %d is [SAX_INPUT_TABLET]: added\n",tabletID);
+
+    printf ("Setting up tablet data... ");
+    SaXManipulateTablets pointer (
+        section["Pointers"],section["Layout"]
+    );
+    if (pointer.selectPointer (tabletID)) {
+        QList&lt;QString&gt; tabletList = pointer.getTabletList();
+        QList&lt;QString&gt; penList = pointer.getPenList();
+        QString* myTablet = tabletList.at (3);
+        QString* myPen = penList.at(3);
+        pointer.setTablet( *myTablet );
+        pointer.addPen ( *myPen );
+        printf ("Tablet: [%s] with pen: [%s] configured\n",
+            myTablet-&gt;ascii(),myPen-&gt;ascii()
+        );
+    }
+    printf ("writing configuration\n");
+    config -&gt; setMode (SAX_MERGE);
+    if ( ! config -&gt; createConfiguration() ) {
+        printf ("%s\n",config-&gt;errorString().ascii());
+        printf ("%s\n",config-&gt;getParseErrorValue().ascii());
+        return 1;
+    }
+    return (0);
+}
+</programlisting>
+</refsect2>
+
+<!--
+#=============================================
+# MEMBER FUNCTION DOCUMENTATION...
+#=============================================
+-->
+<refsect1><title>MEMBER FUNCTION DOCUMENTATION</title>
+<variablelist>
+<varlistentry>
+<term><function>SaXManipulateTablets::SaXManipulateTablets</function> ( SaXImport* pointer, SaXImport* layout, int id ) : SaXManipulatePointers (pointer,id)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateTablets::setType</function> (const QString&amp; type)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateTablets::setMode</function> (const QString&amp; mode)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXManipulateTablets::isTablet</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXManipulateTablets::isPen</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXManipulateTablets::isEraser</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXManipulateTablets::getName</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXManipulateTablets::getVendor</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXManipulateTablets::getType</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXManipulateTablets::getMode</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateTablets::getTabletDrivers</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QDict&lt;QString&gt; <function>SaXManipulateTablets::getTabletOptions</function> (const QString&amp; driver)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateTablets::getTabletList</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulateTablets::getPenList</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulateTablets::setTablet</function> (const QString&amp; group)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateTablets::addPen</function> (const QString&amp; group)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>int <function>SaXManipulateTablets::deletePen</function> ( int id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# POSSIBLE EXCEPTIONS...
+#=============================================
+-->
+<refsect1><title>POSSIBLE EXCEPTIONS</title>
+<variablelist>
+<varlistentry>
+<term><function>excCDBRecordNotFound</function> ( driver )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excPointerFashionTypeFailed</function> ( fashionType )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# COPYRIGHT...
+#=============================================
+-->
+<refsect1><title>COPYRIGHT</title>
+<para>
+(C) Copyright 2000-2005 - SuSE GmbH, <ulink>http://www.suse.de</ulink>.
+See the license file included in the distribution for a complete license
+statement.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# AUTHOR...
+#=============================================
+-->
+<refsect1><title>AUTHOR</title>
+<para>
+Marcus Schäfer <email>ms@suse.de</email>
+</para>
+</refsect1>
+</refentry>

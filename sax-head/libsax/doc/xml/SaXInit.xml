@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC
+	"-//OASIS//DTD DocBook XML V4.2//EN"
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+>
+<refentry id="SaXInit">
+
+<!--
+#=============================================
+# Header settings...
+#=============================================
+-->
+<refentryinfo><title>libsax class reference</title></refentryinfo>
+<refentryinfo><date>January 2005</date></refentryinfo>
+<refentryinfo><productname>libsax-4.8</productname></refentryinfo>
+<refmeta>
+<refentrytitle>SaX::Init</refentrytitle>
+<manvolnum>3</manvolnum>
+</refmeta>
+<refnamediv>
+<refname>SaXInit</refname>
+<refpurpose>Abstraction of the SYSP init stage</refpurpose>
+</refnamediv>
+
+<!--
+#=============================================
+# SYNOPSIS...
+#=============================================
+-->
+<refsynopsisdiv>
+<synopsis>
+#include &lt;sax.h&gt;
+</synopsis>
+Inherits <filename>SaXException</filename>
+</refsynopsisdiv>
+
+<!--
+#=============================================
+# Public Members...
+#=============================================
+-->
+<refsect2><title>Public Members</title>
+<para>
+    <itemizedlist>
+    <listitem><para>
+		<function>SaXInit</function> ( QList&lt;char&gt; )
+    </para></listitem>
+    <listitem><para>
+		<function>SaXInit</function> ( void )
+    </para></listitem>
+    <listitem><para>
+		bool <function>needInit</function> (void)
+    </para></listitem>
+    <listitem><para>
+		void <function>ignoreProfile</function> (void)
+    </para></listitem>
+    <listitem><para>
+		void <function>doInit</function> (void)
+    </para></listitem>
+    </itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# Private Members...
+#=============================================
+-->
+<refsect2><title>Private Members</title>
+<para>
+    <itemizedlist>
+    <listitem><para>
+		bool <function>needUpdate</function>   ( void )
+    </para></listitem>
+    <listitem><para>
+		bool <function>scanHDstatus</function> ( bool = false )
+    </para></listitem>
+    <listitem><para>
+		bool <function>saveHDstatus</function> ( int,char*,char* )
+    </para></listitem>
+    </itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# DESCRIPTION...
+#=============================================
+-->
+<refsect1><title>Description</title>
+<para>
+SaXInit is used to create the SaX cache files. SaX will provide a
+configuration suggestion which is the basis for all actions. To be
+sure not to make use of an outdated cache every program using libsax
+should create this cache first. The following example illustrates
+that more detailed:
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# EXAMPLES...
+#=============================================
+-->
+<refsect2><title>Example</title>
+<programlisting>
+#include &lt;sax.h&gt;
+
+SaXInit init;
+if (init.needInit()) {
+    printf ("initialize cache...\n");
+    //init.ignoreProfile();
+    init.doInit();
+}
+</programlisting>
+</refsect2>
+
+<!--
+#=============================================
+# MEMBER FUNCTION DOCUMENTATION...
+#=============================================
+-->
+<refsect1><title>MEMBER FUNCTION DOCUMENTATION</title>
+<variablelist>
+<varlistentry>
+<term><function>SaXInit::SaXInit</function> ( QList&lt;char&gt; opt )</term>
+<listitem><para>
+Create a SaXInit object with an optional option list. The options
+are passed to the <filename>init.pl</filename> call. More information about the
+init options can be obtained from the sax2 manual page
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>SaXInit::SaXInit</function> ( void )</term>
+<listitem><para>
+Create a SaXInit object
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXInit::needInit</function> (void)</term>
+<listitem><para>
+Check if the cache is up to date and whether the relevant
+hardware has changed or not
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXInit::ignoreProfile</function> (void)</term>
+<listitem><para>
+Ignore profiles while creating the cache. This is the same
+as setting the option <option>--ignoreprofile</option> to the
+<function>options</function> list
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXInit::doInit</function> (void)</term>
+<listitem><para>
+Create the cache information. This process can take some time
+according to the performance of the machine
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXInit::needUpdate</function> (void)</term>
+<listitem><para>
+Private member checking via libhd if there is hardware in a configuration
+state which is new or unconfigured. If there is such
+hardware the SaX2 cache will be recreated
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXInit::scanHDstatus</function> (bool save)</term>
+<listitem><para>
+Private member handling the libhd configuration flags for the monitor
+display and mouse hardware. if <filename>save</filename> is set to true the flags
+will be updated to indicate the graphics hardware has been configured.
+<function>scanHDstatus()</function> is called from <function>needUpdate()</function>
+to check if the flags has changed which points to new hardware and which requires
+a new session cache to be created
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXInit::saveHDstatus</function> (int type, char* val, char* id)</term>
+<listitem><para>
+Private member called within <function>scanHDstatus()</function>
+to save the flags into the libhd
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# POSSIBLE EXCEPTIONS...
+#=============================================
+-->
+<refsect1><title>POSSIBLE EXCEPTIONS</title>
+<variablelist>
+<varlistentry>
+<term><function>saxProcessFailed</function></term>
+<listitem><para>
+The process to call <function>isax</function> failed. This is fatal
+because no configuration will be written or installed
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxPermissionDenied</function></term>
+<listitem><para>
+Init wasn't able to call the appropriate SaX functions because
+of missing root privileges
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxLockSetFailed</function></term>
+<listitem><para>
+The call to flock LOCK_EX failed.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxLockUnsetFailed</function></term>
+<listitem><para>
+The call to flock LOCK_UN failed.
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# COPYRIGHT...
+#=============================================
+-->
+<refsect1><title>COPYRIGHT</title>
+<para>
+(C) Copyright 2000-2005 - SuSE GmbH, <ulink>http://www.suse.de</ulink>.
+See the license file included in the distribution for a complete license
+statement.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# AUTHOR...
+#=============================================
+-->
+<refsect1><title>AUTHOR</title>
+<para>
+Marcus Schäfer <email>ms@suse.de</email>
+</para>
+</refsect1>
+</refentry>

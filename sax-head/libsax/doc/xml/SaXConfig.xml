@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC
+	"-//OASIS//DTD DocBook XML V4.2//EN"
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+>
+<refentry id="SaXConfig">
+
+<!--
+#=============================================
+# Header settings...
+#=============================================
+-->
+<refentryinfo><title>libsax class reference</title></refentryinfo>
+<refentryinfo><date>January 2005</date></refentryinfo>
+<refentryinfo><productname>libsax-4.8</productname></refentryinfo>
+<refmeta>
+<refentrytitle>SaX::Config</refentrytitle>
+<manvolnum>3</manvolnum>
+</refmeta>
+<refnamediv>
+<refname>SaXConfig</refname>
+<refpurpose>Abstraction of the ISaX calling stage</refpurpose>
+</refnamediv>
+
+<!--
+#=============================================
+# SYNOPSIS...
+#=============================================
+-->
+<refsynopsisdiv>
+<synopsis>
+#include &lt;sax.h&gt;
+</synopsis>
+Inherits <filename>SaXException</filename>
+</refsynopsisdiv>
+
+<!--
+#=============================================
+# Public Members...
+#=============================================
+-->
+<refsect2><title>Public Members</title>
+<para>
+	<itemizedlist>
+	<listitem><para>
+		<function>SaXConfig</function> ( int = SAX_MERGE )
+	</para></listitem>
+	<listitem><para>
+		void <function>setParseErrorValue</function> ( char* )
+	</para></listitem>
+	<listitem><para>
+		void <function>setParseError</function> ( char* )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getParseErrorValue</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		QString <function>getParseError</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		void <function>addImport</function> ( SaXImport* )
+	</para></listitem>
+	<listitem><para>
+		void <function>setMode</function> ( int )
+	</para></listitem>
+	<listitem><para>
+		bool <function>createConfiguration</function>  ( void )
+	</para></listitem>
+	<listitem><para>
+		void <function>installConfiguration</function> ( void )
+	</para></listitem>
+	<listitem><para>
+		bool <function>testConfiguration</function>    ( void )
+	</para></listitem>
+	</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# DESCRIPTION...
+#=============================================
+-->
+<refsect1><title>Description</title>
+<para>
+A SaXConfig object is mainly used as a container for SaXImport
+objects. Different import objects describing a complete configuration
+or only parts of it can be added using the <function>addImport()</function> method.
+A complete new configuration requires the following import ID's
+to become added: SAX_CARD,SAX_DESKTOP,SAX_POINTERS,SAX_KEYBOARD,SAX_LAYOUT,
+SAX_PATH and SAX_EXTENSIONS. If not all of these are provided it
+is necessary to set the config mode to SAX_MERGE using the <function>setMode</function>
+method otherwise the configuration will be broken. If merging is used you
+may recognize problems while trying to remove complete devices. For example
+you want to remove one mouse out of two but your changes do not have any effect.
+This is because while merging the currently existing information is still
+there. As result of that you need to write a complete new configuration using the
+SAX_NEW mode to prevent existing sections from beeing imported again.
+</para>
+<para>
+Calling <function>createConfiguration()</function> will create a preliminary
+configuration file
+at <filename>/var/lib/sax/xorg.conf</filename>. libsax will automatically check the
+syntax of the new created file and the programmer is able to
+get possible syntax errors using the <function>getParseError*</function> methods
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# EXAMPLES...
+#=============================================
+-->
+<refsect2><title>Example</title>
+<programlisting>
+#include &lt;sax.h&gt;
+
+int importID[7] = {
+    SAX_CARD,
+    SAX_DESKTOP,
+    SAX_POINTERS,
+    SAX_KEYBOARD,
+    SAX_LAYOUT,
+    SAX_PATH,
+    SAX_EXTENSIONS
+};
+SaXConfig* config = new SaXConfig;
+for (int id=0; id&lt;7; id++) {
+    SaXImport* import = new SaXImport ( importID[id] );
+    import -> doImport();
+    config -> addImport (import);
+}
+config -> setMode (SAX_NEW);
+if ( ! config -> createConfiguration() ) {
+    printf ("%s\n",config->getParseErrorValue().ascii());
+}
+</programlisting>
+</refsect2>
+
+<!--
+#=============================================
+# MEMBER FUNCTION DOCUMENTATION...
+#=============================================
+-->
+<refsect1><title>MEMBER FUNCTION DOCUMENTATION</title>
+<variablelist>
+<varlistentry>
+<term><function>SaXConfig::SaXConfig</function> (int mode)</term>
+<listitem><para>
+Construct a SaXConfig object. Optionally the configuration modus
+can be set. There are two modi: <function>SAX_NEW</function> which will create a
+complete new configuration and <function>SAX_MERGE</function> which will merge 
+the changes into an existing configuration. Note in both cases
+a complete new file <filename>/etc/X11/xorg.conf</filename> will be written
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXConfig::addImport</function> ( SaXImport* in )</term>
+<listitem><para>
+Add a SaXImport object storing data for one of the
+supported SAX_* sections
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXConfig::enableXFineCache</function> (bool enable)</term>
+<listitem><para>
+Make use of the XFine cache at <filename>/var/cache/xfine</filename>. The cache
+is written if XFine was started on the test X-Server. If there are any changes
+to the modeline the cache will be imported to be able to store this information.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXConfig::setMode</function> (int mode)</term>
+<listitem><para>
+Set configuration modus as described in the constructor of
+SaXConfig.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXConfig::createConfiguration</function> (void)</term>
+<listitem><para>
+Create configuration cache file: <filename>/var/lib/sax/xorg.conf</filename>. Return
+false if there are any syntax errors
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXConfig::installConfiguration</function> (void)</term>
+<listitem><para>
+Install cache configuration file to <filename>/etc/X11/xorg.conf</filename> and create
+the appropriate X11 links
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>bool <function>SaXConfig::testConfiguration</function> (void)</term>
+<listitem><para>
+Test the configuration. A new X-Server will be started powered
+by the new configuration. The xfine application will be started to
+be able to tune the size and position of the screen
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXConfig::setParseErrorValue</function> (char* data)</term>
+<listitem><para>
+Internal method used by the X-Server to set the syntax error value
+if there is any. It does not make any sense to call this function
+manually
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXConfig::setParseError</function> (char* data)</term>
+<listitem><para>
+Internal method used by the X-Server to set the syntax error location
+if there is any. It does not make any sense to call this function
+manually
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXConfig::getParseErrorValue</function> (void)</term>
+<listitem><para>
+retrieve the parse error value if there is any
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QString <function>SaXConfig::getParseError</function> (void)</term>
+<listitem><para>
+retrieve the parse error location if there is any
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# POSSIBLE EXCEPTIONS...
+#=============================================
+-->
+<refsect1><title>POSSIBLE EXCEPTIONS</title>
+<variablelist>
+<varlistentry>
+<term><function>saxImportAlreadyAdded ( int ID )</function></term>
+<listitem><para>
+The SaXImport object with id <filename>ID</filename> which should be added in an
+addImport call has already been added to this SaXConfig object
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxUnknownImport ( SaXImport* import )</function></term>
+<listitem><para>
+The section ID of the SaXImport object <filename>import</filename> is unknown.
+This means the SaXImport object does not provide one of
+the allowed SAX_* ID's
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxNoAPIFileFound</function></term>
+<listitem><para>
+The <filename>/var/lib/sax/apidata</filename> file does not exist. The apidata
+file is the input file used with isax to create the configuration
+file it is created automatically when needed so this exception never
+should occur. If you discover this exception please check the
+/var/lib/sax environment refering the current permissions.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxFileOpenFailed ( int errno )</function></term>
+<listitem><para>
+The preliminary written configuration file couldn't be opened
+for checking the syntax.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>saxProcessFailed</function></term>
+<listitem><para>
+The process to call <function>isax</function> failed. This is fatal
+because no configuration will be written or installed
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# COPYRIGHT...
+#=============================================
+-->
+<refsect1><title>COPYRIGHT</title>
+<para>
+(C) Copyright 2000-2005 - SuSE GmbH, <ulink>http://www.suse.de</ulink>.
+See the license file included in the distribution for a complete license
+statement.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# AUTHOR...
+#=============================================
+-->
+<refsect1><title>AUTHOR</title>
+<para>
+Marcus Schäfer <email>ms@suse.de</email>
+</para>
+</refsect1>
+</refentry>

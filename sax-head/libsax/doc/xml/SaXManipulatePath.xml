@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC
+    "-//OASIS//DTD DocBook XML V4.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+>
+<refentry id="SaXManipulatePath">
+
+<!--
+#=============================================
+# Header settings...
+#=============================================
+-->
+<refentryinfo><title>libsax class reference</title></refentryinfo>
+<refentryinfo><date>January 2005</date></refentryinfo>
+<refentryinfo><productname>libsax-4.8</productname></refentryinfo>
+<refmeta>
+<refentrytitle>SaX::ManipulatePath</refentrytitle>
+<manvolnum>3</manvolnum>
+</refmeta>
+<refnamediv>
+<refname>SaXManipulatePath</refname>
+<refpurpose>Handler methods for module lists ServerFlags and font paths</refpurpose>
+</refnamediv>
+
+<!--
+#=============================================
+# SYNOPSIS...
+#=============================================
+-->
+<refsynopsisdiv>
+<synopsis>
+#include &lt;sax.h&gt;
+</synopsis>
+Inherits <filename>SaXException</filename>
+</refsynopsisdiv>
+
+<!--
+#=============================================
+# Public Members...
+#=============================================
+-->
+<refsect2><title>Public Members</title>
+<para>
+	<itemizedlist>
+	<listitem><para>
+		<function>SaXManipulatePath</function> ( SaXImport*, int = 0 )
+	</para></listitem>
+	<listitem><para>
+		void <function>setFontPath</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>addFontPath</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>deleteFontPath</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setLoadableModule</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>addLoadableModule</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>deleteLoadableModule</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>setServerFlag</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>addServerFlag</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		void <function>deleteServerFlag</function> ( const QString&amp; )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getFontPaths</function>   ( void )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getModules</function>     ( void )
+	</para></listitem>
+	<listitem><para>
+		QList&lt;QString&gt; <function>getServerFlags</function> ( void )
+	</para></listitem>
+</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# Private Members...
+#=============================================
+-->
+<refsect2><title>Private Members</title>
+<para>
+    <itemizedlist>		
+	<listitem><para>
+		QList&lt;QString&gt; <function>createList</function> ( const QString&amp; )
+	</para></listitem>
+	</itemizedlist>
+</para>
+</refsect2>
+
+<!--
+#=============================================
+# DESCRIPTION...
+#=============================================
+-->
+<refsect1><title>Description</title>
+<para>
+The path manipulator requires one import object (Path) to become
+created. Once created the manipulator object is able to get/set information
+related to server-flags server-modules and search paths. The following
+example demonstrates how to add a server flag to the configuration. The
+DontVTSwitch server flag disallows the use of the  Ctrl+Alt+Fn  sequence
+(where  Fn refers  to one of the numbered function keys).  That sequence is
+normally used to switch to another "virtual terminal" on operating systems
+that  have  this  feature.   When  this  option is enabled, that key
+sequence has no special meaning and is  passed to clients.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# EXAMPLES...
+#=============================================
+-->
+<refsect2><title>Example</title>
+<programlisting>
+#include &lt;sax.h&gt;
+
+int main (void) {
+    SaXException().setDebug (true);
+    QDict&lt;SaXImport&gt; section;
+
+    printf ("Importing data...\n");
+    SaXConfig* config = new SaXConfig;
+    SaXImport* import = new SaXImport ( SAX_PATH );
+    import -&gt; setSource ( SAX_SYSTEM_CONFIG );
+    import -&gt; doImport();
+    config -&gt; addImport (import);
+    section.insert (
+        import->getSectionName(),import
+    );
+    printf ("Disable VT switching...\n");
+    SaXManipulatePath mPath (
+        section["Path"]
+    );
+    mPath.addServerFlag ("DontVTSwitch");
+
+    printf ("Writing configuration\n");
+    config -&gt; setMode (SAX_MERGE);
+    if ( ! config -&gt; createConfiguration() ) {
+        printf ("%s\n",config-&gt;errorString().ascii());
+        printf ("%s\n",config-&gt;getParseErrorValue().ascii());
+        return 1;
+    }
+    return 0;
+}
+</programlisting>
+</refsect2>
+
+<!--
+#=============================================
+# MEMBER FUNCTION DOCUMENTATION...
+#=============================================
+-->
+<refsect1><title>MEMBER FUNCTION DOCUMENTATION</title>
+<variablelist>
+<varlistentry>
+<term><function>SaXManipulatePath::SaXManipulatePath</function> (SaXImport* in, int path)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::setFontPath</function> (const QString&amp; path)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::addFontPath</function> (const QString&amp; path)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::deleteFontPath</function> (const QString&amp; path)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::setLoadableModule</function> (const QString&amp; module)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::addLoadableModule</function> (const QString&amp; module)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::deleteLoadableModule</function> (const QString&amp; module)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::setServerFlag</function> (const QString&amp; flag)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::addServerFlag</function> (const QString&amp; flag)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>void <function>SaXManipulatePath::deleteServerFlag</function> (const QString&amp; flag)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulatePath::getFontPaths</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulatePath::getModules</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulatePath::getServerFlags</function> (void)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term>QList&lt;QString&gt; <function>SaXManipulatePath::createList</function> ( const QString&amp; data)</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# POSSIBLE EXCEPTIONS...
+#=============================================
+-->
+<refsect1><title>POSSIBLE EXCEPTIONS</title>
+<variablelist>
+<varlistentry>
+<term><function>excNullPointerArgument</function></term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><function>excPathImportBindFailed</function> ( id )</term>
+<listitem><para>
+TODO...
+</para></listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<!--
+#=============================================
+# COPYRIGHT...
+#=============================================
+-->
+<refsect1><title>COPYRIGHT</title>
+<para>
+(C) Copyright 2000-2005 - SuSE GmbH, <ulink>http://www.suse.de</ulink>.
+See the license file included in the distribution for a complete license
+statement.
+</para>
+</refsect1>
+
+<!--
+#=============================================
+# AUTHOR...
+#=============================================
+-->
+<refsect1><title>AUTHOR</title>
+<para>
+Marcus Schäfer <email>ms@suse.de</email>
+</para>
+</refsect1>
+</refentry>
