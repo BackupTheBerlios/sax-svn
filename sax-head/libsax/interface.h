@@ -37,10 +37,93 @@ STATUS        : Status: Development
 
 #include "sax.h"
 
+typedef void* (*Factory) ();
 //====================================
 // Entrypoint...
 //------------------------------------
-typedef void* (*Factory) ();
+/*! \brief SaX2 - Entrypoint structure to find symbol "entrypoint"
+*
+* To be able to load libsax via dlopen it is needed to provide
+* a global entrypoint symbol which can be found using dlsym().
+* Once the entrypoint has been created the structure variable
+* provides access to a function named factory() which creates a
+* global saxPluglib object while called. Using the saxPluglib
+* object will provide access to all constructors of all
+* interface class types implemented in libsax. See the following
+* loader.cpp example for information how to dynamically load libsax
+*
+* \code
+* #include <stdio.h>
+* #include <stdlib.h>
+* #include <dlfcn.h>
+*
+* #include <sax.h>
+*
+* using namespace LML;
+*
+* saxPluglib* loadLibrary (void) {
+*     void* handle = dlopen (
+*         "/usr/lib/libsax.so", RTLD_LAZY | RTLD_GLOBAL
+*     );
+*     if (! handle) {
+*         printf ("%s\n", dlerror ());
+*         exit ( EXIT_FAILURE );
+*     }
+*     EntryPoint* entrypoint = (EntryPoint*)dlsym (handle, "entrypoint");
+*     if (! entrypoint) {
+*         printf ("%s\n", dlerror ());
+*         exit ( EXIT_FAILURE );
+*     }
+*     saxPluglib* LiMal = (saxPluglib*)entrypoint->factory();
+*     return LiMal;
+* }
+*
+* int main (void) {
+*    saxPluglib* LiMal = loadLibrary();
+*    LiMal -> setDebug();
+*    int importID[7] = {
+*         SAX_CARD,
+*         SAX_DESKTOP,
+*         SAX_POINTERS,
+*         SAX_KEYBOARD,
+*         SAX_LAYOUT,
+*         SAX_PATH,
+*         SAX_EXTENSIONS
+*     };
+*     QList<SaXImport> section;
+*     SaXConfig* config = LiMal->saxConfig();
+*     for (int id=0; id<7; id++) {
+*         printf ("Importing data...\n");
+*         SaXImport* import = LiMal->saxImport (importID[id]);
+*         import -> setSource (SAX_AUTO_PROBE);
+*         import -> doImport();
+*         config -> addImport (import);
+*         section.append (import);
+*     }
+*     printf ("writing configuration\n");
+*     config -> setMode (SAX_NEW);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*     }
+*     delete LiMal;
+*     return 0;
+* }
+* \endcode
+*
+* Important Note:
+*
+* Because of the fact that libsax is using Qt a wide set of Q-Objects are
+* created. To know about the constructors of those Q-Objects it is needed
+* to link against qt-mt while compiling the loader. This of course results
+* in a loader binary which is linked against qt-mt which you should have
+* in mind and first check if that fits into your needs:
+*
+* \code
+* g++ loader.cpp -o loader \
+*     -Wall -O2 -I/usr/lib/qt3/include -I/usr/X11R6/include \
+*     -L/usr/lib/qt3/lib/ -ldl -lqt-mt
+* \endcode
+*/
 struct EntryPoint {
 	const char* name;
 	const char* version;
@@ -51,6 +134,13 @@ namespace LML {
 //====================================
 // Class saxPluglib abstract...
 //------------------------------------
+/*! \brief SaX2 - Abstract interface class saxPluglib.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class saxPluglib {
 	public:
 	virtual SaXInit*    saxInit   ( void ) = 0;
@@ -114,6 +204,12 @@ class saxPluglib {
 //====================================
 // Class SaXPluglib...
 //------------------------------------
+/*! \brief SaX2 - Interface class saxPluglib.
+*
+* The SaXPluglib class is a wrapper class for all constructors
+* implemented in libsax. An object of this class is normally only
+* used when libsax has been loaded with dlopen.
+*/
 class SaXPluglib : public saxPluglib {
 	public:
 	SaXPluglib ( void );
