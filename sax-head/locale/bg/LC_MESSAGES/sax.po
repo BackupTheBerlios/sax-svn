@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of sax.bg.po to Bulgarian
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Borislav Mitev <morbid_viper@tkzs.org>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: sax.bg\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-02-24 19:14+0200\n"
+"PO-Revision-Date: 2004-03-22 12:04+0200\n"
 "Last-Translator: Borislav Mitev <morbid_viper@tkzs.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -29,24 +29,23 @@ msgstr "с"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Относително"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Прекъсване"
+msgstr "Абсолютно"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -66,45 +65,43 @@ msgstr "Не е налично"
 
 #. Maximum length: 40  characters
 msgid "Use the following AccessX settings"
-msgstr ""
+msgstr "Употреба на следните AccessX настройки"
 
 #. Maximum length: 40  characters
 msgid "Disable AccessX"
-msgstr "спиране на AccessX"
+msgstr "Спиране на AccessX"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Primary Setup"
-msgstr "Главно устройство"
+msgstr "Първично настройване"
 
 #. Maximum length: 60  characters
 msgid "Additional Layout(s)"
-msgstr ""
+msgstr "Допълнително оформление"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Разни"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Layout"
-msgstr "Оформление екран"
+msgstr "Оформление"
 
 #. Maximum length: 60  characters
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #. Maximum length: 60  characters
 msgid "Keytable"
-msgstr ""
+msgstr "Клавишна таблица"
 
 #. Maximum length: 60  characters
 msgid "Variant"
-msgstr ""
+msgstr "Вариант"
 
 #. Maximum length: 60  characters
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #. Maximum length: 60  characters
 msgid "This screen is selected"
@@ -112,7 +109,7 @@ msgstr "Този екран е избран"
 
 #. Maximum length: 20  characters
 msgid "at"
-msgstr ""
+msgstr "на"
 
 #. Maximum length: 20  characters
 msgid "Mouse"
@@ -361,7 +358,7 @@ msgstr "Цвят и раздел. сп."
 
 #. Maximum length: 20  characters
 msgid "Virtual Resolution"
-msgstr "Виртуа. раздел. сп."
+msgstr "Вирт. раздел. сп."
 
 #. Maximum length: 40  characters
 msgid "Language Layout"
@@ -441,6 +438,9 @@ msgid ""
 "warning only but make sure your keyboard model is able to map all the keys "
 "needed for the selected layout."
 msgstr ""
+"<b>Текущото оформление и модел изглежда не си пасват добре.</b><hr>Това е "
+"само предупреждение, но се уверете, че Вашия модел на клавиатурата ще може "
+"да покрие всички клавиши, които са необходими за избраното оформление."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
@@ -506,9 +506,16 @@ msgid ""
 "location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
 "XFree86/nvidia-installer-HOWTO</b>"
 msgstr ""
+"<b>Не може да се разреши OpenGL ускорение</b><hr>За да активирате3D "
+"подсистемата за тази карта ще трябва първо да инсталирате комерсиалния "
+"драйвер от nVidia. Можете да направите това от <b>YaST онлайн подновяването</"
+"b> като изберете кръпката за nVidia драйвера. <br><br>Ако сте инсталирали "
+"вече този драйвер през YaST онлайн подновяването и след това сте го махнали, "
+"ще трябва да инсталирате драйвера ръчно. Инструкции как може да бъде "
+"направено това могат да се намерят на: <br><br><b>ftp://ftp.suse.com/pub/"
+"suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -516,33 +523,32 @@ msgid ""
 "XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do "
 "you want to continue?</b>"
 msgstr ""
-"<b>Не може да се спре OpenGL ускорението.</b><hr>3D подсистемата е базиране "
-"на комерсиални драйвер от nVidia. За да спрете 3D трябва да премахнете "
-"драйвера чрез инсталиращата програма на nVidia. В процеса на премахване "
-"оригиналния XFree86 драйвер, който не предоставя никакво 3D хардуерно "
-"ускорение, ще бъде възстановен."
+"<b>Забраняване на OpenGL ускорение</b><hr>3D подсистемата е базирана на "
+"комерсиален драйвер от nVidia. SaX2 трябва да премахне драйвера чрез "
+"инсталатора на nVidia. Процесът на премахване ще върне системата към "
+"използване на оригиналния драйвер от XFree86, който не поддържа 3D хардуерно "
+"ускорение. <br><br><b>Желаете ли да продължите?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
-msgstr "диск с приложения (utility)..."
+msgstr "Диск с приложения (utility)..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Поставете дискета</b><hr>Поставете дискетата с приложения и драйвери от "
-"производителя."
+"<b>Вкарайте CD или дискета</b><hr>Вкарайте CD или дискета от доставчика на "
+"монитора с приложения за екрана."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Грешка при четене</b><hr>Дискетата не може да се прочете. Това може да се "
-"дължи на повреда или неправилно форматиране на файловете на дискетата."
+"<b>Грешка при четенето</b><hr>CD-то или дискетата не може да се прочете. "
+"Това може да е вследствие на повреден носител или некоректен формат на "
+"данните на носителя."
 
 #. RTF text: no limit
 msgid ""
@@ -926,11 +932,9 @@ msgstr ""
 "настроено."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
 msgstr ""
-"<b>Невалидна настройка:</b><hr>Поне едно графично устройство трябва да бъде "
-"настроено."
+"<b>Невалидна настройка:</b><hr>Поне един монитор трябва да бъде настроен."
 
 #. RTF text: no limit
 msgid ""
@@ -1001,24 +1005,22 @@ msgid "Unknown Monitor..."
 msgstr "Непознат монитор..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Мониторът не може да бъде разпознат</b><hr>Ще трябва да го настроите "
-"ръчно. Желаете ли да стартирате диалога за настройка сега?"
+"<b>Мониторът (%1) не може да бъде открит</b><hr>Моля, настройте Вашия "
+"монитор ръчно. Желаете ли сега да стартирате диалога за настройка на екрана?"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Мониторът с  ID: %1 не е открит</b><hr>Ще трябва да го настроите ръчно. "
-"Желаете ли да стартирате диалога за настройка сега?"
+"<b>Мониторът (%1) с ID: %2 не бе открит</b><hr>Моля, настройте Вашия монитор "
+"ръчно. Желаете ли сега да стартирате диалога за настройка на екрана?"
 
 #. Dynamic length: Please do not oversize key up to 10%
 msgid "Automatic graphics system set up"
@@ -1225,23 +1227,20 @@ msgid "Remove selected card"
 msgstr "Премахване на избрана видеокарта"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Remove selected monitor"
-msgstr "Пр&емахване на избраната мишка"
+msgstr "Премахване на избрания монитор"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "Пара&метри..."
+msgstr "Аксесоари..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "&Параметри..."
+msgstr "&Параметри"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
-msgstr "Пара&метри..."
+msgstr "&Аксесоари..."
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1337,13 +1336,12 @@ msgid "Possible"
 msgstr "Възможно"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "&Add this resolution"
-msgstr "Добавяне на нова &разделителна способност..."
+msgstr "&Добавяне на тази разделителна способност"
 
 #. Maximum length: 50  characters
 msgid "Enable 3-button emulation"
-msgstr "Разрешаване на емулация на 3 бутона"
+msgstr "Разрешаване емулация на 3 бутона"
 
 #. Maximum length: 50  characters
 msgid "Enable Mouse Wheel"
@@ -1474,14 +1472,12 @@ msgstr ""
 "използваните режими."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
 "language environment with which it should work."
 msgstr ""
-"<b>Параметри на клавиатурата:</b><hr>Настройване на типа на клавиатурата и "
-"езиковата среда, в която ще работи. Също така и вида на шрифтовете, които ще "
-"се използват."
+"<b>Аксесоари на клавиатурата:</b><hr>Задайте типа на клавиатурата и "
+"езиковата среда, в която трябва да работи."
 
 #. RTF text: no limit
 msgid ""
@@ -1551,9 +1547,8 @@ msgid "&Port"
 msgstr "&Порт"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Режим:"
+msgstr "Ре&жим"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -1637,948 +1632,901 @@ msgid "C&hange Size"
 msgstr "Пром&яна на размера"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "No video mode tuning available"
-msgstr "Не е налично"
+msgstr "Не може да се прави регулиране на видео режима"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Време на бездействие..."
 
 #. RTF text: no limit
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx серии"
 
 #. RTF text: no limit
 msgid "Canadian"
-msgstr ""
+msgstr "Канадска"
 
 #. RTF text: no limit
 msgid "Brazilian"
-msgstr ""
+msgstr "Бразилска"
 
 #. RTF text: no limit
 msgid "Bosnian"
-msgstr ""
+msgstr "Босненска"
 
 #. RTF text: no limit
 msgid "Lithuanian qwerty (numeric)"
-msgstr ""
+msgstr "Литовска qwerty (цифрова)"
 
 #. RTF text: no limit
 msgid "Georgian (russian)"
-msgstr ""
+msgstr "Грузинска (руска)"
 
 #. RTF text: no limit
 msgid "Latvian"
-msgstr ""
+msgstr "Латвийска"
 
 #. RTF text: no limit
 msgid "Belarusian"
-msgstr ""
+msgstr "Белоруска"
 
 #. RTF text: no limit
 msgid "Czech (qwerty)"
-msgstr ""
+msgstr "Чешка (qwerty)"
 
 #. RTF text: no limit
 msgid "Northern Saami (Finland)"
-msgstr ""
+msgstr "Северен суоми (Финландия)"
 
 #. RTF text: no limit
 msgid "Macedonian"
-msgstr ""
+msgstr "Македонска"
 
 #. RTF text: no limit
 msgid "U.S. English w/ deadkeys"
-msgstr ""
+msgstr "Английска (САЩ) с \"мъртви клавиши\""
 
 #. RTF text: no limit
 msgid "Malayalam"
-msgstr ""
+msgstr "Малайска"
 
 #. RTF text: no limit
 msgid "Burmese"
-msgstr ""
+msgstr "Бурнийска"
 
 #. RTF text: no limit
 msgid "Kannada"
-msgstr ""
+msgstr "Канарийска (Индия)"
 
 #. RTF text: no limit
 msgid "Mongolian"
-msgstr ""
+msgstr "Монголска"
 
 #. RTF text: no limit
 msgid "Bengali"
-msgstr ""
+msgstr "Бенгалска"
 
 #. RTF text: no limit
 msgid "Romanian"
-msgstr ""
+msgstr "Румънска"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Croatian"
-msgstr "Параметри на видеокартата"
+msgstr "Хърватска"
 
 #. RTF text: no limit
 msgid "U.S. English w/ ISO9995-3"
-msgstr ""
+msgstr "Английска (САЩ) с ISO9995-3"
 
 #. RTF text: no limit
 msgid "Lithuanian azerty standard"
-msgstr ""
+msgstr "Литовска azerty стандарт"
 
 #. RTF text: no limit
 msgid "Maltese"
-msgstr ""
+msgstr "Малтийска"
 
 #. RTF text: no limit
 msgid "German"
-msgstr ""
+msgstr "Немска"
 
 #. RTF text: no limit
 msgid "Hungarian"
-msgstr ""
+msgstr "Унгарска"
 
 #. RTF text: no limit
 msgid "Russian"
-msgstr ""
+msgstr "Руска"
 
 #. RTF text: no limit
 msgid "Swedish"
-msgstr ""
+msgstr "Шведска"
 
 #. RTF text: no limit
 msgid "Turkish (F)"
-msgstr ""
+msgstr "Турска (F)"
 
 #. RTF text: no limit
 msgid "Oriya"
-msgstr ""
+msgstr "Орийска (Индия)"
 
 #. RTF text: no limit
 msgid "Slovenian"
-msgstr ""
+msgstr "Словенска"
 
 #. RTF text: no limit
 msgid "Slovak (qwerty)"
-msgstr ""
+msgstr "Словашка (qwerty)"
 
 #. RTF text: no limit
 msgid "Czech"
-msgstr ""
+msgstr "Чешка"
 
 #. RTF text: no limit
 msgid "Gujarati"
-msgstr ""
+msgstr "Гуджератска (Индия)"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Danish"
-msgstr "&Край"
+msgstr "Датска"
 
 #. RTF text: no limit
 msgid "Dvorak"
-msgstr ""
+msgstr "Dvorak"
 
 #. RTF text: no limit
 msgid "Slovak"
-msgstr ""
+msgstr "Словашка"
 
 #. RTF text: no limit
 msgid "Dutch"
-msgstr ""
+msgstr "Холандска"
 
 #. RTF text: no limit
 msgid "Israeli"
-msgstr ""
+msgstr "Израелска"
 
 #. RTF text: no limit
 msgid "Tamil"
-msgstr ""
+msgstr "Тамилска"
 
 #. RTF text: no limit
 msgid "Ogham"
-msgstr ""
+msgstr "Огамска (Ирландия)"
 
 #. RTF text: no limit
 msgid "Norwegian"
-msgstr ""
+msgstr "Норвежка"
 
 #. RTF text: no limit
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Гурмукийска"
 
 #. RTF text: no limit
 msgid "Serbian"
-msgstr ""
+msgstr "Сръбска"
 
 #. RTF text: no limit
 msgid "Farsi"
-msgstr ""
+msgstr "Фарсийска (Персия)"
 
 #. RTF text: no limit
 msgid "Icelandic"
-msgstr ""
+msgstr "Исландска"
 
 #. RTF text: no limit
 msgid "Italian"
-msgstr ""
+msgstr "Италианска"
 
 #. RTF text: no limit
 msgid "Estonian"
-msgstr ""
+msgstr "Естонска"
 
 #. RTF text: no limit
 msgid "Inuktitut"
-msgstr ""
+msgstr "Инуктитутска"
 
 #. RTF text: no limit
 msgid "Swiss French"
-msgstr ""
+msgstr "Френска (Швейцария)"
 
 #. RTF text: no limit
 msgid "Swiss German"
-msgstr ""
+msgstr "Германска (Швейцария)"
 
 #. RTF text: no limit
 msgid "Thai"
-msgstr ""
+msgstr "Тайландска"
 
 #. RTF text: no limit
 msgid "Tajik"
-msgstr ""
+msgstr "Таджикска"
 
 #. RTF text: no limit
 msgid "Greek"
-msgstr ""
+msgstr "Гръцка"
 
 #. RTF text: no limit
 msgid "Japanese"
-msgstr ""
+msgstr "Японска"
 
 #. RTF text: no limit
 msgid "Georgian (latin)"
-msgstr ""
+msgstr "Грузинска (латиница)"
 
 #. RTF text: no limit
 msgid "Ukrainian"
-msgstr ""
+msgstr "Украинска"
 
 #. RTF text: no limit
 msgid "Polish (qwertz)"
-msgstr ""
+msgstr "Полска (qwertz)"
 
 #. RTF text: no limit
 msgid "Syriac"
-msgstr ""
+msgstr "Сирийска"
 
 #. RTF text: no limit
 msgid "Turkish"
-msgstr ""
+msgstr "Турска"
 
 #. RTF text: no limit
 msgid "Spanish"
-msgstr ""
+msgstr "Испанска"
 
 #. RTF text: no limit
 msgid "Northern Saami (Sweden)"
-msgstr ""
+msgstr "Северен суоми (Швеция)"
 
 #. RTF text: no limit
 msgid "Yugoslavian"
-msgstr ""
+msgstr "Югославска"
 
 #. RTF text: no limit
 msgid "Hindi"
-msgstr ""
+msgstr "Хиндийска"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Finnish"
-msgstr "&Край"
+msgstr "Финландска"
 
 #. RTF text: no limit
 msgid "French (alternative)"
-msgstr ""
+msgstr "Френска (алтернативна)"
 
 #. RTF text: no limit
 msgid "Hungarian (qwerty)"
-msgstr ""
+msgstr "Унгарска (qwerty)"
 
 #. RTF text: no limit
 msgid "Russian (cyrillic phonetic)"
-msgstr ""
+msgstr "Руска (фонетична кирилица)"
 
 #. RTF text: no limit
 msgid "Albanian"
-msgstr ""
+msgstr "Албанска"
 
 #. RTF text: no limit
 msgid "Polish"
-msgstr ""
+msgstr "Полска"
 
 #. RTF text: no limit
 msgid "Telugu"
-msgstr ""
+msgstr "Телугуийска (Индия)"
 
 #. RTF text: no limit
 msgid "Armenian"
-msgstr ""
+msgstr "Арменска"
 
 #. RTF text: no limit
 msgid "Northern Saami (Norway)"
-msgstr ""
+msgstr "Северен суоми (Норвегия)"
 
 #. RTF text: no limit
 msgid "Latin America"
-msgstr ""
+msgstr "Латино-американска"
 
 #. RTF text: no limit
 msgid "French"
-msgstr ""
+msgstr "Френска"
 
 #. RTF text: no limit
 msgid "United Kingdom"
-msgstr ""
+msgstr "Великобритания"
 
 #. RTF text: no limit
 msgid "Arabic"
-msgstr ""
+msgstr "Арабска"
 
 #. RTF text: no limit
 msgid "U.S. English"
-msgstr ""
+msgstr "Английска (САЩ)"
 
 #. RTF text: no limit
 msgid "Maltese (US layout)"
-msgstr ""
+msgstr "Малтийска (оформление САЩ)"
 
 #. RTF text: no limit
 msgid "French Canadian"
-msgstr ""
+msgstr "Френска (Канада)"
 
 #. RTF text: no limit
 msgid "Portuguese"
-msgstr ""
+msgstr "Португалска"
 
 #. RTF text: no limit
 msgid "Belgian"
-msgstr ""
+msgstr "Белгийска"
 
 #. RTF text: no limit
 msgid "Bulgarian"
-msgstr ""
+msgstr "Българска"
 
 #. RTF text: no limit
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Азербайджанска"
 
 #. RTF text: no limit
 msgid "Vietnamese"
-msgstr ""
+msgstr "Виетнамска"
 
 #. RTF text: no limit
 msgid "Lao"
-msgstr ""
+msgstr "Лаоска"
 
 #. RTF text: no limit
 msgid "Microsoft Natural"
-msgstr ""
+msgstr "Microsoft Natural"
 
 #. RTF text: no limit
 msgid "Ennyah DKB-1008"
-msgstr ""
+msgstr "Ennyah DKB-1008"
 
 #. RTF text: no limit
 msgid "Logitech Deluxe Access Keyboard"
-msgstr ""
+msgstr "Logitech Deluxe Access клавиатура"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard"
-msgstr ""
+msgstr "Microsoft Internet клавиатура"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4500P"
-msgstr ""
+msgstr "Samsung SDM 4500P"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd"
 
 #. RTF text: no limit
 msgid "Dell"
-msgstr ""
+msgstr "Dell"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GF"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access"
-msgstr ""
+msgstr "IBM Rapid Access"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (алтернативна възможност2)"
 
 #. RTF text: no limit
 msgid "Memorex MX1998"
-msgstr ""
+msgstr "Memorex MX1998"
 
 #. RTF text: no limit
 msgid "Trust Wireless Keyboard Classic"
-msgstr ""
+msgstr "Trust Wireless класическа клавиатура"
 
 #. RTF text: no limit
 msgid "Dell 101-key PC"
-msgstr ""
+msgstr "Dell 101-клавишна PC"
 
 #. RTF text: no limit
 msgid "Brother Internet Keyboard"
-msgstr ""
+msgstr "Brother Internet клавиатура"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr ""
+msgstr "Compaq клавиатура за лаптоп, например Armada"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr ""
+msgstr "Compaq Интернет клавиатура за лаптоп, например Presario"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II"
-msgstr ""
+msgstr "IBM Rapid Access II"
 
 #. RTF text: no limit
 msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr ""
+msgstr "Logitech iTouch безжична клавиатура (модел Y-RB6)"
 
 #. RTF text: no limit
 msgid "Trust Direct Access Keyboard"
-msgstr ""
+msgstr "Trust Direct Access клавиатура"
 
 #. RTF text: no limit
 msgid "Logitech Internet Navigator Keyboard"
-msgstr ""
+msgstr "Logitech Internet Navigator клавиатура"
 
 #. RTF text: no limit
 msgid "SK-7100"
-msgstr ""
+msgstr "SK-7100"
 
 #. RTF text: no limit
 msgid "Acer AirKey V"
-msgstr ""
+msgstr "Acer AirKey V"
 
 #. RTF text: no limit
 msgid "BTC 9000A"
-msgstr ""
+msgstr "BTC 9000A"
 
 #. RTF text: no limit
 msgid "Toshiba Satellite S3000"
-msgstr ""
+msgstr "Toshiba Satellite S3000"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (13 keys)"
-msgstr ""
+msgstr "Compaq Интернет клавиатура (13 клавиша)"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XT1000"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XT1000"
 
 #. RTF text: no limit
 msgid "Logitech iTouch"
-msgstr ""
+msgstr "Logitech iTouch"
 
 #. RTF text: no limit
 msgid "SK-6200"
-msgstr ""
+msgstr "SK-6200"
 
 #. RTF text: no limit
 msgid "Compaq iPaq Keyboard"
-msgstr ""
+msgstr "Compaq iPaq клавиатура"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (алтернативна възможност)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Desktop Navigator"
 
 #. RTF text: no limit
 msgid "QTronix Scorpius 98N+"
-msgstr ""
+msgstr "QTronix Scorpius 98N+"
 
 #. RTF text: no limit
 msgid "Symplon PaceBook (tablet PC)"
-msgstr ""
+msgstr "Symplon PaceBook (таблет PC)"
 
 #. RTF text: no limit
 msgid "Winbook Model XP5"
-msgstr ""
+msgstr "Winbook модел XP5"
 
 #. RTF text: no limit
 msgid "BTC 5113RF Multimedia"
-msgstr ""
+msgstr "BTC 5113RF мултимедийна"
 
 #. RTF text: no limit
 msgid "Diamond 9801 / 9802 series"
-msgstr ""
+msgstr "Diamond 9801 / 9802 серии"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE4xxx и ZE4xxx"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Optical"
-msgstr ""
+msgstr "Logitech Cordless Desktop оптична"
 
 #. RTF text: no limit
 msgid "Logitech Internet Keyboard"
-msgstr ""
+msgstr "Logitech Интернет клавиатура"
 
 #. RTF text: no limit
 msgid "BTC 9000"
-msgstr ""
+msgstr "BTC 9000"
 
 #. RTF text: no limit
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr ""
+msgstr "Genius Comfy KB-16M / Genius MM клавиатура KWD-910"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard Интернет клавиатура"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Freedom/Desktop Navigator"
 
 #. RTF text: no limit
 msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr ""
+msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
 
 #. RTF text: no limit
 msgid "Propeller Voyager (KTEZ-1000)"
-msgstr ""
+msgstr "Propeller Voyager (KTEZ-1000)"
 
 #. RTF text: no limit
 msgid "Brazilian ABNT2"
-msgstr ""
+msgstr "Бразилска ABNT2"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (7 keys)"
-msgstr ""
+msgstr "Compaq Интернет клавиатура (7 клавиша)"
 
 #. RTF text: no limit
 msgid "Honeywell Euroboard"
-msgstr ""
+msgstr "Honeywell Euroboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop"
-msgstr ""
+msgstr "Logitech Cordless Desktop"
 
 #. RTF text: no limit
 msgid "Yahoo! Internet Keyboard"
-msgstr ""
+msgstr "Yahoo! Интернет клавиатура"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (18 keys)"
-msgstr ""
+msgstr "Compaq Интернет клавиатура (18 клавиша)"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr ""
+msgstr "Dell Inspiron 8xxx за лаптоп"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II (alternate option)"
-msgstr ""
+msgstr "IBM Rapid Access II (алтернативна възможност)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro"
 
 #. RTF text: no limit
 msgid "Advance Scorpius KI"
-msgstr ""
+msgstr "Advance Scorpius KI"
 
 #. RTF text: no limit
 msgid "BTC 5126T"
-msgstr ""
+msgstr "BTC 5126T"
 
 #. RTF text: no limit
 msgid "Dexxa Wireless Desktop Keyboard"
-msgstr ""
+msgstr "Dexxa безжична десктоп клавиатура"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 5xx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 5xx"
 
 #. RTF text: no limit
 msgid "Memorex MX2750"
-msgstr ""
+msgstr "Memorex MX2750"
 
 #. RTF text: no limit
 msgid "SK-1300"
-msgstr ""
+msgstr "SK-1300"
 
 #. RTF text: no limit
 msgid "Generic 101-key PC"
-msgstr ""
+msgstr "Обща 101-клавишна PC"
 
 #. RTF text: no limit
 msgid "Northgate OmniKey 101"
-msgstr ""
+msgstr "Northgate OmniKey 101"
 
 #. RTF text: no limit
 msgid "ACPI Standard"
-msgstr ""
+msgstr "ACPI стандарт"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd (алтернативна възможност)"
 
 #. RTF text: no limit
 msgid "Chicony Internet Keyboard"
-msgstr ""
+msgstr "Chicony Интернет клавиатура"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2501 мултимедийна клавиатура"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4510P"
-msgstr ""
+msgstr "Samsung SDM 4510P"
 
 #. RTF text: no limit
 msgid "SK-2500"
-msgstr ""
+msgstr "SK-2500"
 
 #. RTF text: no limit
 msgid "SVEN Ergonomic 2500"
-msgstr ""
+msgstr "SVEN Ergonomic 2500"
 
 #. RTF text: no limit
 msgid "Generic 102-key (Intl) PC"
-msgstr ""
+msgstr "Обща 102-клавишна (Intl) PC"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop iTouch"
-msgstr ""
+msgstr "Logitech iTouch безжична за десктоп"
 
 #. RTF text: no limit
 msgid "Chicony KB-9885"
-msgstr ""
+msgstr "Chicony KB-9885"
 
 #. RTF text: no limit
 msgid "Compaq Easy Access Keyboard"
-msgstr ""
+msgstr "Compaq Easy Access клавиатура"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard 5181 Интернет клавиатура"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 500 FA"
 
 #. RTF text: no limit
 msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr ""
+msgstr "Memorex MX2500 EZ-Access клавиатура"
 
 #. RTF text: no limit
 msgid "Generic 104-key PC"
-msgstr ""
+msgstr "Обща 104-клавишна PC"
 
 #. RTF text: no limit
 msgid "Everex STEPnote"
-msgstr ""
+msgstr "Everex STEPnote"
 
 #. RTF text: no limit
 msgid "Japanese 106-key"
-msgstr ""
+msgstr "Японска 106-клавишна"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE и Pavilion N5xxx"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr ""
+msgstr "Hewlett-Packard Pavilion ZT11xx"
 
 #. RTF text: no limit
 msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr ""
+msgstr "Logitech iTouch клавиатура Internet Navigator"
 
 #. RTF text: no limit
 msgid "Generic 105-key (Intl) PC"
-msgstr ""
+msgstr "Обща 105-клавишна (Intl) PC"
 
 #. RTF text: no limit
 msgid "Keytronic FlexPro"
-msgstr ""
+msgstr "Keytronic FlexPro"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2505 Интернет клавиатура"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr ""
+msgstr "Microsoft Internet Keyboard Pro, Шведска"
 
 #. RTF text: no limit
 msgid "Microsoft Office Keyboard"
-msgstr ""
+msgstr "Microsoft офис клавиатура"
 
 #. RTF text: no limit
 msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr ""
+msgstr "Oretec MCK-800 MM/Internet клавиатура"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Ctrl keys together change group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Двата Ctrl-a превключват групата"
 
 #. RTF text: no limit
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "Поведение на CapsLock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Win-keys switch group while pressed"
-msgstr "R-Alt превключва групата, когато е натиснат"
+msgstr "Двата Win клавиша превключват групата, когато са натиснати"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Alt key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Левия Alt превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Левия Win клавиш превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Shift key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Десният Shift превключва групата"
 
 #. RTF text: no limit
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Поведение на Alt/Win клавишите "
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "използва вътрешна метод за главните букви. Shift не прекъсва Caps."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "R-Alt switches group while pressed"
 msgstr "R-Alt превключва групата, когато е натиснат"
 
 #. RTF text: no limit
 msgid "Right Win-key is Compose"
-msgstr ""
+msgstr "Десният Win клавиш е Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Ctrl key changes group"
-msgstr "Alt и Ctrl превключват групата"
+msgstr "Десния Ctrl превключва групата"
 
 #. RTF text: no limit
 msgid "Press any of Win-keys to choose 3rd level"
-msgstr ""
+msgstr "Натиснете някой от Win клавишите за да изберете трето ниво"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at bottom left"
-msgstr "Ctrl долу вляво"
+msgstr "Клавишът Control долу ляво"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Shift keys together change group"
 msgstr "Двата Shift-a превключват групата"
 
 #. RTF text: no limit
 msgid "Third level choosers"
-msgstr ""
+msgstr "Превключватели за трето ниво"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at left of 'A'"
-msgstr "Ctrl вляво от <A>"
+msgstr "Клавишът Control отляво на 'A'"
 
 #. RTF text: no limit
 msgid "Scroll_Lock LED shows alternative group"
-msgstr ""
+msgstr "Диода Scroll_Lock показва алтернативната група"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt is Compose"
-msgstr "Задаване на RightAlt"
+msgstr "Десният Alt е Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Десният Win клавиш превключва групата"
 
 #. RTF text: no limit
 msgid "Press Left Win-key to choose 3rd level"
-msgstr ""
+msgstr "Натиснете левия Win клавиш за да изберете трето ниво"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Make CapsLock an additional Control"
 msgstr "CapsLock като допълнителен Ctrl"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+msgstr "използва вътрешна метод за главните букви. Shift прекъсва Caps."
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "работи като Shift със заключване. Shift не прекъсва Caps."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key switches group while pressed"
-msgstr "R-Alt превключва групата, когато е натиснат"
+msgstr "Левият Win клавиш превключва групата, когато е натиснат"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Shift key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Левият Shift превключва групата"
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
-msgstr ""
+msgstr "Диода Num_Lock показва алтернативната група"
 
 #. RTF text: no limit
 msgid "Caps_Lock LED shows alternative group"
-msgstr ""
+msgstr "Диода Caps_Lock показва алтернативната група"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "Meta е определен за левия Win клавиш."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Caps Lock key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Клавишът Caps Lock превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Alt keys together change group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Двата Alt-a превключват групата"
 
 #. RTF text: no limit
 msgid "Menu is Compose"
-msgstr ""
+msgstr "Menu е Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Десният Alt превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control Key Position"
-msgstr "&Промяна на позициите"
+msgstr "Позиция на клавиша Control"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Swap Control and Caps Lock"
-msgstr "Смяна на местата на Ctrl и CapsLock"
+msgstr "Смяна местата на Ctrl и CapsLock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control+Shift changes group"
-msgstr "Ctrl и Shift превключват групата"
+msgstr "Ctrl+Shift превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Shift changes group"
-msgstr "Ctrl и Shift превключват групата"
+msgstr "Alt+Shift превключва групата"
 
 #. RTF text: no limit
 msgid "Press Right Control to choose 3rd level"
-msgstr ""
+msgstr "Натиснете десния Control за да изберете трето ниво"
 
 #. RTF text: no limit
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Добавяне на стандартно поведение за клавиша Menu."
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Alt и Meta на Alt клавишите (стандартно)."
 
 #. RTF text: no limit
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Super е определен за Win клавишите (стандартно)."
 
 #. RTF text: no limit
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Hyper е определен за Win клавишите."
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+msgstr "Натиснете десния Win клавиш за да изберете трето ниво"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
 msgstr ""
+"Използване на диодите на клавиатурата за показване на алтернативната група"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+msgstr "работи като Shift със заключване. Shift прекъсва Caps."
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Поведение на групата Shift/Lock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key switches group while pressed"
-msgstr "R-Alt превключва групата, когато е натиснат"
+msgstr "Десният Win клавиш превключва групата, когато е натиснат"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Control changes group"
-msgstr "Alt и Ctrl превключват групата"
+msgstr "Alt+Ctrl превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Menu key changes group"
-msgstr "Двата Shift-a превключват групата"
+msgstr "Клавишът Menu превключва групата"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Ctrl key changes group"
-msgstr "Alt и Ctrl превключват групата"
+msgstr "Левият Ctrl превключва групата"
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
-msgstr ""
+msgstr "Натиснете клавиша Menu за да изберете трето ниво"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to use the commercial driver from nVidia. Please "
-#~ "download the nVidia installer from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. After you have installed the driver you can enable "
-#~ "3D with SaX2."
-#~ msgstr ""
-#~ "<b>Не може да се разреши OpenGL ускорение.</b><hr>Системата няма "
-#~ "официалния 2D/3D/OpenGL драйвер от nVidia. Подновете пакетите NVIDIA_GLX "
-#~ "и NVIDIA_kernel от сайта на nVidia <i>http://www.nvidia.com</i>. След "
-#~ "като ги инсталирате можете да разрешите 3D чрез SaX2."
-
-#~ msgid "Enable AccessX"
-#~ msgstr "Разрешаване на AccessX"
-
-#~ msgid "add"
-#~ msgstr "добавяне"
+msgstr "Meta е определен за Win клавишите."
