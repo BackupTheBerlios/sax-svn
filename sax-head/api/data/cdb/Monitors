@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed May  7 12:18:03 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon May 12 12:53:10 2003
 #
 # Template for monitor data
 # --------------------------
@@ -30136,6 +30136,16 @@ SAMSUNG:SYNCMASTER 700NF(T)  {
  DDC=SAM38D7
  Option=DPMS
  Hsync=30-96
+ Vsync=50-160
+}
+
+#==============================================
+# SyncMaster 700P
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 700P  {
+ DDC=SAM1D13
+ Option=DPMS
+ Hsync=30-85
  Vsync=50-160
 }
 
