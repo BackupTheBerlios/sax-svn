@@ -202,6 +202,7 @@ sub ImportConfig {
 		die "ISaX: could not open tree: $init{BinaryFile}";
 	}
 	%dialog = %{$hashref};
+	%dialog = ConstructInputOptions (\%dialog);
 	}
 	PrepareLayoutDefaults();
 	PrepareLayout();
@@ -1048,6 +1049,73 @@ sub GetFbResolution {
 			return($res)
 		}
 	}
+}
+
+#---[ ConstructInputOptions ]-----#
+sub ConstructInputOptions {
+#----------------------------------------------------------
+# refering to the MergeParseResult function we will create
+# the RawOption index according to the InputOptions keys
+#
+	my %input = %{$_[0]};
+	my %InputOptions;
+	$InputOptions{Protocol}           = 1;
+	$InputOptions{Device}             = 1;
+	$InputOptions{SampleRate}         = 1;
+	$InputOptions{BaudRate}           = 1;
+	$InputOptions{Emulate3Buttons}    = 1;
+	$InputOptions{Emulate3Timeout}    = 1;
+	$InputOptions{ChordMiddle}        = 1;
+	$InputOptions{ClearDTR}           = 1;
+	$InputOptions{ClearRTS}           = 1;
+	$InputOptions{ZAxisMapping}       = 1;
+	$InputOptions{MinX}               = 1;
+	$InputOptions{MaxX}               = 1;
+	$InputOptions{MinY}               = 1;
+	$InputOptions{MaxY}               = 1;
+	$InputOptions{MaximumYPosition}   = 1;
+	$InputOptions{MinimumYPosition}   = 1;
+	$InputOptions{MaximumXPosition}   = 1;
+	$InputOptions{MinimumXPosition}   = 1;
+	$InputOptions{ScreenNumber}       = 1;
+	$InputOptions{ScreenNo}           = 1;
+	$InputOptions{ReportingMode}      = 1;
+	$InputOptions{Rotation}           = 1;
+	$InputOptions{ButtonThreshold}    = 1;
+	$InputOptions{ButtonNumber}       = 1;
+	$InputOptions{Buttons}            = 1;
+	$InputOptions{SendCoreEvents}     = 1;
+	$InputOptions{Vendor}             = 1;
+	$InputOptions{Name}               = 1;
+	$InputOptions{Type}               = 1;
+	$InputOptions{Mode}               = 1;
+	$InputOptions{Load}               = 1;
+	$InputOptions{InputFashion}       = 1;
+	$InputOptions{Option}             = 1;
+	$InputOptions{TopX}               = 1;
+	$InputOptions{TopY}               = 1;
+	$InputOptions{BottomX}            = 1;
+	$InputOptions{BottomY}            = 1;
+	$InputOptions{Suppress}           = 1;
+	$InputOptions{Serial}             = 1;
+	$InputOptions{EmulateWheel}       = 1;
+	$InputOptions{EmulateWheelButton} = 1;
+
+	my $option = "";
+	foreach my $id (keys %{$input{InputDevice}}) {
+	if ($input{InputDevice}{$id}{Identifier} =~ /Mouse\[(.*)\]/) {
+		foreach my $opt (keys %{$input{InputDevice}{$id}{Option}}) {
+		if (! defined $InputOptions{$opt}) {
+			my $optval = $input{InputDevice}{$id}{Option}{$opt};
+			$option = "$option,\"$opt\" \"$optval\"";
+			$option =~ s/^,//;
+			$input{InputDevice}{$id}{Option}{RawOption} = $option;
+			delete $input{InputDevice}{$id}{Option}{$opt};
+		}
+		}
+	}
+	}
+	return %input;
 }
 
 # start with main...
