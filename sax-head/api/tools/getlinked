@@ -25,7 +25,7 @@ sub LinkConfiguration {
 	my $ref    = "/var/cache/sax/files/XF86Config.first";
 
 	if (! -f $server) {
-		$server = "/usr/X11R6/bin/XFree86";
+		$server = "/usr/X11R6/bin/Xorg";
 	} 
 	if (-f $final) {
 		qx (cp $final $save);
