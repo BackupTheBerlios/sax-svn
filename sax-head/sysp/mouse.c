@@ -108,6 +108,7 @@ void ScanMouse::Scan (void) {
 		strcpy(define->did,"0");
 		strcpy(define->vid,"0");
 		strcpy(define->profile,"<undefined>");
+		strcpy(define->name,"<undefined>");
 		Push (*define);
 	}
 }
