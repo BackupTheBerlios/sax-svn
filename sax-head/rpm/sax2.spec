@@ -280,6 +280,7 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 
 # remove unpacked sources...
 # --------------------------
+rm -f $RPM_BUILD_ROOT/var/adm/perl-modules/sax2
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SecureMode
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SetMode
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/catch
