@@ -1,0 +1,74 @@
+.TH xmode 1 "July 15, 2002" "Version 4.8" "Utils for X-Window"
+.UC 1
+
+.SH NAME
+xmode \- Calculate X11 Modelines
+
+.SH SYNOPSIS
+.B xmode
+[
+.I options 
+]
+
+.SH DESCRIPTION
+xmode calculates X11 modelines according to your specifications
+the output from xmode contains three lines where the first line
+print the horizontal sync value in
+.I Khz
+and the second line the refresh rate in
+.I Hz
+The third and last line is the modeline to be used within the
+.I /etc/X11/XF86Config
+file
+
+.SH COMMAND LINE OPTIONS
+Available command line options are the following:
+.TP
+-d \fIdacspeed\fP
+RamDac speed to use for the Modeline
+.TP
+-r \fIrefresh rate in Hz\fP
+Set basic refresh rate to use for the Modeline
+.TP
+-s \fIhorizontal sync rate in Khz\fP
+Set basic fhorizontal sync rate to use for the Modeline
+.TP
+-x \fIX dimension in pixels\fP
+Set X resolution
+.TP
+-y \fIY dimension in pixels\fP
+Set Y resolution
+.TP
+-n
+Do not call the check geometry algorithm. This algorithm tries
+to put the image to the center but this will change the basic
+values for refresh\- and/or horizontal sync rate. If you want
+the modeline to be exactly at the given frequencies use this
+option.
+.TP
+-f
+Calculate Framebuffer modes instead of X11 modes which can be
+used with a
+.I fbset
+call, if the kernel framebuffer is able to swtich the mode
+
+.SH EXAMPLE
+xmode
+.I -x 1024 -y 768 -r 80
+
+58 Khz
+.br
+73 Hz
+.br
+Modeline "1024x768" 82 1024 1040 1216 1400 768 768 777 802
+
+.SH AUTHORS
+Marcus Schäfer <sax@suse.de>
+
+.SH MAINTAINERS
+The current maintainer is Marcus Schäfer. If you found a bug concering
+SaX2 and/or related tools, feel free to contact Marcus <
+.I sax@suse.de
+>.  If you have any questions concerning support areas please contact
+.I support@suse.de
+.
