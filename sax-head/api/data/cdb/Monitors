@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 10 15:01:07 2003
+# Author: Marcus Schaefer <sax@suse.de>, Thu Nov 13 12:44:08 2003
 #
 # Template for monitor data
 # --------------------------
@@ -4410,6 +4410,15 @@ BELINEA:101720  {
 BELINEA:101740  {
  Hsync=30-80
  Vsync=50-75
+}
+
+#==============================================
+# 101750
+#----------------------------------------------
+BELINEA:101750  {
+ Option=DPMS
+ Hsync=30-80
+ Vsync=56-75
 }
 
 #==============================================
@@ -30817,7 +30826,8 @@ SAMTRON:96BDF97BDF  {
 SAMTRON:96P97P(T)  {
  DDC=STN000C
  Option=DPMS
- Hsync=30-85
+ Hsync=30-93
+ Resolution=1280x1024
  Vsync=50-160
 }
 
