@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 31 10:35:47 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 31 12:31:30 2004
 #
 # Template for monitor data
 # --------------------------
@@ -20968,6 +20968,17 @@ LG:L1811S (DIGITAL)  {
  Option=DPMS
  Hsync=30-71
  Vsync=56-75
+}
+
+#==============================================
+# LGP 1024x768
+#----------------------------------------------
+LG:LGP 1024X768  {
+ DDC=LGP0557
+ Option=DPMS
+ Hsync=31-60
+ Resolution=1024x768
+ Vsync=30-60
 }
 
 #==============================================
