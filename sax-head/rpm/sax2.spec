@@ -8,12 +8,12 @@
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig udev update-desktop-files x-devel-packages xorg-x11-driver-options xorg-x11-server yacc
+# neededforbuild  flex hwinfo hwinfo-devel qt3-devel-packages swig udev update-desktop-files x-devel-packages xorg-x11-driver-options xorg-x11-server yacc
 
 BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv less libacl libattr libgcc libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
 
 Name:         sax2
-Requires:     perl perl-gettext fbset sax2-ident
+Requires:     perl perl-gettext fbset sax2-ident perl-TermReadLine-Gnu
 %if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
@@ -350,10 +350,6 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wmstart
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
 rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*/*-linux-thread-multi/perllocal.pod
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm,v
 %suse_update_desktop_file -i %name System SystemSetup
 
 %post
@@ -371,13 +367,6 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 %dir /usr/X11R6/%{_lib}/sax/api/data
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
-%dir /usr/lib/perl5/*_perl/*/*/Term
-%dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine
-%dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/doc
 %dir /usr/X11R6/%{_lib}/sax/sysp/script
@@ -417,19 +406,12 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/XFree.so
 /usr/X11R6/%{_lib}/PLog.so
 /usr/sbin/sysp
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
-/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu.pm
-/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu/XS.pm
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.en.ps
 %doc %{_defaultdocdir}/sax2/sax.en.dvi
 %doc %{_defaultdocdir}/sax2/sax.de.ps
 %doc %{_defaultdocdir}/sax2/sax.de.dvi
-%doc %{_mandir}/man3/Term::ReadLine::Gnu.3pm.gz
 #=================================================
 # SaX-GUI file list...  
 # ------------------------------------------------

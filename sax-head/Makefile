@@ -36,7 +36,6 @@ RDBMS        = ${var_prefix}/sax/sysp/rdbms
 SCRIPTVZ     = ${usr_prefix}/${lib_prefix}/sax/sysp/script
 SAXTOOLS     = ${usr_prefix}/${lib_prefix}/sax/tools
 APITOOLS     = ${usr_prefix}/${lib_prefix}/sax/api/tools
-PERLVZ       = ${usr_prefix}/${lib_prefix}/sax/perl
 FILES        = ${var_prefix}/sax/files
 LIBVZ        = ${usr_prefix}/${lib_prefix}
 VARVZ        = ${var_prefix}/sax
@@ -68,37 +67,13 @@ all:
 	( cd xfine && ./.make )
 	${MAKE} -C ./xfine all
 
-	# building perl stuff...
-	# ----------------------
-	for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
-		( cd perl && pkgmake extract $$i && cd $$i && perl Makefile.PL ) ;\
-	done
-
-	
 install:
 	install -d -m 755 ${BINVZ} ${APIVZ} ${APIDATAVZ}
 	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
-	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ} ${PERLVZ}
+	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${FONTVZ} ${VARVZ} ${CREATEVZ}
 	install -d -m 755 ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
-
-	# install perl stuff...
-	# ---------------------
-	for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
-		if [ "${PVERSION}" -ge 581 ];then \
-		( \
-        cd ./perl/$$i && make DESTDIR=${buildroot} install_vendor \
-        ) ;\
-		else \
-		( \
-		cd ./perl/$$i && make PREFIX=${buildroot}/usr \
-		BUILDROOTPREFIX=${buildroot} \
-		INSTALLMAN1DIR=${buildroot}/${mandir}/man1 \
-		INSTALLMAN3DIR=${buildroot}/${mandir}/man3 install \
-		) ;\
-		fi \
-	done
 
 	# install NLS support...
 	# -----------------------
