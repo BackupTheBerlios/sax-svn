@@ -47,11 +47,12 @@ WACOM:GRAPHIRE / INTUOS (USB) {
  Mode             = Absolute
  Driver           = wacom
  Device           = /dev/input/event0
- Option           = Tilt,KeepShape,USB
+ Option           = Tilt,USB
  SendCoreEvents   = on
  KernelLoad       = wacom
  StylusLink       = GRAPHIRE / INTUOS Stylus (USB)
  EraserLink       = GRAPHIRE / INTUOS Eraser (USB)
+ RawOption        = "BottomX" "46000","BottomY" "24000"
 }
 
 #--------------------------#

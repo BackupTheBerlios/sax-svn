@@ -158,6 +158,7 @@ STATUS        : Status: Up-to-date
 #define GETLOG          "/usr/X11R6/lib/sax/api/tools/getlog"
 #define GETRAWLIST      "/usr/X11R6/lib/sax/api/tools/getRawList"
 #define GET3D           "/usr/X11R6/lib/sax/api/tools/get3D"
+#define GETTABLETPORT   "/usr/X11R6/lib/sax/api/tools/getUSBTabletPort"
 #define GETACTIVATED    "/usr/X11R6/lib/sax/api/tools/getActivated"
 #define GETINSTALLED    "/usr/X11R6/lib/sax/api/tools/getInstalled"
 #define GETPACKAGE      "/usr/X11R6/lib/sax/api/tools/getPackage"

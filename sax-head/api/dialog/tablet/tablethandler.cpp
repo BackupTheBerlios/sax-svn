@@ -860,9 +860,12 @@ void XTablet::addTablet (void) {
 			workingTablet.setPair ("RawOption","");
 		}
 		// port...
+		QString* tabletport = new QString (
+			qx (GETTABLETPORT,STDNONE)
+		);
 		switch (mPort->currentItem()) {
 			case 0:
-				workingTablet.setPair ("Device","/dev/input/event0");
+				workingTablet.setPair ("Device",*tabletport);
 			break;
 			case 1:
 				workingTablet.setPair ("Device","/dev/ttyS0");
