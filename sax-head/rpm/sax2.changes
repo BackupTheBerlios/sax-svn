@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Oct  2 10:34:49 CEST 2003 - ms@suse.de
+
+- fixed checking for graphics card changes, which was incorrect
+  if only the name of a card was changed but the vendor was still
+  the same
+
+-------------------------------------------------------------------
 Mon Sep 29 14:21:54 CEST 2003 - ms@suse.de
 
 - fixed double click behaviour of fvwmrc (#31361)

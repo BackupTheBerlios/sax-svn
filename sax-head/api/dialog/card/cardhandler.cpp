@@ -741,10 +741,7 @@ void XCard::slotTopOk (void) {
 	if (! newCard) {
 	QString vendor = workingCard["Vendor"];
 	QString name   = workingCard["Name"];
-	if (
-		((mVendor->currentText()!=vendor) && (mName->currentText()!=name)) ||
-		m3DStateChanged
-	) {
+	if ((mName->currentText()!=name) || m3DStateChanged) {
 		changeRequest = true;
 	}
 	} else {
