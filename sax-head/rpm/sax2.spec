@@ -162,9 +162,11 @@ done
 if [ -f /sbin/fbset ];then
 for i in `find -name "*" | xargs grep -l "/usr/sbin/fbset"`;do
 (
+	mode=`stat -c %a $i`
 	cat $i | \
 		sed -e 's@/usr/sbin/fbset@/sbin/fbset@g' \
 	> $i.sed; mv $i.sed $i
+	chmod 0$mode $i
 )
 done
 fi
