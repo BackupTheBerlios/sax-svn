@@ -2,6 +2,7 @@
 # ------------------------
 Device  -> [X]   ->  VendorName       = Matrox
 Device  -> [X]   ->  BoardName        = G450
+Device  -> [X]   ->  Raw->0->Option   = "hwcursor" "off"
 Device  -> [X]   ->  Driver           = mga
 Device  -> [X]   ->  Option           = NoHal
 Device  -> [X]   ->  Screen           = 0
@@ -13,6 +14,7 @@ Device  -> [X+1] ->  VendorName       = Matrox
 Device  -> [X+1] ->  Option           = NoHal
 Device  -> [X+1] ->  Identifier       = Device[[X+1]]
 Device  -> [X+1] ->  BoardName        = G450
+Device  -> [X+1] ->  Raw->0->Option   = "hwcursor" "off"
 Device  -> [X+1] ->  Driver           = mga
 Device  -> [X+1] ->  Screen           = 1
 
