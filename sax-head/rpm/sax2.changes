@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Jul 24 15:38:33 CEST 2003 - ms@suse.de
+
+- fixed use of xupdate and xkbctrl scripts. Package only the
+  script versions, the binary versions are no longer needed
+  because there is a perl interpreter within the instsys now
+
+-------------------------------------------------------------------
 Wed Jul 23 12:36:03 CEST 2003 - ms@suse.de
 
 - fixed build for perl >= 5.8.1
