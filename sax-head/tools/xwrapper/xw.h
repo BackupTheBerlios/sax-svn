@@ -32,7 +32,7 @@ STATUS        : Status: Up-to-date
 #define  XLook       "/usr/X11R6/lib/sax/tools/xlook"
 #define  XFree86     "/usr/X11R6/bin/XFree86"
 #define  TWM         "/usr/X11R6/bin/twm"
-#define  FVWM        "/usr/X11R6/bin/fvwm2"
+#define  FVWM        "/usr/X11R6/lib/sax/wmstart"
 #define  XIDLE       "/usr/X11R6/lib/sax/xapi"
 #define  TWMRC       "/usr/X11R6/lib/sax/api/data/twmrc"
 #define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc"

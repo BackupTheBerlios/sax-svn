@@ -5,7 +5,6 @@ require DynaLoader;
 @ISA = qw(Exporter DynaLoader);
 package PLog;
 bootstrap PLog;
-var_PLog_init();
 package PLog;
 @EXPORT = qw( );
 1;
