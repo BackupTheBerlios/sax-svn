@@ -61,6 +61,7 @@ all:
 	# /.../
 	# building libsax and bindings...
 	# -------------------------------
+	( cd libsax && doxygen sax.dox )
 	${MAKE} -C ./libsax all
 	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \
@@ -68,7 +69,6 @@ all:
 			( cd ./bindings/$$i && make -f Makefile.swig && make ) ;\
 		fi \
 	done )
-	( cd libsax && doxygen sax.dox )
 
 	# building GUI and tools...
 	# -------------------------
