@@ -116,16 +116,18 @@ sub AutoDetectMouse {
 		if ($index >= 3) {
 			my $driver = $var{InputDevice}{$index}{Driver};
 			my $device = $var{InputDevice}{$index}{Option}{Device};
+			my $profile= $prof_list[$i];
 			# /.../
 			# send core events only if driver and device are
 			# not yet in use !
 			# ----
-			if (! defined $entity{$driver}{$device}) {
+			if (! defined $entity{$driver}{$device}{$profile}) {
 				my $l = "ServerLayout";
+				$var{$l}{all}{InputDevice}{$index}{id} = "Mouse[$index]";
 				$var{$l}{all}{InputDevice}{$index}{usage} = "SendCoreEvents";
 			}
 			$var{InputDevice}{$index}{Identifier};
-			$entity{$driver}{$device} = $index;
+			$entity{$driver}{$device}{$profile} = $index;
 		}
 		$index = $index + 2;
 	}

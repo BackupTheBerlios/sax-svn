@@ -478,9 +478,11 @@ void PrintMouseData(ScanMouse m) {
 
 	// create a cache for all device names
 	str devs[m.Count()];
+	str profiles[m.Count()];
 	for (int i = m.Count(); i > 0; i--) {
 		data = m.Pop();
 		strcpy (devs[i],data.device);
+		strcpy (profiles[i],data.profile);
 	}
 	m.Reset();
 
@@ -491,8 +493,10 @@ void PrintMouseData(ScanMouse m) {
 		data = m.Pop();
 		for (int n = i - 1; n > 0; n--) {
 		if (strcmp (devs[n],data.device) == 0) {
-			show = false;
-			break;
+			if (strcmp (profiles[n],data.profile) == 0) {
+				show = false;
+				break;
+			}
 		}
 		}
 		if (show) {
