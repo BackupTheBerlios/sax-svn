@@ -8,5 +8,5 @@
 # --------
 # Status: Up-to-date
 #
-VERSION=`rpm -q hwinfo | cut -f2 -d- | tr -d . | cut -c1`
+VERSION=`rpm -q hwinfo --qf %{VERSION} | tr -d .`
 test "$VERSION" -ge "5" && echo "DDC_SUPPORT" || echo "NO_DDC_SUPPORT"
