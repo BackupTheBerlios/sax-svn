@@ -185,7 +185,14 @@ sub svnup {
 		print "Checkout source level [$slevel]...\n";
 		qx (svn co -r $slevel http://$svnPath sax 2>&1 );
 	} else {
-		print "Checkout source level [HEAD]...\n";
+		my $location = "HEAD";
+		if ( defined $Branch ) {
+			$location = "BRANCH: $Branch";
+		}
+		if ( defined $Tag ) {
+			$location = "TAG: $Tag";
+		}
+		print "Checkout source level [$location]...\n";
 		qx ( svn co http://$svnPath sax 2>&1 );
 	}
 	my $error = $? >> 8;
