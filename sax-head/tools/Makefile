@@ -108,7 +108,6 @@ install:
 	${MAKE} -C ./plog DESTDIR=${buildroot} install_vendor
 	rm -f ${sax_tools}/config.status
 	rm -f ${sax_tools}/configure
-	rm -f ${sax_tools}/xw
 	rm -f ${sax_tools}/prepare
 	rm -f ${sax_tools}/PLog.so
 	rm -f ${sax_tools}/check_ddc.sh
