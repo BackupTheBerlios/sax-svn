@@ -12,56 +12,63 @@
 buildroot      = /
 mandir         = /usr/share/man
 
-prefix         = ${buildroot}/usr
-usr_prefix     = ${buildroot}/usr/X11R6
+#============================================
+# Prefixs...
+#--------------------------------------------
+usr_prefix     = ${buildroot}/usr
+sax_prefix     = ${buildroot}/usr/share/sax
+xfi_prefix     = ${buildroot}/usr/share/xfine
 var_prefix     = ${buildroot}/var/cache
-lib_prefix     = lib
+lib_prefix     = ${buildroot}/usr/lib
 
-# Variables 
-SBINVZ       = ${prefix}/sbin
-BINVZ        = ${usr_prefix}/bin
-APIVZ        = ${usr_prefix}/${lib_prefix}/sax/api
-SAXBINVZ     = ${usr_prefix}/${lib_prefix}/sax
-DOCVZ        = ${usr_prefix}/${lib_prefix}/sax/doc
-APIDATAVZ    = ${usr_prefix}/${lib_prefix}/sax/api/data
-CDBVZ        = ${usr_prefix}/${lib_prefix}/sax/api/data/cdb
-PIXVZ        = ${usr_prefix}/${lib_prefix}/sax/api/pixmaps
-LANGVZ       = ${usr_prefix}/${lib_prefix}/sax/api/lang
-MODULEVZ     = ${usr_prefix}/${lib_prefix}/sax/modules
-DETECTVZ     = ${usr_prefix}/${lib_prefix}/sax/modules/detect
-CREATEVZ     = ${usr_prefix}/${lib_prefix}/sax/modules/create
-SYSPVZ       = ${usr_prefix}/${lib_prefix}/sax/sysp
-MAPVZ        = ${usr_prefix}/${lib_prefix}/sax/sysp/maps
-RDBMS        = ${var_prefix}/sax/sysp/rdbms
-SCRIPTVZ     = ${usr_prefix}/${lib_prefix}/sax/sysp/script
-SAXTOOLS     = ${usr_prefix}/${lib_prefix}/sax/tools
-APITOOLS     = ${usr_prefix}/${lib_prefix}/sax/api/tools
-FILES        = ${var_prefix}/sax/files
-LIBVZ        = ${usr_prefix}/${lib_prefix}
-USRLIBVZ     = ${prefix}/${lib_prefix}
-INCVZ        = ${prefix}/include/sax
-VARVZ        = ${var_prefix}/sax
-LOCALEVZ     = ${prefix}/share/locale
-LC           = LC_MESSAGES
-PROFILE      = ${usr_prefix}/${lib_prefix}/sax/profile
-FONTVZ       = ${usr_prefix}/${lib_prefix}/X11/fonts/truetype
-XFINEBINVZ   = ${usr_prefix}/${lib_prefix}/xfine
-XFINEPIXMAPS = ${usr_prefix}/${lib_prefix}/xfine/pixmaps
-LIBDOCDIR    = ${prefix}/share/doc/packages/libsax
+#============================================
+# Variables... 
+#--------------------------------------------
+SBINVZ         = ${buildroot}/sbin
+SAXBINVZ       = ${sax_prefix}
+APIVZ          = ${sax_prefix}/api
+APIDATAVZ      = ${sax_prefix}/api/data
+CDBVZ          = ${sax_prefix}/api/data/cdb
+PIXVZ          = ${sax_prefix}/api/pixmaps
+LANGVZ         = ${sax_prefix}/api/lang
+DOCVZ          = ${sax_prefix}/doc
+MODULEVZ       = ${sax_prefix}/modules
+DETECTVZ       = ${sax_prefix}/modules/detect
+CREATEVZ       = ${sax_prefix}/modules/create
+SYSPVZ         = ${sax_prefix}/sysp
+MAPVZ          = ${sax_prefix}/sysp/maps
+PROFILE        = ${sax_prefix}/profile
+VARCACHEVZ     = ${var_prefix}/sax
+RDBMS          = ${var_prefix}/sax/sysp/rdbms
+FILES          = ${var_prefix}/sax/files
+SCRIPTVZ       = ${sax_prefix}/sysp/script
+SAXTOOLS       = ${sax_prefix}/tools
+APITOOLS       = ${sax_prefix}/api/tools
+USRLIBVZ       = ${lib_prefix}
+INCVZ          = ${usr_prefix}/include/sax
+LOCALEVZ       = ${usr_prefix}/share/locale
+XFINEBINVZ     = ${xfi_prefix}
+XFINEPIXMAPS   = ${xfi_prefix}/pixmaps
+LIBDOCDIR      = ${usr_prefix}/share/doc/packages/libsax
 
-ARCH         = `arch`
-PVERSION     = `rpm -q perl --queryformat '%{VERSION}' | tr -d .`
+#============================================
+# Helpers
+#--------------------------------------------
+ARCH           = `arch`
+PVERSION       = `rpm -q perl --queryformat '%{VERSION}' | tr -d .`
+LC             = LC_MESSAGES
 
 all:
-	# /.../
-	# building config parser and system profiler...
-	# ---------------------------------------------
+	#============================================
+	# building config parser and system profiler
+	#--------------------------------------------
 	${MAKE} -C ./parse -f Makefile.Linux all
+	${MAKE} -C ./parse all
 	${MAKE} -C ./sysp  all
 
-	# /.../
+	#============================================
 	# building libsax and bindings...
-	# -------------------------------
+	#--------------------------------------------
 	( cd libsax && doxygen sax.dox )
 	${MAKE} -C ./libsax all
 	( cd libsax && \
@@ -71,28 +78,39 @@ all:
 		fi \
 	done )
 
+	#============================================
 	# building GUI and tools...
-	# -------------------------
+	#--------------------------------------------
 	( cd api && ./.make )
 	${MAKE} -C ./api all
 	${MAKE} -C ./tools all
 
+	#============================================
 	# building XFine2...
-	# ------------------
+	#--------------------------------------------
 	( cd xfine && ./.make )
 	${MAKE} -C ./xfine all
 
 install:
-	install -d -m 755 ${BINVZ} ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
+	#============================================
+	# Install base directories
+	#--------------------------------------------
+	install -d -m 755 ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
 	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ} ${INCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
-	install -d -m 755 ${PROFILE} ${SBINVZ} ${FONTVZ} ${VARVZ} ${CREATEVZ}
+	install -d -m 755 ${PROFILE} ${SBINVZ} ${VARCACHEVZ} ${CREATEVZ}
 	install -d -m 755 ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
 	install -d -m 755 ${LIBDOCDIR}
 
-	# install bindings...
-	# ---------------------
+	#============================================
+	# install X11 parser...
+	#--------------------------------------------
+	( cd parse && make DESTDIR=${buildroot} install_vendor )
+
+	#============================================
+	# install language bindings...
+	#--------------------------------------------
 	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \
 		if [ -d ./bindings/$$i ];then \
@@ -100,8 +118,9 @@ install:
 		fi \
 	done )
 
-	# install NLS support...
-	# -----------------------
+	#============================================
+	# install NLS support (translations)...
+	#--------------------------------------------
 	( cd ./locale && ./.locale )
 	for i in `ls -1 ./locale`; do \
 		if [ -d ./locale/$$i ];then \
@@ -113,8 +132,9 @@ install:
 		fi \
 	done
 
-	# install files...
-	# -----------------
+	#============================================
+	# install core files...
+	#--------------------------------------------
 	for i in `find ./profile -type f`; do \
 		echo $$i | grep -q .sh$			&& \
 		install -m 755 $$i ${PROFILE}	|| \
@@ -139,39 +159,41 @@ install:
 	install -m 644 ./parse/XFree.pm                         ${MODULEVZ}
 	install -m 644 ./api/data/cdb/*                         ${CDBVZ}
 	install -m 644 ./api/pixmaps/*                          ${PIXVZ}
-	install -m 755 ./startup/sax.sh                         ${BINVZ}
-	install -m 755 ./startup/sax2-vesa                      ${BINVZ}
-	install -m 755 ./startup/SaX2                           ${BINVZ}
+	install -m 755 ./startup/sax.sh                         ${SBINVZ}
+	install -m 755 ./startup/sax2-vesa                      ${SBINVZ}
+	install -m 755 ./startup/SaX2                           ${SBINVZ}
 	install -m 644 ./sysp/maps/Identity.map                 ${MAPVZ}
 	install -m 644 ./sysp/maps/Keyboard.map                 ${MAPVZ}
 	install -m 644 ./sysp/maps/Vendor.map                   ${MAPVZ}
 	install -m 644 ./sysp/maps/Input.map                    ${MAPVZ}
 	install -m 644 ./sysp/maps/Driver.map                   ${MAPVZ}
 	install -m 755 ./sysp/script/*                          ${SCRIPTVZ}
-	install -m 755 ./parse/blib/arch/auto/XFree/XFree.so    ${LIBVZ}
-	install -m 755 ./tools/plog/blib/arch/auto/PLog/PLog.so ${LIBVZ}
 
+	#============================================
 	# install library files...
-	# -------------------------
+	#--------------------------------------------
 	cp -a ./libsax/doc/doxygen/html ${LIBDOCDIR}
 	cp ./libsax/libsax.so*  ${USRLIBVZ}
 	cp ./libsax/*.h         ${INCVZ}
 
+	#============================================
 	# install API data files...
-	# --------------------------
+	#--------------------------------------------
 	for i in `find ./api/data -maxdepth 1 -name "*"`; do \
 	if [ -f $$i ];then \
 		install -m 644 $$i  ${APIDATAVZ} ;\
 	fi \
 	done
 
+	#============================================
 	# install tools...
-	# ------------------
+	#--------------------------------------------
 	${MAKE} -C ./tools install \
-		buildroot=${buildroot} lib_prefix=${lib_prefix}
+		buildroot=${buildroot} sax_prefix=${sax_prefix} DESTDIR=${buildroot}
 
+	#============================================
 	# install XFine2...
-	# -------------------
+	#--------------------------------------------
 	install -m 644 ./xfine/pixmaps/*                        ${XFINEPIXMAPS}
 	install -m 755 ./xfine/xfine                            ${XFINEBINVZ}
 	install -m 644 ./xfine/xfine.gtx                        ${XFINEBINVZ}
