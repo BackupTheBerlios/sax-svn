@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Jul  1 14:58:47 2003
+# Author: Marcus Schaefer <sax@suse.de>, Tue Jul 15 17:04:18 2003
 #
 # Template for monitor data
 # --------------------------
@@ -12840,6 +12840,15 @@ FUJITSU:X176  {
 #----------------------------------------------
 FUJITSU:X191  {
  DDC=ICL2800
+ Hsync=30-96
+ Vsync=50-160
+}
+
+#==============================================
+# 19P1N
+#----------------------------------------------
+FUJITSU SIEMENS:19P1N  {
+ Option=DPMS
  Hsync=30-96
  Vsync=50-160
 }
@@ -31070,7 +31079,7 @@ SIEMENS NIXDORF:MCM1707NTD  {
 SIEMENS NIXDORF:MCM171V  {
  Option=DPMS
  Hsync=30-70
- Vsync=50-160
+ Vsync=50-120
 }
 
 #==============================================
