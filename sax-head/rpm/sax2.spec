@@ -279,6 +279,13 @@ FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
 mkdir -p $FILLUP_DIR
 install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 
+# install script variants of xupdate and xkbctrl...
+# --------------------------------------------------
+mv $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl.pl \
+   $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl
+mv $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl \
+   $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate
+
 # check perl .packlist...
 # --------------------------
 %if %{suse_version} > 820
@@ -302,10 +309,8 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/isax
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/screen
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/whois
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wrap
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl.pl
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl
 rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/.testgtx
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*/i586-linux-thread-multi/perllocal.pod
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/i586-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
