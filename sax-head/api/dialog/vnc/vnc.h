@@ -30,6 +30,8 @@ STATUS        : Status: Up-to-date
 #include "../intro.h"
 #include "../../xbox.h"
 
+#define UNIQUE 10
+
 enum {
 	XVncPage1 = XVnc,
 };
@@ -74,10 +76,10 @@ class Xvnc : public XTemplate {
 	private:
 	bool saveConfiguration    (void);
 	void setDeviceOption      (QString);
-	void setDeviceRawOption   (QString,QString);
+	void setDeviceRawOption   (QString,QString,int=0);
 	void unsetDeviceOption    (QString);
 	void unsetDeviceRawOption (QString);
-	void resetDeviceRawOption (QString,QString);
+	void resetDeviceRawOption (QString,QString,int=0);
 	void resetDeviceOption    (QString);
 
 	private:

@@ -348,7 +348,7 @@ bool Xvnc::saveConfiguration (void) {
 	}
 	if (mCheckHTTP -> isOn()) {
 		resetDeviceRawOption ("httpdir","/usr/share/vnc/classes");
-		resetDeviceRawOption ("httpport",mHTTP->text());
+		resetDeviceRawOption ("httpport",mHTTP->text(),UNIQUE);
 	} else {
 		unsetDeviceRawOption ("httpport");
 		unsetDeviceRawOption ("httpdir");
@@ -379,7 +379,7 @@ void Xvnc::setDeviceOption (QString value) {
 //=====================================
 // Xvnc set raw option to all devices
 //-------------------------------------
-void Xvnc::setDeviceRawOption (QString key,QString value) {
+void Xvnc::setDeviceRawOption (QString key,QString value,int flag) {
 	// ...
 	// this function will set the given option to all
 	// known device sections
@@ -390,6 +390,16 @@ void Xvnc::setDeviceRawOption (QString key,QString value) {
 			continue;
 		}
 		XWrapPointer<XData> card ( mFiles["sys_CARD"]->getDevice (n) );
+		switch (flag) {
+		case UNIQUE:
+			if ( (n > 0) && (value.toInt() > 0) ) {
+				value.sprintf ("%d",value.toInt() + 1);
+			}
+		break;
+		default:
+			// nothing to do for default
+		break;
+		}
 		QString* options = new QString;
 		options -> sprintf ("%s,Option \"%s\" \"%s\"",
 			card["RawData"].ascii(),key.ascii(),value.ascii()
@@ -533,13 +543,13 @@ QString Xvnc::getDeviceOption (QString key) {
 //=====================================
 // Xvnc unset/set raw option 
 //-------------------------------------
-void Xvnc::resetDeviceRawOption (QString key,QString value) {
+void Xvnc::resetDeviceRawOption (QString key,QString value,int flag) {
 	// ...
 	// this function combines unset and set for raw
 	// option values
 	// ---
 	unsetDeviceRawOption (key);
-	setDeviceRawOption   (key,value);
+	setDeviceRawOption   (key,value,flag);
 }
 
 //=====================================

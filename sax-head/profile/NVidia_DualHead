@@ -5,6 +5,7 @@ Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
 Device  -> [X] ->  Driver        = nvidia
 Device  -> [X] ->  Screen        = 0
+Device  -> [X] ->  Option        = IgnoreEDID
 
 # new device for Screen 1
 # ------------------------
@@ -14,6 +15,7 @@ Device  -> [X+1] ->  BoardName        = {Device -> [X] -> BoardName}
 Device  -> [X+1] ->  Identifier       = Device[[X+1]]
 Device  -> [X+1] ->  Driver           = nvidia
 Device  -> [X+1] ->  Screen           = 1
+Device  -> [X+1] ->  Option           = IgnoreEDID
 
 # new desktop for Screen 1
 # -------------------------
