@@ -186,12 +186,13 @@ void XIntro::addTo (XFrame* xf) {
 	QDict<char> text = xf->getText();
 	QDictIterator<char> it (init);
 
-	XCommand sysCard       (GETCARD   , ISAXCARD);
-	XCommand sysDesktop    (GETDESKTOP, ISAXDESKTOP);
-	XCommand sysLayout     (GETLAYOUT , ISAXLAYOUT);
-	XCommand sysKeyboard   (GETKBD    , ISAXKEYBOARD);
-	XCommand sysPath       (GETPATH   , ISAXPATH);
-	XCommand sysInput      (GETINPUT  , ISAXINPUT);
+	XCommand sysCard       ( GETCARD       , ISAXCARD       );
+	XCommand sysDesktop    ( GETDESKTOP    , ISAXDESKTOP    );
+	XCommand sysLayout     ( GETLAYOUT     , ISAXLAYOUT     );
+	XCommand sysKeyboard   ( GETKBD        , ISAXKEYBOARD   );
+	XCommand sysPath       ( GETPATH       , ISAXPATH       );
+	XCommand sysInput      ( GETINPUT      , ISAXINPUT      );
+	XCommand sysExtensions ( GETEXTENSIONS , ISAXEXTENSIONS );
 
 	QFileInfo configStatus (XCONFIG);
 	QFileInfo scanStatus   (HWCONFIG);
@@ -212,6 +213,7 @@ void XIntro::addTo (XFrame* xf) {
 		sysKeyboard.addOption	("-b");
 		sysPath.addOption		("-b");
 		sysInput.addOption		("-b");
+		sysExtensions.addOption ("-b");
 	}
 	// ...
 	// Ok let`s call the ISaX to create the configuration
@@ -224,6 +226,7 @@ void XIntro::addTo (XFrame* xf) {
 		sysKeyboard.runCommand();
 		sysPath.runCommand();
 		sysInput.runCommand();
+		sysExtensions.runCommand();
 	}
 
 	for (; it.current(); ++it) {
@@ -249,6 +252,7 @@ void XIntro::addTo (XFrame* xf) {
 			sysKeyboard.runCommand();
 			sysPath.runCommand();
 			sysInput.runCommand();
+			sysExtensions.runCommand();
 		}
 		while(getproc(it.current())) {
 			XStringList baseList (it.current());

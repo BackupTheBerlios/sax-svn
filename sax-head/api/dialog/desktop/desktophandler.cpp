@@ -1037,7 +1037,7 @@ void XDesktop::slotTopOk (void) {
 	QList<char> resList = res.getList();
 	QString vsync;
 	bool fitSyncRange = false;
-	for (int i=minVsync.toInt();i<=maxVsync.toInt();i+=10) {
+	for (int i=minVsync.toInt();i<=maxVsync.toInt();i+=2) {
 		vsync.sprintf("%d",i);
 		QString modeline = qx (
 			XMODE,STDOUT,6,"%s %s %s %s %s %s",
@@ -1049,6 +1049,10 @@ void XDesktop::slotTopOk (void) {
 		mode.setSeperator ("\n");
 		QString mhsync = mode.getList().at(0);
 		QString mvsync = mode.getList().at(1);
+		log ( L_INFO,
+			"XDesktop::checking: have[ %d khz %d hz ] / got[ %d Khz %d hz ]\n",
+			maxHsync.toInt(),minVsync.toInt(),mhsync.toInt(),mvsync.toInt()
+		);
 		if (
 			(mhsync.toInt() <= maxHsync.toInt()) && 
 			(mvsync.toInt() >= minVsync.toInt())

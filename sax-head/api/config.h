@@ -130,6 +130,7 @@ STATUS        : Status: Up-to-date
 #define GETKBD          ISAX " -l Keyboard"
 #define GETLAYOUT       ISAX " -l Layout"
 #define GETPATH         ISAX " -l Path"
+#define GETEXTENSIONS   ISAX " -l Extensions"
 
 //==============================
 // Binary files...
@@ -216,5 +217,6 @@ STATUS        : Status: Up-to-date
 #define ISAXKEYBOARD    CONFDIR "keyboard"
 #define ISAXLAYOUT      CONFDIR "layout"
 #define ISAXPATH        CONFDIR "path"
+#define ISAXEXTENSIONS  CONFDIR "extensions"
 
 #endif

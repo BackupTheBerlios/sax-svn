@@ -30,7 +30,7 @@ Auto:Generic {
  Driver       = mouse
  Protocol     = Auto
  Option       = AutoSoft
- Device       = /dev/mouse
+ Device       = /dev/input/mice
 }
 
 # =========================================
@@ -96,7 +96,7 @@ Serial:ThinkingMouse {
 BusMouse:InPort {
  Driver       = mouse
  Protocol     = BusMouse
- Device       = /dev/mouse 
+ Device       = /dev/input/mice 
 }
 
 # =========================================
@@ -107,28 +107,28 @@ PS/2-Mouse:ExplorerPS/2 {
  Protocol     = ExplorerPS/2
  Buttons      = 7
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:GlidePointPS/2 {
  Driver       = mouse
  Protocol     = GlidePointPS/2
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:IMPS/2 {
  Driver       = mouse
  Protocol     = imps/2
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:MouseManPlusPS/2 {
  Driver       = mouse
  Protocol     = MouseManPlusPS/2
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:NetMousePS/2 {
@@ -136,7 +136,7 @@ PS/2-Mouse:NetMousePS/2 {
  Protocol     = NetMousePS/2
  Buttons      = 7
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:NetScrollPS/2 {
@@ -144,20 +144,20 @@ PS/2-Mouse:NetScrollPS/2 {
  Protocol     = NetScrollPS/2
  Buttons      = 7
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:PS/2 {
  Driver       = mouse
  Protocol     = PS/2
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 PS/2-Mouse:ThinkingMousePS/2 {
  Driver       = mouse
  Protocol     = ThinkingMousePS/2
  ZAxisMapping = 4 5
- Device       = /dev/psaux
+ Device       = /dev/input/mice
 }
 
 # =========================================
@@ -226,12 +226,12 @@ USB-Mouse:ThinkingMousePS/2 on USB {
 # -----------------------------------------
 Extended:Spaceball {
  Driver       = magellan
- Device       = /dev/mouse
+ Device       = /dev/input/mice
 }
 
 Extended:SpaceOrbit {
  Driver       = spaceorb
- Device       = /dev/mouse
+ Device       = /dev/input/mice
 }
 
 # =========================================
@@ -240,13 +240,13 @@ Extended:SpaceOrbit {
 Anubis:Economy (PS/2)  {
  Driver     = mouse
  Protocol   = PS/2
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 Anubis:Economy (Serial)  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 # =========================================
@@ -255,43 +255,43 @@ Anubis:Economy (Serial)  {
 Boeder:F-1 (Schumacher-Design)  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:Junior {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-1 Scrollmouse {
  Driver     = IntelliMouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-10 Designer {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-12 Windows Pointer  {
  Driver     = mouse
  Protocol   = Microsoft
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-13 PS/2 Mouse  {
  Driver     = mouse
  Protocol   = PS/2
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 Boeder:M-2 Trackball  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-3 Serial Pointer  {
@@ -303,31 +303,31 @@ Boeder:M-3 Serial Pointer  {
 Boeder:M-7 BIT StarPointer  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-8 StatinPointer  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:M-9 Classic {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:SmartMouse  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:SmartMouse PRO  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Boeder:Scrollmouse USB  {
@@ -342,37 +342,37 @@ Boeder:Scrollmouse USB  {
 Genius:GM-F303  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Genius:Netmouse (PS/2 VERSION)  {
  Driver     = mouse
  Protocol   = IntelliMouse
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 Genius:Netmouse PRO (PS/2 VERSION)  {
  Driver     = mouse
  Protocol   = NetMousePS/2
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 Genius:Netscroll  {
  Driver     = mouse
  Protocol   = NetScrollPS/2
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 Genius:GM-F303  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Genius:Kidsball  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/mouse
+ Device     = /dev/input/mice
 }
 
 Genius:Netmouse PRO (Serial)  {
@@ -384,13 +384,13 @@ Genius:Netmouse PRO (Serial)  {
 Genius:NewScroll (PS/2 VERSION)  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 Genius:NewScroll Wireless (PS/2 VERSION)  {
  Driver     = mouse
  Protocol   = Auto
- Device     = /dev/psaux
+ Device     = /dev/input/mice
 }
 
 # =========================================
@@ -399,7 +399,7 @@ Genius:NewScroll Wireless (PS/2 VERSION)  {
 Logitech:Cordless Trackman FX {
  Driver       = mouse
  Protocol     = ExplorerPS/2
- Device       = /dev/psaux
+ Device       = /dev/input/mice
  EmulateWheel = 4
  Buttons      = 4
 }
@@ -415,7 +415,7 @@ Logitech:Cordless Trackman FX (USB) {
 Logitech:TrackMan Marble FX (PS/2) {
  Driver       = mouse
  Protocol     = ExplorerPS/2
- Device       = /dev/psaux
+ Device       = /dev/input/mice
  EmulateWheel = 4
  Buttons      = 4
 }
@@ -425,7 +425,7 @@ Logitech:TrackMan Marble FX (PS/2) {
 # -----------------------------------------
 Synaptics:Touchpad {
  Driver       = synaptics
- Device       = /dev/psaux
+ Device       = /dev/input/mice
  RawOption    = "Edges" "1900 5400 1800 3900","AccelFactor" "0.0010","LeftEdge" "1900","RightEdge" "5400","TopEdge" "1900","BottomEdge" "4000","FingerLow" "25","FingerHigh" "30","Finger" "25 30","MaxSpeed" "0.18","MaxTapMove" "220","MaxTapTime" "180","MinSpeed" "0.02","VertScrollDelta" "100","SHMConfig" "on"
  ZAxisMapping = 4 5
  Emulate3Buttons = on

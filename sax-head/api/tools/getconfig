@@ -71,7 +71,8 @@ sub createXF86Config {
 		"input",
 		"keyboard",
 		"layout",
-		"path"
+		"path",
+		"extensions"
 	);
 	# /.../
 	# create apidata file within the secure
@@ -101,20 +102,24 @@ sub createXF86Config {
 			print $api $line;
 			last SWITCH;
 			};
-			/^input/    && do {
+			/^input/      && do {
 			print $api "Mouse \{\n";
 			last SWITCH;
 			};
-			/^keyboard/ && do {
+			/^keyboard/   && do {
 			print $api "Keyboard \{\n";
 			last SWITCH;
 			};
-			/^layout/   && do {
+			/^layout/     && do {
 			print $api "Layout \{\n";
 			last SWITCH;
 			};
-			/^path/     && do {
+			/^path/       && do {
 			print $api "Path \{\n";
+			last SWITCH;
+			};
+			/^extensions/ && do {
+			print $api "Extensions \{\n";
 			last SWITCH;
 			};
 			}
