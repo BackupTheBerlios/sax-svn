@@ -1,0 +1,35 @@
+\begin{appendix}
+%%======================
+\chapter{Beispiele zur Optionsproblematik}
+\index{Anhang!Startbeispiele}
+%%======================
+
+\begin{enumerate}
+\item Eingebaut sind 4 Karten von denen die letzten 3 benutzt 
+      werden sollen. F"ur die Karten 2 und 4 sollen module 
+      gesetzt werden. In diesem Fall lautet der Aufruf:
+      \begin{verbatim}
+        SaX2 -c 1,2,3 -m 0=mga,2=nv
+      \end{verbatim}
+      Die Nummerierung der Chips beginnt bei 0 ebenso die
+      Folge der Module. Das Device 0 wird an den Chip 1 gebunden
+      Device 1 an den Chip 2 Device 2 an den Chip 3
+
+\item Eingebaut sind zwei Karten mit insgesammt 4 Chipsets.
+      3 der vier Chips sind auf der ersten Karte das andere auf der
+      zweiten. Es soll ein multihead setup erstellt werden das jeweils
+      den ersten Chip auf beiden Karten benutzt:
+      \begin{verbatim}
+        SaX2 -c 0 3 
+      \end{verbatim}
+      Sollen f"ur diese Chipsets noch module vergeben werden, so ist 
+      zu beachten dass diese als Card 0 und Card 1 erkannt werden und 
+      folglich die Moduloption auf 0 und 1 zu setzen ist: 
+      \begin{verbatim}
+        SaX -c 0,3 -m 0=mga,1=glint
+      \end{verbatim}
+\end{enumerate}
+
+
+\end{appendix}
+

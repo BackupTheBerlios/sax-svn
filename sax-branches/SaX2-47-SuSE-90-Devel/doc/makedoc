@@ -1,0 +1,59 @@
+#!/bin/sh
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 1999
+# SaX (sax) configuration level 3
+#
+
+LOCALE=$1
+DIR=`pwd`
+
+if [ -z "$LOCALE" ];then
+	echo "locale not set..."
+	exit 1
+fi
+
+# clean sweep...
+# ---------------
+rm -f ./$LOCALE/compiled/*.dvi
+rm -f ./$LOCALE/compiled/*.ps
+cd $LOCALE 
+
+# create archive...
+# ------------------
+tar -czpf doc.tgz *
+rm -rf /tmp/latex
+mkdir /tmp/latex
+
+# prepare...
+# -----------
+cp -f ./doc.tgz /tmp/latex
+if [ ! $? = 0 ];then
+	exit 1
+fi
+rm -f ./doc.tgz
+cd /tmp/latex
+
+tar -xzf ./doc.tgz
+echo "texing sax documentation ($LOCALE)..."
+make 2>/dev/null >/dev/null
+
+# saving...
+# ----------
+cd $DIR
+
+cp -f /tmp/latex/compiled/sax.dvi $DIR/$LOCALE/compiled/sax.$LOCALE.dvi
+
+# postscript...
+# --------------
+echo "creating postscript..."
+cd $DIR/$LOCALE
+dvips compiled/sax.$LOCALE.dvi 2>/dev/null >/dev/null
+mv sax.$LOCALE.ps $DIR/$LOCALE/compiled/sax.$LOCALE.ps
+
+echo 
+echo "  Please have a look at the results:"
+echo "  --> $DIR/$LOCALE/compiled"
+echo
+echo "remember to have fun :-)"
+

@@ -1,0 +1,67 @@
+.TH xkbset 1 "July 15, 2002" "Version 4.7" "Utils for X-Window"
+.UC 1
+
+.SH NAME
+xkbset \- set/reset X11 keyboard
+
+.SH SYNOPSIS
+.B xkbset
+[
+.I options 
+]
+
+.SH DESCRIPTION
+.I xkbset
+is similar to the
+.I setxkbmap
+tool but designed to work
+within SaX2. xkbset is not as powerfull as setxkbmap but easier to
+use in combination with the
+.I xkbctrl
+tool. xkbset requires an apply string containing the following
+parameters in a colon seperated list:
+.P
+.br
+[ \fIkeymap\fP   ] default: xfree86
+.br
+[ \fIkeycodes\fP ] default: xfree86
+.br
+[ \fIcompat\fP   ] default: complete
+.br
+[ \fItypes\fP    ] default: complete
+.br
+[ \fIsymbols\fP  ] default: en_US(pc101) us keyboard
+.br
+[ \fIgeometry\fP ] default: pc(pc101)
+
+If you want to map a specific console keyboard to the X11
+analogon you can use the
+.I xkbctrl
+tool with the name of the console map as argument. For example:
+
+xkbset -l `xkbctrl
+.I us.map.gz
+| grep Apply | cut -f 4 -d\\"` 
+
+.SH COMMAND LINE OPTIONS
+Available command line options are the following:
+.TP
+-l \fIapplystring\fP
+The apply string as colon seperated list as explained above.
+.TP
+-d \fIdisplay\fP
+The display to apply the keyboard to.
+
+.SH FILES
+.I <XRoot>/lib/X11/xkb
+
+.SH AUTHORS
+Marcus Schäfer <sax@suse.de>
+
+.SH MAINTAINERS
+The current maintainer is Marcus Schäfer. If you found a bug concering
+SaX2 and/or related tools, feel free to contact Marcus <
+.I sax@suse.de
+>.  If you have any questions concerning support areas please contact
+.I support@suse.de
+.

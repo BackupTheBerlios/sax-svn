@@ -1,0 +1,29 @@
+# /.../
+# Twinview profile for Quadro4 cards. This profile assume two
+# identical monitors connected to the card ! Please make sure
+# this is true before using this profile
+# --------------------------------------
+Desktop -> [X] ->  CalcModelines = no
+Monitor -> [X] ->  CalcAlgorithm = XServerPool
+Device  -> [X] ->  Driver        = nvidia
+Device  -> [X] ->  Screen        = 0
+
+# remove device/desktop for Screen 1
+# ----------------------------------
+Device  -> [X+1] = [REMOVE]
+Screen  -> [X+1] = [REMOVE]
+Monitor -> [X+1] = [REMOVE]
+
+# setup twinview options
+# ----------------------
+Device  -> [X] -> Option = TwinView
+Device  -> [X] ->  Raw -> 11 -> Option = "SecondMonitorHorizSync" "{Monitor->[X]->HorizSync}"
+Device  -> [X] ->  Raw -> 12 -> Option = "SecondMonitorVertRefresh" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] ->  Raw -> 13 -> Option = "MetaModes" "{Screen->[X]->Depth->16->Modes},{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] ->  Raw -> 14 -> Option = "TwinViewOrientation" "LeftOf"
+
+ServerLayout -> all -> Screen -> 1 = [REMOVE]
+ServerLayput -> all -> Screen -> 0 -> top    =
+ServerLayout -> all -> Screen -> 0 -> bottom =
+ServerLayout -> all -> Screen -> 0 -> left   =
+ServerLayout -> all -> Screen -> 0 -> right  =

@@ -1,0 +1,42 @@
+# How to use the guitest script for
+# testing your translations...
+# --
+
+1) Install the SaX2 package 
+2) Allow root to access the X-Server
+
+   xhost +
+
+2) switch the user to root
+ 
+   su root
+
+3) Change the directory to:
+
+   /usr/X11R6/lib/sax/doc/
+
+4) Call guitest:
+
+   ./guitest <your .po file>
+
+Notes:
+------
+
+- It is not possible to test the help text within this script
+  because the help text .txt file is outside the .po file during
+  your test phase. There is no need to test the help text 
+  because there are no geometry problems expected
+
+- You need to name your .po file with a full qualified 
+  locale name in it. For example:
+
+  sax.en_US.po 
+  sax.fr_FR.po
+
+  sax.fr.po ---> is wrong and will lead to an us outfit
+
+Samples:
+--------
+
+  ./guitest /tmp/sax.fr_FR.po
+

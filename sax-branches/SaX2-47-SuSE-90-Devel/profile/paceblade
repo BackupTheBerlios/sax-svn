@@ -1,0 +1,36 @@
+# /.../
+# create input device section to support
+# the touchscreen automatically
+# ---
+Screen  -> [X] ->  Depth->8->Modes  = 1024x768
+Screen  -> [X] ->  Depth->15->Modes = 1024x768
+Screen  -> [X] ->  Depth->16->Modes = 1024x768
+Screen  -> [X] ->  Depth->24->Modes = 1024x768
+Screen  -> [X] ->  Depth->32->Modes = 1024x768
+Monitor -> [X] ->  VertRefresh      = 58-78
+Monitor -> [X] ->  ModelName        = 1024X768@70HZ
+Monitor -> [X] ->  HorizSync        = 31-65
+Monitor -> [X] ->  VendorName       = --> LCD
+
+InputDevice -> 3 -> Identifier = Mouse[3]
+InputDevice -> 3 -> Driver     = pacebook
+InputDevice -> 3 -> Option -> InputFashion   = Touchpanel
+InputDevice -> 3 -> Option -> Name           = PACEBLADE;PACEBOOK
+InputDevice -> 3 -> Option -> Device         = /dev/ttyS0
+InputDevice -> 3 -> Option -> ButtonNumber   = 1
+InputDevice -> 3 -> Option -> SendCoreEvents = on
+InputDevice -> 3 -> Option -> Rotation       = 0
+InputDevice -> 3 -> Option -> BaudRate       = 19200
+InputDevice -> 3 -> Option -> SwapXY         = 0
+InputDevice -> 3 -> Option -> horizontalMax  = 987
+InputDevice -> 3 -> Option -> verticalMax    = 950
+InputDevice -> 3 -> Option -> horizontalMin  = 24
+InputDevice -> 3 -> Option -> verticalMin    = 75
+InputDevice -> 3 -> Option -> HistorySize    = 0
+
+InputDevice -> 3 -> Option -> #PDAMode       = [BOOLEAN]
+InputDevice -> 3 -> Option -> #ButtonNumber2 = "2|3"
+InputDevice -> 3 -> Option -> #ButtonNuber2Timeout = [INTEGER]
+
+ServerLayout -> all -> InputDevice -> [3] -> id    = Mouse[3]
+ServerLayout -> all -> InputDevice -> [3] -> usage = SendCoreEvents
