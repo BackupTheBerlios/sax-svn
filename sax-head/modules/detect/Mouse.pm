@@ -68,13 +68,17 @@ sub AutoDetectMouse {
 	$index = $index + 2;
 	}
 	# /.../
-	# set detected button number...
-	# ------------------------------
+	# set detected button number, enable wheel emulation if needed...
+	# ---------------------------------------------------------------
 	$index = 1;
 	@btn_list = reverse(@btn_list);
 	for($i=0;$i<@btn_list;$i++) {
 	if ($btn_list[$i] > 3) {
 		$var{InputDevice}{$index}{Option}{Buttons} = $btn_list[$i];
+	}
+	if (($btn_list[$i] == 4) && ($whl_list[$i] == 0)) {
+		$var{InputDevice}{$index}{Option}{EmulateWheel} = "on";
+		$var{InputDevice}{$index}{Option}{EmulateWheelButton} = 4;
 	}
 	$index = $index + 2;
 	}

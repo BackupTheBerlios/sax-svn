@@ -65,6 +65,20 @@ TEVION / AIPTEK:ALDI Tablet (SERIAL) {
  Option              = AlwaysCore
  BaudRate            = 19200
  RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus"
+ Load                = HyperPen
+}
+
+#--------------------------#
+# Aiptek HyperPen 6000     #
+#--------------------------#
+TEVION / AIPTEK:HyperPen 6000 (SERIAL) {
+ Driver              = hyperpen
+ TabletMode          = Absolute
+ Device              = /dev/ttyS0
+ Option              = AlwaysCore
+ BaudRate            = 19200
+ RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus"
+ Load                = HyperPen
 }
 
 #--------------------------#

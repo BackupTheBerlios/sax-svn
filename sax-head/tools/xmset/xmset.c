@@ -651,6 +651,13 @@ void showConfig (void) {
 				btns - 1,btns
 			);
 		}
+		if ((lp->buttons) && (lp->buttons == 4)) {
+		if ((lp->wheel) && (lp->wheel <= 0)) {
+			printf("  Option     \"Buttons\" \"%d\"\n",lp->buttons);
+			printf("  Option     \"EmulateWheel\" \"on\"\n");
+			printf("  Option     \"EmulateWheelButton\" \"4\"\n");
+		}
+		}
 		haveMouse = 1;
 		break;
 	}

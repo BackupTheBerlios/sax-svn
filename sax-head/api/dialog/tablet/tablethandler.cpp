@@ -54,6 +54,10 @@ void XTablet::resetPage (int reload) {
 		if (mFiles [update] -> sysSerialize()) {
 			mFiles [update] -> isModified ( mFrame );
 		}
+		update = "sys_PATH";
+		if (mFiles [update] -> sysSerialize()) {
+			mFiles [update] -> isModified ( mFrame );
+		}
 	}
 	mIntro -> importFile (update);
 	slotIntro (mIndex);
@@ -639,6 +643,9 @@ void XTablet::addTablet (void) {
 		while (mFiles["sys_INPUT"]->getDevice (count)) {
 			count += 2;
 		}
+		XWrapPointer<XData> workingPath (
+			mFiles["sys_PATH"] -> getDevice (0)
+		);
 		XWrapPointer<XData> workingTablet (
 			mFiles["sys_INPUT"] -> addDevice (count)
 		);
@@ -669,6 +676,17 @@ void XTablet::addTablet (void) {
 			continue;
 		}
 		if ((*key == "StylusLink") || (*key == "EraserLink")) {
+			continue;
+		}
+		if ((*key == "Load")) {
+			if (! workingPath["ModuleLoad"].contains (val->ascii())) {
+				// TODO...
+				QString* modules = new QString (workingPath["ModuleLoad"]);
+				modules -> sprintf ("%s,%s",
+					workingPath["ModuleLoad"].ascii(),val->ascii()
+				);
+				workingPath.setPair ("ModuleLoad",modules->ascii());
+			}
 			continue;
 		}
 		workingTablet.setPair (
