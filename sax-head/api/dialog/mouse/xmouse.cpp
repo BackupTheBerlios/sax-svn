@@ -44,7 +44,7 @@ XShowMouse::XShowMouse (
 	);
 	mID = 0;
 	mBuffer = new QPixmap ();
-	setFixedWidth  (mPixmap[0]->width());
+	setFixedWidth  (mPixmap[0]->width() + 50);
 	setFixedHeight (mPixmap[0]->height() + mStatus->height());
 	mStatus -> message (mText["MouseTestReady"]);
 	paintEvent (0);

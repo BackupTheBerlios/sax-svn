@@ -163,7 +163,7 @@ PS/2-Mouse:ThinkingMousePS/2 {
 # =========================================
 # Generic USB Mouse protocol entries
 # -----------------------------------------
-USB-Mouse:ExplorerPS/2 {
+USB-Mouse:ExplorerPS/2 on USB {
  Driver       = mouse
  Protocol     = ExplorerPS/2
  Buttons      = 7
@@ -171,28 +171,28 @@ USB-Mouse:ExplorerPS/2 {
  Device       = /dev/input/mice
 }
 
-USB-Mouse:GlidePointPS/2 {
+USB-Mouse:GlidePointPS/2 on USB {
  Driver       = mouse
  Protocol     = GlidePointPS/2
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
 
-USB-Mouse:IMPS/2 {
+USB-Mouse:IMPS/2 on USB {
  Driver       = mouse
  Protocol     = imps/2
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
 
-USB-Mouse:MouseManPlusPS/2 {
+USB-Mouse:MouseManPlusPS/2 on USB {
  Driver       = mouse
  Protocol     = MouseManPlusPS/2
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
 
-USB-Mouse:NetMousePS/2 {
+USB-Mouse:NetMousePS/2 on USB {
  Driver       = mouse
  Protocol     = NetMousePS/2
  Buttons      = 7
@@ -200,7 +200,7 @@ USB-Mouse:NetMousePS/2 {
  Device       = /dev/input/mice
 }
 
-USB-Mouse:NetScrollPS/2 {
+USB-Mouse:NetScrollPS/2 on USB {
  Driver       = mouse
  Protocol     = NetScrollPS/2
  Buttons      = 7
@@ -208,13 +208,13 @@ USB-Mouse:NetScrollPS/2 {
  Device       = /dev/input/mice
 }
 
-USB-Mouse:PS/2 {
+USB-Mouse:PS/2 on USB {
  Driver       = mouse
  Protocol     = PS/2
  Device       = /dev/input/mice
 }
 
-USB-Mouse:ThinkingMousePS/2 {
+USB-Mouse:ThinkingMousePS/2 on USB {
  Driver       = mouse
  Protocol     = ThinkingMousePS/2
  ZAxisMapping = 4 5
