@@ -274,6 +274,32 @@ FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
 mkdir -p $FILLUP_DIR
 install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 
+# remove unpacked sources...
+# --------------------------
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SecureMode
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SetMode
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/catch
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_wheel.sh
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/corner
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/demo
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/demo.sh
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/dots
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/fake
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/hwupdate
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/isax
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/screen
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/whois
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wrap
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl.pl
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl
+rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/.testgtx
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/5.8.0/i586-linux-thread-multi/perllocal.pod
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm,v
+
 %post
 %{fillup_and_insserv -npY sax}
 
@@ -284,6 +310,16 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 #-------------------------------------------------
 
 %files
+%dir /usr/share/doc/packages/sax2
+%dir /usr/X11R6/share/fvwm
+%dir /usr/lib/perl5/site_perl/*/*/Term
+%dir /usr/lib/perl5/site_perl/*/*/Term/ReadLine
+%dir /usr/lib/perl5/site_perl/*/*/Term/ReadLine/Gnu
+%dir /usr/lib/perl5/site_perl/*/*/auto
+%dir /usr/lib/perl5/site_perl/*/*/auto/Term
+%dir /usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine
+%dir /usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu
+%dir /usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu/XS
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/api
 %dir /usr/X11R6/%{_lib}/sax/api/lang
@@ -372,7 +408,7 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 # ------------------------------------------------
 
 %files -n saxtools
-%doc /usr/X11R6/man/man1
+%doc /usr/X11R6/man/man1/*
 /usr/X11R6/bin/xbounce
 /usr/X11R6/bin/xupdate
 /usr/X11R6/bin/xmset
