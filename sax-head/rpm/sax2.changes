@@ -1,6 +1,8 @@
 -------------------------------------------------------------------
 Thu Apr  1 10:15:39 CEST 2004 - ms@suse.de
 
+- disable <Save> button in test screen if mode tuning is not
+  available. It may lead to broken modelines (#35949)
 - added 1680x1050 TFT wide screen mode to CDB (#37465)
 - added Dell Latitude D600 display to CDB (#37787)
 - update Identities

@@ -326,6 +326,7 @@ void XFineWindow::setFrame (
 	if ( ! adjustable) {
 		menuBar() -> setDisabled (true);
 		mTab -> setDisabled (true);
+		mSave -> setDisabled (true);
 	}
 
 	setCentralWidget ( mFrame );
