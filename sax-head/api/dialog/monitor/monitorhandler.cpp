@@ -169,6 +169,8 @@ void XMonitor::initPage (void) {
 	for (; ir.current(); ++ir) {
 		mRatio -> insertItem (ir.current());
 	}
+	mRatio -> insertItem ( mText["notConfigured"] );
+	mTraversal -> insertItem ( mText["notConfigured"] );
 }
 
 //=====================================
@@ -391,6 +393,9 @@ void XMonitor::setupTop ( void ) {
 			QTextOStream (&infoRatio) << ratio.x() << "/" << ratio.y();
 			mRatio -> setCurrentText (infoRatio);
 		}
+	} else {
+		mTraversal -> setCurrentText ( mText ["notConfigured"] );
+		mRatio -> setCurrentText ( mText["notConfigured"] );
 	}
 	
 	// ...
