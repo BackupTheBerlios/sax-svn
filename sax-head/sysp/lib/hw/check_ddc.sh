@@ -8,9 +8,5 @@
 # --------
 # Status: Up-to-date
 #
-if [ -f "/etc/SuSE-release" ];then
-	VERSION=`cat /etc/SuSE-release | head -n 1 | cut -f3 -d" " | tr -d .`
-else
-	VERSION=81
-fi
-test "$VERSION" -ge "73" && echo "DDC_SUPPORT" || echo "NO_DDC_SUPPORT"
+VERSION=`rpm -q hwinfo | cut -f2 -d- | tr -d .`
+test "$VERSION" -ge "202" && echo "DDC_SUPPORT" || echo "NO_DDC_SUPPORT"
