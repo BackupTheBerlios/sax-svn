@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Dec 13 17:26:38 2004
+# Author: Marcus Schaefer <sax@suse.de>, Tue Jan  4 11:20:04 2005
 #
 # Template for monitor data
 # --------------------------
@@ -13304,6 +13304,17 @@ FUJITSU SIEMENS:ERGOPRO X176  {
 FUJITSU SIEMENS:ERGOPRO X191  {
  Hsync=30-96
  Vsync=50-160
+}
+
+#==============================================
+# LM 510
+#----------------------------------------------
+FUJITSU SIEMENS:LM 510  {
+ DDC=FUS0395
+ Option=DPMS
+ Hsync=30-63
+ Resolution=1024x768
+ Vsync=55-75
 }
 
 #==============================================
