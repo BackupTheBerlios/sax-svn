@@ -11,9 +11,9 @@
 #==================================
 # Variables...
 #----------------------------------
+DOTS="/sbin/dots"
 INIT="/usr/share/sax/init.pl"
 XC="/usr/share/sax/xc.pl"
-DOTS="/usr/share/sax/tools/dots"
 PCI="/usr/share/sax/pci.pl"
 XFT="/var/cache/xfine/*"
 ERR="/var/log/SaX.log"

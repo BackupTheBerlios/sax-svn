@@ -204,7 +204,7 @@ sub main {
 	}
 
 	# /.../
-	# if ! haveServer start a new server using xw.pl.
+	# if ! haveServer start a new server using xw.
 	# Note: this server allways runs on terminal provided via: 
 	# GetVirtualTerminal()
 	# ---
@@ -501,22 +501,22 @@ sub init {
 	$SIG{PIPE}  = "HandleTmpSignal";
 	$SIG{TERM}  = "HandleTmpSignal";
 
-	$spec{WrapMouse}   = "/usr/share/sax/tools/wrap";
-	$spec{Sysp}        = "/usr/share/sax/sysp.pl"; 
+	$spec{WrapMouse}   = "/sbin/wrap";
+	$spec{Sysp}        = "/sbin/sysp"; 
 	$spec{DbmFile}     = "/var/cache/sax/files/config"; 
 	$spec{HWFlag}      = "/var/cache/sax/files/hardware.chg";
 	$spec{LogFile}     = "/var/log/SaX.log";
 	$spec{XpidFile}    = "/var/log/SaX.pid";
 	$spec{AutoConf}    = "/tmp/$TmpDir/xorg.conf";
 	$spec{Xmsg}        = "/var/log/xlog";
-	$spec{X}           = "/usr/share/sax/xw.pl";
-	$spec{Xapi}        = "/usr/share/sax/xapi";
+	$spec{X}           = "/sbin/xw";
+	$spec{Xapi}        = "/sbin/xapi";
 	$spec{Intro}       = "/usr/share/sax/intro.pl";
-	$spec{Corner}      = "/usr/share/sax/tools/corner";
+	$spec{Corner}      = "/sbin/corner";
 	$spec{Xpid}        = undef;
 	$spec{NewServer}   = undef;
 	$spec{IntroPid}    = undef;
-	$spec{Demo}        = "/usr/share/sax/tools/demo.sh";
+	$spec{Demo}        = "/sbin/demo.sh";
 	$spec{XTerminal}   = "/var/log/xvt";
 	$spec{Twm}         = "/usr/X11R6/bin/twm";
 	$spec{TwmRc}       = "/usr/share/sax/api/data/twmrc";
@@ -554,7 +554,7 @@ sub init {
 	if ( $result != 1 ) {
 		usage();
 	}
-	my $api = "/usr/share/sax/xapi";
+	my $api = $spec{Xapi};
 	if ( ! -f $api ) {
 		$EnableAutoConf = "";
 	}

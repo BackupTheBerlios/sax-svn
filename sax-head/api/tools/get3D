@@ -21,7 +21,7 @@ sub get3DPackages {
 #
 	my $noscan = $_[0];
 
-	my $sysp        = "/usr/share/sax/sysp.pl";
+	my $sysp        = "/sbin/sysp";
 	my $install;    # Install string from 3dlib
 	my $scriptreal; # real 3D script name
 	my $scriptsoft; # software 3D script name

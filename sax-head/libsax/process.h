@@ -33,8 +33,8 @@ STATUS        : Status: Development
 //====================================
 // Defines...
 //------------------------------------
-#define ISAX               "/usr/share/sax/tools/isax"
-#define SYSP               "/usr/share/sax/sysp.pl"
+#define ISAX               "/sbin/isax"
+#define SYSP               "/sbin/sysp"
 #define PROF               "/var/lib/sax/createPRO.pl"
 
 #define CDBDIR             "/usr/share/sax/api/data/cdb/"

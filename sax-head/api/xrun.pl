@@ -60,15 +60,15 @@ sub main {
 	# /.../
 	# set specifications...
 	# ---
-	$var{X}             = "/usr/share/sax/xw.pl";
+	$var{X}             = "/sbin/xw";
 	$var{Xpid}          = "/var/log/SaX.pid";
 	$var{SaXLog}        = "/var/log/SaX.log";
 	$var{LastLog}       = "/var/cache/sax/files/lastlog";
 	$var{ConfigFile}    = "/var/cache/sax/files/xorg.conf";
 	$var{FirstConfig}   = "/var/cache/sax/files/xorg.conf.first";
 	$var{StartOptions}  = "/var/cache/sax/files/xapi.opt";
-	$var{Xidle}         = "/usr/share/sax/xapi";
-	$var{XFine}         = "/usr/X11R6/lib/xfine/xfine";
+	$var{Xidle}         = "/sbin/xapi";
+	$var{XFine}         = "/sbin/xfine";
 
 	# /.../
 	# set signal handler...

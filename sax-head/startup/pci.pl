@@ -17,22 +17,22 @@ init(); main();
 
 #----[ init ]-----#
 sub init {
- # variable init...
- # ------------------
- $var{Sysp}     = "/usr/share/sax/sysp.pl";
+	# variable init...
+	# ------------------
+	$var{Sysp}     = "/sbin/sysp";
 
- # option init...
- # ----------------
- undef($ProfileMode);
+	# option init...
+	# ----------------
+	undef($ProfileMode);
 
- $result = GetOptions(
-  "profile|p"         => \$ProfileMode,
-  "help|h"            => \&usage,
-  "<>"                => \&usage
- );
- if ( $result != 1 ) {
-  usage();
- }
+	$result = GetOptions(
+		"profile|p"         => \$ProfileMode,
+		"help|h"            => \&usage,
+		"<>"                => \&usage
+	);
+	if ( $result != 1 ) {
+		usage();
+	}
 }
 
 #---[ main ]-----#
@@ -40,14 +40,14 @@ sub main {
 #--------------------------
 # do the job :-)
 #
- my $data;
+	my $data;
 
- if (defined $ProfileMode) {
-  $data = qx($var{Sysp} -p);
- } else {
-  $data = qx($var{Sysp} -c);
- }
- print $data;
+	if (defined $ProfileMode) {
+		$data = qx($var{Sysp} -p);
+	} else {
+		$data = qx($var{Sysp} -c);
+	}
+	print $data;
 }
 
 #---[ usage ]-----#
@@ -55,10 +55,10 @@ sub usage {
 #-------------------------
 # usage message
 #
- print "usage: pci [ options ]\n";
- print "options:\n";
- print "[ -p | --profile ]\n";
- print "   print profile file for each card\n";
- exit(0);
+	print "usage: pci [ options ]\n";
+	print "options:\n";
+	print "[ -p | --profile ]\n";
+	print "   print profile file for each card\n";
+	exit(0);
 }
 

@@ -144,12 +144,12 @@ install:
 	install -m 755 ./init.pl                                ${SAXBINVZ}
 	install -m 644 ./svnbuild                               ${SAXBINVZ}
 	install -m 755 ./xc.pl                                  ${SAXBINVZ}
-	install -m 755 ./tools/xwrapper/xw                      ${SAXBINVZ}/xw.pl
-	install -m 755 ./api/xapi                               ${SAXBINVZ}
+	install -m 755 ./tools/xwrapper/xw                      ${SBINVZ}
+	install -m 755 ./api/xapi                               ${SBINVZ}
 	install -m 755 ./api/tools/*                            ${APITOOLS}
 	install -m 755 ./api/xrun.pl                            ${SAXBINVZ}
 	install -m 755 ./startup/pci.pl                         ${SAXBINVZ}
-	install -m 755 ./sysp/sysp.pl                           ${SAXBINVZ}
+	install -m 755 ./sysp/sysp                              ${SBINVZ}
 	install -m 644 ./doc/database/config                    ${DOCVZ}
 	install -m 755 ./doc/database/guitest                   ${DOCVZ}
 	install -m 644 ./doc/database/README                    ${DOCVZ}
@@ -196,7 +196,7 @@ install:
 	# install XFine2...
 	#--------------------------------------------
 	install -m 644 ./xfine/pixmaps/*                        ${XFINEPIXMAPS}
-	install -m 755 ./xfine/xfine                            ${XFINEBINVZ}
+	install -m 755 ./xfine/xfine                            ${SBINVZ}
 	install -m 644 ./xfine/xfine.gtx                        ${XFINEBINVZ}
 
 	@echo "remember to have fun..."

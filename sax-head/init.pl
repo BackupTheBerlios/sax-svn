@@ -115,7 +115,7 @@ sub init {
 	# check for the Identity.map
 	# --------------------------
 	my $map = "/usr/share/sax/sysp/maps/Identity.map";
-	my $api = "/usr/share/sax/xapi";
+	my $api = "/sbin/xapi";
 	if ( ! -f $map ) {
 		die "init: no Identity.map found";
 	}
@@ -138,32 +138,29 @@ sub init {
 	# /.../
 	# global spec hash definitions...
 	# -------------------------------
-	my $LD = "/usr/share/";
-	$spec{StaticFontPathList}  = $LD."sax/api/data/StaticFontPathList";
-	$spec{LangFirstPath}       = $LD."sax/api/data/LangFirstPath";
-	$spec{LangCodes}           = $LD."sax/api/data/LangCodes";
+	$spec{StaticFontPathList}  = "/usr/share/sax/api/data/StaticFontPathList";
+	$spec{LangFirstPath}       = "/usr/share/sax/api/data/LangFirstPath";
+	$spec{LangCodes}           = "/usr/share/sax/api/data/LangCodes";
 	$spec{InitFlag}            = "/var/cache/sax/files/reinit";
 	$spec{DbmFile}             = "/var/cache/sax/files/config";
 	$spec{DbmNew}              = "/var/cache/sax/files/config.new";
 	$spec{DbmDir}              = "/var/cache/sax/files";
 	$spec{SyspDir}             = "/var/cache/sax/sysp/rdbms";
-	$spec{Sysp}                = $LD."sax/sysp.pl";
-	$spec{SetMode}             = $LD."sax/tools/SetMode";
-	$spec{SecureMode}          = $LD."sax/tools/SecureMode";
+	$spec{Sysp}                = "/sbin/sysp";
 	$spec{FbSet}               = "fbset";
 	$spec{LogFile}             = "/var/log/SaX.log";
-	$spec{Xmode}               = $LD."sax/tools/xmode";
-	$spec{Xmset}               = $LD."sax/tools/xmset";
+	$spec{Xmode}               = "/sbin/xmode";
+	$spec{Xmset}               = "/sbin/xmset";
 	$spec{RcConfig}            = "/etc/rc.config";
 	$spec{RcSysConfigLang}     = "/etc/sysconfig/language";
 	$spec{SysConfig}           = "/etc/sysconfig";
-	$spec{Profile}             = $LD."sax/pci.pl";
+	$spec{Profile}             = "/usr/share/sax/pci.pl";
 	$spec{ProfileDir}          = "/usr/share/sax/profile/";
-	$spec{Monitors}            = $LD."sax/api/data/cdb/Monitors";
-	$spec{Corner}              = $LD."sax/tools/corner";
+	$spec{Monitors}            = "/usr/share/sax/api/data/cdb/Monitors";
+	$spec{Corner}              = "/sbin/corner";
 	$spec{MD5}                 = "/usr/bin/md5sum";
-	$spec{ISaX}                = "/usr/share/sax/tools/isax";
-	$spec{HwUpdate}            = "/usr/share/sax/tools/hwupdate";
+	$spec{ISaX}                = "/sbin/isax";
+	$spec{HwUpdate}            = "/sbin/hwupdate";
 
 	# /.../
 	# check if sysp was able to detect a card

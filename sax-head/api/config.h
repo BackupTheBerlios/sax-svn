@@ -123,7 +123,7 @@ STATUS        : Status: Up-to-date
 //==============================
 // ISaX calls...
 //------------------------------
-#define ISAX            "/usr/share/sax/tools/isax"
+#define ISAX            "/sbin/isax"
 #define GETCARD         ISAX " -l Card"
 #define GETDESKTOP      ISAX " -l Desktop"
 #define GETINPUT        ISAX " -l Mouse"
@@ -136,16 +136,16 @@ STATUS        : Status: Up-to-date
 // Binary files...
 //------------------------------
 #define RPM             "/bin/rpm"
-#define XMODE           "/usr/share/sax/tools/xmode"
-#define WRAP            "/usr/share/sax/tools/wrap"
-#define FAKE            "/usr/share/sax/tools/fake"
-#define CATCH           "/usr/share/sax/tools/catch" 
-#define SYSP            "/usr/share/sax/sysp.pl"
-#define XMSET           "/usr/share/sax/tools/xmset"
-#define XKBSET          "/usr/share/sax/tools/xkbset"
+#define XMODE           "/sbin/xmode"
+#define WRAP            "/sbin/wrap"
+#define FAKE            "/sbin/fake"
+#define CATCH           "/sbin/catch" 
+#define SYSP            "/sbin/sysp"
+#define XMSET           "/sbin/xmset"
+#define XKBSET          "/sbin/xkbset"
 #define SETXKBMAP       "/usr/X11R6/bin/setxkbmap"
-#define DEMO            "/usr/share/sax/tools/demo.sh" 
-#define XQUERY          "/usr/share/sax/tools/xquery"
+#define DEMO            "/sbin/demo.sh" 
+#define XQUERY          "/sbin/xquery"
 #define XRUN            "/usr/share/sax/xrun.pl"
 #define XVERSION        "/usr/share/sax/api/tools/getversion"
 #define GETPROFILE      "/usr/share/sax/api/tools/getprofile"

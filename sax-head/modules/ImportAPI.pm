@@ -48,10 +48,8 @@ sub ApiInit {
 # Api import filter
 #
 	$import{ApiFile}    = "/var/cache/sax/files/apidata";
-	$import{SetMode}    = "/usr/share/sax/tools/SetMode";
-	$import{SecureMode} = "/usr/share/sax/tools/SecureMode";
-	$import{Xmode}      = "/usr/share/sax/tools/xmode";
-	$import{Sysp}       = "/usr/share/sax/sysp.pl";
+	$import{Xmode}      = "/sbin/xmode";
+	$import{Sysp}       = "/sbin/sysp";
 	$import{FbSet}      = "fbset";
 }
 

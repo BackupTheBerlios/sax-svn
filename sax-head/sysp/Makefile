@@ -4,11 +4,11 @@ LIB = ./lib/libsysp.a -lfl -lhd -lstdc++ -lX11
 OBJ = sysp.o mouse.o keyboard.o server.o cfg.o xstuff.o d3.o
 SYS = ./lib
 
-all: sysp.pl
+all: sysp
 
-sysp.pl: ${OBJ}
+sysp: ${OBJ}
 	${MAKE} -C ${SYS} all
-	${CC} -o sysp.pl \
+	${CC} -o sysp \
 		${OBJ} \
 		${LIB}
 

@@ -12,7 +12,7 @@
 # Variable setup...
 #------------------------------------
 buildroot   = /
-sax_tools   = ${buildroot}/usr/share/sax/tools
+sax_tools   = ${buildroot}/sbin
 
 CFLAGS      = -Wall
 VERSION     = 7.1
@@ -75,8 +75,6 @@ clean:
 	done
 	${MAKE} -C ./plog -f Makefile.Linux clean
 	rm -f whois/whois
-	rm -f setmode/SetMode
-	rm -f setmode/SecureMode
 	rm -f xkbset/xkbctrl
 	rm -f xkbset/xkbctrl.c
 	rm -f xmset/xupdate

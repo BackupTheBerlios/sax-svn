@@ -21,7 +21,7 @@ sub init {
 # init global specifications in %spec hash
 #
 	$spec{CDir}  = "/var/lib/sax/";
-	$spec{ISaX}  = "/usr/share/sax/tools/isax";
+	$spec{ISaX}  = "/sbin/isax";
 }
 
 #---[ createXOrgConfig ]-----#

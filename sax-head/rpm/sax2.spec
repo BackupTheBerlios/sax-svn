@@ -13,7 +13,8 @@
 BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libgcc libnscd libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fbset fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel rpm swig udev update-desktop-files wireless-tools xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
 
 Name:         sax2
-Requires:     perl perl-gettext fbset sax2-ident perl-TermReadLine-Gnu
+Requires:     perl perl-gettext fbset perl-TermReadLine-Gnu
+Requires:     sax2-ident sax2-tools
 %if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
@@ -253,26 +254,11 @@ export TEMPLATE_CHECK=no
 export ARCH=`/bin/arch`
 make buildroot=$RPM_BUILD_ROOT lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
 #=================================================
-# install tools for the sax2-tools subpackage
-#-------------------------------------------------
-(
-	cd $RPM_BUILD_ROOT/usr/share/sax/tools
-	install -m 755 * $RPM_BUILD_ROOT/sbin/
-)
-#=================================================
 # create startup link
 #-------------------------------------------------
 ( 
 	rm -f $RPM_BUILD_ROOT/sbin/sax2 && \
 	cd $RPM_BUILD_ROOT/sbin && ln -s SaX2 sax2
-)
-#=================================================
-# create sysp link
-#-------------------------------------------------
-(
-	rm -f $RPM_BUILD_ROOT/sbin/sysp
-	cd $RPM_BUILD_ROOT/sbin && \
-		ln -s /usr/share/sax/sysp.pl sysp
 )
 #=================================================
 # check for options file at /etc/X11/CardModules
@@ -344,23 +330,6 @@ install -m 644 api/pixmaps/sax2.xpm \
 #=================================================
 # remove unpacked sources...
 #-------------------------------------------------
-rm -f $RPM_BUILD_ROOT/sbin/SecureMode
-rm -f $RPM_BUILD_ROOT/sbin/SetMode
-rm -f $RPM_BUILD_ROOT/sbin/catch
-rm -f $RPM_BUILD_ROOT/sbin/corner
-rm -f $RPM_BUILD_ROOT/sbin/demo
-rm -f $RPM_BUILD_ROOT/sbin/demo.sh
-rm -f $RPM_BUILD_ROOT/sbin/dots
-rm -f $RPM_BUILD_ROOT/sbin/fake
-rm -f $RPM_BUILD_ROOT/sbin/hwupdate
-rm -f $RPM_BUILD_ROOT/sbin/isax
-rm -f $RPM_BUILD_ROOT/sbin/screen
-rm -f $RPM_BUILD_ROOT/sbin/whois
-rm -f $RPM_BUILD_ROOT/sbin/wmstart
-rm -f $RPM_BUILD_ROOT/sbin/wrap
-rm -f $RPM_BUILD_ROOT/sbin/xlook
-rm -f $RPM_BUILD_ROOT/sbin/xmirror
-
 rm -f $RPM_BUILD_ROOT/usr/share/sax/api/data/.testgtx
 rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 
@@ -396,9 +365,7 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /usr/share/sax/init.pl
 /usr/share/sax/xc.pl
 /usr/share/sax/pci.pl
-/usr/share/sax/sysp.pl
 /usr/share/sax/modules
-/usr/share/sax/tools
 /sbin/sax.sh
 /sbin/sax2-vesa
 /sbin/SaX2
@@ -434,13 +401,10 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 %defattr(-,root,root)
 %dir /usr/share/sax/api
 %dir /usr/share/xfine
-/usr/share/sax/xw.pl
-/usr/share/sax/xapi
 /usr/share/sax/xrun.pl
 /usr/share/sax/api/tools
 /usr/share/sax/api/pixmaps
 /usr/share/xfine/pixmaps
-/usr/share/xfine/xfine
 /usr/share/xfine/xfine.gtx
 /usr/share/locale/de/LC_MESSAGES/sax.mo
 /usr/share/locale/en_US/LC_MESSAGES/sax.mo
@@ -467,6 +431,9 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /usr/share/locale/pl_PL/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
+/sbin/xapi
+/sbin/xfine
+/sbin/xw
 %if %{suse_version} > 820
 /usr/share/applications/sax2.desktop
 %endif
@@ -477,16 +444,30 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 %files -n sax2-tools
 %defattr(-,root,root)
 %doc %{_mandir}/man1/*
-/sbin/xbounce
-/sbin/xupdate
-/sbin/xmset
-/sbin/xkbset
-/sbin/xkbctrl
-/sbin/xmode
-/sbin/xquery
-/sbin/xidle
-/sbin/xbound
+/sbin/catch
+/sbin/corner
+/sbin/demo
+/sbin/demo.sh
+/sbin/dots
+/sbin/fake
+/sbin/hwupdate
+/sbin/isax
+/sbin/screen
 /sbin/testX
+/sbin/whois
+/sbin/wmstart
+/sbin/wrap
+/sbin/xbounce
+/sbin/xbound
+/sbin/xidle
+/sbin/xkbctrl
+/sbin/xkbset
+/sbin/xlook
+/sbin/xmirror
+/sbin/xmode
+/sbin/xmset
+/sbin/xquery
+/sbin/xupdate
 
 #=================================================
 # SaX-Ident file list...  

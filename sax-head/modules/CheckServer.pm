@@ -31,7 +31,7 @@ sub GetDisplay {
 	# X11 forwarding and check for the DISPLAY variable
 	# ---
 	my @displayStatus;
-	system ("/usr/share/sax/tools/whois");
+	system ("/sbin/whois");
 	if ($? >> 8 == 1) {
 	if (defined $ENV{DISPLAY}) {
 		$displayStatus[0] = $ENV{DISPLAY};
@@ -140,7 +140,7 @@ sub X11ForwardEnabled {
 # terminal we want to start X
 #
 	my @displayStatus = ();
-	my $corner = "/usr/share/sax/tools/corner";
+	my $corner = "/sbin/corner";
 	if (defined $ENV{DISPLAY}) {
 		my $dpy = $ENV{DISPLAY};
 		my $status = qx($corner -t x -d $dpy 2>&1);
