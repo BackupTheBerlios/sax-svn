@@ -232,7 +232,16 @@ IdentifyDevice (
 	case 2:
 		return ( fgroup[FLAG_DEFAULT] );
 	case 3:
-		return ( fgroup[FLAG_3D] );
+		if ( fgroup[FLAG_3D] ) {
+			return ( fgroup[FLAG_3D] );
+		} else {
+			// ... /
+			// there is no 3D specification but we requested one
+			// with the 3D answer set to yes. We will return the
+			// default entry in this case
+			// ---
+			return ( fgroup[FLAG_DEFAULT] );
+		}
 	}
 
 	// ...
