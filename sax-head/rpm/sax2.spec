@@ -214,65 +214,9 @@ if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
 	cp nvidia_drv.o /usr/X11R6/%{_lib}/modules/drivers/
 fi
 # %patch
-#=================================================
-# adapt lib environment to currently used %_{lib}
-#-------------------------------------------------
-for i in `find -type f | grep -v "/\."`;do
-(
-	grep -I "lib\/" $i 2>/dev/null >/dev/null
-	if [ $? = 0 ];then
-	head -n 1 $i | grep "^#!" >/dev/null 2>/dev/null
-	if [ $? = 0 ];then
-		cat $i | \
-			sed -e 's@/usr/lib\/@/usr/%{_lib}\/@g' \
-		> $i.sed; mv $i.sed $i
-		cat $i | \
-			sed -e 's@/usr/X11R6/lib\/@/usr/X11R6/%{_lib}\/@g' \
-		> $i.sed; mv $i.sed $i
-		chmod 755 $i
-	fi
-	fi
-)
-done
-for i in `find -regex ".*\.\(h\|pm\)"`;do
-(
-	grep -I "lib\/" $i 2>/dev/null >/dev/null
-	if [ $? = 0 ];then
-		cat $i | \
-			sed -e 's@/usr/lib\/@/usr/%{_lib}\/@g' \
-		> $i.sed; mv $i.sed $i
-		cat $i | \
-			sed -e 's@/usr/X11R6/lib\/@/usr/X11R6/%{_lib}\/@g' \
-		> $i.sed; mv $i.sed $i
-	fi
-)
-done
-#=================================================
-# adapt programs moved to other directories *grr*
-#-------------------------------------------------
-if [ -f /sbin/fbset ];then
-for i in `find -name "*" | xargs grep -l "/usr/sbin/fbset"`;do
-(
-	mode=`stat -c %a $i`
-	cat $i | \
-		sed -e 's@/usr/sbin/fbset@/sbin/fbset@g' \
-	> $i.sed; mv $i.sed $i
-	chmod 0$mode $i
-)
-done
-fi
-test -e /.buildenv && . /.buildenv
 
 %build
 test -e /.buildenv && . /.buildenv
-#=================================================
-# if SuSE 7.0 change parse.c not to use dev_screen
-#-------------------------------------------------
-%if %{suse_version} <= 700
-	cat ./parse/parse.c | \
-	sed -e s@"#if 1"@"#if 0"@ > ./parse/parse.c.new
-	mv ./parse/parse.c.new ./parse/parse.c
-%endif
 #=================================================
 # patch files.pm according to misc extension
 #-------------------------------------------------
@@ -297,44 +241,42 @@ make
 %preun
 chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
- mkdir -p /var/cache/xfine
+	mkdir -p /var/cache/xfine
 fi
 #=================================================
 # install sources
 #-------------------------------------------------
-
 %install
 rm -rf $RPM_BUILD_ROOT
 export ASK_FOR_CHANGELOG=no
 export TEMPLATE_CHECK=no
 export ARCH=`/bin/arch`
-make buildroot=$RPM_BUILD_ROOT lib_prefix=%{_lib} install
+make buildroot=$RPM_BUILD_ROOT lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
+#=================================================
 # install tools for the sax2-tools subpackage
-# ------------------------------------------
+#-------------------------------------------------
 (
- cd $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/tools
- install -m 755 * $RPM_BUILD_ROOT/usr/X11R6/bin/
+	cd $RPM_BUILD_ROOT/usr/share/sax/tools
+	install -m 755 * $RPM_BUILD_ROOT/sbin/
 )
+#=================================================
 # create startup link
-# --------------------
+#-------------------------------------------------
 ( 
- rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/sax2 && \
-    cd $RPM_BUILD_ROOT/usr/X11R6/bin && ln -s SaX2 sax2
+	rm -f $RPM_BUILD_ROOT/sbin/sax2 && \
+	cd $RPM_BUILD_ROOT/sbin && ln -s SaX2 sax2
 )
-# create xfine directory
-# -----------------------
-if [ ! -d $RPM_BUILD_ROOT/var/cache/xfine ];then
- mkdir -p $RPM_BUILD_ROOT/var/cache/xfine
-fi
+#=================================================
 # create sysp link
-# -----------------
+#-------------------------------------------------
 (
- rm -f $RPM_BUILD_ROOT/usr/sbin/sysp
- cd $RPM_BUILD_ROOT/usr/sbin && \
-    ln -s /usr/X11R6/%{_lib}/sax/sysp.pl sysp
+	rm -f $RPM_BUILD_ROOT/sbin/sysp
+	cd $RPM_BUILD_ROOT/sbin && \
+		ln -s /usr/share/sax/sysp.pl sysp
 )
-# check for the xf86 options file at /etc/X11/CardModules...
-# ------------------------------------------------------------
+#=================================================
+# check for options file at /etc/X11/CardModules
+#-------------------------------------------------
 %ifarch %ix86
 if [ -f "/usr/X11R6/bin/xsload" ];then
 	mv /usr/X11R6/lib/modules/drivers/ati_drv.o /tmp
@@ -344,15 +286,16 @@ if [ -f "/usr/X11R6/bin/xsload" ];then
 	/usr/X11R6/bin/xsload > /tmp/CardModules
 	cat /etc/X11/CardModules.addon >> /tmp/CardModules
 	cp /tmp/CardModules \
-	$RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/CardModules
+		$RPM_BUILD_ROOT/usr/share/sax/api/data/CardModules
 	mv /tmp/ati_drv.o /usr/X11R6/lib/modules/drivers/
 	mv /tmp/radeon_drv.o /usr/X11R6/lib/modules/drivers/
 	mv /tmp/atimisc_drv.o /usr/X11R6/lib/modules/drivers/
 	mv /tmp/r128_drv.o /usr/X11R6/lib/modules/drivers/
 fi
 %endif
-# install docs
-# -------------
+#=================================================
+# install documentation
+#-------------------------------------------------
 if [ ! -d $RPM_BUILD_ROOT%{_defaultdocdir}/sax2 ];then
 	mkdir -p $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 fi
@@ -360,179 +303,126 @@ install -m 644 ./LICENSE $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/README  $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/en/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/de/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
+#=================================================
 # install architecture dependant Identity
-# ---------------------------------------
+#-------------------------------------------------
 if [ -f ./sysp/maps/arch/Identity.map.$ARCH ];then
 	install -m 644 ./sysp/maps/arch/Identity.map.$ARCH \
-	$RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/sysp/maps/Identity.map
+	$RPM_BUILD_ROOT/usr/share/sax/sysp/maps/Identity.map
 fi
+#=================================================
 # transform Identitiy information to Cards file
-# -----------------------------------------------
+#------------------------------------------------
 ./.cards.pl -f \
-	$RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/sysp/maps/Identity.map \
-> $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/cdb/Cards
+	$RPM_BUILD_ROOT/usr/share/sax/sysp/maps/Identity.map \
+> $RPM_BUILD_ROOT/usr/share/sax/api/data/cdb/Cards
+#=================================================
 # install sax2-tools manual pages...
-# ---------------------------------
-install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/man
-install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/man/man1
-if [ -d "$RPM_BUILD_ROOT/usr/X11R6/man" ];then
-	for i in `ls -1 ./doc/man`;do
-	install -m 644 ./doc/man/$i $RPM_BUILD_ROOT/usr/X11R6/man/man1/$i.1
-	done
-fi
+#-------------------------------------------------
+install -d -m 755 $RPM_BUILD_ROOT/%{_mandir}/man1
+rm -f %{_mandir}/man1/*
+for i in `ls -1 ./doc/man`;do
+	install -m 644 ./doc/man/$i $RPM_BUILD_ROOT/%{_mandir}/man1/$i.1
+done
+#=================================================
 # install fvwm config file...
-# ----------------------------
-if [ ! -d $RPM_BUILD_ROOT/usr/X11R6/share/fvwm ];then
-	install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/share/fvwm
-fi
+#-------------------------------------------------
+install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/share/fvwm
 install -m 644 api/data/fvwmrc* \
 	$RPM_BUILD_ROOT/usr/X11R6/share/fvwm/
+#=================================================
 # install desktop icon...
-# ------------------------
-if [ ! -d $RPM_BUILD_ROOT/share/pixmaps ];then
-	install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
-fi
+#-------------------------------------------------
+install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
 install -m 644 api/pixmaps/sax2.xpm \
 	$RPM_BUILD_ROOT/usr/share/pixmaps/
-# copy manual pages...
-# ---------------------
-install -d -m 755 $RPM_BUILD_ROOT/etc
-install -d -m 755 $RPM_BUILD_ROOT/etc/X11
-install -d -m 755 $RPM_BUILD_ROOT/usr/share
-install -d -m 755 $RPM_BUILD_ROOT/usr/share/man
-install -d -m 755 $RPM_BUILD_ROOT/usr/share/man/man3
-if [ -d "/usr/man/man3" ];then
-	for i in `ls -1 /usr/man/man3`;do
-	install -m 644 /usr/man/man3/$i $RPM_BUILD_ROOT/usr/share/man/man3
-	done
-fi
-# sysconfig variables...
-# ----------------------
-#FILLUP_DIR=$RPM_BUILD_ROOT/var/adm/fillup-templates
-#mkdir -p $FILLUP_DIR
-#install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
-# install script variants of xupdate and xkbctrl...
-# --------------------------------------------------
-mv $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl.pl \
-   $RPM_BUILD_ROOT/usr/X11R6/bin/xkbctrl
-mv $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl \
-   $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate
+#=================================================
 # check perl .packlist...
-# --------------------------
+#-------------------------------------------------
 %if %{suse_version} > 820
 %perl_process_packlist
 %endif
+#=================================================
 # remove unpacked sources...
-# --------------------------
-rm -f $RPM_BUILD_ROOT/usr/X11R6/%_lib/sax/api/data/cdb/Monitors.orig
-rm -f $RPM_BUILD_ROOT/usr/X11R6/share/fvwm/fvwmrc.yast2
-rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/fvwmrc.yast2
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_loader.sh
-rm -f $RPM_BUILD_ROOT/var/adm/perl-modules/sax2
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SecureMode
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SetMode
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/catch
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_wheel.sh
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/corner
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/demo
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/demo.sh
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/dots
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/fake
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/hwupdate
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/isax
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/screen
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/whois
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wrap
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wmstart
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
-rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_ddc.sh
-rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
-rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/example.pl
-rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
+#-------------------------------------------------
+
+#=================================================
+# update desktop file 
+#-------------------------------------------------
 %suse_update_desktop_file -i %name System SystemSetup
 
-%post
-#%{fillup_and_insserv -npY sax}
-
-%postun
-#%{insserv_cleanup}
 #=================================================
 # SaX files...      
 #-------------------------------------------------
-
 %files
 %defattr(-,root,root)
-%dir /usr/X11R6/%{_lib}/sax/api
-%dir /usr/X11R6/%{_lib}/sax/api/data
+%dir /usr/share/sax/api
+%dir /usr/share/sax/api/data
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
-%dir /usr/X11R6/%{_lib}/sax
-%dir /usr/X11R6/%{_lib}/sax/doc
-%dir /usr/X11R6/%{_lib}/sax/sysp/script
-%dir /usr/X11R6/%{_lib}/sax/sysp
+%dir /usr/share/sax
+%dir /usr/share/sax/doc
+%dir /usr/share/sax/sysp/script
+%dir /usr/share/sax/sysp
 %dir /var/cache/sax/sysp
 %dir /var/cache/sax/sysp/rdbms
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-#/var/adm/fillup-templates/sysconfig.sax
 /usr/share/pixmaps/sax2.xpm
 /usr/X11R6/share/fvwm/fvwmrc.sax
-/usr/X11R6/%{_lib}/sax/doc/config
-/usr/X11R6/%{_lib}/sax/doc/guitest
-/usr/X11R6/%{_lib}/sax/doc/README
-/usr/X11R6/%{_lib}/sax/svnbuild
-/usr/X11R6/%{_lib}/sax/init.pl
-/usr/X11R6/%{_lib}/sax/xc.pl
-/usr/X11R6/%{_lib}/sax/pci.pl
-/usr/X11R6/%{_lib}/sax/sysp.pl
-/usr/X11R6/%{_lib}/sax/modules
-/usr/X11R6/%{_lib}/sax/tools
-/usr/X11R6/bin/sax.sh
-/usr/X11R6/bin/sax2-vesa
-/usr/X11R6/bin/SaX2
-/usr/X11R6/bin/sax2
-/usr/X11R6/%{_lib}/sax/api/data/*????
-/usr/X11R6/%{_lib}/sax/sysp/script/installed.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/killdot.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/vbios.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/machine.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/preparelog.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/checkmap.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/profilecount.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/diag.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/psection.pl
-/usr/X11R6/%{_lib}/sax/sysp/script/vendor.pl
-/usr/X11R6/%{_lib}/XFree.so
-/usr/X11R6/%{_lib}/PLog.so
-/usr/sbin/sysp
+/usr/share/sax/doc/config
+/usr/share/sax/doc/guitest
+/usr/share/sax/doc/README
+/usr/share/sax/svnbuild
+/usr/share/sax/init.pl
+/usr/share/sax/xc.pl
+/usr/share/sax/pci.pl
+/usr/share/sax/sysp.pl
+/usr/share/sax/modules
+/usr/share/sax/tools
+/sbin/sax.sh
+/sbin/sax2-vesa
+/sbin/SaX2
+/sbin/sax2
+/sbin/sysp
+/usr/share/sax/api/data/*????
+/usr/share/sax/sysp/script/installed.pl
+/usr/share/sax/sysp/script/killdot.pl
+/usr/share/sax/sysp/script/vbios.pl
+/usr/share/sax/sysp/script/machine.pl
+/usr/share/sax/sysp/script/preparelog.pl
+/usr/share/sax/sysp/script/checkmap.pl
+/usr/share/sax/sysp/script/profilecount.pl
+/usr/share/sax/sysp/script/diag.pl
+/usr/share/sax/sysp/script/psection.pl
+/usr/share/sax/sysp/script/vendor.pl
+%{perl_vendorarch}/XFree.pm
+%{perl_vendorarch}/auto/XFree
+%{perl_vendorarch}/PLog.pm
+%{perl_vendorarch}/auto/PLog
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.en.ps
 %doc %{_defaultdocdir}/sax2/sax.en.dvi
 %doc %{_defaultdocdir}/sax2/sax.de.ps
 %doc %{_defaultdocdir}/sax2/sax.de.dvi
+
 #=================================================
 # SaX-GUI file list...  
 # ------------------------------------------------
-
 %files -n sax2-gui
 %defattr(-,root,root)
-%dir /usr/X11R6/%{_lib}/sax/api
-%dir /usr/X11R6/%{_lib}/sax/api/lang
-%dir /usr/X11R6/%{_lib}/xfine
-/usr/X11R6/%{_lib}/sax/xw.pl
-/usr/X11R6/%{_lib}/sax/xapi
-/usr/X11R6/%{_lib}/sax/xrun.pl
-/usr/X11R6/%{_lib}/sax/api/tools
-/usr/X11R6/%{_lib}/sax/api/pixmaps
-/usr/X11R6/%{_lib}/xfine/pixmaps
-/usr/X11R6/%{_lib}/xfine/xfine
-/usr/X11R6/%{_lib}/xfine/xfine.gtx
-%if %{suse_version} > 820
-/usr/share/applications/sax2.desktop
-%endif
+%dir /usr/share/sax/api
+%dir /usr/share/xfine
+/usr/share/sax/xw.pl
+/usr/share/sax/xapi
+/usr/share/sax/xrun.pl
+/usr/share/sax/api/tools
+/usr/share/sax/api/pixmaps
+/usr/share/xfine/pixmaps
+/usr/share/xfine/xfine
+/usr/share/xfine/xfine.gtx
 /usr/share/locale/de/LC_MESSAGES/sax.mo
 /usr/share/locale/en_US/LC_MESSAGES/sax.mo
 /usr/share/locale/en_GB/LC_MESSAGES/sax.mo
@@ -558,46 +448,49 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 /usr/share/locale/pl_PL/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
+%if %{suse_version} > 820
+/usr/share/applications/sax2.desktop
+%endif
+
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------
-
 %files -n sax2-tools
 %defattr(-,root,root)
-%doc /usr/X11R6/man/man1/*
-/usr/X11R6/bin/xbounce
-/usr/X11R6/bin/xupdate
-/usr/X11R6/bin/xmset
-/usr/X11R6/bin/xkbset
-/usr/X11R6/bin/xkbctrl
-/usr/X11R6/bin/xmode
-/usr/X11R6/bin/xquery
-/usr/X11R6/bin/xidle
-/usr/X11R6/bin/xbound
-/usr/X11R6/bin/testX
+%doc %{_mandir}/man1/*
+/sbin/xbounce
+/sbin/xupdate
+/sbin/xmset
+/sbin/xkbset
+/sbin/xkbctrl
+/sbin/xmode
+/sbin/xquery
+/sbin/xidle
+/sbin/xbound
+/sbin/testX
+
 #=================================================
 # SaX-Ident file list...  
 # ------------------------------------------------
-
 %files -n sax2-ident
 %defattr(-,root,root)
-%dir /usr/X11R6/%{_lib}/sax
-%dir /usr/X11R6/%{_lib}/sax/api
-%dir /usr/X11R6/%{_lib}/sax/api/data/cdb
-%dir /usr/X11R6/%{_lib}/sax/api/data
-%dir /usr/X11R6/%{_lib}/sax/sysp/maps
-%dir /usr/X11R6/%{_lib}/sax/sysp
-/usr/X11R6/%{_lib}/sax/sysp/maps/Identity.map
-/usr/X11R6/%{_lib}/sax/sysp/maps/Keyboard.map
-/usr/X11R6/%{_lib}/sax/sysp/maps/Vendor.map
-/usr/X11R6/%{_lib}/sax/sysp/maps/Input.map
-/usr/X11R6/%{_lib}/sax/sysp/maps/Driver.map
-/usr/X11R6/%{_lib}/sax/api/data/cdb/*
-/usr/X11R6/%{_lib}/sax/profile
+%dir /usr/share/sax
+%dir /usr/share/sax/api
+%dir /usr/share/sax/api/data/cdb
+%dir /usr/share/sax/api/data
+%dir /usr/share/sax/sysp/maps
+%dir /usr/share/sax/sysp
+/usr/share/sax/sysp/maps/Identity.map
+/usr/share/sax/sysp/maps/Keyboard.map
+/usr/share/sax/sysp/maps/Vendor.map
+/usr/share/sax/sysp/maps/Input.map
+/usr/share/sax/sysp/maps/Driver.map
+/usr/share/sax/api/data/cdb/*
+/usr/share/sax/profile
+
 #=================================================
 # SaX-libsax file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax
 %defattr(-,root,root)
 %dir %{_defaultdocdir}/libsax
@@ -607,42 +500,41 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 #=================================================
 # SaX-libsax-devel file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-devel
 %defattr(-,root,root)
 %dir /usr/include/sax
 /usr/include/sax/*
+
 #=================================================
 # SaX-libsax-perl file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-perl
 %defattr(-,root,root)
 %{perl_vendorarch}/SaX.pm
 %{perl_vendorarch}/auto/SaX
+
 #=================================================
 # SaX-libsax-python file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-python
 %defattr(-,root,root)
 %dir %{py_sitedir}/SaX
 %{py_sitedir}/SaX.pth
 %{py_sitedir}/SaX/*
+
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-java
 %defattr(-,root,root)
 %dir /usr/lib/sax
 %dir /usr/lib/sax/plugins
 /usr/share/java/SaX.jar
 /usr/lib/sax/plugins/SaX.so
+
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
 %dir /usr/lib/mono/gac/SaX

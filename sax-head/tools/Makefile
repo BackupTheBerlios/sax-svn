@@ -105,6 +105,8 @@ install:
 	install -m 644 ./xbanner/demo   ${sax_tools}
 	install -m 644 ./xbanner/screen ${sax_tools}
 	mv ${sax_tools}/isax.pl ${sax_tools}/isax
+	mv ${sax_tools}/xkbctrl.pl ${sax_tools}/xkbctrl
+	mv ${sax_tools}/xupdate.pl ${sax_tools}/xupdate
 	${MAKE} -C ./plog DESTDIR=${buildroot} install_vendor
 	rm -f ${sax_tools}/config.status
 	rm -f ${sax_tools}/configure

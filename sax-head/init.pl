@@ -150,7 +150,7 @@ sub init {
 	$spec{Sysp}                = $LD."sax/sysp.pl";
 	$spec{SetMode}             = $LD."sax/tools/SetMode";
 	$spec{SecureMode}          = $LD."sax/tools/SecureMode";
-	$spec{FbSet}               = "/usr/sbin/fbset";
+	$spec{FbSet}               = "fbset";
 	$spec{LogFile}             = "/var/log/SaX.log";
 	$spec{Xmode}               = $LD."sax/tools/xmode";
 	$spec{Xmset}               = $LD."sax/tools/xmset";

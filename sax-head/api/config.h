@@ -136,7 +136,6 @@ STATUS        : Status: Up-to-date
 // Binary files...
 //------------------------------
 #define RPM             "/bin/rpm"
-#define FBSET           "/usr/sbin/fbset"
 #define XMODE           "/usr/X11R6/lib/sax/tools/xmode"
 #define WRAP            "/usr/X11R6/lib/sax/tools/wrap"
 #define FAKE            "/usr/X11R6/lib/sax/tools/fake"

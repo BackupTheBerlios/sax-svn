@@ -101,7 +101,7 @@ sub init {
 	$init{DbmNew}      = "/var/cache/sax/files/config.new";
 	$init{XFineCache}  = "/var/cache/xfine";
 	$init{LILOCode}    = "/var/cache/sax/files/lilocode.ycp";
-	$init{FbSet}       = "/usr/sbin/fbset";
+	$init{FbSet}       = "fbset";
 	$init{ListFile}    = "$init{TmpDir}/apidata";
 	$init{ListSection} = $ListSection;
 	$init{OutputFile}  = $OutputFile;

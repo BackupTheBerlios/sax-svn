@@ -38,7 +38,8 @@ CREATEVZ       = ${sax_prefix}/modules/create
 SYSPVZ         = ${sax_prefix}/sysp
 MAPVZ          = ${sax_prefix}/sysp/maps
 PROFILE        = ${sax_prefix}/profile
-VARCACHEVZ     = ${var_prefix}/sax
+SAXCACHEVZ     = ${var_prefix}/sax
+XFICACHEVZ     = ${var_prefix}/xfine
 RDBMS          = ${var_prefix}/sax/sysp/rdbms
 FILES          = ${var_prefix}/sax/files
 SCRIPTVZ       = ${sax_prefix}/sysp/script
@@ -99,8 +100,8 @@ install:
 	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${DOCVZ} ${INCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
-	install -d -m 755 ${PROFILE} ${SBINVZ} ${VARCACHEVZ} ${CREATEVZ}
-	install -d -m 755 ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
+	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
+	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
 	install -d -m 755 ${LIBDOCDIR}
 
 	#============================================

@@ -52,7 +52,7 @@ sub ApiInit {
 	$import{SecureMode} = "/usr/X11R6/lib/sax/tools/SecureMode";
 	$import{Xmode}      = "/usr/X11R6/lib/sax/tools/xmode";
 	$import{Sysp}       = "/usr/X11R6/lib/sax/sysp.pl";
-	$import{FbSet}      = "/usr/sbin/fbset";
+	$import{FbSet}      = "fbset";
 }
 
 #---[ ApiRead ]-----#
