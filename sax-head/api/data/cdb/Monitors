@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 22 12:39:18 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 29 16:44:56 2003
 #
 # Template for monitor data
 # --------------------------
@@ -98,6 +98,7 @@
  DDC=AUO0F03
  Hsync=30-90
  Modeline="1400x1050" 145.06 1400 1496 1648 1896 1050 1051 1054 1093
+ Resolution=1400x1050
  Vsync=58-70
 }
 
@@ -758,6 +759,7 @@ ACER:99SL  {
 ACER:ACERVIEW 11D  {
  DDC=API440B
  Hsync=31-40
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -775,6 +777,7 @@ ACER:ACERVIEW 11DG  {
 ACER:ACERVIEW 33D  {
  DDC=API4421
  Hsync=31-40
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -793,6 +796,7 @@ ACER:ACERVIEW 33DL  {
 ACER:ACERVIEW 34T  {
  DDC=API5422
  Hsync=31-50
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -811,6 +815,7 @@ ACER:ACERVIEW 34TL  {
 ACER:ACERVIEW 55  {
  DDC=API0037
  Hsync=31-70
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -829,6 +834,7 @@ ACER:ACERVIEW 55L  {
 ACER:ACERVIEW 56L  {
  DDC=API4C38
  Hsync=31-70
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -937,6 +943,7 @@ ACER:ACERVIEW 7178IE  {
 ACER:ACERVIEW 76I  {
  DDC=API494C
  Hsync=31-70
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -946,6 +953,7 @@ ACER:ACERVIEW 76I  {
 ACER:ACERVIEW 76IE  {
  DDC=API424C
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-110
 }
 
@@ -964,6 +972,7 @@ ACER:ACERVIEW 76N  {
 ACER:ACERVIEW 78I  {
  DDC=API494E
  Hsync=31-90
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -973,6 +982,7 @@ ACER:ACERVIEW 78I  {
 ACER:ACERVIEW 98I  {
  DDC=API4962
  Hsync=31-90
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -1974,6 +1984,7 @@ ADI:MICROSCAN G710  {
  DDC=ADI5450
  Option=DPMS
  Hsync=30-96
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -2559,6 +2570,7 @@ AOC:SPECTRUM 4VA  {
  DDC=AOCD350
  Option=DPMS
  Hsync=30-50
+ Resolution=1152x864
  Vsync=50-100
 }
 
@@ -2614,6 +2626,7 @@ AOC:SPECTRUM 5GLR  {
  DDC=AOCE570
  Option=DPMS
  Hsync=30-64
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -2651,6 +2664,7 @@ AOC:SPECTRUM 5NLR  {
  DDC=AOCA566
  Option=DPMS
  Hsync=30-66
+ Resolution=1280x1024
  Vsync=50-100
 }
 
@@ -2715,6 +2729,7 @@ AOC:SPECTRUM 7NLR  {
  DDC=AOCA782
  Option=DPMS
  Hsync=30-82
+ Resolution=1280x1024
  Vsync=50-110
 }
 
@@ -3713,6 +3728,7 @@ AST:ASTVISION 20H  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -3725,6 +3741,7 @@ AST:ASTVISION 4L  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -3737,6 +3754,7 @@ AST:ASTVISION 5L  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -3749,6 +3767,7 @@ AST:ASTVISION 5V  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -3761,6 +3780,7 @@ AST:ASTVISION 7H  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -3773,6 +3793,7 @@ AST:ASTVISION 7L  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -4340,6 +4361,7 @@ BELINEA:101545  {
  DDC=MAX0609
  Option=DPMS
  Hsync=31-60
+ Resolution=1024x768
  Vsync=50-75
 }
 
@@ -4460,6 +4482,7 @@ BELINEA:102030  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -4472,6 +4495,7 @@ BELINEA:103010  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -4484,6 +4508,7 @@ BELINEA:103015  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -4496,6 +4521,7 @@ BELINEA:103020  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -4524,6 +4550,7 @@ BELINEA:103030  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-150
 }
 
@@ -4544,6 +4571,7 @@ BELINEA:103040  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-150
 }
 
@@ -4584,6 +4612,7 @@ BELINEA:103060  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -4604,6 +4633,7 @@ BELINEA:103070  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -4640,6 +4670,7 @@ BELINEA:104010  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -4700,6 +4731,7 @@ BELINEA:105045  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4712,6 +4744,7 @@ BELINEA:105046  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4771,6 +4804,7 @@ BELINEA:105075  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4783,6 +4817,7 @@ BELINEA:105076  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4795,6 +4830,7 @@ BELINEA:105080  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4890,6 +4926,7 @@ BELINEA:105586  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4914,6 +4951,7 @@ BELINEA:105595  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4926,6 +4964,7 @@ BELINEA:105596  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -4938,6 +4977,7 @@ BELINEA:106020  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -5000,6 +5040,7 @@ BELINEA:106060  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5020,6 +5061,7 @@ BELINEA:106070  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -5029,6 +5071,7 @@ BELINEA:106070  {
 BELINEA:106080  {
  DDC=MAX17C0
  Hsync=30-110
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -5041,6 +5084,7 @@ BELINEA:106090  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -5073,6 +5117,7 @@ BELINEA:107015  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5085,6 +5130,7 @@ BELINEA:107020  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -5097,6 +5143,7 @@ BELINEA:107025  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -5109,6 +5156,7 @@ BELINEA:107030  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5121,6 +5169,7 @@ BELINEA:107035  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -5133,6 +5182,7 @@ BELINEA:107040  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -5145,6 +5195,7 @@ BELINEA:107050  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5157,6 +5208,7 @@ BELINEA:107060  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -5169,6 +5221,7 @@ BELINEA:107065  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5181,6 +5234,7 @@ BELINEA:108010  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5193,6 +5247,7 @@ BELINEA:108015  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5205,6 +5260,7 @@ BELINEA:108020  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5225,6 +5281,7 @@ BELINEA:108050  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5237,6 +5294,7 @@ BELINEA:108060  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5269,6 +5327,7 @@ BELINEA:108095  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -5609,6 +5668,7 @@ COMPAQ:150 COLOR  {
 COMPAQ:151FS  {
  DDC=CPQ0028
  Hsync=31-57
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -5629,6 +5689,7 @@ COMPAQ:171 FSES  {
 COMPAQ:171FS  {
  DDC=CPQ0033
  Hsync=31-57
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -5798,6 +5859,7 @@ COMPAQ:P110  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=48-160
 }
 
@@ -5820,6 +5882,7 @@ COMPAQ:P1610  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=48-160
 }
 
@@ -5846,6 +5909,7 @@ COMPAQ:P70  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-150
  Vsync=48-150
 }
@@ -5869,6 +5933,7 @@ COMPAQ:P75  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-150
 }
 
@@ -5992,6 +6057,7 @@ COMPAQ:QVISION 172  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-90
 }
 
@@ -6014,6 +6080,7 @@ COMPAQ:QVISION 200  {
  DDC=CPQ0045
  Option=DPMS
  Hsync=31-82
+ Resolution=1152x864
  Vsync=50-90
 }
 
@@ -6027,6 +6094,7 @@ COMPAQ:QVISION 210  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-90
 }
 
@@ -6313,6 +6381,7 @@ COMPAQ:V40  {
  DDC=CPQ1334
  Option=DPMS
  Hsync=31-48
+ Resolution=1280x1024
  Vsync=50-100
 }
 
@@ -6332,6 +6401,7 @@ COMPAQ:V50  {
  DDC=CPQ1322
  Option=DPMS
  Hsync=30-60
+ Resolution=1280x1024
  Vsync=50-125
 }
 
@@ -6352,6 +6422,7 @@ COMPAQ:V55  {
  DDC=CPQ1331
  Option=DPMS
  Hsync=30-60
+ Resolution=1280x1024
  Vsync=50-125
  Vsync=48-125
 }
@@ -6372,6 +6443,7 @@ COMPAQ:V70  {
  DDC=CPQ170A
  Option=DPMS
  Hsync=30-69
+ Resolution=1280x1024
  Vsync=50-125
 }
 
@@ -6400,6 +6472,7 @@ COMPAQ:V90  {
  DDC=CPQ1730
  Option=DPMS
  Hsync=30-94
+ Resolution=1280x1024
  Vsync=48-160
 }
 
@@ -7966,6 +8039,7 @@ CTX:VL700  {
  DDC=CTX3621
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -8171,6 +8245,7 @@ DAEWOO:512B  {
 DAEWOO:518B  {
  DDC=DWE5183
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -8328,6 +8403,7 @@ DAEWOO:CMC-1428XW  {
 DAEWOO:CMC-1502B1  {
  DDC=DWE1502
  Hsync=30-64
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -8365,6 +8441,7 @@ DAEWOO:CMC-1701MW  {
 DAEWOO:CMC-1703B  {
  DDC=DWE1703
  Hsync=30-64
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -8374,6 +8451,7 @@ DAEWOO:CMC-1703B  {
 DAEWOO:CMC-1704C  {
  DDC=DWE7044
  Hsync=24-86
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -9051,6 +9129,7 @@ DELL:828FI  {
 DELL:D1025HE  {
  DDC=DEL6124
  Hsync=31-92
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -10225,6 +10304,7 @@ EIZO:FLEXSCAN FX2 21  {
 EIZO:FLEXSCAN L34  {
  DDC=EIZ1012
  Hsync=24-61
+ Resolution=1024x768
  Vsync=50-85
 }
 
@@ -11438,6 +11518,7 @@ ELSA AG:ECOMO 21S99  {
 ELSA AG:ECOMO 22H99  {
  DDC=ELS7617
  Hsync=31-121
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -11552,6 +11633,7 @@ ELSA AG:ECOMO 850 (24H96)  {
 ELSA AG:ECOMO OFFICE  {
  DDC=ELS4160
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-130
 }
 
@@ -11921,6 +12003,7 @@ EYE-Q:777  {
  DDC=STC0777
  Option=DPMS
  Hsync=30-72
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -12157,6 +12240,7 @@ FUJITSU:ERGOPRO X153  {
 FUJITSU:ERGOPRO X174  {
  DDC=ICL2400
  Hsync=30-92
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -12841,6 +12925,7 @@ FUJITSU:VL-P150  {
 FUJITSU:X176  {
  DDC=FUJ2118
  Hsync=30-100
+ Resolution=1024x768
  Vsync=50-200
 }
 
@@ -12850,6 +12935,7 @@ FUJITSU:X176  {
 FUJITSU:X191  {
  DDC=ICL2800
  Hsync=30-96
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -12870,6 +12956,7 @@ FUJITSU SIEMENS:431V-FA  {
  Option=DPMS
  Hsync=31-67
  Modeline="1280x1024" 108.00 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync
+ Resolution=1280x1024
  Vsync=50-62
 }
 
@@ -12986,6 +13073,7 @@ FUJITSU SIEMENS:E177  {
 FUJITSU SIEMENS:E213  {
  DDC=ICL2700
  Hsync=30-107
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -13012,6 +13100,7 @@ FUJITSU SIEMENS:X150F  {
  DDC=FUJ0119
  Option=DPMS
  Hsync=31-60
+ Resolution=1280x1024
  Vsync=56-75
 }
 
@@ -13022,6 +13111,7 @@ FUJITSU SIEMENS:X154  {
  DDC=ICL2900
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -13033,6 +13123,7 @@ FUJITSU SIEMENS:X177  {
  Option=DPMS
  Hsync=30-92
  Hsync=31-92
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -13044,6 +13135,7 @@ FUJITSU SIEMENS:X177A  {
  Option=DPMS
  Hsync=30-92
  Hsync=31-92
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -13121,6 +13213,7 @@ GATEWAY:DESTINATION DL36  {
 GATEWAY:EV500  {
  DDC=GWY138A
  Hsync=30-70
+ Resolution=1024x768
  Vsync=60-110
 }
 
@@ -13188,6 +13281,7 @@ GATEWAY:EV700B  {
 GATEWAY:EV900  {
  DDC=GWY8883
  Hsync=30-95
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -13276,6 +13370,7 @@ GATEWAY:VX700-E  {
  DDC=GWY044E
  Option=DPMS
  Hsync=30-86
+ Resolution=1280x1024
  Vsync=50-130
 }
 
@@ -13985,6 +14080,7 @@ HIGHSCREEN:2085  {
  DDC=CTX2085
  Hsync=30-85
  Hsync=28-85
+ Resolution=1024x768
  Vsync=45-160
  Vsync=48-160
  Vsync=50-160
@@ -14198,6 +14294,7 @@ HIGHSCREEN:LE95P  {
  DDC=VOB3130
  Option=DPMS
  Hsync=30-65
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -15050,6 +15147,7 @@ HITACHI:LTD CM611  {
  DDC=HTCAFD7
  Option=DPMS
  Hsync=31-92
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -15956,6 +16054,7 @@ HP:D5060 1024X768 LCD  {
  DDC=HWP13C4
  Option=DPMS
  Hsync=32-61
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -15975,6 +16074,7 @@ HP:D5065 L1800 18.1-INCH LCD MONITOR  {
  DDC=HWP13C9
  Option=DPMS
  Hsync=30-80
+ Resolution=1280x1024
  Vsync=56-85
 }
 
@@ -15985,6 +16085,7 @@ HP:D5065 L1800 LCD  {
  DDC=HWP13C9
  Option=DPMS
  Hsync=30-80
+ Resolution=1280x1024
  Vsync=56-85
 }
 
@@ -15995,6 +16096,7 @@ HP:D5069 L1810 LCD  {
  DDC=HWP13CD
  Option=DPMS
  Hsync=30-80
+ Resolution=1280x1024
  Vsync=56-85
 }
 
@@ -16264,6 +16366,7 @@ HP:HP D2838 M700 17"  {
 HP:HP D2846 21  {
  DDC=HWP0B1E
  Hsync=30-107
+ Resolution=1600x1200
  Vsync=50-160
 }
 
@@ -16462,6 +16565,7 @@ HYUNDAI:17B+  {
 HYUNDAI:7687  {
  DDC=HEI768B
  Hsync=30-87
+ Resolution=1024x768
  Vsync=50-150
 }
 
@@ -16541,6 +16645,7 @@ HYUNDAI:DELUXSCAN 15S (HL5854B)  {
 HYUNDAI:DELUXSCAN 17  {
  DDC=HEIB81E
  Hsync=30-64
+ Resolution=1024x768
  Vsync=50-90
 }
 
@@ -16861,6 +16966,7 @@ HYUNDAI:HL-4860E  {
  DDC=HEI12FC
  Option=DPMS
  Hsync=30-60
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -18000,6 +18106,7 @@ IBM:E74  {
  DDC=IBM18BC
  Option=DPMS
  Hsync=30-69
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -18018,6 +18125,7 @@ IBM:G200  {
 IBM:G41  {
  DDC=IBM198E
  Hsync=31-58
+ Resolution=1024x768
  Vsync=50-95
 }
 
@@ -18084,6 +18192,7 @@ IBM:P50  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Resolution=1152x864
  Vsync=50-125
  Vsync=47-125
 }
@@ -18113,6 +18222,7 @@ IBM:T540 TFT  {
  DDC=IBM7347
  Option=DPMS
  Hsync=31-65
+ Resolution=1024x768
  Vsync=50-70
 }
 
@@ -18380,6 +18490,7 @@ IIYAMA:AU4831D  {
  DDC=IVM4800
  Option=DPMS
  Hsync=30-80
+ Resolution=1280x1024
  Vsync=56-85
 }
 
@@ -18598,6 +18709,7 @@ IIYAMA:PROLITE 36 (TXA3611HT)  {
  DDC=IVM3602
  Option=DPMS
  Hsync=23-62
+ Resolution=1152x864
  Vsync=50-200
 }
 
@@ -19029,6 +19141,7 @@ IIYAMA:VISION MASTER 400  {
  DDC=IVM1703
  Option=DPMS
  Hsync=27-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19098,6 +19211,7 @@ IIYAMA:VISION MASTER 450  {
  DDC=IVM1900
  Option=DPMS
  Hsync=27-102
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19107,6 +19221,7 @@ IIYAMA:VISION MASTER 450  {
 IIYAMA:VISION MASTER 451 (S902JT)  {
  DDC=IVM1910
  Hsync=30-115
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19125,6 +19240,7 @@ IIYAMA:VISION MASTER 501  {
  DDC=IVM2110
  Option=DPMS
  Hsync=27-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19135,6 +19251,7 @@ IIYAMA:VISION MASTER 502  {
  DDC=IVM2120
  Option=DPMS
  Hsync=27-110
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19223,6 +19340,7 @@ IIYAMA:VISION MASTER PRO 400  {
  DDC=IVM1711
  Option=DPMS
  Hsync=27-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19233,6 +19351,7 @@ IIYAMA:VISION MASTER PRO 410  {
  DDC=IVM1740
  Option=DPMS
  Hsync=27-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19259,6 +19378,7 @@ IIYAMA:VISION MASTER PRO 450  {
  DDC=IVM1901
  Option=DPMS
  Hsync=27-110
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -19268,6 +19388,7 @@ IIYAMA:VISION MASTER PRO 450  {
 IIYAMA:VISION MASTER PRO 451 (A902MT)  {
  DDC=IVM1918
  Hsync=27-105
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19321,6 +19442,7 @@ IIYAMA:VISION MASTER PRO 501  {
  DDC=IVM2118
  Option=DPMS
  Hsync=27-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -19331,6 +19453,7 @@ IIYAMA:VISION MASTER PRO 502  {
  DDC=IVM2128
  Option=DPMS
  Hsync=27-110
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -20764,6 +20887,7 @@ LG ELECTRONICS:STUDIOWORKS 78D  {
  DDC=GSM427F
  Option=DPMS
  Hsync=30-85
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -20783,6 +20907,7 @@ LG ELECTRONICS:STUDIOWORKS 78I  {
  DDC=GSM426C
  Option=DPMS
  Hsync=31-85
+ Resolution=1280x1024
  Vsync=50-106
 }
 
@@ -20837,6 +20962,7 @@ LG ELECTRONICS:FLATRON 775FT  {
  DDC=GSM42D1
  Option=DPMS
  Hsync=30-60
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -20963,6 +21089,7 @@ MAG:DX1595N  {
 MAG TECHNOLOGY CO., LTD.:DX1595  {
  DDC=HIG5620
  Hsync=30-50
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -20972,6 +21099,7 @@ MAG TECHNOLOGY CO., LTD.:DX1595  {
 MAG TECHNOLOGY CO., LTD.:DX15T  {
  DDC=HIG5624
  Hsync=30-64
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -20981,6 +21109,7 @@ MAG TECHNOLOGY CO., LTD.:DX15T  {
 MAG TECHNOLOGY CO., LTD.:DX1795  {
  DDC=HIG5626
  Hsync=30-64
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -21007,6 +21136,7 @@ MAGIC:1569  {
  DDC=CTX0150
  DDC=DEL1569
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-110
  Vsync=47-110
 }
@@ -21265,6 +21395,7 @@ MAGIC:AT1782F  {
 MAGIC:D410  {
  DDC=MAG4577
  Hsync=30-54
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -21290,6 +21421,7 @@ MAGIC:D700  {
 MAGIC:DJ530  {
  DDC=MAG5775
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -21308,6 +21440,7 @@ MAGIC:DJ707  {
 MAGIC:DJ717  {
  DDC=MAG7854
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -21386,6 +21519,7 @@ MAGIC:DX715  {
 MAGIC:DX715T  {
  DDC=MAG7842
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -21486,6 +21620,7 @@ MAGIC:XJ500T  {
  DDC=MAG5779
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -21496,6 +21631,7 @@ MAGIC:XJ530  {
  DDC=MAG5776
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -21515,6 +21651,7 @@ MAGIC:XJ700T  {
  DDC=MAG7780
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -21525,6 +21662,7 @@ MAGIC:XJ707  {
  DDC=MAG7772
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -21535,6 +21673,7 @@ MAGIC:XJ717  {
  DDC=MAG7874
  Option=DPMS
  Hsync=30-86
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -21563,6 +21702,7 @@ MAGIC:XJ810  {
  DDC=MAG8997
  Option=DPMS
  Hsync=30-95
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -22172,6 +22312,7 @@ MITSUBISHI:DIAMOND PLUS 200  {
 MITSUBISHI:DIAMOND PLUS 70 (TF-7700P)  {
  DDC=MEL4190
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -22189,6 +22330,7 @@ MITSUBISHI:DIAMOND PLUS 71  {
 MITSUBISHI:DIAMOND PLUS 72 (TFV-8705)  {
  DDC=MEL4160
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-130
 }
 
@@ -22299,6 +22441,7 @@ MITSUBISHI:DIAMOND PRO 21TX (THN9105)  {
 MITSUBISHI:DIAMOND PRO 67TXV (TFV6705)  {
  DDC=MEL4064
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-130
 }
 
@@ -22365,6 +22508,7 @@ MITSUBISHI:DIAMOND PRO 900U  {
 MITSUBISHI:DIAMOND PRO 91TXM (TFW9105)  {
  DDC=MEL40E0
  Hsync=30-95
+ Resolution=1024x768
  Vsync=50-130
 }
 
@@ -22425,6 +22569,7 @@ MITSUBISHI:DIAMOND SCAN 17HX (FFF8705)  {
 MITSUBISHI:DIAMOND SCAN 50 (SD5904)  {
  DDC=MEL41F0
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -22442,6 +22587,7 @@ MITSUBISHI:DIAMOND SCAN 50M  {
 MITSUBISHI:DIAMOND SCAN 70 (SD7704)  {
  DDC=MEL4210
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -22860,6 +23006,7 @@ NANAO:FLEXSCAN 6600  {
  DDC=NAN0406
  DDC=EIZ0206
  Hsync=56-110
+ Resolution=1024x768
  Vsync=70-90
 }
 
@@ -23006,6 +23153,7 @@ NANAO:FLEXSCAN T660I  {
  DDC=EIZ0312
  DDC=NAN0512
  Hsync=30-78
+ Resolution=1024x768
  Vsync=55-90
 }
 
@@ -23211,6 +23359,7 @@ NEC:ACCUSYNC 95F  {
 NEC:C900  {
  DDC=NECEA69
  Hsync=30-95
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -23649,6 +23798,7 @@ NEC:MULTISYNC 50  {
  DDC=NEC1D4D
  Option=DPMS
  Hsync=31-69
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23659,6 +23809,7 @@ NEC:MULTISYNC 70  {
  DDC=NEC1E15
  Option=DPMS
  Hsync=31-69
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23677,6 +23828,7 @@ NEC:MULTISYNC 90  {
  DDC=NEC4BF0
  Option=DPMS
  Hsync=31-92
+ Resolution=1152x864
  Vsync=55-160
 }
 
@@ -23695,6 +23847,7 @@ NEC:MULTISYNC A500  {
  DDC=NEC3D90
  Option=DPMS
  Hsync=31-65
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23714,6 +23867,7 @@ NEC:MULTISYNC A700  {
  DDC=NEC43D0
  Option=DPMS
  Hsync=31-65
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23733,6 +23887,7 @@ NEC:MULTISYNC A900  {
  DDC=NEC4BE6
  Option=DPMS
  Hsync=31-92
+ Resolution=1152x864
  Vsync=55-160
 }
 
@@ -23770,6 +23925,7 @@ NEC:MULTISYNC E1100+  {
  DDC=NEC53DE
  Option=DPMS
  Hsync=31-96
+ Resolution=1152x864
  Vsync=55-160
 }
 
@@ -23780,6 +23936,7 @@ NEC:MULTISYNC E500  {
  DDC=NEC3D86
  Option=DPMS
  Hsync=31-69
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23790,6 +23947,7 @@ NEC:MULTISYNC E700  {
  DDC=NEC4434
  Option=DPMS
  Hsync=31-82
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23809,6 +23967,7 @@ NEC:MULTISYNC E900  {
  DDC=NEC4BD2
  Option=DPMS
  Hsync=31-92
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -23819,6 +23978,7 @@ NEC:MULTISYNC E900+  {
  DDC=NEC4BDC
  Option=DPMS
  Hsync=31-96
+ Resolution=1152x864
  Vsync=55-160
 }
 
@@ -24084,6 +24244,7 @@ NEC:MULTISYNC LCD2000  {
  DDC=NEC4F56
  Option=DPMS
  Hsync=24-81
+ Resolution=1152x864
  Vsync=55-85
 }
 
@@ -24094,6 +24255,7 @@ NEC:MULTISYNC LCD2010  {
  DDC=NEC4F60
  Option=DPMS
  Hsync=24-81
+ Resolution=1152x864
  Vsync=55-85
 }
 
@@ -24112,6 +24274,7 @@ NEC:MULTISYNC LCD400  {
  DDC=NEC3782
  Option=DPMS
  Hsync=24-60
+ Resolution=1152x864
  Vsync=55-86
 }
 
@@ -24130,6 +24293,7 @@ NEC:MULTISYNC LCD400V  {
  DDC=NEC378C
  Option=DPMS
  Hsync=24-60
+ Resolution=1152x864
  Vsync=55-86
 }
 
@@ -24149,6 +24313,7 @@ NEC:MULTISYNC M500  {
  DDC=NEC3D68
  Option=DPMS
  Hsync=30-69
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -24159,6 +24324,7 @@ NEC:MULTISYNC M700  {
  DDC=NEC43C6
  Option=DPMS
  Hsync=30-69
+ Resolution=1152x864
  Vsync=55-120
 }
 
@@ -24187,6 +24353,7 @@ NEC:MULTISYNC P1150  {
  DDC=NEC53CA
  Option=DPMS
  Hsync=31-94
+ Resolution=1152x864
  Vsync=55-160
 }
 
@@ -24216,6 +24383,7 @@ NEC:MULTISYNC P750  {
  DDC=NEC4420
  Option=DPMS
  Hsync=31-94
+ Resolution=1152x864
  Vsync=55-160
 }
 
@@ -24738,6 +24906,7 @@ NOKIA:447KC  {
 NOKIA:447M  {
  DDC=NOK00AD
  Hsync=31-64
+ Resolution=1024x768
  Vsync=55-110
 }
 
@@ -24763,6 +24932,7 @@ NOKIA:447V  {
 NOKIA:447W  {
  DDC=NOK00B7
  Hsync=31-85
+ Resolution=1024x768
  Vsync=48-100
 }
 
@@ -24780,6 +24950,7 @@ NOKIA:447X  {
 NOKIA:447XI  {
  DDC=NOK00A9
  Hsync=31-92
+ Resolution=1024x768
  Vsync=45-150
 }
 
@@ -25006,6 +25177,7 @@ OPTIQUEST:Q41  {
  DDC=OQI4136
  Option=DPMS
  Hsync=30-48
+ Resolution=1152x864
  Vsync=50-90
 }
 
@@ -25016,6 +25188,7 @@ OPTIQUEST:Q51  {
  DDC=OQI4435
  Option=DPMS
  Hsync=30-54
+ Resolution=1152x864
  Vsync=50-100
 }
 
@@ -25026,6 +25199,7 @@ OPTIQUEST:Q53  {
  DDC=OQI4433
  Option=DPMS
  Hsync=30-70
+ Resolution=1152x864
  Vsync=50-100
 }
 
@@ -25087,6 +25261,7 @@ OPTIQUEST:V115  {
  DDC=OQI4D31
  Option=DPMS
  Hsync=30-95
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -25097,6 +25272,7 @@ OPTIQUEST:V115T  {
  DDC=OQI4D32
  Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -25143,6 +25319,7 @@ OPTIQUEST:V73  {
  DDC=OQI5634
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -25154,6 +25331,7 @@ OPTIQUEST:V75  {
  DDC=CPQ1332
  Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=48-160
  Vsync=50-160
 }
@@ -25166,6 +25344,7 @@ OPTIQUEST:V773  {
  Option=DPMS
  Hsync=30-69
  Hsync=31-69
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -25186,6 +25365,7 @@ OPTIQUEST:V775  {
  Option=DPMS
  Hsync=30-82
  Hsync=24-82
+ Resolution=1280x1024
  Vsync=50-130
 }
 
@@ -25205,6 +25385,7 @@ OPTIQUEST:V95  {
  DDC=OQI4A32
  Option=DPMS
  Hsync=30-95
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -25449,6 +25630,7 @@ PANASONIC:LC50S (TX-D5L31F)  {
  DDC=MEI1E07
  Option=DPMS
  Hsync=30-61
+ Resolution=1152x864
  Vsync=50-77
 }
 
@@ -25673,6 +25855,7 @@ PANASONIC:S110  {
  DDC=MEI1649
  Option=DPMS
  Hsync=30-95
+ Resolution=1152x864
  Vsync=50-180
 }
 
@@ -25692,6 +25875,7 @@ PANASONIC:SL70I(TX-D7S36)  {
  DDC=MEI0C96
  Option=DPMS
  Hsync=30-70
+ Resolution=1152x864
  Vsync=50-180
 }
 
@@ -25702,6 +25886,7 @@ PANASONIC:SL90 (TX-D9S54)  {
  DDC=MEI120D
  Option=DPMS
  Hsync=30-95
+ Resolution=1152x864
  Vsync=50-180
 }
 
@@ -26011,6 +26196,7 @@ PEACOCK:TOP17A  {
 PHILIPS:104B (14 ZOLL/CM1300)  {
  DDC=PHL104B
  Hsync=30-54
+ Resolution=1280x1024
  Vsync=50-110
 }
 
@@ -26186,6 +26372,7 @@ PHILIPS:105S (15 ZOLL/CM2300)  {
  DDC=PHLB15C
  Option=DPMS
  Hsync=30-60
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -26223,6 +26410,7 @@ PHILIPS:107B (107B2)  {
 PHILIPS:107B (17 ZOLL/CM6800)  {
  DDC=PHL6800
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-130
 }
 
@@ -26261,6 +26449,7 @@ PHILIPS:107E  {
  DDC=PHL0004
  Option=DPMS
  Hsync=30-70
+ Resolution=1152x864
  Vsync=60-85
 }
 
@@ -26450,6 +26639,7 @@ PHILIPS:109B10  {
 PHILIPS:109S  {
  DDC=PHL4109
  Hsync=30-95
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -26660,6 +26850,7 @@ PHILIPS:201B (201B1)  {
 PHILIPS:201B (21 ZOLL/CM0770)  {
  DDC=PHL201B
  Hsync=30-94
+ Resolution=1024x768
  Vsync=48-160
 }
 
@@ -26742,6 +26933,7 @@ PHILIPS:7CM5279  {
 PHILIPS:BRILLIANCE 105 (15 ZOLL/CM2200)  {
  DDC=PHL105A
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -26759,6 +26951,7 @@ PHILIPS:BRILLIANCE 105A  {
 PHILIPS:BRILLIANCE 107 (17 ZOLL/CM8800)  {
  DDC=PHL0107
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -26831,6 +27024,7 @@ PHILIPS:BRILLIANCE 107P10  {
 PHILIPS:BRILLIANCE 109 (PRODUCT ID 19A58...)  {
  DDC=PHL1109
  Hsync=30-95
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -26948,6 +27142,7 @@ PHILIPS:BRILLIANCE 181AS (18.1 LCD MONITOR)  {
 PHILIPS:BRILLIANCE 201 (21 ZOLL/CM1700)  {
  DDC=PHL201A
  Hsync=31-107
+ Resolution=1024x768
  Vsync=50-170
 }
 
@@ -26983,6 +27178,7 @@ PHILIPS:BRILLIANCE 201B10  {
 PHILIPS:BRILLIANCE 201CS  {
  DDC=PHL0201
  Hsync=30-107
+ Resolution=1024x768
  Vsync=50-170
 }
 
@@ -29366,6 +29562,7 @@ SAMSUNG:SYNCMASTER 15GLE  {
  DDC=SAM6D20
  Option=DPMS
  Hsync=30-50
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -29376,6 +29573,7 @@ SAMSUNG:SYNCMASTER 15GLI  {
  DDC=SAM4D51
  Option=DPMS
  Hsync=30-65
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -29462,6 +29660,7 @@ SAMSUNG:SYNCMASTER 17GLI  {
  DDC=SAM4D70
  Option=DPMS
  Hsync=30-65
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -29472,6 +29671,7 @@ SAMSUNG:SYNCMASTER 17GLSI  {
  DDC=SAM4D71
  Option=DPMS
  Hsync=30-85
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -29541,6 +29741,7 @@ SAMSUNG:SYNCMASTER 21GLS  {
  DDC=SAM4610
  Option=DPMS
  Hsync=30-85
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -29738,6 +29939,7 @@ SAMSUNG:SYNCMASTER 500B PLUS (CKF5607*)  {
  DDC=SAM0D66
  Option=DPMS
  Hsync=30-69
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -29858,6 +30060,7 @@ SAMSUNG:SYNCMASTER 550S(T)  {
 SAMSUNG:SYNCMASTER 570 B TFT  {
  DDC=SAM49D5
  Hsync=30-61
+ Resolution=1024x768
  Vsync=50-75
 }
 
@@ -29995,6 +30198,7 @@ SAMSUNG:SYNCMASTER 700IFT (CSH780B*)  {
  DDC=SAM4EE9
  Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -30024,6 +30228,7 @@ SAMSUNG:SYNCMASTER 700P  {
  DDC=SAM1D13
  Option=DPMS
  Hsync=30-85
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -30034,6 +30239,7 @@ SAMSUNG:SYNCMASTER 700P PLUS (CSH7839*)  {
  DDC=SAM4EE6
  Option=DPMS
  Hsync=30-85
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -30259,6 +30465,7 @@ SAMSUNG:SYNCMASTER 900IFT  {
  DDC=SAM4F29
  Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -30288,6 +30495,7 @@ SAMSUNG:SYNCMASTER 900P (CSH9839*)  {
  DDC=SAM4F26
  Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -30307,6 +30515,7 @@ SAMSUNG:SYNCMASTER 900SL (CSM92*)  {
  DDC=SAM4DB9
  Option=DPMS
  Hsync=30-96
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -30414,6 +30623,7 @@ SAMSUNG:V550  {
  DDC=SAM12B6
  Option=DPMS
  Hsync=30-55
+ Resolution=1280x1024
  Vsync=50-120
 }
 
@@ -30621,6 +30831,7 @@ SAMTRON:SC-528TXL  {
  DDC=SDI1528
  Option=DPMS
  Hsync=30-48
+ Resolution=1152x864
  Vsync=50-100
 }
 
@@ -30631,6 +30842,7 @@ SAMTRON:SC-528UXL  {
  DDC=SDI1529
  Option=DPMS
  Hsync=30-65
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -30641,6 +30853,7 @@ SAMTRON:SC-726GXL  {
  DDC=SDI4D71
  Option=DPMS
  Hsync=30-85
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -30651,6 +30864,7 @@ SAMTRON:SC-728FXL  {
  DDC=SDI4D70
  Option=DPMS
  Hsync=30-65
+ Resolution=1152x864
  Vsync=50-120
 }
 
@@ -32023,6 +32237,7 @@ SONY:CPD-200SF  {
 SONY:CPD-200SFT  {
  DDC=SNY0370
  Hsync=30-80
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -32306,6 +32521,7 @@ SONY:CPD-G520  {
 SONY:CPD-L133  {
  DDC=SNY0030
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-65
 }
 
@@ -32479,6 +32695,7 @@ SONY:GDM-W900  {
  DDC=SNY00E0
  Option=DPMS
  Hsync=30-96
+ Resolution=1152x864
  Vsync=50-160
 }
 
@@ -32777,6 +32994,7 @@ SONY:MULTISCAN E400 (CPD-E400E)  {
  DDC=SNY0390
  Option=DPMS
  Hsync=30-96
+ Resolution=1152x864
  Vsync=48-120
 }
 
@@ -33730,6 +33948,7 @@ Sun:SUN (18.1) FLAT PANEL  {
  Option=DPMS
  Hsync=30-81
  Modeline="1280x1024" 108.0 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync
+ Resolution=1280x1024
  Vsync=56-75
 }
 
@@ -34038,6 +34257,7 @@ TARGA:VISIONARY V1770 C2  {
  DDC=ACTE002
  Option=DPMS
  Hsync=30-70
+ Resolution=1280x1024
  Vsync=50-150
 }
 
@@ -34047,6 +34267,7 @@ TARGA:VISIONARY V1770 C2  {
 TATUNG:C5D  {
  DDC=TAT3044
  Hsync=30-54
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -36359,6 +36580,7 @@ VIEWSONIC:17GA-2  {
 VIEWSONIC:17GS  {
  DDC=VSC0C00
  Hsync=30-69
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -36523,6 +36745,7 @@ VIEWSONIC:E55  {
 VIEWSONIC:E641  {
  DDC=VSC3441
  Hsync=30-54
+ Resolution=1024x768
  Vsync=50-100
 }
 
@@ -36606,6 +36829,7 @@ VIEWSONIC:E75  {
 VIEWSONIC:E771  {
  DDC=VSC564A
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -36664,6 +36888,7 @@ VIEWSONIC:EA771+  {
 VIEWSONIC:EA771B  {
  DDC=VSC4244
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -36681,6 +36906,7 @@ VIEWSONIC:EF70  {
 VIEWSONIC:G653  {
  DDC=VSC3645
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -36730,6 +36956,7 @@ VIEWSONIC:G75F  {
 VIEWSONIC:G771  {
  DDC=VSC4C4A
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -36739,6 +36966,7 @@ VIEWSONIC:G771  {
 VIEWSONIC:G773  {
  DDC=VSC524A
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -36748,6 +36976,7 @@ VIEWSONIC:G773  {
 VIEWSONIC:G790  {
  DDC=VSC384D
  Hsync=30-95
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -36757,6 +36986,7 @@ VIEWSONIC:G790  {
 VIEWSONIC:G800  {
  DDC=VSC374D
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -36766,6 +36996,7 @@ VIEWSONIC:G800  {
 VIEWSONIC:G810  {
  DDC=VSC3751
  Hsync=30-89
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -36808,6 +37039,7 @@ VIEWSONIC:G90MB  {
 VIEWSONIC:GA655  {
  DDC=VSC4145
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -36817,6 +37049,7 @@ VIEWSONIC:GA655  {
 VIEWSONIC:GA771  {
  DDC=VSC514A
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -36834,6 +37067,7 @@ VIEWSONIC:GF775  {
 VIEWSONIC:GS771  {
  DDC=VSC594A
  Hsync=30-70
+ Resolution=1024x768
  Vsync=50-180
 }
 
@@ -36876,6 +37110,7 @@ VIEWSONIC:GT770  {
 VIEWSONIC:GT775  {
  DDC=VSC4B4A
  Hsync=30-86
+ Resolution=1024x768
  Vsync=50-160
 }
 
@@ -36946,6 +37181,7 @@ VIEWSONIC:P655  {
  DDC=VSC4245
  Option=DPMS
  Hsync=30-70
+ Resolution=1152x864
  Vsync=50-180
 }
 
@@ -36956,6 +37192,7 @@ VIEWSONIC:P775  {
  DDC=VSC504A
  Option=DPMS
  Hsync=30-95
+ Resolution=1152x864
  Vsync=50-180
 }
 
@@ -36993,6 +37230,7 @@ VIEWSONIC:P815  {
  DDC=VSC3651
  Option=DPMS
  Hsync=30-115
+ Resolution=1152x864
  Vsync=50-160
 }
 
@@ -37179,6 +37417,7 @@ VIEWSONIC:PS790  {
  DDC=VSC434D
  Option=DPMS
  Hsync=30-95
+ Resolution=1152x864
  Vsync=50-180
 }
 
@@ -37207,6 +37446,7 @@ VIEWSONIC:PT771  {
  DDC=VSC5A4A
  Option=DPMS
  Hsync=30-92
+ Resolution=1152x864
  Vsync=50-160
 }
 
@@ -37217,6 +37457,7 @@ VIEWSONIC:PT775  {
  DDC=VSC474A
  Option=DPMS
  Hsync=30-96
+ Resolution=1152x864
  Vsync=50-160
 }
 
@@ -37272,6 +37513,7 @@ VIEWSONIC:PT813  {
  DDC=VSC4151
  Option=DPMS
  Hsync=30-107
+ Resolution=1152x864
  Vsync=50-160
 }
 
@@ -37554,6 +37796,7 @@ VIEWSONIC:VX2000  {
  Option=DPMS
  Hsync=30-82
  Modeline="1600x1200" 157.25 1600 1616 1968 2080 1200 1200 1212 1253
+ Resolution=1600x1200
  Vsync=50-85
 }
 
@@ -37842,6 +38085,7 @@ WYSE:17PS  {
  DDC=VSC0C0F
  Hsync=30-82
  Hsync=24-82
+ Resolution=1024x768
  Vsync=50-130
 }
 

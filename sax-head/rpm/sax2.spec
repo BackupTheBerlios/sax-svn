@@ -33,7 +33,6 @@ NoSource:     2
 %if %{suse_version} < 810
 Patch:        sax2_binmode.dif
 %endif
-Patch1:       sax2_monitor.dif
 Patch2:       sax2_slec.dif
 Patch3:       sax2_date.dif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
@@ -106,7 +105,6 @@ fi
 %if %{suse_version} <= 820
 %patch3
 %endif
-%patch1
 #=================================================
 # adapt lib environment to currently used %_{lib}
 #-------------------------------------------------
