@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Feb 28 16:42:53 2005
+# Author: Marcus Schaefer <sax@suse.de>, Thu Mar 10 10:03:53 2005
 #
 # Template for monitor data
 # --------------------------
@@ -16777,6 +16777,15 @@ HITACHI:SUPERSCAN LC150 (CML150-512)  {
  Option=DPMS
  Hsync=31-60
  Vsync=56-75
+}
+
+#==============================================
+# zv5000
+#----------------------------------------------
+HP:ZV5000  {
+ Option=DPMS
+ Hsync=32-48
+ Vsync=40-70
 }
 
 #==============================================
