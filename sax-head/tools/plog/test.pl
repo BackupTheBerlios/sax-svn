@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use lib '/usr/share/sax/modules';
+
 use PLogData;
 
 $logfile = $ARGV[0];

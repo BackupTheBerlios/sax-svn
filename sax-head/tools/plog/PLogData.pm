@@ -11,11 +11,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib '/usr/X11R6/lib';
-use lib '/usr/X11R6/lib/sax/modules';
-
 use PLog;
-
 
 #---[ ParseLog ]-----------#
 sub ParseLog {
