@@ -56,6 +56,7 @@ my $D3Answer = "no";    # answer to the 3D question
 my $dpy      = ":0.0";  # display to use
 
 our %mop;               # monitor profile hash
+our %idp;               # input device profile hash
 
 init();
 #==================================================
@@ -466,6 +467,18 @@ sub init {
 			@ProfileData = ();
 			$ProfileSize = 0;
 			@ProfileData = ReadProfile($CardNumber,"monitor");
+			$ProfileSize = @ProfileData;
+			IncludeProfile();
+		}
+		# /.../
+		# look if there is a profile defined for the mouse...
+		# ------------------------------------------------------
+		$ProfileSize = keys %{$idp{MouseProfile}};
+		if ($ProfileSize > 0) {
+			@ProfileAddSections = ();
+			@ProfileData = ();
+			$ProfileSize = 0;
+			@ProfileData = ReadProfile($CardNumber,"mouse");
 			$ProfileSize = @ProfileData;
 			IncludeProfile();
 		}
@@ -1205,10 +1218,11 @@ sub ReadProfile {
 	my $new;
 	my $c;
 
+	my $topic = "Card";
 	# get profiles filenames for all cards, 
 	# save result to %data
 	# --------------------
-	if ($kind ne "monitor") {
+	if (($kind ne "monitor") && ($kind ne "mouse")) {
 	# create %data for a card...
 	# ------------------------------
 	$profile = qx($spec{Profile} -p);
@@ -1222,12 +1236,25 @@ sub ReadProfile {
 	}
 	} 
 	else {
-	# create %data for a monitor...
-	# ------------------------------
-	foreach (keys %{$mop{MonitorProfile}}) {
-	if ($mop{MonitorProfile}{$_} ne "unknown") {
-		$data{$_} = $mop{MonitorProfile}{$_};
+	if ($kind eq "monitor") {
+		$topic = "Monitor";
+		# create %data for a monitor...
+		# ------------------------------
+		foreach (keys %{$mop{MonitorProfile}}) {
+		if ($mop{MonitorProfile}{$_} ne "unknown") {
+			$data{$_} = $mop{MonitorProfile}{$_};
+		}
+		}
 	}
+	if ($kind eq "mouse") {
+		$topic = "Mouse";
+		# create %data for a mouse...
+		# ------------------------------
+		foreach (keys %{$idp{MouseProfile}}) {
+		if ($idp{MouseProfile}{$_} ne "<undefined>") {
+			$data{$_} = $idp{MouseProfile}{$_};
+		}
+		}
 	}
 	}
 
@@ -1240,14 +1267,14 @@ sub ReadProfile {
 		# it belongs to within the current card setup
 		# --------------------------------------------- 
 		$file = "$spec{ProfileDir}$data{$c}";
-		print   "SaX: including [Card:$c] profile: $data{$c}...\n";
+		print   "SaX: including [$topic:$c] profile: $data{$c}...\n";
 		if (-f $file) {
 			#==========================================
 			# Check if there is a profile script which
 			# should run before the profile is opened
 			#------------------------------------------
 			if (-f "$file.sh") {
-				print "SaX: calling [Card:$c] profile script: $data{$c}.sh\n";
+				print "SaX: calling [$topic:$c] profile script: $data{$c}.sh\n";
 				qx ($file.sh);
 				$file = "$file.tmp";
 			}

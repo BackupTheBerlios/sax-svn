@@ -27,6 +27,8 @@ MouseData* MouseGetData(void) {
 	MouseData* last    = NULL;
 	hd_t *hd           = NULL;
 	hd_t *first_dev    = NULL;
+	char buf[256]      = "";
+
 
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	//hd_data->flags.fast = 1;
@@ -41,6 +43,10 @@ MouseData* MouseGetData(void) {
 		// create new element and defaults...
 		// -----------------------------------
 		data = (MouseData*)malloc(sizeof(MouseData));
+		sprintf (buf,"0x%04x",ID_VALUE(hd->device.id));
+		strcpy(data->did,buf);
+		sprintf (buf,"0x%04x",ID_VALUE(hd->vendor.id));
+		strcpy(data->vid,buf);
 		strcpy(data->name,hd->model);
 		strcpy(data->device,"/dev/mouse");
 		strcpy(data->protocol,"Auto");

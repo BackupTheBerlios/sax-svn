@@ -18,6 +18,7 @@ STATUS        : Status: Up-to-date
 #include <fcntl.h>
 
 #include "mouse.h"
+#include "config.h"
 
 //======================================
 // ScanMouse: constructor...
@@ -65,62 +66,13 @@ void ScanMouse::Reset (void) {
 // ScanMouse: hw scan of the mice
 //--------------------------------------
 void ScanMouse::Scan (void) {
-	int mcount = 0;     // count number of detected devices
-	//int count  = 0;     // current mouse count
-	#if 0
-	int USB    = 0;     // USB container device descriptor
-	#endif
-	//str link   = "";    // result link name used for symlink()
-	int USBGeneric = 1; // decide to add a generic USB mouse section
 	mp = MouseGetData();
-	// ...
-	// first count number of mouse devices and check if
-	// a USB mouse was detected
-	// ---
+	SPReadFile<Input> rcinput;
+	rcinput.SetFile(INPUT_MAP);
+	rcinput.ImportInputMap();
+	Input input;
+
 	for (MouseData* lp=mp; lp; lp=lp->next) {
-	mcount++;
-	if (strstr(lp->device,"/dev/input")) {
-		USBGeneric = 0;
-	}
-	}
-	// ...
-	// if no USB mouse was detected but the USB subsystem was
-	// loaded we will add a generic USB device to enable hot plug
-	// USB devices
-	// ---
-	#if 0
-	if (USBGeneric) {
-	USB = open ("/proc/bus/usb/drivers",O_RDONLY|O_NONBLOCK);
-	if (USB != -1) {
-		close (USB);
-		MouseData* usbGeneric = NULL;
-		usbGeneric = (MouseData*)malloc(sizeof(MouseData));
-		strcpy (usbGeneric->protocol,"imps/2");
-		strcpy (usbGeneric->device  ,"/dev/input/mice");
-		usbGeneric->emulate = 0;
-		usbGeneric->buttons = 3;
-		usbGeneric->wheel   = 1;
-		Push (*usbGeneric);
-	}
-	}
-	#endif
-	// ...
-	// add detected devices now
-	// ---
-	for (MouseData* lp=mp; lp; lp=lp->next) {
-		#if 0
-		if (mcount > 1) {
-			// more than one mouse detected...
-			sprintf (link,"/dev/pointer%d",count);
-			count++;
-		} else {
-			// only one mouse detected...
-			sprintf (link,"/dev/mouse");
-		}
-		unlink  (link);
-		symlink (lp->device,link);
-		strcpy  (lp->device,link);
-		#endif
 		if (
 			(strstr(lp->name,"Tablet") != NULL) ||
 			(strstr(lp->name,"tablet") != NULL) ||
@@ -130,6 +82,15 @@ void ScanMouse::Scan (void) {
 			// Tablet detected shouldn't be handled as mouse
 			continue;
 		}
+		strcpy (lp->profile,"<undefined>");
+		for (int i = rcinput.Count(); i > 0; i--) {
+			input = rcinput.Pop();
+			if ((input.did == lp->did) && (input.vid == lp->vid)) {
+				strcpy (lp->profile,input.profile.c_str());
+				break;
+			}
+		}
+		rcinput.Reset();
 		Push(*lp);
 	}
 	// ...
@@ -144,6 +105,9 @@ void ScanMouse::Scan (void) {
 		define->emulate = 1;
 		define->buttons = 2;
 		define->wheel   = 0;
+		strcpy(define->did,"0");
+		strcpy(define->vid,"0");
+		strcpy(define->profile,"<undefined>");
 		Push (*define);
 	}
 }

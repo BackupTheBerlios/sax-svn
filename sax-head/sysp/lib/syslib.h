@@ -96,6 +96,9 @@ typedef struct MouseData_t {
  str name;
  str protocol;
  str device;
+ str did;
+ str vid;
+ str profile;
  int emulate;
  int wheel;
  int buttons;

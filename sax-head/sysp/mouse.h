@@ -30,6 +30,7 @@ STATUS        : Status: Up-to-date
 using namespace std;
 
 #include "lib/syslib.h"
+#include "sysp.h"
 
 //=====================================
 // Class Headers

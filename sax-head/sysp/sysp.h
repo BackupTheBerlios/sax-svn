@@ -57,6 +57,12 @@ struct Keymap {
 	string rightctl;
 };
 
+struct Input {
+	string vid;
+	string did;
+	string profile;
+};
+
 struct Keymap_S {
 	str consolename;
 	str model;
@@ -255,6 +261,7 @@ class SPReadFile {
 	int Count() { return count; }
 	void ImportIdentity (void);
 	void ImportKeymap (void);
+	void ImportInputMap (void);
 	RcData ImportRcConfig (void);
 	RcData ImportVendorMap (void);
 	void SetFile (str name);
@@ -586,6 +593,63 @@ void SPReadFile<T>::ImportKeymap(void) {
 		if (id.model != "") {
 			Push(id);
 		}
+	}
+	handle.clear();
+	handle.close();
+}
+
+//===================================
+// SPReadFile: read input map
+//-----------------------------------
+template <class T>
+void SPReadFile<T>::ImportInputMap(void) {
+	ifstream handle(file.c_str());
+	string data;
+	char *line;
+	char *token;
+	int n;
+
+	// check if file could be opened...
+	// ---------------------------------- 
+	if (! handle) {
+		cout << "SPReadFile: could not open file: " << file << endl;
+		exit(1);
+	}
+	// read line per line and push the data...
+	// ----------------------------------------
+	while(! handle.eof()) {
+		line  = (char*)malloc(sizeof(char)*MAX_LINE_SIZE);
+		handle.getline(line,MAX_LINE_SIZE);
+		if ((line[0] == '#') || (line[0] == 0)) {
+			continue;
+		}
+		Input id;
+		token = strtok(line,":");
+
+		if (token != NULL) {
+			trim(token); id.vid = token;
+		}
+		n = 0; 
+		while (token) {
+		token = strtok(NULL,":");
+		if (token != NULL) {
+		trim (token);
+		switch(n) {
+			case 0:
+			id.did = token;
+			break;
+
+			case 1:
+			id.profile = token;
+			break;
+
+			default:
+			break;
+		}
+		n++;
+		}
+		}
+		Push(id);
 	}
 	handle.clear();
 	handle.close();

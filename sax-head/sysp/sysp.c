@@ -505,6 +505,9 @@ void PrintMouseData(ScanMouse m) {
 			printf("Mouse%d    =>  Wheel      : %d\n",mouse,data.wheel);
 			printf("Mouse%d    =>  Emulate    : %d\n",mouse,data.emulate);
 			printf("Mouse%d    =>  Name       : %s\n",mouse,data.name);
+			printf("Mouse%d    =>  VendorID   : %s\n",mouse,data.vid);
+			printf("Mouse%d    =>  DeviceID   : %s\n",mouse,data.did);
+			printf("Mouse%d    =>  Profile    : %s\n",mouse,data.profile);
 			mouse++;
 		}
 	}

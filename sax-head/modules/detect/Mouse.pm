@@ -13,6 +13,7 @@ sub AutoDetectMouse {
 	my @whl_list;          # list of wheel numbers
 	my @emu_list;          # list of emulate btn flags
 	my @name_list;         # list of Mouse names
+	my @prof_list;         # list of Mouse profiles
 	my $mouse;             # mouse key in query hash
 	my $value;             # hash value 
 	my $i;                 # hash count
@@ -29,6 +30,7 @@ sub AutoDetectMouse {
 		push (@whl_list, $query{$mouse}{Wheel});
 		push (@emu_list, $query{$mouse}{Emulate});
 		push (@name_list,$query{$mouse}{Name});
+		push (@prof_list,$query{$mouse}{Profile});
 	}
 	}
 	# /.../
@@ -56,6 +58,15 @@ sub AutoDetectMouse {
 	@dev_list = reverse(@dev_list);
 	for($i=0;$i<@dev_list;$i++) {
 		$var{InputDevice}{$index}{Option}{Device} = $dev_list[$i];
+		$index = $index + 2;
+	}
+	# /.../
+	# set detected mouse profiles...
+	# -------------------------------
+	$index = 1;
+	@dev_list = reverse(@dev_list);
+	for($i=0;$i<@dev_list;$i++) {
+		$idp{MouseProfile}{$index} = $prof_list[$i];
 		$index = $index + 2;
 	}
 	# /.../
