@@ -8,26 +8,54 @@
 %}
 
 //==================================
+// SWIG includes
+//----------------------------------
+%include exception.i
+
+//==================================
 // Typemaps
 //----------------------------------
 //==================================
 // Allow QString return types
 //----------------------------------
-// TODO
+%typemap(ctype)  QString "char*"
+%typemap(imtype) QString "string"
+%typemap(cstype) QString "string"
+%typemap(out) QString {
+	$result = SWIG_csharp_string_callback($1.data());
+}
+%typemap(csin) QString "$csinput"
+%typemap(csout) QString {
+	return $imcall;
+}
+%typemap(typecheck) QString = char*;
+
 //================================== 
 // Allow QString refs as parameters
 //----------------------------------
-// TODO
+%typemap(ctype)  QString& "char*"
+%typemap(imtype) QString& "string"
+%typemap(cstype) QString& "string"
+%typemap(in) QString&,QString& {
+	if (! $input) {
+		SWIG_CSharpThrowException (
+			SWIG_CSharpNullReferenceException, "null string"
+		);
+	}
+	$1 = new QString ($input);
+}
+%typemap(csin) QString& "$csinput"
+%typemap(csout) QString& {
+	return $imcall;
+}
+%typemap(typecheck) QString& = char*;
+
 //==================================
 // Allow QDict<QString> return types
 //----------------------------------
 // TODO
 //==================================
 // Allow QList<QString> return types
-//----------------------------------
-// TODO
-//==================================
-// Allow QStringList return types
 //----------------------------------
 // TODO
 
