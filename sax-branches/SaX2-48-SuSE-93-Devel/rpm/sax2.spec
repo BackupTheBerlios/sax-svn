@@ -267,6 +267,7 @@ if [ ! -d $RPM_BUILD_ROOT%{_defaultdocdir}/sax2 ];then
 fi
 install -m 644 ./LICENSE $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/README  $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
+install -m 644 ./doc/README.profile  $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/en/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 install -m 644 ./doc/de/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
 # install architecture dependant Identity
@@ -389,6 +390,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/X11R6/%{_lib}/sax/doc/config
 /usr/X11R6/%{_lib}/sax/doc/guitest
 /usr/X11R6/%{_lib}/sax/doc/README
+/usr/X11R6/%{_lib}/sax/doc/README.profile
 /usr/X11R6/%{_lib}/sax/svnbuild
 /usr/X11R6/%{_lib}/sax/init.pl
 /usr/X11R6/%{_lib}/sax/xc.pl
@@ -416,6 +418,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/sbin/sysp
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
+%doc %{_defaultdocdir}/sax2/README.profile
 %doc %{_defaultdocdir}/sax2/sax.en.ps
 %doc %{_defaultdocdir}/sax2/sax.en.dvi
 %doc %{_defaultdocdir}/sax2/sax.de.ps

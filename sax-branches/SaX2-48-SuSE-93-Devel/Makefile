@@ -107,6 +107,7 @@ install:
 	install -m 644 ./doc/database/config                    ${DOCVZ}
 	install -m 755 ./doc/database/guitest                   ${DOCVZ}
 	install -m 644 ./doc/database/README                    ${DOCVZ}
+	install -m 644 ./doc/database/README.profile            ${DOCVZ}
 	install -m 644 ./modules/*.pm                           ${MODULEVZ}
 	install -m 644 ./modules/detect/*                       ${DETECTVZ}
 	install -m 644 ./modules/create/*                       ${CREATEVZ}
