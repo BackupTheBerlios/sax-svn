@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //------------------------------------
 SaXManipulateCard::SaXManipulateCard (SaXImport* in, int card) {
 	// .../
-	// An object of this type is used to manipulate the graphics
-	// card settings refering to the X11 Device sections. An
-	// import of type SAX_CARD is required with this class
+	//! An object of this type is used to manipulate the graphics
+	//! card settings refering to the X11 Device sections. An
+	//! import of type SAX_CARD is required with this class
 	// ----
 	mImport = 0;
 	if ( ! in ) {
@@ -51,8 +51,8 @@ SaXManipulateCard::SaXManipulateCard (SaXImport* in, int card) {
 //------------------------------------
 bool SaXManipulateCard::selectCard (int card) {
 	// .../
-	// select the card device the changes should be applied to
-	// if the device does not exist <false> is returned
+	//! select the card device the changes should be applied to
+	//! if the device does not exist <false> is returned
 	// ----
 	if (! mImport) {
 		return false;
@@ -69,7 +69,7 @@ bool SaXManipulateCard::selectCard (int card) {
 //------------------------------------
 void SaXManipulateCard::setCardDriver (const QString& driver ) {
 	// .../
-	// set the card driver to use with the selected device
+	//! set the card driver to use with the selected device
 	// ----
 	if (! mImport) {
 		return;
@@ -84,8 +84,8 @@ void SaXManipulateCard::setCardOption (
 	const QString& keyword, const QString& value
 ) {
 	// .../
-	// set an option to the graphics card used with the
-	// currently selected device
+	//! set an option to the graphics card used with the
+	//! currently selected device
 	// ----
 	if (! mImport) {
 		return;
@@ -112,8 +112,8 @@ void SaXManipulateCard::addCardOption (
 	const QString& keyword, const QString& value
 ) {
 	// .../
-	// add an option to the graphics card used with the
-	// currently selected device
+	//! add an option to the graphics card used with the
+	//! currently selected device
 	// ----
 	if (! mImport) {
 		return;
@@ -138,9 +138,9 @@ void SaXManipulateCard::addCardOption (
 //------------------------------------
 void SaXManipulateCard::deleteCardOption (const QString& value) {
 	// .../
-	// delete an option which has been set to the currently
-	// selected device. If the option does not exist nothing
-	// will happen
+	//! delete an option which has been set to the currently
+	//! selected device. If the option does not exist nothing
+	//! will happen
 	// ----
 	if (! mImport) {
 		return;
@@ -165,7 +165,7 @@ void SaXManipulateCard::deleteCardOption (const QString& value) {
 //------------------------------------
 void SaXManipulateCard::setBusID  (const QString& busid) {
 	// .../
-	// set busID location for the selected graphics device
+	//! set busID location for the selected graphics device
 	// ----
 	if (! mImport) {
 		return;
@@ -178,9 +178,9 @@ void SaXManipulateCard::setBusID  (const QString& busid) {
 //------------------------------------
 void SaXManipulateCard::setScreenID (int screen) {
 	// .../
-	// set screen identification for the selected graphics device
-	// this is only useful for multihead cards to separate the
-	// heads
+	//! set screen identification for the selected graphics device
+	//! this is only useful for multihead cards to separate the
+	//! heads
 	// ----
 	if (! mImport) {
 		return;
@@ -194,8 +194,8 @@ void SaXManipulateCard::setScreenID (int screen) {
 //------------------------------------
 QString SaXManipulateCard::getCardName (void) {
 	// .../
-	// retrieve the card vendor and name as one string
-	// separated by a colon from the currently selected card
+	//! retrieve the card vendor and name as one string
+	//! separated by a colon from the currently selected card
 	// ----
 	if (! mImport) {
 		return QString();
@@ -212,8 +212,8 @@ QString SaXManipulateCard::getCardName (void) {
 //------------------------------------
 QString SaXManipulateCard::getBusID (void) {
 	// .../
-	// retrieve the cards busID location from the currently
-	// selected card
+	//! retrieve the cards busID location from the currently
+	//! selected card
 	// ----
 	if (! mImport) {
 		return QString();
@@ -226,8 +226,8 @@ QString SaXManipulateCard::getBusID (void) {
 //------------------------------------
 QString SaXManipulateCard::getScreenID (void) {
 	// .../
-	// retrieve the card screen identification from the currently
-	// selected card. This value is always 0 for non multihead cards
+	//! retrieve the card screen identification from the currently
+	//! selected card. This value is always 0 for non multihead cards
 	// ----
 	if (! mImport) {
 		return QString();
@@ -240,11 +240,11 @@ QString SaXManipulateCard::getScreenID (void) {
 //------------------------------------
 QDict<QString> SaXManipulateCard::getOptions (void) {
 	// .../
-	// retrieve an option list of all options set for the
-	// selected card. The storage is a dictionary saving the
-	// option name as key and the options value as value for
-	// this key. If there is no value set for the option
-	// (bool options) the value for the key is the (null) string
+	//! retrieve an option list of all options set for the
+	//! selected card. The storage is a dictionary saving the
+	//! option name as key and the options value as value for
+	//! this key. If there is no value set for the option
+	//! (bool options) the value for the key is the (null) string
 	// ----
 	if (! mImport) {
 		return QDict<QString>();
@@ -286,9 +286,9 @@ QDict<QString> SaXManipulateCard::getOptions (void) {
 //------------------------------------
 QList<QString> SaXManipulateCard::getCardDrivers ( void ) {
 	// .../
-	// retrieve a list of X11 card driver names. The items
-	// if the list can be used to retrieve the coresponding
-	// option list using the getCardOptions() method
+	//! retrieve a list of X11 card driver names. The items
+	//! if the list can be used to retrieve the coresponding
+	//! option list using the getCardOptions() method
 	// ----
 	mCDBCardDrivers.clear();
 	if ( ! mCDBCardModules ) {
@@ -308,9 +308,9 @@ QList<QString> SaXManipulateCard::getCardDrivers ( void ) {
 //------------------------------------
 QDict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 	// .../
-	// retrieve a list of card options for the given driver
-	// name <driver>. A list of drivers can be obtained using the
-	// getCardDrivers() member method
+	//! retrieve a list of card options for the given driver
+	//! name <driver>. A list of drivers can be obtained using the
+	//! getCardDrivers() member method
 	// ----
 	mCDBCardOptions.clear();
 	if ( ! mCDBCardModules ) {

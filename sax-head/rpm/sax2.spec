@@ -156,6 +156,21 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+%package -n sax2-libsax-python
+Version:      1.2 
+Release:      11 
+Requires:     sax2-libsax
+%{py_requires}
+Summary:      SuSE advanced X Window System-configuration perl binding
+Group:        System/X11/Libraries
+    
+%description -n sax2-libsax-python
+This package contains the SaX2 binding to be able to use libsax with python
+
+Authors: 
+--------
+    Marcus Schäfer <ms@suse.de>
+
 %prep
 %setup -n sax -a 1
 if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
@@ -569,3 +584,12 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 %defattr(-,root,root)
 %{perl_vendorarch}/SaX.pm
 %{perl_vendorarch}/auto/SaX
+#=================================================
+# SaX-libsax-python file list...  
+# ------------------------------------------------
+
+%files -n sax2-libsax-python
+%defattr(-,root,root)
+%dir /usr/lib/python/site-packages/SaX
+/usr/lib/python/site-packages/SaX.pth
+/usr/lib/python/site-packages/SaX/*

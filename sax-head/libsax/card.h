@@ -29,6 +29,13 @@ STATUS        : Status: Development
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 - Card manipulator class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the subclass definition
+*/
 class SaXManipulateCardIF : public SaXException {
 	public:
 	virtual void setCardDriver ( const QString& ) = 0;
@@ -52,9 +59,19 @@ class SaXManipulateCardIF : public SaXException {
 	public:
 	virtual ~SaXManipulateCardIF ( void ) { }
 };
+
 //====================================
 // Class SaXManipulateCard...
 //------------------------------------
+/*! \brief SaX2 - Card manipulator class.
+*
+* The card manipulator requires one import object (Card) to become
+* created. Once created the manipulator object is able to get/set
+* hardware related information like graphics card driver or options
+* to use with this driver. The following example shows how to use
+* the card manipulator to force setting up the PanelSize on a radeon
+* based NoteBook which reports the wrong size in its DDC record.
+*/
 class SaXManipulateCard : public SaXManipulateCardIF {
 	protected:
 	SaXImport*     mImport;
