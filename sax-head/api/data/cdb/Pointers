@@ -426,7 +426,15 @@ Logitech:TrackMan Marble FX (PS/2) {
 Synaptics:Touchpad {
  Driver       = synaptics
  Device       = /dev/input/mice
- RawOption    = "Edges" "1900 5400 1800 3900","AccelFactor" "0.0010","LeftEdge" "1900","RightEdge" "5400","TopEdge" "1900","BottomEdge" "4000","FingerLow" "25","FingerHigh" "30","Finger" "25 30","MaxSpeed" "0.18","MaxTapMove" "220","MaxTapTime" "180","MinSpeed" "0.02","VertScrollDelta" "100","SHMConfig" "on"
+ RawOption    = "SHMConfig" "on"
+ ZAxisMapping = 4 5
+ Emulate3Buttons = on
+}
+
+ALPS:Touchpad {
+ Driver       = synaptics
+ Device       = /dev/input/mice
+ RawOption    = "SHMConfig" "on","Protocol" "auto-dev","LeftEdge" "120","RightEdge" "830","TopEdge" "120","BottomEdge" "650","FingerLow" "14","FingerHigh" "15","MaxTapTime" "180","MaxTapMove" "110","EmulateMidButtonTime" "75","VertScrollDelta" "20","HorizScrollDelta" "20","MinSpeed" "0.2","MaxSpeed" "0.5","AccelFactor" "0.01","EdgeMotionMinSpeed" "15","EdgeMotionMaxSpeed" "15","UpDownScrolling" "1","CircularScrolling" "1","CircScrollDelta" "0.1","CircScrollTrigger" "2"
  ZAxisMapping = 4 5
  Emulate3Buttons = on
 }
