@@ -427,6 +427,6 @@ Logitech:TrackMan Marble FX (PS/2) {
 Synaptics:Touchpad {
  Driver       = synaptics
  Device       = /dev/psaux
- RawOption    = "Edges" "1900 5400 1800 3900","Finger" "25 30","MaxTapTime" "20","MaxTapMove" "220","VertScrollDelta" "100","MinSpeed" "0.02","MaxSpeed" "0.18","AccelFactor" "0.0010"
+ RawOption    = "Edges" "1900 5400 1800 3900","AccelFactor" "0.0010","LeftEdge" "1900","RightEdge" "5400","TopEdge" "1900","BottomEdge" "4000","FingerLow" "25","FingerHigh" "30","Finger" "25 30","MaxSpeed" "0.18","MaxTapMove" "220","MaxTapTime" "180","MinSpeed" "0.02","VertScrollDelta" "100","SHMConfig" "on"
  ZAxisMapping = 4 5
 }
