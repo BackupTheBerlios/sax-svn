@@ -55,7 +55,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-tools
-Version:      2.3
+Version:      2.7
 Release:      11
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
@@ -74,7 +74,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-ident
-Version:      1.2
+Version:      1.7
 Release:      11
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
@@ -96,7 +96,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-gui
-Version:      1.2
+Version:      1.7
 Release:      11
 Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI

@@ -12,7 +12,7 @@
 use strict;
 use Env;
 
-my $sysp = "/usr/sbin/sysp -c";
+my $sysp = "/sbin/sysp -c";
 my @data = split (/\n/,qx($sysp));
 
 my @idlist;

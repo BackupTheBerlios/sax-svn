@@ -12,7 +12,7 @@
 use strict;
 use Env;
 
-my $sysp = "/usr/sbin/sysp -q xstuff";
+my $sysp = "/sbin/sysp -q xstuff";
 my $data = qx (
 	$sysp | grep Card$ARGV[0] | grep DDC | cut -f2 -d:
 );
