@@ -121,6 +121,7 @@ install:
 	install -m 644 ./sysp/maps/Keyboard.map                 ${MAPVZ}
 	install -m 644 ./sysp/maps/Vendor.map                   ${MAPVZ}
 	install -m 644 ./sysp/maps/Input.map                    ${MAPVZ}
+	install -m 644 ./sysp/maps/Driver.map                   ${MAPVZ}
 	install -m 755 ./sysp/script/*                          ${SCRIPTVZ}
 	install -m 755 ./parse/blib/arch/auto/XFree/XFree.so    ${LIBVZ}
 	install -m 755 ./tools/plog/blib/arch/auto/PLog/PLog.so ${LIBVZ}
