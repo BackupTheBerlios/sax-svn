@@ -54,6 +54,7 @@ package XFree;
 *GetModuleSubSpecs = *XFreec::GetModuleSubSpecs;
 *GetInputSpecs = *XFreec::GetInputSpecs;
 *GetFlags = *XFreec::GetFlags;
+*GetExtensions = *XFreec::GetExtensions;
 *GetLayoutSpecs = *XFreec::GetLayoutSpecs;
 *GetDeviceSpecs = *XFreec::GetDeviceSpecs;
 *GetMonitorSpecs = *XFreec::GetMonitorSpecs;

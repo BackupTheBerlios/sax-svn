@@ -21,7 +21,7 @@ all:
 		-lxf86config -lm
 
 	@echo "running swig..."
-	swig -perl5 XFree.i
+	swig -D${EXTSEC} -perl5 XFree.i
 
 	@echo "generating Makefile..."
 	perl Makefile.PL
