@@ -1778,6 +1778,10 @@ sub CheckSplit {
 			}
 		}
 	}
+	if ($joined ne "") {
+		$joined =~ s/^,//;
+		push (@result,$joined);
+	}
 	@list   = @result;
 	@result = ();
 	foreach (@list) {
