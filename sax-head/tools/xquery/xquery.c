@@ -367,6 +367,7 @@ int main (int argc, char*argv[]) {
 		vtotal = atoi(left);
 
 		badValue = PrepareModeline (
+			dpy,current_screen,
 			hdisp,hsyncstart,hsyncend,htotal,
 			vdisp,vsyncstart,vsyncend,vtotal
 		);
@@ -586,13 +587,39 @@ void ApplyModeline (Display *dpy, int scr) {
 // PrepareModeline()
 //---------------------
 int PrepareModeline (
+	Display* dpy,int current_screen,
 	int h1,int h2,int h3,int h4,int v1,int v2,int v3,int v4
 ) {
+	int hsmin,hsmax;
+	int vsmin,vsmax;
 	if (
 		h2 < h1 || h3 < h2 || h4 < h3 ||
 		v2 < v1 || v3 < v2 || v4 < v3
 	) {
 		return 1;
+	}
+	XF86VidModeMonitor monitor;
+	if (XF86VidModeGetMonitor (dpy, current_screen, &monitor)) {
+		hsmax = monitor.hsync[0].hi;
+		hsmin = monitor.hsync[0].lo;
+		vsmax = monitor.vsync[0].hi;
+		vsmin = monitor.vsync[0].lo;
+		XF86VidModeModeLine mode_line;
+		if (!XF86VidModeGetModeLine (
+			dpy, current_screen, &dot_clock, &mode_line)
+		) {
+			return 1;
+		}
+		double dc = (double)dot_clock * 1000;
+		double hs = dc / (double)h4;
+		double vs = dc / (double)(h4 * v4);
+		hs = hs / 1000;
+		if ((hs > hsmax) || (hs < hsmin)) {
+			return 1;
+		}
+		if ((vs > vsmax) || (vs < vsmin)) {
+			return 1;
+		}
 	}
 	AppRes.field[HDisplay].val   =h1;
 	AppRes.field[HSyncStart].val =h2;
