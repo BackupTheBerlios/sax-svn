@@ -43,7 +43,6 @@ my $MouseProtocol;      # option variable: core pointer protocol
 my @ProfileAddSections; # profile add section list
 my @ProfileData;        # profile data
 my $ProfileSize;        # size of profile
-my %mop;                # monitor profile hash
 my $AbortBatch;         # abort batch mode
 my $ViewValue;          # Tree view
 my $ViewRef;            # Tree view reference
@@ -54,6 +53,8 @@ my $HWScanNeeded = 1;   # indicate if scan(),detect() call is needed
 my $logHandle;          # log handler
 my $D3Answer = "no";    # answer to the 3D question
 my $dpy      = ":0.0";  # display to use
+
+our %mop;               # monitor profile hash
 
 init();
 #==================================================

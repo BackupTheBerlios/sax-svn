@@ -41,6 +41,7 @@ Patch:        sax2_binmode.dif
 %endif
 Patch2:       sax2_slec.dif
 Patch3:       sax2_date.dif
+Patch4:       sax2_monitor-profile.dif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 %if %{suse_version} > 820
 Provides:     sax xfine
@@ -134,6 +135,7 @@ fi
 %if %{suse_version} <= 820
 %patch3
 %endif
+%patch4
 #=================================================
 # adapt lib environment to currently used %_{lib}
 #-------------------------------------------------
