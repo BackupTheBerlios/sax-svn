@@ -26,5 +26,7 @@ clean:
 	rm -f XFree_wrap.*
 	rm -f XFree.bs
 	rm -f Makefile
+	rm -f Makefile.old
+	rm -f XFree.pm
 	rm -rf blib/
 	rm -rf parse
