@@ -66,11 +66,11 @@ void ScanMouse::Reset (void) {
 //--------------------------------------
 void ScanMouse::Scan (void) {
 	int mcount = 0;     // count number of detected devices
-	int count  = 0;     // current mouse count
+	//int count  = 0;     // current mouse count
 	#if 0
 	int USB    = 0;     // USB container device descriptor
 	#endif
-	str link   = "";    // result link name used for symlink()
+	//str link   = "";    // result link name used for symlink()
 	int USBGeneric = 1; // decide to add a generic USB mouse section
 	mp = MouseGetData();
 	// ...
@@ -108,6 +108,7 @@ void ScanMouse::Scan (void) {
 	// add detected devices now
 	// ---
 	for (MouseData* lp=mp; lp; lp=lp->next) {
+		#if 0
 		if (mcount > 1) {
 			// more than one mouse detected...
 			sprintf (link,"/dev/pointer%d",count);
@@ -119,6 +120,7 @@ void ScanMouse::Scan (void) {
 		unlink  (link);
 		symlink (lp->device,link);
 		strcpy  (lp->device,link);
+		#endif
 		Push(*lp);
 	}
 	// ...
