@@ -336,9 +336,6 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 %dir /var/cache/xfine
 /usr/share/pixmaps/sax2.xpm
 /usr/X11R6/share/fvwm/fvwmrc.sax
-/usr/share/sax/doc/config
-/usr/share/sax/doc/guitest
-/usr/share/sax/doc/README
 /usr/share/sax/svnbuild
 /usr/share/sax/init.pl
 /usr/share/sax/xc.pl
@@ -437,7 +434,12 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 # ------------------------------------------------
 %files -n sax2-tools
 %defattr(-,root,root)
-%doc %{_mandir}/man1/*
+%doc %{_mandir}/man1/sax2.1.gz
+%doc %{_mandir}/man1/xkbctrl.1.gz
+%doc %{_mandir}/man1/xkbset.1.gz
+%doc %{_mandir}/man1/xmode.1.gz
+%doc %{_mandir}/man1/xmset.1.gz
+%doc %{_mandir}/man1/xquery.1.gz
 /sbin/catch
 /sbin/corner
 /sbin/demo
