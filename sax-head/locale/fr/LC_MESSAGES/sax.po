@@ -3,13 +3,13 @@
 # French message file for SaX.
 # Copyright (C)  SuSE GmbH, 2000..2001
 # Francoise Lermen <flermen@suse.de>, 2000..2001
-# Patricia Vaz <Patricia.Vaz@suse.de>, 2003
+# Patricia Vaz <Patricia.Vaz@suse.de>, 2003,2004
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.fr\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-09-16 12:15+0200\n"
+"PO-Revision-Date: 2004-03-15 15:32+0100\n"
 "Last-Translator: Patricia Vaz <Patricia.Vaz@suse.de>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -32,24 +32,23 @@ msgstr "avec"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Relatif"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Interrompre"
+msgstr "Absolu"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -85,7 +84,7 @@ msgstr "Disposition(s) supplémentaire(s)"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Divers"
 
 #. Maximum length: 60  characters
 msgid "Layout"
@@ -516,9 +515,19 @@ msgid ""
 "location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
 "XFree86/nvidia-installer-HOWTO</b>"
 msgstr ""
+"<b>Impossible d'activer l'accélération OpenGL</b><hr>Pour activer le sous-"
+"système\n"
+"3D pour cette carte, vous devez tout d'abord installer le pilote commercial "
+"de nVidia. Installer le pilote en utilisant <b>YaST Online Update</b> et en "
+"sélectionnant le patch\n"
+"du pilote nVidia.<br><br>Si vous avez déjà installé le pilote via YaST "
+"Online Update\n"
+"et si vous l'avez désinstallé par la suite, vous devrez installer le pilote "
+"manuellement.\n"
+"Vous pourrez trouver des instructions à ce sujet ici : <br><br><b>ftp://ftp."
+"suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -526,33 +535,32 @@ msgid ""
 "XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do "
 "you want to continue?</b>"
 msgstr ""
-"<b>Impossible de désactiver l'accélération OpenGL</b><hr>Le sous-système 3D "
-"est basé sur le pilote commercial de nVidia. Pour désactiver l'accélération "
-"3D, vous devez désinstaller le pilote à l'aide de l'installeur nVidia. Le "
-"processus de désinstallation reconfigurera le pilote original de XFree86 qui "
-"ne fournit aucune accélération matérielle 3D."
+"<b>Désactiver l'accélération OpenGL</b><hr>Le sous-système 3D est basé sur "
+"le pilote commercial de nVidia. SaX2 doit désinstaller le pilote à l'aide de "
+"l'installeur nVidia. Le processus de désinstallation réinitialisera le "
+"pilote original de XFree86 qui ne fournit aucune accélération matérielle 3D."
+"<br><br><b>Voulez-vous continuer ?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
 msgstr "Disquette utilitaire..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Insérez la disquette</b><hr>Insérez la disquette utilitaire display du "
-"constructeur du moniteur."
+"<b>Insérez la disquette ou le CD</b><hr>Insérez la disquette ou le CD "
+"utilitaire display du constructeur du moniteur."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Erreur à la lecture</b><hr>Impossible de lire la disquette. Elle est peut-"
-"être endommagée ou contient des fichiers d'information mal formatés."
+"<b>Erreur à la lecture</b><hr>Impossible de lire la disquette ou le CD. Le "
+"support est peut-être endommagé ou contient des fichiers d'information mal "
+"formatés."
 
 #. RTF text: no limit
 msgid ""
@@ -1246,14 +1254,12 @@ msgid "Remove selected monitor"
 msgstr "Supprimer le moniteur sélectionné"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "&Propriétés..."
+msgstr "Propriétés..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "&Options..."
+msgstr "&Options"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1567,9 +1573,8 @@ msgid "&Port"
 msgstr "&Port"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Mode :"
+msgstr "&Mode"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -2555,16 +2560,3 @@ msgstr "Presser la touche Menu pour sélectionner le troisième niveau"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta est assigné aux touches Win."
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to use the commercial driver from nVidia. Please "
-#~ "download the nVidia installer from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. After you have installed the driver you can enable "
-#~ "3D with SaX2."
-#~ msgstr ""
-#~ "<b>Impossible d'activer l'accélération OpenGL</b><hr>Pour activer le sous-"
-#~ "système 3D pour cette carte, vous devez utiliser le pilote commercial de "
-#~ "nVidia. Veuillez tout d'abord télécharger l'installeur nVidia sur le "
-#~ "serveur web nVidia <i>(http://www.nvidia.com)</i>. Après avoir installé "
-#~ "le pilote, vous pouvez activer 3D avec SaX2."
