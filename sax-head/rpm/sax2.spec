@@ -11,9 +11,12 @@
 # neededforbuild  XFree86-driver-options XFree86-server flex freetype2 freetype2-devel hwinfo hwinfo-devel mesa-devel-packages qt3-devel-packages readline-devel swig x-devel-packages yacc
 
 Name:         sax2
-Requires:     perl xbanner perl-gettext XFree86-server fbset saxident saxtools qt3 fvwm2 3ddiag
+Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
 %if %{suse_version} >= 810
+Requires:     XFree86-server
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
+%else
+Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.7
