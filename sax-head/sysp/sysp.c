@@ -590,6 +590,9 @@ void PrintStuffData(ScanXStuff s) {
 			data.vesa[n].hsync,data.vesa[n].vsync);
 		}
 		}
+		if (TvSupport()) {
+			printf ("Card%d     =>  Vesa       : 768 576 36 60\n",card);
+		}
 		if (data.fbtiming != "") {
 			printf("Card%d     =>  FbTiming   : %s\n",card,
 			data.fbtiming.c_str()); 
