@@ -1122,12 +1122,15 @@ sub ApiImportLayout {
 
 		/^VNC/              && do {
 		$var{ServerLayout}{all}{Option}{VNC} = $value;
-		if ($value =~ /(\d) (\d)/) {
-			my $mID = $1;
-			my $kID = $2;
+		my @idlist = split (/ /,$value);
+		if ($idlist[0] > 0) {
+			my $mID = $idlist[0];
 			$var{ServerLayout}{all}{InputDevice}{$mID}{id} = "Mouse[$mID]";
-			$var{ServerLayout}{all}{InputDevice}{$kID}{id} = "Keyboard[$kID]";
 			$var{ServerLayout}{all}{InputDevice}{$mID}{usage} = "ExtraPointer";
+		}
+		if ($idlist[1] > 0) {
+			my $kID = $idlist[1];
+			$var{ServerLayout}{all}{InputDevice}{$kID}{id} = "Keyboard[$kID]";
 			$var{ServerLayout}{all}{InputDevice}{$kID}{usage} = "ExtraKeyboard";
 		}
 		last SWITCH;
