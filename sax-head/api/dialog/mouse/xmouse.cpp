@@ -48,6 +48,7 @@ XShowMouse::XShowMouse (
 	setFixedHeight (mPixmap[0]->height() + mStatus->height());
 	mStatus -> message (mText["MouseTestReady"]);
 	paintEvent (0);
+	show();
 }
 
 //====================================
@@ -71,7 +72,6 @@ void XShowMouse::paintEvent( QPaintEvent* ) {
 	pDC.drawPixmap ( mX,mY,*mPixmap[mID] );
 	bitBlt( this, 0, 0, mBuffer );
 	pDC.end();
-	show();
 }
 
 //====================================
