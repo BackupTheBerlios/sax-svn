@@ -12,7 +12,7 @@ xmset \- set/reset X11 mouse
 
 .SH DESCRIPTION
 xmset is used to apply a new mouse node/type directly to the
-running X\-Server. The XFree86 misc extension is used to perform
+running X\-Server. The X11 misc extension is used to perform
 this task.
 
 .SH COMMAND LINE OPTIONS
@@ -59,7 +59,7 @@ enable the mouse pointer after it was disabled with the
 option --disable
 
 .SH BUGS
-The currently used implementation of the XFree86 misc extension is
+The currently used implementation of the X11 misc extension is
 not able to apply the mouse wheel functions to the currently running
 X-Server. It also is not capable of applying more than three buttons.
 

@@ -37,18 +37,18 @@ In the course of development for SaX2 the following sysp modules were written:
       PnP-capable pointer devices, which also provide a checkback signal.
 \item \textbf{Server}\\
       This module determines all PCI/AGP graphics cards which are inserted in
-      the PCI or AGP bus. Furthermore, it attempts to set an XFree86 4.0
+      the PCI or AGP bus. Furthermore, it attempts to set an X11 R6 v4.x
       module allocation by means of the unique vendor and device ID`s of these
       cards, as well as finding special options and extensions. If a single
       ISA card isa used, then it attempts to find out, by registry dump, which
-      XFree86 4.0 module can be responsible for this. If there is a mixture of
+      X11 R6 v4.x module can be responsible for this. If there is a mixture of
       AGP, PCI and ISA cards, the ISA cards will definitely not be
       automatically detected.
 \item \textbf{Xstuff}\\
       This module collects card-specific data, such as video memory, RamDAC
       speed, possible resolutions per DDC and the synchronization range of the
       monitor in accordance with the resolutions detected. To detect this data
-      a minimal XFree86 configuration is created from the result of the
+      a minimal X11 configuration is created from the result of the
       preceding sysp module, and the X server is started for a brief test
       run. The output of the server is then processed and provides the
       above-mentioned information. The minimum configuration for this server

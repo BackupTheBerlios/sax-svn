@@ -53,7 +53,7 @@ Im Zuge der SaX2 Entwicklung wurden folgende sysp Module implementiert:
       Dieses Modul ermittelt alle PCI/AGP Graphikkarten die auf den 
       PCI oder AGP Bus gesteckt wurden. Weiterhin wird versucht anhand
       der eindeutigen Vendor und Device ID`s dieser Karten eine 
-      XFree86 4.x Modulzuordnung zu setzen sowie spezielle Optionen 
+      X11 R6 v4.x Modulzuordnung zu setzen sowie spezielle Optionen 
       und Erweiterungen (Extensions) zu finden. Daten zu erkannten
       Karten werden in der Datei: 
       \textit{/usr/X11R6/lib/sax/sysp/maps/Identity.map} abgelegt.
@@ -64,7 +64,7 @@ Im Zuge der SaX2 Entwicklung wurden folgende sysp Module implementiert:
       Videospeicher, RamDAC Geschwindigkeit, moegliche Aufloesungen per DDC
       und den Synchronisationsbereich des Monitors entsprechend der erkannten 
       Aufloesungen. Zur Ermittlung dieser Daten wird aus dem Ergebnis der 
-      vorangegangenen sysp module eine minimale XFree86 Konfiguration erstellt
+      vorangegangenen sysp module eine minimale X11 Konfiguration erstellt
       und der X-Server testweise kurz gestartet. Dieser Serverstart erfolgt nur
       dann wenn mehr als \textbf{eine} Graphikkarte gefunden wurde. Ist
       nur eine Karte im System vorhanden so k"onnen alle notwendigen Daten 

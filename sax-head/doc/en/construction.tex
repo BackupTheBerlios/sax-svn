@@ -1,8 +1,8 @@
-\chapter{The SaX Principle, based on XFree86, Version 4.0}
+\chapter{The SaX Principle, based on X11 R6, Version 4.x}
 \label{cha:dsp}
 \minitoc
 In contrast to the existing SaX version (2.8), a three-layered model was
-developed for configuring XFree86 4.0. Briefly outlined, a registration of
+developed for configuring X11. Briefly outlined, a registration of
 hardware is performed in the first layer, in the second layer the actual
 configuration takes place, which can either be completely automated or be
 done manually, using the information gathered up till now. The third layer
@@ -85,7 +85,7 @@ takes over the following tasks:
       configuration file is done by a perl module called
       \textit{ParseConfig.pm}. This module represents an extension of the 
       Perl interpreter and is based on the \textbf{libxf86config.a}, which is
-      included from version 4.0 of XFree86. The interface itself only has the
+      included from version 4.x of X11 R6. The interface itself only has the
       task of creating a Variables-API file, from which an X11 configuration
       file is newly created, through a later import, using the
       \textit{ImportAPI.pm} module in conjunction with the
@@ -135,13 +135,13 @@ following tasks:
   then authentication is required. This is done by the xauth mechanism, via
   the  \textit{sux} command, or via the xhost mechanism, if sux does not
   exist. In both cases the root password has to be given.  
-\item Testing the X11 link environment. From version 4.0. of XFree86 onwards
+\item Testing the X11 link environment. From version 4.x. of X11 onwards
   there are various xinit calls to start the X server. The original
   \textit{/usr/X11R6/bin/xinit} is now just a link to one of the two following
   programs:
       \begin{itemize}
-      \item /usr/X11R6/bin/xinit3x for XFree86 3.3.x
-      \item /usr/X11R6/bin/xinit4  for XFree86 4.x
+      \item /usr/X11R6/bin/xinit3x for X11 R6 v3.3.x
+      \item /usr/X11R6/bin/xinit4  for X11 R6 v4.x
       \end{itemize} 
       The script tests and sets this link, if it is needed. A corresponding
       message and query is output, if the link does not point to xinit4. 
@@ -244,7 +244,7 @@ The following options are available:
       This option activates the gpm as a repeater. Then SaX uses 
       \textit{MouseSystems} as the mouse protocol and as the device node, the
       fifo \textit{/dev/gpmdata} provided by GPM.\\
-      \textbf{NOTE:} Currently this option does not work for XFree86 4.0-based
+      \textbf{NOTE:} Currently this option does not work for X1 R6 v4.0-based
       X servers.
 
 \item \verb+-o | --noscan+\\
