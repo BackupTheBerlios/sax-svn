@@ -123,6 +123,17 @@ sub init {
 	}
 
 	# /.../
+	# check for the syntax of the ModuleList
+	# --------------------------------------
+	if ((defined $ModuleList) && ($ModuleList ne "none")) {
+	if ($ModuleList !~ /^(\d=\w+)(,\d=\w+)*$/) {
+		print "SaX: wrong module syntax...\n";
+		print "SaX: syntax: -m CardNr=CardModule[,...]\n";
+		exit 1;
+	}
+	}
+
+	# /.../
 	# global spec hash definitions...
 	# -------------------------------
 	my $LD = "/usr/X11R6/lib/";
@@ -502,7 +513,7 @@ sub init {
 	}
 
 	# /.../
-	# treat the module list (Option -m X=..) with the highest 
+	# handle the module list (Option -m X=..) with the highest 
 	# priority. Therefore we had to check the ModuleList against
 	# because it may be modified via a profile
 	# ---
