@@ -384,7 +384,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 %dir /var/cache/xfine
 /var/adm/fillup-templates/sysconfig.sax
 /usr/X11R6/share/fvwm/fvwmrc.sax
-/usr/X11R6/share/fvwm/fvwmrc.notitle
+/usr/X11R6/share/fvwm/fvwmrc.yast2
 /usr/X11R6/%{_lib}/sax/doc/config
 /usr/X11R6/%{_lib}/sax/doc/guitest
 /usr/X11R6/%{_lib}/sax/doc/README
