@@ -9,7 +9,6 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 #=================================
 # Globals...
