@@ -2,12 +2,7 @@
 
 public class main {
 	static {
-	try {
-		System.load("/suse/ms/libsax/bindings/java//SaX.so");
-	} catch (UnsatisfiedLinkError e) {
-		System.err.println("Native code library failed to load\n" + e);
-		System.exit(1);
-	}
+		SaX_Java.initialize();
 	}
 
 	public static void main(String argv[]) {

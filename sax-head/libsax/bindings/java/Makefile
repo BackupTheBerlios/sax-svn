@@ -9,10 +9,11 @@ all:
 		-fno-strict-aliasing -pipe -O2 -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o SaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
-	${JAVAC} *.java
+	${JAVAC} SaX*.java SWIGTYPE*
+	jar cf SaX.jar *.class && rm -f *.class SaX[^_]*.java SWIGTYPE*
 
 install_vendor:
 
 clean:
-	rm -f SaX*.java SaX_* SaX.so *.class
-	rm -f SWIGTYPE*
+	rm -f SaX[^_]*.java SaX.so *.class SaX.java
+	rm -f SWIGTYPE* SaX.jar SaX_wrap*
