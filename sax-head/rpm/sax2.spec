@@ -326,6 +326,7 @@ mv $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl \
 %endif
 # remove unpacked sources...
 # --------------------------
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_loader.sh
 rm -f $RPM_BUILD_ROOT/var/adm/perl-modules/sax2
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SecureMode
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/SetMode
