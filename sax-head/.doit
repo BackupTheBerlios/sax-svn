@@ -188,15 +188,15 @@ sub usage {
 	print "\n";
 	print "[ -p | --prepare [ --tag | --branch <name> ] ]\n";
 	print "   prepare package for build. Use sources as specified\n";
-    print "   by tag or branch. If no tag is given the head will\n";
+	print "   by tag or branch. If no tag is given the head will\n";
 	print "   be used\n";
-    print "\n";
+	print "\n";
 	print "[ -b | --build [ --tag | --branch <name> ] [ --clean ] ]\n";
 	print "   prepare and build package\n";
 	print "   same as -p except the fact that the package build\n";
 	print "   immediatelly. --clean will remove the buildsystem and\n";
 	print "   setup a new one\n";
-    print "\n";
+	print "\n";
 	print "[ -l | --patchlevel <n> ]\n";
 	print "   patches the sources from -b or -p up to the given\n";
 	print "   patchlevel. More than one level may be specified as\n"; 
