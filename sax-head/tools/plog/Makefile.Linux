@@ -13,6 +13,7 @@ CC = g++
 LD = g++
 
 all:
+	${MAKE} -C ../../sysp/lib all
 	swig -perl5 PLog.i
 	perl Makefile.PL CC=${CC} LD=${LD}
 
@@ -27,5 +28,6 @@ clean:
 	rm -f PLog.bs
 	rm -f Makefile
 	rm -f Makefile.old
+	rm -f PLog.pm
 	rm -f  ./plog
 	rm -rf ./blib
