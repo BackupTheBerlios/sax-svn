@@ -78,8 +78,8 @@ Version:      1.2
 Release:      11
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
-Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
-Provides:     sax2-tools:/usr/X11R6/lib/sax/sysp/maps/Identity.map
+Provides:     sax2:/usr/share/sax/sysp/maps/Identity.map
+Provides:     sax2-tools:/usr/share/sax/sysp/maps/Identity.map
 Provides:     saxident
 Obsoletes:    saxident
 

@@ -18,7 +18,7 @@ sub readKeyboardMap {
 # read the Keyboard.map and create a result list
 # with has references for Model and Layout
 #
-	my $map = "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map";
+	my $map = "/usr/share/sax/sysp/maps/Keyboard.map";
 	my @result;
 	open (MAP,$map)
 		|| die "could not open KBD::map: $!";

@@ -62,8 +62,8 @@ sub main {
 	#========================================
 	# set specifications...
 	#----------------------------------------
-	$var{X}             = "/usr/X11R6/lib/sax/xw.pl";
-	$var{Xidle}         = "/usr/X11R6/lib/sax/xapi";
+	$var{X}             = "/usr/share/sax/xw.pl";
+	$var{Xidle}         = "/usr/share/sax/xapi";
 	$var{XFine}         = "/usr/X11R6/lib/xfine/xfine";
 	$var{Xpid}          = "/var/log/SaX.pid";
 	$var{SaXLog}        = "/var/log/SaX.log";

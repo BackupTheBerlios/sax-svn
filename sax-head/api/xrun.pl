@@ -10,7 +10,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib "/usr/X11R6/lib/sax/api/dialog";
+use lib "/usr/share/sax/api/dialog";
 
 use strict;
 use Env;
@@ -60,14 +60,14 @@ sub main {
 	# /.../
 	# set specifications...
 	# ---
-	$var{X}             = "/usr/X11R6/lib/sax/xw.pl";
+	$var{X}             = "/usr/share/sax/xw.pl";
 	$var{Xpid}          = "/var/log/SaX.pid";
 	$var{SaXLog}        = "/var/log/SaX.log";
 	$var{LastLog}       = "/var/cache/sax/files/lastlog";
 	$var{ConfigFile}    = "/var/cache/sax/files/xorg.conf";
 	$var{FirstConfig}   = "/var/cache/sax/files/xorg.conf.first";
 	$var{StartOptions}  = "/var/cache/sax/files/xapi.opt";
-	$var{Xidle}         = "/usr/X11R6/lib/sax/xapi";
+	$var{Xidle}         = "/usr/share/sax/xapi";
 	$var{XFine}         = "/usr/X11R6/lib/xfine/xfine";
 
 	# /.../

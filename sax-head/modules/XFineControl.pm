@@ -11,7 +11,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib             '/usr/X11R6/lib/sax/modules';
+use lib             '/usr/share/sax/modules';
 
 use ParseConfig;
 use CreateSections;

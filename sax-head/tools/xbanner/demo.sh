@@ -18,10 +18,10 @@ function init {
 # set some variables
 #
  XBANNER="/usr/X11R6/bin/xbanner"
- XBOUND="/usr/X11R6/lib/sax/tools/xbound"
- FILE="/usr/X11R6/lib/sax/tools/demo"
- SCREEN="/usr/X11R6/lib/sax/tools/screen"
- XMIRROR="/usr/X11R6/lib/sax/tools/xmirror"
+ XBOUND="/usr/share/sax/tools/xbound"
+ FILE="/usr/share/sax/tools/demo"
+ SCREEN="/usr/share/sax/tools/screen"
+ XMIRROR="/usr/share/sax/tools/xmirror"
  FREE="/usr/X11R6/bin/freetemp"
 
  DISP=$1

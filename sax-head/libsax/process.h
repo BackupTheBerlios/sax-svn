@@ -33,12 +33,12 @@ STATUS        : Status: Development
 //====================================
 // Defines...
 //------------------------------------
-#define ISAX               "/usr/X11R6/lib/sax/tools/isax"
-#define SYSP               "/usr/X11R6/lib/sax/sysp.pl"
+#define ISAX               "/usr/share/sax/tools/isax"
+#define SYSP               "/usr/share/sax/sysp.pl"
 #define PROF               "/var/lib/sax/createPRO.pl"
 
-#define CDBDIR             "/usr/X11R6/lib/sax/api/data/cdb/"
-#define DATADIR            "/usr/X11R6/lib/sax/api/data/"
+#define CDBDIR             "/usr/share/sax/api/data/cdb/"
+#define DATADIR            "/usr/share/sax/api/data/"
 #define CDBCARDS           CDBDIR "Cards"
 #define CDBMONITORS        CDBDIR "Monitors"
 #define CDBPOINTERS        CDBDIR "Pointers"

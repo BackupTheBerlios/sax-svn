@@ -28,12 +28,12 @@ STATUS        : Status: Up-to-date
 //------------------------------
 #define RC_CONFIG         "/etc/rc.config"
 #define RC_SYSCONFIG      "/etc/sysconfig/"
-#define INPUT_MAP         "/usr/X11R6/lib/sax/sysp/maps/Input.map"
-#define DRIVER_MAP        "/usr/X11R6/lib/sax/sysp/maps/Driver.map"
-#define KBD_MAP           "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map"
-#define VENDOR_MAP        "/usr/X11R6/lib/sax/sysp/maps/Vendor.map"
-#define IDENTITY          "/usr/X11R6/lib/sax/sysp/maps/Identity.map"
-#define PROFILEDIR        "/usr/X11R6/lib/sax/profile/"
+#define INPUT_MAP         "/usr/share/sax/sysp/maps/Input.map"
+#define DRIVER_MAP        "/usr/share/sax/sysp/maps/Driver.map"
+#define KBD_MAP           "/usr/share/sax/sysp/maps/Keyboard.map"
+#define VENDOR_MAP        "/usr/share/sax/sysp/maps/Vendor.map"
+#define IDENTITY          "/usr/share/sax/sysp/maps/Identity.map"
+#define PROFILEDIR        "/usr/share/sax/profile/"
 
 //==============================
 // Expressions...
@@ -43,14 +43,14 @@ STATUS        : Status: Up-to-date
 #define TEXT_3D           "Do you want to enable 3D for this card ?"
 #define TMP_CONFIG        "/tmp/sysdata"
 #define XW_LOG            "/tmp/xwlog"
-#define XWRAPPER          "/usr/X11R6/lib/sax/xw.pl"
+#define XWRAPPER          "/usr/share/sax/xw.pl"
 #define PROBE             "-probeonly"
 #define CONFIG            "-xf86config"
 #define BLANK             "-blank"
 #define NO_FLAG_QUESTION  99
 #define FB_DEV            "/dev/fb0"
 #define KILL              "/usr/bin/killall"
-#define QTASK             "/usr/X11R6/lib/sax/xapi"
+#define QTASK             "/usr/share/sax/xapi"
 #define STDOUT            0
 #define STDERR            1
 #define STDNONE           2
@@ -70,16 +70,16 @@ STATUS        : Status: Up-to-date
 //==============================
 // Scripts...
 //------------------------------
-#define MACHINE           "/usr/X11R6/lib/sax/sysp/script/machine.pl"
-#define INSTALLED         "/usr/X11R6/lib/sax/sysp/script/installed.pl"
-#define KILLDOT           "/usr/X11R6/lib/sax/sysp/script/killdot.pl"
-#define PREPARELOG        "/usr/X11R6/lib/sax/sysp/script/preparelog.pl"
-#define CHECKMAP          "/usr/X11R6/lib/sax/sysp/script/checkmap.pl"
-#define PROFILECOUNT      "/usr/X11R6/lib/sax/sysp/script/profilecount.pl"
-#define PSECTION          "/usr/X11R6/lib/sax/sysp/script/psection.pl"
-#define DIAG              "/usr/X11R6/lib/sax/sysp/script/diag.pl"
-#define GETVENDOR         "/usr/X11R6/lib/sax/sysp/script/vendor.pl"
-#define VBIOS             "/usr/X11R6/lib/sax/sysp/script/vbios.pl"
+#define MACHINE           "/usr/share/sax/sysp/script/machine.pl"
+#define INSTALLED         "/usr/share/sax/sysp/script/installed.pl"
+#define KILLDOT           "/usr/share/sax/sysp/script/killdot.pl"
+#define PREPARELOG        "/usr/share/sax/sysp/script/preparelog.pl"
+#define CHECKMAP          "/usr/share/sax/sysp/script/checkmap.pl"
+#define PROFILECOUNT      "/usr/share/sax/sysp/script/profilecount.pl"
+#define PSECTION          "/usr/share/sax/sysp/script/psection.pl"
+#define DIAG              "/usr/share/sax/sysp/script/diag.pl"
+#define GETVENDOR         "/usr/share/sax/sysp/script/vendor.pl"
+#define VBIOS             "/usr/share/sax/sysp/script/vbios.pl"
 
 #ifdef XORG_LOADER
 #define  LOADER_NAME      "Xorg"

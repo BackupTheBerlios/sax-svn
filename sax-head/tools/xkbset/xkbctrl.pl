@@ -13,7 +13,7 @@ use strict;
 #=================================
 # Globals...
 #---------------------------------
-my $CFGMap = "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map";
+my $CFGMap = "/usr/share/sax/sysp/maps/Keyboard.map";
 
 #=================================
 # The magic main :-)

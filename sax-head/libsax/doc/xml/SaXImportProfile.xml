@@ -104,7 +104,7 @@ one parameter which defines the profile filename to import.
 #include &lt;sax.h&gt;
 
 SaXImportProfile* nvidiaTwinview = new SaXImportProfile (
-    "/usr/X11R6/lib/sax/profile/NVidia_Twinview"
+    "/usr/share/sax/profile/NVidia_Twinview"
 );
 nvidiaTwinview -&gt; doImport();
 SaXImport* profileDesktop = nvidiaTwinview -&gt; getImport (SAX_CARD);

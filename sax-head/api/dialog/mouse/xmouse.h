@@ -26,12 +26,12 @@ STATUS        : Status: Development
 //=====================================
 // Defines
 //-------------------------------------
-#define PIX_DEFAULT "/usr/X11R6/lib/sax/api/pixmaps/mouse_default.png"
-#define PIX_FRONT   "/usr/X11R6/lib/sax/api/pixmaps/mouse_front.png"
-#define PIX_LEFT    "/usr/X11R6/lib/sax/api/pixmaps/mouse_left.png"
-#define PIX_MIDDLE  "/usr/X11R6/lib/sax/api/pixmaps/mouse_middle.png"
-#define PIX_RIGHT   "/usr/X11R6/lib/sax/api/pixmaps/mouse_right.png"
-#define PIX_BACK    "/usr/X11R6/lib/sax/api/pixmaps/mouse_back.png"
+#define PIX_DEFAULT "/usr/share/sax/api/pixmaps/mouse_default.png"
+#define PIX_FRONT   "/usr/share/sax/api/pixmaps/mouse_front.png"
+#define PIX_LEFT    "/usr/share/sax/api/pixmaps/mouse_left.png"
+#define PIX_MIDDLE  "/usr/share/sax/api/pixmaps/mouse_middle.png"
+#define PIX_RIGHT   "/usr/share/sax/api/pixmaps/mouse_right.png"
+#define PIX_BACK    "/usr/share/sax/api/pixmaps/mouse_back.png"
 
 //=====================================
 // Class Definitions

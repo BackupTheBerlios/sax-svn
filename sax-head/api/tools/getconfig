@@ -9,7 +9,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib '/usr/X11R6/lib/sax/modules';
+use lib '/usr/share/sax/modules';
 use strict;
 use Env;
 use FileHandle;
@@ -31,7 +31,7 @@ sub init {
 		exit (1);
 	}
 	$spec{CDir}  = "/var/cache/sax/files";
-	$spec{ISaX}  = "/usr/X11R6/lib/sax/tools/isax";
+	$spec{ISaX}  = "/usr/share/sax/tools/isax";
 
 	qx (rm -f $spec{CDir}/xorg.conf);
 }

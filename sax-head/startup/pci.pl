@@ -19,7 +19,7 @@ init(); main();
 sub init {
  # variable init...
  # ------------------
- $var{Sysp}     = "/usr/X11R6/lib/sax/sysp.pl";
+ $var{Sysp}     = "/usr/share/sax/sysp.pl";
 
  # option init...
  # ----------------

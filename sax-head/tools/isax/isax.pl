@@ -12,7 +12,7 @@ use strict;
 no strict "refs";
 no strict "subs";
 
-use lib '/usr/X11R6/lib/sax/modules';
+use lib '/usr/share/sax/modules';
 use lib '/usr/X11R6/lib/';
 
 use Env;
@@ -95,7 +95,7 @@ sub init {
 		$OutputFile = "/etc/X11/xorg.conf";
 	}
 	$init{TmpDir}      = CreateSecureDir(); 
-	$init{Xmode}       = "/usr/X11R6/lib/sax/tools/xmode";
+	$init{Xmode}       = "/usr/share/sax/tools/xmode";
 	$init{ConfigFile}  = "/etc/X11/xorg.conf";
 	$init{BinaryFile}  = "/var/cache/sax/files/config";
 	$init{DbmNew}      = "/var/cache/sax/files/config.new";

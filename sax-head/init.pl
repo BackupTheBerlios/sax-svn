@@ -8,7 +8,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib   '/usr/X11R6/lib/sax/modules';
+use lib   '/usr/share/sax/modules';
 use strict;
 use Env;
 
@@ -114,8 +114,8 @@ sub init {
 	# /.../
 	# check for the Identity.map
 	# --------------------------
-	my $map = "/usr/X11R6/lib/sax/sysp/maps/Identity.map";
-	my $api = "/usr/X11R6/lib/sax/xapi";
+	my $map = "/usr/share/sax/sysp/maps/Identity.map";
+	my $api = "/usr/share/sax/xapi";
 	if ( ! -f $map ) {
 		die "init: no Identity.map found";
 	}
@@ -158,12 +158,12 @@ sub init {
 	$spec{RcSysConfigLang}     = "/etc/sysconfig/language";
 	$spec{SysConfig}           = "/etc/sysconfig";
 	$spec{Profile}             = $LD."sax/pci.pl";
-	$spec{ProfileDir}          = "/usr/X11R6/lib/sax/profile/";
+	$spec{ProfileDir}          = "/usr/share/sax/profile/";
 	$spec{Monitors}            = $LD."sax/api/data/cdb/Monitors";
 	$spec{Corner}              = $LD."sax/tools/corner";
 	$spec{MD5}                 = "/usr/bin/md5sum";
-	$spec{ISaX}                = "/usr/X11R6/lib/sax/tools/isax";
-	$spec{HwUpdate}            = "/usr/X11R6/lib/sax/tools/hwupdate";
+	$spec{ISaX}                = "/usr/share/sax/tools/isax";
+	$spec{HwUpdate}            = "/usr/share/sax/tools/hwupdate";
 
 	# /.../
 	# check if sysp was able to detect a card

@@ -8,7 +8,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib   '/usr/X11R6/lib/sax/modules';
+use lib   '/usr/share/sax/modules';
 use lib   '/usr/X11R6/lib';
 
 # strict checking disabled because this cause problems 
@@ -501,25 +501,25 @@ sub init {
 	$SIG{PIPE}  = "HandleTmpSignal";
 	$SIG{TERM}  = "HandleTmpSignal";
 
-	$spec{WrapMouse}   = "/usr/X11R6/lib/sax/tools/wrap";
-	$spec{Sysp}        = "/usr/X11R6/lib/sax/sysp.pl"; 
+	$spec{WrapMouse}   = "/usr/share/sax/tools/wrap";
+	$spec{Sysp}        = "/usr/share/sax/sysp.pl"; 
 	$spec{DbmFile}     = "/var/cache/sax/files/config"; 
 	$spec{HWFlag}      = "/var/cache/sax/files/hardware.chg";
 	$spec{LogFile}     = "/var/log/SaX.log";
 	$spec{XpidFile}    = "/var/log/SaX.pid";
 	$spec{AutoConf}    = "/tmp/$TmpDir/xorg.conf";
 	$spec{Xmsg}        = "/var/log/xlog";
-	$spec{X}           = "/usr/X11R6/lib/sax/xw.pl";
-	$spec{Xapi}        = "/usr/X11R6/lib/sax/xapi";
-	$spec{Intro}       = "/usr/X11R6/lib/sax/intro.pl";
-	$spec{Corner}      = "/usr/X11R6/lib/sax/tools/corner";
+	$spec{X}           = "/usr/share/sax/xw.pl";
+	$spec{Xapi}        = "/usr/share/sax/xapi";
+	$spec{Intro}       = "/usr/share/sax/intro.pl";
+	$spec{Corner}      = "/usr/share/sax/tools/corner";
 	$spec{Xpid}        = undef;
 	$spec{NewServer}   = undef;
 	$spec{IntroPid}    = undef;
-	$spec{Demo}        = "/usr/X11R6/lib/sax/tools/demo.sh";
+	$spec{Demo}        = "/usr/share/sax/tools/demo.sh";
 	$spec{XTerminal}   = "/var/log/xvt";
 	$spec{Twm}         = "/usr/X11R6/bin/twm";
-	$spec{TwmRc}       = "/usr/X11R6/lib/sax/api/data/twmrc";
+	$spec{TwmRc}       = "/usr/share/sax/api/data/twmrc";
 	$spec{StartOptions}= "/var/cache/sax/files/xapi.opt";
 
 	# get options...
@@ -554,7 +554,7 @@ sub init {
 	if ( $result != 1 ) {
 		usage();
 	}
-	my $api = "/usr/X11R6/lib/sax/xapi";
+	my $api = "/usr/share/sax/xapi";
 	if ( ! -f $api ) {
 		$EnableAutoConf = "";
 	}

@@ -4,7 +4,7 @@
 # Init profile script
 #------------------------------------
 profile=$(basename $0 | cut -f1 -d.)
-profile="/usr/X11R6/lib/sax/profile/$profile"
+profile="/usr/share/sax/profile/$profile"
 if [ ! -f "$profile" ] || [ "$UID" -ne 0 ];then
 	exit 0
 fi

@@ -10,9 +10,9 @@
 # --------
 # Status: Up-to-date
 #
-use lib '/usr/X11R6/lib/sax/modules/detect';
+use lib '/usr/share/sax/modules/detect';
 use lib '/usr/X11R6/lib/xfine/modules';
-use lib '/usr/X11R6/lib/sax/modules';
+use lib '/usr/share/sax/modules';
 
 use strict;
 use XFineControl;
@@ -34,7 +34,7 @@ our %spec;
 # use AutoDetectFontPath()
 #----------------------------------------
 if (! defined %spec) {
-	my $dataDir = "/usr/X11R6/lib/sax/api/data";
+	my $dataDir = "/usr/share/sax/api/data";
 	$spec{StaticFontPathList}  = "$dataDir/StaticFontPathList";
 	$spec{LangFirstPath}       = "$dataDir/LangFirstPath";
 	$spec{LangCodes}           = "$dataDir/LangCodes";
@@ -48,10 +48,10 @@ sub ApiInit {
 # Api import filter
 #
 	$import{ApiFile}    = "/var/cache/sax/files/apidata";
-	$import{SetMode}    = "/usr/X11R6/lib/sax/tools/SetMode";
-	$import{SecureMode} = "/usr/X11R6/lib/sax/tools/SecureMode";
-	$import{Xmode}      = "/usr/X11R6/lib/sax/tools/xmode";
-	$import{Sysp}       = "/usr/X11R6/lib/sax/sysp.pl";
+	$import{SetMode}    = "/usr/share/sax/tools/SetMode";
+	$import{SecureMode} = "/usr/share/sax/tools/SecureMode";
+	$import{Xmode}      = "/usr/share/sax/tools/xmode";
+	$import{Sysp}       = "/usr/share/sax/sysp.pl";
 	$import{FbSet}      = "fbset";
 }
 

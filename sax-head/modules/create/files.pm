@@ -100,7 +100,7 @@ sub CreateFilesSection {
 	# ---
 	my $io = new FileHandle;
 	if (isSecureMiscExtension()) {
-	if ($io->open("/usr/X11R6/lib/sax/api/data/PointerDevice")) {
+	if ($io->open("/usr/share/sax/api/data/PointerDevice")) {
 		while (my $device = <$io>) {
 		chomp ($device);
 		if ($device =~ /^\//) {

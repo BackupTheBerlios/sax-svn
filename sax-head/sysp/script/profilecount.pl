@@ -18,7 +18,7 @@ use Env;
 
 sub profileCount {
 	my $profile = $_[0];
-	my $path    = "/usr/X11R6/lib/sax/profile";
+	my $path    = "/usr/share/sax/profile";
 	my $count   = 0;
 	if (! open (FD,"$path/$profile")) {
 		return (0);

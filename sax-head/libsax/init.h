@@ -31,7 +31,7 @@ STATUS        : Status: Development
 //====================================
 // Defines...
 //------------------------------------
-#define SAX_INIT        "/usr/X11R6/lib/sax/init.pl"
+#define SAX_INIT        "/usr/share/sax/init.pl"
 #define CACHE_CONFIG    "/var/cache/sax/files/config"
 
 //====================================

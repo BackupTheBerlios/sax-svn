@@ -26,14 +26,14 @@ STATUS        : Status: Up-to-date
 // Defines...
 //---------------------------
 #define  XFTFONT     "serif-30"
-#define  XBannerFile "/usr/X11R6/lib/sax/tools/demo"
-#define  XScreenFile "/usr/X11R6/lib/sax/tools/screen"
+#define  XBannerFile "/usr/share/sax/tools/demo"
+#define  XScreenFile "/usr/share/sax/tools/screen"
 #define  XBanner     "/usr/X11R6/bin/xbanner"
-#define  XLook       "/usr/X11R6/lib/sax/tools/xlook"
+#define  XLook       "/usr/share/sax/tools/xlook"
 #define  TWM         "/usr/X11R6/bin/twm"
-#define  FVWM        "/usr/X11R6/lib/sax/tools/wmstart"
-#define  XIDLE       "/usr/X11R6/lib/sax/xapi"
-#define  TWMRC       "/usr/X11R6/lib/sax/api/data/twmrc"
+#define  FVWM        "/usr/share/sax/tools/wmstart"
+#define  XIDLE       "/usr/share/sax/xapi"
+#define  TWMRC       "/usr/share/sax/api/data/twmrc"
 #define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc.sax"
 #define  TDOMAIN     "/usr/share/locale"
 #define  DISPSIZE    255

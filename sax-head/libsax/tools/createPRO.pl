@@ -25,7 +25,7 @@ use strict;
 #==========================================
 # Module path
 #------------------------------------------
-use lib '/usr/X11R6/lib/sax/modules';
+use lib '/usr/share/sax/modules';
 
 #==========================================
 # Includes

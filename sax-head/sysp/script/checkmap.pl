@@ -21,7 +21,7 @@ sub CheckMap {
 # contains .map.gz or not and add it if needed
 #
 	my $map = $_[0];
-	my $kbd = "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map";
+	my $kbd = "/usr/share/sax/sysp/maps/Keyboard.map";
 
 	if ($map eq "") {
 		$map = "us.map.gz";

@@ -11,14 +11,14 @@
 #==================================
 # Variables...
 #----------------------------------
-INIT="/usr/X11R6/lib/sax/init.pl"
-XC="/usr/X11R6/lib/sax/xc.pl"
-DOTS="/usr/X11R6/lib/sax/tools/dots"
-PCI="/usr/X11R6/lib/sax/pci.pl"
+INIT="/usr/share/sax/init.pl"
+XC="/usr/share/sax/xc.pl"
+DOTS="/usr/share/sax/tools/dots"
+PCI="/usr/share/sax/pci.pl"
 XFT="/var/cache/xfine/*"
 ERR="/var/log/SaX.log"
 REF="/var/cache/sax/files/xorg.conf.first"
-CVSB="/usr/X11R6/lib/sax/svnbuild"
+CVSB="/usr/share/sax/svnbuild"
 
 #==================================
 # Init option variables

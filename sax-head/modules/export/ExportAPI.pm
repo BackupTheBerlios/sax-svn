@@ -11,8 +11,8 @@
 # Status: Up-to-date
 #
 use lib '/usr/X11R6/lib';
-use lib '/usr/X11R6/lib/sax/modules';
-use lib '/usr/X11R6/lib/sax/api/dialog';
+use lib '/usr/share/sax/modules';
+use lib '/usr/share/sax/api/dialog';
 
 use XFree;
 use Storable;

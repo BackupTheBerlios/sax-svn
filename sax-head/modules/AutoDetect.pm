@@ -10,7 +10,7 @@
 # --------
 # Status: Up-to-date
 #
-use lib '/usr/X11R6/lib/sax/modules/detect';
+use lib '/usr/share/sax/modules/detect';
 
 use Card;
 use Fonts;

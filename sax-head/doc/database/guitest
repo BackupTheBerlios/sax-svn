@@ -59,7 +59,7 @@ API="/var/cache/sax/files/config"
 if [ -f "$API" ];then
 	cp -f $API /tmp/sax2_config
 fi
-cp -f /usr/X11R6/lib/sax/doc/config $API
+cp -f /usr/share/sax/doc/config $API
 
 # export language according to po file
 # --------------------------------------
@@ -67,7 +67,7 @@ export LANG=$MYLANG
 
 # run the SaX2 GUI for a test
 # ----------------------------
-/usr/X11R6/lib/sax/xapi.pl
+/usr/share/sax/xapi.pl
 
 # restore registry
 # -----------------

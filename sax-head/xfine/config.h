@@ -54,8 +54,8 @@ STATUS        : Status: Up-to-date
 // Binary files...
 //------------------------------
 #define KILLALL         "/usr/bin/killall"
-#define XQUERY          "/usr/X11R6/lib/sax/tools/xquery"
-#define WRAPMOUSE       "/usr/X11R6/lib/sax/tools/wrap"
+#define XQUERY          "/usr/share/sax/tools/xquery"
+#define WRAPMOUSE       "/usr/share/sax/tools/wrap"
 #define XSETROOT        "/usr/X11R6/bin/xsetroot"
 
 //==============================
