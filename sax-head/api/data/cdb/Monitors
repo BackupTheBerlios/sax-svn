@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Mar  5 13:05:55 2004
+# Author: Marcus Schaefer <sax@suse.de>, Mon Mar  8 10:14:26 2004
 #
 # Template for monitor data
 # --------------------------
@@ -20831,6 +20831,7 @@ LG:L1710B (ANALOG)  {
  DDC=GSM4356
  Option=DPMS
  Hsync=30-83
+ Resolution=1280x1024
  Vsync=56-75
 }
 
@@ -20841,6 +20842,7 @@ LG:L1710B (DIGITAL)  {
  DDC=GSM4358
  Option=DPMS
  Hsync=30-71
+ Resolution=1280x1024
  Vsync=56-75
 }
 
