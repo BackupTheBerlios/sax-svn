@@ -47,20 +47,70 @@ sub getMouseSection {
 	}
 }
 
+#---[ getServerLayoutSection ]-----#
+sub getServerLayoutSection {
+#--------------------------------------------------
+# get server layout section coordinates
+#
+	my @point = ();
+	my $count = 0;
+	my $start = 0;
+	foreach my $line (@_) {
+	$count++;
+	if ($line =~ /Section.*ServerLayout.*/) {
+		$start = $count;
+		next;
+	}
+	if ($line =~ /InputDevice.*CorePointer.*/) {
+		$point[0] = $count;
+	}
+	if ((defined $point[0]) && ($line =~ "EndSection")) {
+		$point[1] = $count;
+		return @point;
+	}
+	}
+}
+
+#---[ getPointerLayout ]-----#
+sub getPointerLayout {
+#--------------------------------------------------
+# get InputDevice section entries
+#
+	my @result = ();
+	foreach my $line (@_) {
+		if ($line =~ /.*Mouse\[(.*)\].*/) {
+			my $pointer = "SendCoreEvents";
+			if ($1 eq 1) {
+				$pointer = "CorePointer";
+			}
+			push (@result,"InputDevice  \"Mouse[$1]\" \"$pointer\"");
+		}
+	}
+	return @result;
+}
+
 # /.../
 # now exchange the mouse section with the real detected
 # input device section using xmset -c feature
 # ---
 my @list   = readConfig();
-my @point  = getMouseSection (@list);
+my @point1 = getMouseSection (@list);
+my @point2 = getServerLayoutSection (@list);
 my @detect = split (/\n/,qx (/usr/X11R6/bin/xmset -c));
+my @layout = getPointerLayout (@detect);
 
-for (my $i=0;$i < $point[0] - 1;$i++) {
+for (my $i=0;$i < $point1[0] - 1;$i++) {
 	print $list[$i];
 }
 foreach my $line (@detect) {
 	print "$line\n";
 }
-for (my $i=$point[1];$i <= @list;$i++) {
+for (my $i=$point1[1];$i <= $point2[0] - 2;$i++) {
+	print $list[$i];
+}
+foreach (@layout) {
+	print "  $_\n";
+}
+for (my $i=$point2[0];$i <= @list;$i++) {
 	print $list[$i];
 }

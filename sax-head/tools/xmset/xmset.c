@@ -622,11 +622,11 @@ void showConfig (void) {
 	MouseData* mp = MouseGetData();
 	int haveMouse = 0;
 
-	printf("Section \"InputDevice\"\n");
-	printf("  Driver     \"mouse\"\n");
-	printf("  Identifier \"Mouse[1]\"\n");
-
+	int count = 1;
 	for (lp=mp; lp; lp=lp->next) {
+		printf("Section \"InputDevice\"\n");
+		printf("  Driver     \"mouse\"\n");
+		printf("  Identifier \"Mouse[%d]\"\n",count);
 		if (
 			(strstr(lp->name,"Tablet") != NULL) ||
 			(strstr(lp->name,"tablet") != NULL) ||
@@ -659,12 +659,17 @@ void showConfig (void) {
 		}
 		}
 		haveMouse = 1;
-		break;
+		printf("EndSection\n\n");
+		count += 2;
+		//break;
 	}
 	if (! haveMouse) {
+		printf("Section \"InputDevice\"\n");
+		printf("  Driver     \"mouse\"\n");
+		printf("  Identifier \"Mouse[1]\"\n");
 		printf("  Option     \"Protocol\" \"Auto\"\n");
 		printf("  Option     \"Device\"   \"/dev/mouse\"\n");
+		printf("EndSection\n");
 	}
-	printf("EndSection\n");
 	exit (0);
 }
