@@ -8,5 +8,5 @@
 # --------
 # Status: Up-to-date
 
-VERSION=`rpm -q hwinfo | cut -f2 -d- | tr -d .`
-test "$VERSION" -ge "202" && echo "WHEEL_SUPPORT" || echo "NO_WHEEL_SUPPORT"
+VERSION=`rpm -q hwinfo | cut -f2 -d- | tr -d . | cut -c1`
+test "$VERSION" -ge "5" && echo "WHEEL_SUPPORT" || echo "NO_WHEEL_SUPPORT"
