@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //------------------------------------
 SaXKeyRules::SaXKeyRules (QString rule): mLayouts(80) {
 	// .../
-	// An object of this type is used to access the xkbfile
-	// library to be able to know about the possible XKB
-	// map settings
+	//! An object of this type is used to access the xkbfile
+	//! library to be able to know about the possible XKB
+	//! map settings
 	// ----
 	mX11Dir = "/usr/X11R6/lib/X11/";
 	loadRules (mX11Dir + QString("xkb/rules/%1").arg(rule));
@@ -38,8 +38,8 @@ SaXKeyRules::SaXKeyRules (QString rule): mLayouts(80) {
 //------------------------------------
 void SaXKeyRules::loadRules(QString file) {
 	// .../
-	// Load the models, layouts and options from the
-	// given XKB rules file
+	//! Load the models, layouts and options from the
+	//! given XKB rules file
 	// ----
 	static struct {
 		const char * locale;
@@ -97,8 +97,8 @@ void SaXKeyRules::loadRules(QString file) {
 //------------------------------------
 QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 	// .../
-	// obtain a list of all variants belonging to the
-	// given baselayout.
+	//! obtain a list of all variants belonging to the
+	//! given baselayout.
 	// ----
 	if ( layout.isEmpty() || ! getLayouts().find(layout) ) {
 		return QList<QString>();
@@ -180,10 +180,10 @@ SaXManipulateKeyboard::SaXManipulateKeyboard (
 	SaXImport* in, int kbd
 ) : SaXManipulateKeyboardIF () {
 	// .../
-	// An object of this type is used to manipulate the
-	// keyboard settings refering to the X11 InputDevice sections.
-	// In contrast to pointer devices the keyboards are enumerated
-	// as 0,2,4,6,etc
+	//! An object of this type is used to manipulate the
+	//! keyboard settings refering to the X11 InputDevice sections.
+	//! In contrast to pointer devices the keyboards are enumerated
+	//! as 0,2,4,6,etc
 	// ----
 	if ( ! in ) {
 		excNullPointerArgument ();
@@ -205,8 +205,8 @@ SaXManipulateKeyboard::SaXManipulateKeyboard (
 //------------------------------------
 bool SaXManipulateKeyboard::selectKeyboard (int ptr) {
 	// .../
-	// select the keyboard device the changes should be applied to
-	// if the device does not exist <false> is returned
+	//! select the keyboard device the changes should be applied to
+	//! if the device does not exist <false> is returned
 	// ----
 	if (! mImport) {
 		return false;
@@ -223,8 +223,8 @@ bool SaXManipulateKeyboard::selectKeyboard (int ptr) {
 //------------------------------------
 void SaXManipulateKeyboard::setXKBModel (const QString& model) {
 	// .../
-	// set global keyboard model to define the basic
-	// keyboard hardware type
+	//! set global keyboard model to define the basic
+	//! keyboard hardware type
 	// ----
 	if (! mImport) {
 		return;
@@ -237,8 +237,8 @@ void SaXManipulateKeyboard::setXKBModel (const QString& model) {
 //------------------------------------
 void SaXManipulateKeyboard::setXKBLayout (const QString& layout) {
 	// .../
-	// set the basic keyboard layout. This method will
-	// overwrite the current layout setting
+	//! set the basic keyboard layout. This method will
+	//! overwrite the current layout setting
 	// ----
 	if (! mImport) {
 		return;
@@ -251,9 +251,9 @@ void SaXManipulateKeyboard::setXKBLayout (const QString& layout) {
 //------------------------------------
 void SaXManipulateKeyboard::addXKBLayout (const QString& layout) {
 	// .../
-	// add a keyboard layout to the basic layout to be
-	// able to switch between different layouts. The first
-	// layout in the list defines the basic layout
+	//! add a keyboard layout to the basic layout to be
+	//! able to switch between different layouts. The first
+	//! layout in the list defines the basic layout
 	// ----
 	if (! mImport) {
 		return;
@@ -272,8 +272,8 @@ void SaXManipulateKeyboard::addXKBLayout (const QString& layout) {
 //------------------------------------
 void SaXManipulateKeyboard::removeXKBLayout (const QString& layout) {
 	// .../
-	// remove the given layout <layout> from the current
-	// list of keyboard layouts
+	//! remove the given layout <layout> from the current
+	//! list of keyboard layouts
 	// ----
 	if (! mImport) {
 		return;
@@ -290,8 +290,8 @@ void SaXManipulateKeyboard::removeXKBLayout (const QString& layout) {
 //------------------------------------
 void SaXManipulateKeyboard::setXKBOption (const QString& option) {
 	// .../
-	// set keyboard option. This will overwrite the current
-	// options list used for all keyboards
+	//! set keyboard option. This will overwrite the current
+	//! options list used for all keyboards
 	// ----
 	if (! mImport) {
 		return;
@@ -304,8 +304,8 @@ void SaXManipulateKeyboard::setXKBOption (const QString& option) {
 //------------------------------------
 void SaXManipulateKeyboard::addXKBOption (const QString& option) {
 	// .../
-	// add a keyboard option to the current list of
-	// keyboard options
+	//! add a keyboard option to the current list of
+	//! keyboard options
 	// ----
 	if (! mImport) {
 		return;
@@ -324,8 +324,8 @@ void SaXManipulateKeyboard::addXKBOption (const QString& option) {
 //------------------------------------
 void SaXManipulateKeyboard::removeXKBOption (const QString& option) {
 	// .../
-	// remove a keyboard option. If the option <option>
-	// does not exist nothing will happen
+	//! remove a keyboard option. If the option <option>
+	//! does not exist nothing will happen
 	// ----
 	if (! mImport) {
 		return;
@@ -344,8 +344,8 @@ void SaXManipulateKeyboard::setXKBVariant (
 	const QString& layout, const QString& variant
 ) {
 	// .../
-	// set a variant for the given keyboard layout. If the layout
-	// has not been set an exception will be thrown.
+	//! set a variant for the given keyboard layout. If the layout
+	//! has not been set an exception will be thrown.
 	// ----
 	if (! mImport) {
 		return;
@@ -380,8 +380,8 @@ void SaXManipulateKeyboard::setXKBVariant (
 //------------------------------------
 void SaXManipulateKeyboard::removeXKBVariant ( const QString& layout ) {
 	// .../
-	// remove the variant set for the layout <layout>. This
-	// method simply call setXKBVariant() with an empty variant
+	//! remove the variant set for the layout <layout>. This
+	//! method simply call setXKBVariant() with an empty variant
 	// ----
 	setXKBVariant (layout,"");
 }
@@ -393,9 +393,9 @@ void SaXManipulateKeyboard::setMapping (
 	const QString& type,const QString& mapping
 ) {
 	// .../
-	// set mapping for the special keys Left/Right-Alt Scroll-Lock
-	// and Right Ctrl key. If wrong type or mappings are set an
-	// invalid argument exception will be thrown
+	//! set mapping for the special keys Left/Right-Alt Scroll-Lock
+	//! and Right Ctrl key. If wrong type or mappings are set an
+	//! invalid argument exception will be thrown
 	// ----
 	if (! mImport) {
 		return;
@@ -432,7 +432,7 @@ void SaXManipulateKeyboard::setMapping (
 //------------------------------------
 QList<QString> SaXManipulateKeyboard::getXKBOptionList (void) {
 	// .../
-	// return a list of XKB options set for the core keyboard
+	//! return a list of XKB options set for the core keyboard
 	// ----
 	if (! mImport) {
 		return QList<QString>();
@@ -446,8 +446,8 @@ QList<QString> SaXManipulateKeyboard::getXKBOptionList (void) {
 //------------------------------------
 QList<QString> SaXManipulateKeyboard::getXKBLayout (void) {
 	// .../
-	// return a list of XKB layouts set for the core keyboard
-	// the first element of the list os the core layout
+	//! return a list of XKB layouts set for the core keyboard
+	//! the first element of the list os the core layout
 	// ----
 	if (! mImport) {
 		return QList<QString>();
@@ -461,8 +461,8 @@ QList<QString> SaXManipulateKeyboard::getXKBLayout (void) {
 //------------------------------------
 QList<QString> SaXManipulateKeyboard::getXKBVariantList (void) {
 	// .../
-	// return a list of variants following the list of
-	// defined keyboard layouts
+	//! return a list of variants following the list of
+	//! defined keyboard layouts
 	// ----
 	if (! mImport) {
 		return QList<QString>();
@@ -476,10 +476,10 @@ QList<QString> SaXManipulateKeyboard::getXKBVariantList (void) {
 //------------------------------------
 QString SaXManipulateKeyboard::getXKBVariant ( const QString& layout ) {
 	// .../
-	// return the variant defined for the given layout <layout>
-	// if there is no variant defined for the layout an empty string
-	// is returned. if the layout doesn't exist and exception will
-	// be throwed and an empty string is returned
+	//! return the variant defined for the given layout <layout>
+	//! if there is no variant defined for the layout an empty string
+	//! is returned. if the layout doesn't exist and exception will
+	//! be throwed and an empty string is returned
 	// ----
 	if (! mImport) {
 		return QString();
@@ -507,8 +507,8 @@ QString SaXManipulateKeyboard::getXKBVariant ( const QString& layout ) {
 //------------------------------------
 QString SaXManipulateKeyboard::getXKBModel (void) {
 	// .../
-	// return the keyboard model name used for this
-	// keyboard. Only one model can be defined and active
+	//! return the keyboard model name used for this
+	//! keyboard. Only one model can be defined and active
 	// ----
 	if (! mImport) {
 		return QString();
@@ -521,9 +521,9 @@ QString SaXManipulateKeyboard::getXKBModel (void) {
 //------------------------------------
 int SaXManipulateKeyboard::findLayout (const QString& layout) {
 	// .../
-	// find the position of the given layout <layout> in the
-	// current layout list and return the position or -1 if the
-	// layout does not exist
+	//! find the position of the given layout <layout> in the
+	//! current layout list and return the position or -1 if the
+	//! layout does not exist
 	// ----
 	int count  = 0;
 	bool found = false;
@@ -547,8 +547,8 @@ int SaXManipulateKeyboard::findLayout (const QString& layout) {
 //------------------------------------
 QList<QString> SaXManipulateKeyboard::createList ( const QString& data) {
 	// .../
-	// return an item list from a comma separated data string
-	// empty items (,,) are allowed using this method
+	//! return an item list from a comma separated data string
+	//! empty items (,,) are allowed using this method
 	// ----
 	if (data.isEmpty()) {
 		return QList<QString>();

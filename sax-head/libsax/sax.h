@@ -21,6 +21,10 @@ STATUS        : Status: Development
 #ifndef SAX_SAX_H
 #define SAX_SAX_H 1
 
+/*! \mainpage libsax documentation
+* libsax is a X11 configuration library for XOrg version v6.x
+*/
+
 //====================================
 // Defines...
 //------------------------------------
@@ -46,6 +50,9 @@ STATUS        : Status: Development
 #include "path.h"
 #include "card.h"
 
+//====================================
+// Interface...
+//------------------------------------
 #include "interface.h"
 
 #endif

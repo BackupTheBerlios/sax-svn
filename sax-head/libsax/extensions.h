@@ -53,6 +53,10 @@ class SaXManipulateExtensionsIF : public SaXException {
 //====================================
 // Class SaXManipulateExtensions...
 //------------------------------------
+/*! \brief SaX2 -  Extensions class
+*
+* *** Currently no implementation for X11 extensions configuration ***
+*/
 class SaXManipulateExtensions : public SaXManipulateExtensionsIF {
 	private:
 	SaXImport* mImport;
@@ -90,10 +94,10 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 	virtual void allowMultipleConnections ( bool = true ) = 0;
 
 	public:
-	virtual bool VNCEnabled           ( void ) = 0;
-	virtual bool HTTPAccessEnabled    ( void ) = 0;
-	virtual bool multiConnectEnabled  ( void ) = 0;
-	virtual bool pwdProtectionEnabled ( void ) = 0;
+	virtual bool isVNCEnabled           ( void ) = 0;
+	virtual bool isHTTPAccessEnabled    ( void ) = 0;
+	virtual bool isMultiConnectEnabled  ( void ) = 0;
+	virtual bool isPwdProtectionEnabled ( void ) = 0;
 
 	public:
 	virtual ~SaXManipulateVNCIF ( void ) { }
@@ -104,6 +108,59 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 //====================================
 // Class SaXManipulateVNC...
 //------------------------------------
+/*! \brief SaX2 -  VNC class.
+*
+* The VNC manipulator requires five import objects (Card,Pointers,Keyboard,
+* Layout and Path) to become created. Once created the manipulator object
+* can enable/disable the exporting of the display via VNC protocol. The
+* following example demonstrate how to enable/disable VNC for the current
+* configuration:
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+*     int importID[] = {
+*         SAX_CARD,
+*         SAX_POINTERS,
+*         SAX_KEYBOARD,
+*         SAX_LAYOUT,
+*         SAX_PATH
+*     };
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     for (int id=0; id<5; id++) {
+*         SaXImport* import = new SaXImport ( importID[id] );
+*         import -> setSource ( SAX_SYSTEM_CONFIG );
+*         import -> doImport();
+*         config -> addImport (import);
+*         section.insert (
+*             import->getSectionName(),import
+*         );
+*     }
+*     printf ("Exporting display for VNC access...\n");
+*     SaXManipulateVNC mVNC (
+*         section["Card"],section["Pointers"],section["Keyboard"],
+*         section["Layout"],section["Path"]
+*     );
+*     if (! mVNC.VNCEnabled()) {
+*         mVNC.enableVNC();
+*         mVNC.addVNCKeyboard();
+*         mVNC.addVNCMouse();
+*     }
+*     printf ("writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return (0);
+* }
+* \endcode
+*/
 class SaXManipulateVNC : public SaXManipulateVNCIF {
 	private:
 	int mVNCMouse;
@@ -132,10 +189,10 @@ class SaXManipulateVNC : public SaXManipulateVNCIF {
 	void allowMultipleConnections ( bool = true );
 
 	public:
-	bool VNCEnabled           ( void );
-	bool HTTPAccessEnabled    ( void );
-	bool multiConnectEnabled  ( void );
-	bool pwdProtectionEnabled ( void );
+	bool isVNCEnabled           ( void );
+	bool isHTTPAccessEnabled    ( void );
+	bool isMultiConnectEnabled  ( void );
+	bool isPwdProtectionEnabled ( void );
 
 	public:
 	SaXManipulateVNC (

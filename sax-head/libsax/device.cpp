@@ -27,13 +27,13 @@ SaXManipulateDevices::SaXManipulateDevices (
 	SaXImport* desktop ,SaXImport* card ,SaXImport* layout
 ) {
 	// .../
-	// an object of this type is used to create or remove new
-	// desktops for further configuration. A desktop is defined
-	// by the Monitor,Modes,Screen and ServerLayout sections.
-	// Adding a new desktop will add a new Monitor,Modes and Screen
-	// section. The section gets activated by chaning the global
-	// ServerLayout section. Removing a desktop will do the same
-	// vice versa
+	//! an object of this type is used to create or remove new
+	//! desktops for further configuration. A desktop is defined
+	//! by the Monitor,Modes,Screen and ServerLayout sections.
+	//! Adding a new desktop will add a new Monitor,Modes and Screen
+	//! section. The section gets activated by chaning the global
+	//! ServerLayout section. Removing a desktop will do the same
+	//! vice versa
 	// ----
 	desktopHandlingAllowed = false;
 	inputHandlingAllowed   = false;
@@ -71,12 +71,12 @@ SaXManipulateDevices::SaXManipulateDevices (
 	SaXImport* input, SaXImport* layout
 ) {
 	// .../
-	// an object of this type is used to create or remove new
-	// input devices. An input device is a mouse,tablet,touchscreen
-	// or keyboard. An input device is defined by its InputDevice
-	// section and is activated within the global ServerLayout
-	// section. Adding an input device requires setting the InputFashion
-	// which is the type of the device.
+	//! an object of this type is used to create or remove new
+	//! input devices. An input device is a mouse,tablet,touchscreen
+	//! or keyboard. An input device is defined by its InputDevice
+	//! section and is activated within the global ServerLayout
+	//! section. Adding an input device requires setting the InputFashion
+	//! which is the type of the device.
 	// ----
 	desktopHandlingAllowed = false;
 	inputHandlingAllowed   = false;
@@ -110,8 +110,8 @@ SaXManipulateDevices::SaXManipulateDevices (
 //------------------------------------
 int SaXManipulateDevices::addDesktopDevice (void) {
 	// .../
-	// add a new desktop at the end of the current desktop
-	// list. The new desktop ID is returned
+	//! add a new desktop at the end of the current desktop
+	//! list. The new desktop ID is returned
 	// ---
 	if (! desktopHandlingAllowed) {
 		return -1;
@@ -158,10 +158,10 @@ int SaXManipulateDevices::addDesktopDevice (void) {
 //------------------------------------
 int SaXManipulateDevices::addInputDevice (const char* fashion) {
 	// .../
-	// add a new input device at the end of the current input
-	// device list. The new input device ID is returned. pointer
-	// input devices are following the odd order (1,3,5,7...)
-	// whereas keyboard input devices use the even order (0,2,4,6...)
+	//! add a new input device at the end of the current input
+	//! device list. The new input device ID is returned. pointer
+	//! input devices are following the odd order (1,3,5,7...)
+	//! whereas keyboard input devices use the even order (0,2,4,6...)
 	// ----
 	if (! inputHandlingAllowed) {
 		return -1;
@@ -238,11 +238,11 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 //------------------------------------
 int SaXManipulateDevices::removeDesktopDevice (int id) {
 	// .../
-	// remove the desktop of the given id <id> and return the
-	// previous desktop id. The current desktop is set to this
-	// previous desktop id. If the desktop does not exist or
-	// the desktop id is the core (0) desktop the method will
-	// return (-1)
+	//! remove the desktop of the given id <id> and return the
+	//! previous desktop id. The current desktop is set to this
+	//! previous desktop id. If the desktop does not exist or
+	//! the desktop id is the core (0) desktop the method will
+	//! return (-1)
 	// ----
 	if (! desktopHandlingAllowed) {
 		return -1;
@@ -282,11 +282,11 @@ int SaXManipulateDevices::removeDesktopDevice (int id) {
 //------------------------------------
 int SaXManipulateDevices::removeInputDevice (int id) {
 	// .../
-	// remove the input device of the given id <id> and return the
-	// previous input device id. The current input device id is set
-	// to this previous input device id. If the input device does
-	// not exist or the input device id is the core (0|1) mouse or
-	// keyboard the method will return (-1)
+	//! remove the input device of the given id <id> and return the
+	//! previous input device id. The current input device id is set
+	//! to this previous input device id. If the input device does
+	//! not exist or the input device id is the core (0|1) mouse or
+	//! keyboard the method will return (-1)
 	// ----
 	if (! inputHandlingAllowed) {
 		return -1;
@@ -364,11 +364,11 @@ int SaXManipulateDevices::removeInputDevice (int id) {
 //------------------------------------
 void SaXManipulateDevices::updateLayout (int newID) {
 	// .../
-	// update the ServerLayout while adding or deleting a desktop
-	// this method is called only privately and is not published.
-	// Adding or deleting a desktop will overwrite the current
-	// layout specification to use a standard horizontal left to
-	// right layout specification.
+	//! update the ServerLayout while adding or deleting a desktop
+	//! this method is called only privately and is not published.
+	//! Adding or deleting a desktop will overwrite the current
+	//! layout specification to use a standard horizontal left to
+	//! right layout specification.
 	// ----
 	//====================================
 	// remove current screen layout

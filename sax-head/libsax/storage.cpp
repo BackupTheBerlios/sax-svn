@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //------------------------------------
 SaXStorage::SaXStorage (void) {
 	// .../
-	// An object of this type is used to create a storage
-	// object saving all the data provided by the interfaces
-	// ISAX,SYSP,CDB,PROFILE
+	//! An object of this type is used to create a storage
+	//! object saving all the data provided by the interfaces
+	//! ISAX,SYSP,CDB,PROFILE
 	// ----
 	mCurrentID = 0;
 	mData.insert (mCurrentID, new QDict<QString>);
@@ -38,8 +38,8 @@ SaXStorage::SaXStorage (void) {
 //------------------------------------
 void SaXStorage::setItem ( const QString & key, const QString & val ) {
 	// .../
-	// set key value pairs to the current data dictionary
-	// reached via mCurrentID
+	//! set key value pairs to the current data dictionary
+	//! reached via mCurrentID
 	// ----
 	QString* data = new QString (val);
 	mData.at (mCurrentID) -> replace (key,data);
@@ -50,9 +50,9 @@ void SaXStorage::setItem ( const QString & key, const QString & val ) {
 //------------------------------------
 void SaXStorage::addItem ( const QString & key, const QString & val ) {
 	// .../
-	// add a value to the current value of <key> seperated by
-	// the comma sign. If there is no data behind <key> nothing
-	// will happen
+	//! add a value to the current value of <key> seperated by
+	//! the comma sign. If there is no data behind <key> nothing
+	//! will happen
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
 	if (currentValue) {
@@ -69,9 +69,9 @@ void SaXStorage::addItem ( const QString & key, const QString & val ) {
 //------------------------------------
 void SaXStorage::removeItem ( const QString & key, const QString & val ) {
 	// .../
-	// remove the value <val> from the current value list stored
-	// behind the key <key>. If the value is not found the list
-	// won't be changed
+	//! remove the value <val> from the current value list stored
+	//! behind the key <key>. If the value is not found the list
+	//! won't be changed
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
 	if (currentValue) {
@@ -95,8 +95,8 @@ void SaXStorage::removeItem ( const QString & key, const QString & val ) {
 //------------------------------------
 void SaXStorage::removeEntry ( const QString & key ) {
 	// .../
-	// remove a complete entry from the data dictionary
-	// The entry is searched as key named <key>
+	//! remove a complete entry from the data dictionary
+	//! The entry is searched as key named <key>
 	// ----
 	mData.at (mCurrentID) -> remove (key);
 }
@@ -106,8 +106,8 @@ void SaXStorage::removeEntry ( const QString & key ) {
 //------------------------------------
 QString SaXStorage::getItem ( const QString & key ) {
 	// .../
-	// returns a copy of the value of key refering
-	// to the current data record
+	//! returns a copy of the value of key refering
+	//! to the current data record
 	// ----
 	if (! mData.at (mCurrentID) -> operator[] (key)) {
 		return QString();
@@ -122,9 +122,9 @@ void SaXStorage::setDenomination (
 	const QString & key, const QString & vendor,const QString & name 
 ) {
 	// .../
-	// set special item value normaly used for Vendor and Name
-	// specifications. The vendor and name string is concatenated
-	// using the ";" sign
+	//! set special item value normaly used for Vendor and Name
+	//! specifications. The vendor and name string is concatenated
+	//! using the ";" sign
 	// ----
 	QString value (vendor+";"+name);
 	setItem (key,value);
@@ -137,10 +137,10 @@ void SaXStorage::setRawItem (
 	const QString & key, const QString & optname,const QString & optval
 ) {
 	// .../
-	// set special item value used for options including a value
-	// if the key is some sort of Raw* the value behind this key
-	// is a comma separated list of key value pairs separated by
-	// a space each. This method will set such a value pair
+	//! set special item value used for options including a value
+	//! if the key is some sort of Raw* the value behind this key
+	//! is a comma separated list of key value pairs separated by
+	//! a space each. This method will set such a value pair
 	// ----
 	QString value (optname+" "+optval);
 	setItem (key,value);
@@ -153,10 +153,10 @@ void SaXStorage::addRawItem (
 	const QString & key, const QString & optname,const QString & optval
 ) {
 	// .../
-	// set special item value used for options including a value
-	// if the key is some sort of Raw* the value behind this key
-	// is a comma separated list of key value pairs separated by
-	// a space each. This method will add such a value pair
+	//! set special item value used for options including a value
+	//! if the key is some sort of Raw* the value behind this key
+	//! is a comma separated list of key value pairs separated by
+	//! a space each. This method will add such a value pair
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
 	if (currentValue) {
@@ -176,10 +176,10 @@ void SaXStorage::removeRawItem (
 	const QString & key, const QString & optname
 ) {
 	// .../
-	// set special item value used for options including a value
-	// if the key is some sort of Raw* the value behind this key
-	// is a comma separated list of key value pairs separated by
-	// a space each. This method will remove such a value pair
+	//! set special item value used for options including a value
+	//! if the key is some sort of Raw* the value behind this key
+	//! is a comma separated list of key value pairs separated by
+	//! a space each. This method will remove such a value pair
 	// ----
 	QString expression (",");
 	if (key == "RawData") {
@@ -207,9 +207,9 @@ void SaXStorage::removeRawItem (
 //------------------------------------
 void SaXStorage::merge (QList< QDict<QString> > data) {
 	// .../
-	// merge the data records from the list <data> into
-	// the corresponding data records of the object. If
-	// a record does not exist it will be created 
+	//! merge the data records from the list <data> into
+	//! the corresponding data records of the object. If
+	//! a record does not exist it will be created 
 	// ----
 	for (unsigned int n=0;n<data.count();n++) {
 		QDict<QString>* table = data.at(n);
@@ -230,9 +230,9 @@ void SaXStorage::merge (QList< QDict<QString> > data) {
 //------------------------------------
 bool SaXStorage::addID ( int id ) {
 	// .../
-	// add a new data record without gaps. If the
-	// record already exists the function will return false
-	// otherwise true
+	//! add a new data record without gaps. If the
+	//! record already exists the function will return false
+	//! otherwise true
 	// ----
 	if (! mData.at (id)) {
 		while (mCurrentID < id) {
@@ -249,8 +249,8 @@ bool SaXStorage::addID ( int id ) {
 //------------------------------------
 bool SaXStorage::delID ( int id ) {
 	// .../
-	// remove a data record and adapt the Identifier strings
-	// to provide consistency
+	//! remove a data record and adapt the Identifier strings
+	//! to provide consistency
 	// ----
 	if ((! mData.at (id)) || (mData.at(id)->isEmpty())) {
 		return false;
@@ -336,9 +336,9 @@ bool SaXStorage::delID ( int id ) {
 //------------------------------------
 bool SaXStorage::setID ( int id ) {
 	// .../
-	// change the current data record ID to the new ID <id>
-	// If there is no data for ID <id> an exception is throwed
-	// and the current ID won't become changed
+	//! change the current data record ID to the new ID <id>
+	//! If there is no data for ID <id> an exception is throwed
+	//! and the current ID won't become changed
 	// ----
 	if (! mData.at (id)) {
 		excSetStorageIDFailed (id);
@@ -354,7 +354,7 @@ bool SaXStorage::setID ( int id ) {
 //------------------------------------
 int SaXStorage::getCurrentID ( void ) {
 	// .../
-	// return the current section ID value
+	//! return the current section ID value
 	// ----
 	return mCurrentID;
 }
@@ -364,7 +364,7 @@ int SaXStorage::getCurrentID ( void ) {
 //------------------------------------
 QDict<QString> SaXStorage::getTable ( int id ) {
 	// .../
-	// return a copy of the data dictionary for the given ID <id>
+	//! return a copy of the data dictionary for the given ID <id>
 	// ----
 	return *mData.at (id);
 }
@@ -374,7 +374,7 @@ QDict<QString> SaXStorage::getTable ( int id ) {
 //------------------------------------
 QDict<QString> SaXStorage::getCurrentTable ( void ) {
 	// .../
-	// return a copy of the data dictionary for the current ID
+	//! return a copy of the data dictionary for the current ID
 	// ----
 	return *mData.at (mCurrentID);
 }
@@ -384,7 +384,7 @@ QDict<QString> SaXStorage::getCurrentTable ( void ) {
 //------------------------------------
 QDict<QString>* SaXStorage::getTablePointer ( int id ) {
 	// .../
-	// return a pointer to the data dictionary at ID <id>
+	//! return a pointer to the data dictionary at ID <id>
 	// ----
     return mData.at (id);
 }
@@ -394,7 +394,7 @@ QDict<QString>* SaXStorage::getTablePointer ( int id ) {
 //------------------------------------
 QDict<QString>* SaXStorage::getCurrentTablePointer ( void ) {
 	// .../
-	// return a pointer to the data dictionary at the current ID
+	//! return a pointer to the data dictionary at the current ID
 	// ----
     return mData.at (mCurrentID);
 }
@@ -404,10 +404,10 @@ QDict<QString>* SaXStorage::getCurrentTablePointer ( void ) {
 //------------------------------------
 int SaXStorage::count (bool noEmptyItem) {
 	// .../
-	// if noEmptyItem is set to true this method will calculate
-	// the number of non empty data records. If noEmptyItem is set
-	// to false which is the default the method will return the
-	// number of elements stored in the mData data record list 
+	//! if noEmptyItem is set to true this method will calculate
+	//! the number of non empty data records. If noEmptyItem is set
+	//! to false which is the default the method will return the
+	//! number of elements stored in the mData data record list 
 	// ----
 	int count = 0;
 	if (noEmptyItem) {
@@ -430,9 +430,9 @@ void SaXStorage::addGroup (
 	const QString & group,const QString & key, const QString & value
 ) {
 	// .../
-	// A method for the CDB interface only. This function will
-	// use <group> as first key and <key> as second key to store 
-	// the value <value> in a two dimensional data dictionary 
+	//! A method for the CDB interface only. This function will
+	//! use <group> as first key and <key> as second key to store 
+	//! the value <value> in a two dimensional data dictionary 
 	// ----
 	if ( ! mCDB[group] ) {
 		mCDB.insert (group, new QDict<QString>);
@@ -446,8 +446,8 @@ void SaXStorage::addGroup (
 //------------------------------------
 QDict< QDict<QString> > SaXStorage::getTablePointerCDB ( void ) {
 	// .../
-	// A method for the CDB interface only. Return a copy of the 
-	// two dimensional CDB data dictionary
+	//! A method for the CDB interface only. Return a copy of the 
+	//! two dimensional CDB data dictionary
 	// ----
 	return mCDB;
 }
@@ -459,10 +459,10 @@ QList< QDict<QString> > SaXStorage::getTablePointerCDB_DATA (
 	const QString & group
 ) {
 	// .../
-	// A method for the CDB interface only. Returns a pointer
-	// to the dictionary found under the key <group>. The pointer
-	// is appended to a list because in most cases the return
-	// value is used as parmeter to the merge() method
+	//! A method for the CDB interface only. Returns a pointer
+	//! to the dictionary found under the key <group>. The pointer
+	//! is appended to a list because in most cases the return
+	//! value is used as parmeter to the merge() method
 	// ----
 	QList< QDict<QString> > list;
 	if ( mCDB[group] ) {
@@ -476,8 +476,8 @@ QList< QDict<QString> > SaXStorage::getTablePointerCDB_DATA (
 //------------------------------------
 QList< QDict<QString> > SaXStorage::getTablePointerDATA ( void ) {
 	// .../
-	// return a pointer list of the complete data dictionary
-	// including all ISAX data records
+	//! return a pointer list of the complete data dictionary
+	//! including all ISAX data records
 	// ----
 	return mData;
 }

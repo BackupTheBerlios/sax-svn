@@ -62,6 +62,78 @@ class SaXManipulateDevicesIF : public SaXException {
 //====================================
 // Class SaXManipulateDevices...
 //------------------------------------
+/*! \brief SaX2 -  Device manipulator class.
+*
+* The device manipulator is either used to create a new desktop- or
+* a new input-Device. A new input-Device needs to be transformed into a
+* standard Keyboard,Mouse,Tablet or Touchscreen device before it can
+* be handled by the appropriate manipulator for the device. A new
+* desktop-Device instead can be handled by the DesktopManipulator
+* directly after the device has been created. To create a new input
+* device the device manipulator requires two imports:
+*
+* - Pointers
+* - Layout
+*
+* whereas the constructor to create a new desktop device requires
+* three imports:
+*
+* - Desktop
+* - Card
+* - Layout
+*
+* The following example will show how to use the device manipulator
+* for adding a new Tablet to the configuration:
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+*     int importID[] = {
+*         SAX_POINTERS,
+*         SAX_LAYOUT
+*     };
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     for (int id=0; id < 2; id++) {
+*         SaXImport* import = new SaXImport ( importID[id] );
+*         import -> setSource ( SAX_SYSTEM_CONFIG );
+*         import -> doImport();
+*         config -> addImport (import);
+*         section.insert (
+*             import->getSectionName(),import
+*         );
+*     }
+*     printf ("Adding new pointer device... ");
+*     SaXManipulateDevices dev (
+*         section["Pointers"],section["Layout"]
+*     );
+*     int tabletID = dev.addInputDevice (SAX_INPUT_TABLET);
+*     printf ("ID: %d [SAX_INPUT_TABLET] added\n",tabletID);
+* 
+*     printf ("Setting up tablet data... ");
+*     SaXManipulateTablets pointer (
+*         section["Pointers"],section["Layout"]
+*     );
+*     if (pointer.selectPointer (tabletID)) {
+*         QList<QString> tabletList = pointer.getTabletList();
+*         QString* myTablet = tabletList.at (3);
+*         pointer.setTablet( *myTablet );
+*         printf ("[%s]\n",myTablet->ascii());
+*     }
+*     printf ("writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return (0);
+* }
+* \endcode
+*/
 class SaXManipulateDevices : public SaXManipulateDevicesIF {
 	private:
 	SaXImport* mDesktop;

@@ -25,10 +25,10 @@ STATUS        : Status: Development
 //------------------------------------
 SaXManipulatePath::SaXManipulatePath (SaXImport* in, int path) {
 	// .../
-	// An object of this type is used to configure the
-	// Files,Module and ServerFlags specifications including
-	// path descriptions for Fonts loadable module settings
-	// and server flags
+	//! An object of this type is used to configure the
+	//! Files,Module and ServerFlags specifications including
+	//! path descriptions for Fonts loadable module settings
+	//! and server flags
 	// ----
 	if ( ! in ) {
 		excNullPointerArgument ();
@@ -50,8 +50,8 @@ SaXManipulatePath::SaXManipulatePath (SaXImport* in, int path) {
 //------------------------------------
 void SaXManipulatePath::setFontPath (const QString& path) {
 	// .../
-	// set global FontPath for this configuration. Using
-	// this function will overwrite the current FontPath setting
+	//! set global FontPath for this configuration. Using
+	//! this function will overwrite the current FontPath setting
 	// ----
 	if (! mImport) {
 		return;
@@ -64,8 +64,8 @@ void SaXManipulatePath::setFontPath (const QString& path) {
 //------------------------------------
 void SaXManipulatePath::addFontPath (const QString& path) {
 	// .../
-	// add FontPath to the current list of font pathes. The
-	// comma separator is used for each item
+	//! add FontPath to the current list of font pathes. The
+	//! comma separator is used for each item
 	// ----
 	if (! mImport) {
 		return;
@@ -84,9 +84,9 @@ void SaXManipulatePath::addFontPath (const QString& path) {
 //------------------------------------
 void SaXManipulatePath::removeFontPath (const QString& path) {
 	// .../
-	// remove the given font path <path> from the current
-	// list of font pathes. If the path doesn't exist nothing
-	// will be changed
+	//! remove the given font path <path> from the current
+	//! list of font pathes. If the path doesn't exist nothing
+	//! will be changed
 	// ----
 	if (! mImport) {
 		return;
@@ -103,8 +103,8 @@ void SaXManipulatePath::removeFontPath (const QString& path) {
 //------------------------------------
 void SaXManipulatePath::setLoadableModule (const QString& module) {
 	// .../
-	// set global module to load for this configuration. Using
-	// this function will overwrite the current module list
+	//! set global module to load for this configuration. Using
+	//! this function will overwrite the current module list
 	// ----
 	if (! mImport) {
 		return;
@@ -117,8 +117,8 @@ void SaXManipulatePath::setLoadableModule (const QString& module) {
 //------------------------------------
 void SaXManipulatePath::addLoadableModule (const QString& module) {
 	// .../
-	// add module name to the current list of modules. The
-	// comma separator is used for each item
+	//! add module name to the current list of modules. The
+	//! comma separator is used for each item
 	// ----
 	if (! mImport) {
 		return;
@@ -137,9 +137,9 @@ void SaXManipulatePath::addLoadableModule (const QString& module) {
 //------------------------------------
 void SaXManipulatePath::removeLoadableModule (const QString& module) {
 	// .../
-	// remove the given module <module> from the current
-	// list of modules. If the module doesn't exist nothing
-	// will be changed
+	//! remove the given module <module> from the current
+	//! list of modules. If the module doesn't exist nothing
+	//! will be changed
 	// ----
 	if (! mImport) {
 		return;
@@ -156,8 +156,8 @@ void SaXManipulatePath::removeLoadableModule (const QString& module) {
 //------------------------------------
 void SaXManipulatePath::setServerFlag (const QString& flag) {
 	// .../
-	// set global server flag for this configuration. Using
-	// this function will overwrite the current flag list
+	//! set global server flag for this configuration. Using
+	//! this function will overwrite the current flag list
 	// ----
 	if (! mImport) {
 		return;
@@ -170,8 +170,8 @@ void SaXManipulatePath::setServerFlag (const QString& flag) {
 //------------------------------------
 void SaXManipulatePath::addServerFlag (const QString& flag) {
 	// .../
-	// add server flag to the current list of flags. The
-	// comma separator is used for each item
+	//! add server flag to the current list of flags. The
+	//! comma separator is used for each item
 	// ----
 	if (! mImport) {
 		return;
@@ -190,9 +190,9 @@ void SaXManipulatePath::addServerFlag (const QString& flag) {
 //------------------------------------
 void SaXManipulatePath::removeServerFlag (const QString& flag) {
 	// .../
-	// remove the given flag <flag> from the current
-	// list of flags. If the flag doesn't exist nothing
-	// will be changed
+	//! remove the given flag <flag> from the current
+	//! list of flags. If the flag doesn't exist nothing
+	//! will be changed
 	// ----
 	if (! mImport) {
 		return;
@@ -209,8 +209,8 @@ void SaXManipulatePath::removeServerFlag (const QString& flag) {
 //------------------------------------
 QList<QString> SaXManipulatePath::getFontPaths (void) {
 	// .../
-	// return a list of server font paths defined for
-	// this X11 configuration
+	//! return a list of server font paths defined for
+	//! this X11 configuration
 	// ----
 	if (! mImport) {
 		return QList<QString>();
@@ -224,8 +224,8 @@ QList<QString> SaXManipulatePath::getFontPaths (void) {
 //------------------------------------
 QList<QString> SaXManipulatePath::getModules (void) {
 	// .../
-	// return a list of server modules defined for this
-	// X11 configuration
+	//! return a list of server modules defined for this
+	//! X11 configuration
 	// ----
 	if (! mImport) {
 		return QList<QString>();
@@ -239,8 +239,8 @@ QList<QString> SaXManipulatePath::getModules (void) {
 //------------------------------------
 QList<QString> SaXManipulatePath::getServerFlags (void) {
 	// .../
-	// return a list of server flags defined for this
-	// X11 configuration
+	//! return a list of server flags defined for this
+	//! X11 configuration
 	// ----
 	if (! mImport) {
 		return QList<QString>();
@@ -254,8 +254,8 @@ QList<QString> SaXManipulatePath::getServerFlags (void) {
 //------------------------------------
 QList<QString> SaXManipulatePath::createList ( const QString& data) {
 	// .../
-	// return an item list from a comma separated data string
-	// empty items will be ignored using this method
+	//! return an item list from a comma separated data string
+	//! empty items will be ignored using this method
 	// ----
 	if (data.isEmpty()) {
 		return QList<QString>();

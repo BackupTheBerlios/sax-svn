@@ -23,10 +23,10 @@ STATUS        : Status: Development
 //------------------------------------
 SaXManipulatePointers::SaXManipulatePointers (SaXImport* in, int ptr) {
 	// .../
-	// An object of this type is used to configure pointer
-	// devices like mice tablets and touchscreens. this class
-	// is the base class for all pointer devices and provides
-	// methodes every pointer configuration will need
+	//! This baseclass is used to provide common pointer
+	//! manipulation methods for the devices Mice Tablets and Touchscreens.
+	//! it provides a protected constructor only. Therefore it is not
+	//! possible to create an object of this type
 	// ----
 	if ( ! in ) {
 		excNullPointerArgument ();
@@ -48,8 +48,8 @@ SaXManipulatePointers::SaXManipulatePointers (SaXImport* in, int ptr) {
 //------------------------------------
 bool SaXManipulatePointers::selectPointer (int ptr) {
 	// .../
-	// select the pointer device the changes should be applied to
-	// if the device does not exist <false> is returned
+	//! select the pointer device the changes should be applied to
+	//! if the device does not exist <false> is returned
 	// ----
 	if (! mImport) {
 		return false;
@@ -66,8 +66,8 @@ bool SaXManipulatePointers::selectPointer (int ptr) {
 //------------------------------------
 void SaXManipulatePointers::setDriver (const QString& driver) {
 	// .../
-	// set global mouse driver to use with this configuration.
-	// the default mouse driver is named "mouse"
+	//! set global mouse driver to use with this configuration.
+	//! the default mouse driver is named "mouse"
 	// ----
 	if (! mImport) {
 		return;
@@ -80,10 +80,10 @@ void SaXManipulatePointers::setDriver (const QString& driver) {
 //------------------------------------
 void SaXManipulatePointers::setDevice (const QString& device) {
 	// .../
-	// set pointer device which provide the raw data for
-	// the pointer device. Some drivers support some sort
-	// of autodetection in this case a keywoard instead of
-	// the /dev/... path can be used
+	//! set pointer device which provide the raw data for
+	//! the pointer device. Some drivers support some sort
+	//! of autodetection in this case a keywoard instead of
+	//! the /dev/... path can be used
 	// ----
 	if (! mImport) {
 		return;
@@ -96,8 +96,8 @@ void SaXManipulatePointers::setDevice (const QString& device) {
 //------------------------------------
 void SaXManipulatePointers::setProtocol (const QString& protocol) {
 	// .../
-	// set the protocol name for this pointer device
-	// some drivers support some sort of AUTO protocols
+	//! set the protocol name for this pointer device
+	//! some drivers support some sort of AUTO protocols
 	// ----
 	if (! mImport) {
 		return;
@@ -112,11 +112,11 @@ void SaXManipulatePointers::setNamePair (
 	const QString& vendor , const QString& name
 ) {
 	// .../
-	// set a name tag to the configuration which consists of a
-	// vendor and a model name separated by a semicolon. xorg's
-	// config file does not provide native keywords for vendor or
-	// name tags, but they are needed to be able so select a
-	// component within a user interface.
+	//! set a name tag to the configuration which consists of a
+	//! vendor and a model name separated by a semicolon. xorg's
+	//! config file does not provide native keywords for vendor or
+	//! name tags, but they are needed to be able so select a
+	//! component within a user interface.
 	// ----
 	if (! mImport) {
 		return;
@@ -133,10 +133,10 @@ void SaXManipulatePointers::setOption (
 	const QString& keyword, const QString& value
 ) {
 	// .../
-	// set a pointer option to the currently selected
-	// pointer device. If the value is set to NULL the
-	// keyword "Option" is used otherwise "RawOption"
-	// will be set.
+	//! set a pointer option to the currently selected
+	//! pointer device. If the value is set to NULL the
+	//! keyword "Option" is used otherwise "RawOption"
+	//! will be set.
 	// ----
 	if (! mImport) {
 		return;
@@ -165,10 +165,10 @@ void SaXManipulatePointers::addOption (
 	const QString& keyword, const QString& value
 ) {
 	// .../
-	// add a pointer option to the currently selected
-	// pointer device. If the value is set to NULL the
-	// "Option" list will be enhances otherwise the
-	// "RawOption" list will be increased.
+	//! add a pointer option to the currently selected
+	//! pointer device. If the value is set to NULL the
+	//! "Option" list will be enhances otherwise the
+	//! "RawOption" list will be increased.
 	// ----
 	if (! mImport) {
 		return;
@@ -195,10 +195,10 @@ void SaXManipulatePointers::addOption (
 //------------------------------------
 void SaXManipulatePointers::removeOption (const QString& value) {
 	// .../
-	// remove a pointer option from the currently selected
-	// pointer device. If the value is set to NULL the
-	// value will be removed from the "Option" list otherwise
-	// the option is removed from the "RawOption" list 
+	//! remove a pointer option from the currently selected
+	//! pointer device. If the value is set to NULL the
+	//! value will be removed from the "Option" list otherwise
+	//! the option is removed from the "RawOption" list 
 	// ----
 	if (! mImport) {
 		return;
@@ -223,11 +223,11 @@ void SaXManipulatePointers::removeOption (const QString& value) {
 //------------------------------------
 QDict<QString> SaXManipulatePointers::getOptions (void) {
 	// .../
-	// retrieve an option list of all options set for this pointer
-	// device. The storage is a dictionary saving the
-	// option name as key and the options value as value for
-	// this key. If there is no value set for the option
-	// (bool options) the value for the key is the (null) string
+	//! retrieve an option list of all options set for this pointer
+	//! device. The storage is a dictionary saving the
+	//! option name as key and the options value as value for
+	//! this key. If there is no value set for the option
+	//! (bool options) the value for the key is the (null) string
 	// ----
 	if (! mImport) {
 		return QDict<QString>();
@@ -269,9 +269,9 @@ QDict<QString> SaXManipulatePointers::getOptions (void) {
 //------------------------------------
 QString SaXManipulatePointers::getDevice ( void ) {
 	// .../
-	// return the device name the pointer device is
-	// connected to. Note this may be an alias name
-	// concerning the type of the pointer device
+	//! return the device name the pointer device is
+	//! connected to. Note this may be an alias name
+	//! concerning the type of the pointer device
 	// ----
 	if (! mImport) {
 		return QString();
@@ -284,7 +284,7 @@ QString SaXManipulatePointers::getDevice ( void ) {
 //------------------------------------
 QString SaXManipulatePointers::getDriver ( void ) {
 	// .../
-	// return the driver used for this pointer device
+	//! return the driver used for this pointer device
 	// ----
 	if (! mImport) {
 		return QString();
@@ -297,7 +297,7 @@ QString SaXManipulatePointers::getDriver ( void ) {
 //------------------------------------
 QString SaXManipulatePointers::getProtocol ( void ) {
 	// .../
-	// return the protocol used for this pointer device
+	//! return the protocol used for this pointer device
 	// ----
 	if (! mImport) {
 		return QString();
@@ -312,8 +312,8 @@ SaXManipulateMice::SaXManipulateMice (
 	SaXImport* in, int ptr
 ) : SaXManipulateMiceIF (in,ptr) {
 	// .../
-	// An object of this type is used to configure simple
-	// mouse pointer devices
+	//! An object of this type is used to configure simple
+	//! mouse pointer devices
 	// ----
 }
 
@@ -322,9 +322,9 @@ SaXManipulateMice::SaXManipulateMice (
 //------------------------------------
 void SaXManipulateMice::enableWheelEmulation (int btn) {
 	// .../
-	// for mice without a wheel one button can be set
-	// to emulate a wheel while pressed. This method will
-	// setup the wheel emulation on button <btn>
+	//! for mice without a wheel one button can be set
+	//! to emulate a wheel while pressed. This method will
+	//! setup the wheel emulation on button <btn>
 	// ----
 	if (! mImport) {
 		return;
@@ -339,9 +339,9 @@ void SaXManipulateMice::enableWheelEmulation (int btn) {
 //------------------------------------
 void SaXManipulateMice::disableWheelEmulation (void) {
 	// .../
-	// release the wheel emulation button used for
-	// emulating a wheel. This is done by removing the
-	// EmulateWheel item completely
+	//! release the wheel emulation button used for
+	//! emulating a wheel. This is done by removing the
+	//! EmulateWheel item completely
 	// ----
 	if (! mImport) {
 		return;
@@ -354,9 +354,9 @@ void SaXManipulateMice::disableWheelEmulation (void) {
 //------------------------------------
 void SaXManipulateMice::enable3ButtonEmulation (void) {
 	// .../
-	// for mice with only two buttons the third button
-	// can be emulated by pressing both the left and right
-	// button simultaneously
+	//! for mice with only two buttons the third button
+	//! can be emulated by pressing both the left and right
+	//! button simultaneously
 	// ----
 	if (! mImport) {
 		return;
@@ -369,7 +369,7 @@ void SaXManipulateMice::enable3ButtonEmulation (void) {
 //------------------------------------
 void SaXManipulateMice::disable3ButtonEmulation (void) {
 	// .../
-	// disable the emulation of the third mouse button
+	//! disable the emulation of the third mouse button
 	// ----
 	if (! mImport) {
 		return;
@@ -382,10 +382,10 @@ void SaXManipulateMice::disable3ButtonEmulation (void) {
 //------------------------------------
 void SaXManipulateMice::enableWheel  (void) {
 	// .../
-	// enable the mouse wheel. This function assumes that
-	// the wheel is mapped to the buttons 4 and 5 which is
-	// in almost all cases true even for mice with more than
-	// 3 buttons
+	//! enable the mouse wheel. This function assumes that
+	//! the wheel is mapped to the buttons 4 and 5 which is
+	//! in almost all cases true even for mice with more than
+	//! 3 buttons
 	// ----
 	if (! mImport) {
 		return;
@@ -398,8 +398,8 @@ void SaXManipulateMice::enableWheel  (void) {
 //------------------------------------
 void SaXManipulateMice::disableWheel (void) {
 	// .../
-	// disable the mouse wheel. The X-Server will report
-	// the events as button events without a Z-axs
+	//! disable the mouse wheel. The X-Server will report
+	//! the events as button events without a Z-axs
 	// ----
 	if (! mImport) {
 		return;
@@ -412,10 +412,10 @@ void SaXManipulateMice::disableWheel (void) {
 //------------------------------------
 bool SaXManipulateMice::isMouse (void) {
 	// .../
-	// check if the current device is a simply mouse. this is
-	// done by checking the driver name. If the driver "mouse"
-	// is used it is a simple device. Any other input devices
-	// will set the InputFashion parameter to become checked
+	//! check if the current device is a simply mouse. this is
+	//! done by checking the driver name. If the driver "mouse"
+	//! is used it is a simple device. Any other input devices
+	//! will set the InputFashion parameter to become checked
 	// ----
 	if (! mImport) {
 		return false;
@@ -430,10 +430,10 @@ bool SaXManipulateMice::isMouse (void) {
 //====================================
 // wheelEnabled
 //------------------------------------
-bool SaXManipulateMice::wheelEnabled (void) {
+bool SaXManipulateMice::isWheelEnabled (void) {
 	// .../
-	// check if the wheel functions are active. This is done
-	// by checking the ZAxisMapping keyword
+	//! check if the wheel functions are active. This is done
+	//! by checking the ZAxisMapping keyword
 	// ----
 	if (! mImport) {
 		return false;
@@ -448,10 +448,10 @@ bool SaXManipulateMice::wheelEnabled (void) {
 //====================================
 // wheelEmulated
 //------------------------------------
-bool SaXManipulateMice::wheelEmulated (void) {
+bool SaXManipulateMice::isWheelEmulated (void) {
 	// .../
-	// check if the wheel functions are emulated using
-	// a special button which enables the emulation
+	//! check if the wheel functions are emulated using
+	//! a special button which enables the emulation
 	// ----
 	if (! mImport) {
 		return false;
@@ -466,10 +466,10 @@ bool SaXManipulateMice::wheelEmulated (void) {
 //====================================
 // buttonEmulation
 //------------------------------------
-bool SaXManipulateMice::buttonEmulated (void) {
+bool SaXManipulateMice::isButtonEmulated (void) {
 	// .../
-	// check if the third button emulation has been activated.
-	// This is done by checking the Emulate3Buttons keyword
+	//! check if the third button emulation has been activated.
+	//! This is done by checking the Emulate3Buttons keyword
 	// ----
 	if (! mImport) {
 		return false;
@@ -488,8 +488,8 @@ SaXManipulateTablets::SaXManipulateTablets (
 	SaXImport* pointer, SaXImport* layout, int id
 ) : SaXManipulateTabletsIF (pointer,id) {
 	// .../
-	// An object of this type is used to configure
-	// tablet pointer devices including pens and erasers
+	//! An object of this type is used to configure
+	//! tablet pointer devices including pens and erasers
 	// ----
 	mManipInputDevices = new SaXManipulateDevices (pointer,layout);
 	mCDBTablets = 0;
@@ -501,8 +501,8 @@ SaXManipulateTablets::SaXManipulateTablets (
 //------------------------------------
 void SaXManipulateTablets::setType (const QString& type) {
 	// .../
-	// set the tablet type for the currently selected
-	// pointer device
+	//! set the tablet type for the currently selected
+	//! pointer device
 	// ----
 	if (! mImport) {
 		return;
@@ -515,8 +515,8 @@ void SaXManipulateTablets::setType (const QString& type) {
 //------------------------------------
 void SaXManipulateTablets::setMode (const QString& mode) {
 	// .../
-	// set the tablet mode for the currently selected
-	// pointer device
+	//! set the tablet mode for the currently selected
+	//! pointer device
 	// ----
 	if (! mImport) {
 		return;
@@ -529,8 +529,8 @@ void SaXManipulateTablets::setMode (const QString& mode) {
 //------------------------------------
 bool SaXManipulateTablets::isTablet (void) {
 	// .../ 
-	// check if the current device is a tablet. This is
-	// done by checking the InputFashion parameter.
+	//! check if the current device is a tablet. This is
+	//! done by checking the InputFashion parameter.
 	// ----
 	if (! mImport) {
 		return false;
@@ -547,8 +547,8 @@ bool SaXManipulateTablets::isTablet (void) {
 //------------------------------------
 bool SaXManipulateTablets::isPen (void) {
 	// .../
-	// check if the current device is a tablet pen. This is
-	// done by checking the InputFashion parameter.
+	//! check if the current device is a tablet pen. This is
+	//! done by checking the InputFashion parameter.
 	// ----
 	if (! mImport) {
 		return false;
@@ -565,9 +565,9 @@ bool SaXManipulateTablets::isPen (void) {
 //------------------------------------
 bool SaXManipulateTablets::isEraser (void) {
 	// .../
-	// check if the current device is a tablet eraser.
-	// This is done by checking the InputFashion
-	// parameter.
+	//! check if the current device is a tablet eraser.
+	//! This is done by checking the InputFashion
+	//! parameter.
 	// ----
 	if (! mImport) {
 		return false;
@@ -584,7 +584,7 @@ bool SaXManipulateTablets::isEraser (void) {
 //------------------------------------
 QString SaXManipulateTablets::getName (void) {
 	// .../
-	// return the CDB model name of this tablet
+	//! return the CDB model name of this tablet
 	// ----
 	if (! mImport) {
 		return QString();
@@ -597,7 +597,7 @@ QString SaXManipulateTablets::getName (void) {
 //------------------------------------
 QString SaXManipulateTablets::getVendor (void) {
 	// .../
-	// return the CDB vendor name of this tablet
+	//! return the CDB vendor name of this tablet
 	// ----
 	if (! mImport) {
 		return QString();
@@ -610,8 +610,8 @@ QString SaXManipulateTablets::getVendor (void) {
 //------------------------------------
 QString SaXManipulateTablets::getType (void) {
 	// .../
-	// return the type of this pointer device which 
-	// can be: cursor,stylus or eraser
+	//! return the type of this pointer device which 
+	//! can be: cursor,stylus or eraser
 	// ----
 	if (! mImport) {
 		return QString();
@@ -624,8 +624,8 @@ QString SaXManipulateTablets::getType (void) {
 //------------------------------------
 QString SaXManipulateTablets::getMode (void) {
 	// .../
-	// return the mode of this pointer device which 
-	// can be either Absolute or Relative
+	//! return the mode of this pointer device which 
+	//! can be either Absolute or Relative
 	// ----
 	if (! mImport) {
 		return QString();
@@ -638,8 +638,8 @@ QString SaXManipulateTablets::getMode (void) {
 //------------------------------------
 QList<QString> SaXManipulateTablets::getTabletDrivers (void) {
 	// .../
-	// retrieve a list of supported tablet modules from the
-	// TabletModules file
+	//! retrieve a list of supported tablet modules from the
+	//! TabletModules file
 	// ----
 	mCDBTabletDrivers.clear();
 	if ( ! mCDBTabletModules ) {
@@ -659,11 +659,11 @@ QList<QString> SaXManipulateTablets::getTabletDrivers (void) {
 //------------------------------------
 QDict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
 	// .../
-	// retrieve a list of tablet options refering to the tablet
-	// driver specified by <driver>. The result is a dictionary
-	// saving the option name as key and the optional value as value.
-	// the value specify the type of the option (bool,any,string) and
-	// may contain additional information if type=string
+	//! retrieve a list of tablet options refering to the tablet
+	//! driver specified by <driver>. The result is a dictionary
+	//! saving the option name as key and the optional value as value.
+	//! the value specify the type of the option (bool,any,string) and
+	//! may contain additional information if type=string
 	// ----
 	mCDBTabletOptions.clear();
 	if ( ! mCDBTabletModules ) {
@@ -688,9 +688,9 @@ QDict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
 //------------------------------------
 QList<QString> SaXManipulateTablets::getTabletList (void) {
 	// .../
-	// retrieve a list of supported tablet groups. Each item
-	// contains the vendor and the model in its name separated
-	// by a colon
+	//! retrieve a list of supported tablet groups. Each item
+	//! contains the vendor and the model in its name separated
+	//! by a colon
 	// ----
 	mCDBTabletList.clear();
 	if ( ! mCDBTablets ) {
@@ -710,9 +710,9 @@ QList<QString> SaXManipulateTablets::getTabletList (void) {
 //------------------------------------
 QList<QString> SaXManipulateTablets::getPenList (void) {
 	// .../
-	// retrieve a list of supported Pen/Eraser groups. Each item
-	// contains the vendor and the model in its name separated
-	// by a colon
+	//! retrieve a list of supported Pen/Eraser groups. Each item
+	//! contains the vendor and the model in its name separated
+	//! by a colon
 	// ----
 	mCDBPenList.clear();
 	if ( ! mCDBPens ) {
@@ -732,9 +732,9 @@ QList<QString> SaXManipulateTablets::getPenList (void) {
 //------------------------------------
 void SaXManipulateTablets::setTablet (const QString& group) {
 	// .../
-	// set all tablet data associated with the given group name to
-	// the current pointer data. The group name consists of the
-	// vendor and model name separated by a colon
+	//! set all tablet data associated with the given group name to
+	//! the current pointer data. The group name consists of the
+	//! vendor and model name separated by a colon
 	// ----
 	if ( ! mCDBTablets ) {
 		mCDBTablets = new SaXProcess ();
@@ -775,11 +775,11 @@ void SaXManipulateTablets::setTablet (const QString& group) {
 //------------------------------------
 int SaXManipulateTablets::addPen (const QString& group) {
 	// .../
-	// add a new Pen or Eraser associated with the given group name to
-	// the current pointer data. The group name consists of the
-	// vendor and model name separated by a colon. The contents of the
-	// data record will set the InputFashion type for this addon
-	// pointer device
+	//! add a new Pen or Eraser associated with the given group name to
+	//! the current pointer data. The group name consists of the
+	//! vendor and model name separated by a colon. The contents of the
+	//! data record will set the InputFashion type for this addon
+	//! pointer device
 	// ----
 	if ( ! mCDBPens ) {
 		mCDBPens = new SaXProcess ();
@@ -848,10 +848,10 @@ int SaXManipulateTablets::addPen (const QString& group) {
 //------------------------------------
 int SaXManipulateTablets::removePen ( int id ) {
 	// .../
-	// remove the Pen or Eraser located at section ID <id>
-	// If the InputFashion type is a valid SAX_INPUT_PEN or
-	// SAX_INPUT_ERASER the method will remove the pointer
-	// device and return the new current ID
+	//! remove the Pen or Eraser located at section ID <id>
+	//! If the InputFashion type is a valid SAX_INPUT_PEN or
+	//! SAX_INPUT_ERASER the method will remove the pointer
+	//! device and return the new current ID
 	// ----
 	if (! selectPointer ( id )) {
 		return -1;
@@ -877,9 +877,9 @@ SaXManipulateTouchscreens::SaXManipulateTouchscreens (
 	SaXImport* in, int ptr
 ) : SaXManipulateTouchscreensIF (in,ptr) {
 	// .../
-	// An object of this type is used to configure simple
-	// touchpanel pointer devices for predefined supported
-	// panels
+	//! An object of this type is used to configure simple
+	//! touchpanel pointer devices for predefined supported
+	//! panels
 	// ----
 	mCDBPanels = 0;
 }
@@ -889,9 +889,9 @@ SaXManipulateTouchscreens::SaXManipulateTouchscreens (
 //------------------------------------
 bool SaXManipulateTouchscreens::isTouchpanel (void) {
 	// .../
-	// check if the current device is a touchpanel.
-	// This is done by checking the InputFashion
-	// parameter.
+	//! check if the current device is a touchpanel.
+	//! This is done by checking the InputFashion
+	//! parameter.
 	// ----
 	if (! mImport) {
 		return false;
@@ -908,9 +908,9 @@ bool SaXManipulateTouchscreens::isTouchpanel (void) {
 //------------------------------------
 QList<QString> SaXManipulateTouchscreens::getPanelList (void) {
 	// .../
-	// retrieve a list of supported panel groups. Each item
-	// contains the vendor and the model in its name separated
-	// by a colon
+	//! retrieve a list of supported panel groups. Each item
+	//! contains the vendor and the model in its name separated
+	//! by a colon
 	// ----
 	mCDBPanelList.clear();
 	if ( ! mCDBPanels ) {
@@ -930,9 +930,9 @@ QList<QString> SaXManipulateTouchscreens::getPanelList (void) {
 //------------------------------------
 void SaXManipulateTouchscreens::setTouchPanel (const QString& group) {
 	// .../
-	// set all panel data associated with the given group name to
-	// the current pointer data. The group name consists of the
-	// vendor and model name separated by a colon
+	//! set all panel data associated with the given group name to
+	//! the current pointer data. The group name consists of the
+	//! vendor and model name separated by a colon
 	// ----
 	if ( ! mCDBPanels ) {
 		mCDBPanels = new SaXProcess ();

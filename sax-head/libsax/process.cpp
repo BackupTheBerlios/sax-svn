@@ -25,11 +25,11 @@ STATUS        : Status: Development
 //------------------------------------
 SaXProcess::SaXProcess ( void ) {
 	// .../
-	// An object of this type is used to read information
-	// from one of the interfaces ISAX CDB SYSP or PROFILE.
-	// Depending what information should be retrieved a new
-	// process is forked calling isax sysp or createPRO.
-	// The CDB information is based on simple file reading
+	//! An object of this type is used to read information
+	//! from one of the interfaces ISAX CDB SYSP or PROFILE.
+	//! Depending what information should be retrieved a new
+	//! process is forked calling isax sysp or createPRO.
+	//! The CDB information is based on simple file reading
 	// ----
 	mProc = new QProcess ();
 }
@@ -39,10 +39,10 @@ SaXProcess::SaXProcess ( void ) {
 //------------------------------------
 void SaXProcess::start ( QList<char> args, int prog ) {
 	// .../
-	// This start method will check if <prog> is a valid
-	// program and call it by adding the options set in
-	// <args>. After the call the appropriate evaluation
-	// method is called to store the data
+	//! This start method will check if <prog> is a valid
+	//! program and call it by adding the options set in
+	//! args. After the call the appropriate evaluation
+	//! method is called to store the data
 	// ----
 	switch (prog) {
 		case SAX_ISAX:
@@ -90,9 +90,9 @@ void SaXProcess::start ( QList<char> args, int prog ) {
 //------------------------------------
 void SaXProcess::start ( int fileID ) {
 	// .../
-	// This start method will check if the given fileID
-	// points to a valid file and call the appropriate
-	// evaluation method to the store the data
+	//! This start method will check if the given fileID
+	//! points to a valid file and call the appropriate
+	//! evaluation method to the store the data
 	// ----
 	switch (fileID) {
 		case CDB_CARDMODULES:
@@ -109,9 +109,9 @@ void SaXProcess::start ( int fileID ) {
 //------------------------------------
 void SaXProcess::storeDataCDB (int fileID) {
 	// .../
-	// Store CDB based group records into the CDB
-	// dictionary. The given file ID must be able to
-	// become resolved into a valid CDB file
+	//! Store CDB based group records into the CDB
+	//! dictionary. The given file ID must be able to
+	//! become resolved into a valid CDB file
 	// ----
 	QString file;
 	switch (fileID) {
@@ -202,9 +202,9 @@ void SaXProcess::storeDataCDB (int fileID) {
 //------------------------------------
 void SaXProcess::storeDataSYS (int fileID) {
 	// .../
-	// Store CDB based data which is manually maintained
-	// within the SaX2 source files. Currently only files
-	// of the Format key=value are supported
+	//! Store CDB based data which is manually maintained
+	//! within the SaX2 source files. Currently only files
+	//! of the Format key=value are supported
 	// ----
 	QString file;
 	switch (fileID) {
@@ -257,8 +257,8 @@ void SaXProcess::storeDataSYS (int fileID) {
 //------------------------------------
 void SaXProcess::storeDataSysp (void) {
 	// .../
-	// Store data which has been written to STDOUT after
-	// a previous sysp process call
+	//! Store data which has been written to STDOUT after
+	//! a previous sysp process call
 	// ----
 	QByteArray data = mProc->readStdout();
 	QStringList lines = QStringList::split ("\n",data);
@@ -290,8 +290,8 @@ void SaXProcess::storeDataSysp (void) {
 //------------------------------------
 void SaXProcess::storeData (void) {
 	// .../
-	// Store data which has been written to STDOUT after
-	// a previous isax process call
+	//! Store data which has been written to STDOUT after
+	//! a previous isax process call
 	// ----
 	QByteArray data = mProc->readStdout();
 	QStringList lines = QStringList::split ("\n",data);

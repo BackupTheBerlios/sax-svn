@@ -25,8 +25,8 @@ STATUS        : Status: Development
 //------------------------------------
 SaXManipulateExtensions::SaXManipulateExtensions (SaXImport* in) {
 	// .../
-	// An object of this type is used to configure the
-	// server extensions: XEVIE,Composite,DAMAGE and XFIXES
+	//! An object of this type is used to configure the
+	//! server extensions: XEVIE,Composite,DAMAGE and XFIXES
 	// ----
 	if ( ! in ) {
 		excNullPointerArgument ();
@@ -56,8 +56,8 @@ SaXManipulateVNC::SaXManipulateVNC (
 	SaXImport* layout,SaXImport* path,int id
 ) : SaXManipulateVNCIF (card,id) {
 	// .../
-	// An object of this type is used to manipulate the
-	// configuration to be able to accesss the X-Server via VNC
+	//! An object of this type is used to manipulate the
+	//! configuration to be able to accesss the X-Server via VNC
 	// ----
 	mManipPointer  = new SaXManipulateDevices (pointer,layout);
 	mManipKeyboard = new SaXManipulateDevices (kbd,layout);
@@ -77,9 +77,9 @@ SaXManipulateVNC::SaXManipulateVNC (
 //------------------------------------
 void SaXManipulateVNC::enableVNC (void) {
 	// .../
-	// export the display using the VNC protocol. This method
-	// will enable VNC by loading the vnc module and applying the
-	// usevnc option into the Device section
+	//! export the display using the VNC protocol. This method
+	//! will enable VNC by loading the vnc module and applying the
+	//! usevnc option into the Device section
 	// ----
 	removeCardOption ("usevnc");
 	mManipModules->removeLoadableModule ("vnc");
@@ -92,10 +92,10 @@ void SaXManipulateVNC::enableVNC (void) {
 //------------------------------------
 void SaXManipulateVNC::disableVNC (void) {
 	// .../
-	// disable VNC support by unloading the vnc module and
-	// switch off the service with: usevnc -> no
-	// NOTE: The X-Server must be restarted in order the
-	// changes to become effective
+	//! disable VNC support by unloading the vnc module and
+	//! switch off the service with: usevnc -> no
+	//! NOTE: The X-Server must be restarted in order the
+	//! changes to become effective
 	// ----
 	removeCardOption ("usevnc");
 	addCardOption ("usevnc","no");
@@ -107,10 +107,10 @@ void SaXManipulateVNC::disableVNC (void) {
 //------------------------------------
 void SaXManipulateVNC::setPassword (const QString& pwd) {
 	// .../
-	// restricted access can be set up by creating a
-	// password file. This file is set within the rfbauth
-	// option. This method is used to create the password
-	// file by using the vncpasswd program
+	//! restricted access can be set up by creating a
+	//! password file. This file is set within the rfbauth
+	//! option. This method is used to create the password
+	//! file by using the vncpasswd program
 	// ----
 	if (! setLock()) {
 		return;
@@ -135,10 +135,10 @@ void SaXManipulateVNC::setPassword (const QString& pwd) {
 //------------------------------------
 void SaXManipulateVNC::enablePasswordProtection (const QString& pwd) {
 	// .../
-	// enable the password protection by setting a password
-	// and activating it with the rfbauth option. A user who
-	// will access the display is asked for this password while
-	// connecting
+	//! enable the password protection by setting a password
+	//! and activating it with the rfbauth option. A user who
+	//! will access the display is asked for this password while
+	//! connecting
 	// ----
 	setPassword (pwd);
 	disablePasswordProtection();
@@ -150,9 +150,9 @@ void SaXManipulateVNC::enablePasswordProtection (const QString& pwd) {
 //------------------------------------
 void SaXManipulateVNC::disablePasswordProtection (void) {
 	// .../
-	// disable the password protection will not remove the
-	// passwd file. Only the rfbauth option is removed which
-	// will disable the password prompt while connecting
+	//! disable the password protection will not remove the
+	//! passwd file. Only the rfbauth option is removed which
+	//! will disable the password prompt while connecting
 	// ----
 	removeCardOption ("rfbauth");
 }
@@ -162,9 +162,9 @@ void SaXManipulateVNC::disablePasswordProtection (void) {
 //------------------------------------
 void SaXManipulateVNC::enableHTTPAccess (int port) {
 	// .../
-	// enable VNC HTTP access on the given port. This is
-	// done by setting up the httpdir option in combination
-	// with the httpport option
+	//! enable VNC HTTP access on the given port. This is
+	//! done by setting up the httpdir option in combination
+	//! with the httpport option
 	// ----
 	QString HTTPport;
 	QTextOStream (&HTTPport) << port;
@@ -178,8 +178,8 @@ void SaXManipulateVNC::enableHTTPAccess (int port) {
 //------------------------------------
 void SaXManipulateVNC::disableHTTPAccess (void) {
 	// .../
-	// disable HTTP access by removing the httpdir and
-	// httpport options
+	//! disable HTTP access by removing the httpdir and
+	//! httpport options
 	// ----
 	removeCardOption ("httpdir");
 	removeCardOption ("httpport");
@@ -190,8 +190,8 @@ void SaXManipulateVNC::disableHTTPAccess (void) {
 //------------------------------------
 void SaXManipulateVNC::allowMultipleConnections (bool allow) {
 	// .../
-	// allow multiple connections at the same time. default
-	// is to allow only one connection at the same time
+	//! allow multiple connections at the same time. default
+	//! is to allow only one connection at the same time
 	// ----
 	if (allow) {
 		removeCardOption ("alwaysshared");
@@ -206,8 +206,8 @@ void SaXManipulateVNC::allowMultipleConnections (bool allow) {
 //------------------------------------
 void SaXManipulateVNC::addVNCKeyboard (void) {
 	// .../
-	// add the VNC keyboard to handle keyboard events
-	// properly
+	//! add the VNC keyboard to handle keyboard events
+	//! properly
 	// ----
 	if (! mLayout) {
 		return;
@@ -225,7 +225,7 @@ void SaXManipulateVNC::addVNCKeyboard (void) {
 //------------------------------------
 void SaXManipulateVNC::addVNCMouse (void) {
 	// .../
-	// add the VNC mouse to handle mouse events properly
+	//! add the VNC mouse to handle mouse events properly
 	// ----
 	if (! mLayout) {
 		return;
@@ -243,7 +243,7 @@ void SaXManipulateVNC::addVNCMouse (void) {
 //------------------------------------
 void SaXManipulateVNC::removeVNCMouse (void) {
 	// .../
-	// remove the VNC mouse -> no mouse events in VNC session
+	//! remove the VNC mouse -> no mouse events in VNC session
 	//
 	if (! mLayout) {
 		return;
@@ -258,7 +258,7 @@ void SaXManipulateVNC::removeVNCMouse (void) {
 //------------------------------------
 void SaXManipulateVNC::removeVNCKeyboard (void) {
 	// .../
-	// remove the VNC keyboard -> no kbd events in VNC session
+	//! remove the VNC keyboard -> no kbd events in VNC session
 	// ----
 	if (! mLayout) {
 		return;
@@ -271,9 +271,9 @@ void SaXManipulateVNC::removeVNCKeyboard (void) {
 //====================================
 // VNCEnabled
 //------------------------------------
-bool SaXManipulateVNC::VNCEnabled (void) {
+bool SaXManipulateVNC::isVNCEnabled (void) {
 	// .../
-	// check if VNC has been enabled
+	//! check if VNC has been enabled
 	// ----
 	QDict<QString> options = getOptions();
 	if ((options["usevnc"]) && (*options["usevnc"] == "yes")) {
@@ -285,9 +285,9 @@ bool SaXManipulateVNC::VNCEnabled (void) {
 //====================================
 // HTTPAccessEnabled
 //------------------------------------
-bool SaXManipulateVNC::HTTPAccessEnabled (void) {
+bool SaXManipulateVNC::isHTTPAccessEnabled (void) {
 	// .../
-	// check if HTTP access is enabled
+	//! check if HTTP access is enabled
 	// ----
 	QDict<QString> options = getOptions();
 	if (options["httpport"]) {
@@ -299,10 +299,10 @@ bool SaXManipulateVNC::HTTPAccessEnabled (void) {
 //====================================
 // multiConnectEnabled
 //------------------------------------
-bool SaXManipulateVNC::multiConnectEnabled (void) {
+bool SaXManipulateVNC::isMultiConnectEnabled (void) {
 	// .../
-	// check if multiple connections at the same
-	// time are allowed
+	//! check if multiple connections at the same
+	//! time are allowed
 	// ----
 	QDict<QString> options = getOptions();
 	if (options["alwaysshared"]) {
@@ -314,9 +314,9 @@ bool SaXManipulateVNC::multiConnectEnabled (void) {
 //====================================
 // pwdProtectionEnabled
 //------------------------------------
-bool SaXManipulateVNC::pwdProtectionEnabled (void) {
+bool SaXManipulateVNC::isPwdProtectionEnabled (void) {
 	// .../
-	// check if the password protection is enabled
+	//! check if the password protection is enabled
 	// ----
 	QDict<QString> options = getOptions();
 	if (options["rfbauth"]) {

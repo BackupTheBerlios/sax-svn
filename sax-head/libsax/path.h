@@ -63,6 +63,51 @@ class SaXManipulatePathIF : public SaXException {
 //====================================
 // Class SaXManipulatePath...
 //------------------------------------
+/*! \brief SaX2 -  Path class.
+*
+* The path manipulator requires one import object (Path) to become
+* created. Once created the manipulator object is able to get/set information
+* related to server-flags server-modules and search paths. The following
+* example demonstrates how to add a server flag to the configuration. The
+* DontVTSwitch server flag disallows the use of the  Ctrl+Alt+Fn  sequence
+* (where  Fn refers  to one of the numbered function keys).  That sequence is
+* normally used to switch to another "virtual terminal" on operating systems
+* that  have  this  feature.   When  this  option is enabled, that key
+* sequence has no special meaning and is  passed to clients.
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+* 
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     SaXImport* import = new SaXImport ( SAX_PATH );
+*     import -> setSource ( SAX_SYSTEM_CONFIG );
+*     import -> doImport();
+*     config -> addImport (import);
+*     section.insert (
+*         import->getSectionName(),import
+*     );
+*     printf ("Disable VT switching...\n");
+*     SaXManipulatePath mPath (
+*         section["Path"]
+*     );
+*     mPath.addServerFlag ("DontVTSwitch");
+* 
+*     printf ("Writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return 0;
+* }
+* \endcode
+*/
 class SaXManipulatePath : public SaXManipulatePathIF {
 	private:
 	SaXImport* mImport;

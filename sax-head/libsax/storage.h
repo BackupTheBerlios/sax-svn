@@ -96,6 +96,34 @@ class SaXStorageIF : public SaXException {
 //====================================
 // Class SaXStorage...
 //------------------------------------
+/*! \brief SaX2 -  Storage class
+*
+* The SaXStorage class provides all the structures and member functions
+* to store, delete/retrieve and change configuration related
+* information. The internal data structure is based on a list of hashes
+* or a an hash of hashes. The standard data is stored in a dictionary
+* list whereas the special CDB data is stored in a dictionary of
+* dictionaries
+*
+* \code
+* #include <sax.h>
+*
+* SaXStorage container;
+* container.setItem ("Identifier","Monitor[0]");
+* container.setDenomination ("01","Belinea","102030");
+* container.setRawItem ("RawOption","opt1","val1");
+* container.addRawItem ("RawOption","opt2","val2");
+* container.removeRawItem ("RawOption","opt1");
+*
+* //QDict<QString> section = container.getCurrentTable();
+* QDict<QString> section = container[0];
+*
+* QString* data = section.take ("RawOption");
+* printf ("%s\n",data->ascii());
+*
+* printf ("%s\n",container["RawOption"].ascii());
+* \endcode
+*/
 class SaXStorage : public SaXStorageIF {
 	protected:
 	QList< QDict<QString> > mData;

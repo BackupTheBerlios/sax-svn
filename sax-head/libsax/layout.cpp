@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //------------------------------------
 SaXManipulateLayout::SaXManipulateLayout (SaXImport* layout,SaXImport* card ) {
 	// .../
-	// An object of this type is used to configure the
-	// server layout. This includes mainly the configuration
-	// of the multihead arrangement and the multihead mode
+	//! An object of this type is used to configure the
+	//! server layout. This includes mainly the configuration
+	//! of the multihead arrangement and the multihead mode
 	// ----
 	if ((! layout) || (! card)) {
 		excNullPointerArgument ();
@@ -55,9 +55,9 @@ SaXManipulateLayout::SaXManipulateLayout (SaXImport* layout,SaXImport* card ) {
 //------------------------------------
 void SaXManipulateLayout::setXOrgMultiheadMode ( int mode ) {
 	// .../
-	// set the multihead mode which can be one of the
-	// following settings: SAX_XINERAMA, SAX_TRADITIONAL or
-	// SAX_CLONE
+	//! set the multihead mode which can be one of the
+	//! following settings: SAX_XINERAMA, SAX_TRADITIONAL or
+	//! SAX_CLONE
 	// ----
 	switch (mode) {
 		case SAX_XINERAMA:
@@ -86,10 +86,10 @@ bool SaXManipulateLayout::setXOrgLayout (
 	int screen, int left, int right, int top, int bottom
 ) {
 	// .../
-	// set the layout for the given screen <screen>. The parameters
-	// define the neighbour IDs at the positions left , right , top
-	// and bottom. If there is no neighbour at position X a negative
-	// value must be set
+	//! set the layout for the given screen <screen>. The parameters
+	//! define the neighbour IDs at the positions left , right , top
+	//! and bottom. If there is no neighbour at position X a negative
+	//! value must be set
 	// ----
 	SaXManipulateCard cardData (mCard);
 	if (! cardData.selectCard (screen)) {
@@ -124,11 +124,11 @@ bool SaXManipulateLayout::setXOrgLayout (
 //------------------------------------
 int SaXManipulateLayout::getMultiheadMode ( void ) {
 	// .../
-	// return an identifier for the currently used multihead
-	// mode. Currently there are the following modes:
-	// SAX_TWINVIEW,SAX_TRADITIONAL,SAX_SINGLE_HEAD,SAX_CLONE
-	// and SAX_XINERAMA. The return of SAX_UNKNOWN_MODE should
-	// never happen
+	//! return an identifier for the currently used multihead
+	//! mode. Currently there are the following modes:
+	//! SAX_TWINVIEW,SAX_TRADITIONAL,SAX_SINGLE_HEAD,SAX_CLONE
+	//! and SAX_XINERAMA. The return of SAX_UNKNOWN_MODE should
+	//! never happen
 	// ----
 	QString clone = mLayout -> getItem ("Clone");
 	QString xrama = mLayout -> getItem ("Xinerama");
@@ -184,10 +184,10 @@ int SaXManipulateLayout::getMultiheadMode ( void ) {
 //------------------------------------
 QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	// .../
-	// return the layout for the given screen <screen>. The
-	// returned list has four elements which defines the
-	// (left | right | top | bottom) neighbours of the requested
-	// screen
+	//! return the layout for the given screen <screen>. The
+	//! returned list has four elements which defines the
+	//! (left | right | top | bottom) neighbours of the requested
+	//! screen
 	// ----
 	SaXManipulateCard cardData (mCard);
 	if (! cardData.selectCard (screen)) {

@@ -80,6 +80,13 @@ STATUS        : Status: Development
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  SaX process execution class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXProcessIF : public SaXStorage {
 	public:
 	virtual void start ( QList<char>, int = SAX_ISAX ) = 0;
@@ -91,6 +98,27 @@ class SaXProcessIF : public SaXStorage {
 //====================================
 // Class SaXProcess...
 //------------------------------------
+/*! \brief SaX2 -  SaX process execution class.
+*
+* The SaXProcess class provides an interface to call external programs
+* including output parsing. Concerning libsax only the output formats
+* of CDB files isax and sysp calls are handled. The internal structure
+* is based on SaXStorage objects. All access and modifaction members are
+* provided by the SaXStorage class.
+*
+* \code
+* #include <sax.h>
+*
+* QList<char> sysp_options;
+* sysp_options.append ( "-q" );
+* sysp_options.append ( "server" );
+* SaXProcess* proc = new SaXProcess ();
+* proc -> start ( sysp_options , SAX_SYSP );
+* if (proc -> getItemPointer("VID")) {
+*     printf ("%s\n",proc -> getItemPointer("VID")->ascii());
+* }
+* \endcode
+*/
 class SaXProcess : public SaXProcessIF {
 	private:
 	QProcess*     mProc;

@@ -184,6 +184,71 @@ class SaXExceptionIF : public QObject {
 //====================================
 // Class SaXException
 //------------------------------------
+/*! \brief SaX2 -  Exception class
+*
+* The SaXException class is a container for all exceptions of the
+* library. It provides methods to set and retrieve error codes and
+* error strings. Within the library each class which may run into
+* an error inherits from SaXException and therefore each SaX* class
+* stores their errors inside the object instance. The programmer is
+* able to use the methods obj->errorCode() and obj->errorString() to
+* obtain possible errors or the programmer can create its own
+* exception class which needs to inherit from SaXException. While
+* constructing an object of this exception class the programmer
+* needs to pass the SaX* object which should be watched to the constructor
+* of its own class. If an error occurs the appropriate exception method is
+* called. The following example will show how to make use of the libsax
+* exception handling:
+*
+* my_excpetion.h
+* \code
+* class myException : public SaXException {
+*    Q_OBJECT
+*
+*     public:
+*     myException (SaXException*);
+*
+*     private slots:
+*     void processFailed ( void );
+*     void permissionDenied ( void );
+* };
+* \endcode
+*
+* my_exception.cpp
+* \code
+* #include "my_exception.h"
+*
+* myException::myException (SaXException* mException)  {
+*     connect (
+*         mException, SIGNAL (saxProcessFailed (void)),
+*         this      , SLOT   (processFailed (void))
+*     );
+*     connect (
+*         mException, SIGNAL (saxPermissionDenied (void)),
+*         this      , SLOT   (permissionDenied (void))
+*     );
+* }
+* 
+* void myException::processFailed (void) {
+*     printf ("Process failed...\n");
+* }
+* 
+* void myException::permissionDenied (void) {
+*     printf ("Permission denied...\n");
+* }
+* \endcode
+*
+* sample.cpp
+* \code
+* int main (void) {
+*     SaXException::setDebug();
+* 
+*     SaXInit* init = new SaXInit;
+*     myException* e = new myException ( init );
+*     ...
+* }
+* \endcode
+*/
 class SaXException : public SaXExceptionIF {
 	Q_OBJECT
 

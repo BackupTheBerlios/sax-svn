@@ -103,7 +103,7 @@ void SaXManipulateDesktop::calculateModelines (bool calc) {
 void SaXManipulateDesktop::setResolution (int c,int x,int y) {
 	// .../
 	//! set resolution <X>x<Y> for colordepth <c>. Using this
-	//1 member will overwrite the current resolution setting
+	//! member will overwrite the current resolution setting
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return;
@@ -162,7 +162,7 @@ void SaXManipulateDesktop::removeResolution (int c,int x,int y) {
 void SaXManipulateDesktop::setVirtualResolution (int c,int x,int y) {
 	// .../
 	//! set virtual resolution <X>x<Y> for colordepth <c>. This
-	//1 call will overwrite the current setting
+	//! call will overwrite the current setting
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return;
@@ -808,7 +808,7 @@ void SaXManipulateDesktop::setCDBMonitor ( const QString& group ) {
 QList<QString> SaXManipulateDesktop::getCDBMonitorList ( void ) {
 	// .../
 	//! retrieve a list of supported monitor groups. Each item
-	//1 contains the vendor and the model in its name separated
+	//! contains the vendor and the model in its name separated
 	//! by a colon
 	// ----
 	mCDBMonitorList.clear();

@@ -26,10 +26,10 @@ STATUS        : Status: Development
 //------------------------------------
 SaXInit::SaXInit ( QList<char> opt ) {
 	// .../
-	// An object of this type is used to initialize the SaX2
-	// cache. The cache provide the current configuration suggestion
-	// which can be used to create an automatic X11 config file.
-	// If additional options are used this constructor will apply it
+	//! An object of this type is used to initialize the SaX2
+	//! cache. The cache provide the current configuration suggestion
+	//! which can be used to create an automatic X11 config file.
+	//! If additional options are used this constructor will apply it
 	// ----
 	mOptions.append ("--quiet");
 	mOptions.append ("no");
@@ -44,9 +44,9 @@ SaXInit::SaXInit ( QList<char> opt ) {
 //------------------------------------
 SaXInit::SaXInit ( void ) {
 	// .../
-	// An object of this type is used to initialize the SaX2
-	// cache. The cache provide the current configuration suggestion
-	// which can be used to create an automatic X11 config file.
+	//! An object of this type is used to initialize the SaX2
+	//! cache. The cache provide the current configuration suggestion
+	//! which can be used to create an automatic X11 config file.
 	// ----
 	mOptions.append ("--quiet");
 	mOptions.append ("no");
@@ -57,9 +57,9 @@ SaXInit::SaXInit ( void ) {
 //------------------------------------
 bool SaXInit::needInit (void) {
 	// .../
-	// check if the cache is up to date. This member function will
-	// check if the cache file exists and it will check if there is
-	// hardware which has been changed
+	//! check if the cache is up to date. This member function will
+	//! check if the cache file exists and it will check if there is
+	//! hardware which has been changed
 	// ----
 	if (! setLock()) {
 		return false;
@@ -82,9 +82,9 @@ bool SaXInit::needInit (void) {
 //------------------------------------
 void SaXInit::ignoreProfile (void) {
 	// .../
-	// ignore any automatically applied profiles during initializing
-	// this will prevent any multihead cards to become configured as
-	// multihead card
+	//! ignore any automatically applied profiles during initializing
+	//! this will prevent any multihead cards to become configured as
+	//! multihead card
 	// ----
 	mOptions.append ("-i");
 }
@@ -94,8 +94,8 @@ void SaXInit::ignoreProfile (void) {
 //------------------------------------
 void SaXInit::doInit (void) {
 	// .../
-	// start the init.pl SaX2 startup sequence to create the
-	// cache which is the base for all further actions
+	//! start the init.pl SaX2 startup sequence to create the
+	//! cache which is the base for all further actions
 	// ----
 	if (! havePrivileges()) {
 		excPermissionDenied();
@@ -128,9 +128,9 @@ void SaXInit::doInit (void) {
 //------------------------------------
 bool SaXInit::needUpdate (void) {
 	// .../
-	// check via libhd if there is hardware in a configuration
-	// state which is new or unconfigured. If there is such
-	// hardware the SaX2 cache and detection has to be recalled
+	//! check via libhd if there is hardware in a configuration
+	//! state which is new or unconfigured. If there is such
+	//! hardware the SaX2 cache and detection has to be recalled
 	// ----
 	if (! havePrivileges()) {
 		excPermissionDenied();
@@ -145,9 +145,9 @@ bool SaXInit::needUpdate (void) {
 //------------------------------------
 bool SaXInit::scanHDstatus (bool save) {
 	// .../
-	// handle the configuration flags for the monitor
-	// display and mouse hardware. See the code documentation
-	// for an explanation about the single states
+	//! handle the configuration flags for the monitor
+	//! display and mouse hardware. See the code documentation
+	//! for an explanation about the single states
 	// ----
 	hd_t* hd;
 	hd_data_t* hd_data;
@@ -259,8 +259,8 @@ bool SaXInit::scanHDstatus (bool save) {
 //------------------------------------
 bool SaXInit::saveHDstatus (int type, char* val, char* id) {
 	// .../
-	// save the value <val> for the given type
-	// <configured,available or new> of the unique ID <id>
+	//! save the value <val> for the given type
+	//! <configured,available or new> of the unique ID <id>
 	// ----
 	hd_t* hd;
 	hd_data_t* hd_data;

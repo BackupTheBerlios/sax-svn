@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //------------------------------------
 SaXExport::SaXExport (SaXImport* import, SaXException* to) {
 	// .../
-	// An object of this type is used to create one of
-	// the section files which build the contents of the
-	// later apidata file. 
+	//! An object of this type is used to create one of
+	//! the section files which build the contents of the
+	//! later apidata file. 
 	// ----
 	if (to) {
 		mTo = to;
@@ -71,8 +71,8 @@ SaXExport::SaXExport (SaXImport* import, SaXException* to) {
 //------------------------------------
 bool SaXExport::doExport (void) {
 	// .../
-	// use mImport to extract the data and write it to the
-	// previously opened file. Format used is: <ID:KEY:VALUE>
+	//! use mImport to extract the data and write it to the
+	//! previously opened file. Format used is: <ID:KEY:VALUE>
 	// ----
 	if (! havePrivileges()) {
 		excPermissionDenied ();

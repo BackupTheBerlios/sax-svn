@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //------------------------------------
 SaXImport::SaXImport (int section) {
 	// .../
-	// An object of this type is used to create an ISAX based
-	// SaX import. Refering to the given section ID the correct
-	// isax options are set.
+	//! An object of this type is used to create an ISAX based
+	//! SaX import. Refering to the given section ID the correct
+	//! isax options are set.
 	// ----
 	mOptions.append ("-l");
 	switch (section) {
@@ -73,8 +73,8 @@ SaXImport::SaXImport (int section) {
 //------------------------------------
 void SaXImport::doImport (void) {
 	// .../
-	// call SaXProcess::start() to obtain the isax provided
-	// information
+	//! call SaXProcess::start() to obtain the isax provided
+	//! information
 	// ----
 	start (mOptions);
 }
@@ -84,10 +84,10 @@ void SaXImport::doImport (void) {
 //------------------------------------
 void SaXImport::setSource (int s) {
 	// .../
-	// set the ISAX data source which can be the current
-	// used configuration (SAX_SYSTEM_CONFIG) or the data stored
-	// inside SaX2 after the hardware detection has been called
-	// (SAX_AUTO_PROBE)
+	//! set the ISAX data source which can be the current
+	//! used configuration (SAX_SYSTEM_CONFIG) or the data stored
+	//! inside SaX2 after the hardware detection has been called
+	//! (SAX_AUTO_PROBE)
 	// ----
 	if ( s == SAX_AUTO_PROBE ) {
 		mOptions.append ("-b");
@@ -99,7 +99,7 @@ void SaXImport::setSource (int s) {
 //------------------------------------
 int SaXImport::getSectionID (void) {
 	// .../
-	// return the section identifier this import belongs to
+	//! return the section identifier this import belongs to
 	// ----
 	return mSection;
 }
@@ -109,7 +109,7 @@ int SaXImport::getSectionID (void) {
 //------------------------------------
 QString SaXImport::getSectionName (void) {
 	// .../
-	// return the section name corresponding to the section ID
+	//! return the section name corresponding to the section ID
 	// ----
 	return mSectionName;
 }
@@ -119,9 +119,9 @@ QString SaXImport::getSectionName (void) {
 //------------------------------------
 SaXImportSysp::SaXImportSysp (int section) {
 	// .../
-	// An object of this type is used to create a SYSP based
-	// SaX import. Refering to the given section ID the correct
-	// sysp.pl options are set.
+	//! An object of this type is used to create a SYSP based
+	//! SaX import. Refering to the given section ID the correct
+	//! sysp.pl options are set.
 	// ----
 	mOptions.append ("-q");
 	switch (section) { 
@@ -159,8 +159,8 @@ SaXImportSysp::SaXImportSysp (int section) {
 //------------------------------------
 void SaXImportSysp::doImport (void) {
 	// .../
-	// call SaXProcess::start() to obtain the sysp provided
-	// information
+	//! call SaXProcess::start() to obtain the sysp provided
+	//! information
 	// ----
 	start (mOptions,SAX_SYSP);
 }
@@ -170,7 +170,7 @@ void SaXImportSysp::doImport (void) {
 //------------------------------------
 int SaXImportSysp::getSectionID (void) {
 	// .../
-	// return the section identifier this import belongs to
+	//! return the section identifier this import belongs to
 	// ----
 	return mSection;
 }
@@ -180,7 +180,7 @@ int SaXImportSysp::getSectionID (void) {
 //------------------------------------
 QString SaXImportSysp::getSectionName (void) {
 	// .../
-	// return the section name corresponding to the section ID
+	//! return the section name corresponding to the section ID
 	// ----
 	return mSectionName;
 }
@@ -190,9 +190,9 @@ QString SaXImportSysp::getSectionName (void) {
 //------------------------------------
 SaXImportCDB::SaXImportCDB (int fileID) {
 	// .../
-	// An object of this type is used to create a CDB based
-	// SaX import. Refering to the given file ID the correct
-	// CDB file is selected.
+	//! An object of this type is used to create a CDB based
+	//! SaX import. Refering to the given file ID the correct
+	//! CDB file is selected.
 	// ----
 	mID = fileID;
 }
@@ -202,8 +202,8 @@ SaXImportCDB::SaXImportCDB (int fileID) {
 //------------------------------------
 void SaXImportCDB::doImport (void) {
 	// .../
-	// call SaXProcess::start() to obtain the data from
-	// the corresponding CDB file
+	//! call SaXProcess::start() to obtain the data from
+	//! the corresponding CDB file
 	// ----
 	start (mID);
 }
@@ -213,10 +213,10 @@ void SaXImportCDB::doImport (void) {
 //------------------------------------
 SaXImportProfile::SaXImportProfile (const QString & p) {
 	// .../
-	// An object of this type is used to create a PROFILE based
-	// SaX import. Refering to the given name the constructor
-	// will check if the file exists and add the correct
-	// createPRO.pl options
+	//! An object of this type is used to create a PROFILE based
+	//! SaX import. Refering to the given name the constructor
+	//! will check if the file exists and add the correct
+	//! createPRO.pl options
 	// ----
 	QFileInfo info (p);
 	if (! info.exists()) {
@@ -234,11 +234,11 @@ SaXImportProfile::SaXImportProfile (const QString & p) {
 //------------------------------------
 void SaXImportProfile::doImport (void) {
 	// .../
-	// call SaXProcess::start() to obtain the createPRO.pl
-	// information. Because of the fact that a profile may
-	// handle multiple sections the data will be splitted
-	// into single sections which can be retrieved using
-	// getImport()
+	//! call SaXProcess::start() to obtain the createPRO.pl
+	//! information. Because of the fact that a profile may
+	//! handle multiple sections the data will be splitted
+	//! into single sections which can be retrieved using
+	//! getImport()
 	// ----
 	start (mOptions,SAX_PROF);
 	splitImport();
@@ -249,16 +249,17 @@ void SaXImportProfile::doImport (void) {
 //------------------------------------
 void SaXImportProfile::splitImport (void) {
 	// .../
-	// Split the data from the profile into the appropriate
-	// ISAX sections. If the section does not exist a new one
-	// will be created. Each section can be obtained using the
-	// getImport() method. For the profile to take effect it is
-	// normally needed to merge this SaXImport objects into the
-	// basic imports which are the base for the configuration
-	// export: For example
-	// ----
-	//   SaXImport* profile = this->getImport (SAX_CARD);
-	//   baseImport->merge (profile->getTablePointerDATA());
+	//! Split the data from the profile into the appropriate
+	//! ISAX sections. If the section does not exist a new one
+	//! will be created. Each section can be obtained using the
+	//! getImport() method. For the profile to take effect it is
+	//! normally needed to merge this SaXImport objects into the
+	//! basic imports which are the base for the configuration
+	//! export: For example
+	//! \code
+	//!   SaXImport* profile = this->getImport (SAX_CARD);
+	//!   baseImport->merge (profile->getTablePointerDATA());
+	//! \endcode
 	// ----
 	for (int n=0;n < count();n++) {
 		QDict<QString>* table = getTablePointer ( n );
@@ -305,9 +306,9 @@ void SaXImportProfile::splitImport (void) {
 //------------------------------------
 void SaXImportProfile::setDevice (int dev) {
 	// .../
-	// Set the device number the profile should be applied
-	// to. This may be needed if the profile itself only set
-	// a wild card for the device number
+	//! Set the device number the profile should be applied
+	//! to. This may be needed if the profile itself only set
+	//! a wild card for the device number
 	// ----
 	QString device;
 	device.sprintf ("%d",dev);
@@ -320,9 +321,9 @@ void SaXImportProfile::setDevice (int dev) {
 //------------------------------------
 SaXImport* SaXImportProfile::getImport (int section) {
 	// .../
-	// Return a pointer to the SaXImport object created during
-	// the splitImport() call. Refering to the given section ID
-	// either the pointer or NULL is returned
+	//! Return a pointer to the SaXImport object created during
+	//! the splitImport() call. Refering to the given section ID
+	//! either the pointer or NULL is returned
 	// ----
 	SaXImport* obj = NULL;
 	switch (section) {

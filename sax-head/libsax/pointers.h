@@ -68,6 +68,14 @@ class SaXManipulatePointersIF : public SaXException {
 //====================================
 // Class SaXManipulatePointers...
 //------------------------------------
+/*! \brief SaX2 -  Base pointer class.
+*
+* The manipulate pointers class is the base class for all supported
+* pointer devices Mice, Tablets and Touchscreens. It is not possible
+* to create an object of type SaXManipulatePointers because the class
+* contains only methods which are common to all pointer devices and
+* can be used within the derived classes.
+*/
 class SaXManipulatePointers : public SaXManipulatePointersIF {
 	protected:
 	SaXImport* mImport;
@@ -115,9 +123,9 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 	virtual void disableWheel ( void ) = 0;
 
 	public:
-	virtual bool wheelEnabled   ( void ) = 0;
-	virtual bool wheelEmulated  ( void ) = 0;
-	virtual bool buttonEmulated ( void ) = 0;
+	virtual bool isWheelEnabled   ( void ) = 0;
+	virtual bool isWheelEmulated  ( void ) = 0;
+	virtual bool isButtonEmulated ( void ) = 0;
 	virtual bool isMouse ( void ) = 0;
 
 	public:
@@ -129,6 +137,49 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 //====================================
 // Class SaXManipulateMice...
 //------------------------------------
+/*! \brief SaX2 -  Mouse manipulator class.
+*
+* The mice manipulator requires one import object (Pointers) to become
+* created. Once created the manipulator object is able to get/set standard
+* mouse configuration information like wheel and button handling. The
+* following example demonstrate how to disable the mouse wheel.
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+* 
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     SaXImport* import = new SaXImport ( SAX_POINTERS );
+*     import -> setSource ( SAX_SYSTEM_CONFIG );
+*     import -> doImport();
+*     config -> addImport (import);
+*     section.insert (
+*         import->getSectionName(),import
+*     );
+*     printf ("Disable core pointer mouse wheel...\n");
+*     SaXManipulateMice mMouse (
+*         section["Pointers"]
+*     );
+*     if (mMouse.selectPointer (SAX_CORE_POINTER)) {
+*     if (mMouse.wheelEnabled()) {
+*         mMouse.disableWheel();
+*     }
+*     }
+*     printf ("Writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return 0;
+* }
+* \endcode
+*/
 class SaXManipulateMice : public SaXManipulateMiceIF {
 	public:
 	void enableWheelEmulation    ( int  );
@@ -139,9 +190,9 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	void disableWheel ( void );
 
 	public:
-	bool wheelEnabled   ( void );
-	bool wheelEmulated  ( void );
-	bool buttonEmulated ( void );
+	bool isWheelEnabled   ( void );
+	bool isWheelEmulated  ( void );
+	bool isButtonEmulated ( void );
 	bool isMouse ( void );
 
 	public:
@@ -190,6 +241,71 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 //====================================
 // Class SaXManipulateTablets...
 //------------------------------------
+/*! \brief SaX2 -  Tablet manipulator class.
+*
+* The tablet manipulator requires two import object (Pointers and Layout)
+* to become created. Once created the manipulator object is able to get/set
+* tablet configuration information. To set up a tablet a new input device
+* needs to created first which get transformed into a tablet using the
+* setTablet() method. Based on this tablet device the manipulator is able
+* to add additional input devices using the addPen() method which results
+* in a stylus or an eraser pointer for this tablet. The following example
+* demonstrate how to add a tablet with one stylus-pen applied
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+*     int importID[] = {
+*         SAX_POINTERS,
+*         SAX_LAYOUT
+*     };
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     for (int id=0; id<2; id++) {
+*         SaXImport* import = new SaXImport ( importID[id] );
+*         import -> setSource ( SAX_SYSTEM_CONFIG );
+*         import -> doImport();
+*         config -> addImport (import);
+*         section.insert (
+*             import->getSectionName(),import
+*         );
+*     }
+*     printf ("Adding new pointer device... ");
+*     SaXManipulateDevices dev (
+*         section["Pointers"],section["Layout"]
+*     );
+*     int tabletID = dev.addInputDevice (SAX_INPUT_TABLET);
+*     printf ("ID: %d is [SAX_INPUT_TABLET]: added\n",tabletID);
+* 
+*     printf ("Setting up tablet data... ");
+*     SaXManipulateTablets pointer (
+*         section["Pointers"],section["Layout"]
+*     );
+*     if (pointer.selectPointer (tabletID)) {
+*         QList<QString> tabletList = pointer.getTabletList();
+*         QList<QString> penList = pointer.getPenList();
+*        QString* myTablet = tabletList.at (3);
+*         QString* myPen = penList.at(3);
+*         pointer.setTablet( *myTablet );
+*         pointer.addPen ( *myPen );
+*         printf ("Tablet: [%s] with pen: [%s] configured\n",
+*             myTablet->ascii(),myPen->ascii()
+*         );
+*     }
+*     printf ("writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return (0);
+* }
+* \endcode
+*/
 class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	private:
 	SaXProcess*    mCDBTablets;
@@ -256,6 +372,64 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 //====================================
 // Class SaXManipulateTouchscreens...
 //------------------------------------
+/*! \brief SaX2 -  Touchscreen manipulator class
+*
+* The touchscreen manipulator requires one import object (Pointers) to
+* become created. Once created the manipulator object is able to transform
+* a currently existing InputDevice into a touchpanel. In almost all cases
+* it is needed to create this InputDevice first which means there is the
+* need for the device manipulator as well. The following example
+* demonstrate how to add a touch panel to the configuration.
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+*     int importID[] = {
+*         SAX_POINTERS,
+*         SAX_LAYOUT
+*     };
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     for (int id=0; id<2; id++) {
+*         SaXImport* import = new SaXImport ( importID[id] );
+*         import -> setSource ( SAX_SYSTEM_CONFIG );
+*         import -> doImport();
+*         config -> addImport (import);
+*         section.insert (
+*             import->getSectionName(),import
+*         );
+*     }
+*     printf ("Adding new pointer device... ");
+*     SaXManipulateDevices dev (
+*         section["Pointers"],section["Layout"]
+*     );
+*     int panelID = dev.addInputDevice (SAX_INPUT_TOUCHPANEL);
+*     printf ("ID: %d is [SAX_INPUT_TOUCHPANEL]: added\n",panelID);
+* 
+*     printf ("Setting up touchpanel data... ");
+*     SaXManipulateTouchscreens pointer (
+*         section["Pointers"]
+*     );
+*     if (pointer.selectPointer (panelID)) {
+*         QList<QString> panelList = pointer.getPanelList();
+*         QString* myPanel = panelList.at(0);
+*         pointer.setTouchPanel( *myPanel );
+*         printf ("TouchPanel: [%s] configured\n", myPanel->ascii());
+*     }
+*     printf ("writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return (0);
+* }
+* \endcode
+*/
 class SaXManipulateTouchscreens : public SaXManipulateTouchscreensIF {
 	private:
 	SaXProcess*    mCDBPanels;

@@ -65,6 +65,28 @@ class SaXExportIF : public SaXException {
 //====================================
 // Class SaXExport...
 //------------------------------------
+/*! \brief SaX2 -  Export class.
+*
+* The SaXExport class provides an abstraction for the ISaX apidata
+* file. Using ISaX to create or modify X11 configurations requires
+* a special input file called apidata. The file is automatically build
+* when all needed sections are available. Each section itself is a file
+* corresponding to a SaXExport object. A SaXExport object requires
+* a valid SaXImport object for initializing. After the export object
+* has been created the programmer simply exports the data by calling
+* doExport(). There is no need to take care about the files created
+* implicitely. All files refering the library will be created in
+* /var/lib/sax
+*
+* \code
+* #include <sax.h>
+*
+* SaXImport* import = new SaXImport (SAX_DESKTOP);
+* SaXExport* export = new SaXExport (import,NULL);
+* import -> doImport();
+* export -> doExport();
+* \endcode
+*/
 class SaXExport : public SaXExportIF {
 	private:
 	SaXException* mTo;

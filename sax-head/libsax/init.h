@@ -58,6 +58,25 @@ class SaXInitIF : public SaXException {
 //====================================
 // Class SaXInit...
 //------------------------------------
+/*! \brief SaX2 -  Init class.
+*
+* SaXInit is used to create the SaX cache files. SaX will provide a
+* configuration suggestion which is the basis for all actions. To be
+* sure not to make use of an outdated cache every program using libsax
+* should create this cache first. The following example illustrates
+* that more detailed:
+*
+* \code
+* #include <sax.h>
+*
+* SaXInit init;
+* if (init.needInit()) {
+*     printf ("initialize cache...\n");
+*     //init.ignoreProfile();
+*     init.doInit();
+* }
+* \endcode
+*/
 class SaXInit : public SaXInitIF {
 	private:
 	QList<char> mOptions;

@@ -76,6 +76,12 @@ class SaXKeyRulesIF : public SaXException {
 //====================================
 // Class SaXKeyRules...
 //------------------------------------
+/*! \brief SaX2 -  XKB key rules class
+*
+* The key rules class has been implemented to provide access to the
+* XKB file extensions. This extensions provides information about the
+* supported keyboard models layout and variants
+*/
 class SaXKeyRules : public SaXKeyRulesIF {
 	protected:
 	void loadRules ( QString );
@@ -149,6 +155,49 @@ class SaXManipulateKeyboardIF : public SaXKeyRules {
 //====================================
 // Class SaXManipulateKeyboard...
 //------------------------------------
+/*! \brief SaX2 -  Keyboard class.
+*
+* The keyboard manipulator requires one import object (Keyboard) to become
+* created. Once created the manipulator object is able to get/set specific
+* keyboard options and is able to access the XKB file extension to know
+* about the supported keyboards. The following example will demonstrate
+* how to add an additional keyboard layout to the core layout:
+*
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+* 
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     SaXImport* import = new SaXImport ( SAX_KEYBOARD );
+*     import -> setSource ( SAX_SYSTEM_CONFIG );
+*     import -> doImport();
+*     config -> addImport (import);
+*     section.insert (
+*         import->getSectionName(),import
+*     );
+*     printf ("Add czech keyboard layout...\n");
+*     SaXManipulateKeyboard mKeyboard (
+*         section["Keyboard"]
+*     );
+*     if (mKeyboard.selectKeyboard (SAX_CORE_KBD)) {
+*         mKeyboard.addXKBLayout ("cz");
+*         mKeyboard.getXKBVariant ("bla");
+*     }
+*     printf ("Writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString().ascii());
+*         printf ("%s\n",config->getParseErrorValue().ascii());
+*         return 1;
+*     }
+*     return 0;
+* }
+* \endcode
+*/
 class SaXManipulateKeyboard : public SaXManipulateKeyboardIF {
 	private:
 	SaXImport* mImport;
