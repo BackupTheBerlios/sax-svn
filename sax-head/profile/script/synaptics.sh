@@ -25,6 +25,8 @@ if [ $? -ne 0 ];then
 	echo "InputDevice->[X+2]->Option->InputFashion = Mouse" >> $profile 
 	echo "InputDevice->[X+2]->Option->ZAxisMapping = 4 5"   >> $profile
 	echo "InputDevice->[X+2]->Option->ButtonNumber = 5"     >> $profile
-	echo "InputDevice->[X+2]->Option->Device = /dev/input/mice"      >> $profile
-	echo "InputDevice->[X+2]->Option->USB-Mouse;ExplorerPS/2 on USB" >> $profile
+	echo "InputDevice->[X+2]->Option->Device = /dev/input/mice"     >> $profile
+	echo "InputDevice->[X+2]->Option->Name = USB-Mouse;ExplorerPS/2 on USB" >> $profile
+	echo "ServerLayout->all->InputDevice->[X+2]->id = Mouse[[X+2]]" >> $profile
+	echo "ServerLayout->all->InputDevice->[X+2]->usage = SendCoreEvents" >> $profile
 fi
