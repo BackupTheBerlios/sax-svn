@@ -15,6 +15,7 @@ DESCRIPTION   : XFine2 (display fine tuning too)
               :
 STATUS        : Status: Up-to-date
 **************/
+
 #include <qapplication.h>
 #include <qpushbutton.h>
 #include <qmainwindow.h>
@@ -29,6 +30,14 @@ STATUS        : Status: Up-to-date
 #include <signal.h>
 #include <unistd.h>
 #include <errno.h>
+#include <X11/Xlib.h>
+
+#ifndef LONG64
+#define LONG64
+#include <X11/extensions/xf86vmode.h>
+#else
+#include <X11/extensions/xf86vmode.h>
+#endif
 
 #include "frame.h"
 #include "xquery.h"
@@ -711,7 +720,44 @@ void XFineWindow::resize ( Direction flag ) {
 	apply.setArguments (mode);
 	apply.useErrorHandler();
 	QString *error = apply.run();
-	if (! error -> isEmpty()) {
+	bool invalid = false;
+	if (
+		mHSyncStart < mHDisplay   ||
+		mHSyncEnd   < mHSyncStart ||
+		mHTotal     < mHSyncEnd   ||
+		mVSyncStart < mVDisplay   ||
+		mVSyncEnd   < mVSyncStart ||
+		mVTotal     < mVSyncEnd
+	) {
+		invalid = true;
+	}
+	if (! invalid) {
+		XF86VidModeMonitor monitor;
+		if (XF86VidModeGetMonitor (x11Display(),mScreen,&monitor)) {
+			int dot_clock;
+			float hsmax = monitor.hsync[0].hi;
+			float hsmin = monitor.hsync[0].lo;
+			float vsmax = monitor.vsync[0].hi;
+			float vsmin = monitor.vsync[0].lo;
+			XF86VidModeModeLine mode_line;
+			if (!XF86VidModeGetModeLine (
+				x11Display(), mScreen, &dot_clock, &mode_line)
+			) {
+				invalid = true;
+			}
+			double dc = (double)dot_clock * 1000;
+			double hs = dc / (double)mHTotal;
+			double vs = dc / (double)(mHTotal * mVTotal);
+			hs = hs / 1000;
+			if ((hs > hsmax) || (hs < hsmin)) {
+				invalid = true;
+			}
+			if ((vs > vsmax) || (vs < vsmin)) {
+				invalid = true;
+			}
+		}
+	}
+	if ((! error -> isEmpty()) || (invalid)) {
 		mHDisplay    = HDisplaySave;
 		mHSyncStart  = HSyncStartSave;
 		mHSyncEnd    = HSyncEndSave;
