@@ -150,7 +150,8 @@ Summary:      SuSE advanced X Window System-configuration Perl binding
 Group:        System/X11/Libraries
 
 %description -n sax2-libsax-perl
-This package contains the SaX2 binding to be able to use libsax with Perl
+This package contains the SaX2 binding to be able to use
+libsax with Perl
 
 Authors:
 --------
@@ -165,7 +166,8 @@ Summary:      SuSE advanced X Window System-configuration Python binding
 Group:        System/X11/Libraries
     
 %description -n sax2-libsax-python
-This package contains the SaX2 binding to be able to use libsax with Python
+This package contains the SaX2 binding to be able to use
+libsax with Python
 
 Authors: 
 --------
@@ -179,9 +181,26 @@ Summary:      SuSE advanced X Window System-configuration Java binding
 Group:        System/X11/Libraries
     
 %description -n sax2-libsax-java
-This package contains the SaX2 binding to be able to use libsax with Java
+This package contains the SaX2 binding to be able to use
+libsax with Java
 
 Authors:      
+--------
+    Marcus Schäfer <ms@suse.de>
+
+
+%package -n sax2-libsax-csharp
+Version:      1.2
+Release:      11
+Requires:     sax2-libsax mono-core mono-basic
+Summary:      SuSE advanced X Window System-configuration Java binding
+Group:        System/X11/Libraries
+
+%description -n sax2-libsax-csharp
+This package contains the SaX2 binding to be able to use
+libsax with CSharp
+
+Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
@@ -607,9 +626,8 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 %dir %{py_sitedir}/SaX
 %{py_sitedir}/SaX.pth
 %{py_sitedir}/SaX/*
-
 #=================================================
-# SaX-libsax.java file list...  
+# SaX-libsax-java file list...  
 # ------------------------------------------------
 
 %files -n sax2-libsax-java
@@ -618,3 +636,12 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 %dir /usr/lib/sax/plugins
 /usr/share/java/SaX.jar
 /usr/lib/sax/plugins/SaX.so
+#=================================================
+# SaX-libsax-csharp file list...  
+# ------------------------------------------------
+
+%files -n sax2-libsax-csharp
+%defattr(-,root,root)
+%dir /usr/lib/mono/gac/SaX
+/usr/lib/mono/gac/SaX/*
+/usr/lib/libSaX.so
