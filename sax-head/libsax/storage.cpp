@@ -366,7 +366,11 @@ QDict<QString> SaXStorage::getTable ( int id ) {
 	// .../
 	//! return a copy of the data dictionary for the given ID (id)
 	// ----
-	return *mData.at (id);
+	if (mData.at (id)) {
+		return *mData.at (id);
+	} else {
+		return QDict<QString>();
+	}
 }
 
 //====================================
