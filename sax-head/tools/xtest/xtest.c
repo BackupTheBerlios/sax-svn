@@ -72,7 +72,7 @@ int main (int argc, char **argv) {
 		fprintf (stderr,
 			"testX: invalid dimensions, must be >= %dx%d Pixels\n", MIN_X,MIN_Y
 		);
-		return 2;
+		exit (2);
 	}
 
 	cname = argc == 2 ? argv[1] : "black";
