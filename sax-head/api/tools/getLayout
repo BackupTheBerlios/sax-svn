@@ -46,6 +46,7 @@ sub validateLayout {
 #
 	my ($model,$layout) = @_;
 	my @mapList = readKeyboardMap();
+	my $foundModel = 0;
 	foreach my $map (@mapList) {
 		my @maps = split (",",$map->{Layout});
 		foreach my $submap (@maps) {
@@ -53,6 +54,12 @@ sub validateLayout {
 			return 1;
 		}
 		}
+		if ($map->{Model} eq $model) {
+			$foundModel = 1;
+		}
+	}
+	if ($foundModel == 0) {
+		return 1
 	}
 	return 0;
 }
