@@ -11,15 +11,15 @@ all:
 		-O2 -fPIC -fno-strict-aliasing -pipe SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o _SaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
-	#python -c "import SaX"
-	#python -O -c "import SaX"
+	python -c "import SaX"
+	python -O -c "import SaX"
 
 install_vendor:
 	install -d -m 755      ${MODDIR}
 	install -m 755 _SaX.so ${MODDIR}
 	install -m 644 SaX.py  ${MODDIR}
-	#install -m 644 SaX.pyc ${MODDIR}
-	#install -m 644 SaX.pyo ${MODDIR}
+	install -m 644 SaX.pyc ${MODDIR}
+	install -m 644 SaX.pyo ${MODDIR}
 	install -m 644 SaX.pth ${PACKDIR}
 
 clean:
