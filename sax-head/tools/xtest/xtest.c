@@ -29,11 +29,14 @@ STATUS        : Status: Up-to-date
 //======================================
 // Defines
 //--------------------------------------
-#define TWM    "/usr/X11R6/bin/twm"
-#define MWM    "/usr/X11R6/bin/mwm"
-#define FVWM   "/usr/X11R6/bin/fvwm2"
+#define TWM       "/usr/X11R6/bin/twm"
+#define MWM       "/usr/X11R6/bin/mwm"
+#define FVWM      "/usr/X11R6/bin/fvwm2"
+#define MIN_X     800
+#define MIN_Y     600
+#define MIN_DEPTH 15
 
-#define FVWMRC "/usr/X11R6/share/fvwm/fvwmrc"
+#define FVWMRC    "/usr/X11R6/share/fvwm/fvwmrc"
 
 //======================================
 // Globals
@@ -45,6 +48,8 @@ int screen;
 //======================================
 // Functions
 //--------------------------------------
+int validColorDepth (Display* dpy);
+int validResolution (Display* dpy);
 Cursor CreateCursorFromName (Display* dpy,char *name);
 XColor NameToXColor (Display* dpy,char *name, unsigned long pixel);
 int RunWindowManager (void);
@@ -62,7 +67,19 @@ int main (int argc, char **argv) {
 	Pixmap save_pixmap = (Pixmap)None;
 
 	display = XOpenDisplay(NULL);
-	if(!display) return 1;
+	if (!display) return 1;
+	if (!validColorDepth(display)) {
+		fprintf (stderr,
+			"testX: invalid color depth, must be >= %d Bit\n", MIN_DEPTH
+		);
+		return 1;
+	}
+	if (!validResolution(display)) {
+		fprintf (stderr,
+			"testX: invalid dimensions, must be >= %dx%d Pixels\n", MIN_X,MIN_Y
+		);
+		return 1;
+	}
 
 	cname = argc == 2 ? argv[1] : "black";
 
@@ -198,4 +215,27 @@ int RunWindowManager (void) {
 	);
 	}
 	return (1);
+}
+
+//=========================================
+// validColorDepth ( >= 8 Bit )
+//-----------------------------------------
+int validColorDepth (Display* dpy) {
+	int planes = DisplayPlanes (dpy, DefaultScreen(dpy));
+	if (planes >= MIN_DEPTH) {
+		return 1;
+	}
+	return 0;
+}
+
+//=========================================
+// validResolution ( >= 800x600 )
+//-----------------------------------------
+int validResolution (Display* dpy) {
+	int x = DisplayWidth  (dpy, DefaultScreen(dpy));
+	int y = DisplayHeight (dpy, DefaultScreen(dpy));
+	if ((x >= MIN_X) && (y >= MIN_Y)) {
+		return 1;
+	}
+	return 0;
 }

@@ -74,6 +74,9 @@ clean:
 		fi \
 	fi \
 	done
+	rm -f whois/whois
+	rm -f setmode/SetMode
+	rm -f setmode/SecureMode
 	rm -f xkbset/xkbctrl
 	rm -f xkbset/xkbctrl.c
 	rm -f xmset/xupdate
