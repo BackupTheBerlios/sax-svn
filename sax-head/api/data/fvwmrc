@@ -67,12 +67,9 @@ Mouse 1	I	A	Move-or-Iconify
 #-----------------------------
 AddToFunc Move-or-Raise		I Raise
 +				M Move
-+  				D WindowShade
 
 AddToFunc Move-or-Iconify	I Raise
 +				M Move
-+				D Iconify
 
 AddToFunc Resize-or-Raise	I Raise
 +				M Resize
-+				D WindowShade
