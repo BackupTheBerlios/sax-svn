@@ -43,6 +43,8 @@ class Xvnc : public XTemplate {
     QFrame*       mDialog;
     XIntro*       mIntro;
 	QDict<XFile>* mFilePtr;
+	QString       mPWD;
+	bool          VNCPrepared;
 	
 	private:
 	QCheckBox*    mCheckVNC;
@@ -53,6 +55,9 @@ class Xvnc : public XTemplate {
 	QCheckBox*    mCheckViewOnly;
 	QCheckBox*    mCheckShared;
 	QVBox*        mEntries;
+
+	private:
+	bool noInputConnection;
 
     public:
 	Xvnc (XFrame*,XIntro*);

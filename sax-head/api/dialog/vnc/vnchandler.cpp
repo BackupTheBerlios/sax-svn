@@ -34,13 +34,13 @@ void Xvnc::resetPage (int reload) {
 	// to conclude the dialog. Otherwhise the original file is imported
 	// and the changes will be lost.
 	// ---
-	QString update = "sys_PATH";
-
 	if (reload == PAGE_RELOAD) {
 	if (! saveConfiguration() ) {
 		return;
 	}
 	}
+
+	QString update = "sys_PATH";
 
 	mStatus -> clear();
 	if (reload == PAGE_RELOAD) {
@@ -117,6 +117,7 @@ bool Xvnc::slotRun (int index) {
 		isShared = true;
 	}
 
+	mPWD = mText ["newpwd"];
 	mCheckViewOnly -> setChecked (false);
 	mCheckShared   -> setChecked (false);
 	mCheckVNC -> setChecked (false);
@@ -133,6 +134,8 @@ bool Xvnc::slotRun (int index) {
 		if (hasRFBAuth) {
 			mCheckPWD -> setChecked (true);
 			mPWD1 -> setText ( mText["pwdchange"] );
+			mPWD1 -> setEchoMode ( QLineEdit::Normal );
+			mPWD = mText ["pwdchange"];
 		}
 		//=====================================
 		// check for view only mode
@@ -147,10 +150,13 @@ bool Xvnc::slotRun (int index) {
 			mCheckShared -> setChecked (true);
 		}
 	}
-	QObject::connect (
-		mPWD1     , SIGNAL ( textChanged       ( const QString &) ),
-		this      , SLOT   ( slotInput1Changed ( const QString &) )
-	);
+	if ( noInputConnection ) {
+		QObject::connect (
+			mPWD1 , SIGNAL ( textChanged       ( const QString &) ),
+			this  , SLOT   ( slotInput1Changed ( const QString &) )
+		);
+		noInputConnection = false;
+	}
 	}
 	return (TRUE);
 }
@@ -210,59 +216,81 @@ bool Xvnc::saveConfiguration (void) {
 	mFilePtr = mIntro->getFiles();
 	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
 
-	//=====================================
-	// get number of input devices
-	//-------------------------------------
-	int inputDevices = mFiles["sys_INPUT"]->getDeviceCount();
-	int mouseID = inputDevices * 2 + 1;
-	int kbdID   = inputDevices * 2;
-
-	//=====================================
-	// create new VNC mouse and keyboard
-	//-------------------------------------
-	XWrapPointer<XData> newKeyboard;
-	newKeyboard.init (
-		mFiles["sys_INPUT"]->addDevice (inputDevices + 1)
-	);
-	XWrapPointer<XData> newMouse;
-	newMouse.init (
-		mFiles["sys_INPUT"]->addDevice (inputDevices + 2)
-	);
-
-	//=====================================
-	// setup data for new VNC mouse / kbd
-	//-------------------------------------
-	QString* identmouse = new QString;
-	identmouse -> sprintf ("Mouse[%d]",mouseID);
-	newMouse.setPair ("InputFashion","VNC");
-	newMouse.setPair ("Identifier",identmouse->ascii());
-	newMouse.setPair ("Driver","rfbmouse");
-
-	QString* identkbd = new QString;
-	identkbd -> sprintf ("Keyboard[%d]",kbdID);
-	newKeyboard.setPair ("InputFashion","VNC");
-	newKeyboard.setPair ("Identifier",identkbd->ascii());
-	newKeyboard.setPair ("Driver","rfbkeyb");
-
-	//=====================================
-	// include vnc module to be loaded
-	//-------------------------------------
-	QString* mModuleList = new QString;
-	XWrapPointer<XData> path ( mFiles["sys_PATH"]->getDevice (0) );
-	if (! path["ModuleLoad"].contains ("vnc")) {
-		mModuleList -> sprintf ("%s,vnc",path["ModuleLoad"].ascii());
-		path.setPair ("ModuleLoad",mModuleList->ascii());
+	if (mCheckPWD -> isOn()) {
+		if (mPWD1->isModified()) {
+		if (mPWD1->text() != mPWD2->text()) {
+			setMessage ("pwdmismatch",XBox::Critical);
+			mPWD1->clear();
+			mPWD2->clear();
+			return false;
+		} else if (mPWD1->text().length() < 6) {
+			setMessage ("pwdtooshort",XBox::Critical);
+			return false;
+		} else {
+			qx ( GETVNCPASSWORD,STDNONE,1,"%s",mPWD1->text().ascii() );
+			resetDeviceRawOption ("rfbauth","/root/.vnc/passwd");
+		}
+		}
+	} else {
+		unsetDeviceRawOption ("rfbauth");
 	}
 
-	//=====================================
-	// add flag to server layout
-	//-------------------------------------
-	QString* vncid = new QString;
-	vncid -> sprintf ("%d %d",mouseID,kbdID);
-	XWrapPointer<XData> serverLayout (
-		mFiles["sys_LAYOUT"] -> getDevice(0)
-	);
-	serverLayout.setPair ("VNC",vncid->ascii());
+	if (! VNCPrepared) {
+		//=====================================
+		// get number of input devices
+		//-------------------------------------
+		int inputDevices = mFiles["sys_INPUT"]->getDeviceCount();
+		int mouseID = inputDevices * 2 + 1;
+		int kbdID   = inputDevices * 2;
+
+		//=====================================
+		// create new VNC mouse and keyboard
+		//-------------------------------------
+		XWrapPointer<XData> newKeyboard;
+		newKeyboard.init (
+			mFiles["sys_INPUT"]->addDevice (inputDevices + 1)
+		);
+		XWrapPointer<XData> newMouse;
+		newMouse.init (
+			mFiles["sys_INPUT"]->addDevice (inputDevices + 2)
+		);
+
+		//=====================================
+		// setup data for new VNC mouse / kbd
+		//-------------------------------------
+		QString* identmouse = new QString;
+		identmouse -> sprintf ("Mouse[%d]",mouseID);
+		newMouse.setPair ("InputFashion","VNC");
+		newMouse.setPair ("Identifier",identmouse->ascii());
+		newMouse.setPair ("Driver","rfbmouse");
+	
+		QString* identkbd = new QString;
+		identkbd -> sprintf ("Keyboard[%d]",kbdID);
+		newKeyboard.setPair ("InputFashion","VNC");
+		newKeyboard.setPair ("Identifier",identkbd->ascii());
+		newKeyboard.setPair ("Driver","rfbkeyb");
+
+		//=====================================
+		// include vnc module to be loaded
+		//-------------------------------------
+		QString* mModuleList = new QString;
+		XWrapPointer<XData> path ( mFiles["sys_PATH"]->getDevice (0) );
+		if (! path["ModuleLoad"].contains ("vnc")) {
+			mModuleList -> sprintf ("%s,vnc",path["ModuleLoad"].ascii());
+			path.setPair ("ModuleLoad",mModuleList->ascii());
+		}
+
+		//=====================================
+		// add flag to server layout
+		//-------------------------------------
+		QString* vncid = new QString;
+		vncid -> sprintf ("%d %d",mouseID,kbdID);
+		XWrapPointer<XData> serverLayout (
+			mFiles["sys_LAYOUT"] -> getDevice(0)
+		);
+		serverLayout.setPair ("VNC",vncid->ascii());
+		VNCPrepared = true;
+	}
 
 	//=====================================
 	// set "usevnc" option to yes/no
@@ -287,22 +315,6 @@ bool Xvnc::saveConfiguration (void) {
 	} else {
 		unsetDeviceOption ("alwaysshared");
 		unsetDeviceOption ("nevershared");
-	}
-	if (mCheckPWD -> isOn()) {
-		if (mPWD1->text() != mPWD2->text()) {
-			setMessage ("pwdmismatch",XBox::Critical);
-			mPWD1->clear();
-			mPWD2->clear();
-			return false;
-		} else if (mPWD1->text().length() < 6) {
-			setMessage ("pwdtooshort",XBox::Critical);
-			return false;
-		} else {
-			qx ( GETVNCPASSWORD,STDNONE,1,"%s",mPWD1->text().ascii() );
-			resetDeviceRawOption ("rfbauth","/root/.vnc/passwd");
-		}
-	} else {
-		unsetDeviceRawOption ("rfbauth");
 	}
 	return true;
 }
@@ -573,7 +585,7 @@ void Xvnc::slotInput1Changed (const QString& data) {
 		mPWD1 -> clear();
 		QChar start;
 		for (unsigned int i=0;i< data.length();i++) {
-		if (data.at(i) != mText["newpwd"].at(i)) {
+		if (data.at(i) != mPWD.at(i)) {
 			start = data.at(i);
 			break;
 		}

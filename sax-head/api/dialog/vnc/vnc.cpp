@@ -22,12 +22,16 @@ STATUS        : Status: Up-to-date
 // Xvnc Constructor...
 //-------------------------------------
 Xvnc::Xvnc (void) {
+	noInputConnection = true;
+	VNCPrepared = false;
 }
 
 //=====================================
 // Xvnc Constructor...
 //-------------------------------------
 Xvnc::Xvnc (XFrame* xf,XIntro* xi) : XTemplate(xf,xi) {
+	noInputConnection = true;
+	VNCPrepared = false;
 	addTo (xf,xi);
 }
 
@@ -158,11 +162,11 @@ void Xvnc::slotIntro (int index) {
 			continue;
 		}
 		card = data -> getData();
-		if (strstr(card["Option"],"usevnc") != NULL) {
+		if ((card["Option"]) && (strstr(card["Option"],"usevnc") != NULL)) {
 			active = true;
 			break;
 		}
-		if (strstr(card["RawData"],"usevnc") != NULL) {
+		if ((card["RawData"]) && (strstr(card["RawData"],"usevnc") != NULL)) {
 			QString rawopt = qx (
 				GETRAWLIST,STDOUT,1,"%s",card["RawData"]
 			);
