@@ -29,6 +29,7 @@ STATUS        : Status: Up-to-date
 #define RC_CONFIG         "/etc/rc.config"
 #define RC_SYSCONFIG      "/etc/sysconfig/"
 #define INPUT_MAP         "/usr/X11R6/lib/sax/sysp/maps/Input.map"
+#define DRIVER_MAP        "/usr/X11R6/lib/sax/sysp/maps/Driver.map"
 #define KBD_MAP           "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map"
 #define VENDOR_MAP        "/usr/X11R6/lib/sax/sysp/maps/Vendor.map"
 #define IDENTITY          "/usr/X11R6/lib/sax/sysp/maps/Identity.map"

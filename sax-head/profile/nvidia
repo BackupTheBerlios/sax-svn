@@ -9,3 +9,4 @@ Device  -> [X] ->  Raw -> 12 -> Option   = "#NvAGP" "2" # use agpgart
 Device  -> [X] ->  Raw -> 13 -> Option   = "#NvAGP" "3" # try 2 than 1
 Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
+Screen  -> [X] ->  DefaultDepth  = 24

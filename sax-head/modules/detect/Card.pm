@@ -13,6 +13,7 @@ sub AutoDetectServer {
 	my @vendor_list;       # list of vendor names
 	my @device_list;       # list of device names
 	my @module_list;       # list of modules
+	my @drvprofile_list;   # list of Driver profiles
 	my $bus;               # bus  id DEZ
 	my $slot;              # slot id DEZ 
 	my $func;              # func id DEZ
@@ -23,23 +24,26 @@ sub AutoDetectServer {
 		return(-1);
 	}
 
-	for ($i=0;$i<@query;$i+=13) {
+	for ($i=0;$i<@query;$i+=14) {
 		push (@bus_list,$query[$i]);
 	}
-	for ($i=1;$i<@query;$i+=13) {
+	for ($i=1;$i<@query;$i+=14) {
 		push (@slot_list,$query[$i]);
 	}
-	for ($i=2;$i<@query;$i+=13) {
+	for ($i=2;$i<@query;$i+=14) {
 		push (@func_list,$query[$i]);
 	}
-	for ($i=3;$i<@query;$i+=13) {
+	for ($i=3;$i<@query;$i+=14) {
 		push (@vendor_list,$query[$i]);
 	}
-	for ($i=4;$i<@query;$i+=13) {
+	for ($i=4;$i<@query;$i+=14) {
 		push (@device_list,$query[$i]);
 	}
-	for ($i=7;$i<@query;$i+=13) {
+	for ($i=7;$i<@query;$i+=14) {
 		push (@module_list,$query[$i]);
+	}
+	for ($i=13;$i<@query;$i+=14) {
+		push (@drvprofile_list,$query[$i]);
 	}
 
 	# set detected busid strings...
@@ -75,6 +79,12 @@ sub AutoDetectServer {
 		if ($module_list[$i] eq "vga") {
 			$var{Screen}{$i}{Depth}{4}{Visual} = "PseudoColor";
 		}
+	}
+
+	# set detected driver profiles...
+	# --------------------------------
+	for($i=0;$i<@drvprofile_list;$i++) {
+		$xdp{DriverProfile}{$i} = $drvprofile_list[$i];
 	}
 
 	# set identifier...

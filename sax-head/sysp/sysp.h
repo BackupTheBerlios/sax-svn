@@ -63,6 +63,11 @@ struct Input {
 	string profile;
 };
 
+struct Driver {
+	string driver;
+	string profile;
+};
+
 struct Keymap_S {
 	str consolename;
 	str model;
@@ -97,6 +102,7 @@ struct ServerData {
 	string raw;
 	string option;
 	string extension;
+	string drvprofile;
 };
 
 struct ServerData_S {
@@ -120,6 +126,7 @@ struct ServerData_S {
 	str raw;
 	str option;
 	str extension;
+	str drvprofile;
 };
 
 struct XMode {
@@ -262,6 +269,7 @@ class SPReadFile {
 	void ImportIdentity (void);
 	void ImportKeymap (void);
 	void ImportInputMap (void);
+	void ImportDriverMap (void);
 	RcData ImportRcConfig (void);
 	RcData ImportVendorMap (void);
 	void SetFile (str name);
@@ -640,6 +648,59 @@ void SPReadFile<T>::ImportInputMap(void) {
 			break;
 
 			case 1:
+			id.profile = token;
+			break;
+
+			default:
+			break;
+		}
+		n++;
+		}
+		}
+		Push(id);
+	}
+	handle.clear();
+	handle.close();
+}
+
+//===================================
+// SPReadFile: read driver map
+//-----------------------------------
+template <class T>
+void SPReadFile<T>::ImportDriverMap(void) {
+	ifstream handle(file.c_str());
+	string data;
+	char *line;
+	char *token;
+	int n;
+
+	// check if file could be opened...
+	// ---------------------------------- 
+	if (! handle) {
+		cout << "SPReadFile: could not open file: " << file << endl;
+		exit(1);
+	}
+	// read line per line and push the data...
+	// ----------------------------------------
+	while(! handle.eof()) {
+		line  = (char*)malloc(sizeof(char)*MAX_LINE_SIZE);
+		handle.getline(line,MAX_LINE_SIZE);
+		if ((line[0] == '#') || (line[0] == 0)) {
+			continue;
+		}
+		Driver id;
+		token = strtok(line,":");
+
+		if (token != NULL) {
+			trim(token); id.driver = token;
+		}
+		n = 0; 
+		while (token) {
+		token = strtok(NULL,":");
+		if (token != NULL) {
+		trim (token);
+		switch(n) {
+			case 0:
 			id.profile = token;
 			break;
 

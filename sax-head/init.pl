@@ -57,6 +57,7 @@ my $dpy      = ":0.0";  # display to use
 
 our %mop;               # monitor profile hash
 our %idp;               # input device profile hash
+our %xdp;               # X11 driver profile hash
 
 init();
 #==================================================
@@ -448,6 +449,19 @@ sub init {
 	# handle option --batch
 	# ---------------------
 	if (! defined $UseDbmNew) {
+		# /.../
+		# look if there is X11 driver profile defined...
+		# ------------------------------------------------
+		$ProfileSize = keys %{$xdp{DriverProfile}};
+		if ($ProfileSize > 0) {
+			@ProfileAddSections = ();
+			@ProfileData = ();
+			$ProfileSize = 0;
+			@ProfileData = ReadProfile($CardNumber,"driver");
+			$ProfileSize = @ProfileData;
+			IncludeProfile();
+		}
+		# /.../
 		# look if there is a profile defined for the card...
 		# ----------------------------------------------------
 		@ProfileAddSections = ();
@@ -738,16 +752,16 @@ sub scan {
 	$subject  = "Sysp: Server detection data";
 	if (defined $Quiet) {
 		$result   = qx 
-		( $spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList -A $Quiet;echo );
+		($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList -A $Quiet;echo);
 	} else {
 		if ($haveServer == 1) {
 		EnableMouse();
 		$result   = qx
-		( $spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList -x;echo );
+		($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList -x;echo);
 		DisableMouse();
 		} else {
 		$result   = qx 
-		( $spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList;echo );
+		($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList;echo);
 		}
 	}
 	$result =~ s/\n$//;
@@ -1222,7 +1236,7 @@ sub ReadProfile {
 	# get profiles filenames for all cards, 
 	# save result to %data
 	# --------------------
-	if (($kind ne "monitor") && ($kind ne "mouse")) {
+	if (($kind ne "monitor") && ($kind ne "mouse") && ($kind ne "driver")) {
 	# create %data for a card...
 	# ------------------------------
 	$profile = qx($spec{Profile} -p);
@@ -1256,8 +1270,17 @@ sub ReadProfile {
 		}
 		}
 	}
+	if ($kind eq "driver") {
+		$topic = "Driver";
+		# create %data for a device (driver)...
+		# ------------------------------
+		foreach (keys %{$xdp{DriverProfile}}) {
+		if ($xdp{DriverProfile}{$_} ne "<undefined>") {
+			$data{$_} = $xdp{DriverProfile}{$_};
+		}
+		}
 	}
-
+	}
 	# use only profiles for defined chips
 	# ------------------------------------
 	if (! defined $IgnoreProfile) {

@@ -379,6 +379,14 @@ void ScanServer::Scan(void) {
 		n++;
 	}
 
+	// read the driver map to check if this driver
+	// has a driver profile
+	// --------------------
+	SPReadFile<Driver> driverI;
+	driverI.SetFile(DRIVER_MAP);
+	driverI.ImportDriverMap();
+	Driver drvmap;
+
 	// identify the graphics cards in the pool 
 	// of cards
 	// ---------
@@ -652,6 +660,15 @@ void ScanServer::Scan(void) {
 		if (graphics[i].module == "") {
 			graphics[i].module  = config[mapnr].server;
 		}
+		graphics[i].drvprofile = "<undefined>";
+		for (int x = driverI.Count(); x > 0; x--) {
+			drvmap = driverI.Pop();
+			if (drvmap.driver == graphics[i].module) {
+				graphics[i].drvprofile = drvmap.profile;
+				break;
+			}
+		}
+		driverI.Reset();
 	}
 	// ...
 	// Start TestServer if:
@@ -819,6 +836,7 @@ int ScanServer::Read(void) {
 		data.extension = input.extension;
 		data.script3d  = input.script3d;
 		data.package3d = input.package3d;
+		data.drvprofile= input.drvprofile;
 
 		if (handle.eof()) {
 			break;
@@ -857,6 +875,7 @@ int ScanServer::Save(void) {
 		strcpy(save.extension  , data.extension.c_str());
 		strcpy(save.script3d   , data.script3d.c_str());
 		strcpy(save.package3d  , data.package3d.c_str());
+		strcpy(save.drvprofile , data.drvprofile.c_str());
 		save.cls               = data.cls;
 		save.bus               = data.bus;
 		save.slot              = data.slot;

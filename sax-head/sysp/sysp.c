@@ -572,6 +572,7 @@ void PrintServerData(ScanServer s) {
 		printf("Card%d     =>  Flag       : %s\n"    ,card,data.flag.c_str());
 		printf("Card%d     =>  SUB-VID    : 0x%04x\n",card,data.subvendor);
 		printf("Card%d     =>  SUB-DID    : 0x%04x\n",card,data.subdevice);
+		printf("Card%d     =>  DrvProfile : %s\n",card,data.drvprofile.c_str());
 
 		card++;
 	}
