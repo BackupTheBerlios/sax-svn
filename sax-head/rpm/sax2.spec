@@ -133,11 +133,24 @@ Release:      11
 Requires:     sax2-libsax
 Summary:      SuSE advanced X Window System-configuration library header files
 Group:        System/X11/Libraries
-Provides:     sax2:/usr/include/sax/sax.h
 
 %description -n sax2-libsax-devel
 This package contains the core library headers for the
 SuSE Advanced X-Configuration development
+
+Authors:
+--------
+    Marcus Schäfer <ms@suse.de>
+
+%package -n sax2-libsax-perl
+Version:      1.2
+Release:      11
+Requires:     sax2-libsax
+Summary:      SuSE advanced X Window System-configuration perl binding
+Group:        System/X11/Libraries
+
+%description -n sax2-libsax-perl
+This package contains the SaX2 binding to be able to use libsax with perl
 
 Authors:
 --------
@@ -546,4 +559,11 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %defattr(-,root,root)
 %dir /usr/include/sax
 /usr/include/sax
+#=================================================
+# SaX-libsax-perl file list...  
+# ------------------------------------------------
 
+%files -n sax2-libsax-perl
+%defattr(-,root,root)
+%{perl_vendorarch}/SaX.pm
+%{perl_vendorarch}/auto/SaX
