@@ -129,6 +129,7 @@ install:
 	install -m 644 ./api/data/cdb/*                         ${CDBVZ}
 	install -m 644 ./api/pixmaps/*                          ${PIXVZ}
 	install -m 755 ./startup/sax.sh                         ${BINVZ}
+	install -m 755 ./startup/sax2-vesa                      ${BINVZ}
 	install -m 755 ./startup/SaX2                           ${BINVZ}
 	install -m 644 ./sysp/maps/Identity.map                 ${MAPVZ}
 	install -m 644 ./sysp/maps/Keyboard.map                 ${MAPVZ}

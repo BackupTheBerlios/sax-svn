@@ -312,6 +312,7 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 /usr/X11R6/%{_lib}/sax/api/data/*????
 /usr/X11R6/%{_lib}/sax/api/pixmaps
 /usr/X11R6/bin/sax.sh
+/usr/X11R6/bin/sax2-vesa
 /usr/X11R6/bin/SaX2
 /usr/X11R6/bin/sax2
 /usr/X11R6/%{_lib}/xfine/pixmaps
