@@ -138,9 +138,11 @@ sub checkout {
 	if (defined $Build) {
 		qx( mv sax/.build . );
 	}
-	chdir $pacdir."/sax" && qx (./.archive);
+	chdir $pacdir."/sax";
+	qx (./.archive);
+	qx (tar -cjf sax2_pixmaps.tar.bz2 api/pixmaps/*.*);
 	chdir $pacdir;
-	qx( mv sax/*.bz2 ./sax2.tar.bz2 );
+	qx( mv sax/*.bz2 . );
 	qx( rm -rf sax );
 	return $pacdir;
 }
