@@ -68,12 +68,6 @@ int main (int argc, char **argv) {
 
 	display = XOpenDisplay(NULL);
 	if (!display) return 1;
-	if (!validColorDepth(display)) {
-		fprintf (stderr,
-			"testX: invalid color depth, must be >= %d Bit\n", MIN_DEPTH
-		);
-		return 2;
-	}
 	if (!validResolution(display)) {
 		fprintf (stderr,
 			"testX: invalid dimensions, must be >= %dx%d Pixels\n", MIN_X,MIN_Y
