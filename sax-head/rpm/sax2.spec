@@ -1,15 +1,16 @@
 #
 # spec file for package sax2 (Version 4.8)
 #
-# Copyright (c) 2004 SuSE Linux AG, Nuernberg, Germany.
+# Copyright (c) 2004 SUSE LINUX AG, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  XFree86-driver-options XFree86-server flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig udev update-desktop-files x-devel-packages yacc
-# usedforbuild    aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv kbd less libacl libattr libgcc libselinux libstdc++ libxcrypt m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed sendmail strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel XFree86-Mesa XFree86-Mesa-devel XFree86-devel XFree86-driver-options XFree86-libs XFree86-server autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files
+# neededforbuild  flex hwinfo hwinfo-devel qt3-devel-packages readline-devel swig udev update-desktop-files x-devel-packages xorg-x11-driver-options xorg-x11-server yacc
+
+BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv kbd less libacl libattr libgcc libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
 
 Name:         sax2
 Requires:     perl perl-gettext fbset sax2-ident
@@ -17,13 +18,17 @@ Requires:     perl perl-gettext fbset sax2-ident
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
 %if %{suse_version} > 810
+%if %{suse_version} > 910
+Requires:     xorg-x11-server
+%else
 Requires:     XFree86-server
+%endif
 %else
 Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.8
-Release:      39
+Release:      108
 Group:        System/X11/Utilities
 License:      LGPL, Other License(s), see package
 Source:       sax2.tar.bz2
@@ -49,13 +54,14 @@ Requires:     sax2_sbus
 This package contains the SuSE Advanced X-Configuration (XFree86 4.x)
 
 
+
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-tools
 Version:      2.3
-Release:      1
+Release:      2
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     sax2-ident
@@ -66,13 +72,15 @@ Obsoletes:    saxtools
 Some small X Window System tools to handle input devices, for example,
 mouse and keyboard.
 
+
+
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-ident
 Version:      1.2
-Release:      1
+Release:      2
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
@@ -86,6 +94,8 @@ and its special parameters. For some graphics cards a profile is needed
 to describe configuration parameters outside the ordinary way of
 setting up the card with SaX2.
 
+
+
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
@@ -93,17 +103,17 @@ Authors:
 %package -n sax2-gui
 Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Version:      1.2
-Release:      1
+Release:      2
 Requires:     sax2
-Summary:      SaX2 Graphical User Interface
+Summary:      SuSE advanced X Window System-configuration GUI (XFree86 4.x)
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
 
 %description -n sax2-gui
-This package contains the GUI part of SaX2. A GUI for SaX2 have to
-make use of the ISaX interface which requires a input file for generating
-all the configuration stuff. The ISaX inerface is provided with the
-main sax2 package
+This package contains the GUI for the SuSE Advanced X-Configuration
+(XFree86 4.x)
+
+
 
 Authors:
 --------
@@ -457,7 +467,6 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/share/locale/sv/LC_MESSAGES/sax.mo
 /usr/share/locale/ja/LC_MESSAGES/sax.mo
 /usr/share/locale/bg/LC_MESSAGES/sax.mo
-
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------
