@@ -7,19 +7,21 @@
 # Petr Pavlik <pp@suse.cz>, 2000, 2001.
 # Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003.
 # Klara Cihlarova <koty@seznam.cz>, 2003, 2004.
-# 
+# Klára Cihlářová <cihlarov@suse.cz>, 2004.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-15 09:56+0100\n"
+"PO-Revision-Date: 2004-09-02 15:06+0200\n"
 "Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
-"Language-Team: cs_CZ <suse@suse.cz>\n"
+"Language-Team: cs_CZ <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.9\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. /.../
@@ -69,11 +71,11 @@ msgstr "Není nastaveno"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<Zadejte nové heslo...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<Změňte heslo..>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -441,9 +443,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>Nastavení AccessX...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>Nastavení AccessX...</u></h3></nobr>"
+msgstr "<nobr><h3><u>Nastavení VNC...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -497,7 +498,7 @@ msgstr ""
 msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
-msgstr ""
+msgstr "<b>Chybné heslo</b><hr>První a druhá verze hesla nesouhlasí! Opakujte."
 
 #. RTF text: no limit
 msgid ""
@@ -505,6 +506,8 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>Chybné heslo</b><hr>Heslo je příliš krátké nebo nebylo zadáno. Heslo musí "
+"obsahovat alespoň 6 znaků."
 
 #. RTF text: no limit
 msgid ""
@@ -538,9 +541,15 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>Nelze povolit OpenGL akceleraci</b><hr>Abyste mohli aktivovat 3D "
+"subsystém této karty, musíte nainstalovat nejdřív komerční verzi nVidia "
+"ovladače. Ten můžete nainstalovat pomocí <b>YaST Online Update</b>. V YOU v "
+"<b>kategorii</b> zvolte <b>Instalovatelné a nainstalované novinky</b> a ze "
+"seznamu vyberte <b>Download NVIDIA(r) Graphics Driver</b> (obvykle na konci "
+"seznamu). Pokud jste již balíček instalovali, musíte ho označit jako <b>k "
+"updatu</b>."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -550,14 +559,13 @@ msgid ""
 msgstr ""
 "<b>Nelze deaktivovat akceleraci OpenGL</b><hr>3D subsystém je založen na "
 "komerčních ovladačích od firmy nVidia. K deaktivaci 3D je třeba odinstalovat "
-"tyto ovladače. Tento proces obnoví původní nastavení XFree86, které ovšem "
+"tyto ovladače. Tento proces obnoví původní nastavení X.org, které ovšem "
 "nepodporuje žádnou hardwarovou akceleraci 3D.<br><br><b>Chcete pokračovat?</"
 "b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "Velikost zobrazení"
+msgstr "Neznámá velikost obrazovky..."
 
 #. RTF text: no limit
 msgid ""
@@ -569,6 +577,11 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>Zadejte X/Y velikost obrazovky v [mm]</b><hr>Nelze detekovat geometrii "
+"vaší obrazovky. Grafické aplikace jako například <b>Gimp</b> nebo knihovna "
+"pro renderování písma <b>Xft</b> vyžadují ke své správné funkci znalost této "
+"hodnoty. Správné hodnoty najdete v manuálu svého monitoru. Hodnoty mají být "
+"zadávány v [mm]. <br><br><b>Chcete nyní nastavit velikost obrazovky?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
@@ -849,15 +862,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "Přístup k X serveru přes VNC protokol:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "Kontrola přístupu"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -985,6 +998,8 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>Monitor nelze odstranit:</b><hr>Systém obsahuje pouze jednu konfiguraci "
+"monitoru. Nejste oprávněni tento objekt ze systému odstranit."
 
 #. RTF text: no limit
 msgid ""
@@ -1092,11 +1107,11 @@ msgstr "&Ne"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>Ano</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>Ne</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1224,7 +1239,7 @@ msgstr "Konfigurovat XAccess: myš na numerické klávesnici..."
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
+msgstr "Nastavení VNC: Export plochy pomocí VNC protokolu"
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1299,17 +1314,16 @@ msgid "&Options"
 msgstr "V&olby"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "V&olby"
+msgstr "VNC volby"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "Povolit přístup k obrazovce přes VNC protokol"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "Povolit ochranu heslem"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1317,28 +1331,27 @@ msgstr "&Vlastnosti..."
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "Ověření hesla"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "Povolit pouze režim zobrazení"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "Zakázat AccessX"
+msgstr "Povolit HTTP přístup"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP port"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "Povolit vícečetná VNC spojení"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1451,9 +1464,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Aktuální stav konfigurace AccessX</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Aktuální stav 3D/OpenGL</b></big><hr>"
+msgstr "<big><b>Aktuální stav VNC</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1522,17 +1534,18 @@ msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>VNC server:</b><hr>Nastavení X serveru, aby bylo možné k pracovní ploše a "
+"všem jejím aplikacím vzdáleně přes VNC prohlížeč"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
 "capabilities of your graphics card. If your card and the corresponding "
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
-"<b>OpenGL subsystém:</b><hr>Zde se nastavují 3D funkce pro grafické karty. "
-"XFree86 obsahuje renderovací rozhraní pro využívání 3D funkcí vaší grafické "
+"<b>OpenGL subsystém:</b><hr>Zde se nastavují 3D funkce pro grafické karty. X."
+"org obsahuje renderovací rozhraní pro využívání 3D funkcí vaší grafické "
 "karty. Pokud vaše karta a odpovídající ovladač podporují 3D hardwarovou "
 "akceleraci, pak ji povolte v tomto dialogu."
 
@@ -2642,19 +2655,3 @@ msgstr "Třetí úroveň nastavíte stisknutím klávesy Menu"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta je mapováno na klávesách Win."
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>Nelze aktivovat OpenGL akceleraci</b><hr>Abyste mohli používat "
-#~ "3Dsubsystém této grafické karty, musíte si nejdřív nainstalovat komerční "
-#~ "ovladač společnosti nVidia. Ovladač nainstalujete pomocí <b>YaST Online "
-#~ "Update</b> a výběrem nVidia ovladače.<br><br>Pokud jste již pomocí YaST "
-#~ "Online Update ovladač nainstalovali a pak jej ručně odinstalovali, musíte "
-#~ "ho nyní nainstalovat ručně. Postup najdete na serveru: <br><br><b>ftp://"
-#~ "ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-"
-#~ "HOWTO</b>"
