@@ -201,7 +201,6 @@ void XFrame::setInit (void) {
 	mInit.insert("cdb_PENS"			, PENS);
 	mInit.insert("cdb_TABLETS"		, TABLETS);
 	mInit.insert("cdb_TOUCHER"		, TOUCHER);
-	mInit.insert("cdb_KEYBOARDS"	, KEYBOARDS);
 
 	// QLists...
 	// ----------

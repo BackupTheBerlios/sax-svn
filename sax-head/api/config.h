@@ -187,7 +187,6 @@ STATUS        : Status: Up-to-date
 #define PENS            CDBDIR "Pens"
 #define TABLETS         CDBDIR "Tablets"
 #define TOUCHER         CDBDIR "Touchscreens"
-#define KEYBOARDS       CDBDIR "Keyboards"
 
 #define DATADIR         "/usr/X11R6/lib/sax/api/data/"
 #define PDEVICE         DATADIR "PointerDevice"
