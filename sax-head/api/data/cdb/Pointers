@@ -412,12 +412,20 @@ Logitech:Cordless Trackman FX (USB) {
  ButtonNumber = 4 
 }
 
+Logitech:TrackMan Marble FX (PS/2) {
+ Driver       = mouse
+ Protocol     = MouseManPlusPS/2
+ Device       = /dev/psaux
+ RawOption    = "XAxisMapping" "4 5","YAxisMapping" "6 7","EmulateWheelInertia" "12"
+ EmulateWheel = 4
+ ButtonNumber = 4
+}
+
 # =========================================
 # Touchpads (NoteBooks)
 # -----------------------------------------
-SYNAPTICS:TOUCHPAD {
+Synaptics:Touchpad {
  Driver       = synaptics
  Device       = /dev/psaux
  RawOption    = "Edges" "1900 5400 1800 3900","Finger" "25 30","MaxTapTime" "20","MaxTapMove" "220","VertScrollDelta" "100","MinSpeed" "0.02","MaxSpeed" "0.18","AccelFactor" "0.0010"
- Load         = synaptics
 }

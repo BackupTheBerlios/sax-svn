@@ -270,8 +270,10 @@ void XMouse::slotIntro (int index) {
 			"<td width=10%c align=center>( %d )</td>",'%',n
 		);
 		message += idents;
+		QString name (input["Name"]);
+		name.replace(QRegExp(";")," ");
 		idents.sprintf(
-			"<td width=40%c>%s</td>",'%',input["Protocol"]
+			"<td width=40%c>%s</td>",'%',name.ascii()
 		);
 		message += idents;
 		idents.sprintf(

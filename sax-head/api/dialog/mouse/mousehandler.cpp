@@ -464,7 +464,7 @@ void XMouse::slotTopOk (void) {
 			QDict<char> mouseInfo = sysData -> getData();
 			QTextOStream (&topic)
 				<< mVendor->currentText() << " " << mName->currentText()
-				<< " ( " << mouseInfo["Protocol"] << " " << mText["add"] << " "
+				<< " ( " << mouseInfo["Protocol"] << " " << mText["at"] << " "
 				<< mouseInfo["Device"] << " )";
 			int* newIndex = (int*) malloc(sizeof(int));
 			*newIndex = mWorkingIndex;
@@ -484,12 +484,12 @@ void XMouse::slotTopOk (void) {
 		if (pCDB) {
 			QTextOStream (&topic)
 				<< mVendor->currentText() << " " << mName->currentText()
-				<< " ( " << workingMouse["Protocol"] << " " << mText["add"] 
+				<< " ( " << workingMouse["Protocol"] << " " << mText["at"] 
 				<< " " << workingMouse["Device"] << " )";
 		} else {
 			QTextOStream (&topic)
 				<< workingMouse["Name"]
-				<< " ( " << workingMouse["Protocol"] << " " << mText["add"]
+				<< " ( " << workingMouse["Protocol"] << " " << mText["at"]
 				<< " " << workingMouse["Device"] << " )";
 		}
 		mouseList -> changeItem (
@@ -743,7 +743,7 @@ bool XMouse::slotRun (int index) {
 		QString topicStream;
 		QTextOStream (&topicStream)
 			<< topic << " ( " << mouseInfo["Protocol"] << " "
-			<< mText["add"] << " " << mouseInfo["Device"] << " )";
+			<< mText["at"] << " " << mouseInfo["Device"] << " )";
 		topic = topicStream;
 		int* index = (int*) malloc (sizeof(int));
 		*index = count;

@@ -333,6 +333,8 @@ void XKeyboard::dialogCreate (void) {
 //-------------------------------------
 void XKeyboard::slotIntro (int index) {
 	if (index == mIndex) {
+	QDict<char> mModelHash  = mRules.getModels();
+	QDict<char> mLayoutHash = mRules.getLayouts();
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 	XTextBrowser* info;
 	QString     message;
@@ -353,20 +355,36 @@ void XKeyboard::slotIntro (int index) {
 		return;
 	}
 	keyboard = data -> getData();
-
+	QString XKBModel = keyboard["XkbModel"];
+	QDictIterator<char> itModel (mModelHash);
+	for (; itModel.current(); ++itModel) {
+	if (itModel.currentKey() == XKBModel) {
+		XKBModel = itModel.current();
+		break;
+	}
+	}
+	XStringList completeLayout (keyboard["XkbLayout"]);
+	completeLayout.setSeperator (",");
+	QString XKBLayout = completeLayout.getList().getFirst();
+	QDictIterator<char> itLayout (mLayoutHash);
+	for (; itLayout.current(); ++itLayout) {
+	if (itLayout.currentKey() == XKBLayout) {
+		XKBLayout = itLayout.current();
+	}
+	}
 	// first row
 	message += "<tr>";
-	QTextOStream(&idents) << "<td width=30%>" << mText["model"] << "</td>";
-	message += idents;
-	idents.sprintf("<td width=60%c>%s</td>",'%',keyboard["MapName"]);
+	QTextOStream(&idents)
+		<< "<td width=30%>" << mText["model"]
+		<< "</td> <td width=60%>" << XKBModel << "</td>";
 	message += idents;
 	message += "</tr>";	
 
 	// second row
 	message += "<tr>";
-	QTextOStream(&idents) << "<td width=30%>" << mText["klayout"] << "</td>";
-	message += idents;
-	idents.sprintf("<td width=60%c>%s</td>",'%',keyboard["XkbLayout"]);
+	QTextOStream(&idents)
+		<< "<td width=30%>" << mText["klayout"]
+		<< "</td> <td width=60%>" << XKBLayout << "</td>";
 	message += idents;
 	message += "</tr>";
 
