@@ -74,7 +74,7 @@ sub AutoDetectMouse {
 	@btn_list = reverse(@btn_list);
 	for($i=0;$i<@btn_list;$i++) {
 	if ($btn_list[$i] > 3) {
-		$var{InputDevice}{$index}{Option}{ButtonNumber} = $btn_list[$i];
+		$var{InputDevice}{$index}{Option}{Buttons} = $btn_list[$i];
 	}
 	$index = $index + 2;
 	}

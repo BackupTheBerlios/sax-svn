@@ -257,8 +257,8 @@ void XMouse::slotName (QListBoxItem*) {
 	if (selectedMouse["ZAxisMapping"]) {
 		mCheckWheel -> setChecked (true);
 	}
-	if (selectedMouse["ButtonNumber"]) {
-	QString mouseButtons (selectedMouse["ButtonNumber"]);
+	if (selectedMouse["Buttons"]) {
+	QString mouseButtons (selectedMouse["Buttons"]);
 	int buttons = mouseButtons.toInt();
 	if ((! selectedMouse["ZAxisMapping"]) && (buttons >= 4)) {
 		mCheckWheelEmu -> setChecked (true);

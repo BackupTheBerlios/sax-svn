@@ -589,6 +589,13 @@ sub ApiImportMouse {
 		last SWITCH;
 		};
 
+		/^Buttons/                  && do {
+		if ($value > 0) {
+			$var{InputDevice}{$card}{Option}{Buttons} = $value;
+		}
+		last SWITCH;
+		};
+
 		/^ButtonThreshold/          && do {
 		if ($value > 10) {
 			$var{InputDevice}{$card}{Option}{ButtonThreshold} = $value;

@@ -215,7 +215,7 @@ sub init {
 	$var{InputDevice}{1}{Option}{ScreenNumber}     = "";
 	$var{InputDevice}{1}{Option}{ReportingMode}    = "";
 	$var{InputDevice}{1}{Option}{ButtonThreshold}  = "";
-	$var{InputDevice}{1}{Option}{ButtonNumber}     = "";
+	$var{InputDevice}{1}{Option}{Buttons}          = "";
 	$var{InputDevice}{1}{Option}{SendCoreEvents}   = "";
 
 	#------------------------------------------#

@@ -15,7 +15,7 @@
 #  Emulate3Timeout      = timeout val...
 #  ChordMiddle          = <on> or <off>
 #  ButtonThreshold      = integer...
-#  ButtonNumber         = integer...
+#  Buttons              = integer...
 #  SendCoreEvents       = <on> or <off>
 #  ClearRTS             = <on> or <off>
 #  ClearDTR             = <on> or <off>
@@ -105,7 +105,7 @@ BusMouse:InPort {
 PS/2-Mouse:ExplorerPS/2 {
  Driver       = mouse
  Protocol     = ExplorerPS/2
- ButtonNumber = 7
+ Buttons      = 7
  ZAxisMapping = 4 5
  Device       = /dev/psaux
 }
@@ -134,7 +134,7 @@ PS/2-Mouse:MouseManPlusPS/2 {
 PS/2-Mouse:NetMousePS/2 {
  Driver       = mouse
  Protocol     = NetMousePS/2
- ButtonNumber = 7
+ Buttons      = 7
  ZAxisMapping = 4 5
  Device       = /dev/psaux
 }
@@ -142,7 +142,7 @@ PS/2-Mouse:NetMousePS/2 {
 PS/2-Mouse:NetScrollPS/2 {
  Driver       = mouse
  Protocol     = NetScrollPS/2
- ButtonNumber = 7
+ Buttons      = 7
  ZAxisMapping = 4 5
  Device       = /dev/psaux
 }
@@ -166,7 +166,7 @@ PS/2-Mouse:ThinkingMousePS/2 {
 USB-Mouse:ExplorerPS/2 {
  Driver       = mouse
  Protocol     = ExplorerPS/2
- ButtonNumber = 7
+ Buttons      = 7
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
@@ -195,7 +195,7 @@ USB-Mouse:MouseManPlusPS/2 {
 USB-Mouse:NetMousePS/2 {
  Driver       = mouse
  Protocol     = NetMousePS/2
- ButtonNumber = 7
+ Buttons      = 7
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
@@ -203,7 +203,7 @@ USB-Mouse:NetMousePS/2 {
 USB-Mouse:NetScrollPS/2 {
  Driver       = mouse
  Protocol     = NetScrollPS/2
- ButtonNumber = 7
+ Buttons      = 7
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
@@ -401,7 +401,7 @@ Logitech:Cordless Trackman FX {
  Protocol     = ExplorerPS/2
  Device       = /dev/psaux
  EmulateWheel = 4
- ButtonNumber = 4
+ Buttons      = 4
 }
 
 Logitech:Cordless Trackman FX (USB) {
@@ -409,7 +409,7 @@ Logitech:Cordless Trackman FX (USB) {
  Protocol     = ExplorerPS/2
  Device       = /dev/input/mice
  EmulateWheel = 4
- ButtonNumber = 4 
+ Buttons      = 4 
 }
 
 Logitech:TrackMan Marble FX (PS/2) {
@@ -418,7 +418,7 @@ Logitech:TrackMan Marble FX (PS/2) {
  Device       = /dev/psaux
  RawOption    = "XAxisMapping" "4 5","YAxisMapping" "6 7","EmulateWheelInertia" "12"
  EmulateWheel = 4
- ButtonNumber = 4
+ Buttons      = 4
 }
 
 # =========================================

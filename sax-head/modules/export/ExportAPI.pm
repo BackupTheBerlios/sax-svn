@@ -112,6 +112,7 @@ sub MergeParseResult {
 	$InputOptions{Rotation}           = 1;
 	$InputOptions{ButtonThreshold}    = 1;
 	$InputOptions{ButtonNumber}       = 1;
+	$InputOptions{Buttons}            = 1;
 	$InputOptions{SendCoreEvents}     = 1;
 	$InputOptions{Vendor}             = 1;
 	$InputOptions{Name}               = 1;

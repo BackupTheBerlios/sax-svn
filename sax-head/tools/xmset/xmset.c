@@ -641,7 +641,7 @@ void showConfig (void) {
 	if ((mp->wheel) && (mp->wheel >= 1)) {
 		int btns = 5;
 		if ((mp->buttons) && (mp->buttons > 5)) {
-			printf("  Option     \"ButtonNumber\" \"%d\"\n",mp->buttons);
+			printf("  Option     \"Buttons\" \"%d\"\n",mp->buttons);
 		}
 		printf("  Option     \"ZAxisMapping\" \"%d %d\"\n",
 			btns - 1,btns
