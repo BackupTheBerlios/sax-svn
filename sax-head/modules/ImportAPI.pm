@@ -1051,6 +1051,7 @@ sub ApiImportLayout {
 	my ($value,$key,$card,$i,$count,$screen,$id);
 	my %var;
 
+	my %entity;
 	$screen = 0;
 	foreach (sort keys %{$api{Layout}}) {
 	$value = $api{Layout}{$_};
@@ -1082,12 +1083,21 @@ sub ApiImportLayout {
 		@list = split(/,/,$value);
 		$var{ServerLayout}{all}{InputDevice}{1}{id}    = $list[0];
 		$var{ServerLayout}{all}{InputDevice}{1}{usage} = "CorePointer";
-			
+		my $driver = $api{Mouse}{"1 Driver"};
+		my $device = $api{Mouse}{"1 Device"};
+		$entity{$driver}{$device} = 1;
+		
 		$count = 3;
 		for ($i=1;$i<@list;$i++) {
-		$var{ServerLayout}{all}{InputDevice}{$count}{id}    = $list[$i];
-		$var{ServerLayout}{all}{InputDevice}{$count}{usage} = "SendCoreEvents";
-		$count+=2;
+			my $driver = $api{Mouse}{"$count Driver"};
+			my $device = $api{Mouse}{"$count Device"};
+			if (! defined $entity{$driver}{$device}) {
+				my $l = "ServerLayout";
+				$var{$l}{all}{InputDevice}{$count}{id}    = $list[$i];
+				$var{$l}{all}{InputDevice}{$count}{usage} = "SendCoreEvents";
+			}
+			$entity{$driver}{$device} = $count;
+			$count+=2;
 		}
 		last SWITCH;
 		};

@@ -96,15 +96,25 @@ sub AutoDetectMouse {
 	# /.../
 	# set detected core layout...
 	# -----------------------------
+	my %entity;
 	$index = 1;
 	for($i=0;$i<@dev_list;$i++) {
-	if ($index >= 3) {
-		$var{ServerLayout}{all}{InputDevice}{$index}{usage} = "SendCoreEvents";
-		$var{ServerLayout}{all}{InputDevice}{$index}{id}    = 
-        $var{InputDevice}{$index}{Identifier};
-	}
-	$var{InputDevice}{$index}{Driver} = "mouse";
-	$index = $index + 2;
+		$var{InputDevice}{$index}{Driver} = "mouse";
+		if ($index >= 3) {
+			my $driver = $var{InputDevice}{$index}{Driver};
+			my $device = $var{InputDevice}{$index}{Option}{Device};
+			# /.../
+			# send core events only if driver and device are
+			# not yet in use !
+			# ----
+			if (! defined $entity{$driver}{$device}) {
+				my $l = "ServerLayout";
+				$var{$l}{all}{InputDevice}{$index}{usage} = "SendCoreEvents";
+			}
+			$var{InputDevice}{$index}{Identifier};
+			$entity{$driver}{$device} = $index;
+		}
+		$index = $index + 2;
 	}
 	return(%var);
 }

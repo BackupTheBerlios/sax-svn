@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Sep 28 11:46:24 CEST 2004 - ms@suse.de
+
+- fixed detect/Mouse and ImportAPI modules: Do not include
+  SendCoreEvents for input devices which already send core events
+  refering to their driver and device specifications (#44815)
+
+-------------------------------------------------------------------
 Mon Sep 27 16:42:42 CEST 2004 - ms@suse.de
 
 - include readline patch from Michael Schroeder <mls@suse.de>
