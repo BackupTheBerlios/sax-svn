@@ -236,8 +236,10 @@ bool SaXConfig::createConfiguration (void) {
 	if (! xf86readConfigFile()) {
 		unsetLock();
 		return false;
+	} else {
+		xf86closeConfigFile();
 	}
-	xf86closeConfigFile();
+	removeXFineCache();
 	unsetLock();
 	return true;
 }
@@ -417,6 +419,30 @@ QString SaXConfig::getParseError (void) {
 		return QString("");
 	}
 	return *mParseErrorString;
+}
+
+//====================================
+// removeXFineCache
+//------------------------------------
+void SaXConfig::removeXFineCache (void) {
+	// .../
+	//! remove the /var/cache/xfine contents to avoid
+	//! importing outdated modeline changes
+	// ----
+	struct dirent* entry = NULL;
+	DIR* cacheDir = NULL;
+	cacheDir = opendir (SAX_XFINE_CACHE);
+	while (1) {
+		entry = readdir (cacheDir);
+		if (! entry) {
+			break;
+		}
+		QString file (entry->d_name);
+		if ((file == ".") || (file == "..")) {
+			continue;
+		}
+		unlink (file.ascii());
+	}
 }
 
 //====================================

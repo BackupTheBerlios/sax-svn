@@ -25,6 +25,7 @@ STATUS        : Status: Development
 // Includes...
 //------------------------------------
 #include <stdarg.h>
+#include <dirent.h>
 extern "C" {
 #include <xf86Parser.h>
 }
@@ -43,6 +44,7 @@ extern "C" {
 #define SAX_SYS_CONFIG  "/etc/X11/xorg.conf"
 #define SAX_SYS_CSAVED  "/etc/X11/xorg.conf.saxsave"
 #define SAX_X11_LOADER  "/usr/X11R6/bin/Xorg"
+#define SAX_XFINE_CACHE "/var/cache/xfine"
 #define CONFPATH        "%A,%R,/etc/%R,%P/etc/X11/%R,%E,%F,/etc/X11/%F"
 #define CONFERRORLINE   80
 
@@ -152,6 +154,7 @@ class SaXConfig : public SaXConfigIF {
 
 	private:
 	void enableXFineCache (bool = true);
+	void removeXFineCache (void);
 
 	public:
 	void setParseErrorValue ( char* );
