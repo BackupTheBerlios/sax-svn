@@ -363,7 +363,7 @@ void ScanXStuff::Scan (void) {
 	if (display.vesacount > 0) {
 		int vesaCount = 0;
 		for (int n=0;n<=display.vesacount;n++) {
-		if (display.vmodes[n].x <= 1600) {
+		if (display.vmodes[n].x > 0) {
 			XMode mode;
 			mode.x = display.vmodes[n].x;
 			mode.y = display.vmodes[n].y;
@@ -371,17 +371,26 @@ void ScanXStuff::Scan (void) {
 			// check if the detected resolutions are part
 			// of the following list
 			// ---
-			XMode vesaStandard[7];
-			vesaStandard[0].x = 640;  vesaStandard[0].y = 480;
-			vesaStandard[1].x = 800;  vesaStandard[1].y = 600;
-			vesaStandard[2].x = 1024; vesaStandard[2].y = 768;
-			vesaStandard[3].x = 1152; vesaStandard[3].y = 864;
-			vesaStandard[4].x = 1280; vesaStandard[4].y = 1024;
-			vesaStandard[5].x = 1400; vesaStandard[5].y = 1050;
-			vesaStandard[6].x = 1600; vesaStandard[6].y = 1200;
+			XMode vesaStandard[16];
+			vesaStandard[0].x  = 640;  vesaStandard[0].y  = 480;
+			vesaStandard[1].x  = 800;  vesaStandard[1].y  = 600;
+			vesaStandard[2].x  = 1024; vesaStandard[2].y  = 768;
+			vesaStandard[3].x  = 1152; vesaStandard[3].y  = 864;
+			vesaStandard[4].x  = 1280; vesaStandard[4].y  = 768;
+			vesaStandard[5].x  = 1280; vesaStandard[5].y  = 800;
+			vesaStandard[6].x  = 1280; vesaStandard[6].y  = 960;
+			vesaStandard[7].x  = 1280; vesaStandard[7].y  = 1024;
+			vesaStandard[8].x  = 1440; vesaStandard[8].y  = 900;
+			vesaStandard[9].x  = 1400; vesaStandard[9].y  = 1050;
+			vesaStandard[10].x = 1600; vesaStandard[10].y = 1000;
+			vesaStandard[11].x = 1600; vesaStandard[11].y = 1024;
+			vesaStandard[12].x = 1600; vesaStandard[12].y = 1200;
+			vesaStandard[13].x = 1680; vesaStandard[13].y = 1050;
+			vesaStandard[14].x = 1900; vesaStandard[14].y = 1200;
+			vesaStandard[15].x = 1920; vesaStandard[15].y = 1200;
 	
 			int isStandard = false;
-			for (int i=0;i<7;i++) {
+			for (int i=0;i<16;i++) {
 			if ((mode.x == vesaStandard[i].x)&&(mode.y == vesaStandard[i].y)) {
 				isStandard = true;
 				break;

@@ -604,9 +604,11 @@ void PrintStuffData(ScanXStuff s) {
 		printf ("Card%d     =>  Hsync      : %d\n",card,data.hsync);
 		if (data.vesacount > 0) {
 		for (int n=0;n<data.vesacount;n++) {
-			printf ("Card%d     =>  Vesa       : %d %d %d %d\n",card,
-			data.vesa[n].x,data.vesa[n].y,
-			data.vesa[n].hsync,data.vesa[n].vsync);
+			if (data.vesa[n].x > 0) {
+				printf ("Card%d     =>  Vesa       : %d %d %d %d\n",card,
+				data.vesa[n].x,data.vesa[n].y,
+				data.vesa[n].hsync,data.vesa[n].vsync);
+			}
 		}
 		}
 		if (TvSupport()) {

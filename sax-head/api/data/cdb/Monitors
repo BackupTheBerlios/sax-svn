@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 27 12:14:33 2004
+# Author: Marcus Schaefer <sax@suse.de>, Tue Oct  5 11:19:19 2004
 #
 # Template for monitor data
 # --------------------------
@@ -82,9 +82,9 @@
 }
 
 #==============================================
-# 1280x800@75
+# 1280x800@75HZ
 #----------------------------------------------
---> LCD:1280X800@75  {
+--> LCD:1280X800@75HZ  {
  Option=DPMS
  Hsync=30-82
  Modeline="1280x800" 104.35 1280 1360 1496 1712 800 801 804 835
@@ -37422,8 +37422,8 @@ VIEWMODE:PROFESSIONAL LINE PRO  1796 VMT99  {
 #----------------------------------------------
 VIEWMODE:PROFESSIONAL LINE PRO 1772 VMT99  {
  Option=DPMS
- Hsync=47-160
- Vsync=30-72
+ Hsync=30-72
+ Vsync=47-160
 }
 
 #==============================================
@@ -37431,8 +37431,8 @@ VIEWMODE:PROFESSIONAL LINE PRO 1772 VMT99  {
 #----------------------------------------------
 VIEWMODE:PROFESSIONAL LINE PRO 1785 VMT99  {
  Option=DPMS
- Hsync=47-160
- Vsync=30-85
+ Hsync=30-85
+ Vsync=47-160
 }
 
 #==============================================
