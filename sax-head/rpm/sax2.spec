@@ -283,6 +283,13 @@ if [ ! -d $RPM_BUILD_ROOT/usr/X11R6/share/fvwm ];then
 fi
 install -m 644 api/data/fvwmrc* \
 	$RPM_BUILD_ROOT/usr/X11R6/share/fvwm/
+# install desktop icon...
+# ------------------------
+if [ ! -d $RPM_BUILD_ROOT/share/pixmaps ];then
+	install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
+fi
+install -m 644 api/pixmaps/sax2.xpm \
+	$RPM_BUILD_ROOT/usr/share/pixmaps/
 # copy manual pages...
 # ---------------------
 install -d -m 755 $RPM_BUILD_ROOT/etc
@@ -364,6 +371,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %dir /var/cache/sax
 %dir /var/cache/xfine
 #/var/adm/fillup-templates/sysconfig.sax
+/usr/share/pixmaps/sax2.xpm
 /usr/X11R6/share/fvwm/fvwmrc.sax
 /usr/X11R6/%{_lib}/sax/doc/config
 /usr/X11R6/%{_lib}/sax/doc/guitest
