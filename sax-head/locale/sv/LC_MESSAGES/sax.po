@@ -1,19 +1,21 @@
+# Översättning sax.po till Svenska
 # Översättning av sax.sv.po till Svenska
 # Swedish language file for SaX2.
 # Copyright (C) SuSE AG.
 # Gudmund Areskoug <fta@algonet.se>, 2001.
-# Mattias Newzella <newzella@linux.nu>, 2002,2003.
-#
+# Mattias Newzella <newzella@linux.nu>, 2002,2003, 2004.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.sv\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-09-08 11:17+0200\n"
+"PO-Revision-Date: 2004-02-20 21:03+0100\n"
 "Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
 "Language-Team: Svenska <sv@li.org>\n"
 "MIME-Version: 1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -30,24 +32,23 @@ msgstr "med"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM 1 [/dev/ttyS0]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM 2 [/dev/ttyS1]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Relativ"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Avbryt"
+msgstr "Absolut"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -83,7 +84,7 @@ msgstr "Ytterligare layouter"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Diverse"
 
 #. Maximum length: 60  characters
 msgid "Layout"
@@ -171,7 +172,7 @@ msgstr "Inaktivera tecken med accent"
 
 #. Maximum length: 40  characters
 msgid "Clear test field"
-msgstr "Töm testfältet"
+msgstr "Rensa testfält"
 
 #. Maximum length: 40  characters
 msgid "Test field"
@@ -509,9 +510,16 @@ msgid ""
 "location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
 "XFree86/nvidia-installer-HOWTO</b>"
 msgstr ""
+"<b>Kan inte aktivera OpenGL-acceleration</b><hr>För att aktivera 3D-"
+"delsystemet för det här kortet måste du först installera den kommersiella "
+"drivrutinen från nVidia. Installera drivrutinen med <b>YaST Online-"
+"uppdatering</b>. Väl där väljer du programfixen nVidia. <br><br>Om du redan "
+"har installerat drivrutinen via YaST Online-uppdatering och sedan "
+"avinstallerat den måste du installera den manuellt. Instruktioner för hur du "
+"gör detta finns på följande plats: <br><br><b>ftp://ftp.suse.com/pub/suse/"
+"i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -519,32 +527,32 @@ msgid ""
 "XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do "
 "you want to continue?</b>"
 msgstr ""
-"<b>Kan inte inaktivera OpenGL-acceleration</b><hr>3D-delsystemet är baserat "
-"på den komersiella drivrutin från nVidia. För att inaktivera 3D måste du "
-"avinstallera drivrutinen med nVidias installerare. Avinstallationsprocessen "
-"kommer att återaktivera den ursprungliga drivrutinen från XFree86 som inte "
-"tillhandahåller någon 3D-hårdvaruacceleration."
+"<b>Inaktivera OpenGL-acceleration</b><hr>3D-delsystemet är baserat på den "
+"kommersiella drivrutinen från nVidia. Sax2 måste avinstallera drivrutinen "
+"med nVidias installationsprogram. Avinstallationsprocessen kommer att "
+"återaktivera den ursprungliga drivrutinen från XFree86 som inte "
+"tillhandahåller någon 3D-hårdvaruacceleration.<br><br><b>Vill du fortsätta?</"
+"b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
 msgstr "Drivrutinsdisk..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Sätt i disk</b><hr>Sätt in drivrutinsdisken från bildskärmsleverantören."
+"<b>Sätt i cd eller diskett</b><hr>Sätt in drivrutins-cd:n eller disketten "
+"från bildskärmsleverantören."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Läsfel</b><hr>Kunde inte läsa från disken. Det kan bero på att disken är "
-"skadad eller ett felaktigt format på informationsfilen på disken."
+"<b>Läsfel</b><hr>Kunde inte läsa från cd eller diskett. Det kan bero på "
+"felaktig media eller ett felaktigt format på informationsfilen på mediat."
 
 #. RTF text: no limit
 msgid ""
@@ -645,10 +653,10 @@ msgstr ""
 "<b>Kort med 3D-egenskaper hittades: <u>%1</u></b><hr>Alla 3D-drivrutiner i "
 "Linux befinner sig på utvecklingsstadiet och ska därför fortfarande ses som "
 "experimentella. Vi har ändå beslutat ta med dem i vår distribution på grund "
-"av den starka efterfrågan efter hårdvaruacceleration av 3D i Linux. "
+"av den stora efterfrågan efter hårdvaruacceleration av 3D i Linux. "
 "<br><br>På grund av att OpenGL-drivrutinerna är något experimentella kan vi "
 "inte ge någon installationssupport för inställning av hårdvaruaccelererad "
-"3D, eller om problem som hänger ihop med det dyker upp.<br><br><b>Vill du "
+"3D, eller om problem som hänger ihop med det infinner sig.<br><br><b>Vill du "
 "aktivera 3D för det här kortet?</b>"
 
 #. RTF text: no limit
@@ -1221,14 +1229,12 @@ msgid "Remove selected monitor"
 msgstr "Ta bort vald skärm"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "Egenska&per..."
+msgstr "Egenskaper..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "A&lternativ..."
+msgstr "A&lternativ"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1535,9 +1541,8 @@ msgid "&Port"
 msgstr "&Port"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Läge:"
+msgstr "&Läge"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -2518,16 +2523,3 @@ msgstr "Tryck på meny-tangenten för att välja tredje nivån"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta tilldelas till win-tangenterna."
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to use the commercial driver from nVidia. Please "
-#~ "download the nVidia installer from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. After you have installed the driver you can enable "
-#~ "3D with SaX2."
-#~ msgstr ""
-#~ "<b>Kan inte aktivera OpenGL-acceleration</b><hr>För att aktivera "
-#~ "delsystemet för det här kortet måste du använda den komersiella drivrutin "
-#~ "från nVidia. Ladda först ner nVidias installerare från nVidias webbserver "
-#~ "<i>(http://www.nvidia.com)</i>. När du har installerat drivrutinen kan du "
-#~ "aktivera 3D med Sax2."
