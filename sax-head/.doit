@@ -165,9 +165,9 @@ sub svnup {
 	#===========================================
 	# set SVN path to repository and branch/tag
 	#-------------------------------------------
-	my $svnPath = "dist.suse.de:/sax/sax-head";
+	my $svnPath = "svn.suse.de:/svn/sax/sax-head";
 	if (defined $tagName) {
-		$svnPath = "dist.suse.de:/sax/".$treeID."/".$tagName;
+		$svnPath = "svn.suse.de:/svn/sax/".$treeID."/".$tagName;
 	}
 	#===========================================
 	# create tmp directory and change into it
