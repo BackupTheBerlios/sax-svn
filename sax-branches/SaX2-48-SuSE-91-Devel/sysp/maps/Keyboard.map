@@ -28,9 +28,9 @@ defkeymap       : pc104 : us           : x          : xfree86 : x : x : x : x : 
 defkeymap_V1.0  : pc104 : us           : x          : xfree86 : x : x : x : x : x
 dk-latin1       : pc104 : dk           : x          : xfree86 : x : x : x : x : x
 dk              : pc101 : dk           : x          : xfree86 : x : x : x : x : x
-dvorak-l        : pc101 : us           : x          : xfree86 : x : x : x : x : x
-dvorak-r        : pc101 : us           : x          : xfree86 : x : x : x : x : x
-dvorak          : pc101 : us           : x          : xfree86 : x : x : x : x : x
+dvorak-l        : pc104 : dvorak,us    : x          : xfree86 : x : x : x : x : x
+dvorak-r        : pc104 : dvorak,us    : x          : xfree86 : x : x : x : x : x
+dvorak          : pc104 : dvorak,us    : x          : xfree86 : x : x : x : x : x
 emacs           : pc102 : us           : x          : xfree86 : x : x : x : x : x
 emacs2          : pc102 : us           : x          : xfree86 : x : x : x : x : x
 es              : pc102 : es           : x          : xfree86 : x : x : x : x : x
@@ -41,8 +41,8 @@ fr-pc           : pc102 : fr           : x          : xfree86 : x : x : x : x : 
 fr              : pc102 : fr           : x          : xfree86 : x : x : x : x : x
 fr_CH-latin1    : pc102 : fr_CH        : x          : xfree86 : x : x : x : x : x
 fr_CH           : pc102 : fr_CH        : x          : xfree86 : x : x : x : x : x
-gr-pc           : pc104 : el           : x          : xfree86 : x : x : x : x : grp:toggle
-gr              : pc104 : el           : x          : xfree86 : x : x : x : x : grp:toggle
+gr-pc           : pc105 : us,el        : ,winkeys   : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
+gr              : pc105 : us,el        : ,winkeys   : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
 hebrew          : pc102 : he           : x          : xfree86 : x : x : x : x : x
 hu              : pc102 : hu           : x          : xfree86 : x : x : x : x : x
 hu101           : pc101 : hu           : x          : xfree86 : x : x : x : x : x
@@ -51,7 +51,8 @@ it-ibm          : pc104 : it           : x          : xfree86 : x : x : x : x : 
 it              : pc102 : it           : x          : xfree86 : x : x : x : x : x
 it2             : pc102 : it           : x          : xfree86 : x : x : x : x : x
 jp106           : jp106 : jp           : x          : xfree86 : x : x : x : x : x
-la-latin1       : pc104 : us           : x          : xfree86 : x : x : x : x : x
+la-latin1       : pc102 : es           : x          : xfree86 : x : x : x : x : x
+es-cp850        : pc102 : es           : x          : xfree86 : x : x : x : x : x
 lt.l4           : pc104 : us           : x          : xfree86 : x : x : x : x : x
 lt              : pc104 : us           : x          : xfree86 : x : x : x : x : x
 mac-Pl02        : macintosh : us       : x          : xfree86 : x : x : x : x : x
@@ -84,7 +85,8 @@ mac-mac-template: macintosh : us       : x          : xfree86 : x : x : x : x : 
 no-latin1       : pc104 : no           : x          : xfree86 : x : x : x : x : x
 no              : pc104 : no           : x          : xfree86 : x : x : x : x : x
 pc110           : pc110 : us           : x          : xfree86 : x : x : x : x : x
-pl              : pc102 : pl           : x          : xfree86 : x : x : x : x : x
+pl              : pc104 : pl           : x          : xfree86 : x : x : x : x : x
+Pl02            : pc104 : pl           : x          : xfree86 : x : x : x : x : x
 pt              : pc102 : pt           : nodeadkeys : xfree86 : x : x : x : x : x
 pt2             : pc102 : pt           : nodeadkeys : xfree86 : x : x : x : x : x
 pt-latin9       : pc102 : pt           : nodeadkeys : xfree86 : x : x : x : x : x
@@ -95,7 +97,8 @@ ru1             : pc105 : us,ru        : ,winkeys   : xfree86 : x : x : x : x : 
 ru2             : pc105 : us,ru        : ,winkeys   : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
 ru_win          : pc105 : us,ru        : ,winkeys   : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
 russian         : pc105 : us,ru        : ,winkeys   : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-se-latin1       : pc104 : se           : x          : xfree86 : x : x : x : x : x
+sv-latin1       : pc105 : se           : x          : xfree86 : x : x : x : x : x
+se-latin1       : pc105 : se           : x          : xfree86 : x : x : x : x : x
 sg-l1-lk450     : pc102 : de_CH        : x          : xfree86 : x : x : x : x : x
 sg-latin1-lk450 : pc104 : de_CH        : x          : xfree86 : x : x : x : x : x
 sg-latin1       : pc104 : de_CH        : x          : xfree86 : x : x : x : x : x
