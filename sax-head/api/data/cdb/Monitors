@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 10 17:20:54 2004
+# Author: Marcus Schaefer <sax@suse.de>, Mon Mar 29 13:05:14 2004
 #
 # Template for monitor data
 # --------------------------
@@ -30027,6 +30027,17 @@ SAMSUNG:SAMTRON SC-528TXL  {
  Option=DPMS
  Hsync=30-48
  Vsync=50-100
+}
+
+#==============================================
+# SEC 1024
+#----------------------------------------------
+SAMSUNG:SEC 1024  {
+ DDC=SEC0000
+ Option=DPMS
+ Hsync=31-60
+ Resolution=1024x768
+ Vsync=30-60
 }
 
 #==============================================
