@@ -400,6 +400,8 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wmstart
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_ddc.sh
 rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
+rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/example.pl
+rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 %suse_update_desktop_file -i %name System SystemSetup
 
 %post
@@ -558,7 +560,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 %files -n sax2-libsax-devel
 %defattr(-,root,root)
 %dir /usr/include/sax
-/usr/include/sax
+/usr/include/sax/*
 #=================================================
 # SaX-libsax-perl file list...  
 # ------------------------------------------------

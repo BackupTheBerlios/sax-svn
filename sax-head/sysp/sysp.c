@@ -475,14 +475,31 @@ void CheckRoot(void) {
 void PrintMouseData(ScanMouse m) {
 	MouseData data;
 	int mouse = 0;
+	int wheelCount   = -1;
+	int wheelEmulate = 1;
+	int buttonCount  = 3;
+	str mouseName    = "";
 
 	// create a cache for all device names
+	// and check for properties of non profiled devices
 	str devs[m.Count()];
 	str profiles[m.Count()];
 	for (int i = m.Count(); i > 0; i--) {
 		data = m.Pop();
 		strcpy (devs[i],data.device);
 		strcpy (profiles[i],data.profile);
+		if (strcmp(data.profile,"<undefined>") == 0) {
+			if (data.wheel > wheelCount) {
+				wheelCount = data.wheel;
+				strcpy (mouseName,data.name);
+			}
+			if (data.emulate == 0) {
+				wheelEmulate = data.emulate;
+			}
+			if (data.buttons > buttonCount) {
+				buttonCount = data.buttons;
+			}
+		}
 	}
 	m.Reset();
 
@@ -492,16 +509,22 @@ void PrintMouseData(ScanMouse m) {
 		bool show = true;
 		data = m.Pop();
 		for (int n = i - 1; n > 0; n--) {
-		if (strcmp (devs[n],data.device) == 0) {
+			if (strcmp (devs[n],data.device) == 0) {
 			if (strcmp (profiles[n],data.profile) == 0) {
 				show = false;
 				break;
 			}
-		}
+			}
 		}
 		if (show) {
 			if (mouse > 0) {
 				printf("\n");
+			}
+			if (strcmp(data.profile,"<undefined>") == 0) {
+				data.buttons = buttonCount;
+				data.wheel   = wheelCount;
+				data.emulate = wheelEmulate;
+				strcpy (data.name,mouseName);
 			}
 			printf("Mouse%d    =>  Protocol   : %s\n",mouse,data.protocol);
 			printf("Mouse%d    =>  Device     : %s\n",mouse,data.device);
