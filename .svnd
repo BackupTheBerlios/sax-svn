@@ -2,7 +2,7 @@
 # Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Marcus Schaefer <sax@suse.de>, 2002
-# create readable diffs from cvs
+# create diffs from subversion
 #
 # CVS ID:
 # --------
@@ -28,50 +28,28 @@ my $result = GetOptions (
 # get current changes, with release info
 # ----------------------------------------
 if (! defined $Release1) {
-	my $dif  = qx(cvs diff -N -u 2>/dev/null);
+	my $dif  = qx(svn diff -N 2>/dev/null);
 	@list = split (/\n/,$dif);
 } else {
 if (! defined $Release2) {
-	my $dif  = qx(cvs diff -N -r $Release1 -u 2>/dev/null);
+	my $dif  = qx(svn diff -N -r $Release1 2>/dev/null);
 	@list = split (/\n/,$dif);
 } else {
-	my $dif  = qx(cvs diff -N -r $Release1 -r $Release2 -u 2>/dev/null);
+	my $dif  = qx(svn diff -N -r $Release1 -r $Release2 2>/dev/null);
 	@list = split (/\n/,$dif);
 }
-}
-
-# ========================================
-# fixing dif output and generate dif
-# file now. print output to stderr
-# ----------------------------------------
-my $full;
-my $small;
-my @newlist;
-my $do_fixup = 0;
-foreach (@list) {
-	if (/^Index: (.*)/) {
-		$full = $1;
-		($small) = ($full =~ m=.*/([^\t]*)=);
-		push(@newlist,$_);
-		if (!$small) { $small = $full; } {
-			$do_fixup = 1;
-		}
-	} else {
-		$do_fixup = 0 if (/^@/);
-		if ($do_fixup) {
-			s!(\Q$small\E|/(sourceware/cvs-|)tmp/[a-zA-Z0-9]+)(?=$|\t)!$full! 
-			unless /\Q$full\E/;
-		}
-		push(@newlist,$_);
-	}
 }
 
 # ========================================
 # grep unneeded information from the dif
 # ----------------------------------------
-@list = grep {!/^=/} @newlist;
+@list = grep {!/^=/} @list;
 @list = grep {!/^RCS file:/} @list;
 @list = grep {!/^retrieving revision/} @list;
+@list = grep {!/^Property changes/} @list;
+@list = grep {!/^Name:/} @list;
+@list = grep {!/\+ \*$/} @list;
+@list = grep {!/^_+$/} @list;
 @list = grep {!/^diff/} @list;
 @list = grep {!/^Index:/} @list;
 @list = grep {!/^\?/} @list;
@@ -87,6 +65,6 @@ foreach (@list) {
 # usage
 # ----------------------------------------
 sub usage {
-	print ".cvsd [ -r1 <Release1> ] [ -r2 <Release2> ]\n";
+	print ".svnd [ -r1 <Release1> ] [ -r2 <Release2> ]\n";
 	exit (0);
 }
