@@ -113,7 +113,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax
-Version:      1.2
+Version:      7.1
 Release:      11
 Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration library
@@ -129,7 +129,7 @@ Authors:
 
 
 %package -n sax2-libsax-devel
-Version:      1.2
+Version:      7.1
 Release:      11
 Requires:     sax2-libsax
 Summary:      SuSE advanced X Window System-configuration library header files
@@ -144,7 +144,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-perl
-Version:      1.2
+Version:      7.1
 Release:      11
 Requires:     sax2-libsax
 Summary:      SuSE advanced X Window System-configuration Perl binding
@@ -159,7 +159,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-python
-Version:      1.2 
+Version:      7.1 
 Release:      11 
 Requires:     sax2-libsax
 %{py_requires}
@@ -175,7 +175,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-java
-Version:      1.2
+Version:      7.1
 Release:      11
 Requires:     sax2-libsax jre1.2.x
 Summary:      SuSE advanced X Window System-configuration Java binding
@@ -191,7 +191,7 @@ Authors:
 
 
 %package -n sax2-libsax-csharp
-Version:      1.2
+Version:      7.1
 Release:      11
 Requires:     sax2-libsax mono-core mono-basic
 Summary:      SuSE advanced X Window System-configuration Java binding
