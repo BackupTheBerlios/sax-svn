@@ -431,6 +431,12 @@ int main (int argc, char*argv[]) {
 	exit(0);
 } 
 
+//=====================
+// errorHandler
+//---------------------
+int errorHandler (Display* dpy,XErrorEvent *err) {
+	exit (1);
+}
 
 //=====================
 // CleanUp()
@@ -616,6 +622,7 @@ Display* XOpen(char name[256],int screen) {
 	) {
 	return(NULL);
 	}
+	XSetErrorHandler (errorHandler);
 	return(dpy);
 }
 

@@ -42,6 +42,7 @@ libsysp.a:
 
 clean:
 	rm -f libsysp*
+	rm -f pci/lib/libpci.a
 	${MAKE} -C ${PLOG}   clean
 	${MAKE} -C ${PCI}    clean
 	${MAKE} -C ${FBSET}  clean
