@@ -7,4 +7,3 @@ WriteMakefile(
   'INC'      => '-I/usr/X11R6/include',
   'OPTIMIZE' => '-O2'
 ); 
-
