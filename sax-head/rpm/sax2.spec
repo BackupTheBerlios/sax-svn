@@ -252,7 +252,10 @@ rm -rf $RPM_BUILD_ROOT
 export ASK_FOR_CHANGELOG=no
 export TEMPLATE_CHECK=no
 export ARCH=`/bin/arch`
-make buildroot=$RPM_BUILD_ROOT lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
+make buildroot=$RPM_BUILD_ROOT \
+	 lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
+make doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
+	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} install-docs
 #=================================================
 # create startup link
 #-------------------------------------------------
@@ -279,16 +282,6 @@ if [ -f "/usr/X11R6/bin/xsload" ];then
 fi
 %endif
 #=================================================
-# install documentation
-#-------------------------------------------------
-if [ ! -d $RPM_BUILD_ROOT%{_defaultdocdir}/sax2 ];then
-	mkdir -p $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
-fi
-install -m 644 ./LICENSE $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
-install -m 644 ./doc/README  $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
-install -m 644 ./doc/en/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
-install -m 644 ./doc/de/compiled/* $RPM_BUILD_ROOT%{_defaultdocdir}/sax2
-#=================================================
 # install architecture dependant Identity
 #-------------------------------------------------
 if [ -f ./sysp/maps/arch/Identity.map.$ARCH ];then
@@ -301,20 +294,6 @@ fi
 ./.cards.pl -f \
 	$RPM_BUILD_ROOT/usr/share/sax/sysp/maps/Identity.map \
 > $RPM_BUILD_ROOT/usr/share/sax/api/data/cdb/Cards
-#=================================================
-# install sax2-tools manual pages...
-#-------------------------------------------------
-install -d -m 755 $RPM_BUILD_ROOT/%{_mandir}/man1
-rm -f %{_mandir}/man1/*
-for i in `ls -1 ./doc/man`;do
-	install -m 644 ./doc/man/$i $RPM_BUILD_ROOT/%{_mandir}/man1/$i.1
-done
-#=================================================
-# install fvwm config file...
-#-------------------------------------------------
-install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/share/fvwm
-install -m 644 api/data/fvwmrc* \
-	$RPM_BUILD_ROOT/usr/X11R6/share/fvwm/
 #=================================================
 # install desktop icon...
 #-------------------------------------------------
@@ -330,7 +309,6 @@ install -m 644 api/pixmaps/sax2.xpm \
 #=================================================
 # remove unpacked sources...
 #-------------------------------------------------
-rm -f $RPM_BUILD_ROOT/usr/share/sax/api/data/.testgtx
 rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 
 #=================================================

@@ -20,10 +20,14 @@ sax_prefix     = ${buildroot}/usr/share/sax
 xfi_prefix     = ${buildroot}/usr/share/xfine
 var_prefix     = ${buildroot}/var/cache
 lib_prefix     = ${buildroot}/usr/lib
+doc_prefix     = ${buildroot}/usr/share/doc/packages
+man_prefix     = ${buildroot}/usr/share/man
 
 #============================================
 # Variables... 
 #--------------------------------------------
+MANVZ          = ${man_prefix}/man1
+PACKDOCVZ      = ${doc_prefix}/sax2
 SBINVZ         = ${buildroot}/sbin
 SAXBINVZ       = ${sax_prefix}
 APIVZ          = ${sax_prefix}/api
@@ -51,6 +55,7 @@ LOCALEVZ       = ${usr_prefix}/share/locale
 XFINEBINVZ     = ${xfi_prefix}
 XFINEPIXMAPS   = ${xfi_prefix}/pixmaps
 LIBDOCDIR      = ${usr_prefix}/share/doc/packages/libsax
+WMVZ           = ${usr_prefix}/X11R6/share/fvwm
 
 #============================================
 # Helpers
@@ -102,7 +107,7 @@ install:
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
 	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
-	install -d -m 755 ${LIBDOCDIR}
+	install -d -m 755 ${LIBDOCDIR} ${WMVZ}
 
 	#============================================
 	# install X11 parser...
@@ -169,6 +174,7 @@ install:
 	install -m 644 ./sysp/maps/Input.map                    ${MAPVZ}
 	install -m 644 ./sysp/maps/Driver.map                   ${MAPVZ}
 	install -m 755 ./sysp/script/*                          ${SCRIPTVZ}
+	install -m 644 ./api/data/fvwmrc.sax                    ${WMVZ}
 
 	#============================================
 	# install library files...
@@ -181,7 +187,7 @@ install:
 	# install API data files...
 	#--------------------------------------------
 	for i in `find ./api/data -maxdepth 1 -name "*"`; do \
-	if [ -f $$i ];then \
+	if [ -f $$i ] && [ ! $$i = ".testgtx" ];then \
 		install -m 644 $$i  ${APIDATAVZ} ;\
 	fi \
 	done
@@ -201,3 +207,24 @@ install:
 
 	@echo "remember to have fun..."
 	@echo "your SuSE team :-)"
+
+install-docs:
+	#============================================
+	# install documentation...
+	#--------------------------------------------
+	install -d -m 755 ${PACKDOCVZ} ${MANVZ}
+
+	#============================================
+	# SaX2 system draft and LICENSE
+	#--------------------------------------------
+	install -m 644 ./LICENSE           ${PACKDOCVZ}
+	install -m 644 ./doc/README        ${PACKDOCVZ}
+	install -m 644 ./doc/en/compiled/* ${PACKDOCVZ}
+	install -m 644 ./doc/de/compiled/* ${PACKDOCVZ}
+
+	#============================================
+	# SaX2 tools manual pages
+	#--------------------------------------------
+	for i in `ls -1 ./doc/man`;do \
+		install -m 644 ./doc/man/$$i ${MANVZ}/$$i.1 ;\
+	done
