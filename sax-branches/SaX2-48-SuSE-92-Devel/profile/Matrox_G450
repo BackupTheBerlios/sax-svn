@@ -1,0 +1,43 @@
+# settings for screen 0
+# ------------------------
+Device  -> [X]   ->  VendorName       = Matrox
+Device  -> [X]   ->  BoardName        = G450
+Device  -> [X]   ->  Raw->0->Option   = "hwcursor" "off"
+Device  -> [X]   ->  Driver           = mga
+Device  -> [X]   ->  Option           = NoHal
+Device  -> [X]   ->  Screen           = 0
+
+# new device for Screen 1
+# ------------------------
+Device  -> [X+1] ->  BusID            = {Device -> [X] -> BusID}
+Device  -> [X+1] ->  VendorName       = Matrox
+Device  -> [X+1] ->  Option           = NoHal
+Device  -> [X+1] ->  Identifier       = Device[[X+1]]
+Device  -> [X+1] ->  BoardName        = G450
+Device  -> [X+1] ->  Raw->0->Option   = "hwcursor" "off"
+Device  -> [X+1] ->  Driver           = mga
+Device  -> [X+1] ->  Screen           = 1
+
+# new desktop for Screen 1
+# -------------------------
+# ...
+# If the HalLib is used you need to adapt the sync ranges
+# because the HalLib does not accept modes bigger than 75Hz
+# ---
+# Monitor -> [X] ->  VertRefresh      = 50-75
+# Monitor -> [X] ->  HorizSync        = 30-90
+#
+Screen  -> [X+1] ->  Device           = Device[[X+1]]
+Screen  -> [X+1] ->  Monitor          = Monitor[[X+1]]
+Screen  -> [X+1] ->  Identifier       = Screen[[X+1]]
+Screen  -> [X+1] ->  DefaultDepth     = 16
+Screen  -> [X+1] ->  Depth->8->Modes  = 640x480
+Screen  -> [X+1] ->  Depth->15->Modes = 640x480
+Screen  -> [X+1] ->  Depth->16->Modes = 640x480
+Screen  -> [X+1] ->  Depth->24->Modes = 640x480
+Screen  -> [X+1] ->  Depth->32->Modes = 640x480
+Monitor -> [X+1] ->  VertRefresh      = 50-62
+Monitor -> [X+1] ->  ModelName        = Unknown
+Monitor -> [X+1] ->  HorizSync        = 30-32
+Monitor -> [X+1] ->  VendorName       = Unknown
+Monitor -> [X+1] ->  Identifier       = Monitor[[X+1]]

@@ -1,0 +1,51 @@
+#!/usr/bin/perl
+# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2002
+# xapi script: install XF86Config and create the links
+# --
+#
+# CVS ID:
+# --------
+# Status: Up-to-date
+#
+use strict;
+use Env;
+
+#--[ LinkConfiguration ]-----#
+sub LinkConfiguration {
+#-----------------------------------------------------
+# install the config file and create the needed
+# links to startup X successfully
+# 
+	my $final  = "/etc/X11/XF86Config";
+	my $save   = "/etc/X11/XF86Config.saxsave";
+	my $server = "/usr/X11R6/bin/Xorg";
+	my $new    = "/var/cache/sax/files/XF86Config";
+	my $ref    = "/var/cache/sax/files/XF86Config.first";
+
+	if (! -f $server) {
+		$server = "/usr/X11R6/bin/XFree86";
+	} 
+	if (-f $final) {
+		qx (cp $final $save);
+	}
+
+	# save configuration to /etc/X11...
+	# ----------------------------------
+	if (-f $new) {
+		qx (mv -f $new $final);
+	}
+
+	# create links...
+	# ----------------
+	if (-f $server) {
+		qx(rm -f /usr/X11R6/bin/X);
+		qx(rm -f /var/X11R6/bin/X);
+		qx(ln -s /var/X11R6/bin/X /usr/X11R6/bin/X);
+		qx(ln -s $server /var/X11R6/bin/X);
+	}
+	unlink ($ref);
+}
+
+LinkConfiguration();
