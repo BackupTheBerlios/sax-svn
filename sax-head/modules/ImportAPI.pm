@@ -744,6 +744,7 @@ sub ApiImportCard {
 
 		/^RawData/         && do {
 		@list = split(/,/,$value);
+		@list = CheckSplit (@list);
 		$count = 0;
 		foreach (@list) {
 			@elements = split(/ +/,$_);
@@ -1685,6 +1686,31 @@ sub ImportXFineCache {
 # this function return either "yes" or "no"
 #
 	return ($ImportXFineCache);
+}
+
+#---[ CheckSplit ]----#
+sub CheckSplit {
+#------------------------------------------------------
+# check if a splitted list with seperator [,] was
+# splitted in a correct way. This function will check
+# for the number ["] signs and make sure there was
+# no split between optionslist which mustn't splitted
+#
+	my @list   = @_;
+	my @result = ();
+	for (my $i=0;$i<@list;$i++) {
+		my $signs = split (/[^\"]*/,$list[$i]);
+		if ( ($signs > 0) && ($signs % 2 == 0) ) {
+			$list[$i] = $list[$i].",".$list[$i+1];
+			delete $list[$i+1];
+		}
+	}
+	foreach (@list) {
+	if (defined $_) {
+		push (@result,$_);
+	}
+	}
+	return @result;
 }
 
 1;

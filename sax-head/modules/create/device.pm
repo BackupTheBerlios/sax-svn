@@ -95,6 +95,7 @@ sub CreateDeviceSection {
 				$setting = $var{Device}{$section}{$i}{$count}{$n};
 				if ($setting ne "") {
 					@list = split(/,/,$setting);
+					@list = CheckSplit (@list);
 					$size = @list;
 					foreach $l (@list) {
 						push(@result,PrintLine($n,$l));
@@ -155,6 +156,31 @@ sub prepare_setting {
 	$setting =~ s/^ +//g; # remove rest blanks
 	$setting =~ s/\n//g;  # remove returns
 	return($setting);
+}
+
+#---[ CheckSplit ]----#
+sub CheckSplit {
+#------------------------------------------------------
+# check if a splitted list with seperator [,] was
+# splitted in a correct way. This function will check
+# for the number ["] signs and make sure there was
+# no split between optionslist which mustn't splitted
+#
+	my @list   = @_;
+	my @result = ();
+	for (my $i=0;$i<@list;$i++) {
+		my $signs = split (/[^\"]*/,$list[$i]);
+		if ( ($signs > 0) && ($signs % 2 == 0) ) {
+			$list[$i] = $list[$i].",".$list[$i+1];
+			delete $list[$i+1];
+		}
+	}
+	foreach (@list) {
+	if (defined $_) {
+		push (@result,$_);
+	}
+	}
+	return @result;
 }
 
 1;

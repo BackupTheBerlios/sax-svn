@@ -15,6 +15,30 @@ use lib '/usr/X11R6/lib/sax/modules';
 
 use XFree;
 
+#---[ CheckThisSplit ]----#
+sub CheckThisSplit {
+#------------------------------------------------------
+# check if a splitted list with seperator [,] was
+# splitted in a correct way. This function will check
+# for the number ["] signs and make sure there was
+# no split between optionslist which mustn't splitted
+#
+	my @list   = @_;
+	my @result = ();
+	for (my $i=0;$i<@list;$i++) {
+		if ($list[$i] !~ /:/) {
+			$list[$i-1] = $list[$i-1].",".$list[$i];
+			delete $list[$i];
+		}
+	}
+	foreach (@list) {
+	if (defined $_) {
+		push (@result,$_);
+	}
+	}
+	return @result;
+}
+
 #----[ ReadConfig (file) ]----#
 sub ReadConfig {
 #----------------------------------------------
@@ -530,6 +554,7 @@ sub ParseDeviceSection {
 			#----------------------------------------
 			/^option/      && do { 
 				@list = split(/,/,$value[1]);
+				@list = CheckThisSplit (@list);
 				foreach $l (@list) {
 					@option = split(/:/,$l);
 					$parse{Device}{$count}{Option}{$option[0]} = $option[1];

@@ -1203,6 +1203,7 @@ sub ReadProfile {
 		if (-f "$file.sh") {
 			print "SaX: calling [Card:$c] profile script: $data{$c}.sh...\n";
 			qx ($file.sh);
+			$file = $file.tmp;
 		}
 		#==========================================
 		# Save profile information

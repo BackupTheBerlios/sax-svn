@@ -10,18 +10,16 @@ if [ ! -f "$profile" ] || [ "$UID" -ne 0 ];then
 fi
 
 #====================================
-# Restore saved profile
+# Copy profile
 #------------------------------------
-if [ -f "$profile.orig" ];then
-	mv $profile.orig $profile
-fi
+cp $profile $profile.tmp
+profile="$profile.tmp"
 
 #====================================
 # Check if profile is valid
 #------------------------------------
 vendor=$(/usr/X11R6/lib/sax/sysp/script/vendor.pl nvidia)
 if [ "$vendor" = "The XFree86 Project" ];then
-	cp $profile $profile.orig
 	echo "Desktop -> [X] ->  CalcModelines = no"            > $profile
 	echo "Monitor -> [X] ->  CalcAlgorithm = XServerPool"  >> $profile
 fi

@@ -156,6 +156,7 @@ STATUS        : Status: Up-to-date
 #define GETDDC          "/usr/X11R6/lib/sax/api/tools/getDDC"
 #define GETINF          "/usr/X11R6/lib/sax/api/tools/getINF"
 #define GETLOG          "/usr/X11R6/lib/sax/api/tools/getlog"
+#define GETRAWLIST      "/usr/X11R6/lib/sax/api/tools/getRawList"
 #define GET3D           "/usr/X11R6/lib/sax/api/tools/get3D"
 #define GETACTIVATED    "/usr/X11R6/lib/sax/api/tools/getActivated"
 #define GETINSTALLED    "/usr/X11R6/lib/sax/api/tools/getInstalled"

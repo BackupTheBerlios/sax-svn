@@ -438,8 +438,11 @@ void XCard::setupTop (int state) {
 	}
 	mHiddenRawOptions.clear();
 	if (workingCard["RawData"]) {
-		cur.setText (workingCard["RawData"]);
-		cur.setSeperator (",");
+		QString rawopt = qx (
+			GETRAWLIST,STDOUT,1,"%s",workingCard["RawData"].ascii()
+		);
+		cur.setText (rawopt);
+		cur.setSeperator ("|");
 		QList<char> strlist = cur.getList();
 		QListIterator<char> it (strlist);
 		for (; it.current(); ++it) {
