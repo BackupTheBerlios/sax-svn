@@ -109,6 +109,12 @@ install:
 	# install files...
 	# -----------------
 	install -m 644 ./profile/*                              ${PROFILE}
+	install -m 644 ./profile/x86_64/*                       ${PROFILE}
+	install -m 644 ./profile/alpha/*                        ${PROFILE}
+	install -m 644 ./profile/ia64/*                         ${PROFILE}
+	install -m 644 ./profile/ppc/*                          ${PROFILE}
+	install -m 644 ./profile/unbound/*                      ${PROFILE}
+	install -m 755 ./profile/script/*                       ${PROFILE}
 	install -m 755 ./init.pl                                ${SAXBINVZ}
 	install -m 644 ./svnbuild                               ${SAXBINVZ}
 	install -m 755 ./xc.pl                                  ${SAXBINVZ}
