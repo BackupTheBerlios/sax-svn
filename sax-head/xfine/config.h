@@ -20,8 +20,8 @@ STATUS        : Status: Up-to-date
 //==============================
 // Pixmaps and translations...
 //------------------------------
-#define PIXDIR          "/usr/X11R6/lib/xfine/pixmaps/"
-#define XFINEGTX        "/usr/X11R6/lib/xfine/xfine.gtx"
+#define PIXDIR          "/usr/share/xfine/pixmaps/"
+#define XFINEGTX        "/usr/share/xfine/xfine.gtx"
 
 #define LOGO            PIXDIR "suse.gif"
 #define DRI_ENABLED     PIXDIR "dri-enabled.gif"
