@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Sep 27 16:42:42 CEST 2004 - ms@suse.de
+
+- include readline patch from Michael Schroeder <mls@suse.de>
+  module FileHandle expects PerlIO is blessed to IO::Handle
+  This will stop segmentation fault on Perl 5.8.0 w/PerlIO
+
+-------------------------------------------------------------------
 Mon Sep 27 15:57:56 CEST 2004 - ms@suse.de
 
 - update Identity: updated ix86 entries

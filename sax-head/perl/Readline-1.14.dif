@@ -1,17 +1,6 @@
---- ppport.h
-+++ ppport.h	2003/09/05 10:01:55
-@@ -40,7 +40,7 @@
-    special defines should be used, ppport.h can be run through Perl to check
-    your source code. Simply say:
-    
--   	perl -x ppport.h *.c *.h *.xs foo/*.c [etc]
-+   	perl -x ppport.h *.c *.h *.xs foo/foo.c [etc]
-    
-    The result will be a list of patches suggesting changes that should at
-    least be acceptable, if not necessarily the most efficient solution, or a
 --- Gnu.xs
-+++ Gnu.xs	2002/09/19 09:34:11
-@@ -190,18 +190,13 @@
++++ Gnu.xs	2004/09/27 14:37:29
+@@ -191,18 +191,13 @@
  extern char *xfree PARAMS((char *));
  
  #else /* not OS2_USEDLL */
@@ -33,7 +22,7 @@
  {
    /*
     * Use xmalloc(), because allocated block will be freed in the GNU
-@@ -711,7 +706,7 @@
+@@ -712,7 +707,7 @@
        matches[0] = matches[1];
        matches[1] = NULL;
      } else if (count == 1 && !matches[0]) { /* in case of a list of undef */
@@ -42,7 +31,7 @@
        matches = NULL;
      }
    } else {
-@@ -1206,7 +1201,7 @@
+@@ -1207,7 +1202,7 @@
  	  fntbl[i].pfn = newSVsv(fn);
  	  
  	  /* rl_add_defun() always returns 0. */
@@ -51,7 +40,7 @@
  	  RETVAL = fntbl[i].wrapper;
  	}
      OUTPUT:
-@@ -1363,7 +1358,7 @@
+@@ -1364,7 +1359,7 @@
  	Keymap map
      PROTOTYPE: $$;$
      CODE:
@@ -60,7 +49,7 @@
      OUTPUT:
  	RETVAL
  
-@@ -1678,7 +1673,7 @@
+@@ -1679,7 +1674,7 @@
  	const char *	macro
      PROTOTYPE: $
      CODE:
@@ -69,7 +58,7 @@
  
   #
   #	2.4.8 Character Input
-@@ -1818,7 +1813,7 @@
+@@ -1819,7 +1814,7 @@
  
  	  for (i = 1; i <= len; i++)
  	    xfree(matches[i]);
@@ -79,7 +68,7 @@
  
  #endif /* (RL_VERSION_MAJOR >= 4) */
 --- Gnu/XS.pm
-+++ Gnu/XS.pm	2002/09/19 09:36:17
++++ Gnu/XS.pm	2004/09/27 14:37:29
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
@@ -87,7 +76,7 @@
  #	XS.pm : perl function definition for Term::ReadLine::Gnu
  #
 --- Gnu/euc_jp.pm
-+++ Gnu/euc_jp.pm	2002/09/19 09:36:06
++++ Gnu/euc_jp.pm	2004/09/27 14:37:29
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
@@ -95,7 +84,7 @@
  #	euc_jp.pm : EUC Japanese Character Support Functions
  #		This modules is experimental.  API may be changed.
 --- eg/fileman
-+++ eg/fileman	2002/09/19 09:37:01
++++ eg/fileman	2004/09/27 14:37:29
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
@@ -103,7 +92,7 @@
  # $Id$
  #
 --- eg/perlsh
-+++ eg/perlsh	2002/09/19 09:36:51
++++ eg/perlsh	2004/09/27 14:37:29
 @@ -1,4 +1,4 @@
 -#! /usr/local/bin/perl
 +#!/usr/bin/perl
@@ -111,7 +100,7 @@
  #	$Id$	
  #
 --- eg/pftp
-+++ eg/pftp	2002/09/19 09:37:10
++++ eg/pftp	2004/09/27 14:37:29
 @@ -1,4 +1,4 @@
 -#! /usr/local/bin/perl
 +#!/usr/bin/perl
@@ -119,10 +108,36 @@
  #	$Id$
  #
 --- eg/ptksh+
-+++ eg/ptksh+	2002/09/19 09:36:39
++++ eg/ptksh+	2004/09/27 14:37:29
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
 +#!/usr/bin/perl -w
  #
  # $Id$
  #
+--- ppport.h
++++ ppport.h	2004/09/27 14:37:29
+@@ -40,7 +40,7 @@
+    special defines should be used, ppport.h can be run through Perl to check
+    your source code. Simply say:
+    
+-   	perl -x ppport.h *.c *.h *.xs foo/*.c [etc]
++   	perl -x ppport.h *.c *.h *.xs foo/foo.c [etc]
+    
+    The result will be a list of patches suggesting changes that should at
+    least be acceptable, if not necessarily the most efficient solution, or a
+--- typemap
++++ typemap	2004/09/27 14:40:34
+@@ -24,7 +24,11 @@
+ 	    /* module FileHandle expects PerlIO is blessed to IO::Handle */
+ 	    /* This stop segmentation fault on Perl 5.8.0 w/PerlIO */
+ 	    GV *gv = newGVgen("IO::Handle");
+-	    PerlIO *fp = PerlIO_importFILE($var,0);
++	    PerlIO *fp = PerlIO_fdopen(fileno($var),"r+");
++	    if (!fp)
++	        fp = PerlIO_fdopen(fileno($var),"w");
++	    if (!fp)
++	        fp = PerlIO_fdopen(fileno($var),"r");
+ 	    if ( fp && do_open(gv, "+<&", 3, FALSE, 0, 0, fp) )
+ 		sv_setsv($arg, sv_bless(newRV((SV*)gv), gv_stashpv("IO::Handle",1)));
+ 	    else
