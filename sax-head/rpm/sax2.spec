@@ -279,18 +279,17 @@ make buildroot=$RPM_BUILD_ROOT lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
 #-------------------------------------------------
 %ifarch %ix86
 if [ -f "/usr/X11R6/bin/xsload" ];then
-	mv /usr/X11R6/lib/modules/drivers/ati_drv.o /tmp
-	mv /usr/X11R6/lib/modules/drivers/radeon_drv.o /tmp
-	mv /usr/X11R6/lib/modules/drivers/atimisc_drv.o /tmp
-	mv /usr/X11R6/lib/modules/drivers/r128_drv.o /tmp
+	MD=/usr/X11R6/lib/modules/drivers
+	for i in ati_drv.o radeon_drv.o atimisc_drv.o r128_drv.o;do
+		test -f $MD/$i && mv $MD/$i /tmp
+	done
 	/usr/X11R6/bin/xsload > /tmp/CardModules
 	cat /etc/X11/CardModules.addon >> /tmp/CardModules
 	cp /tmp/CardModules \
 		$RPM_BUILD_ROOT/usr/share/sax/api/data/CardModules
-	mv /tmp/ati_drv.o /usr/X11R6/lib/modules/drivers/
-	mv /tmp/radeon_drv.o /usr/X11R6/lib/modules/drivers/
-	mv /tmp/atimisc_drv.o /usr/X11R6/lib/modules/drivers/
-	mv /tmp/r128_drv.o /usr/X11R6/lib/modules/drivers/
+	for i in ati_drv.o radeon_drv.o atimisc_drv.o r128_drv.o;do
+		test -f /tmp/$i && mv /tmp/$i $MD
+	done
 fi
 %endif
 #=================================================
