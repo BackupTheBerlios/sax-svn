@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu May  8 18:25:51 CEST 2003 - ms@suse.de
+
+- added date patch, which is needed for SuSE Version <= 8.2
+  because the date -I syntax has changed with SuSE 8.3
+
+-------------------------------------------------------------------
 Wed May  7 15:06:59 CEST 2003 - ms@suse.de
 
 - fixed RawOption handling if comma seperated lists are used

@@ -29,6 +29,7 @@ Patch:        sax2_binmode.dif
 %endif
 Patch1:       sax2_monitor.dif
 Patch2:       sax2_slec.dif
+Patch3:       sax2_date.dif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 %ifarch ppc sparc sparc64
 Provides:     sax
@@ -88,6 +89,9 @@ if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
 fi
 %if %{suse_version} < 801
 %patch
+%endif
+%if %{suse_version} < 803
+%patch3
 %endif
 %patch1
 #=================================================

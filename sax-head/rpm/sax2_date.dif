@@ -1,0 +1,22 @@
+--- locale/.locale	(revision 48)
++++ locale/.locale	(working copy)
+@@ -130,7 +130,7 @@
+ 	$dir =~ s/\n//g;
+ 	$dir =~ s/ +//g;
+ 	qx (cd /tmp && tar -czf sax-bundle.tgz sax);
+-	$date = qx(date -I seconds);
++	$date = qx(date -I);
+ 	$date =~ s/\n//g;
+ 	$date =~ s/ +//g;
+ 
+--- modules/create/header.pm	(revision 48)
++++ modules/create/header.pm	(working copy)
+@@ -19,7 +19,7 @@
+ #
+ 	my $builder = $_[0];
+ 	my @result;
+-	my $date    = qx(/bin/date -I seconds);
++	my $date    = qx(/bin/date -I);
+ 	$date =~ s/\n//g;
+ 
+ 	if ($builder eq "") {
