@@ -420,6 +420,14 @@ Logitech:TrackMan Marble FX (PS/2) {
  Buttons      = 4
 }
 
+Logitech:MX 900 Bluetooth {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Device       = /dev/input/mice
+ ZAxisMapping = 7 8
+ Buttons      = 8 
+}
+
 # =========================================
 # Touchpads (NoteBooks)
 # -----------------------------------------
