@@ -328,6 +328,7 @@ mv $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl \
 %endif
 # remove unpacked sources...
 # --------------------------
+rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/cdb/Monitors.orig
 rm -f $RPM_BUILD_ROOT/usr/X11R6/share/fvwm/fvwmrc.yast2
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/check_loader.sh
 rm -f $RPM_BUILD_ROOT/var/adm/perl-modules/sax2
