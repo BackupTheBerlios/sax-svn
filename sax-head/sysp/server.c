@@ -409,7 +409,11 @@ void ScanServer::Scan(void) {
 		data.slot      = 0x1;       // called nobus which will
 		data.func      = 0x2;       // remove the wrong BusID entry
 		if (! haveFBdev()) {
+		if (! haveVesaBIOS()) {
 			data.module = "vga";
+		} else {
+			data.module = "vesa";
+		}
 		}
 		pci[n]         = data;
 		graphics[n]    = pci[n];
@@ -555,10 +559,14 @@ void ScanServer::Scan(void) {
 		askid = ask;
 		// ...
 		// do not ask and use the DEFAULT 
-		// flag if vga/fbdev is set
+		// flag if vga/fbdev/vesa is set
 		// ---
 		int cardnumber = card;
-		if ((graphics[i].module == "vga") || (graphics[i].module == "fbdev")) {
+		if (
+			( graphics[i].module == "vga" )   || 
+			( graphics[i].module == "fbdev" ) ||
+			( graphics[i].module == "vesa" )
+		) {
 			cardnumber = NO_FLAG_QUESTION;
 		}
 		mapnr = IdentifyDevice (
@@ -599,14 +607,18 @@ void ScanServer::Scan(void) {
 			(graphics[i].module == "") || 
 			((graphics[i].vid == UNCVID) && (graphics[i].did == UNCDID) )
 		) {
-			ifstream handle(FB_DEV);
-			if (handle) {
-				handle.close();
+			if ( haveFBdev() ) {
 				graphics[i].module   = "fbdev";
-			} else { 
+			} else {
+			if ( haveVesaBIOS() ) {
+				graphics[i].module   = "vesa";
+				graphics[i].vendor   = "VESA";
+				graphics[i].device   = "Vesa-BIOS Graphics";
+			} else {
 				graphics[i].module   = "vga";
 				graphics[i].vendor   = "Unclassified";
 				graphics[i].device   = "Graphics";
+			}
 			}
 		}
 		if (checkPCIVendor) {
@@ -863,6 +875,18 @@ int ScanServer::haveFBdev (void) {
 	}
 	close (status);
 	return (1);
+}
+
+//======================================
+// ScanServer: check for VESA BIOS
+//--------------------------------------
+int ScanServer::haveVesaBIOS (void) {
+	string status = "0";
+	status = qx ( VBIOS,STDOUT );
+	if (status == "1") {
+		return (1);
+	}
+	return (0);
 }
 
 //======================================

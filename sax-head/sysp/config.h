@@ -77,6 +77,7 @@ STATUS        : Status: Up-to-date
 #define PSECTION          "/usr/X11R6/lib/sax/sysp/script/psection.pl"
 #define DIAG              "/usr/X11R6/lib/sax/sysp/script/diag.pl"
 #define GETVENDOR         "/usr/X11R6/lib/sax/sysp/script/vendor.pl"
+#define VBIOS             "/usr/X11R6/lib/sax/sysp/script/vbios.pl"
 
 #endif
 

@@ -550,3 +550,8 @@ NAME=Unclassified§DEVICE=Graphics§VID=0x1234§DID=0x5678§SERVER=fbdev§EXT=§OPT=§R
 # VESA Framebuffer
 #-----------------------------------#
 NAME=VESA§DEVICE=Framebuffer Graphics§VID=0x1234§DID=0x5678§SERVER=fbdev§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# VESA Card
+#-----------------------------------#
+NAME=VESA§DEVICE=Vesa-BIOS Graphics§VID=0x1234§DID=0x5678§SERVER=vesa§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT

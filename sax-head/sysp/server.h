@@ -69,7 +69,8 @@ class ScanServer {
 	void SetCard(str card="all");
 	void SetCardModule(str copt);
 	void NoPrimaryCheck(void);
-	int  haveFBdev(void);
+	int  haveFBdev (void);
+	int  haveVesaBIOS (void);
 
 	private:
 	int IdentifyDevice(

@@ -170,3 +170,14 @@
  
  	# create links...
  	# ----------------
+--- tools/xtest/xtest.c
++++ tools/xtest/xtest.c		2003/04/29 15:49:53
+@@ -126,7 +126,7 @@
+ 	// XAccess (display,NULL);
+ 	XCloseDisplay(display);
+ 
+-	RunWindowManager();
++	// RunWindowManager();
+ 	return 0;
+ }
+ 

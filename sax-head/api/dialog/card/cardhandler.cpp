@@ -945,6 +945,10 @@ void XCard::slotTopOk (void) {
 			for (; it.current(); ++it) {
 				current -> setPair ( it.currentKey().ascii(),it.current() );
 			}
+			QString* name   = new QString (mName->currentText());
+			QString* vendor = new QString (mVendor->currentText());
+			current -> setPair ("Name"   , name->ascii());
+			current -> setPair ("Vendor" , vendor->ascii());
 			}
 		}
 		// include desktop profile data
