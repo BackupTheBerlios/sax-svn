@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 15 17:06:42 2003
+# Author: Marcus Schaefer <sax@suse.de>, Thu Sep 18 09:29:49 2003
 #
 # Template for monitor data
 # --------------------------
@@ -29875,16 +29875,6 @@ SAMSUNG:SYNCMASTER 570 B TFT  {
 SAMSUNG:SYNCMASTER 570B TFT  {
  Hsync=30-61
  Vsync=60-75
-}
-
-#==============================================
-# SYNCMASTER 570B580B TFT
-#----------------------------------------------
-SAMSUNG:SYNCMASTER 570B580B TFT  {
- DDC=SAM49D5
- Option=DPMS
- Hsync=31-70
- Vsync=50-85
 }
 
 #==============================================
