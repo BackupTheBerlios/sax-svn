@@ -361,7 +361,6 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 /usr/share/sax/api/data/PointerDevice
 /usr/share/sax/api/data/StaticFontPathList
 /usr/share/sax/api/data/TabletModules
-/usr/share/sax/api/data/fvwmrc.sax
 /usr/share/sax/api/data/twmrc
 /usr/share/sax/sysp/script/installed.pl
 /usr/share/sax/sysp/script/killdot.pl
