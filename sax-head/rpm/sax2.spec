@@ -327,7 +327,6 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/i586-linux-thread-multi/Term/ReadLi
 %dir /usr/lib/perl5/*_perl/*/*/Term
 %dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine
 %dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu
-#%dir /usr/lib/perl5/*_perl/*/*/auto
 %dir /usr/lib/perl5/*_perl/*/*/auto/Term
 %dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine
 %dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu
