@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Sep 19 15:51:45 CEST 2003 - ms@suse.de
+
+- fixed xfine process call from xapi, use system to make
+  sure a new display is opened (#31394)
+
+-------------------------------------------------------------------
 Fri Sep 19 11:08:27 CEST 2003 - ms@suse.de
 
 - fixed variant checking, reset kbd variant if empty (#31316)

@@ -95,7 +95,6 @@ class XWrapFile {
 //-----------------------------------
 class XRunXFine : public QThread {
 	private:
-	QString xfineReturn;
 	int code;
 
 	public:
@@ -103,26 +102,18 @@ class XRunXFine : public QThread {
 		code = 0;
 	}
 	virtual void run ( void ) {
-		QString optfn ("-fn");
 		QString optst ("-style");
-		QString font (QApplication::desktop()->font().rawName());
 		if (globalStyle) {
-		xfineReturn = qx ( XFINE,STDOUT,4,"%s %s %s %s",
-			optfn.ascii(),font.ascii(),optst.ascii(),globalStyle
-		);
+			QString command;
+			command.sprintf ("%s %s %s",XFINE,optst.ascii(),globalStyle);
+			code = system (command);
 		} else {
-		xfineReturn = qx ( XFINE,STDOUT,2,"%s %s", 
-			optfn.ascii(),font.ascii()
-		);
+			code = system (XFINE);
 		}
-		code = xfineReturn.toInt();
 		exit();
 	}
 	int getReturnCode ( void ) {
 		return (code);
-	}
-	QString getMessage ( void ) {
-		return (xfineReturn);
 	}
 };
 

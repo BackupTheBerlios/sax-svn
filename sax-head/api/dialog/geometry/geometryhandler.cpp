@@ -104,11 +104,10 @@ bool XDisplayGeometry::slotRun (int index) {
 		}
 		mFrame -> enableInteraction();
 		int code = xfineThread.getReturnCode();
-		QString message (xfineThread.getMessage());
 		switch (code) {
 		case 0:
 			log (L_ERROR,
-				"XDisplayGeometry::%s\n",message.ascii()
+				"XDisplayGeometry::XFine called failed\n"
 			);
 		break;
 		case 1:
