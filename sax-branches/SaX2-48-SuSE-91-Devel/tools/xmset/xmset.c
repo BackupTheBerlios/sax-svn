@@ -618,52 +618,36 @@ int catchErrors (Display *dpy, XErrorEvent *ev) {
 // show mouse configuration...
 //----------------------------------------
 void showConfig (void) {
-	MouseData* lp = NULL;
 	MouseData* mp = MouseGetData();
-	int haveMouse = 0;
-
 	printf("Section \"InputDevice\"\n");
 	printf("  Driver     \"mouse\"\n");
 	printf("  Identifier \"Mouse[1]\"\n");
-
-	for (lp=mp; lp; lp=lp->next) {
-		if (
-			(strstr(lp->name,"Tablet") != NULL) ||
-			(strstr(lp->name,"tablet") != NULL) ||
-			(strstr(lp->name,"Intuos") != NULL)
-		) {
-			// TODO...
-			// Tablet detected shouldn't be handled as mouse
-			continue;
-		}
-		if (lp->protocol) {
-			printf("  Option     \"Protocol\" \"%s\"\n",lp->protocol);
-		}
-		if (lp->device) {
-			int error = 0;
-			str mouseLink = "/dev/mouse";
-			error = unlink  (mouseLink);
-			error = symlink (lp->device,mouseLink);
-			if (error == -1) {
-			fprintf(stderr,"Could not create mouse link: %s -> %s\n",
-				mouseLink,lp->device
-			);
-			}
-			printf("  Option     \"Device\"   \"%s\"\n",mouseLink);
-		}
-		if ((lp->wheel) && (lp->wheel >= 1)) {
-			int btns = 5;
-			if ((lp->buttons) && (lp->buttons > 5)) {
-				printf("  Option     \"Buttons\" \"%d\"\n",lp->buttons);
-			}
-			printf("  Option     \"ZAxisMapping\" \"%d %d\"\n",
-				btns - 1,btns
-			);
-		}
-		haveMouse = 1;
-		break;
+	if (mp) {
+	if (mp->protocol) {
+		printf("  Option     \"Protocol\" \"%s\"\n",mp->protocol);
 	}
-	if (! haveMouse) {
+	if (mp->device) {
+		int error = 0;
+		str mouseLink = "/dev/mouse";
+		error = unlink  (mouseLink);
+		error = symlink (mp->device,mouseLink);
+		if (error == -1) {
+		fprintf(stderr,"Could not create mouse link: %s -> %s\n",
+			mouseLink,mp->device
+		);
+		}
+		printf("  Option     \"Device\"   \"%s\"\n",mouseLink);
+	}
+	if ((mp->wheel) && (mp->wheel >= 1)) {
+		int btns = 5;
+		if ((mp->buttons) && (mp->buttons > 5)) {
+			printf("  Option     \"Buttons\" \"%d\"\n",mp->buttons);
+		}
+		printf("  Option     \"ZAxisMapping\" \"%d %d\"\n",
+			btns - 1,btns
+		);
+	}
+	} else {
 		printf("  Option     \"Protocol\" \"Auto\"\n");
 		printf("  Option     \"Device\"   \"/dev/mouse\"\n");
 	}

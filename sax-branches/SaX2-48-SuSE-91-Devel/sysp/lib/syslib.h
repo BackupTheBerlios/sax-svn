@@ -92,7 +92,6 @@ typedef struct {
 } FbData;
 
 typedef struct MouseData_t {
- str name;
  str protocol;
  str device;
  int emulate;
