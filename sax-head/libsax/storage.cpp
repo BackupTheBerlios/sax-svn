@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "storage.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -485,3 +486,4 @@ QList< QDict<QString> > SaXStorage::getTablePointerDATA ( void ) {
 	// ----
 	return mData;
 }
+} // end namespace

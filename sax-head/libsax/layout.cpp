@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "layout.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -212,3 +213,4 @@ QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	}
 	return layoutList;
 }
+} // end namespace

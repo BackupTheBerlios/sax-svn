@@ -30,6 +30,7 @@ STATUS        : Status: Development
 #include "storage.h"
 #include "exception.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -113,9 +114,9 @@ class SaXProcessIF : public SaXStorage {
 * sysp_options.append ( "-q" );
 * sysp_options.append ( "server" );
 * SaXProcess* proc = new SaXProcess ();
-* proc -> start ( sysp_options , SAX_SYSP );
-* if (proc -> getItem("VID")) {
-*     printf ("%s\n",proc -> getItem("VID").ascii());
+* proc->start ( sysp_options , SAX_SYSP );
+* if (proc->getItem("VID")) {
+*     printf ("%s\n",proc->getItem("VID").ascii());
 * }
 * \endcode
 */
@@ -136,5 +137,5 @@ class SaXProcess : public SaXProcessIF {
 	public:
 	SaXProcess ( void );
 };
-
+} // end namespace
 #endif

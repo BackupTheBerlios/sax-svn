@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "card.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -462,3 +463,4 @@ int SaXManipulateCard::getHeads ( void ) {
 	//------------------------------------
 	return mBoards;
 }
+} // end namespace

@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "desktop.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -823,3 +824,4 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorList ( void ) {
 	}
 	return mCDBMonitorList;
 }
+} // end namespace

@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "export.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -132,3 +133,4 @@ bool SaXExport::doExport (void) {
 	mHandle -> close();
 	return true;
 }
+} // end namespace

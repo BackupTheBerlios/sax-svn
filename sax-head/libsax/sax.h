@@ -80,9 +80,9 @@ STATUS        : Status: Development
 *     my $config = new SaX::SaXConfig;
 *     foreach my $id (@importID) {
 *         $import = new SaX::SaXImport ( $id );
-*         $import -> setSource ( $SaX::SAX_SYSTEM_CONFIG );
-*         $import -> doImport();
-*         $config -> addImport ( $import );
+*         $import->setSource ( $SaX::SAX_SYSTEM_CONFIG );
+*         $import->doImport();
+*         $config->addImport ( $import );
 *         $section{$import->getSectionName()} = $import;
 *     }
 *     my $mDesktop = new SaX::SaXManipulateDesktop (
@@ -91,8 +91,8 @@ STATUS        : Status: Development
 *     if ($mDesktop->selectDesktop (0)) {
 *         $mDesktop->setColorDepth (24);
 *     }
-*     $config -> setMode (SaX::SAX_MERGE);
-*     $config -> createConfiguration();
+*     $config->setMode (SaX::SAX_MERGE);
+*     $config->createConfiguration();
 * }
 *
 * main();

@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "keyboard.h"
 
+namespace SaX {
 //====================================
 // Constructor
 //------------------------------------
@@ -561,3 +562,4 @@ QList<QString> SaXManipulateKeyboard::createList ( const QString& data) {
 	}
 	return result;
 }
+} // end namespace

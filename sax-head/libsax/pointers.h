@@ -27,6 +27,7 @@ STATUS        : Status: Development
 #include "import.h"
 #include "device.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -154,9 +155,9 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 *     printf ("Importing data...\n");
 *     SaXConfig* config = new SaXConfig;
 *     SaXImport* import = new SaXImport ( SAX_POINTERS );
-*     import -> setSource ( SAX_SYSTEM_CONFIG );
-*     import -> doImport();
-*     config -> addImport (import);
+*     import->setSource ( SAX_SYSTEM_CONFIG );
+*     import->doImport();
+*     config->addImport (import);
 *     section.insert (
 *         import->getSectionName(),import
 *     );
@@ -170,8 +171,8 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 *     }
 *     }
 *     printf ("Writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -266,9 +267,9 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 *     SaXConfig* config = new SaXConfig;
 *     for (int id=0; id<2; id++) {
 *         SaXImport* import = new SaXImport ( importID[id] );
-*         import -> setSource ( SAX_SYSTEM_CONFIG );
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource ( SAX_SYSTEM_CONFIG );
+*         import->doImport();
+*         config->addImport (import);
 *         section.insert (
 *             import->getSectionName(),import
 *         );
@@ -296,8 +297,8 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 *         );
 *     }
 *     printf ("writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -395,9 +396,9 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 *     SaXConfig* config = new SaXConfig;
 *     for (int id=0; id<2; id++) {
 *         SaXImport* import = new SaXImport ( importID[id] );
-*         import -> setSource ( SAX_SYSTEM_CONFIG );
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource ( SAX_SYSTEM_CONFIG );
+*         import->doImport();
+*         config->addImport (import);
 *         section.insert (
 *             import->getSectionName(),import
 *         );
@@ -420,8 +421,8 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 *         printf ("TouchPanel: [%s] configured\n", myPanel->ascii());
 *     }
 *     printf ("writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -445,5 +446,5 @@ class SaXManipulateTouchscreens : public SaXManipulateTouchscreensIF {
 	public:
 	SaXManipulateTouchscreens ( SaXImport*, int = 1 );
 };
-
+} // end namespace
 #endif

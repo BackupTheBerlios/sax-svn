@@ -31,6 +31,7 @@ STATUS        : Status: Development
 #include "card.h"
 #include "path.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -133,9 +134,9 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 *     SaXConfig* config = new SaXConfig;
 *     for (int id=0; id<5; id++) {
 *         SaXImport* import = new SaXImport ( importID[id] );
-*         import -> setSource ( SAX_SYSTEM_CONFIG );
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource ( SAX_SYSTEM_CONFIG );
+*         import->doImport();
+*         config->addImport (import);
 *         section.insert (
 *             import->getSectionName(),import
 *         );
@@ -151,8 +152,8 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 *         mVNC.addVNCMouse();
 *     }
 *     printf ("writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -200,5 +201,5 @@ class SaXManipulateVNC : public SaXManipulateVNCIF {
 		SaXImport*, SaXImport*, int = 0
 	);
 };
-
+} // end namespace
 #endif

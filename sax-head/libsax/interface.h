@@ -80,7 +80,7 @@ typedef void* (*Factory) ();
 *
 * int main (void) {
 *    saxPluglib* LiMal = loadLibrary();
-*    LiMal -> setDebug();
+*    LiMal->setDebug();
 *    int importID[7] = {
 *         SAX_CARD,
 *         SAX_DESKTOP,
@@ -95,14 +95,14 @@ typedef void* (*Factory) ();
 *     for (int id=0; id<7; id++) {
 *         printf ("Importing data...\n");
 *         SaXImport* import = LiMal->saxImport (importID[id]);
-*         import -> setSource (SAX_AUTO_PROBE);
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource (SAX_AUTO_PROBE);
+*         import->doImport();
+*         config->addImport (import);
 *         section.append (import);
 *     }
 *     printf ("writing configuration\n");
-*     config -> setMode (SAX_NEW);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_NEW);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *     }
 *     delete LiMal;
@@ -129,6 +129,11 @@ struct EntryPoint {
 	const char* version;
 	Factory factory;
 };
+
+//====================================
+// use namespace SaX for interface
+//------------------------------------
+using namespace SaX;
 
 namespace LML {
 //====================================

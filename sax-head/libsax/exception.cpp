@@ -20,6 +20,10 @@ STATUS        : Status: Development
 **************/
 #include "exception.h"
 
+namespace SaX {
+//====================================
+// Globals...
+//------------------------------------
 volatile bool DEBUG = false;
 
 //====================================
@@ -446,3 +450,4 @@ void SaXException::excXKBLayoutUndefined ( const char* layout ) {
 	setErrorCode (EXKBLAYOUT,EXKBLAYOUTID);
 	emit saxXKBLayoutUndefined (layout);
 }
+} // end namespace

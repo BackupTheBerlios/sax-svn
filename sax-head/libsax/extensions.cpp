@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "extensions.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -324,3 +325,4 @@ bool SaXManipulateVNC::isPwdProtectionEnabled (void) {
 	}
 	return false;
 }
+} // end namespace

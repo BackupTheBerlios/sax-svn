@@ -21,6 +21,7 @@ STATUS        : Status: Development
 #include <hd.h>
 #include "init.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -298,3 +299,4 @@ bool SaXInit::saveHDstatus (int type, char* val, char* id) {
 	free (hd_data);
 	return true;
 }
+} // end namespace

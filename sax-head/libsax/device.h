@@ -26,6 +26,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include "import.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -99,9 +100,9 @@ class SaXManipulateDevicesIF : public SaXException {
 *     SaXConfig* config = new SaXConfig;
 *     for (int id=0; id < 2; id++) {
 *         SaXImport* import = new SaXImport ( importID[id] );
-*         import -> setSource ( SAX_SYSTEM_CONFIG );
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource ( SAX_SYSTEM_CONFIG );
+*         import->doImport();
+*         config->addImport (import);
 *         section.insert (
 *             import->getSectionName(),import
 *         );
@@ -124,8 +125,8 @@ class SaXManipulateDevicesIF : public SaXException {
 *         printf ("[%s]\n",myTablet->ascii());
 *     }
 *     printf ("writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -160,5 +161,5 @@ class SaXManipulateDevices : public SaXManipulateDevicesIF {
 	SaXManipulateDevices ( SaXImport*,SaXImport*,SaXImport* );
 	SaXManipulateDevices ( SaXImport*,SaXImport* );
 };
-
+} // end namespace
 #endif

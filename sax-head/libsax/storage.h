@@ -32,6 +32,7 @@ STATUS        : Status: Development
 
 #include "exception.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -180,5 +181,5 @@ class SaXStorage : public SaXStorageIF {
 	public:
 	SaXStorage ( void );
 };
-
+} // end namespace
 #endif

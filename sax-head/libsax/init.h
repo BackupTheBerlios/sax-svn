@@ -28,6 +28,7 @@ STATUS        : Status: Development
 
 #include "exception.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -97,5 +98,5 @@ class SaXInit : public SaXInitIF {
 	SaXInit ( QList<char> );
 	SaXInit ( void );
 };
-
+} // end namespace
 #endif

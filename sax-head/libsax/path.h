@@ -26,6 +26,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include "import.h"
 
+namespace SaX {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
@@ -85,9 +86,9 @@ class SaXManipulatePathIF : public SaXException {
 *     printf ("Importing data...\n");
 *     SaXConfig* config = new SaXConfig;
 *     SaXImport* import = new SaXImport ( SAX_PATH );
-*     import -> setSource ( SAX_SYSTEM_CONFIG );
-*     import -> doImport();
-*     config -> addImport (import);
+*     import->setSource ( SAX_SYSTEM_CONFIG );
+*     import->doImport();
+*     config->addImport (import);
 *     section.insert (
 *         import->getSectionName(),import
 *     );
@@ -98,8 +99,8 @@ class SaXManipulatePathIF : public SaXException {
 *     mPath.addServerFlag ("DontVTSwitch");
 * 
 *     printf ("Writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -139,5 +140,5 @@ class SaXManipulatePath : public SaXManipulatePathIF {
 	public:
 	SaXManipulatePath ( SaXImport*, int = 0 );
 };
-
+} // end namespace
 #endif

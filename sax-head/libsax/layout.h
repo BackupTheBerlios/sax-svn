@@ -27,6 +27,7 @@ STATUS        : Status: Development
 #include "import.h"
 #include "card.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -85,9 +86,9 @@ class SaXManipulateLayoutIF : public SaXException {
 *     SaXConfig* config = new SaXConfig;
 *     for (int id=0; id<2; id++) {
 *         SaXImport* import = new SaXImport ( importID[id] );
-*         import -> setSource ( SAX_SYSTEM_CONFIG );
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource ( SAX_SYSTEM_CONFIG );
+*         import->doImport();
+*         config->addImport (import);
 *         section.insert (
 *             import->getSectionName(),import
 *         );
@@ -139,5 +140,5 @@ class SaXManipulateLayout : public SaXManipulateLayoutIF {
 	public:
 	SaXManipulateLayout ( SaXImport*,SaXImport* );
 };
-
+} // end namespace
 #endif

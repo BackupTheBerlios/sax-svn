@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "device.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -430,3 +431,4 @@ void SaXManipulateDevices::updateLayout (int newID) {
 		mLayout -> setItem (key,val);
 	}
 }
+} // end namespace

@@ -31,6 +31,7 @@ STATUS        : Status: Development
 #include <fcntl.h>
 #include <sys/file.h>
 
+namespace SaX {
 //====================================
 // Defines (macros)...
 //------------------------------------
@@ -356,5 +357,5 @@ class SaXException : public SaXExceptionIF {
 	public:
 	SaXException ( void );
 };
-
+} // end namespace
 #endif

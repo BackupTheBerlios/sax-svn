@@ -28,6 +28,7 @@ STATUS        : Status: Development
 #include <dirent.h>
 #include "import.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -93,9 +94,9 @@ class SaXManipulateCardIF : public SaXException {
 *     printf ("Importing data...\n");
 *     SaXConfig* config = new SaXConfig;
 *     SaXImport* import = new SaXImport ( SAX_CARD );
-*     import -> setSource ( SAX_SYSTEM_CONFIG );
-*     import -> doImport();
-*     config -> addImport (import);
+*     import->setSource ( SAX_SYSTEM_CONFIG );
+*     import->doImport();
+*     config->addImport (import);
 *     section.insert (
 *         import->getSectionName(),import
 *     );
@@ -107,8 +108,8 @@ class SaXManipulateCardIF : public SaXException {
 *         mCard.addCardOption ("PanelSize","1280x1024");
 *     }
 *     printf ("Writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString());
 *         printf ("%s\n",config->getParseErrorValue());
 *         return 1;
@@ -152,5 +153,5 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	public:
 	SaXManipulateCard ( SaXImport*, int = 0 );
 };
-
+} // end namespace
 #endif

@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "config.h"
 
+namespace SaX {
 //====================================
 // Globals...
 //------------------------------------
@@ -491,3 +492,4 @@ void ErrorF (const char *f, ...) {
 	}
 }
 }
+} // end namespace

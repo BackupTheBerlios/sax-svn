@@ -28,6 +28,7 @@ STATUS        : Status: Development
 #include "card.h"
 #include "path.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -116,9 +117,9 @@ class SaXManipulateDesktopIF : public SaXException {
 *     SaXConfig* config = new SaXConfig;
 *     for (int id=0; id<3; id++) {
 *         SaXImport* import = new SaXImport ( importID[id] );
-*         import -> setSource ( SAX_SYSTEM_CONFIG );
-*         import -> doImport();
-*         config -> addImport (import);
+*         import->setSource ( SAX_SYSTEM_CONFIG );
+*         import->doImport();
+*         config->addImport (import);
 *         section.insert (
 *             import->getSectionName(),import
 *         );
@@ -131,8 +132,8 @@ class SaXManipulateDesktopIF : public SaXException {
 *         mDesktop.addResolution (24,1600,1200);
 *     }
 *     printf ("Writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString());
 *         printf ("%s\n",config->getParseErrorValue());
 *         return 1;
@@ -192,5 +193,5 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 		SaXImport*, SaXImport*, SaXImport*, int = 0
 	);
 };
-
+} // end namespace
 #endif

@@ -32,6 +32,7 @@ extern "C" {
 
 #include "export.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -124,11 +125,11 @@ class SaXConfigIF : public SaXException {
 * SaXConfig* config = new SaXConfig;
 * for (int id=0; id < 7; id++) {
 *     SaXImport* import = new SaXImport ( importID[id] );
-*     import -> doImport();
-*     config -> addImport (import);
+*     import->doImport();
+*     config->addImport (import);
 * }
-* config -> setMode (SAX_NEW);
-* if ( ! config -> createConfiguration() ) {
+* config->setMode (SAX_NEW);
+* if ( ! config->createConfiguration() ) {
 *     printf ("%s\n",config->getParseErrorValue().ascii());
 * }
 * \endcode
@@ -174,4 +175,5 @@ class SaXConfig : public SaXConfigIF {
 	public:
 	SaXConfig ( int = SAX_MERGE );
 };
+} // end namespace
 #endif

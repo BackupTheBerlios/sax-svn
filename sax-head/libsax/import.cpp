@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "import.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -346,4 +347,4 @@ SaXImport* SaXImportProfile::getImport (int section) {
 	}
 	return obj;
 }
-
+} // end namespace

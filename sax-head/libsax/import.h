@@ -31,6 +31,7 @@ STATUS        : Status: Development
 #include "exception.h"
 #include "process.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -115,10 +116,10 @@ class SaXImportIF : public SaXProcess {
 * #include <sax.h>
 *
 * SaXImport* card = new SaXImport (SAX_CARD);
-* card -> doImport();
+* card->doImport();
 *
-* if (card -> getItem("Vendor")) {
-*     printf ("%s\n",card -> getItem("Vendor").ascii());
+* if (card->getItem("Vendor")) {
+*     printf ("%s\n",card->getItem("Vendor").ascii());
 * }
 * \endcode
 */
@@ -209,10 +210,10 @@ class SaXImportSyspIF : public SaXProcess {
 * #include <sax.h>
 *
 * SaXImportSysp* card = new SaXImportSysp (SYSP_CARD);
-* card -> doImport();
+* card->doImport();
 *
 * if (card->getItem("VID")) {
-*     printf ("%s\n",card -> getItem("VID").ascii());
+*     printf ("%s\n",card->getItem("VID").ascii());
 * }
 * \endcode
 */
@@ -310,9 +311,9 @@ class SaXImportCDBIF : public SaXProcess {
 * #include <sax.h>
 *
 * SaXImportCDB* cards = new SaXImportCDB (CDB_CARDS);
-* cards -> doImport();
+* cards->doImport();
 *
-* QDict< QDict<QString> > data = cards -> getTablePointerCDB ();
+* QDict< QDict<QString> > data = cards->getTablePointerCDB ();
 * QDictIterator< QDict<QString> > n (data);
 * for (; n.current(); ++n) {
 *     printf ("%s\n",n.currentKey().ascii());
@@ -385,5 +386,5 @@ class SaXImportProfile : public SaXImportProfileIF {
 	public:
 	SaXImportProfile ( const QString& );
 };
-
+} // end namespace
 #endif

@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "path.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -268,3 +269,4 @@ QList<QString> SaXManipulatePath::createList ( const QString& data) {
 	}
 	return result;
 }
+} // end namespace

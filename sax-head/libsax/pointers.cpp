@@ -18,6 +18,7 @@ STATUS        : Status: Development
 **************/
 #include "pointers.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -969,3 +970,4 @@ void SaXManipulateTouchscreens::setTouchPanel (const QString& group) {
 		nameList.last()
 	);
 }
+} // end namespace

@@ -34,6 +34,7 @@ STATUS        : Status: Development
 #include <X11/extensions/XKBfile.h>
 #include <X11/extensions/XKBui.h>
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -173,9 +174,9 @@ class SaXManipulateKeyboardIF : public SaXKeyRules {
 *     printf ("Importing data...\n");
 *     SaXConfig* config = new SaXConfig;
 *     SaXImport* import = new SaXImport ( SAX_KEYBOARD );
-*     import -> setSource ( SAX_SYSTEM_CONFIG );
-*     import -> doImport();
-*     config -> addImport (import);
+*     import->setSource ( SAX_SYSTEM_CONFIG );
+*     import->doImport();
+*     config->addImport (import);
 *     section.insert (
 *         import->getSectionName(),import
 *     );
@@ -185,11 +186,10 @@ class SaXManipulateKeyboardIF : public SaXKeyRules {
 *     );
 *     if (mKeyboard.selectKeyboard (SAX_CORE_KBD)) {
 *         mKeyboard.addXKBLayout ("cz");
-*         mKeyboard.getXKBVariant ("bla");
 *     }
 *     printf ("Writing configuration\n");
-*     config -> setMode (SAX_MERGE);
-*     if ( ! config -> createConfiguration() ) {
+*     config->setMode (SAX_MERGE);
+*     if ( ! config->createConfiguration() ) {
 *         printf ("%s\n",config->errorString().ascii());
 *         printf ("%s\n",config->getParseErrorValue().ascii());
 *         return 1;
@@ -242,5 +242,5 @@ class SaXManipulateKeyboard : public SaXManipulateKeyboardIF {
 	public:
 	SaXManipulateKeyboard ( SaXImport*, int = 0 );
 };
-
+} // end namespace
 #endif

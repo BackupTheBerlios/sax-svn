@@ -33,6 +33,7 @@ STATUS        : Status: Development
 
 #include "import.h"
 
+namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
@@ -83,8 +84,8 @@ class SaXExportIF : public SaXException {
 *
 * SaXImport* import = new SaXImport (SAX_DESKTOP);
 * SaXExport* export = new SaXExport (import,NULL);
-* import -> doImport();
-* export -> doExport();
+* import->doImport();
+* export->doExport();
 * \endcode
 */
 class SaXExport : public SaXExportIF {
@@ -102,5 +103,5 @@ class SaXExport : public SaXExportIF {
 	public:
 	SaXExport ( SaXImport*,SaXException* );
 };
-
+} // end namespace
 #endif

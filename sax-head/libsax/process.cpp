@@ -20,6 +20,7 @@ STATUS        : Status: Development
 **************/
 #include "process.h"
 
+namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
@@ -347,3 +348,4 @@ void SaXProcess::storeData (void) {
 		setItem (key,val);
 	}
 }
+} // end namespace
