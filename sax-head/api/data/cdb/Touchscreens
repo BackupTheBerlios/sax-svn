@@ -78,16 +78,6 @@ MICROTOUCH:TOUCHSCREEN {
  RawOption            = "DataBits" "8","StopBits" "1","Parity" "None"
 }
 
-#----------------------#
-# Synaptics Touchpad   #
-#----------------------#
-SYNAPTICS:TOUCHPAD {
- Driver               = synaptics
- Device               = /dev/psaux
- RawOption            = "Edges" "1900 5400 1800 3900","Finger" "25 30","MaxTapTime" "20","MaxTapMove" "220","VertScrollDelta" "100","MinSpeed" "0.02","MaxSpeed" "0.18","AccelFactor" "0.0010"
- Load                 = synaptics
-}
-
 #---------------#
 # Elo Touchpad  #
 #---------------#
