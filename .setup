@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp .doit $HOME
+ssh -l root 10.10.100.196 "$HOME/.doit $*"

@@ -22,6 +22,12 @@ init
 rm -rf /suse/ms/compiled/*
 for i in 8.2 8.1 8.0;do
 	ROOT="/abuild/kussl/$i"
+	if [ ! -d $ROOT ];then
+		mkdir -p $ROOT
+	fi
+	if [ ! -d /work ];then
+		ln -s /mounts/work /work
+	fi
 	export BUILD_ROOT=$ROOT
 	export BUILD_DIST=$i-i386
 	if [ "$i" = "8.2" ];then

@@ -108,18 +108,21 @@ sub main {
 	#----------------------------------------------
 	if (defined $Build) {
 	if (defined $Clean) {
-		chdir $pacdir && system (".build clean");
+		chdir $pacdir && system ("./.build clean");
 	} else {
-		chdir $pacdir && system (".build");
+		chdir $pacdir && system ("./.build");
 	}
 	}
 	#==============================================
 	# Clean sweep
 	#----------------------------------------------
 	if (defined $Build) {
-		qx (rm -rf $pacdir);
+		#qx (rm -rf $pacdir);
 	} else {
-		print "Created archive at: $pacdir...\n";
+		my $host = qx (hostname);
+		chomp ($host);
+		print 'Retrieve archive with: ';
+		print '[ scp -r root@'.$host.':'.$pacdir." . ]\n";
 	}
 }
 
@@ -132,6 +135,9 @@ sub checkout {
 	my $pacdir = svnup (@_);
 	chdir $pacdir;
 	qx( mv sax/rpm/* . );
+	if (defined $Build) {
+		qx( mv sax/.build . );
+	}
 	chdir $pacdir."/sax" && qx (./.archive);
 	chdir $pacdir;
 	qx( mv sax/*.bz2 ./sax2.tar.bz2 );
@@ -161,7 +167,8 @@ sub svnup {
 		die "Could not create temp dir: $!";
 	}
 	chdir $tmpdir;
-	qx (svn co file://$svnPath sax);
+	qx (svn co file://$svnPath sax) || 
+		die "checkout failed !";
 	return $tmpdir;
 }
 
