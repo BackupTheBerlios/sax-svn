@@ -130,7 +130,7 @@ sub main {
 	$dir =~ s/\n//g;
 	$dir =~ s/ +//g;
 	qx (cd /tmp && tar -czf sax-bundle.tgz sax);
-	$date = qx(date -I);
+	$date = qx(date -I seconds);
 	$date =~ s/\n//g;
 	$date =~ s/ +//g;
 
