@@ -41,6 +41,7 @@ R {F}[ \t]*-[ \t]*{F}
 {F}[xX]{F}@{F}Hz              {strcpy(yylval.string,yytext);return(VESAMODE);  }
 "Max pixel clock is"          {strcpy(yylval.string,yytext);return(DAC);       }
 "Maximum pixel clock"[ \t]*:  {strcpy(yylval.string,yytext);return(DAC);       }
+"Maximum clock:"              {strcpy(yylval.string,yytext);return(DAC);       }
 "clock range:".*"to"          {strcpy(yylval.string,yytext);return(DAC);       }
 "Max Clock"[ \t]*:            {strcpy(yylval.string,yytext);return(DAC);       }
 "pixel clocks"[ \t]*:         {strcpy(yylval.string,yytext);return(CLOCKS);    }
