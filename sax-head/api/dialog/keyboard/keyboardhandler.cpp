@@ -275,6 +275,26 @@ bool XKeyboard::slotRun (int index) {
 	QString XKBVariants = keyboardInfo["XkbVariant"];
 	QString XKBModel    = keyboardInfo["XkbModel"];
 
+	// ...
+	// Save the parsed XkbOption data to the
+	// mKeyboardOptions hash
+	// ---
+	if (keyboardInfo["XkbOptions"]) {
+		mKeyboardOptions.insert ("XkbOptions",keyboardInfo["XkbOptions"]);
+	}
+	if (keyboardInfo["LeftAlt"]) {
+		mKeyboardOptions.insert ("LeftAlt",keyboardInfo["LeftAlt"]);
+	}
+	if (keyboardInfo["RightAlt"]) {
+		mKeyboardOptions.insert ("RightAlt",keyboardInfo["RightAlt"]);
+	}
+	if (keyboardInfo["ScrollLock"]) {
+		mKeyboardOptions.insert ("ScrollLock",keyboardInfo["ScrollLock"]);
+	}
+	if (keyboardInfo["RightCtl"]) {
+		mKeyboardOptions.insert ("RightCtl",keyboardInfo["RightCtl"]);
+	}
+
 	//=====================================
 	// clean QListView data fields
 	//-------------------------------------
@@ -559,6 +579,7 @@ void XKeyboard::setupTop ( void ) {
 	// lookup AutoRepeat value to init slider
 	// values within the options dialog
 	// ---
+	#if 0
 	if (mKeyboardOptions["AutoRepeat"]) {
 		XStringList valList;
 		valList.setText (mKeyboardOptions["AutoRepeat"]);
@@ -573,6 +594,7 @@ void XKeyboard::setupTop ( void ) {
 			mCurrentKrate
 		);
 	}
+	#endif
 	// ...
 	// init all XKB values in the key-mapping dialog
 	// overwrite the default setup with it
@@ -746,6 +768,7 @@ void XKeyboard::slotTopOk ( void ) {
 	// save the values of the auto repeat sliders, if one
 	// of them has another value than the default value
 	// ---
+	#if 0
 	if (
 		(mDelay->value() != XKBDDELAY_DEFAULT) || 
 		(mRepeat->value() != XKBDRATE_DEFAULT)
@@ -758,6 +781,7 @@ void XKeyboard::slotTopOk ( void ) {
 			"AutoRepeat",autoRepeat->ascii()
 		);
 	}
+	#endif
 	apply();
 }
 
