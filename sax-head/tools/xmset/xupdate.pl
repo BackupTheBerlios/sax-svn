@@ -139,8 +139,8 @@ my @list   = readConfig();
 my @point1 = getMouseSection (@list);
 my @point2 = getMonitorSection (@list);
 my @point3 = getServerLayoutSection (@list);
-my @detect = split (/\n/,qx (/usr/X11R6/bin/xmset -c));
-my $size   = qx (/usr/X11R6/bin/xmset -m);
+my @detect = split (/\n/,qx (/usr/share/sax/tools/xmset -c));
+my $size   = qx (/usr/share/sax/tools/xmset -m);
 my @layout = getPointerLayout (@detect);
 
 for (my $i=0;$i < $point1[0] - 1;$i++) {

@@ -138,7 +138,7 @@ sub init {
 	# /.../
 	# global spec hash definitions...
 	# -------------------------------
-	my $LD = "/usr/X11R6/lib/";
+	my $LD = "/usr/share/";
 	$spec{StaticFontPathList}  = $LD."sax/api/data/StaticFontPathList";
 	$spec{LangFirstPath}       = $LD."sax/api/data/LangFirstPath";
 	$spec{LangCodes}           = $LD."sax/api/data/LangCodes";

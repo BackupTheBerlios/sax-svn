@@ -52,11 +52,11 @@ fi
 #----------------------------------------
 for param;do
 	if [ $param = "-v" ] || [ $param = "--version" ];then
-		/usr/X11R6/bin/sax.sh -v
+		/sbin/sax.sh -v
 		exit 0
 	fi
 	if [ $param = "-h" ] || [ $param = "--help" ];then
-		/usr/X11R6/bin/sax.sh -h
+		/sbin/sax.sh -h
 		exit 0
 	fi
 done
@@ -81,10 +81,10 @@ if [ ! "$UID" = 0 ];then
 
 	echo -n "SaX: root "
 	if [ -f "$SUX" ];then
-		sux -c "/usr/X11R6/bin/SaX2 $*"
+		sux -c "/sbin/SaX2 $*"
 	else
 		xhost + localhost > /dev/null 2>/dev/null
-		su - -c "/usr/X11R6/bin/SaX2 $*"
+		su - -c "/sbin/SaX2 $*"
 	fi
 
 	if [ ! "$?" = 0 ];then
@@ -103,8 +103,8 @@ fi
 
 # Use sax2_sbus to configure Sun framebuffer cards
 # ------------------------------------------------
-if [ -x /usr/X11R6/bin/sax2_sbus ] ; then
-	/usr/X11R6/bin/sax2_sbus -s > /dev/null
+if [ -x /sbin/sax2_sbus ] ; then
+	/sbin/sax2_sbus -s > /dev/null
 	if [ $? = 0 ] ; then
 		exit 0
 	fi
@@ -112,5 +112,5 @@ fi
 
 # run the main sax start script...
 # ---------------------------------
-/usr/X11R6/bin/sax.sh $*
+/sbin/sax.sh $*
 
