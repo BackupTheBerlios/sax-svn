@@ -1,20 +1,23 @@
+# translation of sax.po to czech
 # translation of sax.cs.po to Czech
 # domain "sax.mo"
 # Czech message file for SaX 2.
 # Copyright (C) 2000 SuSE GmbH.
 # Petr Pavlik <pp@suse.cz>, 2000, 2001.
-# Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003
-#
+# Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003.
+# Klara Cihlarova <koty@seznam.cz>, 2003.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.cs\n"
-"PO-Revision-Date: 2003-02-26 18:45+0100\n"
-"Last-Translator: Lukáš Tinkl <lukas.tinkl@suse.cz>\n"
-"Language-Team: Czech <local@suse.cz>\n"
+"Project-Id-Version: sax\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2003-09-02 15:00+0200\n"
+"Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
+"Language-Team: czech <suse@suse.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.2\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -47,41 +50,39 @@ msgstr "Nedostupné"
 
 #. Maximum length: 40  characters
 msgid "Use the following AccessX settings"
-msgstr ""
+msgstr "Použít následující nastavení AccessX"
 
 #. Maximum length: 40  characters
 msgid "Disable AccessX"
 msgstr "Zakázat AccessX"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Primary Setup"
 msgstr "Primární zařízení"
 
 #. Maximum length: 60  characters
 msgid "Additional Layout(s)"
-msgstr ""
+msgstr "Další rozložení"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Layout"
-msgstr "Rozložení obrazovky"
+msgstr "Rozložení"
 
 #. Maximum length: 60  characters
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #. Maximum length: 60  characters
 msgid "Keytable"
-msgstr ""
+msgstr "Tabulka"
 
 #. Maximum length: 60  characters
 msgid "Variant"
-msgstr ""
+msgstr "Varianta"
 
 #. Maximum length: 60  characters
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #. Maximum length: 60  characters
 msgid "This screen is selected"
@@ -89,7 +90,7 @@ msgstr "Tato obrazovka je vybrána"
 
 #. Maximum length: 20  characters
 msgid "at"
-msgstr ""
+msgstr "na"
 
 #. Maximum length: 20  characters
 msgid "Mouse"
@@ -417,6 +418,8 @@ msgid ""
 "warning only but make sure your keyboard model is able to map all the keys "
 "needed for the selected layout."
 msgstr ""
+"<b>Současné rozložení a model nesouhlasí</b><hr>Toto je pouze varování. "
+"Ujistěte se, že zvolený typ klávesnice je schopný mapovat zvolené rozložení."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
@@ -633,14 +636,14 @@ msgid ""
 "influence over the development of nVidia drivers.<br><br><b>Prepare 3D for "
 "this card?</b>"
 msgstr ""
-"<b>Byla nalezena karta s podporou 3D</b><hr>Toto není, z licenčních důvodů "
-"oficiální 2D/3D/OpenGL ovladač od nVidie. Tento ovladač neobsahuje "
-"hardwarovou 3D akceleraci.<br><br>Abyste získali 3D hardwarovou akceleraci, "
-"je třeba provést On-line aktualizaci v YaSTu nebo si stáhnout balíky "
-"NVIDIA_GLX a NVIDIA_kernel pro SuSE Linux ze stránek (http://www.nvidia.com)."
-"<br><br> Pokud se vyskytnou problémy s 2D/3D/OpenGL ovladači od nVidie, pak "
-"prosím kontaktujte prodejce, protože nemáme naneštěstí žádný vliv na vývoj "
-"ovladačů . <br><br>Chcete povolit 3D pro následující kartu?"
+"<b>Byla nalezena karta s podporou 3D: <u>%1</u></b><hr>Toto není, z "
+"licenčních důvodů oficiální 2D/3D/OpenGL ovladač od nVidie. Tento ovladač "
+"neobsahuje hardwarovou 3D akceleraci.<br><br>Abyste získali 3D hardwarovou "
+"akceleraci, je třeba provést On-line aktualizaci v YaSTu nebo si stáhnout "
+"balíky NVIDIA_GLX a NVIDIA_kernel pro SuSE Linux ze stránek (http://www."
+"nvidia.com).<br><br> Pokud se vyskytnou problémy s 2D/3D/OpenGL ovladači od "
+"nVidie, pak prosím kontaktujte prodejce, protože nemáme naneštěstí žádný "
+"vliv na vývoj ovladačů . <br><br>Chcete povolit 3D pro následující kartu?"
 
 #. RTF text: no limit
 msgid ""
@@ -890,11 +893,8 @@ msgstr ""
 "zařízení."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-msgstr ""
-"<b>Neplatné nastavení:</b><hr>Je třeba nastavit alespoň jedno grafické "
-"zařízení."
+msgstr "<b>Neplatné nastavení:</b><hr>Je třeba nastavit alespoň jeden monitor."
 
 #. RTF text: no limit
 msgid ""
@@ -963,24 +963,22 @@ msgid "Unknown Monitor..."
 msgstr "Neznámý monitor..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Nebylo možné rozpoznat monitor</b><hr>Je třeba provést konfiguraci ručně. "
-"Přejete si spustit dialog nyní?"
+"<b>Nebylo možné rozpoznat monitor (%1)</b><hr>Je třeba provést konfiguraci "
+"ručně. Přejete si spustit dialog nyní?"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Monitor s ID %1 nenalezen</b><hr>Je třeba provést konfiguraci monitoru "
-"ručně. Přejete si spustit dialog nyní?"
+"<b>Monitor (%1) s ID %2 nenalezen</b><hr>Je třeba provést konfiguraci "
+"monitoru ručně. Přejete si spustit dialog nyní?"
 
 #. Dynamic length: Please do not oversize key up to 10%
 msgid "Automatic graphics system set up"
@@ -1187,9 +1185,8 @@ msgid "Remove selected card"
 msgstr "Odstranit zvolenou kartu"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Remove selected monitor"
-msgstr "Odst&ranit zvolenou myš"
+msgstr "Odstranit zvolený monitor"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1289,9 +1286,8 @@ msgid "Possible"
 msgstr "Dostupné"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "&Add this resolution"
-msgstr "Přid&at toto rozlišení..."
+msgstr "Přid&at toto rozlišení"
 
 #. Maximum length: 50  characters
 msgid "Enable 3-button emulation"
@@ -1425,13 +1421,12 @@ msgstr ""
 "monitoru. Tabulka níže obsahuje aktuální nastavení modeline."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
 "language environment with which it should work."
 msgstr ""
 "<b>Vlastnosti klávesnice:</b><hr>Nastavte typ klávesnice a národní rozložení "
-"klávesnice. Navíc zde můžete nastavit použitá písma."
+"klávesnice."
 
 #. RTF text: no limit
 msgid ""
@@ -1585,933 +1580,903 @@ msgid "C&hange Size"
 msgstr "Změn&it velikost"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "No video mode tuning available"
-msgstr "Nedostupné"
+msgstr "Ladění video módu není dostupné"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Čekání..."
 
 #. RTF text: no limit
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx série"
 
 #. RTF text: no limit
 msgid "Canadian"
-msgstr ""
+msgstr "Kanadské"
 
 #. RTF text: no limit
 msgid "Brazilian"
-msgstr ""
+msgstr "Brazilské"
 
 #. RTF text: no limit
 msgid "Bosnian"
-msgstr ""
+msgstr "Bosenské"
 
 #. RTF text: no limit
 msgid "Lithuanian qwerty (numeric)"
-msgstr ""
+msgstr "Litevské qwerty (numerické)"
 
 #. RTF text: no limit
 msgid "Georgian (russian)"
-msgstr ""
+msgstr "Gruzínské (ruské)"
 
 #. RTF text: no limit
 msgid "Latvian"
-msgstr ""
+msgstr "Lotyšské"
 
 #. RTF text: no limit
 msgid "Belarusian"
-msgstr ""
+msgstr "Běloruské"
 
 #. RTF text: no limit
 msgid "Czech (qwerty)"
-msgstr ""
+msgstr "České (qwerty)"
 
 #. RTF text: no limit
 msgid "Northern Saami (Finland)"
-msgstr ""
+msgstr "Severní Saami (Finsko)"
 
 #. RTF text: no limit
 msgid "Macedonian"
-msgstr ""
+msgstr "Makedonské"
 
 #. RTF text: no limit
 msgid "U.S. English w/ deadkeys"
-msgstr ""
+msgstr "U.S. anglické w/ mrtvé klávesy"
 
 #. RTF text: no limit
 msgid "Malayalam"
-msgstr ""
+msgstr "Malajské"
 
 #. RTF text: no limit
 msgid "Burmese"
-msgstr ""
+msgstr "Barmské"
 
 #. RTF text: no limit
 msgid "Kannada"
-msgstr ""
+msgstr "Kanadské"
 
 #. RTF text: no limit
 msgid "Mongolian"
-msgstr ""
+msgstr "Mongolské"
 
 #. RTF text: no limit
 msgid "Bengali"
-msgstr ""
+msgstr "Bengálské"
 
 #. RTF text: no limit
 msgid "Romanian"
-msgstr ""
+msgstr "Rumunské"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Croatian"
-msgstr "Vlastnosti karty"
+msgstr "Chorvatské"
 
 #. RTF text: no limit
 msgid "U.S. English w/ ISO9995-3"
-msgstr ""
+msgstr "U.S. anglické w/ ISO9995-3"
 
 #. RTF text: no limit
 msgid "Lithuanian azerty standard"
-msgstr ""
+msgstr "Litevské azerty standard"
 
 #. RTF text: no limit
 msgid "Maltese"
-msgstr ""
+msgstr "Maltské"
 
 #. RTF text: no limit
 msgid "German"
-msgstr ""
+msgstr "Německé"
 
 #. RTF text: no limit
 msgid "Hungarian"
-msgstr ""
+msgstr "Maďarské"
 
 #. RTF text: no limit
 msgid "Russian"
-msgstr ""
+msgstr "Ruské"
 
 #. RTF text: no limit
 msgid "Swedish"
-msgstr ""
+msgstr "Švédské"
 
 #. RTF text: no limit
 msgid "Turkish (F)"
-msgstr ""
+msgstr "Turecké (F)"
 
 #. RTF text: no limit
 msgid "Oriya"
-msgstr ""
+msgstr "Oriya"
 
 #. RTF text: no limit
 msgid "Slovenian"
-msgstr ""
+msgstr "Slovinské"
 
 #. RTF text: no limit
 msgid "Slovak (qwerty)"
-msgstr ""
+msgstr "Slovenské (qwerty)"
 
 #. RTF text: no limit
 msgid "Czech"
-msgstr ""
+msgstr "České"
 
 #. RTF text: no limit
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Danish"
-msgstr "Doko&nčit"
+msgstr "Dánské"
 
 #. RTF text: no limit
 msgid "Dvorak"
-msgstr ""
+msgstr "Dvorak"
 
 #. RTF text: no limit
 msgid "Slovak"
-msgstr ""
+msgstr "Slovenské"
 
 #. RTF text: no limit
 msgid "Dutch"
-msgstr ""
+msgstr "Nizozemské"
 
 #. RTF text: no limit
 msgid "Israeli"
-msgstr ""
+msgstr "Izraelské"
 
 #. RTF text: no limit
 msgid "Tamil"
-msgstr ""
+msgstr "Tamilské"
 
 #. RTF text: no limit
 msgid "Ogham"
-msgstr ""
+msgstr "Ogham"
 
 #. RTF text: no limit
 msgid "Norwegian"
-msgstr ""
+msgstr "Norské"
 
 #. RTF text: no limit
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #. RTF text: no limit
 msgid "Serbian"
-msgstr ""
+msgstr "Srbské"
 
 #. RTF text: no limit
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #. RTF text: no limit
 msgid "Icelandic"
-msgstr ""
+msgstr "Islandské"
 
 #. RTF text: no limit
 msgid "Italian"
-msgstr ""
+msgstr "Italské"
 
 #. RTF text: no limit
 msgid "Estonian"
-msgstr ""
+msgstr "Estonské"
 
 #. RTF text: no limit
 msgid "Inuktitut"
-msgstr ""
+msgstr "Inuktitut"
 
 #. RTF text: no limit
 msgid "Swiss French"
-msgstr ""
+msgstr "Švýcarsko-francouzské"
 
 #. RTF text: no limit
 msgid "Swiss German"
-msgstr ""
+msgstr "Švýcarsko-německé"
 
 #. RTF text: no limit
 msgid "Thai"
-msgstr ""
+msgstr "Thajské"
 
 #. RTF text: no limit
 msgid "Tajik"
-msgstr ""
+msgstr "Tádžidské"
 
 #. RTF text: no limit
 msgid "Greek"
-msgstr ""
+msgstr "Řecké"
 
 #. RTF text: no limit
 msgid "Japanese"
-msgstr ""
+msgstr "Japonské"
 
 #. RTF text: no limit
 msgid "Georgian (latin)"
-msgstr ""
+msgstr "Gruzínské (latinka)"
 
 #. RTF text: no limit
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukrajinské"
 
 #. RTF text: no limit
 msgid "Polish (qwertz)"
-msgstr ""
+msgstr "Polské (qwertz)"
 
 #. RTF text: no limit
 msgid "Syriac"
-msgstr ""
+msgstr "Syrské"
 
 #. RTF text: no limit
 msgid "Turkish"
-msgstr ""
+msgstr "Turecké"
 
 #. RTF text: no limit
 msgid "Spanish"
-msgstr ""
+msgstr "Španělské"
 
 #. RTF text: no limit
 msgid "Northern Saami (Sweden)"
-msgstr ""
+msgstr "Severní Saami (Švédsko)"
 
 #. RTF text: no limit
 msgid "Yugoslavian"
-msgstr ""
+msgstr "Jugoslávské"
 
 #. RTF text: no limit
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Finnish"
-msgstr "Doko&nčit"
+msgstr "Dokončit"
 
 #. RTF text: no limit
 msgid "French (alternative)"
-msgstr ""
+msgstr "Francouzské (alternativní)"
 
 #. RTF text: no limit
 msgid "Hungarian (qwerty)"
-msgstr ""
+msgstr "Maďarské (qwerty)"
 
 #. RTF text: no limit
 msgid "Russian (cyrillic phonetic)"
-msgstr ""
+msgstr "Ruské (cyrillic phonetic)"
 
 #. RTF text: no limit
 msgid "Albanian"
-msgstr ""
+msgstr "Albánské"
 
 #. RTF text: no limit
 msgid "Polish"
-msgstr ""
+msgstr "Polské"
 
 #. RTF text: no limit
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #. RTF text: no limit
 msgid "Armenian"
-msgstr ""
+msgstr "Arménské"
 
 #. RTF text: no limit
 msgid "Northern Saami (Norway)"
-msgstr ""
+msgstr "Severní Saami (Norsko)"
 
 #. RTF text: no limit
 msgid "Latin America"
-msgstr ""
+msgstr "Latinskoamerické"
 
 #. RTF text: no limit
 msgid "French"
-msgstr ""
+msgstr "Francouzské"
 
 #. RTF text: no limit
 msgid "United Kingdom"
-msgstr ""
+msgstr "Spojené království"
 
 #. RTF text: no limit
 msgid "Arabic"
-msgstr ""
+msgstr "Arabské"
 
 #. RTF text: no limit
 msgid "U.S. English"
-msgstr ""
+msgstr "U.S. anglické"
 
 #. RTF text: no limit
 msgid "Maltese (US layout)"
-msgstr ""
+msgstr "Maltské (US rozložení)"
 
 #. RTF text: no limit
 msgid "French Canadian"
-msgstr ""
+msgstr "Francouzko-kanadské"
 
 #. RTF text: no limit
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugalské"
 
 #. RTF text: no limit
 msgid "Belgian"
-msgstr ""
+msgstr "Belgické"
 
 #. RTF text: no limit
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulharské"
 
 #. RTF text: no limit
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Azerbajdžánské"
 
 #. RTF text: no limit
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamské"
 
 #. RTF text: no limit
 msgid "Lao"
-msgstr ""
+msgstr "Laoské"
 
 #. RTF text: no limit
 msgid "Microsoft Natural"
-msgstr ""
+msgstr "Microsoft natural"
 
 #. RTF text: no limit
 msgid "Ennyah DKB-1008"
-msgstr ""
+msgstr "Ennyah DKB-1008"
 
 #. RTF text: no limit
 msgid "Logitech Deluxe Access Keyboard"
-msgstr ""
+msgstr "Logitech Deluxe Access Keyboard"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard"
-msgstr ""
+msgstr "Microsoft Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4500P"
-msgstr ""
+msgstr "Samsung SDM 4500P"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd"
 
 #. RTF text: no limit
 msgid "Dell"
-msgstr ""
+msgstr "Dell"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GF"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access"
-msgstr ""
+msgstr "IBM Rapid Access"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (alternativní nastavení 2)"
 
 #. RTF text: no limit
 msgid "Memorex MX1998"
-msgstr ""
+msgstr "Memorex MX1998"
 
 #. RTF text: no limit
 msgid "Trust Wireless Keyboard Classic"
-msgstr ""
+msgstr "Trust Wireless Keyboard Classic"
 
 #. RTF text: no limit
 msgid "Dell 101-key PC"
-msgstr ""
+msgstr "Dell 101-kláves PC"
 
 #. RTF text: no limit
 msgid "Brother Internet Keyboard"
-msgstr ""
+msgstr "Brother Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (např. Armada) Laptop Keyboard"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (např. Presario) Internet Keyboard"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II"
-msgstr ""
+msgstr "IBM Rapid Access II"
 
 #. RTF text: no limit
 msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr ""
+msgstr "Logitech iTouch Cordless Keyboard (model Y-RB6)"
 
 #. RTF text: no limit
 msgid "Trust Direct Access Keyboard"
-msgstr ""
+msgstr "Trust Direct Access Keyboard"
 
 #. RTF text: no limit
 msgid "Logitech Internet Navigator Keyboard"
-msgstr ""
+msgstr "Logitech Internet Navigator Keyboard"
 
 #. RTF text: no limit
 msgid "SK-7100"
-msgstr ""
+msgstr "SK-7100"
 
 #. RTF text: no limit
 msgid "Acer AirKey V"
-msgstr ""
+msgstr "Acer AirKey V"
 
 #. RTF text: no limit
 msgid "BTC 9000A"
-msgstr ""
+msgstr "BTC 9000A"
 
 #. RTF text: no limit
 msgid "Toshiba Satellite S3000"
-msgstr ""
+msgstr "Toshiba Satellite S3000"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (13 keys)"
-msgstr ""
+msgstr "Compaq Internet Keyboard (13 kláves)"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XT1000"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XT1000"
 
 #. RTF text: no limit
 msgid "Logitech iTouch"
-msgstr ""
+msgstr "Logitech iTouch"
 
 #. RTF text: no limit
 msgid "SK-6200"
-msgstr ""
+msgstr "SK-6200"
 
 #. RTF text: no limit
 msgid "Compaq iPaq Keyboard"
-msgstr ""
+msgstr "Compaq iPaq Keyboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (alternativní nastavení)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Desktop Navigator"
 
 #. RTF text: no limit
 msgid "QTronix Scorpius 98N+"
-msgstr ""
+msgstr "QTronix Scorpius 98N+"
 
 #. RTF text: no limit
 msgid "Symplon PaceBook (tablet PC)"
-msgstr ""
+msgstr "Symplon PaceBook (tablet PC)"
 
 #. RTF text: no limit
 msgid "Winbook Model XP5"
-msgstr ""
+msgstr "Winbook Model XP5"
 
 #. RTF text: no limit
 msgid "BTC 5113RF Multimedia"
-msgstr ""
+msgstr "BTC 5113RF Multimedia"
 
 #. RTF text: no limit
 msgid "Diamond 9801 / 9802 series"
-msgstr ""
+msgstr "Diamond 9801 / 9802 série"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE4xxx a ZE4xxx"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Optical"
-msgstr ""
+msgstr "Logitech Cordless Desktop Optical"
 
 #. RTF text: no limit
 msgid "Logitech Internet Keyboard"
-msgstr ""
+msgstr "Logitech Internet Keyboard"
 
 #. RTF text: no limit
 msgid "BTC 9000"
-msgstr ""
+msgstr "BTC 9000"
 
 #. RTF text: no limit
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr ""
+msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Freedom/Desktop Navigator"
 
 #. RTF text: no limit
 msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr ""
+msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
 
 #. RTF text: no limit
 msgid "Propeller Voyager (KTEZ-1000)"
-msgstr ""
+msgstr "Propeller Voyager (KTEZ-1000)"
 
 #. RTF text: no limit
 msgid "Brazilian ABNT2"
-msgstr ""
+msgstr "Brazilské ABNT2"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (7 keys)"
-msgstr ""
+msgstr "Compaq Internet Keyboard (7 kláves)"
 
 #. RTF text: no limit
 msgid "Honeywell Euroboard"
-msgstr ""
+msgstr "Honeywell Euroboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop"
-msgstr ""
+msgstr "Logitech Cordless Desktop"
 
 #. RTF text: no limit
 msgid "Yahoo! Internet Keyboard"
-msgstr ""
+msgstr "Yahoo! Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (18 keys)"
-msgstr ""
+msgstr "Compaq Internet Keyboard (18 kláves)"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr ""
+msgstr "Laptop/notebook Dell Inspiron 8xxx"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II (alternate option)"
-msgstr ""
+msgstr "IBM Rapid Access II (alternativní nastavení)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro"
 
 #. RTF text: no limit
 msgid "Advance Scorpius KI"
-msgstr ""
+msgstr "Advance Scorpius KI"
 
 #. RTF text: no limit
 msgid "BTC 5126T"
-msgstr ""
+msgstr "BTC 5126T"
 
 #. RTF text: no limit
 msgid "Dexxa Wireless Desktop Keyboard"
-msgstr ""
+msgstr "Dexxa Wireless Desktop Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 5xx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 5xx"
 
 #. RTF text: no limit
 msgid "Memorex MX2750"
-msgstr ""
+msgstr "Memorex MX2750"
 
 #. RTF text: no limit
 msgid "SK-1300"
-msgstr ""
+msgstr "SK-1300"
 
 #. RTF text: no limit
 msgid "Generic 101-key PC"
-msgstr ""
+msgstr "Generic 101-kláves PC"
 
 #. RTF text: no limit
 msgid "Northgate OmniKey 101"
-msgstr ""
+msgstr "Northgate OmniKey 101"
 
 #. RTF text: no limit
 msgid "ACPI Standard"
-msgstr ""
+msgstr "ACPI standard"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd (alternativní volba)"
 
 #. RTF text: no limit
 msgid "Chicony Internet Keyboard"
-msgstr ""
+msgstr "Chicony Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2501 Multimedia Keyboard"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4510P"
-msgstr ""
+msgstr "Samsung SDM 4510P"
 
 #. RTF text: no limit
 msgid "SK-2500"
-msgstr ""
+msgstr "SK-2500"
 
 #. RTF text: no limit
 msgid "SVEN Ergonomic 2500"
-msgstr ""
+msgstr "SVEN Ergonomic 2500"
 
 #. RTF text: no limit
 msgid "Generic 102-key (Intl) PC"
-msgstr ""
+msgstr "Generic 102-kláves (Intl) PC"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop iTouch"
-msgstr ""
+msgstr "Logitech Cordless Desktop iTouch"
 
 #. RTF text: no limit
 msgid "Chicony KB-9885"
-msgstr ""
+msgstr "Chicony KB-9885"
 
 #. RTF text: no limit
 msgid "Compaq Easy Access Keyboard"
-msgstr ""
+msgstr "Compaq Easy Access Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard 5181 Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 500 FA"
 
 #. RTF text: no limit
 msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr ""
+msgstr "Memorex MX2500 EZ-Access Keyboard"
 
 #. RTF text: no limit
 msgid "Generic 104-key PC"
-msgstr ""
+msgstr "Generic 104-kláves PC"
 
 #. RTF text: no limit
 msgid "Everex STEPnote"
-msgstr ""
+msgstr "Everex STEPnote"
 
 #. RTF text: no limit
 msgid "Japanese 106-key"
-msgstr ""
+msgstr "Japonské 106-kláves"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE a Pavilion N5xxx"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr ""
+msgstr "Hewlett-Packard Pavilion ZT11xx"
 
 #. RTF text: no limit
 msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr ""
+msgstr "Logitech iTouch keyboard Internet Navigator"
 
 #. RTF text: no limit
 msgid "Generic 105-key (Intl) PC"
-msgstr ""
+msgstr "Generic 105-key (Intl) PC"
 
 #. RTF text: no limit
 msgid "Keytronic FlexPro"
-msgstr ""
+msgstr "Keytronic FlexPro"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2505 Internet Keyboard"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr ""
+msgstr "Microsoft Internet Keyboard Pro, švédské"
 
 #. RTF text: no limit
 msgid "Microsoft Office Keyboard"
-msgstr ""
+msgstr "Microsoft Office Keyboard"
 
 #. RTF text: no limit
 msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr ""
+msgstr "Oretec MCK-800 MM/Internet keyboard"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Ctrl keys together change group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Oba Ctrl mění skupinu"
 
 #. RTF text: no limit
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "Chování klávesy CapsLock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Win-keys switch group while pressed"
-msgstr "Pravý Alt přepíná skupinu při stisknutí"
+msgstr "Obě klávesy Win přepínají skupinu při stisknutí"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Alt key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Levý Shift mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Levá Win mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Shift key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Pravý Shift mění skupinu"
 
 #. RTF text: no limit
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Chivání klávesy Alt/Win"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "používá interní nastavení. Shift nevyruší Caps."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "R-Alt switches group while pressed"
 msgstr "Pravý Alt přepíná skupinu při stisknutí"
 
 #. RTF text: no limit
 msgid "Right Win-key is Compose"
-msgstr ""
+msgstr "Pravá Win je Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Ctrl key changes group"
-msgstr "Alt a Ctrl mění skupinu"
+msgstr "Pravý Ctrl mění skupinu"
 
 #. RTF text: no limit
 msgid "Press any of Win-keys to choose 3rd level"
-msgstr ""
+msgstr "Třetí úroveň nastavíte stisknutím klávesy Win"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at bottom left"
 msgstr "Klávesa Ctrl vlevo dole"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Shift keys together change group"
 msgstr "Oba Shifty mění skupinu"
 
 #. RTF text: no limit
 msgid "Third level choosers"
-msgstr ""
+msgstr "Výběr třetí úrovně"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control key at left of 'A'"
-msgstr "Klávesa Ctrl vlevo od <A>"
+msgstr "Klávesa Ctrl vlevo od 'A'"
 
 #. RTF text: no limit
 msgid "Scroll_Lock LED shows alternative group"
-msgstr ""
+msgstr "Scroll_Lock LED zobrazuje alternativní skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt is Compose"
-msgstr "Mapování pravého Altu"
+msgstr "Pravý Altu je Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Pravá Win klávesa mění skupinu"
 
 #. RTF text: no limit
 msgid "Press Left Win-key to choose 3rd level"
-msgstr ""
+msgstr "Třetí úroveň zvolíte stisknutím levé klávesy Win"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Make CapsLock an additional Control"
 msgstr "CapsLock jako další ovládací klávesa"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+msgstr "používá interní nastavení. Shift vyruší Caps."
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "je jako Shift se zámkem. Shift nevyruší Caps."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Win-key switches group while pressed"
-msgstr "Pravý Alt přepíná skupinu při stisknutí"
+msgstr "Levý Alt přepíná skupinu při stisknutí"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Shift key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Levý Shift mění skupinu"
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
-msgstr ""
+msgstr "Num_Lock LED zobrazuje alternativní skupinu"
 
 #. RTF text: no limit
 msgid "Caps_Lock LED shows alternative group"
-msgstr ""
+msgstr "Caps_Lock LED zobrazuje alternativní skupinu"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "Meta je mapované na levou klávesu Win."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Caps Lock key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Caps Lock mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Both Alt keys together change group"
 msgstr "Oba Shifty mění skupinu"
 
 #. RTF text: no limit
 msgid "Menu is Compose"
-msgstr ""
+msgstr "Menu je Compose"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Pravý Alt mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control Key Position"
-msgstr "Z&měnit umístění"
+msgstr "Změna umístění kláves"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Swap Control and Caps Lock"
 msgstr "Zaměnit Ctrl a CapsLock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control+Shift changes group"
 msgstr "Ctrl a Shift mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Shift changes group"
-msgstr "Ctrl a Shift mění skupinu"
+msgstr "Alt a Shift mění skupinu"
 
 #. RTF text: no limit
 msgid "Press Right Control to choose 3rd level"
-msgstr ""
+msgstr "Třetí úroveň zvolíte stisknutím pravého Ctrl"
 
 #. RTF text: no limit
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Přidat standardní chování do klávesy Menu."
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Alt a Meta na klávese Alt (výchozí)."
 
 #. RTF text: no limit
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Super je namapované na klávesách Win (výchozí)."
 
 #. RTF text: no limit
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Hyper je výchozí na klávesách Win."
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+msgstr "K volbě třetí úrovně stiskněte pravý Win"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
-msgstr ""
+msgstr "Použít k zobrazení alternativní skupiny LED"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+msgstr "je jako Shift se zámkem. Shift ruší Caps."
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Chování skupiny Shift/Lock"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Win-key switches group while pressed"
-msgstr "Pravý Alt přepíná skupinu při stisknutí"
+msgstr "Pravá Win přepíná skupinu při stisknutí"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Alt+Control changes group"
 msgstr "Alt a Ctrl mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Menu key changes group"
-msgstr "Oba Shifty mění skupinu"
+msgstr "Klávesa Menu mění skupinu"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Left Ctrl key changes group"
-msgstr "Alt a Ctrl mění skupinu"
+msgstr "Levý Ctrl mění skupinu"
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
-msgstr ""
+msgstr "Třetí úroveň nastavíte stisknutím klávesy Menu"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
+msgstr "Meta je mapováno na klávesách Win."
 
 #~ msgid "Enable AccessX"
 #~ msgstr "Povolit AccessX"

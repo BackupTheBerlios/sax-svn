@@ -83,8 +83,8 @@ void Scan3D::Scan (void) {
 	str none      = "<none>";
 	//str soft3dpac = "mesasoft";
 	//str soft3dscr = "switch2mesasoft";
-	str soft3dpac = "";
-	str soft3dscr = "";
+	str soft3dpac = "<none>";
+	str soft3dscr = "<none>";
 	str work      = "";
 	str card      = "0";
 	str D3Answer  = "no";
