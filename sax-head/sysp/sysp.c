@@ -487,21 +487,25 @@ void PrintMouseData(ScanMouse m) {
  	// print all devices. take care about multiple
 	// device names. 
 	for (int i = m.Count(); i > 0; i--) {
+		bool show = true;
 		data = m.Pop();
 		for (int n = i - 1; n > 0; n--) {
 		if (strcmp (devs[n],data.device) == 0) {
-			continue;
+			show = false;
+			break;
 		}
 		}
-		if (mouse > 0) {
-			printf("\n");
+		if (show) {
+			if (mouse > 0) {
+				printf("\n");
+			}
+			printf("Mouse%d    =>  Protocol   : %s\n",mouse,data.protocol);
+			printf("Mouse%d    =>  Device     : %s\n",mouse,data.device);
+			printf("Mouse%d    =>  Buttons    : %d\n",mouse,data.buttons);
+			printf("Mouse%d    =>  Wheel      : %d\n",mouse,data.wheel);
+			printf("Mouse%d    =>  Emulate    : %d\n",mouse,data.emulate);
+			printf("Mouse%d    =>  Name       : %s\n",mouse,data.name);
 		}
-		printf("Mouse%d    =>  Protocol   : %s\n",mouse,data.protocol);
-		printf("Mouse%d    =>  Device     : %s\n",mouse,data.device);
-		printf("Mouse%d    =>  Buttons    : %d\n",mouse,data.buttons);
-		printf("Mouse%d    =>  Wheel      : %d\n",mouse,data.wheel);
-		printf("Mouse%d    =>  Emulate    : %d\n",mouse,data.emulate);
-		printf("Mouse%d    =>  Name       : %s\n",mouse,data.name);
 		mouse++;
 	}
 	fflush(stdout);
