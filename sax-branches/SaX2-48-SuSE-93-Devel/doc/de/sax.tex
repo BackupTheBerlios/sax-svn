@@ -1,0 +1,132 @@
+%%============================================================
+%% Preamble
+%%------------------------------------------------------------
+\documentclass[10pt, german, a4paper, headsepline, footsepline,
+BCOR1.5cm, DIV16, bigheadings, bibtotoc, idxtotoc, headinclude,
+footexclude, abstracton]{scrbook}
+
+%scrreprt
+
+\NeedsTeXFormat{LaTeX2e}
+%%==============================
+%% Packages 
+%%------------------------------
+\usepackage{german}
+\usepackage{bibgerm}
+\usepackage{url}
+\usepackage{makeidx}
+\usepackage{epsfig}
+\usepackage{alltt}
+\usepackage{varioref}
+\usepackage[dvips]{color}
+\usepackage{boxedminipage}
+\usepackage{minitoc}
+%%\usepackage[first]{draftcopy}
+
+%%==============================
+%% Definitions
+%%------------------------------
+\renewcommand{\rmdefault}{bch}
+\renewcommand*\descfont{\normalfont\bfseries}
+\renewcommand*\sectfont{\normalfont\bfseries}
+\renewcommand{\ttdefault}{cmtt}
+\DeclareFontShape{OT1}{cmtt}{bx}{n} {
+  <5><6><7><8>cmtt8
+  <9> cmbtt9
+  <10><10.95> <12><14.4><17.28><20.74><24.88> cmbtt10 }{}
+\parskip.5ex
+\parindent0cm
+\makeindex
+\setcounter{tocdepth}{1}
+\renewcommand{\mtcSfont}{\normalfont\bfseries}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\Code}[1]{{\ttfamily\bfseries #1}}
+\pagestyle{headings}
+
+
+%%==============================
+%% Titlepage
+%%------------------------------
+\subject{Systementwurf}
+
+\title{
+  Systementwurf SaX2\\
+  SuSE advanced X-configuration
+}
+
+\author{
+  Projektierung Implementierung und Pflege\\ 
+  von Marcus Sch"afer ms@suse.de\\
+  \thanks{
+  SUSE LINUX AG, Maxfeldstrasse 5, D-90409 N"urnberg
+  }
+}
+
+\date{
+ \vspace{1cm}
+ \epsfig{
+   file=pictures/logo.ps,width=4cm
+ }\\
+ \vspace{1.5cm}
+ \vspace{3cm}
+ \begin{tabbing}
+  \hspace{2.6cm} Author: \quad\= Marcus Sch"afer\\
+  \hspace{2.6cm} Datum:\>  \today\\
+ \end{tabbing}
+}
+
+\publishers{}
+\makeindex
+
+%%============================================================
+\begin{document}
+%%------------------------------------------------------------
+\dominitoc
+
+
+%%==============================
+%% trustee
+%%------------------------------
+%% Entwurf:
+
+\maketitle
+
+%%============================================================
+\tableofcontents
+
+
+%%============================================================
+%% all input sources 
+%%------------------------------------------------------------
+\input sysp
+\input construction
+\input opengl
+\input tuning
+\input interface
+\input profile
+\input yast
+\input cvs
+\input appendix
+
+%%============================================================
+%% bibliography
+%%------------------------------------------------------------
+\begin{thebibliography}{99}
+ \input books
+\end{thebibliography}
+
+
+%%===========================================================
+%% Index entry
+%%-----------------------------------------------------------
+\input glossary
+\input index/sax.ind
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% mode: font-lock
+%%% TeX-master: t
+%%% End: 
+

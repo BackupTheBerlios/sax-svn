@@ -1,0 +1,12 @@
+# /.../
+# profile to setup the NvAGP Option as comment
+# to be activated on demand. Disable modeline calculation
+# because the nvidia driver is very restrictive
+# ---------------------------------------------
+Device  -> [X] ->  Raw -> 10 -> Option   = "#NvAGP" "0" # disable agp
+Device  -> [X] ->  Raw -> 11 -> Option   = "#NvAGP" "1" # use nvidia agp
+Device  -> [X] ->  Raw -> 12 -> Option   = "#NvAGP" "2" # use agpgart
+Device  -> [X] ->  Raw -> 13 -> Option   = "#NvAGP" "3" # try 2 than 1
+Desktop -> [X] ->  CalcModelines = no
+Monitor -> [X] ->  CalcAlgorithm = XServerPool
+Screen  -> [X] ->  DefaultDepth  = 24
