@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Aug 19 16:29:45 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Aug 25 10:24:40 2004
 #
 # Template for monitor data
 # --------------------------
@@ -1205,6 +1205,17 @@ ACER:G772  {
  DDC=API9902
  Hsync=30-72
  Vsync=50-120
+}
+
+#==============================================
+# IDT-1400x1050
+#----------------------------------------------
+ACER:IDT-1400X1050  {
+ DDC=IDT0002
+ Option=DPMS
+ Hsync=40-80
+ Resolution=1400x1050
+ Vsync=50-75
 }
 
 #==============================================

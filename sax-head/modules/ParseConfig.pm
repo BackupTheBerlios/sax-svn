@@ -292,6 +292,39 @@ sub ParseServerFlagsSection {
 	return(%parse);
 }
 
+#----[ ParseExtensionsSection (ptr) ]----#
+sub ParseExtensionsSection {
+#---------------------------------------------
+# this function create a hash array
+# containing the configuration information
+# from the X11 Extensions section
+#
+	my $ptr = $_[0];     # config pointer
+	my %parse;           # result hash
+	my $result;          # result string from an XFree:: call
+	my @list;            # item list
+	my $count;           # counter
+	my $i;               # loop counter
+	
+	#========================================
+	# Option...
+	#----------------------------------------
+	$result = XFree::GetExtensions($ptr);
+	if (defined $result) {
+		$count  = 0;
+		@list   = split(/,/,$result);
+		foreach $i (@list) {
+		if ($i =~ /(.*):(.*)/) {
+			$optn = $1;
+			$optv = $2;
+			$parse{Option}{$optn} = $optv;
+			$count++;
+		}
+		}
+	}
+	return(%parse);
+}
+
 #----[ ParseServerLayoutSection (ptr) ]----#
 sub ParseServerLayoutSection {
 #---------------------------------------------
