@@ -57,12 +57,15 @@ void XAccessX::resetPage (int reload) {
 		data.insert ("MouseKeysInterval=" , "10" );
 		data.insert ("MouseKeysTimeToMax=", "1000" );
 		data.insert ("MouseKeysCurve="    , "0"  );
+		data.insert ("Controls+=","MouseKeysAccel");
+		#if 0
 		data.insert ("Controls+=",
 			"MouseKeysAccel + AccessxKeys"
 		);
 		data.insert ("Feedback+=",
 			"SlowKeysPress + SlowKeysAccept + StickyKeys + LatchToLock"
 		);
+		#endif
 		QDictIterator<char> it (data);
 		for (; it.current(); ++it) {
 			QString line;
