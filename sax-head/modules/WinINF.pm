@@ -31,7 +31,7 @@ sub mountMedia {
 	my $error = $? >> 8;
 	if ($error) {
 		rmdir  ($mountpoint);
-		return (undef);
+		return;
 	}
 	open (FD,"find $mountpoint -name '*.inf'|");
 	while (my $file = <FD>) {
@@ -40,7 +40,7 @@ sub mountMedia {
 	if (@result > 0) {
 		return (@result);
 	}
-	return (undef);
+	return;
 }
 
 #---[ umountMedia ]---#
