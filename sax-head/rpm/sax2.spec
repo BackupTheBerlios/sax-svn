@@ -12,12 +12,12 @@
 # usedforbuild    aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv kbd less libacl libattr libgcc libselinux libstdc++ libxcrypt m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed sendmail strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel XFree86-Mesa XFree86-Mesa-devel XFree86-devel XFree86-driver-options XFree86-libs XFree86-server autoconf automake binutils expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel readline-devel rpm swig udev update-desktop-files
 
 Name:         sax2
-Requires:     perl xbanner perl-gettext fbset saxident saxtools qt3 fvwm2 3ddiag
+Requires:     perl perl-gettext fbset sax2-ident
 %if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
 %if %{suse_version} > 810
-Requires:     XFree86-server tightvnc
+Requires:     XFree86-server
 %else
 Requires:     xloader
 %endif
@@ -49,43 +49,61 @@ Requires:     sax2_sbus
 This package contains the SuSE Advanced X-Configuration (XFree86 4.x)
 
 
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%package -n saxtools
-Version:      2.2
-Release:      1349
+%package -n sax2-tools
+Version:      2.3
+Release:      1
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
-Requires:     saxident
+Requires:     sax2-ident
+Provides:     saxtools
+Obsoletes:    saxtools
 
-%description -n saxtools
+%description -n sax2-tools
 Some small X Window System tools to handle input devices, for example,
 mouse and keyboard.
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%package -n saxident
-Version:      1.1
-Release:      1055
+%package -n sax2-ident
+Version:      1.2
+Release:      1
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
-Provides:     saxtools:/usr/X11R6/lib/sax/sysp/maps/Identity.map
+Provides:     sax2-tools:/usr/X11R6/lib/sax/sysp/maps/Identity.map
+Provides:     saxident
+Obsoletes:    saxident
 
-%description -n saxident
+%description -n sax2-ident
 This package contains information about the supported graphics hardware
 and its special parameters. For some graphics cards a profile is needed
 to describe configuration parameters outside the ordinary way of
 setting up the card with SaX2.
 
+Authors:
+--------
+    Marcus Schäfer <ms@suse.de>
 
+%package -n sax2-gui
+Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
+Version:      1.2
+Release:      1
+Requires:     sax2
+Summary:      SaX2 Graphical User Interface
+Group:        System/X11/Utilities
+Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
+
+%description -n sax2-gui
+This package contains the GUI part of SaX2. A GUI for SaX2 have to
+make use of the ISaX interface which requires a input file for generating
+all the configuration stuff. The ISaX inerface is provided with the
+main sax2 package
 
 Authors:
 --------
@@ -190,7 +208,7 @@ export ASK_FOR_CHANGELOG=no
 export TEMPLATE_CHECK=no
 export ARCH=`/bin/arch`
 make buildroot=$RPM_BUILD_ROOT lib_prefix=%{_lib} install
-# install tools for the saxtools subpackage
+# install tools for the sax2-tools subpackage
 # ------------------------------------------
 (
  cd $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/tools
@@ -252,7 +270,7 @@ fi
 ./.cards.pl -f \
 	$RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/sysp/maps/Identity.map \
 > $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/cdb/Cards
-# install saxtools manual pages...
+# install sax2-tools manual pages...
 # ---------------------------------
 install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/man
 install -d -m 755 $RPM_BUILD_ROOT/usr/X11R6/man/man1
@@ -334,6 +352,8 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 
 %files
 %defattr(-,root,root)
+%dir /usr/X11R6/%{_lib}/sax/api
+%dir /usr/X11R6/%{_lib}/sax/api/data
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
 %dir /usr/lib/perl5/*_perl/*/*/Term
@@ -344,16 +364,12 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 %dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu
 %dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS
 %dir /usr/X11R6/%{_lib}/sax
-%dir /usr/X11R6/%{_lib}/sax/api
-%dir /usr/X11R6/%{_lib}/sax/api/lang
-%dir /usr/X11R6/%{_lib}/sax/api/data
 %dir /usr/X11R6/%{_lib}/sax/doc
 %dir /usr/X11R6/%{_lib}/sax/sysp/script
 %dir /usr/X11R6/%{_lib}/sax/sysp
 %dir /var/cache/sax/sysp
 %dir /var/cache/sax/sysp/rdbms
 %dir /var/cache/sax/files
-%dir /usr/X11R6/%{_lib}/xfine
 %dir /var/cache/sax
 %dir /var/cache/xfine
 /var/adm/fillup-templates/sysconfig.sax
@@ -365,23 +381,15 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/sax/svnbuild
 /usr/X11R6/%{_lib}/sax/init.pl
 /usr/X11R6/%{_lib}/sax/xc.pl
-/usr/X11R6/%{_lib}/sax/xw.pl
-/usr/X11R6/%{_lib}/sax/xapi
-/usr/X11R6/%{_lib}/sax/xrun.pl
 /usr/X11R6/%{_lib}/sax/pci.pl
 /usr/X11R6/%{_lib}/sax/sysp.pl
 /usr/X11R6/%{_lib}/sax/modules
 /usr/X11R6/%{_lib}/sax/tools
-/usr/X11R6/%{_lib}/sax/api/tools
-/usr/X11R6/%{_lib}/sax/api/data/*????
-/usr/X11R6/%{_lib}/sax/api/pixmaps
 /usr/X11R6/bin/sax.sh
 /usr/X11R6/bin/sax2-vesa
 /usr/X11R6/bin/SaX2
 /usr/X11R6/bin/sax2
-/usr/X11R6/%{_lib}/xfine/pixmaps
-/usr/X11R6/%{_lib}/xfine/xfine
-/usr/X11R6/%{_lib}/xfine/xfine.gtx
+/usr/X11R6/%{_lib}/sax/api/data/*????
 /usr/X11R6/%{_lib}/sax/sysp/script/installed.pl
 /usr/X11R6/%{_lib}/sax/sysp/script/killdot.pl
 /usr/X11R6/%{_lib}/sax/sysp/script/vbios.pl
@@ -395,6 +403,36 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/XFree.so
 /usr/X11R6/%{_lib}/PLog.so
 /usr/sbin/sysp
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
+/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu.pm
+/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu/XS.pm
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
+%doc %{_defaultdocdir}/sax2/LICENCE
+%doc %{_defaultdocdir}/sax2/README
+%doc %{_defaultdocdir}/sax2/sax.en.ps
+%doc %{_defaultdocdir}/sax2/sax.en.dvi
+%doc %{_defaultdocdir}/sax2/sax.de.ps
+%doc %{_defaultdocdir}/sax2/sax.de.dvi
+%doc %{_mandir}/man3/Term::ReadLine::Gnu.3pm.gz
+#=================================================
+# SaX-GUI file list...  
+# ------------------------------------------------
+
+%files -n sax2-gui
+%defattr(-,root,root)
+%dir /usr/X11R6/%{_lib}/sax/api
+%dir /usr/X11R6/%{_lib}/sax/api/lang
+%dir /usr/X11R6/%{_lib}/xfine
+/usr/X11R6/%{_lib}/sax/xw.pl
+/usr/X11R6/%{_lib}/sax/xapi
+/usr/X11R6/%{_lib}/sax/xrun.pl
+/usr/X11R6/%{_lib}/sax/api/tools
+/usr/X11R6/%{_lib}/sax/api/pixmaps
+/usr/X11R6/%{_lib}/xfine/pixmaps
+/usr/X11R6/%{_lib}/xfine/xfine
+/usr/X11R6/%{_lib}/xfine/xfine.gtx
 %if %{suse_version} > 820
 /usr/share/applications/sax2.desktop
 %endif
@@ -419,24 +457,12 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/share/locale/sv/LC_MESSAGES/sax.mo
 /usr/share/locale/ja/LC_MESSAGES/sax.mo
 /usr/share/locale/bg/LC_MESSAGES/sax.mo
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
-/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu.pm
-/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu/XS.pm
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
-%doc %{_defaultdocdir}/sax2/LICENCE
-%doc %{_defaultdocdir}/sax2/README
-%doc %{_defaultdocdir}/sax2/sax.en.ps
-%doc %{_defaultdocdir}/sax2/sax.en.dvi
-%doc %{_defaultdocdir}/sax2/sax.de.ps
-%doc %{_defaultdocdir}/sax2/sax.de.dvi
-%doc %{_mandir}/man3/Term::ReadLine::Gnu.3pm.gz
+
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------
 
-%files -n saxtools
+%files -n sax2-tools
 %defattr(-,root,root)
 %doc /usr/X11R6/man/man1/*
 /usr/X11R6/bin/xbounce
@@ -453,7 +479,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 # SaX-Ident file list...  
 # ------------------------------------------------
 
-%files -n saxident
+%files -n sax2-ident
 %defattr(-,root,root)
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/api

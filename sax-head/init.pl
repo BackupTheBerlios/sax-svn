@@ -110,8 +110,13 @@ sub init {
 	# check for the Identity.map
 	# --------------------------
 	my $map = "/usr/X11R6/lib/sax/sysp/maps/Identity.map";
+	my $api = "/usr/X11R6/lib/sax/xapi";
 	if ( ! -f $map ) {
 		die "init: no Identity.map found";
+	}
+	if ( ! -f $api ) {
+		print "SaX: GUI is missing, starting commandline interface\n";
+		$StartBatchMode = "";
 	}
 
 	# /.../
@@ -614,7 +619,11 @@ sub init {
 	}
 	}
 	}
-	exit(0);	
+	if ($AbortBatch ne "yes") {
+		exit (0);
+	} else {
+		exit (1);
+	}
 }
 
 #==================================================

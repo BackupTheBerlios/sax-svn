@@ -554,6 +554,10 @@ sub init {
 	if ( $result != 1 ) {
 		usage();
 	}
+	my $api = "/usr/X11R6/lib/sax/xapi";
+	if ( ! -f $api ) {
+		$EnableAutoConf = "";
+	}
 
 	#--------------#
 	# test on root #
