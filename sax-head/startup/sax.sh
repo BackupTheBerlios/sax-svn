@@ -42,6 +42,7 @@ TYPE=""
 NOSCAN=""
 SYS_CONFIG=""
 DBMNEW=""
+IGNORE_PROFILE=""
 DIALOG=""
 REINIT=0
 
@@ -140,6 +141,10 @@ function usage() {
 	echo "  which normaly will import the SaX2 HW detection"
 	echo "  data"
 	echo
+	echo "[ -i | --ignoreprofile ]"
+	echo "  do not include profiles which are normally applied"
+	echo "  automatically"
+	echo 
 	echo "[ -r | --reinit ]"
 	echo "  remove detection database and re-init the"
 	echo "  hardware database"
@@ -151,7 +156,7 @@ function usage() {
 #==================================
 # get options
 #----------------------------------
-TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO: --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,dialog: \
+TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:i --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog: \
 -n 'SaX' -- "$@"`
 
 if [ $? != 0 ] ; then usage ; exit 1 ; fi
@@ -173,6 +178,10 @@ while true ; do
 
 	-d|--dbmnew)                # use the config.new file instead of the
 		DBMNEW="--dbmnew"       # normal config storable file
+	shift;;
+
+	-i|--ignoreprofile)         # ignore profiles automatically set
+		IGNORE_PROFILE="-i"     # via CDB information
 	shift;;
 
 	-O|--dialog)                # start with custom dialog

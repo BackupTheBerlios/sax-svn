@@ -48,7 +48,7 @@ sub CreateDeviceSection {
 		#===========================================
 		# Clocks setting...
 		#------------------------------------------- 
-		/^Clocks/                  && do {
+		/^Clocks/                   && do {
 			@list = split(/:/,$setting);
 			foreach $n (@list) {
 			if ($n ne "") {
@@ -60,7 +60,7 @@ sub CreateDeviceSection {
 		#===========================================
 		# Videoram setting...
 		#------------------------------------------- 
-		/^Videoram|Screen/         && do {
+		/^Videoram|VideoRam|Screen/ && do {
 			foreach $n (@list) {
 			if ($n ne "") {
 				$n =~ s/\"//g;
@@ -72,7 +72,7 @@ sub CreateDeviceSection {
 		#===========================================
 		# BusID setting...
 		#-------------------------------------------
-		/^BusID/i                  && do {
+		/^BusID/i                   && do {
 			if ($setting ne "Single") {
 				push(@result,PrintLine($i,"\"$setting\""));
 			}
@@ -93,7 +93,7 @@ sub CreateDeviceSection {
 		#===========================================
 		# Raw...
 		#-------------------------------------------
-		/^Raw/                     && do {
+		/^Raw/                      && do {
 			foreach $count (sort keys %{$var{Device}{$section}{$i}}) {
 			foreach $n (sort keys %{$var{Device}{$section}{$i}{$count}}) {
 				$setting = $var{Device}{$section}{$i}{$count}{$n};
@@ -112,7 +112,7 @@ sub CreateDeviceSection {
 	    #============================================================
 		# Special setting ( options which need on/off statement)...
 		#------------------------------------------------------------
-		/^Special/                 && do { 
+		/^Special/                  && do { 
 			foreach $n (sort keys %{$var{Device}{$section}{$i}}) {
 			$setting = $var{Device}{$section}{$i}{$n};
 			if ($setting ne "") {

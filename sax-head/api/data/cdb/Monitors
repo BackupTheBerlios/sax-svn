@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Jun 22 10:01:41 2004
+# Author: Marcus Schaefer <sax@suse.de>, Tue Jul 13 11:28:14 2004
 #
 # Template for monitor data
 # --------------------------
@@ -30411,6 +30411,18 @@ SAMSUNG:SYNCMASTER 210T(D)210MP MAGICSYNCMASTER LXA210T(D)  {
  Option=DPMS
  Hsync=30-81
  Vsync=50-85
+}
+
+#==============================================
+# SYNCMASTER 213T
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 213T  {
+ DDC=SAM0091
+ Option=DPMS
+ Hsync=30-81
+ Modeline="1600x1200" 140.00 1600 1632 2024 2052 1200 1200 1208 1216
+ Resolution=1600x1200
+ Vsync=56-75
 }
 
 #==============================================
