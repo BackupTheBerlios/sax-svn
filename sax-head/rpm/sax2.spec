@@ -489,5 +489,6 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/X11R6/%{_lib}/sax/sysp/maps/Identity.map
 /usr/X11R6/%{_lib}/sax/sysp/maps/Keyboard.map
 /usr/X11R6/%{_lib}/sax/sysp/maps/Vendor.map
+/usr/X11R6/%{_lib}/sax/sysp/maps/Input.map
 /usr/X11R6/%{_lib}/sax/api/data/cdb/*
 /usr/X11R6/%{_lib}/sax/profile
