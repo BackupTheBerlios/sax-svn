@@ -83,5 +83,5 @@ HEADERS   += dialog/touchscreen/touchscreen.h
 HEADERS   += xquery.h
 
 CONFIG    += thread warn_on release
-unix:LIBS += -lm -lXss -lxkbfile
+unix:LIBS += -lm -lXss -lxkbfile -lGL
 TARGET    += xapi
