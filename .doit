@@ -117,7 +117,7 @@ sub main {
 	# Clean sweep
 	#----------------------------------------------
 	if (defined $Build) {
-		#qx (rm -rf $pacdir);
+		qx (rm -rf $pacdir);
 	} else {
 		my $host = qx (hostname);
 		chomp ($host);
