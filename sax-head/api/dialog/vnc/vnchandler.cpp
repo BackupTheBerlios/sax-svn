@@ -99,10 +99,11 @@ bool Xvnc::slotRun (int index) {
 	mStatus -> message (mText["RunXVNC"]);
 	mFrame  -> nextButton() -> setText (mText["finish"]);
 
-	bool hasVNCconfig = false;
-	bool hasRFBAuth   = false;
-	bool isViewOnly   = false;
-	bool isShared     = false;
+	bool hasVNCconfig  = false;
+	bool hasRFBAuth    = false;
+	bool isViewOnly    = false;
+	bool isShared      = false;
+	bool hasHTTPaccess = false;
 
 	if ( getDeviceOption ("usevnc") == "yes" ) {
 		hasVNCconfig = true;
@@ -117,10 +118,14 @@ bool Xvnc::slotRun (int index) {
 	if ( getDeviceOption ("alwaysshared") == "alwaysshared" ) {
 		isShared = true;
 	}
+	if ( ! getDeviceOption ("httpport").isEmpty() ) {
+		hasHTTPaccess = true;
+	}
 
 	mPWD = mText ["newpwd"];
 	mCheckViewOnly -> setChecked (false);
 	mCheckShared   -> setChecked (false);
+	mCheckHTTP     -> setChecked (false);
 	mCheckVNC -> setChecked (false);
 	mCheckPWD -> setChecked (false);
 
@@ -150,6 +155,12 @@ bool Xvnc::slotRun (int index) {
 		//-------------------------------------
 		if (isShared) {
 			mCheckShared -> setChecked (true);
+		}
+		//=====================================
+		// check for HTTP access status
+		//-------------------------------------
+		if (hasHTTPaccess) {
+			mCheckHTTP -> setChecked (true);
 		}
 	}
 	if ( noInputConnection ) {
@@ -203,6 +214,21 @@ void Xvnc::slotPassword (bool on) {
 		mEntries -> setDisabled (false);
 	} else {
 		mEntries -> setDisabled (true);
+	}
+}
+
+//=====================================
+// Xvnc enable/disable HTTP setup
+//-------------------------------------
+void Xvnc::slotHTTP (bool on) {
+	// ...
+	// this function is called if the check box value has changed. 
+	// We will enable/disable HTTP according to the state 
+	// ---
+	if (on) {
+		mHTTPEntries -> setDisabled (false);
+	} else {
+		mHTTPEntries -> setDisabled (true);
 	}
 }
 
@@ -317,6 +343,13 @@ bool Xvnc::saveConfiguration (void) {
 	} else {
 		unsetDeviceOption ("alwaysshared");
 		unsetDeviceOption ("nevershared");
+	}
+	if (mCheckHTTP -> isOn()) {
+		resetDeviceRawOption ("httpdir","/usr/share/vnc/classes");
+		resetDeviceRawOption ("httpport",mHTTP->text());
+	} else {
+		unsetDeviceRawOption ("httpport");
+		unsetDeviceRawOption ("httpdir");
 	}
 	return true;
 }

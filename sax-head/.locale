@@ -190,8 +190,11 @@ sub PutOnFtp {
 	$path = $var{Base}.$var{$prefix};
 	$path =~ s/\.//g;
 
-	$e1 = qx(ssh -l ms euklid "cp $path/$file $var{FTP}");
-	$e2 = qx(ssh -l ms euklid "chgrp -h susewww $var{FTP}/$file");
+	#$e1 = qx(ssh -l ms euklid "cp $path/$file $var{FTP}");
+	#$e2 = qx(ssh -l ms euklid "chgrp -h susewww $var{FTP}/$file");
+
+	my $destination = 'ms@euklid:'.$var{FTP};
+	qx (scp $path/$file $destination);
 
 	push(@error,$e1); push(@error,$e2);
 	return(@error);

@@ -96,7 +96,6 @@ void Xvnc::dialogCreate (void) {
 	mPWD1 = new QLineEdit ( pwd1 );
 	mPWD1 -> setText ( mText["newpwd"] );
 	mPWD1 -> setMaximumWidth ( 400 );
-	//mPWD1 -> setMaxLength ( 8 );
 
 	QVBox* pwd2 = new QVBox ( mEntries );
 	QLabel* pwd2text = new QLabel ( pwd2 );
@@ -104,13 +103,28 @@ void Xvnc::dialogCreate (void) {
 	mPWD2 = new QLineEdit ( pwd2 );
 	mPWD2 -> setEchoMode ( QLineEdit::Password );
 	mPWD2 -> setMaximumWidth ( 400 );
-	//mPWD2 -> setMaxLength ( 8 );
 
 	QLabel* hidden2 = new QLabel ( mEntries );
 	hidden2 -> setFixedHeight ( 5 );
 	
 	mCheckViewOnly = new QCheckBox ( mText["vncviewonly"], mOptions );
 	mCheckShared   = new QCheckBox ( mText["vncshared"], mOptions );
+
+	mCheckHTTP = new QCheckBox ( mText["vnchttp"], mOptions );
+
+	QHBox* space2 = new QHBox ( mOptions );
+	QLabel* hidden3 = new QLabel ( space2 );
+	hidden3 -> setFixedWidth ( 22 );
+	mHTTPEntries = new QVBox ( space2 );
+	mHTTPEntries -> setSpacing (5);
+	mHTTPEntries -> setDisabled ( true );
+
+	QVBox* http = new QVBox ( mHTTPEntries );
+	QLabel* httptext = new QLabel ( http );
+	httptext -> setText ( mText["httpport"] );
+	mHTTP = new QSpinBox (5000,10000,1,http);
+	mHTTP -> setValue ( 5800 );
+	mHTTP -> setMaximumWidth ( 400 );
 
 	// connect me to the world...
 	// --------------------------
@@ -122,6 +136,10 @@ void Xvnc::dialogCreate (void) {
 		mCheckPWD , SIGNAL ( toggled       ( bool ) ),
 		this      , SLOT   ( slotPassword  ( bool ) )
 	);
+	QObject::connect (
+		mCheckHTTP , SIGNAL ( toggled       ( bool ) ),
+        this       , SLOT   ( slotHTTP      ( bool ) )
+    );
 
 	// add widgets to the layout...
 	// ----------------------------

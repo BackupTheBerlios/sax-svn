@@ -24,6 +24,7 @@ STATUS        : Status: Up-to-date
 #include <qframe.h>
 #include <qlayout.h>
 #include <qcheckbox.h>
+#include <qspinbox.h>
 #include <time.h>
 
 #include "../intro.h"
@@ -52,9 +53,12 @@ class Xvnc : public XTemplate {
 	QButtonGroup* mOptions;
 	QLineEdit*    mPWD1;
 	QLineEdit*    mPWD2;
+	QSpinBox*     mHTTP;
 	QCheckBox*    mCheckViewOnly;
 	QCheckBox*    mCheckShared;
+	QCheckBox*    mCheckHTTP;
 	QVBox*        mEntries;
+	QVBox*        mHTTPEntries;
 
 	private:
 	bool noInputConnection;
@@ -94,6 +98,7 @@ class Xvnc : public XTemplate {
 	public slots:
 	void slotState    (bool);
 	void slotPassword (bool);
+	void slotHTTP     (bool);
 	void slotInput1Changed (const QString&);
 };
 
