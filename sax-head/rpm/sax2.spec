@@ -315,6 +315,7 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/screen
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/whois
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wrap
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
+rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wmstart
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
 rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*/*-linux-thread-multi/perllocal.pod
@@ -365,6 +366,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/sax/init.pl
 /usr/X11R6/%{_lib}/sax/xc.pl
 /usr/X11R6/%{_lib}/sax/xw.pl
+/usr/X11R6/%{_lib}/sax/wmstart
 /usr/X11R6/%{_lib}/sax/xapi
 /usr/X11R6/%{_lib}/sax/xrun.pl
 /usr/X11R6/%{_lib}/sax/pci.pl
