@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Aug 25 16:26:31 2003
+# Author: Marcus Schaefer <sax@suse.de>, Tue Aug 26 09:16:26 2003
 #
 # Template for monitor data
 # --------------------------
@@ -20681,6 +20681,15 @@ LG ELECTRONICS:STUDIOWORKS 55I  {
  DDC=GSM3ABD
  Hsync=30-54
  Vsync=50-90
+}
+
+#==============================================
+# STUDIOWORKS 55V
+#----------------------------------------------
+LG ELECTRONICS:STUDIOWORKS 55V  {
+ Option=DPMS
+ Hsync=30-54
+ Vsync=50-120
 }
 
 #==============================================
