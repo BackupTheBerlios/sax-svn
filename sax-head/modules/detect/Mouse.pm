@@ -37,7 +37,6 @@ sub AutoDetectMouse {
 	# set detected mouse protocols...
 	# ------------------------------- 
 	$index = 1;
-	@prot_list = reverse(@prot_list);
 	for($i=0;$i<@prot_list;$i++) {
 		$var{InputDevice}{$index}{Identifier}       = "Mouse\[$index\]"; 
 		$var{InputDevice}{$index}{Option}{Vendor}   = "Sysp";
@@ -55,7 +54,6 @@ sub AutoDetectMouse {
 	# set detected mouse devices...
 	# -----------------------------
 	$index = 1;
-	@dev_list = reverse(@dev_list);
 	for($i=0;$i<@dev_list;$i++) {
 		$var{InputDevice}{$index}{Option}{Device} = $dev_list[$i];
 		$index = $index + 2;
@@ -64,7 +62,6 @@ sub AutoDetectMouse {
 	# set detected mouse profiles...
 	# -------------------------------
 	$index = 1;
-	@dev_list = reverse(@dev_list);
 	for($i=0;$i<@dev_list;$i++) {
 		$idp{MouseProfile}{$index} = $prof_list[$i];
 		$index = $index + 2;
@@ -73,7 +70,6 @@ sub AutoDetectMouse {
 	# set detected wheel options...
 	# -------------------------------
 	$index = 1;
-	@whl_list = reverse(@whl_list);
 	for($i=0;$i<@whl_list;$i++) {
 	if ($whl_list[$i] > 0) { 
 		$var{InputDevice}{$index}{Option}{ZAxisMapping} = "4 5";
@@ -84,7 +80,6 @@ sub AutoDetectMouse {
 	# set detected button number, enable wheel emulation if needed...
 	# ---------------------------------------------------------------
 	$index = 1;
-	@btn_list = reverse(@btn_list);
 	for($i=0;$i<@btn_list;$i++) {
 	if ($btn_list[$i] > 3) {
 		$var{InputDevice}{$index}{Option}{Buttons} = $btn_list[$i];
@@ -99,7 +94,6 @@ sub AutoDetectMouse {
 	# set detected emulate 3 button option...
 	# -----------------------------------------
 	$index = 1;
-	@emu_list = reverse(@emu_list);
 	for($i=0;$i<@emu_list;$i++) {
 	if ($emu_list[$i] == 1) {
 		$var{InputDevice}{$index}{Option}{Emulate3Buttons} = "on";
