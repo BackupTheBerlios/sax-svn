@@ -1,0 +1,432 @@
+# /.../
+# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2001
+#
+# Template for mouse data
+# -----------------------
+# <VENDOR NAME>:<DEVICE NAME>  {
+#  Driver               = driver...
+#  Protocol             = protocol...
+#  Device               = device name...
+#  BaudRate             = baud rate...
+#  SampleRate           = sample rate...
+#  Emulate3Buttons      = <on> or <off>
+#  Emulate3Timeout      = timeout val...
+#  ChordMiddle          = <on> or <off>
+#  ButtonThreshold      = integer...
+#  Buttons              = integer...
+#  SendCoreEvents       = <on> or <off>
+#  ClearRTS             = <on> or <off>
+#  ClearDTR             = <on> or <off>
+#  ZAxisMapping         = [ N M ] or X or Y 
+#  Option               = string,string
+# }
+
+# =========================================
+# Generic Auto protocol entry
+# -----------------------------------------
+Auto:Generic {
+ Driver       = mouse
+ Protocol     = Auto
+ Option       = AutoSoft
+ Device       = /dev/mouse
+}
+
+# =========================================
+# Generic Serial Mouse protocol entries
+# -----------------------------------------
+Serial:GlidePoint {
+ Driver       = mouse
+ Protocol     = GlidePoint
+ Device       = /dev/ttyS0
+}
+
+Serial:IntelliMouse {
+ Driver       = mouse
+ Protocol     = IntelliMouse
+ Device       = /dev/ttyS0
+}
+
+Serial:Logitech {
+ Driver       = mouse
+ Protocol     = Logitech
+ Device       = /dev/ttyS0
+}
+
+Serial:Microsoft {
+ Driver       = mouse
+ Protocol     = Microsoft
+ Device       = /dev/ttyS0
+}
+
+Serial:MMHittab {
+ Driver       = mouse 
+ Protocol     = MMHittab
+ Device       = /dev/ttyS0
+}
+
+Serial:MMSeries {
+ Driver       = mouse
+ Protocol     = MMSeries
+ Device       = /dev/ttyS0
+}
+
+Serial:MouseMan {
+ Driver       = mouse
+ Protocol     = MouseMan
+ Device       = /dev/ttyS0
+}
+
+Serial:MouseSystems {
+ Driver       = mouse
+ Protocol     = MouseSystems
+ Device       = /dev/ttyS0
+}
+
+Serial:ThinkingMouse {
+ Driver       = mouse
+ Protocol     = ThinkingMouse
+ Device       = /dev/ttyS0
+}
+
+# =========================================
+# Generic Bus Mouse protocol entry
+# -----------------------------------------
+BusMouse:InPort {
+ Driver       = mouse
+ Protocol     = BusMouse
+ Device       = /dev/mouse 
+}
+
+# =========================================
+# Generic PS/2 mouse entries
+# -----------------------------------------
+PS/2-Mouse:ExplorerPS/2 {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Buttons      = 7
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:GlidePointPS/2 {
+ Driver       = mouse
+ Protocol     = GlidePointPS/2
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:IMPS/2 {
+ Driver       = mouse
+ Protocol     = imps/2
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:MouseManPlusPS/2 {
+ Driver       = mouse
+ Protocol     = MouseManPlusPS/2
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:NetMousePS/2 {
+ Driver       = mouse
+ Protocol     = NetMousePS/2
+ Buttons      = 7
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:NetScrollPS/2 {
+ Driver       = mouse
+ Protocol     = NetScrollPS/2
+ Buttons      = 7
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:PS/2 {
+ Driver       = mouse
+ Protocol     = PS/2
+ Device       = /dev/psaux
+}
+
+PS/2-Mouse:ThinkingMousePS/2 {
+ Driver       = mouse
+ Protocol     = ThinkingMousePS/2
+ ZAxisMapping = 4 5
+ Device       = /dev/psaux
+}
+
+# =========================================
+# Generic USB Mouse protocol entries
+# -----------------------------------------
+USB-Mouse:ExplorerPS/2 {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Buttons      = 7
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:GlidePointPS/2 {
+ Driver       = mouse
+ Protocol     = GlidePointPS/2
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:IMPS/2 {
+ Driver       = mouse
+ Protocol     = imps/2
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:MouseManPlusPS/2 {
+ Driver       = mouse
+ Protocol     = MouseManPlusPS/2
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:NetMousePS/2 {
+ Driver       = mouse
+ Protocol     = NetMousePS/2
+ Buttons      = 7
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:NetScrollPS/2 {
+ Driver       = mouse
+ Protocol     = NetScrollPS/2
+ Buttons      = 7
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:PS/2 {
+ Driver       = mouse
+ Protocol     = PS/2
+ Device       = /dev/input/mice
+}
+
+USB-Mouse:ThinkingMousePS/2 {
+ Driver       = mouse
+ Protocol     = ThinkingMousePS/2
+ ZAxisMapping = 4 5
+ Device       = /dev/input/mice
+}
+
+# =========================================
+# Extended Mouse protocol entries
+# -----------------------------------------
+Extended:Spaceball {
+ Driver       = magellan
+ Device       = /dev/mouse
+}
+
+Extended:SpaceOrbit {
+ Driver       = spaceorb
+ Device       = /dev/mouse
+}
+
+# =========================================
+# Anubis Mouse protocol entries
+# -----------------------------------------
+Anubis:Economy (PS/2)  {
+ Driver     = mouse
+ Protocol   = PS/2
+ Device     = /dev/psaux
+}
+
+Anubis:Economy (Serial)  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+# =========================================
+# Boeder Mouse protocol entries
+# -----------------------------------------
+Boeder:F-1 (Schumacher-Design)  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:Junior {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:M-1 Scrollmouse {
+ Driver     = IntelliMouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:M-10 Designer {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:M-12 Windows Pointer  {
+ Driver     = mouse
+ Protocol   = Microsoft
+ Device     = /dev/mouse
+}
+
+Boeder:M-13 PS/2 Mouse  {
+ Driver     = mouse
+ Protocol   = PS/2
+ Device     = /dev/psaux
+}
+
+Boeder:M-2 Trackball  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:M-3 Serial Pointer  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/ttyS0
+}
+
+Boeder:M-7 BIT StarPointer  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:M-8 StatinPointer  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:M-9 Classic {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:SmartMouse  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:SmartMouse PRO  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Boeder:Scrollmouse USB  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/input/mice
+}
+
+# =========================================
+# Genius Mouse protocol entries
+# -----------------------------------------
+Genius:GM-F303  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Genius:Netmouse (PS/2 VERSION)  {
+ Driver     = mouse
+ Protocol   = IntelliMouse
+ Device     = /dev/psaux
+}
+
+Genius:Netmouse PRO (PS/2 VERSION)  {
+ Driver     = mouse
+ Protocol   = NetMousePS/2
+ Device     = /dev/psaux
+}
+
+Genius:Netscroll  {
+ Driver     = mouse
+ Protocol   = NetScrollPS/2
+ Device     = /dev/psaux
+}
+
+Genius:GM-F303  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Genius:Kidsball  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/mouse
+}
+
+Genius:Netmouse PRO (Serial)  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/ttyS0
+}
+
+Genius:NewScroll (PS/2 VERSION)  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/psaux
+}
+
+Genius:NewScroll Wireless (PS/2 VERSION)  {
+ Driver     = mouse
+ Protocol   = Auto
+ Device     = /dev/psaux
+}
+
+# =========================================
+# Logitech Mouse protocol entries
+# -----------------------------------------
+Logitech:Cordless Trackman FX {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Device       = /dev/psaux
+ EmulateWheel = 4
+ Buttons      = 4
+}
+
+Logitech:Cordless Trackman FX (USB) {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Device       = /dev/input/mice
+ EmulateWheel = 4
+ Buttons      = 4 
+}
+
+Logitech:TrackMan Marble FX (PS/2) {
+ Driver       = mouse
+ Protocol     = MouseManPlusPS/2
+ Device       = /dev/psaux
+ RawOption    = "XAxisMapping" "4 5","YAxisMapping" "6 7","EmulateWheelInertia" "12"
+ EmulateWheel = 4
+ Buttons      = 4
+}
+
+# =========================================
+# Touchpads (NoteBooks)
+# -----------------------------------------
+Synaptics:Touchpad {
+ Driver       = synaptics
+ Device       = /dev/psaux
+ RawOption    = "Edges" "1900 5400 1800 3900","Finger" "25 30","MaxTapTime" "20","MaxTapMove" "220","VertScrollDelta" "100","MinSpeed" "0.02","MaxSpeed" "0.18","AccelFactor" "0.0010"
+ ZAxisMapping = 4 5
+}
