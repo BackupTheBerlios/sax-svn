@@ -1,3 +1,18 @@
+/**************
+FILE          : rules.c
+***************
+PROJECT       : SaX2 - SuSE advanced X configuration
+              :
+AUTHOR        : Marcus Schäfer <ms@suse.de>
+              :
+BELONGS TO    : configuration tool for the X window system 
+              : released under the XFree86 license
+              :
+DESCRIPTION   : provide XKB information via the xkbfile
+              : extension
+              :
+STATUS        : Status: Up-to-date
+**************/
 #include <locale.h>
 #include <qfile.h>
 #include <qtextstream.h>
