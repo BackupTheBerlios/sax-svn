@@ -1,7 +1,6 @@
 JAVAC=/usr/lib/jvm/java-1.4.2-sun/bin/javac
 
 all:
-	swig -Wall -c++ -java SaX.i
 	g++ -c \
 		-I/usr/X11R6/include \
 		-I/usr/lib/qt3/include \
