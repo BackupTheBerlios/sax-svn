@@ -394,7 +394,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/X11R6/%{_lib}/XFree.so
 /usr/X11R6/%{_lib}/PLog.so
 /usr/sbin/sysp
-%if %{suse_version} > 830
+%if %{suse_version} > 820
 /usr/share/applications/sax2.desktop
 %endif
 /usr/share/locale/de/LC_MESSAGES/sax.mo
