@@ -85,7 +85,6 @@ void XKeyboard::dialogCreate (void) {
 	QHBox* primaryBox = new QHBox ( primary );
 	QVBox* lBox = new QVBox ( primaryBox );
 	primaryBox -> setSpacing ( 10 );
-	primaryBox -> setStretchFactor ( lBox, 100 );
 	QVBox* rBox = new QVBox ( primaryBox );
 	QHBox* typeBox    = new QHBox ( lBox );
 	QHBox* layoutBox  = new QHBox ( lBox );
@@ -96,21 +95,22 @@ void XKeyboard::dialogCreate (void) {
 	);
 	typeLabel -> setFixedWidth ( 100 );
 	mType    = new QComboBox ( FALSE,typeBox );
+	mType -> setMaximumWidth ( 480 );
 	QLabel* layoutLabel = new QLabel (
 		mText["kbdlayoutlabel"],layoutBox
 	);
 	layoutLabel -> setFixedWidth ( 100 );
 	mLayout  = new QComboBox ( FALSE,layoutBox );
+	mLayout -> setMaximumWidth ( 480 );
 	QLabel* variantLabel = new QLabel (
 		mText["kbdvariantlabel"],variantBox
 	);
 	variantLabel -> setFixedWidth ( 100 );
 	mVariant = new QComboBox ( FALSE,variantBox );
+	mVariant -> setMaximumWidth ( 480 );
 	mOption  = new QPushButton (
 		mText["kbdoption"],rBox 
 	);
-	mOption -> setFixedWidth ( 100 );
-	rBox -> setStretchFactor ( mOption, 100 );
 	QLabel* hidden = new QLabel ( rBox );
 	hidden -> setFixedHeight  ( 60 );
 	mAddView = new QListView  ( additional );
@@ -161,42 +161,42 @@ void XKeyboard::dialogCreate (void) {
 	shiftLockLabel -> setText (
 		mText["ShiftLockGroup"]
 	);
-	shiftLockLabel -> setFixedWidth ( 150 );
+	shiftLockLabel -> setFixedWidth ( 200 );
 	mXkbOption[0] = new QComboBox ( FALSE,shiftLockBox );
 	shiftLockBox -> setStretchFactor ( mXkbOption[0],2 );
 	QLabel* ctrlMapLabel    = new QLabel ( ctrlMapBox );
 	ctrlMapLabel -> setText (
 		mText["CtrlPos"]
 	);
-	ctrlMapLabel -> setFixedWidth ( 150 );
+	ctrlMapLabel -> setFixedWidth ( 200 );
 	mXkbOption[1] = new QComboBox ( FALSE,ctrlMapBox );
 	ctrlMapBox -> setStretchFactor ( mXkbOption[1],2 );
 	QLabel* leftAltLabel    = new QLabel ( leftAltBox );
 	leftAltLabel -> setText (
 		mText["LeftAlt"]
 	);
-	leftAltLabel -> setFixedWidth ( 150 );
+	leftAltLabel -> setFixedWidth ( 200 );
 	mXkbOption[2] = new QComboBox ( FALSE,leftAltBox );
 	leftAltBox -> setStretchFactor ( mXkbOption[2],2 );
 	QLabel* rightAltLabel   = new QLabel ( rightAltBox );
 	rightAltLabel -> setText (
 		mText["RightAlt"]
 	);
-	rightAltLabel -> setFixedWidth ( 150 );
+	rightAltLabel -> setFixedWidth ( 200 );
 	mXkbOption[3] = new QComboBox ( FALSE,rightAltBox );
 	rightAltBox -> setStretchFactor ( mXkbOption[3],2 );
 	QLabel* scrollLockLabel = new QLabel ( scrollLockBox );
 	scrollLockLabel -> setText (
 		mText["ScrollLock"]
 	);
-	scrollLockLabel -> setFixedWidth ( 150 );
+	scrollLockLabel -> setFixedWidth ( 200 );
 	mXkbOption[4] = new QComboBox ( FALSE,scrollLockBox );
 	scrollLockBox -> setStretchFactor ( mXkbOption[4],2 );
 	QLabel* rightCtrlLabel  = new QLabel ( rightCtrlBox );
 	rightCtrlLabel -> setText (
 		mText["RightCtl"]
 	);
-	rightCtrlLabel -> setFixedWidth ( 150 );
+	rightCtrlLabel -> setFixedWidth ( 200 );
 	mXkbOption[5] = new QComboBox ( FALSE,rightCtrlBox );
 	rightCtrlBox -> setStretchFactor ( mXkbOption[5],2 );
 
