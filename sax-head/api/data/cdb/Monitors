@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 31 12:31:30 2004
+# Author: Marcus Schaefer <sax@suse.de>, Thu Apr  1 11:14:38 2004
 #
 # Template for monitor data
 # --------------------------
@@ -135,6 +135,16 @@
 --> LCD:1600X1200@75HZ  {
  Hsync=30-95
  Vsync=58-78
+}
+
+#==============================================
+# 1680X1050@60HZ
+#----------------------------------------------
+--> LCD:1680X1050@60HZ  {
+ Option=DPMS
+ Hsync=30-66
+ Modeline="1680x1050" 147.14 1680 1784 1968 2256 1050 1051 1054 1087
+ Vsync=30-61
 }
 
 #==============================================
@@ -20975,6 +20985,17 @@ LG:L1811S (DIGITAL)  {
 #----------------------------------------------
 LG:LGP 1024X768  {
  DDC=LGP0557
+ Option=DPMS
+ Hsync=31-60
+ Resolution=1024x768
+ Vsync=30-60
+}
+
+#==============================================
+# LGP 1024x768 [ DELL ]
+#----------------------------------------------
+LG:LGP 1024X768 [ DELL ]  {
+ DDC=LGP9C1C
  Option=DPMS
  Hsync=31-60
  Resolution=1024x768
