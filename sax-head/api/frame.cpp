@@ -532,6 +532,9 @@ void XFrame::setFrame (void) {
 	// status bar
 	//------------
 	mStatus = new QStatusBar    ( mainFrame );
+	if (fullScreen) {
+		mStatus -> setSizeGripEnabled (false);
+	}
 	mStatus -> message (xText["dohint"]);
 
 	//----------------------------------------------
