@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Aug 26 09:16:26 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep  1 17:36:13 2003
 #
 # Template for monitor data
 # --------------------------
@@ -86,6 +86,15 @@
 #----------------------------------------------
 --> LCD:1400X1050@70HZ  {
  Option=DPMS
+ Hsync=30-90
+ Modeline="1400x1050" 145.06 1400 1496 1648 1896 1050 1051 1054 1093
+ Vsync=58-70
+}
+
+#==============================================
+# 1400X1050@70HZ (Acer Travelmate 800)
+#----------------------------------------------
+--> LCD:1400X1050@70HZ (ACER TRAVELMATE 800)  {
  Hsync=30-90
  Modeline="1400x1050" 145.06 1400 1496 1648 1896 1050 1051 1054 1093
  Vsync=58-70
