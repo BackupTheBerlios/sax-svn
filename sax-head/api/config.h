@@ -74,6 +74,14 @@ STATUS        : Status: Up-to-date
 #define HWFLAG          MD5DIR "hardware.chg"
 
 //==============================
+// XKB constants
+//------------------------------
+#define XKB_VARIANT     0
+#define XKB_LAYOUT      1
+#define XKB_MODEL       2
+#define XKB_OPTIONS     3
+
+//==============================
 // QX paramters...
 //------------------------------
 #define STDOUT          0
@@ -135,6 +143,7 @@ STATUS        : Status: Up-to-date
 #define SYSP            "/usr/X11R6/lib/sax/sysp.pl"
 #define XMSET           "/usr/X11R6/lib/sax/tools/xmset"
 #define XKBSET          "/usr/X11R6/lib/sax/tools/xkbset"
+#define SETXKBMAP       "/usr/X11R6/bin/setxkbmap"
 #define DEMO            "/usr/X11R6/lib/sax/tools/demo.sh" 
 #define XQUERY          "/usr/X11R6/lib/sax/tools/xquery"
 #define XRUN            "/usr/X11R6/lib/sax/xrun.pl"

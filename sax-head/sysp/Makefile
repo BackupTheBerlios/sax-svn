@@ -15,22 +15,22 @@ sysp.pl: ${OBJ}
 d3.o: d3.c d3.h
 	${CC} -c d3.c
 
-xstuff.o: xstuff.c xstuff.h
+xstuff.o: xstuff.c xstuff.h sysp.h
 	${CC} -c xstuff.c
 
-cfg.o: cfg.c cfg.h
+cfg.o: cfg.c cfg.h sysp.h
 	${CC} -c cfg.c
 
-server.o: server.c server.h
+server.o: server.c server.h sysp.h
 	${CC} -c server.c
 
-keyboard.o: keyboard.c keyboard.h
+keyboard.o: keyboard.c keyboard.h sysp.h
 	${CC} -c keyboard.c
 
 sysp.o: sysp.c sysp.h
 	${CC} -c sysp.c
 
-mouse.o: mouse.c mouse.h
+mouse.o: mouse.c mouse.h sysp.h
 	${CC} -c mouse.c
 
 clean:

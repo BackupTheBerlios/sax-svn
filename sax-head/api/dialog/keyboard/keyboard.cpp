@@ -73,18 +73,60 @@ void XKeyboard::dialogCreate (void) {
 	);
 	type -> setSpacing ( 10 );
 	type -> setStretchFactor ( typeText,10 );
-	QHBox* selectType = new QHBox ( mDialog );
-	mType = new QComboBox ( FALSE,selectType );
-	selectType -> setSpacing ( 10 );
-	mOption = new QPushButton ( mText["kbdoption"],selectType );
-	selectType -> setStretchFactor ( mType,10 );
-	QLabel* layoutText = new QLabel ( mDialog );
-	layoutText -> setText (mText["kbdlayout"]);
-	mLayout   = new QListBox  ( mDialog );
-	mDeadKeys = new QCheckBox ( mDialog );
-	mDeadKeys -> setText (
-		mText["deadkey"]
+	QVBox* selectType = new QVBox ( mDialog );
+	QButtonGroup* primary = new QButtonGroup (
+		1,Horizontal,mText["kbdprimary"],selectType
 	);
+	selectType -> setSpacing (10);
+	QButtonGroup* additional = new QButtonGroup (
+		1,Horizontal,mText["kbdadditional"],selectType
+	);
+	selectType -> setStretchFactor ( additional, 100 );
+	QHBox* primaryBox = new QHBox ( primary );
+	QVBox* lBox = new QVBox ( primaryBox );
+	primaryBox -> setSpacing ( 10 );
+	primaryBox -> setStretchFactor ( lBox, 100 );
+	QVBox* rBox = new QVBox ( primaryBox );
+	QHBox* typeBox    = new QHBox ( lBox );
+	QHBox* layoutBox  = new QHBox ( lBox );
+	QHBox* variantBox = new QHBox ( lBox );
+	
+	QLabel* typeLabel = new QLabel (
+		mText["kbdtypelabel"],typeBox
+	);
+	typeLabel -> setFixedWidth ( 100 );
+	mType    = new QComboBox ( FALSE,typeBox );
+	QLabel* layoutLabel = new QLabel (
+		mText["kbdlayoutlabel"],layoutBox
+	);
+	layoutLabel -> setFixedWidth ( 100 );
+	mLayout  = new QComboBox ( FALSE,layoutBox );
+	QLabel* variantLabel = new QLabel (
+		mText["kbdvariantlabel"],variantBox
+	);
+	variantLabel -> setFixedWidth ( 100 );
+	mVariant = new QComboBox ( FALSE,variantBox );
+	mOption  = new QPushButton (
+		mText["kbdoption"],rBox 
+	);
+	mOption -> setFixedWidth ( 100 );
+	rBox -> setStretchFactor ( mOption, 100 );
+	QLabel* hidden = new QLabel ( rBox );
+	hidden -> setFixedHeight  ( 60 );
+	mAddView = new QListView  ( additional );
+	mAddView -> setItemMargin ( 2 );
+	mAddView -> setAllColumnsShowFocus (true);
+	mViewStatus = mAddView -> addColumn ( mText["kbdstatus"] );
+	mViewLayout = mAddView -> addColumn ( mText["kbdaddlayout"] );
+	mViewKey    = mAddView -> addColumn ( mText["kbdkey"] );
+	mViewVariant= mAddView -> addColumn ( mText["kbdvariantlabel"] );
+	mAddView -> setResizeMode (QListView::LastColumn);
+	QHBox* testBox = new QHBox ( additional );
+	QLabel* addvariantLabel = new QLabel (
+		mText["kbdvariantlabel"],testBox
+	);
+	addvariantLabel -> setFixedWidth ( 100 );
+	mAddVariant = new QComboBox ( FALSE,testBox );
 	QLabel* testText = new QLabel( mDialog );
 	testText -> setText (
 		mText["kbdtest"]
@@ -157,71 +199,6 @@ void XKeyboard::dialogCreate (void) {
 	rightCtrlLabel -> setFixedWidth ( 150 );
 	mXkbOption[5] = new QComboBox ( FALSE,rightCtrlBox );
 	rightCtrlBox -> setStretchFactor ( mXkbOption[5],2 );
-
-	QString* xkbDefault = new QString (
-		mText["Default"]
-	);
-	QString* grpSwitch  = new QString (
-		mText["R-Alt-switch-group-while-pressed"]
-	);
-	QString* grpToggle = new QString (
-		mText["R-Alt-switch-group"]
-	);
-	QString* grpShiftToggle = new QString (
-		mText["Both-Shift-Keys-change-group"]
-	);
-	QString* grpCtrlShiftToggle = new QString (
-		mText["Ctrl-and-Shift-change-group"]
-	);
-	QString* grpCtrlAltToggle = new QString (
-		mText["Alt-and-Ctrl-change-group"]
-	);
-	mTranslateOption.insert ( "default",    *xkbDefault );
-	mTranslateOption.insert ( "grp:switch", *grpSwitch );
-	mTranslateOption.insert ( "grp:toggle", *grpToggle );
-	mTranslateOption.insert ( "grp:shift_toggle",     *grpShiftToggle );
-	mTranslateOption.insert ( "grp:ctrl_shift_toggle",*grpCtrlShiftToggle );
-	mTranslateOption.insert ( "grp:ctrl_alt_toggle",  *grpCtrlAltToggle );
-
-	mXkbOption[0]->insertItem (mTranslateOption["default"]);
-	mXkbOption[0]->insertItem (mTranslateOption["grp:switch"]);
-	mXkbOption[0]->insertItem (mTranslateOption["grp:toggle"]);
-	mXkbOption[0]->insertItem (mTranslateOption["grp:shift_toggle"]);
-	mXkbOption[0]->insertItem (mTranslateOption["grp:ctrl_shift_toggle"]);
-	mXkbOption[0]->insertItem (mTranslateOption["grp:ctrl_alt_toggle"]);
-
-	QString* ctrlNocaps = new QString (
-		mText["CapsLock-as-additional-control"]
-	);
-	QString* ctrlSwapCaps = new QString (
-		mText["Swap-Ctrl-and-CapsLock"]
-	);
-	QString* ctrlCtrlAC = new QString (
-		mText["Ctrl-Key-at-left-of-<A>"]
-	);
-	QString* ctrlCtrlAA = new QString (
-		mText["Ctrl-Key-at-bottom-left"]
-	);
-	mTranslateOption.insert ( "ctrl:nocaps",  *ctrlNocaps );
-	mTranslateOption.insert ( "ctrl:swapcaps",*ctrlSwapCaps);
-	mTranslateOption.insert ( "ctrl:ctrl_ac", *ctrlCtrlAC );
-	mTranslateOption.insert ( "ctrl:ctrl_aa", *ctrlCtrlAA );
-
-	mXkbOption[1]->insertItem (mTranslateOption["default"]);
-	mXkbOption[1]->insertItem (mTranslateOption["ctrl:nocaps"]);
-	mXkbOption[1]->insertItem (mTranslateOption["ctrl:swapcaps"]);
-	mXkbOption[1]->insertItem (mTranslateOption["ctrl:ctrl_ac"]);
-	mXkbOption[1]->insertItem (mTranslateOption["ctrl:ctrl_aa"]);
-	
-	for (int i=2;i<6;i++) {
-		mXkbOption[i]->insertItem (*xkbDefault);
-		mXkbOption[i]->insertItem ("Meta");
-		mXkbOption[i]->insertItem ("Compose");
-		mXkbOption[i]->insertItem ("ModeShift");
-		mXkbOption[i]->insertItem ("ModeLock");
-		mXkbOption[i]->insertItem ("ScrollLock");
-		mXkbOption[i]->insertItem ("Control");
-	}
 
 	// ...
 	// AutoRepeat setting
@@ -304,20 +281,28 @@ void XKeyboard::dialogCreate (void) {
 	// connect me to the world
 	// -----------------------
 	QObject::connect (
-		mLayout   , SIGNAL ( clicked      (QListBoxItem *) ),
-		this      , SLOT   ( slotSelect   (QListBoxItem *) )
+		mLayout   , SIGNAL ( activated        (int) ),
+		this      , SLOT   ( slotLayout       (int) )
 	);
 	QObject::connect (
-		mType     , SIGNAL ( activated    (int) ),
-		this      , SLOT   ( slotType     (int) )
+		mType     , SIGNAL ( activated        (int) ),
+		this      , SLOT   ( slotType         (int) )
+	);
+	QObject::connect (
+		mVariant  , SIGNAL ( activated        (int) ),
+		this      , SLOT   ( slotVariant      (int) )
+	);
+	QObject::connect (
+		mAddVariant , SIGNAL ( activated      (int) ),
+		this        , SLOT   ( slotAddVariant (int) )
 	);
 	QObject::connect (
 		mOption   , SIGNAL ( clicked    () ),
 		this      , SLOT   ( slotOption () )
 	);
-	QObject::connect (
-		mDeadKeys , SIGNAL ( toggled      (bool) ),
-		this      , SLOT   ( slotVariant  (bool) )
+	QObject::connect(
+		mAddView  , SIGNAL ( selectionChanged (QListViewItem *)),
+		this      , SLOT   ( slotAddLayout    (QListViewItem *))
 	);
 	QObject::connect (
 		mTop, SIGNAL ( applyButtonPressed() ),
@@ -333,12 +318,7 @@ void XKeyboard::dialogCreate (void) {
 	layer0 -> addWidget  ( type );
 	layer0 -> addSpacing ( 5 );
 	layer0 -> addWidget  ( selectType );
-	layer0 -> addSpacing ( 10 );
-	layer0 -> addWidget  ( layoutText );
-	layer0 -> addWidget  ( mLayout );
 	layer0 -> addSpacing ( 5 );
-	layer0 -> addWidget  ( mDeadKeys );
-	layer0 -> addSpacing ( 10 );
 	layer0 -> addWidget  ( testText );
 	layer0 -> addWidget  ( mTest );
 	layer0 -> setMargin  ( 5 );

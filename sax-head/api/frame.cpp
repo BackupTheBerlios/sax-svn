@@ -416,7 +416,7 @@ void XFrame::setFrame (void) {
 	component -> setMaximumWidth (190);
 	component -> setFixedWidth   (190);
 	component -> addColumn(xText["component"]);
-	component -> setColumnWidth(0,component->width() - 5);
+	component -> setResizeMode (QListView::LastColumn);
 	component -> setRootIsDecorated(true);
 	component -> setSorting ( -1 );
 	component -> setItemMargin ( 2 );

@@ -187,7 +187,16 @@ sub ParseInputDeviceSection {
 			if ($opt =~ /XkbLayout:(.*),XkbModel/) {
 				$special = $1; $special =~ s/ +//g;
 				$parse{Input}{$count}{Option}{XkbLayout} = $special;
+				$parse{Input}{$count}{Option}{XkbLayout} =~ s/,,/,\!,/g;
 				$opt =~ s/,XkbLayout:$special//;
+			}
+			# look up XkbVariant next...
+			# -------------------------
+			if ($opt =~ /XkbVariant:(.*)/) {
+				$special = $1; $special =~ s/ +//g;
+				$parse{Input}{$count}{Option}{XkbVariant} = $special;
+				$parse{Input}{$count}{Option}{XkbVariant} =~ s/,,/,\!,/g;
+				$opt =~ s/,XkbVariant:$special//;
 			}
  
 			@list = split(/,/,$opt);

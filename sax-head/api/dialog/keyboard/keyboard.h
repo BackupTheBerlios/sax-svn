@@ -26,6 +26,7 @@ STATUS        : Status: Up-to-date
 #include <qlineedit.h>
 
 #include "../intro.h"
+#include "rules.h"
 #include <X11/XKBlib.h>
 
 //=====================================
@@ -47,9 +48,11 @@ class XKeyboard : public XTemplate {
     private:
     QFrame*       mDialog;
 	XTabDialog*   mTop;
-	QListBox*     mLayout;
-	QCheckBox*    mDeadKeys;
 	QComboBox*    mType;
+	QComboBox*    mLayout;
+	QComboBox*    mVariant;
+	QComboBox*    mAddVariant;
+	QListView*    mAddView;
 	QPushButton*  mOption;
 	QLineEdit*    mTest;
 	QComboBox*    mXkbOption[6];
@@ -61,10 +64,16 @@ class XKeyboard : public XTemplate {
 	private:
 	XIntro*       mIntro;
 	QDict<XFile>* mFilePtr;
-	QDict<char>*  mKBDPtr;
-	QDict<char>   mTranslateOption;
+	QDict<char>   mLayoutHash;
+	QDict<char>   mModelHash;
+	QDict<char>   mOptionHash;
 	int           mCurrentDelay;
 	int           mCurrentKrate;
+	int           mViewStatus;
+	int           mViewLayout;
+	int           mViewKey;
+	int           mViewVariant;
+	XKeyRules     mRules;
 
     public:
     XKeyboard  ( XFrame*,XIntro* );
@@ -75,23 +84,27 @@ class XKeyboard : public XTemplate {
     void dialogCreate ( void );
 	int  getItem      ( QComboBox* , const QString& );
     void resetPage    ( int = PAGE_NOLOAD );
-    void pageCalled   ( int );
-	void initPage     ( void );
-	bool apply        ( void );
-	void setupTop     ( void );
+    void pageCalled     ( int );
+	void initPage       ( void );
+	bool apply          ( void );
+	void setupTop       ( void );
+	void updateVariants ( void );
+	void validateLayout ( void );
 
     protected:
     bool slotRun   ( int );
 	void slotIntro ( int );
 
 	public slots:
-	void slotSelect    ( QListBoxItem* );
-	void slotType      ( int  );
-	void slotVariant   ( bool );
-	void slotOption    ( void );
-	void slotTopCancel ( void );
-	void slotTopOk     ( void );
-	void autoRepeat    ( void );
+	void slotAddLayout  ( QListViewItem* );
+	void slotLayout     ( int  );
+	void slotType       ( int  );
+	void slotVariant    ( int  );
+	void slotAddVariant ( int  );
+	void slotOption     ( void );
+	void slotTopCancel  ( void );
+	void slotTopOk      ( void );
+	void autoRepeat     ( void );
 };
 
 

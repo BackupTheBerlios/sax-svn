@@ -70,11 +70,9 @@ void ScanKeyboard::Scan (void) {
 	// --------------------------
 	kp.variant = "";
 	if (strstr((char*)arch.c_str(), ARCH_SPARC) != NULL) {
-		kp.rules  = kbd->rules;
 		kp.model  = kbd->model;
 		kp.layout = kbd->layout;
 	} else {
-		kp.rules  = "undef";
 		kp.model  = "undef";
 		kp.layout = "undef";
 	}
@@ -89,21 +87,14 @@ void ScanKeyboard::Scan (void) {
 	if (keymap.consolename == config[KEYTABLE]) {
 		// found console keymap adapter...
 		// -----------------------------------
-		if (kp.rules  == "undef") {
-			kp.rules  = keymap.rules;
-		}
 		if (kp.model  == "undef") {
 			kp.model  = keymap.model;
 		}
 		if (kp.layout == "undef") {
 			kp.layout = keymap.layout;
 		}
-		if (keymap.variant == "on") {
-			kp.variant    = "nodeadkeys";
-		}
-		kp.protocol    = keymap.protocol;
+		kp.variant     = keymap.variant;
 		kp.consolename = config[KEYTABLE]; 
-		kp.mapname     = keymap.mapname;
 		kp.keycodes    = keymap.keycodes;
 		kp.leftalt     = keymap.leftalt;
 		kp.rightalt    = keymap.rightalt;
@@ -141,13 +132,10 @@ int ScanKeyboard::Save (void) {
 	// reformat to primitive types...
 	// -------------------------------
 	strcpy(save.consolename , kp.consolename.c_str());
-	strcpy(save.protocol    , kp.protocol.c_str());
-	strcpy(save.rules       , kp.rules.c_str());
 	strcpy(save.model       , kp.model.c_str());
 	strcpy(save.layout      , kp.layout.c_str());
 	strcpy(save.variant     , kp.variant.c_str());
 	strcpy(save.options     , kp.options.c_str());
-	strcpy(save.mapname     , kp.mapname.c_str());
 	strcpy(save.keycodes    , kp.keycodes.c_str());
 	strcpy(save.leftalt     , kp.leftalt.c_str());
 	strcpy(save.rightalt    , kp.rightalt.c_str());
@@ -175,13 +163,10 @@ int ScanKeyboard::Read (void) {
 	// save to object data
 	// ---------------------
 	kp.consolename = input.consolename;
-	kp.protocol    = input.protocol;
-	kp.rules       = input.rules;
 	kp.model       = input.model;
 	kp.layout      = input.layout;
 	kp.variant     = input.variant;
 	kp.options     = input.options;
-	kp.mapname     = input.mapname;
 	kp.keycodes    = input.keycodes;
 	kp.leftalt     = input.leftalt;
 	kp.rightalt    = input.rightalt;

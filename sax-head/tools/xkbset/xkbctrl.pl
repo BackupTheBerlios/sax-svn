@@ -14,9 +14,7 @@ use Env;
 #=================================
 # Globals...
 #---------------------------------
-my $CDBMap = "/usr/X11R6/lib/sax/api/data/cdb/Keyboards";
 my $CFGMap = "/usr/X11R6/lib/sax/sysp/maps/Keyboard.map";
-
 
 #=================================
 # The magic main :-)
@@ -40,82 +38,63 @@ sub main {
 	my $RightCtl;
 	my $Apply;
 
-	my %cdb;
 	my %map;
-
+	my %opt;
+	
 	if (! defined $ARGV[0]) {
 		die "xkbctrl: no console name given";
 	}
-	%cdb = ReadDataCDB ($CDBMap);
+	if ($ARGV[0] =~ /(.*)\.map\.gz.*/) {
+		$ARGV[0] = $1;
+	}
 	%map = ReadDataConfigMap ($CFGMap);
 	foreach (keys %map) {
 	if ($_ eq $ARGV[0]) {
 		my @list = split (/:/,$map{$_});
-		$Protocol    = Tr (shift(@list));
-		$XkbRules    = Tr (shift(@list));
 		$XkbModel    = Tr (shift(@list));
 		$XkbLayout   = Tr (shift(@list));
 		$XkbVariant  = Tr (shift(@list));
-		$MapName     = Tr (shift(@list));
 		$XkbKeyCodes = Tr (shift(@list));
 		$LeftAlt     = Tr (shift(@list));
 		$RightAlt    = Tr (shift(@list));
 		$ScrollLock  = Tr (shift(@list));
 		$RightCtl    = Tr (shift(@list));
 		$XkbOptions  = Tr (join(":",@list));
-
-		foreach (keys %cdb) {
-		if ($MapName eq $_) {
-			my $symbols = $cdb{$_}{'<...>'}{ApplySymbols};
-			my $layout  = $XkbLayout;
-			my @symlist  = split(/,/,$layout);
-			$layout = $symlist[0];
-			if ($layout ne "us") {
-			if ($XkbVariant eq "on") {
-				$symbols = $symbols."+".$layout."(nodeadkeys)";
-			} else {
-				$symbols = $symbols."+".$layout;
-			} 
-			}
-			my $keycodes = $cdb{$_}{'<...>'}{ApplyKeycodes};
-			my $compat   = $cdb{$_}{'<...>'}{ApplyCompat};
-			my $types    = $cdb{$_}{'<...>'}{ApplyTypes};
-			my $geometry = $cdb{$_}{'<...>'}{ApplyGeometry};
-
-			$Apply = "$keycodes:$compat:$types:$symbols:$geometry";
-			$Apply =~ s/ +//g;
-			$Apply =~ s/\t+//g;
-		}
-		}
 	}
 	}
+	$opt{-model}   = $XkbModel;
+	$opt{-layout}  = $XkbLayout;
+	$opt{-option}  = $XkbOptions;
+	$opt{-variant} = $XkbVariant;
+	foreach (keys %opt) {
+	if (($opt{$_} ne "x") && ($opt{$_} ne "")) {
+		$Apply = "$Apply $_ $opt{$_}";
+	}
+	}
+	$Apply =~ s/^ +//;
+
 	print "\$[\n";
-	if ($XkbVariant eq "on") {
-	print "   \"XkbVariant\"   : \"nodeadkeys\",\n";
+	if ($XkbVariant ne "x") {
+	print "   \"XkbVariant\"   : \"$XkbVariant\",\n";
 	}
 	print "   \"XkbLayout\"    : \"$XkbLayout\",\n";
 	print "   \"XkbModel\"     : \"$XkbModel\",\n";
-	print "   \"Protocol\"     : \"$Protocol\",\n";
-	if ($XkbRules !~ /xfree86/) {
-	print "   \"XkbRules\"     : \"$XkbRules\",\n";
-	}
-	if ($XkbOptions !~ /none/) {
+	if ($XkbOptions ne "x") {
 	print "   \"XkbOptions\"   : \"$XkbOptions\",\n";
 	}
-	print "   \"MapName\"      : \"$MapName\",\n";
 	if ($XkbKeyCodes !~ /xfree86/) {
 	print "   \"XkbKeyCodes\"  : \"$XkbKeyCodes\",\n";
 	}
-	if ($LeftAlt !~ /none/) {
+	if ($LeftAlt ne "x") {
 	print "   \"LeftAlt\"      : \"$LeftAlt\",\n";
 	}
-	if ($RightAlt !~ /none/) {
+	if ($RightAlt ne "x") {
 	print "   \"RightAlt\"     : \"$RightAlt\",\n";
 	}
-	if ($ScrollLock !~ /none/) {
+	if ($ScrollLock ne "x") {
 	print "   \"ScrollLock\"   : \"$ScrollLock\",\n";
 	}
-	if ($RightCtl !~ /none/) {
+	if ($RightCtl ne "x") {
 	print "   \"RightCtl\"     : \"$RightCtl\",\n";
 	}
 	print "   \"Apply\"        : \"$Apply\"\n";
@@ -147,59 +126,6 @@ sub ReadDataConfigMap {
 		$result{$consoleName} = $stuff;
 	}
 	return (%result);
-}
-
-#----[ ReadDataCDB ]----------#
-sub ReadDataCDB {
-#--------------------------------------------
-# read CDB formatted data files...
-# return a hash
-#
-	my $filename = $_[0];
-	my %result;
-	my $vendor;
-	my $name;
-	my $option;
-	my $value;
-
-	my @file = ();
-	my $filesize = 0;
-	if (! open (DATA,$filename)) {
-		die "could not open file: $filename";
-	}
-	while (my $line=<DATA>) {
-		chomp ($line);
-		push (@file,$line);
-		$filesize++;
-	}
-	close(DATA);
-
-	foreach my $line (@file) {
-	if (($line =~ /^#/) || ($line eq "")) {
-		next;
-	}
-
-	if ($line =~ /(.*):(.*)\{/) {
-		# get the topic line...
-		# ----------------------
-		$vendor = $1;
-		$name   = $2;
-		$vendor =~ s/^ +//g; $vendor =~ s/ +$//g;
-		$name   =~ s/^ +//g; $name   =~ s/ +$//g;
-	} elsif ($line =~ /(.*)=(.*)/) {
-		# get the values behind this topic...
-		# ------------------------------------
-		$option = $1;
-		$value  = $2;
-		$option =~ s/^ +//g; $option =~ s/ +$//g;
-		$value  =~ s/^ +//g; $value  =~ s/ +$//g;
-
-		if ((defined $name) && (defined $vendor)) {
-			$result{$vendor}{$name}{$option} = $value;
-		}
-	}
-	}
-	return(%result);
 }
 
 #---[ tr ]----#

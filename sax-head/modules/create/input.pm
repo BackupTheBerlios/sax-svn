@@ -81,11 +81,17 @@ sub CreateInputDeviceSection {
 					$setting =~ s/^ +//g; # remove rest blanks
 					$setting =~ s/\n//g;  # remove returns
 
-					if ($n ne "XkbLayout") {
+					if (
+						($n ne "XkbLayout")  && ($n ne "XkbVariant") &&
+						($n ne "XkbOptions")
+					) {
 						@list = split(/,/,$setting);
 						$size = @list;
 					} else {
-						@list = $setting;
+						$setting =~ s/\!//g;
+						if ($setting !~ /^,+$/) {
+							@list = $setting;
+						}
 					}
 
 					foreach $l (@list) {

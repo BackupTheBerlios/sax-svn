@@ -46,12 +46,9 @@ struct Identity {
 
 struct Keymap {
 	string consolename;
-	string protocol;
-	string rules;
 	string model;
 	string layout;
 	string variant;
-	string mapname;
 	string options;
 	string keycodes;
 	string leftalt;
@@ -62,12 +59,9 @@ struct Keymap {
 
 struct Keymap_S {
 	str consolename;
-	str protocol;
-	str rules;
 	str model;
 	str layout;
 	str variant;
-	str mapname;
 	str options;
 	str keycodes;
 	str leftalt;
@@ -528,6 +522,9 @@ void SPReadFile<T>::ImportKeymap(void) {
 	while(! handle.eof()) {
 		line  = (char*)malloc(sizeof(char)*MAX_LINE_SIZE);
 		handle.getline(line,MAX_LINE_SIZE);
+		if ((line[0] == '#') || (line[0] == 0)) {
+			continue;
+		}
 		Keymap id;
 		token = strtok(line,":");
 
@@ -538,49 +535,38 @@ void SPReadFile<T>::ImportKeymap(void) {
 		while (token) {
 		token = strtok(NULL,":");
 		if (token != NULL) {
+		trim (token);
 		switch(n) {
 			case 0:
-			trim(token); id.protocol = token;
+			id.model = token;
 			break;
 
 			case 1:
-			trim(token); id.rules = token;
+			id.layout = token;
 			break;
 
 			case 2:
-			trim(token); id.model = token;
+			id.variant = token;
 			break;
 
 			case 3:
-			trim(token); id.layout = token;
+			id.keycodes = token;
 			break;
 
 			case 4:
-			trim(token); id.variant = token;
+			id.leftalt = token;
 			break;
-
+ 
 			case 5:
-			id.mapname   = token;
+			id.rightalt = token;
 			break;
 
 			case 6:
-			id.keycodes  = token;
-			break;
-
-			case 7:
-			id.leftalt   = token;
-			break;
- 
-			case 8:
-			id.rightalt  = token;
-			break;
-
-			case 9:
 			id.scrollock = token;
 			break;
 
-			case 10:
-			id.rightctl  = token;
+			case 7:
+			id.rightctl = token;
 			break;
 
 			default:

@@ -30,8 +30,8 @@ sub CheckMap {
 	$map =~ s/#.*//;
 	$map =~ s/^ +//;
 	$map =~ s/ +$//;
-	if ($map !~ /.*\.map\.gz.*/) {
-		$map = "$map\.map\.gz";
+	if ($map =~ /(.*)\.map\.gz.*/) {
+		$map = $1;
 	}
 
 	my $ok = 0;
@@ -47,7 +47,7 @@ sub CheckMap {
 	if ($ok) {
 		print "$map\n";
 	} else {
-		print "us.map.gz\n";
+		print "us\n";
 	}
 }
 

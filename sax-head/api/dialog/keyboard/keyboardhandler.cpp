@@ -31,6 +31,71 @@ void XKeyboard::resetPage (int reload) {
 	// ---
 	QString update = "sys_KEYBOARD";
 
+	//=======================================
+	// save primary and secondary keyboard(s)
+	//---------------------------------------
+	if (reload == PAGE_RELOAD) {
+		QString* XkbLayout  = NULL;
+		QString* XkbModel   = NULL;
+		QString* XkbVariant = NULL;
+		XWrapFile < QDict<XFile> > mFiles (mFilePtr);
+		XWrapPointer<XData> workingKeyboard (
+			mFiles["sys_KEYBOARD"]->getDevice (0)
+		);
+		// 1) primary XKB model
+		QDictIterator<char> itModel (mModelHash);
+		for (; itModel.current(); ++itModel) {
+		if (QString(itModel.current()) == mType -> currentText()) {
+			XkbModel = new QString (itModel.currentKey());
+		}
+		}
+		// 2) primary XKB layout
+		QDictIterator<char> itLayout (mLayoutHash);
+		for (; itLayout.current(); ++itLayout) {
+		if (QString(itLayout.current()) == mLayout -> currentText()) {
+			XkbLayout = new QString (itLayout.currentKey());
+		}
+		}
+		// 3) variant for primary XKB layout
+		XkbVariant = new QString();
+		if ((mVariant->currentText()) && (mVariant->currentText() != "basic")) {
+			*XkbVariant = mVariant->currentText();
+		}
+		// 4) additional layout and variant
+		QListViewItemIterator itAdd (mAddView);
+		for ( ; itAdd.current(); ++itAdd ) {
+			QCheckListItem* item = (QCheckListItem*)itAdd.current();
+			if (item->isOn()) {
+				QString layout  = itAdd.current()->text(2);
+				QString variant = "!";
+				XkbLayout->sprintf("%s,%s",
+					XkbLayout->ascii(),layout.ascii()
+				);
+				if (itAdd.current()->text(3)) {
+					variant = itAdd.current()->text(3);
+				}
+				XkbVariant->sprintf("%s,%s",
+					XkbVariant->ascii(),variant.ascii()
+				);
+			}
+		}
+		if (XkbLayout) {
+		workingKeyboard.setPair ("XkbLayout",
+			XkbLayout->ascii()
+		);
+		}
+		if (XkbModel) {
+		workingKeyboard.setPair ("XkbModel",
+			XkbModel->ascii()
+		);
+		}
+		if ((XkbVariant) && (! XkbVariant->isEmpty())) {
+		workingKeyboard.setPair ("XkbVariant",
+			XkbVariant->ascii()
+		);
+		}
+	}
+
 	mStatus -> clear();
 	if (reload == PAGE_RELOAD) {
 		mFilePtr = mIntro->getFiles();
@@ -72,27 +137,68 @@ void XKeyboard::initPage (void) {
     // with the data available for selections and other stuff
     // like that
     // ---
-	QDict<XFile>* mFilePtr = mIntro->getFiles();
-	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
+	XWrapPointer< QDict<char> > mText (mTextPtr);
 
-	// insert keyboard layouts...
-	// --------------------------
-	XApiData kbd = mFiles["ext_KLANGUAGE"]->getAPI();
-	mKBDPtr = kbd.getHash();
+	mLayoutHash = mRules.getLayouts();
+	mModelHash  = mRules.getModels();
+	mOptionHash = mRules.getOptions();
+	//================================================
+	// include available layouts
+	//------------------------------------------------
+	QDictIterator<char> itLayout (mLayoutHash);
+	for (; itLayout.current(); ++itLayout) {
+		mLayout -> insertItem ( QString::fromLocal8Bit (itLayout.current()) );
+		QCheckListItem* item = new QCheckListItem (
+			mAddView,"",QCheckListItem::CheckBox
+		);
+		item->setText ( 1, QString::fromLocal8Bit (itLayout.current()) );
+		item->setText ( 2, itLayout.currentKey() );
+	}
 	
-	QDictIterator<char> it (*mKBDPtr);
-	for (; it.current(); ++it) {
-		mLayout -> insertItem (it.currentKey());
+	//================================================
+	// include available models
+	//------------------------------------------------
+	QDictIterator<char> itModel (mModelHash);
+	for (; itModel.current(); ++itModel) {
+		mType -> insertItem ( QString::fromLocal8Bit (itModel.current()) );
+    }
+	mAddView -> setSorting (1);
+	//================================================
+	// include available options
+	//------------------------------------------------
+	QString* xkbDefault = new QString (
+		mText["Default"]
+	);
+	mXkbOption[0]->insertItem (*xkbDefault);
+	mXkbOption[1]->insertItem (*xkbDefault);
+	QDictIterator<char> itOption (mOptionHash);
+	for (; itOption.current(); ++itOption) {
+		XStringList completeOption (itOption.currentKey());
+		completeOption.setSeperator (":");
+		QString optkey = completeOption.getList().getFirst();
+		if (optkey == "grp") {
+		mXkbOption[0] -> insertItem (
+			QString::fromLocal8Bit (itOption.current())
+		);
+		}
+		if (optkey == "ctrl") {
+		mXkbOption[1] -> insertItem (
+			QString::fromLocal8Bit (itOption.current()) 
+		);
+		}
 	}
-	mLayout -> sort();
-
-	// insert keyboard types...
-	// ------------------------
-	QList<char> types = mFiles["cdb_KEYBOARDS"]->cdbGetVendorList();
-	QListIterator<char> io (types);
-	for (; io.current(); ++io) {
-		mType -> insertItem (io.current());
+	for (int i=2;i<6;i++) {
+		mXkbOption[i]->insertItem (*xkbDefault);
+		mXkbOption[i]->insertItem ("Meta");
+		mXkbOption[i]->insertItem ("Compose");
+		mXkbOption[i]->insertItem ("ModeShift");
+		mXkbOption[i]->insertItem ("ModeLock");
+		mXkbOption[i]->insertItem ("ScrollLock");
+		mXkbOption[i]->insertItem ("Control");
 	}
+	//================================================
+	// set defaults
+	//------------------------------------------------
 	mCurrentDelay = XKBDDELAY_DEFAULT;
 	mCurrentKrate = XKBDRATE_DEFAULT;
 }
@@ -111,7 +217,6 @@ bool XKeyboard::slotRun (int index) {
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 	mStatus -> message (mText["RunXKeyboard"]);
 	mFrame  -> nextButton() -> setText (mText["finish"]);
-
 	// ...
 	// get the mFiles pointer wrapper from the Intro
 	// object which has read all the data files. Than
@@ -124,43 +229,74 @@ bool XKeyboard::slotRun (int index) {
 		return (FALSE);
 	}
 	QDict<char> keyboardInfo = sysData -> getData();
+	QString XKBLayouts  = keyboardInfo["XkbLayout"];
+	QString XKBVariants = keyboardInfo["XkbVariant"];
+	QString XKBModel    = keyboardInfo["XkbModel"];
 
-	// ...
-	// lookup keyboard type [MapName] and select
-	// the model in the combobox
-	// ---
-	for (int n=0;n<mType->count();n++) {
-	if (mType->text(n) == keyboardInfo["MapName"]) {
-		mType->setCurrentItem (n);
-		break;
+	//=====================================
+	// select base keyboard model
+	//-------------------------------------
+	QDictIterator<char> itModel (mModelHash);
+	for (; itModel.current(); ++itModel) {
+	if (itModel.currentKey() == XKBModel) {
+		mType -> setCurrentText (itModel.current());
 	}
 	}
-	// ...
-	// select current used language layout in the
-	// mLayout listbox
-	// ---
-	XApiData kbd = mFiles["ext_KLANGUAGE"]->getAPI();
-	mKBDPtr = kbd.getHash();
-	for (unsigned int n=0;n<mLayout->count();n++) {
-		QString XkbLayout (mKBDPtr->operator[](mLayout->text(n)));
-		XStringList completeLanguage (XkbLayout);
-		completeLanguage.setSeperator ("+");
-		QList<char> xf86Layout = completeLanguage.getList();
-		if (QString(xf86Layout.at(0)) == keyboardInfo["XkbLayout"]) {
-			QListBoxItem* current = mLayout->item(n);
-			mLayout -> setSelected (current,true);
-			mLayout -> setCurrentItem (current);
-			mLayout -> ensureCurrentVisible();
-			break;
+	
+	//=====================================
+	// get layout/variant lists
+	//-------------------------------------
+	XStringList completeLayout (XKBLayouts);
+	completeLayout.setSeperator (",");
+	QList<char> layoutList = completeLayout.getList();
+	QString baseLayout = layoutList.getFirst();
+	layoutList.removeFirst();
+
+	XStringList completeVariant (XKBVariants);
+	completeVariant.setSeperator (",");
+	QList<char> variantList = completeVariant.getList();
+	QString baseVariant = variantList.getFirst();
+	variantList.removeFirst();
+	int varCount = 0;
+
+	//=====================================
+	// select base/secondary layout(s)
+	//-------------------------------------
+	// 1)
+	QDictIterator<char> itLayout (mLayoutHash);
+	for (; itLayout.current(); ++itLayout) {
+	if (itLayout.currentKey() == baseLayout) {
+		mLayout -> setCurrentText (itLayout.current());
+	}
+	}
+	// 2)
+	QListIterator<char> it (layoutList);
+	for (; it.current(); ++it) {
+	QListViewItemIterator itAdd (mAddView);
+	for ( ; itAdd.current(); ++itAdd ) {
+		QCheckListItem* item = (QCheckListItem*)itAdd.current();
+		QString layout = itAdd.current()->text(2);
+		if (layout == it.current()) {
+			item -> setOn (true);
+			if (QString(variantList.at(varCount)) != "!") {
+				item -> setText ( 3 , variantList.at(varCount) );
+			}
+			mAddView -> setSelected (itAdd.current(), true);
+			mAddView -> ensureItemVisible (item);
+			varCount++;
 		}
 	}
-	// ...
-	// lookup XkbVariant and enable/disable the
-	// nodeadkeys checkbox
-	// ---
-	mDeadKeys -> setChecked ( false );
-	if (keyboardInfo["XkbVariant"]) {
-		mDeadKeys -> setChecked ( true );
+	}
+	updateVariants();
+
+	//=====================================
+	// select base variant
+	//-------------------------------------
+	for (int n=0;n<mVariant->count();n++) {
+		QString item = mVariant->text (n);
+		if (item == baseVariant) {
+			mVariant -> setCurrentText (baseVariant);
+		}
 	}
 	}
 	return (TRUE);
@@ -169,33 +305,14 @@ bool XKeyboard::slotRun (int index) {
 //=====================================
 // XKeyboard select basic layout...
 //-------------------------------------
-void XKeyboard::slotSelect ( QListBoxItem* ) {
-	// log(L_INFO,"XKeyboard::slotSelect() called\n");
+void XKeyboard::slotLayout ( int ) {
+	// log(L_INFO,"XKeyboard::slotLayout() called\n");
 	// ...
-	// every time the language layout has changed
-	// we will update the XkbLayout setting for the
-	// currently working keyboard
+	// every time the primary language layout gets changed
+	// this function is called
 	// ---
-	// get the mFiles pointer wrapper first
-	// ---
-	QDict<XFile>* mFilePtr = mIntro->getFiles();
-	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
-	// ...
-	// get the currently used keyboard and set the
-	// XkbLayout according to the selection
-	// ---
-	XWrapPointer<XData> workingKeyboard (
-		mFiles["sys_KEYBOARD"]->getDevice (0)
-	);
-	XApiData kbd = mFiles["ext_KLANGUAGE"]->getAPI();
-	mKBDPtr = kbd.getHash();
-	QString XkbLayout (mKBDPtr->operator[](mLayout->currentText()));
-	XStringList completeLanguage (XkbLayout);
-	completeLanguage.setSeperator ("+");
-	QList<char> xf86Layout = completeLanguage.getList();
-	if (xf86Layout.at(0)) {
-		workingKeyboard.setPair ("XkbLayout",xf86Layout.at(0));
-	}
+	updateVariants();
+	validateLayout();
 	apply();
 }
 
@@ -205,108 +322,91 @@ void XKeyboard::slotSelect ( QListBoxItem* ) {
 void XKeyboard::slotType ( int ) {
 	// log(L_INFO,"XKeyboard::slotType() called\n");
 	// ...
-	// every time the keyboard type is changed we will
-	// lookup the according CDB record for the new type
-	// and reset the complete keyboard with the new data
-	// ---
-	// get the mFiles pointer wrapper first
+	// every time the keyboard type gets changed this
+	// function is called
     // ---
-    QDict<XFile>* mFilePtr = mIntro->getFiles();
-	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
-	// ...
-	// get the working keyboard and clear the current
-	// contents and re-init the record
-	// ---
-	XWrapPointer<XData> workingKeyboard (
-		mFiles["sys_KEYBOARD"]->getDevice (0)
-	);
-	workingKeyboard.clear();
-	QString* mapname = new QString (mType->currentText());
-	QString* ident   = new QString ("Keyboard[0]");
-	QString* driver  = new QString ("Keyboard");
-	workingKeyboard.setPair (
-		"Identifier", ident->ascii()
-	);
-	workingKeyboard.setPair (
-		"Driver", driver->ascii()
-	);
-	workingKeyboard.setPair (
-		"MapName",mapname->ascii()
-	);
-	// ...
-	// set the type data now
-	// ---
-	XDb* pCDB = mFiles["cdb_KEYBOARDS"]->cdbGetSpec (
-		mType->currentText(),"<...>"
-	);
-	if (pCDB) {
-		QDict<char>* CDBData = NULL;
-		CDBData = pCDB -> getHash();
-		QDictIterator <char> it (*CDBData);
-		for (; it.current(); ++it) {
-			QString key (it.currentKey());
-			QString* val = new QString;
-			val->sprintf("%s",it.current());
-			if (val->isEmpty()) {
-				continue;
-			}
-			if (key == "Protocol") {
-				workingKeyboard.setPair ("Protocol",val->ascii());
-			}
-			if (key == "XkbRules") {
-				workingKeyboard.setPair ("XkbRules",val->ascii());
-			}
-			if (key == "XkbModel") {
-				workingKeyboard.setPair ("XkbModel",val->ascii());
-			}
-			if (key == "XkbKeyCodes") {
-				workingKeyboard.setPair ("XkbKeyCodes",val->ascii());
-			}
-			if (key == "AutoRepeat") {
-				workingKeyboard.setPair ("AutoRepeat",val->ascii());
-			}
-			if (key == "ScrollLock") {
-				workingKeyboard.setPair ("ScrollLock",val->ascii());
-			}
-			if (key == "RightCtl") {
-				workingKeyboard.setPair ("RightCtl",val->ascii());
-			}
-			if (key == "LeftAlt") {
-				workingKeyboard.setPair ("LeftAlt",val->ascii());
-			}
-			if (key == "RightAlt") {
-				workingKeyboard.setPair ("RightAlt",val->ascii());
-			}
-			if (key == "XkbOptions") {
-				workingKeyboard.setPair ("XkbOptions",val->ascii());
-			}
-			if (key == "XkbKeymap") {
-				workingKeyboard.setPair ("XkbKeymap",val->ascii());
-			}
-			if (key == "XkbCompat") {
-				workingKeyboard.setPair ("XkbCompat",val->ascii());
-			}
-		}
-		// ...
-		// set nodeadkey if checked
-		// ---
-		if (mDeadKeys -> isChecked()) {
-			workingKeyboard.setPair ("XkbVariant","nodeadkeys");
-		}
-		// ...
-		// set current selected language layout
-		// ---
-		XApiData kbd = mFiles["ext_KLANGUAGE"]->getAPI();
-		mKBDPtr = kbd.getHash();
-		QString XkbLayout (mKBDPtr->operator[](mLayout->currentText()));
-		XStringList completeLanguage (XkbLayout);
-		completeLanguage.setSeperator ("+");
-		QList<char> xf86Layout = completeLanguage.getList();
-		if (xf86Layout.at(0)) {
-			workingKeyboard.setPair ("XkbLayout",xf86Layout.at(0));
-		}
-	}
 	apply();
+}
+
+//=====================================
+// XKeyboard::slotAddLayout 
+//-------------------------------------
+void XKeyboard::slotAddLayout ( QListViewItem* ) {
+	// log(L_INFO,"XKeyboard::slotAddLayout() called\n");
+	// ...
+	// every time the user changed the selection in the addOn
+	// layout list this function is called to update the
+	// available list of Variants according to the selected
+	// layout
+	// ---
+	updateVariants();
+	apply();
+}
+
+//=====================================
+// XKeyboard::additional Variant(s)
+//-------------------------------------
+void XKeyboard::slotAddVariant ( int ) {
+	// log(L_INFO,"XKeyboard::slotAddVariant() called\n");
+	// ...
+	// if the variant type in the addon listview has
+	// changed this dialog is called
+	// ---
+	QListViewItem* item = mAddView -> selectedItem();
+	item -> setText (3, mAddVariant->currentText());
+	apply();
+}
+
+//=====================================
+// XKeyboard::base Variant
+//-------------------------------------
+void XKeyboard::slotVariant ( int ) {
+	// log(L_INFO,"XKeyboard::slotVariant() called\n");
+	// ...
+	// if the base variant has changed this function
+	// is called
+	// ---
+	apply();
+}
+
+//=====================================
+// XKeyboard::Layout/Model check
+//-------------------------------------
+void XKeyboard::validateLayout ( void ) {
+	// TODO...
+}
+
+//=====================================
+// XKeyboard::update all variant lists
+//-------------------------------------
+void XKeyboard::updateVariants ( void ) {
+	mAddVariant -> clear();
+	QListViewItem* item = mAddView -> selectedItem();
+	if (item) {
+	mAddVariant -> insertStringList ( 
+		mRules.getVariants (item->text (2)) 
+	);
+	mAddVariant->setCurrentText ("basic");
+	if (item->text(3)) {
+		mAddVariant -> setCurrentText (item->text(3));
+	}
+	}
+	int curItem = mVariant -> currentItem();
+	QString curText = mVariant -> currentText();
+	mVariant -> clear();
+	QDictIterator<char> it (mRules.getLayouts());
+	for (; it.current(); ++it) {
+	if (QString(it.current()) == mLayout->currentText()) {
+		mVariant -> insertStringList (
+			mRules.getVariants (it.currentKey())
+		);
+		break;
+	}
+	}
+	mVariant->setCurrentText ("basic");
+	if (mVariant->text(curItem) == curText) {
+		mVariant->setCurrentItem (curItem);
+	}
 }
 
 //=====================================
@@ -382,7 +482,8 @@ void XKeyboard::setupTop ( void ) {
 		QList<char> opt = optList.getList();
 		QListIterator<char> it (opt);
 		for (; it.current(); ++it) {
-			QString optionText = mTranslateOption[it.current()];
+		if (mOptionHash[it.current()]) {
+			QString optionText = mOptionHash[it.current()];
 			int index0 = getItem ( mXkbOption[0],optionText );
 			int index1 = getItem ( mXkbOption[1],optionText );
 			if (index0 != 0) {
@@ -391,6 +492,7 @@ void XKeyboard::setupTop ( void ) {
 			if (index1 != 0) {
 				mXkbOption[1] -> setCurrentItem ( index1 );
 			}
+		}
 		}
 	}
 	if (workingKeyboard["LeftAlt"]) {
@@ -448,6 +550,8 @@ void XKeyboard::slotTopOk ( void ) {
 	// this function is called if you click onto the OK 
 	// button in the setup toplevel window
 	// ---
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+
 	mFrame -> enterEvent ( 0 );
 	QString* XkbOptions = NULL;
 	QString* ScrollLock = NULL;
@@ -456,15 +560,15 @@ void XKeyboard::slotTopOk ( void ) {
 	QString* RightCtl   = NULL;
 	for (int i=0;i<6;i++) {
 		QString selection = mXkbOption[i]->currentText();
-		QDictIterator<char> it (mTranslateOption);
+		QDictIterator<char> it (mOptionHash);
 		for (; it.current(); ++it) {
 		if (QString(it.current()) == selection) {
 			selection = it.currentKey();
 			break;
 		}
 		}
-		if (selection == "default") {
-			continue;
+		if (selection == mText["Default"]) {
+			selection = "";
 		}
 		switch (i) {
 		case 0:
@@ -541,35 +645,6 @@ void XKeyboard::slotTopOk ( void ) {
 			"AutoRepeat",autoRepeat->ascii()
 		);
 	}
-}
-
-//=====================================
-// XKeyboard enable disable nodeadkeys
-//-------------------------------------
-void XKeyboard::slotVariant ( bool ) {
-	// log(L_INFO,"XKeyboard::slotVariant() called\n");
-	// ...
-	// every time the nodeadkey checkbox toggles we
-	// will set or reset the XkbVariant setting for the
-	// currently used keyboard record
-	// ---
-	QDict<XFile>* mFilePtr = mIntro->getFiles();
-	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
-	// ...
-	// get currently used keyboard record...
-	// ---
-	XWrapPointer<XData> workingKeyboard (
-		mFiles["sys_KEYBOARD"]->getDevice (0)
-	);
-	if (mDeadKeys -> isChecked()) {
-	workingKeyboard.setPair (
-		"XkbVariant","nodeadkeys"
-	);
-	} else {
-	workingKeyboard.setPair (
-		"XkbVariant",""
-	);
-	}
 	apply();
 }
 
@@ -625,67 +700,107 @@ bool XKeyboard::apply ( void ) {
 	// log(L_INFO,"XKeyboard::apply() called\n");
 	// ...
 	// apply the keyboard to the X-Server for immediate
-	// usage. get the mFiles pointer wrapper first
+	// usage. This call will use the XKB extension
     // ---
-    QDict<XFile>* mFilePtr = mIntro->getFiles();
-    XWrapFile < QDict<XFile> > mFiles (mFilePtr);
-	// ...
-	// get the CDB pointer to the current used
-	// keyboard type
-	// ---
-	XDb* pCDB = mFiles["cdb_KEYBOARDS"]->cdbGetSpec (
-		mType->currentText(),"<...>"
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+
+	QString* XkbModel   = NULL;
+	QString* XkbLayout  = NULL;
+	QString* XkbVariant = NULL;
+	QString* XkbOptions = NULL;
+	// 1) primary XKB model
+	QDictIterator<char> itModel (mModelHash);
+	for (; itModel.current(); ++itModel) {
+	if (QString(itModel.current()) == mType -> currentText()) {
+		XkbModel = new QString (itModel.currentKey());
+	}
+	}
+	// 2) primary XKB layout
+	QDictIterator<char> itLayout (mLayoutHash);
+	for (; itLayout.current(); ++itLayout) {
+	if (QString(itLayout.current()) == mLayout -> currentText()) {
+		XkbLayout = new QString (itLayout.currentKey());
+	}
+	}
+	// 3) variant for primary XKB layout
+	XkbVariant = new QString();
+	if (mVariant->currentText()) {
+		*XkbVariant = mVariant->currentText();
+	}
+	// 4) additional layout and variant
+	QListViewItemIterator itAdd (mAddView);
+	for ( ; itAdd.current(); ++itAdd ) {
+	QCheckListItem* item = (QCheckListItem*)itAdd.current();
+	if (item->isOn()) {
+		QString layout  = itAdd.current()->text(2);
+		QString variant = "";
+		XkbLayout->sprintf("%s,%s",
+			XkbLayout->ascii(),layout.ascii()
+		);
+		if (itAdd.current()->text(3)) {
+			variant = itAdd.current()->text(3);
+		}
+		XkbVariant->sprintf("%s,%s",
+			XkbVariant->ascii(),variant.ascii()
+		);
+	}
+	}
+	// 5) options
+	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
+	XWrapPointer<XData> workingKeyboard (
+		mFiles["sys_KEYBOARD"]->getDevice (0)
 	);
-	if (pCDB) {
-		QDict<char>* CDBData = NULL;
-		CDBData = pCDB -> getHash();
-		XWrapPointer< QDict<char> > selectedKeyboard ( CDBData );
-
-		XApiData kbd = mFiles["ext_KLANGUAGE"]->getAPI();
-		mKBDPtr = kbd.getHash();
-		QString XkbLayout (mKBDPtr->operator[](mLayout->currentText()));
-		XStringList completeLanguage (XkbLayout);
-		completeLanguage.setSeperator ("+");
-		QList<char> xf86Layout = completeLanguage.getList();
-
-		QString symbols ( selectedKeyboard["ApplySymbols"]);
-		if (QString (xf86Layout.at(0)) != "us") {
-		if (mDeadKeys -> isChecked()) {
-			symbols.sprintf("%s+%s(nodeadkeys)", 
-			symbols.ascii(),xf86Layout.at(0)
-			);
-		} else {
-			symbols.sprintf("%s+%s",
-			symbols.ascii(),xf86Layout.at(0)
-			);
-		}
-		}
-		XkbComponentNamesRec  getcomps;
-		QString keymap   (selectedKeyboard["ApplyKeymap"]);
-		QString keycodes (selectedKeyboard["ApplyKeycodes"]);
-		QString compat   (selectedKeyboard["ApplyCompat"]);
-		QString types    (selectedKeyboard["ApplyTypes"]);
-		QString geometry (selectedKeyboard["ApplyGeometry"]);
-		getcomps.keymap   = (char*) keymap.ascii();
-		getcomps.keycodes = (char*) keycodes.ascii();
-		getcomps.compat   = (char*) compat.ascii();
-		getcomps.types    = (char*) types.ascii();
-		getcomps.geometry = (char*) geometry.ascii();
-		getcomps.symbols  = (char*) symbols.ascii();
+	if (workingKeyboard["XkbOptions"]) {
+	if (! workingKeyboard["XkbOptions"].isEmpty()) {
+		XkbOptions = new QString (workingKeyboard["XkbOptions"]);
+	}
+	}
+	QString optm ("-model");
+    QString optl ("-layout");
+    QString opto ("-option");
+    QString optv ("-variant");
+	if ((XkbVariant) && (XkbOptions)) {
 		#if 0
-		printf("%s:%s:%s:%s:%s:%s\n",
-			getcomps.keymap,getcomps.keycodes,getcomps.compat,
-			getcomps.types,getcomps.symbols,getcomps.geometry
+		printf("%s %s %s %s %s %s %s %s\n",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
+			opto.ascii(),XkbOptions->ascii(),optv.ascii(),XkbVariant->ascii()
 		);
 		#endif
-		XkbDescPtr xkb = XkbGetKeyboardByName (
-			x11Display(), XkbUseCoreKbd, &getcomps,
-            XkbGBN_AllComponentsMask, 0, True
+		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s %s %s %s %s",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
+			opto.ascii(),XkbOptions->ascii(),optv.ascii(),XkbVariant->ascii()
 		);
-		if (! xkb) {
-			return (false);
-		}
-		return ( true );
+	} else if (XkbVariant) {
+		#if 0
+		printf("%s %s %s %s %s %s\n",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
+			optv.ascii(),XkbVariant->ascii()
+		);
+		#endif
+		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s %s %s",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
+			optv.ascii(),XkbVariant->ascii()
+		);
+	} else if (XkbOptions) {
+		#if 0
+		printf("%s %s %s %s %s %s\n",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
+			opto.ascii(),XkbOptions->ascii()
+		);
+		#endif
+		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s %s %s",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii(),
+			opto.ascii(),XkbOptions->ascii()
+		);
+	} else {
+		#if 0
+		printf("%s %s %s %s\n",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii()
+		);
+		#endif
+		qx ( SETXKBMAP,STDNONE,8,"%s %s %s %s",
+			optm.ascii(),XkbModel->ascii(),optl.ascii(),XkbLayout->ascii()
+		);
 	}
-	return ( false );
+	return (true);
 }

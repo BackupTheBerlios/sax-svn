@@ -499,32 +499,27 @@ void PrintKeyboardData(ScanKeyboard k) {
 	Keymap data;
  
 	data = k.Pop();
-	if (data.variant != "") {
+	printf("Keyboard0 =>  XkbModel   : %s\n",data.model.c_str());
+	printf("Keyboard0 =>  XkbLayout  : %s\n",data.layout.c_str());
+	if (data.variant != "x") {
 		printf("Keyboard0 =>  XkbVariant : %s\n",data.variant.c_str());
 	}
-	printf("Keyboard0 =>  XkbLayout  : %s\n",data.layout.c_str());
-	printf("Keyboard0 =>  XkbModel   : %s\n",data.model.c_str());
-	printf("Keyboard0 =>  Protocol   : %s\n",data.protocol.c_str()); 
-	if (data.rules != "xfree86") {
-	printf("Keyboard0 =>  XkbRules   : %s\n",data.rules.c_str());
-	}
-	if (data.options != "none") {
+	if (data.options != "x") {
 	printf("Keyboard0 =>  XkbOptions : %s\n",data.options.c_str());
 	}
-	printf("Keyboard0 =>  MapName    : %s\n",data.mapname.c_str());
 	if (data.keycodes != "xfree86") {
 	printf("Keyboard0 =>  XkbKeyCodes: %s\n",data.keycodes.c_str()); 
 	}
-	if (data.leftalt != "none")    {
+	if (data.leftalt != "x")    {
 	printf("Keyboard0 =>  LeftAlt    : %s\n",data.leftalt.c_str());
 	}
-	if (data.rightalt != "none")   {
+	if (data.rightalt != "x")   {
 	printf("Keyboard0 =>  RightAlt   : %s\n",data.rightalt.c_str());
 	}
-	if (data.scrollock != "none")  {
+	if (data.scrollock != "x")  {
 	printf("Keyboard0 =>  ScrollLock : %s\n",data.scrollock.c_str());
 	}
-	if (data.rightctl != "none")   {
+	if (data.rightctl != "x")   {
 	printf("Keyboard0 =>  RightCtl   : %s\n",data.rightctl.c_str());
 	}
 	fflush(stdout);
