@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue May 18 10:33:27 2004
+# Author: Marcus Schaefer <sax@suse.de>, Tue May 18 17:32:09 2004
 #
 # Template for monitor data
 # --------------------------
@@ -23141,6 +23141,17 @@ MITSUBISHI:DIAMOND PRO 91TXM (TFW9105)  {
 MITSUBISHI:DIAMOND PRO 920  {
  Hsync=30-108
  Vsync=50-140
+}
+
+#==============================================
+# DIAMOND PRO 930
+#----------------------------------------------
+MITSUBISHI:DIAMOND PRO 930  {
+ DDC=MEL463D
+ Option=DPMS
+ Hsync=30-110
+ Resolution=1280x1024
+ Vsync=50-160
 }
 
 #==============================================
