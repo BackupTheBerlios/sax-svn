@@ -70,7 +70,7 @@ Inherits <filename>SaXManipulatePointers</filename>
 		int  <function>addPen</function>    ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		int  <function>deletePen</function> ( int )
+		int  <function>removePen</function> ( int )
 	</para></listitem>
 	<listitem><para>
 		QString <function>getName</function>   ( void )
@@ -281,7 +281,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>int <function>SaXManipulateTablets::deletePen</function> ( int id )</term>
+<term>int <function>SaXManipulateTablets::removePen</function> ( int id )</term>
 <listitem><para>
 TODO...
 </para></listitem>

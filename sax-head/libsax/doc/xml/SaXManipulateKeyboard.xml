@@ -55,7 +55,7 @@ Inherits <filename>SaXKeyRules</filename>
 		void <function>addXKBLayout</function>      ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteXKBLayout</function>   ( const QString&amp; )
+		void <function>removeXKBLayout</function>   ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setXKBOption</function>      ( const QString&amp; )
@@ -64,13 +64,13 @@ Inherits <filename>SaXKeyRules</filename>
 		void <function>addXKBOption</function>      ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteXKBOption</function>   ( const QString&amp; )
+		void <function>removeXKBOption</function>   ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setXKBVariant</function>     ( const QString&amp; , const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteXKBVariant</function>  ( const QString&amp; )
+		void <function>removeXKBVariant</function>  ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setMapping</function>        ( const QString&amp; , const QString&amp; )
@@ -210,7 +210,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateKeyboard::deleteXKBLayout</function> (const QString&amp; layout)</term>
+<term>void <function>SaXManipulateKeyboard::removeXKBLayout</function> (const QString&amp; layout)</term>
 <listitem><para>
 TODO...
 </para></listitem>
@@ -228,7 +228,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateKeyboard::deleteXKBOption</function> (const QString&amp; option)</term>
+<term>void <function>SaXManipulateKeyboard::removeXKBOption</function> (const QString&amp; option)</term>
 <listitem><para>
 TODO...
 </para></listitem>
@@ -240,7 +240,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateKeyboard::deleteXKBVariant</function> ( const QString&amp; layout )</term>
+<term>void <function>SaXManipulateKeyboard::removeXKBVariant</function> ( const QString&amp; layout )</term>
 <listitem><para>
 TODO...
 </para></listitem>

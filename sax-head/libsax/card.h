@@ -34,7 +34,7 @@ STATUS        : Status: Development
 * The interface class is provided to be able to dlopen the
 * library and have all methods available in the compilers
 * virtual table. For a detailed description of the class itself
-* please refer to the subclass definition
+* please refer to the derived class definition
 */
 class SaXManipulateCardIF : public SaXException {
 	public:
@@ -68,9 +68,42 @@ class SaXManipulateCardIF : public SaXException {
 * The card manipulator requires one import object (Card) to become
 * created. Once created the manipulator object is able to get/set
 * hardware related information like graphics card driver or options
-* to use with this driver. The following example shows how to use
-* the card manipulator to force setting up the PanelSize on a radeon
-* based NoteBook which reports the wrong size in its DDC record.
+* to use with this driver. The following example shows how to use the
+* card manipulator to force setting up the PanelSize on a radeon based
+* NoteBook which reports the wrong size in its DDC record
+* \code
+* #include <sax.h>
+*
+* int main (void) {
+*     SaXException().setDebug (true);
+*     QDict<SaXImport> section;
+*
+*     printf ("Importing data...\n");
+*     SaXConfig* config = new SaXConfig;
+*     SaXImport* import = new SaXImport ( SAX_CARD );
+*     import -> setSource ( SAX_SYSTEM_CONFIG );
+*     import -> doImport();
+*     config -> addImport (import);
+*     section.insert (
+*         import->getSectionName(),import
+*     );
+*     printf ("Overwrite PanelSize option...\n");
+*     SaXManipulateCard mCard (
+*         section["Card"]
+*     );
+*     if (mCard.selectCard (0)) {
+*         mCard.addCardOption ("PanelSize","1280x1024");
+*     }
+*     printf ("Writing configuration\n");
+*     config -> setMode (SAX_MERGE);
+*     if ( ! config -> createConfiguration() ) {
+*         printf ("%s\n",config->errorString());
+*         printf ("%s\n",config->getParseErrorValue());
+*         return 1;
+*     }
+*     return 0;
+* }
+* \endcode
 */
 class SaXManipulateCard : public SaXManipulateCardIF {
 	protected:

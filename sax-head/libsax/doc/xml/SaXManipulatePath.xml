@@ -52,7 +52,7 @@ Inherits <filename>SaXException</filename>
 		void <function>addFontPath</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteFontPath</function> ( const QString&amp; )
+		void <function>removeFontPath</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setLoadableModule</function> ( const QString&amp; )
@@ -61,7 +61,7 @@ Inherits <filename>SaXException</filename>
 		void <function>addLoadableModule</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteLoadableModule</function> ( const QString&amp; )
+		void <function>removeLoadableModule</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setServerFlag</function> ( const QString&amp; )
@@ -70,7 +70,7 @@ Inherits <filename>SaXException</filename>
 		void <function>addServerFlag</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteServerFlag</function> ( const QString&amp; )
+		void <function>removeServerFlag</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		QList&lt;QString&gt; <function>getFontPaths</function>   ( void )
@@ -185,7 +185,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulatePath::deleteFontPath</function> (const QString&amp; path)</term>
+<term>void <function>SaXManipulatePath::removeFontPath</function> (const QString&amp; path)</term>
 <listitem><para>
 TODO...
 </para></listitem>
@@ -203,7 +203,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulatePath::deleteLoadableModule</function> (const QString&amp; module)</term>
+<term>void <function>SaXManipulatePath::removeLoadableModule</function> (const QString&amp; module)</term>
 <listitem><para>
 TODO...
 </para></listitem>
@@ -221,7 +221,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulatePath::deleteServerFlag</function> (const QString&amp; flag)</term>
+<term>void <function>SaXManipulatePath::removeServerFlag</function> (const QString&amp; flag)</term>
 <listitem><para>
 TODO...
 </para></listitem>

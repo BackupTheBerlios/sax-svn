@@ -64,7 +64,7 @@ Inherits <filename>SaXException</filename>
 		virtual void <function>addOption</function>    ( const QString&amp; , const QString&amp; = 0 ) =0
 	</para></listitem>
 	<listitem><para>
-		virtual void <function>deleteOption</function> ( const QString&amp; ) =0
+		virtual void <function>removeOption</function> ( const QString&amp; ) =0
 	</para></listitem>
 	<listitem><para>
 		virtual QString <function>getDevice</function> ( void ) =0
@@ -152,7 +152,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulatePointers::deleteOption</function> (const QString&amp; value)</term>
+<term>void <function>SaXManipulatePointers::removeOption</function> (const QString&amp; value)</term>
 <listitem><para>
 TODO...
 </para></listitem>

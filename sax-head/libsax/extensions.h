@@ -39,6 +39,13 @@ STATUS        : Status: Development
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Extensions class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateExtensionsIF : public SaXException {
 	public:
 	virtual ~SaXManipulateExtensionsIF ( void ) { }
@@ -58,6 +65,13 @@ class SaXManipulateExtensions : public SaXManipulateExtensionsIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  VNC class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateVNCIF : public SaXManipulateCard {
 	public:
 	virtual void addVNCKeyboard    ( void ) = 0;

@@ -30,8 +30,8 @@ SaXConfig* self = NULL;
 //------------------------------------
 SaXConfig::SaXConfig (int mode) {
 	// .../
-	// An object of this type is used to create and verify
-	// the basic X11 configuration file /etc/X11/xorg.conf
+	//! An object of this type is used to create and verify
+	//! the basic X11 configuration file /etc/X11/xorg.conf
 	// ----
 	configMode = mode;
 	gotCard       = false;
@@ -65,9 +65,9 @@ SaXConfig::SaXConfig (int mode) {
 //------------------------------------
 void SaXConfig::addImport ( SaXImport* in ) {
 	// .../
-	// add previously imported data using a SaXImport reference
-	// multiple addImport() calls are possible to add all
-	// needed sections
+	//! add previously imported data using a SaXImport reference
+	//! multiple addImport() calls are possible to add all
+	//! needed sections
 	// ----
 	int ID = in->getSectionID();
 	switch (ID) {
@@ -142,11 +142,11 @@ void SaXConfig::addImport ( SaXImport* in ) {
 //------------------------------------
 void SaXConfig::enableXFineCache (bool enable) {
 	// .../
-	// private member function to enable the XFine cache.
-	// the cache is created when xfine is running. xfine is
-	// started while testing the new configuration. If the test
-	// has been finished using the "Save" button the XFine cache
-	// will be imported to incorp the modeline changes
+	//! private member function to enable the XFine cache.
+	//! the cache is created when xfine is running. xfine is
+	//! started while testing the new configuration. If the test
+	//! has been finished using the "Save" button the XFine cache
+	//! will be imported to incorp the modeline changes
 	// ----
 	if (! mDesktop) {
 		return;
@@ -164,10 +164,10 @@ void SaXConfig::enableXFineCache (bool enable) {
 //------------------------------------
 void SaXConfig::setMode (int mode) {
 	// .../
-	// set the ISAX mode for creating the configuration
-	// file. Possible modes are: SAX_NEW or SAX_MERGE (default).
-	// If SAX_NEW is specified a complete set of imports must
-	// be added to create a valid configuration file.
+	//! set the ISAX mode for creating the configuration
+	//! file. Possible modes are: SAX_NEW or SAX_MERGE (default).
+	//! If SAX_NEW is specified a complete set of imports must
+	//! be added to create a valid configuration file.
 	// ----
 	configMode = mode;
 }
@@ -177,9 +177,9 @@ void SaXConfig::setMode (int mode) {
 //------------------------------------
 bool SaXConfig::createConfiguration (void) {
 	// .../
-	// create the preliminary configuration file and verify the
-	// syntax of the file. If everything is ok the method will
-	// return true otherwise false
+	//! create the preliminary configuration file and verify the
+	//! syntax of the file. If everything is ok the method will
+	//! return true otherwise false
 	// ----
 	if (! setLock()) {
 		return false;
@@ -247,9 +247,9 @@ bool SaXConfig::createConfiguration (void) {
 //------------------------------------
 void SaXConfig::commitConfiguration (void) {
 	// .../
-	// install the configuration file as /etc/X11/xorg.conf
-	// installing the file should only be done when
-	// createConfiguration() returned succesfully
+	//! install the configuration file as /etc/X11/xorg.conf
+	//! installing the file should only be done when
+	//! createConfiguration() returned succesfully
 	// ----
 	QFile apiConfig (SAX_API_CONFIG);
 	QFile curConfig (SAX_SYS_CONFIG);
@@ -315,8 +315,8 @@ void SaXConfig::commitConfiguration (void) {
 //------------------------------------
 bool SaXConfig::testConfiguration (void) {
 	// .../
-	// test the configuration by starting a new X-Server using
-	// the preliminary configuration file.
+	//! test the configuration by starting a new X-Server using
+	//! the preliminary configuration file.
 	// ----
 	if (! createConfiguration()) {
 		return false;
@@ -374,8 +374,8 @@ bool SaXConfig::testConfiguration (void) {
 //------------------------------------
 void SaXConfig::setParseErrorValue (char* data) {
 	// .../
-	// private member which stores the parse error value
-	// for later acces in getParseErrorValue()
+	//! private member which stores the parse error value
+	//! for later acces in getParseErrorValue()
 	// ---
 	QTextOStream (mParseErrorValue) << data;
 }
@@ -385,8 +385,8 @@ void SaXConfig::setParseErrorValue (char* data) {
 //------------------------------------
 void SaXConfig::setParseError (char* data) {
 	// .../
-	// private member which stores the parse error
-	// for later acces in getParseError()
+	//! private member which stores the parse error
+	//! for later acces in getParseError()
 	// ----
 	QTextOStream (mParseErrorString) << data;
 }
@@ -396,8 +396,8 @@ void SaXConfig::setParseError (char* data) {
 //------------------------------------
 QString SaXConfig::getParseErrorValue (void) {
 	// .../
-	// obtain parse error value if there is any. If no
-	// error occured an empty string is returned
+	//! obtain parse error value if there is any. If no
+	//! error occured an empty string is returned
 	// ----
 	if (mParseErrorValue->isEmpty()) {
 		return QString("");
@@ -410,8 +410,8 @@ QString SaXConfig::getParseErrorValue (void) {
 //------------------------------------
 QString SaXConfig::getParseError (void) {
 	// .../
-	// obtain parse error if there is any. If no
-	// error occured an empty string is returned
+	//! obtain parse error if there is any. If no
+	//! error occured an empty string is returned
 	// ----
 	if (mParseErrorString->isEmpty()) {
 		return QString("");

@@ -49,6 +49,13 @@ extern "C" {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 - Configuration class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXConfigIF : public SaXException {
 	public:
 	virtual void setParseErrorValue ( char* ) = 0;
@@ -71,6 +78,59 @@ class SaXConfigIF : public SaXException {
 //====================================
 // Class SaXConfig...
 //------------------------------------
+/*! \brief SaX2 - Configuration class
+*
+* A SaXConfig object is mainly used as a container for SaXImport objects.
+* Different import objects describing a complete configuration or only parts
+* of it can be added using the addImport() method. A complete new
+* configuration requires the following import ID's to be added: 
+*
+* - SAX_CARD
+* - SAX_DESKTOP
+* - SAX_POINTERS
+* - SAX_KEYBOARD
+* - SAX_LAYOUT
+* - SAX_PATH
+* - SAX_EXTENSIONS
+*
+* If not all of these are provided it is necessary to set the config mode
+* to SAX_MERGE using the setMode() method otherwise the configuration will be
+* broken. If merging is used you may recognize problems while trying to remove
+* complete devices. For example you want to remove one mouse out of two but
+* your changes do not have any effect. This is because while merging the
+* currently existing information is still there. As result of that you need to
+* write a complete new configuration using the SAX_NEW mode to prevent existing
+* sections from beeing imported again.
+*
+* Calling createConfiguration() will create a preliminary configuration file
+* named /var/lib/sax/xorg.conf. libsax will automatically check the syntax of
+* the new created file and the programmer is able to get possible syntax errors
+* using the getParseError* methods
+* 
+* \code
+* #include <sax.h>
+*
+* int importID[7] = {
+*     SAX_CARD,
+*     SAX_DESKTOP,
+*     SAX_POINTERS,
+*     SAX_KEYBOARD,
+*     SAX_LAYOUT,
+*     SAX_PATH,
+*     SAX_EXTENSIONS
+* };
+* SaXConfig* config = new SaXConfig;
+* for (int id=0; id < 7; id++) {
+*     SaXImport* import = new SaXImport ( importID[id] );
+*     import -> doImport();
+*     config -> addImport (import);
+* }
+* config -> setMode (SAX_NEW);
+* if ( ! config -> createConfiguration() ) {
+*     printf ("%s\n",config->getParseErrorValue().ascii());
+* }
+* \endcode
+*/
 class SaXConfig : public SaXConfigIF {
 	private:
 	QList <SaXImport> mImportList;

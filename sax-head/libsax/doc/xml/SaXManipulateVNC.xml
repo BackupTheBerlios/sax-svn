@@ -52,10 +52,10 @@ Inherits <filename>SaXManipulateCard</filename>
 		void <function>addVNCMouse</function>       ( void )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteVNCMouse</function>    ( void )
+		void <function>removeVNCMouse</function>    ( void )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteVNCKeyboard</function> ( void )
+		void <function>removeVNCKeyboard</function> ( void )
 	</para></listitem>
 	<listitem><para>
 		void <function>enableVNC</function>   ( void )
@@ -238,13 +238,13 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateVNC::deleteVNCMouse</function> (void)</term>
+<term>void <function>SaXManipulateVNC::removeVNCMouse</function> (void)</term>
 <listitem><para>
 TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateVNC::deleteVNCKeyboard</function> (void)</term>
+<term>void <function>SaXManipulateVNC::removeVNCKeyboard</function> (void)</term>
 <listitem><para>
 TODO...
 </para></listitem>

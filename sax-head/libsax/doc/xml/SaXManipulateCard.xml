@@ -55,7 +55,7 @@ Inherits <filename>SaXException</filename>
 		void <function>addCardOption</function> ( const QString&amp; , const QString&amp; = 0 )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteCardOption</function> ( const QString&amp; )
+		void <function>removeCardOption</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setBusID</function> ( const QString&amp; )
@@ -183,7 +183,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateCard::deleteCardOption</function> (const QString&amp; value)</term>
+<term>void <function>SaXManipulateCard::removeCardOption</function> (const QString&amp; value)</term>
 <listitem><para>
 TODO...
 </para></listitem>

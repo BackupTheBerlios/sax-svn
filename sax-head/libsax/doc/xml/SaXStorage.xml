@@ -49,10 +49,10 @@ Inherits <filename>SaXException</filename>
 		void <function>addItem</function> ( const QString&amp;, const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteItem</function>  ( const QString&amp;, const QString&amp; )
+		void <function>removeItem</function>  ( const QString&amp;, const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteEntry</function> ( const QString&amp; )
+		void <function>removeEntry</function> ( const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		void <function>setDenomination</function> (const QString&amp;,const QString&amp;,const QString&amp;)
@@ -64,7 +64,7 @@ Inherits <filename>SaXException</filename>
 		void <function>addRawItem</function> ( const QString&amp;, const QString&amp;,const QString&amp; )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteRawItem</function> ( const QString&amp;, const QString&amp; )
+		void <function>removeRawItem</function> ( const QString&amp;, const QString&amp; )
 	</para></listitem>
 	<listitem><para>
 		QString <function>getItem</function> ( const QString&amp; )
@@ -132,7 +132,7 @@ Inherits <filename>SaXException</filename>
 <refsect1><title>Description</title>
 <para>
 The SaXStorage class provides all the structures and member functions
-to store, delete/retrieve and change configuration related
+to store, remove/retrieve and change configuration related
 information. The internal data structure is based on a list of hashes
 or a an hash of hashes. The standard data is stored in a dictionary
 list whereas the special CDB data is stored in a dictionary of
@@ -158,7 +158,7 @@ container.setItem ("Identifier","Monitor[0]");
 container.setDenomination ("01","Belinea","102030");
 container.setRawItem ("RawOption","opt1","val1");
 container.addRawItem ("RawOption","opt2","val2");
-container.deleteRawItem ("RawOption","opt1"); 
+container.removeRawItem ("RawOption","opt1"); 
 
 //QDict&lt;QString&gt; section = container.getCurrentTable();
 QDict&lt;QString&gt; section = container[0];
@@ -219,15 +219,15 @@ will happen
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXStorage::deleteItem</function> ( const QString&amp; key, const QString&amp; val )</term>
+<term>void <function>SaXStorage::removeItem</function> ( const QString&amp; key, const QString&amp; val )</term>
 <listitem><para>
-delete the value <filename>val</filename> from the current value list stored
+remove the value <filename>val</filename> from the current value list stored
 behind the key <filename>key</filename>. If the value is not found the list
 won't be changed
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXStorage::deleteEntry</function> ( const QString&amp; key )</term>
+<term>void <function>SaXStorage::removeEntry</function> ( const QString&amp; key )</term>
 <listitem><para>
 Delete a complete entry from the data dictionary
 The entry is searched as key named <filename>key</filename>
@@ -267,7 +267,7 @@ contents of <filename>key</filename>. A comma is used as separator between the d
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXStorage::deleteRawItem</function> ( const QString&amp; key, const QString&amp; optname )</term>
+<term>void <function>SaXStorage::removeRawItem</function> ( const QString&amp; key, const QString&amp; optname )</term>
 <listitem><para>
 Removes the <function>'"optname" "optval"'</function> pair matching
 <filename>optname</filename> which is found as value of <filename>key</filename>

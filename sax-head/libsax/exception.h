@@ -122,6 +122,13 @@ class SaXImport;
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Exception class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXExceptionIF : public QObject {
 	public:
 	virtual void setDebug ( bool=true ) = 0;

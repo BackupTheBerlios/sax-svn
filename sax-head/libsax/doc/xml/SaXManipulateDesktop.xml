@@ -55,13 +55,13 @@ Inherits <filename>SaXException</filename>
 		void <function>addResolution</function> ( int,int,int )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteResolution</function> ( int,int,int )
+		void <function>removeResolution</function> ( int,int,int )
 	</para></listitem>
 	<listitem><para>
 		void <function>setVirtualResolution</function> ( int,int,int )
 	</para></listitem>
 	<listitem><para>
-		void <function>deleteVirtualResolution</function> ( int )
+		void <function>removeVirtualResolution</function> ( int )
 	</para></listitem>
 	<listitem><para>
 		void <function>setColorDepth</function> ( int )
@@ -242,7 +242,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateDesktop::deleteResolution</function> (int c,int x,int y)</term>
+<term>void <function>SaXManipulateDesktop::removeResolution</function> (int c,int x,int y)</term>
 <listitem><para>
 TODO...
 </para></listitem>
@@ -254,7 +254,7 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>void <function>SaXManipulateDesktop::deleteVirtualResolution</function> (int c)</term>
+<term>void <function>SaXManipulateDesktop::removeVirtualResolution</function> (int c)</term>
 <listitem><para>
 TODO...
 </para></listitem>

@@ -54,8 +54,15 @@ STATUS        : Status: Development
 #define SAX_NEXT_KBD(x)    ((x)+2)
 
 //====================================
-// Class SaXKeyRules...
+// Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  XKB key rules class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXKeyRulesIF : public SaXException {
 	public:
 	virtual QDict<QString> getModels   ( void ) = 0;
@@ -66,6 +73,9 @@ class SaXKeyRulesIF : public SaXException {
 	public:
 	virtual ~SaXKeyRulesIF ( void ) { }
 };
+//====================================
+// Class SaXKeyRules...
+//------------------------------------
 class SaXKeyRules : public SaXKeyRulesIF {
 	protected:
 	void loadRules ( QString );
@@ -90,6 +100,13 @@ class SaXKeyRules : public SaXKeyRulesIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Keyboard class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateKeyboardIF : public SaXKeyRules {
 	public:
 	virtual void setXKBModel       ( const QString& ) = 0;

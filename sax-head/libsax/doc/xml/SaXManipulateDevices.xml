@@ -55,10 +55,10 @@ Inherits <filename>SaXException</filename>
 		int <function>addInputDevice</function>   ( const char* )
 	</para></listitem>
 	<listitem><para>
-		int <function>deleteDesktopDevice</function> ( int )
+		int <function>removeDesktopDevice</function> ( int )
 	</para></listitem>
 	<listitem><para>
-		int <function>deleteInputDevice</function>   ( int )
+		int <function>removeInputDevice</function>   ( int )
 	</para></listitem>
 </itemizedlist>
 </para>
@@ -190,13 +190,13 @@ TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>int <function>SaXManipulateDevices::deleteDesktopDevice</function> (int id)</term>
+<term>int <function>SaXManipulateDevices::removeDesktopDevice</function> (int id)</term>
 <listitem><para>
 TODO...
 </para></listitem>
 </varlistentry>
 <varlistentry>
-<term>int <function>SaXManipulateDevices::deleteInputDevice</function> (int id)</term>
+<term>int <function>SaXManipulateDevices::removeInputDevice</function> (int id)</term>
 <listitem><para>
 TODO...
 </para></listitem>

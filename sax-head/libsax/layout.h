@@ -41,6 +41,13 @@ STATUS        : Status: Development
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Layout class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateLayoutIF : public SaXException {
 	public:
 	virtual void setXOrgMultiheadMode ( int ) = 0;

@@ -40,6 +40,13 @@ STATUS        : Status: Development
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Import class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXImportIF : public SaXProcess {
 	public:
 	virtual void doImport  ( void )   = 0;
@@ -72,6 +79,13 @@ class SaXImport : public SaXImportIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Import SYSP class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXImportSyspIF : public SaXProcess {
 	public:
 	virtual void doImport    ( void ) = 0;
@@ -102,6 +116,13 @@ class SaXImportSysp : public SaXImportSyspIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Import CDB class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXImportCDBIF : public SaXProcess {
 	public:
 	virtual void doImport ( void ) = 0;
@@ -126,6 +147,13 @@ class SaXImportCDB : public SaXImportCDBIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Import Profile class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXImportProfileIF : public SaXProcess {
 	public:
 	virtual void setDevice ( int  ) = 0;

@@ -36,6 +36,13 @@ STATUS        : Status: Development
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Base pointer class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulatePointersIF : public SaXException {
 	public:
 	virtual void setDriver    ( const QString& ) = 0;
@@ -91,6 +98,13 @@ class SaXManipulatePointers : public SaXManipulatePointersIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Mouse manipulator class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateMiceIF : public SaXManipulatePointers {
 	public:
 	virtual void enableWheelEmulation    ( int  ) = 0;
@@ -137,6 +151,13 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Tablet manipulator class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	public:
 	virtual QList<QString> getTabletList ( void ) = 0;
@@ -209,6 +230,13 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 //====================================
 // Interface class for dlopen ability
 //------------------------------------
+/*! \brief SaX2 -  Touchscreen manipulator class interface.
+*
+* The interface class is provided to be able to dlopen the
+* library and have all methods available in the compilers
+* virtual table. For a detailed description of the class itself
+* please refer to the derived class definition
+*/
 class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 	public:
 	virtual QList<QString> getPanelList ( void ) = 0;
