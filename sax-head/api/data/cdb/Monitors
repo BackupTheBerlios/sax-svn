@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Mar 14 11:56:07 2005
+# Author: Marcus Schaefer <sax@suse.de>, Fri Mar 18 15:31:57 2005
 #
 # Template for monitor data
 # --------------------------
@@ -16601,6 +16601,17 @@ HITACHI:LTD CM803  {
  DDC=HTCABEA
  Hsync=31-115
  Vsync=50-160
+}
+
+#==============================================
+# nc8230
+#----------------------------------------------
+HITACHI:NC8230  {
+ DDC=HTC1C6D
+ Option=DPMS
+ Hsync=30-66
+ Resolution=1680x1050
+ Vsync=50-65
 }
 
 #==============================================
