@@ -47,6 +47,7 @@ PROFILE      = ${usr_prefix}/${lib_prefix}/sax/profile
 FONTVZ       = ${usr_prefix}/${lib_prefix}/X11/fonts/truetype
 XFINEBINVZ   = ${usr_prefix}/${lib_prefix}/xfine
 XFINEPIXMAPS = ${usr_prefix}/${lib_prefix}/xfine/pixmaps
+LIBDOCDIR    = ${prefix}/share/doc/packages/libsax
 
 ARCH         = `arch`
 PVERSION     = `rpm -q perl --queryformat '%{VERSION}' | tr -d .`
@@ -88,6 +89,7 @@ install:
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${FONTVZ} ${VARVZ} ${CREATEVZ}
 	install -d -m 755 ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
+	install -d -m 755 ${LIBDOCDIR}
 
 	# install bindings...
 	# ---------------------
@@ -151,6 +153,7 @@ install:
 
 	# install library files...
 	# -------------------------
+	cp -a ./libsax/doc/doxygen/html ${LIBDOCDIR}
 	cp ./libsax/libsax.so*  ${USRLIBVZ}
 	cp ./libsax/*.h         ${INCVZ}
 
