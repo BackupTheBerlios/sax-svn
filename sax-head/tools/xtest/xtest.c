@@ -71,6 +71,10 @@ int main (int argc, char **argv) {
 	if (!display) {
 		exit (1);
 	}
+	if ((argc == 2) && (strcmp (argv[1],"--fast") == NULL)) {
+		XCloseDisplay(display);
+		exit (0);
+	}
 	//============================================
 	// check the resolution
 	//--------------------------------------------
