@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Feb 14 11:14:49 2005
+# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 16 09:44:01 2005
 #
 # Template for monitor data
 # --------------------------
@@ -39141,6 +39141,17 @@ WYSE:WY-670  {
 WYSE:WY-890N  {
  Hsync=38-51
  Vsync=58-77
+}
+
+#==============================================
+# XA7-19i
+#----------------------------------------------
+XEROX:XA7-19I  {
+ DDC=XER90B2
+ Option=DPMS
+ Hsync=31-82
+ Resolution=1280x1024
+ Vsync=60-75
 }
 
 #==============================================
