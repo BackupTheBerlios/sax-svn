@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu May 13 11:47:36 CEST 2004 - ms@suse.de
+
+- do not allow removing major entities, for example the
+  monitor entity which is the only one existing (#40477)
+
+-------------------------------------------------------------------
 Thu Apr 29 11:53:55 CEST 2004 - ms@suse.de
 
 - lots of xorg-x11 fixes which will break SaX2 to work correctly

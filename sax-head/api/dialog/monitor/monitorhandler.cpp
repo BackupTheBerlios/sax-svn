@@ -443,6 +443,21 @@ void XMonitor::slotRemove (void) {
 	// this function is called if a montor resp. the
 	// card it belongs to should be removed.
 	// ---
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+	if (monitorList->count() == 1) {
+		XBox mb (
+			mText["dialoginfo"], mText["cannotremovemonitor"],
+			XBox::Critical,
+			XBox::Ok,0,0,mFrame,
+			globalFrameWidth
+		);
+		mb.setButtonText (
+			XBox::Ok,mText["Ok"]
+		);
+		mb.exec();
+		mFrame -> enterEvent ( 0 );
+		return;
+	}
 	XCard* cardDialog;
 	cardDialog = (XCard*) mIntro -> retrieve (Card);
 	cardDialog -> mSelected = mSelected;
