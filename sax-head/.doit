@@ -7,7 +7,8 @@
 # Syntax:
 # -------
 #   doit --ftp
-#   doit --prepare [ --tag <tag> ] [ --branch <branch> ] [ --patchlevel <n> ]
+#   doit --prepare [ --tag <tag> ] [ --branch <branch> ]
+#				   [ --sourcelevel <n> ] [ --patchlevel <n> ]
 #   doit --build   [ PrepareOptions ]  [ --clean ]
 #
 # tag or branch specifiy the subversion location where a tag
@@ -28,6 +29,7 @@ my $Prepare;
 my $Tag;
 my $Branch;
 my $PatchList;
+my $SourceList;
 my $Clean;
 
 #----[ main ]-----------------#
@@ -37,15 +39,16 @@ sub main {
 # package and version stuff
 #
 	my $result = GetOptions(
-		"ftp|f"          => \$PutOnFTP,
-		"build|b"        => \$Build,
-		"tag|t=s"        => \$Tag,  
-		"branch|r=s"     => \$Branch,
-		"prepare|p"      => \$Prepare,
-		"patchlevel|l=s" => \$PatchList,
-		"clean|c"        => \$Clean,
-		"help|h"         => \&usage,
-		"<>"             => \&usage
+		"ftp|f"           => \$PutOnFTP,
+		"build|b"         => \$Build,
+		"tag|t=s"         => \$Tag,  
+		"branch|r=s"      => \$Branch,
+		"prepare|p"       => \$Prepare,
+		"patchlevel=s"    => \$PatchList,
+		"sourcelevel=i"   => \$SourceList,
+		"clean|c"         => \$Clean,
+		"help|h"          => \&usage,
+		"<>"              => \&usage
 	);
 	if ( $result != 1 ) {
 		usage();
@@ -88,7 +91,7 @@ sub main {
 	# Checkout source
 	#----------------------------------------------
 	my $pacdir = checkout (
-		$tagsID,$treeID
+		$tagsID,$treeID,$PatchList,$SourceList
 	);
 	#==============================================
 	# Creating Patches...
@@ -133,18 +136,16 @@ sub checkout {
 # ready to go to /work/src/done
 #
 	my $pacdir = svnup (@_);
-	my $svndir = "sax-head";
 	chdir $pacdir;
-	qx( mv sax/$svndir/rpm/* . );
+	qx( mv sax/rpm/* . );
 	if (defined $Build) {
-		qx( mv sax/$svndir/.build . );
+		qx( mv sax/.build . );
 	}
-	qx (mv sax/$svndir sax/sax);
-	chdir $pacdir."/sax/sax";
+	chdir "./sax";
 	qx (./.archive);
 	qx (tar -cjf sax2_pixmaps.tar.bz2 api/pixmaps/*.*);
 	chdir $pacdir;
-	qx( mv sax/sax/*.bz2 . );
+	qx( mv sax/*.bz2 . );
 	qx( rm -rf sax );
 	return $pacdir;
 }
@@ -158,21 +159,66 @@ sub svnup {
 #
 	my $tagName = $_[0];
 	my $treeID  = $_[1];
+	my $plevel  = $_[2];
+	my $slevel  = $_[3];
 
-	my $svnPath = "/opt/repository/sax";
+	#===========================================
+	# set SVN path to repository and branch/tag
+	#-------------------------------------------
+	my $svnPath = "dist.suse.de:/sax/sax-head";
 	if (defined $tagName) {
-		$svnPath = "/opt/repository/".$treeID."/".$tagName;
+		$svnPath = "dist.suse.de:/sax/".$treeID."/".$tagName;
 	}
+	#===========================================
+	# create tmp directory and change into it
+	#-------------------------------------------
 	my $tmpdir = qx (
 		mktemp -q -d /tmp/svnsax.XXXXXX
 	);
 	chomp $tmpdir;
-	if (! -e $tmpdir) {
-		die "Could not create temp dir: $!";
+	chdir $tmpdir
+		|| die "Could not create temp dir: $!";
+	#===========================================
+	# checkout source at given level or HEAD
+	#-------------------------------------------
+	if (defined $slevel) {
+		print "Checkout source level [$slevel]...\n";
+		qx (svn co -r $slevel http://$svnPath sax 2>&1 );
+	} else {
+		print "Checkout source level [HEAD]...\n";
+		qx ( svn co http://$svnPath sax 2>&1 );
 	}
-	chdir $tmpdir;
-	qx (svn co file://$svnPath sax) || 
-		die "checkout failed !";
+	my $error = $? >> 8;
+	if ($error > 0) {
+		die "checkout failed: $!";
+	}
+	#===========================================
+	# setup patches at given level
+	#-------------------------------------------
+	if (defined $plevel) {
+		sub numeric { $a <=> $b; };
+		my @list = sort numeric (split(/,/,$plevel));
+		my $firstLevel = $list[0];
+		if ($firstLevel eq "LAST") {
+			qx (svn co http://$svnPath tmp);
+			my $status = qx (svn status -v tmp/xc.pl);
+			$status =~ s/ +/:/g;
+			$status =~ s/^:+//g;
+			$status =~ s/:+$//g;
+			my @stlist = split(/:/,$status);
+			my $headrv = shift (@stlist);
+			$list[0] = $headrv;
+			if (! defined $slevel) {
+				$slevel = $headrv;
+			}
+			qx (rm -rf tmp);
+		}
+		foreach my $rev (@list) {
+			print "Create patch: $slevel:$rev...\n";
+			qx (svn diff -r $slevel:$rev sax/ > sax_patch$rev.dif );
+			$slevel = $rev;
+		}
+	}
 	return $tmpdir;
 }
 
