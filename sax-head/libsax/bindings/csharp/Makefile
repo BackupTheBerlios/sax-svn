@@ -18,5 +18,5 @@ install_vendor:
 	install -m 644 ./SaX.dll.mdb ${MONODLLD}
 
 clean:
-	rm -f SaX*.cs SaX_* libSaX.so
+	rm -f SaX*.cs SaX_* libSaX.so SaX.dll.mdb
 	rm -f SWIGTYPE* *.exe SaX.dll*
