@@ -3,8 +3,8 @@ using System;
 public class SaXTest {
 	static void Main() {
 		SaXImport desktop = new SaXImport ( 5 ); // SaX.SAX_DESKTOP
-		SaXImport card    = new SaXImport ( 4 );
-		SaXImport path    = new SaXImport ( 9 );
+		SaXImport card    = new SaXImport ( 4 ); // SaX.SAX_CARD
+		SaXImport path    = new SaXImport ( 9 ); // SaX.SAX_PATH
 
 		card.doImport();
 		desktop.doImport();
