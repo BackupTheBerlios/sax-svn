@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Mar 10 10:03:53 2005
+# Author: Marcus Schaefer <sax@suse.de>, Fri Mar 11 12:25:29 2005
 #
 # Template for monitor data
 # --------------------------
@@ -10548,6 +10548,17 @@ EIZO:FLEXSCAN T563  {
  DDC=EIZ0305
  Hsync=24-83
  Vsync=55-160
+}
+
+#==============================================
+# FLEXSCAN T660I
+#----------------------------------------------
+EIZO:FLEXSCAN T660I  {
+ DDC=EIZ0312
+ Option=DPMS
+ Hsync=30-78
+ Resolution=1280x1024
+ Vsync=55-90
 }
 
 #==============================================
