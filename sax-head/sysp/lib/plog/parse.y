@@ -26,6 +26,7 @@ struct CLKSTRUCT clocks[200]; int clocksindex = 0;
 
 
 /*----FUNCTIONS-----------*/
+int yylex (void);
 void yyerror ( char *s)
 {
  /*
