@@ -1,0 +1,22 @@
+--- init.pl
++++ init.pl	2002/08/01 15:19:17
+@@ -1175,7 +1175,7 @@
+ 	if (! $io->open(">>$spec{LogFile}")) {
+ 		die "init: could not create LogFile: $spec{LogFile}";
+ 	}
+-	binmode($io, ':unix');
++	$io->setvbuf(0,_IONBF,0);
+ 	return ($io);
+ }
+ 
+--- xc.pl
++++ xc.pl	2002/08/01 15:20:46
+@@ -700,7 +700,7 @@
+ 	open(STDERR,">&$LOG") ||
+ 	die "could not duplicate LOG on stderr";
+ 
+-	binmode($io, ':unix');
++	$io->setvbuf(0,_IONBF,0);
+ 	return ($io);
+ }
+ 
