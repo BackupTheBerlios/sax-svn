@@ -113,6 +113,10 @@ class XCard : public XTemplate {
 	void setupTop     ( int );
 	bool validatePage ( void );
 	QList<char> get3Dstatus ( const QString& = "noscan" );
+	void selectOptions    ( const QString & );
+	void selectRawOptions ( const QString & );
+	QString* setOption    ( const QString &, const QString & );
+	QString* unsetOption  ( const QString &, const QString & );
 
 	public:
 	int setTypedMessage (

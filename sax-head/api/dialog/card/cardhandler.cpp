@@ -418,78 +418,12 @@ void XCard::setupTop (int state) {
 	}
 	mOptions -> sort();
 	if (workingCard["Option"]) {
-		cur.setText (workingCard["Option"]);
-		cur.setSeperator (",");
-		QList<char> strlist = cur.getList();
-		QListIterator<char> it (strlist);
-		for (; it.current(); ++it) {
-			QListBoxItem* item = mOptions -> findItem (it.current());
-			if (! item) {
-				mOptions -> insertItem     (it.current());
-				mOptions -> setSelected    (mOptions->count() - 1,true);
-				mOptions -> setCurrentItem (mOptions->count() - 1);
-			} else {
-				mOptions -> setSelected    (item,true);
-				mOptions -> setCurrentItem (item);
-			}
-		}
-		mOptions -> sort();
-		mOptions -> ensureCurrentVisible();
+		selectOptions ( workingCard["Option"] );
 	}
 	mHiddenRawOptions.clear();
 	if (workingCard["RawData"]) {
-		QString rawopt = qx (
-			GETRAWLIST,STDOUT,1,"%s",workingCard["RawData"].ascii()
-		);
-		cur.setText (rawopt);
-		cur.setSeperator ("|");
-		QList<char> strlist = cur.getList();
-		QListIterator<char> it (strlist);
-		for (; it.current(); ++it) {
-			int count = 0;
-			QList<char> cleanOptionList;
-			QStringList optlist = QStringList::split ( "\"", it.current() );
-			for ( QStringList::Iterator 
-				in = optlist.begin(); in != optlist.end(); ++in 
-			) {
-				QString result (*in);
-				result = result.stripWhiteSpace();
-				if (result.isEmpty()) {
-					continue;
-				}
-				if (result == "Option") {
-					count++; continue;
-				}
-				if ((count == 0) && (result != "Option")) {
-					mHiddenRawOptions.append (it.current());
-				}
-				cleanOptionList.append (result.ascii());
-				count++;
-			}
-			if (cleanOptionList.count() == 2) {
-			QString option;
-			option.sprintf("%s >>> %s",
-				cleanOptionList.at(0),cleanOptionList.at(1)
-			);
-			QListBoxItem* item = mOptions -> findItem (
-				cleanOptionList.at(0)
-			);
-			if (! item) {
-				mOptions -> insertItem (cleanOptionList.at(0));
-				mOptFlags.insert (cleanOptionList.at(0),"any");
-				item = mOptions -> findItem (cleanOptionList.at(0));
-			}
-			mOptions -> setCurrentItem (item);
-			mOptions -> changeItem (
-				option,mOptions->currentItem()
-			);
-			mOptions -> setSelected (
-				mOptions->currentItem(),true
-			);
-			}
-		}
+		selectRawOptions ( workingCard["RawData"] );
 	}
-
 	// ...
 	// setup rotate state for this card
 	// ---
@@ -825,10 +759,14 @@ void XCard::slotTopOk (void) {
 			workingCard.setPair ("Driver",val->ascii());
 		}
 		if (key == "3DOption")    {
-			workingCard.setPair ("Option",val->ascii());
+			QString* opt = setOption ( workingCard["Option"], *val );
+			workingCard.setPair ("Option",opt->ascii());
+			selectOptions ( *opt );
 		}
 		if (key == "3DRawData")   {
-			workingCard.setPair ("RawData",val->ascii());
+			QString* opt = setOption ( workingCard["RawData"], *val );
+			workingCard.setPair ("RawData",opt->ascii());
+			selectRawOptions ( *opt );
 		}
 		if (key == "Script3D")    {
 			qx ( GETACTIVATED,STDNONE,1,"%s",val->ascii() );
@@ -837,6 +775,7 @@ void XCard::slotTopOk (void) {
 		// ====================================
 		// Include DEFAULT Selection data
 		// ------------------------------------
+		mHiddenRawOptions.clear();
 		QList<char> data3D = get3Dstatus();
 		QString script = data3D.at(2);
 		qx ( GETACTIVATED,STDNONE,1,"%s",script.ascii() );
@@ -845,10 +784,14 @@ void XCard::slotTopOk (void) {
 			workingCard.setPair ("Driver",val->ascii());
 		}
 		if (key == "Option")    {
-			workingCard.setPair ("Option",val->ascii());
+			QString* opt = setOption ( workingCard["Option"], *val );
+			workingCard.setPair ("Option",opt->ascii());
+			selectOptions ( *opt );
 		}
 		if (key == "RawData")   {
-			workingCard.setPair ("RawData",val->ascii());
+			QString* opt = setOption ( workingCard["RawData"], *val );
+			workingCard.setPair ("RawData",opt->ascii());
+			selectRawOptions ( *opt );
 		}
 		}
 		}
@@ -1958,4 +1901,126 @@ void XCard::setRandRExtension ( const QString& direction ) {
 		"SpecialFlags","RandR,on"
 	);
 	}
+}
+
+//=========================================
+// XCard select standard options
+//-----------------------------------------
+void XCard::selectOptions ( const QString & op ) {
+	// log (L_INFO,"XCard::selectOptions() called\n");
+	// ...
+	// this function will select the bool options
+	// in the mOptions Listbox
+	// ---
+	XStringList cur;
+	cur.setText (op);
+	cur.setSeperator (",");
+	QList<char> strlist = cur.getList();
+	QListIterator<char> it (strlist);
+	for (; it.current(); ++it) {
+		QListBoxItem* item = mOptions -> findItem (it.current());
+		if (! item) {
+			mOptions -> insertItem     (it.current());
+			mOptions -> setSelected    (mOptions->count() - 1,true);
+			mOptions -> setCurrentItem (mOptions->count() - 1);
+		} else {
+			mOptions -> setSelected    (item,true);
+			mOptions -> setCurrentItem (item);
+		}
+	}
+	mOptions -> sort();
+	mOptions -> ensureCurrentVisible();
+}
+
+//=========================================
+// XCard select raw options
+//-----------------------------------------
+void XCard::selectRawOptions ( const QString & op ) {
+	// log (L_INFO,"XCard::selectRawOptions() called\n");
+	// ...
+	// this function will select the options with
+	// a value in the mOptions Listbox
+	// ---
+	QString rawopt = qx (
+		GETRAWLIST,STDOUT,1,"%s",op.ascii()
+	);
+	XStringList cur;
+	cur.setText (rawopt);
+	cur.setSeperator ("|");
+	QList<char> strlist = cur.getList();
+	QListIterator<char> it (strlist);
+	for (; it.current(); ++it) {
+		int count = 0;
+		QList<char> cleanOptionList;
+		QStringList optlist = QStringList::split ( "\"", it.current() );
+		for ( QStringList::Iterator
+			in = optlist.begin(); in != optlist.end(); ++in
+		) {
+			QString result (*in);
+			result = result.stripWhiteSpace();
+			if (result.isEmpty()) {
+				continue;
+			}
+			if (result == "Option") {
+				count++; continue;
+			}
+			if ((count == 0) && (result != "Option")) {
+				mHiddenRawOptions.append (it.current());
+			}
+			cleanOptionList.append (result.ascii());
+			count++;
+		}
+		if (cleanOptionList.count() == 2) {
+		QString option;
+		option.sprintf("%s >>> %s",
+			cleanOptionList.at(0),cleanOptionList.at(1)
+		);
+		QListBoxItem* item = mOptions -> findItem (
+			cleanOptionList.at(0)
+		);
+		if (! item) {
+			mOptions -> insertItem (cleanOptionList.at(0));
+			mOptFlags.insert (cleanOptionList.at(0),"any");
+			item = mOptions -> findItem (cleanOptionList.at(0));
+		}
+		mOptions -> setCurrentItem (item);
+		mOptions -> changeItem (
+			option,mOptions->currentItem()
+		);
+		mOptions -> setSelected (
+			mOptions->currentItem(),true
+		);
+		}
+	}
+}
+
+//=========================================
+// XCard set option if not yet included
+//-----------------------------------------
+QString* XCard::setOption ( const QString & base, const QString & opt ) {
+	QString* options = new QString();;
+	if ((! base) || (base.isEmpty())) {
+		options -> sprintf ("%s",opt.ascii());
+		return (options);
+	}
+	QRegExp pattern (opt);
+	if (pattern.search (base) < 0) {
+		options -> sprintf ("%s,%s",base.ascii(),opt.ascii());
+	} else {
+		options -> sprintf ("%s",base.ascii());
+	}
+	return (options);
+}
+
+//=========================================
+// XCard unset option if matched
+//-----------------------------------------
+QString* XCard::unsetOption ( const QString & base, const QString & opt ) {
+	QString* options = new QString ();
+	if ((! base) || (base.isEmpty())) {
+		return (options);
+	}
+	options -> sprintf ("%s",base.ascii());
+	options -> replace (QRegExp(opt),"");
+	return (options);
 }
