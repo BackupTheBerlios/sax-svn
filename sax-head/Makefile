@@ -38,6 +38,7 @@ SAXTOOLS     = ${usr_prefix}/${lib_prefix}/sax/tools
 APITOOLS     = ${usr_prefix}/${lib_prefix}/sax/api/tools
 FILES        = ${var_prefix}/sax/files
 LIBVZ        = ${usr_prefix}/${lib_prefix}
+USRLIBVZ     = ${prefix}/${lib_prefix}
 VARVZ        = ${var_prefix}/sax
 LOCALEVZ     = ${prefix}/share/locale
 LC           = LC_MESSAGES
@@ -55,6 +56,11 @@ all:
 	# ---------------------------------------------
 	${MAKE} -C ./parse -f Makefile.Linux all
 	${MAKE} -C ./sysp  all
+
+	# /.../
+	# building libsax and bindings...
+	# -------------------------------
+	${MAKE} -C ./libsax all
 
 	# building GUI and tools...
 	# -------------------------
@@ -125,6 +131,10 @@ install:
 	install -m 755 ./sysp/script/*                          ${SCRIPTVZ}
 	install -m 755 ./parse/blib/arch/auto/XFree/XFree.so    ${LIBVZ}
 	install -m 755 ./tools/plog/blib/arch/auto/PLog/PLog.so ${LIBVZ}
+
+	# install library files...
+	# -------------------------
+	cp ./libsax/libsax.so*  ${USRLIBVZ}
 
 	# install API data files...
 	# --------------------------

@@ -96,10 +96,9 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-gui
-Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Version:      1.2
 Release:      11
-Requires:     sax2
+Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
@@ -108,6 +107,20 @@ Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
 This package contains the GUI for the SuSE Advanced X-Configuration
 
 
+Authors:
+--------
+    Marcus Schäfer <ms@suse.de>
+
+%package -n sax2-libsax
+Version:      1.2
+Release:      11
+Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
+Summary:      SuSE advanced X Window System-configuration library
+Group:        System/X11/Libraries
+Provides:     sax2:/usr/%{_lib}/libsax.so
+
+%description -n sax2-libsax
+This package contains the core library for the SuSE Advanced X-Configuration
 
 Authors:
 --------
@@ -501,3 +514,11 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
 /usr/X11R6/%{_lib}/sax/sysp/maps/Driver.map
 /usr/X11R6/%{_lib}/sax/api/data/cdb/*
 /usr/X11R6/%{_lib}/sax/profile
+
+#=================================================
+# SaX-libsax file list...  
+# ------------------------------------------------
+
+%files -n sax2-libsax
+%defattr(-,root,root)
+/usr/%{_lib}/libsax.so*
