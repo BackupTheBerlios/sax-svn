@@ -5,7 +5,7 @@
 # Generate plog objects used for libsysp
 #
 
-CC       = gcc
+CC       = g++
 CFLAGS   = -O2 -Wall -fpic
 LIBS     = -lfl
 YACC     = yacc
