@@ -412,8 +412,8 @@ void XFrame::setFrame (void) {
 	// component list
 	//----------------
 	QListView*     component = new QListView (mainFrame);
-	component -> setMaximumWidth (190);
-	component -> setFixedWidth   (190);
+	//component -> setMaximumWidth (190);
+	component -> setFixedWidth   (200);
 	component -> addColumn(xText["component"]);
 	component -> setResizeMode (QListView::LastColumn);
 	component -> setRootIsDecorated(true);

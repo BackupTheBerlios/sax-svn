@@ -549,17 +549,22 @@ void XKeyboard::setupTop ( void ) {
 		QList<char> opt = optList.getList();
 		QListIterator<char> it (opt);
 		for (; it.current(); ++it) {
-		if (mOptionHash[it.current()]) {
-			QString optionText = mOptionHash[it.current()];
-			int index0 = getItem ( mXkbOption[0],optionText );
-			int index1 = getItem ( mXkbOption[1],optionText );
-			if (index0 != 0) {
-				mXkbOption[0] -> setCurrentItem ( index0 );
+			QDictIterator<char> itOption (mOptionHash);
+			for (; itOption.current(); ++itOption) {
+			if (itOption.currentKey() == QString(it.current())) {
+				QString optionText = QString::fromLocal8Bit (
+					itOption.current()
+				);
+				int index0 = getItem ( mXkbOption[0],optionText );
+				int index1 = getItem ( mXkbOption[1],optionText );
+				if (index0 != 0) {
+					mXkbOption[0] -> setCurrentItem ( index0 );
+				}
+				if (index1 != 0) {
+					mXkbOption[1] -> setCurrentItem ( index1 );
+				}
 			}
-			if (index1 != 0) {
-				mXkbOption[1] -> setCurrentItem ( index1 );
 			}
-		}
 		}
 	}
 	if (workingKeyboard["LeftAlt"]) {
@@ -629,7 +634,7 @@ void XKeyboard::slotTopOk ( void ) {
 		QString selection = mXkbOption[i]->currentText();
 		QDictIterator<char> it (mOptionHash);
 		for (; it.current(); ++it) {
-		if (QString(it.current()) == selection) {
+		if (QString::fromLocal8Bit (it.current()) == selection) {
 			selection = it.currentKey();
 			break;
 		}
@@ -640,19 +645,21 @@ void XKeyboard::slotTopOk ( void ) {
 		switch (i) {
 		case 0:
 			if (! XkbOptions) {
-				XkbOptions = new QString();
+				XkbOptions = new QString (selection);
+			} else {
+				XkbOptions -> sprintf ("%s,%s",
+					XkbOptions->ascii(),selection.ascii()
+				);
 			}
-			XkbOptions -> sprintf ("%s,%s",
-				XkbOptions->ascii(),selection.ascii()
-			);
 		break;
 		case 1:
 			if (! XkbOptions) {
-				XkbOptions = new QString();
+				XkbOptions = new QString (selection);
+			} else {
+				XkbOptions -> sprintf ("%s,%s",
+					XkbOptions->ascii(),selection.ascii()
+				);
 			}
-			XkbOptions -> sprintf ("%s,%s",
-				XkbOptions->ascii(),selection.ascii()
-			);
 		break;
 		case 2:
 			LeftAlt = new QString (selection);
@@ -668,8 +675,8 @@ void XKeyboard::slotTopOk ( void ) {
 		break;
 		}
 		if (XkbOptions) {
-		if (XkbOptions -> at(0) == ',') {
-			XkbOptions -> remove (0,1);
+		if (XkbOptions -> at(XkbOptions->length()-1) == ',') {
+			XkbOptions -> remove (XkbOptions->length()-1,1);
 		}
 		}
 	}
