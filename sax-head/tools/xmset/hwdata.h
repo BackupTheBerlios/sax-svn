@@ -36,6 +36,7 @@ STATUS        : development
 typedef char str[512];
 
 typedef struct MouseData_t {
+ str name;
  str protocol;
  str device;
  int emulate;

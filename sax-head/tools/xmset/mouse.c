@@ -29,6 +29,7 @@ MouseData* MouseGetData(void) {
 	hd_t *first_dev;
 
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
+	hd_data->flags.fast = 1;
 	hd = hd_list(hd_data, hw_mouse, 1, NULL);
 	first_dev = hd;
 
@@ -36,6 +37,7 @@ MouseData* MouseGetData(void) {
 		// create new element and defaults...
 		// -----------------------------------
 		data = (MouseData*)malloc(sizeof(MouseData));
+		strcpy(data->name,hd->model);
 		strcpy(data->device,"/dev/mouse");
 		strcpy(data->protocol,"Auto");
 		data->buttons = -1;
