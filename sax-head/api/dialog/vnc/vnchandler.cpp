@@ -106,6 +106,7 @@ bool Xvnc::slotRun (int index) {
 
 	if ( getDeviceOption ("usevnc") == "yes" ) {
 		hasVNCconfig = true;
+		VNCPrepared  = true;
 	}
 	if ( ! getDeviceOption ("rfbauth").isEmpty() ) {
 		hasRFBAuth = true;
@@ -135,6 +136,7 @@ bool Xvnc::slotRun (int index) {
 			mCheckPWD -> setChecked (true);
 			mPWD1 -> setText ( mText["pwdchange"] );
 			mPWD1 -> setEchoMode ( QLineEdit::Normal );
+			mPWD2 -> setDisabled ( true );
 			mPWD = mText ["pwdchange"];
 		}
 		//=====================================
@@ -217,7 +219,7 @@ bool Xvnc::saveConfiguration (void) {
 	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
 
 	if (mCheckPWD -> isOn()) {
-		if (mPWD1->isModified()) {
+		if (mPWD2 -> isEnabled()) {
 		if (mPWD1->text() != mPWD2->text()) {
 			setMessage ("pwdmismatch",XBox::Critical);
 			mPWD1->clear();
@@ -583,6 +585,9 @@ void Xvnc::slotInput1Changed (const QString& data) {
 	if (mPWD1 -> echoMode() != QLineEdit::Password) {
 		mPWD1 -> setEchoMode ( QLineEdit::Password );
 		mPWD1 -> clear();
+		if (! mPWD2 -> isEnabled()) {
+			mPWD2 -> setDisabled (false);
+		}
 		QChar start;
 		for (unsigned int i=0;i< data.length();i++) {
 		if (data.at(i) != mPWD.at(i)) {
