@@ -1604,17 +1604,17 @@ void XCard::slot3D (void) {
 	QList<char> extModules = ext.getList();
 	QListIterator<char> it (extModules);
 	for (; it.current(); ++it) {
-		bool found = false;
+		int index = 0;
 		QListIterator<char> in (curModules);
 		for (; in.current(); ++in) {
-		if (QString(in.current()) == QString(it.current())) {
-			found=true; break;
-		}
+			if (QString(in.current()) == QString(it.current())) {
+				curModules.remove (index);
+				break;
+			}
+			index++;
 		}
 		if (enable) {
-		if (! found) {
 			curModules.append (it.current());
-		}
 		} 
 	} 
 	m3D -> sprintf ("%c",'\0');

@@ -19,7 +19,7 @@ sub CreateHeaderSection {
 #
 	my $builder = $_[0];
 	my @result;
-	my $date    = qx(/bin/date -I seconds);
+	my $date    = qx(/bin/date -Iseconds);
 	$date =~ s/\n//g;
 
 	if ($builder eq "") {
