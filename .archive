@@ -1,0 +1,27 @@
+#!/bin/sh
+# Copyright (c) 1996 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2000
+# archiving script to create build required files
+#
+# CVS ID:
+# --------
+# Status: Up-to-date
+#
+#===========================================
+# create CVS build number...
+#-------------------------------------------
+cat .cvsbuild > cvsbuild
+
+#===========================================
+# make tarball from the current source tree
+#-------------------------------------------
+rm -rf `find -name CVS`
+rm -rf `find -name .cvsignore`
+rm -f "./sysp/lib/pci/lib/config.h"
+rm -rf parse/blib/
+rm -rf rpm/
+
+cd ..
+tar -cjf sax.tar.bz2 sax/
+mv sax.tar.bz2 sax/

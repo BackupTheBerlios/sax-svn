@@ -1,0 +1,12 @@
+#!/bin/sh
+
+sum=`cat .cvsbuild`
+sum=`expr $sum + 1`
+
+echo $sum
+echo $sum > .cvsbuild.new
+mv .cvsbuild.new .cvsbuild
+
+cvs commit \
+	-m "new version set" .cvsbuild \
+>/dev/null 2>/dev/null

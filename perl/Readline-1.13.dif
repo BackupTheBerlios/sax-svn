@@ -1,0 +1,117 @@
+--- Gnu.xs
++++ Gnu.xs	2002/09/19 09:34:11
+@@ -190,18 +190,13 @@
+ extern char *xfree PARAMS((char *));
+ 
+ #else /* not OS2_USEDLL */
+-static void
+-xfree (string)
+-     char *string;
+-{
+-  if (string)
+-    free (string);
++static void xfree (char* string) {
++  if (string) free (string);
+ }
+ #endif /* not OS2_USEDLL */
+ 
+ static char *
+-dupstr(s)			/* duplicate string */
+-     char *s;
++dupstr(char* s)			/* duplicate string */
+ {
+   /*
+    * Use xmalloc(), because allocated block will be freed in the GNU
+@@ -711,7 +706,7 @@
+       matches[0] = matches[1];
+       matches[1] = NULL;
+     } else if (count == 1 && !matches[0]) { /* in case of a list of undef */
+-      xfree(matches);
++      xfree((char*)matches);
+       matches = NULL;
+     }
+   } else {
+@@ -1206,7 +1201,7 @@
+ 	  fntbl[i].pfn = newSVsv(fn);
+ 	  
+ 	  /* rl_add_defun() always returns 0. */
+-	  rl_add_defun(dupstr(name), fntbl[i].wrapper, key);
++	  rl_add_defun(dupstr((char*)name), fntbl[i].wrapper, key);
+ 	  RETVAL = fntbl[i].wrapper;
+ 	}
+     OUTPUT:
+@@ -1363,7 +1358,7 @@
+ 	Keymap map
+     PROTOTYPE: $$;$
+     CODE:
+-	RETVAL = rl_generic_bind(ISMACR, keyseq, dupstr(macro), map);
++	RETVAL = rl_generic_bind(ISMACR, keyseq, dupstr((char*)macro), map);
+     OUTPUT:
+ 	RETVAL
+ 
+@@ -1678,7 +1673,7 @@
+ 	const char *	macro
+     PROTOTYPE: $
+     CODE:
+-	rl_push_macro_input(dupstr(macro));
++	rl_push_macro_input(dupstr((char*)macro));
+ 
+  #
+  #	2.4.8 Character Input
+@@ -1818,7 +1813,7 @@
+ 
+ 	  for (i = 1; i <= len; i++)
+ 	    xfree(matches[i]);
+-	  xfree(matches);
++	  xfree((char*)matches);
+ 	}
+ 
+ #endif /* (RL_VERSION_MAJOR >= 4) */
+--- Gnu/XS.pm
++++ Gnu/XS.pm	2002/09/19 09:36:17
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	XS.pm : perl function definition for Term::ReadLine::Gnu
+ #
+--- Gnu/euc_jp.pm
++++ Gnu/euc_jp.pm	2002/09/19 09:36:06
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	euc_jp.pm : EUC Japanese Character Support Functions
+ #		This modules is experimental.  API may be changed.
+--- eg/fileman
++++ eg/fileman	2002/09/19 09:37:01
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ # $Id: Readline-1.13.dif,v 1.2 2002/09/19 09:37:17 ms Exp $
+ #
+--- eg/perlsh
++++ eg/perlsh	2002/09/19 09:36:51
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	$Id: Readline-1.13.dif,v 1.2 2002/09/19 09:37:17 ms Exp $	
+ #
+--- eg/pftp
++++ eg/pftp	2002/09/19 09:37:10
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	$Id: Readline-1.13.dif,v 1.2 2002/09/19 09:37:17 ms Exp $
+ #
+--- eg/ptksh+
++++ eg/ptksh+	2002/09/19 09:36:39
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ #
+ # $Id: Readline-1.13.dif,v 1.2 2002/09/19 09:37:17 ms Exp $
+ #

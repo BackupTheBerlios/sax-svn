@@ -1,0 +1,451 @@
+#!/usr/bin/perl
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2001
+# Build script for SaX2 with CVS access
+#
+# call: 
+#   doit -ftp | -prepare | -build [ tag:[clean] --shipped ]
+#
+# The given tag specify the SaX2 version you want
+# to prepare for a build. Each tag in the SaX2 cvs is 
+# called: SaX2-<Version>-SuSE-<Version>-[Beta|RC|Devel]
+#
+#
+use strict;
+use Getopt::Long;
+use Env;
+
+#=====================================
+# Globals...
+#-------------------------------------
+my $count = 0;
+my $BuildOptions;
+my $PutOnFTP;
+my $AtHead;
+my $PrepareOptions;
+my $TagList;
+my $Shipped;
+my $head;
+
+#----[ main ]------------#
+sub main {
+#-----------------------------------------------
+# The magic main, start with option
+# parsing...
+#
+	my $result = GetOptions(
+		"build|b:s"      => \$BuildOptions,
+		"shipped|s"      => \$Shipped,
+		"ftp|f"          => \$PutOnFTP,
+		"head|d"         => \$AtHead,
+		"prepare|p:s"    => \$PrepareOptions,
+		"taglist|t"      => \$TagList,
+		"help|h"         => \&usage,
+		"<>"             => \&usage
+	);
+	if ( $result != 1 ) {
+		usage();
+	}
+	my $user = qx(whoami);
+	if (defined $TagList) {
+		my @list = taglist ("..","listOnly");
+		foreach my $tag (@list) {
+			if ($tag =~ /-Devel/) { next; }
+			print "$tag\n";
+		}
+		exit (0);
+	}
+	if (defined $PutOnFTP) {
+		print "Update FTP packages...\n";
+		if (! -f "./.ftp") {
+			die "Could not find .ftp script... abort";
+		}
+		system ("./.ftp");
+		exit (0);	
+	}
+	if (defined $BuildOptions) {
+	if ($user !~ /root/i) {
+		die "Only root can do this... abort";
+	}
+	}
+
+	#====================================
+	# Evaluate options
+	#------------------------------------
+	my $tag   = "head";
+	my $clean = "false";
+	my @list  = ();
+	if (defined $BuildOptions) {
+		@list = split(":",$BuildOptions);
+	}
+	if (defined $PrepareOptions) {
+		@list = split(":",$PrepareOptions);
+	}
+	if (@list > 0) {
+	if ($list[1] eq "clean") {
+		$clean = "true";
+	}
+	if ($list[0] ne "") {
+		$tag = $list[0];
+	}
+	}
+
+	#====================================
+	# Evaluate shipped flag
+	#------------------------------------
+	if (defined $Shipped) {
+	if ($tag =~ /-Beta|-Preview|-RC/) {
+		die "Version $tag not shipped... abort";
+	}
+	}
+
+	#====================================
+	# Log in to CVS server
+	#------------------------------------
+	system ("cvs login >/dev/null 2>/dev/null");
+	if ($? >> 8 != 0) {
+		die "CVS incorrect password";
+	}
+
+	#====================================
+	# Create package directory
+	#------------------------------------
+	my $pacdir = "/tmp/saxpac-$$-package";
+	system ("mkdir $pacdir");
+	if ($? >> 8 != 0) {
+		die "Could not create package dir: $!";
+	}
+
+	#====================================
+	# Checkout the SaX2 head/branch
+	#------------------------------------
+	if (defined $AtHead) {
+		$head = cvsup();
+	} else {
+	if (defined $Shipped) {
+		$head = cvsup ("$tag-Devel");
+	} else {
+		$head = cvsup ($tag);
+	}
+	}
+
+	#====================================
+	# Remove CVS dir from files we don't 
+	# want to see in the dif files
+	#------------------------------------
+	system ("rm -rf $head/sax/api/pixmaps/CVS");
+	system ("rm -rf $head/sax/rpm/CVS");
+	system ("rm -rf $head/sax/parse/blib/CVS");
+
+	#====================================
+	# get tag list from head
+	#------------------------------------
+	my @taglist   = ();
+	my @patchlist = ();
+	if ($tag ne "head") {
+		print "Creating tag difference files...\n";
+		@taglist = taglist ($head,$tag);
+		if (@taglist == 0) {
+			die "No such tag: $tag";
+		}
+		my $c = -1;
+		foreach (@taglist) {
+		$c++;
+		if ($c == 0) {
+			my $tagfrom = tagBaseName ($_);
+			my $file = "$pacdir/sax2_$tagfrom.dif";
+			system ("cd $head/sax; ./.cvsd -r1 $_ > $file");
+			if (! -z $file) {
+				push (@patchlist,"sax2_$tagfrom.dif");
+			} else {
+				unlink ($file);
+			}
+			print "\n";
+			print "\t--> cvsd -r1 $_\n";
+		} else {
+			my $next = $taglist[$c-1];
+			my $tagfrom = tagBaseName ($_);
+			my $tagto   = tagBaseName ($next);
+			my $file = "$pacdir/sax2_$tagfrom.dif";
+			system ("cd $head/sax; ./.cvsd -r1 $_ -r2 $taglist[$c-1] > $file");
+			if (! -z $file) {
+				push (@patchlist,"sax2_$tagfrom.dif");
+			} else {
+				unlink ($file);
+			}
+			print "\t--> cvsd -r1 $_ -r2 $taglist[$c-1]\n";
+		}
+		}
+		print "\n";
+	}
+
+	#====================================
+	# Update spec file
+	#------------------------------------
+	if (@patchlist > 0) {
+		if (! open (IN,"$head/sax/rpm/sax2.spec")) {
+			die "could not open spec file: $!";
+		}
+		if (! open (OU,"> $pacdir/sax2.spec")) {
+			die "could not create spec file: $!";
+		}
+		my $count1 = 1;
+		my $count2 = 1;
+		while (<IN>) {
+			if ($_ =~ /usedforbuild/) {
+				next;
+			}
+			if ($_ =~ /neededforbuild/) {
+				my $need = qx(cat $head/sax/rpm/sax2.spec | grep neededfor);
+				print OU $need;
+				next;
+			} 
+			if ($_ =~ /^Source:/) {
+			foreach my $patch ( reverse @patchlist) {
+				print OU "Patch$count1:       $patch\n";
+				$count1++;
+				$count2++;
+				next;
+			}
+			}
+			if ($_ =~ /Patch.*:(.*)/) {
+				print OU "Patch$count2:       $1\n";
+				$count2++;
+				next;
+			}
+			if ($_ =~ /\%setup/) {
+				print OU $_;
+				for (my $c=1;$c<$count1;$c++) {
+					print OU "\%patch$c\n";
+				}
+				next;
+			}
+			if ($_ =~ /\%patch/) {
+				print OU "\%patch$count1\n";
+				$count1++;
+				next;
+			}
+			print OU $_;
+		}
+		close (OU);
+		close (IN);
+	}
+
+	#====================================
+	# Create the pixmap source tar
+	#------------------------------------
+	print "Creating pixmap source from CVS source...\n";
+	system ("cd $head/sax; tar -cjf sax2_pixmaps.tar.bz2 api/pixmaps/*.*");
+	system ("mv $head/sax/sax2_pixmaps.tar.bz2 $pacdir");
+
+	#====================================
+	# Copy package files from head
+	#------------------------------------
+	if (-f "$pacdir/sax2.spec") {
+		system ("rm -f $head/sax/rpm/*.spec");
+	}
+	system ("cp $head/sax/rpm/*.* $pacdir");
+
+	#====================================
+	# Checkout the SaX2 head source
+	#------------------------------------
+	my $realhead = cvsup ();
+
+	#====================================
+	# Copy ext. perl archives from head
+	#------------------------------------
+	system ("rm -f $head/sax/perl/*.tar.gz");
+	system ("cp $realhead/sax/perl/*.tar.gz $head/sax/perl/");
+
+    #====================================
+    # Checkout the SaX2 tagged source
+    #------------------------------------
+	my $tagged;
+	if ($tag ne "head") {
+		$tag = pop(@taglist);
+	}
+	$tagged = cvsup ($tag);
+
+	#====================================
+	# Create archive
+	#------------------------------------
+	print "Creating archive at: $pacdir...\n";
+	system ("cp $realhead/sax/.archive  $tagged/sax");
+	system ("cp $realhead/sax/.cvsbuild $tagged/sax");
+	system ("cp $realhead/sax/rpm/config-dist.sh $pacdir");
+	system ("cd $tagged/sax; ./.archive");
+	system ("cp $tagged/sax/sax.tar.bz2 $pacdir/sax2.tar.bz2");
+
+	#====================================
+	# Build package
+	#------------------------------------
+	if (defined $BuildOptions) {
+	if ($clean eq "true") {
+		system ("cd $pacdir; $realhead/sax/.build clean");
+	} else {
+		system ("cd $pacdir; $realhead/sax/.build");
+	}
+	}
+
+	#====================================
+	# Clean sweep
+	#------------------------------------
+	system ("rm -rf /tmp/saxcvs*");
+}
+
+#----[ cvsup ]----------------#
+sub cvsup {
+#-----------------------------------------------
+# checkout SaX2 cvs source according to a given
+# CVS tag and return the pathname of the temp
+# directory created for this checkout
+#
+	my $tag = $_[0];
+	if (! defined $tag) {
+		$tag = "head";
+	}
+	my $tmpdir = "/tmp/saxcvs-$$-$count-$tag";
+	if (-e $tmpdir) {
+		return ($tmpdir);
+	}
+	if (! -f "$ENV{HOME}/.cvspass") {
+		system ("cvs login >/dev/null 2>/dev/null");
+		if ($? >> 8 != 0) {
+			die "CVS incorrect password";
+		}
+	}
+	system ("mkdir $tmpdir");
+	if ($? >> 8 != 0) {
+		die "Could not create temp dir: $!";
+	}
+	if ($tag eq "head") {
+	system (
+		"cd $tmpdir; cvs co sax 2>/dev/null >/dev/null"
+	);
+	} else {
+	system (
+		"cd $tmpdir; cvs co -r $tag sax 2>/dev/null >/dev/null"
+	);
+	}
+	$count++;
+	return ($tmpdir);
+}
+
+#----[ taglist ]-------#
+sub taglist {
+#-----------------------------------------------
+# create a list of tags according to the given
+# hook tag. xc.pl is used as reference file
+#
+	my $head     = $_[0];
+	my $tag      = $_[1];
+
+	my $baseTag = tagPrefix ($tag);
+	my @result  = ();
+	my @taglist = split ("\n", qx (
+		cd $head/sax; cvs log xc.pl | tr -d "\t" | grep "^SaX2-" | cut -f1 -d:
+	));
+	if ($tag eq "listOnly") {
+		return (@taglist);
+	}
+	my $foundTag = 0;
+	my $start    = 0;
+	foreach (@taglist) {
+		if ($_ =~ /-Fix/) { next; }
+		# ...
+		# include the -Devel flags if the shipped flag
+		# was set
+		# ---
+		if (defined $Shipped) {
+		if (($_ =~ /$baseTag/) && ($_ =~ /-Devel/)) {
+			push (@result,$_);
+		}
+		}
+		# ...
+		# include the rest flags needed to patch up to
+		# given flag version
+		# ---
+		if ($_ eq $tag) {
+			$foundTag = 1;
+			$start    = 1;
+		}
+		if ($start) {
+		if (! defined $Shipped) {
+		if ($_ =~ /-Fix|-Devel/) {
+			# ...
+			# if we are NOT checking out a branch ignore the
+			# "-Devel or -Fix" branch tags
+			# ---
+			next;
+		}
+		}
+		if ($_ !~ /$baseTag/) {
+			last;
+		}
+		push (@result,$_);
+		}
+	}
+	if ($foundTag == 0) {
+		@result = ();
+	}
+	return (@result);
+}
+
+#----[ tagBaseName ]-------#
+sub tagBaseName {
+#-----------------------------------------------
+# get basename of given tag
+#
+	my $tagname  = $_[0];
+	my @baselist = split (/-/,$tagname);
+	my $use = pop (@baselist);
+	return ( $use );
+}
+
+#----[ tagPrefix ]---------#
+sub tagPrefix {
+#-----------------------------------------------
+# get prefix of tag name
+#
+	my $tagname  = $_[0];
+	my @baselist = split (/-/,$tagname);
+	pop (@baselist);
+	my $use = join ("-",@baselist);
+	return ( $use )
+}
+
+#----[ usage ]------------#
+sub usage {
+#----------------------------------------
+# give me a usage message
+#	
+	print "usage: doit [ options ]\n";
+	print "options:\n";
+	print "[ -p | --prepare [ tag [--shipped ]]\n";
+	print "   prepare package for build\n";
+	print "   the source is based on the given tag\n";
+	print "   for all other changes a diff will be created\n";
+	print "\n";
+	print "[ -b | --build [ tag[:clean] [--shipped ]]\n";
+	print "   prepare and build package\n";
+	print "   same as --prepare except the fact that the\n";
+	print "   package will be build immediatelly\n";
+	print "\n";
+	print "[ -f | --ftp ]\n";
+	print "   put packages to the FTP server\n";
+	print "\n";
+	print "[ -s | --shipped ]\n";
+	print "   shipped flag, indicate to create additional\n";
+	print "   diffs according to the tag-Devel branch\n";
+	print "\n";
+	print "[ -t | --taglist ]\n";
+	print "   print available tags\n";
+	print "[ -d | --head ]\n";
+	print "   create diffs against the head instead of the\n";
+	print "   tagged source tree\n";
+	print "--\n";
+	exit (0);
+}
+
+main();
