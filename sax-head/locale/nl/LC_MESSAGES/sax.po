@@ -29,6 +29,27 @@ msgid "with"
 msgstr "met"
 
 #. Maximum length: 20  characters
+msgid "USB"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "Relative"
+msgstr ""
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "Absolute"
+msgstr "Afsluiten"
+
+#. Maximum length: 20  characters
 msgid "Connected to:"
 msgstr "Verbonden met:"
 
@@ -233,6 +254,7 @@ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
 msgstr "<nobr><h3>Toetsenbord type</h3></nobr>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "Screen"
 msgstr "Scherm"
 
@@ -795,6 +817,7 @@ msgid "<b>Core Pointer...</b>"
 msgstr "<b>Basiswijzer...</b>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "&Cancel"
 msgstr "&Annuleren"
 
@@ -1209,6 +1232,16 @@ msgid "Remove selected monitor"
 msgstr "Geselecteerde monitor verwijderen"
 
 #. Maximum length: 40  characters
+#, fuzzy
+msgid "Properties..."
+msgstr "&Eigenschappen..."
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "&Options"
+msgstr "&Opties..."
+
+#. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Eigenschappen..."
 
@@ -1257,6 +1290,7 @@ msgid "&General"
 msgstr "&Algemeen"
 
 #. Maximum length: 30  characters
+#. Maximum length: 50  characters
 msgid "&Expert"
 msgstr "&Expert"
 
@@ -1518,6 +1552,11 @@ msgstr "Wiel ondersteuning"
 #. Maximum length: 30  characters
 msgid "&Port"
 msgstr "&Poort"
+
+#. Maximum length: 30  characters
+#, fuzzy
+msgid "&Mode"
+msgstr "Mode:"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"

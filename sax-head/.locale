@@ -168,8 +168,10 @@ sub UpdateBundle {
 
 	# send e-mail notification to afaber 
 	# ------------------------------------
+	qx (cd locale && ./.fuzzy >/tmp/fuzzy);
+	qx (cd locale && ./.lastchange > /tmp/lastchange);
 	$subject = "$var{Subject} $prefix : $date...";
-	qx(mail -s \"$subject\" $var{Address} < $var{$prefix}/$prefix.changes);
+	qx(mail -s \"$subject\" $var{Address} -c ms -a /tmp/fuzzy < /tmp/lastchange);
 }
 
 #----[ PutOnFtp ]------------#

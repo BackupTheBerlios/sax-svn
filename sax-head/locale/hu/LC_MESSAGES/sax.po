@@ -35,6 +35,28 @@ msgid "with"
 msgstr "és"
 
 #. Maximum length: 20  characters
+msgid "USB"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "Relative"
+msgstr ""
+
+# /tmp/xapi:13
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "Absolute"
+msgstr "Megszakítás"
+
+#. Maximum length: 20  characters
 msgid "Connected to:"
 msgstr "Ide kapcsolódik:"
 
@@ -256,6 +278,7 @@ msgstr "<nobr><h3>Billentyűzet típusa</h3></nobr>"
 
 # /tmp/intro:67 /tmp/xapi:379
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "Screen"
 msgstr "Képernyő"
 
@@ -851,6 +874,7 @@ msgstr "<b>Egérmutató...</b>"
 
 # /tmp/xapi:17 /tmp/xapi:25 /tmp/xapi:83
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "&Cancel"
 msgstr "&Mégsem"
 
@@ -1309,6 +1333,18 @@ msgstr "Kiválasztott képernyő eltávolítása"
 
 # /tmp/xapi:111
 #. Maximum length: 40  characters
+#, fuzzy
+msgid "Properties..."
+msgstr "&Tulajdonságok"
+
+# /tmp/xapi:327
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "&Options"
+msgstr "&Beállítások..."
+
+# /tmp/xapi:111
+#. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Tulajdonságok"
 
@@ -1360,6 +1396,7 @@ msgstr "Á&ltalános"
 
 # /tmp/xapi:339
 #. Maximum length: 30  characters
+#. Maximum length: 50  characters
 msgid "&Expert"
 msgstr "S&zakértő"
 
@@ -1629,6 +1666,11 @@ msgstr "Görgő támogatása"
 #. Maximum length: 30  characters
 msgid "&Port"
 msgstr "&Kapu"
+
+#. Maximum length: 30  characters
+#, fuzzy
+msgid "&Mode"
+msgstr "Mód:"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"

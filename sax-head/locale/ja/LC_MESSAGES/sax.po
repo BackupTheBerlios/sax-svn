@@ -27,6 +27,27 @@ msgid "with"
 msgstr ","
 
 #. Maximum length: 20  characters
+msgid "USB"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "Relative"
+msgstr ""
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "Absolute"
+msgstr "中止"
+
+#. Maximum length: 20  characters
 msgid "Connected to:"
 msgstr "次に接続されています："
 
@@ -231,6 +252,7 @@ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
 msgstr "<nobr><h3>キーボード・タイプ</h3></nobr>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "Screen"
 msgstr "画面"
 
@@ -811,6 +833,7 @@ msgid "<b>Core Pointer...</b>"
 msgstr "<b>主要なマウス・ポインタ ...</b>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "&Cancel"
 msgstr "キャンセル (&C)"
 
@@ -1231,6 +1254,16 @@ msgid "Remove selected monitor"
 msgstr "選択したモニターの削除"
 
 #. Maximum length: 40  characters
+#, fuzzy
+msgid "Properties..."
+msgstr "特性 ... (&P)"
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "&Options"
+msgstr "オプション ... (&O)"
+
+#. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "特性 ... (&P)"
 
@@ -1279,6 +1312,7 @@ msgid "&General"
 msgstr "一般的 (&G)"
 
 #. Maximum length: 30  characters
+#. Maximum length: 50  characters
 msgid "&Expert"
 msgstr "エキスパート (&E)"
 
@@ -1546,6 +1580,11 @@ msgstr "マウスホイールのサポート"
 #. Maximum length: 30  characters
 msgid "&Port"
 msgstr "ポート (&P)"
+
+#. Maximum length: 30  characters
+#, fuzzy
+msgid "&Mode"
+msgstr "モード:"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"

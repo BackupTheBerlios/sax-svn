@@ -40,6 +40,7 @@ WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = eraser
+ RawOption           = "BottomX" "46000"
 }
 
 #-----------------------#
@@ -51,6 +52,7 @@ WACOM:GRAPHIRE / INTUOS Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
+ RawOption           = "BottomX" "46000"
 }
 
 #-----------------------#

@@ -27,6 +27,27 @@ msgid "with"
 msgstr "con"
 
 #. Maximum length: 20  characters
+msgid "USB"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "Relative"
+msgstr ""
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "Absolute"
+msgstr "Cancelar"
+
+#. Maximum length: 20  characters
 msgid "Connected to:"
 msgstr "Conectado a:"
 
@@ -231,6 +252,7 @@ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
 msgstr "<nobr><h3>Tipo de teclado</h3></nobr>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "Screen"
 msgstr "Pantalla"
 
@@ -793,6 +815,7 @@ msgid "<b>Core Pointer...</b>"
 msgstr "<b>Puntero núcleo...</b>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "&Cancel"
 msgstr "&Cancelar"
 
@@ -1206,6 +1229,16 @@ msgid "Remove selected monitor"
 msgstr "Eliminar el monitor seleccionado"
 
 #. Maximum length: 40  characters
+#, fuzzy
+msgid "Properties..."
+msgstr "&Propiedades..."
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "&Options"
+msgstr "&Opciones..."
+
+#. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Propiedades..."
 
@@ -1254,6 +1287,7 @@ msgid "&General"
 msgstr "&General"
 
 #. Maximum length: 30  characters
+#. Maximum length: 50  characters
 msgid "&Expert"
 msgstr "&Experto"
 
@@ -1513,6 +1547,11 @@ msgstr "Soporte de rueda"
 #. Maximum length: 30  characters
 msgid "&Port"
 msgstr "&Puerto"
+
+#. Maximum length: 30  characters
+#, fuzzy
+msgid "&Mode"
+msgstr "Modo:"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"

@@ -31,6 +31,27 @@ msgid "with"
 msgstr "avec"
 
 #. Maximum length: 20  characters
+msgid "USB"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "Relative"
+msgstr ""
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "Absolute"
+msgstr "Interrompre"
+
+#. Maximum length: 20  characters
 msgid "Connected to:"
 msgstr "Connecté à :"
 
@@ -235,6 +256,7 @@ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
 msgstr "<nobr><h3>Type de clavier</h3></nobr>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "Screen"
 msgstr "Écran"
 
@@ -803,6 +825,7 @@ msgid "<b>Core Pointer...</b>"
 msgstr "<b>Pointeur...</b>"
 
 #. Maximum length: 20  characters
+#. Maximum length: 40  characters
 msgid "&Cancel"
 msgstr "&Annuler"
 
@@ -1221,6 +1244,16 @@ msgid "Remove selected monitor"
 msgstr "Supprimer le moniteur sélectionné"
 
 #. Maximum length: 40  characters
+#, fuzzy
+msgid "Properties..."
+msgstr "&Propriétés..."
+
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "&Options"
+msgstr "&Options..."
+
+#. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Propriétés..."
 
@@ -1269,6 +1302,7 @@ msgid "&General"
 msgstr "&Général"
 
 #. Maximum length: 30  characters
+#. Maximum length: 50  characters
 msgid "&Expert"
 msgstr "&Expert"
 
@@ -1529,6 +1563,11 @@ msgstr "Support de la mollette"
 #. Maximum length: 30  characters
 msgid "&Port"
 msgstr "&Port"
+
+#. Maximum length: 30  characters
+#, fuzzy
+msgid "&Mode"
+msgstr "Mode :"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
