@@ -125,9 +125,9 @@ bool Xvnc::slotRun (int index) {
 	mPWD = mText ["newpwd"];
 	mCheckViewOnly -> setChecked (false);
 	mCheckShared   -> setChecked (false);
-	mCheckHTTP     -> setChecked (false);
-	mCheckVNC -> setChecked (false);
-	mCheckPWD -> setChecked (false);
+	mCheckHTTP -> setChecked (false);
+	mCheckVNC  -> setChecked (false);
+	mCheckPWD  -> setChecked (false);
 
 	if (hasVNCconfig) {
 		//=====================================
@@ -160,7 +160,9 @@ bool Xvnc::slotRun (int index) {
 		// check for HTTP access status
 		//-------------------------------------
 		if (hasHTTPaccess) {
+			QString port = getDeviceOption ("httpport");
 			mCheckHTTP -> setChecked (true);
+			mHTTP -> setValue (port.toInt());
 		}
 	}
 	if ( noInputConnection ) {
