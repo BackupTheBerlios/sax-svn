@@ -276,7 +276,9 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 
 # check perl .packlist...
 # --------------------------
+%if %{suse_version} > 820
 %perl_process_packlist
+%endif
 
 # remove unpacked sources...
 # --------------------------
