@@ -72,9 +72,7 @@ char* GetModesSpecs (XF86ConfigPtr conf);
 char* GetDisplaySpecs (XF86ConfigPtr conf);
 
 /* Extensions Section... */
-#ifdef HAVE_EXTENSIONS_SECTION
 char* GetExtensions (XF86ConfigPtr conf);
-#endif
 
 /*---------------------------------------------------------------------------
  Next part is the main function which build the logical layer of the module
@@ -393,6 +391,13 @@ char* GetExtensions (XF86ConfigPtr conf) {
 		strcat(result,line);
 		count++;
 	}
+	return(result);
+}
+#else
+// for compatibility only...
+char* GetExtensions (XF86ConfigPtr conf) {
+	char* result = (char*) malloc(SIZE);
+	strcpy(result,"");
 	return(result);
 }
 #endif
