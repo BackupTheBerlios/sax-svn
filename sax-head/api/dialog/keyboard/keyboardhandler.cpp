@@ -146,14 +146,17 @@ void XKeyboard::initPage (void) {
 	// include available layouts
 	//------------------------------------------------
 	QDictIterator<char> itLayout (mLayoutHash);
+	QListBox* layoutBox = new QListBox();
 	for (; itLayout.current(); ++itLayout) {
-		mLayout -> insertItem ( QString::fromLocal8Bit (itLayout.current()) );
+		layoutBox -> insertItem ( QString::fromLocal8Bit (itLayout.current()) );
 		QCheckListItem* item = new QCheckListItem (
 			mAddView,"",QCheckListItem::CheckBox
 		);
 		item->setText ( 1, QString::fromLocal8Bit (itLayout.current()) );
 		item->setText ( 2, itLayout.currentKey() );
 	}
+	layoutBox -> sort ( true );
+	mLayout -> setListBox ( layoutBox );
 	
 	//================================================
 	// include available models
@@ -766,8 +769,6 @@ bool XKeyboard::apply ( void ) {
 	// apply the keyboard to the X-Server for immediate
 	// usage. This call will use the XKB extension
     // ---
-	// hallo
-	return (true);
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 
 	QString* XkbModel   = NULL;
