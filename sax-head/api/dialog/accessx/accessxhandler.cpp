@@ -76,6 +76,9 @@ void XAccessX::resetPage (int reload) {
 		mHandle -> close();
 	}
 	}
+	if (reload == PAGE_RELOAD) {
+		slotApply();
+	}
 	mStatus -> clear();
 	slotIntro (mIndex);
 	XTemplate::resetPage ();
@@ -132,7 +135,8 @@ bool XAccessX::slotRun (int index) {
 		mEnable -> setChecked  ( true );
 		mSpeed  -> setValue ( xkb->ctrls->mk_max_speed );
 	} else {
-		mEnable -> setChecked  ( false );
+		mEnable  -> setChecked  ( false );
+		mDisable -> setChecked  ( true );
 		slotState (false);
 	}
 	}
