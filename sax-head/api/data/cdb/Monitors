@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Oct 24 15:14:24 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 10 14:37:47 2003
 #
 # Template for monitor data
 # --------------------------
@@ -19726,6 +19726,15 @@ KDS:VS-F15  {
 }
 
 #==============================================
+# VS7I
+#----------------------------------------------
+KDS:VS7I  {
+ Option=DPMS
+ Hsync=30-70
+ Vsync=50-160
+}
+
+#==============================================
 # VSX-5
 #----------------------------------------------
 KDS:VSX-5  {
@@ -28869,6 +28878,17 @@ RELISYS:RE767  {
  DDC=REL0767
  Hsync=30-69
  Vsync=50-100
+}
+
+#==============================================
+# RE995B
+#----------------------------------------------
+RELISYS:RE995B  {
+ DDC=REL0995
+ Option=DPMS
+ Hsync=30-90
+ Resolution=1280x1024
+ Vsync=50-150
 }
 
 #==============================================
