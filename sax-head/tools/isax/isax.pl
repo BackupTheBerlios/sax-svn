@@ -180,10 +180,11 @@ sub ImportConfig {
 	my %device  = ParseDeviceSection       ($cp);
 	my %screen  = ParseScreenSection       ($cp);
 	my %layout  = ParseServerLayoutSection ($cp);
+	my %extend  = ParseExtensionsSection   ($cp);
 
 	%dialog = MergeParseResult(
 		\%files,\%module,\%flags ,\%input,\%monitor,
-		\%modes,\%device,\%screen,\%layout,\%sflags
+		\%modes,\%device,\%screen,\%layout,\%sflags,\%extend
 	);
 	} else {
 	# /.../
@@ -326,6 +327,7 @@ sub CreateApiData {
 	my @device;   # Device sections
 	my @desktop;  # Monitor,Screen sections
 	my @layout;   # ServerLayout sections
+	my @extend;   # Extensions section
 
 	open(FD,">$init{ListFile}") ||
 		die "could not create file $init{ListFile}: $!";
@@ -355,6 +357,11 @@ sub CreateApiData {
 	/ServerLayout/   && do {
 		@layout  = LayoutGetServerLayout();  print FD @layout;
 	last SWITCH;
+	};
+	# create Extensions section...
+    # ----------------------------
+	/Extensions/     && do {
+		@extend  = ExtensionsGetExtensions();print FD @extend;
 	};
 	}
 	}
@@ -563,6 +570,7 @@ sub CreateConfigFile {
 	my @part9;   # Device
 	my @part10;  # ServerLayout
 	my @part11;  # DRI
+	my @part12;  # Extensions
 	my %config;  # section hash
 
 	# Files,ServerFlags,Module...
@@ -607,6 +615,9 @@ sub CreateConfigFile {
 	@part10 = CreateServerLayoutSection(\%config);
 	@part11 = CreateDRISection(\%config);
 
+	%config = ApiImportExtensions(\%input);
+	@part12 = CreateExtensionsSection(\%config);
+
 	# /.../
 	# save new configuration as storable file
 	# this file may be used for later access
@@ -629,6 +640,7 @@ sub CreateConfigFile {
 	print HANDLE @part9;  print HANDLE "\n";
 	print HANDLE @part10; print HANDLE "\n";
 	print HANDLE @part11; print HANDLE "\n";
+	print HANDLE @part12; print HANDLE "\n";
 	close(HANDLE);
 
 	if (ImportXFineCache() eq "yes") {
@@ -721,12 +733,13 @@ sub usage {
 	print "  given configuration section. The following\n";
 	print "  sections are available:\n";
 	print "  /.../\n";
-	print "     Card      -> Section Device\n";
-	print "     Desktop   -> Section Monitor,Modes,Screen\n";
-	print "     Keyboard  -> Section InputDevice\n";
-	print "     Mouse     -> Section InputDevice\n";
-	print "     Path      -> Section Files,Module\n";
-	print "     Layout    -> Section ServerLayout\n";
+	print "     Card       -> Section Device\n";
+	print "     Desktop    -> Section Monitor,Modes,Screen\n";
+	print "     Keyboard   -> Section InputDevice\n";
+	print "     Mouse      -> Section InputDevice\n";
+	print "     Path       -> Section Files,Module\n";
+	print "     Layout     -> Section ServerLayout\n";
+	print "     Extensions -> Section Extensions\n";
 	print "  /.../\n";
 	print "[ -y | --ycp ]\n";
 	print "  suppress normal output of a list command\n";

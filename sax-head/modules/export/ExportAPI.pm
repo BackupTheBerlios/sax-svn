@@ -48,6 +48,7 @@ sub MergeParseResult {
 	my %screen  = %{$_[7]};
 	my %layout  = %{$_[8]};
 	my %sflags  = %{$_[9]};
+	my %extend  = %{$_[10]};
 
 	my %result;
 	my $count;
@@ -80,6 +81,7 @@ sub MergeParseResult {
 	my $newopt;
 	my $modelines;
 	my @flaglist;
+	my @extensionslist;
 	my @keylist;
 	my $dpix;
 	my $dpiy;
@@ -209,6 +211,20 @@ sub MergeParseResult {
 	}
 	$setpath = join(",",@flaglist);
 	$result{ServerFlags}{0}{Option} = $setpath;
+
+	#------------------------------------------------#
+	# handle result from ParseExntesionsSection...   #
+	# -----------------------------------------------#
+	$setpath = "";
+	foreach $key (keys %{$extend{Option}}) {
+	if ($extend{Option}{$key} eq "none") {
+		push(@extensionslist,$key);
+	} else {
+		$result{Extensions}{0}{$key} = $extend{Option}{$key};
+	}	
+	}
+	$setpath = join(",",@extensionslist);
+	$result{Extensions}{0}{Option} = $setpath;
 
 	#------------------------------------------------#
 	# handle result from ParseInputDeviceSection...  #
@@ -1045,6 +1061,44 @@ sub LayoutGetServerLayout {
 		push(@result,DLine("0","Screen:$screen","$left $right $top $bottom"));
 	}
 	# end API Layout interface...
+	# -----------------------------
+	push(@result,"}\n");
+	return(@result);
+}
+
+#----[ ExtensionsGetExtensions ]----#
+sub ExtensionsGetExtensions {
+#-----------------------------------------
+# this function is called to create the 
+# Extensions part of the API interface file
+#
+# --> Original location: ExtensionsCallBack
+# --> Used sections: Extensions
+#
+	my @result;
+	my $exts;
+	my $key;
+	my $value;
+
+	push(@result,"Extensions {\n");
+	foreach $key (keys %{$dialog{Extensions}{0}}) {
+		$value = $dialog{Extensions}{0}{$key};
+		if ($key eq "Option") {
+		if ($value ne "") {
+			push(@result,DLine("0","Extensions",$value));
+		}
+		} else {
+			if ($value ne "") {
+				$exts = "$exts\\n$key,$value";
+			}
+		}
+	}
+	$exts =~ s/^,+//;
+	if ($exts ne "") {
+		$exts =~ s/^\\n//;
+		push(@result,DLine("0","SpecialExtensions",$exts));
+	}
+	# end API Extensions interface...
 	# -----------------------------
 	push(@result,"}\n");
 	return(@result);

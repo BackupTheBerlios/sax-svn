@@ -25,6 +25,7 @@ use modes;
 use module;
 use monitor;
 use screen;
+use extensions;
 
 $Version = "4.8";
 

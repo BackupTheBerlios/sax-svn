@@ -145,7 +145,7 @@ sub ApiImportPath {
 		};
 
 		/^Extmod/        && do {
-		@list = split(/\n/,$value);
+		@list = split(/\\n/,$value);
 		foreach (@list) {
 			@opt = split(/,/,$_);
 			$var{Module}{0}{$opt[0]}{Option} = $opt[1];
@@ -154,7 +154,7 @@ sub ApiImportPath {
 		};
 
 		/^SpecialFlags/  && do {
-		@list = split(/\n/,$value);
+		@list = split(/\\n/,$value);
 		foreach (@list) {
 			@opt = split(/,/,$_);
 			$var{ServerFlags}{0}{$opt[0]} = $opt[1];
@@ -171,6 +171,40 @@ sub ApiImportPath {
 	return(%var);
 }
 
+#---[ ApiImportExtensions ]------# 
+sub ApiImportExtensions {
+#--------------------------------------------
+# import Extensions settings to create the
+# Extensions section
+#
+	my %api = %{$_[0]};
+	my ($value,$key,$card);
+	my (@list,@opt,@pair);
+	my %var;
+	
+	foreach (keys %{$api{Extensions}}) {
+	$value = $api{Extensions}{$_};
+	@pair = split(/ /,$_);
+	$card = $pair[0];
+	$key  = $pair[1];
+	SWITCH: for ($key) {
+		/^SpecialExtensions/  && do {
+		@list = split(/\\n/,$value);
+		foreach (@list) {
+			@opt = split(/,/,$_);
+			$var{Extensions}{0}{$opt[0]} = $opt[1];
+		}
+		last SWITCH;
+		};
+
+		/^Extensions/   && do {
+		$var{Extensions}{0}{Option} = $value;
+		last SWITCH;
+		};
+	}
+	}
+	return(%var);
+}
 
 #---[ ApiImportKeyboard ]------#
 sub ApiImportKeyboard {
