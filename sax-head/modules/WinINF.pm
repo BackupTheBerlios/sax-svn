@@ -172,6 +172,9 @@ sub getRegister {
 	if ($reg =~ /^AddReg=(.*)/) {
 		my @reglist = split(/,/,$1);
 		my $regkey = $reglist[0];
+		if (! defined $sections{$regkey}) {
+			$regkey =~ s/AddReg/Addreg/;
+		}
 		@result = @{$sections{$regkey}};
 	}
 	}
