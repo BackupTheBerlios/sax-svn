@@ -234,6 +234,7 @@ void XMouse::dialogCreate (void) {
 	// add dialog to the widget stack
 	// -------------------------------
 	mStack -> addWidget ( mDialog , mIndex );
+	mEvents -> show();
 }
 
 //=====================================
