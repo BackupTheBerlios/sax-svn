@@ -10,6 +10,21 @@ component=Component
 with=with
 
 # Maximum length: 20  characters
+usb=USB
+
+# Maximum length: 20  characters
+serial1=COM-1 [ /dev/ttyS0 ]
+
+# Maximum length: 20  characters
+serial2=COM-2 [ /dev/ttyS1 ]
+
+# Maximum length: 20  characters
+relative=Relative
+
+# Maximum length: 20  characters
+absolute=Absolute
+
+# Maximum length: 20  characters
 connectedto=Connected to:
 
 # Maximum length: 40  characters
@@ -721,6 +736,12 @@ removecard=Remove selected card
 removemonitor=Remove selected monitor
 
 # Maximum length: 40  characters
+conftablet=Properties...
+
+# Maximum length: 20  characters
+tabletopts=&Options
+
+# Maximum length: 40  characters
 confcard=&Properties...
 
 # Maximum length: 40  characters
@@ -908,6 +929,9 @@ wheel=Wheel support
 
 # Maximum length: 30  characters
 port=&Port
+
+# Maximum length: 30  characters
+mode=&Mode
 
 # Maximum length: 30  characters
 emulate=Button emulation

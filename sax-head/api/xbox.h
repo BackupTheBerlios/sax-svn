@@ -21,14 +21,16 @@ STATUS        : Status: Up-to-date
 #include <qlayout.h>
 #include <qlabel.h>
 #include <qpushbutton.h>
+#include <qcombobox.h>
 #include <qspinbox.h>
 #include <qlineedit.h>
 #include <qframe.h>
 #include <qimage.h>
 
-#define XBOX_NORMAL   0
-#define XBOX_OPT_ANY  1
-#define XBOX_OPT_INT  2
+#define XBOX_NORMAL     0
+#define XBOX_OPT_ANY    1
+#define XBOX_OPT_INT    2
+#define XBOX_OPT_STRING 3
 
 class XBox : public QWidget {
 	Q_OBJECT
@@ -62,6 +64,7 @@ class XBox : public QWidget {
 
 	private:
 	QLineEdit* mLineWidget;
+	QComboBox* mComboWidget;
 	QSpinBox*  mSpinWidget;
 	QFrame* mFrame;
 	QLabel* mLabel;
@@ -87,6 +90,10 @@ class XBox : public QWidget {
 
 	public:
 	QString getLineEditText ( void );
+	QString getComboBoxText ( void );
+	void setComboBoxText ( const QStringList& );
+	void setComboBoxCurrent ( const QString& );
+	void setLineEditText ( const QString& );
 	int getSpinBoxCount ( void );
 	void setButtonText (Button,const QString&);
 	void setButtonText (int,const QString&);

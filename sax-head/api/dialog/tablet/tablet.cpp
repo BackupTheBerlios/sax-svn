@@ -18,6 +18,11 @@ STATUS        : Status: Up-to-date
 #include "tablet.h"
 
 //=====================================
+// external globals
+//-------------------------------------
+extern int globalFrameWidth;
+
+//=====================================
 // XTablet Constructor...
 //-------------------------------------
 XTablet::XTablet (void) {
@@ -53,6 +58,7 @@ void XTablet::addTo (XFrame* xf,XIntro* xi) {
 //-------------------------------------
 void XTablet::dialogCreate (void) {
 	mDialog = new QFrame ( mStack );
+	mTop    = new XTabDialog ( mFrame,"",TRUE,0,globalFrameWidth );
 	XWrapPointer< QDict<char> > mText (mTextPtr);
 
 	// create layout structure...
@@ -70,16 +76,57 @@ void XTablet::dialogCreate (void) {
 	);
 	QHBox* SelectAndToolBox = new QHBox ( mDialog );
 	SelectAndToolBox -> setSpacing ( 10 );
-	QButtonGroup* select = new QButtonGroup ( 
+	QButtonGroup* select = new QButtonGroup (
 		1,Vertical,mText["vnselect"],SelectAndToolBox
 	);
+	SelectAndToolBox -> setStretchFactor ( select,100 );
+	QVBox* SelectAndToolBoxFrame = new QVBox ( SelectAndToolBox );
 	QButtonGroup* toolbar = new QButtonGroup (
-		1,Horizontal,mText["toolbar"],SelectAndToolBox
+		1,Horizontal,mText["toolbar"],SelectAndToolBoxFrame
 	);
-	mPen    = new QCheckBox ( toolbar );
+	QButtonGroup* options = new QButtonGroup (
+		1,Horizontal,mText["tabletopts"],SelectAndToolBoxFrame
+	);
+	SelectAndToolBoxFrame -> setStretchFactor ( options,100 );
+	QButtonGroup* port = new QButtonGroup (
+		1,Horizontal,mText["port"],SelectAndToolBoxFrame
+	);
+	QButtonGroup* mode = new QButtonGroup (
+		1,Horizontal,mText["mode"],SelectAndToolBoxFrame
+	);
+	
+	mTabletOptions = new QListBox ( options );
+	mTabletOptions -> setSelectionMode ( QListBox::Multi );
+	mTabletOptions -> setDisabled ( true );
+
+	mPort = new QComboBox ( false, port);
+	mPort -> insertItem ( mText["usb"] );
+	mPort -> insertItem ( mText["serial1"] );
+	mPort -> insertItem ( mText["serial2"] );
+	mPort -> setDisabled ( true );
+
+	mModeRelative = new QRadioButton ( mText["relative"], mode );
+	mModeAbsolute = new QRadioButton ( mText["absolute"], mode );
+	mModeAbsolute -> setChecked  ( true );
+	mModeRelative -> setDisabled ( true );
+	mModeAbsolute -> setDisabled ( true );
+
+	QHBox* penbox = new QHBox ( toolbar );
+	penbox -> setSpacing ( 10 );
+	mPen = new QCheckBox ( penbox );
+	mPenConfigure = new QPushButton (mText["conftablet"],penbox);
+	mPenConfigure -> setDisabled ( true );
 	mPen -> setText ( mText["addpen"] );
-	mEraser = new QCheckBox ( toolbar );
+	mPen -> setDisabled ( true );
+
+	QHBox* eraserbox = new QHBox ( toolbar );
+	eraserbox -> setSpacing ( 10 );
+	mEraser = new QCheckBox ( eraserbox );
+	mEraserConfigure = new QPushButton (mText["conftablet"],eraserbox);
+	mEraserConfigure -> setDisabled ( true );
 	mEraser -> setText ( mText["adderaser"] );
+	mEraser -> setDisabled ( true );
+
 	mVendor = new QListBox  ( select );
 	mName   = new QListBox  ( select );
 
@@ -88,6 +135,32 @@ void XTablet::dialogCreate (void) {
 	QLabel* nope = new QLabel ( btns );
 	btns -> setStretchFactor ( mRemove, 0 );
 	btns -> setStretchFactor ( nope, 10 );
+
+	// create tab dialog widgets...
+	// -----------------------------
+	//-----------------------------------
+	// General...
+	//===================================
+	QVBox* general = new QVBox ( mTop );
+	QButtonGroup* toolmode = new QButtonGroup (
+		1,Horizontal,mText["mode"],general
+	);
+	QButtonGroup* tooloptions = new QButtonGroup (
+		1,Horizontal,mText["tabletopts"],general
+	);
+	mToolModeRelative = new QRadioButton ( mText["relative"], toolmode );
+	mToolModeAbsolute = new QRadioButton ( mText["absolute"], toolmode );
+	mToolModeAbsolute -> setChecked ( true );
+	mToolTabletOptions = new QListBox ( tooloptions );
+	mToolTabletOptions -> setSelectionMode ( QListBox::Multi );
+	general -> setMargin ( 10 );
+
+	// add tab dialogs to toplevel...
+    // ------------------------------
+	mTop -> addTab ( general,mText["general"] );
+
+	mTop -> setOkButton      ( mText["Ok"] );
+    mTop -> setCancelButton  ( mText["Cancel"] );
 
 	// disable remove button
 	// ---------------------
@@ -118,6 +191,38 @@ void XTablet::dialogCreate (void) {
 	QObject::connect (
 		mRemove  , SIGNAL ( clicked    (void) ),
 		this     , SLOT   ( slotRemove (void) )
+	);
+	QObject::connect (
+		mPen     , SIGNAL ( clicked              (void) ),
+		this     , SLOT   ( slotPenCheck         (void) )
+	);
+	QObject::connect (
+		mEraser  , SIGNAL ( clicked              (void) ),
+		this     , SLOT   ( slotEraserCheck      (void) )
+	);
+	QObject::connect (
+		mTop      , SIGNAL ( applyButtonPressed  (void) ),
+		this      , SLOT   ( slotTopOk           (void) )
+	);
+	QObject::connect (
+		mTop      , SIGNAL ( cancelButtonPressed (void) ),
+		this      , SLOT   ( slotTopCancel       (void) )
+	);
+	QObject::connect (
+		mEraserConfigure , SIGNAL ( clicked      (void) ),
+		this             , SLOT   ( slotEraser   (void) )
+	);
+	QObject::connect (
+		mPenConfigure    , SIGNAL ( clicked      (void) ),
+		this             , SLOT   ( slotPen      (void) )
+	);
+	QObject::connect (
+		mToolTabletOptions , SIGNAL ( clicked        (QListBoxItem*) ),
+		this               , SLOT   ( slotToolOption (QListBoxItem*) )
+	);
+    QObject::connect (
+		mTabletOptions     , SIGNAL ( clicked        (QListBoxItem*) ),
+		this               , SLOT   ( slotOption     (QListBoxItem*) )
 	);
 
 	// add widgets to the layout...

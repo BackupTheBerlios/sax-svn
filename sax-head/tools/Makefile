@@ -5,7 +5,7 @@
 # Makefile for SaX2 tools area
 # X-Server configuration program
 #
-# Version 4.7
+# Version 4.8
 # Status: Up-to-date
 #
 #====================================
@@ -17,7 +17,7 @@ usr_prefix  = ${buildroot}/usr/X11R6
 sax_tools   = ${usr_prefix}/${lib_prefix}/sax/tools
 
 CFLAGS      = -Wall
-VERSION     = 4.7
+VERSION     = 4.8
 
 export
 

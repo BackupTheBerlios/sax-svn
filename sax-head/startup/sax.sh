@@ -77,12 +77,12 @@ function StopGPM() {
 function version() {
 	ID='$Id: sax.sh,v 1.49 2003/03/17 13:39:51 ms Exp $'
 	ID=`echo $ID | cut -f3-4 -d" "`
-	echo "SaX2 version 4.7 - CVS Release: $ID" 
+	echo "SaX2 version 4.8 - CVS Release: $ID" 
 }
 function usage() {
 	/sbin/killproc $DOTS
 	# ...
-	echo "Linux SaX Version 4.7 (2002-03-22)"
+	echo "Linux SaX Version 4.8 (2002-03-22)"
 	echo "(C) Copyright 2002 - SuSE GmbH <Marcus Schaefer sax@suse.de>"
 	echo 
 	echo "usage: SaX [ options ]"

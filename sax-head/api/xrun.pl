@@ -280,7 +280,7 @@ sub usage {
 #-----------------------
 # if you need help :-)
 #
-	print "Linux SaX2 Version 4.7 finish level (xrun) (2002-02-20)\n";
+	print "Linux SaX2 Version 4.8 finish level (xrun) (2002-02-20)\n";
 	print "(C) Copyright 2002 SuSE GmbH\n";
 	print "\n";
 

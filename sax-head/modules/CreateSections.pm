@@ -26,7 +26,7 @@ use module;
 use monitor;
 use screen;
 
-$Version = "4.7";
+$Version = "4.8";
 
 #---[ PrintLine ]----#
 sub PrintLine {

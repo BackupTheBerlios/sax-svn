@@ -187,6 +187,9 @@ XBox::XBox (
 		case XBOX_OPT_ANY:
 			mLineWidget = new QLineEdit (mFrame);
 		break;
+		case XBOX_OPT_STRING:
+			mComboWidget = new QComboBox (mFrame);
+		break;
 		case XBOX_OPT_INT:
 			mSpinWidget = new QSpinBox (0,100,1,mFrame);
 		break;
@@ -262,6 +265,11 @@ XBox::XBox (
 			layer5 -> addWidget  ( mLineWidget );
 			layer5 -> addSpacing ( 10 );
 		break;
+		case XBOX_OPT_STRING:
+			layer5 -> addSpacing ( 10 );
+			layer5 -> addWidget  ( mComboWidget );
+			layer5 -> addSpacing ( 10 );
+		break;
 		case XBOX_OPT_INT:
 			layer5 -> addSpacing ( 10 );
 			layer5 -> addWidget ( mSpinWidget );
@@ -290,6 +298,44 @@ QString XBox::getLineEditText ( void ) {
 		text = mLineWidget->text();
 	}
 	return (text);
+}
+
+//============================================
+// set text of the line edit widget
+//--------------------------------------------
+void XBox::setLineEditText ( const QString& data ) {
+	if (mLineWidget) {
+		mLineWidget->setText (data);
+	}
+}
+
+//============================================
+// get text from combo box widget
+//--------------------------------------------
+QString XBox::getComboBoxText ( void ) {
+	QString text;
+	if (mComboWidget) {
+		text = mComboWidget->currentText();
+	}
+	return (text);
+}
+
+//============================================
+// set combo box items
+//--------------------------------------------
+void XBox::setComboBoxText ( const QStringList& data ) {
+	if (mComboWidget) {
+		mComboWidget->insertStringList (data);
+	}
+}
+
+//============================================
+// set current combo box item
+//--------------------------------------------
+void XBox::setComboBoxCurrent ( const QString& data ) {
+	if (mComboWidget) {
+		mComboWidget->setCurrentText (data);
+	}
 }
 
 //============================================

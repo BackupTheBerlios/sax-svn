@@ -214,6 +214,7 @@ void XFrame::setInit (void) {
 	mInit.insert("ext_MFBRESOLUTION", MFBRESOLUTION);
 	mInit.insert("ext_KLANGUAGE"	, KLANGUAGE);
 	mInit.insert("ext_CMODULES"		, CMODULES);
+	mInit.insert("ext_TMODULES"     , TMODULES);
 	mInit.insert("ext_MCOLORS"		, MCOLORS);
 
 	// System Config...

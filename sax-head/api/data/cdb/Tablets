@@ -17,7 +17,7 @@
 #  ButtonNumber         = integer...
 #  SendCoreEvents       = <on> or <off>
 #  TabletType           = string
-#  Mode                 = string
+#  Mode                 = Absolute/Relative
 #  Load                 = string
 #  Option               = string,string
 #  KernelLoad           = string,string
@@ -58,7 +58,7 @@ WACOM:GRAPHIRE / INTUOS (USB) {
 #--------------------------#
 TEVION / AIPTEK:ALDI Tablet (SERIAL) {
  Driver              = hyperpen
- Mode                = absolute
+ Mode                = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
  BaudRate            = 19200
@@ -70,7 +70,7 @@ TEVION / AIPTEK:ALDI Tablet (SERIAL) {
 #--------------------------#
 SUMMAGRAPHICS:SUMMASKETCH {
  Driver              = summa
- Mode                = absolute
+ Mode                = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
  BaudRate            = 19200
@@ -82,9 +82,9 @@ SUMMAGRAPHICS:SUMMASKETCH {
 #--------------------------#
 NUMONICS:GRIDMASTER {
  Driver              = summa
- Mode                = absolute
+ Mode                = Absolute
  Device              = /dev/ttyS0
- Option              = AlwaysCore,compatible
+ Option              = AlwaysCore,Compatible
  BaudRate            = 19200
  RawOption           = "Cursor" "Stylus"
 }

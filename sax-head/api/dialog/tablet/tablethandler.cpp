@@ -151,7 +151,11 @@ bool XTablet::slotRun (int index) {
 		// a) select vendor and name in the listboxes
 		// b) check availability of pen and eraser
 		// c) setup pen and eraser checkboxes
-		// d) enable remove button
+		//    save pen/eraser data to mToolData[...] hashes
+		// d) setup main tablet options
+		// e) setup port
+		// f) setup mode
+		// g) enable remove button
 		// ---
 		mPen    -> setChecked (false);
 		mEraser -> setChecked (false);
@@ -177,11 +181,165 @@ bool XTablet::slotRun (int index) {
 		// c)
 		if (gotPen) {
 			mPen -> setChecked (true);
+			mPenConfigure -> setDisabled (false);
+			XWrapPointer<XData> workingPen (
+				mFiles["sys_INPUT"] -> getDevice (IDPen)
+			);
+			if (workingPen["Mode"]) {
+				QString* data = new QString (workingPen["Mode"]);
+				mToolDataPen.insert ("Mode",*data);
+			}
+			if (workingPen["Option"]) {
+				QString* data = new QString (workingPen["Option"]);
+				mToolDataPen.insert ("Option",*data);
+			}
+			if (workingPen["RawOption"]) {
+				XStringList options;
+				options.setText (workingPen ["RawOption"]);
+				options.setSeperator (",");
+				QList<char> optraw = options.getList();
+				QListIterator<char> ir (optraw);
+				QStringList allopt = QStringList::split(",",
+					workingPen["Option"]
+				);
+				if (! optraw.isEmpty()) {
+					for (; ir.current(); ++ir) {
+						options.setText (ir.current());
+						options.setSeperator (" ");
+						QList<char> keyval = options.getList();
+						QString* key = new QString (keyval.at(0));
+						QString* val = new QString (keyval.at(1));
+						*key = key->stripWhiteSpace();
+						*val = val->stripWhiteSpace();
+						*key = key->mid (1,key->length() - 2);
+						*val = val->mid (1,val->length() - 2);
+						mToolDataPen.insert (*key,*val);
+						allopt.append (*key);
+					}
+					QString* data = new QString (allopt.join(","));
+					mToolDataPen.replace ("Option",*data);
+				}
+			}
 		}
 		if (gotEraser) {
 			mEraser -> setChecked (true);
+			mEraserConfigure -> setDisabled (false);
+			XWrapPointer<XData> workingEraser (
+				mFiles["sys_INPUT"] -> getDevice (IDEraser)
+			);
+			if (workingEraser["Mode"]) {
+				QString* data = new QString (workingEraser["Mode"]);
+				mToolDataEraser.insert ("Mode",*data);
+			}
+			if (workingEraser["Option"]) {
+				QString* data = new QString (workingEraser["Option"]);
+				mToolDataEraser.insert ("Option",*data);
+			}
+			if (workingEraser["RawOption"]) {
+				XStringList options;
+				options.setText (workingEraser ["RawOption"]);
+				options.setSeperator (",");
+				QList<char> optraw = options.getList();
+				QListIterator<char> ir (optraw);
+				QStringList allopt = QStringList::split(",",
+					workingEraser["Option"]
+				);
+				if (! optraw.isEmpty()) {
+					for (; ir.current(); ++ir) {
+						options.setText (ir.current());
+						options.setSeperator (" ");
+						QList<char> keyval = options.getList();
+						QString* key = new QString (keyval.at(0));
+						QString* val = new QString (keyval.at(1));
+						*key = key->stripWhiteSpace();
+						*val = val->stripWhiteSpace();
+						*key = key->mid (1,key->length() - 2);
+						*val = val->mid (1,val->length() - 2);
+						mToolDataEraser.insert (*key,*val);
+						allopt.append (*key); 
+					} 
+					QString* data = new QString (allopt.join(","));
+					mToolDataEraser.replace ("Option",*data);
+				}
+			}
 		}
 		// d)
+		if ((workingTablet ["Option"]) || (workingTablet ["RawOption"])) {
+			mTabletOptions -> clearSelection();
+		}
+		// d)
+		if (workingTablet ["Option"]) {
+			XStringList options;
+			options.setText (workingTablet ["Option"]);
+			options.setSeperator (",");
+			QList<char> optl = options.getList();
+			QListIterator<char> it (optl);
+			if (! optl.isEmpty()) {
+			for (; it.current(); ++it) {
+				for (unsigned int id=0;id<mTabletOptions->count();id++) {
+					QListBoxItem* item = mTabletOptions->item (id);
+					if (QString(it.current()) == item->text()) {
+						mTabletOptions -> setSelected ( id,true );
+					}
+				}
+			}
+			}
+		}
+		// d)
+		if (workingTablet ["RawOption"]) {
+			XStringList options;
+			options.setText (workingTablet ["RawOption"]);
+			options.setSeperator (",");
+			QList<char> optraw = options.getList();
+			QListIterator<char> ir (optraw);
+			if (! optraw.isEmpty()) {
+			for (; ir.current(); ++ir) {
+				options.setText (ir.current());
+				options.setSeperator (" ");
+				QList<char> keyval = options.getList();
+				QString* key = new QString (keyval.at(0));
+				QString* val = new QString (keyval.at(1));
+				*key = key->stripWhiteSpace();
+				*val = val->stripWhiteSpace();
+				*key = key->mid (1,key->length() - 2);
+				*val = val->mid (1,val->length() - 2);
+				// save raw options...
+				mTabletDataRawOptions.insert (*key,*val);
+				// select raw options...
+				for (unsigned int id=0;id<mTabletOptions->count();id++) {
+					QListBoxItem* item = mTabletOptions->item (id);
+					if (*key == item->text()) {
+						mTabletOptions -> setSelected ( id,true );
+					}
+				}
+			}
+			}
+		}
+
+		// e)
+		if (workingTablet["Device"]) {
+			QString device = workingTablet ["Device"];
+			if (device == "/dev/input/event0") {
+				mPort -> setCurrentItem ( 0 );
+			}
+			if (device == "/dev/ttyS0") {
+				mPort -> setCurrentItem ( 1 );
+			}
+			if (device == "/dev/ttyS1") {
+				mPort -> setCurrentItem ( 2 );
+			}
+		}
+
+		// f)
+		if (workingTablet ["Mode"]) {
+		if (QString(workingTablet ["Mode"])	== "Absolute") {
+			mModeAbsolute -> setChecked ( true );
+		} else {
+			mModeRelative -> setChecked ( true );
+		}
+		}
+
+		// g)
 		mRemove -> setDisabled (false);
 	}
 	}
@@ -258,17 +416,124 @@ void XTablet::slotName (QListBoxItem*) {
 		mVendor->currentText(),mName->currentText()
 	);
 	if (pCDB) {
+		QDict<char>* spec = pCDB -> getHash();
+		XWrapPointer< QDict<char> > selectedTablet (spec);
+		// ...
+		// insert options for this tablet...
+		// ---
+		mTabletOptions -> clear();
+		mToolTabletOptions -> clear();
+		QStringList optlist = getOptions ( selectedTablet["Driver"] );
+		mTabletOptions -> insertStringList (
+			optlist
+		);
+		mToolTabletOptions -> clear();
+		mToolTabletOptions -> insertStringList (
+			optlist
+		);
+		// ...
+		// setup pen/eraser state for this tablet
+		// ---
 		mPen    -> setDisabled ( true );
 		mEraser -> setDisabled ( true );
 		mPen    -> setChecked  ( false );
 		mEraser -> setChecked  ( false );
-		QDict<char>* spec = pCDB -> getHash();
-		XWrapPointer< QDict<char> > selectedTablet (spec);
+		mPenConfigure    -> setDisabled ( true );
+		mEraserConfigure -> setDisabled ( true );
+
 		if (selectedTablet["StylusLink"]) {
 			mPen -> setDisabled ( false );
 		}
 		if (selectedTablet["EraserLink"]) {
 			mEraser -> setDisabled ( false );
+		}
+		// ...
+		// clear tool data hashes
+		// ---
+		mTabletDataRawOptions.clear();
+		mToolDataEraser.clear();
+		mToolDataPen.clear();
+
+		// ...
+		// enable widgets
+		// ---
+		mPort -> setDisabled          ( false );
+		mTabletOptions -> setDisabled ( false );
+		mModeRelative -> setDisabled  ( false );
+		mModeAbsolute -> setDisabled  ( false );
+		// ...
+		// select options [bool]
+		// ---
+		XStringList options;
+		options.setText (selectedTablet ["Option"]);
+		options.setSeperator (",");
+		QList<char> optl = options.getList();
+		QListIterator<char> it (optl);
+		if (! optl.isEmpty()) {
+		for (; it.current(); ++it) {
+			int id = 0;
+			QStringList::Iterator in;
+			for (in = optlist.begin(); in != optlist.end(); ++in) {
+				if (QString(it.current()) == QString (*in)) {
+					mTabletOptions -> setSelected ( id,true );
+				}
+				id++;
+			}
+		}
+		}
+		// ...
+		// select options [raw]
+		// ---
+		options.setText (selectedTablet ["RawOption"]);
+		options.setSeperator (",");
+		QList<char> optraw = options.getList();
+		QListIterator<char> ir (optraw);
+		if (! optraw.isEmpty()) {
+		for (; ir.current(); ++ir) {
+			options.setText (ir.current());
+			options.setSeperator (" ");
+			QList<char> keyval = options.getList();
+			QString* key = new QString (keyval.at(0));
+			QString* val = new QString (keyval.at(1));
+			*key = key->stripWhiteSpace();
+			*val = val->stripWhiteSpace();
+			*key = key->mid (1,key->length() - 2);
+			*val = val->mid (1,val->length() - 2);
+			// save raw options...
+			mTabletDataRawOptions.insert (*key,*val);
+			// select raw options...
+			int id = 0;
+			QStringList::Iterator in;
+			for (in = optlist.begin(); in != optlist.end(); ++in) {
+				if (*key == QString (*in)) {
+					mTabletOptions -> setSelected ( id,true );
+				}
+				id++;
+			}
+		}
+		}
+		// ...
+		// select port (Device) node
+		// ---
+		QString device = selectedTablet ["Device"];
+		if (device == "/dev/input/event0") {
+			mPort -> setCurrentItem ( 0 );
+		}
+		if (device == "/dev/ttyS0") {
+			mPort -> setCurrentItem ( 1 );
+		}
+		if (device == "/dev/ttyS1") {
+			mPort -> setCurrentItem ( 2 );
+		}
+		// ...
+		// select mode
+		// ---
+		QString mode = selectedTablet ["Mode"];
+		if (mode == "Absolute") {
+			mModeAbsolute -> setChecked ( true );
+		}
+		if (mode == "Relative") {
+			mModeRelative -> setChecked ( true );
 		}
 	}
 }
@@ -411,14 +676,16 @@ void XTablet::addTablet (void) {
 		// add pen and eraser if available and selected
 		// use the searchTool function to get the record
 		// ...
+		QDict<char>* pen = NULL;
+		XData* newPen = NULL;
 		XWrapPointer< QDict<char> > selectedTablet (spec);
 		if (mPen->isChecked()) {
-		QDict<char>* pen = searchTool (
+		pen = searchTool (
 			mVendor->currentText(),selectedTablet["StylusLink"]
 		);
 		if (pen) {
 			count += 2;
-			XData* newPen = mFiles["sys_INPUT"] -> addDevice (count);
+			newPen = mFiles["sys_INPUT"] -> addDevice (count);
 			QString* ident  = new QString;
 			QString* name   = new QString (selectedTablet["StylusLink"]);
 			QString* vendor = new QString (mVendor->currentText());
@@ -443,13 +710,15 @@ void XTablet::addTablet (void) {
 			gotPen = true;
 		}
 		}
+		QDict<char>* eraser = NULL;
+		XData* newEraser = NULL;
 		if (mEraser->isChecked()) {
-		QDict<char>* eraser = searchTool (
+		eraser = searchTool (
 			mVendor->currentText(),selectedTablet["EraserLink"]
 		);
 		if (eraser) {
 			count += 2;
-			XData* newEraser = mFiles["sys_INPUT"] -> addDevice (count);
+			newEraser = mFiles["sys_INPUT"] -> addDevice (count);
 			QString* ident  = new QString;
 			QString* name   = new QString (selectedTablet["EraserLink"]);
 			QString* vendor = new QString (mVendor->currentText());
@@ -473,6 +742,140 @@ void XTablet::addTablet (void) {
 			IDEraser  = count;
 			gotEraser = true;
 		}
+		}
+		// ...
+		// save the pen user configuration
+		// ---
+		if (pen) {
+			// options...
+			if (mToolDataPen["Option"]) {
+				QStringList options;
+				QStringList rawoptions;
+				QStringList allopt = QStringList::split(",",
+					mToolDataPen["Option"]
+				);
+				QStringList::Iterator in;
+				for (in = allopt.begin(); in != allopt.end(); ++in) {
+				if (mToolDataPen[*in]) {
+					QString line;
+					line.sprintf ("\"%s\" \"%s\"",
+						QString(*in).ascii(),mToolDataPen[*in]
+					);
+					rawoptions.append (line);
+				} else {
+					options.append (*in);
+				}
+				}
+				if (! options.isEmpty()) {
+					QString* opts = new QString (options.join(","));
+					newPen -> setPair ("Option",*opts);
+				} else {
+					newPen -> setPair ("Option","");
+				}
+				if (! rawoptions.isEmpty()) {
+					QString* opts = new QString (rawoptions.join(","));
+					newPen -> setPair ("RawOption",*opts);
+				} else {
+					newPen -> setPair ("RawOption","");
+				}
+			}
+			// mode...
+			if (mToolDataPen["Mode"]) {
+				newPen -> setPair ("Mode",mToolDataPen["Mode"]);
+			}
+		}
+		// ...
+		// save the eraser user configuration
+		// ---
+		if (eraser) {
+			// options...
+			if (mToolDataEraser["Option"]) {
+				QStringList options;
+				QStringList rawoptions;
+				QStringList allopt = QStringList::split(",",
+					mToolDataEraser["Option"]
+				);
+				QStringList::Iterator in;
+				for (in = allopt.begin(); in != allopt.end(); ++in) {
+				if (mToolDataEraser[*in]) { 
+					QString line;
+					line.sprintf ("\"%s\" \"%s\"",
+						QString(*in).ascii(),mToolDataEraser[*in]
+					);
+					rawoptions.append (line);
+				} else { 
+					options.append (*in); 
+				}
+				} 
+				if (! options.isEmpty()) { 
+					QString* opts = new QString (options.join(",")); 
+					newEraser -> setPair ("Option",*opts); 
+				} else {
+					newEraser -> setPair ("Option","");
+				}
+				if (! rawoptions.isEmpty()) {
+					QString* opts = new QString (rawoptions.join(","));
+					newEraser -> setPair ("RawOption",*opts);
+				} else {
+					newEraser -> setPair ("RawOption","");
+				}
+			}
+			// mode...
+			if (mToolDataEraser["Mode"]) { 
+				newEraser -> setPair ("Mode",mToolDataEraser["Mode"]);
+			}
+		}
+		// ...
+		// save the main tablet user configuration
+		// this includes the port the options and
+		// the tablet mode
+		// ---
+		// options...
+		QStringList options;
+		QStringList rawoptions;
+		for (unsigned int i=0;i<mTabletOptions->count();i++) {
+			QListBoxItem* item = mTabletOptions->item (i);
+			if (item -> isSelected()) {
+			if (mTabletDataRawOptions[item->text()]) {
+				QString line;
+				line.sprintf ("\"%s\" \"%s\"",
+					item->text().ascii(),mTabletDataRawOptions[item->text()]
+				);
+				rawoptions.append (line);
+			} else {
+				options.append (item->text());
+			}
+			}
+		}
+		if (! options.isEmpty()) {
+			QString* opts = new QString (options.join(","));
+			workingTablet.setPair ("Option",*opts);
+		} else {
+			workingTablet.setPair ("Option","");
+		}
+		if (! rawoptions.isEmpty()) {
+			QString* opts = new QString (rawoptions.join(","));
+			workingTablet.setPair ("RawOption",*opts);
+		} else {
+			workingTablet.setPair ("RawOption","");
+		}
+		// port...
+		switch (mPort->currentItem()) {
+			case 0:
+				workingTablet.setPair ("Device","/dev/input/event0");
+			break;
+			case 1:
+				workingTablet.setPair ("Device","/dev/ttyS0");
+			break;
+			case 2:
+				workingTablet.setPair ("Device","/dev/ttyS1");
+			break;
+		}
+		// mode...
+		if (mModeRelative -> isOn()) {
+			workingTablet.setPair ("Mode","Relative");
+		} else {
+			workingTablet.setPair ("Mode","Absolute");
 		}
 	}
 }
@@ -504,3 +907,507 @@ QDict<char>* XTablet::searchTool (
 	}
 	return (spec);
 }
+
+//=====================================
+// XTablet slotTopOk...
+//-------------------------------------
+void XTablet::slotTopOk (void) {
+	// log (L_INFO,"XTablet::slotTopOk() called\n");
+	// ...
+	// this function is called if the configuration dialog
+	// for either the pen or the eraser is finished with
+	// the [OK] button
+	// ---
+	QDict<char> data;
+	if (mToolModeRelative -> isChecked()) {
+		data.insert ("Mode","Relative");
+	}
+	if (mToolModeAbsolute -> isChecked()) {
+		data.insert ("Mode","Absolute");
+	}
+	QStringList options;
+	for (unsigned int i=0;i<mToolTabletOptions->count();i++) {
+	if (mToolTabletOptions->isSelected (i)) {
+		QListBoxItem* item = mToolTabletOptions->item (i);
+		options.append (item->text());
+	}
+	}
+	QString* allopts = new QString (options.join (","));
+	data.insert ("Option",*allopts);
+
+	// save raw options data...
+	if (! mToolTabletDataRawOptions.isEmpty()) {
+		QDictIterator<char> it (mToolTabletDataRawOptions);
+		for (; it.current(); ++it) {
+			QString* key = new QString (it.currentKey());
+			QString* val = new QString (it.current());
+			for (unsigned int i=0;i<mToolTabletOptions->count();i++) {
+				QListBoxItem* item = mToolTabletOptions->item (i);
+				if (*key == item->text()) {
+				if (item -> isSelected()) {
+					data.insert (*key,*val);
+				}
+				}
+			}
+		}
+	}
+
+	if ( mTopToolStatus == "eraser" ) {
+		mToolDataEraser = data;
+	}
+	if ( mTopToolStatus == "pen") {
+		mToolDataPen = data;
+	}
+}
+
+//=====================================
+// XTablet slotTopCancel...
+//-------------------------------------
+void XTablet::slotTopCancel (void) {
+	// log (L_INFO,"XTablet::slotTopCancel() called\n");
+	// ...
+	// this function is called if the configuration dialog
+	// for either the pen or the eraser is fisnished with
+	// the [Cancel] button
+	// ---
+}
+
+//=====================================
+// XTablet configure eraser...
+//-------------------------------------
+void XTablet::slotEraser (void) {
+	// log (L_INFO,"XTablet::slotEraser() called\n");
+	// ...
+	// this function is called if the property button
+	// for the eraser tool has been pressed to setup
+	// special eraser settings. Save eraser data to
+	// mToolDataEraser
+	// ---
+	mTop->show();
+	mTopToolStatus = "eraser";
+	mToolTabletOptions -> clearSelection();
+	mToolTabletDataRawOptions.clear();
+    mToolTabletDataRawOptions = mToolDataEraser;
+	setupTop ( mTopToolStatus );
+}
+
+//=====================================
+// XTablet configure pen...
+//-------------------------------------
+void XTablet::slotPen (void) {
+	// log (L_INFO,"XTablet::slotPen() called\n");
+	// ...
+	// this function is called if the property button
+	// for the pen tool has been pressed to setup
+	// special pen settings. Save pen data to
+	// mToolDataPen
+	// ---
+	mTop->show();
+	mTopToolStatus = "pen";
+	mToolTabletOptions -> clearSelection();
+	mToolTabletDataRawOptions.clear();
+	mToolTabletDataRawOptions = mToolDataPen;
+	setupTop ( mTopToolStatus );
+}
+
+//=====================================
+// XTablet setup tab dialog...
+//-------------------------------------
+void XTablet::setupTop (const QString& which) {
+	// log (L_INFO,"XTablet::slotPen() called\n");
+	// ...
+	// this function will read the mToolData... hash
+	// and setup the tool property dialog according to
+	// this information. If one of the data hashes is
+	// empty the information about the pen/eraser is
+	// retrieved from the predefined CDB data
+	// ---
+	// 1) get the CDB information record
+	// ---
+	QDict<char> data;
+	QDict<XFile>* mFilePtr = mIntro->getFiles();
+	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
+	XDb* pCDB = mFiles["cdb_TABLETS"]->cdbGetSpec(
+		mVendor->currentText(),mName->currentText()
+	);
+	if ( ! pCDB) {
+		return;
+	}
+	QDict<char>* spec = pCDB -> getHash();
+	XWrapPointer< QDict<char> > selectedTablet (spec);
+	// ...
+	// 2) check if tool hashes contain data
+	// ---
+	if ((which == "eraser") && (mToolDataEraser.isEmpty())) {
+		QDict<char>* eraser = searchTool (
+			mVendor->currentText(),selectedTablet["EraserLink"]
+		);
+		if (eraser) {
+			XWrapPointer< QDict<char> > selectedEraser (eraser);
+			if (selectedEraser["Mode"]) {
+				QString* mode = new QString (selectedEraser["Mode"]);
+				mToolDataEraser.replace ("Mode",*mode);
+			}
+			if (selectedEraser["Option"]) {
+				QString* opts = new QString (selectedEraser["Option"]);
+				mToolDataEraser.replace ("Option",*opts);
+			}
+			if (selectedEraser["RawOption"]) {
+				XStringList options;
+				options.setText (selectedEraser ["RawOption"]);
+				options.setSeperator (",");
+				QList<char> optraw = options.getList();
+				QListIterator<char> ir (optraw);
+				if (! optraw.isEmpty()) {
+					QStringList optlist;
+					if (selectedEraser["Option"]) {
+						optlist = QStringList::split(",",
+							selectedEraser["Option"]
+						);
+					}
+					for (; ir.current(); ++ir) {
+						options.setText (ir.current());
+						options.setSeperator (" ");
+						QList<char> keyval = options.getList();
+						QString* key = new QString (keyval.at(0));
+						QString* val = new QString (keyval.at(1));
+						*key = key->stripWhiteSpace();
+						*val = val->stripWhiteSpace();
+						*key = key->mid (1,key->length() - 2);
+						*val = val->mid (1,val->length() - 2);
+						// save raw options...
+						mToolTabletDataRawOptions.insert (*key,*val);
+						mToolDataEraser.insert (*key,*val);
+						// append base option to selectedEraser["Option"]...
+						optlist.append (*key);
+					}
+					QString* opts = new QString (optlist.join(","));
+					mToolDataEraser.replace ("Option",*opts);
+				}
+			}
+		}
+	}
+	if ((which == "pen") && (mToolDataPen.isEmpty())) {
+		QDict<char>* pen = searchTool (
+			mVendor->currentText(),selectedTablet["StylusLink"]
+		);
+		if (pen) {
+			XWrapPointer< QDict<char> > selectedPen (pen);
+			if (selectedPen["Mode"]) {
+				QString* mode = new QString (selectedPen["Mode"]);
+				mToolDataPen.replace ("Mode",*mode);
+			}
+			if (selectedPen["Option"]) {
+				QString* opts = new QString (selectedPen["Option"]);
+				mToolDataPen.replace ("Option",*opts);
+			}
+			if (selectedPen["RawOption"]) {
+				XStringList options;
+				options.setText (selectedPen ["RawOption"]);
+				options.setSeperator (",");
+				QList<char> optraw = options.getList();
+				QListIterator<char> ir (optraw);
+				if (! optraw.isEmpty()) {
+					QStringList optlist;
+					if (selectedPen["Option"]) {
+						optlist = QStringList::split(",",
+							selectedPen["Option"]
+						);
+					}
+					for (; ir.current(); ++ir) {
+						options.setText (ir.current());
+						options.setSeperator (" ");
+						QList<char> keyval = options.getList();
+						QString* key = new QString (keyval.at(0));
+						QString* val = new QString (keyval.at(1));
+						*key = key->stripWhiteSpace();
+						*val = val->stripWhiteSpace();
+						*key = key->mid (1,key->length() - 2);
+						*val = val->mid (1,val->length() - 2);
+						// save raw options...
+						mToolTabletDataRawOptions.insert (*key,*val);
+						mToolDataPen.insert (*key,*val);
+						// append base option to selectedPen["Option"]...
+						optlist.append (*key);
+					}
+					QString* opts = new QString (optlist.join(","));
+					mToolDataPen.replace ("Option",*opts);
+				}
+			}
+		}
+	}
+	// ...
+	// 3) decide for one tool hash and setup dialog data
+	// ---
+	if (which == "eraser") {
+		data = mToolDataEraser;
+	}
+	if (which == "pen") {
+		data = mToolDataPen;
+	}
+	if (data["Mode"]) {
+		if (QString(data["Mode"]) == "Absolute") {
+			mToolModeAbsolute -> setChecked ( true );
+		} else {
+			mToolModeRelative -> setChecked ( true );
+		}
+	}
+	if (data["Option"]) {
+		XStringList options;
+		options.setText (data["Option"]);
+		options.setSeperator (",");
+		QList<char> optl = options.getList();
+		QListIterator<char> it (optl);
+		if (! optl.isEmpty()) {
+		for (; it.current(); ++it) {
+			for (unsigned int id=0;id < mToolTabletOptions->count();id++) {
+				QListBoxItem* item = mToolTabletOptions -> item (id);
+				if (QString(it.current()) == item->text()) {
+					mToolTabletOptions -> setSelected ( id,true );
+					break;
+				}
+			}
+		}
+		}
+	}
+}
+
+//=====================================
+// XTablet pen checkbox handling...
+//-------------------------------------
+void XTablet::slotPenCheck (void) {
+	// log (L_INFO,"XTablet::slotPenCheck() called\n");
+	// ...
+	// called every time the pen checkbox is clicked
+	// enable/disable Property button according to
+	// selection status
+	// ---
+	if (mPen -> isChecked()) {
+		mPenConfigure -> setDisabled ( false );
+	} else {
+		mPenConfigure -> setDisabled ( true );
+	}
+}
+
+//=====================================
+// XTablet eraser checkbox handling...
+//-------------------------------------
+void XTablet::slotEraserCheck (void) {
+	// log (L_INFO,"XTablet::slotEraserCheck() called\n");
+	// ...
+	// called every time the pen checkbox is clicked
+	// enable/disable Property button according to
+	// selection status
+	// ---
+	if (mEraser -> isChecked()) {
+		mEraserConfigure -> setDisabled ( false );
+	} else {
+		mEraserConfigure -> setDisabled ( true );
+	}
+}
+
+//=====================================
+// XTablet handle options...
+//-------------------------------------
+void XTablet::slotOption (QListBoxItem* item) {
+	// log (L_INFO,"XTablet::slotOption() called\n");
+	// ...
+	// this function is called if the option listbox
+	// was selected. It checks the type of the option
+	// selected and opens a dialog if the option isn't
+	// of type <bool>
+	// ---
+	if (! item -> isSelected()) {
+		return;
+	}
+	int index = mTabletOptions->currentItem();
+	if (mKeyOptions[item->text()]) {
+		if (! setTypedMessage (
+			"optionfor",XBox::Information,
+			item->text(),mKeyOptions[item->text()],
+			mTabletDataRawOptions[item->text()],
+			XBOX_OPT_STRING
+		)) {
+			mTabletOptions -> setSelected ( index,false );
+		} else {
+			QString* input = new QString (mTypeString);
+			mTabletDataRawOptions.replace (item->text(),*input);
+		}
+	} else
+	if (mRawOptions[item->text()]) {
+		if (! setTypedMessage (
+			"optionfor",XBox::Information,
+			item->text(),mKeyOptions[item->text()],
+			mTabletDataRawOptions[item->text()],
+			XBOX_OPT_ANY
+		)) {
+			mTabletOptions -> setSelected ( index,false );
+		} else {
+			QString* input = new QString (mTypeString);
+			mTabletDataRawOptions.replace (item->text(),*input);
+		}
+	} else {
+		return;
+	}
+}
+
+//=====================================
+// XTablet handle tool options...
+//-------------------------------------
+void XTablet::slotToolOption (QListBoxItem* item) {
+	// log (L_INFO,"XTablet::slotToolOption() called\n");
+	// ...
+	// this function is called if the tool option listbox
+	// was selected. It checks the type of the option
+	// selected and opens a dialog if the option isn't
+	// of type <bool>
+	// ---
+	if (! item -> isSelected()) {
+		return;
+	}
+	int index = mToolTabletOptions->currentItem();
+	if (mKeyOptions[item->text()]) {
+		if (! setTypedMessage (
+			"optionfor",XBox::Information,
+			item->text(),mKeyOptions[item->text()],
+			mToolTabletDataRawOptions[item->text()],
+			XBOX_OPT_STRING
+		)) {
+			mToolTabletOptions -> setSelected ( index,false );
+		} else {
+			QString* input = new QString (mTypeString);
+			mToolTabletDataRawOptions.replace (item->text(),*input);
+		}
+	} else
+	if (mRawOptions[item->text()]) {
+		if (! setTypedMessage (
+			"optionfor",XBox::Information,
+			item->text(),mKeyOptions[item->text()],
+			mToolTabletDataRawOptions[item->text()],
+			XBOX_OPT_ANY
+		)) {
+			mToolTabletOptions -> setSelected ( index,false );
+		} else {
+			QString* input = new QString (mTypeString);
+			mToolTabletDataRawOptions.replace (item->text(),*input);
+		}
+	} else {
+		return;
+	}
+}
+
+//=====================================
+// XTablet get options per driver...
+//-------------------------------------
+QStringList XTablet::getOptions ( const QString& driver) {
+	// log (L_INFO,"XTablet::getOptions() called\n");
+	// ...
+	// retrieve options for the given driver name
+	// save the string%... options to mKeyOptions and the
+	// any%... options to mRawOptions with empty (null) value
+	// ---
+	mKeyOptions.clear();
+	mRawOptions.clear();
+
+	QDict<XFile>* mFilePtr = mIntro->getFiles();
+	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
+	XApiData tabletOptions = mFiles["ext_TMODULES"]->getAPI();
+	QString options ( tabletOptions[driver] );
+	QStringList* result = new QStringList ();
+	XStringList cur;
+	if (! options.isEmpty()) {
+		cur.setText (options);
+		cur.setSeperator (" ");
+		QList<char> strlist = cur.getList();
+		QListIterator<char> it (strlist);
+		for (; it.current(); ++it) {
+			XStringList opt;
+			opt.setText (it.current());
+			opt.setSeperator (":");
+			QList<char> optlist = opt.getList();
+			opt.setText (optlist.at(1));
+			opt.setSeperator ("%");
+			QList<char> optvallist = opt.getList();
+			if (QString(optvallist.at(0)) == "bool") {
+				result -> append (optlist.at(0));
+			}
+			if (QString(optvallist.at(0)) == "string") {
+				result -> append (optlist.at(0));
+				mKeyOptions.insert (optlist.at(0),optvallist.at(1));
+			}
+			if (QString(optlist.at(1)) == "any") {
+				result -> append (optlist.at(0));
+				mRawOptions.insert (optlist.at(0),"null");
+			}
+		}
+	}
+	return ( *result );
+}
+
+//=====================================
+// XTablet set OK/Cancel typed box...
+//-------------------------------------
+int XTablet::setTypedMessage (
+	const QString& textKey,XBox::Icon icon,
+	const QString& option,const QString& value,
+	const QString& current,int type
+) {
+	XWrapPointer< QDict<char> > mText (mTextPtr);
+	QString text (mText[textKey]);
+	text.replace (
+		QRegExp("\%1"),option
+	);
+	XBox* mb = new XBox (
+		mText["hint"],text,
+		icon,XBox::Ok, XBox::Cancel,0,mFrame,
+		globalFrameWidth,type
+	);
+	switch (type) {
+	case XBOX_OPT_STRING:
+		if (! value.isEmpty()) {
+			QStringList items = QStringList::split( ",", value );
+			mb->setComboBoxText (items);
+			if (! current.isEmpty()) {
+				mb->setComboBoxCurrent (current);
+			}
+		}
+	break;
+	case XBOX_OPT_ANY:
+		if (! current.isEmpty()) {
+			mb->setLineEditText (current);
+		}
+	break;
+	}
+	mb->setFixedWidth (400);
+	mb->setButtonText (
+		XBox::Ok,mText["Ok"]
+	);
+	mb->setButtonText (
+		XBox::Cancel, mText["Cancel"]
+	);
+	int choose = mb->exec();
+	switch (choose) {
+	case XBox::Cancel: {
+		delete (mb); return (0);
+	}
+	}
+	switch (type) {
+	case XBOX_OPT_ANY:
+		mTypeString = mb->getLineEditText();
+	break;
+	case XBOX_OPT_STRING:
+		mTypeString = mb->getComboBoxText();
+	break;
+	case XBOX_OPT_INT:
+		mTypeValue = mb->getSpinBoxCount();
+	break;
+	}
+	if (mTop->isVisible()) {
+		mTop -> enterEvent ( 0 );
+	} else {
+		mFrame -> enterEvent ( 0 );
+	}
+	delete (mb);
+	return (1);
+}
+

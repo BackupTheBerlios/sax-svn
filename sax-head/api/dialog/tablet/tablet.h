@@ -36,16 +36,35 @@ class XTablet : public XTemplate {
 	Q_OBJECT
 
     private:
-    QFrame*       mDialog;
-	QListBox*     mVendor;
-	QListBox*     mName;
-	QCheckBox*    mPen;
-	QCheckBox*    mEraser;
-	QPushButton*  mRemove;
+    QFrame*        mDialog;
+	XTabDialog*    mTop;
+	QListBox*      mVendor;
+	QListBox*      mName;
+	QCheckBox*     mPen;
+	QCheckBox*     mEraser;
+	QPushButton*   mRemove;
+	QPushButton*   mPenConfigure;
+	QPushButton*   mEraserConfigure;
+	QComboBox*     mPort;
+	QRadioButton*  mModeRelative;
+	QRadioButton*  mModeAbsolute;
+	QListBox*      mTabletOptions;
+	QListBox*      mToolTabletOptions;
+	QRadioButton*  mToolModeRelative;
+	QRadioButton*  mToolModeAbsolute;
+	QDict<char>    mToolDataPen;
+	QDict<char>    mToolDataEraser;
+	QDict<char>    mKeyOptions;
+	QDict<char>    mRawOptions;
+	QDict<char>    mTabletDataRawOptions;
+	QDict<char>    mToolTabletDataRawOptions;
+	QString        mTypeString;
+	int            mTypeValue;
 
 	private:
 	XIntro*       mIntro;
 	QDict<XFile>* mFilePtr;
+	QString       mTopToolStatus;
 	bool          gotTablet;
 	bool          gotPen;
 	bool          gotEraser;
@@ -65,7 +84,13 @@ class XTablet : public XTemplate {
     void pageCalled   ( int );
 	void initPage     ( void );
 	void addTablet    ( void );
+	void setupTop     ( const QString& );
+	QStringList getOptions ( const QString &);
 	QDict<char>* searchTool ( const QString&,const QString& );
+	int setTypedMessage (
+		const QString&,XBox::Icon = XBox::Warning,
+		const QString& = 0,const QString& = 0,const QString& = 0,int=1
+	);
 
     protected:
     bool slotRun    ( int );
@@ -75,6 +100,14 @@ class XTablet : public XTemplate {
 	void slotVendor ( QListBoxItem* );
 	void slotName   ( QListBoxItem* );
 	void slotRemove ( void );
+	void slotPen    ( void );
+	void slotEraser ( void );
+	void slotTopCancel   ( void );
+	void slotTopOk       ( void );
+	void slotPenCheck    ( void );
+	void slotEraserCheck ( void );
+	void slotOption      ( QListBoxItem* );
+	void slotToolOption  ( QListBoxItem* );
 };
 
 #endif

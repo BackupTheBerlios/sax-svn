@@ -195,6 +195,7 @@ STATUS        : Status: Up-to-date
 #define PDEVICE         DATADIR "PointerDevice"
 #define KLANGUAGE       DATADIR "KbdLanguage"
 #define CMODULES        DATADIR "CardModules"
+#define TMODULES        DATADIR "TabletModules"
 #define C3DMODULES      DATADIR "Card3DModules"
 #define MCOLORS         DATADIR "MonitorColors"
 #define MVISUAL         DATADIR "MonitorVisual"

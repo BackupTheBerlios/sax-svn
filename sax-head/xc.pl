@@ -871,7 +871,7 @@ sub usage {
 #--------------------------------
 # if you need help :-)
 #
-	print "Linux SaX Version 4.7 level (xc) (2002-02-19)\n";
+	print "Linux SaX Version 4.8 level (xc) (2002-02-19)\n";
 	print "(C) Copyright 2002 - SuSE GmbH\n";
 	print "\n";
 
