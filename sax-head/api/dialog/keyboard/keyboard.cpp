@@ -216,6 +216,9 @@ void XKeyboard::dialogCreate (void) {
 	// ...
 	// AutoRepeat setting
 	// ---
+	// X11 no longer support this to be set with the config file
+	// ...
+	#if 0
 	QVBox* layer2 = new QVBox ( mTop );
 	layer2 -> setMargin  (20);
 	QButtonGroup* kbdRate = new QButtonGroup (
@@ -280,11 +283,12 @@ void XKeyboard::dialogCreate (void) {
 		mText["kbdtest"]
 	);
 	new QLineEdit ( layer2 );
+	#endif
 
 	// Add widgets to tab dialog
 	// -------------------------
 	mTop -> addTab ( layer1,mText["kbdmapping"] );
-	mTop -> addTab ( layer2,mText["kbdrepeat"] );
+	//mTop -> addTab ( layer2,mText["kbdrepeat"] );
 
 	// set OK/Cancel buttons...
 	// ------------------------
