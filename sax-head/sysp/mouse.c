@@ -121,6 +121,15 @@ void ScanMouse::Scan (void) {
 		symlink (lp->device,link);
 		strcpy  (lp->device,link);
 		#endif
+		if (
+			(strstr(lp->name,"Tablet") != NULL) ||
+			(strstr(lp->name,"tablet") != NULL) ||
+			(strstr(lp->name,"Intuos") != NULL)
+		) {
+			// TODO...
+			// Tablet detected shouldn't be handled as mouse
+			continue;
+		}
 		Push(*lp);
 	}
 	// ...

@@ -34,16 +34,10 @@ MouseData* MouseGetData(void) {
 	first_dev = hd;
 
 	for(; hd; hd = hd->next) {
-		if (
-			(strstr(hd->model,"Tablet") != NULL) ||
-			(strstr(hd->model,"tablet") != NULL)
-		) {
-			// TODO... found a tablet, should not be handled as mouse
-			continue;
-		}
 		// create new element and defaults...
 		// -----------------------------------
 		data = (MouseData*)malloc(sizeof(MouseData));
+		strcpy(data->name,hd->model);
 		strcpy(data->device,"/dev/mouse");
 		strcpy(data->protocol,"Auto");
 		data->buttons = -1;
