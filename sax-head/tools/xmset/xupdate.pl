@@ -77,13 +77,31 @@ sub getPointerLayout {
 # get InputDevice section entries
 #
 	my @result = ();
+	my @list;
+	foreach my $line (@_) {
+		if ($line =~ /.*Device.*\"(.*)\"/) {
+			push (@list,$1);
+		}
+		if ($line =~ /.*Driver.*\"(.*)\"/) {
+			push (@list,$1);
+		}
+	}
+	my %entity;
 	foreach my $line (@_) {
 		if ($line =~ /.*Mouse\[(.*)\].*/) {
-			my $pointer = "SendCoreEvents";
-			if ($1 eq 1) {
-				$pointer = "CorePointer";
+			my $count  = $1;
+			my $driver = $list[$count - 1];
+			my $device = $list[$count];
+			if ($count eq 1) {
+				my $pointer = "CorePointer";
+				push (@result,"InputDevice  \"Mouse[$count]\" \"$pointer\"");
+			} else {
+			if (! defined $entity{$driver}{$device}) {
+				my $pointer = "SendCoreEvents";
+				push (@result,"InputDevice  \"Mouse[$count]\" \"$pointer\"");
 			}
-			push (@result,"InputDevice  \"Mouse[$1]\" \"$pointer\"");
+			}
+			$entity{$driver}{$device} = $count;
 		}
 	}
 	return @result;
