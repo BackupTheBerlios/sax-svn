@@ -307,10 +307,10 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xupdate.pl
 rm -f $RPM_BUILD_ROOT/usr/X11R6/lib/sax/api/data/.testgtx
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/5.8.0/i586-linux-thread-multi/perllocal.pod
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm,v
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*/i586-linux-thread-multi/perllocal.pod
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/i586-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/i586-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm
+rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/i586-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm,v
 
 %post
 %{fillup_and_insserv -npY sax}
@@ -324,14 +324,14 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term
 %files
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
-%dir /usr/lib/perl5/site_perl/*/*/Term
-%dir /usr/lib/perl5/site_perl/*/*/Term/ReadLine
-%dir /usr/lib/perl5/site_perl/*/*/Term/ReadLine/Gnu
-%dir /usr/lib/perl5/site_perl/*/*/auto
-%dir /usr/lib/perl5/site_perl/*/*/auto/Term
-%dir /usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine
-%dir /usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu
-%dir /usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu/XS
+%dir /usr/lib/perl5/*_perl/*/*/Term
+%dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine
+%dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu
+%dir /usr/lib/perl5/*_perl/*/*/auto
+%dir /usr/lib/perl5/*_perl/*/*/auto/Term
+%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine
+%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu
+%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/api
 %dir /usr/X11R6/%{_lib}/sax/api/lang
@@ -402,12 +402,12 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/site_perl/5.8.0/i586-linux-thread-multi/Term
 /usr/share/locale/sv/LC_MESSAGES/sax.mo
 /usr/share/locale/ja/LC_MESSAGES/sax.mo
 /usr/share/locale/bg/LC_MESSAGES/sax.mo
-/usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
-/usr/lib/perl5/site_perl/*/*/Term/ReadLine/Gnu.pm
-/usr/lib/perl5/site_perl/*/*/Term/ReadLine/Gnu/XS.pm
-/usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
-/usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
-/usr/lib/perl5/site_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
+/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu.pm
+/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu/XS.pm
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
+/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %doc %{_defaultdocdir}/sax2/LICENCE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.en.ps

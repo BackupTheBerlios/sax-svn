@@ -48,6 +48,7 @@ XFINEBINVZ   = ${usr_prefix}/${lib_prefix}/xfine
 XFINEPIXMAPS = ${usr_prefix}/${lib_prefix}/xfine/pixmaps
 
 ARCH         = `arch`
+PVERSION     = `rpm -q perl --queryformat '%{VERSION}' | tr -d .`
 
 all:
 	# /.../
@@ -85,12 +86,18 @@ install:
 	# install perl stuff...
 	# ---------------------
 	for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
+		if [ "${PVERSION}" -ge 581 ];then \
+		( \
+        cd ./perl/$$i && make DESTDIR=${buildroot} install_vendor \
+        ) ;\
+		else \
 		( \
 		cd ./perl/$$i && make PREFIX=${buildroot}/usr \
 		BUILDROOTPREFIX=${buildroot} \
 		INSTALLMAN1DIR=${buildroot}/${mandir}/man1 \
 		INSTALLMAN3DIR=${buildroot}/${mandir}/man3 install \
 		) ;\
+		fi \
 	done
 
 	# install NLS support...
