@@ -43,7 +43,7 @@ int main (int argc,char*argv[]) {
 	int status = 1;
 	int item;
 	int itemCount = 1;
-	hd_hw_item_t scan_item[3];
+	hd_hw_item_t scan_item[4];
 	scan_item[0] = hw_display;
 
 	while (1) {
@@ -91,7 +91,8 @@ int main (int argc,char*argv[]) {
 	if (HWall == 1) {
 		scan_item[1] = hw_monitor;
 		scan_item[2] = hw_keyboard;
-		itemCount = 3;
+		scan_item[3] = hw_mouse;
+		itemCount = 4;
 	}
 	if (! accessAllowed()) {
 		fprintf (stderr,"hwupdate: only root can do this\n");
