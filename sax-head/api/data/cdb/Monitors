@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Mar  8 10:14:26 2004
+# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 10 17:20:54 2004
 #
 # Template for monitor data
 # --------------------------
@@ -7914,6 +7914,28 @@ CTX:PV600  {
  Option=DPMS
  Hsync=24-50
  Vsync=56-75
+}
+
+#==============================================
+# PV722 (Digital)
+#----------------------------------------------
+CTX:PV722 (DIGITAL)  {
+ DDC=CTX2008
+ Option=DPMS
+ Hsync=30-66
+ Resolution=1280x1024
+ Vsync=59-61
+}
+
+#==============================================
+# PV722 (VGA)
+#----------------------------------------------
+CTX:PV722 (VGA)  {
+ DDC=CTX2007
+ Option=DPMS
+ Hsync=30-80
+ Resolution=1280x1024
+ Vsync=59-75
 }
 
 #==============================================
