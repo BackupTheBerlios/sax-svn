@@ -477,11 +477,10 @@ sub doYCP {
 	@list = sort keys(%result);
 	my $lastid = pop(@list);
 
-	@list = sort keys(%{$result{$lastid}});
-	my $lastit = pop(@list);
-
 	print $channel "\$\[\n";
 	foreach $id (sort keys %result) {
+		my @list = sort keys(%{$result{$id}});
+		my $lastit = pop(@list);
 		print $channel "  $id : \$\[\n";
 		print $channel "   \"$item\" : \$\[\n";
 		foreach $key (sort keys %{$result{$id}}) {
