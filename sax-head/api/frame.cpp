@@ -208,6 +208,8 @@ void XFrame::setInit (void) {
 	mInit.insert("std_MVISUAL"		, MVISUAL);
 	mInit.insert("std_C3DMODULES"   , C3DMODULES);
 	mInit.insert("std_MRESOLUTION"  , MRESOLUTION);
+	mInit.insert("std_MTRAVERSAL"   , MTRAVERSAL);
+	mInit.insert("std_MRATIO"       , MRATIO);
 	
 	// QDicts...
 	// -----------

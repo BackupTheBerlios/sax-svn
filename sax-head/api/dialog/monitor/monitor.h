@@ -52,6 +52,8 @@ class XMonitor : public XTemplate {
 	QListBox*     mVendor;
 	QListBox*     mName;
 	QPushButton*  mDisk;
+	QComboBox*    mTraversal;
+	QComboBox*    mRatio;
 	QSpinBox*     mHSpinMin;
 	QSpinBox*     mHSpinMax;
 	QSpinBox*     mVSpinMin;
@@ -79,6 +81,9 @@ class XMonitor : public XTemplate {
 	void initPage     ( void );
 	void setupTop     ( void );
 	bool validatePage ( void );
+	QPoint translateTraversal ( double,int,int );
+	double getTraversal  ( int,int );
+	QPoint getRatio   ( int,int );
 
     protected:
     bool slotRun   ( int );
@@ -101,7 +106,8 @@ class XMonitor : public XTemplate {
 	void slotAlgorithm ( int );
 	void slotXSize     ( int );
 	void slotYSize     ( int );
-	
+	void slotTraversal ( int );
+	void slotRatio     ( int );
 };
 
 

@@ -135,6 +135,7 @@ void XMonitor::initPage (void) {
 	// with the data available for selections and other stuff
 	// like that
 	// ---
+	XWrapPointer< QDict<char> > mText (mTextPtr);
 	QDict<XFile>* mFilePtr = mIntro->getFiles();
 	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
 
@@ -151,6 +152,23 @@ void XMonitor::initPage (void) {
 	mMode->insertItem ("CheckDesktopGeometry");
 	mMode->insertItem ("UseFrameBufferTiming");
 	mMode->insertItem ("XServerPool");
+
+	// include traversal and ratio settings...
+	// ---------------------------------------
+	XApiData traversal = mFiles["std_MTRAVERSAL"]->getAPI();
+	XApiData ratio = mFiles["std_MRATIO"]->getAPI();
+	QList<char>* traversalList = traversal.getList();
+	QList<char>* ratioList = ratio.getList();
+	QListIterator<char> io (*traversalList);
+	for (; io.current(); ++io) {
+		QString info;
+		QTextOStream (&info) << io.current() << " " << mText["zoll"];
+		mTraversal -> insertItem (info);
+	}
+	QListIterator<char> ir (*ratioList);
+	for (; ir.current(); ++ir) {
+		mRatio -> insertItem (ir.current());
+	}
 }
 
 //=====================================
@@ -267,6 +285,7 @@ void XMonitor::setupTop ( void ) {
 	// get the mFiles pointer wrapper from the Intro
 	// object which has read all the data files
 	// ---
+	XWrapPointer< QDict<char> > mText (mTextPtr);
 	QDict<XFile>* mFilePtr = mIntro->getFiles();
 	XWrapFile < QDict<XFile> > mFiles (mFilePtr);
 
@@ -362,6 +381,15 @@ void XMonitor::setupTop ( void ) {
 		if (size.count() == 2) {
 			QString x (size.at(0)); mXspin -> setValue (x.toInt());
 			QString y (size.at(1)); mYspin -> setValue (y.toInt());
+			// set traversal and aspect/ratio
+			double traversal = round (getTraversal (x.toInt(),y.toInt()));
+			QPoint ratio = getRatio (x.toInt(),y.toInt());
+			QString infoTraversal;
+			QString infoRatio;
+			QTextOStream (&infoTraversal) << traversal << " " << mText["zoll"];
+			mTraversal -> setCurrentText (infoTraversal);
+			QTextOStream (&infoRatio) << ratio.x() << "/" << ratio.y();
+			mRatio -> setCurrentText (infoRatio);
 		}
 	}
 	
@@ -972,4 +1000,88 @@ void XMonitor::slotTopCancel (void) {
 	// button in the setup toplevel window
 	// ---
 	mFrame -> enterEvent ( 0 );
+}
+
+//=====================================
+// XMonitor slotTraversal...
+//-------------------------------------
+void XMonitor::slotTraversal (int) {
+	// log (L_INFO,"XMonitor::slotTraversal() called\n");
+	// ...
+	// this function is called if you select a traversal 
+	// from the combobox located in the properties dialog
+	// ---
+	QString selected = mTraversal -> currentText();
+	QStringList selectList = QStringList::split ( " ", selected );
+	double traversal = selectList.first().toDouble();
+	selected = mRatio -> currentText();
+	selectList = QStringList::split ( "/", selected );
+	int aspect = selectList.first().toInt();
+	int ratio  = selectList.last().toInt();
+	QPoint n = translateTraversal (traversal,aspect,ratio);
+	mXspin -> setValue (n.x());
+	mYspin -> setValue (n.y());
+}
+
+//=====================================
+// XMonitor slotRatio...
+//-------------------------------------
+void XMonitor::slotRatio (int) {
+	// log (L_INFO,"XMonitor::slotRatio() called\n");
+	// ...
+	// this function is called if you select an aspect/ ratio 
+	// from the combobox located in the properties dialog
+	// ---
+	slotTraversal (0);
+}
+
+//=====================================
+// XMonitor translateTraversal...
+//-------------------------------------
+QPoint XMonitor::translateTraversal (double traversal,int aspect, int ratio) {
+	// log (L_INFO,"XMonitor::translateTraversal() called\n");
+	// ...
+	// calculate x and y sizes in mm refering to traversal and
+	// aspect / ratio
+	// ---
+	QPoint result;
+	traversal = traversal * 25.4;
+	double ar = (double)aspect / (double)ratio;
+	double y = sqrt ( (traversal * traversal) / (ar * ar + 1.0) );
+	double x = ar * y;
+	result.setX ( (int)(round(x)) );
+	result.setY ( (int)(round(y)) );
+	return result;
+}
+
+//=====================================
+// XMonitor getTraversal...
+//-------------------------------------
+double XMonitor::getTraversal (int x,int y) {
+	// log (L_INFO,"XMonitor::getTraversal() called\n");
+	// ...
+	// calculate the length of the traversal refering to
+	// the length of x and y
+	// ---
+	return (sqrt (x*x + y*y) / 25.4);
+}
+
+//=====================================
+// XMonitor getRatio...
+//-------------------------------------
+QPoint XMonitor::getRatio (int x,int y) {
+	// log (L_INFO,"XMonitor::getRatio() called\n");
+	// ...
+	// calculate the aspect/ratio refering to
+	// the length of x and y
+	// ---
+	QPoint result;
+	result.setX (4);
+	result.setY (3);
+	double ar = round ((double)x/(double)y);
+	if ( ar > 1.0 ) {
+		result.setX (16);
+		result.setY (10);
+	}
+	return result;
 }

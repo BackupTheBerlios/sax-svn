@@ -101,8 +101,15 @@ void XMonitor::dialogCreate (void) {
 	mName    = new QListBox ( select );
 	layer6 -> setSpacing ( 10 );
 	QHBox* layer7      = new QHBox ( layer6 );
-	mDisk    = new QPushButton ( layer7 );
-	QLabel* mSep       = new QLabel ( layer7 );
+
+	QButtonGroup* aspect = new QButtonGroup (
+		1,Vertical,mText["aspect"],layer7
+	);
+	mTraversal = new QComboBox ( aspect );
+	mRatio     = new QComboBox ( aspect );
+
+	QLabel* mSep = new QLabel ( layer7 );
+	mDisk      = new QPushButton ( layer7 );
 	mDisk  -> setText    ( mText["disk"] );
 	layer7 -> setStretchFactor ( mDisk,0 );
 	layer7 -> setStretchFactor ( mSep,100 );
@@ -269,6 +276,14 @@ void XMonitor::dialogCreate (void) {
 	QObject::connect (
 		mDisk, SIGNAL (clicked (void)),
 		this, SLOT (slotDisk (void))
+	);
+	QObject::connect (
+		mRatio, SIGNAL (activated (int)),
+		this, SLOT (slotRatio (int))
+	);
+	QObject::connect (
+		mTraversal, SIGNAL (activated (int)),
+		this, SLOT (slotTraversal (int))
 	);
 	QObject::connect (
 		mHSpinMin, SIGNAL (valueChanged (int)),

@@ -257,13 +257,13 @@ sub AutoDetectResolution {
 		#=============================================================
 		# equal or more than 1600 x 1200 pixels, assume 19'z monitor
 		#-------------------------------------------------------------
-		$var{Monitor}{$i}{DisplaySize} = "360 270";
+		$var{Monitor}{$i}{DisplaySize} = "380 290";
 
 		} elsif ($p > 786432) {
 		#=============================================================
 		# more than 1024 x 768 pixels assume 17'z monitor
 		#-------------------------------------------------------------
-		$var{Monitor}{$i}{DisplaySize} = "320 240";
+		$var{Monitor}{$i}{DisplaySize} = "340 270";
 		}
 	}
 	}

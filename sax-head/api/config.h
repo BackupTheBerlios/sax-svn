@@ -208,6 +208,8 @@ STATUS        : Status: Up-to-date
 #define MCOLORS         DATADIR "MonitorColors"
 #define MVISUAL         DATADIR "MonitorVisual"
 #define MRESOLUTION     DATADIR "MonitorResolution"
+#define MTRAVERSAL      DATADIR "MonitorTraversal"
+#define MRATIO          DATADIR "MonitorRatio"
 #define MFBRESOLUTION   DATADIR "MonitorFBResolution"
 
 #define CONFDIR         "/var/cache/sax/files/"
