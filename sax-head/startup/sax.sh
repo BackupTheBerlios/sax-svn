@@ -349,7 +349,7 @@ fi
 #----------------------------------
 XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG $DIALOG"
 IN_OPT="$LOW_RES $BATCH_MODE $MODLIST $AUTOMODE $CHIP"
-IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $QUIET"
+IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $QUIET $IGNORE_PROFILE"
 
 #==================================
 # call init now...
