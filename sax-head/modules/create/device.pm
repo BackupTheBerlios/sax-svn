@@ -102,6 +102,7 @@ sub CreateDeviceSection {
 					@list = CheckSplit (@list);
 					$size = @list;
 					foreach $l (@list) {
+						$l =~ s/^ +//;
 						push(@result,PrintLine($n,$l));
 					}
 				}
