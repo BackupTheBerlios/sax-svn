@@ -69,6 +69,14 @@ msgstr "3D gyorsítás"
 msgid "Not configured"
 msgstr "Nincs beállítva"
 
+#. Maximum length: 60  characters
+msgid "<Enter new password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "<Change password...>"
+msgstr ""
+
 # /tmp/xapi:41
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -473,6 +481,11 @@ msgstr "<nobr><h3><u>3D/OpenGL beállítása...</u></h3></nobr>"
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX beállítása...</u></h3></nobr>"
 
+#. Maximum length: 40  characters
+#, fuzzy
+msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+msgstr "<nobr><h3><u>AccessX beállítása...</u></h3></nobr>"
+
 #. Maximum length: 60 characters
 msgid "Selected component:"
 msgstr "Kiválasztott komponensek:"
@@ -524,6 +537,19 @@ msgstr ""
 "meghajtó csak <b>16 bites</b> színmélységgel (65536 szín) működik "
 "megfelelően. A jelenlegi színbeállítások nem felelnek meg ennek. Kérem, "
 "ellenőrizze az alapértelmezett színmélység beállítását."
+
+#. RTF text: no limit
+msgid ""
+"<b>Password mismatch</b><hr>The first and the second version of the password "
+"don't match ! Please try again."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
+msgstr ""
 
 #. RTF text: no limit
 msgid ""
@@ -877,6 +903,18 @@ msgstr "Modeline"
 msgid "AccessX"
 msgstr "AccessX"
 
+#. Maximum length: 20  characters
+msgid "VNC"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "X-Server accessable via VNC protocol:"
+msgstr ""
+
+#. Maximum length: 25  characters
+msgid "Access Control"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
 msgstr "<b>Egérmutató...</b>"
@@ -1125,6 +1163,14 @@ msgstr "&Igen"
 msgid "&No"
 msgstr "&Nem"
 
+#. Maximum length: 20  characters
+msgid "<b>Yes</b>"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "<b>No</b>"
+msgstr ""
+
 # /tmp/xapi:21
 #. Maximum length: 50  characters
 msgid "File"
@@ -1271,6 +1317,10 @@ msgstr "Megszakítás"
 msgid "Configure XAccess: Mouse over keypad..."
 msgstr "AccessX -- az egérmozgató billentyűk beállítása..."
 
+#. Maximum length: 100  characters
+msgid "Configure VNC: Export display using the VNC protocol..."
+msgstr ""
+
 # /tmp/xapi:409
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1349,10 +1399,40 @@ msgstr "Tulajdonságok..."
 msgid "&Options"
 msgstr "&Beállítások"
 
+# /tmp/xapi:327
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "VNC Options"
+msgstr "&Beállítások"
+
+#. Maximum length: 60  characters
+msgid "Allow access to display using VNC protocol"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Enable password protection"
+msgstr ""
+
 # /tmp/xapi:111
 #. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Tulajdonságok"
+
+#. Maximum length: 40  characters
+msgid "Password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Verify password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Enable View-Only mode"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Allow multiple VNC connections"
+msgstr ""
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1476,6 +1556,11 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Jelenlegi AccessX beállítás állapota</b></big><hr>"
 
 #. Maximum length: 60  characters
+#, fuzzy
+msgid "<big><b>Current VNC status</b></big><hr>"
+msgstr "<big><b>Jelenlegi 3D/OpenGL beállítás állapota</b></big><hr>"
+
+#. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
 msgstr "<big><b>Jelenlegi 3D/OpenGL beállítás állapota</b></big><hr>"
 
@@ -1534,6 +1619,12 @@ msgid ""
 msgstr ""
 "<b>Virtuális egér:</b><hr>Állítsa be a numerikus billentyűket úgy, hogy "
 "segítségével irányíthassa az egérmutatót. "
+
+#. RTF text: no limit
+msgid ""
+"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
+"and all its programs remotely via a VNC viewer program"
+msgstr ""
 
 #. RTF text: no limit
 msgid ""

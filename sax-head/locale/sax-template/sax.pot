@@ -61,6 +61,14 @@ msgid "Not configured"
 msgstr ""
 
 #. Maximum length: 60  characters
+msgid "<Enter new password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "<Change password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
 msgid "Not available"
 msgstr ""
 
@@ -425,6 +433,10 @@ msgstr ""
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr ""
 
+#. Maximum length: 40  characters
+msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+msgstr ""
+
 #. Maximum length: 60 characters
 msgid "Selected component:"
 msgstr ""
@@ -462,6 +474,19 @@ msgid ""
 "require a color depth of <b>16 Bit (65536)</b> to work properly. The "
 "currently used color setup does not fulfill this requirement. Verify the "
 "current default color depth setup."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password mismatch</b><hr>The first and the second version of the password "
+"don't match ! Please try again."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
 msgstr ""
 
 #. RTF text: no limit
@@ -721,6 +746,18 @@ msgstr ""
 msgid "AccessX"
 msgstr ""
 
+#. Maximum length: 20  characters
+msgid "VNC"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "X-Server accessable via VNC protocol:"
+msgstr ""
+
+#. Maximum length: 25  characters
+msgid "Access Control"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
 msgstr ""
@@ -921,6 +958,14 @@ msgstr ""
 msgid "&No"
 msgstr ""
 
+#. Maximum length: 20  characters
+msgid "<b>Yes</b>"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "<b>No</b>"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "File"
 msgstr ""
@@ -1044,6 +1089,10 @@ msgid "Configure XAccess: Mouse over keypad..."
 msgstr ""
 
 #. Maximum length: 100  characters
+msgid "Configure VNC: Export display using the VNC protocol..."
+msgstr ""
+
+#. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
 msgstr ""
 
@@ -1113,8 +1162,36 @@ msgstr ""
 msgid "&Options"
 msgstr ""
 
+#. Maximum length: 20  characters
+msgid "VNC Options"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Allow access to display using VNC protocol"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Enable password protection"
+msgstr ""
+
 #. Maximum length: 40  characters
 msgid "&Properties..."
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Verify password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Enable View-Only mode"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Allow multiple VNC connections"
 msgstr ""
 
 #. Maximum length: 40  characters
@@ -1227,6 +1304,10 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr ""
 
 #. Maximum length: 60  characters
+msgid "<big><b>Current VNC status</b></big><hr>"
+msgstr ""
+
+#. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
 msgstr ""
 
@@ -1282,6 +1363,12 @@ msgstr ""
 msgid ""
 "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse with "
 "the keypad. The table below points to the current status of AccessX."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
+"and all its programs remotely via a VNC viewer program"
 msgstr ""
 
 #. RTF text: no limit

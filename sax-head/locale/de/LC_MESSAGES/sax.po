@@ -64,6 +64,14 @@ msgid "Not configured"
 msgstr "Nicht konfiguriert"
 
 #. Maximum length: 60  characters
+msgid "<Enter new password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "<Change password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
 msgid "Not available"
 msgstr "Nicht verfügbar"
 
@@ -428,6 +436,10 @@ msgstr "<nobr><h3><u>3D/OpenGL-Konfiguration...</u></h3></nobr>"
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX-Konfiguration...</u></h3></nobr>"
 
+#. Maximum length: 40  characters
+msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+msgstr "<nobr><h3><u>VNC Konfiguration...</u></h3></nobr>"
+
 #. Maximum length: 60 characters
 msgid "Selected component:"
 msgstr "Ausgewählte Komponente:"
@@ -479,6 +491,19 @@ msgstr ""
 "Treiber erfordern die Einstellung von <b>16 Bit (65536)</b> Farben um "
 "fehlerfrei funktionieren zu können. Bitte passen Sie die Farbtiefe "
 "dementstprechend an."
+
+#. RTF text: no limit
+msgid ""
+"<b>Password mismatch</b><hr>The first and the second version of the password "
+"don't match ! Please try again."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
+msgstr ""
 
 #. RTF text: no limit
 msgid ""
@@ -820,6 +845,18 @@ msgstr "Modeline"
 msgid "AccessX"
 msgstr "AccessX"
 
+#. Maximum length: 20  characters
+msgid "VNC"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "X-Server accessable via VNC protocol:"
+msgstr ""
+
+#. Maximum length: 25  characters
+msgid "Access Control"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
 msgstr "<b>Haupt-Mauszeiger...</b>"
@@ -1058,6 +1095,14 @@ msgstr "&Ja"
 msgid "&No"
 msgstr "&Nein"
 
+#. Maximum length: 20  characters
+msgid "<b>Yes</b>"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "<b>No</b>"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "File"
 msgstr "Datei"
@@ -1184,6 +1229,10 @@ msgid "Configure XAccess: Mouse over keypad..."
 msgstr "XAccess-Konfiguration: Maussteuerung über die Tastatur..."
 
 #. Maximum length: 100  characters
+msgid "Configure VNC: Export display using the VNC protocol..."
+msgstr ""
+
+#. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
 msgstr "Konfiguration der Eingabegeräte: Maus konfigurieren..."
 
@@ -1255,9 +1304,37 @@ msgstr "Eigenschaften..."
 msgid "&Options"
 msgstr "&Optionen..."
 
+#. Maximum length: 20  characters
+msgid "VNC Options"
+msgstr "VNC Optionen"
+
+#. Maximum length: 60  characters
+msgid "Allow access to display using VNC protocol"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Enable password protection"
+msgstr ""
+
 #. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "Eigen&schaften..."
+
+#. Maximum length: 40  characters
+msgid "Password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Verify password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Enable View-Only mode"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Allow multiple VNC connections"
+msgstr ""
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1369,6 +1446,10 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Aktueller AccessX-Status:</b></big><hr>"
 
 #. Maximum length: 60  characters
+msgid "<big><b>Current VNC status</b></big><hr>"
+msgstr "<big><b>Aktueller VNC Status:</b></big><hr>"
+
+#. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
 msgstr "<big><b>Aktueller 3D/OpenGL-Status:</b></big><hr>"
 
@@ -1428,6 +1509,12 @@ msgstr ""
 "<b>Virtuelle Maus:</b><hr>Dieser Konfigurationsdialog bietet Ihnen die "
 "Möglichkeit, die Steuerung der Maus über den numerischen Tastaturblock ein- "
 "bzw. auszuschalten."
+
+#. RTF text: no limit
+msgid ""
+"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
+"and all its programs remotely via a VNC viewer program"
+msgstr ""
 
 #. RTF text: no limit
 msgid ""

@@ -64,6 +64,14 @@ msgid "Not configured"
 msgstr "Ikke konfigurert"
 
 #. Maximum length: 60  characters
+msgid "<Enter new password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "<Change password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
 msgid "Not available"
 msgstr "Ikke tilgjengelig"
 
@@ -428,6 +436,11 @@ msgstr "<nobr><h3><u>3D/OpenGL-innstilling...</u></h3></nobr>"
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX-innstilling...</u></h3></nobr>"
 
+#. Maximum length: 40  characters
+#, fuzzy
+msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+msgstr "<nobr><h3><u>AccessX-innstilling...</u></h3></nobr>"
+
 #. Maximum length: 60 characters
 msgid "Selected component:"
 msgstr "Valgt komponent:"
@@ -479,6 +492,19 @@ msgstr ""
 "driverekrever en fargedybde på <b>16 bits (65536)</b> for å fungere riktig. "
 "Gjeldende fargeinnstillinger oppfyller ikke dette kravet. Kontroller "
 "innstillingen for standard fargedybde."
+
+#. RTF text: no limit
+msgid ""
+"<b>Password mismatch</b><hr>The first and the second version of the password "
+"don't match ! Please try again."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
+msgstr ""
 
 #. RTF text: no limit
 msgid ""
@@ -814,6 +840,18 @@ msgstr "Moduslinje"
 msgid "AccessX"
 msgstr "AccessX"
 
+#. Maximum length: 20  characters
+msgid "VNC"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "X-Server accessable via VNC protocol:"
+msgstr ""
+
+#. Maximum length: 25  characters
+msgid "Access Control"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
 msgstr "<b>Standardpeker...</b>"
@@ -1037,6 +1075,14 @@ msgstr "&Ja"
 msgid "&No"
 msgstr "&Nei"
 
+#. Maximum length: 20  characters
+msgid "<b>Yes</b>"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "<b>No</b>"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "File"
 msgstr "Fil"
@@ -1162,6 +1208,10 @@ msgid "Configure XAccess: Mouse over keypad..."
 msgstr "Konfigurer XAccess: Mus via talltastatur..."
 
 #. Maximum length: 100  characters
+msgid "Configure VNC: Export display using the VNC protocol..."
+msgstr ""
+
+#. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
 msgstr "Konfigurer innmatingsenheter: Konfigurasjon av mus..."
 
@@ -1233,9 +1283,38 @@ msgstr "Egenskaper..."
 msgid "&Options"
 msgstr "&Alternativer"
 
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "VNC Options"
+msgstr "&Alternativer"
+
+#. Maximum length: 60  characters
+msgid "Allow access to display using VNC protocol"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Enable password protection"
+msgstr ""
+
 #. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Egenskaper..."
+
+#. Maximum length: 40  characters
+msgid "Password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Verify password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Enable View-Only mode"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Allow multiple VNC connections"
+msgstr ""
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1347,6 +1426,11 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Konfigurert AccessX-status</b></big><hr>"
 
 #. Maximum length: 60  characters
+#, fuzzy
+msgid "<big><b>Current VNC status</b></big><hr>"
+msgstr "<big><b>Gjeldende 3D/OpenGL-status</b></big><hr>"
+
+#. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
 msgstr "<big><b>Gjeldende 3D/OpenGL-status</b></big><hr>"
 
@@ -1406,6 +1490,12 @@ msgstr ""
 "<b>Virtuell mus:</b><hr>Sett opp talltastaturet slik at musen kan "
 "kontrolleres medtalltastaturet. Tabellen nedenfor viser gjeldende status for "
 "AccessX."
+
+#. RTF text: no limit
+msgid ""
+"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
+"and all its programs remotely via a VNC viewer program"
+msgstr ""
 
 #. RTF text: no limit
 msgid ""

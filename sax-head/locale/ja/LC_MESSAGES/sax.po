@@ -59,6 +59,14 @@ msgid "Not configured"
 msgstr "まだ設定されていません"
 
 #. Maximum length: 60  characters
+msgid "<Enter new password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "<Change password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
 msgid "Not available"
 msgstr "使用不能"
 
@@ -423,6 +431,11 @@ msgstr "<nobr><h3><u>3D/OpenGL の設定 ...</u></h3></nobr>"
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX の設定 ...</u></h3></nobr>"
 
+#. Maximum length: 40  characters
+#, fuzzy
+msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+msgstr "<nobr><h3><u>AccessX の設定 ...</u></h3></nobr>"
+
 #. Maximum length: 60 characters
 msgid "Selected component:"
 msgstr "選択されたコンポーネント:"
@@ -476,6 +489,19 @@ msgstr ""
 "大部分の OpenGL ドライバでは正しく使えません。\n"
 "現在選択されている色数が 16 ビットではありません。\n"
 "色数の設定を確認して下さい。"
+
+#. RTF text: no limit
+msgid ""
+"<b>Password mismatch</b><hr>The first and the second version of the password "
+"don't match ! Please try again."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
+msgstr ""
 
 #. RTF text: no limit
 msgid ""
@@ -839,6 +865,18 @@ msgstr "モードライン"
 msgid "AccessX"
 msgstr "AccessX"
 
+#. Maximum length: 20  characters
+msgid "VNC"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "X-Server accessable via VNC protocol:"
+msgstr ""
+
+#. Maximum length: 25  characters
+msgid "Access Control"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
 msgstr "<b>主要なマウスポインタ ...</b>"
@@ -1077,6 +1115,14 @@ msgstr "はい (&Y)"
 msgid "&No"
 msgstr "いいえ (&N)"
 
+#. Maximum length: 20  characters
+msgid "<b>Yes</b>"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "<b>No</b>"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "File"
 msgstr "ファイル"
@@ -1202,6 +1248,10 @@ msgid "Configure XAccess: Mouse over keypad..."
 msgstr "XAccess の設定: キーパッドでマウスを動かす ..."
 
 #. Maximum length: 100  characters
+msgid "Configure VNC: Export display using the VNC protocol..."
+msgstr ""
+
+#. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
 msgstr "入力デバイスの設定: マウスの設定 ..."
 
@@ -1273,9 +1323,38 @@ msgstr "特性 ..."
 msgid "&Options"
 msgstr "オプション ... (&O)"
 
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "VNC Options"
+msgstr "オプション ... (&O)"
+
+#. Maximum length: 60  characters
+msgid "Allow access to display using VNC protocol"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Enable password protection"
+msgstr ""
+
 #. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "特性 ... (&P)"
+
+#. Maximum length: 40  characters
+msgid "Password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Verify password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Enable View-Only mode"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Allow multiple VNC connections"
+msgstr ""
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1387,6 +1466,11 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>現在設定されている AccessX の状況</b></big><hr>"
 
 #. Maximum length: 60  characters
+#, fuzzy
+msgid "<big><b>Current VNC status</b></big><hr>"
+msgstr "<big><b>現在設定されている 3D/OpenGL の状況</b></big><hr>"
+
+#. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
 msgstr "<big><b>現在設定されている 3D/OpenGL の状況</b></big><hr>"
 
@@ -1446,6 +1530,12 @@ msgstr ""
 "<b>バーチャルマウス:</b><hr>\n"
 "Number Pad を使用して、マウスをコントロールするための設定です。\n"
 "以下のテーブルに AccessX の現在の状態が表示されます。"
+
+#. RTF text: no limit
+msgid ""
+"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
+"and all its programs remotely via a VNC viewer program"
+msgstr ""
 
 #. RTF text: no limit
 msgid ""

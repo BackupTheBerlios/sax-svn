@@ -64,6 +64,14 @@ msgid "Not configured"
 msgstr "Δεν έχει ρυθμιστεί"
 
 #. Maximum length: 60  characters
+msgid "<Enter new password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "<Change password...>"
+msgstr ""
+
+#. Maximum length: 60  characters
 msgid "Not available"
 msgstr "Δεν είναι διαθέσιμο"
 
@@ -430,6 +438,11 @@ msgstr "<nobr><h3><u>Εγκατάσταση 3D/OpenGL...</u></h3></nobr>"
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>Εγκατάσταση AccessX....</u></h3></nobr>"
 
+#. Maximum length: 40  characters
+#, fuzzy
+msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+msgstr "<nobr><h3><u>Εγκατάσταση AccessX....</u></h3></nobr>"
+
 #. Maximum length: 60 characters
 msgid "Selected component:"
 msgstr "Επιλεγμένο συστατικό:"
@@ -484,6 +497,19 @@ msgstr ""
 "για να λειτουργήσουν κανονικά.Η τρέχουσα χρησιμοποιούμενη ρύθμιση χρώματος "
 "δεν πληροί αυτή την απαίτηση.Παρακαλώ επαληθεύστε την τρέχουσα ρύθμιση του "
 "προκαθορισμένου βάθους χρώματος. "
+
+#. RTF text: no limit
+msgid ""
+"<b>Password mismatch</b><hr>The first and the second version of the password "
+"don't match ! Please try again."
+msgstr ""
+
+#. RTF text: no limit
+msgid ""
+"<b>Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
+msgstr ""
 
 #. RTF text: no limit
 msgid ""
@@ -836,6 +862,18 @@ msgstr "Modeline"
 msgid "AccessX"
 msgstr "AccessX"
 
+#. Maximum length: 20  characters
+msgid "VNC"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "X-Server accessable via VNC protocol:"
+msgstr ""
+
+#. Maximum length: 25  characters
+msgid "Access Control"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
 msgstr "<b>Βασικός δείκτης...</b>"
@@ -1066,6 +1104,14 @@ msgstr "&Ναι"
 msgid "&No"
 msgstr "&Οχι"
 
+#. Maximum length: 20  characters
+msgid "<b>Yes</b>"
+msgstr ""
+
+#. Maximum length: 20  characters
+msgid "<b>No</b>"
+msgstr ""
+
 #. Maximum length: 50  characters
 msgid "File"
 msgstr "Αρχείο"
@@ -1193,6 +1239,10 @@ msgid "Configure XAccess: Mouse over keypad..."
 msgstr "Ρύθμιση XAccess: Ποντίκι πάνω σε αριθμητικό πληκτρολόγιο..."
 
 #. Maximum length: 100  characters
+msgid "Configure VNC: Export display using the VNC protocol..."
+msgstr ""
+
+#. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
 msgstr "Ρύθμιση συσκευών εισόδου: Ρύθμιση ποντικιού"
 
@@ -1265,9 +1315,38 @@ msgstr "Ιδιότητες..."
 msgid "&Options"
 msgstr "&Επιλογές"
 
+#. Maximum length: 20  characters
+#, fuzzy
+msgid "VNC Options"
+msgstr "&Επιλογές"
+
+#. Maximum length: 60  characters
+msgid "Allow access to display using VNC protocol"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "Enable password protection"
+msgstr ""
+
 #. Maximum length: 40  characters
 msgid "&Properties..."
 msgstr "&Ιδιότητες..."
+
+#. Maximum length: 40  characters
+msgid "Password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Verify password"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Enable View-Only mode"
+msgstr ""
+
+#. Maximum length: 40  characters
+msgid "Allow multiple VNC connections"
+msgstr ""
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1379,6 +1458,11 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Τρέχουσα κατάσταση ρυθμισμένου AccessX</b></big><hr>"
 
 #. Maximum length: 60  characters
+#, fuzzy
+msgid "<big><b>Current VNC status</b></big><hr>"
+msgstr "<big><b>Τρέχουσα κατάσταση 3Δ/OpenGL</b></big><hr>"
+
+#. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
 msgstr "<big><b>Τρέχουσα κατάσταση 3Δ/OpenGL</b></big><hr>"
 
@@ -1440,6 +1524,12 @@ msgstr ""
 "<b>Εικονικό ποντίκι:</b><hr>Ρύθμιση του αριθμητικού πληκτρολογίου για το "
 "χειρισμό του ποντικιού από τα πλήκτρα. Ο πίνακας παρακάτω δείχνει την "
 "τρέχουσα κατάσταση του AccessX."
+
+#. RTF text: no limit
+msgid ""
+"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
+"and all its programs remotely via a VNC viewer program"
+msgstr ""
 
 #. RTF text: no limit
 msgid ""

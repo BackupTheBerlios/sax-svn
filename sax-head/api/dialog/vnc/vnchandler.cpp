@@ -258,14 +258,11 @@ bool Xvnc::saveConfiguration (void) {
 	// add flag to server layout
 	//-------------------------------------
 	QString* vncid = new QString;
-	QString* kbd   = new QString;
-	kbd -> sprintf ("Keyboard[0],Keyboard[%d]",kbdID);
 	vncid -> sprintf ("%d %d",mouseID,kbdID);
 	XWrapPointer<XData> serverLayout (
 		mFiles["sys_LAYOUT"] -> getDevice(0)
 	);
 	serverLayout.setPair ("VNC",vncid->ascii());
-	serverLayout.setPair ("Keyboard",kbd->ascii());
 
 	//=====================================
 	// set "usevnc" option to yes/no
