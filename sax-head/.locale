@@ -135,6 +135,7 @@ sub UpdateBundle {
 	my @files;
 	my $new;
 	my $subject;
+	my $dest;
 	my $date;
 
 	# open dir and get files...
@@ -171,7 +172,8 @@ sub UpdateBundle {
 	qx (cd locale && ./.fuzzy >/tmp/fuzzy);
 	qx (cd locale && ./.lastchange > /tmp/lastchange);
 	$subject = "$var{Subject} $prefix : $date...";
-	qx(mail -s \"$subject\" $var{Address} -c ms -a /tmp/fuzzy < /tmp/lastchange);
+	$dest = $var{Address}.'@suse.de -c ms@suse.de';
+	qx(mail -s \"$subject\" $dest -a /tmp/fuzzy < /tmp/lastchange);
 }
 
 #----[ PutOnFtp ]------------#
