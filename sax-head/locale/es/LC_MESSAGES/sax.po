@@ -5,6 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.es\n"
+"Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2003-09-10 17:34+0200\n"
 "Last-Translator: Ines Pozo <ip@suse.de>\n"
 "Language-Team:  i18n@suse.de\n"
@@ -411,9 +412,10 @@ msgid ""
 "warning only but make sure your keyboard model is able to map all the keys "
 "needed for the selected layout."
 msgstr ""
-"<b>La distribución y modelo de teclado seleccionados actualmente parecen no armonizar</b><hr>Aunque éste "
-"es sólo un aviso, asegúrese de que el modelo de teclado puede asignar todas las teclas necesarias "
-"para la distribución de teclado seleccionada."
+"<b>La distribución y modelo de teclado seleccionados actualmente parecen no "
+"armonizar</b><hr>Aunque éste es sólo un aviso, asegúrese de que el modelo de "
+"teclado puede asignar todas las teclas necesarias para la distribución de "
+"teclado seleccionada."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
@@ -582,7 +584,8 @@ msgstr ""
 "teclado numérico está <b>desactivado</b>."
 
 #. RTF text: no limit
-msgid "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the system?"
+msgid ""
+"<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the system?"
 msgstr ""
 "<b>Eliminar tableta:</b><hr>¿Está seguro de que desea eliminar la tableta "
 "gráfica del sistema?"
@@ -892,14 +895,16 @@ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
 msgstr "<b>Cancelar diálogo:</b><hr>¿Desea cancelar este diálogo?"
 
 #. RTF text: no limit
-msgid "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+msgid ""
+"<b>Invalid setup:</b><hr>At least one graphics device must be configured."
 msgstr ""
 "<b>Configuración no válida:</b><hr> Ha de configurar al menos un dispositivo "
 "gráfico."
 
 #. RTF text: no limit
 msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-msgstr "<b>Configuración no válida:</b><hr> Ha de configurar al menos un monitor."
+msgstr ""
+"<b>Configuración no válida:</b><hr> Ha de configurar al menos un monitor."
 
 #. RTF text: no limit
 msgid ""
@@ -1346,7 +1351,8 @@ msgstr "<big><b>Dispositivos punteros configurados actualmente</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently configured multihead status</b></big><hr>"
-msgstr "<big><b>Estado del sistema multimonitor configurado actualmente</b></big><hr>"
+msgstr ""
+"<big><b>Estado del sistema multimonitor configurado actualmente</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
@@ -2310,7 +2316,9 @@ msgstr "Comportamiento de las teclas Alt/Win"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr "utiliza sistema interno de mayúsculas. La tecla Mayúsculas no cancela la tecla Bloq. Mayús"
+msgstr ""
+"utiliza sistema interno de mayúsculas. La tecla Mayúsculas no cancela la "
+"tecla Bloq. Mayús"
 
 #. RTF text: no limit
 msgid "R-Alt switches group while pressed"
@@ -2366,11 +2374,15 @@ msgstr "Bloq. Mayúsculas como control adicional"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr "utiliza sistema interno de mayúsculas. La tecla Mayúsculas cancela la tecla Bloq. Mayús"
+msgstr ""
+"utiliza sistema interno de mayúsculas. La tecla Mayúsculas cancela la tecla "
+"Bloq. Mayús"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr "actúa como Mayúsculas con bloqueo. La tecla Mayúsculas no cancela la tecla Bloq. Mayús"
+msgstr ""
+"actúa como Mayúsculas con bloqueo. La tecla Mayúsculas no cancela la tecla "
+"Bloq. Mayús"
 
 #. RTF text: no limit
 msgid "Left Win-key switches group while pressed"
@@ -2454,7 +2466,8 @@ msgstr "Utilizar piloto del teclado para mostrar un grupo alternativo"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr "actúa como Mayúsculas con bloqueo. La tecla Mayúsculas cancela Bloq Mayús"
+msgstr ""
+"actúa como Mayúsculas con bloqueo. La tecla Mayúsculas cancela Bloq Mayús"
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
@@ -2483,10 +2496,3 @@ msgstr "Pulse la tecla Menu para seleccionar el tercer nivel"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Las teclas Win actúan como Meta"
-
-#~ msgid "Enable AccessX"
-#~ msgstr "Activar AccessX"
-
-#~ msgid "add"
-#~ msgstr "añadir"
-
