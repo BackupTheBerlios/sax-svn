@@ -108,17 +108,11 @@ install:
 
 	# install files...
 	# -----------------
-	for i in `ls -1 ./profile`; do \
-		if [ ! -d ./profile/$$i ];then \
-		install -m 644 ./profile/$$i ${PROFILE} ;\
-		fi \
+	for i in `find ./profile -type f`; do \
+		echo $$i | grep -q .sh$			&& \
+		install -m 755 $$i ${PROFILE}	|| \
+		install -m 644 $$i ${PROFILE}	;\
 	done
-	install -m 644 ./profile/x86_64/*                       ${PROFILE}
-	install -m 644 ./profile/alpha/*                        ${PROFILE}
-	install -m 644 ./profile/ia64/*                         ${PROFILE}
-	install -m 644 ./profile/ppc/*                          ${PROFILE}
-	install -m 644 ./profile/unbound/*                      ${PROFILE}
-	install -m 755 ./profile/script/*                       ${PROFILE}
 	install -m 755 ./init.pl                                ${SAXBINVZ}
 	install -m 644 ./svnbuild                               ${SAXBINVZ}
 	install -m 755 ./xc.pl                                  ${SAXBINVZ}
