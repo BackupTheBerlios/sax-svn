@@ -10,11 +10,4 @@ xkbset_LDFLAGS = \
 
 xkbset_LDADD = -lXxf86misc
 
-xkbctrl:xkbctrl.c
-	gcc xkbctrl.c -o xkbctrl \
-	`./.static` -ldl -lcrypt -lm -lpthread
-
-xkbctrl.c:xkbctrl.pl
-	perlcc -c xkbctrl.pl
-
 INCLUDES = -I../whois

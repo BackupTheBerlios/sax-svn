@@ -689,7 +689,7 @@ void showMouseConfig (void) {
 		printf("  Driver     \"mouse\"\n");
 		printf("  Identifier \"Mouse[1]\"\n");
 		printf("  Option     \"Protocol\" \"Auto\"\n");
-		printf("  Option     \"Device\"   \"/dev/mouse\"\n");
+		printf("  Option     \"Device\"   \"/dev/input/mice\"\n");
 		printf("EndSection\n");
 	}
 	exit (0);

@@ -57,8 +57,6 @@ build: configure
 		${MAKE} -C ./$$i all ;\
 	fi \
 	done
-	${MAKE} -C ./xkbset xkbctrl
-	${MAKE} -C ./xmset xupdate
 
 #====================================
 # Clean sweep
@@ -75,10 +73,6 @@ clean:
 	done
 	${MAKE} -C ./plog -f Makefile.Linux clean
 	rm -f whois/whois
-	rm -f xkbset/xkbctrl
-	rm -f xkbset/xkbctrl.c
-	rm -f xmset/xupdate
-	rm -f xmset/xupdate.c
 	rm -f configure.in
 	rm -f Makefile.am
 	rm -f aclocal.m4

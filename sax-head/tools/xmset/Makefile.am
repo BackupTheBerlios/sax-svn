@@ -13,11 +13,4 @@ xmset_CFLAGS = -D`./check_wheel.sh` -D`./check_ddc.sh`
 
 xmset_LDADD = -lXxf86misc -lhd
 
-xupdate:xupdate.c
-	gcc xupdate.c -o xupdate \
-	`./.static` -ldl -lcrypt -lm -lpthread
-
-xupdate.c:xupdate.pl
-	perlcc -c xupdate.pl
-
 INCLUDES = -I../whois
