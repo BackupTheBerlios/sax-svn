@@ -1,3 +1,5 @@
+# translation of sax.nb.po to 
+# translation of sax.nb.po to
 # translation of sax.po to Norsk
 # Oversetting av sax.nb.po till norsk
 # Norwegian language file for SaX2.
@@ -8,15 +10,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.nb\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-17 13:17+0100\n"
+"PO-Revision-Date: 2004-09-02 21:42+0200\n"
 "Last-Translator: Olav Pettershagen <olav.pettershagen@trysil.online.no>\n"
-"Language-Team: Norsk <nb@li.org>\n"
+"Language-Team:  <nn@li.org>\n"
 "MIME-Version: 1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.9\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -65,11 +67,11 @@ msgstr "Ikke konfigurert"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<Angi nytt passord...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<Endre passord...>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -221,7 +223,7 @@ msgstr "Velg oppløsninger"
 
 #. Maximum length: 50  characters
 msgid "Emulate wheel with mouse button:"
-msgstr "Emuler hjul med musknapp:"
+msgstr "Emuler hjul med museknapp:"
 
 #. Maximum length: 50  characters
 msgid "Repeat rate: (Symbols/sec)"
@@ -437,9 +439,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX-innstilling...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>AccessX-innstilling...</u></h3></nobr>"
+msgstr "<nobr><h3><u>VNC-oppsett...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -498,6 +499,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
+"<b>Passord samsvarer ikke</b><hr>Første og andre versjon av passordet "
+"samsvarer ikke ! Forsøk igjen."
 
 #. RTF text: no limit
 msgid ""
@@ -505,6 +508,8 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>Passordfeil</b><hr>Passordfeltet er tomt, eller passordet er for kort. "
+"Angi et passord med minst seks tegn !."
 
 #. RTF text: no limit
 msgid ""
@@ -522,9 +527,9 @@ msgid ""
 "first. This can also be done comfortably with YOU (YaST2 Online Update)."
 msgstr ""
 "<b>Kan ikke aktivere OpenGL-akselerasjon</b><hr>Den offisielle 2D/3D/OpenGL-"
-"driveren fra nVidia følger ikke med systemet. Oppdater pakkene NVIDIA_GLX og "
-"NVIDIA_kernel fra nVidia-severen <i>(http://www.nvidia.com)</i>først. Dette "
-"kan du også enkelt gjøre med YOU (YaST2 Online-oppdatering)."
+"driveren fra nVidia følger ikke med systemet. Oppgrader pakkene NVIDIA_GLX "
+"og NVIDIA_kernel fra nVidia-serveren <i>(http://www.nvidia.com)</i>først. "
+"Dette kan du også enkelt gjøre med YOU (YaST2 Online-oppgradering)."
 
 #. RTF text: no limit
 msgid ""
@@ -537,9 +542,16 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>Kan ikke aktivere OpenGL-akselerasjon</b><hr>For å aktivere 3D-"
+"undersystemet for dette kortet må du først installere den kommersielle "
+"nVidia-driveren. Installer driveren med <b>YaST online-oppgradering</b>. I "
+"YOU velger du<b>Installerbare og installerte oppgraderinger</b> som "
+"<b>Oppgraderingskategori</b>. Velg deretter <b>Last ned NVIDIA(r)-"
+"grafikkdriver</b> fra oppgraderingslisten (vanligvis nederst på listen). "
+"Husk at du må merke pakken med <b>Oppgrader</b> (høyreklikk) hvis du har "
+"installert driveren tidligere og deretter avinstallert den."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -548,15 +560,14 @@ msgid ""
 "want to continue?</b>"
 msgstr ""
 "<b>Deaktiver OpenGL-akselerasjon</b><hr>3D-undersystemet er basert på den "
-"kommersielle driveren fra nVidia. SaX2 må avinstallere driveren ved hjelp "
-"avnVidia-installasjonsprogrammet. Avinstalleringen vil tilbakestille "
-"systemet til å bruke den originale driveren fra XFree86 som ikke støtter "
+"kommersielle driveren fra nVidia. SaX2 må avinstallere driveren ved hjelp av "
+"nVidia-installasjonsprogrammet. Avinstalleringen vil tilbakestille systemet "
+"til å bruke den originale driveren fra X.Org, som ikke støtter "
 "maskinvarebasert 3D-akselerasjon.<br><br><b>Vil du fortsette?</b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "Skjermdimensjon"
+msgstr "Ukjent skjermdimensjon..."
 
 #. RTF text: no limit
 msgid ""
@@ -568,6 +579,13 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>Angi skjermens X/Y-dimensjoner i [ mm ]</b><hr>Skjermgeometrien ble ikke "
+"automatisk registrert. Programmer for datagrafikk som f.eks.<b>Gimp</b> "
+"eller skrifttypebiblioteker som <b>Xft</b> trenger informasjon om skjermens "
+"fysiske dimensjoner for å fungere som de skal. Du finner korrekte verdier "
+"for skjermens horisontale (X) og vertikale (Y) størrelse i "
+"brukerveiledningen for skjermen. Verdiene må angis i [ mm ].<br><br><b>Vil "
+"du angi skjermdimensjonen ?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
@@ -587,7 +605,7 @@ msgid ""
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
 "<b>Lesefeil</b><hr>Kunne ikke lese fra CD eller diskett. Dette kan skyldes "
-"skader på mediet eller feilformaterte iinformasjosfiler på mediet."
+"skader på mediet eller feilformaterte informasjonsfiler på mediet."
 
 #. RTF text: no limit
 msgid ""
@@ -663,7 +681,7 @@ msgid ""
 "<b>Configuration has been saved:</b><hr>Your modifications will take effect "
 "the next time the graphics system is restarted."
 msgstr ""
-"<b>Konfigurasjonen er lagret:</b><hr>Endringene blir aktivertnår du starter "
+"<b>Konfigurasjonen er lagret:</b><hr>Endringene blir aktivert når du starter "
 "grafikksystemet på nytt."
 
 #. RTF text: no limit
@@ -671,7 +689,7 @@ msgid ""
 "<b>Configuration has been saved:</b><hr>Your modifications will take effect "
 "the next time your system is <b>rebooted</b>."
 msgstr ""
-"<b>Konfigurasjonen er lagret:</b><hr>Endringene blir aktivertnår du "
+"<b>Konfigurasjonen er lagret:</b><hr>Endringene blir aktivert når du "
 "<b>starter systemet på nytt</b>."
 
 #. RTF text: no limit
@@ -685,13 +703,13 @@ msgid ""
 "acceleration or if any problems related to this should arise.<br><br><b>Do "
 "you want to enable 3D for this card?</b>"
 msgstr ""
-"<b>3D-kompatibelt kort funnet: <u>%1</u></b><hr>Alle 3D-drivere for Linux "
-"erunder utvikling, og betraktes derfor delvis som eksperimentelle.Vi har "
-"likevel valgt å legge ved drivere i distribusjonenpå grunn av den store "
+"<b>3D-kompatibelt kort funnet: <u>%1</u></b><hr>Alle 3D-drivere for Linux er "
+"under utvikling, og betraktes derfor delvis som eksperimentelle.Vi har "
+"likevel valgt å legge ved drivere i distribusjonen på grunn av den store "
 "etterspørselen etter maskinvarebasert 3D-akselerasjon for Linux.<br><br>På "
-"grunn av den delvis eksperimentelle statusen til OpenGL-driverne kanvi ikke "
+"grunn av den delvis eksperimentelle statusen til OpenGL-driverne kan vi ikke "
 "tilby installasjonsbrukerstøtte for maskinvare- basert3D-akselerasjon eller "
-"problemer i forbindelse med dette.<br><br><b>DoVil du aktivere 3D-støtte for "
+"problemer i forbindelse med dette.<br><br><b>Vil du aktivere 3D-støtte for "
 "dette kortet?</b>"
 
 #. RTF text: no limit
@@ -708,15 +726,15 @@ msgid ""
 "this card?</b>"
 msgstr ""
 "<b>3D-kompatibelt kort funnet: <u>%1</u></b><hr>Driveren som brukes for "
-"dette kortet,er ikke en offisiell 2D/3D/OpenGL-driver fra nVidia (av "
-"lisensmessige grunner).3D/OpenGL-driveren som brukes hvis du aktiverer 3D, "
+"dette kortet, er ikke en offisiell 2D/3D/OpenGL-driver fra nVidia (av "
+"lisensmessige grunner). 3D/OpenGL-driveren som brukes hvis du aktiverer 3D, "
 "har <b>ikke</b> maskinvareakselerasjon.<br><br> For å bruke 3D/OpenGL med "
-"maskinvareakselerasjon må du oppdaterepakkene NVIDIA_GLX og NVIDIA_kernel "
+"maskinvareakselerasjon må du oppgradere pakkene NVIDIA_GLX og NVIDIA_kernel "
 "fra nVidia- serveren <i>(http://www.nvidia.com)</i>. Dette kan du også "
-"enkelt gjøre med YOU (YaST2online-oppdatering).<br><br>Hvis det oppstår "
-"problemer  med 2D/3D/OpenGL-driverenfra nVidia, må du kontakte produsenten "
-"fordi vi dessverre ikke har noeninnflytelse over utviklingen av nVidia-"
-"drivere.<br><br><b>Vil du aktivere 3D fordette kortet?</b>"
+"enkelt gjøre med YOU (YaST2online-oppgradering).<br><br>Hvis det oppstår "
+"problemer  med 2D/3D/OpenGL-driveren fra nVidia, må du kontakte produsenten "
+"fordi vi dessverre ikke har noen innflytelse på utviklingen av nVidia-"
+"drivere.<br><br><b>Vil du aktivere 3D for dette kortet?</b>"
 
 #. RTF text: no limit
 msgid ""
@@ -725,18 +743,18 @@ msgid ""
 "official nvidia drivers from the nvidia ftp server with YOU (YaST2 online "
 "update). Start the online update?"
 msgstr ""
-"<b>Programvareoppdateing</b><hr>Den \"tomme\" nvidia -driveren uten 3D-"
-"akselerasjon somleveres med distribusjonen, er fremdeles installert. Du bør "
-"oppdatere til denoffisielle nvidia-driveren fra nvidias ftp-server med YOU "
-"(YaST2 online-oppdatering). Vil du starte online-oppdateringen?"
+"<b>Programvareoppgradering</b><hr>Standard-nVidia-driveren uten 3D-"
+"akselerasjon som leveres med distribusjonen, er fremdeles installert. Du bør "
+"oppgradere til den offisielle nVidia-driveren fra nVidias ftp-server med YOU "
+"(YaST2 online-oppgradering). Vil du starte online-oppgraderingen?"
 
 #. RTF text: no limit
 msgid ""
 "<b>Software installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>Programvareinstallasjon:</b><hr>Noen pakker mangler. Vil du installere "
-"demanglende pakkene nå?"
+"<b>Programvareinstallasjon:</b><hr>Noen pakker mangler. Vil du installere de "
+"manglende pakkene nå?"
 
 #. RTF text: no limit
 msgid ""
@@ -754,7 +772,7 @@ msgid ""
 "selected monitor model is correct or select a lower resolution than:"
 msgstr ""
 "<b>Denne oppløsningen er ikke tilgjengelig</b><hr>Den valgte oppløsningen "
-"passer ikketil skjermens oppløsningsområder. Kontroller om du har "
+"passer ikke til skjermens oppløsningsområder. Kontroller om du har "
 "valgtriktig skjermmodell, eller velg en lavere oppløsning enn:"
 
 #. RTF text: no limit
@@ -762,7 +780,7 @@ msgid ""
 "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
 "depth is not allowed for this configuration."
 msgstr ""
-"<b>Ugyldig fargedybde:</b><hr><b>4</b> eller <b>15</b> bits fargedybdekan "
+"<b>Ugyldig fargedybde:</b><hr><b>4</b> eller <b>15</b> bits fargedybde kan "
 "ikke brukes med denne konfigurasjonen."
 
 #. RTF text: no limit
@@ -851,15 +869,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "X-serveren er tilgjengelig via VNC-protokollen:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "Tilgangskontroll"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -964,7 +982,7 @@ msgid ""
 "than one graphics device.  More are required to set up a multihead "
 "configuration."
 msgstr ""
-"<b>Et oppsett med flere skjermer ikke mulig:</b><hr>Systemet har bareén "
+"<b>Et oppsett med flere skjermer ikke mulig:</b><hr>Systemet har bar en "
 "grafikkenhet. Flere er nødvendig for et oppsett med flereskjermer."
 
 #. RTF text: no limit
@@ -985,6 +1003,8 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>Skjermen kan ikke slettes:</b><hr>Bare .n skjermkonfigurasjon er mulig i "
+"systemet Du kan ikke fjerne denne hovedenheten"
 
 #. RTF text: no limit
 msgid ""
@@ -992,7 +1012,7 @@ msgid ""
 "and start the selected one?"
 msgstr ""
 "<b>Åpen dialog:</b><hr>en dialog er allerede åpen. Vil du avbryte den åpne "
-"dialogenog starte denne?"
+"dialogen og starte denne?"
 
 #. RTF text: no limit
 msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
@@ -1023,7 +1043,7 @@ msgid ""
 msgstr ""
 "<b>Avsluttende trinn:</b><hr>Det siste trinnet er å lagre den nye "
 "konfigurasjonen.Husk at konfigurasjonen er <i>framebuffer</i>-basert, og at "
-"systemetmå startes på nytt for å aktivere endringene for oppløsnings- og/"
+"systemet må startes på nytt for å aktivere endringene for oppløsnings- og/"
 "ellerfargeinnstillingene."
 
 #. RTF text: no limit
@@ -1032,7 +1052,7 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>SaX2-forslag</b><hr>Dette grafiske oppsettet er basert pået forslag fra "
+"<b>SaX2-forslag</b><hr>Dette grafiske oppsettet er basert på et forslag fra "
 "SaX2. Hvis forslaget er akseptabelt, klikk <b>OK</b>.Hvis ikke, kan du endre "
 "konfigurasjonen."
 
@@ -1059,7 +1079,7 @@ msgid ""
 "now ?"
 msgstr ""
 "<b>Skjermen (%1) ble ikke funnet</b><hr>Sett opp skjermenmanuelt Vil du "
-"starte konfigurasjonsdialogen for skjermoppsettnå?"
+"starte konfigurasjonsdialogen for skjermoppsett nå?"
 
 #. RTF text: no limit
 msgid ""
@@ -1068,7 +1088,7 @@ msgid ""
 "now ?"
 msgstr ""
 "<b>Skjerm (%1) med ID: %2 ikke funnet</b><hr>Sett opp skjermenmanuelt Vil du "
-"starte konfigurasjonsdialogen for skjermoppsettnå?"
+"starte konfigurasjonsdialogen for skjermoppsett nå?"
 
 #. Dynamic length: Please do not oversize key up to 10%
 msgid "Automatic graphics system set up"
@@ -1092,11 +1112,11 @@ msgstr "&Nei"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>Ja</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>Nei</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1224,7 +1244,7 @@ msgstr "Konfigurer XAccess: Mus via talltastatur..."
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
+msgstr "Konfigurer VNC: Eksporter skjermen via VNC-protokollen..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1299,17 +1319,16 @@ msgid "&Options"
 msgstr "&Alternativer"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "&Alternativer"
+msgstr "VNC-alternativer"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "Tillat tilgang via VNC-protokollen"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "Aktiver passordbeskyttelse"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1317,28 +1336,27 @@ msgstr "&Egenskaper..."
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "Bekreft passord"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "Aktiver Kun visning-modus"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "Deaktiver AccessXb"
+msgstr "Aktiver HTTP-tilgang"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP-port"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "Tillatt flere VNC-tilkoblinger"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1435,7 +1453,7 @@ msgstr "Mulig"
 
 #. Maximum length: 50  characters
 msgid "&Add this resolution"
-msgstr "&Legg til denne oppløsningenen"
+msgstr "&Legg til denne oppløsningen"
 
 #. Maximum length: 50  characters
 msgid "Enable 3-button emulation"
@@ -1450,9 +1468,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Konfigurert AccessX-status</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Gjeldende 3D/OpenGL-status</b></big><hr>"
+msgstr "<big><b>Gjeldende VNC-status</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1512,26 +1529,27 @@ msgid ""
 "the keypad. The table below points to the current status of AccessX."
 msgstr ""
 "<b>Virtuell mus:</b><hr>Sett opp talltastaturet slik at musen kan "
-"kontrolleres medtalltastaturet. Tabellen nedenfor viser gjeldende status for "
-"AccessX."
+"kontrolleres med talltastaturet. Tabellen nedenfor viser gjeldende status "
+"for AccessX."
 
 #. RTF text: no limit
 msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>VNC-server:</b><hr>Sett opp X-serveren slik at det er ekstern tilgang til "
+"skrivebordet og alle skrivebordsprogrammene via et VNC-visningsprogram"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
 "capabilities of your graphics card. If your card and the corresponding "
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
-"<b>OpenGL-undersystem:</b><hr>Sett opp 3D-funksjonene til grafikkortether. "
-"XFree86 har et system for direkte gjengivelse slik at du kan bruke 3D-"
-"egenskapene til grafikkortet. Hvis kortet og den tilhørendedriveren støtter "
+"<b>OpenGL-undersystem:</b><hr>Sett opp 3D-funksjonene til grafikkortet her. "
+"X.Org har et system for direkte gjengivelse slik at du kan bruke 3D-"
+"egenskapene til grafikkortet. Hvis kortet og den tilhørende driveren støtter "
 "maskinvarebasert 3D-akselerasjon, kan du aktivere dette i denne dialogen."
 
 #. RTF text: no limit
@@ -1543,10 +1561,10 @@ msgid ""
 "called a virtual resolution."
 msgstr ""
 "<b>Virtuell oppløsning:</b><hr>Hvert enkelt skrivebord har en faktisk "
-"oppløsningsom er helt synlig. I tillegg til denne oppløsningen kan du sette "
-"opp enoppløsning utenfor det synlige området på skjermen, som kommeropp hvis "
-"du fører musepekeren utenfor skjermbildet. Dette områdetkalles en virtuell "
-"oppløsning."
+"oppløsning som er helt synlig. I tillegg til denne oppløsningen kan du sette "
+"opp en oppløsning utenfor det synlige området på skjermen, som kommer opp "
+"hvis du fører musepekeren utenfor skjermbildet. Dette området kalles en "
+"virtuell oppløsning."
 
 #. RTF text: no limit
 msgid ""
@@ -1557,7 +1575,7 @@ msgid ""
 msgstr ""
 "<b>Grafikkort:</b><hr>Sett opp grafikkenhetene her. Det grafiskesystemet "
 "består av minst ett grafikkort, men kombinasjoner er også mulig for å sette "
-"opp etsåkalt <i>flerskjermsmiljø</i>. Dette kan bestå av minst to og opptil "
+"opp et såkalt <i>flerskjermsmiljø</i>. Dette kan bestå av minst to og opptil "
 "maksimalt 16 kort."
 
 #. RTF text: no limit
@@ -1566,9 +1584,9 @@ msgid ""
 "resolution and colors. Every desktop is an independent device and may have a "
 "different color and/or resolution setup."
 msgstr ""
-"<b>Skrivebordsegenskaper:</b><hr>Sett opp skrivebordet med innstillinger "
-"somoppløsning og farger. Skrivebordene er uavhengige enheter, og de kan "
-"haulike innstillinger for farge og/eller oppløsning."
+"<b>Skrivebordsegenskaper:</b><hr>Sett opp skrivebordet med innstillinger som "
+"oppløsning og farger. Skrivebordene er uavhengige enheter, og de kan ha "
+"ulike innstillinger for farge og/eller oppløsning."
 
 #. RTF text: no limit
 msgid ""
@@ -1576,8 +1594,8 @@ msgid ""
 "displayed by the monitor. The table below point to the current used Modeline"
 "(s)."
 msgstr ""
-" <b>Skjermgeometri:</b><hr>Sett opp posisjonen til og størrelsen på "
-"bildetsom vises på skjermen. Tabellen nedenfor viser gjeldende moduslinje(r)."
+" <b>Skjermgeometri:</b><hr>Sett opp posisjonen til og størrelsen på bildet "
+"som vises på skjermen. Tabellen nedenfor viser gjeldende moduslinje(r)."
 
 #. RTF text: no limit
 msgid ""
@@ -1596,10 +1614,10 @@ msgid ""
 "corresponding screen."
 msgstr ""
 "<b>Skrivebordsoppsett:</b><hr>Hvis flere enn ett kort er tilgjengelig, har "
-"du etmiljø med flere skjermer. Velg hvordan de tilkoplede skjermene skal "
+"du et miljø med flere skjermer. Velg hvordan de tilkoplede skjermene skal "
 "forholde seg til hverandre ved hjelp av dra og slipp. Hvis du er usikker på "
 "hvilken skjerm som tilhører ikonet, kan du dobbeltklikke på ikonet for å få "
-"opp en melding på dentilhørende skjermen."
+"opp en melding på den tilhørende skjermen."
 
 #. RTF text: no limit
 msgid ""
@@ -1607,9 +1625,9 @@ msgid ""
 "graphics cards. Be careful in your choice. Wrong sync ranges may damage the "
 "monitor."
 msgstr ""
-"<b>Skjermegenskaper:</b><hr>Velg skjermmodellen som er koplet "
-"tilgrafikkortet. Vær forsiktig når du velger. Feil synkroniseringsområder "
-"kan skadeskjermen."
+"<b>Skjermegenskaper:</b><hr>Velg skjermmodellen som er koplet til "
+"grafikkortet. Vær forsiktig når du velger. Feil synkroniseringsområder kan "
+"skadeskjermen."
 
 #. RTF text: no limit
 msgid ""
@@ -2639,19 +2657,3 @@ msgstr "Trykk på menytasten for å velge 3. nivå"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta på Win-tastene"
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>Kan ikke aktivere OpenGL-akselerasjon</b><hr>For å aktivere 3D-"
-#~ "undersystemet fordette kortet du må du installere den kommersielle "
-#~ "driveren fra fra nVidia først.Installer driveren med <b>YaST Online-"
-#~ "oppdatering</b> og velgoppdateringspakken nVidia driver.<br><br>Hvis du "
-#~ "allerede har installert driveren viaYaST Online-oppdatering og deretter "
-#~ "avinstallert den, må du installeredriveren manuelt. Veiledning om dette "
-#~ "finner du her: <br><br><b>FTP://FTP.suse.com/pub/suse/i386/supplementary/"
-#~ "X/XFree86/nvidia-installer-HOWTO</b>"

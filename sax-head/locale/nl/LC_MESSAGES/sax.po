@@ -1,19 +1,20 @@
+# translation of sax.po to Dutch
 # translation of sax.nl.po to Dutch
 # domain "sax.mo"
 # Dutch message file for Sax.
 # Copyright (C) SuSE GmbH, 2000.
-# Arthur & Ettie Kerkmeester <a.s.kerkmeester@hccnet.nl>, 2000-2003.
+# Arthur & Ettie Kerkmeester <a.s.kerkmeester@hccnet.nl>, 2000-2003, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.nl\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-09-09 18:52+0100\n"
+"PO-Revision-Date: 2004-09-05 18:46+0200\n"
 "Last-Translator: Arthur & Ettie Kerkmeester <a.s.kerkmeester@hccnet.nl>\n"
 "Language-Team: Dutch <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -30,24 +31,23 @@ msgstr "met"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Relatief"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Afsluiten"
+msgstr "Absoluut"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -63,11 +63,11 @@ msgstr "Niet geconfigureerd"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<Geef nieuw wachtwoord...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<Wijzig wachtwoord...>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -91,7 +91,7 @@ msgstr "Extra layout(s)"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Allerlei"
 
 #. Maximum length: 60  characters
 msgid "Layout"
@@ -435,9 +435,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>AccessX instelling...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>AccessX instelling...</u></h3></nobr>"
+msgstr "<nobr><h3><u>VNC instelling...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -496,6 +495,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
+"<b>Wachtwoord komt niet overeen</b><hr>De eerste en de tweede versie van het "
+"wachtwoord komen niet overeen! Probeer het nog eens aub."
 
 #. RTF text: no limit
 msgid ""
@@ -503,6 +504,9 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>Wachtwoord fout</b><hr>Het wachtwoord veld is leeg gelaten of het "
+"wachtwoord is te kort. Geef aub een wachtwoord op dat minstens zes karakters "
+"lang is!."
 
 #. RTF text: no limit
 msgid ""
@@ -536,9 +540,17 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Om het 3D "
+"subsysteem voor deze kaart te activeren, dient u eerst de commerciele driver "
+"van nVidia te installeren. Installeer de driver met behulp van <b>YaST "
+"Online Update</b>. Selecteer binnen YOU <b>Installeerbare en geïnstalleerde "
+"patches</b> als <b>Patch categorie</b> en selecteer inde patch lijst "
+"<b>Download NVIDIA(r) Graphics Driver</b> (dit staat normaliter onderin de "
+"lijst). Denk er om dat u de patch markeert als zijnde een <b>Update</b> "
+"(rechter muisklik) indien u het reeds eerder heeft geïnstalleerd en de "
+"driver installatie, om wat voor reden dan ook, ongedaan is gemaakt."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -546,17 +558,15 @@ msgid ""
 "X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
 "want to continue?</b>"
 msgstr ""
-"<b>De OpenGL acceleratie kan niet uitgeschakeld worden</b><hr>Het 3D "
-"subsysteem is gebaseerd op de commerciële driver van nVidia. Voor het "
-"uitschakelen van de 3D dient u de installatie van de driver met behulp van "
-"het nVidia installatieprogramma ongedaan te maken. Het de-installatie proces "
-"zal de originele driver van XFree86, dat overigens geen enkele 3D hardware "
-"acceleratie biedt, opnieuw activeren."
+"<b>OpenGL acceleratie uitschakelen</b><hr>Het 3D subsysteem is gebaseerd op "
+"de commerciële driver van nVidia. SaX2 moet de driver met behulp van het "
+"nVidia installatieprogramma ongedaan maken. Het de-installatie proces zal de "
+"originele driver van X.Org, dat overigens geen enkele 3D hardware "
+"acceleratie biedt, opnieuw activeren. <br><br><b>Wilt u verder gaan?</b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "Beeldscherm grootte"
+msgstr "Onbekende beeldscherm grootte..."
 
 #. RTF text: no limit
 msgid ""
@@ -568,28 +578,35 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>Geef de X/Y beeldscherm grootte op in [ mm ]</b><hr>De geometrie van uw "
+"beeldscherm kon niet gedetecteerd worden. Programma's die met computer "
+"graphics werken zoals bijvoorbeeld <b>Gimp</b> of font rendering "
+"bibliotheken zoals <b>Xft</b> willen graag weten wat de echte fysieke "
+"grootte van uw beeldscherm is om correct te kunnen functioneren. Kijk aub "
+"even in uw monitorhandleiding en zoek de juiste waardes van de horizontale "
+"(X) en verticale (Y) groottes op. De waardes moeten in [ mm ] worden "
+"opgegeven.<br><br><b>Wilt u de beeldscherm grootte instellen?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
 msgstr "Utility disk..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Plaats disk</b><hr>Plaats aub de beeldscherm utility disk van de "
-"monitorfabrikant."
+"<b>Plaats CD of disk</b><hr>Plaats aub de beeldscherm utility CD of disk van "
+"de monitorfabrikant."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Leesfout</b><hr>Kan de disk niet lezen. Dit kan duiden op een beschadigde "
-"disk of op de disk aanwezige incorrect geformatteerde informatiebestanden."
+"<b>Leesfout</b><hr>Kan de CD of disk niet lezen. Dit kan duiden op een "
+"beschadigd medium of op het medium aanwezige incorrect geformatteerde "
+"informatiebestanden."
 
 #. RTF text: no limit
 msgid ""
@@ -858,15 +875,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "X-server toegankelijk via het VNC protocol:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "Toegangscontrole"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -997,6 +1014,9 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>De monitor kan niet verwijderd worden:</b><hr>Het systeem biedt exact één "
+"monitor configuratie. Het is u niet toegestaan om dit belangrijke onderdeel "
+"te verwijderen."
 
 #. RTF text: no limit
 msgid ""
@@ -1107,11 +1127,11 @@ msgstr "&Nee"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>Ja</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>Nee</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1240,6 +1260,8 @@ msgstr "Configureer XAccess: muis over keypad..."
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
 msgstr ""
+"VNC configureren: exporteer het beeldscherm met behulp van het VNC "
+"protocol..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1306,27 +1328,24 @@ msgid "Remove selected monitor"
 msgstr "Geselecteerde monitor verwijderen"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "&Eigenschappen..."
+msgstr "Eigenschappen..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "&Opties..."
+msgstr "&Opties"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "&Opties..."
+msgstr "VNC opties"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "Toegang tot het beeldscherm met behulp van het VNC protocol toestaan"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "Wachtwoord bescherming inschakelen"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1334,28 +1353,27 @@ msgstr "&Eigenschappen..."
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "Wachtwoord controle"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "Alleen-bekijken mode inschakelen"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "AccessX deactiveren"
+msgstr "HTTP toegang activeren"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP poort"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "Meerdere VNC verbindingen toestaan"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1467,9 +1485,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Huidige geconfigureerde AccessX status</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Huidige 3D/OpenGL status</b></big><hr>"
+msgstr "<big><b>Huidige VNC status</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1537,9 +1554,11 @@ msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>VNC server:</b><hr>Hier kunt u de X-server dusdanig instellen zodat de "
+"desktop met al z'n programma's remote toegankelijk wordt via een VNC viewer "
+"programma"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
@@ -1547,10 +1566,10 @@ msgid ""
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
 "<b>OpenGL subsysteem:</b><hr>Hier kunt u de 3D opties van de grafische kaart "
-"instellen. XFree86 bevat tevens de directe renderings-interface om de 3D "
+"instellen. X.Org bevat tevens de directe renderings-interface om de 3D "
 "capaciteiten van uw grafische kaart te kunnen gebruiken. Wanneer uw kaart en "
-"de corresponderende driver de 3D hardware acceleratie ondersteunen, dan is "
-"dat in dit dialoog te activeren."
+"de corresponderende driver de 3D hardware acceleratie ondersteunen, activeer "
+"u dat dan in dit dialoog."
 
 #. RTF text: no limit
 msgid ""
@@ -1678,9 +1697,8 @@ msgid "&Port"
 msgstr "&Poort"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Mode:"
+msgstr "&Mode"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -2665,17 +2683,3 @@ msgstr "Druk op de Menu toets om het 3de level te selecteren"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta is aan de Win-toetsen toegewezen."
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Voor het "
-#~ "activeren van het 3D subsysteem voor deze kaart dient u de commerciële "
-#~ "driver van nVidia te gebruiken. Download aub eerst het nVidia "
-#~ "installatieprogramma van de nVidia webserver <i>(http://www.nvidia.com)</"
-#~ "i>. Nadat u de driver heeft geïnstalleerd kunt u 3D met behulp van SaX2 "
-#~ "activeren."

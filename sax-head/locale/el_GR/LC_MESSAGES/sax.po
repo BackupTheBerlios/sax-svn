@@ -1,3 +1,4 @@
+# translation of sax.el_GR.po to Hellenic
 # translation of sax.po to Hellenic-Ελληνικά-Greek
 # translation of sax.el_GR.po to Ελληνικά-Hellinic-Greek
 # Copyright (C) 2003, 2004 Free Software Foundation, Inc.
@@ -7,16 +8,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.el_GR\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-19 00:00+0200\n"
+"PO-Revision-Date: 2004-09-06 15:19+0300\n"
 "Last-Translator: Hellenic SuSE Translators Group <hstg@billg.gr>\n"
-"Language-Team: Hellenic-Ελληνικά-Greek <hstg@billg.gr>\n"
+"Language-Team: Hellenic <hstg@billg.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Giannakopoulos - BillG@remalia.com>\n"
-"X-Generator: KBabel 1.2\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -65,11 +66,11 @@ msgstr "Δεν έχει ρυθμιστεί"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<Εισάγετε νέο συνθηματικό...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<Αλλαγή συνθηματικού...>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -177,7 +178,7 @@ msgstr "Σταμάτημα ροδέλας: Έγινε"
 
 #. Maximum length: 40  characters
 msgid "Disable use of accented letters"
-msgstr "Απενεργοποίηση χρήσης της έμφασης γραμμάτων"
+msgstr "Απενεργοποίηση χρήσης τονισμένων γραμμάτων"
 
 #. Maximum length: 40  characters
 msgid "Clear test field"
@@ -439,9 +440,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>Εγκατάσταση AccessX....</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>Εγκατάσταση AccessX....</u></h3></nobr>"
+msgstr "<nobr><h3><u>Ρύθμιση VNC...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -503,6 +503,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
+"<b>Ασυμφωνία Συνθηματικών</b><hr>Η πρώτη και η δεύτερη έκδοση του "
+"συνθηματικού δεν ταιριάζουν! Παρακαλώ προσπαθήστε ξανά."
 
 #. RTF text: no limit
 msgid ""
@@ -510,6 +512,9 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>Σφάλμα συνθηματικού</b><hr>Το πεδίο συνθηματικού έχει μείνει κενό ή το "
+"συνθηματικό είναι πολύ σύντομο. Παρακαλώ εισάγετε ένα συνθηματικό με "
+"τουλάχιστον έξι χαρακτήρες !."
 
 #. RTF text: no limit
 msgid ""
@@ -543,9 +548,17 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>Δεν είναι δυνατή η επιτάχυνση OpenGL</b><hr>Για να ενεργοποιήσετε το 3D "
+"υποσύστημα για αυτήν την κάρτα θα πρέπει να εγκαταστήσετε πρώτα τον εμπορικό "
+"οδηγό της nVidia. Εγκαταστήστε τον οδηγό χρησιμοποιώντας την <b>Ενεργή "
+"Ενημέρωση YaST</b>. Μέσα από το YOU επιλέξτε <b>Εγκαταστήσιμες και "
+"Εγκατεστημένες Διορθώσεις</b> ως <b>Κατηγορία Διορθώσεων</b> και επιλέξτε "
+"<b>Download NVIDIA(r) Graphics Driver</b> από την λίστα διορθώσεων (συνήθως "
+"στο τέλος της λίστας). Σημειώστε, πως χρειάζεται να σημαδέψετε την διόρθωση "
+"ως <b>Ενημέρωση</b> (δεξί κλικ) εάν την έχετε ήδη εγκαταστήσει προηγουμένως "
+"και ο οδηγός είχε απεγκατασταθεί - για οποιονδήποτε λόγο."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -553,18 +566,18 @@ msgid ""
 "X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
 "want to continue?</b>"
 msgstr ""
-"<b>Δεν είναι δυνατή η απενεργοποίηση της επιτάχυνσης OpenGL</b><hr>Το 3Δ "
-"υποσύστημα βασίζεται στον εμπορικό οδηγό της nVidia. Για να απενεργοποιήσετε "
-"το 3Δ θα πρέπει να απεγκαταστήσετε τον οδηγό, χρησιμοποιώντας την εφαρμογή "
-"εγκατάστασης της nVidia. Η διαδικασία απεγκατάστασης θα επαναφέρει τον "
-"αρχικό οδηγό του XFree86 ο οποίος δεν παρέχει 3Δ επιτάχυνση μέσω του υλικού."
+"<b>Απενεργοποίηση επιτάχυνσης OpenGL</b><hr>Το 3Δ υποσύστημα βασίζεται στον "
+"εμπορικό οδηγό της nVidia. Το SaX2 χρειάζεται να απεγκαταστήσει τον οδηγό, "
+"χρησιμοποιώντας την εφαρμογή εγκατάστασης της nVidia. Η διαδικασία "
+"απεγκατάστασης θα επαναφέρει τον αρχικό οδηγό του X.Org ο οποίος δεν παρέχει "
+"3Δ επιτάχυνση μέσω του υλικού.<br><br><b>Θέλετε να συνεχίσετε;</b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "Μέγεθος απεικόνισης"
+msgstr "Άγνωστο μέγεθος απεικόνισης..."
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
 "couldn't be detected. Applications dealing with computer graphics like "
@@ -574,6 +587,13 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
+"couldn't be detected. Applications dealing with computer graphics like "
+"<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know about "
+"the real physical size of your display to work properly. Please refer to "
+"your monitor manual to obtain the correct size values for the horizontal (X) "
+"and vertical (Y) direction. The values are required to be entered in [ mm ]."
+"<br><br><b>Do you want to setup the display size ?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
@@ -871,15 +891,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "Ο Διακομιστής-X είναι προσβάσιμος μέσω του πρωτοκκόλου VNC:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "Έλεγχος Πρόσβασης"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -1009,6 +1029,9 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>Η οθόνη δεν μπορεί να αφαιρεθεί:</b><hr>Το σύστημα παρέχει ακριβώς μία "
+"ρύθμιση οθόνης. Δεν σας επιτρέπετε να αφαιρέσετε αυτήν την σημαντική "
+"οντότητα."
 
 #. RTF text: no limit
 msgid ""
@@ -1119,11 +1142,11 @@ msgstr "&Οχι"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>Ναι</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>Όχι</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1253,7 +1276,7 @@ msgstr "Ρύθμιση XAccess: Ποντίκι πάνω σε αριθμητικ�
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
+msgstr "Ρύθμιση VNC: Εξαγωγή οθόνης χρησιμοποιώντας το πρωτόκολλο VNC..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1329,17 +1352,16 @@ msgid "&Options"
 msgstr "&Επιλογές"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "&Επιλογές"
+msgstr "Επιλογές VNC"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "Επιτρέπεται η πρόσβαση στην οθόνη χρησιμοποιώντας το πρωτόκολλο VNC"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "Ενεργοποίηση προστασίας συνθηματικού"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1347,28 +1369,27 @@ msgstr "&Ιδιότητες..."
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "Συνθηματικό"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "Επαλήθευση Συνθηματικού"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "Ενεργοποίηση κατάστασης View-Only"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "Απενεργοποίηση AccessX"
+msgstr "Ενεργοποίηση Πρόσβασης HTTP"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "Θύρα HTTP"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "Επιτρέπονται πολλαπλές συνδέσεις VNC"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1480,9 +1501,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Τρέχουσα κατάσταση ρυθμισμένου AccessX</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Τρέχουσα κατάσταση 3Δ/OpenGL</b></big><hr>"
+msgstr "<big><b>Τρέχουσα κατάσταση VNC</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1552,9 +1572,11 @@ msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>Διακομιστής VNC:</b><hr>Ρυθμίστε τον Διακομιστή-X έτσι ώστε να "
+"επιτρέπεται η πρόσβαση σε όλα τα προγράμματα του και στην επιφάνεια εργασίας "
+"με απομακρυσμένο τρόπο μέσω ενός προγραμμάτος προβολής VNC"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
@@ -1562,10 +1584,10 @@ msgid ""
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
 "<b>Υποσύστημα OpenGL:</b><hr>Ρυθμίστε τις δυνατότητες 3Δ για την κάρτα "
-"γραφικών εδώ. Το XFree86 περιλαμβάνει την αποκαλούμενη απευθείας διεπαφή "
-"rendering για χρήση των δυνατοτήτων 3Δ της κάρτας γραφικών. Αν η κάρτα και ο "
-"αντίστοιχος οδηγός υποστηρίζουν 3Δ επιτάχυνση μέσω υλικού μπορείτε να το "
-"ενεργοποιήσετε από αυτό το διάλογο. "
+"γραφικών εδώ. Το X.Org περιλαμβάνει την απευθείας διασύνδεση σχεδιασμού για "
+"χρήση των δυνατοτήτων 3Δ της κάρτας γραφικών. Αν η κάρτα και ο αντίστοιχος "
+"οδηγός υποστηρίζουν 3Δ επιτάχυνση μέσω υλικού μπορείτε να το ενεργοποιήσετε "
+"από αυτό το διάλογο. "
 
 #. RTF text: no limit
 msgid ""
@@ -2505,7 +2527,6 @@ msgid "Alt/Win key behavior"
 msgstr "Συμπεριφορά πλήκτρου Alt/Win "
 
 #. RTF text: no limit
-#, fuzzy
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
 msgstr "χρήση εσωτερικού capitalization. Το Shift δεν ακυρώνει Caps."
 
@@ -2563,11 +2584,11 @@ msgstr "Θέσε το CapsLock σαν ένα επιπρόσθετο Control"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+msgstr "χρήση εσωτερικού capitalization. Το Shift ακυρώνει το Caps."
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "ενεργεί ως Shift με κλείδωμα. Το Shift δεν ακυρώνει το Caps."
 
 #. RTF text: no limit
 msgid "Left Win-key switches group while pressed"
@@ -2579,11 +2600,11 @@ msgstr "Το αριστερό πλήκτρο Shift αλλάζει την ομά�
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
-msgstr ""
+msgstr "Το Num_Lock LED δείχνει την εναλλακτική ομάδα"
 
 #. RTF text: no limit
 msgid "Caps_Lock LED shows alternative group"
-msgstr ""
+msgstr "Το Caps_Lock LED δείχνει την εναλλακτική ομάδα"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
@@ -2631,31 +2652,31 @@ msgstr "Προσθήκη της κανονικής συμπεριφοράς στ
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Alt and Meta on the Alt keys (default)."
 
 #. RTF text: no limit
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Το Super αντιστοιχίζεται στα πλήκτρα Win (default)."
 
 #. RTF text: no limit
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Το Hyper αντιστοιχίζεται στα πλήκτρα Win."
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+msgstr "Πατήστε το Δεξί πλήκτρο-Win για να επιλέξετε το 3ο επίπεδο"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
-msgstr ""
+msgstr "Χρήση του LED του πληκτρολογίου για την εμφάνιση εναλλακτικής ομάδας"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+msgstr "ενεργεί ως Shift με κλείδωμα. Το Shift ακυρώνει το Caps."
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Group Shift/Lock behavior"
 
 #. RTF text: no limit
 msgid "Right Win-key switches group while pressed"
@@ -2675,26 +2696,8 @@ msgstr "Το αριστερό πλήκτρο Ctrl αλλάζει την ομάδ
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
-msgstr ""
+msgstr "Πατήστε το πλήκτρο Menu για την επιλογή 3ου επιπέδου"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>Δεν είναι δυνατόν να ενεργοποιηθεί η επιτάχυνση OpenGL</b><hr> Για να "
-#~ "ενεργοποιήσετε το υποσύστημα 3Δ για αυτήν την κάρτα θα πρέπει πρώτα να "
-#~ "εγκαταστήσετε τον εμπορικό οδηγό της nVidia. Εγκαταστήστε τον οδηγό "
-#~ "χρησιμοποιώντας την <b>Online Ενημέρωση YaST</b> και επιλέγοντας την "
-#~ "διόρθωση για τον οδηγό nVidia.<br><br> Εάν έχετε ήδη εγκαταστήσει τον "
-#~ "οδηγό μέσω της Online Ενημέρωσης του YaST παλαιότερα και τον έχετε πλέον "
-#~ "απεγκαταστήσει, θα πρέπει να εγκαταστήσετε τον οδηγό χειροκίνητα. "
-#~ "Πληροφορίες για αυτό μπορείτε να βρείτε στην ακόλουθη διεύθυνση:"
-#~ "<br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/XFree86/"
-#~ "nvidia-installer-HOWTO</b>"
+msgstr "Το Meta αντιστοιχίζεται στα πλήκτρα-Win."

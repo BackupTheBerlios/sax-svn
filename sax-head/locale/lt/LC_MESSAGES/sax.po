@@ -1,17 +1,22 @@
+# translation of sax.po to Lithuanian
 # SAX.
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2004 Free Software Foundation, Inc.
 # Linas Spraunius <linas@operis.org>, 2001.
+# Linas Spraunius <mail@operis.org>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: (sax.mo)\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2002-09-11 15:49+0200\n"
-"Last-Translator: Linas Spraunius <linas@operis.org>\n"
+"PO-Revision-Date: 2004-09-03 19:45+0300\n"
+"Last-Translator: Linas Spraunius <mail@operis.org>\n"
 "Language-Team: Lithuanian <i18n@operis.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-13\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -28,24 +33,23 @@ msgstr "su"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Reliatyvus"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Nutraukti"
+msgstr "Absoliutus"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -69,49 +73,47 @@ msgstr ""
 
 #. Maximum length: 60  characters
 msgid "Not available"
-msgstr ""
+msgstr "Nëra"
 
 #. Maximum length: 40  characters
 msgid "Use the following AccessX settings"
-msgstr ""
+msgstr "Naudoti sekanèias AccessX nuostatas"
 
 #. Maximum length: 40  characters
 msgid "Disable AccessX"
 msgstr "Iðjungti AccessX"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Primary Setup"
-msgstr "Pagrindinis árenginys"
+msgstr "Pagrindinis konfigûravimas"
 
 #. Maximum length: 60  characters
 msgid "Additional Layout(s)"
-msgstr ""
+msgstr "Papildomas planas"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Ávairûs"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Layout"
-msgstr "Ekranø iðdëstymas"
+msgstr "Planas"
 
 #. Maximum length: 60  characters
 msgid "Status"
-msgstr ""
+msgstr "Bûsena"
 
 #. Maximum length: 60  characters
 msgid "Keytable"
-msgstr ""
+msgstr "Klaviðø lentelë"
 
 #. Maximum length: 60  characters
 msgid "Variant"
-msgstr ""
+msgstr "Variantas"
 
 #. Maximum length: 60  characters
 msgid "Type"
-msgstr ""
+msgstr "Tipas"
 
 #. Maximum length: 60  characters
 msgid "This screen is selected"
@@ -119,7 +121,7 @@ msgstr "Ðis ekranas yra pasirinktas"
 
 #. Maximum length: 20  characters
 msgid "at"
-msgstr ""
+msgstr "ties"
 
 #. Maximum length: 20  characters
 msgid "Mouse"
@@ -147,34 +149,31 @@ msgstr "Neþinomas monitoriaus modelis"
 
 #. Maximum length: 40  characters
 msgid "Mouse test field: Ready..."
-msgstr ""
+msgstr "Pelës testinis laukelis: Pasiruoðta..."
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Single button click: Done"
-msgstr "Ájungti 3 mygtuko emuliacijà"
+msgstr "Vienkartinis paspaudimas: Atlikta"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Double button click: Done"
-msgstr "Ájungti 3 mygtuko emuliacijà"
+msgstr "Dvigubas paspaudimas: Atlikta"
 
 #. Maximum length: 40  characters
 msgid "Wheel is moving..."
-msgstr ""
+msgstr "Ratukas juda..."
 
 #. Maximum length: 40  characters
 msgid "Button pressed..."
-msgstr ""
+msgstr "Klaviðas paspaustas..."
 
 #. Maximum length: 40  characters
 msgid "Button released..."
-msgstr ""
+msgstr "Klaviðas atleistas..."
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Wheel stopped: Done"
-msgstr "Ratuko palaikymas"
+msgstr "Ratukas sustabdytas: Atlikta"
 
 #. Maximum length: 40  characters
 msgid "Disable use of accented letters"
@@ -262,7 +261,7 @@ msgstr "Simbolio pasikartojimo sparta"
 
 #. Maximum length: 40  characters
 msgid "<nobr><h3>Keyboard Type</h3></nobr>"
-msgstr ""
+msgstr "<nobr><h3>Klaviatûros tipas</h3></nobr>"
 
 #. Maximum length: 20  characters
 #. Maximum length: 40  characters
@@ -274,9 +273,8 @@ msgid "BusID"
 msgstr "Magistralës ID"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "ScreenID"
-msgstr "Ekranas"
+msgstr "EkranoID"
 
 #. Maximum length: 50  characters
 msgid "Manufacturer Disk..."
@@ -320,43 +318,43 @@ msgstr "Deðiniojo Ctl sàryðis"
 
 #. Maximum length: 50 characters
 msgid "Default"
-msgstr ""
+msgstr "Áprastas"
 
 #. Maximum length: 50 characters
 msgid "R-Alt switch group while pressed"
-msgstr ""
+msgstr "Paspaustas deð. Alt perjungia grupæ"
 
 #. Maximum length: 50 characters
 msgid "R-Alt switch group"
-msgstr ""
+msgstr "Deð. Alt perjungia grupæ"
 
 #. Maximum length: 50 characters
 msgid "Both Shift Keys change group"
-msgstr ""
+msgstr "Abu Shift klaviðai pakeièia grupæ"
 
 #. Maximum length: 50 characters
 msgid "Ctrl and Shift change group"
-msgstr ""
+msgstr "Ctrl ir Shift pakeièia grupæ"
 
 #. Maximum length: 50 characters
 msgid "Alt and Ctrl change group"
-msgstr ""
+msgstr "Alt ir Ctrl pakeièia grupæ"
 
 #. Maximum length: 50 characters
 msgid "CapsLock as additional control"
-msgstr ""
+msgstr "CapsLock papildomam valdymui"
 
 #. Maximum length: 50 characters
 msgid "Swap Ctrl and CapsLock"
-msgstr ""
+msgstr "Sukeisti Ctrl ir CapsLock"
 
 #. Maximum length: 50 characters
 msgid "Ctrl Key at left of <A>"
-msgstr ""
+msgstr "Ctrl yra <A> kairëje"
 
 #. Maximum length: 50 characters
 msgid "Ctrl Key at bottom left"
-msgstr ""
+msgstr "Ctrl yra kairëje apaèioje"
 
 #. Maximum length: 50  characters
 msgid "Modeline Algorithm"
@@ -371,9 +369,8 @@ msgid "Color and Resolution"
 msgstr "Spalva ir raiðka"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Virtual Resolution"
-msgstr "&Raiðka"
+msgstr "Virtuali raiðka"
 
 #. Maximum length: 40  characters
 msgid "Language Layout"
@@ -428,24 +425,21 @@ msgid "Enable DPMS"
 msgstr "Ájungti DPMS"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
-msgstr "<b>Konfigûruoti daugiaekranæ veiksenà...</b><hr>"
+msgstr "<nobr><h3><u>Konfigûruoti daugiaekranæ veiksenà...</u></h3></nobr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
-msgstr "<b>3D/OpenGL konfigûravimas...</b><hr>"
+msgstr "<nobr><h3><u>3D/OpenGL konfigûravimas...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
-msgstr "<b>AccessX konfigûravimas...</b><hr>"
+msgstr "<nobr><h3><u>AccessX konfigûravimas...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
 #, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<b>AccessX konfigûravimas...</b><hr>"
+msgstr "<nobr><h3><u>AccessX konfigûravimas...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -461,10 +455,15 @@ msgid ""
 "warning only but make sure your keyboard model is able to map all the keys "
 "needed for the selected layout."
 msgstr ""
+"<b>Neatrodo, kad dabartinis planas ir modelis tiktø vienas kitam</b><hr>Tai "
+"tik perspëjimas, bet ásitikinkite, kad jûsø klaviatûros modelis susieti "
+"visus klaviðus, reikalingus pasirinktam planui."
 
 #. RTF text: no limit
 msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
 msgstr ""
+"<b>Parametrui %1 reikia vertës</b><hr>Praðome nustatyti ðiam parametrui "
+"vertæ."
 
 #. RTF text: no limit
 msgid ""
@@ -516,19 +515,19 @@ msgstr ""
 "kadangi trûksta sekanèiø paketø:"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide the "
 "official 2D/3D/OpenGL driver from nVidia. Update the packages NVIDIA_GLX and "
 "NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> "
 "first. This can also be done comfortably with YOU (YaST2 Online Update)."
 msgstr ""
-"<b>Neádiegta oficiali NVidia tvarkyklë</b><hr>Nepavyksta ájungti OpenGL "
-"spartinimo, kadangi sistema nepateikia oficialiø NVidia paketø. Praðome "
-"pirma atnaujinti paketus <b>NVIDIA_GLX ir NVIDIA_kernel</b> su YOU (YaST2 "
-"atnaujinimu internetu)."
+"<b>Nepavyksta ájungti OpenGL spartinimo</b><hr>Sistema nepateikia oficialios "
+"2D/3D/OpenGL nVidia tvarkyklës. Paketus NVIDIA_GLX ir NVIDIA_kernel "
+"atnaujinkite ið nVidia web serverio <i>(http://www.nvidia.com)</i>. Tai "
+"galima padaryti ir su YOU (YaST2 atnaujinimas internetu)."
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
 "this card you need to install the commercial driver from nVidia first. "
@@ -539,8 +538,16 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>Nepavyksta ájungti OpenGL spartinimo</b><hr>Norëdami ðiai plokðtei "
+"aktyvuoti 3D posistemæ, jums reikia ádiegti komercinæ tvarkyklæ ið nVidia. "
+"Naudodami <b>YaST atnaujinimà internetu</b> ádiekite tvarkyklæ ir nVidia "
+"tvarkyklës pataisà.<br><br>Jei jau ádiegëte tvarkyklæ per YaST atnaujinimà "
+"internetu ir po to iðdiegëte, jums reiks ádiegti tvarkyklæ rankiniu bûdu. "
+"Tam dalykui instrukcijas rasite: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/"
+"supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
+#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -548,6 +555,10 @@ msgid ""
 "X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
 "want to continue?</b>"
 msgstr ""
+"<b>Iðjungti OpenGL spartinimà</b><hr>3D posistemë pagrásta komercine nVidia "
+"tvarkykle. SaX2 reikia iðdiegti tvarkyklæ su nVidia diegimo programa. "
+"Iðdiegimo procesas panaudos originalià tvarkyklæ ið XFree86, kuri neteikia "
+"3D spartinimo.<br><br><b>Norite tæsti?</b>"
 
 #. Maximum length: 70 characters
 #, fuzzy
@@ -570,22 +581,20 @@ msgid "Utility Disk..."
 msgstr "Pagalbinis diskas..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Ádëkite diskà</b><hr>Praðome ádëti monitoriaus gamintojo teikiamà "
+"<b>Ádëkite Cd arba diskà</b><hr>Praðome ádëti monitoriaus gamintojo teikiamà "
 "pagalbiná displëjaus diskà."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Skaitymo klaida</b><hr>Nepavyksta perskaityti disko. Tai gali bûti dël "
-"paþeisto disko arba blogo formato bylos diske."
+"<b>Skaitymo klaida</b><hr>Nepavyksta perskaityti CD arba disko. Tai gali "
+"bûti dël paþeisto disko arba blogo formato bylos diske."
 
 #. RTF text: no limit
 msgid ""
@@ -639,7 +648,8 @@ msgid ""
 "<b>number pad keys</b>. Test the behavior using the number pad."
 msgstr ""
 "<b>AccessX ájungtas:</b><hr>Kursorius dabar pasiekiamas per <b>deðinëje "
-"klaviatûros pusëje esanèius skaièiø klaviðus</b>. Praðome patikrinti"
+"klaviatûros pusëje esanèius skaièiø klaviðus</b>. Praðome patikrinti jø "
+"elgsenà."
 
 #. RTF text: no limit
 msgid ""
@@ -665,16 +675,14 @@ msgstr ""
 "paleidus grafinæ sistemà."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Configuration has been saved:</b><hr>Your modifications will take effect "
 "the next time your system is <b>rebooted</b>."
 msgstr ""
-"<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti tik ið naujo "
-"paleidus grafinæ sistemà."
+"<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti <b>ið naujo "
+"paleidus</b> sistemà."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are in "
 "developmental phases so are, in part, still regarded as experimental. "
@@ -685,18 +693,16 @@ msgid ""
 "acceleration or if any problems related to this should arise.<br><br><b>Do "
 "you want to enable 3D for this card?</b>"
 msgstr ""
-"<b>Surasta plokðtë su 3D spartinimu</b><hr>Visos 3D tvarkyklës Linux "
-"sistemai yra vystymosi etape ir ið dalies jas galima traktuoti kaip "
+"<b>Surasta plokðtë su 3D spartinimu: <u>%1</u></b><hr>Visos 3D tvarkyklës "
+"Linux sistemai yra vystymosi etape ir ið dalies jas galima traktuoti kaip "
 "eksperimentines. Taèiau mes nusprendëme átraukti tvarkykles á mûsø "
 "distribucijà dël didelio 3D spartinimo poreikio Linux sistemoje. <br><br>Dël "
 "OpenGL tvarkykliø eksperimentinës bûklës, mes negalime pasiûlyti jokios "
 "ádiegimo pagalbos 3D spartinimo konfigûravimui ir dël to kilusioms "
-"problemoms spræsti. Todël pagrindinis grafinës vartotojo sàsajos X11 "
-"konfigûravimas neturi savyje 3D spartinimo konfigûravimo.<br><br>Ar norite "
-"ájungti 3D spartinimà sekanèiai plokðtei?"
+"problemoms spræsti.<br><br><b>Ar norite ájungti 3D spartinimà sekanèiai "
+"plokðtei?</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this card "
 "is not an official 2D/3D/OpenGL driver from nVidia for licensing reasons. "
@@ -709,19 +715,18 @@ msgid ""
 "influence over the development of nVidia drivers.<br><br><b>Prepare 3D for "
 "this card?</b>"
 msgstr ""
-"<b>Detektuota plokðtë su 3D spartinimu</b><hr>Turëkite omeny, jog dël "
-"licenzijos problemø tai nëra oficiali nVidia 2D/3D/OpenGL tvarkyklë. "
-"Naudojama 3D/OpenGL tvarkyklë, jei ájungsite 3D, nëra átaiso spartinama."
+"<b>Detektuota plokðtë su 3D spartinimu: <u>%1</u></b><hr>Dël licencijos "
+"problemø tai nëra oficiali nVidia 2D/3D/OpenGL tvarkyklë. Naudojama 3D/"
+"OpenGL tvarkyklë, jei ájungsite 3D, <b>nëra</b> átaiso spartinama."
 "<br><br>Jei norite naudoti átaiso spartinamà 3D/OpenGL, atnaujinkite paketus "
 "NVIDIA_GLX ir NVIDIA_kernel SuSE Linux sistemai ið nVidia interneto "
 "svetainës (http://www.nvidia.com). Tai galite padaryti ir su YOU (YaST2 "
 "atnaujinimas internetu).<br><br>Jei atsiranda problemø su 2D/3D/OpenGL "
 "tvarkykle ið nVidia, pasikonsultuokite su gamintoju, kadangi mes neturime "
-"jokios átakos nVidia tvarkykliø kûrimui.<br><br>Ar norite ájungti 3D "
-"sekanèiai plokðtei?"
+"jokios átakos nVidia tvarkykliø kûrimui.<br><br><b>Paruoðti 3D ðiai plokðtei?"
+"</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability that "
 "comes with this distribution is still installed.  You should update to the "
@@ -729,9 +734,9 @@ msgid ""
 "update). Start the online update?"
 msgstr ""
 "<b>Programø atnaujinimas</b><hr>Jûs vis dar turite ádiegtà netikusià nvidia "
-"tvarkyklæ be 3D galimybës, kuri ateina su SuSE Linux. Todël mes turëtume "
+"tvarkyklæ be 3D galimybës, kuri gaunama su SuSE Linux. Todël jûs turëtume "
 "atnaujinti tai iki oficialios nvidia tvarkyklës ið nvidia ftp serverio su "
-"programa YOU (YaST2 atnaujinimu internetu). Ar norite paleisti atnaujinimà "
+"programa YOU (YaST2 atnaujinimas internetu). Ar paleisti atnaujinimà "
 "internetu?"
 
 #. RTF text: no limit
@@ -900,12 +905,11 @@ msgstr "Api&e..."
 
 #. Maximum length: 60  characters
 msgid "About the author"
-msgstr ""
+msgstr "Apie autoriø"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "Select virtual resolution for Mode %1"
-msgstr "Pasirinkti raiðkas"
+msgstr "Pasirinkite virtualià raiðkà modai %1"
 
 #. RTF text: no limit
 msgid ""
@@ -985,7 +989,6 @@ msgstr ""
 "vienas árenginys."
 
 #. RTF text: no limit
-#, fuzzy
 msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
 msgstr ""
 "<b>Netinkama konfigûracija:</b><hr>Turi bûti sukonfigûruotas maþiausiai "
@@ -1026,17 +1029,16 @@ msgstr ""
 "Alt-Backspace ]</b><br><br>, taip priverstinai iðjungsite serverá."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Final step:</b><hr>The last step is saving your new configuration. Please "
 "note the configuration is <i>Framebuffer</i> based and your system needs to "
 "be rebooted first to activate the changes for resolution and/or color "
 "settings."
 msgstr ""
-"<b>Baigiamieji þingsniai:</b><hr>Paskutinis þingsnis- iðsaugoti jûsø naujà "
-"konfigûracijà. Rekomenduojama iðbandyti konfigûracijà prieð jà iðsaugant. "
-"Jei serveris pasileis su iðkraipytu darbalaukiu, spauskite:<br><br><b>[ Ctrl-"
-"Alt-Backspace ]</b><br><br>, taip priverstinai iðjungsite serverá."
+"<b>Baigiamasis þingsnis:</b><hr>Paskutinis þingsnis- iðsaugoti jûsø naujà "
+"konfigûracijà. Turëkite omeny, kad konfigûracija pagrásta <i>Framebuffer</"
+"i>  árenginiu ir jûsø sistemà pirma reikia perkrauti, kad bûtø aktyyvuoti "
+"raiðkos ir/arba spalvø nuostatø pakeitimai."
 
 #. RTF text: no limit
 msgid ""
@@ -1066,26 +1068,24 @@ msgid "Unknown Monitor..."
 msgstr "Neþinomas monitorius..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Nepavyko detektuoti monitoriaus</b><hr>Praðome já konfigûruoti rankiniu "
-"bûdu. Ar norite dabar paleisti konfigûracijos dialogà monitoriaus "
+"<b>Nepavyko detektuoti monitoriaus (%1)</b><hr>Praðome já konfigûruoti "
+"rankiniu bûdu. Ar norite dabar paleisti konfigûracijos dialogà monitoriaus "
 "konfigûravimui ?"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
 "manually. Do you want to start the configuration dialog to setup the display "
 "now ?"
 msgstr ""
-"<b>Nepavyko detektuoti monitoriaus</b><hr>Praðome já konfigûruoti rankiniu "
-"bûdu. Ar norite dabar paleisti konfigûracijos dialogà monitoriaus "
-"konfigûravimui ?"
+"<b>Nepavyko rasti monitoriaus (%1) su ID: %2</b><hr>Praðome monitoriø "
+"konfigûruoti rankiniu bûdu. Ar norite dabar paleisti konfigûracijos dialogà "
+"monitoriaus konfigûravimui ?"
 
 #. Dynamic length: Please do not oversize key up to 10%
 msgid "Automatic graphics system set up"
@@ -1128,13 +1128,12 @@ msgid "Please wait"
 msgstr "Praðome palaukti"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
 "X11 Configuration Manager<br>"
 msgstr ""
-"<b>SaX2: Iðplëstasis X11 konfigûravimas </b><hr>Sveiki atvykæ á SuSE X11 "
-"konfigûracijos tvarkyklæ<br>"
+"<big><b>SaX2: Iðplëstas X11 konfigûravimas </b></big><hr>Sveiki atvykæ á "
+"SuSE X11 konfigûracijos tvarkyklæ<br>"
 
 #. Maximum length: 70  characters
 msgid "To start, double-click  an item in the component list."
@@ -1253,9 +1252,8 @@ msgid "Configure 3D/OpenGL subsystem..."
 msgstr "Konfigûruoti 3D/OpenGL posistemæ..."
 
 #. Maximum length: 100  characters
-#, fuzzy
 msgid "Configure virtual resolutions..."
-msgstr "Konfigûruoti lytimuosius ekranus..."
+msgstr "Konfigûruoti virtualià raiðkà..."
 
 #. Maximum length: 100  characters
 msgid "Configure graphics cards..."
@@ -1286,6 +1284,8 @@ msgid ""
 "Set up screen layout of your desktops (Double-click an icon will identify "
 "the real screen)..."
 msgstr ""
+"Konfigûruokite darbalaukio ekranø iðdëstymà (Dukart paspaudus, bus ident. "
+"realus ekranas)..."
 
 #. Maximum length: 100  characters
 msgid "Configure graphics tablet"
@@ -1304,24 +1304,21 @@ msgid "Remove selected card"
 msgstr "Paðalinti paþymëtà plokðtæ"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Remove selected monitor"
-msgstr "Paða&linti paþymëtà pelæ"
+msgstr "Paðalinti paþymëtà monitoriø"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "&Savybës"
+msgstr "Savybës..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "P&arinktys..."
+msgstr "P&arinktys"
 
 #. Maximum length: 20  characters
 #, fuzzy
 msgid "VNC Options"
-msgstr "P&arinktys..."
+msgstr "P&arinktys"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
@@ -1333,7 +1330,7 @@ msgstr ""
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
-msgstr "&Savybës"
+msgstr "&Savybës..."
 
 #. Maximum length: 40  characters
 msgid "Password"
@@ -1350,7 +1347,7 @@ msgstr ""
 #. Maximum length: 40  characters
 #, fuzzy
 msgid "Enable HTTP Access"
-msgstr "Ájungti AccessX"
+msgstr "Iðjungti AccessX"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
@@ -1369,34 +1366,29 @@ msgid "&Remove selected touchscreen"
 msgstr "Paða&linti paþymëtà lytimàjá ekranà"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
-msgstr "<b>Ðiuo metu sukonfigûruoti lytimieji ekranai</b><hr>"
+msgstr ""
+"<nobr><h3><u>Ðiuo metu sukonfigûruoti lytimieji ekranai:</u></h3></nobr>"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
-msgstr "<b>Dabar sukonfigûruotas monitoriai</b><hr>"
+msgstr "<nobr><h3><u>Dabar sukonfigûruoti monitoriai</u></h3></nobr>"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
-msgstr "<b>Dabar sukonfigûruotos plokðtës:</b><hr>"
+msgstr "<nobr><h3><u>Dabar sukonfigûruotos plokðtës:</u></h3></nobr>"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
-msgstr "<b>Dabar sukonfigûruota pelë:</b><hr>"
+msgstr "<nobr><h3><u>Dabar sukonfigûruota pelë:</u></h3></nobr>"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-msgstr "<b>Dabartinis monitoriø iðdëstymas:</b><hr>"
+msgstr "<nobr><h3><u>Dabartinis monitoriø iðdëstymas:</u></h3></nobr>"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
-msgstr "<b>Dabar sukonfigûruoti darbalaukiai:</b><hr>"
+msgstr "<nobr><h3><u>Dabar sukonfigûruoti darbalaukiai:</u></h3></nobr>"
 
 #. Maximum length: 40  characters
 msgid "&Add new mouse..."
@@ -1449,7 +1441,7 @@ msgstr "&Spalvos"
 
 #. Maximum length: 50  characters
 msgid "&Resolution(s) for %1 colors"
-msgstr ""
+msgstr "&Raiðka(os) %1 spalvoms"
 
 #. Maximum length: 50  characters
 msgid "Resolution Y"
@@ -1460,9 +1452,8 @@ msgid "Possible"
 msgstr "Galimas"
 
 #. Maximum length: 50  characters
-#, fuzzy
 msgid "&Add this resolution"
-msgstr "Pridëti ðià r&aiðkà..."
+msgstr "Pridëti ðià r&aiðkà"
 
 #. Maximum length: 50  characters
 msgid "Enable 3-button emulation"
@@ -1473,74 +1464,62 @@ msgid "Enable Mouse Wheel"
 msgstr "Ájungti pelës ratukà"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruoto AccessX bûsena</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruoto AccessX bûsena</b></big><hr>"
 
 #. Maximum length: 60  characters
 #, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<b>Dabartinë 3D/OpenGL bûsena</b><hr>"
+msgstr "<big><b>Dabartinë 3D/OpenGL bûsena</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-msgstr "<b>Dabartinë 3D/OpenGL bûsena</b><hr>"
+msgstr "<big><b>Dabartinë 3D/OpenGL bûsena</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruotos daugiaekranës veiksenos bûsena</b><hr>"
+msgstr "<big><b>Dabartinës virtualios raiðkos konfigûracija</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured graphics cards</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruota vaizdo plokðtës</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruota vaizdo plokðtës</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured desktops</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruoti darbalaukiai</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruoti darbalaukiai</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently active geometry timings</b></big><hr>"
-msgstr "<b>Ðiuo metu aktyvûs geometrijos laikai</b><hr>"
+msgstr "<big><b>Ðiuo metu aktyvûs geometrijos laikai</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured keyboard</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruota klaviatûra</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruota klaviatûra</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured layout</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruotas iðdëstymas</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruotas iðdëstymas</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured monitors</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruotas monitoriai</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruoti monitoriai</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruoti pelës þymeklio árenginiai</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruoti þymeklio árenginiai</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured multihead status</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruotos daugiaekranës veiksenos bûsena</b><hr>"
+msgstr ""
+"<big><b>Dabar sukonfigûruotos daugiaekranës veiksenos bûsena</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
-msgstr "<b>Dabar sukonfigûruotas grafinis planðetas</b><hr>"
+msgstr "<big><b>Dabar sukonfigûruotas grafinis planðetas</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Currently configured touchscreen</b></big><hr>"
-msgstr "<b>Ðiuo metu sukonfigûruotas lytimasis ekranas</b><hr>"
+msgstr "<big><b>Ðiuo metu sukonfigûruotas lytimasis ekranas</b></big><hr>"
 
 #. RTF text: no limit
 msgid "<b><nobr>No information available</nobr></b>"
@@ -1581,6 +1560,11 @@ msgid ""
 "up if you leave the edges of your monitor with the mouse. This area is "
 "called a virtual resolution."
 msgstr ""
+"<b>Virtuali raiðka:</b><hr>Kiekvienas darbalaukis turi savo tikrà raiðkà, "
+"kuri yra matoma. Be ðios raiðkos, jûs galite sukonfigûruoti raiðkà, kuri "
+"patenka uþ matomos monitoriaus srities ir pasirodo tuomet, kai pelës "
+"kursoriø stumiate uþ monitoriaus matomos srities. Ði sritis vadinama "
+"virtualia raiðka."
 
 #. RTF text: no limit
 msgid ""
@@ -1615,16 +1599,13 @@ msgstr ""
 "skleistines."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
 "language environment with which it should work."
 msgstr ""
-"<b>Klaviatûros savybës:</b><hr>Konfigûruojamas klaviatûros tipas bei kalba, "
-"kur ji turëtø veikti. Taip pat galite konfigûruoti naudojamus ðriftus."
+"<b>Klaviatûros savybës:</b><hr>Konfigûruokite klaviatûros tipà bei kalbà."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Desktop layout:</b><hr>If more than one card is available, you are in a "
 "multihead environment. Set up the neighborhood relations of the connected "
@@ -1633,8 +1614,10 @@ msgid ""
 "corresponding screen."
 msgstr ""
 "<b>Darbalaukio iðdëstymas:</b><hr>Jei yra daugiau nei viena plokðtë, jûs "
-"esate taip vadinamoje daugiaekranës veiksenos aplinkoje. Sukonfigûruokite "
-"prijungtø monitoriø kaimyninius ryðius."
+"esate daugiaekranës veiksenos aplinkoje. Sukonfigûruokite prijungtø "
+"monitoriø kaimyninius ryðius nutempdami piktogramas. Jei neþinote, kuris "
+"monitorius priklauso kokiai piktogramai, paspauskite dukart ant jos ir jûs "
+"pamatysite praneðimà atitinkamame ekrane."
 
 #. RTF text: no limit
 msgid ""
@@ -1693,9 +1676,8 @@ msgid "&Port"
 msgstr "&Prievadas"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Veiksena:"
+msgstr "&Veiksena"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -1780,925 +1762,899 @@ msgstr "K&eisti dydá"
 
 #. Maximum length: 60  characters
 msgid "No video mode tuning available"
-msgstr ""
+msgstr "Negalimas video veiksenos derinimas"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Tuðèios eigos taimeris..."
 
 #. RTF text: no limit
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx serija"
 
 #. RTF text: no limit
 msgid "Canadian"
-msgstr ""
+msgstr "Kanadieèiø"
 
 #. RTF text: no limit
 msgid "Brazilian"
-msgstr ""
+msgstr "Brazilø"
 
 #. RTF text: no limit
 msgid "Bosnian"
-msgstr ""
+msgstr "Bosnijos"
 
 #. RTF text: no limit
 msgid "Lithuanian qwerty (numeric)"
-msgstr ""
+msgstr "Lietuviø qwerty (ant skaièiø)"
 
 #. RTF text: no limit
 msgid "Georgian (russian)"
-msgstr ""
+msgstr "Gruzinø (rusø)"
 
 #. RTF text: no limit
 msgid "Latvian"
-msgstr ""
+msgstr "Latviø"
 
 #. RTF text: no limit
 msgid "Belarusian"
-msgstr ""
+msgstr "Baltarusiø"
 
 #. RTF text: no limit
 msgid "Czech (qwerty)"
-msgstr ""
+msgstr "Èekø (qwerty)"
 
 #. RTF text: no limit
 msgid "Northern Saami (Finland)"
-msgstr ""
+msgstr "Ðiauriniø Samiø (Suomiø)"
 
 #. RTF text: no limit
 msgid "Macedonian"
-msgstr ""
+msgstr "Makedonieèiø"
 
 #. RTF text: no limit
 msgid "U.S. English w/ deadkeys"
-msgstr ""
+msgstr "JAV anglø w/ miræ klaviðai"
 
 #. RTF text: no limit
 msgid "Malayalam"
-msgstr ""
+msgstr "Malajø"
 
 #. RTF text: no limit
 msgid "Burmese"
-msgstr ""
+msgstr "Birmieèiø"
 
 #. RTF text: no limit
 msgid "Kannada"
-msgstr ""
+msgstr "Kanadieèiø"
 
 #. RTF text: no limit
 msgid "Mongolian"
-msgstr ""
+msgstr "Mongolø"
 
 #. RTF text: no limit
 msgid "Bengali"
-msgstr ""
+msgstr "Bengalø"
 
 #. RTF text: no limit
 msgid "Romanian"
-msgstr ""
+msgstr "Rumunø"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Croatian"
-msgstr "Plokðtës savybës"
+msgstr "Kroatø"
 
 #. RTF text: no limit
 msgid "U.S. English w/ ISO9995-3"
-msgstr ""
+msgstr "JAV anglø w/ ISO9995-3"
 
 #. RTF text: no limit
 msgid "Lithuanian azerty standard"
-msgstr ""
+msgstr "Lietuviø azerty standartinë"
 
 #. RTF text: no limit
 msgid "Maltese"
-msgstr ""
+msgstr "Maltieèiø"
 
 #. RTF text: no limit
 msgid "German"
-msgstr ""
+msgstr "Vokieèiø"
 
 #. RTF text: no limit
 msgid "Hungarian"
-msgstr ""
+msgstr "Vengrø"
 
 #. RTF text: no limit
 msgid "Russian"
-msgstr ""
+msgstr "Rusø"
 
 #. RTF text: no limit
 msgid "Swedish"
-msgstr ""
+msgstr "Ðvedø"
 
 #. RTF text: no limit
 msgid "Turkish (F)"
-msgstr ""
+msgstr "Turkø (F)"
 
 #. RTF text: no limit
 msgid "Oriya"
-msgstr ""
+msgstr "Oriya"
 
 #. RTF text: no limit
 msgid "Slovenian"
-msgstr ""
+msgstr "Svolënø"
 
 #. RTF text: no limit
 msgid "Slovak (qwerty)"
-msgstr ""
+msgstr "Slovakø (qwerty)"
 
 #. RTF text: no limit
 msgid "Czech"
-msgstr ""
+msgstr "Èekø"
 
 #. RTF text: no limit
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Danish"
-msgstr "&Uþbaigti"
+msgstr "Danø"
 
 #. RTF text: no limit
 msgid "Dvorak"
-msgstr ""
+msgstr "Dvorak"
 
 #. RTF text: no limit
 msgid "Slovak"
-msgstr ""
+msgstr "Slovakø"
 
 #. RTF text: no limit
 msgid "Dutch"
-msgstr ""
+msgstr "Olandø"
 
 #. RTF text: no limit
 msgid "Israeli"
-msgstr ""
+msgstr "Þydø"
 
 #. RTF text: no limit
 msgid "Tamil"
-msgstr ""
+msgstr "Tamilø"
 
 #. RTF text: no limit
 msgid "Ogham"
-msgstr ""
+msgstr "Ogham"
 
 #. RTF text: no limit
 msgid "Norwegian"
-msgstr ""
+msgstr "Norvegø"
 
 #. RTF text: no limit
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #. RTF text: no limit
 msgid "Serbian"
-msgstr ""
+msgstr "Serbø"
 
 #. RTF text: no limit
 msgid "Farsi"
-msgstr ""
+msgstr "Persø"
 
 #. RTF text: no limit
 msgid "Icelandic"
-msgstr ""
+msgstr "Islandø"
 
 #. RTF text: no limit
 msgid "Italian"
-msgstr ""
+msgstr "Italø"
 
 #. RTF text: no limit
 msgid "Estonian"
-msgstr ""
+msgstr "Estø"
 
 #. RTF text: no limit
 msgid "Inuktitut"
-msgstr ""
+msgstr "Inuktitut"
 
 #. RTF text: no limit
 msgid "Swiss French"
-msgstr ""
+msgstr "Ðveicarijos prancûzø"
 
 #. RTF text: no limit
 msgid "Swiss German"
-msgstr ""
+msgstr "Ðveicarijos"
 
 #. RTF text: no limit
 msgid "Thai"
-msgstr ""
+msgstr "Tailandieèiø"
 
 #. RTF text: no limit
 msgid "Tajik"
-msgstr ""
+msgstr "Tadþikø"
 
 #. RTF text: no limit
 msgid "Greek"
-msgstr ""
+msgstr "Graikø"
 
 #. RTF text: no limit
 msgid "Japanese"
-msgstr ""
+msgstr "Japonø"
 
 #. RTF text: no limit
 msgid "Georgian (latin)"
-msgstr ""
+msgstr "Gruzinø (lotyniðka)"
 
 #. RTF text: no limit
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukrainieèiø"
 
 #. RTF text: no limit
 msgid "Polish (qwertz)"
-msgstr ""
+msgstr "Lenkø (qwertz)"
 
 #. RTF text: no limit
 msgid "Syriac"
-msgstr ""
+msgstr "Sirø"
 
 #. RTF text: no limit
 msgid "Turkish"
-msgstr ""
+msgstr "Turkø"
 
 #. RTF text: no limit
 msgid "Spanish"
-msgstr ""
+msgstr "Ispanø"
 
 #. RTF text: no limit
 msgid "Northern Saami (Sweden)"
-msgstr ""
+msgstr "Ðiauriniø samiø (ðvedø)"
 
 #. RTF text: no limit
 msgid "Yugoslavian"
-msgstr ""
+msgstr "Jugoslavø"
 
 #. RTF text: no limit
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Finnish"
-msgstr "&Uþbaigti"
+msgstr "Suomiø"
 
 #. RTF text: no limit
 msgid "French (alternative)"
-msgstr ""
+msgstr "Prancûzø (alternatyvus)"
 
 #. RTF text: no limit
 msgid "Hungarian (qwerty)"
-msgstr ""
+msgstr "Vengrø (qwerty)"
 
 #. RTF text: no limit
 msgid "Russian (cyrillic phonetic)"
-msgstr ""
+msgstr "Rusø (fonetinis)"
 
 #. RTF text: no limit
 msgid "Albanian"
-msgstr ""
+msgstr "Albanø"
 
 #. RTF text: no limit
 msgid "Polish"
-msgstr ""
+msgstr "Lenkø"
 
 #. RTF text: no limit
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #. RTF text: no limit
 msgid "Armenian"
-msgstr ""
+msgstr "Armënø"
 
 #. RTF text: no limit
 msgid "Northern Saami (Norway)"
-msgstr ""
+msgstr "Ðiauriniø samiø (norvegø)"
 
 #. RTF text: no limit
 msgid "Latin America"
-msgstr ""
+msgstr "Lotynø Amerika"
 
 #. RTF text: no limit
 msgid "French"
-msgstr ""
+msgstr "Prancûzø"
 
 #. RTF text: no limit
 msgid "United Kingdom"
-msgstr ""
+msgstr "Jungtinë Karalystë"
 
 #. RTF text: no limit
 msgid "Arabic"
-msgstr ""
+msgstr "Arabø"
 
 #. RTF text: no limit
 msgid "U.S. English"
-msgstr ""
+msgstr "JAV anglø"
 
 #. RTF text: no limit
 msgid "Maltese (US layout)"
-msgstr ""
+msgstr "Maltieèiø (US iðdëstymas)"
 
 #. RTF text: no limit
 msgid "French Canadian"
-msgstr ""
+msgstr "Prancûzø kanadieèiø"
 
 #. RTF text: no limit
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugalø"
 
 #. RTF text: no limit
 msgid "Belgian"
-msgstr ""
+msgstr "Belgø"
 
 #. RTF text: no limit
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgarø"
 
 #. RTF text: no limit
 msgid "Azerbaijani"
-msgstr ""
+msgstr "Azerbaidþanieèiø"
 
 #. RTF text: no limit
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamieèiø"
 
 #. RTF text: no limit
 msgid "Lao"
-msgstr ""
+msgstr "Laosieèiø"
 
 #. RTF text: no limit
 msgid "Microsoft Natural"
-msgstr ""
+msgstr "Microsoft Natural"
 
 #. RTF text: no limit
 msgid "Ennyah DKB-1008"
-msgstr ""
+msgstr "Ennyah DKB-1008"
 
 #. RTF text: no limit
 msgid "Logitech Deluxe Access Keyboard"
-msgstr ""
+msgstr "Logitech Deluxe Access klaviatûra"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard"
-msgstr ""
+msgstr "Microsoft Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4500P"
-msgstr ""
+msgstr "Samsung SDM 4500P"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd"
 
 #. RTF text: no limit
 msgid "Dell"
-msgstr ""
+msgstr "Dell"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GF"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access"
-msgstr ""
+msgstr "IBM Rapid Access"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (papildoma option2)"
 
 #. RTF text: no limit
 msgid "Memorex MX1998"
-msgstr ""
+msgstr "Memorex MX1998"
 
 #. RTF text: no limit
 msgid "Trust Wireless Keyboard Classic"
-msgstr ""
+msgstr "Trust Wireless Keyboard Classic"
 
 #. RTF text: no limit
 msgid "Dell 101-key PC"
-msgstr ""
+msgstr "Dell 101-key PC"
 
 #. RTF text: no limit
 msgid "Brother Internet Keyboard"
-msgstr ""
+msgstr "Brother Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr ""
+msgstr "Neðiojamojo Compaq (pvz. Armada) Laptop Keyboard"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr ""
+msgstr "Laptop/notebook Compaq (pvz. Presario) Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II"
-msgstr ""
+msgstr "IBM Rapid Access II"
 
 #. RTF text: no limit
 msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr ""
+msgstr "Logitech iTouch Cordless klaviatûra (modelis Y-RB6)"
 
 #. RTF text: no limit
 msgid "Trust Direct Access Keyboard"
-msgstr ""
+msgstr "Trust Direct Access klaviatûra"
 
 #. RTF text: no limit
 msgid "Logitech Internet Navigator Keyboard"
-msgstr ""
+msgstr "Logitech Internet Navigator klaviatûra"
 
 #. RTF text: no limit
 msgid "SK-7100"
-msgstr ""
+msgstr "SK-7100"
 
 #. RTF text: no limit
 msgid "Acer AirKey V"
-msgstr ""
+msgstr "Acer AirKey V"
 
 #. RTF text: no limit
 msgid "BTC 9000A"
-msgstr ""
+msgstr "BTC 9000A"
 
 #. RTF text: no limit
 msgid "Toshiba Satellite S3000"
-msgstr ""
+msgstr "Toshiba Satellite S3000"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (13 keys)"
-msgstr ""
+msgstr "Compaq Internet klaviatûra (13 klaviðø)"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XT1000"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XT1000"
 
 #. RTF text: no limit
 msgid "Logitech iTouch"
-msgstr ""
+msgstr "Logitech iTouch"
 
 #. RTF text: no limit
 msgid "SK-6200"
-msgstr ""
+msgstr "SK-6200"
 
 #. RTF text: no limit
 msgid "Compaq iPaq Keyboard"
-msgstr ""
+msgstr "Compaq iPaq klaviatûra"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro (papildoma parinktis)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Desktop Navigator"
 
 #. RTF text: no limit
 msgid "QTronix Scorpius 98N+"
-msgstr ""
+msgstr "QTronix Scorpius 98N+"
 
 #. RTF text: no limit
 msgid "Symplon PaceBook (tablet PC)"
-msgstr ""
+msgstr "Symplon PaceBook (tablet PC)"
 
 #. RTF text: no limit
 msgid "Winbook Model XP5"
-msgstr ""
+msgstr "Winbook Model XP5"
 
 #. RTF text: no limit
 msgid "BTC 5113RF Multimedia"
-msgstr ""
+msgstr "BTC 5113RF Multimedia"
 
 #. RTF text: no limit
 msgid "Diamond 9801 / 9802 series"
-msgstr ""
+msgstr "Diamond 9801 / 9802 serijos"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE4xxx ir ZE4xxx"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Optical"
-msgstr ""
+msgstr "Logitech Cordless Desktop Optical"
 
 #. RTF text: no limit
 msgid "Logitech Internet Keyboard"
-msgstr ""
+msgstr "Logitech Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "BTC 9000"
-msgstr ""
+msgstr "BTC 9000"
 
 #. RTF text: no limit
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr ""
+msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr ""
+msgstr "Logitech Cordless Freedom/Desktop Navigator"
 
 #. RTF text: no limit
 msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr ""
+msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
 
 #. RTF text: no limit
 msgid "Propeller Voyager (KTEZ-1000)"
-msgstr ""
+msgstr "Propeller Voyager (KTEZ-1000)"
 
 #. RTF text: no limit
 msgid "Brazilian ABNT2"
-msgstr ""
+msgstr "Brazilø ABNT2"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (7 keys)"
-msgstr ""
+msgstr "Compaq Internet klaviatûra (7 klaviðai)"
 
 #. RTF text: no limit
 msgid "Honeywell Euroboard"
-msgstr ""
+msgstr "Honeywell Euroboard"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop"
-msgstr ""
+msgstr "Logitech Cordless Desktop"
 
 #. RTF text: no limit
 msgid "Yahoo! Internet Keyboard"
-msgstr ""
+msgstr "Yahoo! Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Compaq Internet Keyboard (18 keys)"
-msgstr ""
+msgstr "Compaq Internet klaviatûra (18 klaviðø)"
 
 #. RTF text: no limit
 msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr ""
+msgstr "Neðiojamasis Dell Inspiron 8xxx"
 
 #. RTF text: no limit
 msgid "IBM Rapid Access II (alternate option)"
-msgstr ""
+msgstr "IBM Rapid Access II (papildoma parinktis)"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop Pro"
-msgstr ""
+msgstr "Logitech Cordless Desktop Pro"
 
 #. RTF text: no limit
 msgid "Advance Scorpius KI"
-msgstr ""
+msgstr "Advance Scorpius KI"
 
 #. RTF text: no limit
 msgid "BTC 5126T"
-msgstr ""
+msgstr "BTC 5126T"
 
 #. RTF text: no limit
 msgid "Dexxa Wireless Desktop Keyboard"
-msgstr ""
+msgstr "Dexxa Wireless Desktop klaviatûra"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 5xx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 5xx"
 
 #. RTF text: no limit
 msgid "Memorex MX2750"
-msgstr ""
+msgstr "Memorex MX2750"
 
 #. RTF text: no limit
 msgid "SK-1300"
-msgstr ""
+msgstr "SK-1300"
 
 #. RTF text: no limit
 msgid "Generic 101-key PC"
-msgstr ""
+msgstr "Bendrasis 101-klaviðø PK"
 
 #. RTF text: no limit
 msgid "Northgate OmniKey 101"
-msgstr ""
+msgstr "Northgate OmniKey 101"
 
 #. RTF text: no limit
 msgid "ACPI Standard"
-msgstr ""
+msgstr "ACPI Standard"
 
 #. RTF text: no limit
 msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr ""
+msgstr "Cherry Blue Line CyBo@rd (papaildoma parinktis)"
 
 #. RTF text: no limit
 msgid "Chicony Internet Keyboard"
-msgstr ""
+msgstr "Chicony Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2501 Multimedia klaviatûra"
 
 #. RTF text: no limit
 msgid "Samsung SDM 4510P"
-msgstr ""
+msgstr "Samsung SDM 4510P"
 
 #. RTF text: no limit
 msgid "SK-2500"
-msgstr ""
+msgstr "SK-2500"
 
 #. RTF text: no limit
 msgid "SVEN Ergonomic 2500"
-msgstr ""
+msgstr "SVEN Ergonomic 2500"
 
 #. RTF text: no limit
 msgid "Generic 102-key (Intl) PC"
-msgstr ""
+msgstr "Bendroji 102-key (Intl) PC"
 
 #. RTF text: no limit
 msgid "Logitech Cordless Desktop iTouch"
-msgstr ""
+msgstr "Logitech Cordless Desktop iTouch"
 
 #. RTF text: no limit
 msgid "Chicony KB-9885"
-msgstr ""
+msgstr "Chicony KB-9885"
 
 #. RTF text: no limit
 msgid "Compaq Easy Access Keyboard"
-msgstr ""
+msgstr "Compaq Easy Access klaviatûra"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard 5181 Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook 500 FA"
 
 #. RTF text: no limit
 msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr ""
+msgstr "Memorex MX2500 EZ-Access klaviatûra"
 
 #. RTF text: no limit
 msgid "Generic 104-key PC"
-msgstr ""
+msgstr "Bendroji 104 klaviðø PK"
 
 #. RTF text: no limit
 msgid "Everex STEPnote"
-msgstr ""
+msgstr "Everex STEPnote"
 
 #. RTF text: no limit
 msgid "Japanese 106-key"
-msgstr ""
+msgstr "Japonø 106 klaviðø"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr ""
+msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE ir Pavilion N5xxx"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr ""
+msgstr "Hewlett-Packard Pavilion ZT11xx"
 
 #. RTF text: no limit
 msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr ""
+msgstr "Logitech iTouch keyboard Internet Navigator"
 
 #. RTF text: no limit
 msgid "Generic 105-key (Intl) PC"
-msgstr ""
+msgstr "Bendroji 105 klaviðø (Intl) PK"
 
 #. RTF text: no limit
 msgid "Keytronic FlexPro"
-msgstr ""
+msgstr "Keytronic FlexPro"
 
 #. RTF text: no limit
 msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr ""
+msgstr "Hewlett-Packard SK-2505 Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr ""
+msgstr "Microsoft Internet Keyboard Pro, Ðvedø"
 
 #. RTF text: no limit
 msgid "Microsoft Office Keyboard"
-msgstr ""
+msgstr "Microsoft Office klaviatûra"
 
 #. RTF text: no limit
 msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr ""
+msgstr "Oretec MCK-800 MM/Internet klaviatûra"
 
 #. RTF text: no limit
 msgid "Both Ctrl keys together change group"
-msgstr ""
+msgstr "Abu Ctrl klaviðai kartu keièia grupæ"
 
 #. RTF text: no limit
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "CapsLock klaviðo veiksena"
 
 #. RTF text: no limit
 msgid "Both Win-keys switch group while pressed"
-msgstr ""
+msgstr "Abu Win klaviðai keièia grupæ"
 
 #. RTF text: no limit
 msgid "Left Alt key changes group"
-msgstr ""
+msgstr "Kairys Alt klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Left Win-key changes group"
-msgstr ""
+msgstr "Kairys Win klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Right Shift key changes group"
-msgstr ""
+msgstr "Deðinys Shift klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Alt/Win klaviðo elgsena"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "Shift neatðaukia Caps."
 
 #. RTF text: no limit
 msgid "R-Alt switches group while pressed"
-msgstr ""
+msgstr "Paspaustas R-Alt keièia grupæ"
 
 #. RTF text: no limit
 msgid "Right Win-key is Compose"
-msgstr ""
+msgstr "Deðinys Win klaviðas yra Compose"
 
 #. RTF text: no limit
 msgid "Right Ctrl key changes group"
-msgstr ""
+msgstr "Deðinys Ctrl keièia grupæ"
 
 #. RTF text: no limit
 msgid "Press any of Win-keys to choose 3rd level"
-msgstr ""
+msgstr "Spauskite bet koká Win klaviða 3-iam lygiui"
 
 #. RTF text: no limit
 msgid "Control key at bottom left"
-msgstr ""
+msgstr "Control klaviðas apaèioje kairëje"
 
 #. RTF text: no limit
 msgid "Both Shift keys together change group"
-msgstr ""
+msgstr "Abu Shift klaviðai kartu keièia grupæ"
 
 #. RTF text: no limit
 msgid "Third level choosers"
-msgstr ""
+msgstr "Treèiojo lygio pasirinkimas"
 
 #. RTF text: no limit
 msgid "Control key at left of 'A'"
-msgstr ""
+msgstr "Control klaviðas 'A' kairëje"
 
 #. RTF text: no limit
 msgid "Scroll_Lock LED shows alternative group"
-msgstr ""
+msgstr "Scroll_Lock LED rodo alternatyvià grupæ"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Right Alt is Compose"
-msgstr "Deðiniojo Alt sàryðis"
+msgstr "Deðinysis Alt yra Compose"
 
 #. RTF text: no limit
 msgid "Right Win-key changes group"
-msgstr ""
+msgstr "Deðinys Win keièia grupæ"
 
 #. RTF text: no limit
 msgid "Press Left Win-key to choose 3rd level"
-msgstr ""
+msgstr "Spauskite kairájá Win klaviðà 3-iam lygiui"
 
 #. RTF text: no limit
 msgid "Make CapsLock an additional Control"
-msgstr ""
+msgstr "Padaryti CapsLock papildomu Control"
 
 #. RTF text: no limit
 msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+msgstr "Shift keièia Caps."
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+msgstr "veikia kaip Shift su uþrakinimu. Shift neatðaukia Caps."
 
 #. RTF text: no limit
 msgid "Left Win-key switches group while pressed"
-msgstr ""
+msgstr "Paspaudus kairá Win persijungia grupë"
 
 #. RTF text: no limit
 msgid "Left Shift key changes group"
-msgstr ""
+msgstr "Kairys Shift klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Num_Lock LED shows alternative group"
-msgstr ""
+msgstr "Num_Lock LED rodo alternatyvià grupæ"
 
 #. RTF text: no limit
 msgid "Caps_Lock LED shows alternative group"
-msgstr ""
+msgstr "Caps_Lock LED rodo alternatyvià grupæ"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "Meta susietas su kairiu Win klaviðu."
 
 #. RTF text: no limit
 msgid "Caps Lock key changes group"
-msgstr ""
+msgstr "Caps Lock klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Both Alt keys together change group"
-msgstr ""
+msgstr "Abu Alt klaviðai kartu keièia grupæ"
 
 #. RTF text: no limit
 msgid "Menu is Compose"
-msgstr ""
+msgstr "Meniu yra Compose"
 
 #. RTF text: no limit
 msgid "Right Alt key changes group"
-msgstr ""
+msgstr "Deðinys Alt klaviðas keièia grupæ"
 
 #. RTF text: no limit
-#, fuzzy
 msgid "Control Key Position"
-msgstr "&Pakeisti pozicijà"
+msgstr "Control klaviðo pozicija"
 
 #. RTF text: no limit
 msgid "Swap Control and Caps Lock"
-msgstr ""
+msgstr "Sukeisti Control ir Caps Lock"
 
 #. RTF text: no limit
 msgid "Control+Shift changes group"
-msgstr ""
+msgstr "Control+Shift keièia grupæ"
 
 #. RTF text: no limit
 msgid "Alt+Shift changes group"
-msgstr ""
+msgstr "Alt+Shift keièia grupæ"
 
 #. RTF text: no limit
 msgid "Press Right Control to choose 3rd level"
-msgstr ""
+msgstr "Spauskite deðiná Control 3-iam lygiui"
 
 #. RTF text: no limit
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Pridëti standarninæ elgsenà Meniu klaviðui."
 
 #. RTF text: no limit
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Alt ir Meta visiems Alt klaviðams (áprasta)."
 
 #. RTF text: no limit
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Super susietas su Win klaviðu (áprasta)."
 
 #. RTF text: no limit
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Hyper susietas su Win klaviðais."
 
 #. RTF text: no limit
 msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+msgstr "Spauskite deðiná Win klaviðà 3-iam lygiui"
 
 #. RTF text: no limit
 msgid "Use keyboard LED to show alternative group"
-msgstr ""
+msgstr "Naudoti klaviatûros LED alternatyvios grupës rodymui"
 
 #. RTF text: no limit
 msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+msgstr "Shift atðaukia Caps."
 
 #. RTF text: no limit
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Grupës Shift/Lock elgsena"
 
 #. RTF text: no limit
 msgid "Right Win-key switches group while pressed"
-msgstr ""
+msgstr "Nuspaustas deðinys Win perjungia grupæ"
 
 #. RTF text: no limit
 msgid "Alt+Control changes group"
-msgstr ""
+msgstr "Alt+Control keièia grupæ"
 
 #. RTF text: no limit
 msgid "Menu key changes group"
-msgstr ""
+msgstr "Meniu klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Left Ctrl key changes group"
-msgstr ""
+msgstr "Kairys Ctrl klaviðas keièia grupæ"
 
 #. RTF text: no limit
 msgid "Press Menu key to choose 3rd level"
-msgstr ""
+msgstr "Spauskite Meniu klaviðà 3-iam lygiui"
 
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>Neádiegta oficiali NVidia tvarkyklë</b><hr>Nepavyksta ájungti OpenGL "
-#~ "spartinimo, kadangi sistema nepateikia oficialiø NVidia paketø. Praðome "
-#~ "pirma atnaujinti paketus <b>NVIDIA_GLX ir NVIDIA_kernel</b> su YOU (YaST2 "
-#~ "atnaujinimu internetu)."
-
-#~ msgid "add"
-#~ msgstr "pridëti"
-
-#~ msgid "Keyboard Type"
-#~ msgstr "Klaviatûros tipas"
-
-#~ msgid "Set up neighborhood relations of your desktops..."
-#~ msgstr "Konfigûruosi savo darbalaukiø kaimynystës ryðius..."
+msgstr "Meta susietas su Win klaviðais."

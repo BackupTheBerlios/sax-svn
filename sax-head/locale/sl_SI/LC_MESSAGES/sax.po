@@ -1,3 +1,4 @@
+# translation of sax.po to Slovenščina
 # translation of sax.sl_SI.po to Slovenscina
 # translation of abc.po to Slovenščina
 # translation of sax.sl_SI.po to Slovenščina
@@ -7,15 +8,17 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.sl_SI\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-21 23:06+0100\n"
+"PO-Revision-Date: 2004-09-05 20:45+0200\n"
 "Last-Translator: Janez Krek <janez.krek@euroteh.si>\n"
-"Language-Team: Slovenscina <sl@li.org>\n"
+"Language-Team: Slovenščina <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -64,11 +67,11 @@ msgstr "Neprilagojeno"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<Vpiši novo geslo...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<Spremeni geslo...>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -436,9 +439,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>Nastavitev AccessX...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>Nastavitev AccessX...</u></h3></nobr>"
+msgstr "<nobr><h3><u>Nastavitev VNC...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -497,6 +499,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
+"<b>Različni gesli</b><hr>Prva in druga verzija gesla se razlikujeta! "
+"Poizkusite znova."
 
 #. RTF text: no limit
 msgid ""
@@ -504,6 +508,8 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>Napaka v geslu</b><hr>Polje za vpis gesla je prazno ali pa\n"
+"je geslo prekratko. Vnesite geslo, ki je dolgo najmanj 6 znakov!"
 
 #. RTF text: no limit
 msgid ""
@@ -536,9 +542,17 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>OpenGL pospeševanje ni možno</b><hr>Za aktiviranje 3D podsistema te "
+"grafične kartice, morate najprej namestiti komercialni nVidia gonilnik. "
+"Gonilnik lahko namestite z uporabo <b>YaST Online Update</b>. V YOU kot "
+"<b>Kategorijo popravka</b> izberete <b>Popravki, ki se jih da namestiti, in "
+"ki so nameščeni</b> in s seznama popravkov (navadno na koncu seznama) "
+"izberete <b>Download NVIDIA(r) Graphics Driver</b>. Obvestilo: če ste "
+"popravek že namestili in ga iz kakrškega koli razloga tudi že odstranili, "
+"morate popravek označiti kot <b>Posodobi</b> (preko pritiska na desni gumb "
+"na miški)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -546,16 +560,15 @@ msgid ""
 "X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
 "want to continue?</b>"
 msgstr ""
-"<b>Izključitev OpenGL pospeševanja</b><hr>3D podsistem temelji na "
-"komercialnemu gonilniku nVidia. SaX2 za odstranitev gonilnika potrebuje "
-"namestitveni program nVidie. Odstranitev gonilnika bo ponovno nastavila "
-"originalni gonilnik sistema XFree86, ki ne omogoča strojnega 3D "
-"pospeševanja. <br><br><b>Resnično želite nadaljevati?</b>"
+"<b>Izključi OpenGL pospeševanje</b><hr>3D podsistem temelji na komercialnemu "
+"gonilniku nVidia. SaX2 za odstranitev gonilnika potrebuje namestitveni "
+"program nVidie. Odstranitev gonilnika bo ponovno nastavila originalni "
+"gonilnik sistema X.Org, ki ne omogoča strojnega 3D pospeševanja. "
+"<br><br><b>Resnično želite nadaljevati?</b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "Velikost zaslona"
+msgstr "Neznana velikost zaslona..."
 
 #. RTF text: no limit
 msgid ""
@@ -567,6 +580,13 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>Vnesite X/Y dimenzije zaslona v [ mm ]</b><hr> Geometrije vašega zaslona "
+"ni mogoče zaznati. Aplikacije za računalniško grafiko, kot npr. <b>Gimp</b> "
+"ali knjižnice za upodabljanje pisav, npr.<b>Xft</b>, za pravilno delovanje "
+"potrebujejo realno velikost vašega zaslona. Za pravilne dimenzije zaslona v "
+"vodoravni (X) in navpični (Y) smeri poglejte v navodila monitorja.Zahtevane "
+"dimenzije morate vpisati v milimetrih [ mm ]. <br><br><b>Želite nastaviti "
+"dimenzijo zaslona ?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
@@ -854,15 +874,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "X-Server je dostoper preko VNC protokola:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "Nadzor dostopa"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -992,6 +1012,8 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>Monitorja ni možno odstraniti:</b><hr>sistem ima točno eno nastavitvev "
+"monitorja, ki je ni dovoljeno odstraniti."
 
 #. RTF text: no limit
 msgid ""
@@ -1101,11 +1123,11 @@ msgstr "&Ne"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>Da</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>Ne</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1233,7 +1255,7 @@ msgstr "Prilagoditev AccessX: miška pred numeričnim delom..."
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
+msgstr "Nastavi VNC: izvozi zaslov s pomočjo VNC protokola..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1277,7 +1299,7 @@ msgid ""
 "the real screen)..."
 msgstr ""
 "Nastavitev položajev zaslonov vaših namizij (Z dvojnim pritiskom na ikono "
-"zaslona boste preverili, kateremu realmenu zaslonu ustreza ikonca)... "
+"zaslona boste preverili, kateremu realmenu zaslonu ustreza ikonca)..."
 
 #. Maximum length: 100  characters
 msgid "Configure graphics tablet"
@@ -1293,11 +1315,11 @@ msgstr "Dodajanje nove kartice..."
 
 #. Maximum length: 40  characters
 msgid "Remove selected card"
-msgstr "Odstranitev izbrane kartice"
+msgstr "Odstrani izbrane kartice"
 
 #. Maximum length: 40  characters
 msgid "Remove selected monitor"
-msgstr "Odstranitev izbranega monitorja"
+msgstr "Odstrani izbrani monitor"
 
 #. Maximum length: 40  characters
 msgid "Properties..."
@@ -1305,20 +1327,19 @@ msgstr "Lastnosti..."
 
 #. Maximum length: 20  characters
 msgid "&Options"
-msgstr "M&ožnosti..."
+msgstr "M&ožnosti"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "M&ožnosti..."
+msgstr "VNC možnosti"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "Dovoli dostop do zaslona preko VNC protokola"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "Omogoči zaščito z geslom"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1326,28 +1347,27 @@ msgstr "&Lastnosti..."
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "Geslo"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "Preveri geslo"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "Omogoči način pregleda (view-only)"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "Onemogoči AccessX"
+msgstr "Onemogoči HTTP dostop"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP vrata"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "Dovoli več VNC povezav"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1460,9 +1480,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Trenutno prilagojen AccessX status</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Trenutni 3D/OpenGL status</b></big><hr>"
+msgstr "<big><b>Trenutni VNC status</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1530,17 +1549,18 @@ msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>VNC strežnik:</b><hr>Nastavi X strežnik tako, da bo možen oddaljen dostop "
+"do namizja in programov preko VNC programa"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
 "capabilities of your graphics card. If your card and the corresponding "
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
-"<b>OpenGL podsistem:</b><hr>Nastavite lahko 3D zmožnosti grafične kartice. "
-"XFree86 vključuje t.i. vmesnik za neposredno upodabljanje (direct rendering "
+"<b>OpenGL podsistem:</b><hr>Nastavite lahko 3D zmožnosti grafične kartice. X."
+"Org vključuje t.i. vmesnik za neposredno upodabljanje (direct rendering "
 "interface) za uporabo 3D zmožnosti vaše grafične kartice. Če vaša kartica in "
 "ustrezni gonilniki podpirajo strojno 3D pospeševanje, ga v tem pogovornem "
 "oknu lahko omogočite."
@@ -2657,18 +2677,3 @@ msgstr "Pritisnite tipko Menu za izbiro tretjega nivoja"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Tipka Meta je preslikana v Win-tipke."
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>Vključitev OpenGL pospeševanja ni možna</b><hr>Za vključitev 3D "
-#~ "podsistema grafične kartice, najprej namestite komercialni gonilnik "
-#~ "podjetja nVidia. Namestite gonilnik z YOU (YaST2 Online Update) in izbiro "
-#~ "posodobitve gonilnika nVidia.<br><br>Če ste gonilnik že namestili in ga "
-#~ "kasneje odstranili, ga morate ponovno namestiti ročno. Navodila za ročno "
-#~ "namestitev so na voljo na naslednji spletni strani:<br><br><b>ftp://ftp."
-#~ "suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"

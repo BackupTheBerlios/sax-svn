@@ -1,3 +1,4 @@
+# translation of sax.po to 
 # translation of sax.po to
 # translation of sax.it.po to
 # translation of sax.it.po to
@@ -13,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-31 12:53+0200\n"
+"PO-Revision-Date: 2004-09-06 11:04+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -68,11 +69,11 @@ msgstr "Non configurato"
 
 #. Maximum length: 60  characters
 msgid "<Enter new password...>"
-msgstr ""
+msgstr "<Immettere nuova password...>"
 
 #. Maximum length: 60  characters
 msgid "<Change password...>"
-msgstr ""
+msgstr "<Modifica password...>"
 
 #. Maximum length: 60  characters
 msgid "Not available"
@@ -440,9 +441,8 @@ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
 msgstr "<nobr><h3><u>Impostazione AccessX...</u></h3></nobr>"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>Impostazione AccessX...</u></h3></nobr>"
+msgstr "<nobr><h3><u>Setup VNC...</u></h3></nobr>"
 
 #. Maximum length: 60 characters
 msgid "Selected component:"
@@ -503,6 +503,8 @@ msgid ""
 "<b>Password mismatch</b><hr>The first and the second version of the password "
 "don't match ! Please try again."
 msgstr ""
+"<b>Password non collimano</b><hr>La prima e la seconda password non "
+"collimano! Riprovate."
 
 #. RTF text: no limit
 msgid ""
@@ -510,6 +512,8 @@ msgid ""
 "password is too short. Please enter a password with at least six "
 "characters !."
 msgstr ""
+"<b>Errore password</b><hr>Il campo della password è vuoto o la password è "
+"troppo breve. Una password deve essere composta da almeno sei caratteri !"
 
 #. RTF text: no limit
 msgid ""
@@ -542,9 +546,17 @@ msgid ""
 "b> (right mouse click) if you already installed it before and the driver was "
 "uninstalled - for whatever reason."
 msgstr ""
+"<b>Impossibile abilitare l'accelerazione OpenGL </b><hr> Per abilitare il "
+"sottosistema 3D per questa scheda dovete installare il driver commerciale di "
+"nVidia. Installate il driver ricorrendo al <b>YaST Online Update</b>. In YOU "
+"selezionate <b>Patch installabili e installate</b> quale <b>Categoria delle "
+"patch</b> e selezionate <b>Scarica driver grafici NVIDIA(r)</b> dall'elenco "
+"delle patch (di solito in fondo all'elenco). Non dimenticate di "
+"contrassegnare la patch con <b>Update</b> (clic con il tasto destro del "
+"mouse) se avete già installato la patch in precedenza e il driver è stato "
+"disinstallato per un qualunque motivo."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -555,13 +567,12 @@ msgstr ""
 "<b>Disabilita accelerazione OpenGL</b><hr>Il sottosistema 3D si basa sul "
 "driver commerciale di nVidia. SaX2 richiede che venga disinstallato il "
 "driver ricorrendo all'installer di nVidia. Questo processo ripristinerà il "
-"driver originario XFree86 che non fornisce accelerazione hardware 3D."
+"driver originario X.Org che non fornisce accelerazione hardware 3D."
 "<br><br><b>Continuare?</b>"
 
 #. Maximum length: 70 characters
-#, fuzzy
 msgid "Display size unknown..."
-msgstr "Dimensione schermo"
+msgstr "Dimensione schermo sconosciuta..."
 
 #. RTF text: no limit
 msgid ""
@@ -573,6 +584,14 @@ msgid ""
 "and vertical (Y) direction. The values are required to be entered in [ mm ]."
 "<br><br><b>Do you want to setup the display size ?</b>"
 msgstr ""
+"<b>Inserite la dimensione display X/Y in [ mm ]</b><hr> Non è stato "
+"possibile rilevare la geometria del vostro display. Applicazioni grafiche "
+"come <b>Gimp</b> o librerie di font rendering come <b>Xft</b> richiedono "
+"delle indicazioni riguardanti la dimensione fisica del vostro display per un "
+"corretto funzionamento. Consultate il manuale del vostro monitor per "
+"reperire i valori corretti per la direzione orizzontale (X) e verticale (Y). "
+"I valori vanno espressi in [ mm ]. <br><br><b>Volete impostare la dimensione "
+"del display?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
@@ -864,15 +883,15 @@ msgstr "AccessX"
 
 #. Maximum length: 20  characters
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. Maximum length: 60  characters
 msgid "X-Server accessable via VNC protocol:"
-msgstr ""
+msgstr "X server accessibile tramite protocollo VNC:"
 
 #. Maximum length: 25  characters
 msgid "Access Control"
-msgstr ""
+msgstr "Controllo accesso"
 
 #. Maximum length: 50  characters
 msgid "<b>Core Pointer...</b>"
@@ -1002,6 +1021,8 @@ msgid ""
 "<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
 "configuration. You are not allowed to remove this major entity."
 msgstr ""
+"<b>Impossibile rimuovere il monitor:</b><hr>Il sistema offre esattamente una "
+"configurazione monitor. Non vi è consentito rimuovere questa entità."
 
 #. RTF text: no limit
 msgid ""
@@ -1112,11 +1133,11 @@ msgstr "&No"
 
 #. Maximum length: 20  characters
 msgid "<b>Yes</b>"
-msgstr ""
+msgstr "<b>Sì</b>"
 
 #. Maximum length: 20  characters
 msgid "<b>No</b>"
-msgstr ""
+msgstr "<b>No</b>"
 
 #. Maximum length: 50  characters
 msgid "File"
@@ -1245,7 +1266,7 @@ msgstr "Configura AccessX: mouse tramite tastierino numerico..."
 
 #. Maximum length: 100  characters
 msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
+msgstr "Configura VNC: Export del display tramite il protocollo VNC..."
 
 #. Maximum length: 100  characters
 msgid "Configure input devices: Mouse configuration..."
@@ -1257,7 +1278,7 @@ msgstr "Configurazione sottosistema 3D/OpenGL..."
 
 #. Maximum length: 100  characters
 msgid "Configure virtual resolutions..."
-msgstr "Configuraz risoluzione virtuale..."
+msgstr "Configura risoluzione virtuale..."
 
 #. Maximum length: 100  characters
 msgid "Configure graphics cards..."
@@ -1320,17 +1341,16 @@ msgid "&Options"
 msgstr "&Opzioni"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "VNC Options"
-msgstr "&Opzioni"
+msgstr "Opzioni VNC"
 
 #. Maximum length: 60  characters
 msgid "Allow access to display using VNC protocol"
-msgstr ""
+msgstr "Consenti accesso al display tramite protocollo VNC"
 
 #. Maximum length: 60  characters
 msgid "Enable password protection"
-msgstr ""
+msgstr "Abilita protezione password"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1338,28 +1358,27 @@ msgstr "&Proprietà..."
 
 #. Maximum length: 40  characters
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #. Maximum length: 40  characters
 msgid "Verify password"
-msgstr ""
+msgstr "Verifica password"
 
 #. Maximum length: 40  characters
 msgid "Enable View-Only mode"
-msgstr ""
+msgstr "Abilita modo view only"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Enable HTTP Access"
-msgstr "Disabilita AccessX"
+msgstr "Abilita accesso HTTP"
 
 #. Maximum length: 40  characters
 msgid "HTTP Port"
-msgstr ""
+msgstr "Porta HTTP"
 
 #. Maximum length: 40  characters
 msgid "Allow multiple VNC connections"
-msgstr ""
+msgstr "Abilita connessioni VNC multiple"
 
 #. Maximum length: 40  characters
 msgid "&Add new touchscreen..."
@@ -1471,9 +1490,8 @@ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
 msgstr "<big><b>Stato AccessX attualmente configurato</b></big><hr>"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Stato attuale 3D/OpenGL</b></big><hr>"
+msgstr "<big><b>Stato VNC attuale</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
@@ -1493,7 +1511,7 @@ msgstr "<big><b>Desktop attualmente configurati</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently active geometry timings</b></big><hr>"
-msgstr "<big><b>Temporizzazione di geometria attualmente attive</b></big><hr>"
+msgstr "<big><b>Temporizzazioni di geometria attualmente attive</b></big><hr>"
 
 #. Maximum length: 60  characters
 msgid "<big><b>Currently configured keyboard</b></big><hr>"
@@ -1542,9 +1560,11 @@ msgid ""
 "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
 "and all its programs remotely via a VNC viewer program"
 msgstr ""
+"<b>Server VNC:</b><hr>Impostate il server X per abilitare l'accesso al "
+"desktop e relativi programmi da remoto tramite un programma di "
+"visualizzazione VNC (viewer)."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
 "here. X.Org includes the direct rendering interface to use the 3D "
@@ -1552,10 +1572,10 @@ msgid ""
 "driver support 3D hardware acceleration, enable it in this dialog."
 msgstr ""
 "<b>Sottosistema OpenGL:</b><hr>Qui è possibile impostare le funzionalità 3D "
-"della scheda grafica. XFree86 include la direct rendering interface "
-"(interfaccia diretta per il rendering) per usare le capacità 3D della scheda "
-"video. Se la Vostra scheda e il relativo driver supportano l'accelerazione "
-"hardware 3D, è possibile abilitarle tramite questa procedura."
+"della scheda grafica. X.Org include la direct rendering interface "
+"(interfaccia diretta per il rendering) per usare le funzionalità 3D della "
+"scheda video. Se la vostra scheda e il relativo driver supportano "
+"l'accelerazione hardware 3D, è possibile abilitarle tramite questa procedura."
 
 #. RTF text: no limit
 msgid ""
@@ -2666,19 +2686,3 @@ msgstr "Premere il tasto menu per selezionare il terzo livello"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Il tasto meta è mappato su tasti Win."
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b> and "
-#~ "selecting the nVidia driver patch."
-#~ msgstr ""
-#~ "<b>Impossibile abilitare l'accelerazione OpenGL</b><hr>Per attivare il "
-#~ "sottosistema 3D per la scheda dovete prima installare il driver "
-#~ "commerciale di nVidia. Installate il driver tramite <b>YaST Online "
-#~ "Update</b> e selezionate la patch di driver di nVidia.<br><br>Se avete "
-#~ "già installato il driver tramite YaST Online Update ed in seguito "
-#~ "disinstallato, dovete installare il driver manualmente. Le istruzioni da "
-#~ "seguire sono reperibili sotto:<br><br><b>ftp://ftp.suse.com/pub/suse/i386/"
-#~ "supplementary/X/XFree86/ nvidia-installer-HOWTO</b>"
