@@ -344,6 +344,25 @@ install -m 644 api/pixmaps/sax2.xpm \
 #=================================================
 # remove unpacked sources...
 #-------------------------------------------------
+rm -f $RPM_BUILD_ROOT/sbin/SecureMode
+rm -f $RPM_BUILD_ROOT/sbin/SetMode
+rm -f $RPM_BUILD_ROOT/sbin/catch
+rm -f $RPM_BUILD_ROOT/sbin/corner
+rm -f $RPM_BUILD_ROOT/sbin/demo
+rm -f $RPM_BUILD_ROOT/sbin/demo.sh
+rm -f $RPM_BUILD_ROOT/sbin/dots
+rm -f $RPM_BUILD_ROOT/sbin/fake
+rm -f $RPM_BUILD_ROOT/sbin/hwupdate
+rm -f $RPM_BUILD_ROOT/sbin/isax
+rm -f $RPM_BUILD_ROOT/sbin/screen
+rm -f $RPM_BUILD_ROOT/sbin/whois
+rm -f $RPM_BUILD_ROOT/sbin/wmstart
+rm -f $RPM_BUILD_ROOT/sbin/wrap
+rm -f $RPM_BUILD_ROOT/sbin/xlook
+rm -f $RPM_BUILD_ROOT/sbin/xmirror
+
+rm -f $RPM_BUILD_ROOT/usr/share/sax/api/data/.testgtx
+rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 
 #=================================================
 # update desktop file 
@@ -400,6 +419,7 @@ install -m 644 api/pixmaps/sax2.xpm \
 %{perl_vendorarch}/auto/XFree
 %{perl_vendorarch}/PLog.pm
 %{perl_vendorarch}/auto/PLog
+/var/adm/perl-modules/sax2
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.en.ps

@@ -112,3 +112,7 @@ install:
 	rm -f ${sax_tools}/configure
 	rm -f ${sax_tools}/xw
 	rm -f ${sax_tools}/prepare
+	rm -f ${sax_tools}/PLog.so
+	rm -f ${sax_tools}/check_ddc.sh
+	rm -f ${sax_tools}/check_loader.sh
+	rm -f ${sax_tools}/check_wheel.sh
