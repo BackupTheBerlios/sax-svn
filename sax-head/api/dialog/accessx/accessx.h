@@ -43,7 +43,7 @@ STATUS        : Status: Up-to-date
 //=====================================
 // Defines...
 //-------------------------------------
-#define XACCESS_CODE 5041
+#define XACCESS_CODE(c) ((c)->ctrls->enabled_ctrls & (XkbMouseKeysMask | XkbMouseKeysAccelMask))
 
 enum {
     XAccessPage1 = Xaccess,

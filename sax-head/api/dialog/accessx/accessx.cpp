@@ -160,7 +160,7 @@ void XAccessX::slotIntro (int index) {
 	if (xkb->ctrls == NULL) {
 		active = FALSE;
 	} else {
-		if (xkb->ctrls->enabled_ctrls == XACCESS_CODE) {
+		if (XACCESS_CODE(xkb)) {
 		active = TRUE;
 		} else {
 		active = FALSE;

@@ -124,7 +124,7 @@ bool XAccessX::slotRun (int index) {
 		xkb->ctrls = (XkbControlsPtr)malloc(sizeof(XkbControlsRec));
 		isActive = FALSE;
 	} else {
-	if (xkb->ctrls->enabled_ctrls == XACCESS_CODE) {
+	if (XACCESS_CODE(xkb)) {
 		isActive = TRUE;
 	} else {
 		isActive = FALSE;
