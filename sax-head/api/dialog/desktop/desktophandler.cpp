@@ -727,7 +727,15 @@ void XDesktop::slotUsed (QListViewItem* resolution) {
 			selectionReached = true;
 		}
 		if ((selected->isOn()) && (selectionReached) && (! item->isOn())) {
-			item->setOn (true);
+			QStringList baseTokens = QStringList::split ("x", selected->text());
+			QStringList workTokens = QStringList::split ("x", item->text());
+			int bx = baseTokens[0].toInt();
+			int by = baseTokens[1].toInt();
+			int wx = workTokens[0].toInt();
+			int wy = workTokens[1].toInt();
+			if ((bx >= wx) && (by >= wy)) {
+				item->setOn (true);
+			}
 		}
 		}
 		#endif
