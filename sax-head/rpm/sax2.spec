@@ -411,6 +411,7 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/share/locale/it/LC_MESSAGES/sax.mo
 /usr/share/locale/sk/LC_MESSAGES/sax.mo
 /usr/share/locale/nl/LC_MESSAGES/sax.mo
+/usr/share/locale/nb/LC_MESSAGES/sax.mo
 /usr/share/locale/el_GR/LC_MESSAGES/sax.mo
 /usr/share/locale/sl_SI/LC_MESSAGES/sax.mo
 /usr/share/locale/sv/LC_MESSAGES/sax.mo
