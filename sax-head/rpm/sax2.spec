@@ -90,7 +90,7 @@ fi
 %if %{suse_version} < 810
 %patch
 %endif
-%if %{suse_version} >= 820
+%if %{suse_version} <= 820
 %patch3
 %endif
 %patch1
