@@ -1,17 +1,19 @@
+# translation of sax.es.po to 
 # domain "sax.mo"
 # Copyright (C) 2003 SuSE Linux AG.
-# Javier Moreno<Javier.moreno@alufis35.uv.es>, 2000,2003.
-#
+# Javier Moreno<Javier.moreno@alufis35.uv.es>, 2000,2003,2004.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.es\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2003-09-10 17:34+0200\n"
-"Last-Translator: Ines Pozo <ip@suse.de>\n"
-"Language-Team:  i18n@suse.de\n"
+"PO-Revision-Date: 2004-03-16 13:51+0100\n"
+"Last-Translator: \n"
+"Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -28,24 +30,23 @@ msgstr "con"
 
 #. Maximum length: 20  characters
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Maximum length: 20  characters
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Maximum length: 20  characters
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Maximum length: 20  characters
 msgid "Relative"
-msgstr ""
+msgstr "Relativo"
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "Absolute"
-msgstr "Cancelar"
+msgstr "Absoluto"
 
 #. Maximum length: 20  characters
 msgid "Connected to:"
@@ -81,7 +82,7 @@ msgstr "Distribución(es) adicional(es)"
 
 #. Maximum length: 60  characters
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Otros"
 
 #. Maximum length: 60  characters
 msgid "Layout"
@@ -509,9 +510,16 @@ msgid ""
 "location: <br><br><b>ftp://ftp.suse.com/pub/suse/i386/supplementary/X/"
 "XFree86/nvidia-installer-HOWTO</b>"
 msgstr ""
+"<b>No es posible activar la aceleración OpenGL</b><hr>Para activar el "
+"subsistema 3D para esta tarjeta es necesario haber instalado previamente el "
+"controlador comercial de nVidia. Utilice <b>YaST Online Update</b> para "
+"instalar el controlador seleccionando el parche de controlador nVidia."
+"<br><br>Si ya ha instalado previamente el controlador conYaST Online Update "
+"y lo ha vuelto a desinstalar, deberá instalar el controlador manualmente. "
+"Puede consultarlas instrucciones correspondientes en: <br><br><b>ftp://ftp."
+"suse.com/pub/suse/i386/supplementary/X/XFree86/nvidia-installer-HOWTO</b>"
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
 "commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
@@ -519,34 +527,32 @@ msgid ""
 "XFree86 which does not provide any 3D hardware acceleration.<br><br><b>Do "
 "you want to continue?</b>"
 msgstr ""
-"<b>No es posible desactivar la aceleración OpenGL</b><hr>El subsistema 3D "
-"está basado en el controlador comercial de nVidia. Para desactivar 3D debe "
-"desinstalar el controlador por medio del instalador de nVidia. El proceso de "
-"desinstalación restablecerá el controlador original de XFree86, que no "
-"incluye soporte para aceleración de hardware 3D."
+"<b>Desactivar la aceleración OpenGL</b><hr>El subsistema 3D está basado en "
+"el controlador comercial de nVidia. SaX2 necesita desinstalar el controlador "
+"por medio del instalador de nVidia. El proceso de desinstalación recuperará "
+"el controlador original de XFree86, el cual no incluye soporte para "
+"aceleración de hardware 3D.<br><br><b>¿Desea continuar?</b>"
 
 #. Maximum length: 70 characters
 msgid "Utility Disk..."
 msgstr "Disquete de utilidades..."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Introducir disquete</b><hr> Introduzca el disquete de utilidades del "
-"fabricante del monitor"
+"<b>Introducir CD o disquete</b><hr> Introduzca el CD o disquete de "
+"utilidades del fabricante del monitor."
 
 #. RTF text: no limit
-#, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
 msgstr ""
-"<b>Error de lectura</b><hr> No se ha podido leer del disco. Puede ser que el "
-"disco esté dañadoo que contenga archivos de información formateados de forma "
-"incorrecta."
+"<b>Error de lectura</b><hr> No ha sido posible leer del CD o disquete. Puede "
+"ser que el medio esté dañado o contenga archivos de información formateados "
+"de forma incorrecta."
 
 #. RTF text: no limit
 msgid ""
@@ -591,8 +597,8 @@ msgid ""
 "<b>Note:</b><hr>Wrong sync ranges may damage your monitor. Consult the "
 "monitor manual for the following settings."
 msgstr ""
-"<b>Nota:</b><hr> Frecuencias de sincronización incorrectas pueden dañar "
-"elmonitor. Consulte el manual del mismo para configurar las siguientes "
+"<b>Nota:</b><hr> Frecuencias de sincronización incorrectas pueden dañar el "
+"monitor. Consulte el manual del mismo para configurar las siguientes "
 "opciones."
 
 #. RTF text: no limit
@@ -1207,8 +1213,8 @@ msgid ""
 "Set up screen layout of your desktops (Double-click an icon will identify "
 "the real screen)..."
 msgstr ""
-"Configurar modo de pantalla de escritorios (con doble clic en un icono "
-"seidentifica la pantalla)"
+"Configurar modo de pantalla de escritorios (con doble clic en un icono se "
+"identifica la pantalla)"
 
 #. Maximum length: 100  characters
 msgid "Configure graphics tablet"
@@ -1231,14 +1237,12 @@ msgid "Remove selected monitor"
 msgstr "Eliminar el monitor seleccionado"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Properties..."
-msgstr "&Propiedades..."
+msgstr "Propiedades..."
 
 #. Maximum length: 20  characters
-#, fuzzy
 msgid "&Options"
-msgstr "&Opciones..."
+msgstr "&Opciones"
 
 #. Maximum length: 40  characters
 msgid "&Properties..."
@@ -1461,7 +1465,7 @@ msgid ""
 msgstr ""
 "<b>Propiedades del escritorio:</b><hr>Configure el escritorio con opciones "
 "como la resolución y el color. Cada escritorio es un dispositivo "
-"independiente que puede tener uncolor y/o resolución diferente."
+"independiente que puede tener un color y/o resolución diferente."
 
 #. RTF text: no limit
 msgid ""
@@ -1551,9 +1555,8 @@ msgid "&Port"
 msgstr "&Puerto"
 
 #. Maximum length: 30  characters
-#, fuzzy
 msgid "&Mode"
-msgstr "Modo:"
+msgstr "&Modo"
 
 #. Maximum length: 30  characters
 msgid "Button emulation"
@@ -1945,7 +1948,7 @@ msgstr "Árabe"
 
 #. RTF text: no limit
 msgid "U.S. English"
-msgstr "Ingés americano"
+msgstr "Inglés americano"
 
 #. RTF text: no limit
 msgid "Maltese (US layout)"
@@ -2541,16 +2544,3 @@ msgstr "Pulse la tecla Menu para seleccionar el tercer nivel"
 #. RTF text: no limit
 msgid "Meta is mapped to the Win-keys."
 msgstr "Las teclas Win actúan como Meta"
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to use the commercial driver from nVidia. Please "
-#~ "download the nVidia installer from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. After you have installed the driver you can enable "
-#~ "3D with SaX2."
-#~ msgstr ""
-#~ "<b>No es posible activar la aceleración OpenGL</b><hr>. Para activar el "
-#~ "subsistema 3D para esta tarjeta necesita el controlador comercial de "
-#~ "nVidia. Descargue primero el instalador de nVidia del servidor web nVidia "
-#~ "<i>(http://www.nvidia.com)</i>. Una vez instalado el controlador, puede "
-#~ "activar 3D con SaX2. "
