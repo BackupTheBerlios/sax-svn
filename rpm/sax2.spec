@@ -293,7 +293,7 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 /usr/X11R6/%{_lib}/sax/doc/config
 /usr/X11R6/%{_lib}/sax/doc/guitest
 /usr/X11R6/%{_lib}/sax/doc/README
-/usr/X11R6/%{_lib}/sax/cvsbuild
+/usr/X11R6/%{_lib}/sax/svnbuild
 /usr/X11R6/%{_lib}/sax/init.pl
 /usr/X11R6/%{_lib}/sax/xc.pl
 /usr/X11R6/%{_lib}/sax/xw.pl

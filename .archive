@@ -11,15 +11,13 @@
 #===========================================
 # create CVS build number...
 #-------------------------------------------
-cat .cvsbuild > cvsbuild
+cat .svnbuild > svnbuild
 
 #===========================================
 # make tarball from the current source tree
 #-------------------------------------------
-rm -rf `find -name CVS`
-rm -rf `find -name .cvsignore`
+rm -rf `find -type d | grep .svn`
 rm -f "./sysp/lib/pci/lib/config.h"
-rm -rf parse/blib/
 rm -rf rpm/
 
 cd ..

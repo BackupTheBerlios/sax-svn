@@ -18,7 +18,7 @@ PCI="/usr/X11R6/lib/sax/pci.pl"
 XFT="/var/cache/xfine/*"
 ERR="/var/log/SaX.log"
 REF="/var/cache/sax/files/XF86Config.first"
-CVSB="/usr/X11R6/lib/sax/cvsbuild"
+CVSB="/usr/X11R6/lib/sax/svnbuild"
 
 #==================================
 # Init option variables

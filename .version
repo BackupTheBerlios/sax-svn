@@ -1,12 +1,12 @@
 #!/bin/sh
 
-sum=`cat .cvsbuild`
+sum=`cat .svnbuild`
 sum=`expr $sum + 1`
 
 echo $sum
-echo $sum > .cvsbuild.new
-mv .cvsbuild.new .cvsbuild
+echo $sum > .svnbuild.new
+mv .svnbuild.new .svnbuild
 
-cvs commit \
-	-m "new version set" .cvsbuild \
+svn commit \
+	-m "new version set" .svnbuild \
 >/dev/null 2>/dev/null

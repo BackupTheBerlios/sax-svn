@@ -272,7 +272,7 @@ sub main {
 	#------------------------------------
 	print "Creating archive at: $pacdir...\n";
 	system ("cp $realhead/sax/.archive  $tagged/sax");
-	system ("cp $realhead/sax/.cvsbuild $tagged/sax");
+	system ("cp $realhead/sax/.svnbuild $tagged/sax");
 	system ("cp $realhead/sax/rpm/config-dist.sh $pacdir");
 	system ("cd $tagged/sax; ./.archive");
 	system ("cp $tagged/sax/sax.tar.bz2 $pacdir/sax2.tar.bz2");
