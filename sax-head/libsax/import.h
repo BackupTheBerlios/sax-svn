@@ -117,8 +117,8 @@ class SaXImportIF : public SaXProcess {
 * SaXImport* card = new SaXImport (SAX_CARD);
 * card -> doImport();
 *
-* if (card -> getItemPointer("Vendor")) {
-*     printf ("%s\n",card -> getItemPointer("Vendor")->ascii());
+* if (card -> getItem("Vendor")) {
+*     printf ("%s\n",card -> getItem("Vendor").ascii());
 * }
 * \endcode
 */
@@ -211,8 +211,8 @@ class SaXImportSyspIF : public SaXProcess {
 * SaXImportSysp* card = new SaXImportSysp (SYSP_CARD);
 * card -> doImport();
 *
-* if (card->getItemPointer("VID")) {
-*     printf ("%s\n",card -> getItemPointer("VID")->ascii());
+* if (card->getItem("VID")) {
+*     printf ("%s\n",card -> getItem("VID").ascii());
 * }
 * \endcode
 */

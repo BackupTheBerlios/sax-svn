@@ -114,8 +114,8 @@ class SaXProcessIF : public SaXStorage {
 * sysp_options.append ( "server" );
 * SaXProcess* proc = new SaXProcess ();
 * proc -> start ( sysp_options , SAX_SYSP );
-* if (proc -> getItemPointer("VID")) {
-*     printf ("%s\n",proc -> getItemPointer("VID")->ascii());
+* if (proc -> getItem("VID")) {
+*     printf ("%s\n",proc -> getItem("VID").ascii());
 * }
 * \endcode
 */

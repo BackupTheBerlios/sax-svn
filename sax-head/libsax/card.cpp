@@ -330,3 +330,135 @@ QDict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 	return mCDBCardOptions;
 }
 
+//====================================
+// isNoteBook
+//------------------------------------
+bool SaXManipulateCard::isNoteBook ( void ) {
+	// .../
+	//! check if the graphics card is working in a NoteBook.
+	//! The check is based on the battery count in /proc/acpi/battery/
+	//! if there is a battery we will asumme a NoteBook
+	// ----
+	struct dirent* entry = NULL;
+	DIR* batteryDir = NULL;
+	batteryDir = opendir (ACPI_BATTERY);
+	int BATs = 0;
+	while (1) {
+		entry = readdir (batteryDir);
+		if (! entry) {
+			return false;
+		}
+		QString file (entry->d_name);
+		if ((file == ".") || (file == "..")) {
+			continue;
+		}
+		BATs++;
+	}
+	if (BATs == 0) {
+		return false;
+	}
+	return true;
+}
+
+//====================================
+// getCards
+//------------------------------------
+int SaXManipulateCard::getCards ( void ) {
+	// .../
+	//! returns the number of installed graphics cards. This
+	//! refers to the real value of different graphics devices
+	//! located on the BUS
+	// ----
+	if (! mImport) {
+		return -1;
+	}
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
+	if (pCard->getItem("Detected")) {
+		return pCard->getItem("Detected").toInt();
+	}
+	return -1;
+}
+
+//====================================
+// getHeads
+//------------------------------------
+int SaXManipulateCard::getHeads ( void ) {
+	// .../
+	//! returns the number of configurable VGA heads This value may
+	//! differ from the getCards() return value because there are
+	//! possibly more than one head available on one card
+	// ----
+	if (! mImport) {
+		return -1;
+	}
+	int mBoards  = getCards();
+	int mDevices = mImport -> getCount();
+	//====================================
+	// check for NoteBooks, assume *2
+	//------------------------------------
+	if ( isNoteBook() ) {
+		return mBoards * 2;
+	}
+	//====================================
+	// import CDB DB for profile names
+	//------------------------------------
+	SaXProcess* pCDB = new SaXProcess();
+	pCDB -> start ( CDB_CARDS );
+	QDict< QDict<QString> > CDBData = pCDB -> getTablePointerCDB();
+	//====================================
+	// check profile names
+	//------------------------------------
+	int headCount = 0;
+	int realCount = 0;
+	int currentCard = mCard;
+	while (1) {
+		if (realCount >= mDevices) {
+			selectCard (currentCard);
+			return headCount;
+		}
+		selectCard (realCount);
+		if ( CDBData[getCardName()] ) {
+			QDict<QString> CDBTable = *CDBData[getCardName()];
+			if (CDBTable["Profile"]) {
+				QString mProfile = *CDBTable["Profile"];
+				if (mProfile == "NVidia_Twinview") {
+					headCount += 2;
+					realCount += 1;
+					continue;
+				}
+				if (mProfile == "NVidia_DualHead") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+				if (mProfile == "Radeon_DualHead") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+				if (mProfile == "Matrox_G400") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+				if (mProfile == "Matrox_G450") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+				if (mProfile == "Matrox_G550") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+			}
+		}
+		realCount++;
+		headCount++;
+	}
+	//====================================
+	// return board count, last chance
+	//------------------------------------
+	return mBoards;
+}

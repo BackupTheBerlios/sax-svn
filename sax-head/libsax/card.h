@@ -24,7 +24,14 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
+#include <stdarg.h>
+#include <dirent.h>
 #include "import.h"
+
+//====================================
+// Defines...
+//------------------------------------
+#define ACPI_BATTERY "/proc/acpi/battery"
 
 //====================================
 // Interface class for dlopen ability
@@ -52,6 +59,11 @@ class SaXManipulateCardIF : public SaXException {
 	virtual QString getCardName ( void ) = 0;
 	virtual QString getBusID    ( void ) = 0;
 	virtual QString getScreenID ( void ) = 0;
+	virtual int getCards ( void ) = 0;
+	virtual int getHeads ( void ) = 0;
+
+	public:
+	bool isNoteBook ( void );
 
 	public:
 	virtual bool selectCard ( int ) = 0;
@@ -128,6 +140,11 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	QString getCardName ( void );
 	QString getBusID    ( void );
 	QString getScreenID ( void );
+	int getCards ( void );
+	int getHeads ( void );
+
+	public:
+	bool isNoteBook ( void );
 
 	public:
 	bool selectCard ( int );
