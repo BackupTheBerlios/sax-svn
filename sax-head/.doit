@@ -44,7 +44,7 @@ sub main {
 		"tag|t=s"         => \$Tag,  
 		"branch|r=s"      => \$Branch,
 		"prepare|p"       => \$Prepare,
-		"patchlevel=s"    => \$PatchList,
+		"patchlevel|l=s"  => \$PatchList,
 		"sourcelevel=i"   => \$SourceList,
 		"clean|c"         => \$Clean,
 		"help|h"          => \&usage,
