@@ -25,6 +25,7 @@ all:
 
 	@echo "generating Makefile..."
 	perl Makefile.PL
+	touch Makefile
 
 	@echo "compiling XFree perl stuff..."
 	make
