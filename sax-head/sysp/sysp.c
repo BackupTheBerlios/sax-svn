@@ -89,9 +89,6 @@ void SyncOnDisk (void);
 
 int main(int argc,char *argv[]) {
 	int c;
-
-	printf ("%s\n",LOADER_NAME);
- 
 	//===========================================
 	// get commandline options...
 	//-------------------------------------------
