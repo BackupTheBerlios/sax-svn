@@ -287,8 +287,9 @@ int main (int argc, char*argv[]) {
 		float vsync = AppRes.field[VSyncStart].val;
 		if ((hsync == 0) || ( vsync == 0)) {
 			printf("%d no\n",current_screen);
+		} else {
+			printf("%d yes\n",current_screen);
 		}
-		printf("%d yes\n",current_screen);
 	}
 	}
 
