@@ -35,7 +35,7 @@ if (! defined $Release2) {
 	my $dif  = qx(svn diff -N -r $Release1 2>/dev/null);
 	@list = split (/\n/,$dif);
 } else {
-	my $dif  = qx(svn diff -N -r $Release1 -r $Release2 2>/dev/null);
+	my $dif  = qx(svn diff -N -r $Release1:$Release2 2>/dev/null);
 	@list = split (/\n/,$dif);
 }
 }
