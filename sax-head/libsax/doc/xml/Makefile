@@ -1,11 +1,12 @@
-all:man
+all:man html
 
-DTD_MAN=/usr/share/xml/docbook/stylesheet/nwalsh/1.65.1/manpages/docbook.xsl
-DTD_HTML=/usr/share/xml/docbook/stylesheet/nwalsh/1.65.1/html/docbook.xsl
+DTD_MAN=/usr/share/xml/docbook/stylesheet/nwalsh/current/manpages/docbook.xsl
+DTD_HTML=/usr/share/xml/docbook/stylesheet/nwalsh/current/html/docbook.xsl
 
 html:
 	for i in `ls -1 *.xml`; do \
-		xsltproc --output $$i.html ${DTD_HTML} $$i ;\
+		base=`echo $$i | sed -e s@.xml@@` ;\
+		xsltproc --output $$base.html ${DTD_HTML} $$i ;\
 	done
 
 man:
