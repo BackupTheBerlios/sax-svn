@@ -1,23 +1,23 @@
 #
 # spec file for package sax2 (Version 4.7)
 #
-# Copyright (c) 2002 SuSE Linux AG, Nuernberg, Germany.
+# Copyright (c) 2003 SuSE Linux AG, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
-# please send bugfixes or comments to feedback@suse.de.
+# Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  flex yacc hwinfo hwinfo-devel mesa-devel-packages x-devel-packages qt3-devel-packages swig readline-devel freetype2 freetype2-devel XFree86-server XFree86-driver-options
+# neededforbuild  XFree86-driver-options XFree86-server flex freetype2 freetype2-devel hwinfo hwinfo-devel mesa-devel-packages qt3-devel-packages readline-devel swig x-devel-packages yacc
 
 Name:         sax2
 Requires:     perl xbanner perl-gettext XFree86-server fbset saxident saxtools qt3 fvwm2 3ddiag
 %if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
-Summary:      SuSE advanced X-Configuration (XFree86 4.x)
+Summary:      SuSE advanced X Window System-configuration (XFree86 4.x)
 Version:      4.7
-Release:      60
+Release:      395
 Group:        System/X11/Utilities
 License:      LGPL, Other License(s), see package
 Source:       sax2.tar.bz2
@@ -40,7 +40,7 @@ Requires:     sax2_sbus
 %endif
 
 %description
-SuSE advanced X-Configuration (XFree86 4.x)
+This package contains the SuSE Advanced X-Configuration (XFree86 4.x)
 
 Authors:
 --------
@@ -48,14 +48,14 @@ Authors:
 
 %package -n saxtools
 Version:      2.2
-Release:      569
-Summary:      X11 tools for SaX2
+Release:      942
+Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     saxident
 
 %description -n saxtools
-Some small X11 tools to handle input devices,
-for example, mouse and keyboard devices.
+Some small X Window System tools to handle input devices,
+for example, mouse and keyboard.
 
 Authors:
 --------
@@ -63,16 +63,16 @@ Authors:
 
 %package -n saxident
 Version:      1.1
-Release:      304
-Summary:      SaX2 Identitiy and Profile information
+Release:      652
+Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/lib/sax/sysp/maps/Identity.map
 Provides:     saxtools:/usr/X11R6/lib/sax/sysp/maps/Identity.map
 
 %description -n saxident
-This package hold the information about the supported graphics hardware and
-its special parameters. For some graphics card a profile is needed to describe
-configuration parameters outside the ordinary way of setting up the card with SaX2
+This package contains information about the supported graphics hardware and
+its special parameters. For some graphics cards a profile is needed to describe
+configuration parameters outside the ordinary way of setting up the card with SaX2.
 
 Authors:
 --------
@@ -279,10 +279,10 @@ install -o root -g root ./startup/sysconfig.sax $FILLUP_DIR
 
 %postun
 %{insserv_cleanup}
-
 #=================================================
 # SaX files...      
 #-------------------------------------------------
+
 %files
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/api
