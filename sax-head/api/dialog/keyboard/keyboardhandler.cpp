@@ -279,9 +279,16 @@ bool XKeyboard::slotRun (int index) {
 	QString baseLayout = layoutList.getFirst();
 	layoutList.removeFirst();
 
-	XStringList completeVariant (XKBVariants);
-	completeVariant.setSeperator (",");
-	QList<char> variantList = completeVariant.getList();
+	QStringList completeVariant = QStringList::split(",", XKBVariants,True);
+	QList<char> variantList;
+	QStringList::Iterator in;
+	for (in = completeVariant.begin(); in != completeVariant.end(); ++in) {
+		if (QString (*in).isEmpty()) {
+			variantList.append ("!");
+		} else {
+			variantList.append (*in);
+		}
+	}
 	QString baseVariant = variantList.getFirst();
 	variantList.removeFirst();
 	int varCount = 0;
@@ -317,7 +324,7 @@ bool XKeyboard::slotRun (int index) {
 	updateVariants();
 
 	//=====================================
-	// select base variant
+	// select base/secondary variant(s)
 	//-------------------------------------
 	for (int n=0;n<mVariant->count();n++) {
 		QString item = mVariant->text (n);
