@@ -12,6 +12,9 @@
 
 BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libgcc libnscd libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace syslogd sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils expat fbset fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext hwinfo hwinfo-devel libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl qt3 qt3-devel rpm swig udev update-desktop-files wireless-tools xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-libs xorg-x11-server
 
+#=================================================
+# Description sax2
+#-------------------------------------------------
 Name:         sax2
 Requires:     perl perl-gettext fbset perl-TermReadLine-Gnu
 Requires:     sax2-ident sax2-tools
@@ -49,12 +52,13 @@ Requires:     sax2_sbus
 %description
 This package contains the SuSE Advanced X-Configuration
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-tools
+#-------------------------------------------------
 %package -n sax2-tools
 Version:      2.7
 Release:      11
@@ -68,12 +72,13 @@ Obsoletes:    saxtools
 Some small X Window System tools to handle input devices, for example,
 mouse and keyboard.
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-ident
+#-------------------------------------------------
 %package -n sax2-ident
 Version:      1.7
 Release:      11
@@ -90,12 +95,13 @@ and its special parameters. For some graphics cards a profile is needed
 to describe configuration parameters outside the ordinary way of
 setting up the card with SaX2.
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-gui
+#-------------------------------------------------
 %package -n sax2-gui
 Version:      1.7
 Release:      11
@@ -107,11 +113,13 @@ Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
 %description -n sax2-gui
 This package contains the GUI for the SuSE Advanced X-Configuration
 
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-libsax
+#-------------------------------------------------
 %package -n sax2-libsax
 Version:      7.1
 Release:      11
@@ -127,7 +135,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-
+#=================================================
+# Description sax2-libsax-devel
+#-------------------------------------------------
 %package -n sax2-libsax-devel
 Version:      7.1
 Release:      11
@@ -143,6 +153,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-libsax-perl
+#-------------------------------------------------
 %package -n sax2-libsax-perl
 Version:      7.1
 Release:      11
@@ -158,6 +171,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-libsax-python
+#-------------------------------------------------
 %package -n sax2-libsax-python
 Version:      7.1 
 Release:      11 
@@ -174,6 +190,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Description sax2-libsax-java
+#-------------------------------------------------
 %package -n sax2-libsax-java
 Version:      7.1
 Release:      11
@@ -190,6 +209,9 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 
+#=================================================
+# Description sax2-libsax-csharp
+#-------------------------------------------------
 %package -n sax2-libsax-csharp
 Version:      7.1
 Release:      11
@@ -205,6 +227,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+#=================================================
+# Preparation...
+#-------------------------------------------------
 %prep
 %setup -n sax -a 1
 if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
@@ -239,11 +264,6 @@ cp /tmp/sax.sh ./startup/sax.sh
 #-------------------------------------------------
 make
 
-%preun
-chroot . rm -f /var/cache/xfine/*
-if [ ! -d /var/cache/xfine ];then
-	mkdir -p /var/cache/xfine
-fi
 #=================================================
 # install sources
 #-------------------------------------------------
@@ -282,19 +302,6 @@ if [ -f "/usr/X11R6/bin/xsload" ];then
 fi
 %endif
 #=================================================
-# install architecture dependant Identity
-#-------------------------------------------------
-if [ -f ./sysp/maps/arch/Identity.map.$ARCH ];then
-	install -m 644 ./sysp/maps/arch/Identity.map.$ARCH \
-	$RPM_BUILD_ROOT/usr/share/sax/sysp/maps/Identity.map
-fi
-#=================================================
-# transform Identitiy information to Cards file
-#------------------------------------------------
-./.cards.pl -f \
-	$RPM_BUILD_ROOT/usr/share/sax/sysp/maps/Identity.map \
-> $RPM_BUILD_ROOT/usr/share/sax/api/data/cdb/Cards
-#=================================================
 # install desktop icon...
 #-------------------------------------------------
 install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
@@ -315,6 +322,15 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 # update desktop file 
 #-------------------------------------------------
 %suse_update_desktop_file -i %name System SystemSetup
+
+#=================================================
+# uninstall script stage:[previous]
+#-------------------------------------------------
+%preun
+chroot . rm -f /var/cache/xfine/*
+if [ ! -d /var/cache/xfine ];then
+	mkdir -p /var/cache/xfine
+fi
 
 #=================================================
 # SaX files...      

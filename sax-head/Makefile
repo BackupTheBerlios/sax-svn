@@ -173,6 +173,18 @@ install:
 	install -m 644 ./api/data/fvwmrc.sax                    ${WMVZ}
 
 	#============================================
+	# install architecture dependant Identity
+	#--------------------------------------------
+	if [ -f ./sysp/maps/arch/Identity.map.${ARCH} ];then \
+		install -m 644 ./sysp/maps/arch/Identity.map.${ARCH} ${MAPVZ} ;\
+	fi
+
+	#============================================
+	# transform Identitiy info to Cards file
+	#--------------------------------------------
+	./.cards.pl -f ${MAPVZ}/Identity.map > ${CDBVZ}/Cards
+
+	#============================================
 	# install library files...
 	#--------------------------------------------
 	cp -a ./libsax/doc/doxygen/html ${LIBDOCDIR}
