@@ -87,7 +87,7 @@ sub main {
 	# -------------------------
 	unlink($var{LastLog});
 	my $XLoader = "$var{X} $var{LastLog}:xfine -xf86config $var{ConfigFile}";
-	my $XFlags  = "-allowMouseOpenFail -verbose 2 +accessx vt$tty";
+	my $XFlags  = "-allowMouseOpenFail -br -verbose 2 +accessx vt$tty";
 	system("$XLoader $XFlags $Display >$var{Xpid} 2>/dev/null");
 	my $exitStatus = $? >> 8;
 	if ($exitStatus ne "0") {
