@@ -210,7 +210,7 @@ sub main {
 	$spec{haveServer} = $haveServer;
 	if ($haveServer == 0) {
 		my $vt = GetVirtualTerminal();
-		my $XLoader = "$spec{X} $spec{Xmsg} -xf86config $spec{AutoConf}";
+		my $XLoader = "$spec{X} $spec{Xmsg} -br -xf86config $spec{AutoConf}";
 		my $XFlags  = "-allowMouseOpenFail -verbose 10 +accessx $vt";
 		system("$XLoader $XFlags $disp >$spec{XpidFile}");
 		if (! open(FD,"$spec{XpidFile}")) {
