@@ -632,6 +632,7 @@ void showMonitorConfig (void) {
 		int y = display.dpiy * 10;
 		printf ("DisplaySize  %d %d",x,y);
 	}
+	exit (0);
 }
 
 //========================================
