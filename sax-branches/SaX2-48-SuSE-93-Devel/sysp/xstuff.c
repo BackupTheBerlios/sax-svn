@@ -302,7 +302,7 @@ void ScanXStuff::Scan (void) {
 		stuff[i].dpiy      = parse[mapnr].dpiy;
 
 		if (
-		(ddc == 1) && (
+		(ddc == 1) && (string(display.ddc) != "") && (
 			(string(parse[i].ddc) != "<undefined>") || 
 			(string(display.ddc)  != "00000000")
 		)
@@ -319,7 +319,7 @@ void ScanXStuff::Scan (void) {
 
 		// save fbtiming only for primary device...
 		// -----------------------------------------
-		if ((i==0) && (stuff[0].dtype == "CRT")) {
+		if (i==0) {
 		if ((stuff[i].vesacount == -1) && (fb != NULL) && (ddc == 1)) {
 			stuff[i].fbtiming  = fbstring;
 			stuff[i].vesacount = 1;
