@@ -7,7 +7,7 @@ AUTHORS       : Thomas Fehr <fehr@suse.de>
               : Marcus Schäfer <ms@suse.de>
               :
 BELONGS TO    : configuration tool for the X window system 
-              : released under the XFree86 license
+              : released under the GPL license
               :
 DESCRIPTION   : whois will check if the currently used
               : X11 Display link point to a remote or a local

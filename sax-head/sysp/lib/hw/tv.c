@@ -6,7 +6,7 @@ PROJECT       : SaX2 - SuSE advanced X configuration
 AUTHOR        : Marcus Schäfer <ms@suse.de>
               :
 BELONGS TO    : configuration tool for the X window system 
-              : released under the XFree86 license
+              : released under the GPL license
               :
 DESCRIPTION   : provide functions to check if there is
               : a TV card in your system, using [libhd] 

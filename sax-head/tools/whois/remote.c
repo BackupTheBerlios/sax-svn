@@ -7,7 +7,7 @@ AUTHORS       : Thomas Fehr <fehr@suse.de>
               : Marcus Schäfer <ms@suse.de>
               :
 BELONGS TO    : configuration tool for the X window system 
-              : released under the XFree86 license
+              : released under the GPL license
               :
 DESCRIPTION   : remote will check the local adresses against
               : the remote adresses. If one local adress equals

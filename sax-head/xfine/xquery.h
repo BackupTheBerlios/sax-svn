@@ -6,7 +6,7 @@ PROJECT       : SaX2 - SuSE advanced X configuration
 AUTHOR        : Marcus Schäfer <ms@suse.de>
               :
 BELONGS TO    : configuration tool for the X window system 
-              : released under the XFree86 license
+              : released under the GPL license
               :
 DESCRIPTION   : XFine2 (display fine tuning tool)
               : run xquery -command and deliver the result

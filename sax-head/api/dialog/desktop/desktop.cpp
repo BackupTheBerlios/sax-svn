@@ -6,7 +6,7 @@ PROJECT       : SaX2 - SuSE advanced X configuration
 AUTHOR        : Marcus Schäfer <ms@suse.de>
               :
 BELONGS TO    : configuration tool for the X window system 
-              : released under the XFree86 license
+              : released under the GPL license
               :
 DESCRIPTION   : xapi (X11-Application-Interface)
               : configure colors and resolution for each desktop

@@ -6,7 +6,7 @@ PROJECT       : SaX2 - SuSE advanced X configuration
 AUTHOR        : Marcus Schäfer <ms@suse.de>
               :
 BELONGS TO    : configuration tool for the X window system 
-              : released under the XFree86 license
+              : released under the GPL license
               :
 DESCRIPTION   : xidle timer control widget 
               : we will use the xidle tool (sax/tools/wrap)
