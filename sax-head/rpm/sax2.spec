@@ -590,5 +590,6 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 
 %files -n sax2-libsax-python
 %defattr(-,root,root)
+%dir %{py_sitedir}/SaX
 %{py_sitedir}/SaX.pth
 %{py_sitedir}/SaX/*
