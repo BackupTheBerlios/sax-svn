@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Sep 12 12:09:04 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 15 10:38:21 2003
 #
 # Template for monitor data
 # --------------------------
@@ -2488,6 +2488,14 @@ AOC:CM314  {
 #----------------------------------------------
 AOC:CMLB-337  {
  Hsync=30-60
+ Vsync=50-90
+}
+
+#==============================================
+# CMLB-736
+#----------------------------------------------
+AOC:CMLB-736  {
+ Hsync=30-64
  Vsync=50-90
 }
 
@@ -33730,6 +33738,17 @@ Sun:GDM-20E14  {
 Sun:HM-4119  {
  Hsync=61-63
  Vsync=60-60
+}
+
+#==============================================
+# Sun (18.1) Flat Panel
+#----------------------------------------------
+Sun:SUN (18.1) FLAT PANEL  {
+ DDC=SUN0587
+ Option=DPMS
+ Hsync=30-81
+ Modeline="1280x1024" 108.0 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync
+ Vsync=56-75
 }
 
 #==============================================
