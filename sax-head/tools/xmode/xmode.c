@@ -214,6 +214,14 @@ int XmodeTiming (struct xmode *data,struct xtiming *ht) {
 		XmodeTiming (data,ht);
 	}
 	}
+	// Nvidia Modeline Checks
+	// 1) vsyncend - vsyncstart <= 16
+	// ---
+	if (ht->vsyncend - ht->vsyncstart > 16) {
+		ht->vsyncend = ht->vsyncstart + 16;
+	}
+	// 2) [ Add missing checks here ]
+	// ---
 	return(0); 
 }
 
