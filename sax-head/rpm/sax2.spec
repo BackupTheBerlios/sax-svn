@@ -146,11 +146,11 @@ Authors:
 Version:      1.2
 Release:      11
 Requires:     sax2-libsax
-Summary:      SuSE advanced X Window System-configuration perl binding
+Summary:      SuSE advanced X Window System-configuration Perl binding
 Group:        System/X11/Libraries
 
 %description -n sax2-libsax-perl
-This package contains the SaX2 binding to be able to use libsax with perl
+This package contains the SaX2 binding to be able to use libsax with Perl
 
 Authors:
 --------
@@ -161,13 +161,27 @@ Version:      1.2
 Release:      11 
 Requires:     sax2-libsax
 %{py_requires}
-Summary:      SuSE advanced X Window System-configuration perl binding
+Summary:      SuSE advanced X Window System-configuration Python binding
 Group:        System/X11/Libraries
     
 %description -n sax2-libsax-python
-This package contains the SaX2 binding to be able to use libsax with python
+This package contains the SaX2 binding to be able to use libsax with Python
 
 Authors: 
+--------
+    Marcus Schäfer <ms@suse.de>
+
+%package -n sax2-libsax-java
+Version:      1.2
+Release:      11
+Requires:     sax2-libsax jre1.2.x
+Summary:      SuSE advanced X Window System-configuration Java binding
+Group:        System/X11/Libraries
+    
+%description -n sax2-libsax-java
+This package contains the SaX2 binding to be able to use libsax with Java
+
+Authors:      
 --------
     Marcus Schäfer <ms@suse.de>
 
@@ -593,3 +607,14 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/auto/SaX/.packlist
 %dir %{py_sitedir}/SaX
 %{py_sitedir}/SaX.pth
 %{py_sitedir}/SaX/*
+
+#=================================================
+# SaX-libsax.java file list...  
+# ------------------------------------------------
+
+%files -n sax2-libsax-java
+%defattr(-,root,root)
+%dir /usr/lib/sax
+%dir /usr/lib/sax/plugins
+/usr/share/java/SaX.jar
+/usr/lib/sax/plugins/SaX.so

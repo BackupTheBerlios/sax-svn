@@ -1,4 +1,7 @@
-JAVAC=/usr/lib/jvm/java-1.4.2-sun/bin/javac
+DESTDIR = /
+PLUGSDIR=${DESTDIR}/usr/lib/sax/plugins
+SHAREDIR=${DESTDIR}/usr/share/java
+JAVAC=/usr/lib/jvm/java-*-sun/bin/javac
 
 all:
 	g++ -c \
@@ -13,6 +16,10 @@ all:
 	jar cf SaX.jar *.class && rm -f *.class SaX[^_]*.java SWIGTYPE*
 
 install_vendor:
+	install -d -m 755 ${PLUGSDIR}
+	install -d -m 755 ${SHAREDIR}
+	install -m 755 ./SaX.so  ${PLUGSDIR}
+	install -m 644 ./SaX.jar ${SHAREDIR}
 
 clean:
 	rm -f SaX[^_]*.java SaX.so *.class SaX.java
