@@ -108,7 +108,11 @@ install:
 
 	# install files...
 	# -----------------
-	install -m 644 ./profile/*                              ${PROFILE}
+	for i in `ls -1 ./profile`; do \
+		if [ ! -d ./profile/$$i ];then \
+		install -m 644 ./profile/$$i ${PROFILE} ;\
+		fi \
+	done
 	install -m 644 ./profile/x86_64/*                       ${PROFILE}
 	install -m 644 ./profile/alpha/*                        ${PROFILE}
 	install -m 644 ./profile/ia64/*                         ${PROFILE}
