@@ -1,0 +1,8 @@
+InputDevice -> 1 -> Identifier = Mouse[1]
+InputDevice -> 1 -> Driver     = synaptics
+InputDevice -> 1 -> Option -> InputFashion         = Mouse
+InputDevice -> 1 -> Option -> Name                 = Synaptics;Touchpad
+InputDevice -> 1 -> Option -> Device               = /dev/input/mice
+InputDevice -> 1 -> Option -> ZAxisMapping         = 4 5
+InputDevice -> 1 -> Option -> Emulate3Buttons      = on
+InputDevice -> 1 -> Option -> SHMConfig            = on

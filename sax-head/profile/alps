@@ -4,6 +4,7 @@ InputDevice -> 1 -> Option -> InputFashion         = Mouse
 InputDevice -> 1 -> Option -> Name                 = ALPS;Touchpad
 InputDevice -> 1 -> Option -> Device               = /dev/input/mice
 InputDevice -> 1 -> Option -> ZAxisMapping         = 4 5
+InputDevice -> 1 -> Option -> Emulate3Buttons      = on
 InputDevice -> 1 -> Option -> SHMConfig            = on
 InputDevice -> 1 -> Option -> Protocol             = auto-dev
 InputDevice -> 1 -> Option -> LeftEdge             = 120
