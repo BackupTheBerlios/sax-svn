@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Feb 19 15:21:23 2004
+# Author: Marcus Schaefer <sax@suse.de>, Fri Mar  5 13:05:55 2004
 #
 # Template for monitor data
 # --------------------------
@@ -19803,6 +19803,17 @@ IODATA:I-O DATA LCD-DV15H  {
  Option=DPMS
  Hsync=31-60
  Vsync=55-75
+}
+
+#==============================================
+# Q17
+#----------------------------------------------
+IQ AUTOMATION:Q17  {
+ DDC=IQT217A
+ Option=DPMS
+ Hsync=31-64
+ Resolution=1280x1024
+ Vsync=50-60
 }
 
 #==============================================
