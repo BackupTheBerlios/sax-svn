@@ -110,7 +110,7 @@ install:
 	# -----------------
 	install -m 644 ./profile/*                              ${PROFILE}
 	install -m 755 ./init.pl                                ${SAXBINVZ}
-	install -m 644 ./cvsbuild                               ${SAXBINVZ}
+	install -m 644 ./svnbuild                               ${SAXBINVZ}
 	install -m 755 ./xc.pl                                  ${SAXBINVZ}
 	install -m 755 ./tools/xwrapper/xw                      ${SAXBINVZ}/xw.pl
 	install -m 755 ./api/xapi                               ${SAXBINVZ}
