@@ -58,6 +58,7 @@ build: configure
 		${MAKE} -C ./$$i all ;\
 	fi \
 	done
+	${MAKE} -C ./plog -f Makefile.Linux
 	${MAKE} -C ./xkbset xkbctrl
 	${MAKE} -C ./xmset xupdate
 
