@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Sep 18 10:46:05 2003
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 22 12:39:18 2003
 #
 # Template for monitor data
 # --------------------------
@@ -4337,7 +4337,9 @@ BELINEA:101540  {
 # 101545
 #----------------------------------------------
 BELINEA:101545  {
- Hsync=30-61
+ DDC=MAX0609
+ Option=DPMS
+ Hsync=31-60
  Vsync=50-75
 }
 
@@ -5706,16 +5708,6 @@ COMPAQ:CV935 COLOR MONITOR  {
  Option=DPMS
  Hsync=30-85
  Vsync=50-120
-}
-
-#==============================================
-# FP745A ANALOG FLAT PANEL MONITOR
-#----------------------------------------------
-COMPAQ:FP745A ANALOG FLAT PANEL MONITOR  {
- DDC=CPQ3059
- Option=DPMS
- Hsync=31-60
- Vsync=56-75
 }
 
 #==============================================
