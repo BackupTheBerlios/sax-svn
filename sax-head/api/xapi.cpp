@@ -489,7 +489,7 @@ int main(int argc,char*argv[]) {
 	xapi -> enterEvent ( 0 );
 	xapi -> activateFirstItem();
 	setMouseCursor();
-	if (! withDialog) {
+	if ((! withDialog) && (useHwData)) {
 		intro -> checkDetected();
 	} else {
 		if ( *popUpDialog == "Monitor" ) {

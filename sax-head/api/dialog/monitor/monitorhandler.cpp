@@ -1081,12 +1081,15 @@ QPoint XMonitor::getRatio (int x,int y) {
 	// the length of x and y
 	// ---
 	QPoint result;
-	result.setX (4);
-	result.setY (3);
-	double ar = round ((double)x/(double)y);
-	if ( ar > 1.0 ) {
+	result.setX (5);
+	result.setY (4);
+	double ar = (double)x / (double)y;
+	if ( ar > 1.5 ) {
 		result.setX (16);
 		result.setY (10);
+	} else if ( ar >= 1.33 ) {
+		result.setX (4);
+		result.setY (3);
 	}
 	return result;
 }
