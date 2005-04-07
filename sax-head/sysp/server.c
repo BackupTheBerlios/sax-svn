@@ -392,7 +392,7 @@ void ScanServer::Scan(void) {
 	// ---------
 	n = 0;
 	for (int i=0;i<count;i++) {
-	if ((pci[i].cls == 0x300) || (pci[i].cls == 0x0001)) {
+	if ((pci[i].cls == 0x300)||(pci[i].cls == 0x0001)||(pci[i].cls == 0x380)) {
 		graphics[n] = pci[i];
 		n++;
 	} else {
