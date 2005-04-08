@@ -297,16 +297,17 @@ sub init {
 	$haveServer = 0;
 	my @xpid = GetPids();
 	if (@xpid > 0) {
-	my @displayStatus = GetDisplay (@xpid,$spec{Corner});
-	$dpy = $displayStatus[0];
-	if ($displayStatus[1] eq "grant") {
-		$haveServer = 1;
-		print ("SaX: access to your display has been granted\n");
-		print ("SaX: the current configuration will be used\n");
+		my @displayStatus = GetDisplay (@xpid,$spec{Corner});
+		$dpy = $displayStatus[0];
+		if ($displayStatus[1] eq "grant") {
+			$haveServer = 1;
+			print ("SaX: access to your display has been granted\n");
+		} else {
+			print ("SaX: access to your display is denied\n");
+		}
 	} else {
-		print ("SaX: no X-Server running or display access denied\n");
-		print ("SaX: the current configuration will not be used\n");
-	}
+		print ("SaX: no X-Server is running\n");
+		print ("SaX: will start own server if needed\n");
 	}
 
 	# /.../

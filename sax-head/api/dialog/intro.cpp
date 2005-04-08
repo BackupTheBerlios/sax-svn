@@ -469,8 +469,8 @@ void XIntro::checkDetected (void) {
 		}
 		}
 		break;
-	} else
-	if ((model=="--> VESA") && (ddcID != "undefined")) {
+	} else if ((model=="--> VESA") && (ddcID != "undefined")) {
+		#if 0
 		QString translation;
 		translation = mText["monitorCDBunknown"];
 		translation.replace ( QRegExp("\%2"),ddcID );
@@ -495,6 +495,7 @@ void XIntro::checkDetected (void) {
 		}
 		}
 		break;
+		#endif
 	}
 	}
 
