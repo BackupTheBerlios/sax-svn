@@ -428,6 +428,30 @@ Logitech:MX 900 Bluetooth {
  Buttons      = 8 
 }
 
+Logitech;MediaPlay {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Device       = /dev/input/mice
+ ZAxisMapping = 7 8
+ Buttons      = 8
+}
+
+Logitech;TrackMan Optical {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Device       = /dev/input/mice
+ ZAxisMapping = 7 8
+ Buttons      = 8
+}
+
+Logitech;MX310 {
+ Driver       = mouse
+ Protocol     = ExplorerPS/2
+ Device       = /dev/input/mice
+ ZAxisMapping = 4 5
+ Buttons      = 5
+}
+
 # =========================================
 # Touchpads (NoteBooks)
 # -----------------------------------------
