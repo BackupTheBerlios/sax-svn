@@ -87,6 +87,14 @@ void PrintStuffData(ScanXStuff s);
 void Print3DData (Scan3D d);
 void SyncOnDisk (void);
 
+//============================================
+// Functions...
+//--------------------------------------------
+char* GetProfileDriver ( string );
+
+//============================================
+// Main
+//--------------------------------------------
 int main(int argc,char *argv[]) {
 	int c;
 	//===========================================
@@ -470,6 +478,17 @@ void CheckRoot(void) {
 }
 
 //============================================
+// GetProfileDriver...
+//--------------------------------------------
+char* GetProfileDriver ( string profile ) {
+	string profileFile = PDIR + string(profile);
+	string profileDriver = qx (
+		PDRIVER,STDOUT,1,"%s",profileFile.c_str()
+	);
+	return (char*)profileDriver.c_str();
+}
+
+//============================================
 // print out mouse data...
 //--------------------------------------------
 void PrintMouseData(ScanMouse m) {
@@ -484,6 +503,7 @@ void PrintMouseData(ScanMouse m) {
 	// and check for properties of non profiled devices
 	str devs[m.Count()];
 	str profiles[m.Count()];
+	str pdrivers[m.Count()];
 	for (int i = m.Count(); i > 0; i--) {
 		data = m.Pop();
 		strcpy (devs[i],data.device);
@@ -503,6 +523,9 @@ void PrintMouseData(ScanMouse m) {
 				buttonCount = data.buttons;
 			}
 		}
+		strcpy (
+			pdrivers[i],GetProfileDriver(data.profile)
+		);
 	}
 	m.Reset();
 
@@ -513,7 +536,7 @@ void PrintMouseData(ScanMouse m) {
 		data = m.Pop();
 		for (int n = i - 1; n > 0; n--) {
 			if (strcmp (devs[n],data.device) == 0) {
-			if (strcmp (profiles[n],data.profile) == 0) {
+			if (strcmp (pdrivers[n],GetProfileDriver(data.profile)) == 0) {
 				show = false;
 				break;
 			}

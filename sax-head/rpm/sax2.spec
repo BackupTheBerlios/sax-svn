@@ -385,6 +385,7 @@ fi
 /usr/share/sax/sysp/script/profilecount.pl
 /usr/share/sax/sysp/script/diag.pl
 /usr/share/sax/sysp/script/psection.pl
+/usr/share/sax/sysp/script/profiledriver.pl
 /usr/share/sax/sysp/script/vendor.pl
 %{perl_vendorarch}/XFree.pm
 %{perl_vendorarch}/auto/XFree

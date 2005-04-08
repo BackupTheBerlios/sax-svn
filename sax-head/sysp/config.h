@@ -70,6 +70,7 @@ STATUS        : Status: Up-to-date
 //==============================
 // Scripts...
 //------------------------------
+#define PDIR              "/usr/share/sax/profile/"
 #define MACHINE           "/usr/share/sax/sysp/script/machine.pl"
 #define INSTALLED         "/usr/share/sax/sysp/script/installed.pl"
 #define KILLDOT           "/usr/share/sax/sysp/script/killdot.pl"
@@ -77,6 +78,7 @@ STATUS        : Status: Up-to-date
 #define CHECKMAP          "/usr/share/sax/sysp/script/checkmap.pl"
 #define PROFILECOUNT      "/usr/share/sax/sysp/script/profilecount.pl"
 #define PSECTION          "/usr/share/sax/sysp/script/psection.pl"
+#define PDRIVER           "/usr/share/sax/sysp/script/profiledriver.pl"
 #define DIAG              "/usr/share/sax/sysp/script/diag.pl"
 #define GETVENDOR         "/usr/share/sax/sysp/script/vendor.pl"
 #define VBIOS             "/usr/share/sax/sysp/script/vbios.pl"
