@@ -397,9 +397,16 @@ sub CheckResolution {
 	foreach (@list) {
 		@xy   = split(/x/,$_);
 		$need = $xy[0] * $xy[1] * ($bpp / 8);
-		if ($need <= $mem) {
-			push(@res,$_); $mres{$card}{$_} = $_;
-		} 
+		# .../
+		# removed the memory check to prevent wrong
+		# memory detections to have any effect. The
+		# X-Server is able to react appropriately if
+		# such a case comes true
+		# ----
+		#if ($need <= $mem) {
+		#	push(@res,$_); $mres{$card}{$_} = $_;
+		#} 
+		push(@res,$_); $mres{$card}{$_} = $_;
 	}
 	$modes = join(",",@res);
 	return($modes);
