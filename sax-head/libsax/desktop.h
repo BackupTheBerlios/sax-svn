@@ -70,9 +70,10 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual QList<QString> getDisplaySize ( void ) = 0;
 	virtual QList<QString> getHsyncRange  ( void ) = 0;
 	virtual QList<QString> getVsyncRange  ( void ) = 0;
-	virtual bool is3DEnabled ( void ) = 0;
-	virtual bool is3DCard    ( void ) = 0;
-	virtual bool DPMSEnabled ( void ) = 0;
+	virtual bool is3DEnabled    ( void ) = 0;
+	virtual bool is3DCard       ( void ) = 0;
+	virtual bool isDualHeadCard ( void ) = 0;
+	virtual bool DPMSEnabled    ( void ) = 0;
 	virtual QString getMonitorVendor ( void ) = 0;
 	virtual QString getMonitorName   ( void ) = 0;
 	virtual QString getColorDepth    ( void ) = 0;
@@ -176,9 +177,10 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	QList<QString> getDisplaySize ( void );
 	QList<QString> getHsyncRange  ( void );
 	QList<QString> getVsyncRange  ( void );
-	bool is3DEnabled ( void );
-	bool is3DCard    ( void );
-	bool DPMSEnabled ( void );
+	bool is3DEnabled    ( void );
+	bool is3DCard       ( void );
+	bool isDualHeadCard ( void );
+	bool DPMSEnabled    ( void );
 	QString getMonitorVendor ( void );
 	QString getMonitorName   ( void );
 	QString getColorDepth    ( void );

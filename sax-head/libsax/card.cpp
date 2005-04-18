@@ -402,6 +402,14 @@ int SaXManipulateCard::getHeads ( void ) {
 		return mBoards * 2;
 	}
 	//====================================
+	// get sysp card name
+	//------------------------------------
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+	//====================================
 	// import CDB DB for profile names
 	//------------------------------------
 	SaXProcess* pCDB = new SaXProcess();
@@ -419,8 +427,8 @@ int SaXManipulateCard::getHeads ( void ) {
 			return headCount;
 		}
 		selectCard (realCount);
-		if ( CDBData[getCardName()] ) {
-			QDict<QString> CDBTable = *CDBData[getCardName()];
+		if ( CDBData[mCardName] ) {
+			QDict<QString> CDBTable = *CDBData[mCardName];
 			if (CDBTable["Profile"]) {
 				QString mProfile = *CDBTable["Profile"];
 				if (mProfile == "NVidia_Twinview") {

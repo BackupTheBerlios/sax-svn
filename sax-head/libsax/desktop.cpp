@@ -221,14 +221,20 @@ bool SaXManipulateDesktop::is3DCard (void) {
 		return false;
 	}
 	//====================================
+	// get sysp card name
+	//------------------------------------
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+	//====================================
 	// retrieve CDB card list
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
 	CDBCards -> start (CDB_CARDS);
 	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
-	SaXManipulateCard cardInfo (mCard);
-	QString cardName = cardInfo.getCardName();
-	QDict<QString>* cardData = CDBData.find ( cardName );
+	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* flag = cardData -> find ("Flag");
 		if (flag) {
@@ -239,7 +245,49 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	//====================================
 	// No CDB record found for cardName
 	//------------------------------------
-	excEmptyCDBGroup ( cardName.data() );
+	excEmptyCDBGroup ( mCardName.data() );
+	qError (errorString(),EXC_EMPTYCDBGROUP);
+	return false;
+}
+
+//====================================
+// isDualHeadCard
+//------------------------------------
+bool SaXManipulateDesktop::isDualHeadCard (void) {
+	// .../
+	//! check if the card is a dual head card The check
+	//! is based on a profile check. If the card is bound
+	//! to a DualHead profile the method will return true
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return false;
+	}
+	//====================================
+	// get sysp card name
+	//------------------------------------
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+	//====================================
+	// retrieve CDB card list
+	//------------------------------------
+	SaXProcess* CDBCards = new SaXProcess ();
+	CDBCards -> start (CDB_CARDS);
+	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	QDict<QString>* cardData = CDBData.find ( mCardName );
+	if ( cardData ) {
+		QString* profile = cardData -> find ("Profile");
+		if ((profile) && (profile->contains("DualHead"))) {
+			return true;
+		}
+		return false;
+	}
+	//====================================
+	// No CDB record found for cardName
+	//------------------------------------
+	excEmptyCDBGroup ( mCardName.data() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
@@ -262,6 +310,15 @@ bool SaXManipulateDesktop::enable3D (void) {
 		return false;
 	}
 	//====================================
+	// get sysp card name
+	//------------------------------------
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+
+	//====================================
 	// retrieve CDB card list
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
@@ -272,8 +329,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 	// get Extensions for the active card
 	//------------------------------------
 	SaXManipulateCard cardInfo (mCard);
-	QString cardName = cardInfo.getCardName();
-	QDict<QString>* cardData = CDBData.find ( cardName );
+	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* driver  = cardData -> find ("3DDriver");
 		QString* extends = cardData -> find ("Extension");
@@ -331,9 +387,9 @@ bool SaXManipulateDesktop::enable3D (void) {
 		return false;
 	}
 	//====================================
-	// No CDB record found for cardName
+	// No CDB record found for mCardName
 	//------------------------------------
-	excEmptyCDBGroup ( cardName.data() );
+	excEmptyCDBGroup ( mCardName.data() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
@@ -353,6 +409,15 @@ bool SaXManipulateDesktop::disable3D (void) {
 		return false;
 	}
 	//====================================
+	// get sysp card name
+	//------------------------------------
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+
+	//====================================
 	// retrieve CDB card list
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
@@ -363,8 +428,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 	// get Extensions for the active card
 	//------------------------------------
 	SaXManipulateCard cardInfo (mCard);
-	QString cardName = cardInfo.getCardName();
-	QDict<QString>* cardData = CDBData.find ( cardName );
+	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* driver  = cardData -> find ("3DDriver");
 		QString* driver2D= cardData -> find ("Driver");
@@ -422,9 +486,9 @@ bool SaXManipulateDesktop::disable3D (void) {
 		return false;
 	}
 	//====================================
-	// No CDB record found for cardName
+	// No CDB record found for mCardName
 	//------------------------------------
-	excEmptyCDBGroup ( cardName.data() );
+	excEmptyCDBGroup ( mCardName.data() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
