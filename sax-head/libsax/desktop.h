@@ -32,7 +32,8 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define XSLOAD  "/usr/X11R6/bin/xsload"
+#define XSLOAD            "/usr/X11R6/bin/xsload"
+#define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
 
 //====================================
 // Interface class for dlopen ability

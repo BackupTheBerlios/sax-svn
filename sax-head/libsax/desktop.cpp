@@ -224,6 +224,7 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mDesktopID );
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -238,7 +239,12 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	if ( cardData ) {
 		QString* flag = cardData -> find ("Flag");
 		if (flag) {
-			return true;
+			QString  driver = mCard -> getItem ("Driver");
+			QString* driver3D = cardData -> find ("3DDriver");
+			if ( driver == *driver3D ) {
+				return true;
+			}
+			return false;
 		}
 		return false;
 	}
@@ -266,6 +272,7 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mDesktopID );
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -280,7 +287,24 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	if ( cardData ) {
 		QString* profile = cardData -> find ("Profile");
 		if ((profile) && (profile->contains("DualHead"))) {
-			return true;
+			//====================================
+			// ask profile for changes if dynamic
+			//------------------------------------
+			QProcess* proc = new QProcess ();
+			proc -> addArgument ( SAX_PROFILE_CHECK );
+			proc -> addArgument ( *profile );
+			if ( ! proc -> start() ) {
+				excProcessFailed();
+				qError (errorString(),EXC_PROCESSFAILED);
+				return false;
+			}
+			while (proc->isRunning()) {
+				usleep (1000);
+			}
+			if (proc->exitStatus() == 0) {
+				return true;
+			}
+			return false;
 		}
 		return false;
 	}
@@ -313,6 +337,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mDesktopID );
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -412,6 +437,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mDesktopID );
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -613,7 +639,12 @@ bool SaXManipulateDesktop::is3DEnabled (void) {
 	}
 	QString driver = mCard -> getItem ("Driver");
 	if (driver == "nvidia") {
-		return true;
+		SaXImportSysp* p3D = new SaXImportSysp (SYSP_3D);
+		p3D -> doImport();
+		if ((p3D->getItem("Flag")) && (p3D->getItem("Flag") == "NVReal")) {
+			return true;
+		}
+		return false;
 	}
 	SaXManipulatePath pathInfo (mPath);
 	QList<QString> modules = pathInfo.getModules();

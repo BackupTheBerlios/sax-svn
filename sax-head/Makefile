@@ -54,6 +54,7 @@ LOCALEVZ       = ${usr_prefix}/share/locale
 XFINEBINVZ     = ${xfi_prefix}
 XFINEPIXMAPS   = ${xfi_prefix}/pixmaps
 LIBDOCDIR      = ${usr_prefix}/share/doc/packages/libsax
+LIBTOOLDIR     = ${buildroot}/var/lib/sax
 WMVZ           = ${usr_prefix}/X11R6/share/fvwm
 
 #============================================
@@ -106,7 +107,7 @@ install:
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
 	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
-	install -d -m 755 ${LIBDOCDIR} ${WMVZ}
+	install -d -m 755 ${LIBDOCDIR} ${WMVZ} ${LIBTOOLDIR}
 
 	#============================================
 	# install X11 parser...
@@ -190,6 +191,7 @@ install:
 	cp -a ./libsax/doc/doxygen/html ${LIBDOCDIR}
 	cp ./libsax/libsax.so*  ${USRLIBVZ}
 	cp ./libsax/*.h         ${INCVZ}
+	cp ./libsax/tools/*     ${LIBTOOLDIR}
 
 	#============================================
 	# install API data files...

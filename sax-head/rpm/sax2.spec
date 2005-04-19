@@ -508,6 +508,7 @@ fi
 %dir %{_defaultdocdir}/libsax
 %doc %{_defaultdocdir}/libsax/html
 /usr/%{_lib}/libsax.so*
+/var/lib/sax
 
 #=================================================
 # SaX-libsax-devel file list...  

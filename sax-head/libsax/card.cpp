@@ -201,11 +201,47 @@ QString SaXManipulateCard::getCardName (void) {
 	if (! mImport) {
 		return QString();
 	}
-	QString fullName;
-	QTextOStream (&fullName)
-		<< mImport -> getItem ("Vendor") << ":"
-		<< mImport -> getItem ("Name");
-	return fullName;
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mCard );
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+	return mCardName;
+}
+
+//====================================
+// getCardVendor
+//------------------------------------
+QString SaXManipulateCard::getCardVendor (void) {
+	// .../
+	//! retrieve the card vendor from the SYSP_CARD
+	//! interface
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mCard );
+	pCard -> doImport();
+	return pCard->getItem("Vendor");
+}
+
+//====================================
+// getCardModel
+//------------------------------------
+QString SaXManipulateCard::getCardModel (void) {
+	// .../
+	//! retrieve the card model from the SYSP_CARD
+	//! interface
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> setID ( mCard );
+	pCard -> doImport();
+	return pCard->getItem("Device");
 }
 
 //====================================
@@ -382,6 +418,23 @@ int SaXManipulateCard::getCards ( void ) {
 }
 
 //====================================
+// getDevices
+//------------------------------------
+int SaXManipulateCard::getDevices ( void ) {
+	// .../
+	//! returns the number of configured device sections
+	//! the result should be always the same as calling
+	//! getHeads(), but getHeads will refer to the CDB data
+	//! whereas getDevices is counting the included X11
+	//! Device sections.
+	// ----
+	if (! mImport) {
+		return -1;
+	}
+	return mImport->getCount();
+}
+
+//====================================
 // getHeads
 //------------------------------------
 int SaXManipulateCard::getHeads ( void ) {
@@ -431,7 +484,7 @@ int SaXManipulateCard::getHeads ( void ) {
 			QDict<QString> CDBTable = *CDBData[mCardName];
 			if (CDBTable["Profile"]) {
 				QString mProfile = *CDBTable["Profile"];
-				if (mProfile == "NVidia_Twinview") {
+				if (mProfile == "NVidia_DualHead_DriverOptions") {
 					headCount += 2;
 					realCount += 1;
 					continue;
@@ -441,7 +494,22 @@ int SaXManipulateCard::getHeads ( void ) {
 					realCount += 2;
 					continue;
 				}
+				if (mProfile == "Radeon_DualHead_DriverOptions") {
+					headCount += 2;
+					realCount += 1;
+					continue;
+				}
 				if (mProfile == "Radeon_DualHead") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+				if (mProfile == "FGLRX_DualHead_DriverOptions") {
+					headCount += 2;
+					realCount += 1;
+					continue;
+				}
+				if (mProfile == "FGLRX_DualHead") {
 					headCount += 2;
 					realCount += 2;
 					continue;

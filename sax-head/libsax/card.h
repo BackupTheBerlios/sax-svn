@@ -57,11 +57,14 @@ class SaXManipulateCardIF : public SaXException {
 	virtual QList<QString> getCardDrivers ( void ) = 0;
 	virtual QDict<QString> getCardOptions ( const QString& ) = 0;
 	virtual QDict<QString> getOptions ( void ) = 0;
-	virtual QString getCardName ( void ) = 0;
-	virtual QString getBusID    ( void ) = 0;
-	virtual QString getScreenID ( void ) = 0;
-	virtual int getCards ( void ) = 0;
-	virtual int getHeads ( void ) = 0;
+	virtual QString getCardName   ( void ) = 0;
+	virtual QString getCardVendor ( void ) = 0;
+	virtual QString getCardModel  ( void ) = 0;
+	virtual QString getBusID      ( void ) = 0;
+	virtual QString getScreenID   ( void ) = 0;
+	virtual int getCards   ( void ) = 0;
+	virtual int getHeads   ( void ) = 0;
+	virtual int getDevices ( void ) = 0;
 
 	public:
 	virtual bool isNoteBook ( void ) = 0;
@@ -138,11 +141,14 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	QList<QString> getCardDrivers ( void );
 	QDict<QString> getCardOptions ( const QString& );
 	QDict<QString> getOptions ( void );
-	QString getCardName ( void );
-	QString getBusID    ( void );
-	QString getScreenID ( void );
-	int getCards ( void );
-	int getHeads ( void );
+	QString getCardName   ( void );
+	QString getCardVendor ( void );
+	QString getCardModel  ( void );
+	QString getBusID      ( void );
+	QString getScreenID   ( void );
+	int getCards   ( void );
+	int getHeads   ( void );
+	int getDevices ( void );
 
 	public:
 	bool isNoteBook ( void );
