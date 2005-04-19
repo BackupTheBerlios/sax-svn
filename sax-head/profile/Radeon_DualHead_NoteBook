@@ -2,6 +2,7 @@
 # profile to setup the second channel on a
 # radeon based laptop device
 # ---------------------------
+Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] ->  Raw -> 20 -> Option = "MergedFB"   "yes"
 Device  -> [X] ->  Raw -> 21 -> Option = "CRT2HSync"  "30-120"
 Device  -> [X] ->  Raw -> 22 -> Option = "CRT2VSync"  "58-62"

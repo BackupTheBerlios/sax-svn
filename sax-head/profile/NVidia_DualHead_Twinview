@@ -16,6 +16,7 @@ Monitor -> [X+1] = [REMOVE]
 
 # setup twinview options
 # ----------------------
+Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] -> Option = TwinView
 Device  -> [X] ->  Raw -> 11 -> Option = "SecondMonitorHorizSync" "{Monitor->[X]->HorizSync}"
 Device  -> [X] ->  Raw -> 12 -> Option = "SecondMonitorVertRefresh" "{Monitor->[X]->VertRefresh}"
