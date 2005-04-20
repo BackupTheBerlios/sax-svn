@@ -333,12 +333,28 @@ sub SetFbdevDefaultScreen {
 	my (%spec) = %{$_[1]};
 	my $i      = $_[2];
 	$geometry = qx($spec{FbSet} | grep geometry);
+	$rgba     = qx($spec{FbSet} | grep rgba);
 	@glist = split(/ +/,$geometry);
 	$depth = pop(@glist);
 	chomp($depth);
 	$depth =~ s/ +//g;
 	if ($depth eq "32") {
 		$depth = 24;
+	}
+	if ($depth eq "16") {
+		$rgba =~ s/^ +//;
+		my @rgblist = split (/ /,$rgba);
+		@rgblist = split (/,/,$rgblist[1]);
+		pop @rgblist;
+		my $count = 0;
+		foreach (@rgblist) {
+			if ($_ =~ /(.*)\/.*/) {
+				$count = $count + $1;
+			}
+		}
+		if ($count < 16 ) {
+			$depth = $count;
+		}
 	}
 	$var{Screen}{$i}{DefaultDepth}          = $depth;
 	$var{Screen}{$i}{Depth}{8}{Modes}       = "";
