@@ -8,23 +8,21 @@ Monitor -> [X] ->  CalcAlgorithm = XServerPool
 Device  -> [X] ->  Driver        = nvidia
 Device  -> [X] ->  Screen        = 0
 
-# remove device/desktop for Screen 1
-# ----------------------------------
-Device  -> [X+1] = [REMOVE]
-Screen  -> [X+1] = [REMOVE]
-Monitor -> [X+1] = [REMOVE]
-
+#================================
 # setup twinview options
-# ----------------------
-Device  -> [X] -> Option = SaXDualHead
+#--------------------------------
 Device  -> [X] -> Option = TwinView
 Device  -> [X] ->  Raw -> 11 -> Option = "SecondMonitorHorizSync" "{Monitor->[X]->HorizSync}"
 Device  -> [X] ->  Raw -> 12 -> Option = "SecondMonitorVertRefresh" "{Monitor->[X]->VertRefresh}"
 Device  -> [X] ->  Raw -> 13 -> Option = "MetaModes" "{Screen->[X]->Depth->16->Modes},{Screen->[X]->Depth->16->Modes}"
 Device  -> [X] ->  Raw -> 14 -> Option = "TwinViewOrientation" "RightOf"
 
-ServerLayout -> all -> Screen -> 1 = [REMOVE]
-ServerLayput -> all -> Screen -> 0 -> top    =
-ServerLayout -> all -> Screen -> 0 -> bottom =
-ServerLayout -> all -> Screen -> 0 -> left   =
-ServerLayout -> all -> Screen -> 0 -> right  =
+#================================
+# setup SaX meta options
+#--------------------------------
+Device  -> [X] -> Option = SaXDualHead
+Device  -> [X] -> Raw -> 15 -> Option = "SaXDualOrientation" "RightOf"
+Device  -> [X] -> Raw -> 16 -> Option = "SaXDualHSync"       "{Monitor->[X]->HorizSync}"
+Device  -> [X] -> Raw -> 17 -> Option = "SaXDualVSync"       "{Monitor->[X]->VertRefresh}"
+Device  -> [X] -> Raw -> 18 -> Option = "SaXDualResolution"  "{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] -> Raw -> 19 -> Option = "SaXDualMode"        "Xinerama"

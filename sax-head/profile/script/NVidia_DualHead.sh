@@ -3,7 +3,7 @@
 #====================================
 # DualHead check
 #------------------------------------
-if [ $1 = "check" ];then
+if [ "$1" = "check" ];then
 	vendor=$(/usr/share/sax/sysp/script/vendor.pl nvidia)
 	if [ "$vendor" = "The XFree86 Project" ] || \
 	   [ "$vendor" = "X.Org Foundation" ];then

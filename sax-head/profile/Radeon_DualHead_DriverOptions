@@ -1,10 +1,20 @@
 # /.../
 # profile to setup the second channel on a
-# radeon based laptop device
+# radeon based dual head card
 # ---------------------------
-Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] ->  Raw -> 20 -> Option = "MergedFB"   "yes"
-Device  -> [X] ->  Raw -> 21 -> Option = "CRT2HSync"  "30-120"
-Device  -> [X] ->  Raw -> 22 -> Option = "CRT2VSync"  "58-62"
+Device  -> [X] ->  Raw -> 21 -> Option = "CRT2HSync"  "{Monitor->[X]->HorizSync}"
+Device  -> [X] ->  Raw -> 22 -> Option = "CRT2VSync"  "{Monitor->[X]->VertRefresh}"
 Device  -> [X] ->  Raw -> 23 -> Option = "IgnoreEDID" "yes"
-Device  -> [X] ->  Raw -> 24 -> Option = "MetaModes" "1400x1050-1400x1050 1280x1024-1280x1024 1280x960-1280x960 1152x864-1152x864 1024x768-1024x768 800x600-800x600 640x480-640x480"
+Device  -> [X] ->  Raw -> 24 -> Option = "MetaModes" "{Screen->[X]->Depth->16->Modes}-{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] ->  Raw -> 25 -> Option = "CRT2Position" "RightOf"
+
+#================================
+# setup SaX meta options
+#--------------------------------
+Device  -> [X] -> Option = SaXDualHead
+Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "RightOf"
+Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync"       "{Monitor->[X]->HorizSync}"
+Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync"       "{Monitor->[X]->VertRefresh}"
+Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution"  "{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] -> Raw -> 30 -> Option = "SaXDualMode"        "Xinerama"

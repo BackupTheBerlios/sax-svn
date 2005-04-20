@@ -286,7 +286,7 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* profile = cardData -> find ("Profile");
-		if ((profile) && (profile->contains("DualHead"))) {
+		if ((profile) && (profile->contains("DualHead_DriverOptions"))) {
 			//====================================
 			// ask profile for changes if dynamic
 			//------------------------------------
@@ -635,6 +635,9 @@ bool SaXManipulateDesktop::is3DEnabled (void) {
 	//! the 3D subsystem
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return false;
+	}
+	if ( mCard -> getCount() > 1 ) {
 		return false;
 	}
 	QString driver = mCard -> getItem ("Driver");
