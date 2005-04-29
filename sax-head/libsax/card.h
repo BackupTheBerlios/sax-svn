@@ -57,11 +57,13 @@ class SaXManipulateCardIF : public SaXException {
 	virtual QList<QString> getCardDrivers ( void ) = 0;
 	virtual QDict<QString> getCardOptions ( const QString& ) = 0;
 	virtual QDict<QString> getOptions ( void ) = 0;
+	virtual QString getCardDriver ( void ) = 0;
 	virtual QString getCardName   ( void ) = 0;
 	virtual QString getCardVendor ( void ) = 0;
 	virtual QString getCardModel  ( void ) = 0;
 	virtual QString getBusID      ( void ) = 0;
 	virtual QString getScreenID   ( void ) = 0;
+	virtual QString getRotationDirection ( void ) = 0;
 	virtual int getCards   ( void ) = 0;
 	virtual int getHeads   ( void ) = 0;
 	virtual int getDevices ( void ) = 0;
@@ -141,11 +143,13 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	QList<QString> getCardDrivers ( void );
 	QDict<QString> getCardOptions ( const QString& );
 	QDict<QString> getOptions ( void );
+	QString getCardDriver ( void );
 	QString getCardName   ( void );
 	QString getCardVendor ( void );
 	QString getCardModel  ( void );
 	QString getBusID      ( void );
 	QString getScreenID   ( void );
+	QString getRotationDirection ( void );
 	int getCards   ( void );
 	int getHeads   ( void );
 	int getDevices ( void );

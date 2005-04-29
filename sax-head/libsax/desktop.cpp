@@ -224,7 +224,9 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mDesktopID );
+	if (! pCard -> setID ( mDesktopID )) {
+		return false;
+	}
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -257,6 +259,79 @@ bool SaXManipulateDesktop::is3DCard (void) {
 }
 
 //====================================
+// getDualHeadProfile
+//------------------------------------
+QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
+	// .../
+	//! return the full qualified profile file name used
+	//! to set the driver options for a dual head configuration.
+	//! if the card is not a dual head card or the assigned
+	//! profile is not a DualHead_DriverOptions profile the
+	//! method will return an empty QString
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return QString();
+	}
+	//====================================
+	// check special laptop case
+	//------------------------------------
+	QString result;
+	SaXManipulateCard cardInfo (mCard);
+	if (cardInfo.isNoteBook()) {
+		QString driver = mCard -> getItem ("Driver");
+		if ((driver == "i810") || (driver == "i915")) {
+			QTextOStream (&result)
+				<< PROFILE_DIR << "Intel_DualHead_DriverOptions";
+		}
+		if (driver == "nvidia") {
+			QTextOStream (&result)
+				<< PROFILE_DIR << "NVidia_DualHead_DriverOptions";
+		}
+		if (driver == "radeon") {
+			QTextOStream (&result)
+				<< PROFILE_DIR << "Radeon_DualHead_DriverOptions";
+		}
+		if (driver == "fglrx") {
+			QTextOStream (&result)
+				<< PROFILE_DIR << "FGLRX_DualHead_DriverOptions";
+		}
+		return result;
+	}
+	//====================================
+	// get sysp card name
+	//------------------------------------
+	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	if (! pCard -> setID ( mDesktopID )) {
+		return QString();
+	}
+	pCard -> doImport();
+	QString mCardName;
+	QTextOStream (&mCardName) <<
+		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+	//====================================
+	// retrieve CDB card list
+	//------------------------------------
+	SaXProcess* CDBCards = new SaXProcess ();
+	CDBCards -> start (CDB_CARDS);
+	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	QDict<QString>* cardData = CDBData.find ( mCardName );
+	if ( cardData ) {
+		QString* profile = cardData -> find ("Profile");
+		if ((profile) && (profile->contains("DualHead_DriverOptions"))) {
+			QTextOStream (&result)
+				<< PROFILE_DIR << *profile;
+			return result;
+		}
+	}
+	//====================================
+	// No CDB record found for cardName
+	//------------------------------------
+	excEmptyCDBGroup ( mCardName.data() );
+	qError (errorString(),EXC_EMPTYCDBGROUP);
+	return QString();
+}
+
+//====================================
 // isDualHeadCard
 //------------------------------------
 bool SaXManipulateDesktop::isDualHeadCard (void) {
@@ -272,7 +347,9 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mDesktopID );
+	if (! pCard -> setID ( mDesktopID )) {
+		return false;
+	}
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -337,7 +414,9 @@ bool SaXManipulateDesktop::enable3D (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mDesktopID );
+	if (! pCard -> setID ( mDesktopID )) {
+		return false;
+	}
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -437,7 +516,9 @@ bool SaXManipulateDesktop::disable3D (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mDesktopID );
+	if (! pCard -> setID ( mDesktopID )) {
+		return false;
+	}
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<

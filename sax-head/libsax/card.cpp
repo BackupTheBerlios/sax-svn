@@ -202,7 +202,9 @@ QString SaXManipulateCard::getCardName (void) {
 		return QString();
 	}
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mCard );
+	if (! pCard -> setID ( mCard )) {
+		return QString();
+	}
 	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -222,7 +224,9 @@ QString SaXManipulateCard::getCardVendor (void) {
 		return QString();
 	}
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mCard );
+	if (! pCard -> setID ( mCard )) {
+		return QString();
+	}
 	pCard -> doImport();
 	return pCard->getItem("Vendor");
 }
@@ -239,7 +243,9 @@ QString SaXManipulateCard::getCardModel (void) {
 		return QString();
 	}
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	pCard -> setID ( mCard );
+	if (! pCard -> setID ( mCard )) {
+		return QString();
+	}
 	pCard -> doImport();
 	return pCard->getItem("Device");
 }
@@ -259,6 +265,20 @@ QString SaXManipulateCard::getBusID (void) {
 }
 
 //====================================
+// getCardDriver
+//------------------------------------
+QString SaXManipulateCard::getCardDriver (void) {
+	// .../
+	//! retrieve the cards driver name from the currently
+	//! selected card
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("Driver");
+}
+
+//====================================
 // getScreenID
 //------------------------------------
 QString SaXManipulateCard::getScreenID (void) {
@@ -270,6 +290,21 @@ QString SaXManipulateCard::getScreenID (void) {
 		return QString();
 	}
 	return mImport -> getItem ("Screen");
+}
+
+//====================================
+// getRotationDirection
+//------------------------------------
+QString SaXManipulateCard::getRotationDirection (void) {
+	// .../
+	//! retrieve the current value of the Rotate option
+	//! if defined. If there is no rotate option given an
+	//! empty QString is returned
+	// ---- 
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("Rotate");
 }
 
 //====================================
