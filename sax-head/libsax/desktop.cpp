@@ -244,6 +244,18 @@ bool SaXManipulateDesktop::is3DCard (void) {
 			QString  driver = mCard -> getItem ("Driver");
 			QString* driver3D = cardData -> find ("3DDriver");
 			if ( driver == *driver3D ) {
+				//====================================
+				// check 3D driver installation
+				//------------------------------------
+				if ( driver == "nvidia") {
+					SaXImportSysp* p3D = new SaXImportSysp (SYSP_3D);
+					p3D -> doImport();
+					QString NVFlag = p3D -> getItem ("Flag");
+					if ((! NVFlag.isEmpty()) && (NVFlag != "NVDummy")) {
+						return true;
+					}
+					return false;
+				}
 				return true;
 			}
 			return false;
