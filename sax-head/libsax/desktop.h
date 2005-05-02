@@ -65,7 +65,11 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual void setMonitorVendor ( const QString& ) = 0;
 	virtual void setMonitorName   ( const QString& ) = 0;
 	virtual void setCDBMonitor ( const QString& ) = 0;
-	virtual QList<QString> getCDBMonitorList ( void ) = 0;
+	virtual QList<QString> getCDBMonitorVendorList ( void ) = 0;
+	virtual QList<QString> getCDBMonitorModelList  ( const QString& ) = 0;
+	virtual QDict<QString> getCDBMonitorData (
+		const QString&,const QString&
+	) = 0;
 
 	public:
 	virtual QList<QString> getResolutions ( int  ) = 0;
@@ -153,6 +157,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	SaXImport*     mPath;
 	SaXProcess*    mCDBMonitors;
 	QList<QString> mCDBMonitorList;
+	QDict<QString> mCDBMonitorData;
 	int            mDesktopID;
 
 	public:
@@ -173,7 +178,9 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	void setMonitorVendor ( const QString& );
 	void setMonitorName   ( const QString& );
 	void setCDBMonitor ( const QString& );
-	QList<QString> getCDBMonitorList ( void );
+	QList<QString> getCDBMonitorVendorList ( void );
+	QList<QString> getCDBMonitorModelList  ( const QString& );
+	QDict<QString> getCDBMonitorData ( const QString&, const QString& );
 
 	public:
 	QList<QString> getResolutions ( int  );

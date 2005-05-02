@@ -997,11 +997,10 @@ void SaXManipulateDesktop::setCDBMonitor ( const QString& group ) {
 //====================================
 // get list of CDB monitors
 //------------------------------------
-QList<QString> SaXManipulateDesktop::getCDBMonitorList ( void ) {
+QList<QString> SaXManipulateDesktop::getCDBMonitorVendorList ( void ) {
 	// .../
-	//! retrieve a list of supported monitor groups. Each item
-	//! contains the vendor and the model in its name separated
-	//! by a colon
+	//! retrieve a list of supported monitor vendors. Each item
+	//! contains the vendor name as it is stored in the CDB
 	// ----
 	mCDBMonitorList.clear();
 	if ( ! mCDBMonitors ) {
@@ -1011,8 +1010,67 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorList ( void ) {
 	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
 	QDictIterator< QDict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
-		mCDBMonitorList.append (new QString (it.currentKey()));
+		QStringList vnlist = QStringList::split ( ":", it.currentKey() );
+		QString* vendorName = new QString (vnlist.first());
+		int hasVendor = false;
+		QListIterator<QString> io (mCDBMonitorList);
+		for (; io.current(); ++io) {
+		if ( *io.current() == *vendorName ) {
+			hasVendor = true;
+			break;
+		}
+		}
+		if (! hasVendor ) {
+			mCDBMonitorList.append ( vendorName );
+		}
 	}
 	return mCDBMonitorList;
+}
+
+//====================================
+// get CDB monitor models per vendor
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getCDBMonitorModelList (
+	const QString& vendor
+) {
+	mCDBMonitorList.clear();
+	if ( ! mCDBMonitors ) {
+		mCDBMonitors = new SaXProcess ();
+		mCDBMonitors -> start (CDB_MONITORS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", it.currentKey() );
+		QString vendorName = vnlist.first();
+		QString* modelName = new QString (vnlist.last());
+		if ( vendorName == vendor ) {
+			mCDBMonitorList.append ( modelName );
+		}
+	}
+	return mCDBMonitorList;
+}
+
+//====================================
+// get data dict for a CDB monitor
+//------------------------------------
+QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
+	const QString& vendor, const QString& name
+) {
+	QString key;
+	QTextOStream (&key) << vendor << ":" << name;
+	mCDBMonitorData.clear();
+	if ( ! mCDBMonitors ) {
+		mCDBMonitors = new SaXProcess ();
+		mCDBMonitors -> start (CDB_MONITORS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		if ( it.currentKey() == key ) {
+			return *it.current();
+		}
+	}
+	return mCDBMonitorData;
 }
 } // end namespace
