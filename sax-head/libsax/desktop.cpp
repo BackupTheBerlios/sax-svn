@@ -1073,4 +1073,21 @@ QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
 	}
 	return mCDBMonitorData;
 }
+//====================================
+// add data dict to CDB (temporarly)
+//------------------------------------
+void SaXManipulateDesktop::setCDBMonitorData (
+	const QString& vendor, const QString& name,
+	const QString& key, const QString& value
+) {
+	QString group;
+	QTextOStream (&group) << vendor << ":" << name;
+	if ( ! mCDBMonitors ) {
+		mCDBMonitors = new SaXProcess ();
+		mCDBMonitors -> start (CDB_MONITORS);
+	}
+	mCDBMonitors -> addGroup (
+		group,key,value
+	);
+}
 } // end namespace
