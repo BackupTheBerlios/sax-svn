@@ -3,16 +3,16 @@
 # intel based dual head card
 # ---------------------------
 Device  -> [X] ->  Raw -> 20 -> Option = "MonitorLayout" "LFP,CRT"
-Device  -> [X] ->  Raw -> 21 -> Option = "Clone"         "yes"
-Device  -> [X] ->  Raw -> 22 -> Option = "CloneRefresh"  "{Monitor->[X]->VertRefresh}"
-Device  -> [X] ->  Raw -> 23 -> Option = "Modes"         "{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] ->  Raw -> 21 -> Option = "Clone" "yes"
+Device  -> [X] ->  Raw -> 22 -> Option = "CloneRefresh" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] ->  Raw -> 23 -> Option = "Modes" "{Screen->[X]->Depth->16->Modes}"
 
 #================================
 # setup SaX meta options
 #--------------------------------
 Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] -> Raw -> 24 -> Option = "SaXDualOrientation" "off"
-Device  -> [X] -> Raw -> 25 -> Option = "SaXDualHSync"       "off"
-Device  -> [X] -> Raw -> 26 -> Option = "SaXDualVSync"       "{Monitor->[X]->VertRefresh}"
-Device  -> [X] -> Raw -> 27 -> Option = "SaXDualResolution"  "{Screen->[X]->Depth->16->Modes}"
-Device  -> [X] -> Raw -> 28 -> Option = "SaXDualMode"        "off"
+Device  -> [X] -> Raw -> 25 -> Option = "SaXDualHSync" "off"
+Device  -> [X] -> Raw -> 26 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] -> Raw -> 27 -> Option = "SaXDualResolution" "{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] -> Raw -> 28 -> Option = "SaXDualMode" "off"

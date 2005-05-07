@@ -2,7 +2,7 @@
 # Rage Mobility M3 profile used for PPC 
 # architectures only
 #
-Device->[X]->Raw->0->Option  = "PanelWidth"  "800"
+Device->[X]->Raw->0->Option  = "PanelWidth" "800"
 Device->[X]->Raw->1->Option  = "PanelHeight" "600"
 Monitor->[X]->HorizSync      = 0-1
 Monitor->[X]->VertRefresh    = 0-1

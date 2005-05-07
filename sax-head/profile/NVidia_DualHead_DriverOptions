@@ -22,7 +22,7 @@ Device  -> [X] ->  Raw -> 14 -> Option = "TwinViewOrientation" "RightOf"
 #--------------------------------
 Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] -> Raw -> 15 -> Option = "SaXDualOrientation" "RightOf"
-Device  -> [X] -> Raw -> 16 -> Option = "SaXDualHSync"       "{Monitor->[X]->HorizSync}"
-Device  -> [X] -> Raw -> 17 -> Option = "SaXDualVSync"       "{Monitor->[X]->VertRefresh}"
-Device  -> [X] -> Raw -> 18 -> Option = "SaXDualResolution"  "{Screen->[X]->Depth->16->Modes}"
-Device  -> [X] -> Raw -> 19 -> Option = "SaXDualMode"        "Xinerama"
+Device  -> [X] -> Raw -> 16 -> Option = "SaXDualHSync" "{Monitor->[X]->HorizSync}"
+Device  -> [X] -> Raw -> 17 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] -> Raw -> 18 -> Option = "SaXDualResolution" "{Screen->[X]->Depth->16->Modes}"
+Device  -> [X] -> Raw -> 19 -> Option = "SaXDualMode" "Xinerama"
