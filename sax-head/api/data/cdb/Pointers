@@ -428,7 +428,7 @@ Logitech:MX 900 Bluetooth {
  Buttons      = 8 
 }
 
-Logitech;MediaPlay {
+Logitech:MediaPlay {
  Driver       = mouse
  Protocol     = ExplorerPS/2
  Device       = /dev/input/mice
@@ -436,7 +436,7 @@ Logitech;MediaPlay {
  Buttons      = 8
 }
 
-Logitech;TrackMan Optical {
+Logitech:TrackMan Optical {
  Driver       = mouse
  Protocol     = ExplorerPS/2
  Device       = /dev/input/mice
@@ -444,7 +444,7 @@ Logitech;TrackMan Optical {
  Buttons      = 8
 }
 
-Logitech;MX310 {
+Logitech:MX310 {
  Driver       = mouse
  Protocol     = ExplorerPS/2
  Device       = /dev/input/mice

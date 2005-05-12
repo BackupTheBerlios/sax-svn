@@ -116,12 +116,21 @@ class SaXManipulatePointers : public SaXManipulatePointersIF {
 */
 class SaXManipulateMiceIF : public SaXManipulatePointers {
 	public:
+	virtual void setMouse ( const QString& ) = 0;
+	virtual void setMouse ( const QString&,const QString& ) = 0;
 	virtual void enableWheelEmulation    ( int  ) = 0;
 	virtual void disableWheelEmulation   ( void ) = 0;
 	virtual void enable3ButtonEmulation  ( void ) = 0;
 	virtual void disable3ButtonEmulation ( void ) = 0;
 	virtual void enableWheel  ( void ) = 0;
 	virtual void disableWheel ( void ) = 0;
+
+	public:
+	virtual QList<QString> getMouseList       ( void ) = 0;
+	virtual QList<QString> getMouseVendorList ( void ) = 0;
+	virtual QList<QString> getMouseModelList  ( const QString& ) = 0;
+	virtual QDict<QString> getMouseData ( const QString& ) = 0;
+	virtual QDict<QString> getMouseData ( const QString&,const QString& ) = 0;
 
 	public:
 	virtual bool isWheelEnabled   ( void ) = 0;
@@ -182,13 +191,27 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 * \endcode
 */
 class SaXManipulateMice : public SaXManipulateMiceIF {
+	private:
+	SaXProcess*    mCDBMice;
+	QList<QString> mCDBMouseList;
+	QDict<QString> mCDBMouseData;
+
 	public:
+	void setMouse ( const QString& );
+	void setMouse ( const QString&,const QString& );
 	void enableWheelEmulation    ( int  );
 	void disableWheelEmulation   ( void );
 	void enable3ButtonEmulation  ( void );
 	void disable3ButtonEmulation ( void );
 	void enableWheel  ( void );
 	void disableWheel ( void );
+
+	public:
+	QList<QString> getMouseList       ( void );
+	QList<QString> getMouseVendorList ( void );
+	QList<QString> getMouseModelList  ( const QString& );
+	QDict<QString> getMouseData ( const QString& );
+	QDict<QString> getMouseData ( const QString&,const QString& );
 
 	public:
 	bool isWheelEnabled   ( void );
@@ -212,10 +235,13 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 */
 class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	public:
+	virtual QList<QString> getTabletVendorList ( void ) = 0;
+	virtual QList<QString> getTabletModelList  ( const QString& ) = 0;
 	virtual QList<QString> getTabletList ( void ) = 0;
 	virtual QList<QString> getPenList    ( void ) = 0;
 	virtual QList<QString> getTabletDrivers ( void ) = 0;
 	virtual QDict<QString> getTabletOptions ( const QString& ) = 0;
+	virtual void setTablet ( const QString&,const QString& ) = 0;
 	virtual void setTablet ( const QString& ) = 0;
 	virtual void setType   ( const QString& ) = 0;
 	virtual void setMode   ( const QString& ) = 0;
@@ -321,10 +347,13 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	SaXManipulateDevices* mManipInputDevices;
 
 	public:
+	QList<QString> getTabletVendorList ( void );
+	QList<QString> getTabletModelList  ( const QString& ); 
 	QList<QString> getTabletList ( void );
 	QList<QString> getPenList    ( void );
 	QList<QString> getTabletDrivers ( void );
 	QDict<QString> getTabletOptions ( const QString& );
+	void setTablet ( const QString&,const QString& );
 	void setTablet ( const QString& );
 	void setType   ( const QString& );
 	void setMode   ( const QString& );
@@ -357,6 +386,9 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 	public:
 	virtual QList<QString> getPanelList ( void ) = 0;
+	virtual QList<QString> getPanelVendorList ( void ) = 0;
+	virtual QList<QString> getPanelModelList  ( const QString& ) = 0;
+	virtual void setTouchPanel ( const QString&,const QString& ) = 0;
 	virtual void setTouchPanel ( const QString& ) = 0;
 
 	public:
@@ -438,6 +470,9 @@ class SaXManipulateTouchscreens : public SaXManipulateTouchscreensIF {
 
 	public:
 	QList<QString> getPanelList ( void );
+	QList<QString> getPanelVendorList ( void );
+	QList<QString> getPanelModelList  ( const QString& );
+	void setTouchPanel ( const QString&,const QString& );
 	void setTouchPanel ( const QString& );
 
 	public:

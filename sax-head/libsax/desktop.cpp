@@ -1033,6 +1033,10 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorVendorList ( void ) {
 QList<QString> SaXManipulateDesktop::getCDBMonitorModelList (
 	const QString& vendor
 ) {
+	// .../
+	//! retrieve a list of supported monitor models. Each item
+	//! contains the vendor name as it is stored in the CDB
+	// ----
 	mCDBMonitorList.clear();
 	if ( ! mCDBMonitors ) {
 		mCDBMonitors = new SaXProcess ();
@@ -1057,6 +1061,10 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorModelList (
 QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
 	const QString& vendor, const QString& name
 ) {
+	// .../
+	//! return the monitor data dictionary associated with the
+	//! given vendor and model name.
+	// ----
 	QString key;
 	QTextOStream (&key) << vendor << ":" << name;
 	mCDBMonitorData.clear();
@@ -1068,7 +1076,8 @@ QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
 	QDictIterator< QDict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		if ( it.currentKey() == key ) {
-			return *it.current();
+			mCDBMonitorData = *it.current();
+			break;
 		}
 	}
 	return mCDBMonitorData;
@@ -1080,6 +1089,12 @@ void SaXManipulateDesktop::setCDBMonitorData (
 	const QString& vendor, const QString& name,
 	const QString& key, const QString& value
 ) {
+	// .../
+	//! add a CDB group to the current CDB monitor table of
+	//! this manipulator instance. Note the information is not
+	//! part of the CDB directly it is only stored temporarly
+	//! as long as the object instance exists
+	// ----
 	QString group;
 	QTextOStream (&group) << vendor << ":" << name;
 	if ( ! mCDBMonitors ) {

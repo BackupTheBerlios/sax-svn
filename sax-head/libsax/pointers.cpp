@@ -220,6 +220,47 @@ void SaXManipulatePointers::removeOption (const QString& value) {
 }
 
 //====================================
+// getDevice
+//------------------------------------
+QString SaXManipulatePointers::getDevice ( void ) {
+	// .../
+	//! return the device name the pointer device is
+	//! connected to. Note this may be an alias name
+	//! concerning the type of the pointer device
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("Device");
+}
+
+//====================================
+// getDriver
+//------------------------------------
+QString SaXManipulatePointers::getDriver ( void ) {
+	// .../
+	//! return the driver used for this pointer device
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("Driver");
+}
+
+//====================================
+// getProtocol
+//------------------------------------
+QString SaXManipulatePointers::getProtocol ( void ) {
+	// .../
+	//! return the protocol used for this pointer device
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("Protocol");
+}
+
+//====================================
 // getOptions
 //------------------------------------
 QDict<QString> SaXManipulatePointers::getOptions (void) {
@@ -266,47 +307,6 @@ QDict<QString> SaXManipulatePointers::getOptions (void) {
 }
 
 //====================================
-// getDevice
-//------------------------------------
-QString SaXManipulatePointers::getDevice ( void ) {
-	// .../
-	//! return the device name the pointer device is
-	//! connected to. Note this may be an alias name
-	//! concerning the type of the pointer device
-	// ----
-	if (! mImport) {
-		return QString();
-	}
-	return mImport -> getItem ("Device");
-}
-
-//====================================
-// getDriver
-//------------------------------------
-QString SaXManipulatePointers::getDriver ( void ) {
-	// .../
-	//! return the driver used for this pointer device
-	// ----
-	if (! mImport) {
-		return QString();
-	}
-	return mImport -> getItem ("Driver");
-}
-
-//====================================
-// getProtocol
-//------------------------------------
-QString SaXManipulatePointers::getProtocol ( void ) {
-	// .../
-	//! return the protocol used for this pointer device
-	// ----
-	if (! mImport) {
-		return QString();
-	}
-	return mImport -> getItem ("Protocol");
-}
-
-//====================================
 // Constructor...
 //------------------------------------
 SaXManipulateMice::SaXManipulateMice (
@@ -316,6 +316,7 @@ SaXManipulateMice::SaXManipulateMice (
 	//! An object of this type is used to configure simple
 	//! mouse pointer devices
 	// ----
+	mCDBMice = 0;
 }
 
 //====================================
@@ -491,6 +492,177 @@ bool SaXManipulateMice::isButtonEmulated (void) {
 	}
 	return false;
 }
+
+//====================================
+// getMouseList
+//------------------------------------
+QList<QString> SaXManipulateMice::getMouseList (void) {
+	// .../
+	//! retrieve a list of supported standard mouse groups. Each item
+	//! contains the vendor and the model in its name separated
+	//! by a colon
+	// ----
+	mCDBMouseList.clear();
+	if ( ! mCDBMice ) {
+		mCDBMice = new SaXProcess ();
+		mCDBMice -> start (CDB_POINTERS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBMice -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		mCDBMouseList.append (new QString (it.currentKey()));
+	}
+	return mCDBMouseList;
+}
+
+//====================================
+// getMouseVendorList
+//------------------------------------
+QList<QString> SaXManipulateMice::getMouseVendorList (void) {
+	// .../
+	//! retrieve a list of supported standard mouse
+	//! vendor names
+	// ----
+	QList<QString> mouseList = getMouseList();
+	mCDBMouseList.clear();
+	QListIterator<QString> it (mouseList);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", *it.current() );
+		QString* vendorName = new QString (vnlist.first());
+		int hasVendor = false;
+		QListIterator<QString> io (mCDBMouseList);
+		for (; io.current(); ++io) {
+		if ( *io.current() == *vendorName ) {
+			hasVendor = true;
+			break;
+		}
+		}
+		if (! hasVendor ) {
+			mCDBMouseList.append ( vendorName );
+		}
+	}
+	return mCDBMouseList;
+}
+
+//====================================
+// getMouseModelList
+//------------------------------------
+QList<QString> SaXManipulateMice::getMouseModelList (
+	const QString& vendor
+) {
+	// .../
+	//! retrieve a list of supported standard mouse
+	//! model names
+	// ----
+	QList<QString> mouseList = getMouseList();
+	mCDBMouseList.clear();
+	QListIterator<QString> it (mouseList);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", *it.current() );
+		QString vendorName = vnlist.first();
+		QString* modelName = new QString (vnlist.last());
+		if ( vendorName == vendor ) {
+			mCDBMouseList.append ( modelName );
+		}
+	}
+	return mCDBMouseList;
+}
+
+//====================================
+// setMouse
+//------------------------------------
+void SaXManipulateMice::setMouse ( const QString& group ) {
+	// .../
+	//! set all mouse data associated with the given group name to
+	//! the current pointer data. The group name consists of the
+	//! vendor and model name separated by a colon
+	// ----
+	if ( ! mCDBMice ) {
+		mCDBMice = new SaXProcess ();
+		mCDBMice -> start (CDB_POINTERS);
+	}
+	QList< QDict<QString> > data;
+	data = mCDBMice -> getTablePointerCDB_DATA (
+		group
+	);
+	// .../
+	// move the data record to the correct position
+	// refering to the section ID -> mPointer
+	// ----
+	QDict<QString>* record = data.take(0);
+	for (int n=0;n < mPointer;n++) {
+		data.append(new QDict<QString>());
+	}
+	data.append ( record );
+	// .../
+	// merge the data into the current section now
+	// ----
+	if (data.isEmpty()) {
+		excCDBRecordNotFound (group);
+		qError (errorString(),EXC_CDBRECORDNOTFOUND);
+		return;
+	}
+	mImport -> merge ( data );
+	// .../
+	// set vendor and name tag
+	// ----
+	QStringList nameList = QStringList::split ( ":", group );
+	mImport -> setItem ( "Vendor", nameList.first() );
+	mImport -> setItem ( "Name"  , nameList.last()  );
+}
+
+//====================================
+// setMouse
+//------------------------------------
+void SaXManipulateMice::setMouse (
+	const QString& vendor, const QString& model
+) {
+	// .../
+	//! set all mouse data associated with the given vendor
+	//! and model name to the current pointer data.
+	// ----
+	setMouse (vendor+":"+model);
+}
+
+//====================================
+// getMouseData
+//------------------------------------
+QDict<QString> SaXManipulateMice::getMouseData (
+	const QString& group
+) {
+	// .../
+	//! return the mouse data dictionary associated with the
+	//! given CDB group name.
+	// ----
+	mCDBMouseData.clear();
+	if ( ! mCDBMice ) {
+		mCDBMice = new SaXProcess ();
+		mCDBMice -> start (CDB_POINTERS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBMice -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		if ( it.currentKey() == group ) {
+			mCDBMouseData = *it.current();
+			break;
+		}
+	}
+	return mCDBMouseData;
+}
+
+//====================================
+// getMouseData
+//------------------------------------
+QDict<QString> SaXManipulateMice::getMouseData (
+	const QString& vendor, const QString& name
+) {
+	// .../
+	//! return the mouse data dictionary associated with the
+	//! given vendor and model name.
+	// ----
+	return getMouseData (vendor+":"+name);
+}
+
 
 //====================================
 // Constructor...
@@ -717,6 +889,59 @@ QList<QString> SaXManipulateTablets::getTabletList (void) {
 }
 
 //====================================
+// getTabletVendorList
+//------------------------------------
+QList<QString> SaXManipulateTablets::getTabletVendorList (void) {
+	// .../
+	//! retrieve a list of supported tablet
+	//! vendor names
+	// ----
+	QList<QString> tabletList = getTabletList();
+	mCDBTabletList.clear();
+	QListIterator<QString> it (tabletList);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", *it.current() );
+		QString* vendorName = new QString (vnlist.first());
+		int hasVendor = false;
+		QListIterator<QString> io (mCDBTabletList);
+		for (; io.current(); ++io) {
+		if ( *io.current() == *vendorName ) {
+			hasVendor = true;
+			break;
+		}
+		}
+		if (! hasVendor ) {
+			mCDBTabletList.append ( vendorName );
+		}
+	}
+	return mCDBTabletList;
+}
+
+//====================================
+// getTabletModelList
+//------------------------------------
+QList<QString> SaXManipulateTablets::getTabletModelList (
+	const QString& vendor
+) {
+	// .../
+	//! retrieve a list of supported tablet
+	//! model names
+	// ----
+	QList<QString> tabletList = getTabletList();
+	mCDBTabletList.clear();
+	QListIterator<QString> it (tabletList);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", *it.current() );
+		QString vendorName = vnlist.first();
+		QString* modelName = new QString (vnlist.last());
+		if ( vendorName == vendor ) {
+			mCDBTabletList.append ( modelName );
+		}
+	}
+	return mCDBTabletList;
+}
+
+//====================================
 // getPenList
 //------------------------------------
 QList<QString> SaXManipulateTablets::getPenList (void) {
@@ -779,6 +1004,18 @@ void SaXManipulateTablets::setTablet (const QString& group) {
 	QStringList nameList = QStringList::split ( ":", group );
 	mImport -> setItem ( "Vendor", nameList.first() );
 	mImport -> setItem ( "Name"  , nameList.last()  );
+}
+//====================================
+// setTablet
+//------------------------------------
+void SaXManipulateTablets::setTablet (
+	const QString& vendor, const QString& model
+) {
+	// .../
+	//! set all tablet data associated with the given vendor and model
+	//! name to the current pointer data.
+	// ----
+	setTablet (vendor+":"+model);
 }
 
 //====================================
@@ -937,6 +1174,59 @@ QList<QString> SaXManipulateTouchscreens::getPanelList (void) {
 }
 
 //====================================
+// getCDBPanelVendorList
+//------------------------------------
+QList<QString> SaXManipulateTouchscreens::getPanelVendorList (void) {
+	// .../
+	//! retrieve a list of supported panel
+	//! vendor names
+	// ----
+	QList<QString> panelList = getPanelList();
+	mCDBPanelList.clear();
+	QListIterator<QString> it (panelList);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", *it.current() );
+		QString* vendorName = new QString (vnlist.first());
+		int hasVendor = false;
+		QListIterator<QString> io (mCDBPanelList);
+		for (; io.current(); ++io) {
+		if ( *io.current() == *vendorName ) {
+			hasVendor = true;
+			break;
+		}
+		}
+		if (! hasVendor ) {
+			mCDBPanelList.append ( vendorName );
+		}
+	}
+	return mCDBPanelList;
+}
+
+//====================================
+// getCDBPanelModelList
+//------------------------------------
+QList<QString> SaXManipulateTouchscreens::getPanelModelList (
+	const QString& vendor
+) {
+	// .../
+	//! retrieve a list of supported panel
+	//! model names
+	// ----
+	QList<QString> panelList = getPanelList();
+	mCDBPanelList.clear();
+	QListIterator<QString> it (panelList);
+	for (; it.current(); ++it) {
+		QStringList vnlist = QStringList::split ( ":", *it.current() );
+		QString vendorName = vnlist.first();
+		QString* modelName = new QString (vnlist.last());
+		if ( vendorName == vendor ) {
+			mCDBPanelList.append ( modelName );
+		}
+	}
+	return mCDBPanelList;
+}
+
+//====================================
 // setTouchPanel
 //------------------------------------
 void SaXManipulateTouchscreens::setTouchPanel (const QString& group) {
@@ -979,5 +1269,18 @@ void SaXManipulateTouchscreens::setTouchPanel (const QString& group) {
 		nameList.first(),
 		nameList.last()
 	);
+}
+
+//====================================
+// setTouchPanel
+//------------------------------------
+void SaXManipulateTouchscreens::setTouchPanel (
+	const QString& vendor, const QString& model
+) {
+	// .../
+	//! set all panel data associated with the given vendor and model
+	//! name to the current pointer data.
+	// ----
+	setTouchPanel (vendor+":"+model);
 }
 } // end namespace
