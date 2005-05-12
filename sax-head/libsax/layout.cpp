@@ -213,4 +213,35 @@ QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	}
 	return layoutList;
 }
+
+//====================================
+// getInputLayout
+//------------------------------------
+QList<QString> SaXManipulateLayout::getInputLayout ( void ) {
+	// .../
+	//! return the layout of the pointer devices. The list
+	//! contains the Identifier numbers of the activated devices
+	// ----
+	QString layout = mLayout -> getItem ("InputDevice");
+	if (layout.isEmpty()) {
+		excGetInputLayoutFailed ();
+		qError (errorString(),EXC_GETINPUTLAYOUTFAILED);
+		return QList<QString> ();
+	}
+	QList<QString> inputList;
+	QStringList tokens = QStringList::split ( ",", layout );
+	for ( QStringList::Iterator
+		in = tokens.begin(); in != tokens.end(); ++in
+	) {
+		QString* item = new QString (*in);
+		QRegExp identifier ("\\[(.+)\\]");
+		int pos = identifier.search (*item);
+		if (pos >= 0) {
+			inputList.append (
+				new QString (identifier.cap(1))
+			);
+		}
+	}
+	return inputList;
+}
 } // end namespace

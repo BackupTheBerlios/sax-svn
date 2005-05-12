@@ -80,6 +80,7 @@ namespace SaX {
 #define EXC_LOCKSETFAILED               "saxLockSetFailed"
 #define EXC_LOCKUNSETFAILED             "saxLockUnsetFailed"
 #define EXC_GETSCREENLAYOUTFAILED       "saxGetScreenLayoutFailed"
+#define EXC_GETINPUTLAYOUTFAILED        "saxGetInputLayoutFailed"
 #define EXC_EMPTYCDBGROUP               "saxEmptyCDBGroup"
 #define EXC_NVIDIADRIVERMISSING         "saxNvidiaDriverMissing"
 #define EXC_NVIDIADRIVERINSTALLED       "saxNvidiaDriverInstalled"
@@ -185,6 +186,7 @@ class SaXExceptionIF : public QObject {
 	virtual void excLockUnsetFailed            ( int ) = 0;
 	virtual void excGetScreenLayoutFailed      ( int ) = 0;
 	virtual void excEmptyCDBGroup              ( const char* ) = 0;
+	virtual void excGetInputLayoutFailed       ( void ) = 0;
 	virtual void excNvidiaDriverMissing        ( void ) = 0;
 	virtual void excNvidiaDriverInstalled      ( void ) = 0;
 	virtual void excXKBLayoutUndefined         ( const char* ) = 0;
@@ -320,6 +322,7 @@ class SaXException : public SaXExceptionIF {
 	void excLockUnsetFailed            ( int );
 	void excGetScreenLayoutFailed      ( int );
 	void excEmptyCDBGroup              ( const char* );
+	void excGetInputLayoutFailed       ( void );
 	void excNvidiaDriverMissing        ( void );
 	void excNvidiaDriverInstalled      ( void );
 	void excXKBLayoutUndefined         ( const char* );
@@ -355,7 +358,8 @@ class SaXException : public SaXExceptionIF {
 	void saxLockSetFailed              ( int  );
 	void saxLockUnsetFailed            ( int  );
 	void saxGetScreenLayoutFailed      ( int  );
-	void saxEmptyCDBGroup              ( const char* ); 
+	void saxEmptyCDBGroup              ( const char* );
+	void saxGetInputLayoutFailed       ( void );
 	void saxNvidiaDriverMissing        ( void );
 	void saxNvidiaDriverInstalled      ( void );
 	void saxXKBLayoutUndefined         ( const char* );

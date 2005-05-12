@@ -243,8 +243,10 @@ sub PrepareLayoutDefaults {
 		if ($id != 1) {
 			$event = "SendCoreEvents";
 		}
-		$dialog{ServerLayout}{all}{InputDevice}{$id}{usage} = $event;
-		$dialog{ServerLayout}{all}{InputDevice}{$id}{id}    = $input
+		if (defined $dialog{ServerLayout}{all}{InputDevice}{$id}) {
+			$dialog{ServerLayout}{all}{InputDevice}{$id}{usage} = $event;
+			$dialog{ServerLayout}{all}{InputDevice}{$id}{id}    = $input;
+		}
 	}
 	}
 	# / ... /

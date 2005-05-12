@@ -426,6 +426,12 @@ void SaXException::excGetScreenLayoutFailed (int id) {
 	emit saxGetScreenLayoutFailed (id);
 }
 
+//! empty InputDevice definition in layout section
+void SaXException::excGetInputLayoutFailed (void) {
+	setErrorCode (ENODEV);
+	emit saxGetInputLayoutFailed();
+}
+
 //! No CDB record found for cardName
 void SaXException::excEmptyCDBGroup (const char* name) {
 	setErrorCode (ECDBDATA,ECDBDATAID);

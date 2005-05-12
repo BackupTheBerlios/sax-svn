@@ -425,6 +425,16 @@ bool SaXManipulateMice::isMouse (void) {
 	if (driver == "mouse") {
 		return true;
 	}
+	QString fashion = mImport -> getItem ("InputFashion");
+	if ((fashion != "Tablet")     &&
+		(fashion != "Pen")        &&
+		(fashion != "Eraser")     &&
+		(fashion != "VNC")        &&
+		(fashion != "Keyboard")   &&
+		(fashion != "Touchpanel")
+	) {
+		return true;
+	}
 	return false;
 }
 
