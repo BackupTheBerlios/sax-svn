@@ -229,6 +229,7 @@ if ($module eq "nvidia") {
     send_stringoption ($module, "MergedFB",            "yes");
     send_stringoption ($module, "CRT2HSync",           "30-120");
     send_stringoption ($module, "CRT2VSync",           "58-65");
+    send_stringoption ($module, "CRT2VRefresh",        "58-65");
     send_stringoption ($module, "IgnoreEDID",          "yes");
     send_metamodes    ($module, "MetaModes", "-", " ", \@modes);
     send_modes        ($module, "Modes",               \@modes);
@@ -336,8 +337,8 @@ if ($module eq "nvidia") {
     }
     undef $devs{$primary};
     if ($devs{"LFP"}) {
-	$secondary="";
-	$primary="";
+	$primary="LFP";
+	$secondary="CRT";
 	print STDERR "***** Not booted into LFP, but connected. Weird. Config may not work.\n";
     } elsif ($devs{"DFP"}) {
 	$secondary="DFP";
@@ -350,7 +351,7 @@ if ($module eq "nvidia") {
     } elsif ($devs{"CRT2"}) {
 	$secondary="CRT";
     } else {
-	$secondary="";
+	$secondary="CRT";
 	print STDERR "***** No secondary output found. Config may not work.\n";
     }
     if ($xorg_probe =~ /^\(..\) I8.0\([0-9]+\): Primary Pipe is B,/m) {
