@@ -18,6 +18,11 @@ int main (void) {
 		section["Keyboard"]
 	);
 	if (mKeyboard.selectKeyboard (SAX_CORE_KBD)) {
+		QDict<QString> mOptions = mKeyboard.getOptions();
+		QDictIterator<QString> it (mOptions);
+		for (; it.current(); ++it) {
+			printf ("%s : %s\n",it.currentKey().ascii(),it.current()->ascii());
+		}
 		mKeyboard.addXKBLayout ("cz");
 		mKeyboard.getXKBVariant ("bla");
 	}

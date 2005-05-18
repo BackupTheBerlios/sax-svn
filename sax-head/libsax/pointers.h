@@ -235,6 +235,8 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 */
 class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	public:
+	virtual QDict<QString> getTabletData ( const QString& ) = 0;
+	virtual QDict<QString> getTabletData ( const QString&,const QString& ) = 0;
 	virtual QList<QString> getTabletVendorList ( void ) = 0;
 	virtual QList<QString> getTabletModelList  ( const QString& ) = 0;
 	virtual QList<QString> getTabletList ( void ) = 0;
@@ -338,6 +340,7 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	SaXProcess*    mCDBTablets;
 	SaXProcess*    mCDBTabletModules;
 	QList<QString> mCDBTabletList;
+	QDict<QString> mCDBTabletData;
 	SaXProcess*    mCDBPens;
 	QList<QString> mCDBPenList;
 	QList<QString> mCDBTabletDrivers;
@@ -347,6 +350,8 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	SaXManipulateDevices* mManipInputDevices;
 
 	public:
+	QDict<QString> getTabletData ( const QString& );
+	QDict<QString> getTabletData ( const QString&,const QString& );
 	QList<QString> getTabletVendorList ( void );
 	QList<QString> getTabletModelList  ( const QString& ); 
 	QList<QString> getTabletList ( void );
@@ -388,6 +393,8 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 	virtual QList<QString> getPanelList ( void ) = 0;
 	virtual QList<QString> getPanelVendorList ( void ) = 0;
 	virtual QList<QString> getPanelModelList  ( const QString& ) = 0;
+	virtual QDict<QString> getPanelData ( const QString& ) = 0;
+	virtual QDict<QString> getPanelData ( const QString&,const QString& ) = 0;
 	virtual void setTouchPanel ( const QString&,const QString& ) = 0;
 	virtual void setTouchPanel ( const QString& ) = 0;
 
@@ -467,11 +474,14 @@ class SaXManipulateTouchscreens : public SaXManipulateTouchscreensIF {
 	private:
 	SaXProcess*    mCDBPanels;
 	QList<QString> mCDBPanelList;
+	QDict<QString> mCDBPanelData;
 
 	public:
 	QList<QString> getPanelList ( void );
 	QList<QString> getPanelVendorList ( void );
 	QList<QString> getPanelModelList  ( const QString& );
+	QDict<QString> getPanelData ( const QString& );
+	QDict<QString> getPanelData ( const QString&,const QString& );
 	void setTouchPanel ( const QString&,const QString& );
 	void setTouchPanel ( const QString& );
 

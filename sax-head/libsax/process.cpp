@@ -99,6 +99,9 @@ void SaXProcess::start ( int fileID ) {
 		case CDB_CARDMODULES:
 			storeDataSYS (fileID);
 		break;
+		case CDB_TABLETMODULES:
+			storeDataSYS (fileID);
+		break;
 		default:
 			storeDataCDB (fileID);
 		break;
@@ -211,6 +214,9 @@ void SaXProcess::storeDataSYS (int fileID) {
 	switch (fileID) {
 		case CDB_CARDMODULES:
 			file = CDBCARDMODULES;
+		break;
+		case CDB_TABLETMODULES:
+			file = CDBTABLETMODULES;
 		break;
 		default:
 			excCDBFileFailed ();

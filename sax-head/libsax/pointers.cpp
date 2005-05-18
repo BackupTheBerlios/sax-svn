@@ -942,6 +942,43 @@ QList<QString> SaXManipulateTablets::getTabletModelList (
 }
 
 //====================================
+// getTabletData
+//------------------------------------
+QDict<QString> SaXManipulateTablets::getTabletData ( const QString& group ) {
+	// .../
+	//! return the tablet data dictionary associated with the
+	//! given CDB group name.
+	// ----
+	mCDBTabletData.clear();
+	if ( ! mCDBTablets ) {
+		mCDBTablets = new SaXProcess ();
+		mCDBTablets -> start (CDB_TABLETS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBTablets -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		if ( it.currentKey() == group ) {
+			mCDBTabletData = *it.current();
+			break;
+		}
+	}
+	return mCDBTabletData;
+}
+
+//====================================
+// getTabletData
+//------------------------------------
+QDict<QString> SaXManipulateTablets::getTabletData (
+	const QString& vendor,const QString& name
+) {
+	// .../
+	//! return the tablet data dictionary associated with the
+	//! given vendor and model name.
+	// ----
+	return getTabletData (vendor+":"+name);
+}
+
+//====================================
 // getPenList
 //------------------------------------
 QList<QString> SaXManipulateTablets::getPenList (void) {
@@ -1224,6 +1261,45 @@ QList<QString> SaXManipulateTouchscreens::getPanelModelList (
 		}
 	}
 	return mCDBPanelList;
+}
+
+//====================================
+// getPanelData
+//------------------------------------
+QDict<QString> SaXManipulateTouchscreens::getPanelData (
+	const QString& group
+) {
+	// .../
+	//! return the touchers data dictionary associated with the
+	//! given CDB group name.
+	// ----
+	mCDBPanelData.clear();
+	if ( ! mCDBPanels ) {
+		mCDBPanels = new SaXProcess ();
+		mCDBPanels -> start (CDB_TOUCHERS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBPanels -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		if ( it.currentKey() == group ) {
+			mCDBPanelData = *it.current();
+			break;
+		}
+	}
+	return mCDBPanelData;
+}
+
+//====================================
+// getPanelData
+//------------------------------------
+QDict<QString> SaXManipulateTouchscreens::getPanelData (
+	const QString& vendor,const QString& name
+) {
+	// .../
+	//! return the touchers data dictionary associated with the
+	//! given vendor and model name.
+	// ----
+	return getPanelData (vendor+":"+name);
 }
 
 //====================================
