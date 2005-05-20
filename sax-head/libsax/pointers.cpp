@@ -817,6 +817,38 @@ QString SaXManipulateTablets::getMode (void) {
 }
 
 //====================================
+// getOptions
+//------------------------------------
+QDict<QString> SaXManipulateTablets::getOptions ( void ) {
+	// .../
+	//! return a dictionary of tablet options set for this
+	//! tablet. The options will be evaluated according to the
+	//! predefined set of options available for the given driver
+	// ----
+	QDict<QString> result;
+	//====================================
+	// (1) save the bool options
+	//------------------------------------
+	QDict<QString> boolOptions = SaXManipulatePointers::getOptions();
+	QDictIterator<QString> ib (boolOptions);
+	for (; ib.current(); ++ib) {
+		result.insert (ib.currentKey(), new QString(""));
+	}
+	//====================================
+	// (2) check for the tablet options
+	//------------------------------------
+	QDict<QString> tabletOptions = getTabletOptions ( getDriver() );
+	QDictIterator<QString> it (tabletOptions);
+	for (; it.current(); ++it) {
+		QString option = mImport -> getItem (it.currentKey());
+		if ( ! option.isEmpty() ) {
+			result.insert (it.currentKey(),new QString (option));
+		}
+	}
+	return result;
+}
+
+//====================================
 // getTabletDrivers
 //------------------------------------
 QList<QString> SaXManipulateTablets::getTabletDrivers (void) {
