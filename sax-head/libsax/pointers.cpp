@@ -979,6 +979,43 @@ QDict<QString> SaXManipulateTablets::getTabletData (
 }
 
 //====================================
+// getPenData
+//------------------------------------
+QDict<QString> SaXManipulateTablets::getPenData ( const QString& group ) {
+	// .../
+	//! return the pen data dictionary associated with the
+	//! given CDB group name.
+	// ----
+	mCDBTabletData.clear();
+	if ( ! mCDBPens ) {
+		mCDBPens = new SaXProcess ();
+		mCDBPens -> start (CDB_PENS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBPens -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	for (; it.current(); ++it) {
+		if ( it.currentKey() == group ) {
+			mCDBTabletData = *it.current();
+			break;
+		}
+	}
+	return mCDBTabletData;
+}
+
+//====================================
+// getPenData
+//------------------------------------
+QDict<QString> SaXManipulateTablets::getPenData (
+	const QString& vendor,const QString& name
+) {
+	// .../
+	//! return the pen data dictionary associated with the
+	//! given vendor and model name.
+	// ----
+	return getPenData (vendor+":"+name);
+}
+
+//====================================
 // getPenList
 //------------------------------------
 QList<QString> SaXManipulateTablets::getPenList (void) {

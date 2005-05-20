@@ -237,6 +237,8 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	public:
 	virtual QDict<QString> getTabletData ( const QString& ) = 0;
 	virtual QDict<QString> getTabletData ( const QString&,const QString& ) = 0;
+	virtual QDict<QString> getPenData ( const QString& ) = 0;
+	virtual QDict<QString> getPenData ( const QString&,const QString& ) = 0;
 	virtual QList<QString> getTabletVendorList ( void ) = 0;
 	virtual QList<QString> getTabletModelList  ( const QString& ) = 0;
 	virtual QList<QString> getTabletList ( void ) = 0;
@@ -352,6 +354,8 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	public:
 	QDict<QString> getTabletData ( const QString& );
 	QDict<QString> getTabletData ( const QString&,const QString& );
+	QDict<QString> getPenData ( const QString& );
+	QDict<QString> getPenData ( const QString&,const QString& );
 	QList<QString> getTabletVendorList ( void );
 	QList<QString> getTabletModelList  ( const QString& ); 
 	QList<QString> getTabletList ( void );
