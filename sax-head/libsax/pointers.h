@@ -405,7 +405,10 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 	virtual void setTouchPanel ( const QString& ) = 0;
 
 	public:
-	virtual bool isTouchpanel  ( void ) = 0;
+	virtual bool isTouchpanel ( void ) = 0;
+	virtual QString getName   ( void ) = 0;
+	virtual QString getVendor ( void ) = 0;
+	virtual QString getType   ( void ) = 0;
 
 	public:
 	virtual ~SaXManipulateTouchscreensIF ( void ) { }
@@ -492,7 +495,10 @@ class SaXManipulateTouchscreens : public SaXManipulateTouchscreensIF {
 	void setTouchPanel ( const QString& );
 
 	public:
-	bool isTouchpanel  ( void );
+	bool isTouchpanel ( void );
+	QString getName   ( void );
+	QString getVendor ( void );
+	QString getType   ( void );
 
 	public:
 	SaXManipulateTouchscreens ( SaXImport*, int = 1 );

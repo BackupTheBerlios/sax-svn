@@ -213,7 +213,7 @@ sub MergeParseResult {
 	$result{ServerFlags}{0}{Option} = $setpath;
 
 	#------------------------------------------------#
-	# handle result from ParseExntesionsSection...   #
+	# handle result from ParseExtensionsSection...   #
 	# -----------------------------------------------#
 	$setpath = "";
 	foreach $key (keys %{$extend{Option}}) {
@@ -235,11 +235,11 @@ sub MergeParseResult {
 	if (@keylist > 0) {
 		delete $result{InputDevice}; 
 	} 
-	my $option = "";
 	foreach $key (keys %input) {
 	foreach $count (keys %{$input{$key}}) {
 	if ($input{$key}{$count}{Identifier} =~ /[Mouse Keyboard]\[(.*)\]/) {
 		$idc = $1;
+		my $option = "";
 		foreach $name (keys %{$input{$key}{$count}}) {
 		SWITCH: for ($name) {
 		/^Option/        &&  do {

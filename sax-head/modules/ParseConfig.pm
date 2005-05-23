@@ -224,6 +224,7 @@ sub ParseInputDeviceSection {
 			}
  
 			@list = split(/,/,$opt);
+			@opt  = ();
 			foreach $n (@list) {
 				@option = split(/:/,$n);
 				SWITCH: for ($option[0]) {

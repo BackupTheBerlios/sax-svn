@@ -1258,6 +1258,55 @@ bool SaXManipulateTouchscreens::isTouchpanel (void) {
 }
 
 //====================================
+// getName
+//------------------------------------
+QString SaXManipulateTouchscreens::getName ( void ) {
+	// .../
+	//! return the model name of this touchscreen pointer
+	//! device. The vendor and name is stored as one string
+	//! separated by a semi-colon
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	QString name = mImport -> getItem ("Name");
+	QStringList vnlist = QStringList::split ( ";", name );
+	return vnlist.last();
+}
+
+//====================================
+// getVendor
+//------------------------------------
+QString SaXManipulateTouchscreens::getVendor ( void ) {
+	// .../
+	//! return the vendor name of this touchscreen pointer
+	//! device. The vendor and name is stored as one string
+	//! separated by a semi-colon
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	QString name = mImport -> getItem ("Name");
+	QStringList vnlist = QStringList::split ( ";", name );
+	return vnlist.first();
+}
+
+//====================================
+// getType
+//------------------------------------
+QString SaXManipulateTouchscreens::getType (void) {
+	// .../
+	//! return the type of this pointer device.
+	//! Note the type parameter of a touchscreen or a tablet
+	//! is handled with the same key: TabletType
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("TabletType");
+}
+
+//====================================
 // getCDBPanelList
 //------------------------------------
 QList<QString> SaXManipulateTouchscreens::getPanelList (void) {
