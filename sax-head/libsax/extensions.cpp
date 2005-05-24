@@ -325,4 +325,19 @@ bool SaXManipulateVNC::isPwdProtectionEnabled (void) {
 	}
 	return false;
 }
+
+//====================================
+// getHTTPPort
+//------------------------------------
+int SaXManipulateVNC::getHTTPPort (void) {
+	// .../
+	//! check if HTTP access is activated and return
+	//! the current port number set for HTTP access
+	// ----
+	QDict<QString> options = getOptions();
+	if (options["httpport"]) {
+		return options["httpport"]->toInt();
+    }
+	return 0;
+}
 } // end namespace

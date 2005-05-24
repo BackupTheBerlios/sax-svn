@@ -93,6 +93,7 @@ class SaXManipulateVNCIF : public SaXManipulateCard {
 	virtual void enableHTTPAccess  ( int = 5800 ) = 0;
 	virtual void disableHTTPAccess ( void ) = 0;
 	virtual void allowMultipleConnections ( bool = true ) = 0;
+	virtual int  getHTTPPort ( void ) = 0;
 
 	public:
 	virtual bool isVNCEnabled           ( void ) = 0;
@@ -188,6 +189,7 @@ class SaXManipulateVNC : public SaXManipulateVNCIF {
 	void enableHTTPAccess  ( int = 5800 );
 	void disableHTTPAccess ( void );
 	void allowMultipleConnections ( bool = true );
+	int  getHTTPPort ( void );
 
 	public:
 	bool isVNCEnabled           ( void );
