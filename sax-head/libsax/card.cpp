@@ -201,14 +201,23 @@ QString SaXManipulateCard::getCardName (void) {
 	if (! mImport) {
 		return QString();
 	}
+	//====================================
+	// search name in SYSP data
+	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	if (! pCard -> setID ( mCard )) {
-		return QString();
+	if (pCard -> setID ( mCard )) {
+		pCard -> doImport();
+		QString mCardName;
+		QTextOStream (&mCardName) <<
+			pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+		return mCardName;
 	}
-	pCard -> doImport();
+	//====================================
+	// search name in ISAX data
+	//------------------------------------
 	QString mCardName;
 	QTextOStream (&mCardName) <<
-		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
+		mImport->getItem("Vendor") << ":" << mImport->getItem("Name");
 	return mCardName;
 }
 
@@ -223,12 +232,18 @@ QString SaXManipulateCard::getCardVendor (void) {
 	if (! mImport) {
 		return QString();
 	}
+	//====================================
+	// search vendor in SYSP data
+	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	if (! pCard -> setID ( mCard )) {
-		return QString();
+	if (pCard -> setID ( mCard )) {
+		pCard -> doImport();
+		return pCard->getItem("Vendor");
 	}
-	pCard -> doImport();
-	return pCard->getItem("Vendor");
+	//====================================
+	// search vendor in ISAX data
+	//------------------------------------
+	return mImport->getItem("Vendor");
 }
 
 //====================================
@@ -242,12 +257,18 @@ QString SaXManipulateCard::getCardModel (void) {
 	if (! mImport) {
 		return QString();
 	}
+	//====================================
+	// search model in SYSP data
+	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
-	if (! pCard -> setID ( mCard )) {
-		return QString();
+	if (pCard -> setID ( mCard )) {
+		pCard -> doImport();
+		return pCard->getItem("Device");
 	}
-	pCard -> doImport();
-	return pCard->getItem("Device");
+	//====================================
+	// search model in ISAX data
+	//------------------------------------
+	return mImport->getItem("Name");
 }
 
 //====================================
