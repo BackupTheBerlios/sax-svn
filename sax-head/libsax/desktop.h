@@ -88,8 +88,9 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual QString getMonitorName   ( void ) = 0;
 	virtual QString getColorDepth    ( void ) = 0;
 	virtual QString getVirtualResolution ( int  ) = 0;
-	virtual QString getDualHeadProfile  ( void ) = 0;
-	virtual bool willCalculateModelines ( void ) = 0;
+	virtual QString getDualHeadProfile   ( void ) = 0;
+	virtual QString getModelineAlgorithm ( void ) = 0;
+	virtual bool willCalculateModelines  ( void ) = 0;
 
 	public:
 	virtual bool selectDesktop (int) = 0;
@@ -204,6 +205,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	QString getColorDepth    ( void );
 	QString getVirtualResolution ( int  );
 	QString getDualHeadProfile   ( void );
+	QString getModelineAlgorithm ( void );
 	bool willCalculateModelines  ( void );
 
 	public:

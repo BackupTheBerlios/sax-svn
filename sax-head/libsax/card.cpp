@@ -191,6 +191,25 @@ void SaXManipulateCard::setScreenID (int screen) {
 }
 
 //====================================
+// setRotate
+//------------------------------------
+void SaXManipulateCard::setRotate (int direction) {
+	// .../
+	//! set rotation direction for the selected graphics device
+	//! rotation works only for drivers which supports this
+	// ----
+	if (! mImport) {
+		return;
+	}
+	if (direction == SAX_ROTATE_LEFT) {
+		mImport -> setItem ("Rotate","CCW");
+	}
+	if (direction == SAX_ROTATE_RIGHT) {
+		mImport -> setItem ("Rotate","CW");
+	}
+}
+
+//====================================
 // getCardName
 //------------------------------------
 QString SaXManipulateCard::getCardName (void) {

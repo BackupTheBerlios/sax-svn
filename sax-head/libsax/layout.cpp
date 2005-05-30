@@ -71,7 +71,7 @@ void SaXManipulateLayout::setXOrgMultiheadMode ( int mode ) {
 		break;
 		case SAX_CLONE:
 			mLayout -> setItem ("Clone","on");
-			mLayout -> setItem ("Xinerama","off");
+			mLayout -> setItem ("Xinerama","on");
 		break;
 		default:
 			excInvalidArgument (mode);

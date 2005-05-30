@@ -134,6 +134,7 @@ void SaXManipulateDesktop::addResolution (int c,int x,int y) {
 		val = mDesktop -> getItem (key);
 	}
 	QTextOStream (&val) << val << "," << x << "x" << y;
+	val.replace (QRegExp("^,"),"");
 	mDesktop -> setItem ( key,val );
 }
 
@@ -640,7 +641,7 @@ void SaXManipulateDesktop::setHsyncRange (double hsmin,double hsmax) {
 		return;
 	}
 	QString range;
-	range.sprintf ("%.1f-%.1f",hsmin,hsmax);
+	range.sprintf ("%.0f-%.0f",hsmin,hsmax);
 	mDesktop -> setItem ( "HorizSync",range );
 }
 
@@ -656,7 +657,7 @@ void SaXManipulateDesktop::setVsyncRange (double vsmin,double vsmax) {
 		return;
 	}
 	QString range;
-	range.sprintf ("%.1f-%.1f",vsmin,vsmax);
+	range.sprintf ("%.0f-%.0f",vsmin,vsmax);
 	mDesktop -> setItem ( "VertRefresh",range );
 }
 
@@ -922,6 +923,19 @@ QString SaXManipulateDesktop::getColorDepth (void) {
 		return QString();
 	}
 	return mDesktop -> getItem ("ColorDepth");
+}
+
+//====================================
+// getModelineAlgorithm
+//------------------------------------
+QString SaXManipulateDesktop::getModelineAlgorithm (void) {
+	// .../
+	//! get the currently used modeline algorithm method
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return QString();
+	}
+	return mDesktop -> getItem ("CalcAlgorithm");
 }
 
 //====================================

@@ -32,7 +32,9 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define ACPI_BATTERY "/proc/acpi/battery"
+#define ACPI_BATTERY     "/proc/acpi/battery"
+#define SAX_ROTATE_LEFT  1
+#define SAX_ROTATE_RIGHT 2
 
 //====================================
 // Interface class for dlopen ability
@@ -52,6 +54,7 @@ class SaXManipulateCardIF : public SaXException {
 	virtual void removeCardOption ( const QString& ) = 0;
 	virtual void setBusID ( const QString& ) = 0;
 	virtual void setScreenID ( int ) = 0;
+	virtual void setRotate   ( int ) = 0;
 
 	public:
 	virtual QList<QString> getCardDrivers ( void ) = 0;
@@ -138,6 +141,7 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	void removeCardOption ( const QString& );
 	void setBusID ( const QString& );
 	void setScreenID ( int );
+	void setRotate   ( int );
 
 	public:
 	QList<QString> getCardDrivers ( void );
