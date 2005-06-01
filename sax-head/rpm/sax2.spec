@@ -305,7 +305,7 @@ fi
 # install desktop icon...
 #-------------------------------------------------
 install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
-install -m 644 api/pixmaps/sax2.xpm \
+install -m 644 api/pixmaps/sax2.png \
 	$RPM_BUILD_ROOT/usr/share/pixmaps/
 #=================================================
 # check perl .packlist...
