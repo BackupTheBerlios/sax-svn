@@ -37,7 +37,7 @@ STATUS        : Status: Development
 #include <qvbox.h>
 #include <qdict.h>
 
-#include "/suse/ms/sax/libsax/sax.h"
+#include "../libsax/sax.h"
 
 //====================================
 // Includes...
