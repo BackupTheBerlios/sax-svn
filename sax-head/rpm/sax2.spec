@@ -361,21 +361,16 @@ fi
 /sbin/SaX2
 /sbin/sax2
 /sbin/sysp
-/usr/share/sax/api/data/Card3DModules
 /usr/share/sax/api/data/CardModules
-/usr/share/sax/api/data/KbdLanguage
 /usr/share/sax/api/data/LangCodes
+/usr/share/sax/api/data/PointerDevice
 /usr/share/sax/api/data/LangFirstPath
+/usr/share/sax/api/data/StaticFontPathList
 /usr/share/sax/api/data/MonitorColors
-/usr/share/sax/api/data/MonitorFBResolution
+/usr/share/sax/api/data/TabletModules
 /usr/share/sax/api/data/MonitorRatio
 /usr/share/sax/api/data/MonitorResolution
 /usr/share/sax/api/data/MonitorTraversal
-/usr/share/sax/api/data/MonitorVisual
-/usr/share/sax/api/data/PointerDevice
-/usr/share/sax/api/data/StaticFontPathList
-/usr/share/sax/api/data/TabletModules
-/usr/share/sax/api/data/twmrc
 /usr/share/sax/sysp/script/installed.pl
 /usr/share/sax/sysp/script/killdot.pl
 /usr/share/sax/sysp/script/vbios.pl
@@ -406,8 +401,7 @@ fi
 %defattr(-,root,root)
 %dir /usr/share/sax/api
 %dir /usr/share/xfine
-/usr/share/sax/xrun.pl
-/usr/share/sax/api/tools
+/usr/share/sax/api/macros
 /usr/share/sax/api/figures
 /usr/share/xfine/figures
 /usr/share/xfine/xfine.gtx
