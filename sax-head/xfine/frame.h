@@ -52,7 +52,7 @@ class XFineWindow : public QMainWindow {
 	Q_OBJECT
 
 	public:
-	XFineWindow (int,int,int,bool);
+	XFineWindow (int,int,int);
 	void loadText (void);
 
 	private:
@@ -77,10 +77,7 @@ class XFineWindow : public QMainWindow {
 	QPopupMenu*   step;
 	QFrame*       mFrame;
 	QPushButton*  mCancel;
-	QPushButton*  mNext;
 	QPushButton*  mSave;
-	QScrollView*  mSview;
-	QLabel*       mImage;
 	QTabWidget*   mTab;
 	QStatusBar*   mStatus;
 
@@ -90,7 +87,7 @@ class XFineWindow : public QMainWindow {
 
 	private:
 	void updateStep ( int );
-	void setFrame   ( int,int,bool,bool,bool );
+	void setFrame   ( int,int,bool,bool );
 	void initScreen ( bool,bool );
 
 	private slots:
@@ -100,7 +97,6 @@ class XFineWindow : public QMainWindow {
 	void slotNormal ( void );
 	void slotBig    ( void );
 	void slotHuge   ( void );
-	void slotNext   ( void );
 	void slotNarrower (void);
 	void slotWider    (void);
 	void slotTaller   (void);
@@ -111,7 +107,6 @@ class XFineWindow : public QMainWindow {
 	void slotDown  (void);
 
 	protected:
-	virtual void resizeEvent ( QResizeEvent* );
 	virtual bool eventFilter ( QObject*, QEvent* );
 };
 

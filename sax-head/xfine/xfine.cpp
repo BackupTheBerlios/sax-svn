@@ -49,7 +49,6 @@ int main(int argc,char*argv[]) {
 	//=====================================
 	// init options...
 	//-------------------------------------
-	bool uniFont    = false;
 	bool initWindow = false;
 	bool setStyle   = false;
 	int  screen,xmiddle,ymiddle;
@@ -101,7 +100,6 @@ int main(int argc,char*argv[]) {
 		{"xmiddle"    , 1 , 0 , 'x'},
 		{"ymiddle"    , 1 , 0 , 'y'},
 		{"screen"     , 1 , 0 , 's'},
-		{"unifont"    , 0 , 0 , 'U'},
 		{0            , 0 , 0 , 0  }
 	};
 	int c = getopt_long (argc, argv, "hwUs:x:y:",long_options, &option_index);
@@ -122,10 +120,6 @@ int main(int argc,char*argv[]) {
 
 	case 's':
 		screen  = QString (optarg).toInt();
-	break;
-
-	case 'U':
-		uniFont  = true;
 	break;
 
 	case 'x':
@@ -166,7 +160,7 @@ int main(int argc,char*argv[]) {
 		optc.ascii(),cursorName.ascii(),optd.ascii(),display.ascii()
 	);
 	xfine = new XFineWindow (
-		xmiddle,ymiddle,screen,uniFont
+		xmiddle,ymiddle,screen
 	);
 	signal (SIGUSR1,signalSave);
 	signal (SIGTERM,signalReset);
@@ -212,7 +206,6 @@ int main(int argc,char*argv[]) {
 		char* pArgv [15];
 		int count = 0;
 		char* sty = "-style";
-		char* fn  = "--unifont";
 		char* dpy = "-display";
 		char* scr = "--screen";
 		char* xm  = "--xmiddle";
@@ -234,10 +227,6 @@ int main(int argc,char*argv[]) {
 		if (setStyle) {
 			pArgv[count] = sty;   count++;
 			pArgv[count] = style; count++;
-		}
-		if (uniFont) {
-			pArgv[count] = fn;
-			count++;
 		}
 		pArgv[count] = dpy;
 		count++;
@@ -356,8 +345,6 @@ void usage (void) {
 	printf ("Linux XFine2 Version 7.1 - (C) Copyright 2002 SuSE GmbH\n");
 	printf ("usage: xfine [ options ]\n");
 	printf ("options:\n");
-	printf ("[ -U | --unifont ]\n");
-	printf ("   force usage of Uni-Code font\n");
 	printf ("[ -h | --help ]\n");
 	printf ("   you already got it :-)\n");
 	printf ("--\n");

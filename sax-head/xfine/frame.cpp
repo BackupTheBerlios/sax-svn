@@ -45,7 +45,7 @@ STATUS        : Status: Up-to-date
 //=====================================
 // XFineWindow Constructor...
 //-------------------------------------
-XFineWindow::XFineWindow (int x,int y,int screen,bool uniFont) : 
+XFineWindow::XFineWindow (int x,int y,int screen) : 
 	QMainWindow(0,"XFine2",WDestructiveClose) {
 	// ...
 	// load the gettext hash for international
@@ -79,7 +79,7 @@ XFineWindow::XFineWindow (int x,int y,int screen,bool uniFont) :
 	// create the GUI for one screen
 	// ---
 	bool has3D = hasDirectRendering ( screen );
-	setFrame (x,y,mAdjustable,uniFont,has3D);
+	setFrame (x,y,mAdjustable,has3D);
 	installEventFilter (this);
 
 	// ...
@@ -97,7 +97,7 @@ XFineWindow::XFineWindow (int x,int y,int screen,bool uniFont) :
 // XFineWindow create and init GUI...
 //-------------------------------------
 void XFineWindow::setFrame (
-	int x,int y, bool adjustable, bool uniFont,bool has3D
+	int x,int y, bool adjustable,bool has3D
 ) {
 	XWrapText< QDict<char> > mText (mTextPtr);
 	setCaption ("XFine2");
@@ -106,16 +106,6 @@ void XFineWindow::setFrame (
 	);
 	delete (statusBar());
 	step = new QPopupMenu (this);
-	if (uniFont) {
-		log (L_INFO,
-			"XFineWindow::setFrame: set Font %s", UNIFONT
-		);
-		QFont currentFont = QFont( "Helvetica", 12 );
-		currentFont.setStyleHint( QFont::SansSerif, QFont::PreferBitmap );
-		currentFont.setRawName (UNIFONT);
-		setFont (currentFont);
-		step -> setFont (currentFont);
-    }
 	//----------------------------------------------
 	// create step menu and menu slots
 	//==============================================
@@ -138,8 +128,8 @@ void XFineWindow::setFrame (
 		SLOT ( slotHuge(void) )
 	);
 	//----------------------------------------------
-    // create layout structure...
-    //==============================================
+	// create layout structure...
+	//==============================================
 	mFrame = new QFrame (this);
 	// topview...
 	//=====================================
@@ -154,10 +144,6 @@ void XFineWindow::setFrame (
 	layer1 -> addSpacing (10);
 	QBoxLayout*  layer4  = new QHBoxLayout (layer1);
 
-	// Logo view
-	// ====================================
-	QBoxLayout*  layer5  = new QHBoxLayout (layer2);
-
 	// tab and status bar
 	// ====================================
 	QVBox* size = new QVBox (mFrame);
@@ -171,17 +157,6 @@ void XFineWindow::setFrame (
 	//----------------------------------------------
 	// create widgets...
 	//==============================================
-	// logo...
-	QPixmap*  logo = new QPixmap (LOGO);
-	mSview = new QScrollView (mFrame);
-	mImage = new QLabel      (mSview->viewport());
-	mImage -> setPixmap (*logo);
-	mImage -> adjustSize();
-	mSview -> setHScrollBarMode (QScrollView::AlwaysOff);
-	mSview -> setVScrollBarMode (QScrollView::AlwaysOff);
-	mSview -> setFrameStyle(QFrame::NoFrame);
-	mSview -> addChild(mImage);
-	mSview -> setMaximumWidth (35);
 	// 3D label...
 	QLabel* sizeIndicator3D = new QLabel (sizeFrame);
 	QLabel* posIndicator3D  = new QLabel (posFrame);
@@ -200,7 +175,6 @@ void XFineWindow::setFrame (
 	seperator -> setFrameStyle(QFrame::HLine|QFrame::Raised);
 	// button bar...
 	mCancel = new QPushButton (mText["Cancel"], mFrame);
-	mNext   = new QPushButton (mText["GotoNextScreen"], mFrame);
 	mSave   = new QPushButton (mText["Save"], mFrame);
 	mSave -> setDefault (true);
 	mSave -> setFocus();
@@ -262,10 +236,6 @@ void XFineWindow::setFrame (
 		this     , SLOT   (slotCancel  ())
 	);
 	QObject::connect(
-		mNext    , SIGNAL (clicked     ()),
-		this     , SLOT   (slotNext    ())
-	);
-	QObject::connect(
 		mSave    , SIGNAL (clicked     ()),
 		this     , SLOT   (slotSave    ())
 	);
@@ -305,11 +275,9 @@ void XFineWindow::setFrame (
 	//==============================================
 	// add widgets to the layout...
 	//----------------------------------------------
-	layer5 -> addWidget  ( mSview );
 	layer3 -> addWidget  ( seperator );
 	layer4 -> addWidget  ( mCancel );
 	layer4 -> addStretch ( 10 );
-	layer4 -> addWidget  ( mNext );
 	layer4 -> setSpacing ( 10 );
 	layer4 -> addWidget  ( mSave );
 	layer6 -> addWidget  ( mTab );
@@ -384,7 +352,6 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	// ---
 	if (startup) {
 	if ((int)(frqList.count() -1) == mScreen) {
-		mNext -> setDisabled (true);
 		// ...
 		// activate xidle timer by sending SIGUSR2
 		// to all xapi --xidle processes
@@ -468,6 +435,9 @@ void XFineWindow::saveMode (void) {
 		);
 		return;
 	}
+	if (mFileName.isEmpty()) {
+		return;
+	}
 	QFile* mHandle = new QFile (mFileName);
 	if (! mHandle -> open(IO_WriteOnly)) {
 	log (L_ERROR,
@@ -492,13 +462,6 @@ void XFineWindow::saveMode (void) {
 }
 
 //=====================================
-// XFineWindow get repaint event...
-//-------------------------------------
-void XFineWindow::resizeEvent (QResizeEvent*) {
-	mSview  -> scrollBy (0, mImage->height());
-}
-
-//=====================================
 // XFineWindow save...
 //-------------------------------------
 void XFineWindow::slotSave (void) {
@@ -510,30 +473,6 @@ void XFineWindow::slotSave (void) {
 //-------------------------------------
 void XFineWindow::slotCancel (void) {
 	kill (getppid(),SIGTERM);
-}
-
-//=====================================
-// XFineWindow switch mouse to screen X
-//-------------------------------------
-void XFineWindow::slotNext (void) {
-	XQuery screen;
-	screen.setOption ("-M");
-	QString* data = screen.run();
-	XStringList screenData (*data);
-	screenData.setSeperator ("\n");
-	QList<char> screenList = screenData.getList();
-	QString resolution (screenList.at(mScreen + 1));
-	resolution = resolution.right (
-		resolution.length() - 2
-	);
-	XStringList resData (resolution);
-	resData.setSeperator (":");
-	QList<char> resList = resData.getList();
-	QString x (resList.at(0));
-	QString y (resList.at(1));
-	qx (WRAPMOUSE,STDNONE,3,"%s %s %s",
-		x.ascii(),y.ascii(),DisplayString (x11Display())
-	);
 }
 
 //=====================================

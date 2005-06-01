@@ -24,7 +24,7 @@ STATUS        : Status: Up-to-date
 #include <X11/Xlib.h>
 
 #include "config.h"
-#include "../api/common/qx.h"
+#include "common/qx.h"
 
 class XQuery : public QWidget {
 	private:
