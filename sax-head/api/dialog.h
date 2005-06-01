@@ -25,7 +25,7 @@ STATUS        : Status: Development
 #include <qlayout.h>
 #include <qdict.h>
 
-#include "/suse/ms/sax/libsax/sax.h"
+#include "../libsax/sax.h"
 
 #include "common/log.h"
 #include "wrapper.h"
