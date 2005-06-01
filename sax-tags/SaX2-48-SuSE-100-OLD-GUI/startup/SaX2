@@ -1,0 +1,116 @@
+#!/bin/sh
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2000
+#
+# SaX (sax) configuration level 3
+#
+# CVS ID:
+# --------
+# Status: Up-to-date
+#
+trap "signal" EXIT HUP INT TERM PIPE QUIT ABRT SEGV
+
+#========================================
+# Functions
+#----------------------------------------
+function signal {
+	killall dots.pl 2>/dev/null >/dev/null
+	test -n "$TMPFILE" && rm -f $TMPFILE
+	exit 0
+}
+
+function validRunlevel {
+	TTY=`tty | cut -c 6`
+	RUN=`/sbin/runlevel | cut -f2 -d" "`
+	if [ "$TTY" = "t" ];then
+	if [ "$RUN" -gt "3" ] || [ "$RUN" -lt "2" ];then
+		echo "SaX2: Invalid runlevel for console mode"
+		echo "SaX2: Please switch to runlevel 3 first"
+		echo 
+		echo "      init 3"
+		echo
+		echo "SaX2: abort..."
+		exit 0
+	fi
+	fi
+}
+
+#========================================
+# Init
+#----------------------------------------
+ERR="/var/log/SaX.log"
+SHC="/bin/sh"
+SUX="/usr/X11R6/bin/sux"
+
+if [ -z "$DISPLAY" ];then
+	export DISPLAY=:0
+fi
+
+#========================================
+# Main
+#----------------------------------------
+for param;do
+	if [ $param = "-v" ] || [ $param = "--version" ];then
+		/sbin/sax.sh -v
+		exit 0
+	fi
+	if [ $param = "-h" ] || [ $param = "--help" ];then
+		/sbin/sax.sh -h
+		exit 0
+	fi
+done
+validRunlevel
+
+# lookup temp file for language information...
+# ----------------------------------------------
+if [ ! "$UID" = 0 ];then
+	TMPFILE=`mktemp -q /tmp/sax_lenv.XXXXXX`
+	if [ $? -ne 0 ]; then
+	echo "SaX: Can't create tmp file, exiting..."
+	exit 1
+	fi 
+fi
+
+# test for root privileges...
+# ---------------------------
+if [ ! "$UID" = 0 ];then
+	# export LANG user environment...
+	# ---------------------------------
+	echo $LANG >> $TMPFILE
+
+	echo -n "SaX: root "
+	if [ -f "$SUX" ];then
+		sux -c "/sbin/SaX2 $*"
+	else
+		xhost + localhost > /dev/null 2>/dev/null
+		su - -c "/sbin/SaX2 $*"
+	fi
+
+	if [ ! "$?" = 0 ];then
+	echo
+	if [ ! -f "$SUX" ];then
+		xhost - localhost 2>/dev/null >/dev/null
+	fi
+	exit 1
+	fi
+
+	if [ ! -f "$SUX" ];then
+		xhost - localhost 2>/dev/null >/dev/null
+	fi
+	exit 0
+fi
+
+# Use sax2_sbus to configure Sun framebuffer cards
+# ------------------------------------------------
+if [ -x /sbin/sax2_sbus ] ; then
+	/sbin/sax2_sbus -s > /dev/null
+	if [ $? = 0 ] ; then
+		exit 0
+	fi
+fi
+
+# run the main sax start script...
+# ---------------------------------
+/sbin/sax.sh $*
+

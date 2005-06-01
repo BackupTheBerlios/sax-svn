@@ -1,0 +1,20 @@
+# /.../
+# profile to setup the second channel on a
+# radeon based laptop device using fglrx driver
+# ---------------------------------------------
+Device  -> [X] -> Option = SaXDualHead
+Device  -> [X] ->  Raw -> 20 -> Option = "MonitorLayout" "LVDS,CRT"
+Device  -> [X] ->  Raw -> 21 -> Option = "HSync2" "{Monitor->[X]->HorizSync}"
+Device  -> [X] ->  Raw -> 22 -> Option = "VRefresh2" "{Monitor->[X]->VertRefresh}"
+
+#================================
+# setup SaX meta options
+#--------------------------------
+Device  -> [X] -> Option = SaXDualHead
+Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "off"
+Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "{Monitor->[X]->HorizSync}"
+Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "off"
+Device  -> [X] -> Raw -> 30 -> Option = "SaXDualMode" "off"
+Device  -> [X] -> Raw -> 31 -> Option = "SaXDualMonitorVendor" "{Monitor->[X]->VendorName}"
+Device  -> [X] -> Raw -> 32 -> Option = "SaXDualMonitorModel" "{Monitor->[X]->ModelName}"

@@ -1,0 +1,280 @@
+#!/usr/bin/perl
+# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2002
+# xapi script: apply profile on specific device number
+# --
+#
+# getprofile 
+#   -p <ProfileFile> -d <DeviceNumber> -a <add|config>
+#
+# DeviceNumber
+# ============ 
+# number of the device the profile 
+# should be applied to
+#
+# ProfileFile
+# ============
+# file name of the profile
+#
+# add|config
+# ============
+# called with adding a card or configure
+# a specific card
+# 
+# CVS ID:
+# --------
+# Status: Up-to-date
+
+use lib '/usr/share/sax/modules';
+use lib '/usr/X11R6/lib';
+
+use strict;
+use Env;
+
+use HashMap;
+use ExportAPI;
+use Getopt::Long;
+
+my $Profile;
+my $Device;
+my $Action;
+my %init;
+
+no strict "vars";
+
+#----[ init ]------#
+sub init {
+#--------------------------------------------------
+# init options and variables with const information
+#
+ my $result = GetOptions(
+   "profile|p=s" => \$Profile,
+   "device|d=i"  => \$Device,
+   "action|a=s"  => \$Action     
+ );
+ $init{TmpDir}     = "/tmp";
+ $init{TmpLayout}  = "/tmp/layout";
+ $init{TmpDesktop} = "/tmp/desktop";
+ $init{TmpCard}    = "/tmp/card";
+}
+
+#---[ PrepareProfile ]---------#
+sub PrepareProfile {
+#--------------------------------------------------
+# prepare profile according to action. If we
+# configure a card just remove all the additional
+# sections of the profile
+#
+ my $line;
+ my @file;
+
+ if (open (FD,"$Profile")) {
+ while($line = <FD>) {
+  if (($line =~ /^#/) || ($line =~ /^$/)) {
+   next;
+  }
+  if ($Action ne "add") {
+  if ($line =~ /\[X\+.*\]/) {
+   next;
+  }
+  }
+  chomp ($line);
+  push(@file,$line);
+ }
+ close(FD);
+ }
+
+ if (open (FD,">$init{TmpDir}/$$")) {
+ foreach (@file) {
+  print FD "$_\n";
+ }
+ close(FD);
+ }
+ return ("$init{TmpDir}/$$");
+}
+
+#---[ ImportProfile ]-------#
+sub ImportProfile {
+#-----------------------------------------------
+# import profile information and return the
+# changes imported into the given hash
+#
+ my $profile = $_[0];      # profile file name
+ my $device  = $_[1];      # base device number 
+ my %source  = %{$_[2]};   # source hash
+
+ my $l;         # line
+ my $new;       # new device number
+ my @result;    # result as list
+ my @add;       # new sections through the profile
+ my $newsec;    # loop counter for new sections
+ my $data;      # raw profile key
+ my $line;      # raw profile data
+ my @v;         # list of keys (->)
+ my $search;    # formatted search string
+ my $size;      # size of @v
+ my $ViewValue; # Tree view
+ my $ViewRef;   # Tree view reference
+ my $key;       # equals $data
+ my $value;     # equals $ViewValue
+ my $str;       # join "->" @v
+
+ # check device...
+ # ----------------
+ if (! defined $device) {
+  $device = 0;
+ }
+
+ # check file...
+ # --------------
+ if (! -f $profile) {
+  return (%source);
+ }
+ # read profile data...
+ # ---------------------
+ open(DATA,"$profile");
+ while($l = <DATA>) {
+  chomp($l);
+  SWITCH: for ($l) {
+  /^.*\[X\].*/         && do {
+   $l =~ s/\[X\]/$device/g;
+  };
+
+  /^.*\[X\+([1-9]).*/  && do {
+   $new = $device + $1;
+   $l =~ s/\[X\+[1-9]\]/$new/g;
+   push(@add,$new);
+  };
+  }
+  push(@result,$l);
+ }
+ close(DATA);
+
+ # /.../
+ # include the data to the hash...
+ # ---
+ foreach (@result) {
+  if ($_ =~ /(.*)=.*{(.*)}.*/) {
+   $data      = $1;
+   $line      = $2;
+   $line      =~ s/ +//g;
+   @v         = split(/->/,$line);
+   $search    = join("->",@v);
+   $size      = @v;
+   $ViewValue = "";
+   $ViewRef   = "";
+   $ViewValue = HGetValue(\%source,$search);
+   $ViewValue =~ s/^ +//g;
+   $ViewValue =~ s/ +$//g;
+   $_ = "$data = $ViewValue\n";
+  }
+  if ($_ =~ /^(.*)=(.*)/) {
+   $key       = $1;
+   $value     = $2;
+   $key       =~ s/ +//g;
+   $value     =~ s/^ +//g;
+   @v         = split(/->/,$key);
+   $str       = join("->",@v);
+   %source    = HSetValue(\%source,$str,$value);
+  }
+ }
+
+ my $max = 0;
+ foreach (keys %{$source{Device}}) {
+  if ($_ > $max) { $max = $_ };
+ }
+ $Device = $max + 1;
+ %source = HUpdateServerLayout(\%source,$Device);
+ return (%source);
+}
+
+#---[ main ]-----#
+sub main {
+#----------------------------------------------------
+# do the job now...
+# create API interface file according to the
+# imported %dialog data
+#
+ my $section;
+ my $data;
+
+ # /.../
+ # initialize all variables...
+ # ---
+ init();
+
+ # /.../
+ # remove all api file parts...
+ # ---
+ unlink ($init{TmpLayout});
+ unlink ($init{TmpDesktop});
+ unlink ($init{TmpCard});
+
+ $data   = PrepareProfile();
+ %dialog = ImportProfile ($data,$Device,\%dialog);
+
+ foreach $section (keys %dialog) {
+ SWITCH: for ($section) {
+  # create Card section...
+  # ------------------------
+  /Device/         && do {
+   my @device  = CardGetDevice();
+   pop (@device); shift(@device);
+   if (open (FD,">$init{TmpCard}")) {
+    foreach (@device) {
+    chomp($_);
+    $_ =~ s/^ +//;
+    $_ =~ s/ / : /;
+    $_ =~ s/=/:/;
+    print FD "$_\n";
+    }
+   }
+   close (FD);
+   last SWITCH;
+  };
+  # create Monitor and Screen sections...
+  # --------------------------------------
+  /Screen/         && do {
+   my @desktop = DesktopGetDesktop();
+   pop(@desktop); shift(@desktop); 
+   if (open (FD,">$init{TmpDesktop}")) {
+    foreach (@desktop) {
+    chomp($_);
+    $_ =~ s/^ +//;
+    $_ =~ s/ / : /;
+    $_ =~ s/=/:/;
+    print FD "$_\n";
+    }
+   }
+   close (FD);
+   last SWITCH;
+  };
+  # create Layout section...
+  # -------------------------
+  /ServerLayout/   && do {
+   my @list;
+   my @layout  = LayoutGetServerLayout();
+   pop(@layout); shift(@layout);
+   if (open (FD,">$init{TmpLayout}")) {
+    foreach (@layout) {
+    chomp($_);
+    @list = split (/=/,$_);
+    $list[1] =~ s/ +//g;
+    if ($list[1] ne "") {
+     $_ =~ s/^ +//;
+     $_ =~ s/ / : /;
+     $_ =~ s/=/:/;
+     print FD "$_\n";
+    }
+    }
+   }
+   close (FD);
+   last SWITCH;
+  };
+ }
+ }
+ unlink ($data);
+}
+
+main();

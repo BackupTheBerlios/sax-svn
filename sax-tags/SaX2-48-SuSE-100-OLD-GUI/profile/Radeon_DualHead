@@ -1,0 +1,30 @@
+# settings for screen 0
+# ------------------------
+Device  -> [X]   ->  Driver           = radeon
+Device  -> [X]   ->  Screen           = 0
+
+# new device for Screen 1
+# ------------------------
+Device  -> [X+1] ->  BusID            = {Device -> [X] -> BusID}
+Device  -> [X+1] ->  VendorName       = {Device -> [X] -> VendorName}
+Device  -> [X+1] ->  BoardName        = {Device -> [X] -> BoardName}
+Device  -> [X+1] ->  Identifier       = Device[[X+1]]
+Device  -> [X+1] ->  Driver           = radeon
+Device  -> [X+1] ->  Screen           = 1
+
+# new desktop for Screen 1
+# -------------------------
+Screen  -> [X+1] ->  Device           = Device[[X+1]]
+Screen  -> [X+1] ->  Monitor          = Monitor[[X+1]]
+Screen  -> [X+1] ->  Identifier       = Screen[[X+1]]
+Screen  -> [X+1] ->  DefaultDepth     = 24
+Screen  -> [X+1] ->  Depth->8->Modes  = 640x480
+Screen  -> [X+1] ->  Depth->15->Modes = 640x480
+Screen  -> [X+1] ->  Depth->16->Modes = 640x480
+Screen  -> [X+1] ->  Depth->24->Modes = 640x480
+Screen  -> [X+1] ->  Depth->32->Modes = 640x480
+Monitor -> [X+1] ->  VertRefresh      = 50-62
+Monitor -> [X+1] ->  ModelName        = Unknown
+Monitor -> [X+1] ->  HorizSync        = 30-32
+Monitor -> [X+1] ->  VendorName       = Unknown
+Monitor -> [X+1] ->  Identifier       = Monitor[[X+1]]

@@ -1,0 +1,5 @@
+# Permedia Profile used if glint driver is
+# used. Alas we can only handle 8 Bit with this driver
+# -----------------------------------------------------
+Screen->[X]->DefaultDepth = 8
+Monitor->[X]->Modeline    = "" 

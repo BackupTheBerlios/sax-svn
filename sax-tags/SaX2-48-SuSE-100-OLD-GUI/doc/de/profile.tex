@@ -1,0 +1,160 @@
+\chapter{SaX2 Profile}
+\label{cha:pro}
+\minitoc
+Ein Profil ist eine spezielle Beschreibung bestimmter
+Kartenspezifischer Eigenschaften die nicht von SaX2 automatisch
+erfasst werden k"onnen oder f"ur eine standard Konfiguration 
+unbedingt notwendig sind. Ein Profil besteht aus einer oder mehreren 
+Profilzeilen die jeweils eine bestimmte Eigenschaft beschreiben. 
+Die Formulierung solcher Profilzeilen basiert auf folgendem Format: 
+
+\begin{verbatim}
+  Parameter -> Parameter -> ... -> Paramater = Wert
+\end{verbatim}
+
+Folgendes ist zu beachten:
+\begin{itemize}
+\item Gro"s und Klein Schreibung muss beachtet werden
+\item Die maximale Schachtelungstiefe liegt bei 6 Parametern
+\item Ein leerer Wert enth"alt einfach nichts ( ... Parameter = )
+\item Das Trennsymbol zwischen den Paramtern ist der Pfeil ( \verb+->+ )
+\end{itemize}
+
+Eingriffe in die Konfiguration durch Profilzeilen beinflussen 
+direkt die Inhalte des \%var Hashes der zum Aufbau der Registrierung 
+und Erzeugung der Initialkonfiguration verwendet wird. Es ist 
+unbedingt erforderlich die Hashstruktur zu kennen um sinnvolle
+Profilzeilen zu erzeugen. Die Hash-Struktur ist kein statisches 
+Gebilde Sie kann beliebig durch Profilzeilen erweitert werden, 
+es ist aber nicht sicher, dass alle Daten des Hashes dann auch in 
+der Konfiguration Anwendung finden, da eben einfach alles in den 
+Hash eingebracht werden kann. Die automatisch erzeugte Hash-Struktur
+beim Start von SaX2 zeigt den prinzipiellen Aufbau des Hashes 
+und hilft bei der Erstellung von Profilzeilen. Einen Einblick 
+in die Struktur erhalten Sie durch die Daten im Anhang A.\\ 
+
+Da nun das Format der Profilzeilen klar ist gilt es die 
+unterschiedlichen Modi zu unterscheiden. Profilzeilen k"onnen zum 
+einen in \textbf{Profildateien} eingetragen sein und zum 
+anderen "uber die \textbf{SaX2 Shell} innerhalb des \textit{SaX2 batch modus}
+eingegeben werden.
+
+\section{Die SaX2 Shell}
+Der interaktive Modus bietet dem Nutzer folgende Befehle an:
+\begin{itemize}
+\item  \textbf{list}\\
+       Das \textit{list} Kommando gibt alle Einstellungen der
+       aktuellen Registry aus
+
+\item  \textbf{see}\\
+       Das \textit{see} Kommando dient der Anzeige einer
+       bestimmten Einstellung. Zum Beispiel die verwendeten Module
+       \verb+see Module->0->Load+
+
+\item  \textbf{calc}\\
+       Das \textit{calc} Kommando dient zur Errechnung von
+       Modelinetimings. Zum Beispiel:\\
+       \verb+calc 1024x768->70+ Errechnet eine Modeline f"ur
+       den Modus 1024x768 bei 70 Herz.
+
+\item  \textbf{abort}\\
+       Beendet den interactiven Modus und verwirft alle "Anderungen
+
+\item  \textbf{exit}\\
+       Beendet den interactiven Modus und speicher alle "Anderungen
+
+\item  \textbf{Setzen von Variablen}\\
+       Das Setzen von Variablen erfolgt durch Eingabe des vollen
+       Variablenpfades inklusive einer Wertzuweisung. Zum Beispiel:\\
+       \verb+Module->0->Load = glx,dri+
+\end{itemize}
+
+\section{Die Erstellung von Profildateien}
+Bei den Profildateien muss unterschieden werden zwischen jenen 
+die einer bestimmten Karte zugeordnet wurden und von SaX2 selbst 
+erkannt und angewendet wurden \textbf{(automatische Profile)} und jenen 
+die frei "uber die Option -b <Dateiname> zugeordnet werden 
+\textbf{unbound Profile}. F"ur beide Profilarten gelten die nun 
+folgenden Bedingungen mit einer Ausnahme:
+\begin{itemize}
+\item Ungebundene Profile werden immer der Karte \textbf{0} zugeordnet.
+      Automatische Profile hingegen kennen die Nummer der Karte an die
+      sie gebunden werden sollen. Der Platzhalter \verb+[X]+ ist 
+      gleichzusetzen mit \textbf{0}
+\item Alle automatischen Profile m"ussen unter /usr/share/sax/profile/ 
+      abgelegt werden. Gibt es in der 
+      \textit{/usr/share/sax/sysp/modules/maps/Identity.map} einen 
+      Eintrag PROFILE=... so wird das Profil f"ur diese Karte 
+      automatisch hinzugebunden.
+\end{itemize} 
+
+Die Verarbeitung der Profildateien bietet etwas mehr Flexibilit"at 
+gegen"uber dem interaktiven Modus. Innerhalb der Profildatei ist
+es m"oglich auf bereits definierte Hash-Variablen zuzugreifen sowie
+Platzhalter zur Kartenindizierung festzulegen und mit diesen zu 
+Rechnen ( einfach Addition ).
+\begin{itemize}
+\item \textbf{Platzhalter:}\\
+      Der Platzhalter darf nur innerhalb der Parameterdefinition 
+      auftauchen und hat folgendes Struktur: \verb+[X]+. Dieser
+      Konstrukt wird dann zu einer Nummer die der Karte entspricht 
+      an die die Profilzeile zugeordnet werden soll. Das ganze
+      macht nur Sinn wenn es sich um ein automatisches Profil handelt.
+\item \textbf{Indexrechnung:}\\
+      Durch die Angabe von \verb=[X+n]= kann
+      die durch den Platzhalter festgelegte Nummer um \textit{n}
+      vergr"ossert werden.
+\item \textbf{Variablen:}\\
+      Durch die Angaben von:
+      \begin{verbatim}
+      ... = {Parameter -> Parameter -> ... -> Parameter}
+      \end{verbatim}
+      kann der Inhalt dieses Hashwertes genutzt werden. 
+\end{itemize}
+
+Diese Eigenschaften sind im interaktiven Modus nicht verf"ugbar.
+Das folgende Beispiel enth"alt so ziemlich alles was man mit
+einem Profil erreichen kann. Es dient dazu die Dualhead
+Unterst"utzung der Matrox G450 zu aktivieren. Diese Karte 
+meldet sich leider nicht als Dualheadkarte auf dem PCI/AGP
+Bus an, aus diesem Grund muss ein Profil einiges dazu tun.
+\begin{verbatim}
+ # settings for screen 0
+ # ------------------------
+ Device  -> [X]   ->  Option           =
+ Device  -> [X]   ->  Screen           = 0
+
+ # new device for Screen 1
+ # ------------------------
+ Device  -> [X+1] ->  BusID            = {Device -> 0 -> BusID}
+ Device  -> [X+1] ->  Videoram         = {Device -> 0 -> Videoram}
+ Device  -> [X+1] ->  VendorName       = {Device -> 0 -> VendorName}
+ Device  -> [X+1] ->  Option           =
+ Device  -> [X+1] ->  Identifier       = Device[1]
+ Device  -> [X+1] ->  BoardName        = {Device -> 0 -> BoardName}
+ Device  -> [X+1] ->  Driver           = {Device -> 0 -> Driver}
+ Device  -> [X+1] ->  Screen           = 1
+
+ # new desktop for Screen 1
+ # -------------------------
+ Screen  -> [X+1] ->  Device           = Device[1]
+ Screen  -> [X+1] ->  Monitor          = Monitor[1]
+ Screen  -> [X+1] ->  Identifier       = Screen[1]
+ Screen  -> [X+1] ->  DefaultDepth     = 16
+ Screen  -> [X+1] ->  Depth->16->Modes = 640x480
+ Monitor -> [X+1] ->  VertRefresh      = 50-62
+ Monitor -> [X+1] ->  ModelName        = Unknown
+ Monitor -> [X+1] ->  HorizSync        = 30-32
+ Monitor -> [X+1] ->  VendorName       = Unknown
+ Monitor -> [X+1] ->  Identifier       = Monitor[1]
+
+ # new Layout settings for multi display mode
+ # -------------------------------------------
+ ServerLayout -> all -> Screen -> 0 -> left  = <none>
+ ServerLayout -> all -> Screen -> 0 -> Right = Screen[1]
+ ServerLayout -> all -> Screen -> 1 -> id    = Screen[1]
+ ServerLayout -> all -> Screen -> 1 -> left  = Screen[0]
+ ServerLayout -> all -> Screen -> 0 -> Right = <none>
+\end{verbatim}
+
+

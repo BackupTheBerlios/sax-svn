@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+# Copyright (c) 2002 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2002
+# xapi script: get busID`s from sysp
+# --
+#
+# CVS ID:
+# --------
+# Status: Up-to-date
+#
+use strict;
+use Env;
+
+my $sysp = "/sbin/sysp -c";
+my @data = split (/\n/,qx($sysp));
+
+my @idlist;
+foreach (@data) {
+if ($_ =~ /.*([0-9][0-9]:[0-9][0-9]:[0-9]).*/) {
+	@idlist = split (/:/,$1);
+	printf ("%1d:%1d:%1d\n",$idlist[0],$idlist[1],$idlist[2]);
+}
+}

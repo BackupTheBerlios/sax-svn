@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# /.../
+# Find out which language SaX2 will use for
+# the user interface:
+# ---
+tmplang=${LANGUAGE-${LC_ALL-${LC_MESSAGES-${LANG-en_US}}}}
+
+# /.../
+# run fvwm with LC_ALL set to a suitable UTF-8 locale for that language
+# because
+# - display the UTF-8 texts received from SaX2 correctly
+# - make the alias "sans-serif" from fvwmrc expand to a suitable font
+#   for the language
+# ---
+export LC_ALL=`echo ${tmplang} |sed -e 's/[.@:].*//'`.UTF-8
+exec /usr/X11R6/bin/fvwm2 "$@"
