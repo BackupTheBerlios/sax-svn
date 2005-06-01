@@ -51,7 +51,7 @@ USRLIBVZ       = ${lib_prefix}
 INCVZ          = ${usr_prefix}/include/sax
 LOCALEVZ       = ${usr_prefix}/share/locale
 XFINEBINVZ     = ${xfi_prefix}
-XFINEPIXMAPS   = ${xfi_prefix}/pixmaps
+XFINEPIXMAPS   = ${xfi_prefix}/figures
 LIBDOCDIR      = ${usr_prefix}/share/doc/packages/libsax
 LIBTOOLDIR     = ${buildroot}/var/lib/sax
 WMVZ           = ${usr_prefix}/X11R6/share/fvwm
@@ -210,7 +210,7 @@ install:
 	#============================================
 	# install XFine2...
 	#--------------------------------------------
-	install -m 644 ./xfine/pixmaps/*                        ${XFINEPIXMAPS}
+	install -m 644 ./xfine/figures/*                        ${XFINEPIXMAPS}
 	install -m 755 ./xfine/xfine                            ${SBINVZ}
 	install -m 644 ./xfine/xfine.gtx                        ${XFINEBINVZ}
 

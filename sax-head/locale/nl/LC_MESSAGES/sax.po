@@ -17,589 +17,506 @@ msgstr ""
 "X-Generator: KBabel 1.10\n"
 
 #. /.../
-#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #. This file contains the gettext keys used within a gettext call in the
-#. application code for SaX2
+#. application code for the SaX2 and XFine GUI
 #.
-#. Maximum length: 20  characters
-msgid "Component"
-msgstr "Component"
+#. RTF text: Startup information for the user
+msgid ""
+"<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 suggestie</b><hr>Het huidige opgestarte grafische systeem is "
+"gebaseerd op een door SaX2 gemaakte suggestie. Druk op <b>Ok</b> wanneer dit "
+"te accepteren is. Zo niet: wijzig de configuratie."
 
-#. Maximum length: 20  characters
-msgid "with"
-msgstr "met"
+#. Caption text for the startup information window
+msgid "Automatic graphics system set up"
+msgstr "Automatische grafische systeem setup"
 
-#. Maximum length: 20  characters
-msgid "USB"
-msgstr "USB"
+#. Caption text for the main window
+msgid "SaX2 - SuSE Advanced X11 configuration"
+msgstr ""
 
-#. Maximum length: 20  characters
-msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr ""
 
-#. Maximum length: 20  characters
-msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr "COM-2 [ /dev/ttyS1 ]"
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr ""
 
-#. Maximum length: 20  characters
-msgid "Relative"
-msgstr "Relatief"
+#. Help Button text
+msgid "&Help"
+msgstr "&Help"
 
-#. Maximum length: 20  characters
-msgid "Absolute"
-msgstr "Absoluut"
+#. Ok Button text
+msgid "&Ok"
+msgstr "&Ok"
 
-#. Maximum length: 20  characters
-msgid "Connected to:"
-msgstr "Verbonden met:"
+#. Yes Button text
+msgid "&Yes"
+msgstr "&Ja"
 
+#. No Button text
+msgid "&No"
+msgstr "&Nee"
+
+#. Cancel Button text
 #. Maximum length: 40  characters
-msgid "3D Acceleration"
-msgstr "3D versnelling"
+msgid "&Cancel"
+msgstr "&Annuleren"
 
-#. Maximum length: 60  characters
-msgid "Not configured"
-msgstr "Niet geconfigureerd"
+#. RTF text: exit SaX message
+msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
+msgstr "<b>SaX2 afsluiten:</b><hr>Wilt u SaX2 nu afsluiten?"
 
-#. Maximum length: 60  characters
-msgid "<Enter new password...>"
-msgstr "<Geef nieuw wachtwoord...>"
+#. Message box default caption text
+msgid "Message..."
+msgstr ""
 
-#. Maximum length: 60  characters
-msgid "<Change password...>"
-msgstr "<Wijzig wachtwoord...>"
+#. Change configuration Button text
+msgid "C&hange configuration"
+msgstr "&Wijzig configuratie"
 
-#. Maximum length: 60  characters
-msgid "Not available"
-msgstr "Niet beschikbaar"
+#. Short description of the Monitor module
+#, fuzzy
+msgid "Monitor System"
+msgstr "Monitor"
 
-#. Maximum length: 40  characters
-msgid "Use the following AccessX settings"
-msgstr "Gebruik de volgende AccessX instellingen"
+#. Basic description of what the monitor module is used for
+#, fuzzy
+msgid "Setup Card and Monitor properties"
+msgstr "Monitor eigenschappen instellen..."
 
-#. Maximum length: 40  characters
-msgid "Disable AccessX"
-msgstr "AccessX deactiveren"
+#. Short description of the Mouse module
+#, fuzzy
+msgid "Mouse System"
+msgstr "X11 systeem"
 
-#. Maximum length: 60  characters
-msgid "Primary Setup"
-msgstr "Primaire instelling"
+#. Basic description of what the mouse module is used for
+#, fuzzy
+msgid "Setup Mouse properties"
+msgstr "Speciale muis eigenschappen..."
 
-#. Maximum length: 60  characters
-msgid "Additional Layout(s)"
-msgstr "Extra layout(s)"
+#. Short description of the Keyboard module
+#, fuzzy
+msgid "Keyboard System"
+msgstr "Toetsenbord"
 
-#. Maximum length: 60  characters
-msgid "Miscellaneous"
-msgstr "Allerlei"
+#. Basic description of what the keyboard module is used for
+#, fuzzy
+msgid "Setup Keyboard properties"
+msgstr "Monitor eigenschappen instellen..."
 
-#. Maximum length: 60  characters
-msgid "Layout"
-msgstr "Layout"
+#. Short description of the Tablet module
+#, fuzzy
+msgid "Tablet System"
+msgstr "Tablet"
 
-#. Maximum length: 60  characters
-msgid "Status"
-msgstr "Status"
+#. Basic description of what the tablet module is used for
+#, fuzzy
+msgid "Setup tablet properties"
+msgstr "Monitor eigenschappen instellen..."
 
-#. Maximum length: 60  characters
-msgid "Keytable"
-msgstr "Toetsentabel"
+#. Short description of the Touchscreen module
+#, fuzzy
+msgid "Touchscreen System"
+msgstr "Aanraakbeeldscherm"
 
-#. Maximum length: 60  characters
-msgid "Variant"
-msgstr "Variant"
+#. Basic description of what the touchscreen module is used for
+#, fuzzy
+msgid "Setup touchscreen properties"
+msgstr "Monitor eigenschappen instellen..."
 
-#. Maximum length: 60  characters
-msgid "Type"
-msgstr "Type"
+#. Short description of the VNC module
+#, fuzzy
+msgid "VNC System"
+msgstr "X11 systeem"
 
-#. Maximum length: 60  characters
-msgid "This screen is selected"
-msgstr "Dit scherm is geselecteerd"
+#. Basic description of what the VNC module is used for
+#, fuzzy
+msgid "Setup remote access properties"
+msgstr "Monitor eigenschappen instellen..."
 
-#. Maximum length: 20  characters
-msgid "at"
-msgstr "op"
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "Beeldscherm"
 
-#. Maximum length: 20  characters
+#. Tab text for a display tab of the mouse dialog
 msgid "Mouse"
 msgstr "Muis"
 
-#. Maximum length: 30  characters
-msgid "Add Pen"
-msgstr "Pen toevoegen"
+#. Activate display checkbox
+msgid "Activate this display"
+msgstr ""
 
-#. Maximum length: 30  characters
-msgid "Add Eraser"
-msgstr "Wisser toevoegen"
+#. Activate mouse checkbox
+msgid "Activate this pointer"
+msgstr ""
 
-#. Maximum length: 20  characters
-msgid "Tools"
-msgstr "Tools"
+#. Graphics Card name label
+msgid "Card"
+msgstr ""
 
-#. Maximum length: 20  characters
-msgid "Sync ranges"
-msgstr "Sync bereiken"
-
-#. Maximum length: 60  characters
-msgid "Unknown monitor model"
-msgstr "Onbekend monitor model"
-
-#. Maximum length: 40  characters
-msgid "Mouse test field: Ready..."
-msgstr "Muis test veld: klaar..."
-
-#. Maximum length: 40  characters
-msgid "Single button click: Done"
-msgstr "Enkele knop klik: klaar"
-
-#. Maximum length: 40  characters
-msgid "Double button click: Done"
-msgstr "Dubbele knop klik: klaar"
-
-#. Maximum length: 40  characters
-msgid "Wheel is moving..."
-msgstr "Wiel beweegt..."
-
-#. Maximum length: 40  characters
-msgid "Button pressed..."
-msgstr "Knop ingedrukt..."
-
-#. Maximum length: 40  characters
-msgid "Button released..."
-msgstr "Knop losgelaten..."
-
-#. Maximum length: 40  characters
-msgid "Wheel stopped: Done"
-msgstr "Wiel is gestopt: klaar"
-
-#. Maximum length: 40  characters
-msgid "Disable use of accented letters"
-msgstr "Het gebruik van geaccentueerde letters uitschakelen"
-
-#. Maximum length: 40  characters
-msgid "Clear test field"
-msgstr "Testveld leegmaken"
-
-#. Maximum length: 40  characters
-msgid "Test field"
-msgstr "Testveld"
-
-#. Maximum length: 50  characters
-msgid "Mouse speed in pixels/sec"
-msgstr "Muissnelheid in pixels/sec"
-
-#. Maximum length: 50  characters
-msgid "Rotate Screen"
-msgstr "Scherm draaien"
-
-#. Maximum length: 30  characters
-msgid "Not rotated"
-msgstr "Niet gedraaid"
-
-#. Maximum length: 30  characters
-msgid "To the left"
-msgstr "Naar links"
-
-#. Maximum length: 30  characters
-msgid "To the right"
-msgstr "Naar rechts"
-
-#. Maximum length: 50  characters
-msgid "&Remove Tablet..."
-msgstr "&Verwijder tablet..."
-
-#. Maximum length: 50  characters
-msgid "Delay time: (ms)"
-msgstr "Wachttijd: (ms)"
-
-#. Maximum length: 50  characters
-msgid "Select resolutions"
-msgstr "Selecteer resoluties"
-
-#. Maximum length: 50  characters
-msgid "Emulate wheel with mouse button:"
-msgstr "Emuleer wiel met muis knop:"
-
-#. Maximum length: 50  characters
-msgid "Repeat rate: (Symbols/sec)"
-msgstr "Herhalingssnelheid: (karakters/sec)"
-
-#. Maximum length: 50  characters
-msgid "&Apply"
-msgstr "&Bevestigen"
-
-#. Maximum length: 65  characters
-msgid "Graphics engine starts with resolution:"
-msgstr "Grafische engine start met resolutie:"
-
-#. Maximum length: 20  characters
-msgid "Hardware"
-msgstr "Hardware"
-
-#. Maximum length: 20  characters
-msgid "Velocity"
-msgstr "Snelheid"
-
-#. Maximum length: 20  characters
-msgid "Tablet"
-msgstr "Tablet"
-
-#. Maximum length: 20  characters
-msgid "Touchscreen"
-msgstr "Aanraakbeeldscherm"
-
-#. Maximum length: 40  characters
-msgid "Select Keyboard Layout"
-msgstr "Selecteer toetsenbord layout"
-
-#. Maximum length: 40  characters
-msgid "Symbol recurrence"
-msgstr "Symbool herhaling"
-
-#. Maximum length: 40  characters
-msgid "<nobr><h3>Keyboard Type</h3></nobr>"
-msgstr "<nobr><h3>Toetsenbord type</h3></nobr>"
-
-#. Maximum length: 20  characters
-#. Maximum length: 40  characters
-msgid "Screen"
-msgstr "Scherm"
-
-#. Maximum length: 40  characters
-msgid "BusID"
-msgstr "Bus ID"
-
-#. Maximum length: 40  characters
-msgid "ScreenID"
-msgstr "Scherm ID"
-
-#. Maximum length: 50  characters
-msgid "Manufacturer Disk..."
-msgstr "Fabrikant disk..."
-
-#. Maximum length: 20  characters
-msgid "Keyboard"
-msgstr "Toetsenbord"
-
-#. Maximum length: 20  characters
+#. Monitor name label
 msgid "Monitor"
 msgstr "Monitor"
 
-#. Maximum length: 20  characters
-msgid "Monitor-Model"
-msgstr "Monitor model"
+#. Change data
+#, fuzzy
+msgid "&Change..."
+msgstr "<Wijzig wachtwoord...>"
 
-#. Maximum length: 25 characters
-msgid "Shift/Lock Group"
-msgstr "Shift/lock groep"
+#. Set options for some kind of data
+msgid "&Options..."
+msgstr "&Opties..."
 
-#. Maximum length: 25 characters
-msgid "Ctrl Mapping"
-msgstr "Ctrl mapping"
+#. Configure some data
+#, fuzzy
+msgid "Con&figure..."
+msgstr "Configureer toetsenbord..."
 
-#. Maximum length: 25 characters
-msgid "LeftAlt mapping"
-msgstr "LeftAlt mapping"
-
-#. Maximum length: 25 characters
-msgid "RightAlt mapping"
-msgstr "RightAlt mapping"
-
-#. Maximum length: 25 characters
-msgid "ScrollLock mapping"
-msgstr "ScrollLock mapping"
-
-#. Maximum length: 25 characters
-msgid "RightCtl mapping"
-msgstr "RightCtl mapping"
-
-#. Maximum length: 50 characters
-msgid "Default"
-msgstr "Standaard"
-
-#. Maximum length: 50 characters
-msgid "R-Alt switch group while pressed"
-msgstr "R-Alt indrukken voor groepswissel"
-
-#. Maximum length: 50 characters
-msgid "R-Alt switch group"
-msgstr "R-Alt wissel groep"
-
-#. Maximum length: 50 characters
-msgid "Both Shift Keys change group"
-msgstr "Beide shift-toetsen wijzigen de groep"
-
-#. Maximum length: 50 characters
-msgid "Ctrl and Shift change group"
-msgstr "Ctrl en shift wijzigen de groep"
-
-#. Maximum length: 50 characters
-msgid "Alt and Ctrl change group"
-msgstr "Alt en Ctrl wijzigen de groep"
-
-#. Maximum length: 50 characters
-msgid "CapsLock as additional control"
-msgstr "CapsLock als extra besturing"
-
-#. Maximum length: 50 characters
-msgid "Swap Ctrl and CapsLock"
-msgstr "Verwissel Ctrl en CapsLock"
-
-#. Maximum length: 50 characters
-msgid "Ctrl Key at left of <A>"
-msgstr "Ctrl-toets links van <A>"
-
-#. Maximum length: 50 characters
-msgid "Ctrl Key at bottom left"
-msgstr "Ctrl toets links beneden"
-
-#. Maximum length: 50  characters
-msgid "Modeline Algorithm"
-msgstr "Modeline algoritme"
-
-#. Maximum length: 50  characters
-msgid "Display Size in [ mm ]"
-msgstr "Beeldscherm grootte in [ mm ]"
-
-#. Maximum length: 20  characters
-msgid "Color and Resolution"
-msgstr "Kleur en resolutie"
-
-#. Maximum length: 20  characters
-msgid "Virtual Resolution"
-msgstr "Virtuele resolutie"
-
-#. Maximum length: 40  characters
-msgid "Language Layout"
-msgstr "Taal layout"
-
-#. Maximum length: 20  characters
-msgid "Screen Layout"
-msgstr "Scherm layout"
-
-#. Maximum length: 20  characters
-msgid "Server layout:"
-msgstr "Server layout:"
-
-#. Maximum length: 20  characters
-msgid "Mode:"
-msgstr "Mode:"
-
-#. Maximum length: 40  characters
-msgid "Horizontal:"
-msgstr "Horizontaal:"
-
-#. Maximum length: 40  characters
-msgid "Vertical:"
-msgstr "Verticaal:"
-
-#. Maximum length: 10 characters
-msgid "KHz"
-msgstr "KHz"
-
-#. Maximum length: 10 characters
-msgid "MHz"
-msgstr "MHz"
-
-#. Maximum length: 10 characters
-msgid "Hz"
-msgstr "Hz"
-
-#. Maximum length: 20  characters
-msgid "Multihead Mode"
+#. Group box title for dual head setup
+#, fuzzy
+msgid "DualHead mode"
 msgstr "Multihead mode"
 
-#. Maximum length: 50  characters
-msgid "Enable or Disable AccessX"
-msgstr "AccessX aan- of uitzetten"
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+#, fuzzy
+msgid "Options"
+msgstr "&Opties"
 
-#. Maximum length: 40  characters
-msgid "Enable 3D features"
-msgstr "3D opties aanzetten"
+#. CheckBox label to activate the mouse wheel
+#, fuzzy
+msgid "Activate Mouse Wheel"
+msgstr "Muiswiel activeren"
 
-#. Maximum length: 50  characters
-msgid "Enable DPMS"
-msgstr "DPMS aanzetten"
+#. CheckBox label to activate the 3 Button emulation
+#, fuzzy
+msgid "Activate 3-button emulation"
+msgstr "3-knop emulatie activeren"
 
-#. Maximum length: 40  characters
-msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
-msgstr "<nobr><h3><u>Multihead mode instelling...</u></h3></nobr>"
+#. CheckBox label to activate the wheel emulation
+msgid "Emulate wheel with mouse button:"
+msgstr "Emuleer wiel met muis knop:"
 
-#. Maximum length: 60  characters
-msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>3D/OpenGL instelling...</u></h3></nobr>"
+#. Group box title for card rotation
+#, fuzzy
+msgid "Rotate screen"
+msgstr "Scherm draaien"
 
-#. Maximum length: 40  characters
-msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>AccessX instelling...</u></h3></nobr>"
+#. Group box title for the mouse test field
+msgid "Test field"
+msgstr "Testveld"
 
-#. Maximum length: 40  characters
-msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<nobr><h3><u>VNC instelling...</u></h3></nobr>"
+#. Line edit label pointing to the keyboard test field
+#, fuzzy
+msgid "Test:"
+msgstr "&Test..."
 
-#. Maximum length: 60 characters
-msgid "Selected component:"
-msgstr "Geselecteerd component:"
+#. Button text in final step message box for testing the configuration
+#, fuzzy
+msgid "&Test"
+msgstr "&Test..."
 
-#. Maximum length: 80 characters
-msgid "Select Diagonal and Aspect Ratio..."
-msgstr "Selecteer diagonaal en aspect verhouding..."
+#. Button text in final step message box for saving the configuration
+msgid "&Save"
+msgstr "&Opslaan"
 
-#. Maximum length: 40 characters
-msgid "inches"
-msgstr "inches"
+#. Tab text for a layout tab of the keyboard dialog
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Layout"
 
-#. Maximum length: 70 characters
-msgid "Click 'Apply' to test your settings."
-msgstr "Druk op 'Toepassen' om uw instellingen te testen."
+#. Status line of mouse test field: ready
+#, fuzzy
+msgid "Testfield: Ready..."
+msgstr "Muis test veld: klaar..."
 
-#. RTF text: no limit
-msgid ""
-"<b>Current Layout and Model doesn't seem to be a good match</b><hr>This is a "
-"warning only but make sure your keyboard model is able to map all the keys "
-"needed for the selected layout."
+#. Status line of mouse test field: single button click
+#, fuzzy
+msgid "Single click: Done"
+msgstr "Enkele knop klik: klaar"
+
+#. Status line of mouse test field: double button click
+#, fuzzy
+msgid "Double click: Done"
+msgstr "Dubbele knop klik: klaar"
+
+#. Status line of mouse test field: wheel moved
+#, fuzzy
+msgid "Scrolling..."
+msgstr "ScrollLock mapping"
+
+#. Status line of mouse test field: button pressed
+msgid "Button pressed..."
+msgstr "Knop ingedrukt..."
+
+#. Status line of mouse test field: button released
+msgid "Button released..."
+msgstr "Knop losgelaten..."
+
+#. Status line of mouse test field: wheel stopped
+#, fuzzy
+msgid "Stopped: Done"
+msgstr "Wiel is gestopt: klaar"
+
+#. Group box title for properties
+#, fuzzy
+msgid "Properties"
+msgstr "Eigenschappen..."
+
+#. Activate dual head mode checkbox
+msgid "Activate DualHead mode"
 msgstr ""
-"<b>De huidige layout en het model lijken niet goed bij elkaar te passen.</"
-"b><hr>Dit is slechts een waarschuwing, verzeker u zich er echter van dat de "
-"toetsen van uw toetsenbord-model met die van de geselecteerde layout "
-"overeenkomen."
 
-#. RTF text: no limit
-msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
+#. Set display resolution
+#, fuzzy
+msgid "Resolution:"
+msgstr "Resolutie Y"
+
+#. Set display colord
+#, fuzzy
+msgid "Colors:"
+msgstr "&Kleuren"
+
+#. Activate 3D checkboc
+#, fuzzy
+msgid "Activate 3D acceleration"
+msgstr "3D versnelling"
+
+#. Tab title: Setup monitor properties for card X
+#, fuzzy
+msgid "Monitor for card:"
+msgstr "Monitor model"
+
+#. Tab title: Setup monitor for second channel on card X
+msgid "Second monitor for card:"
+msgstr ""
+
+#. Tab title: Setup sync frequencies
+#, fuzzy
+msgid "Sync-Frequencies"
+msgstr "&Frequenties"
+
+#. Tab title: Setup display size
+msgid "Display size"
+msgstr "Beeldscherm grootte"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
+msgstr ""
+
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
+msgstr ""
+
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
+msgstr ""
+
+#. Monitor Model is unknown and should be changed
+#, fuzzy
+msgid "Unknown Monitor please change"
+msgstr "Onbekend monitor model"
+
+#. Mouse Model is unknown and should be changed
+msgid "Unknown Mouse please change"
+msgstr ""
+
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot deactivate all displays:</b><hr><nobr>At least one display has to "
+"be active</nobr>"
+msgstr ""
+
+#. Info label for dual head checkbox
+msgid "No configuration available please configure"
+msgstr ""
+
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"Traditionele multihead:\n"
+"Elk scherm is een onafhankelijk beeldscherm"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"Gekloonde multihead:\n"
+"Elk beeldscherm is een kloon van het primaire beeldscherm"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Xinerama multihead:\n"
+"Van alle schermen één groot beeldscherm maken"
+
+#. Title for multihead modi
+#, fuzzy
+msgid "Multihead Modus"
+msgstr "Multihead mode"
+
+#. Monitor X - connected to - CardY
+#, fuzzy
+msgid "Connected to"
+msgstr "Verbonden met:"
+
+#. Tooltip text if monitor is unknown
+#, fuzzy
+msgid "Unknown monitor:"
+msgstr "Onbekende monitor..."
+
+#. Tooltip text for primary monitor
+#, fuzzy
+msgid "Primary monitor:"
+msgstr "Primaire modeline:"
+
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+#, fuzzy
+msgid "Monitor settings..."
+msgstr "Kleur selectie..."
+
+#. Windowanager title for the mouse mode setup
+msgid "Mouse settings..."
+msgstr ""
+
+#. Windowanager title for the card options dialog
+#, fuzzy
+msgid "Graphics card settings..."
+msgstr "Grafische kaart"
+
+#. Windowanager title for the dual head setup
+msgid "Dualhead settings..."
+msgstr ""
+
+#. Radiobutton don't rotate
+msgid "Not rotated"
+msgstr "Niet gedraaid"
+
+#. Radiobutton rotate to the left side
+msgid "To the left"
+msgstr "Naar links"
+
+#. Radiobutton rotate to the right side
+msgid "To the right"
+msgstr "Naar rechts"
+
+#. Popup message to ask the user for an option value
+#, fuzzy
+msgid ""
+"<b>Option needs a value</b><hr><nobr>Please setup a value for the %1 option."
+"</nobr>"
 msgstr ""
 "<b>Optie %1 heeft een waarde nodig</b><hr>Geef deze optie een waarde aub."
 
-#. RTF text: no limit
+#. Group box title for the monitor vendor and name selection
+#, fuzzy
+msgid "Monitor: Vendor and Name selection"
+msgstr "Model: merk en naam selectie..."
+
+#. Group box title for the mouse vendor and name selection
+#, fuzzy
+msgid "Mouse: Vendor and Name selection"
+msgstr "Model: merk en naam selectie..."
+
+#. Group box title for the manual sync frequency set up
+#, fuzzy
+msgid "Manual sync frequency set up"
+msgstr "Handmatige sync-frequentie instelling..."
+
+#. Group box title for the aspect/ratio selection
+#, fuzzy
+msgid "Select Diagonal and Aspect Ratio"
+msgstr "Selecteer diagonaal en aspect verhouding..."
+
+#. Group box title for the display size setup
+msgid "Display Size in [ mm ]"
+msgstr "Beeldscherm grootte in [ mm ]"
+
+#. Text message telling to be carefull with the monitor sync frequencies
+#, fuzzy
 msgid ""
-"<b>OpenGL acceleration not possible in multihead environments</b><hr>The 3D "
-"subsystem is unable to work within a multihead environment."
+"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
+"monitor manual for the settings.<br><br>If you want your monitor not to use "
+"its maximum rating you can decrease the sync ranges to more <i>powerless</i> "
+"values."
 msgstr ""
-"<b>De OpenGL acceleratie in multihead werkomgevingen is niet mogelijk</"
-"b><hr>Het 3D subsysteem werkt niet binnen een multihead werkomgeving."
+"<b>Opmerking:</b><h>Foutieve sync bereiken kunnen uw monitor beschadigen. "
+"Raadpleeg voor de volgende instellingen het monitorhandboek."
 
-#. RTF text: no limit
-msgid ""
-"<b>3D Acceleration impossible</b><hr>The installed card cannot use hardware "
-"3D/OpenGL acceleration."
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
 msgstr ""
-"<b>3D acceleratie onmogelijk</b><hr>De geïnstalleerde kaart kan de 3D/OpenGL "
-"acceleratie hardware niet gebruiken."
 
-#. RTF text: no limit
-msgid ""
-"<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL drivers "
-"require a color depth of <b>16 Bit (65536)</b> to work properly. The "
-"currently used color setup does not fulfill this requirement. Verify the "
-"current default color depth setup."
-msgstr ""
-"<b>Foutieve kleurdiepte voor de OpenGL acceleratie</b><hr>De meeste OpenGL "
-"drivers hebben een kleurdiepte van <b>16 Bit (65536)</b> nodig om goed te "
-"kunnen werken. De momenteel gebruikte kleurdiepte-instelling voldoet niet "
-"aan deze eis. Verifieer de huidige standaard kleurdiepte-instelling."
-
-#. RTF text: no limit
-msgid ""
-"<b>Password mismatch</b><hr>The first and the second version of the password "
-"don't match ! Please try again."
-msgstr ""
-"<b>Wachtwoord komt niet overeen</b><hr>De eerste en de tweede versie van het "
-"wachtwoord komen niet overeen! Probeer het nog eens aub."
-
-#. RTF text: no limit
-msgid ""
-"<b>Password fault</b><hr>The password field has been left empty or the "
-"password is too short. Please enter a password with at least six "
-"characters !."
-msgstr ""
-"<b>Wachtwoord fout</b><hr>Het wachtwoord veld is leeg gelaten of het "
-"wachtwoord is te kort. Geef aub een wachtwoord op dat minstens zes karakters "
-"lang is!."
-
-#. RTF text: no limit
-msgid ""
-"<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
-"acceleration because the following packages are missing:"
-msgstr ""
-"<b>De vereiste basispakketten ontbreken</b><hr>De OpenGL acceleratie kan "
-"niet geactiveerd worden omdat de volgende pakketten ontbreken:"
-
-#. RTF text: no limit
-msgid ""
-"<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide the "
-"official 2D/3D/OpenGL driver from nVidia. Update the packages NVIDIA_GLX and "
-"NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> "
-"first. This can also be done comfortably with YOU (YaST2 Online Update)."
-msgstr ""
-"<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Het systeem "
-"heeft de officiële 2D/3D/OpenGL driver van nVidia niet. U moet eerst de "
-"pakketten NVIDIA_GLX en NVIDIA_kernel met via de nVidia webserver <i>(http://"
-"www.nvidia.com)</i> bijwerken. Dit kan ook eenvoudig met behulp van YOU "
-"(YaST2 Online Update) gedaan worden."
-
-#. RTF text: no limit
-msgid ""
-"<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
-"this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
-"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
-"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
-"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
-"b> (right mouse click) if you already installed it before and the driver was "
-"uninstalled - for whatever reason."
-msgstr ""
-"<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Om het 3D "
-"subsysteem voor deze kaart te activeren, dient u eerst de commerciële driver "
-"van nVidia te installeren. Installeer de driver met behulp van <b>YaST "
-"Online Update</b>. Selecteer binnen YOU <b>Installeerbare en geïnstalleerde "
-"patches</b> als <b>Patch categorie</b> en selecteer inde patch lijst "
-"<b>Download NVIDIA(r) Graphics Driver</b> (dit staat normaliter onderin de "
-"lijst). Denk er om dat u de patch markeert als zijnde een <b>Update</b> "
-"(rechter muisklik) indien u het reeds eerder heeft geïnstalleerd en de "
-"driver installatie, om wat voor reden dan ook, ongedaan is gemaakt."
-
-#. RTF text: no limit
-msgid ""
-"<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
-"commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
-"nVidia installer. The uninstall process will reset the original driver from "
-"X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
-"want to continue?</b>"
-msgstr ""
-"<b>OpenGL acceleratie uitschakelen</b><hr>Het 3D subsysteem is gebaseerd op "
-"de commerciële driver van nVidia. SaX2 moet de driver met behulp van het "
-"nVidia installatieprogramma ongedaan maken. Het de-installatie proces zal de "
-"originele driver van X.Org, dat overigens geen enkele 3D hardware "
-"acceleratie biedt, opnieuw activeren. <br><br><b>Wilt u verder gaan?</b>"
-
-#. Maximum length: 70 characters
-msgid "Display size unknown..."
-msgstr "Onbekende beeldscherm grootte..."
-
-#. RTF text: no limit
-msgid ""
-"<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
-"couldn't be detected. Applications dealing with computer graphics like "
-"<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know about "
-"the real physical size of your display to work properly. Please refer to "
-"your monitor manual to obtain the correct size values for the horizontal (X) "
-"and vertical (Y) direction. The values are required to be entered in [ mm ]."
-"<br><br><b>Do you want to setup the display size ?</b>"
-msgstr ""
-"<b>Geef de X/Y beeldscherm grootte op in [ mm ]</b><hr>De geometrie van uw "
-"beeldscherm kon niet gedetecteerd worden. Programma's die met computer "
-"graphics werken zoals bijvoorbeeld <b>Gimp</b> of font rendering "
-"bibliotheken zoals <b>Xft</b> willen graag weten wat de echte fysieke "
-"grootte van uw beeldscherm is om correct te kunnen functioneren. Kijk aub "
-"even in uw monitorhandleiding en zoek de juiste waardes van de horizontale "
-"(X) en verticale (Y) groottes op. De waardes moeten in [ mm ] worden "
-"opgegeven.<br><br><b>Wilt u de beeldscherm grootte instellen?</b>"
-
-#. Maximum length: 70 characters
+#. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Utility disk..."
 
-#. RTF text: no limit
+#. Label text for horizontal sync frequency
+msgid "Horizontal:"
+msgstr "Horizontaal:"
+
+#. Label text for second monitor name
+msgid "Second monitor:"
+msgstr ""
+
+#. Label text for second monitor resolution
+#, fuzzy
+msgid "Second monitor resolution:"
+msgstr "Selecteer resoluties"
+
+#. Label text for vertical sync frequency
+msgid "Vertical:"
+msgstr "Verticaal:"
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "KHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio:"
+msgstr ""
+
+#. Label text for the diagonal length combo box
+#, fuzzy
+msgid "Diagonal:"
+msgstr "Horizontaal:"
+
+#. Label text for the display size X-Axis
+msgid "X-Axis [mm]"
+msgstr ""
+
+#. Label text for the display size Y-Axis
+msgid "Y-Axis [mm]"
+msgstr ""
+
+#. Something is not configured
+msgid "Not configured"
+msgstr "Niet geconfigureerd"
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr "inches"
+
+#. Message box of type Ok, telling to user to insert a CD or disk
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
@@ -607,7 +524,7 @@ msgstr ""
 "<b>Plaats CD of disk</b><hr>Plaats aub de beeldscherm utility CD of disk van "
 "de monitorfabrikant."
 
-#. RTF text: no limit
+#. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged media or incorrectly formatted information files on the media."
@@ -616,433 +533,421 @@ msgstr ""
 "beschadigd medium of op het medium aanwezige incorrect geformatteerde "
 "informatiebestanden."
 
-#. RTF text: no limit
-msgid ""
-"<b>Add user-defined resolution</b><hr>Just enter the pixel values for the X "
-"and Y axis and click 'Add' to include the new resolution in the standard "
-"resolution list."
+#. First gap of the ActivateInfo text: Multihead mode name
+#, fuzzy
+msgid "Traditional"
+msgstr "Traditioneel mode is actief"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
 msgstr ""
-"<b>Door gebruiker gedefinieerde resolutie toevoegen</b><hr>Geef de pixel "
-"waardes voor de X en Y as op en druk op 'Toevoegen' om de nieuwe resolutie "
-"aan de standaard resolutielijst toe te voegen."
 
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid "Available configuration components are:"
-msgstr "De beschikbare configuratie componenten zijn:"
-
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid ""
-"Traditional Multihead:\n"
-"Each screen is an independent display"
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
 msgstr ""
-"Traditionele multihead:\n"
-"Elk scherm is een onafhankelijk beeldscherm"
 
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid ""
-"Cloned Multihead:\n"
-"Each display is a clone of the primary display"
+#. Tab text for the mouse model dialog
+msgid "Setup mouse model"
 msgstr ""
-"Gekloonde multihead:\n"
-"Elk beeldscherm is een kloon van het primaire beeldscherm"
 
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid ""
-"Xinerama Multihead:\n"
-"Build one big display out of all screens"
+#. Group box title for the primary keyboard setup
+msgid "Primary Setup"
+msgstr "Primaire instelling"
+
+#. Label text for the primary keyboard type
+#, fuzzy
+msgid "Type:"
+msgstr "Type"
+
+#. Label text for the primary keyboard layout
+#, fuzzy
+msgid "Layout:"
+msgstr "Layout"
+
+#. Label text for the primary keyboard variant
+#, fuzzy
+msgid "Variant:"
+msgstr "Variant"
+
+#. Group box title for the additional keyboard setup
+msgid "Additional Layout(s)"
+msgstr "Extra layout(s)"
+
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr "Variant"
+
+#. Table topic text describing the status column
+msgid "Status"
+msgstr "Status"
+
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr "Toetsentabel"
+
+#. List View root item text
+msgid "Group Shift/Lock behavior"
+msgstr "Groep Shift/Vergrendel gedrag"
+
+#. List View root item text
+#, fuzzy
+msgid "Use Keyboard LED to show alternate group"
 msgstr ""
-"Xinerama multihead:\n"
-"Van alle schermen één groot beeldscherm maken"
+"Gebruik de toetsenbord LED voor het weergeven van de alternatieve groep"
 
-#. RTF text: no limit
-msgid ""
-"<b>Note:</b><hr>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the following settings."
+#. List View root item text
+#, fuzzy
+msgid "Compose Key Position"
+msgstr "Control toets positie"
+
+#. List View root item text
+#. XKBFile extension text
+msgid "Control Key Position"
+msgstr "Control toets positie"
+
+#. List View root item text
+#, fuzzy
+msgid "Third level chooser"
+msgstr "Derde level kiezers"
+
+#. List View root item text
+#, fuzzy
+msgid "Alt/Win key bahavior"
+msgstr "Alt/Win toets gedrag"
+
+#. List View root item text
+#, fuzzy
+msgid "CapsLock key bahavior"
+msgstr "CapsLock toets gedrag"
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
 msgstr ""
-"<b>Opmerking:</b><h>Foutieve sync bereiken kunnen uw monitor beschadigen. "
-"Raadpleeg voor de volgende instellingen het monitorhandboek."
 
-#. RTF text: no limit
-msgid ""
-"<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via the "
-"<b>number pad keys</b>. Test the behavior using the number pad."
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Alt key switches group while pressed"
+msgstr "De linker Win-toets indrukken om de groep te wisselen"
+
+#. XKBFile extension text
+msgid "Both Ctrl keys together change group"
+msgstr "Beide Ctrl-toetsen samen wijzigen de groep"
+
+#. XKBFile extension text
+msgid "Right Shift key changes group"
+msgstr "De rechter shift-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Left Win-key changes group"
+msgstr "De linker Win-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Left Alt key changes group"
+msgstr "De linker Alt-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Both Win-keys switch group while pressed"
+msgstr "Beide Win-toetsen indrukken om de groep te wisselen"
+
+#. XKBFile extension text
+msgid "Right Win-key is Compose"
+msgstr "De rechter Win-toets is Samenstellen"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Shift+CapsLock changes group"
+msgstr "De Caps Lock toets wijzigt de groep"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Alt key switches group while pressed"
+msgstr "Rechter Win-toets indrukken om de groep te wisselen"
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt"
 msgstr ""
-"<b>AccessX is ingeschakeld:</b><hr>De basis muiswijzer is nu via de "
-"<b>nummer toetsen</b> toegankelijk. Test het gedrag door middel van het "
-"nummer pad."
 
-#. RTF text: no limit
-msgid ""
-"<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the number "
-"pad is <b>disabled</b> now."
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr "Control toets linksonder"
+
+#. XKBFile extension text
+msgid "Press any of Win-keys to choose 3rd level"
+msgstr "Druk op één van de Win-toetsen om het 3de level te selecteren"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Right Alt key to choose 3rd level"
+msgstr "Druk op de rechter Win-toets om het 3de level te selecteren"
+
+#. XKBFile extension text
+msgid "Right Ctrl key changes group"
+msgstr "De rechter Ctrl toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Right Alt is Compose"
+msgstr "Alt-rechts is samenstellen"
+
+#. XKBFile extension text
+msgid "Scroll_Lock LED shows alternative group"
+msgstr "Scroll_Lock LED toont de alternatieve groep"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Control key at left of -A-"
+msgstr "Control-toets links van 'A'"
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr "Derde level kiezers"
+
+#. XKBFile extension text
+msgid "Both Shift keys together change group"
+msgstr "Beide Shift-toetsen wijzigen de groep"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "uses internal capitalization. Shift cancels Caps"
+msgstr "gebruikt interne kapitalisatie. Shift annuleert Caps."
+
+#. XKBFile extension text
+msgid "Make CapsLock an additional Control"
+msgstr "Maak van CapsLock een extra control"
+
+#. XKBFile extension text
+msgid "Press Left Win-key to choose 3rd level"
+msgstr "Druk op de linker Win-toets om het 3de level te selecteren"
+
+#. XKBFile extension text
+msgid "Right Win-key changes group"
+msgstr "De rechter Win-toets wijzigt de groep"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Meta is mapped to the left Win-key"
+msgstr "Meta is aan de linker Win-toets toegewezen."
+
+#. XKBFile extension text
+msgid "Caps_Lock LED shows alternative group"
+msgstr "Caps_Lock LED toont de alternatieve groep"
+
+#. XKBFile extension text
+msgid "Num_Lock LED shows alternative group"
+msgstr "Num_Lock LED toont de alternatieve groep"
+
+#. XKBFile extension text
+msgid "Left Shift key changes group"
+msgstr "De linker Shift-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Left Win-key switches group while pressed"
+msgstr "De linker Win-toets indrukken om de groep te wisselen"
+
+#. XKBFile extension text
+msgid "Menu is Compose"
+msgstr "Menu is samenstellen"
+
+#. XKBFile extension text
+msgid "Both Alt keys together change group"
+msgstr "Beide Alt-toetsen wijzigen de groep"
+
+#. XKBFile extension text
+msgid "Caps Lock key changes group"
+msgstr "De Caps Lock toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Swap Control and Caps Lock"
+msgstr "Verwissel Control en CapsLock"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press any of Alt keys to choose 3rd level"
+msgstr "Druk op één van de Win-toetsen om het 3de level te selecteren"
+
+#. XKBFile extension text
+msgid "Right Alt key changes group"
+msgstr "De rechter Alt-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows"
 msgstr ""
-"<b>AccessX is uitgeschakeld:</b><hr>Toegang tot de basis muiswijzer via het "
-"nummer pad is nu <b>uitgeschakeld</b>."
 
-#. RTF text: no limit
-msgid ""
-"<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the system?"
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server"
 msgstr ""
-"<b>Tablet verwijderen:</b><hr>Weet u zeker dat u het grafische tablet van uw "
-"systeem wilt verwijderen?"
 
-#. RTF text: no limit
-msgid ""
-"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
-"the next time the graphics system is restarted."
+#. XKBFile extension text
+#, fuzzy
+msgid "Hyper is mapped to the Win-keys"
+msgstr "Hyper is aan de Win-toetsen toegewezen."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Super is mapped to the Win-keys (default)"
+msgstr "Super is aan de Win-toetsen toegewezen (standaard)."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt and Meta on the Alt keys (default)"
+msgstr "Alt en Meta op de Alt toetsen (standaard)."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Add the standard behavior to Menu key"
+msgstr "Standaard gedrag aan de Menu toets toevoegen."
+
+#. XKBFile extension text
+msgid "Press Right Control to choose 3rd level"
+msgstr "Druk op de rechter Control om het 3de level te selecteren"
+
+#. XKBFile extension text
+msgid "Alt+Shift changes group"
+msgstr "Alt+Shift wijzigen de groep"
+
+#. XKBFile extension text
+msgid "Control+Shift changes group"
+msgstr "Control+Shift wijzigen de groep"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "acts as Shift with locking. Shift cancels Caps"
 msgstr ""
-"<b>De configuratie is opgeslagen:</b><hr>Uw modificaties hebben pas effect "
-"wanneer u het grafische systeem opnieuw heeft opgestart."
+"gedraagt zich als een vergrendelde Shift-toets. Shift zal Caps annuleren."
 
-#. RTF text: no limit
-msgid ""
-"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
-"the next time your system is <b>rebooted</b>."
+#. XKBFile extension text
+msgid "Use keyboard LED to show alternative group"
 msgstr ""
-"<b>De configuratie is opgeslagen:</b><hr>Uw modificatie hebben pas effect "
-"wanneer het systeem <b>opnieuw geboot</b> is."
+"Gebruik de toetsenbord LED voor het weergeven van de alternatieve groep"
 
-#. RTF text: no limit
-msgid ""
-"<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are in "
-"developmental phases so are, in part, still regarded as experimental. "
-"Nevertheless, we have decided to include the drivers in our distribution "
-"because of the high demand for 3D hardware acceleration in Linux. "
-"<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
-"are unable to offer any installation support for configuring 3D hardware "
-"acceleration or if any problems related to this should arise.<br><br><b>Do "
-"you want to enable 3D for this card?</b>"
+#. XKBFile extension text
+msgid "Press Right Win-key to choose 3rd level"
+msgstr "Druk op de rechter Win-toets om het 3de level te selecteren"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Left Alt key to choose 3rd level"
+msgstr "Druk op de linker Win-toets om het 3de level te selecteren"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Meta is mapped to the Win-keys"
+msgstr "Meta is aan de Win-toetsen toegewezen."
+
+#. XKBFile extension text
+msgid "Press Menu key to choose 3rd level"
+msgstr "Druk op de Menu toets om het 3de level te selecteren"
+
+#. XKBFile extension text
+msgid "Left Ctrl key changes group"
+msgstr "De linker Ctrl-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Menu key changes group"
+msgstr "Menu-toets wijzigt de groep"
+
+#. XKBFile extension text
+msgid "Alt+Control changes group"
+msgstr "Alt+Control wijzigen de groep"
+
+#. XKBFile extension text
+msgid "Right Win-key switches group while pressed"
+msgstr "Rechter Win-toets indrukken om de groep te wisselen"
+
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "Tablet"
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
 msgstr ""
-"<b>Kaart met 3D functionaliteit gedetecteerd: <u>%1</u></b><hr>Alle Linux 3D "
-"drivers zitten nog in de ontwikkelingsfase en zijn deels nog experimenteel. "
-"Desondanks hebben we besloten om de drivers in onze distributie op te nemen "
-"vanwege de grote vraag naar 3D hardware versnelling in Linux. "
-"<br><br>Vanwege de ietwat experimentele status van de OpenGL drivers zijn we "
-"niet in staat om wat voor installatie ondersteuning dan ook te geven bij het "
-"configureren van de 3D hardware versnelling of bij optredende problemen met "
-"betrekking tot het bovenstaande.<br><br><b>Wilt u de 3D ondersteuning voor "
-"deze kaart activeren?</b>"
 
-#. RTF text: no limit
-msgid ""
-"<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this card "
-"is not an official 2D/3D/OpenGL driver from nVidia for licensing reasons. "
-"The 3D/OpenGL driver used if you enable 3D is <b>not</b> hardware-"
-"accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, update the "
-"packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://"
-"www.nvidia.com)</i>. This can also be done comfortably with YOU (YaST2 "
-"Online Update).<br><br>If there are problems with the 2D/3D/OpenGL driver "
-"from nVidia, consult the vendor, as we unfortunately do not have any "
-"influence over the development of nVidia drivers.<br><br><b>Prepare 3D for "
-"this card?</b>"
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
 msgstr ""
-"<b>Kaart met 3D functionaliteit gedetecteerd: <u>%1</u></b><hr> Dit is geen "
-"officiële 2D/3D/OpenGL driver van nVidia (vanwege licentie redenen). De 3D/"
-"OpenGL driver, als u 3D inschakelt, heeft <b>geen<b> hardware-versnelling. "
-"Wanneer u de 3D/OpenGL met hardware-versnelling wilt gebruiken, update de "
-"pakketten NVIDIA_GLX en de NVIDIA_kernel voor SuSE Linux van de nVidia "
-"Webserver <i>(http://www.nvidia.com)</i>. U kunt dit ook comfortabel met "
-"behulp van YOU (YaST2 Online Update) doen.<br><br>Als er verder nog "
-"problemen zijn met de 2D/3D/OpenGL driver van nVidia, raadpleeg dan de "
-"fabrikant. Helaas hebben we geen enkele invloed op de ontwikkeling van de "
-"nVidia drivers. <br><br><b>3D ondersteuning voor deze kaart voorbereiden?</b>"
 
-#. RTF text: no limit
-msgid ""
-"<b>Software update</b><hr>The dummy nvidia driver with no 3D capability that "
-"comes with this distribution is still installed.  You should update to the "
-"official nvidia drivers from the nvidia ftp server with YOU (YaST2 online "
-"update). Start the online update?"
+#. Activate tablet checkbox
+msgid "Activate this tablet"
 msgstr ""
-"<b>Software update</b><hr>De bij deze distributie meegeleverde dummy nvidia "
-"driver (zonder 3D capaciteit) is nog geïnstalleerd.  U zou met YOU (YaST2 "
-"online update) een update moeten doen naar de officiële nvidia drivers op de "
-"nvidia ftp server. Wilt u de online update starten?"
 
-#. RTF text: no limit
-msgid ""
-"<b>Software installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
+#. Group box title for the tablet vendor and name selection
+#, fuzzy
+msgid "Tablet: Vendor and Name selection"
+msgstr "Model: merk en naam selectie..."
+
+#. Group box title for tablet port combobox
+#, fuzzy
+msgid "Connection port"
+msgstr "Verbonden met:"
+
+#. Group box title for tablet mode
+#, fuzzy
+msgid "Primary tablet mode"
+msgstr "Primaire instelling"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen/Eraser Mode"
 msgstr ""
-"<b>Software installatie:</b><hr>Enkele pakketten ontbreken. De ontbrekende "
-"pakketten nu installeren?"
 
-#. RTF text: no limit
-msgid ""
-"<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
-"resolution is not adjustable within framebuffer mode. Please select another "
-"resolution than:"
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr "Relatief"
+
+#. Radiobutton for absolute tablet mode
+msgid "Absolute"
+msgstr "Absoluut"
+
+#. Combobox item text for tablet port: USB
+msgid "USB"
+msgstr "USB"
+
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "Tools"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr "Pen toevoegen"
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr "Wisser toevoegen"
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen/Eraser settings..."
 msgstr ""
-"<b>Ongeldige resolutie voor de FBdev mode</b><hr>De momenteel geselecteerde "
-"resolutie is niet binnen de framebuffer mode in te passen. Selecteer aub een "
-"andere resolutie dan:"
 
-#. RTF text: no limit
-msgid ""
-"<b>Selected Resolution not available</b><hr>The selected resolution doesn't "
-"fit into the sync-ranges of the monitor. Please prove if the currently "
-"selected monitor model is correct or select a lower resolution than:"
+#. Tab title: Pen properties
+#, fuzzy
+msgid "Pen properties"
+msgstr "Eigenschappen..."
+
+#. Tab title: Eraser properties
+#, fuzzy
+msgid "Eraser properties"
+msgstr "Speciale muis eigenschappen..."
+
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "Aanraakbeeldscherm"
+
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a touchscreen to display number %1"
 msgstr ""
-"<b>De geselecteerde resolutie is niet beschikbaar</b><hr>De geselecteerde "
-"resolutie past niet in het synchronisatiebereik van de monitor. Controleer "
-"aub of het huidige geselecteerde monitor model wel juist is of selecteer een "
-"lagere resolutie dan:"
 
-#. RTF text: no limit
-msgid ""
-"<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
-"depth is not allowed for this configuration."
-msgstr ""
-"<b>Ongeldige kleurdiepte geselecteerd:</b><hr>Een <b>4</b> of <b>15</b> bit "
-"kleurdiepte is voor deze configuratie niet toegestaan."
+#. Group box title for the touchscreen vendor and name selection
+#, fuzzy
+msgid "Touchscreen: Vendor and Name selection"
+msgstr "Model: merk en naam selectie..."
 
-#. RTF text: no limit
-msgid ""
-"<b>Invalid Resolution selected:</b><hr>Setting the requested resolution is "
-"not allowed for this configuration. Select another resolution from the list."
-msgstr ""
-"<b>Ongeldige resolutie geselecteerd:</b><hr>De gewenste resolutie instelling "
-"is voor deze configuratie niet toegestaan. Selecteer een andere resolutie "
-"uit de lijst aub."
-
-#. RTF text: no limit
-msgid "<b>X Server test failed:</b><hr><br>"
-msgstr "<b>X server test is mislukt:</b><hr><br>"
-
-#. Maximum length: 60  characters
-msgid "3D question..."
-msgstr "3D vraag..."
-
-#. Maximum length: 60  characters
-msgid "X Server test information..."
-msgstr "X server test informatie..."
-
-#. Maximum length: 60  characters
-msgid "Configuration saved..."
-msgstr "Configuratie is opgeslagen..."
-
-#. Maximum length: 60  characters
-msgid "AccessX status information..."
-msgstr "AccessX status informatie..."
-
-#. Maximum length: 60  characters
-msgid "Tablet warning..."
-msgstr "Tablet waarschuwing..."
-
-#. Maximum length: 60  characters
-msgid "Consideration..."
-msgstr "Overweging..."
-
-#. Maximum length: 20  characters
-msgid "Geometry"
-msgstr "Geometrie"
-
-#. Maximum length: 20  characters
-msgid "Graphics card"
-msgstr "Grafische kaart"
-
-#. Maximum length: 20  characters
-msgid "Name:"
-msgstr "Naam:"
-
-#. Maximum length: 20  characters
-msgid "Card and Desktop"
-msgstr "Kaart en desktop"
-
-#. Maximum length: 20  characters
-msgid "Input Devices"
-msgstr "Invoerapparaten"
-
-#. Maximum length: 20  characters
-msgid "Input-Devices"
-msgstr "Invoerapparaten"
-
-#. Maximum length: 20  characters
-msgid "Desktop"
-msgstr "Desktop"
-
-#. Maximum length: 20  characters
-msgid "Multihead"
-msgstr "Multihead"
-
-#. Maximum length: 50  characters
-msgid "Primary Modeline:"
-msgstr "Primaire modeline:"
-
-#. Maximum length: 50  characters
-msgid "Secondary Modeline:"
-msgstr "Secundaire modeline:"
-
-#. Maximum length: 50  characters
-msgid "Modeline"
-msgstr "Modeline"
-
-#. Maximum length: 20  characters
-msgid "AccessX"
-msgstr "AccessX"
-
-#. Maximum length: 20  characters
-msgid "VNC"
-msgstr "VNC"
-
-#. Maximum length: 60  characters
-msgid "X-Server accessable via VNC protocol:"
-msgstr "X-server toegankelijk via het VNC protocol:"
-
-#. Maximum length: 25  characters
-msgid "Access Control"
-msgstr "Toegangscontrole"
-
-#. Maximum length: 50  characters
-msgid "<b>Core Pointer...</b>"
-msgstr "<b>Basiswijzer...</b>"
-
-#. Maximum length: 20  characters
-#. Maximum length: 40  characters
-msgid "&Cancel"
-msgstr "&Annuleren"
-
-#. Maximum length: 20  characters
-msgid "&Ok"
-msgstr "&Ok"
-
-#. Maximum length: 20  characters
-msgid "F&inalize >>"
-msgstr "A&fronden >>"
-
-#. Maximum length: 20  characters
-msgid "<< &Back"
-msgstr "<< &Terug"
-
-#. Maximum length: 20  characters
-msgid "&Next >>"
-msgstr "&Verder >>"
-
-#. Maximum length: 20  characters
-msgid "&Exit"
-msgstr "&Stoppen"
-
-#. Maximum length: 40  characters
-msgid "&About..."
-msgstr "&Info..."
-
-#. Maximum length: 60  characters
-msgid "About the author"
-msgstr "Over de auteur"
-
-#. Maximum length: 60  characters
-msgid "Select virtual resolution for Mode %1"
-msgstr "Selecteer virtuele resolutie voor mode %1"
-
-#. RTF text: no limit
-msgid ""
-"<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer of "
-"this product is</nobr><br>Marcus Schaefer"
-msgstr ""
-"<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>De auteur en beheerder van "
-"dit product is</nobr><br>Marcus Schaefer"
-
-#. Maximum length: 40  characters
-msgid "&Modules..."
-msgstr "&Modules..."
-
-#. Maximum length: 40  characters
-msgid "&File"
-msgstr "&Bestand"
-
-#. Maximum length: 40  characters
-msgid "&Help"
-msgstr "&Help"
-
-#. Maximum length: 40  characters
-msgid "Loading CDB data: %1"
-msgstr "CDB data laden: %1"
-
-#. Maximum length: 40  characters
-msgid "Loading base data: %1"
-msgstr "Basis data laden: %1"
-
-#. Maximum length: 40  characters
-msgid "Loading system data: %1"
-msgstr "Systeem data laden: %1"
-
-#. Maximum length: 40  characters
-msgid "C&hange configuration"
-msgstr "&Wijzig configuratie"
-
-#. Maximum length: 50  characters
-msgid "SaX2 start-up information"
-msgstr "SaX2 opstart informatie"
-
-#. Maximum length: 50  characters
-msgid "SaX2 exit program... "
-msgstr "SaX2 programma stoppen... "
-
-#. Maximum length: 50  characters
-msgid "SaX2 final steps..."
-msgstr "SaX2 laatste stappen..."
-
-#. Maximum length: 50  characters
-msgid "Dialog information..."
-msgstr "Dialoog informatie..."
-
-#. Maximum length: 50  characters
-msgid "Exception..."
-msgstr "Uitzondering..."
-
-#. RTF text: no limit
-msgid ""
-"<b>Multihead setup not possible:</b><hr>Your system does not provide more "
-"than one graphics device.  More are required to set up a multihead "
-"configuration."
-msgstr ""
-"<b>De multihead instelling is niet mogelijk:</b><hr>Uw systeem biedt niet "
-"meer dan één grafisch apparaat.  Om een multihead configuratie in te stellen "
-"heeft u meerdere grafische apparaten nodig."
-
-#. RTF text: no limit
-msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
-msgstr "<b>Dialoog sluiten:</b><hr>Dit dialoog sluiten?"
-
-#. RTF text: no limit
-msgid ""
-"<b>Invalid setup:</b><hr>At least one graphics device must be configured."
-msgstr ""
-"<b>Ongeldige instelling:</b><hr>Minstens één grafisch apparaat dient "
-"geconfigureerd te zijn."
-
-#. RTF text: no limit
-msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-msgstr ""
-"<b>Ongeldige instelling:</b><hr>Minstens één monitor moet geconfigureerd "
-"zijn."
-
-#. RTF text: no limit
-msgid ""
-"<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
-"configuration. You are not allowed to remove this major entity."
-msgstr ""
-"<b>De monitor kan niet verwijderd worden:</b><hr>Het systeem biedt exact één "
-"monitor configuratie. Het is u niet toegestaan om dit belangrijke onderdeel "
-"te verwijderen."
-
-#. RTF text: no limit
-msgid ""
-"<b>Running dialog:</b><hr>A dialog is already open.  Abort the open dialog "
-"and start the selected one?"
-msgstr ""
-"<b>Dialoog starten:</b><hr>Er is reeds een dialoog geopend.  Wilt u het "
-"geopende dialoog afbreken en het geselecteerde starten?"
-
-#. RTF text: no limit
-msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
-msgstr "<b>Dialoog afsluiten:</b><hr>Wilt u dit dialoog nu afsluiten?"
-
-#. RTF text: no limit
-msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
-msgstr "<b>SaX2 afsluiten:</b><hr>Wilt u SaX2 nu afsluiten?"
-
-#. RTF text: no limit
+#. Finish configuration message box
 msgid ""
 "<b>Final steps:</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
@@ -1054,699 +959,79 @@ msgstr ""
 "voordat u deze opslaat. Druk op <b>[ Ctrl-Alt-Backspace ]</b> om de server "
 "af te breken wanneer deze een verknoeide desktop laat zien."
 
-#. RTF text: no limit
-msgid ""
-"<b>Final step:</b><hr>The last step is saving your new configuration. Please "
-"note the configuration is <i>Framebuffer</i> based and your system needs to "
-"be rebooted first to activate the changes for resolution and/or color "
-"settings."
+#. Tab title: VNC Server configuration
+msgid "VNC-Server"
 msgstr ""
-"<b>Laatste stap:</b><hr>Het opslaan van uw nieuwe configuratie is de laatste "
-"stap. Neem er aub nota van dat de configuratie <i>Framebuffer</i> gebaseerd "
-"is en uw systeem eerst opnieuw geboot moet worden om de wijzigingen van de "
-"resolutie en/of kleur instellingen te activeren."
 
-#. RTF text: no limit
-msgid ""
-"<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2 suggestie</b><hr>Het huidige opgestarte grafische systeem is "
-"gebaseerd op een door SaX2 gemaakte suggestie. Druk op <b>Ok</b> wanneer dit "
-"te accepteren is. Zo niet: wijzig de configuratie."
-
-#. Dynamic length: Please do not oversize key up to 30%
-msgid "Unknown Graphics Card..."
-msgstr "Onbekende grafische kaart..."
-
-#. RTF text: no limit
-msgid ""
-"<b>The graphics card could not be detected</b><hr>Configure your card "
-"manually. Start the configuration dialog to set up the graphics card now?"
-msgstr ""
-"<b>De grafische kaart kon niet gedetecteerd worden</b><hr>U dient uw kaart "
-"handmatig te configureren. Wilt u nu het configuratie dialoog starten om de "
-"grafische kaart in te stellen?"
-
-#. Dynamic length: Please do not oversize key up to 30%
-msgid "Unknown Monitor..."
-msgstr "Onbekende monitor..."
-
-#. RTF text: no limit
-msgid ""
-"<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
-"manually. Do you want to start the configuration dialog to setup the display "
-"now ?"
-msgstr ""
-"<b>De monitor (%1) kon niet gedetecteerd worden</b><hr>U dient uw monitor "
-"handmatig in te instellen. Wilt u nu het configuratie dialoog starten om het "
-"beeldscherm in te stellen?"
-
-#. RTF text: no limit
-msgid ""
-"<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
-"manually. Do you want to start the configuration dialog to setup the display "
-"now ?"
-msgstr ""
-"<b>De monitor (%1) met ID: %2 is niet gevonden</b><hr>U dient uw monitor "
-"handmatig in te instellen. Wilt u nu het configuratie dialoog starten om het "
-"beeldscherm in te stellen?"
-
-#. Dynamic length: Please do not oversize key up to 10%
-msgid "Automatic graphics system set up"
-msgstr "Automatische grafische systeem setup"
-
-#. Dynamic length: Please do not oversize key up to 10%
-msgid "&Test..."
-msgstr "&Test..."
-
-#. Dynamic length: Please do not oversize key up to 10%
-msgid "&Save"
-msgstr "&Opslaan"
-
-#. Dynamic length: Please do not oversize key up to 10%
-msgid "&Yes"
-msgstr "&Ja"
-
-#. Dynamic length: Please do not oversize key up to 10%
-msgid "&No"
-msgstr "&Nee"
-
-#. Maximum length: 20  characters
-msgid "<b>Yes</b>"
-msgstr "<b>Ja</b>"
-
-#. Maximum length: 20  characters
-msgid "<b>No</b>"
-msgstr "<b>Nee</b>"
-
-#. Maximum length: 50  characters
-msgid "File"
-msgstr "Bestand"
-
-#. Maximum length: 50  characters
-msgid "still locked"
-msgstr "nog beveiligd"
-
-#. Maximum length: 50  characters
-msgid "Please wait"
-msgstr "Even geduld aub"
-
-#. RTF text: no limit
-msgid ""
-"<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
-"X11 Configuration Manager<br>"
-msgstr ""
-"<big><b>SaX2: Uitgebreide X11 configuratie</b></big><hr>Welkom bij de SuSE "
-"X11 configuratie beheerder<br>"
-
-#. Maximum length: 70  characters
-msgid "To start, double-click  an item in the component list."
-msgstr "Om te kunnen starten dubbelklikt u op een item in de component lijst."
-
-#. Maximum length: 50  characters
-msgid "X11 System Setup"
-msgstr "X11 systeem instelling"
-
-#. Maximum length: 50  characters
-msgid "Value..."
-msgstr "Waarde..."
-
-#. Maximum length: 40  characters
-msgid "Primary device"
-msgstr "Primair apparaat"
-
-#. Maximum length: 40  characters
-msgid "X11 System"
-msgstr "X11 systeem"
-
-#. Maximum length: 40  characters
-msgid "Driver:"
-msgstr "Driver:"
-
-#. Maximum length: 10  characters
-msgid "X:"
-msgstr "X:"
-
-#. Maximum length: 10  characters
-msgid "Y:"
-msgstr "Y:"
-
-#. Maximum length: 40  characters
-msgid "Bus ID:"
-msgstr "Bus ID:"
-
-#. Maximum length: 40  characters
-msgid "Card options"
-msgstr "Kaart opties"
-
-#. Maximum length: 40  characters
-msgid "&Options..."
-msgstr "&Opties..."
-
-#. Maximum length: 70  characters
-msgid "Key Mappings"
-msgstr "Toets mappings"
-
-#. Maximum length: 40  characters
-msgid "&Current sync frequencies"
-msgstr "&Huidige sync frequenties"
-
-#. Maximum length: 40  characters
-msgid "&Frequencies"
-msgstr "&Frequenties"
-
-#. Maximum length: 40  characters
-msgid "Current color depth"
-msgstr "Huidige kleurdiepte"
-
-#. Maximum length: 40  characters
-msgid "Current resolution"
-msgstr "Huidige resolutie"
-
-#. Maximum length: 40  characters
-msgid "HSync range"
-msgstr "Hsync bereik"
-
-#. Maximum length: 40  characters
-msgid "VSync range"
-msgstr "Vsync bereik"
-
-#. Maximum length: 40  characters
-msgid "Display size"
-msgstr "Beeldscherm grootte"
-
-#. Maximum length: 10  characters
-msgid "[ mm ]"
-msgstr "[ mm ]"
-
-#. Maximum length: 40  characters
-msgid "Device"
-msgstr "Apparaat"
-
-#. Maximum length: 40  characters
-msgid "Protocol"
-msgstr "Protocol"
-
-#. Maximum length: 40  characters
-msgid "Keyboard Model"
-msgstr "Toetsenbord model"
-
-#. Maximum length: 40  characters
-msgid "Fi&nish"
-msgstr "&Afronden"
-
-#. Maximum length: 20  characters
-msgid "Abort"
-msgstr "Afsluiten"
-
-#. Maximum length: 100  characters
-msgid "Configure XAccess: Mouse over keypad..."
-msgstr "Configureer XAccess: muis over keypad..."
-
-#. Maximum length: 100  characters
-msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
-"VNC configureren: exporteer het beeldscherm met behulp van het VNC "
-"protocol..."
-
-#. Maximum length: 100  characters
-msgid "Configure input devices: Mouse configuration..."
-msgstr "Configureer invoerapparaten: muisconfiguratie..."
-
-#. Maximum length: 100  characters
-msgid "Configure 3D/OpenGL subsystem..."
-msgstr "Configureer 3D/OpenGL subsysteem..."
-
-#. Maximum length: 100  characters
-msgid "Configure virtual resolutions..."
-msgstr "Configureer virtuele resoluties..."
-
-#. Maximum length: 100  characters
-msgid "Configure graphics cards..."
-msgstr "Configureer grafische kaarten..."
-
-#. Maximum length: 100  characters
-msgid "Configure Desktop: Colors and Resolutions..."
-msgstr "Configureer desktop: kleuren en resoluties..."
-
-#. Maximum length: 100  characters
-msgid "Configure touch screens..."
-msgstr "Configureer aanraakbeeldschermen..."
-
-#. Maximum length: 100  characters
-msgid "Set up picture geometry..."
-msgstr "Afbeelding geometrie instellen..."
-
-#. Maximum length: 100  characters
-msgid "Configure multihead mode..."
-msgstr "Configureer multihead mode..."
-
-#. Maximum length: 100  characters
-msgid "Set up monitor properties..."
-msgstr "Monitor eigenschappen instellen..."
-
-#. Maximum length: 100  characters
-msgid ""
-"Set up screen layout of your desktops (Double-click an icon will identify "
-"the real screen)..."
-msgstr ""
-"De scherm layout van uw desktops instellen (dubbelklik op een pictogram om "
-"het echte scherm te identificeren)..."
-
-#. Maximum length: 100  characters
-msgid "Configure graphics tablet"
-msgstr "Configureer grafisch tablet"
-
-#. Maximum length: 100  characters
-msgid "Configure keyboard..."
-msgstr "Configureer toetsenbord..."
-
-#. Maximum length: 40  characters
-msgid "Add new card..."
-msgstr "Nieuwe kaart toevoegen..."
-
-#. Maximum length: 40  characters
-msgid "Remove selected card"
-msgstr "Geselecteerde kaart verwijderen"
-
-#. Maximum length: 40  characters
-msgid "Remove selected monitor"
-msgstr "Geselecteerde monitor verwijderen"
-
-#. Maximum length: 40  characters
-msgid "Properties..."
-msgstr "Eigenschappen..."
-
-#. Maximum length: 20  characters
-msgid "&Options"
-msgstr "&Opties"
-
-#. Maximum length: 20  characters
-msgid "VNC Options"
-msgstr "VNC opties"
-
-#. Maximum length: 60  characters
+#. Activate VNC server checkbox
 msgid "Allow access to display using VNC protocol"
 msgstr "Toegang tot het beeldscherm met behulp van het VNC protocol toestaan"
 
-#. Maximum length: 60  characters
-msgid "Enable password protection"
+#. Group box title for the VNC options
+msgid "VNC Options"
+msgstr "VNC opties"
+
+#. Activate VNC password protection checkbox
+#, fuzzy
+msgid "Activate password protection"
 msgstr "Wachtwoord bescherming inschakelen"
 
-#. Maximum length: 40  characters
-msgid "&Properties..."
-msgstr "&Eigenschappen..."
-
-#. Maximum length: 40  characters
+#. LineEdit label: enter password
 msgid "Password"
 msgstr "Wachtwoord"
 
-#. Maximum length: 40  characters
+#. LineEdit contents: enter new password
+msgid "<Enter new password...>"
+msgstr "<Geef nieuw wachtwoord...>"
+
+#. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Wachtwoord controle"
 
-#. Maximum length: 40  characters
-msgid "Enable View-Only mode"
-msgstr "Alleen-bekijken mode inschakelen"
-
-#. Maximum length: 40  characters
-msgid "Enable HTTP Access"
+#. Activate HTTP access checkbox
+#, fuzzy
+msgid "Activate HTTP Access"
 msgstr "HTTP toegang activeren"
 
-#. Maximum length: 40  characters
-msgid "HTTP Port"
-msgstr "HTTP poort"
-
-#. Maximum length: 40  characters
+#. Activate multiple VNC connection checkbox
 msgid "Allow multiple VNC connections"
 msgstr "Meerdere VNC verbindingen toestaan"
 
-#. Maximum length: 40  characters
-msgid "&Add new touchscreen..."
-msgstr "Nieuw aanraakbeeldscherm &toevoegen..."
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
+msgstr "HTTP poort"
 
-#. Maximum length: 40  characters
-msgid "&Remove selected touchscreen"
-msgstr "Geselecteerde aanraakscherm &verwijderen"
-
-#. Maximum length: 50  characters
-msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
-msgstr "<nobr><h3><u>Huidige geconfigureerde aanraakschermen:</u></h3></nobr>"
-
-#. Maximum length: 50  characters
-msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
-msgstr "<nobr><h3><u>Huidige geconfigureerde monitoren</u></h3></nobr>"
-
-#. Maximum length: 50  characters
-msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
-msgstr "<nobr><h3><u>Huidige geconfigureerde kaarten:</u></h3></nobr>"
-
-#. Maximum length: 50  characters
-msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
-msgstr "<nobr><h3><u>Huidige geconfigureerde muis:</u></h3></nobr>"
-
-#. Maximum length: 50  characters
-msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-msgstr "<nobr><h3><u>Huidige monitor layout:</u></h3></nobr>"
-
-#. Maximum length: 50  characters
-msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
-msgstr "<nobr><h3><u>Huidige geconfigureerde desktops:</u></h3></nobr>"
-
-#. Maximum length: 40  characters
-msgid "&Add new mouse..."
-msgstr "Nieuwe muis &toevoegen..."
-
-#. Maximum length: 40  characters
-msgid "&Remove selected mouse"
-msgstr "Geselecteerde muis &verwijderen"
-
-#. Maximum length: 30  characters
-msgid "&General"
-msgstr "&Algemeen"
-
-#. Maximum length: 30  characters
-#. Maximum length: 50  characters
-msgid "&Expert"
-msgstr "&Expert"
-
-#. Maximum length: 50  characters
-msgid "Model: Vendor and Name selection..."
-msgstr "Model: merk en naam selectie..."
-
-#. Maximum length: 50  characters
-msgid "Vendor"
-msgstr "Merk"
-
-#. Maximum length: 50  characters
-msgid "Special mouse properties..."
-msgstr "Speciale muis eigenschappen..."
-
-#. Maximum length: 50  characters
-msgid "Color selection..."
-msgstr "Kleur selectie..."
-
-#. Maximum length: 50  characters
-msgid "Manual sync frequency set up..."
-msgstr "Handmatige sync-frequentie instelling..."
-
-#. Maximum length: 50  characters
-msgid "Selected"
-msgstr "Geselecteerd"
-
-#. Maximum length: 50  characters
-msgid "Resolution X"
-msgstr "Resolutie X"
-
-#. Maximum length: 50  characters
-msgid "&Colors"
-msgstr "&Kleuren"
-
-#. Maximum length: 50  characters
-msgid "&Resolution(s) for %1 colors"
-msgstr "&Resolutie(s) voor %1 kleuren"
-
-#. Maximum length: 50  characters
-msgid "Resolution Y"
-msgstr "Resolutie Y"
-
-#. Maximum length: 50  characters
-msgid "Possible"
-msgstr "Mogelijk"
-
-#. Maximum length: 50  characters
-msgid "&Add this resolution"
-msgstr "Deze resolutie &toevoegen"
-
-#. Maximum length: 50  characters
-msgid "Enable 3-button emulation"
-msgstr "3-knop emulatie activeren"
-
-#. Maximum length: 50  characters
-msgid "Enable Mouse Wheel"
-msgstr "Muiswiel activeren"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde AccessX status</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<big><b>Huidige VNC status</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-msgstr "<big><b>Huidige 3D/OpenGL status</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
-msgstr "<big><b>Huidige virtuele resolutie instelling</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured graphics cards</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde grafische kaarten</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured desktops</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde desktops</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently active geometry timings</b></big><hr>"
-msgstr "<big><b>Huidige actieve geometrische timing</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured keyboard</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerd toetsenbord</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured layout</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde layout</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured monitors</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde monitoren</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde aanwijs apparaten</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured multihead status</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerde multihead status</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerd grafisch tablet</b></big><hr>"
-
-#. Maximum length: 60  characters
-msgid "<big><b>Currently configured touchscreen</b></big><hr>"
-msgstr "<big><b>Huidige geconfigureerd aanraakbeeldscherm</b></big><hr>"
-
-#. RTF text: no limit
-msgid "<b><nobr>No information available</nobr></b>"
-msgstr "<b><nobr>Geen informatie beschikbaar</nobr></b>"
-
-#. RTF text: no limit
+#. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse with "
-"the keypad. The table below points to the current status of AccessX."
+"<b>VNC Password mismatch</b><hr>The first and the second version of the "
+"password don't match ! Please try again."
 msgstr ""
-"<b>Virtuele muis:</b><hr>Voor het besturen van de muis met het keypad dient "
-"u het numerieke keypad in te stellen. De onderstaande tabel laat de huidige "
-"status van AccessX zien."
+"<b>Wachtwoord komt niet overeen</b><hr>De eerste en de tweede versie van het "
+"wachtwoord komen niet overeen! Probeer het nog eens aub."
 
-#. RTF text: no limit
+#. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
-"and all its programs remotely via a VNC viewer program"
+"<b>VNC Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
 msgstr ""
-"<b>VNC server:</b><hr>Hier kunt u de X-server dusdanig instellen zodat de "
-"desktop met al z'n programma's remote toegankelijk wordt via een VNC viewer "
-"programma"
+"<b>Wachtwoord fout</b><hr>Het wachtwoord veld is leeg gelaten of het "
+"wachtwoord is te kort. Geef aub een wachtwoord op dat minstens zes karakters "
+"lang is!."
 
-#. RTF text: no limit
+#. Install missing packages box
 msgid ""
-"<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
-"here. X.Org includes the direct rendering interface to use the 3D "
-"capabilities of your graphics card. If your card and the corresponding "
-"driver support 3D hardware acceleration, enable it in this dialog."
+"<b>Software installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
 msgstr ""
-"<b>OpenGL subsysteem:</b><hr>Hier kunt u de 3D opties van de grafische kaart "
-"instellen. X.Org bevat tevens de directe renderings-interface om de 3D "
-"capaciteiten van uw grafische kaart te kunnen gebruiken. Wanneer uw kaart en "
-"de corresponderende driver de 3D hardware acceleratie ondersteunen, activeer "
-"u dat dan in dit dialoog."
+"<b>Software installatie:</b><hr>Enkele pakketten ontbreken. De ontbrekende "
+"pakketten nu installeren?"
 
-#. RTF text: no limit
-msgid ""
-"<b>Virtual resolution:</b><hr>Every single desktop has its real resolution "
-"which is completely viewable. Beside this resolution you can setup a "
-"resolution which lives outside the viewable area of your monitor and comes "
-"up if you leave the edges of your monitor with the mouse. This area is "
-"called a virtual resolution."
+#. Caption text for the missing package info window
+msgid "Package installation"
 msgstr ""
-"<b>Virtuele resolutie:</b><hr>Elke enkelvoudige desktop heeft een werkelijke "
-"resolutie wat compleet zichtbaar is te maken. Naast deze resolutie kunt u "
-"ook een resolutie instellen die buiten het zichtbare gebied van uw monitor "
-"ligt, u ziet het zodra u met uw muis de hoeken van uw monitor verlaat. Dit "
-"gebied wordt de virtuele resolutie genoemd."
-
-#. RTF text: no limit
-msgid ""
-"<b>Graphics cards:</b><hr>Set up your graphics hardware here. The graphics "
-"system consists of at least one graphics card but can be combined to a so "
-"called <i>multihead environment</i> which consists of at least two cards up "
-"to a maximum of 16 cards."
-msgstr ""
-"<b>Grafische kaart:</b><hr>Hier kunt u uw grafische hardware instellen. Het "
-"grafische systeem bestaat uit tenminste één grafische kaart maar kan worden "
-"gecombineerd tot een zogenaamde <i>multihead omgeving</i> welke uit minimaal "
-"twee kaarten en maximaal uit zestien kaarten kan bestaan."
-
-#. RTF text: no limit
-msgid ""
-"<b>Desktop properties:</b><hr>Set up your desktop with settings like "
-"resolution and colors. Every desktop is an independent device and may have a "
-"different color and/or resolution setup."
-msgstr ""
-"<b>Desktop eigenschappen:</b><hr>Stel uw desktop in met instellingen zoals "
-"bijvoorbeeld de resolutie en de kleuren. Elke desktop is dus een "
-"onafhankelijk apparaat en kan dan ook een verschillende kleuren- en/of "
-"resolutie-instelling hebben."
-
-#. RTF text: no limit
-msgid ""
-" <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
-"displayed by the monitor. The table below point to the current used Modeline"
-"(s)."
-msgstr ""
-" <b>Monitor geometrie:</b><hr>Stel de positie en grootte van de door de "
-"monitor getoonde afbeelding in. De onderstaande tabel wijst naar de huidige "
-"gebruikte modeline(s)."
-
-#. RTF text: no limit
-msgid ""
-"<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
-"language environment with which it should work."
-msgstr ""
-"<b>Toetsenbord eigenschappen:</b><hr>Stel het toetsenbord type en de "
-"taalomgeving in waarmee het toetsenbord zou moet werken."
-
-#. RTF text: no limit
-msgid ""
-"<b>Desktop layout:</b><hr>If more than one card is available, you are in a "
-"multihead environment. Set up the neighborhood relations of the connected "
-"monitors simply via drag&drop. If you are not sure which monitor belongs to "
-"the icon just double-click on it and you will see a message on the "
-"corresponding screen."
-msgstr ""
-"<b>Desktop layout:</b><hr>Wanneer er meer dan één kaart beschikbaar is, dan "
-"werkt u in een multihead omgeving. De relaties tussen de aangesloten "
-"monitoren is eenvoudig met behulp van slepen&neerzetten in te stellen. "
-"Wanneer u niet zeker weet welke monitor bij het pictogram behoort, dan kunt "
-"u er gewoon op dubbelklikken waarna u een melding op het corresponderende "
-"scherm zal gaan zien."
-
-#. RTF text: no limit
-msgid ""
-"<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
-"graphics cards. Be careful in your choice. Wrong sync ranges may damage the "
-"monitor."
-msgstr ""
-"<b>Monitor eigenschappen:</b><hr>De instelling van het, op de grafische "
-"kaarten aangesloten, monitormodel. Wees voorzichtig met het maken van uw "
-"keuze. Foutieve sync.bereiken kunnen de monitor namelijk beschadigen."
-
-#. RTF text: no limit
-msgid ""
-"<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
-"mouse pointer as well as settings like button emulation or wheel functions."
-msgstr ""
-"<b>Muis eigenschappen:</b><hr>Stel de basis parameters in om de basis "
-"muisaanwijzer in te stellen als ook de instellingen van bijvoorbeeld de knop-"
-"emulatie of de wielfuncties."
-
-#. RTF text: no limit
-msgid ""
-"<b>Multihead mode:</b><hr>If more than one card is available, you are in a "
-"multihead environment. Set up the multihead functioning here."
-msgstr ""
-"<b>Multihead mode:</b><hr>Wanneer er meer dan één kaart beschikbaar is, dan "
-"werkt u in een multihead omgeving. Stel hier de multihead functionaliteit in."
-
-#. RTF text: no limit
-msgid ""
-"<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
-"pointer devices, such as pens and erasers."
-msgstr ""
-"<b>Grafisch tablet:</b><hr>De instelling van een grafisch tablet en de "
-"corresponderende aanwijs-apparaten, zoals pennen en wissers."
-
-#. RTF text: no limit
-msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
-msgstr "<b>Aanraakscherm:</b><hr>De instelling van een drukgevoelig scherm."
-
-#. Maximum length: 20  characters
-msgid "Disabled"
-msgstr "Uitgeschakeld"
-
-#. Maximum length: 20  characters
-msgid "Enabled"
-msgstr "Ingeschakeld"
-
-#. Maximum length: 30  characters
-msgid "Wheel support"
-msgstr "Wiel ondersteuning"
-
-#. Maximum length: 30  characters
-msgid "&Port"
-msgstr "&Poort"
-
-#. Maximum length: 30  characters
-msgid "&Mode"
-msgstr "&Mode"
-
-#. Maximum length: 30  characters
-msgid "Button emulation"
-msgstr "Knop emulatie"
-
-#. Maximum length: 40  characters
-msgid "Primary Device:"
-msgstr "Primair apparaat:"
-
-#. Maximum length: 40  characters
-msgid "Secondary Device:"
-msgstr "Secundair apparaat:"
-
-#. Maximum length: 50  characters
-msgid "Single Layout [ no multihead environment ]"
-msgstr "Enkelvoudige layout [ geen multihead omgeving ]"
-
-#. Maximum length: 40  characters
-msgid "Clone Mode Active"
-msgstr "Kloonmode is actief"
-
-#. Maximum length: 40  characters
-msgid "Xinerama Mode Active"
-msgstr "Xinerama mode is actief"
-
-#. Maximum length: 40  characters
-msgid "Traditional Mode Active"
-msgstr "Traditioneel mode is actief"
-
-#. Maximum length: 40  characters
-msgid "Screens Layout Active"
-msgstr "Schermen layout is actief"
-
-#. Maximum length: 70  characters
-msgid "Display"
-msgstr "Beeldscherm"
-
-#. Maximum length: 70  characters
-msgid "Configuration on display"
-msgstr "Configuratie op beeldscherm"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1789,905 +1074,1577 @@ msgstr "Wijzig &positie"
 msgid "C&hange Size"
 msgstr "Wijzig &grootte"
 
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr "Scherm"
+
 #. Maximum length: 60  characters
 msgid "No video mode tuning available"
 msgstr "Geen video mode fijninstelling beschikbaar"
 
+msgid "Configuration on display"
+msgstr "Configuratie op beeldscherm"
+
 msgid "Idle timer..."
 msgstr "Idle timer..."
 
-#. RTF text: no limit
-msgid "PC-98xx Series"
-msgstr "PC-98xx series"
-
-#. RTF text: no limit
-msgid "Canadian"
-msgstr "Canadees"
-
-#. RTF text: no limit
-msgid "Brazilian"
-msgstr "Braziliaans"
-
-#. RTF text: no limit
-msgid "Bosnian"
-msgstr "Bosnisch"
-
-#. RTF text: no limit
-msgid "Lithuanian qwerty (numeric)"
-msgstr "Litouws qwerty (numeriek)"
-
-#. RTF text: no limit
-msgid "Georgian (russian)"
-msgstr "Georgiaans (russisch)"
-
-#. RTF text: no limit
-msgid "Latvian"
-msgstr "Lets"
-
-#. RTF text: no limit
-msgid "Belarusian"
-msgstr "Belarusian"
-
-#. RTF text: no limit
-msgid "Czech (qwerty)"
-msgstr "Tjechisch (qwerty)"
-
-#. RTF text: no limit
-msgid "Northern Saami (Finland)"
-msgstr "Noord Saami (Finland)"
-
-#. RTF text: no limit
-msgid "Macedonian"
-msgstr "Macedonisch"
-
-#. RTF text: no limit
-msgid "U.S. English w/ deadkeys"
-msgstr "U.S. Engels w/ deadkeys"
-
-#. RTF text: no limit
-msgid "Malayalam"
-msgstr "Maleis"
-
-#. RTF text: no limit
-msgid "Burmese"
-msgstr "Burmees"
-
-#. RTF text: no limit
-msgid "Kannada"
-msgstr "Kannada"
-
-#. RTF text: no limit
-msgid "Mongolian"
-msgstr "Mongools"
-
-#. RTF text: no limit
-msgid "Bengali"
-msgstr "Bengalees"
-
-#. RTF text: no limit
-msgid "Romanian"
-msgstr "Roemeens"
-
-#. RTF text: no limit
-msgid "Croatian"
-msgstr "Kroatisch"
-
-#. RTF text: no limit
-msgid "U.S. English w/ ISO9995-3"
-msgstr "U.S. Engels w/ ISO9995-3"
-
-#. RTF text: no limit
-msgid "Lithuanian azerty standard"
-msgstr "Litouws azerty standaard"
-
-#. RTF text: no limit
-msgid "Maltese"
-msgstr "Maltees"
-
-#. RTF text: no limit
-msgid "German"
-msgstr "Duits"
-
-#. RTF text: no limit
-msgid "Hungarian"
-msgstr "Hongaars"
-
-#. RTF text: no limit
-msgid "Russian"
-msgstr "Russisch"
-
-#. RTF text: no limit
-msgid "Swedish"
-msgstr "Zweeds"
-
-#. RTF text: no limit
-msgid "Turkish (F)"
-msgstr "Turks (F)"
-
-#. RTF text: no limit
-msgid "Oriya"
-msgstr "Oriya"
-
-#. RTF text: no limit
-msgid "Slovenian"
-msgstr "Sloveens"
-
-#. RTF text: no limit
-msgid "Slovak (qwerty)"
-msgstr "Slowaaks (qwerty)"
-
-#. RTF text: no limit
-msgid "Czech"
-msgstr "Tjechisch"
-
-#. RTF text: no limit
-msgid "Gujarati"
-msgstr "Gujarati"
-
-#. RTF text: no limit
-msgid "Danish"
-msgstr "Deens"
-
-#. RTF text: no limit
-msgid "Dvorak"
-msgstr "Dvorak"
-
-#. RTF text: no limit
-msgid "Slovak"
-msgstr "Slowaaks"
-
-#. RTF text: no limit
-msgid "Dutch"
-msgstr "Nederlands"
-
-#. RTF text: no limit
-msgid "Israeli"
-msgstr "Israëlisch"
-
-#. RTF text: no limit
-msgid "Tamil"
-msgstr "Tamil"
-
-#. RTF text: no limit
-msgid "Ogham"
-msgstr "Ogham"
-
-#. RTF text: no limit
-msgid "Norwegian"
-msgstr "Noors"
-
-#. RTF text: no limit
-msgid "Gurmukhi"
-msgstr "Gurmukhi"
-
-#. RTF text: no limit
-msgid "Serbian"
-msgstr "Servisch"
-
-#. RTF text: no limit
-msgid "Farsi"
-msgstr "Farsi"
-
-#. RTF text: no limit
-msgid "Icelandic"
-msgstr "IJslands"
-
-#. RTF text: no limit
-msgid "Italian"
-msgstr "Italiaans"
-
-#. RTF text: no limit
-msgid "Estonian"
-msgstr "Estisch"
-
-#. RTF text: no limit
-msgid "Inuktitut"
-msgstr "Inuktitut"
-
-#. RTF text: no limit
-msgid "Swiss French"
-msgstr "Zwitsers Frans"
-
-#. RTF text: no limit
-msgid "Swiss German"
-msgstr "Zwitsers Duits"
-
-#. RTF text: no limit
-msgid "Thai"
-msgstr "Thais"
-
-#. RTF text: no limit
-msgid "Tajik"
-msgstr "Tajik"
-
-#. RTF text: no limit
-msgid "Greek"
-msgstr "Grieks"
-
-#. RTF text: no limit
-msgid "Japanese"
-msgstr "Japans"
-
-#. RTF text: no limit
-msgid "Georgian (latin)"
-msgstr "Georgiaans (latijn)"
-
-#. RTF text: no limit
-msgid "Ukrainian"
-msgstr "Oekraïens"
-
-#. RTF text: no limit
-msgid "Polish (qwertz)"
-msgstr "Pools (qwertz)"
-
-#. RTF text: no limit
-msgid "Syriac"
-msgstr "Syrisch"
-
-#. RTF text: no limit
-msgid "Turkish"
-msgstr "Turks"
-
-#. RTF text: no limit
-msgid "Spanish"
-msgstr "Spaans"
-
-#. RTF text: no limit
-msgid "Northern Saami (Sweden)"
-msgstr "Noord Saami (Sweden)"
-
-#. RTF text: no limit
-msgid "Yugoslavian"
-msgstr "Joegoslavisch"
-
-#. RTF text: no limit
-msgid "Hindi"
-msgstr "Hindi"
-
-#. RTF text: no limit
-msgid "Finnish"
-msgstr "Fins"
-
-#. RTF text: no limit
-msgid "French (alternative)"
-msgstr "Frans (alternatief)"
-
-#. RTF text: no limit
-msgid "Hungarian (qwerty)"
-msgstr "Hongaars (qwerty)"
-
-#. RTF text: no limit
-msgid "Russian (cyrillic phonetic)"
-msgstr "Russisch (cyrillisch fonetisch)"
-
-#. RTF text: no limit
-msgid "Albanian"
-msgstr "Albanees"
-
-#. RTF text: no limit
-msgid "Polish"
-msgstr "Pools"
-
-#. RTF text: no limit
-msgid "Telugu"
-msgstr "Telugu"
-
-#. RTF text: no limit
-msgid "Armenian"
-msgstr "Armeens"
-
-#. RTF text: no limit
-msgid "Northern Saami (Norway)"
-msgstr "Noord Saami (Noorwegen)"
-
-#. RTF text: no limit
-msgid "Latin America"
-msgstr "Latijns Amerika"
-
-#. RTF text: no limit
-msgid "French"
-msgstr "Frans"
-
-#. RTF text: no limit
-msgid "United Kingdom"
-msgstr "Verenigd Koninkrijk"
-
-#. RTF text: no limit
-msgid "Arabic"
-msgstr "Arabisch"
-
-#. RTF text: no limit
-msgid "U.S. English"
-msgstr "U.S. Engels"
-
-#. RTF text: no limit
-msgid "Maltese (US layout)"
-msgstr "Maltees (US layout)"
-
-#. RTF text: no limit
-msgid "French Canadian"
-msgstr "Frans Canadees"
-
-#. RTF text: no limit
-msgid "Portuguese"
-msgstr "Portugees"
-
-#. RTF text: no limit
-msgid "Belgian"
-msgstr "Belgisch"
-
-#. RTF text: no limit
-msgid "Bulgarian"
-msgstr "Bulgaars"
-
-#. RTF text: no limit
-msgid "Azerbaijani"
-msgstr "Azerbaidzjaans"
-
-#. RTF text: no limit
-msgid "Vietnamese"
-msgstr "Vietnamees"
-
-#. RTF text: no limit
-msgid "Lao"
-msgstr "Lao"
-
-#. RTF text: no limit
-msgid "Microsoft Natural"
-msgstr "Microsoft Natural"
-
-#. RTF text: no limit
-msgid "Ennyah DKB-1008"
-msgstr "Ennyah DKB-1008"
-
-#. RTF text: no limit
-msgid "Logitech Deluxe Access Keyboard"
-msgstr "Logitech Deluxe Access toetsenbord"
-
-#. RTF text: no limit
-msgid "Microsoft Internet Keyboard"
-msgstr "Microsoft internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Samsung SDM 4500P"
-msgstr "Samsung SDM 4500P"
-
-#. RTF text: no limit
-msgid "Cherry Blue Line CyBo@rd"
-msgstr "Cherry Blue Line CyBo@rd"
-
-#. RTF text: no limit
-msgid "Dell"
-msgstr "Dell"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr "Hewlett-Packard Omnibook XE3 GF"
-
-#. RTF text: no limit
-msgid "IBM Rapid Access"
-msgstr "IBM Rapid Access"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr "Logitech Cordless Desktop Pro (alternatief optie2)"
-
-#. RTF text: no limit
-msgid "Memorex MX1998"
-msgstr "Memorex MX1998"
-
-#. RTF text: no limit
-msgid "Trust Wireless Keyboard Classic"
-msgstr "Trust draadloos toetsenbord klassiek"
-
-#. RTF text: no limit
-msgid "Dell 101-key PC"
-msgstr "Dell 101-key PC"
-
-#. RTF text: no limit
-msgid "Brother Internet Keyboard"
-msgstr "Brother internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr "Laptop/notebook Compaq (bijv: Armada) laptop toetsenbord"
-
-#. RTF text: no limit
-msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr "Laptop/notebook Compaq (bijv: Presario) internet toetsenbord"
-
-#. RTF text: no limit
-msgid "IBM Rapid Access II"
-msgstr "IBM Rapid Access II"
-
-#. RTF text: no limit
-msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr "Logitech iTouch Cordless toetsenbord (model Y-RB6)"
-
-#. RTF text: no limit
-msgid "Trust Direct Access Keyboard"
-msgstr "Trust Direct Access toetsenbord"
-
-#. RTF text: no limit
-msgid "Logitech Internet Navigator Keyboard"
-msgstr "Logitech Internet Navigator toetsenbord"
-
-#. RTF text: no limit
-msgid "SK-7100"
-msgstr "SK-7100"
-
-#. RTF text: no limit
-msgid "Acer AirKey V"
-msgstr "Acer AirKey V"
-
-#. RTF text: no limit
-msgid "BTC 9000A"
-msgstr "BTC 9000A"
-
-#. RTF text: no limit
-msgid "Toshiba Satellite S3000"
-msgstr "Toshiba Satellite S3000"
-
-#. RTF text: no limit
-msgid "Compaq Internet Keyboard (13 keys)"
-msgstr "Compaq internet toetsenbord (13 toetsen)"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XT1000"
-msgstr "Hewlett-Packard Omnibook XT1000"
-
-#. RTF text: no limit
-msgid "Logitech iTouch"
-msgstr "Logitech iTouch"
-
-#. RTF text: no limit
-msgid "SK-6200"
-msgstr "SK-6200"
-
-#. RTF text: no limit
-msgid "Compaq iPaq Keyboard"
-msgstr "Compaq iPaq toetsenbord"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr "Logitech Cordless Desktop Pro (alternatieve optie)"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Navigator"
-msgstr "Logitech Cordless Desktop Navigator"
-
-#. RTF text: no limit
-msgid "QTronix Scorpius 98N+"
-msgstr "QTronix Scorpius 98N+"
-
-#. RTF text: no limit
-msgid "Symplon PaceBook (tablet PC)"
-msgstr "Symplon PaceBook (tablet PC)"
-
-#. RTF text: no limit
-msgid "Winbook Model XP5"
-msgstr "Winbook Model XP5"
-
-#. RTF text: no limit
-msgid "BTC 5113RF Multimedia"
-msgstr "BTC 5113RF Multimedia"
-
-#. RTF text: no limit
-msgid "Diamond 9801 / 9802 series"
-msgstr "Diamond 9801 / 9802 series"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr "Hewlett-Packard Omnibook XE4xxx en ZE4xxx"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Optical"
-msgstr "Logitech Cordless Desktop Optical"
-
-#. RTF text: no limit
-msgid "Logitech Internet Keyboard"
-msgstr "Logitech internet toetsenbord"
-
-#. RTF text: no limit
-msgid "BTC 9000"
-msgstr "BTC 9000"
-
-#. RTF text: no limit
-msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr "Genius Comfy KB-16M / Genius MM toetsenbord KWD-910"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Internet Keyboard"
-msgstr "Hewlett-Packard internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr "Logitech Cordless Freedom/Desktop Navigator"
-
-#. RTF text: no limit
-msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-
-#. RTF text: no limit
-msgid "Propeller Voyager (KTEZ-1000)"
-msgstr "Propeller Voyager (KTEZ-1000)"
-
-#. RTF text: no limit
-msgid "Brazilian ABNT2"
-msgstr "Braziliaanse ABNT2"
-
-#. RTF text: no limit
-msgid "Compaq Internet Keyboard (7 keys)"
-msgstr "Compaq internet toetsenbord (7 toetsen)"
-
-#. RTF text: no limit
-msgid "Honeywell Euroboard"
-msgstr "Honeywell Euroboard"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop"
-msgstr "Logitech Cordless Desktop"
-
-#. RTF text: no limit
-msgid "Yahoo! Internet Keyboard"
-msgstr "Yahoo! internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Compaq Internet Keyboard (18 keys)"
-msgstr "Compaq internet toetsenbord (18 toetsen)"
-
-#. RTF text: no limit
-msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr "Laptop/notebook Dell Inspiron 8xxx"
-
-#. RTF text: no limit
-msgid "IBM Rapid Access II (alternate option)"
-msgstr "IBM Rapid Access II (alternatieve optie)"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Pro"
-msgstr "Logitech Cordless Desktop Pro"
-
-#. RTF text: no limit
-msgid "Advance Scorpius KI"
-msgstr "Geavanceerde Scorpius KI"
-
-#. RTF text: no limit
-msgid "BTC 5126T"
-msgstr "BTC 5126T"
-
-#. RTF text: no limit
-msgid "Dexxa Wireless Desktop Keyboard"
-msgstr "Dexxa Wireless Desktop toetsenbord"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook 5xx"
-msgstr "Hewlett-Packard Omnibook 5xx"
-
-#. RTF text: no limit
-msgid "Memorex MX2750"
-msgstr "Memorex MX2750"
-
-#. RTF text: no limit
-msgid "SK-1300"
-msgstr "SK-1300"
-
-#. RTF text: no limit
-msgid "Generic 101-key PC"
-msgstr "Generieke 101-key PC"
-
-#. RTF text: no limit
-msgid "Northgate OmniKey 101"
-msgstr "Northgate OmniKey 101"
-
-#. RTF text: no limit
-msgid "ACPI Standard"
-msgstr "ACPI Standaard"
-
-#. RTF text: no limit
-msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr "Cherry Blue Line CyBo@rd (alternatieve optie)"
-
-#. RTF text: no limit
-msgid "Chicony Internet Keyboard"
-msgstr "Chicony internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr "Hewlett-Packard SK-2501 multimedia toetsenbord"
-
-#. RTF text: no limit
-msgid "Samsung SDM 4510P"
-msgstr "Samsung SDM 4510P"
-
-#. RTF text: no limit
-msgid "SK-2500"
-msgstr "SK-2500"
-
-#. RTF text: no limit
-msgid "SVEN Ergonomic 2500"
-msgstr "SVEN Ergonomic 2500"
-
-#. RTF text: no limit
-msgid "Generic 102-key (Intl) PC"
-msgstr "Generieke 102-key (Intl) PC"
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop iTouch"
-msgstr "Logitech Cordless Desktop iTouch"
-
-#. RTF text: no limit
-msgid "Chicony KB-9885"
-msgstr "Chicony KB-9885"
-
-#. RTF text: no limit
-msgid "Compaq Easy Access Keyboard"
-msgstr "Compaq Easy Access toetsenbord"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr "Hewlett-Packard 5181 internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr "Hewlett-Packard Omnibook 500 FA"
-
-#. RTF text: no limit
-msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr "Memorex MX2500 EZ-Access toetsenbord"
-
-#. RTF text: no limit
-msgid "Generic 104-key PC"
-msgstr "Generieke 104-key PC"
-
-#. RTF text: no limit
-msgid "Everex STEPnote"
-msgstr "Everex STEPnote"
-
-#. RTF text: no limit
-msgid "Japanese 106-key"
-msgstr "Japans 106-toetsen"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE en Pavilion N5xxx"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr "Hewlett-Packard Pavilion ZT11xx"
-
-#. RTF text: no limit
-msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr "Logitech iTouch keyboard Internet Navigator"
-
-#. RTF text: no limit
-msgid "Generic 105-key (Intl) PC"
-msgstr "Generieke 105-key (Intl) PC"
-
-#. RTF text: no limit
-msgid "Keytronic FlexPro"
-msgstr "Keytronic FlexPro"
-
-#. RTF text: no limit
-msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr "Hewlett-Packard SK-2505 internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr "Microsoft Internet Keyboard Pro, Zweeds"
-
-#. RTF text: no limit
-msgid "Microsoft Office Keyboard"
-msgstr "Microsoft Office toetsenbord"
-
-#. RTF text: no limit
-msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr "Oretec MCK-800 MM/internet toetsenbord"
-
-#. RTF text: no limit
-msgid "Both Ctrl keys together change group"
-msgstr "Beide Ctrl-toetsen samen wijzigen de groep"
-
-#. RTF text: no limit
-msgid "CapsLock key behavior"
-msgstr "CapsLock toets gedrag"
-
-#. RTF text: no limit
-msgid "Both Win-keys switch group while pressed"
-msgstr "Beide Win-toetsen indrukken om de groep te wisselen"
-
-#. RTF text: no limit
-msgid "Left Alt key changes group"
-msgstr "De linker Alt-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Left Win-key changes group"
-msgstr "De linker Win-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Right Shift key changes group"
-msgstr "De rechter shift-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Alt/Win key behavior"
-msgstr "Alt/Win toets gedrag"
-
-#. RTF text: no limit
-msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr "gebruikt interne kapitalisatie. Shift zal Caps niet annuleren."
-
-#. RTF text: no limit
-msgid "R-Alt switches group while pressed"
-msgstr "R-Alt indrukken om de groep te wisselen"
-
-#. RTF text: no limit
-msgid "Right Win-key is Compose"
-msgstr "De rechter Win-toets is Samenstellen"
-
-#. RTF text: no limit
-msgid "Right Ctrl key changes group"
-msgstr "De rechter Ctrl toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Press any of Win-keys to choose 3rd level"
-msgstr "Druk op één van de Win-toetsen om het 3de level te selecteren"
-
-#. RTF text: no limit
-msgid "Control key at bottom left"
-msgstr "Control toets linksonder"
-
-#. RTF text: no limit
-msgid "Both Shift keys together change group"
-msgstr "Beide Shift-toetsen wijzigen de groep"
-
-#. RTF text: no limit
-msgid "Third level choosers"
-msgstr "Derde level kiezers"
-
-#. RTF text: no limit
-msgid "Control key at left of 'A'"
-msgstr "Control-toets links van 'A'"
-
-#. RTF text: no limit
-msgid "Scroll_Lock LED shows alternative group"
-msgstr "Scroll_Lock LED toont de alternatieve groep"
-
-#. RTF text: no limit
-msgid "Right Alt is Compose"
-msgstr "Alt-rechts is samenstellen"
-
-#. RTF text: no limit
-msgid "Right Win-key changes group"
-msgstr "De rechter Win-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Press Left Win-key to choose 3rd level"
-msgstr "Druk op de linker Win-toets om het 3de level te selecteren"
-
-#. RTF text: no limit
-msgid "Make CapsLock an additional Control"
-msgstr "Maak van CapsLock een extra control"
-
-#. RTF text: no limit
-msgid "uses internal capitalization. Shift cancels Caps."
-msgstr "gebruikt interne kapitalisatie. Shift annuleert Caps."
-
-#. RTF text: no limit
-msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
-"gedraagt zich als een vergrendelde Shift-toets. Shift zal Caps niet "
-"annuleren."
-
-#. RTF text: no limit
-msgid "Left Win-key switches group while pressed"
-msgstr "De linker Win-toets indrukken om de groep te wisselen"
-
-#. RTF text: no limit
-msgid "Left Shift key changes group"
-msgstr "De linker Shift-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Num_Lock LED shows alternative group"
-msgstr "Num_Lock LED toont de alternatieve groep"
-
-#. RTF text: no limit
-msgid "Caps_Lock LED shows alternative group"
-msgstr "Caps_Lock LED toont de alternatieve groep"
-
-#. RTF text: no limit
-msgid "Meta is mapped to the left Win-key."
-msgstr "Meta is aan de linker Win-toets toegewezen."
-
-#. RTF text: no limit
-msgid "Caps Lock key changes group"
-msgstr "De Caps Lock toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Both Alt keys together change group"
-msgstr "Beide Alt-toetsen wijzigen de groep"
-
-#. RTF text: no limit
-msgid "Menu is Compose"
-msgstr "Menu is samenstellen"
-
-#. RTF text: no limit
-msgid "Right Alt key changes group"
-msgstr "De rechter Alt-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Control Key Position"
-msgstr "Control toets positie"
-
-#. RTF text: no limit
-msgid "Swap Control and Caps Lock"
-msgstr "Verwissel Control en CapsLock"
-
-#. RTF text: no limit
-msgid "Control+Shift changes group"
-msgstr "Control+Shift wijzigen de groep"
-
-#. RTF text: no limit
-msgid "Alt+Shift changes group"
-msgstr "Alt+Shift wijzigen de groep"
-
-#. RTF text: no limit
-msgid "Press Right Control to choose 3rd level"
-msgstr "Druk op de rechter Control om het 3de level te selecteren"
-
-#. RTF text: no limit
-msgid "Add the standard behavior to Menu key."
-msgstr "Standaard gedrag aan de Menu toets toevoegen."
-
-#. RTF text: no limit
-msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Alt en Meta op de Alt toetsen (standaard)."
-
-#. RTF text: no limit
-msgid "Super is mapped to the Win-keys (default)."
-msgstr "Super is aan de Win-toetsen toegewezen (standaard)."
-
-#. RTF text: no limit
-msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper is aan de Win-toetsen toegewezen."
-
-#. RTF text: no limit
-msgid "Press Right Win-key to choose 3rd level"
-msgstr "Druk op de rechter Win-toets om het 3de level te selecteren"
-
-#. RTF text: no limit
-msgid "Use keyboard LED to show alternative group"
-msgstr ""
-"Gebruik de toetsenbord LED voor het weergeven van de alternatieve groep"
-
-#. RTF text: no limit
-msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
-"gedraagt zich als een vergrendelde Shift-toets. Shift zal Caps annuleren."
-
-#. RTF text: no limit
-msgid "Group Shift/Lock behavior"
-msgstr "Groep Shift/Vergrendel gedrag"
-
-#. RTF text: no limit
-msgid "Right Win-key switches group while pressed"
-msgstr "Rechter Win-toets indrukken om de groep te wisselen"
-
-#. RTF text: no limit
-msgid "Alt+Control changes group"
-msgstr "Alt+Control wijzigen de groep"
-
-#. RTF text: no limit
-msgid "Menu key changes group"
-msgstr "Menu-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Left Ctrl key changes group"
-msgstr "De linker Ctrl-toets wijzigt de groep"
-
-#. RTF text: no limit
-msgid "Press Menu key to choose 3rd level"
-msgstr "Druk op de Menu toets om het 3de level te selecteren"
-
-#. RTF text: no limit
-msgid "Meta is mapped to the Win-keys."
-msgstr "Meta is aan de Win-toetsen toegewezen."
+#~ msgid "Component"
+#~ msgstr "Component"
+
+#~ msgid "with"
+#~ msgstr "met"
+
+#~ msgid "Not available"
+#~ msgstr "Niet beschikbaar"
+
+#~ msgid "Use the following AccessX settings"
+#~ msgstr "Gebruik de volgende AccessX instellingen"
+
+#~ msgid "Disable AccessX"
+#~ msgstr "AccessX deactiveren"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Allerlei"
+
+#~ msgid "This screen is selected"
+#~ msgstr "Dit scherm is geselecteerd"
+
+#~ msgid "at"
+#~ msgstr "op"
+
+#~ msgid "Sync ranges"
+#~ msgstr "Sync bereiken"
+
+#~ msgid "Wheel is moving..."
+#~ msgstr "Wiel beweegt..."
+
+#~ msgid "Disable use of accented letters"
+#~ msgstr "Het gebruik van geaccentueerde letters uitschakelen"
+
+#~ msgid "Clear test field"
+#~ msgstr "Testveld leegmaken"
+
+#~ msgid "Mouse speed in pixels/sec"
+#~ msgstr "Muissnelheid in pixels/sec"
+
+#~ msgid "&Remove Tablet..."
+#~ msgstr "&Verwijder tablet..."
+
+#~ msgid "Delay time: (ms)"
+#~ msgstr "Wachttijd: (ms)"
+
+#~ msgid "Repeat rate: (Symbols/sec)"
+#~ msgstr "Herhalingssnelheid: (karakters/sec)"
+
+#~ msgid "&Apply"
+#~ msgstr "&Bevestigen"
+
+#~ msgid "Graphics engine starts with resolution:"
+#~ msgstr "Grafische engine start met resolutie:"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgid "Velocity"
+#~ msgstr "Snelheid"
+
+#~ msgid "Select Keyboard Layout"
+#~ msgstr "Selecteer toetsenbord layout"
+
+#~ msgid "Symbol recurrence"
+#~ msgstr "Symbool herhaling"
+
+#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
+#~ msgstr "<nobr><h3>Toetsenbord type</h3></nobr>"
+
+#~ msgid "BusID"
+#~ msgstr "Bus ID"
+
+#~ msgid "ScreenID"
+#~ msgstr "Scherm ID"
+
+#~ msgid "Manufacturer Disk..."
+#~ msgstr "Fabrikant disk..."
+
+#~ msgid "Shift/Lock Group"
+#~ msgstr "Shift/lock groep"
+
+#~ msgid "Ctrl Mapping"
+#~ msgstr "Ctrl mapping"
+
+#~ msgid "LeftAlt mapping"
+#~ msgstr "LeftAlt mapping"
+
+#~ msgid "RightAlt mapping"
+#~ msgstr "RightAlt mapping"
+
+#~ msgid "RightCtl mapping"
+#~ msgstr "RightCtl mapping"
+
+#~ msgid "Default"
+#~ msgstr "Standaard"
+
+#~ msgid "R-Alt switch group while pressed"
+#~ msgstr "R-Alt indrukken voor groepswissel"
+
+#~ msgid "R-Alt switch group"
+#~ msgstr "R-Alt wissel groep"
+
+#~ msgid "Both Shift Keys change group"
+#~ msgstr "Beide shift-toetsen wijzigen de groep"
+
+#~ msgid "Ctrl and Shift change group"
+#~ msgstr "Ctrl en shift wijzigen de groep"
+
+#~ msgid "Alt and Ctrl change group"
+#~ msgstr "Alt en Ctrl wijzigen de groep"
+
+#~ msgid "CapsLock as additional control"
+#~ msgstr "CapsLock als extra besturing"
+
+#~ msgid "Swap Ctrl and CapsLock"
+#~ msgstr "Verwissel Ctrl en CapsLock"
+
+#~ msgid "Ctrl Key at left of <A>"
+#~ msgstr "Ctrl-toets links van <A>"
+
+#~ msgid "Ctrl Key at bottom left"
+#~ msgstr "Ctrl toets links beneden"
+
+#~ msgid "Modeline Algorithm"
+#~ msgstr "Modeline algoritme"
+
+#~ msgid "Color and Resolution"
+#~ msgstr "Kleur en resolutie"
+
+#~ msgid "Virtual Resolution"
+#~ msgstr "Virtuele resolutie"
+
+#~ msgid "Language Layout"
+#~ msgstr "Taal layout"
+
+#~ msgid "Screen Layout"
+#~ msgstr "Scherm layout"
+
+#~ msgid "Server layout:"
+#~ msgstr "Server layout:"
+
+#~ msgid "Mode:"
+#~ msgstr "Mode:"
+
+#~ msgid "MHz"
+#~ msgstr "MHz"
+
+#~ msgid "Enable or Disable AccessX"
+#~ msgstr "AccessX aan- of uitzetten"
+
+#~ msgid "Enable 3D features"
+#~ msgstr "3D opties aanzetten"
+
+#~ msgid "Enable DPMS"
+#~ msgstr "DPMS aanzetten"
+
+#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Multihead mode instelling...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>3D/OpenGL instelling...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>AccessX instelling...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>VNC instelling...</u></h3></nobr>"
+
+#~ msgid "Selected component:"
+#~ msgstr "Geselecteerd component:"
+
+#~ msgid "Click 'Apply' to test your settings."
+#~ msgstr "Druk op 'Toepassen' om uw instellingen te testen."
+
+#~ msgid ""
+#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
+#~ "is a warning only but make sure your keyboard model is able to map all "
+#~ "the keys needed for the selected layout."
+#~ msgstr ""
+#~ "<b>De huidige layout en het model lijken niet goed bij elkaar te passen.</"
+#~ "b><hr>Dit is slechts een waarschuwing, verzeker u zich er echter van dat "
+#~ "de toetsen van uw toetsenbord-model met die van de geselecteerde layout "
+#~ "overeenkomen."
+
+#~ msgid ""
+#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
+#~ "3D subsystem is unable to work within a multihead environment."
+#~ msgstr ""
+#~ "<b>De OpenGL acceleratie in multihead werkomgevingen is niet mogelijk</"
+#~ "b><hr>Het 3D subsysteem werkt niet binnen een multihead werkomgeving."
+
+#~ msgid ""
+#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
+#~ "hardware 3D/OpenGL acceleration."
+#~ msgstr ""
+#~ "<b>3D acceleratie onmogelijk</b><hr>De geïnstalleerde kaart kan de 3D/"
+#~ "OpenGL acceleratie hardware niet gebruiken."
+
+#~ msgid ""
+#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
+#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
+#~ "The currently used color setup does not fulfill this requirement. Verify "
+#~ "the current default color depth setup."
+#~ msgstr ""
+#~ "<b>Foutieve kleurdiepte voor de OpenGL acceleratie</b><hr>De meeste "
+#~ "OpenGL drivers hebben een kleurdiepte van <b>16 Bit (65536)</b> nodig om "
+#~ "goed te kunnen werken. De momenteel gebruikte kleurdiepte-instelling "
+#~ "voldoet niet aan deze eis. Verifieer de huidige standaard kleurdiepte-"
+#~ "instelling."
+
+#~ msgid ""
+#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
+#~ "acceleration because the following packages are missing:"
+#~ msgstr ""
+#~ "<b>De vereiste basispakketten ontbreken</b><hr>De OpenGL acceleratie kan "
+#~ "niet geactiveerd worden omdat de volgende pakketten ontbreken:"
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
+#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
+#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
+#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
+#~ "Online Update)."
+#~ msgstr ""
+#~ "<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Het systeem "
+#~ "heeft de officiële 2D/3D/OpenGL driver van nVidia niet. U moet eerst de "
+#~ "pakketten NVIDIA_GLX en NVIDIA_kernel met via de nVidia webserver <i>"
+#~ "(http://www.nvidia.com)</i> bijwerken. Dit kan ook eenvoudig met behulp "
+#~ "van YOU (YaST2 Online Update) gedaan worden."
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
+#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
+#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
+#~ "list (usually at the bottom of the list). Note, that you need to mark the "
+#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
+#~ "before and the driver was uninstalled - for whatever reason."
+#~ msgstr ""
+#~ "<b>De OpenGL acceleratie kan niet geactiveerd worden</b><hr>Om het 3D "
+#~ "subsysteem voor deze kaart te activeren, dient u eerst de commerciële "
+#~ "driver van nVidia te installeren. Installeer de driver met behulp van "
+#~ "<b>YaST Online Update</b>. Selecteer binnen YOU <b>Installeerbare en "
+#~ "geïnstalleerde patches</b> als <b>Patch categorie</b> en selecteer inde "
+#~ "patch lijst <b>Download NVIDIA(r) Graphics Driver</b> (dit staat "
+#~ "normaliter onderin de lijst). Denk er om dat u de patch markeert als "
+#~ "zijnde een <b>Update</b> (rechter muisklik) indien u het reeds eerder "
+#~ "heeft geïnstalleerd en de driver installatie, om wat voor reden dan ook, "
+#~ "ongedaan is gemaakt."
+
+#~ msgid ""
+#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
+#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
+#~ "the nVidia installer. The uninstall process will reset the original "
+#~ "driver from X.Org which does not provide any 3D hardware acceleration."
+#~ "<br><br><b>Do you want to continue?</b>"
+#~ msgstr ""
+#~ "<b>OpenGL acceleratie uitschakelen</b><hr>Het 3D subsysteem is gebaseerd "
+#~ "op de commerciële driver van nVidia. SaX2 moet de driver met behulp van "
+#~ "het nVidia installatieprogramma ongedaan maken. Het de-installatie proces "
+#~ "zal de originele driver van X.Org, dat overigens geen enkele 3D hardware "
+#~ "acceleratie biedt, opnieuw activeren. <br><br><b>Wilt u verder gaan?</b>"
+
+#~ msgid "Display size unknown..."
+#~ msgstr "Onbekende beeldscherm grootte..."
+
+#~ msgid ""
+#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
+#~ "couldn't be detected. Applications dealing with computer graphics like "
+#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
+#~ "about the real physical size of your display to work properly. Please "
+#~ "refer to your monitor manual to obtain the correct size values for the "
+#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
+#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
+#~ msgstr ""
+#~ "<b>Geef de X/Y beeldscherm grootte op in [ mm ]</b><hr>De geometrie van "
+#~ "uw beeldscherm kon niet gedetecteerd worden. Programma's die met computer "
+#~ "graphics werken zoals bijvoorbeeld <b>Gimp</b> of font rendering "
+#~ "bibliotheken zoals <b>Xft</b> willen graag weten wat de echte fysieke "
+#~ "grootte van uw beeldscherm is om correct te kunnen functioneren. Kijk aub "
+#~ "even in uw monitorhandleiding en zoek de juiste waardes van de "
+#~ "horizontale (X) en verticale (Y) groottes op. De waardes moeten in [ mm ] "
+#~ "worden opgegeven.<br><br><b>Wilt u de beeldscherm grootte instellen?</b>"
+
+#~ msgid ""
+#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
+#~ "X and Y axis and click 'Add' to include the new resolution in the "
+#~ "standard resolution list."
+#~ msgstr ""
+#~ "<b>Door gebruiker gedefinieerde resolutie toevoegen</b><hr>Geef de pixel "
+#~ "waardes voor de X en Y as op en druk op 'Toevoegen' om de nieuwe "
+#~ "resolutie aan de standaard resolutielijst toe te voegen."
+
+#~ msgid "Available configuration components are:"
+#~ msgstr "De beschikbare configuratie componenten zijn:"
+
+#~ msgid ""
+#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
+#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
+#~ msgstr ""
+#~ "<b>AccessX is ingeschakeld:</b><hr>De basis muiswijzer is nu via de "
+#~ "<b>nummer toetsen</b> toegankelijk. Test het gedrag door middel van het "
+#~ "nummer pad."
+
+#~ msgid ""
+#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
+#~ "number pad is <b>disabled</b> now."
+#~ msgstr ""
+#~ "<b>AccessX is uitgeschakeld:</b><hr>Toegang tot de basis muiswijzer via "
+#~ "het nummer pad is nu <b>uitgeschakeld</b>."
+
+#~ msgid ""
+#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
+#~ "system?"
+#~ msgstr ""
+#~ "<b>Tablet verwijderen:</b><hr>Weet u zeker dat u het grafische tablet van "
+#~ "uw systeem wilt verwijderen?"
+
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time the graphics system is restarted."
+#~ msgstr ""
+#~ "<b>De configuratie is opgeslagen:</b><hr>Uw modificaties hebben pas "
+#~ "effect wanneer u het grafische systeem opnieuw heeft opgestart."
+
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time your system is <b>rebooted</b>."
+#~ msgstr ""
+#~ "<b>De configuratie is opgeslagen:</b><hr>Uw modificatie hebben pas effect "
+#~ "wanneer het systeem <b>opnieuw geboot</b> is."
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
+#~ "in developmental phases so are, in part, still regarded as experimental. "
+#~ "Nevertheless, we have decided to include the drivers in our distribution "
+#~ "because of the high demand for 3D hardware acceleration in Linux. "
+#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
+#~ "are unable to offer any installation support for configuring 3D hardware "
+#~ "acceleration or if any problems related to this should arise."
+#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Kaart met 3D functionaliteit gedetecteerd: <u>%1</u></b><hr>Alle Linux "
+#~ "3D drivers zitten nog in de ontwikkelingsfase en zijn deels nog "
+#~ "experimenteel. Desondanks hebben we besloten om de drivers in onze "
+#~ "distributie op te nemen vanwege de grote vraag naar 3D hardware "
+#~ "versnelling in Linux. <br><br>Vanwege de ietwat experimentele status van "
+#~ "de OpenGL drivers zijn we niet in staat om wat voor installatie "
+#~ "ondersteuning dan ook te geven bij het configureren van de 3D hardware "
+#~ "versnelling of bij optredende problemen met betrekking tot het "
+#~ "bovenstaande.<br><br><b>Wilt u de 3D ondersteuning voor deze kaart "
+#~ "activeren?</b>"
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
+#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
+#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
+#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
+#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
+#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
+#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
+#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
+#~ "do not have any influence over the development of nVidia drivers."
+#~ "<br><br><b>Prepare 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Kaart met 3D functionaliteit gedetecteerd: <u>%1</u></b><hr> Dit is "
+#~ "geen officiële 2D/3D/OpenGL driver van nVidia (vanwege licentie redenen). "
+#~ "De 3D/OpenGL driver, als u 3D inschakelt, heeft <b>geen<b> hardware-"
+#~ "versnelling. Wanneer u de 3D/OpenGL met hardware-versnelling wilt "
+#~ "gebruiken, update de pakketten NVIDIA_GLX en de NVIDIA_kernel voor SuSE "
+#~ "Linux van de nVidia Webserver <i>(http://www.nvidia.com)</i>. U kunt dit "
+#~ "ook comfortabel met behulp van YOU (YaST2 Online Update) doen.<br><br>Als "
+#~ "er verder nog problemen zijn met de 2D/3D/OpenGL driver van nVidia, "
+#~ "raadpleeg dan de fabrikant. Helaas hebben we geen enkele invloed op de "
+#~ "ontwikkeling van de nVidia drivers. <br><br><b>3D ondersteuning voor deze "
+#~ "kaart voorbereiden?</b>"
+
+#~ msgid ""
+#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
+#~ "that comes with this distribution is still installed.  You should update "
+#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
+#~ "online update). Start the online update?"
+#~ msgstr ""
+#~ "<b>Software update</b><hr>De bij deze distributie meegeleverde dummy "
+#~ "nvidia driver (zonder 3D capaciteit) is nog geïnstalleerd.  U zou met YOU "
+#~ "(YaST2 online update) een update moeten doen naar de officiële nvidia "
+#~ "drivers op de nvidia ftp server. Wilt u de online update starten?"
+
+#~ msgid ""
+#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
+#~ "resolution is not adjustable within framebuffer mode. Please select "
+#~ "another resolution than:"
+#~ msgstr ""
+#~ "<b>Ongeldige resolutie voor de FBdev mode</b><hr>De momenteel "
+#~ "geselecteerde resolutie is niet binnen de framebuffer mode in te passen. "
+#~ "Selecteer aub een andere resolutie dan:"
+
+#~ msgid ""
+#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
+#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
+#~ "currently selected monitor model is correct or select a lower resolution "
+#~ "than:"
+#~ msgstr ""
+#~ "<b>De geselecteerde resolutie is niet beschikbaar</b><hr>De geselecteerde "
+#~ "resolutie past niet in het synchronisatiebereik van de monitor. "
+#~ "Controleer aub of het huidige geselecteerde monitor model wel juist is of "
+#~ "selecteer een lagere resolutie dan:"
+
+#~ msgid ""
+#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
+#~ "depth is not allowed for this configuration."
+#~ msgstr ""
+#~ "<b>Ongeldige kleurdiepte geselecteerd:</b><hr>Een <b>4</b> of <b>15</b> "
+#~ "bit kleurdiepte is voor deze configuratie niet toegestaan."
+
+#~ msgid ""
+#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
+#~ "is not allowed for this configuration. Select another resolution from the "
+#~ "list."
+#~ msgstr ""
+#~ "<b>Ongeldige resolutie geselecteerd:</b><hr>De gewenste resolutie "
+#~ "instelling is voor deze configuratie niet toegestaan. Selecteer een "
+#~ "andere resolutie uit de lijst aub."
+
+#~ msgid "<b>X Server test failed:</b><hr><br>"
+#~ msgstr "<b>X server test is mislukt:</b><hr><br>"
+
+#~ msgid "3D question..."
+#~ msgstr "3D vraag..."
+
+#~ msgid "X Server test information..."
+#~ msgstr "X server test informatie..."
+
+#~ msgid "Configuration saved..."
+#~ msgstr "Configuratie is opgeslagen..."
+
+#~ msgid "AccessX status information..."
+#~ msgstr "AccessX status informatie..."
+
+#~ msgid "Tablet warning..."
+#~ msgstr "Tablet waarschuwing..."
+
+#~ msgid "Consideration..."
+#~ msgstr "Overweging..."
+
+#~ msgid "Geometry"
+#~ msgstr "Geometrie"
+
+#~ msgid "Name:"
+#~ msgstr "Naam:"
+
+#~ msgid "Card and Desktop"
+#~ msgstr "Kaart en desktop"
+
+#~ msgid "Input Devices"
+#~ msgstr "Invoerapparaten"
+
+#~ msgid "Input-Devices"
+#~ msgstr "Invoerapparaten"
+
+#~ msgid "Desktop"
+#~ msgstr "Desktop"
+
+#~ msgid "Multihead"
+#~ msgstr "Multihead"
+
+#~ msgid "Secondary Modeline:"
+#~ msgstr "Secundaire modeline:"
+
+#~ msgid "Modeline"
+#~ msgstr "Modeline"
+
+#~ msgid "AccessX"
+#~ msgstr "AccessX"
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "X-Server accessable via VNC protocol:"
+#~ msgstr "X-server toegankelijk via het VNC protocol:"
+
+#~ msgid "Access Control"
+#~ msgstr "Toegangscontrole"
+
+#~ msgid "<b>Core Pointer...</b>"
+#~ msgstr "<b>Basiswijzer...</b>"
+
+#~ msgid "F&inalize >>"
+#~ msgstr "A&fronden >>"
+
+#~ msgid "<< &Back"
+#~ msgstr "<< &Terug"
+
+#~ msgid "&Next >>"
+#~ msgstr "&Verder >>"
+
+#~ msgid "&Exit"
+#~ msgstr "&Stoppen"
+
+#~ msgid "&About..."
+#~ msgstr "&Info..."
+
+#~ msgid "About the author"
+#~ msgstr "Over de auteur"
+
+#~ msgid "Select virtual resolution for Mode %1"
+#~ msgstr "Selecteer virtuele resolutie voor mode %1"
+
+#~ msgid ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
+#~ "of this product is</nobr><br>Marcus Schaefer"
+#~ msgstr ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>De auteur en beheerder "
+#~ "van dit product is</nobr><br>Marcus Schaefer"
+
+#~ msgid "&Modules..."
+#~ msgstr "&Modules..."
+
+#~ msgid "&File"
+#~ msgstr "&Bestand"
+
+#~ msgid "Loading CDB data: %1"
+#~ msgstr "CDB data laden: %1"
+
+#~ msgid "Loading base data: %1"
+#~ msgstr "Basis data laden: %1"
+
+#~ msgid "Loading system data: %1"
+#~ msgstr "Systeem data laden: %1"
+
+#~ msgid "SaX2 start-up information"
+#~ msgstr "SaX2 opstart informatie"
+
+#~ msgid "SaX2 exit program... "
+#~ msgstr "SaX2 programma stoppen... "
+
+#~ msgid "SaX2 final steps..."
+#~ msgstr "SaX2 laatste stappen..."
+
+#~ msgid "Dialog information..."
+#~ msgstr "Dialoog informatie..."
+
+#~ msgid "Exception..."
+#~ msgstr "Uitzondering..."
+
+#~ msgid ""
+#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
+#~ "than one graphics device.  More are required to set up a multihead "
+#~ "configuration."
+#~ msgstr ""
+#~ "<b>De multihead instelling is niet mogelijk:</b><hr>Uw systeem biedt niet "
+#~ "meer dan één grafisch apparaat.  Om een multihead configuratie in te "
+#~ "stellen heeft u meerdere grafische apparaten nodig."
+
+#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
+#~ msgstr "<b>Dialoog sluiten:</b><hr>Dit dialoog sluiten?"
+
+#~ msgid ""
+#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+#~ msgstr ""
+#~ "<b>Ongeldige instelling:</b><hr>Minstens één grafisch apparaat dient "
+#~ "geconfigureerd te zijn."
+
+#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
+#~ msgstr ""
+#~ "<b>Ongeldige instelling:</b><hr>Minstens één monitor moet geconfigureerd "
+#~ "zijn."
+
+#~ msgid ""
+#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
+#~ "monitor configuration. You are not allowed to remove this major entity."
+#~ msgstr ""
+#~ "<b>De monitor kan niet verwijderd worden:</b><hr>Het systeem biedt exact "
+#~ "één monitor configuratie. Het is u niet toegestaan om dit belangrijke "
+#~ "onderdeel te verwijderen."
+
+#~ msgid ""
+#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
+#~ "dialog and start the selected one?"
+#~ msgstr ""
+#~ "<b>Dialoog starten:</b><hr>Er is reeds een dialoog geopend.  Wilt u het "
+#~ "geopende dialoog afbreken en het geselecteerde starten?"
+
+#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
+#~ msgstr "<b>Dialoog afsluiten:</b><hr>Wilt u dit dialoog nu afsluiten?"
+
+#~ msgid ""
+#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
+#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
+#~ "needs to be rebooted first to activate the changes for resolution and/or "
+#~ "color settings."
+#~ msgstr ""
+#~ "<b>Laatste stap:</b><hr>Het opslaan van uw nieuwe configuratie is de "
+#~ "laatste stap. Neem er aub nota van dat de configuratie <i>Framebuffer</i> "
+#~ "gebaseerd is en uw systeem eerst opnieuw geboot moet worden om de "
+#~ "wijzigingen van de resolutie en/of kleur instellingen te activeren."
+
+#~ msgid "Unknown Graphics Card..."
+#~ msgstr "Onbekende grafische kaart..."
+
+#~ msgid ""
+#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
+#~ "manually. Start the configuration dialog to set up the graphics card now?"
+#~ msgstr ""
+#~ "<b>De grafische kaart kon niet gedetecteerd worden</b><hr>U dient uw "
+#~ "kaart handmatig te configureren. Wilt u nu het configuratie dialoog "
+#~ "starten om de grafische kaart in te stellen?"
+
+#~ msgid ""
+#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>De monitor (%1) kon niet gedetecteerd worden</b><hr>U dient uw monitor "
+#~ "handmatig in te instellen. Wilt u nu het configuratie dialoog starten om "
+#~ "het beeldscherm in te stellen?"
+
+#~ msgid ""
+#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>De monitor (%1) met ID: %2 is niet gevonden</b><hr>U dient uw monitor "
+#~ "handmatig in te instellen. Wilt u nu het configuratie dialoog starten om "
+#~ "het beeldscherm in te stellen?"
+
+#~ msgid "<b>Yes</b>"
+#~ msgstr "<b>Ja</b>"
+
+#~ msgid "<b>No</b>"
+#~ msgstr "<b>Nee</b>"
+
+#~ msgid "File"
+#~ msgstr "Bestand"
+
+#~ msgid "still locked"
+#~ msgstr "nog beveiligd"
+
+#~ msgid "Please wait"
+#~ msgstr "Even geduld aub"
+
+#~ msgid ""
+#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
+#~ "X11 Configuration Manager<br>"
+#~ msgstr ""
+#~ "<big><b>SaX2: Uitgebreide X11 configuratie</b></big><hr>Welkom bij de "
+#~ "SuSE X11 configuratie beheerder<br>"
+
+#~ msgid "To start, double-click  an item in the component list."
+#~ msgstr ""
+#~ "Om te kunnen starten dubbelklikt u op een item in de component lijst."
+
+#~ msgid "X11 System Setup"
+#~ msgstr "X11 systeem instelling"
+
+#~ msgid "Value..."
+#~ msgstr "Waarde..."
+
+#~ msgid "Primary device"
+#~ msgstr "Primair apparaat"
+
+#~ msgid "Driver:"
+#~ msgstr "Driver:"
+
+#~ msgid "X:"
+#~ msgstr "X:"
+
+#~ msgid "Y:"
+#~ msgstr "Y:"
+
+#~ msgid "Bus ID:"
+#~ msgstr "Bus ID:"
+
+#~ msgid "Card options"
+#~ msgstr "Kaart opties"
+
+#~ msgid "Key Mappings"
+#~ msgstr "Toets mappings"
+
+#~ msgid "&Current sync frequencies"
+#~ msgstr "&Huidige sync frequenties"
+
+#~ msgid "Current color depth"
+#~ msgstr "Huidige kleurdiepte"
+
+#~ msgid "Current resolution"
+#~ msgstr "Huidige resolutie"
+
+#~ msgid "HSync range"
+#~ msgstr "Hsync bereik"
+
+#~ msgid "VSync range"
+#~ msgstr "Vsync bereik"
+
+#~ msgid "[ mm ]"
+#~ msgstr "[ mm ]"
+
+#~ msgid "Device"
+#~ msgstr "Apparaat"
+
+#~ msgid "Protocol"
+#~ msgstr "Protocol"
+
+#~ msgid "Keyboard Model"
+#~ msgstr "Toetsenbord model"
+
+#~ msgid "Fi&nish"
+#~ msgstr "&Afronden"
+
+#~ msgid "Abort"
+#~ msgstr "Afsluiten"
+
+#~ msgid "Configure XAccess: Mouse over keypad..."
+#~ msgstr "Configureer XAccess: muis over keypad..."
+
+#~ msgid "Configure VNC: Export display using the VNC protocol..."
+#~ msgstr ""
+#~ "VNC configureren: exporteer het beeldscherm met behulp van het VNC "
+#~ "protocol..."
+
+#~ msgid "Configure input devices: Mouse configuration..."
+#~ msgstr "Configureer invoerapparaten: muisconfiguratie..."
+
+#~ msgid "Configure 3D/OpenGL subsystem..."
+#~ msgstr "Configureer 3D/OpenGL subsysteem..."
+
+#~ msgid "Configure virtual resolutions..."
+#~ msgstr "Configureer virtuele resoluties..."
+
+#~ msgid "Configure graphics cards..."
+#~ msgstr "Configureer grafische kaarten..."
+
+#~ msgid "Configure Desktop: Colors and Resolutions..."
+#~ msgstr "Configureer desktop: kleuren en resoluties..."
+
+#~ msgid "Configure touch screens..."
+#~ msgstr "Configureer aanraakbeeldschermen..."
+
+#~ msgid "Set up picture geometry..."
+#~ msgstr "Afbeelding geometrie instellen..."
+
+#~ msgid "Configure multihead mode..."
+#~ msgstr "Configureer multihead mode..."
+
+#~ msgid ""
+#~ "Set up screen layout of your desktops (Double-click an icon will identify "
+#~ "the real screen)..."
+#~ msgstr ""
+#~ "De scherm layout van uw desktops instellen (dubbelklik op een pictogram "
+#~ "om het echte scherm te identificeren)..."
+
+#~ msgid "Configure graphics tablet"
+#~ msgstr "Configureer grafisch tablet"
+
+#~ msgid "Add new card..."
+#~ msgstr "Nieuwe kaart toevoegen..."
+
+#~ msgid "Remove selected card"
+#~ msgstr "Geselecteerde kaart verwijderen"
+
+#~ msgid "Remove selected monitor"
+#~ msgstr "Geselecteerde monitor verwijderen"
+
+#~ msgid "&Properties..."
+#~ msgstr "&Eigenschappen..."
+
+#~ msgid "Enable View-Only mode"
+#~ msgstr "Alleen-bekijken mode inschakelen"
+
+#~ msgid "&Add new touchscreen..."
+#~ msgstr "Nieuw aanraakbeeldscherm &toevoegen..."
+
+#~ msgid "&Remove selected touchscreen"
+#~ msgstr "Geselecteerde aanraakscherm &verwijderen"
+
+#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
+#~ msgstr ""
+#~ "<nobr><h3><u>Huidige geconfigureerde aanraakschermen:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Huidige geconfigureerde monitoren</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Huidige geconfigureerde kaarten:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Huidige geconfigureerde muis:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Huidige monitor layout:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Huidige geconfigureerde desktops:</u></h3></nobr>"
+
+#~ msgid "&Add new mouse..."
+#~ msgstr "Nieuwe muis &toevoegen..."
+
+#~ msgid "&Remove selected mouse"
+#~ msgstr "Geselecteerde muis &verwijderen"
+
+#~ msgid "&General"
+#~ msgstr "&Algemeen"
+
+#~ msgid "&Expert"
+#~ msgstr "&Expert"
+
+#~ msgid "Vendor"
+#~ msgstr "Merk"
+
+#~ msgid "Selected"
+#~ msgstr "Geselecteerd"
+
+#~ msgid "Resolution X"
+#~ msgstr "Resolutie X"
+
+#~ msgid "&Resolution(s) for %1 colors"
+#~ msgstr "&Resolutie(s) voor %1 kleuren"
+
+#~ msgid "Possible"
+#~ msgstr "Mogelijk"
+
+#~ msgid "&Add this resolution"
+#~ msgstr "Deze resolutie &toevoegen"
+
+#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde AccessX status</b></big><hr>"
+
+#~ msgid "<big><b>Current VNC status</b></big><hr>"
+#~ msgstr "<big><b>Huidige VNC status</b></big><hr>"
+
+#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
+#~ msgstr "<big><b>Huidige 3D/OpenGL status</b></big><hr>"
+
+#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
+#~ msgstr "<big><b>Huidige virtuele resolutie instelling</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde grafische kaarten</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde desktops</b></big><hr>"
+
+#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
+#~ msgstr "<big><b>Huidige actieve geometrische timing</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerd toetsenbord</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured layout</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde layout</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde monitoren</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde aanwijs apparaten</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerde multihead status</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerd grafisch tablet</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
+#~ msgstr "<big><b>Huidige geconfigureerd aanraakbeeldscherm</b></big><hr>"
+
+#~ msgid "<b><nobr>No information available</nobr></b>"
+#~ msgstr "<b><nobr>Geen informatie beschikbaar</nobr></b>"
+
+#~ msgid ""
+#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
+#~ "with the keypad. The table below points to the current status of AccessX."
+#~ msgstr ""
+#~ "<b>Virtuele muis:</b><hr>Voor het besturen van de muis met het keypad "
+#~ "dient u het numerieke keypad in te stellen. De onderstaande tabel laat de "
+#~ "huidige status van AccessX zien."
+
+#~ msgid ""
+#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
+#~ "desktop and all its programs remotely via a VNC viewer program"
+#~ msgstr ""
+#~ "<b>VNC server:</b><hr>Hier kunt u de X-server dusdanig instellen zodat de "
+#~ "desktop met al z'n programma's remote toegankelijk wordt via een VNC "
+#~ "viewer programma"
+
+#~ msgid ""
+#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
+#~ "here. X.Org includes the direct rendering interface to use the 3D "
+#~ "capabilities of your graphics card. If your card and the corresponding "
+#~ "driver support 3D hardware acceleration, enable it in this dialog."
+#~ msgstr ""
+#~ "<b>OpenGL subsysteem:</b><hr>Hier kunt u de 3D opties van de grafische "
+#~ "kaart instellen. X.Org bevat tevens de directe renderings-interface om de "
+#~ "3D capaciteiten van uw grafische kaart te kunnen gebruiken. Wanneer uw "
+#~ "kaart en de corresponderende driver de 3D hardware acceleratie "
+#~ "ondersteunen, activeer u dat dan in dit dialoog."
+
+#~ msgid ""
+#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
+#~ "resolution which is completely viewable. Beside this resolution you can "
+#~ "setup a resolution which lives outside the viewable area of your monitor "
+#~ "and comes up if you leave the edges of your monitor with the mouse. This "
+#~ "area is called a virtual resolution."
+#~ msgstr ""
+#~ "<b>Virtuele resolutie:</b><hr>Elke enkelvoudige desktop heeft een "
+#~ "werkelijke resolutie wat compleet zichtbaar is te maken. Naast deze "
+#~ "resolutie kunt u ook een resolutie instellen die buiten het zichtbare "
+#~ "gebied van uw monitor ligt, u ziet het zodra u met uw muis de hoeken van "
+#~ "uw monitor verlaat. Dit gebied wordt de virtuele resolutie genoemd."
+
+#~ msgid ""
+#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
+#~ "graphics system consists of at least one graphics card but can be "
+#~ "combined to a so called <i>multihead environment</i> which consists of at "
+#~ "least two cards up to a maximum of 16 cards."
+#~ msgstr ""
+#~ "<b>Grafische kaart:</b><hr>Hier kunt u uw grafische hardware instellen. "
+#~ "Het grafische systeem bestaat uit tenminste één grafische kaart maar kan "
+#~ "worden gecombineerd tot een zogenaamde <i>multihead omgeving</i> welke "
+#~ "uit minimaal twee kaarten en maximaal uit zestien kaarten kan bestaan."
+
+#~ msgid ""
+#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
+#~ "resolution and colors. Every desktop is an independent device and may "
+#~ "have a different color and/or resolution setup."
+#~ msgstr ""
+#~ "<b>Desktop eigenschappen:</b><hr>Stel uw desktop in met instellingen "
+#~ "zoals bijvoorbeeld de resolutie en de kleuren. Elke desktop is dus een "
+#~ "onafhankelijk apparaat en kan dan ook een verschillende kleuren- en/of "
+#~ "resolutie-instelling hebben."
+
+#~ msgid ""
+#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
+#~ "displayed by the monitor. The table below point to the current used "
+#~ "Modeline(s)."
+#~ msgstr ""
+#~ " <b>Monitor geometrie:</b><hr>Stel de positie en grootte van de door de "
+#~ "monitor getoonde afbeelding in. De onderstaande tabel wijst naar de "
+#~ "huidige gebruikte modeline(s)."
+
+#~ msgid ""
+#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
+#~ "language environment with which it should work."
+#~ msgstr ""
+#~ "<b>Toetsenbord eigenschappen:</b><hr>Stel het toetsenbord type en de "
+#~ "taalomgeving in waarmee het toetsenbord zou moet werken."
+
+#~ msgid ""
+#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the neighborhood relations of the "
+#~ "connected monitors simply via drag&drop. If you are not sure which "
+#~ "monitor belongs to the icon just double-click on it and you will see a "
+#~ "message on the corresponding screen."
+#~ msgstr ""
+#~ "<b>Desktop layout:</b><hr>Wanneer er meer dan één kaart beschikbaar is, "
+#~ "dan werkt u in een multihead omgeving. De relaties tussen de aangesloten "
+#~ "monitoren is eenvoudig met behulp van slepen&neerzetten in te stellen. "
+#~ "Wanneer u niet zeker weet welke monitor bij het pictogram behoort, dan "
+#~ "kunt u er gewoon op dubbelklikken waarna u een melding op het "
+#~ "corresponderende scherm zal gaan zien."
+
+#~ msgid ""
+#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
+#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
+#~ "the monitor."
+#~ msgstr ""
+#~ "<b>Monitor eigenschappen:</b><hr>De instelling van het, op de grafische "
+#~ "kaarten aangesloten, monitormodel. Wees voorzichtig met het maken van uw "
+#~ "keuze. Foutieve sync.bereiken kunnen de monitor namelijk beschadigen."
+
+#~ msgid ""
+#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
+#~ "mouse pointer as well as settings like button emulation or wheel "
+#~ "functions."
+#~ msgstr ""
+#~ "<b>Muis eigenschappen:</b><hr>Stel de basis parameters in om de basis "
+#~ "muisaanwijzer in te stellen als ook de instellingen van bijvoorbeeld de "
+#~ "knop-emulatie of de wielfuncties."
+
+#~ msgid ""
+#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the multihead functioning here."
+#~ msgstr ""
+#~ "<b>Multihead mode:</b><hr>Wanneer er meer dan één kaart beschikbaar is, "
+#~ "dan werkt u in een multihead omgeving. Stel hier de multihead "
+#~ "functionaliteit in."
+
+#~ msgid ""
+#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
+#~ "pointer devices, such as pens and erasers."
+#~ msgstr ""
+#~ "<b>Grafisch tablet:</b><hr>De instelling van een grafisch tablet en de "
+#~ "corresponderende aanwijs-apparaten, zoals pennen en wissers."
+
+#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
+#~ msgstr "<b>Aanraakscherm:</b><hr>De instelling van een drukgevoelig scherm."
+
+#~ msgid "Disabled"
+#~ msgstr "Uitgeschakeld"
+
+#~ msgid "Enabled"
+#~ msgstr "Ingeschakeld"
+
+#~ msgid "Wheel support"
+#~ msgstr "Wiel ondersteuning"
+
+#~ msgid "&Port"
+#~ msgstr "&Poort"
+
+#~ msgid "&Mode"
+#~ msgstr "&Mode"
+
+#~ msgid "Button emulation"
+#~ msgstr "Knop emulatie"
+
+#~ msgid "Primary Device:"
+#~ msgstr "Primair apparaat:"
+
+#~ msgid "Secondary Device:"
+#~ msgstr "Secundair apparaat:"
+
+#~ msgid "Single Layout [ no multihead environment ]"
+#~ msgstr "Enkelvoudige layout [ geen multihead omgeving ]"
+
+#~ msgid "Clone Mode Active"
+#~ msgstr "Kloonmode is actief"
+
+#~ msgid "Xinerama Mode Active"
+#~ msgstr "Xinerama mode is actief"
+
+#~ msgid "Screens Layout Active"
+#~ msgstr "Schermen layout is actief"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx series"
+
+#~ msgid "Canadian"
+#~ msgstr "Canadees"
+
+#~ msgid "Brazilian"
+#~ msgstr "Braziliaans"
+
+#~ msgid "Bosnian"
+#~ msgstr "Bosnisch"
+
+#~ msgid "Lithuanian qwerty (numeric)"
+#~ msgstr "Litouws qwerty (numeriek)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "Georgiaans (russisch)"
+
+#~ msgid "Latvian"
+#~ msgstr "Lets"
+
+#~ msgid "Belarusian"
+#~ msgstr "Belarusian"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "Tjechisch (qwerty)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "Noord Saami (Finland)"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macedonisch"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "U.S. Engels w/ deadkeys"
+
+#~ msgid "Malayalam"
+#~ msgstr "Maleis"
+
+#~ msgid "Burmese"
+#~ msgstr "Burmees"
+
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgid "Mongolian"
+#~ msgstr "Mongools"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengalees"
+
+#~ msgid "Romanian"
+#~ msgstr "Roemeens"
+
+#~ msgid "Croatian"
+#~ msgstr "Kroatisch"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "U.S. Engels w/ ISO9995-3"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr "Litouws azerty standaard"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltees"
+
+#~ msgid "German"
+#~ msgstr "Duits"
+
+#~ msgid "Hungarian"
+#~ msgstr "Hongaars"
+
+#~ msgid "Russian"
+#~ msgstr "Russisch"
+
+#~ msgid "Swedish"
+#~ msgstr "Zweeds"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "Turks (F)"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Slovenian"
+#~ msgstr "Sloveens"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "Slowaaks (qwerty)"
+
+#~ msgid "Czech"
+#~ msgstr "Tjechisch"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Danish"
+#~ msgstr "Deens"
+
+#~ msgid "Dvorak"
+#~ msgstr "Dvorak"
+
+#~ msgid "Slovak"
+#~ msgstr "Slowaaks"
+
+#~ msgid "Dutch"
+#~ msgstr "Nederlands"
+
+#~ msgid "Israeli"
+#~ msgstr "Israëlisch"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgid "Ogham"
+#~ msgstr "Ogham"
+
+#~ msgid "Norwegian"
+#~ msgstr "Noors"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmukhi"
+
+#~ msgid "Serbian"
+#~ msgstr "Servisch"
+
+#~ msgid "Farsi"
+#~ msgstr "Farsi"
+
+#~ msgid "Icelandic"
+#~ msgstr "IJslands"
+
+#~ msgid "Italian"
+#~ msgstr "Italiaans"
+
+#~ msgid "Estonian"
+#~ msgstr "Estisch"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Swiss French"
+#~ msgstr "Zwitsers Frans"
+
+#~ msgid "Swiss German"
+#~ msgstr "Zwitsers Duits"
+
+#~ msgid "Thai"
+#~ msgstr "Thais"
+
+#~ msgid "Tajik"
+#~ msgstr "Tajik"
+
+#~ msgid "Greek"
+#~ msgstr "Grieks"
+
+#~ msgid "Japanese"
+#~ msgstr "Japans"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "Georgiaans (latijn)"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Oekraïens"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "Pools (qwertz)"
+
+#~ msgid "Syriac"
+#~ msgstr "Syrisch"
+
+#~ msgid "Turkish"
+#~ msgstr "Turks"
+
+#~ msgid "Spanish"
+#~ msgstr "Spaans"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "Noord Saami (Sweden)"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "Joegoslavisch"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Finnish"
+#~ msgstr "Fins"
+
+#~ msgid "French (alternative)"
+#~ msgstr "Frans (alternatief)"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "Hongaars (qwerty)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "Russisch (cyrillisch fonetisch)"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanees"
+
+#~ msgid "Polish"
+#~ msgstr "Pools"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Armenian"
+#~ msgstr "Armeens"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "Noord Saami (Noorwegen)"
+
+#~ msgid "Latin America"
+#~ msgstr "Latijns Amerika"
+
+#~ msgid "French"
+#~ msgstr "Frans"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Verenigd Koninkrijk"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabisch"
+
+#~ msgid "U.S. English"
+#~ msgstr "U.S. Engels"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "Maltees (US layout)"
+
+#~ msgid "French Canadian"
+#~ msgstr "Frans Canadees"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugees"
+
+#~ msgid "Belgian"
+#~ msgstr "Belgisch"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgaars"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbaidzjaans"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamees"
+
+#~ msgid "Lao"
+#~ msgstr "Lao"
+
+#~ msgid "Microsoft Natural"
+#~ msgstr "Microsoft Natural"
+
+#~ msgid "Ennyah DKB-1008"
+#~ msgstr "Ennyah DKB-1008"
+
+#~ msgid "Logitech Deluxe Access Keyboard"
+#~ msgstr "Logitech Deluxe Access toetsenbord"
+
+#~ msgid "Microsoft Internet Keyboard"
+#~ msgstr "Microsoft internet toetsenbord"
+
+#~ msgid "Samsung SDM 4500P"
+#~ msgstr "Samsung SDM 4500P"
+
+#~ msgid "Cherry Blue Line CyBo@rd"
+#~ msgstr "Cherry Blue Line CyBo@rd"
+
+#~ msgid "Dell"
+#~ msgstr "Dell"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GF"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
+
+#~ msgid "IBM Rapid Access"
+#~ msgstr "IBM Rapid Access"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternatief optie2)"
+
+#~ msgid "Memorex MX1998"
+#~ msgstr "Memorex MX1998"
+
+#~ msgid "Trust Wireless Keyboard Classic"
+#~ msgstr "Trust draadloos toetsenbord klassiek"
+
+#~ msgid "Dell 101-key PC"
+#~ msgstr "Dell 101-key PC"
+
+#~ msgid "Brother Internet Keyboard"
+#~ msgstr "Brother internet toetsenbord"
+
+#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
+#~ msgstr "Laptop/notebook Compaq (bijv: Armada) laptop toetsenbord"
+
+#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
+#~ msgstr "Laptop/notebook Compaq (bijv: Presario) internet toetsenbord"
+
+#~ msgid "IBM Rapid Access II"
+#~ msgstr "IBM Rapid Access II"
+
+#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
+#~ msgstr "Logitech iTouch Cordless toetsenbord (model Y-RB6)"
+
+#~ msgid "Trust Direct Access Keyboard"
+#~ msgstr "Trust Direct Access toetsenbord"
+
+#~ msgid "Logitech Internet Navigator Keyboard"
+#~ msgstr "Logitech Internet Navigator toetsenbord"
+
+#~ msgid "SK-7100"
+#~ msgstr "SK-7100"
+
+#~ msgid "Acer AirKey V"
+#~ msgstr "Acer AirKey V"
+
+#~ msgid "BTC 9000A"
+#~ msgstr "BTC 9000A"
+
+#~ msgid "Toshiba Satellite S3000"
+#~ msgstr "Toshiba Satellite S3000"
+
+#~ msgid "Compaq Internet Keyboard (13 keys)"
+#~ msgstr "Compaq internet toetsenbord (13 toetsen)"
+
+#~ msgid "Hewlett-Packard Omnibook XT1000"
+#~ msgstr "Hewlett-Packard Omnibook XT1000"
+
+#~ msgid "Logitech iTouch"
+#~ msgstr "Logitech iTouch"
+
+#~ msgid "SK-6200"
+#~ msgstr "SK-6200"
+
+#~ msgid "Compaq iPaq Keyboard"
+#~ msgstr "Compaq iPaq toetsenbord"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternatieve optie)"
+
+#~ msgid "Logitech Cordless Desktop Navigator"
+#~ msgstr "Logitech Cordless Desktop Navigator"
+
+#~ msgid "QTronix Scorpius 98N+"
+#~ msgstr "QTronix Scorpius 98N+"
+
+#~ msgid "Symplon PaceBook (tablet PC)"
+#~ msgstr "Symplon PaceBook (tablet PC)"
+
+#~ msgid "Winbook Model XP5"
+#~ msgstr "Winbook Model XP5"
+
+#~ msgid "BTC 5113RF Multimedia"
+#~ msgstr "BTC 5113RF Multimedia"
+
+#~ msgid "Diamond 9801 / 9802 series"
+#~ msgstr "Diamond 9801 / 9802 series"
+
+#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE4xxx en ZE4xxx"
+
+#~ msgid "Logitech Cordless Desktop Optical"
+#~ msgstr "Logitech Cordless Desktop Optical"
+
+#~ msgid "Logitech Internet Keyboard"
+#~ msgstr "Logitech internet toetsenbord"
+
+#~ msgid "BTC 9000"
+#~ msgstr "BTC 9000"
+
+#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+#~ msgstr "Genius Comfy KB-16M / Genius MM toetsenbord KWD-910"
+
+#~ msgid "Hewlett-Packard Internet Keyboard"
+#~ msgstr "Hewlett-Packard internet toetsenbord"
+
+#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
+#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
+
+#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+#~ msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+
+#~ msgid "Propeller Voyager (KTEZ-1000)"
+#~ msgstr "Propeller Voyager (KTEZ-1000)"
+
+#~ msgid "Brazilian ABNT2"
+#~ msgstr "Braziliaanse ABNT2"
+
+#~ msgid "Compaq Internet Keyboard (7 keys)"
+#~ msgstr "Compaq internet toetsenbord (7 toetsen)"
+
+#~ msgid "Honeywell Euroboard"
+#~ msgstr "Honeywell Euroboard"
+
+#~ msgid "Logitech Cordless Desktop"
+#~ msgstr "Logitech Cordless Desktop"
+
+#~ msgid "Yahoo! Internet Keyboard"
+#~ msgstr "Yahoo! internet toetsenbord"
+
+#~ msgid "Compaq Internet Keyboard (18 keys)"
+#~ msgstr "Compaq internet toetsenbord (18 toetsen)"
+
+#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
+#~ msgstr "Laptop/notebook Dell Inspiron 8xxx"
+
+#~ msgid "IBM Rapid Access II (alternate option)"
+#~ msgstr "IBM Rapid Access II (alternatieve optie)"
+
+#~ msgid "Logitech Cordless Desktop Pro"
+#~ msgstr "Logitech Cordless Desktop Pro"
+
+#~ msgid "Advance Scorpius KI"
+#~ msgstr "Geavanceerde Scorpius KI"
+
+#~ msgid "BTC 5126T"
+#~ msgstr "BTC 5126T"
+
+#~ msgid "Dexxa Wireless Desktop Keyboard"
+#~ msgstr "Dexxa Wireless Desktop toetsenbord"
+
+#~ msgid "Hewlett-Packard Omnibook 5xx"
+#~ msgstr "Hewlett-Packard Omnibook 5xx"
+
+#~ msgid "Memorex MX2750"
+#~ msgstr "Memorex MX2750"
+
+#~ msgid "SK-1300"
+#~ msgstr "SK-1300"
+
+#~ msgid "Generic 101-key PC"
+#~ msgstr "Generieke 101-key PC"
+
+#~ msgid "Northgate OmniKey 101"
+#~ msgstr "Northgate OmniKey 101"
+
+#~ msgid "ACPI Standard"
+#~ msgstr "ACPI Standaard"
+
+#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
+#~ msgstr "Cherry Blue Line CyBo@rd (alternatieve optie)"
+
+#~ msgid "Chicony Internet Keyboard"
+#~ msgstr "Chicony internet toetsenbord"
+
+#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
+#~ msgstr "Hewlett-Packard SK-2501 multimedia toetsenbord"
+
+#~ msgid "Samsung SDM 4510P"
+#~ msgstr "Samsung SDM 4510P"
+
+#~ msgid "SK-2500"
+#~ msgstr "SK-2500"
+
+#~ msgid "SVEN Ergonomic 2500"
+#~ msgstr "SVEN Ergonomic 2500"
+
+#~ msgid "Generic 102-key (Intl) PC"
+#~ msgstr "Generieke 102-key (Intl) PC"
+
+#~ msgid "Logitech Cordless Desktop iTouch"
+#~ msgstr "Logitech Cordless Desktop iTouch"
+
+#~ msgid "Chicony KB-9885"
+#~ msgstr "Chicony KB-9885"
+
+#~ msgid "Compaq Easy Access Keyboard"
+#~ msgstr "Compaq Easy Access toetsenbord"
+
+#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
+#~ msgstr "Hewlett-Packard 5181 internet toetsenbord"
+
+#~ msgid "Hewlett-Packard Omnibook 500 FA"
+#~ msgstr "Hewlett-Packard Omnibook 500 FA"
+
+#~ msgid "Memorex MX2500 EZ-Access Keyboard"
+#~ msgstr "Memorex MX2500 EZ-Access toetsenbord"
+
+#~ msgid "Generic 104-key PC"
+#~ msgstr "Generieke 104-key PC"
+
+#~ msgid "Everex STEPnote"
+#~ msgstr "Everex STEPnote"
+
+#~ msgid "Japanese 106-key"
+#~ msgstr "Japans 106-toetsen"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE en Pavilion N5xxx"
+
+#~ msgid "Hewlett-Packard Pavilion ZT11xx"
+#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
+
+#~ msgid "Logitech iTouch keyboard Internet Navigator"
+#~ msgstr "Logitech iTouch keyboard Internet Navigator"
+
+#~ msgid "Generic 105-key (Intl) PC"
+#~ msgstr "Generieke 105-key (Intl) PC"
+
+#~ msgid "Keytronic FlexPro"
+#~ msgstr "Keytronic FlexPro"
+
+#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
+#~ msgstr "Hewlett-Packard SK-2505 internet toetsenbord"
+
+#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
+#~ msgstr "Microsoft Internet Keyboard Pro, Zweeds"
+
+#~ msgid "Microsoft Office Keyboard"
+#~ msgstr "Microsoft Office toetsenbord"
+
+#~ msgid "Oretec MCK-800 MM/Internet keyboard"
+#~ msgstr "Oretec MCK-800 MM/internet toetsenbord"
+
+#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
+#~ msgstr "gebruikt interne kapitalisatie. Shift zal Caps niet annuleren."
+
+#~ msgid "R-Alt switches group while pressed"
+#~ msgstr "R-Alt indrukken om de groep te wisselen"
+
+#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
+#~ msgstr ""
+#~ "gedraagt zich als een vergrendelde Shift-toets. Shift zal Caps niet "
+#~ "annuleren."

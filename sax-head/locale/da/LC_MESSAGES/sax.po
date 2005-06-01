@@ -16,655 +16,515 @@ msgstr ""
 "X-Generator: KBabel 0.7\n"
 
 #. /.../
-#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #. This file contains the gettext keys used within a gettext call in the
-#. application code for SaX2
+#. application code for the SaX2 and XFine GUI
 #.
-#. Maximum length: 20  characters
-msgid "Component"
-msgstr "Komponent"
-
-#. Maximum length: 20  characters
-msgid "with"
-msgstr "med"
-
-#. Maximum length: 20  characters
-msgid "USB"
-msgstr ""
-
-#. Maximum length: 20  characters
-msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
-
-#. Maximum length: 20  characters
-msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
-
-#. Maximum length: 20  characters
-msgid "Relative"
-msgstr ""
-
-#. Maximum length: 20  characters
+#. RTF text: Startup information for the user
 #, fuzzy
-msgid "Absolute"
-msgstr "Afslut"
+msgid ""
+"<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 forslag:</b><hr>Det nuværende grafik system er baseret på et forslag "
+"lavet via SaX2. Hvis du kan lide denne konfiguration skal du bare klikke "
+"<b>Ok</b> ellers kan du frit ændre den nuværende konfiguration."
 
-#. Maximum length: 20  characters
-msgid "Connected to:"
-msgstr "Forbundet til:"
+#. Caption text for the startup information window
+#, fuzzy
+msgid "Automatic graphics system set up"
+msgstr "Automatisk grafik system setup"
 
+#. Caption text for the main window
+msgid "SaX2 - SuSE Advanced X11 configuration"
+msgstr ""
+
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr ""
+
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr ""
+
+#. Help Button text
+#, fuzzy
+msgid "&Help"
+msgstr "Hjælp..."
+
+#. Ok Button text
+#, fuzzy
+msgid "&Ok"
+msgstr "Ok"
+
+#. Yes Button text
+#, fuzzy
+msgid "&Yes"
+msgstr "Ja"
+
+#. No Button text
+#, fuzzy
+msgid "&No"
+msgstr "Nej"
+
+#. Cancel Button text
 #. Maximum length: 40  characters
 #, fuzzy
-msgid "3D Acceleration"
-msgstr "3D-Accelerator"
+msgid "&Cancel"
+msgstr "Afbryd"
 
-#. Maximum length: 60  characters
-msgid "Not configured"
-msgstr ""
-
-#. Maximum length: 60  characters
-msgid "<Enter new password...>"
-msgstr ""
-
-#. Maximum length: 60  characters
-msgid "<Change password...>"
-msgstr ""
-
-#. Maximum length: 60  characters
+#. RTF text: exit SaX message
 #, fuzzy
-msgid "Not available"
-msgstr ""
-":UBMuse indstillinger:\n"
-"\n"
-"Sax giver muligheden for opsætning af indlæsnings-\n"
-"enheder. Det er vigtigt at forstå at der er\n"
-"mulighed for håndtering af mere end en indlæsningsenhed\n"
-"på samme tid. Hver enhed som SaX har fundet er vist i\n"
-"træstrukturen. Der er en ikon for hver enhed.\n"
-"I de fleste tilfælde er det ikke nødvendigt med ændringer\n"
-"og hvis musen reagere på bevægelser er det ikke nødvendigt\n"
-"at ændre noget :-)\n"
-"\n"
-":UBHvad er indlæsningsenheder:\n"
-"Grundlæggende så vil du arbejde med musen som en slags\n"
-"indlæsningsenhed. Ud over den er der andre slags\n"
-"indlæsningsenheder. The følgende liste viser hvile slags\n"
-"indlæsningsenheder SaX kan håndtere:\n"
-"\n"
-"° Alle type mus, trackballs og touchpads\n"
-"° Trykfølsomme skærme ( TouchScreens )\n"
-"° Tavler ( Graphic tablets )\n"
-"° Lyspen og slettetavler ( erasers of tablets )\n"
-"\n"
-"Tastaturet er en speciel indlæsningsenhed som bliver\n"
-"håndteret i en seperat tastatur menu.\n"
-"\n"
-":UBBrug af indlæsningsenheder:\n"
-"Nu da du har viden om forskellige typer af\n"
-"indlæsningsenheder så vil du sikkert have muligheden\n"
-"for at ændre indstillinger for indlæsningsenheder, tilføje\n"
-"nye eller fjerne eksisterende indlæsningsenheder.\n"
-"\n"
-"° Tilføj:\n"
-"   En ny indlæsningsenhed bliver tilføjet ved brug af\n"
-"   [Add] knappen. Den nye enhed får standard egenskaber\n"
-"   som kan blive ændret omgående. Enheden er valgt og\n"
-"   dukker op i slutningen af den nuværende liste efter\n"
-"   dialogen er blevet lukket med knappen OK.\n"
-"\n"
-"° Fjern:\n"
-"   For at fjerne en indlæsningsenhed skal du først\n"
-"   vælge elementet du vil fjerne. For at gøre det kan\n"
-"   du enten vælge ikonen eller en speciel egenskab af\n"
-"   enheden. Efter valg af enhed, tryk på knappen\n"
-"   [Fjern]. Når der fjernes en indlæsningsenhed så\n"
-"   fjernes hele enheden med alle dens egenskaber.\n"
-"\n"
-"° Ændre:\n"
-"   For at ændre egenskaber for en indlæsningsenhed er\n"
-"   det nødvendig at vælge elementet du vil ændre på\n"
-"   først. For denne aktion betyder det ikke noget om\n"
-"   du vælger ikonen eller en speciel egenskab for enheden.\n"
-"   Efter valg af enhed trykker du på [Egenskaber] knappen.\n"
-"   Egenskaber dialogen vil komme frem og du kan ændre\n"
-"   alle egenskaber defineret for den valgte enhed.\n"
-"\n"
-":UBTeste en enhed løbende:\n"
-"Bag [Anvend] knappen er der en funktion som du kun skal\n"
-"bruge forsigtigt. Det er muligt at aktivere en speciel\n"
-"enhed løbende uden at genstarte X-Serveren. Denne\n"
-"funktion er kun tilgængelig for normale mus og burde ikke\n"
-"bruges for tavler eller lignende indlæsningsenheder."
+msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
+msgstr "<b>Afslut SaX2:</b><hr>Vil du afslutte SaX2 nu?"
 
-#. Maximum length: 40  characters
-msgid "Use the following AccessX settings"
+#. Message box default caption text
+msgid "Message..."
 msgstr ""
 
-#. Maximum length: 40  characters
-msgid "Disable AccessX"
-msgstr "Deaktiver AccessX"
-
-#. Maximum length: 60  characters
+#. Change configuration Button text
 #, fuzzy
-msgid "Primary Setup"
-msgstr "Primær enhed"
+msgid "C&hange configuration"
+msgstr "Ændre konfiguration"
 
-#. Maximum length: 60  characters
-msgid "Additional Layout(s)"
-msgstr ""
-
-#. Maximum length: 60  characters
+#. Short description of the Monitor module
 #, fuzzy
-msgid "Miscellaneous"
-msgstr "Diverse"
+msgid "Monitor System"
+msgstr "Skærm"
 
-#. Maximum length: 60  characters
-msgid "Layout"
-msgstr "Udlæg"
+#. Basic description of what the monitor module is used for
+#, fuzzy
+msgid "Setup Card and Monitor properties"
+msgstr "Konfigurer skærmen..."
 
-#. Maximum length: 60  characters
-msgid "Status"
-msgstr ""
+#. Short description of the Mouse module
+#, fuzzy
+msgid "Mouse System"
+msgstr "X11 System"
 
-#. Maximum length: 60  characters
-msgid "Keytable"
-msgstr ""
+#. Basic description of what the mouse module is used for
+#, fuzzy
+msgid "Setup Mouse properties"
+msgstr "Egenskaber for mus"
 
-#. Maximum length: 60  characters
-msgid "Variant"
-msgstr ""
+#. Short description of the Keyboard module
+#, fuzzy
+msgid "Keyboard System"
+msgstr "Tastatur"
 
-#. Maximum length: 60  characters
-msgid "Type"
-msgstr ""
+#. Basic description of what the keyboard module is used for
+#, fuzzy
+msgid "Setup Keyboard properties"
+msgstr "Konfigurer skærmen..."
 
-#. Maximum length: 60  characters
-msgid "This screen is selected"
-msgstr ""
+#. Short description of the Tablet module
+#, fuzzy
+msgid "Tablet System"
+msgstr "Tavle"
 
-#. Maximum length: 20  characters
-msgid "at"
-msgstr ""
+#. Basic description of what the tablet module is used for
+#, fuzzy
+msgid "Setup tablet properties"
+msgstr "Konfigurer skærmen..."
 
-#. Maximum length: 20  characters
+#. Short description of the Touchscreen module
+#, fuzzy
+msgid "Touchscreen System"
+msgstr "Touchscreen"
+
+#. Basic description of what the touchscreen module is used for
+#, fuzzy
+msgid "Setup touchscreen properties"
+msgstr "Konfigurer skærmen..."
+
+#. Short description of the VNC module
+#, fuzzy
+msgid "VNC System"
+msgstr "X11 System"
+
+#. Basic description of what the VNC module is used for
+#, fuzzy
+msgid "Setup remote access properties"
+msgstr "Konfigurer skærmen..."
+
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "Skærm"
+
+#. Tab text for a display tab of the mouse dialog
 msgid "Mouse"
 msgstr "Mus"
 
-#. Maximum length: 30  characters
-msgid "Add Pen"
-msgstr "Tilføj"
-
-#. Maximum length: 30  characters
-msgid "Add Eraser"
-msgstr "Fjern"
-
-#. Maximum length: 20  characters
-msgid "Tools"
-msgstr "Værktøjer"
-
-#. Maximum length: 20  characters
-msgid "Sync ranges"
-msgstr "Sync område"
-
-#. Maximum length: 60  characters
-msgid "Unknown monitor model"
+#. Activate display checkbox
+msgid "Activate this display"
 msgstr ""
 
-#. Maximum length: 40  characters
-msgid "Mouse test field: Ready..."
+#. Activate mouse checkbox
+msgid "Activate this pointer"
 msgstr ""
 
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Single button click: Done"
-msgstr "Aktiver 3 knap emulation"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Double button click: Done"
-msgstr "Aktiver 3 knap emulation"
-
-#. Maximum length: 40  characters
-msgid "Wheel is moving..."
+#. Graphics Card name label
+msgid "Card"
 msgstr ""
 
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Button pressed..."
-msgstr "Knap følsomhed"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Button released..."
-msgstr "Knap følsomhed"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Wheel stopped: Done"
-msgstr "Muse-hjul understøttelse"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Disable use of accented letters"
-msgstr "Deaktiver brugen af accent-bogstaver"
-
-#. Maximum length: 40  characters
-msgid "Clear test field"
-msgstr "Slet test felt"
-
-#. Maximum length: 40  characters
-msgid "Test field"
-msgstr "Test felt"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Mouse speed in pixels/sec"
-msgstr "Muse-hastighed i Pixel/sek"
-
-#. Maximum length: 50  characters
-msgid "Rotate Screen"
-msgstr "Rotere skærmbillede"
-
-#. Maximum length: 30  characters
-msgid "Not rotated"
-msgstr "Ikke roteret"
-
-#. Maximum length: 30  characters
-msgid "To the left"
-msgstr "Til venstre"
-
-#. Maximum length: 30  characters
-msgid "To the right"
-msgstr "Til højre"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "&Remove Tablet..."
-msgstr "Fjern tavle..."
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Delay time: (ms)"
-msgstr "Forsinkelse i ms"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Select resolutions"
-msgstr "Vælg Opløsning(er)"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Emulate wheel with mouse button:"
-msgstr "Emulere hjul på en af Musens knapper"
-
-#. Maximum length: 50  characters
-msgid "Repeat rate: (Symbols/sec)"
-msgstr "Gentagelses hastighed: (Symboler/sek)"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "&Apply"
-msgstr "Anvend"
-
-#. Maximum length: 65  characters
-msgid "Graphics engine starts with resolution:"
-msgstr "Grafisk motor starter med opløsningen:"
-
-#. Maximum length: 20  characters
-msgid "Hardware"
-msgstr "Hardware"
-
-#. Maximum length: 20  characters
-msgid "Velocity"
-msgstr "Hastighed"
-
-#. Maximum length: 20  characters
-msgid "Tablet"
-msgstr "Tavle"
-
-#. Maximum length: 20  characters
-msgid "Touchscreen"
-msgstr "Touchscreen"
-
-#. Maximum length: 40  characters
-msgid "Select Keyboard Layout"
-msgstr "Vælg tastatur sprog"
-
-#. Maximum length: 40  characters
-msgid "Symbol recurrence"
-msgstr "Symbol gentagelse"
-
-#. Maximum length: 40  characters
-msgid "<nobr><h3>Keyboard Type</h3></nobr>"
-msgstr ""
-
-#. Maximum length: 20  characters
-#. Maximum length: 40  characters
-msgid "Screen"
-msgstr "Skærm"
-
-#. Maximum length: 40  characters
-msgid "BusID"
-msgstr "Bus ID"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "ScreenID"
-msgstr "Skærm"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Manufacturer Disk..."
-msgstr "Producent-cd/diskette"
-
-#. Maximum length: 20  characters
-msgid "Keyboard"
-msgstr "Tastatur"
-
-#. Maximum length: 20  characters
+#. Monitor name label
 #, fuzzy
 msgid "Monitor"
 msgstr "Skærm"
 
-#. Maximum length: 20  characters
+#. Change data
+msgid "&Change..."
+msgstr ""
+
+#. Set options for some kind of data
 #, fuzzy
-msgid "Monitor-Model"
-msgstr "Skærm"
+msgid "&Options..."
+msgstr "Valgmuligheder"
 
-#. Maximum length: 25 characters
-msgid "Shift/Lock Group"
-msgstr "Shift/Lock gruppe"
+#. Configure some data
+#, fuzzy
+msgid "Con&figure..."
+msgstr "Konfigurer tastatur..."
 
-#. Maximum length: 25 characters
-msgid "Ctrl Mapping"
-msgstr "Ctrl udlægning"
+#. Group box title for dual head setup
+#, fuzzy
+msgid "DualHead mode"
+msgstr "Multihead-tilstand"
 
-#. Maximum length: 25 characters
-msgid "LeftAlt mapping"
-msgstr "Venstre Alt binding"
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+#, fuzzy
+msgid "Options"
+msgstr "Valgmuligheder"
 
-#. Maximum length: 25 characters
-msgid "RightAlt mapping"
-msgstr "Højre Alt binding"
+#. CheckBox label to activate the mouse wheel
+#, fuzzy
+msgid "Activate Mouse Wheel"
+msgstr "Aktiver Muse-Hjul"
 
-#. Maximum length: 25 characters
-msgid "ScrollLock mapping"
+#. CheckBox label to activate the 3 Button emulation
+#, fuzzy
+msgid "Activate 3-button emulation"
+msgstr "Aktiver 3 knap emulation"
+
+#. CheckBox label to activate the wheel emulation
+#, fuzzy
+msgid "Emulate wheel with mouse button:"
+msgstr "Emulere hjul på en af Musens knapper"
+
+#. Group box title for card rotation
+#, fuzzy
+msgid "Rotate screen"
+msgstr "Rotere skærmbillede"
+
+#. Group box title for the mouse test field
+msgid "Test field"
+msgstr "Test felt"
+
+#. Line edit label pointing to the keyboard test field
+#, fuzzy
+msgid "Test:"
+msgstr "Test..."
+
+#. Button text in final step message box for testing the configuration
+#, fuzzy
+msgid "&Test"
+msgstr "Test..."
+
+#. Button text in final step message box for saving the configuration
+#, fuzzy
+msgid "&Save"
+msgstr "Gem"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Udlæg"
+
+#. Status line of mouse test field: ready
+#, fuzzy
+msgid "Testfield: Ready..."
+msgstr "Test felt"
+
+#. Status line of mouse test field: single button click
+#, fuzzy
+msgid "Single click: Done"
+msgstr "Aktiver 3 knap emulation"
+
+#. Status line of mouse test field: double button click
+#, fuzzy
+msgid "Double click: Done"
+msgstr "Aktiver 3 knap emulation"
+
+#. Status line of mouse test field: wheel moved
+#, fuzzy
+msgid "Scrolling..."
 msgstr "ScrollLock binding"
 
-#. Maximum length: 25 characters
-msgid "RightCtl mapping"
-msgstr "Højre Ctrl binding"
+#. Status line of mouse test field: button pressed
+#, fuzzy
+msgid "Button pressed..."
+msgstr "Knap følsomhed"
 
-#. Maximum length: 50 characters
-msgid "Default"
+#. Status line of mouse test field: button released
+#, fuzzy
+msgid "Button released..."
+msgstr "Knap følsomhed"
+
+#. Status line of mouse test field: wheel stopped
+#, fuzzy
+msgid "Stopped: Done"
+msgstr "Muse-hjul understøttelse"
+
+#. Group box title for properties
+#, fuzzy
+msgid "Properties"
+msgstr "Egenskaber"
+
+#. Activate dual head mode checkbox
+msgid "Activate DualHead mode"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "R-Alt switch group while pressed"
+#. Set display resolution
+#, fuzzy
+msgid "Resolution:"
+msgstr "Opløsning Y"
+
+#. Set display colord
+#, fuzzy
+msgid "Colors:"
+msgstr "Farver"
+
+#. Activate 3D checkboc
+#, fuzzy
+msgid "Activate 3D acceleration"
+msgstr "3D-Accelerator"
+
+#. Tab title: Setup monitor properties for card X
+#, fuzzy
+msgid "Monitor for card:"
+msgstr "Skærm"
+
+#. Tab title: Setup monitor for second channel on card X
+msgid "Second monitor for card:"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "R-Alt switch group"
+#. Tab title: Setup sync frequencies
+#, fuzzy
+msgid "Sync-Frequencies"
+msgstr "Frekvenser"
+
+#. Tab title: Setup display size
+msgid "Display size"
+msgstr "Skærm størrelse"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "Both Shift Keys change group"
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "Ctrl and Shift change group"
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "Alt and Ctrl change group"
+#. Monitor Model is unknown and should be changed
+msgid "Unknown Monitor please change"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "CapsLock as additional control"
+#. Mouse Model is unknown and should be changed
+msgid "Unknown Mouse please change"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "Swap Ctrl and CapsLock"
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot deactivate all displays:</b><hr><nobr>At least one display has to "
+"be active</nobr>"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "Ctrl Key at left of <A>"
+#. Info label for dual head checkbox
+msgid "No configuration available please configure"
 msgstr ""
 
-#. Maximum length: 50 characters
-msgid "Ctrl Key at bottom left"
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"Traditionel Multihead:\n"
+"Hver skærm er en uafhænig-skærm"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"Klonet Multihead:\n"
+"Hvert skærmbillede er en klon af det første skærmbillede"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Xinerama Multihead:\n"
+"Lav et stort skærmbillede ud af alle skærmene"
+
+#. Title for multihead modi
+#, fuzzy
+msgid "Multihead Modus"
+msgstr "Multihead-tilstand"
+
+#. Monitor X - connected to - CardY
+#, fuzzy
+msgid "Connected to"
+msgstr "Forbundet til:"
+
+#. Tooltip text if monitor is unknown
+msgid "Unknown monitor:"
 msgstr ""
 
-#. Maximum length: 50  characters
-msgid "Modeline Algorithm"
-msgstr "Modeline Algoritme"
+#. Tooltip text for primary monitor
+#, fuzzy
+msgid "Primary monitor:"
+msgstr "Primær Modeline:"
 
-#. Maximum length: 50  characters
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+#, fuzzy
+msgid "Monitor settings..."
+msgstr "Farve-valg..."
+
+#. Windowanager title for the mouse mode setup
+msgid "Mouse settings..."
+msgstr ""
+
+#. Windowanager title for the card options dialog
+#, fuzzy
+msgid "Graphics card settings..."
+msgstr "Grafikkort"
+
+#. Windowanager title for the dual head setup
+msgid "Dualhead settings..."
+msgstr ""
+
+#. Radiobutton don't rotate
+msgid "Not rotated"
+msgstr "Ikke roteret"
+
+#. Radiobutton rotate to the left side
+msgid "To the left"
+msgstr "Til venstre"
+
+#. Radiobutton rotate to the right side
+msgid "To the right"
+msgstr "Til højre"
+
+#. Popup message to ask the user for an option value
+msgid ""
+"<b>Option needs a value</b><hr><nobr>Please setup a value for the %1 option."
+"</nobr>"
+msgstr ""
+
+#. Group box title for the monitor vendor and name selection
+#, fuzzy
+msgid "Monitor: Vendor and Name selection"
+msgstr "Model: Producent / Navne valg"
+
+#. Group box title for the mouse vendor and name selection
+#, fuzzy
+msgid "Mouse: Vendor and Name selection"
+msgstr "Model: Producent / Navne valg"
+
+#. Group box title for the manual sync frequency set up
+#, fuzzy
+msgid "Manual sync frequency set up"
+msgstr "Manuel sync frekvens opsætning"
+
+#. Group box title for the aspect/ratio selection
+msgid "Select Diagonal and Aspect Ratio"
+msgstr ""
+
+#. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
 msgstr "Skærm størrelse i [ mm ]"
 
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Color and Resolution"
-msgstr "Farvedybde / Opløsning"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Virtual Resolution"
-msgstr "Opløsning"
-
-#. Maximum length: 40  characters
-msgid "Language Layout"
-msgstr "Sprog"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Screen Layout"
-msgstr "Skærmenes Layout aktiv"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Server layout:"
-msgstr "Serverudlæg:"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Mode:"
-msgstr "Tilstande:"
-
-#. Maximum length: 40  characters
-msgid "Horizontal:"
-msgstr "Horisontal sync område"
-
-#. Maximum length: 40  characters
-msgid "Vertical:"
-msgstr "Vertical"
-
-#. Maximum length: 10 characters
-msgid "KHz"
-msgstr "KHz"
-
-#. Maximum length: 10 characters
-msgid "MHz"
-msgstr "MHz"
-
-#. Maximum length: 10 characters
-msgid "Hz"
-msgstr "Hz"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Multihead Mode"
-msgstr "Multihead-tilstand"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Enable or Disable AccessX"
-msgstr "Aktiver/Deaktiver AccessX"
-
-#. Maximum length: 40  characters
-msgid "Enable 3D features"
-msgstr "Aktiver 3D egenskaber"
-
-#. Maximum length: 50  characters
-msgid "Enable DPMS"
-msgstr "Aktiver DPMS"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
-msgstr "<b>Konfigurer Multihead...</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
-msgstr "<b>3D/OpenGL opsætning...</b><hr>"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
-msgstr "<b>AccessX opsætning...</b><hr>"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-msgstr "<b>AccessX opsætning...</b><hr>"
-
-#. Maximum length: 60 characters
-msgid "Selected component:"
-msgstr "Vælg komponenter"
-
-#. Maximum length: 80 characters
-msgid "Select Diagonal and Aspect Ratio..."
-msgstr ""
-
-#. Maximum length: 40 characters
-msgid "inches"
-msgstr ""
-
-#. Maximum length: 70 characters
-#, fuzzy
-msgid "Click 'Apply' to test your settings."
-msgstr "Klik på anvend knappen for at teste dine indstillinger"
-
-#. RTF text: no limit
-msgid ""
-"<b>Current Layout and Model doesn't seem to be a good match</b><hr>This is a "
-"warning only but make sure your keyboard model is able to map all the keys "
-"needed for the selected layout."
-msgstr ""
-
-#. RTF text: no limit
-msgid "<b>Option %1 needs a value</b><hr>Please setup a value for this option."
-msgstr ""
-
-#. RTF text: no limit
+#. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>OpenGL acceleration not possible in multihead environments</b><hr>The 3D "
-"subsystem is unable to work within a multihead environment."
+"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
+"monitor manual for the settings.<br><br>If you want your monitor not to use "
+"its maximum rating you can decrease the sync ranges to more <i>powerless</i> "
+"values."
 msgstr ""
-"<b>OpenGL acceleration er ikke muligt med multihead</b><hr>3D systemmet har "
-"ikke mulighed for at virke sammen med multihead."
+"<b>Note:</b><hr>Forkert sync områder kan skade din skærm.  Vær venlig at "
+"tjekke din skærms maunel for følgende "
 
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>3D Acceleration impossible</b><hr>The installed card cannot use hardware "
-"3D/OpenGL acceleration."
-msgstr ""
-"<b>3D Acceleration er ikke muligt</b><hr>Det installerede graifikort kan "
-"ikke bruge hardware 3D/openGL acceleration"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL drivers "
-"require a color depth of <b>16 Bit (65536)</b> to work properly. The "
-"currently used color setup does not fulfill this requirement. Verify the "
-"current default color depth setup."
-msgstr ""
-"<b>Forkert farvedybte for OpenGL acceleration</b><hr>De fleste OpenGL "
-"drivere kræver en farvedybde på <b>16 Bit (65536)</b> for at virkeDe "
-"nuværende indstillinger er forkerte, ret dem for at det kan virke"
-
-#. RTF text: no limit
-msgid ""
-"<b>Password mismatch</b><hr>The first and the second version of the password "
-"don't match ! Please try again."
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
 msgstr ""
 
-#. RTF text: no limit
-msgid ""
-"<b>Password fault</b><hr>The password field has been left empty or the "
-"password is too short. Please enter a password with at least six "
-"characters !."
-msgstr ""
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
-"acceleration because the following packages are missing:"
-msgstr ""
-"<b>De forventede base pakker mangler</b><hr>Kunne ikke aktivere OpenGL "
-"acceleration fordi de følgende pakker mangler:"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide the "
-"official 2D/3D/OpenGL driver from nVidia. Update the packages NVIDIA_GLX and "
-"NVIDIA_kernel from the nVidia web server <i>(http://www.nvidia.com)</i> "
-"first. This can also be done comfortably with YOU (YaST2 Online Update)."
-msgstr ""
-"<b>Officielle NVidia driver ikke installeret</b><hr>Kunne ikke aktivere "
-"OpenGL-acceleration fordi systemmet ikke bruger de officelle  NVidia pakker. "
-"Opdater pakkerne <b>NVIDIA_GLX og NVIDIA_kernel</b> med YOU (YaST2 Online "
-"Update) først."
-
-#. RTF text: no limit
-msgid ""
-"<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem for "
-"this card you need to install the commercial driver from nVidia first. "
-"Install the driver by using <b>YaST Online Update</b>. Inside YOU select "
-"<b>Installable and Installed Patches</b> as <b>Patch Category</b> and select "
-"<b>Download NVIDIA(r) Graphics Driver</b> from the patches list (usually at "
-"the bottom of the list). Note, that you need to mark the patch as <b>Update</"
-"b> (right mouse click) if you already installed it before and the driver was "
-"uninstalled - for whatever reason."
-msgstr ""
-
-#. RTF text: no limit
-msgid ""
-"<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
-"commercial driver from nVidia. SaX2 needs to uninstall the driver using the "
-"nVidia installer. The uninstall process will reset the original driver from "
-"X.Org which does not provide any 3D hardware acceleration.<br><br><b>Do you "
-"want to continue?</b>"
-msgstr ""
-
-#. Maximum length: 70 characters
-#, fuzzy
-msgid "Display size unknown..."
-msgstr "Skærm størrelse"
-
-#. RTF text: no limit
-msgid ""
-"<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
-"couldn't be detected. Applications dealing with computer graphics like "
-"<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know about "
-"the real physical size of your display to work properly. Please refer to "
-"your monitor manual to obtain the correct size values for the horizontal (X) "
-"and vertical (Y) direction. The values are required to be entered in [ mm ]."
-"<br><br><b>Do you want to setup the display size ?</b>"
-msgstr ""
-
-#. Maximum length: 70 characters
+#. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Værktøjsdiskette"
 
-#. RTF text: no limit
+#. Label text for horizontal sync frequency
+msgid "Horizontal:"
+msgstr "Horisontal sync område"
+
+#. Label text for second monitor name
+msgid "Second monitor:"
+msgstr ""
+
+#. Label text for second monitor resolution
+#, fuzzy
+msgid "Second monitor resolution:"
+msgstr "Vælg Opløsning(er)"
+
+#. Label text for vertical sync frequency
+msgid "Vertical:"
+msgstr "Vertical"
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "KHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio:"
+msgstr ""
+
+#. Label text for the diagonal length combo box
+#, fuzzy
+msgid "Diagonal:"
+msgstr "Horisontal sync område"
+
+#. Label text for the display size X-Axis
+msgid "X-Axis [mm]"
+msgstr ""
+
+#. Label text for the display size Y-Axis
+msgid "Y-Axis [mm]"
+msgstr ""
+
+#. Something is not configured
+msgid "Not configured"
+msgstr ""
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr ""
+
+#. Message box of type Ok, telling to user to insert a CD or disk
 #, fuzzy
 msgid ""
 "<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
@@ -673,7 +533,7 @@ msgstr ""
 "<b>Isæt diskette</b><hr>Isæt disketten som du har fået fra din skærm-"
 "producent"
 
-#. RTF text: no limit
+#. Message box of type Error, telling that the utility disk cannot be opened
 #, fuzzy
 msgid ""
 "<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
@@ -682,453 +542,402 @@ msgstr ""
 "<b>Læsefejl</b><hr> Diskette ulæselig. Muligvis ikke formateret korrekt "
 "eller beskadiget. [ xxx.inf ] fil på diskette"
 
-#. RTF text: no limit
+#. First gap of the ActivateInfo text: Multihead mode name
 #, fuzzy
-msgid ""
-"<b>Add user-defined resolution</b><hr>Just enter the pixel values for the X "
-"and Y axis and click 'Add' to include the new resolution in the standard "
-"resolution list."
-msgstr ""
-"<b>Tilføj brugerdefineret opløsning</b><hr>Indtast pixel værdien for X og Y "
-"aksen og klik på tilføj knappen for at tilføje den nye opløsning til "
-"standard-opløsning listen"
+msgid "Traditional"
+msgstr "Almindelig-tilstand aktiv"
 
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid "Available configuration components are:"
-msgstr "Tilgængelige konfiurations komponenter:"
-
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid ""
-"Traditional Multihead:\n"
-"Each screen is an independent display"
-msgstr ""
-"Traditionel Multihead:\n"
-"Hver skærm er en uafhænig-skærm"
-
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid ""
-"Cloned Multihead:\n"
-"Each display is a clone of the primary display"
-msgstr ""
-"Klonet Multihead:\n"
-"Hvert skærmbillede er en klon af det første skærmbillede"
-
-#. Maximum length: 70 characters per line 3 lines allowed
-msgid ""
-"Xinerama Multihead:\n"
-"Build one big display out of all screens"
-msgstr ""
-"Xinerama Multihead:\n"
-"Lav et stort skærmbillede ud af alle skærmene"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Note:</b><hr>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the following settings."
-msgstr ""
-"<b>Note:</b><hr>Forkert sync områder kan skade din skærm.  Vær venlig at "
-"tjekke din skærms maunel for følgende "
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via the "
-"<b>number pad keys</b>. Test the behavior using the number pad."
-msgstr ""
-"<b>AccessX Aktiveret:</b><hr>Muse-pegepinden er nu til rådighed for "
-"<b>Nummer-tastaturet</b>. Prøv venligst at styre musen med Nummer-tastaturet"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the number "
-"pad is <b>disabled</b> now."
-msgstr ""
-"<b>AccessX Deaktiveret:</b><hr>Strying af muse-pegepinden via Nummer-"
-"tastaturet er <b>deaktiveret</b> nu"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the system?"
-msgstr ""
-"<b>Fjern Tavle:</b><hr>Vil du virkelig gerne fjerne den grafiske-tavle fra "
-"systemmet ?"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
-"the next time the graphics system is restarted."
-msgstr ""
-"<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have effekt "
-"næste gang det grafiske system bliver genstartet."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
-"the next time your system is <b>rebooted</b>."
-msgstr ""
-"<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have effekt "
-"næste gang det grafiske system bliver genstartet."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are in "
-"developmental phases so are, in part, still regarded as experimental. "
-"Nevertheless, we have decided to include the drivers in our distribution "
-"because of the high demand for 3D hardware acceleration in Linux. "
-"<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
-"are unable to offer any installation support for configuring 3D hardware "
-"acceleration or if any problems related to this should arise.<br><br><b>Do "
-"you want to enable 3D for this card?</b>"
-msgstr ""
-"<b>3D-kort fundet</b><hr>Alle 3D drivers i Linux er i udviklingsfasen og er "
-"derfor stadigvæk forsøgsdrivere.Men alligevel har vi valgt at inkludere "
-"disse drivere i vores distribution, pga. mange kræver 3D hardware "
-"acceleration i Linux.<br><br>Pga. at OpenGL-driverne stadigvæk er i "
-"forsøgsperioden, så har vi ikke mulighed for at tilbyde nogen form for "
-"installations-support når 3D hardware accelerationen skal konfigureres eller "
-"hvis der opstår andre problemer relateret til forsøgsdriverne"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this card "
-"is not an official 2D/3D/OpenGL driver from nVidia for licensing reasons. "
-"The 3D/OpenGL driver used if you enable 3D is <b>not</b> hardware-"
-"accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, update the "
-"packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://"
-"www.nvidia.com)</i>. This can also be done comfortably with YOU (YaST2 "
-"Online Update).<br><br>If there are problems with the 2D/3D/OpenGL driver "
-"from nVidia, consult the vendor, as we unfortunately do not have any "
-"influence over the development of nVidia drivers.<br><br><b>Prepare 3D for "
-"this card?</b>"
-msgstr ""
-"<b>3D-kort fundet</b><hr>Vær opmærksom på at det ikke er officielle 2D/3D/"
-"OpenGL drivere fra nVidia pga licencs årsager. Hvis du aktivere 3D med de "
-"medfølgende 3D/OpenGL driver så vil de ikke benytte hardware-acceleration."
-"<br><br>Hvis du vil havde hardware accelereret 3D/OpenGL, skal du opdatere "
-"pakkerne NVIDIA_GLX og NVIDIA_kernel de pakker kan findes på under SuSE "
-"Linux på nVidia´s hjemmeside (http://www.nvidia.com). Du kan også gøre dette "
-"nemmere ved at bruge YOU(YaST2 Online Update).<br><br>Hvis der er nogle "
-"problemer med 2D/3D/OpenGL driverne fra nVidia, så kontakt producenten, da "
-"vi uheldigvis ikke har nogen indflydelse på udviklingen af nVidia-drivere."
-"<br><br>Vil du aktivere 3D for følgende kort:"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Software update</b><hr>The dummy nvidia driver with no 3D capability that "
-"comes with this distribution is still installed.  You should update to the "
-"official nvidia drivers from the nvidia ftp server with YOU (YaST2 online "
-"update). Start the online update?"
-msgstr ""
-"<b>Software update</b><hr>Du har stadigvæk installeret nVidia driveren der "
-"følger med SuSE Linux som der ikke har nogle 3D-muligheder, derfor bør du "
-"opdatere til de officielle nVidia driver fra nVidias ftp-server, dette kan "
-"du gøre med YOU(YaST2 online update) Vil du starte online updaten?"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Software installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Program installation:</b><hr>Der mangler pakker. Vil du installere dem "
-"der mangler nu? "
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
-"resolution is not adjustable within framebuffer mode. Please select another "
-"resolution than:"
-msgstr ""
-"<b>Forkert opløsning:</b><hr>For denne konfiguration er det ikke tilladt at "
-"vælge den valgte opløsning. Vælg venligst en anden opløsningen på listen."
-
-#. RTF text: no limit
-msgid ""
-"<b>Selected Resolution not available</b><hr>The selected resolution doesn't "
-"fit into the sync-ranges of the monitor. Please prove if the currently "
-"selected monitor model is correct or select a lower resolution than:"
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
 msgstr ""
 
-#. RTF text: no limit
-msgid ""
-"<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
-"depth is not allowed for this configuration."
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
 msgstr ""
 
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Invalid Resolution selected:</b><hr>Setting the requested resolution is "
-"not allowed for this configuration. Select another resolution from the list."
-msgstr ""
-"<b>Forkert opløsning:</b><hr>For denne konfiguration er det ikke tilladt at "
-"vælge den valgte opløsning. Vælg venligst en anden opløsningen på listen."
-
-#. RTF text: no limit
-#, fuzzy
-msgid "<b>X Server test failed:</b><hr><br>"
-msgstr "<b>X-Server test mislykkede:</b><hr><br>"
-
-#. Maximum length: 60  characters
-msgid "3D question..."
-msgstr "3D-spørgsmål..."
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "X Server test information..."
-msgstr "X-Server test information..."
-
-#. Maximum length: 60  characters
-msgid "Configuration saved..."
-msgstr "Konfiguration gemt"
-
-#. Maximum length: 60  characters
-msgid "AccessX status information..."
-msgstr "AccessX status information..."
-
-#. Maximum length: 60  characters
-msgid "Tablet warning..."
-msgstr "Tavle advarlse..."
-
-#. Maximum length: 60  characters
-msgid "Consideration..."
-msgstr "Overvejelse..."
-
-#. Maximum length: 20  characters
-msgid "Geometry"
-msgstr "Geometri"
-
-#. Maximum length: 20  characters
-msgid "Graphics card"
-msgstr "Grafikkort"
-
-#. Maximum length: 20  characters
-msgid "Name:"
-msgstr "Navn:"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Card and Desktop"
-msgstr "Skrivebord"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "Input Devices"
-msgstr "Inputenhed"
-
-#. Maximum length: 20  characters
-msgid "Input-Devices"
-msgstr "Inputenhed"
-
-#. Maximum length: 20  characters
-msgid "Desktop"
-msgstr "Skrivebord"
-
-#. Maximum length: 20  characters
-msgid "Multihead"
-msgstr "Multihead"
-
-#. Maximum length: 50  characters
-msgid "Primary Modeline:"
-msgstr "Primær Modeline:"
-
-#. Maximum length: 50  characters
-msgid "Secondary Modeline:"
-msgstr "Sekundær Modeline:"
-
-#. Maximum length: 50  characters
-msgid "Modeline"
-msgstr "Modeline"
-
-#. Maximum length: 20  characters
-msgid "AccessX"
-msgstr "AccessX"
-
-#. Maximum length: 20  characters
-msgid "VNC"
+#. Tab text for the mouse model dialog
+msgid "Setup mouse model"
 msgstr ""
 
-#. Maximum length: 60  characters
-msgid "X-Server accessable via VNC protocol:"
+#. Group box title for the primary keyboard setup
+#, fuzzy
+msgid "Primary Setup"
+msgstr "Primær enhed"
+
+#. Label text for the primary keyboard type
+msgid "Type:"
 msgstr ""
 
-#. Maximum length: 25  characters
-msgid "Access Control"
+#. Label text for the primary keyboard layout
+#, fuzzy
+msgid "Layout:"
+msgstr "Udlæg"
+
+#. Label text for the primary keyboard variant
+msgid "Variant:"
 msgstr ""
 
-#. Maximum length: 50  characters
-msgid "<b>Core Pointer...</b>"
-msgstr "<b>Hoved-Pegepind...</b>"
+#. Group box title for the additional keyboard setup
+msgid "Additional Layout(s)"
+msgstr ""
 
-#. Maximum length: 20  characters
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Cancel"
-msgstr "Afbryd"
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr ""
 
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "&Ok"
-msgstr "Ok"
+#. Table topic text describing the status column
+msgid "Status"
+msgstr ""
 
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "F&inalize >>"
-msgstr "Færdigører"
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr ""
 
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "<< &Back"
-msgstr "« Tilbage"
+#. List View root item text
+msgid "Group Shift/Lock behavior"
+msgstr ""
 
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "&Next >>"
-msgstr "Næste »"
+#. List View root item text
+msgid "Use Keyboard LED to show alternate group"
+msgstr ""
 
-#. Maximum length: 20  characters
+#. List View root item text
 #, fuzzy
-msgid "&Exit"
+msgid "Compose Key Position"
+msgstr "Skift position"
+
+#. List View root item text
+#. XKBFile extension text
+#, fuzzy
+msgid "Control Key Position"
+msgstr "Skift position"
+
+#. List View root item text
+msgid "Third level chooser"
+msgstr ""
+
+#. List View root item text
+msgid "Alt/Win key bahavior"
+msgstr ""
+
+#. List View root item text
+msgid "CapsLock key bahavior"
+msgstr ""
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Left Alt key switches group while pressed"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Both Ctrl keys together change group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Shift key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Left Win-key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Left Alt key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Both Win-keys switch group while pressed"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Win-key is Compose"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Shift+CapsLock changes group"
+msgstr "Shift/Lock gruppe"
+
+#. XKBFile extension text
+msgid "Right Alt key switches group while pressed"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press any of Win-keys to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press Right Alt key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Ctrl key changes group"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Alt is Compose"
+msgstr "Højre Alt binding"
+
+#. XKBFile extension text
+msgid "Scroll_Lock LED shows alternative group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Control key at left of -A-"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Both Shift keys together change group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "uses internal capitalization. Shift cancels Caps"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Make CapsLock an additional Control"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press Left Win-key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Win-key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Meta is mapped to the left Win-key"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Caps_Lock LED shows alternative group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Num_Lock LED shows alternative group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Left Shift key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Left Win-key switches group while pressed"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Menu is Compose"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Both Alt keys together change group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Caps Lock key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Swap Control and Caps Lock"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press any of Alt keys to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Alt key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Hyper is mapped to the Win-keys"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Super is mapped to the Win-keys (default)"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Alt and Meta on the Alt keys (default)"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Add the standard behavior to Menu key"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press Right Control to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Alt+Shift changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Control+Shift changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "acts as Shift with locking. Shift cancels Caps"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Use keyboard LED to show alternative group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press Right Win-key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press Left Alt key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Meta is mapped to the Win-keys"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Press Menu key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Left Ctrl key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Menu key changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Alt+Control changes group"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Win-key switches group while pressed"
+msgstr ""
+
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "Tavle"
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
+msgstr ""
+
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
+msgstr ""
+
+#. Activate tablet checkbox
+msgid "Activate this tablet"
+msgstr ""
+
+#. Group box title for the tablet vendor and name selection
+#, fuzzy
+msgid "Tablet: Vendor and Name selection"
+msgstr "Model: Producent / Navne valg"
+
+#. Group box title for tablet port combobox
+#, fuzzy
+msgid "Connection port"
+msgstr "Forbundet til:"
+
+#. Group box title for tablet mode
+#, fuzzy
+msgid "Primary tablet mode"
+msgstr "Primær enhed"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen/Eraser Mode"
+msgstr ""
+
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr ""
+
+#. Radiobutton for absolute tablet mode
+#, fuzzy
+msgid "Absolute"
 msgstr "Afslut"
 
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&About..."
-msgstr "Om..."
-
-#. Maximum length: 60  characters
-msgid "About the author"
+#. Combobox item text for tablet port: USB
+msgid "USB"
 msgstr ""
 
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "Select virtual resolution for Mode %1"
-msgstr "Vælg Opløsning(er)"
-
-#. RTF text: no limit
-msgid ""
-"<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer of "
-"this product is</nobr><br>Marcus Schaefer"
-msgstr ""
-"SaX (c) 2000 SuSE Linux AG:</b><hr><nobr>Forfatteren og vedligeholderen bag "
-"dette produkt er</nobr><br>Marcus Schäfer <sax\\@suse.de>"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Modules..."
-msgstr "Moduler..."
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&File"
-msgstr "Fil"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Help"
-msgstr "Hjælp..."
-
-#. Maximum length: 40  characters
-msgid "Loading CDB data: %1"
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
 msgstr ""
 
-#. Maximum length: 40  characters
-msgid "Loading base data: %1"
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr ""
 
-#. Maximum length: 40  characters
-msgid "Loading system data: %1"
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "Værktøjer"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr "Tilføj"
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr "Fjern"
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen/Eraser settings..."
 msgstr ""
 
-#. Maximum length: 40  characters
+#. Tab title: Pen properties
 #, fuzzy
-msgid "C&hange configuration"
-msgstr "Ændre konfiguration"
+msgid "Pen properties"
+msgstr "Egenskaber"
 
-#. Maximum length: 50  characters
+#. Tab title: Eraser properties
 #, fuzzy
-msgid "SaX2 start-up information"
-msgstr "SaX2 opstarts information"
+msgid "Eraser properties"
+msgstr "Egenskaber for mus"
 
-#. Maximum length: 50  characters
-msgid "SaX2 exit program... "
-msgstr "SaX2 afslut program... "
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "Touchscreen"
 
-#. Maximum length: 50  characters
-msgid "SaX2 final steps..."
-msgstr "SaX2 de sidste skridt..."
-
-#. Maximum length: 50  characters
-msgid "Dialog information..."
-msgstr "Dialog information..."
-
-#. Maximum length: 50  characters
-msgid "Exception..."
-msgstr "Undtagelse..."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Multihead setup not possible:</b><hr>Your system does not provide more "
-"than one graphics device.  More are required to set up a multihead "
-"configuration."
-msgstr ""
-"<b>Multihead Konfirguration ikke muligt:</b><hr>Dit system har ikke mere end "
-"en skærm, hvilket der kræves for at lave et multihead konfiguration"
-
-#. RTF text: no limit
-#, fuzzy
-msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
-msgstr "<b>Afslut dialog:</b><hr>Vil du afslutte denne dialog ?"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Invalid setup:</b><hr>At least one graphics device must be configured."
-msgstr ""
-"<b>Forkert konfiguration:</b><hr>Mindst en grafiskenhed er ikke konfigureret"
-
-#. RTF text: no limit
-#, fuzzy
-msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-msgstr ""
-"<b>Forkert konfiguration:</b><hr>Mindst en grafiskenhed er ikke konfigureret"
-
-#. RTF text: no limit
-msgid ""
-"<b>Monitor cannot be removed:</b><hr>The system provides exactly one monitor "
-"configuration. You are not allowed to remove this major entity."
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a touchscreen to display number %1"
 msgstr ""
 
-#. RTF text: no limit
+#. Group box title for the touchscreen vendor and name selection
 #, fuzzy
-msgid ""
-"<b>Running dialog:</b><hr>A dialog is already open.  Abort the open dialog "
-"and start the selected one?"
-msgstr ""
-"<b>Kørende dialog:</b><hr>Der kører allerede en dialog, vil du afslutte "
-"denne dialog og starte den valgte ?"
+msgid "Touchscreen: Vendor and Name selection"
+msgstr "Model: Producent / Navne valg"
 
-#. RTF text: no limit
-#, fuzzy
-msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
-msgstr "<b>Afslutte dialog:</b><hr>Vil du afslutte denne dialog nu?"
-
-#. RTF text: no limit
-#, fuzzy
-msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
-msgstr "<b>Afslut SaX2:</b><hr>Vil du afslutte SaX2 nu?"
-
-#. RTF text: no limit
+#. Finish configuration message box
 #, fuzzy
 msgid ""
 "<b>Final steps:</b><hr>The last step is saving your new configuration. It is "
@@ -1141,755 +950,73 @@ msgstr ""
 "testen viser et korrupt billede, så tryk: [ Ctrl-Alt-Backspace ]For at "
 "afslutte serveren..."
 
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Final step:</b><hr>The last step is saving your new configuration. Please "
-"note the configuration is <i>Framebuffer</i> based and your system needs to "
-"be rebooted first to activate the changes for resolution and/or color "
-"settings."
-msgstr ""
-"<b>Server opstart:</b><hr>Det er brugbart at teste nye indstillingerDu må "
-"vælge mellem at teste serveren eller at gemme ændringer med det samme. Hvis "
-"testen viser et korrupt billede, så tryk: [ Ctrl-Alt-Backspace ]For at "
-"afslutte serveren..."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2 forslag:</b><hr>Det nuværende grafik system er baseret på et forslag "
-"lavet via SaX2. Hvis du kan lide denne konfiguration skal du bare klikke "
-"<b>Ok</b> ellers kan du frit ændre den nuværende konfiguration."
-
-#. Dynamic length: Please do not oversize key up to 30%
-#, fuzzy
-msgid "Unknown Graphics Card..."
-msgstr "Grafikkort ukendt..."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>The graphics card could not be detected</b><hr>Configure your card "
-"manually. Start the configuration dialog to set up the graphics card now?"
-msgstr ""
-"<b>Grafikkortet kunne ikke identificeres</b><hr>Du skal derfor konfigurer "
-"dit grafikkort manuelt. Vil du starte denne konfiguration nu ?"
-
-#. Dynamic length: Please do not oversize key up to 30%
-msgid "Unknown Monitor..."
+#. Tab title: VNC Server configuration
+msgid "VNC-Server"
 msgstr ""
 
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
-"manually. Do you want to start the configuration dialog to setup the display "
-"now ?"
-msgstr ""
-"<b>Skærmen kunne ikke identificeres</b><hr>Du skal derfor konfigurer din "
-"skærm manuelt.Vil du starte denne konfiguration nu ?"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
-"manually. Do you want to start the configuration dialog to setup the display "
-"now ?"
-msgstr ""
-"<b>Skærmen kunne ikke identificeres</b><hr>Du skal derfor konfigurer din "
-"skærm manuelt.Vil du starte denne konfiguration nu ?"
-
-#. Dynamic length: Please do not oversize key up to 10%
-#, fuzzy
-msgid "Automatic graphics system set up"
-msgstr "Automatisk grafik system setup"
-
-#. Dynamic length: Please do not oversize key up to 10%
-#, fuzzy
-msgid "&Test..."
-msgstr "Test..."
-
-#. Dynamic length: Please do not oversize key up to 10%
-#, fuzzy
-msgid "&Save"
-msgstr "Gem"
-
-#. Dynamic length: Please do not oversize key up to 10%
-#, fuzzy
-msgid "&Yes"
-msgstr "Ja"
-
-#. Dynamic length: Please do not oversize key up to 10%
-#, fuzzy
-msgid "&No"
-msgstr "Nej"
-
-#. Maximum length: 20  characters
-msgid "<b>Yes</b>"
+#. Activate VNC server checkbox
+msgid "Allow access to display using VNC protocol"
 msgstr ""
 
-#. Maximum length: 20  characters
-msgid "<b>No</b>"
-msgstr ""
-
-#. Maximum length: 50  characters
-msgid "File"
-msgstr "Fil"
-
-#. Maximum length: 50  characters
-msgid "still locked"
-msgstr "stadigvæk låst"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Please wait"
-msgstr "vent venligst"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
-"X11 Configuration Manager<br>"
-msgstr ""
-"<b>SaX2: Udvidede X11-Konfiguration(er) </b><hr>Velkommen til SuSE X11-"
-"Konfigurations vejleder<br>"
-
-#. Maximum length: 70  characters
-#, fuzzy
-msgid "To start, double-click  an item in the component list."
-msgstr "Start ved at dobbelt klikke på en ting på komponentlisten... "
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "X11 System Setup"
-msgstr "X11-System konfiguration"
-
-#. Maximum length: 50  characters
-msgid "Value..."
-msgstr "Værdi..."
-
-#. Maximum length: 40  characters
-msgid "Primary device"
-msgstr "Primær enhed"
-
-#. Maximum length: 40  characters
-msgid "X11 System"
-msgstr "X11 System"
-
-#. Maximum length: 40  characters
-msgid "Driver:"
-msgstr "Driver:"
-
-#. Maximum length: 10  characters
-msgid "X:"
-msgstr "X:"
-
-#. Maximum length: 10  characters
-msgid "Y:"
-msgstr "Y:"
-
-#. Maximum length: 40  characters
-msgid "Bus ID:"
-msgstr "Bus ID"
-
-#. Maximum length: 40  characters
-msgid "Card options"
-msgstr "Kort egenskaber"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Options..."
-msgstr "Valgmuligheder"
-
-#. Maximum length: 70  characters
-msgid "Key Mappings"
-msgstr "Tastatur udlægninger"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Current sync frequencies"
-msgstr "Nuværende sync frekvenser"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Frequencies"
-msgstr "Frekvenser"
-
-#. Maximum length: 40  characters
-msgid "Current color depth"
-msgstr "Nuværende Farvedybde"
-
-#. Maximum length: 40  characters
-msgid "Current resolution"
-msgstr "Nuværende opløsning"
-
-#. Maximum length: 40  characters
-msgid "HSync range"
-msgstr "Hsync område"
-
-#. Maximum length: 40  characters
-msgid "VSync range"
-msgstr "Vsync område"
-
-#. Maximum length: 40  characters
-msgid "Display size"
-msgstr "Skærm størrelse"
-
-#. Maximum length: 10  characters
-msgid "[ mm ]"
-msgstr "[ mm ]"
-
-#. Maximum length: 40  characters
-msgid "Device"
-msgstr "Enhed:"
-
-#. Maximum length: 40  characters
-msgid "Protocol"
-msgstr "Protokol"
-
-#. Maximum length: 40  characters
-msgid "Keyboard Model"
-msgstr "Tastaturmodel"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Fi&nish"
-msgstr "Afslut"
-
-#. Maximum length: 20  characters
-msgid "Abort"
-msgstr "Afslut"
-
-#. Maximum length: 100  characters
-msgid "Configure XAccess: Mouse over keypad..."
-msgstr "Konfigurer AccessX: Mus på piletasterne..."
-
-#. Maximum length: 100  characters
-msgid "Configure VNC: Export display using the VNC protocol..."
-msgstr ""
-
-#. Maximum length: 100  characters
-msgid "Configure input devices: Mouse configuration..."
-msgstr "Konfigurer input enheder: Muse konfiguration..."
-
-#. Maximum length: 100  characters
-msgid "Configure 3D/OpenGL subsystem..."
-msgstr "Konfigurer 3D/OpenGL system..."
-
-#. Maximum length: 100  characters
-#, fuzzy
-msgid "Configure virtual resolutions..."
-msgstr "Konfigurer touchscreen(s)..."
-
-#. Maximum length: 100  characters
-#, fuzzy
-msgid "Configure graphics cards..."
-msgstr "Konfigurer grafikkort..."
-
-#. Maximum length: 100  characters
-#, fuzzy
-msgid "Configure Desktop: Colors and Resolutions..."
-msgstr "Konfigurer skrivebord: Farver og Opløsning"
-
-#. Maximum length: 100  characters
-#, fuzzy
-msgid "Configure touch screens..."
-msgstr "Konfigurer touchscreen(s)..."
-
-#. Maximum length: 100  characters
-#, fuzzy
-msgid "Set up picture geometry..."
-msgstr "Konfigurer billede geometri..."
-
-#. Maximum length: 100  characters
-msgid "Configure multihead mode..."
-msgstr "Konfigurer multihead tilstand..."
-
-#. Maximum length: 100  characters
-#, fuzzy
-msgid "Set up monitor properties..."
-msgstr "Konfigurer skærmen..."
-
-#. Maximum length: 100  characters
-msgid ""
-"Set up screen layout of your desktops (Double-click an icon will identify "
-"the real screen)..."
-msgstr ""
-
-#. Maximum length: 100  characters
-msgid "Configure graphics tablet"
-msgstr "Konfigurer grafisk tavle"
-
-#. Maximum length: 100  characters
-msgid "Configure keyboard..."
-msgstr "Konfigurer tastatur..."
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Add new card..."
-msgstr "Tilføj nyt kort..."
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Remove selected card"
-msgstr "Fjern valgte kort"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Remove selected monitor"
-msgstr "Fjern valgte Mus"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Properties..."
-msgstr "Egenskaber"
-
-#. Maximum length: 20  characters
-#, fuzzy
-msgid "&Options"
-msgstr "Valgmuligheder"
-
-#. Maximum length: 20  characters
+#. Group box title for the VNC options
 #, fuzzy
 msgid "VNC Options"
 msgstr "Valgmuligheder"
 
-#. Maximum length: 60  characters
-msgid "Allow access to display using VNC protocol"
+#. Activate VNC password protection checkbox
+msgid "Activate password protection"
 msgstr ""
 
-#. Maximum length: 60  characters
-msgid "Enable password protection"
-msgstr ""
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Properties..."
-msgstr "Egenskaber"
-
-#. Maximum length: 40  characters
+#. LineEdit label: enter password
 msgid "Password"
 msgstr ""
 
-#. Maximum length: 40  characters
+#. LineEdit contents: enter new password
+msgid "<Enter new password...>"
+msgstr ""
+
+#. LineEdit contents: verify password
 msgid "Verify password"
 msgstr ""
 
-#. Maximum length: 40  characters
-msgid "Enable View-Only mode"
-msgstr ""
-
-#. Maximum length: 40  characters
+#. Activate HTTP access checkbox
 #, fuzzy
-msgid "Enable HTTP Access"
+msgid "Activate HTTP Access"
 msgstr "Aktiver AccessX"
 
-#. Maximum length: 40  characters
-msgid "HTTP Port"
-msgstr ""
-
-#. Maximum length: 40  characters
+#. Activate multiple VNC connection checkbox
 msgid "Allow multiple VNC connections"
 msgstr ""
 
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Add new touchscreen..."
-msgstr "Tilføj ny Touchscreen..."
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Remove selected touchscreen"
-msgstr "Fjern valgte Touchscreen"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
-msgstr "<b>Foreløbig konfigurede Touchscreen</b><hr>"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
-msgstr "<b>Foreløbig konfigurede Skærm(e)</b><hr>"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
-msgstr "<b>Forløbig konfigurede Kort:</b><hr>"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
-msgstr "<b>Foreløbig konfigurede Mus:</b><hr>"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-msgstr "<b>Foreløbig Skærm Layout:</b><hr>"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
-msgstr "<b>Foreløbige konfigurede Skrivebord(er):</b><hr>"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Add new mouse..."
-msgstr "Tilføj ny Mus..."
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "&Remove selected mouse"
-msgstr "Fjern valgte Mus"
-
-#. Maximum length: 30  characters
-#, fuzzy
-msgid "&General"
-msgstr "Generel"
-
-#. Maximum length: 30  characters
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "&Expert"
-msgstr "Ekspert"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Model: Vendor and Name selection..."
-msgstr "Model: Producent / Navne valg"
-
-#. Maximum length: 50  characters
-msgid "Vendor"
-msgstr "Forhandler"
-
-#. Maximum length: 50  characters
-msgid "Special mouse properties..."
-msgstr "Egenskaber for mus"
-
-#. Maximum length: 50  characters
-msgid "Color selection..."
-msgstr "Farve-valg..."
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Manual sync frequency set up..."
-msgstr "Manuel sync frekvens opsætning"
-
-#. Maximum length: 50  characters
-msgid "Selected"
-msgstr "Valgte"
-
-#. Maximum length: 50  characters
-msgid "Resolution X"
-msgstr "Opløsning X"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "&Colors"
-msgstr "Farver"
-
-#. Maximum length: 50  characters
-msgid "&Resolution(s) for %1 colors"
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
 msgstr ""
 
-#. Maximum length: 50  characters
-msgid "Resolution Y"
-msgstr "Opløsning Y"
-
-#. Maximum length: 50  characters
-msgid "Possible"
-msgstr "Muligt"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "&Add this resolution"
-msgstr "Tilføj denne opløsning..."
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Enable 3-button emulation"
-msgstr "Aktiver 3 knap emulation"
-
-#. Maximum length: 50  characters
-#, fuzzy
-msgid "Enable Mouse Wheel"
-msgstr "Aktiver Muse-Hjul"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede AccessX Status</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Current VNC status</b></big><hr>"
-msgstr "<b>Nuværende 3D/OpenGL status</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-msgstr "<b>Nuværende 3D/OpenGL status</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
-msgstr "<b>Forreløbig konfigurede Multihead Status</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured graphics cards</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede Grafikkort</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured desktops</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede Skrivebord(e)</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently active geometry timings</b></big><hr>"
-msgstr "<b>Nuværende aktive Geometri Timing</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured keyboard</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede tastaturer</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured layout</b></big><hr>"
-msgstr "<b>Nuværende konfigurede Layout</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured monitors</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede Skærm(e)</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede Pege-enhed(er)</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured multihead status</b></big><hr>"
-msgstr "<b>Forreløbig konfigurede Multihead Status</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede Grafik-tavler</b><hr>"
-
-#. Maximum length: 60  characters
-#, fuzzy
-msgid "<big><b>Currently configured touchscreen</b></big><hr>"
-msgstr "<b>Foreløbig konfigurede Touchscreen</b><hr>"
-
-#. RTF text: no limit
-msgid "<b><nobr>No information available</nobr></b>"
+#. VNC message box appearing if password strings doesn't match
+msgid ""
+"<b>VNC Password mismatch</b><hr>The first and the second version of the "
+"password don't match ! Please try again."
 msgstr ""
 
-#. RTF text: no limit
+#. VNC message box appearing if password is too short
+msgid ""
+"<b>VNC Password fault</b><hr>The password field has been left empty or the "
+"password is too short. Please enter a password with at least six "
+"characters !."
+msgstr ""
+
+#. Install missing packages box
 #, fuzzy
 msgid ""
-"<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse with "
-"the keypad. The table below points to the current status of AccessX."
+"<b>Software installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
 msgstr ""
-"<b>Virtuel mus:</b><hr>Konfigurer det nummeriske-tastatur så man kan styre "
-"musen via tastaturet. Listen herunder viser det nuværende status for AccessX."
+"<b>Program installation:</b><hr>Der mangler pakker. Vil du installere dem "
+"der mangler nu? "
 
-#. RTF text: no limit
-msgid ""
-"<b>VNC Server:</b><hr>Set up the X-Server to be able to access the desktop "
-"and all its programs remotely via a VNC viewer program"
+#. Caption text for the missing package info window
+msgid "Package installation"
 msgstr ""
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
-"here. X.Org includes the direct rendering interface to use the 3D "
-"capabilities of your graphics card. If your card and the corresponding "
-"driver support 3D hardware acceleration, enable it in this dialog."
-msgstr ""
-"<b>OpenGL Subsystem:</b><hr>Konfigurer 3D-teknologierne på dette grafikkort "
-"her. Xorg indeholder den såkaldte direct rendering interfacce der kan bruge "
-"dit grafikkorts 3D-teknologier. Her kan du aktivere 3D-hardware acceleration."
-
-#. RTF text: no limit
-msgid ""
-"<b>Virtual resolution:</b><hr>Every single desktop has its real resolution "
-"which is completely viewable. Beside this resolution you can setup a "
-"resolution which lives outside the viewable area of your monitor and comes "
-"up if you leave the edges of your monitor with the mouse. This area is "
-"called a virtual resolution."
-msgstr ""
-
-#. RTF text: no limit
-msgid ""
-"<b>Graphics cards:</b><hr>Set up your graphics hardware here. The graphics "
-"system consists of at least one graphics card but can be combined to a so "
-"called <i>multihead environment</i> which consists of at least two cards up "
-"to a maximum of 16 cards."
-msgstr ""
-
-#. RTF text: no limit
-msgid ""
-"<b>Desktop properties:</b><hr>Set up your desktop with settings like "
-"resolution and colors. Every desktop is an independent device and may have a "
-"different color and/or resolution setup."
-msgstr ""
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-" <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
-"displayed by the monitor. The table below point to the current used Modeline"
-"(s)."
-msgstr ""
-"<b>Skærm geometri:</b><hr>Konfigurer størrelsen og placeringen af billedet "
-"som bliver vist på din skærm. Listen viser den nuværende Modeline."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
-"language environment with which it should work."
-msgstr ""
-"<b>Tastatur indstillinger:</b><hr>Konfigurer typen af tastatur og hvilket "
-"sprog-layout det skal benytte. Du kan også indstille skrifttypen. Listen "
-"herunder viser nuværende indstillinger"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Desktop layout:</b><hr>If more than one card is available, you are in a "
-"multihead environment. Set up the neighborhood relations of the connected "
-"monitors simply via drag&drop. If you are not sure which monitor belongs to "
-"the icon just double-click on it and you will see a message on the "
-"corresponding screen."
-msgstr ""
-"<b>Skrivebord layout:</b><hr>Hvis der er mere end et kort til rådighed så "
-"har du et multihead-konfiguration. Her kan du instille samarbejdet mellem de "
-"forskellige skærme. Listen viser nuværende multihead-konfiguration."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
-"graphics cards. Be careful in your choice. Wrong sync ranges may damage the "
-"monitor."
-msgstr ""
-"<b>Skærm indstillinger:</b><hr>Konfigurer skærmen som er forbundet til "
-"grafikkortet. Vær opmærksom på dine indstillinger, et forkert Sync-område "
-"kan skade din skærm!. Listen herunder viser maximum Sync-område for de "
-"tilsluttede skærme."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
-"mouse pointer as well as settings like button emulation or wheel functions."
-msgstr ""
-"<b>Muse indstillinger:</b><hr>Konfigurer de basale indstillinger for musen "
-"for at aktivere makøren, indstillingerne for knap emulation og musse-hjulet. "
-"Listen viser nuværende indstillinger for pege-enhederne."
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Multihead mode:</b><hr>If more than one card is available, you are in a "
-"multihead environment. Set up the multihead functioning here."
-msgstr ""
-"<b>Multihead tilstand:</b><hr>Hvis der er mere end et kort til rådighed så "
-"har du et multihead-konfiguration. Konfigurer multihead funktionerne her. "
-"Listen viser nuværende multihead-tilstand"
-
-#. RTF text: no limit
-#, fuzzy
-msgid ""
-"<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
-"pointer devices, such as pens and erasers."
-msgstr ""
-"<b>Grafisk tavle:</b><hr>Konfigurer en grafisk tavle og pege-enheder.Listen "
-"viser den primære tavles indstillinger."
-
-#. RTF text: no limit
-#, fuzzy
-msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
-msgstr ""
-"<b>Touchscreen:</b><hr>Kofigurer skærmens tryk-niveau. Listen herunder viser "
-"den primærer touchscreen-status."
-
-#. Maximum length: 20  characters
-msgid "Disabled"
-msgstr "Deaktiveret"
-
-#. Maximum length: 20  characters
-msgid "Enabled"
-msgstr "Aktiveret"
-
-#. Maximum length: 30  characters
-msgid "Wheel support"
-msgstr "Muse-hjul understøttelse"
-
-#. Maximum length: 30  characters
-#, fuzzy
-msgid "&Port"
-msgstr "Port"
-
-#. Maximum length: 30  characters
-#, fuzzy
-msgid "&Mode"
-msgstr "Tilstande:"
-
-#. Maximum length: 30  characters
-msgid "Button emulation"
-msgstr "Knap emulering"
-
-#. Maximum length: 40  characters
-msgid "Primary Device:"
-msgstr "Primær enhed:"
-
-#. Maximum length: 40  characters
-msgid "Secondary Device:"
-msgstr "Sekundær enhed:"
-
-#. Maximum length: 50  characters
-msgid "Single Layout [ no multihead environment ]"
-msgstr "Enkelt Layout [intet multihead]"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Clone Mode Active"
-msgstr "Klon-tilstand aktiv"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Xinerama Mode Active"
-msgstr "Xinerama-tilstand aktiv"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Traditional Mode Active"
-msgstr "Almindelig-tilstand aktiv"
-
-#. Maximum length: 40  characters
-#, fuzzy
-msgid "Screens Layout Active"
-msgstr "Skærmenes Layout aktiv"
-
-#. Maximum length: 70  characters
-msgid "Display"
-msgstr "Skærm"
-
-#. Maximum length: 70  characters
-msgid "Configuration on display"
-msgstr "Konfiguration på skærmen"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1937,6 +1064,10 @@ msgstr "Skift position"
 msgid "C&hange Size"
 msgstr "Ændre størrelse"
 
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr "Skærm"
+
 #. Maximum length: 60  characters
 #, fuzzy
 msgid "No video mode tuning available"
@@ -1983,905 +1114,1009 @@ msgstr ""
 "noget her hvis du ikke hvad de forskellige ting gør. Mere\n"
 "informationer kan be fundet i konfigurationsmanualen."
 
+msgid "Configuration on display"
+msgstr "Konfiguration på skærmen"
+
 msgid "Idle timer..."
 msgstr ""
 
-#. RTF text: no limit
-msgid "PC-98xx Series"
-msgstr ""
+#~ msgid "Component"
+#~ msgstr "Komponent"
 
-#. RTF text: no limit
-msgid "Canadian"
-msgstr ""
+#~ msgid "with"
+#~ msgstr "med"
 
-#. RTF text: no limit
-msgid "Brazilian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Bosnian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Lithuanian qwerty (numeric)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Georgian (russian)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Latvian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Belarusian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Czech (qwerty)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Northern Saami (Finland)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Macedonian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "U.S. English w/ deadkeys"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Malayalam"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Burmese"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Kannada"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Mongolian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Bengali"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Romanian"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Croatian"
-msgstr "Kort egenskaber"
+#~ msgid "Not available"
+#~ msgstr ""
+#~ ":UBMuse indstillinger:\n"
+#~ "\n"
+#~ "Sax giver muligheden for opsætning af indlæsnings-\n"
+#~ "enheder. Det er vigtigt at forstå at der er\n"
+#~ "mulighed for håndtering af mere end en indlæsningsenhed\n"
+#~ "på samme tid. Hver enhed som SaX har fundet er vist i\n"
+#~ "træstrukturen. Der er en ikon for hver enhed.\n"
+#~ "I de fleste tilfælde er det ikke nødvendigt med ændringer\n"
+#~ "og hvis musen reagere på bevægelser er det ikke nødvendigt\n"
+#~ "at ændre noget :-)\n"
+#~ "\n"
+#~ ":UBHvad er indlæsningsenheder:\n"
+#~ "Grundlæggende så vil du arbejde med musen som en slags\n"
+#~ "indlæsningsenhed. Ud over den er der andre slags\n"
+#~ "indlæsningsenheder. The følgende liste viser hvile slags\n"
+#~ "indlæsningsenheder SaX kan håndtere:\n"
+#~ "\n"
+#~ "° Alle type mus, trackballs og touchpads\n"
+#~ "° Trykfølsomme skærme ( TouchScreens )\n"
+#~ "° Tavler ( Graphic tablets )\n"
+#~ "° Lyspen og slettetavler ( erasers of tablets )\n"
+#~ "\n"
+#~ "Tastaturet er en speciel indlæsningsenhed som bliver\n"
+#~ "håndteret i en seperat tastatur menu.\n"
+#~ "\n"
+#~ ":UBBrug af indlæsningsenheder:\n"
+#~ "Nu da du har viden om forskellige typer af\n"
+#~ "indlæsningsenheder så vil du sikkert have muligheden\n"
+#~ "for at ændre indstillinger for indlæsningsenheder, tilføje\n"
+#~ "nye eller fjerne eksisterende indlæsningsenheder.\n"
+#~ "\n"
+#~ "° Tilføj:\n"
+#~ "   En ny indlæsningsenhed bliver tilføjet ved brug af\n"
+#~ "   [Add] knappen. Den nye enhed får standard egenskaber\n"
+#~ "   som kan blive ændret omgående. Enheden er valgt og\n"
+#~ "   dukker op i slutningen af den nuværende liste efter\n"
+#~ "   dialogen er blevet lukket med knappen OK.\n"
+#~ "\n"
+#~ "° Fjern:\n"
+#~ "   For at fjerne en indlæsningsenhed skal du først\n"
+#~ "   vælge elementet du vil fjerne. For at gøre det kan\n"
+#~ "   du enten vælge ikonen eller en speciel egenskab af\n"
+#~ "   enheden. Efter valg af enhed, tryk på knappen\n"
+#~ "   [Fjern]. Når der fjernes en indlæsningsenhed så\n"
+#~ "   fjernes hele enheden med alle dens egenskaber.\n"
+#~ "\n"
+#~ "° Ændre:\n"
+#~ "   For at ændre egenskaber for en indlæsningsenhed er\n"
+#~ "   det nødvendig at vælge elementet du vil ændre på\n"
+#~ "   først. For denne aktion betyder det ikke noget om\n"
+#~ "   du vælger ikonen eller en speciel egenskab for enheden.\n"
+#~ "   Efter valg af enhed trykker du på [Egenskaber] knappen.\n"
+#~ "   Egenskaber dialogen vil komme frem og du kan ændre\n"
+#~ "   alle egenskaber defineret for den valgte enhed.\n"
+#~ "\n"
+#~ ":UBTeste en enhed løbende:\n"
+#~ "Bag [Anvend] knappen er der en funktion som du kun skal\n"
+#~ "bruge forsigtigt. Det er muligt at aktivere en speciel\n"
+#~ "enhed løbende uden at genstarte X-Serveren. Denne\n"
+#~ "funktion er kun tilgængelig for normale mus og burde ikke\n"
+#~ "bruges for tavler eller lignende indlæsningsenheder."
 
-#. RTF text: no limit
-msgid "U.S. English w/ ISO9995-3"
-msgstr ""
+#~ msgid "Disable AccessX"
+#~ msgstr "Deaktiver AccessX"
 
-#. RTF text: no limit
-msgid "Lithuanian azerty standard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Maltese"
-msgstr ""
-
-#. RTF text: no limit
-msgid "German"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hungarian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Russian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Swedish"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Turkish (F)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Oriya"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Slovenian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Slovak (qwerty)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Czech"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Gujarati"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Danish"
-msgstr "Afslut"
+#~ msgid "Miscellaneous"
+#~ msgstr "Diverse"
 
-#. RTF text: no limit
-msgid "Dvorak"
-msgstr ""
+#~ msgid "Sync ranges"
+#~ msgstr "Sync område"
 
-#. RTF text: no limit
-msgid "Slovak"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Dutch"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Israeli"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Tamil"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Ogham"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Norwegian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Gurmukhi"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Serbian"
-msgstr "Serienummer"
+#~ msgid "Disable use of accented letters"
+#~ msgstr "Deaktiver brugen af accent-bogstaver"
 
-#. RTF text: no limit
-msgid "Farsi"
-msgstr ""
+#~ msgid "Clear test field"
+#~ msgstr "Slet test felt"
 
-#. RTF text: no limit
-msgid "Icelandic"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Italian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Estonian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Inuktitut"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Swiss French"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Swiss German"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Thai"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Tajik"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Greek"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Japanese"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Georgian (latin)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Ukrainian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Polish (qwertz)"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Syriac"
-msgstr "Signal"
+#~ msgid "Mouse speed in pixels/sec"
+#~ msgstr "Muse-hastighed i Pixel/sek"
 
-#. RTF text: no limit
-msgid "Turkish"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Spanish"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Northern Saami (Sweden)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Yugoslavian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hindi"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Finnish"
-msgstr "Afslut"
+#~ msgid "&Remove Tablet..."
+#~ msgstr "Fjern tavle..."
 
-#. RTF text: no limit
-msgid "French (alternative)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hungarian (qwerty)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Russian (cyrillic phonetic)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Albanian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Polish"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Telugu"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Armenian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Northern Saami (Norway)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Latin America"
-msgstr ""
-
-#. RTF text: no limit
-msgid "French"
-msgstr ""
-
-#. RTF text: no limit
-msgid "United Kingdom"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Arabic"
-msgstr ""
-
-#. RTF text: no limit
-msgid "U.S. English"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Maltese (US layout)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "French Canadian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Portuguese"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Belgian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Bulgarian"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Azerbaijani"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Vietnamese"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Lao"
-msgstr "Udlæg"
+#~ msgid "Delay time: (ms)"
+#~ msgstr "Forsinkelse i ms"
 
-#. RTF text: no limit
-msgid "Microsoft Natural"
-msgstr ""
+#~ msgid "Repeat rate: (Symbols/sec)"
+#~ msgstr "Gentagelses hastighed: (Symboler/sek)"
 
-#. RTF text: no limit
-msgid "Ennyah DKB-1008"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Deluxe Access Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Microsoft Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Samsung SDM 4500P"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Cherry Blue Line CyBo@rd"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Dell"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XE3 GF"
-msgstr ""
-
-#. RTF text: no limit
-msgid "IBM Rapid Access"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Pro (alternate option2)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Memorex MX1998"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Trust Wireless Keyboard Classic"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Dell 101-key PC"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Brother Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "IBM Rapid Access II"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Trust Direct Access Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Internet Navigator Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "SK-7100"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Acer AirKey V"
-msgstr ""
-
-#. RTF text: no limit
-msgid "BTC 9000A"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Toshiba Satellite S3000"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Compaq Internet Keyboard (13 keys)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XT1000"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech iTouch"
-msgstr ""
-
-#. RTF text: no limit
-msgid "SK-6200"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Compaq iPaq Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Pro (alternate option)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Navigator"
-msgstr ""
-
-#. RTF text: no limit
-msgid "QTronix Scorpius 98N+"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Symplon PaceBook (tablet PC)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Winbook Model XP5"
-msgstr ""
-
-#. RTF text: no limit
-msgid "BTC 5113RF Multimedia"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Diamond 9801 / 9802 series"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Optical"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "BTC 9000"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Freedom/Desktop Navigator"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Propeller Voyager (KTEZ-1000)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Brazilian ABNT2"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Compaq Internet Keyboard (7 keys)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Honeywell Euroboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Yahoo! Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Compaq Internet Keyboard (18 keys)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Laptop/notebook Dell Inspiron 8xxx"
-msgstr ""
-
-#. RTF text: no limit
-msgid "IBM Rapid Access II (alternate option)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop Pro"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Advance Scorpius KI"
-msgstr ""
-
-#. RTF text: no limit
-msgid "BTC 5126T"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Dexxa Wireless Desktop Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook 5xx"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Memorex MX2750"
-msgstr ""
-
-#. RTF text: no limit
-msgid "SK-1300"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Generic 101-key PC"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Northgate OmniKey 101"
-msgstr ""
-
-#. RTF text: no limit
-msgid "ACPI Standard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Cherry Blue Line CyBo@rd (alternate option)"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Chicony Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Samsung SDM 4510P"
-msgstr ""
-
-#. RTF text: no limit
-msgid "SK-2500"
-msgstr ""
-
-#. RTF text: no limit
-msgid "SVEN Ergonomic 2500"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Generic 102-key (Intl) PC"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech Cordless Desktop iTouch"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Chicony KB-9885"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Compaq Easy Access Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard 5181 Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook 500 FA"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Memorex MX2500 EZ-Access Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Generic 104-key PC"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Everex STEPnote"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Japanese 106-key"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard Pavilion ZT11xx"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Logitech iTouch keyboard Internet Navigator"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Generic 105-key (Intl) PC"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Keytronic FlexPro"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Microsoft Internet Keyboard Pro, Swedish"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Microsoft Office Keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Oretec MCK-800 MM/Internet keyboard"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Both Ctrl keys together change group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "CapsLock key behavior"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Both Win-keys switch group while pressed"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Left Alt key changes group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Left Win-key changes group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Right Shift key changes group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Alt/Win key behavior"
-msgstr ""
-
-#. RTF text: no limit
-msgid "uses internal capitalization. Shift doesn't cancel Caps."
-msgstr ""
-
-#. RTF text: no limit
-msgid "R-Alt switches group while pressed"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Right Win-key is Compose"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Right Ctrl key changes group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Press any of Win-keys to choose 3rd level"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Control key at bottom left"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Both Shift keys together change group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Third level choosers"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Control key at left of 'A'"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Scroll_Lock LED shows alternative group"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Right Alt is Compose"
-msgstr "Højre Alt binding"
+#~ msgid "&Apply"
+#~ msgstr "Anvend"
 
-#. RTF text: no limit
-msgid "Right Win-key changes group"
-msgstr ""
+#~ msgid "Graphics engine starts with resolution:"
+#~ msgstr "Grafisk motor starter med opløsningen:"
 
-#. RTF text: no limit
-msgid "Press Left Win-key to choose 3rd level"
-msgstr ""
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
 
-#. RTF text: no limit
-msgid "Make CapsLock an additional Control"
-msgstr ""
+#~ msgid "Velocity"
+#~ msgstr "Hastighed"
 
-#. RTF text: no limit
-msgid "uses internal capitalization. Shift cancels Caps."
-msgstr ""
+#~ msgid "Select Keyboard Layout"
+#~ msgstr "Vælg tastatur sprog"
 
-#. RTF text: no limit
-msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-msgstr ""
+#~ msgid "Symbol recurrence"
+#~ msgstr "Symbol gentagelse"
 
-#. RTF text: no limit
-msgid "Left Win-key switches group while pressed"
-msgstr ""
+#~ msgid "BusID"
+#~ msgstr "Bus ID"
 
-#. RTF text: no limit
-msgid "Left Shift key changes group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Num_Lock LED shows alternative group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Caps_Lock LED shows alternative group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Meta is mapped to the left Win-key."
-msgstr ""
-
-#. RTF text: no limit
-msgid "Caps Lock key changes group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Both Alt keys together change group"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Menu is Compose"
-msgstr ""
-
-#. RTF text: no limit
-msgid "Right Alt key changes group"
-msgstr ""
-
-#. RTF text: no limit
 #, fuzzy
-msgid "Control Key Position"
-msgstr "Skift position"
+#~ msgid "ScreenID"
+#~ msgstr "Skærm"
 
-#. RTF text: no limit
-msgid "Swap Control and Caps Lock"
-msgstr ""
+#, fuzzy
+#~ msgid "Manufacturer Disk..."
+#~ msgstr "Producent-cd/diskette"
 
-#. RTF text: no limit
-msgid "Control+Shift changes group"
-msgstr ""
+#~ msgid "Ctrl Mapping"
+#~ msgstr "Ctrl udlægning"
 
-#. RTF text: no limit
-msgid "Alt+Shift changes group"
-msgstr ""
+#~ msgid "LeftAlt mapping"
+#~ msgstr "Venstre Alt binding"
 
-#. RTF text: no limit
-msgid "Press Right Control to choose 3rd level"
-msgstr ""
+#~ msgid "RightAlt mapping"
+#~ msgstr "Højre Alt binding"
 
-#. RTF text: no limit
-msgid "Add the standard behavior to Menu key."
-msgstr ""
+#~ msgid "RightCtl mapping"
+#~ msgstr "Højre Ctrl binding"
 
-#. RTF text: no limit
-msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+#~ msgid "Modeline Algorithm"
+#~ msgstr "Modeline Algoritme"
 
-#. RTF text: no limit
-msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+#, fuzzy
+#~ msgid "Color and Resolution"
+#~ msgstr "Farvedybde / Opløsning"
 
-#. RTF text: no limit
-msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+#, fuzzy
+#~ msgid "Virtual Resolution"
+#~ msgstr "Opløsning"
 
-#. RTF text: no limit
-msgid "Press Right Win-key to choose 3rd level"
-msgstr ""
+#~ msgid "Language Layout"
+#~ msgstr "Sprog"
 
-#. RTF text: no limit
-msgid "Use keyboard LED to show alternative group"
-msgstr ""
+#, fuzzy
+#~ msgid "Screen Layout"
+#~ msgstr "Skærmenes Layout aktiv"
 
-#. RTF text: no limit
-msgid "acts as Shift with locking. Shift cancels Caps."
-msgstr ""
+#, fuzzy
+#~ msgid "Server layout:"
+#~ msgstr "Serverudlæg:"
 
-#. RTF text: no limit
-msgid "Group Shift/Lock behavior"
-msgstr ""
+#, fuzzy
+#~ msgid "Mode:"
+#~ msgstr "Tilstande:"
 
-#. RTF text: no limit
-msgid "Right Win-key switches group while pressed"
-msgstr ""
+#~ msgid "MHz"
+#~ msgstr "MHz"
 
-#. RTF text: no limit
-msgid "Alt+Control changes group"
-msgstr ""
+#, fuzzy
+#~ msgid "Enable or Disable AccessX"
+#~ msgstr "Aktiver/Deaktiver AccessX"
 
-#. RTF text: no limit
-msgid "Menu key changes group"
-msgstr ""
+#~ msgid "Enable 3D features"
+#~ msgstr "Aktiver 3D egenskaber"
 
-#. RTF text: no limit
-msgid "Left Ctrl key changes group"
-msgstr ""
+#~ msgid "Enable DPMS"
+#~ msgstr "Aktiver DPMS"
 
-#. RTF text: no limit
-msgid "Press Menu key to choose 3rd level"
-msgstr ""
+#, fuzzy
+#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
+#~ msgstr "<b>Konfigurer Multihead...</b><hr>"
 
-#. RTF text: no limit
-msgid "Meta is mapped to the Win-keys."
-msgstr ""
+#, fuzzy
+#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
+#~ msgstr "<b>3D/OpenGL opsætning...</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
+#~ msgstr "<b>AccessX opsætning...</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+#~ msgstr "<b>AccessX opsætning...</b><hr>"
+
+#~ msgid "Selected component:"
+#~ msgstr "Vælg komponenter"
+
+#, fuzzy
+#~ msgid "Click 'Apply' to test your settings."
+#~ msgstr "Klik på anvend knappen for at teste dine indstillinger"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
+#~ "3D subsystem is unable to work within a multihead environment."
+#~ msgstr ""
+#~ "<b>OpenGL acceleration er ikke muligt med multihead</b><hr>3D systemmet "
+#~ "har ikke mulighed for at virke sammen med multihead."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
+#~ "hardware 3D/OpenGL acceleration."
+#~ msgstr ""
+#~ "<b>3D Acceleration er ikke muligt</b><hr>Det installerede graifikort kan "
+#~ "ikke bruge hardware 3D/openGL acceleration"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
+#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
+#~ "The currently used color setup does not fulfill this requirement. Verify "
+#~ "the current default color depth setup."
+#~ msgstr ""
+#~ "<b>Forkert farvedybte for OpenGL acceleration</b><hr>De fleste OpenGL "
+#~ "drivere kræver en farvedybde på <b>16 Bit (65536)</b> for at virkeDe "
+#~ "nuværende indstillinger er forkerte, ret dem for at det kan virke"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
+#~ "acceleration because the following packages are missing:"
+#~ msgstr ""
+#~ "<b>De forventede base pakker mangler</b><hr>Kunne ikke aktivere OpenGL "
+#~ "acceleration fordi de følgende pakker mangler:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
+#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
+#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
+#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
+#~ "Online Update)."
+#~ msgstr ""
+#~ "<b>Officielle NVidia driver ikke installeret</b><hr>Kunne ikke aktivere "
+#~ "OpenGL-acceleration fordi systemmet ikke bruger de officelle  NVidia "
+#~ "pakker. Opdater pakkerne <b>NVIDIA_GLX og NVIDIA_kernel</b> med YOU "
+#~ "(YaST2 Online Update) først."
+
+#, fuzzy
+#~ msgid "Display size unknown..."
+#~ msgstr "Skærm størrelse"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
+#~ "X and Y axis and click 'Add' to include the new resolution in the "
+#~ "standard resolution list."
+#~ msgstr ""
+#~ "<b>Tilføj brugerdefineret opløsning</b><hr>Indtast pixel værdien for X og "
+#~ "Y aksen og klik på tilføj knappen for at tilføje den nye opløsning til "
+#~ "standard-opløsning listen"
+
+#~ msgid "Available configuration components are:"
+#~ msgstr "Tilgængelige konfiurations komponenter:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
+#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
+#~ msgstr ""
+#~ "<b>AccessX Aktiveret:</b><hr>Muse-pegepinden er nu til rådighed for "
+#~ "<b>Nummer-tastaturet</b>. Prøv venligst at styre musen med Nummer-"
+#~ "tastaturet"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
+#~ "number pad is <b>disabled</b> now."
+#~ msgstr ""
+#~ "<b>AccessX Deaktiveret:</b><hr>Strying af muse-pegepinden via Nummer-"
+#~ "tastaturet er <b>deaktiveret</b> nu"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
+#~ "system?"
+#~ msgstr ""
+#~ "<b>Fjern Tavle:</b><hr>Vil du virkelig gerne fjerne den grafiske-tavle "
+#~ "fra systemmet ?"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time the graphics system is restarted."
+#~ msgstr ""
+#~ "<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have "
+#~ "effekt næste gang det grafiske system bliver genstartet."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time your system is <b>rebooted</b>."
+#~ msgstr ""
+#~ "<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have "
+#~ "effekt næste gang det grafiske system bliver genstartet."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
+#~ "in developmental phases so are, in part, still regarded as experimental. "
+#~ "Nevertheless, we have decided to include the drivers in our distribution "
+#~ "because of the high demand for 3D hardware acceleration in Linux. "
+#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
+#~ "are unable to offer any installation support for configuring 3D hardware "
+#~ "acceleration or if any problems related to this should arise."
+#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>3D-kort fundet</b><hr>Alle 3D drivers i Linux er i udviklingsfasen og "
+#~ "er derfor stadigvæk forsøgsdrivere.Men alligevel har vi valgt at "
+#~ "inkludere disse drivere i vores distribution, pga. mange kræver 3D "
+#~ "hardware acceleration i Linux.<br><br>Pga. at OpenGL-driverne stadigvæk "
+#~ "er i forsøgsperioden, så har vi ikke mulighed for at tilbyde nogen form "
+#~ "for installations-support når 3D hardware accelerationen skal "
+#~ "konfigureres eller hvis der opstår andre problemer relateret til "
+#~ "forsøgsdriverne"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
+#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
+#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
+#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
+#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
+#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
+#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
+#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
+#~ "do not have any influence over the development of nVidia drivers."
+#~ "<br><br><b>Prepare 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>3D-kort fundet</b><hr>Vær opmærksom på at det ikke er officielle 2D/3D/"
+#~ "OpenGL drivere fra nVidia pga licencs årsager. Hvis du aktivere 3D med de "
+#~ "medfølgende 3D/OpenGL driver så vil de ikke benytte hardware-acceleration."
+#~ "<br><br>Hvis du vil havde hardware accelereret 3D/OpenGL, skal du "
+#~ "opdatere pakkerne NVIDIA_GLX og NVIDIA_kernel de pakker kan findes på "
+#~ "under SuSE Linux på nVidia´s hjemmeside (http://www.nvidia.com). Du kan "
+#~ "også gøre dette nemmere ved at bruge YOU(YaST2 Online Update)."
+#~ "<br><br>Hvis der er nogle problemer med 2D/3D/OpenGL driverne fra nVidia, "
+#~ "så kontakt producenten, da vi uheldigvis ikke har nogen indflydelse på "
+#~ "udviklingen af nVidia-drivere.<br><br>Vil du aktivere 3D for følgende "
+#~ "kort:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
+#~ "that comes with this distribution is still installed.  You should update "
+#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
+#~ "online update). Start the online update?"
+#~ msgstr ""
+#~ "<b>Software update</b><hr>Du har stadigvæk installeret nVidia driveren "
+#~ "der følger med SuSE Linux som der ikke har nogle 3D-muligheder, derfor "
+#~ "bør du opdatere til de officielle nVidia driver fra nVidias ftp-server, "
+#~ "dette kan du gøre med YOU(YaST2 online update) Vil du starte online "
+#~ "updaten?"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
+#~ "resolution is not adjustable within framebuffer mode. Please select "
+#~ "another resolution than:"
+#~ msgstr ""
+#~ "<b>Forkert opløsning:</b><hr>For denne konfiguration er det ikke tilladt "
+#~ "at vælge den valgte opløsning. Vælg venligst en anden opløsningen på "
+#~ "listen."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
+#~ "is not allowed for this configuration. Select another resolution from the "
+#~ "list."
+#~ msgstr ""
+#~ "<b>Forkert opløsning:</b><hr>For denne konfiguration er det ikke tilladt "
+#~ "at vælge den valgte opløsning. Vælg venligst en anden opløsningen på "
+#~ "listen."
+
+#, fuzzy
+#~ msgid "<b>X Server test failed:</b><hr><br>"
+#~ msgstr "<b>X-Server test mislykkede:</b><hr><br>"
+
+#~ msgid "3D question..."
+#~ msgstr "3D-spørgsmål..."
+
+#, fuzzy
+#~ msgid "X Server test information..."
+#~ msgstr "X-Server test information..."
+
+#~ msgid "Configuration saved..."
+#~ msgstr "Konfiguration gemt"
+
+#~ msgid "AccessX status information..."
+#~ msgstr "AccessX status information..."
+
+#~ msgid "Tablet warning..."
+#~ msgstr "Tavle advarlse..."
+
+#~ msgid "Consideration..."
+#~ msgstr "Overvejelse..."
+
+#~ msgid "Geometry"
+#~ msgstr "Geometri"
+
+#~ msgid "Name:"
+#~ msgstr "Navn:"
+
+#, fuzzy
+#~ msgid "Card and Desktop"
+#~ msgstr "Skrivebord"
+
+#, fuzzy
+#~ msgid "Input Devices"
+#~ msgstr "Inputenhed"
+
+#~ msgid "Input-Devices"
+#~ msgstr "Inputenhed"
+
+#~ msgid "Desktop"
+#~ msgstr "Skrivebord"
+
+#~ msgid "Multihead"
+#~ msgstr "Multihead"
+
+#~ msgid "Secondary Modeline:"
+#~ msgstr "Sekundær Modeline:"
+
+#~ msgid "Modeline"
+#~ msgstr "Modeline"
+
+#~ msgid "AccessX"
+#~ msgstr "AccessX"
+
+#~ msgid "<b>Core Pointer...</b>"
+#~ msgstr "<b>Hoved-Pegepind...</b>"
+
+#, fuzzy
+#~ msgid "F&inalize >>"
+#~ msgstr "Færdigører"
+
+#, fuzzy
+#~ msgid "<< &Back"
+#~ msgstr "« Tilbage"
+
+#, fuzzy
+#~ msgid "&Next >>"
+#~ msgstr "Næste »"
+
+#, fuzzy
+#~ msgid "&Exit"
+#~ msgstr "Afslut"
+
+#, fuzzy
+#~ msgid "&About..."
+#~ msgstr "Om..."
+
+#, fuzzy
+#~ msgid "Select virtual resolution for Mode %1"
+#~ msgstr "Vælg Opløsning(er)"
+
+#~ msgid ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
+#~ "of this product is</nobr><br>Marcus Schaefer"
+#~ msgstr ""
+#~ "SaX (c) 2000 SuSE Linux AG:</b><hr><nobr>Forfatteren og vedligeholderen "
+#~ "bag dette produkt er</nobr><br>Marcus Schäfer <sax\\@suse.de>"
+
+#, fuzzy
+#~ msgid "&Modules..."
+#~ msgstr "Moduler..."
+
+#, fuzzy
+#~ msgid "&File"
+#~ msgstr "Fil"
+
+#, fuzzy
+#~ msgid "SaX2 start-up information"
+#~ msgstr "SaX2 opstarts information"
+
+#~ msgid "SaX2 exit program... "
+#~ msgstr "SaX2 afslut program... "
+
+#~ msgid "SaX2 final steps..."
+#~ msgstr "SaX2 de sidste skridt..."
+
+#~ msgid "Dialog information..."
+#~ msgstr "Dialog information..."
+
+#~ msgid "Exception..."
+#~ msgstr "Undtagelse..."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
+#~ "than one graphics device.  More are required to set up a multihead "
+#~ "configuration."
+#~ msgstr ""
+#~ "<b>Multihead Konfirguration ikke muligt:</b><hr>Dit system har ikke mere "
+#~ "end en skærm, hvilket der kræves for at lave et multihead konfiguration"
+
+#, fuzzy
+#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
+#~ msgstr "<b>Afslut dialog:</b><hr>Vil du afslutte denne dialog ?"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+#~ msgstr ""
+#~ "<b>Forkert konfiguration:</b><hr>Mindst en grafiskenhed er ikke "
+#~ "konfigureret"
+
+#, fuzzy
+#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
+#~ msgstr ""
+#~ "<b>Forkert konfiguration:</b><hr>Mindst en grafiskenhed er ikke "
+#~ "konfigureret"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
+#~ "dialog and start the selected one?"
+#~ msgstr ""
+#~ "<b>Kørende dialog:</b><hr>Der kører allerede en dialog, vil du afslutte "
+#~ "denne dialog og starte den valgte ?"
+
+#, fuzzy
+#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
+#~ msgstr "<b>Afslutte dialog:</b><hr>Vil du afslutte denne dialog nu?"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
+#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
+#~ "needs to be rebooted first to activate the changes for resolution and/or "
+#~ "color settings."
+#~ msgstr ""
+#~ "<b>Server opstart:</b><hr>Det er brugbart at teste nye indstillingerDu må "
+#~ "vælge mellem at teste serveren eller at gemme ændringer med det samme. "
+#~ "Hvis testen viser et korrupt billede, så tryk: [ Ctrl-Alt-Backspace ]For "
+#~ "at afslutte serveren..."
+
+#, fuzzy
+#~ msgid "Unknown Graphics Card..."
+#~ msgstr "Grafikkort ukendt..."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
+#~ "manually. Start the configuration dialog to set up the graphics card now?"
+#~ msgstr ""
+#~ "<b>Grafikkortet kunne ikke identificeres</b><hr>Du skal derfor konfigurer "
+#~ "dit grafikkort manuelt. Vil du starte denne konfiguration nu ?"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Skærmen kunne ikke identificeres</b><hr>Du skal derfor konfigurer din "
+#~ "skærm manuelt.Vil du starte denne konfiguration nu ?"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Skærmen kunne ikke identificeres</b><hr>Du skal derfor konfigurer din "
+#~ "skærm manuelt.Vil du starte denne konfiguration nu ?"
+
+#~ msgid "File"
+#~ msgstr "Fil"
+
+#~ msgid "still locked"
+#~ msgstr "stadigvæk låst"
+
+#, fuzzy
+#~ msgid "Please wait"
+#~ msgstr "vent venligst"
+
+#, fuzzy
+#~ msgid ""
+#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
+#~ "X11 Configuration Manager<br>"
+#~ msgstr ""
+#~ "<b>SaX2: Udvidede X11-Konfiguration(er) </b><hr>Velkommen til SuSE X11-"
+#~ "Konfigurations vejleder<br>"
+
+#, fuzzy
+#~ msgid "To start, double-click  an item in the component list."
+#~ msgstr "Start ved at dobbelt klikke på en ting på komponentlisten... "
+
+#, fuzzy
+#~ msgid "X11 System Setup"
+#~ msgstr "X11-System konfiguration"
+
+#~ msgid "Value..."
+#~ msgstr "Værdi..."
+
+#~ msgid "Primary device"
+#~ msgstr "Primær enhed"
+
+#~ msgid "Driver:"
+#~ msgstr "Driver:"
+
+#~ msgid "X:"
+#~ msgstr "X:"
+
+#~ msgid "Y:"
+#~ msgstr "Y:"
+
+#~ msgid "Bus ID:"
+#~ msgstr "Bus ID"
+
+#~ msgid "Card options"
+#~ msgstr "Kort egenskaber"
+
+#~ msgid "Key Mappings"
+#~ msgstr "Tastatur udlægninger"
+
+#, fuzzy
+#~ msgid "&Current sync frequencies"
+#~ msgstr "Nuværende sync frekvenser"
+
+#~ msgid "Current color depth"
+#~ msgstr "Nuværende Farvedybde"
+
+#~ msgid "Current resolution"
+#~ msgstr "Nuværende opløsning"
+
+#~ msgid "HSync range"
+#~ msgstr "Hsync område"
+
+#~ msgid "VSync range"
+#~ msgstr "Vsync område"
+
+#~ msgid "[ mm ]"
+#~ msgstr "[ mm ]"
+
+#~ msgid "Device"
+#~ msgstr "Enhed:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokol"
+
+#~ msgid "Keyboard Model"
+#~ msgstr "Tastaturmodel"
+
+#, fuzzy
+#~ msgid "Fi&nish"
+#~ msgstr "Afslut"
+
+#~ msgid "Abort"
+#~ msgstr "Afslut"
+
+#~ msgid "Configure XAccess: Mouse over keypad..."
+#~ msgstr "Konfigurer AccessX: Mus på piletasterne..."
+
+#~ msgid "Configure input devices: Mouse configuration..."
+#~ msgstr "Konfigurer input enheder: Muse konfiguration..."
+
+#~ msgid "Configure 3D/OpenGL subsystem..."
+#~ msgstr "Konfigurer 3D/OpenGL system..."
+
+#, fuzzy
+#~ msgid "Configure virtual resolutions..."
+#~ msgstr "Konfigurer touchscreen(s)..."
+
+#, fuzzy
+#~ msgid "Configure graphics cards..."
+#~ msgstr "Konfigurer grafikkort..."
+
+#, fuzzy
+#~ msgid "Configure Desktop: Colors and Resolutions..."
+#~ msgstr "Konfigurer skrivebord: Farver og Opløsning"
+
+#, fuzzy
+#~ msgid "Configure touch screens..."
+#~ msgstr "Konfigurer touchscreen(s)..."
+
+#, fuzzy
+#~ msgid "Set up picture geometry..."
+#~ msgstr "Konfigurer billede geometri..."
+
+#~ msgid "Configure multihead mode..."
+#~ msgstr "Konfigurer multihead tilstand..."
+
+#~ msgid "Configure graphics tablet"
+#~ msgstr "Konfigurer grafisk tavle"
+
+#, fuzzy
+#~ msgid "Add new card..."
+#~ msgstr "Tilføj nyt kort..."
+
+#, fuzzy
+#~ msgid "Remove selected card"
+#~ msgstr "Fjern valgte kort"
+
+#, fuzzy
+#~ msgid "Remove selected monitor"
+#~ msgstr "Fjern valgte Mus"
+
+#, fuzzy
+#~ msgid "&Properties..."
+#~ msgstr "Egenskaber"
+
+#, fuzzy
+#~ msgid "&Add new touchscreen..."
+#~ msgstr "Tilføj ny Touchscreen..."
+
+#, fuzzy
+#~ msgid "&Remove selected touchscreen"
+#~ msgstr "Fjern valgte Touchscreen"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
+#~ msgstr "<b>Foreløbig konfigurede Touchscreen</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
+#~ msgstr "<b>Foreløbig konfigurede Skærm(e)</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
+#~ msgstr "<b>Forløbig konfigurede Kort:</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
+#~ msgstr "<b>Foreløbig konfigurede Mus:</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
+#~ msgstr "<b>Foreløbig Skærm Layout:</b><hr>"
+
+#, fuzzy
+#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
+#~ msgstr "<b>Foreløbige konfigurede Skrivebord(er):</b><hr>"
+
+#, fuzzy
+#~ msgid "&Add new mouse..."
+#~ msgstr "Tilføj ny Mus..."
+
+#, fuzzy
+#~ msgid "&Remove selected mouse"
+#~ msgstr "Fjern valgte Mus"
+
+#, fuzzy
+#~ msgid "&General"
+#~ msgstr "Generel"
+
+#, fuzzy
+#~ msgid "&Expert"
+#~ msgstr "Ekspert"
+
+#~ msgid "Vendor"
+#~ msgstr "Forhandler"
+
+#~ msgid "Selected"
+#~ msgstr "Valgte"
+
+#~ msgid "Resolution X"
+#~ msgstr "Opløsning X"
+
+#~ msgid "Possible"
+#~ msgstr "Muligt"
+
+#, fuzzy
+#~ msgid "&Add this resolution"
+#~ msgstr "Tilføj denne opløsning..."
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede AccessX Status</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Current VNC status</b></big><hr>"
+#~ msgstr "<b>Nuværende 3D/OpenGL status</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
+#~ msgstr "<b>Nuværende 3D/OpenGL status</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
+#~ msgstr "<b>Forreløbig konfigurede Multihead Status</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede Grafikkort</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede Skrivebord(e)</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
+#~ msgstr "<b>Nuværende aktive Geometri Timing</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede tastaturer</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured layout</b></big><hr>"
+#~ msgstr "<b>Nuværende konfigurede Layout</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede Skærm(e)</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede Pege-enhed(er)</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
+#~ msgstr "<b>Forreløbig konfigurede Multihead Status</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede Grafik-tavler</b><hr>"
+
+#, fuzzy
+#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
+#~ msgstr "<b>Foreløbig konfigurede Touchscreen</b><hr>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
+#~ "with the keypad. The table below points to the current status of AccessX."
+#~ msgstr ""
+#~ "<b>Virtuel mus:</b><hr>Konfigurer det nummeriske-tastatur så man kan "
+#~ "styre musen via tastaturet. Listen herunder viser det nuværende status "
+#~ "for AccessX."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
+#~ "here. X.Org includes the direct rendering interface to use the 3D "
+#~ "capabilities of your graphics card. If your card and the corresponding "
+#~ "driver support 3D hardware acceleration, enable it in this dialog."
+#~ msgstr ""
+#~ "<b>OpenGL Subsystem:</b><hr>Konfigurer 3D-teknologierne på dette "
+#~ "grafikkort her. Xorg indeholder den såkaldte direct rendering interfacce "
+#~ "der kan bruge dit grafikkorts 3D-teknologier. Her kan du aktivere 3D-"
+#~ "hardware acceleration."
+
+#, fuzzy
+#~ msgid ""
+#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
+#~ "displayed by the monitor. The table below point to the current used "
+#~ "Modeline(s)."
+#~ msgstr ""
+#~ "<b>Skærm geometri:</b><hr>Konfigurer størrelsen og placeringen af "
+#~ "billedet som bliver vist på din skærm. Listen viser den nuværende "
+#~ "Modeline."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
+#~ "language environment with which it should work."
+#~ msgstr ""
+#~ "<b>Tastatur indstillinger:</b><hr>Konfigurer typen af tastatur og hvilket "
+#~ "sprog-layout det skal benytte. Du kan også indstille skrifttypen. Listen "
+#~ "herunder viser nuværende indstillinger"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the neighborhood relations of the "
+#~ "connected monitors simply via drag&drop. If you are not sure which "
+#~ "monitor belongs to the icon just double-click on it and you will see a "
+#~ "message on the corresponding screen."
+#~ msgstr ""
+#~ "<b>Skrivebord layout:</b><hr>Hvis der er mere end et kort til rådighed så "
+#~ "har du et multihead-konfiguration. Her kan du instille samarbejdet mellem "
+#~ "de forskellige skærme. Listen viser nuværende multihead-konfiguration."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
+#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
+#~ "the monitor."
+#~ msgstr ""
+#~ "<b>Skærm indstillinger:</b><hr>Konfigurer skærmen som er forbundet til "
+#~ "grafikkortet. Vær opmærksom på dine indstillinger, et forkert Sync-område "
+#~ "kan skade din skærm!. Listen herunder viser maximum Sync-område for de "
+#~ "tilsluttede skærme."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
+#~ "mouse pointer as well as settings like button emulation or wheel "
+#~ "functions."
+#~ msgstr ""
+#~ "<b>Muse indstillinger:</b><hr>Konfigurer de basale indstillinger for "
+#~ "musen for at aktivere makøren, indstillingerne for knap emulation og "
+#~ "musse-hjulet. Listen viser nuværende indstillinger for pege-enhederne."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the multihead functioning here."
+#~ msgstr ""
+#~ "<b>Multihead tilstand:</b><hr>Hvis der er mere end et kort til rådighed "
+#~ "så har du et multihead-konfiguration. Konfigurer multihead funktionerne "
+#~ "her. Listen viser nuværende multihead-tilstand"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
+#~ "pointer devices, such as pens and erasers."
+#~ msgstr ""
+#~ "<b>Grafisk tavle:</b><hr>Konfigurer en grafisk tavle og pege-enheder."
+#~ "Listen viser den primære tavles indstillinger."
+
+#, fuzzy
+#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
+#~ msgstr ""
+#~ "<b>Touchscreen:</b><hr>Kofigurer skærmens tryk-niveau. Listen herunder "
+#~ "viser den primærer touchscreen-status."
+
+#~ msgid "Disabled"
+#~ msgstr "Deaktiveret"
+
+#~ msgid "Enabled"
+#~ msgstr "Aktiveret"
+
+#~ msgid "Wheel support"
+#~ msgstr "Muse-hjul understøttelse"
+
+#, fuzzy
+#~ msgid "&Port"
+#~ msgstr "Port"
+
+#, fuzzy
+#~ msgid "&Mode"
+#~ msgstr "Tilstande:"
+
+#~ msgid "Button emulation"
+#~ msgstr "Knap emulering"
+
+#~ msgid "Primary Device:"
+#~ msgstr "Primær enhed:"
+
+#~ msgid "Secondary Device:"
+#~ msgstr "Sekundær enhed:"
+
+#~ msgid "Single Layout [ no multihead environment ]"
+#~ msgstr "Enkelt Layout [intet multihead]"
+
+#, fuzzy
+#~ msgid "Clone Mode Active"
+#~ msgstr "Klon-tilstand aktiv"
+
+#, fuzzy
+#~ msgid "Xinerama Mode Active"
+#~ msgstr "Xinerama-tilstand aktiv"
+
+#, fuzzy
+#~ msgid "Screens Layout Active"
+#~ msgstr "Skærmenes Layout aktiv"
+
+#, fuzzy
+#~ msgid "Croatian"
+#~ msgstr "Kort egenskaber"
+
+#, fuzzy
+#~ msgid "Danish"
+#~ msgstr "Afslut"
+
+#, fuzzy
+#~ msgid "Serbian"
+#~ msgstr "Serienummer"
+
+#, fuzzy
+#~ msgid "Syriac"
+#~ msgstr "Signal"
+
+#, fuzzy
+#~ msgid "Finnish"
+#~ msgstr "Afslut"
+
+#, fuzzy
+#~ msgid "Lao"
+#~ msgstr "Udlæg"
