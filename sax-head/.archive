@@ -19,6 +19,8 @@ cat .svnbuild > svnbuild
 rm -rf `find -type d | grep .svn`
 rm -f "./sysp/lib/pci/lib/config.h"
 rm -rf rpm/
+rm -rf api/figures
+rm -rf xfine/figures
 
 cd ..
 tar -cjf sax2.tar.bz2 sax/

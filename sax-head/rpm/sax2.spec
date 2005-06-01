@@ -409,7 +409,7 @@ fi
 /usr/share/sax/xrun.pl
 /usr/share/sax/api/tools
 /usr/share/sax/api/figures
-/usr/share/xfine/pixmaps
+/usr/share/xfine/figures
 /usr/share/xfine/xfine.gtx
 /usr/share/sax/api/data/xapi.gtx
 /usr/share/locale/de/LC_MESSAGES/sax.mo
