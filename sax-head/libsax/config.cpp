@@ -316,7 +316,7 @@ void SaXConfig::commitConfiguration (void) {
 //====================================
 // testConfiguration...
 //------------------------------------
-bool SaXConfig::testConfiguration (void) {
+int SaXConfig::testConfiguration (void) {
 	// .../
 	//! test the configuration by starting a new X-Server using
 	//! the preliminary configuration file.
@@ -349,7 +349,7 @@ bool SaXConfig::testConfiguration (void) {
 		//====================================
 		// test has failed for some reasons
 		//------------------------------------
-		return false;
+		return -1;
 	break;
 	case 2:
 		//====================================
@@ -360,13 +360,13 @@ bool SaXConfig::testConfiguration (void) {
 			enableXFineCache (false);
 			return false;
 		}
-		return true;
+		return 0;
 	break;
 	default:
 		//====================================
 		// test successful + changes canceled
 		//------------------------------------
-		return true;
+		return 1;
 	break;
 	}
 	return false;

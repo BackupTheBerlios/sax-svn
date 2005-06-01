@@ -72,8 +72,8 @@ class SaXConfigIF : public SaXException {
 
 	public:
 	virtual bool createConfiguration  ( void ) = 0;
-	virtual void commitConfiguration ( void ) = 0;
-	virtual bool testConfiguration    ( void ) = 0;
+	virtual void commitConfiguration  ( void ) = 0;
+	virtual int  testConfiguration    ( void ) = 0;
 
 	public:
 	virtual ~SaXConfigIF ( void ) { }
@@ -169,8 +169,8 @@ class SaXConfig : public SaXConfigIF {
 
 	public:
 	bool createConfiguration  ( void );
-	void commitConfiguration ( void );
-	bool testConfiguration    ( void );
+	void commitConfiguration  ( void );
+	int  testConfiguration    ( void );
 
 	public:
 	SaXConfig ( int = SAX_MERGE );
