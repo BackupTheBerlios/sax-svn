@@ -1,0 +1,48 @@
+/**************
+FILE          : wrapper.h
+***************
+PROJECT       : SaX2 - SuSE advanced X configuration
+              :
+AUTHOR        : Marcus Schäfer <ms@suse.de>
+              :
+BELONGS TO    : configuration tool for the X window system 
+              : released under the GPL license
+              :
+DESCRIPTION   : SaX2 GUI system using libsax to provide
+              : configurations for a wide range of X11 capabilities
+              : //.../
+              : - wrapper.h: wrap pointer to object type
+              : ----
+              :
+STATUS        : Status: Development
+**************/
+#ifndef SCCWRAP_H
+#define SCCWRAP_H 1
+
+//===================================
+// Class SCCWrapPointer [ template ]
+//-----------------------------------
+template <class T>
+class SCCWrapPointer {
+	private:
+	T* pM;
+
+	public:
+	SCCWrapPointer (void) { }
+	SCCWrapPointer (T* typ) {
+		pM = typ;
+	}
+	void init (T* typ) {
+		pM = typ;
+	}
+	QString operator[] (const QString& key) {
+		if (pM->operator[](key)) {
+			return(QString::fromLocal8Bit( *pM->operator[](key) ));
+		}
+		return QString("");
+	}
+	void insert (const QString & key,QString* val) {
+		pM->insert (key,val);
+	}
+};
+#endif

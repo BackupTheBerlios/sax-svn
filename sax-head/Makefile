@@ -33,8 +33,7 @@ SAXBINVZ       = ${sax_prefix}
 APIVZ          = ${sax_prefix}/api
 APIDATAVZ      = ${sax_prefix}/api/data
 CDBVZ          = ${sax_prefix}/api/data/cdb
-PIXVZ          = ${sax_prefix}/api/pixmaps
-LANGVZ         = ${sax_prefix}/api/lang
+PIXVZ          = ${sax_prefix}/api/figures
 MODULEVZ       = ${sax_prefix}/modules
 DETECTVZ       = ${sax_prefix}/modules/detect
 CREATEVZ       = ${sax_prefix}/modules/create
@@ -47,7 +46,7 @@ RDBMS          = ${var_prefix}/sax/sysp/rdbms
 FILES          = ${var_prefix}/sax/files
 SCRIPTVZ       = ${sax_prefix}/sysp/script
 SAXTOOLS       = ${sax_prefix}/tools
-APITOOLS       = ${sax_prefix}/api/tools
+APITOOLS       = ${sax_prefix}/api/macros
 USRLIBVZ       = ${lib_prefix}
 INCVZ          = ${usr_prefix}/include/sax
 LOCALEVZ       = ${usr_prefix}/share/locale
@@ -102,7 +101,7 @@ install:
 	# Install base directories
 	#--------------------------------------------
 	install -d -m 755 ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
-	install -d -m 755 ${CDBVZ} ${LANGVZ} ${PIXVZ} ${INCVZ}
+	install -d -m 755 ${CDBVZ} ${PIXVZ} ${INCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
@@ -151,8 +150,7 @@ install:
 	install -m 755 ./xc.pl                                  ${SAXBINVZ}
 	install -m 755 ./tools/xwrapper/xw                      ${SBINVZ}
 	install -m 755 ./api/xapi                               ${SBINVZ}
-	install -m 755 ./api/tools/*                            ${APITOOLS}
-	install -m 755 ./api/xrun.pl                            ${SAXBINVZ}
+	install -m 755 ./api/macros/*                           ${APITOOLS}
 	install -m 755 ./startup/pci.pl                         ${SAXBINVZ}
 	install -m 755 ./sysp/sysp                              ${SBINVZ}
 	install -m 644 ./modules/*.pm                           ${MODULEVZ}
@@ -161,7 +159,7 @@ install:
 	install -m 644 ./modules/export/*                       ${MODULEVZ}
 	install -m 644 ./parse/XFree.pm                         ${MODULEVZ}
 	install -m 644 ./api/data/cdb/*                         ${CDBVZ}
-	install -m 644 ./api/pixmaps/*                          ${PIXVZ}
+	install -m 644 ./api/figures/*                          ${PIXVZ}
 	install -m 755 ./startup/sax.sh                         ${SBINVZ}
 	install -m 755 ./startup/sax2-vesa                      ${SBINVZ}
 	install -m 755 ./startup/SaX2                           ${SBINVZ}
@@ -198,7 +196,6 @@ install:
 	#--------------------------------------------
 	for i in `find ./api/data -maxdepth 1 -name "*"`; do \
 	if [ -f $$i ] && \
-		[ ! $$i = "./api/data/.testgtx" ] && \
 		[ ! $$i = "./api/data/fvwmrc.sax" ];then \
 		install -m 644 $$i  ${APIDATAVZ} ;\
 	fi \

@@ -46,9 +46,9 @@ my $logHandle;             # log file handle
 my $FullScreen;            # full screen mode
 my $NoCheckPacs;           # do not check package requirements
 my $NoIntro;               # prevent intro appearance
-my $NoBorder;              # suppress border around main window
-my $UniFont;               # force usage of UniCode font
-my $FrameWidth = 0;        # default frame width for xapi
+my $NoBorder;              # suppress border around main window (obsolete)
+my $UniFont;               # force usage of UniCode font        (obsolete)
+my $FrameWidth = 0;        # default frame width for xapi       (obsolete)
 my $DialogToStartWith;     # dialog to start with (xapi option)
 
 main();
@@ -308,13 +308,13 @@ sub main {
 	# ------------
 	my @parent = getParentName();
 	system("xsetroot -cursor_name watch -d $disp");
-	my $apiopt = "-style platinum -w $FrameWidth";
+	my $apiopt = "-style platinum";
 	# 1)
 	#=======================================
 	# Check if we are called from YaST2
 	#---------------------------------------
 	if (defined $YaSTMode) {
-		$apiopt = "$parent[1] -w $FrameWidth -y";
+		$apiopt = "--yast";
 	}
 	# 2)
 	#=======================================
@@ -347,12 +347,6 @@ sub main {
 	# ----
 	if (defined $FullScreen) {
 		$apiopt = $apiopt." --fullscreen";
-	}
-	if (defined $NoBorder) {
-		$apiopt = $apiopt." --noborder";
-	}
-	if (defined $UniFont) {
-		$apiopt = $apiopt." --unifont";
 	}
 	if (defined $NoIntro) {
 		$exit = 1;
@@ -396,11 +390,11 @@ sub main {
 		if ((defined $StartWithSystemConfig) && (HeaderOK())) {
 		system ("$spec{Xapi} $apiopt -display $disp");
 		} else {
-		system ("$spec{Xapi} $apiopt --usehwdata -display $disp");
+		system ("$spec{Xapi} $apiopt --mode auto -display $disp");
 		}
 	} else {
 		if (-f $spec{HWFlag}) {
-		system ("$spec{Xapi} $apiopt --usehwdata -display $disp");
+		system ("$spec{Xapi} $apiopt --mode auto -display $disp");
 		} else {
 		system ("$spec{Xapi} $apiopt -display $disp");
 		}
@@ -529,8 +523,6 @@ sub init {
 	undef ($Display);
 	undef ($FullScreen);
 	undef ($NoCheckPacs);
-	undef ($NoBorder);
-	undef ($UniFont);
 	undef ($EnableXF86AutoMode);
 	undef ($StartWithSystemConfig);
 	undef ($DialogToStartWith);
