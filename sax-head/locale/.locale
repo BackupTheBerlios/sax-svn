@@ -15,7 +15,6 @@ my $KeyFile1 = "../api/data/xapi.gtx";
 my $KeyFile2 = "../xfine/xfine.gtx"; 
 my $KeyFile3 = "../tools/xwrapper/xw.c";
 my $KeyFile4 = "../api/xidle.cpp";
-my $KeyFile5 = "../api/dialog/keyboard/xkb.gtx";
 my $Template = "sax-template";
 my $Help     = "sax-help";
 my $CVS      = "CVS";
@@ -196,15 +195,6 @@ sub LoadText {
 	}
 	}
 	close (TXT);
-	open(TXT,"$KeyFile5") || die "could not open text file: $KeyFile5";
-	while(my $line = <TXT>) {
-	chop($line);
-	if ($line =~ /.*gettext.*/) {
-		push(@result,"// RTF text: no limit\n");
-		push(@result,"$line\n");
-	}
-	}
-    close (TXT);
 	return(@result);
 }
 
