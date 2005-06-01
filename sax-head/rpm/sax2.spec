@@ -305,7 +305,7 @@ fi
 # install desktop icon...
 #-------------------------------------------------
 install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
-install -m 644 api/pixmaps/sax2.png \
+install -m 644 api/figures/sax2.png \
 	$RPM_BUILD_ROOT/usr/share/pixmaps/
 #=================================================
 # check perl .packlist...
@@ -349,7 +349,7 @@ fi
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-/usr/share/pixmaps/sax2.xpm
+/usr/share/pixmaps/sax2.png
 /usr/X11R6/share/fvwm/fvwmrc.sax
 /usr/share/sax/svnbuild
 /usr/share/sax/init.pl
@@ -408,7 +408,7 @@ fi
 %dir /usr/share/xfine
 /usr/share/sax/xrun.pl
 /usr/share/sax/api/tools
-/usr/share/sax/api/pixmaps
+/usr/share/sax/api/figures
 /usr/share/xfine/pixmaps
 /usr/share/xfine/xfine.gtx
 /usr/share/sax/api/data/xapi.gtx
