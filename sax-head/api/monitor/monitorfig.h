@@ -34,7 +34,7 @@ namespace SaXGUI {
 //====================================
 // Defines...
 //------------------------------------
-#define PIXDIR  "./figures"
+#define PIXDIR         "/usr/share/sax/api/figures"
 #define FIGURE_SINGLE  PIXDIR "/monitor_single.png"
 #define FIGURE_MULTI   PIXDIR "/monitor_multi.png"
 

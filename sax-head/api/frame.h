@@ -71,7 +71,7 @@ namespace SaXGUI {
 #define TDOMAIN            "/usr/share/locale"
 #define INFDIR             "/usr/share/sax/api/data/"
 #define MACRODIR           "/usr/share/sax/api/macros/"
-#define PIXDIR             "./figures"
+#define PIXDIR             "/usr/share/sax/api/figures"
 
 //====================================
 // Defines...

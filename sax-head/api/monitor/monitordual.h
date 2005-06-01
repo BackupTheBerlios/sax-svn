@@ -44,7 +44,7 @@ STATUS        : Status: Development
 //=====================================
 // Defines...
 //-------------------------------------
-#define PIXDIR                "./figures"
+#define PIXDIR           "/usr/share/sax/api/figures"
 #define LEFT_OF_PIXMAP   PIXDIR "/dualleftof.png"
 #define RIGHT_OF_PIXMAP  PIXDIR "/dualrightof.png"
 #define ABOVE_OF_PIXMAP  PIXDIR "/dualaboveof.png"

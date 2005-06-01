@@ -39,7 +39,7 @@ STATUS        : Status: Development
 //=====================================
 // Defines
 //-------------------------------------
-#define PIX_DIR     "./figures"
+#define PIX_DIR     "/usr/share/sax/api/figures"
 #define PIX_DEFAULT PIX_DIR "/mouse_default.png"
 #define PIX_FRONT   PIX_DIR "/mouse_front.png"
 #define PIX_LEFT    PIX_DIR "/mouse_left.png"
