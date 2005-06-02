@@ -32,6 +32,7 @@ STATUS        : Status: Development
 #include <qpushbutton.h>
 #include <qlistbox.h>
 #include <qwidgetstack.h>
+#include <qprogressdialog.h>
 #include <qlistview.h>
 #include <qlabel.h>
 #include <qvbox.h>
@@ -179,7 +180,7 @@ class SCCFrame : public QWidget {
 	public:
 	SCCFrame (
 		bool, int, bool, bool,
-		bool, bool, QString*, WFlags=WType_TopLevel
+		bool, bool, QString*, bool, WFlags=WType_TopLevel
 	);
 };
 } // end namespace

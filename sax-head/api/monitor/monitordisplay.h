@@ -118,6 +118,7 @@ class SCCMonitorDisplay : public SCCDialog {
 	QPixmap getDualPixmap  ( void );
 	QString getMonitorName ( void );
 	void setMonitorName  ( const QString& );
+	void setMonitorResolution ( const QString& );
 	void setDualModeInfo ( const QString& );
 	QString getCardName    ( void );
 	int getDisplay ( void );

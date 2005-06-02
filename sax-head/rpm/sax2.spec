@@ -105,7 +105,7 @@ Authors:
 %package -n sax2-gui
 Version:      1.7
 Release:      11
-Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
+Requires:     ImageMagick xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi

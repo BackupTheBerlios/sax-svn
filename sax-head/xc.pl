@@ -307,8 +307,7 @@ sub main {
 	# [sysp -q 3d]
 	# ------------
 	my @parent = getParentName();
-	system("xsetroot -cursor_name watch -d $disp");
-	my $apiopt = "-style platinum";
+	my $apiopt = "--middle";
 	# 1)
 	#=======================================
 	# Check if we are called from YaST2

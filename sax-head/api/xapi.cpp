@@ -20,6 +20,11 @@ STATUS        : Status: Development
 #include "xapi.h"
 
 //=====================================
+// Globals
+//-------------------------------------
+SaXGUI::SCCFrame* sccGUI = 0;
+
+//=====================================
 // main program...
 //-------------------------------------
 int main (int argc,char*argv[]) {
@@ -36,6 +41,7 @@ int main (int argc,char*argv[]) {
 	bool mFullScreen = false;
 	bool mSetXIdle   = false;
 	bool mYaSTMode   = false;
+	bool mMiddle     = false;
 
 	//=====================================
 	// init variables...
@@ -88,10 +94,11 @@ int main (int argc,char*argv[]) {
 			{"help"       , 0 , 0 , 'h'},
 			{"mode"       , 1 , 0 , 'm'},
 			{"xidle"      , 0 , 0 , 'x'},
-			{"pid"        , 1 , 0 , 'p'}
+			{"pid"        , 1 , 0 , 'p'},
+			{"middle"     , 0 , 0 , 'M'}
 		};
 		int c = getopt_long (
-			argc, argv, "icO:m:lhxp:y",long_options, &option_index
+			argc, argv, "icO:m:lhxp:yM",long_options, &option_index
 		);
 		if (c == -1) {
 			break;
@@ -102,6 +109,9 @@ int main (int argc,char*argv[]) {
 			break;
 			case 'y':
 				mYaSTMode  = true;
+			break;
+			case 'M':
+				mMiddle    = true;
 			break;
 			case 'c':
 				mCheckPacs = true;
@@ -135,10 +145,16 @@ int main (int argc,char*argv[]) {
 	//=====================================
 	// init program...
 	//-------------------------------------
-	SaXGUI::SCCFrame* sccGUI = new SaXGUI::SCCFrame (
+	sccGUI = new SaXGUI::SCCFrame (
 		mFullScreen, mGUIMode, mSetInfo, mCheckPacs,
-		mYaSTMode, mSetXIdle, mIdlePID
+		mYaSTMode, mSetXIdle, mIdlePID, mMiddle
 	);
+
+	//=====================================
+	// set signal handler...
+	//-------------------------------------
+	signal (SIGUSR2,SIG_IGN);
+	signal (SIGINT ,gotInterrupted);
 
 	//=====================================
 	// enter main event loop...
@@ -156,6 +172,15 @@ int main (int argc,char*argv[]) {
 	}
 	sccGUI -> show();
 	return SCCApp.exec();
+}
+
+//=====================================
+// gotInterupted...
+//-------------------------------------
+void gotInterrupted (int) {
+	if (sccGUI) {
+		sccGUI -> slotCancel();
+	}
 }
 
 //=====================================
@@ -189,6 +214,8 @@ void usage (int code) {
 	printf ("[ -i | --info ]\n");
 	printf ("   show introduction box, used while starting on\n");
 	printf ("   a separate X-Server\n");
+	printf ("[ -M | --middle ]\n");
+	printf ("   placement option to center the main window\n");
 	printf ("[ -c | --checkpacs ]\n");
 	printf ("   check if all packages needed to configure X11\n");
 	printf ("   are installed. If not YaST2 is called to install\n");

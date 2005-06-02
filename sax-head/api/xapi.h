@@ -25,6 +25,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include <qapplication.h>
 #include <getopt.h>
+#include <signal.h>
 
 //====================================
 // Includes...
@@ -36,6 +37,7 @@ STATUS        : Status: Development
 //===================================
 // Prototypes...
 //-----------------------------------
+void gotInterrupted (int);
 void usage ( int );
 
 #endif

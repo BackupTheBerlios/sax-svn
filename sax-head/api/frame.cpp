@@ -25,7 +25,7 @@ namespace SaXGUI {
 //-------------------------------------
 SCCFrame::SCCFrame (
 	bool fullscreen, int mode, bool setinfo, bool checkpacs,
-	bool yastmode , bool xidle, QString* xidlePID, WFlags wflags
+	bool yastmode , bool xidle, QString* xidlePID, bool middle, WFlags wflags
 ) : QWidget ( 0,0, wflags ) {
 	// .../
 	// create main frame for the complete application. This
@@ -122,11 +122,17 @@ SCCFrame::SCCFrame (
 	//=====================================
 	// set application geometry
 	//-------------------------------------
+	int width  = qApp->desktop()->width();
+	int height = qApp->desktop()->height();
 	if (! fullscreen) {
-		setMinimumSize ( 800,600 );
+		if (middle) {
+			int posx = width  / 2 - 400;
+			int posy = height / 2 - 300;
+			setGeometry ( posx,posy,800,600 );
+		} else {
+			resize ( 800,600 );
+		}
 	} else {
-		int width  = qApp->desktop()->width();
-		int height = qApp->desktop()->height();
 		setGeometry ( 0,0,width,height );
 	}
 
@@ -578,6 +584,13 @@ void SCCFrame::loadApplication ( void ) {
 	// store the SaXImport pointers within the dictionary named
 	// mSection.
 	// ----
+	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	QProgressDialog mProgress (
+		mText["ImportDataFiles"],mText["Cancel"],7,this,"progress",true
+	);
+	mProgress.resize ( 350,100 );
+	mProgress.setCaption (mText["ImportDataCaption"]);
+	mProgress.show();
 	//=====================================
 	// init cache if AUTO probed data used
 	//-------------------------------------
@@ -602,6 +615,11 @@ void SCCFrame::loadApplication ( void ) {
 	};
 	mConfig = new SaXConfig;
 	for (int id=0; id<7; id++) {
+		qApp->processEvents();
+		mProgress.setProgress( id );
+		if ( mProgress.wasCanceled() ) {
+			exitSaX();
+		}
 		SaXImport* import = new SaXImport ( importID[id] );
 		import -> setSource ( SAX_SYSTEM_CONFIG );
 		if (mGUIMode == ISAX_AUTO) {
@@ -616,6 +634,7 @@ void SCCFrame::loadApplication ( void ) {
 			import->getSectionName(),import
 		);
 	}
+	mProgress.setProgress (7);
 }
 
 //=====================================

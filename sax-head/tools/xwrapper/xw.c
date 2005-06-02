@@ -194,7 +194,7 @@ int main(int argc,char *argv[]) {
 	}
 	prepare ();
 	//=====================================
-	// start idle timer logtimer is set
+	// start idle timer if logtimer is set
 	//-------------------------------------
 	if (logtimer) {
 		char pidToKill [20] = "";
@@ -269,7 +269,9 @@ void prepare (void) {
 		int bannerpid;
 		int current_screen = scr[count];
 		Window root = RootWindow(dpy, current_screen);
-		int depth   = DefaultDepth(dpy,current_screen);
+		int depth   = DefaultDepth   (dpy,current_screen);
+		int xpixels = XDisplayWidth  (dpy,current_screen);
+		int ypixels = XDisplayHeight (dpy,current_screen);
 		char* display = (char*)malloc(sizeof(char)*128);
 		char* dspstr  = (char*)malloc(sizeof(char)*128);
 		char* color   = (char*)malloc(sizeof(char)*128);
@@ -279,6 +281,8 @@ void prepare (void) {
 		int x1,y1,width,height;
 		GC mgc = DefaultGC(dpy,current_screen);
 		Cursor cursor;
+
+		#if 0
 		//=========================================
 		// set the background to darkSlateBlue
 		//-----------------------------------------
@@ -296,6 +300,44 @@ void prepare (void) {
 		usleep (1000);
 		if (blank) {
 			XFlush(dpy);
+		}
+		#endif
+		if (blank) {
+			//=========================================
+			// set the background to black
+			//-----------------------------------------
+			sprintf(color,"black");
+			XSetWindowBackground(
+				dpy, root, NameToPixel(
+				color,BlackPixel(dpy,current_screen),dpy,current_screen
+				)
+			);
+			XClearWindow(dpy,root);
+			XSetCloseDownMode(dpy, RetainPermanent);
+			usleep (1000);
+			XFlush(dpy);
+		} else {
+			//=========================================
+			// set the background to a picture
+			//-----------------------------------------
+			char size[20] = "";
+			sprintf (size,"%dx%d+0+0!",xpixels,ypixels);
+			int bgpid = fork();
+			switch(bgpid) {
+			case -1:
+				perror("fork"); exit(1);
+			break;
+			case 0:
+				execl (DISPLAY,
+					"display","-resize",size,"-window",
+					"root","-display",displayname,BACKGROUND,NULL
+	            );
+			break;
+			default:
+			waitpid (
+				bgpid, NULL, 0
+			);
+			}
 		}
 		//=========================================
 		// set the corner marks

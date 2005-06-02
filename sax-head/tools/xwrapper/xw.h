@@ -33,9 +33,10 @@ STATUS        : Status: Up-to-date
 #define  TWM         "/usr/X11R6/bin/twm"
 #define  FVWM        "/sbin/wmstart"
 #define  XIDLE       "/sbin/xapi"
-#define  TWMRC       "/usr/share/sax/api/data/twmrc"
+#define  DISPLAY     "/usr/bin/display"
 #define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc.sax"
 #define  TDOMAIN     "/usr/share/locale"
+#define  BACKGROUND  "/usr/share/sax/api/figures/BlueWaves.jpeg"
 #define  DISPSIZE    255
 
 #ifdef XORG_LOADER

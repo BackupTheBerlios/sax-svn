@@ -456,13 +456,38 @@ void SCCMonitorModel::slotOk ( void ) {
 	mVsyncMax = mVSpinMax -> value();
 
 	//=====================================
-	// update text and layout tooltip
+	// update monitor name
 	//-------------------------------------
 	QString monitorName;
 	QTextOStream (&monitorName) <<
 		mText["Monitor"]<< ":\t " <<
 		mSelectedMonitorVendor << " " << mSelectedMonitorName;
 	pDisplay -> setMonitorName ( monitorName );
+
+	//=====================================
+	// update monitor resolution
+	//-------------------------------------
+	QRegExp resExp ("[0-9]+x[0-9]+");
+	resExp.setCaseSensitive (false);
+	int rpos = resExp.search (monitorName,0);
+	if (rpos >= 0) {
+		QString res = monitorName.lower();
+		int npos = 0;
+		for (int n=rpos;n<(int)res.length();n++) {
+		if ((res.at(n) == 'x') || (res.at(n).isDigit())) {
+			npos++;
+		} else {
+			break;
+		}
+		}
+		QString* substr = new QString (
+			res.mid (rpos,npos)
+		);
+		pDisplay -> setMonitorResolution ( *substr );
+	}
+	//=====================================
+	// update layout tooltip
+	//-------------------------------------
 	emit sigMonitorChanged ( pDisplay );
 }
 //=====================================

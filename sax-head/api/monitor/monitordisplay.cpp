@@ -204,7 +204,7 @@ void SCCMonitorDisplay::init ( void ) {
 	mCheckEnable -> setChecked ( true );
 	if (usedDevices == 1) {
 		mCheckEnable -> hide();
-		mEnabled = false;
+		mEnabled = true;
 	} else {
 		mCheckEnable -> setChecked ( true );
 		mEnabled = true;
@@ -452,6 +452,13 @@ QPixmap SCCMonitorDisplay::getDualPixmap ( void ) {
 	}
 }
 //====================================
+// setMonitorResolution
+//------------------------------------ 
+void SCCMonitorDisplay::setMonitorResolution ( const QString& res ) {
+	mResolution -> setCurrentText (*mResolutionDict[res]);
+	slotResolution ( mResolution->currentItem() );
+}
+//====================================
 // setMonitorName
 //------------------------------------
 void SCCMonitorDisplay::setMonitorName ( const QString& name ) {
@@ -531,7 +538,9 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 	//------------------------------------
 	QString selected = mResolution->text(index);
 	QDictIterator<QString> it (mResolutionDict);
-	long basePixels = 0;
+	long basePixels  = 0;
+	int  basePixelsX = 0;
+	int  basePixelsY = 0;
 	mSelectedResolution.clear();
 	for (; it.current(); ++it) {
 		if (*it.current() == selected) {
@@ -539,7 +548,9 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 			QStringList tokens = QStringList::split ( "x", *baseResolution );
 			int x = tokens.first().toInt();
 			int y = tokens.last().toInt();
-			basePixels = x * y;
+			basePixels  = x * y;
+			basePixelsX = x;
+			basePixelsY = y;
 			mSelectedResolution.append ( baseResolution );
 		}
 	}
@@ -556,7 +567,7 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 		int x = tokens.first().toInt();
 		int y = tokens.last().toInt();
 		int pixelSpace = x * y;
-		if ( pixelSpace < basePixels ) {
+		if ((pixelSpace < basePixels) && (x<=basePixelsX) && (y<=basePixelsY)) {
 			QString key;
 			QTextOStream (&key) << pixelSpace;
 			metaResolution.insert ( key,addResolution );
