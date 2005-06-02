@@ -282,26 +282,9 @@ void prepare (void) {
 		GC mgc = DefaultGC(dpy,current_screen);
 		Cursor cursor;
 
-		#if 0
 		//=========================================
-		// set the background to darkSlateBlue
+		// set the background... 
 		//-----------------------------------------
-		sprintf(color,"MidnightBlue");
-		if (blank) {
-			sprintf(color,"black");
-		} 
-		XSetWindowBackground(
-			dpy, root, NameToPixel(
-			color,BlackPixel(dpy,current_screen),dpy,current_screen
-			)
-		);
-		XClearWindow(dpy,root);
-		XSetCloseDownMode(dpy, RetainPermanent);
-		usleep (1000);
-		if (blank) {
-			XFlush(dpy);
-		}
-		#endif
 		if (blank) {
 			//=========================================
 			// set the background to black
