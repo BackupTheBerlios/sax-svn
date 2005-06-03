@@ -337,6 +337,7 @@ void prepare (void) {
 		//=========================================
 		// set the SuSE Linux banner
 		//-----------------------------------------
+		#if 0
 		if (DisplayPlanes (dpy, current_screen) >= 8) {
 			sprintf(dspstr,"%s",displayname);
 			dspstr = strtok (dspstr,".");
@@ -398,6 +399,7 @@ void prepare (void) {
 				dpy,root,save[current_screen].bg,mgc,x1,y1,width,height,0,0
 			);
 		}
+		#endif
 		//=========================================
 		// set the cursor look and feel
 		//-----------------------------------------
