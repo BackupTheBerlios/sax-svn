@@ -440,7 +440,7 @@ int main (int argc, char*argv[]) {
 // errorHandler
 //---------------------
 int errorHandler (Display* dpy,XErrorEvent *err) {
-	exit (1);
+	return -1;
 }
 
 //=====================
@@ -460,7 +460,13 @@ Bool GetModeLineData (Display* dpy, int scr) {
 	if (!XF86VidModeGetModeLine (
 		dpy, scr, &dot_clock, &mode_line)
 	) {
-	return FALSE;
+		// .../
+		// in case of failure we assume the timings
+		// from the first screen, hopefully this will apply
+		// to a special xinerama implementation like NVidia
+		// is using
+		// ----
+		XF86VidModeGetModeLine ( dpy, 0, &dot_clock, &mode_line );
 	}
 	AppRes.field[HDisplay].val   = mode_line.hdisplay;
 	AppRes.field[HSyncStart].val = mode_line.hsyncstart;

@@ -126,8 +126,23 @@ SCCFrame::SCCFrame (
 	int height = qApp->desktop()->height();
 	if (! fullscreen) {
 		if (middle) {
-			int posx = width  / 2 - 400;
-			int posy = height / 2 - 300;
+			QProcess* proc = new QProcess ();
+			proc -> addArgument ( XQUERY );
+			proc -> addArgument ( "-M" );
+			if ( ! proc -> start() ) {
+				return; 
+			}
+			while (proc->isRunning()) {
+				usleep (1000);
+			}
+			QByteArray data = proc->readStdout();
+			QStringList lines = QStringList::split ("\n",data);
+			QStringList position = QStringList::split (" ",lines.first());
+			QStringList reslist  = QStringList::split (":",position.last());
+			int posx = reslist.first().toInt();
+			int posy = reslist.last().toInt();
+			posx = posx - 400;
+			posy = posy - 300;
 			setGeometry ( posx,posy,800,600 );
 		} else {
 			resize ( 800,600 );

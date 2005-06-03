@@ -73,6 +73,7 @@ namespace SaXGUI {
 #define INFDIR             "/usr/share/sax/api/data/"
 #define MACRODIR           "/usr/share/sax/api/macros/"
 #define PIXDIR             "/usr/share/sax/api/figures"
+#define XQUERY             "/sbin/xquery"
 
 //====================================
 // Defines...
