@@ -213,7 +213,11 @@ sub main {
 		my $vt = GetVirtualTerminal();
 		my $XLoader = "$spec{X} $spec{Xmsg} -br -xf86config $spec{AutoConf}";
 		my $XFlags  = "-allowMouseOpenFail -verbose 10 +accessx $vt";
-		system("$XLoader $XFlags $disp >$spec{XpidFile}");
+		my $XDisp   = $disp;
+		if ($disp =~ /(:.*)\./) {
+			$XDisp = $1;
+		}
+		system("$XLoader $XFlags $XDisp >$spec{XpidFile}");
 		if (! open(FD,"$spec{XpidFile}")) {
 			die "xc: could not open file: $spec{XpidFile}";
 		}

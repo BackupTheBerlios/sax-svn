@@ -586,11 +586,13 @@ void SCCFrame::loadApplication ( void ) {
 	// ----
 	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
 	QProgressDialog mProgress (
-		mText["ImportDataFiles"],mText["Cancel"],7,this,"progress",true
+		mText["ImportDataFiles"],mText["Cancel"],8,this,"progress",true
 	);
-	mProgress.resize ( 350,100 );
+	mProgress.setFixedWidth ( 350 );
 	mProgress.setCaption (mText["ImportDataCaption"]);
-	mProgress.show();
+	mProgress.setLabelText (mText["InitCache"]);
+	mProgress.setProgress ( 1 );
+	qApp->processEvents();
 	//=====================================
 	// init cache if AUTO probed data used
 	//-------------------------------------
@@ -616,7 +618,7 @@ void SCCFrame::loadApplication ( void ) {
 	mConfig = new SaXConfig;
 	for (int id=0; id<7; id++) {
 		qApp->processEvents();
-		mProgress.setProgress( id );
+		mProgress.setProgress ( id + 1 );
 		if ( mProgress.wasCanceled() ) {
 			exitSaX();
 		}
@@ -627,6 +629,9 @@ void SCCFrame::loadApplication ( void ) {
 		}
 		import  -> doImport();
 		mConfig -> addImport (import);
+		mProgress.setLabelText (
+			mText["ImportDataFiles"]+": "+import->getSectionName()
+		);
 		log (L_INFO,"Imported: %s\n",
 			import->getSectionName().ascii()
 		);
@@ -634,7 +639,7 @@ void SCCFrame::loadApplication ( void ) {
 			import->getSectionName(),import
 		);
 	}
-	mProgress.setProgress (7);
+	mProgress.setProgress ( 8 );
 }
 
 //=====================================
@@ -707,7 +712,24 @@ void SCCFrame::saveConfiguration ( void ) {
 void SCCFrame::testConfiguration ( void ) {
 	prepareConfiguration();
 	mConfig -> setMode (SAX_NEW);
-	int status = mConfig -> testConfiguration();
+	qApp->setOverrideCursor ( Qt::forbiddenCursor );
+	mModuleList -> setDisabled ( true );
+	mFinish -> setDisabled ( true );
+	mCancel -> setDisabled ( true );
+	SCCTestThread testConfiguration ( mConfig );
+	testConfiguration.start();
+	while (1) {
+		usleep (1000);
+		qApp->processEvents();
+		if (! testConfiguration.running()) {
+			break;
+		}
+	}
+	qApp->restoreOverrideCursor();
+	mModuleList -> setDisabled ( false );
+	mFinish -> setDisabled ( false );
+	mCancel -> setDisabled ( false );
+	int status = testConfiguration.status();
 	if ( status == -1 ) {
 		log (L_ERROR, "%s\n",mConfig->getParseErrorValue().ascii());
 		// TODO... show message box, test failed

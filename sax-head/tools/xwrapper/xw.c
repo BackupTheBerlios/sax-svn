@@ -266,7 +266,9 @@ void prepare (void) {
 	//------------------------------------------
 	CountScreens (dpy);
 	for (count = 0;count < scr_count; count++) {
+		#if 0
 		int bannerpid;
+		#endif
 		int current_screen = scr[count];
 		Window root = RootWindow(dpy, current_screen);
 		int depth   = DefaultDepth   (dpy,current_screen);
@@ -304,7 +306,9 @@ void prepare (void) {
 			// set the background to a picture
 			//-----------------------------------------
 			char size[20] = "";
+			char sdpy[20] = "";
 			sprintf (size,"%dx%d+0+0!",xpixels,ypixels);
+			sprintf (sdpy,"%s.%d",displayname,current_screen);
 			int bgpid = fork();
 			switch(bgpid) {
 			case -1:
@@ -313,7 +317,7 @@ void prepare (void) {
 			case 0:
 				execl (DISPLAY,
 					"display","-resize",size,"-window",
-					"root","-display",displayname,BACKGROUND,NULL
+					"root","-display",sdpy,BACKGROUND,NULL
 	            );
 			break;
 			default:
@@ -337,13 +341,13 @@ void prepare (void) {
 		//=========================================
 		// set the SuSE Linux banner
 		//-----------------------------------------
-		#if 0
 		if (DisplayPlanes (dpy, current_screen) >= 8) {
 			sprintf(dspstr,"%s",displayname);
 			dspstr = strtok (dspstr,".");
 			sprintf(display,"%s.%d",dspstr,current_screen);
 			sprintf(x,"%d",DisplayWidth  (dpy,current_screen) - 150);
 			sprintf(y,"%d",DisplayHeight (dpy,current_screen) - 80);
+			#if 0
 			bannerpid = fork();
 		    switch(bannerpid) {
 			case -1:
@@ -361,6 +365,7 @@ void prepare (void) {
 				bannerpid, NULL, 0
 			);
 			}
+			#endif
 			//===================================================
 			// create a xlook banner on all non primary screen
 			// pointing out, that this screen is not the one
@@ -399,7 +404,6 @@ void prepare (void) {
 				dpy,root,save[current_screen].bg,mgc,x1,y1,width,height,0,0
 			);
 		}
-		#endif
 		//=========================================
 		// set the cursor look and feel
 		//-----------------------------------------

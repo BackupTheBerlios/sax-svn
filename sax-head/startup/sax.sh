@@ -287,13 +287,6 @@ else
 fi
 
 #==================================
-# if POSIX use en_US language
-#----------------------------------
-if [ -z "$LANG" ] || [ "$LANG" = "POSIX" ];then
- export LANG="en_US"
-fi
-
-#==================================
 # clean sweep...
 #----------------------------------
 rm -f  $TMPFILE $REF

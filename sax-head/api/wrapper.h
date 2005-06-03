@@ -19,6 +19,9 @@ STATUS        : Status: Development
 #ifndef SCCWRAP_H
 #define SCCWRAP_H 1
 
+#include <qthread.h>
+#include "../libsax/sax.h"
+
 //===================================
 // Class SCCWrapPointer [ template ]
 //-----------------------------------
@@ -43,6 +46,31 @@ class SCCWrapPointer {
 	}
 	void insert (const QString & key,QString* val) {
 		pM->insert (key,val);
+	}
+};
+
+//===================================
+// Class SCCTestThread
+//-----------------------------------
+class SCCTestThread : public QThread {
+	private:
+	SaXConfig* mConfig;
+	int        mStatus;
+
+	public:
+	void run ( void ) {
+		mStatus = mConfig -> testConfiguration();
+	}
+
+	public:
+	int status ( void ) {
+		return mStatus;
+	}
+
+	public:
+	SCCTestThread ( SaXConfig* config ) {
+		mConfig = config;
+		mStatus = -1;
 	}
 };
 #endif
