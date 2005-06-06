@@ -336,6 +336,9 @@ SCCFrame::SCCFrame (
 	// setup main focus
 	//-------------------------------------
 	mFinish -> setFocus();
+
+	// disabled until SuSE's help strategy is clear
+	mHelper -> setDisabled ( true );
 }
 
 //=====================================
@@ -632,8 +635,8 @@ void SCCFrame::loadApplication ( void ) {
 	};
 	mConfig = new SaXConfig;
 	for (int id=0; id<7; id++) {
-		qApp->processEvents();
 		mProgress.setProgress ( id + 1 );
+		qApp->processEvents();
 		if ( mProgress.wasCanceled() ) {
 			exitSaX();
 		}
@@ -655,13 +658,6 @@ void SCCFrame::loadApplication ( void ) {
 		);
 	}
 	mProgress.setProgress ( 8 );
-}
-
-//=====================================
-// slotHelp
-//-------------------------------------
-void SCCFrame::slotHelp ( void ) {
-	// TODO
 }
 
 //=====================================
@@ -712,12 +708,37 @@ void SCCFrame::prepareConfiguration ( void ) {
 void SCCFrame::saveConfiguration ( void ) {
 	prepareConfiguration();
 	mConfig -> setMode (SAX_NEW);
+	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
 	if ( ! mConfig -> createConfiguration() ) {
-		log (L_ERROR, "%s\n",mConfig->getParseErrorValue().ascii());
-		// TODO... show message box, saving config failed
+		QString message;
+		QString library = mConfig->errorString();
+		QString parser1 = mConfig->getParseError();
+		QString parser2 = mConfig->getParseErrorValue();
+		if (library.isEmpty()) {
+			library = "No information";
+		}
+		if (parser1.isEmpty()) {
+			parser1 = "No information";
+		}
+		QTextOStream (&message) <<
+			mText["SavingFailed"] << "<br><br>" <<
+			"SaX library: " << library << "<br>" <<
+			"X configuration: " << parser1 << " " << parser2;
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, getTextPtr(), SaXMessage::OK,
+			message,"MessageCaption",SaXMessage::Critical
+		);
+		mMessageBox -> showMessage();
 	} else {
 		installConfiguration();
-		// TODO... show message box, changes has been saved	
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, getTextPtr(), SaXMessage::YES_NO,
+			"SavingDone","MessageCaption"
+		);
+		QString result = mMessageBox -> showMessage();
+		if (result == mText["Yes"]) {
+			exitSaX();
+		}
 	}
 }
 
@@ -727,6 +748,7 @@ void SCCFrame::saveConfiguration ( void ) {
 void SCCFrame::testConfiguration ( void ) {
 	prepareConfiguration();
 	mConfig -> setMode (SAX_NEW);
+	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
 	qApp->setOverrideCursor ( Qt::forbiddenCursor );
 	mModuleList -> setDisabled ( true );
 	mFinish -> setDisabled ( true );
@@ -746,12 +768,36 @@ void SCCFrame::testConfiguration ( void ) {
 	mCancel -> setDisabled ( false );
 	int status = testConfiguration.status();
 	if ( status == -1 ) {
-		log (L_ERROR, "%s\n",mConfig->getParseErrorValue().ascii());
-		// TODO... show message box, test failed
+		QString message;
+		QString library = mConfig->errorString();
+		QString parser1 = mConfig->getParseError();
+		QString parser2 = mConfig->getParseErrorValue();
+		if (library.isEmpty()) {
+			library = "No information";
+		}
+		if (parser1.isEmpty()) {
+			parser1 = "No information";
+		}
+		QTextOStream (&message) <<
+			mText["TestingFailed"] << "<br><br>" <<
+			"SaX library: " << library << "<br>" <<
+			"X configuration: " << parser1 << " " << parser2;
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, getTextPtr(), SaXMessage::OK,
+			message,"MessageCaption",SaXMessage::Critical
+		);
+		mMessageBox -> showMessage();
 	}
 	if ( status == 0 ) {
 		installConfiguration();
-		// TODO... show message box, changes has been saved
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, getTextPtr(), SaXMessage::YES_NO,
+			"SavingDone","MessageCaption"
+		);
+		QString result = mMessageBox -> showMessage();
+		if (result == mText["Yes"]) {
+			exitSaX();
+		}
 	}
 }
 
@@ -772,6 +818,13 @@ void SCCFrame::evaluateAutoDetection ( void ) {
 	// check the imported data if there is something important
 	// missing. Checked values are DisplaySize and Monitor Name
 	// ----
+	// TODO
+}
+
+//=====================================
+// slotHelp
+//-------------------------------------
+void SCCFrame::slotHelp ( void ) {
 	// TODO
 }
 

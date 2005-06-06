@@ -285,10 +285,11 @@ void SCCMonitor::exportData ( void ) {
 		//====================================
 		// remove current layout
 		//------------------------------------
-		QString screenID;
-		QTextOStream (&screenID) << "Screen:Screen[" << card << "]";
-		mSection["Layout"]->removeEntry( screenID );
-
+		if ( mMonitorArrange ) {
+			QString screenID;
+			QTextOStream (&screenID) << "Screen:Screen[" << card << "]";
+			mSection["Layout"]->removeEntry( screenID );
+		}
 		//====================================
 		// check for monitor display's
 		//------------------------------------
@@ -385,6 +386,7 @@ void SCCMonitor::exportData ( void ) {
 					//====================================
 					// pick up card profile data
 					//------------------------------------
+					QString driver = saxCard.getCardDriver();
 					QDict<QString> profileDriverOptions;
 					SaXManipulateCard saxProfileCard ( mImport );
 					profileDriverOptions = saxProfileCard.getOptions();
@@ -394,15 +396,236 @@ void SCCMonitor::exportData ( void ) {
 					// delete profile data keys
 					//------------------------------------
 					for (; it.current(); ++it) {
-						printf ("%s\n",it.currentKey().ascii());
-						// TODO
+						saxCard.removeCardOption (it.currentKey());
 					}
 					//====================================
 					// setup profile data
 					//------------------------------------
 					if (display->isDualModeEnabled()) {
 						it.toFirst();
-						// TODO...
+						SCCMonitorDual* dualData;
+						SCCMonitorDualModel* dualModel;
+						dualData  = display->getDualData();
+						dualModel = dualData->getDualModelData();
+						saxCard.addCardOption ("SaXDualHead");
+						for (; it.current(); ++it) {
+							QString key = it.currentKey();
+							QString val = *it.current();
+							//====================================
+							// setup profile "off"-line data
+							//------------------------------------
+							if (val == "off") {
+								saxCard.addCardOption ( key,val );
+								continue;
+							}
+							//====================================
+							// setup profile meta data
+							//------------------------------------
+							if (key == "SaXDualMonitorVendor") {
+								QString vendor = dualModel ->getVendorName();
+								saxCard.addCardOption ( key,vendor );
+							}
+							if (key == "SaXDualMonitorModel") {
+								QString model = dualModel ->getModelName();
+								saxCard.addCardOption ( key,model );
+							}
+							if (key == "SaXDualResolution") {
+								QString resolution = dualData->getResolution();
+								saxCard.addCardOption ( key,resolution );
+							}
+							if (key == "SaXDualOrientation") {
+								int orientation  = dualData->getLayout();
+								QString position = DUAL_LEFTOF_KEY;
+								switch (orientation) {
+									case DUAL_ABOVEOF:
+										position = DUAL_ABOVEOF_KEY;
+									break;
+									case DUAL_RIGHTOF:
+										position = DUAL_RIGHTOF_KEY;
+									break;
+									case DUAL_BELOWOF:
+										position = DUAL_BELOWOF_KEY;
+									break;
+									default:
+									break;
+								}
+								saxCard.addCardOption ( key,position );
+							}
+							if (key == "SaXDualMode") {
+								int mode = dualData->getMode();
+								QString dualMode = DUAL_TRADITIONAL_KEY;
+								switch (mode) {
+									case DUAL_CLONE:
+										dualMode = DUAL_CLONE_KEY;
+									break;
+									case DUAL_XINERAMA:
+										dualMode = DUAL_XINERAMA_KEY;
+									break;
+									default:
+									break;
+								}
+								saxCard.addCardOption ( key,dualMode );
+							}
+							if (key == "SaXDualHSync") {
+								QString hsync;
+								int hsmax = dualModel->getHSmax();
+								int hsmin = dualModel->getHSmin();
+								QTextOStream (&hsync) << hsmin << "-" << hsmax;
+								saxCard.addCardOption ( key,hsync );	
+							}
+							if (key == "SaXDualVSync") {
+								QString vsync;
+								int vsmax = dualModel->getVSmax();
+								int vsmin = dualModel->getVSmin();
+								QTextOStream (&vsync) << vsmin << "-" << vsmax;
+								saxCard.addCardOption ( key,vsync );
+							}
+							//====================================
+							// setup profile NVidia data
+							//------------------------------------
+							if (key == "TwinView") {
+								saxCard.addCardOption ( key );
+							}
+							if ((key== "MetaModes") && (driver == "nvidia")) {
+								QList<QString> resList=display->getResolution();
+								QString resolution2 = dualData->getResolution();
+								QString resolution1 = *resList.at(0);
+								QString resolution;
+								QTextOStream (&resolution) <<
+									resolution1 << "," << resolution2;
+								saxCard.addCardOption ( key,resolution );
+							}
+							if (key == "SecondMonitorHorizSync") {
+								QString hsync;
+								int hsmax = dualModel->getHSmax();
+								int hsmin = dualModel->getHSmin();
+								QTextOStream (&hsync) << hsmin << "-" << hsmax;
+								saxCard.addCardOption ( key,hsync );
+							}
+							if (key == "SecondMonitorVertRefresh") {
+								QString vsync;
+								int vsmax = dualModel->getVSmax();
+								int vsmin = dualModel->getVSmin();
+								QTextOStream (&vsync) << vsmin << "-" << vsmax;
+								saxCard.addCardOption ( key,vsync );
+							}
+							if (key == "TwinViewOrientation") {
+								int orientation  = dualData->getLayout();
+								QString position = DUAL_LEFTOF_KEY;
+								switch (orientation) {
+									case DUAL_ABOVEOF:
+										position = DUAL_ABOVEOF_KEY;
+									break;
+									case DUAL_RIGHTOF:
+										position = DUAL_RIGHTOF_KEY;
+									break;
+									case DUAL_BELOWOF:
+										position = DUAL_BELOWOF_KEY;
+									break;
+									default:
+									break;
+								}
+								saxCard.addCardOption ( key,position );
+								int mode = dualData->getMode();
+								if ( mode == DUAL_CLONE ) {
+									saxCard.addCardOption (key,DUAL_CLONE_KEY);
+								}
+							}
+							//====================================
+							// setup profile Radeon data
+							//------------------------------------
+							if (key == "MergedFB") {
+								saxCard.addCardOption ( key );
+							}
+							if (key == "CRT2HSync") {
+								QString hsync;
+								int hsmax = dualModel->getHSmax();
+								int hsmin = dualModel->getHSmin();
+								QTextOStream (&hsync) << hsmin << "-" << hsmax;
+								saxCard.addCardOption ( key,hsync );
+							}
+							if (key == "CRT2VRefresh") {
+								QString vsync;
+								int vsmax = dualModel->getVSmax();
+								int vsmin = dualModel->getVSmin();
+								QTextOStream (&vsync) << vsmin << "-" << vsmax;
+								saxCard.addCardOption ( key,vsync );
+							}
+							if (key == "IgnoreEDID") {
+								saxCard.addCardOption ( key );
+							}
+							if ((key== "MetaModes") && (driver == "radeon")) {
+								QList<QString> resList=display->getResolution();
+								QString resolution2 = dualData->getResolution();
+								QString resolution1 = *resList.at(0);
+								QString resolution;
+								QTextOStream (&resolution) <<
+									resolution1 << "-" << resolution2;
+								saxCard.addCardOption ( key,resolution );
+							}
+							if (key == "CRT2Position") {
+								int orientation  = dualData->getLayout();
+								QString position = DUAL_LEFTOF_KEY;
+								switch (orientation) {
+									case DUAL_ABOVEOF:
+										position = DUAL_ABOVEOF_KEY;
+									break;
+									case DUAL_RIGHTOF:
+										position = DUAL_RIGHTOF_KEY;
+									break;
+									case DUAL_BELOWOF:
+										position = DUAL_BELOWOF_KEY;
+									break;
+									default:
+									break;
+								}
+								saxCard.addCardOption ( key,position );
+								int mode = dualData->getMode();
+								if ( mode == DUAL_CLONE ) {
+									saxCard.addCardOption (key,DUAL_CLONE_KEY);
+								}
+							}
+							//====================================
+							// setup profile Intel data
+							//------------------------------------
+							if ((key== "MonitorLayout") && (driver == "i810")) {
+								saxCard.addCardOption ( key,val );
+							}
+							if (key == "Clone") {
+								saxCard.addCardOption ( key );
+							}
+							if (key == "CloneRefresh") {
+								QString vsync;
+								int vsmax = dualModel->getVSmax();
+								int vsmin = dualModel->getVSmin();
+								QTextOStream (&vsync) << vsmin << "-" << vsmax;
+								saxCard.addCardOption ( key,vsync );
+							}
+							if (key == "Modes") {
+								QString resolution2 = dualData->getResolution();
+								saxCard.addCardOption ( key,resolution2 );
+							}
+							//====================================
+							// setup profile FGLRX data
+							//------------------------------------
+							if ((key== "MonitorLayout") && (driver== "fglrx")) {
+								saxCard.addCardOption ( key,val );
+							}
+							if (key == "HSync2") {
+								QString hsync;
+								int hsmax = dualModel->getHSmax();
+								int hsmin = dualModel->getHSmin();
+								QTextOStream (&hsync) << hsmin << "-" << hsmax;
+								saxCard.addCardOption ( key,hsync );
+							}
+							if (key == "VRefresh2") {
+								QString vsync;
+								int vsmax = dualModel->getVSmax();
+								int vsmin = dualModel->getVSmin();
+								QTextOStream (&vsync) << vsmin << "-" << vsmax;
+								saxCard.addCardOption ( key,vsync );
+							}
+						}
 					}
 				}
 			}

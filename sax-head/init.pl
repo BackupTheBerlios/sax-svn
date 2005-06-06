@@ -316,7 +316,8 @@ sub init {
 	$logHandle = OpenLog();
 	Logger ("Initializing...",$logHandle);
 	qx (rm -f $spec{InitFlag});
-	my $needUpdate = needHardwareUpdate();
+
+	my $needUpdate = $ENV{HW_UPDATE};
 	if ($needUpdate) {
 		qx (rm -f $spec{SyspDir}/*);
 		qx (touch $spec{InitFlag});
@@ -346,44 +347,8 @@ sub init {
 	Debug ( $result );
 
 	# /.../
-	# call the 3D script during the initial detection 
-	# process. This will setup a unique 3D state
+	# close log file handler
 	# ---
-	if ($needUpdate) {
-		my $script = "";
-		my $scriptreal = "<none>";
-		my $scriptsoft = "<none>";
-		my @list = split(/\n/,$D3Stuff);
-		foreach (@list) {
-		if ($_ =~ /Card3D.*ScriptReal.*:(.*)/) {
-			$scriptreal = $1;
-			$scriptreal =~ s/ +//g;
-		}
-		if ($_ =~ /Card3D.*ScriptSoft.*:(.*)/) {
-			$scriptsoft = $1;
-			$scriptsoft =~ s/ +//g;
-		}
-		}
-		if ($scriptreal ne "<none>") {
-		if ($D3Answer eq "no") {
-			$script = "/usr/X11R6/bin/".$scriptsoft;
-		} else {
-			$script = "/usr/X11R6/bin/".$scriptreal;
-		}
-		if (-f $script) {
-		Logger ("Calling 3D Script:\n$script",
-			$logHandle
-		);
-		qx ($script);
-		my $activeState = qx (
-			$spec{Sysp} -s 3d --nocheckflag | grep Active;echo
-		);
-		Logger ("3D activate state:\n$activeState",
-			$logHandle
-		);
-		}
-		}
-	}
 	CloseLog ( $logHandle );
 
 	# /.../
@@ -1401,86 +1366,6 @@ sub Debug {
 	if (defined $Debug) {
 		print "$result\n";
 	}
-}
-
-#----[ needHardwareUpdate ]----#
-sub needHardwareUpdate {
-#--------------------------------------------------
-# check the md5sum of mouse/server and card
-# to device if we need an hardware update or not
-#
-	my @result;
-	my $code  = 0;
-	my $opts  = 0;
-	
-	# /.../
-	# if DBM file (config) does not exist we surely
-	# need a hardware detection
-	# ---
-	if (! -f $spec{DbmFile}) {
-		$code = 1;
-	}
-
-	# /.../
-	# if some kind of options are set we need
-	# a hardware detection too
-	# ---
-	if (defined $ModuleList) { 
-		$opts = 1;
-	}
-	if (defined $CardNumber) { 
-		$opts = 1;
-	}
-	if (defined $Virtual) {
-		$opts = 1;
-	}
-
-	# /.../
-	# If there are no options set we will check the 
-	# current md5sum against the current HW 
-	# detection data
-	# ---
-	if ($haveServer == 1) {
-		qx ($spec{HwUpdate});
-	} else {
-		qx ($spec{HwUpdate} --all);
-	}
-	my $exitCode = $? >> 8;
-	if (($opts == 0) && ($code ==0)) {
-		SWITCH: for ($exitCode) {
-		/^1/ && do {
-			$code = 0;
-		last SWITCH;
-		};
-		/^0/ && do {
-			$code = 1;
-		last SWITCH;
-		};
-		# /.../
-		# default, something unwanted 
-		# happened
-		# ---
-		$code = 1;
-		}
-	} else {
-		# /.../
-		# there are options set, this will prevent writing
-		# the md5sum file and will force the detection
-		# ---
-		$code = 1;
-	}
-
-	# /.../
-	# check $code status and prepare for scanning
-	# or anable the mouse pointer again 
-	# and return(0)
-	# ---
-	if ($code == 1) {
-		$HWScanNeeded = 1;
-	} else {
-		$HWScanNeeded = 0;
-	}
-	return ($code);
 }
 
 #---[ EnableMouse ]----#

@@ -322,7 +322,7 @@ int SaXConfig::testConfiguration (void) {
 	//! the preliminary configuration file.
 	// ----
 	if (! createConfiguration()) {
-		return false;
+		return -1;
 	}
 	QProcess* test = new QProcess ();
 	test -> addArgument ( SAX_TEST_CONFIG );
@@ -331,6 +331,7 @@ int SaXConfig::testConfiguration (void) {
 	if ( ! test -> start() ) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
+		return -1;
 	}
 	while (test->isRunning()) {
 		usleep (1000);
@@ -369,7 +370,6 @@ int SaXConfig::testConfiguration (void) {
 		return 1;
 	break;
 	}
-	return false;
 }
 
 //====================================

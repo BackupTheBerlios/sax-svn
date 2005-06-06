@@ -23,7 +23,6 @@ SVNB="/usr/share/sax/svnbuild"
 #==================================
 # Init option variables
 #----------------------------------
-QUIET="--quiet no"
 CMDLINE=$*
 FASTPATH=""
 QUICK_START=""
@@ -81,6 +80,16 @@ function version() {
 	ID='$Id: sax.sh,v 1.49 2003/03/17 13:39:51 ms Exp $'
 	ID=`echo $ID | cut -f3-4 -d" "`
 	echo "SaX2 version 7.1 - SVN Release: $ID" 
+}
+function needHardwareUpdate() {
+	if [ ! -f "/var/cache/sax/files/config" ];then
+		return 1
+	fi
+	/sbin/hwupdate 2>/dev/null
+	if [ $? == 0 ];then
+		return 1
+	fi
+	return 0
 }
 function usage() {
 	/sbin/killproc $DOTS
@@ -341,16 +350,29 @@ echo                                                                    >> $ERR
 #==================================
 # remove hardware.chg if exist...
 #----------------------------------
-if [ "$SYS_CONFIG" = "-s" ];then
-	rm -f "/var/cache/sax/files/hardware.chg"
-fi
+rm -f "/var/cache/sax/files/hardware.chg"
 
 #==================================
 # set option strings...
 #----------------------------------
 XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG $DIALOG $FULLSCREEN"
 IN_OPT="$LOW_RES $BATCH_MODE $MODLIST $AUTOMODE $CHIP"
-IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $QUIET $IGNORE_PROFILE"
+IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $IGNORE_PROFILE"
+
+#==================================
+# setup init call trigger
+#----------------------------------
+IN_TRIGGER=0
+if [ ! -z $IN_OPT ];then
+	IN_TRIGGER=1
+fi
+if [ $IN_TRIGGER = 0 ];then
+	needHardwareUpdate
+	if [ ! $? = 0 ];then
+		IN_TRIGGER=1
+	fi
+fi
+export HW_UPDATE=$IN_TRIGGER
 
 #==================================
 # call init now...
@@ -358,10 +380,15 @@ IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $QUIET $IGNORE_PROFILE"
 StopGPM
 /sbin/killproc $DOTS
 echo -ne "\r"
-echo "SaX: initializing please wait..."
-$INIT $IN_OPT
-if [ ! $? = 0 ];then
-	quit
+
+if [ $IN_TRIGGER = 1 ];then
+	echo "SaX: initializing please wait..."
+	$INIT $IN_OPT --quiet no
+	if [ ! $? = 0 ];then
+		quit
+	fi
+else
+	echo "SaX: initializing done, using cache data..."
 fi
  
 #==================================
