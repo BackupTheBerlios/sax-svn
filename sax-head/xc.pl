@@ -328,6 +328,13 @@ sub main {
 	}
 	# 3)
 	#=======================================
+	# for own server check size
+	#---------------------------------------
+	if ($haveServer == 0) {
+		$apiopt .= " --sizecheck";
+	}
+	# 4)
+	#=======================================
 	# Check for package check flag
 	#--------------------------------------- 
 	if (! defined $NoCheckPacs) {

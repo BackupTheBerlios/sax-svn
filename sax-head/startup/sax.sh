@@ -363,7 +363,8 @@ IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $IGNORE_PROFILE"
 # setup init call trigger
 #----------------------------------
 IN_TRIGGER=0
-if [ ! -z $IN_OPT ];then
+IN_OPT=`echo $IN_OPT`
+if [ ! -z "$IN_OPT" ];then
 	IN_TRIGGER=1
 fi
 if [ $IN_TRIGGER = 0 ];then

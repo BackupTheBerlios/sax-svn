@@ -376,11 +376,11 @@ sub SetDefaultScreen {
 	my $i      = $_[1];
 	$architecture = qx(/bin/arch);
 	$var{Screen}{$i}{DefaultDepth}          = "16";
-	$var{Screen}{$i}{Depth}{8}{Modes}       = "640x480";
-	$var{Screen}{$i}{Depth}{16}{Modes}      = "640x480";
-	$var{Screen}{$i}{Depth}{15}{Modes}      = "640x480";
-	$var{Screen}{$i}{Depth}{24}{Modes}      = "640x480";
-	$var{Screen}{$i}{Depth}{32}{Modes}      = "640x480";
+	$var{Screen}{$i}{Depth}{8}{Modes}       = "800x600";
+	$var{Screen}{$i}{Depth}{16}{Modes}      = "800x600";
+	$var{Screen}{$i}{Depth}{15}{Modes}      = "800x600";
+	$var{Screen}{$i}{Depth}{24}{Modes}      = "800x600";
+	$var{Screen}{$i}{Depth}{32}{Modes}      = "800x600";
 
 	# special case for PPC... need 15bit colordepth
 	# -----------------------------------------------

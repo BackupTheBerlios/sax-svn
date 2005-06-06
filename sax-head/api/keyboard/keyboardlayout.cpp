@@ -197,11 +197,16 @@ void SCCKeyboardLayout::import ( void ) {
 	//=====================================
 	// get layout/variant lists
 	//-------------------------------------
-	QString baseLayout  = *XKBLayouts.getFirst();
-	QString baseVariant = *XKBVariants.getFirst();
-	XKBLayouts.removeFirst();
-	XKBVariants.removeFirst();
-
+	QString baseLayout;
+	QString baseVariant;
+	if (! XKBLayouts.isEmpty()) {
+		baseLayout  = *XKBLayouts.getFirst();
+		XKBLayouts.removeFirst();
+	}
+	if (! XKBVariants.isEmpty()) {
+		baseVariant = *XKBVariants.getFirst();
+		XKBVariants.removeFirst();
+	}
 	int varCount = 0;
 	//=====================================
 	// select base/secondary layout(s)

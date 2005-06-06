@@ -297,6 +297,9 @@ void SCCMonitorModel::import ( void ) {
 		if (! displaySize.isEmpty()) {
 			mDisplaySizeX = displaySize.at(0)->toInt();
 			mDisplaySizeY = displaySize.at(1)->toInt();
+		} else {
+			mDisplaySizeX = 340;
+			mDisplaySizeY = 270;
 		}
 
 		//====================================
@@ -442,11 +445,6 @@ void SCCMonitorModel::slotOk ( void ) {
 	//=====================================
 	// save data to dialog export variables
 	//-------------------------------------
-	if ((! mVendorList->selectedItem()) || (! mModelList->selectedItem())) {
-		return;
-	}
-	mSelectedMonitorVendor = mVendorList -> selectedItem()->text();
-	mSelectedMonitorName   = mModelList  -> selectedItem()->text();
 	mDPMSStatus = mCheckDPMS -> isChecked();
 	mDisplaySizeX = mSizeX -> value();
 	mDisplaySizeY = mSizeY -> value();
@@ -454,6 +452,15 @@ void SCCMonitorModel::slotOk ( void ) {
 	mHsyncMax = mHSpinMax -> value();
 	mVsyncMin = mVSpinMin -> value();
 	mVsyncMax = mVSpinMax -> value();
+
+	//=====================================
+	// save data to dialog export variables
+	//-------------------------------------
+	if ((! mVendorList->selectedItem()) || (! mModelList->selectedItem())) {
+		return;
+	}
+	mSelectedMonitorVendor = mVendorList -> selectedItem()->text();
+	mSelectedMonitorName   = mModelList  -> selectedItem()->text();
 
 	//=====================================
 	// update monitor name

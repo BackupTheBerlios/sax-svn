@@ -130,8 +130,8 @@ sub AutoDetectSyncRanges {
 		# we did not get any VESA information therefore we set the 
 		# sync ranges to save values to avoid any monitor damage
 		# ----------------------------------------------------------
-		$var{Monitor}{$i}{VertRefresh} = "43-72";
-		$var{Monitor}{$i}{HorizSync}   = "30-33"; 
+		$var{Monitor}{$i}{VertRefresh} = "43-75";
+		$var{Monitor}{$i}{HorizSync}   = "30-40"; 
 		$var{Monitor}{$i}{VendorName}  = "Unknown";
 		$var{Monitor}{$i}{ModelName}   = "Unknown";
 	}

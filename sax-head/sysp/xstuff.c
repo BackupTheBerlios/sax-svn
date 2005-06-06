@@ -154,8 +154,8 @@ void ScanXStuff::Scan (void) {
 		// without starting an X-Server. Some defaults are set
 		// now
 		parse[0].dacspeed = 220;
-		parse[0].hsmax    = 33;
-		parse[0].vsmax    = 72;
+		parse[0].hsmax    = 40;
+		parse[0].vsmax    = 75;
 		parse[0].chipset  = "<undefined>";
 		parse[0].dpix     = 0;
 		parse[0].dpiy     = 0;

@@ -696,5 +696,15 @@ void SCCMonitor::exportData ( void ) {
 			);
 		}
 	}
+	//====================================
+	// save 3D status
+	//------------------------------------
+	SaXManipulateDesktop saxDesktop (
+		mSection["Desktop"],mSection["Card"],mSection["Path"]
+	);
+	saxDesktop.disable3D();
+	if (mCheck3D->isChecked()) {
+		saxDesktop.enable3D();
+	}
 }
 } // end namespace

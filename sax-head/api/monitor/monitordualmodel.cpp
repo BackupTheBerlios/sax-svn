@@ -344,15 +344,19 @@ void SCCMonitorDualModel::slotOk ( void ) {
 	//=====================================
 	// save data to dialog export variables
 	//-------------------------------------
+	mHsyncMin = mHSpinMin -> value();
+	mHsyncMax = mHSpinMax -> value();
+	mVsyncMin = mVSpinMin -> value();
+	mVsyncMax = mVSpinMax -> value();
+
+	//=====================================
+	// save data to dialog export variables
+	//-------------------------------------
 	if ((! mVendorList->selectedItem()) || (! mModelList->selectedItem())) {
 		return;
 	}
 	mSelectedMonitorVendor = mVendorList -> selectedItem()->text();
 	mSelectedMonitorName   = mModelList  -> selectedItem()->text();
-	mHsyncMin = mHSpinMin -> value();
-	mHsyncMax = mHSpinMax -> value();
-	mVsyncMin = mVSpinMin -> value();
-	mVsyncMax = mVSpinMax -> value();
 
 	//=====================================
 	// update monitor label

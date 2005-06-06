@@ -42,6 +42,7 @@ int main (int argc,char*argv[]) {
 	bool mSetXIdle   = false;
 	bool mYaSTMode   = false;
 	bool mMiddle     = false;
+	bool mSizeCheck  = false;
 
 	//=====================================
 	// init variables...
@@ -95,10 +96,11 @@ int main (int argc,char*argv[]) {
 			{"mode"       , 1 , 0 , 'm'},
 			{"xidle"      , 0 , 0 , 'x'},
 			{"pid"        , 1 , 0 , 'p'},
+			{"sizecheck"  , 0 , 0 , 'S'},
 			{"middle"     , 0 , 0 , 'M'}
 		};
 		int c = getopt_long (
-			argc, argv, "icO:m:lhxp:yM",long_options, &option_index
+			argc, argv, "icO:m:lhxp:yMS",long_options, &option_index
 		);
 		if (c == -1) {
 			break;
@@ -112,6 +114,9 @@ int main (int argc,char*argv[]) {
 			break;
 			case 'M':
 				mMiddle    = true;
+			break;
+			case 'S':
+				mSizeCheck = true;
 			break;
 			case 'c':
 				mCheckPacs = true;
@@ -145,9 +150,15 @@ int main (int argc,char*argv[]) {
 	//=====================================
 	// init program...
 	//-------------------------------------
+	QWidget::WFlags wflags = Qt::WType_TopLevel;
+	int width  = qApp->desktop()->width();
+	int height = qApp->desktop()->height();
+	if ((mSizeCheck) && (width == 800) && (height == 600)) {
+		wflags |= Qt::WStyle_Customize | Qt::WStyle_NoBorder;
+	}
 	sccGUI = new SaXGUI::SCCFrame (
 		mFullScreen, mGUIMode, mSetInfo, mCheckPacs,
-		mYaSTMode, mSetXIdle, mIdlePID, mMiddle
+		mYaSTMode, mSetXIdle, mIdlePID, mMiddle, wflags
 	);
 
 	//=====================================
