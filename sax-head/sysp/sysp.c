@@ -494,75 +494,81 @@ char* GetProfileDriver ( string profile ) {
 void PrintMouseData(ScanMouse m) {
 	MouseData data;
 	int mouse = 0;
-	int wheelCount   = -1;
-	int wheelEmulate = 1;
-	int buttonCount  = 3;
-	str mouseName    = "";
-
-	// create a cache for all device names
-	// and check for properties of non profiled devices
-	str devs[m.Count()];
-	str profiles[m.Count()];
-	str pdrivers[m.Count()];
+	int buttonCount = 0;
+	int devices[m.Count()];
+	//============================================
+	// sort out serial devices
+	//--------------------------------------------
 	for (int i = m.Count(); i > 0; i--) {
 		data = m.Pop();
-		strcpy (devs[i],data.device);
-		strcpy (profiles[i],data.profile);
-		if (i == m.Count()) {
-			strcpy (mouseName,data.name);
+		devices[i] = 0;
+		if ( (strstr(data.device,"ttyS")) != NULL ) {
+			devices[i] = 1;
 		}
-		if (strcmp(data.profile,"<undefined>") == 0) {
-			if (data.wheel > wheelCount) {
-				wheelCount = data.wheel;
-				strcpy (mouseName,data.name);
-			}
-			if (data.emulate == 0) {
-				wheelEmulate = data.emulate;
-			}
-			if (data.buttons > buttonCount) {
-				buttonCount = data.buttons;
-			}
-		}
-		strcpy (
-			pdrivers[i],GetProfileDriver(data.profile)
-		);
 	}
 	m.Reset();
-
- 	// print all devices. take care about multiple
-	// device names. 
+	//============================================
+	// sort out special profiled pointers
+	//--------------------------------------------
 	for (int i = m.Count(); i > 0; i--) {
-		bool show = true;
 		data = m.Pop();
-		for (int n = i - 1; n > 0; n--) {
-			if (strcmp (devs[n],data.device) == 0) {
-			if (strcmp (pdrivers[n],GetProfileDriver(data.profile)) == 0) {
-				show = false;
-				break;
-			}
-			}
+		if (devices[i] == 0) {
+		if (strcmp(data.profile,"synaptics") == 0) {
+			devices[i] = 1;
 		}
-		if (show) {
-			if (mouse > 0) {
-				printf("\n");
-			}
-			if (strcmp(data.profile,"<undefined>") == 0) {
-				data.buttons = buttonCount;
-				data.wheel   = wheelCount;
-				data.emulate = wheelEmulate;
-				strcpy (data.name,mouseName);
-			}
-			printf("Mouse%d    =>  Protocol   : %s\n",mouse,data.protocol);
-			printf("Mouse%d    =>  Device     : %s\n",mouse,data.device);
-			printf("Mouse%d    =>  Buttons    : %d\n",mouse,data.buttons);
-			printf("Mouse%d    =>  Wheel      : %d\n",mouse,data.wheel);
-			printf("Mouse%d    =>  Emulate    : %d\n",mouse,data.emulate);
-			printf("Mouse%d    =>  Name       : %s\n",mouse,data.name);
-			printf("Mouse%d    =>  VendorID   : %s\n",mouse,data.vid);
-			printf("Mouse%d    =>  DeviceID   : %s\n",mouse,data.did);
-			printf("Mouse%d    =>  Profile    : %s\n",mouse,data.profile);
-			mouse++;
+		if (strcmp(data.profile,"alps") == 0) {
+			devices[i] = 1;
 		}
+		}
+	}
+	m.Reset();
+	//============================================
+	// sort out best match from the rest
+	//--------------------------------------------
+	for (int i = m.Count(); i > 0; i--) {
+		data = m.Pop();
+		if (devices[i] == 0) {
+		if (data.buttons > buttonCount) {
+			buttonCount = data.buttons;
+		}
+		}
+	}
+	m.Reset();
+	for (int i = m.Count(); i > 0; i--) {
+		data = m.Pop();
+		if (devices[i] == 0) {
+		if (strcmp(data.profile,"<undefined>") != 0) {
+			devices[i] = 1;
+			break;
+		}
+		if (data.buttons == buttonCount) {
+			devices[i] = 1;
+			break;
+		}
+		}
+	}
+	m.Reset();
+	//============================================
+ 	// print all devices...
+	//--------------------------------------------
+	for (int i = m.Count(); i > 0; i--) {
+		data = m.Pop();
+		if (devices[i] != 1) {
+			continue;
+		}
+		if (mouse > 0) {
+			printf("\n");
+		}
+		printf("Mouse%d    =>  Protocol   : %s\n",mouse,data.protocol);
+		printf("Mouse%d    =>  Device     : %s\n",mouse,data.device);
+		printf("Mouse%d    =>  Buttons    : %d\n",mouse,data.buttons);
+		printf("Mouse%d    =>  Wheel      : %d\n",mouse,data.wheel);
+		printf("Mouse%d    =>  Emulate    : %d\n",mouse,data.emulate);
+		printf("Mouse%d    =>  Name       : %s\n",mouse,data.name);
+		printf("Mouse%d    =>  VendorID   : %s\n",mouse,data.vid);
+		printf("Mouse%d    =>  DeviceID   : %s\n",mouse,data.did);
+		printf("Mouse%d    =>  Profile    : %s\n",mouse,data.profile);
+		mouse++;
 	}
 	fflush(stdout);
 }
