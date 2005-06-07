@@ -615,11 +615,13 @@ void SCCFrame::loadApplication ( void ) {
 	// init cache if AUTO probed data used
 	//-------------------------------------
 	if ( mGUIMode == ISAX_AUTO ) {
+		#if 0
 		SaXInit init;
 		if (init.needInit()) {
 			log (L_INFO,"initialize cache...\n");
 			init.doInit();
 		}
+		#endif
 	}
 	//=====================================
 	// import all sections
