@@ -156,7 +156,7 @@ void SCCMouseDisplay::init ( void ) {
 	mCheckEnable -> setChecked ( true );
 	if (usedDevices == 1) {
 		mCheckEnable -> hide();
-		mEnabled = false;
+		mEnabled = true;
 	} else {
 		mCheckEnable -> setChecked ( true );
 		mEnabled = true;
@@ -336,5 +336,36 @@ int SCCMouseDisplay::getWheelButton ( void ) {
 //------------------------------------
 SCCMouseModel* SCCMouseDisplay::getModelData ( void ) {
 	return mChangeMouseModelDialog;
+}
+//====================================
+// getDisplay
+//------------------------------------
+int SCCMouseDisplay::getDisplay ( void ) {
+	return mDisplay;
+}
+//====================================
+// setButtonEmulationEnabled
+//------------------------------------
+void SCCMouseDisplay::setButtonEmulationEnabled ( bool state ) {
+	mCheck3BtnEmulation -> setChecked ( state );
+}
+//====================================
+// setWheelEmulationEnabled
+//------------------------------------
+void SCCMouseDisplay::setWheelEmulationEnabled  ( bool state ) {
+	mCheckEmulateWheel -> setChecked ( state );
+	slotWheelEmulation();
+}
+//====================================
+// setWheelEnabled
+//------------------------------------
+void SCCMouseDisplay::setWheelEnabled ( bool state ) {
+	mCheckMouseWheel -> setChecked ( state );
+}
+//====================================
+// setWheelButton
+//------------------------------------
+void SCCMouseDisplay::setWheelButton ( int btn ) {
+	mEmulateWheelButton -> setValue ( btn );
 }
 } // end namespace

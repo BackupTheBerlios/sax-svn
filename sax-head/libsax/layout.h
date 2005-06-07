@@ -58,6 +58,8 @@ class SaXManipulateLayoutIF : public SaXException {
 	virtual int getMultiheadMode ( void ) = 0;
 	virtual QList<QString> getXOrgLayout  ( int ) = 0;
 	virtual QList<QString> getInputLayout ( void ) = 0;
+	virtual void addInputLayout    ( int ) = 0;
+	virtual void removeInputLayout ( int ) = 0;
 
 	public:
 	virtual ~SaXManipulateLayoutIF ( void ) { }
@@ -138,6 +140,8 @@ class SaXManipulateLayout : public SaXManipulateLayoutIF {
 	int getMultiheadMode ( void );
 	QList<QString> getXOrgLayout  ( int );
 	QList<QString> getInputLayout ( void );
+	void addInputLayout    ( int );
+	void removeInputLayout ( int );
 
 	public:
 	SaXManipulateLayout ( SaXImport*,SaXImport* );

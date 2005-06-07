@@ -216,6 +216,32 @@ void SCCMouseModel::slotOk ( void ) {
 	mSelectedMouseName   = mModelList  -> selectedItem()->text();
 
 	//=====================================
+	// check parents options
+	//-------------------------------------
+	QDict<QString> selectedData = mSaxMouse->getMouseData (
+		mSelectedMouseVendor,mSelectedMouseName
+	);
+	pDisplay -> setWheelEmulationEnabled  ( false );
+	pDisplay -> setButtonEmulationEnabled ( false );
+	pDisplay -> setWheelEnabled ( false );
+	QDictIterator<QString> it (selectedData);
+	for (; it.current(); ++it) {
+		QString key = it.currentKey();
+		QString val = *it.current();
+		if (key == "EmulateWheel") {
+			pDisplay -> setWheelEmulationEnabled ( true );
+			pDisplay -> setWheelButton ( val.toInt() );
+		}
+		if (key == "ZAxisMapping") {
+			pDisplay -> setWheelEnabled ( true );
+		}
+		if (key == "Emulate3Buttons") {
+		if (val == "on") {
+			pDisplay -> setButtonEmulationEnabled ( true );
+		}
+		}
+	}
+	//=====================================
 	// check availability of options box
 	//-------------------------------------
 	mOptionState = true;

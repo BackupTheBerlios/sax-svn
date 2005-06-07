@@ -156,6 +156,77 @@ void SCCMouse::slotActivate ( void ) {
 // exportData
 //------------------------------------
 void SCCMouse::exportData ( void ) {
-	// TODO...
+	int mouseID = 0;
+	QListIterator<SCCMouseDisplay> it (mMouseDisplay);
+	for (; it.current() ; ++it) {
+		//====================================
+		// check for mouse display's
+		//------------------------------------
+		SCCMouseDisplay* display = (SCCMouseDisplay*)it.current();
+		//if (display->isEnabled()) {
+		//====================================
+		// create manipulators...
+		//------------------------------------
+		SaXManipulateMice saxMouse (
+			mSection["Pointers"]
+		);
+		SaXManipulateLayout saxLayout (
+			mSection["Layout"],mSection["Card"]
+		);
+		//====================================
+		// select pointer device
+		//------------------------------------
+		mouseID = display->getDisplay();
+		saxMouse.selectPointer ( mouseID );
+
+		//====================================
+		// save mouse selection data
+		//------------------------------------
+		SCCMouseModel* modelData = display->getModelData();
+		QString vendor = modelData -> getVendorName(); 
+		QString model  = modelData -> getModelName();
+		if (! model.isEmpty() ) {
+			QDict<QString> mData = mSection["Pointers"]->getCurrentTable();
+			QDictIterator<QString> it (mData);
+			for (; it.current() ; ++it) {
+				QString key = it.currentKey();
+				QString val = *it.current();
+				if (key == "Identifier") {
+					continue;
+				}
+				mSection["Pointers"]->removeEntry ( key );
+			}
+			saxMouse.setMouse ( vendor,model );
+		}
+		//====================================
+		// save 3-Button emulation data
+		//------------------------------------
+		saxMouse.disable3ButtonEmulation();
+		if (display->isButtonEmulationEnabled()) {
+			saxMouse.enable3ButtonEmulation();
+		}
+		//====================================
+		// save mouse wheel data
+		//------------------------------------
+		saxMouse.disableWheel();
+		if (display->isWheelEnabled()) {
+			saxMouse.enableWheel();
+		}
+		//====================================
+		// save mouse wheel emulation data
+		//------------------------------------
+		saxMouse.disableWheelEmulation();
+		if (display->isWheelEmulationEnabled()) {
+			saxMouse.enableWheelEmulation (display->getWheelButton());
+		}
+		//====================================
+		// save input layout
+		//------------------------------------
+		saxLayout.removeInputLayout (mouseID);
+		if (display->isEnabled()) {
+			saxLayout.addInputLayout (mouseID);
+		}
+		//}
+	}
 }
 } // end namespace

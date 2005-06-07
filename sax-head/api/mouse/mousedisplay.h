@@ -79,10 +79,15 @@ class SCCMouseDisplay : public SCCDialog {
 	public:
 	bool isEnabled  ( void );
 	void setEnabled ( bool = true );
+	int  getDisplay ( void );
 	bool isButtonEmulationEnabled ( void );
 	bool isWheelEmulationEnabled  ( void );
 	bool isWheelEnabled ( void );
 	int  getWheelButton ( void );
+	void setButtonEmulationEnabled ( bool );
+	void setWheelEmulationEnabled  ( bool );
+	void setWheelEnabled ( bool );
+	void setWheelButton ( int );
 	void setMouseName   ( const QString& );
 	void setMouseOptionState ( bool );
 	SCCMouseModel* getModelData ( void );

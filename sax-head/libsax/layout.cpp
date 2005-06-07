@@ -244,4 +244,49 @@ QList<QString> SaXManipulateLayout::getInputLayout ( void ) {
 	}
 	return inputList;
 }
+
+//====================================
+// addInputLayout
+//------------------------------------
+void SaXManipulateLayout::addInputLayout ( int id ) {
+	// .../
+	//! add the given pointer ID to the InputDevice option of
+	//! the layout section. 
+	// ----
+	QString mouseID;
+	QString layout = mLayout -> getItem ("InputDevice");
+	QTextOStream (&mouseID) << ",Mouse[" << id << "]";
+	layout.append (mouseID);
+	layout.replace (QRegExp("^,"),"");
+	mLayout -> setItem (
+		"InputDevice",layout
+	);
+}
+
+//====================================
+// removeInputLayout
+//------------------------------------
+void SaXManipulateLayout::removeInputLayout ( int id ) {
+	// .../
+	//! remove the given pointer ID from the InputDevice
+	//! option of the layout section
+	// ----
+	QString mouseID;
+	QString result ("");
+	QString layout = mLayout -> getItem ("InputDevice");
+	QTextOStream (&mouseID) << "Mouse[" << id << "]";
+	QStringList tokens = QStringList::split ( ",", layout );
+	for ( QStringList::Iterator
+		in = tokens.begin(); in != tokens.end(); ++in
+	) {
+		QString item = *in;
+		if ( item != mouseID ) {
+			result.append (","+item);
+		}
+	}
+	result.replace (QRegExp("^,"),"");
+	mLayout -> setItem (
+		"InputDevice",result
+	);
+}
 } // end namespace

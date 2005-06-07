@@ -187,9 +187,9 @@ install:
 	# install library files...
 	#--------------------------------------------
 	cp -a ./libsax/doc/doxygen/html ${LIBDOCDIR}
-	cp ./libsax/libsax.so*  ${USRLIBVZ}
-	cp ./libsax/*.h         ${INCVZ}
-	cp ./libsax/tools/*     ${LIBTOOLDIR}
+	cp -a ./libsax/libsax.so*       ${USRLIBVZ}
+	cp ./libsax/*.h                 ${INCVZ}
+	cp ./libsax/tools/*             ${LIBTOOLDIR}
 
 	#============================================
 	# install API data files...
