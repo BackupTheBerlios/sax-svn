@@ -168,6 +168,148 @@ void SCCTablet::slotActivate ( bool state ) {
 // exportData
 //------------------------------------
 void SCCTablet::exportData ( void ) {
-	// TODO
+	//====================================
+	// create manipulators... 
+	//------------------------------------
+	SaXManipulateTablets saxTablet (
+		mSection["Pointers"],mSection["Layout"]
+	);
+	SaXManipulateDevices saxDevice (
+		mSection["Pointers"],mSection["Layout"]
+	);
+	//====================================
+	// search and remove tablet
+	//------------------------------------
+	int inputCount = mSection["Pointers"]->getCount();
+	for (int i=inputCount;i>=0;i--) {
+		if (saxTablet.selectPointer (i)) {
+		if (saxTablet.isTablet()) {
+			saxDevice.removeInputDevice (i);
+		}
+		if (saxTablet.isPen()) {
+			saxDevice.removeInputDevice (i);
+		}
+		if (saxTablet.isEraser()) {
+			saxDevice.removeInputDevice (i);
+		}
+		}
+	}
+	//====================================
+	// add tablet if enabled
+	//------------------------------------
+	if (mTabletSelection->isEnabled()) {
+		QString vendor = mTabletSelection->getVendor();
+		QString model  = mTabletSelection->getModel();
+		if (! model.isEmpty()) {
+			int tabletID = saxDevice.addInputDevice (SAX_INPUT_TABLET);
+			saxTablet.selectPointer ( tabletID );
+			saxTablet.setTablet ( vendor,model );
+			QDict<QString> tabletDict = saxTablet.getTabletData (
+				vendor,model
+			);
+			//====================================
+			// save tablet connection port
+			//------------------------------------
+			QString port = mTabletConnection->getPortName();
+			if (port.contains ("ttyS0")) {
+				saxTablet.setDevice ( "/dev/ttyS0" );
+			}
+			if (port.contains ("ttyS1")) {
+				saxTablet.setDevice ( "/dev/ttyS1" );
+			}
+			if (port.contains ("USB")) {
+				QProcess* proc = new QProcess ();
+				proc -> addArgument ( USB_PORT );
+				if (proc -> start()) {
+					while (proc->isRunning()) {
+						usleep (1000);
+					}
+					QByteArray data = proc->readStdout();
+					QStringList lines = QStringList::split ("\n",data);
+					saxTablet.setDevice ( lines.first() );
+				}
+			}
+			//====================================
+			// save tablet options
+			//------------------------------------
+			QString driver = saxTablet.getDriver();
+			QDict<QString> allOptions = saxTablet.getTabletOptions ( driver );
+			QDictIterator<QString> it (allOptions);
+			for (; it.current(); ++it) {
+				saxTablet.removeOption (it.currentKey());
+			}
+			QDict<QString> tabletOptions = mTabletConnection->getOptions();
+			QDictIterator<QString> io (tabletOptions);
+			for (; io.current(); ++io) {
+				saxTablet.addOption (io.currentKey(),*io.current());
+			}
+			//====================================
+			// save tablet mode
+			//------------------------------------
+			int mode = mTabletConnection->getTabletMode();
+			if (mode == 0) {
+				saxTablet.setMode ("Relative");
+			} else {
+				saxTablet.setMode ("Absolute");
+			}
+			int sticks[2] = {-1,-1};
+			//====================================
+			// handle Tablet Pen
+			//------------------------------------
+			if (mTabletPens->hasPen()) {
+				QString penLink = *tabletDict["StylusLink"];
+				sticks[0] = saxTablet.addPen ( vendor,penLink );
+			}
+			//====================================
+			// handle Tablet Eraser
+			//------------------------------------
+			if (mTabletPens->hasEraser()) {
+				QString eraserLink = *tabletDict["EraserLink"];
+				sticks[1] = saxTablet.addPen ( vendor,eraserLink );
+			}
+			//====================================
+			// save pen/eraser data
+			//------------------------------------
+			for (int n=0;n<2;n++) {
+			if (sticks[n] > 0) {
+				SCCTabletPenProperty* pen = 0;
+				switch (n) {
+					case 0: pen = mTabletPens->getPenPropertyData();    break;
+					case 1: pen = mTabletPens->getEraserPropertyData(); break;
+				}
+				//====================================
+				// create manipulators... 
+				//------------------------------------
+				SaXManipulateTablets saxPen (
+					mSection["Pointers"],mSection["Layout"]
+				);
+				saxPen.selectPointer ( sticks[n] );
+				//====================================
+				// save pen's mode
+				//------------------------------------
+				int mode = pen->getPenMode();
+				if (mode == 0) {
+					saxPen.setMode ("Relative");
+				} else {
+					saxPen.setMode ("Absolute");
+				}
+				//====================================
+				// save pen's options
+				//------------------------------------
+				QString driver = saxTablet.getDriver();
+				QDict<QString> allOptions = saxTablet.getTabletOptions (driver);
+				QDictIterator<QString> it (allOptions);
+				for (; it.current(); ++it) {
+					saxPen.removeOption (it.currentKey());
+				}
+				QDict<QString> penOptions = pen->getPenOptions();
+				QDictIterator<QString> io (penOptions);
+				for (; io.current(); ++io) {
+					saxPen.addOption (io.currentKey(),*io.current());
+				}
+			}
+			}
+		}
+	}
 }
 } // end namespace

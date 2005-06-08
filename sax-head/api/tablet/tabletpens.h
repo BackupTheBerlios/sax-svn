@@ -72,6 +72,8 @@ class SCCTabletPens : public SCCDialog {
 	public:
 	bool hasPen    ( void );
 	bool hasEraser ( void );
+	SCCTabletPenProperty* getPenPropertyData    ( void );
+	SCCTabletPenProperty* getEraserPropertyData ( void );
 
 	public:
 	void init   ( void );

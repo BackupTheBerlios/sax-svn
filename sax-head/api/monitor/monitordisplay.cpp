@@ -213,9 +213,13 @@ void SCCMonitorDisplay::init ( void ) {
 	// check multihead group
 	//------------------------------------
 	if (! saxCard.isNoteBook()) {
-	if (! saxDesktop.isDualHeadCard()) {
-		mDualHeadGroup -> hide();
-	}
+		if (! saxDesktop.isDualHeadCard()) {
+			mDualHeadGroup -> hide();
+		}
+	} else {
+		if (saxDesktop.getDualHeadProfile().isEmpty()) {
+			mDualHeadGroup -> setDisabled ( true );
+		}
 	}
 	//====================================
 	// insert available resolutions
@@ -505,6 +509,13 @@ void SCCMonitorDisplay::slotActivateDisplay ( void ) {
 		mCardMonitorGroup -> setDisabled (false);
 		mPropertyGroup    -> setDisabled (false);
 		mDualHeadGroup    -> setDisabled (false);
+		SaXManipulateDesktop saxDesktop (
+			mSection["Desktop"],mSection["Card"],mSection["Path"]
+		);
+		saxDesktop.selectDesktop ( mDisplay );
+		if (saxDesktop.getDualHeadProfile().isEmpty()) {
+			mDualHeadGroup -> setDisabled ( true );
+		}
 		mEnabled = true;
 	} else {
 		mCardMonitorGroup -> setDisabled (true);

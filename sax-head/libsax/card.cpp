@@ -458,7 +458,7 @@ bool SaXManipulateCard::isNoteBook ( void ) {
 	while (1) {
 		entry = readdir (batteryDir);
 		if (! entry) {
-			return false;
+			break;
 		}
 		QString file (entry->d_name);
 		if ((file == ".") || (file == "..")) {

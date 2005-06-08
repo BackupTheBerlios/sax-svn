@@ -251,6 +251,7 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	virtual void setType   ( const QString& ) = 0;
 	virtual void setMode   ( const QString& ) = 0;
 	virtual int  addPen    ( const QString& ) = 0;
+	virtual int  addPen    ( const QString&,const QString& ) = 0;
 	virtual int  removePen ( int ) = 0;
 
 	public:
@@ -369,6 +370,7 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	void setType   ( const QString& );
 	void setMode   ( const QString& );
 	int  addPen    ( const QString& );
+	int  addPen    ( const QString&,const QString& );
 	int  removePen ( int );
 
 	public:

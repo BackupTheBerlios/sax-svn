@@ -29,6 +29,7 @@ STATUS        : Status: Development
 #include <qstring.h>
 #include <qtextstream.h>
 #include <qstringlist.h>
+#include <qregexp.h>
 
 #include "exception.h"
 

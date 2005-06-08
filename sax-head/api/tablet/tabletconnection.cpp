@@ -160,7 +160,6 @@ void SCCTabletConnection::setPort ( const QString& device ) {
 	QRegExp identifier ("/dev/input/event");
 	if (identifier.search (device) >= 0) {
 		mPortBox -> setCurrentItem ( 0 );
-		mPortBox -> setCurrentText (device);
 	}
 	if (device == "/dev/ttyS0") {
 		mPortBox -> setCurrentItem ( 1 );
@@ -307,7 +306,6 @@ void SCCTabletConnection::slotTablet (
 		QRegExp identifier ("/dev/input/event");
 		if (identifier.search (device) >= 0) {
 			mPortBox -> setCurrentItem ( 0 );
-			mPortBox -> setCurrentText (device);
 		}
 		if (device == "/dev/ttyS0") {
 			mPortBox -> setCurrentItem ( 1 );

@@ -59,6 +59,7 @@ void SaXStorage::addItem ( const QString & key, const QString & val ) {
 	if (currentValue) {
 		QString newValue;
 		QTextOStream(&newValue) << *currentValue << "," << val;
+		newValue.replace (QRegExp("^,"),"");
 		setItem (key,newValue);
 	} else {
 		setItem (key,val);
@@ -164,6 +165,7 @@ void SaXStorage::addRawItem (
 		QString newValue;
 		QString newOptVal (optname+" "+optval);
 		QTextOStream(&newValue) << *currentValue << "," << newOptVal;
+		newValue.replace (QRegExp("^,"),"");
 		setItem (key,newValue);
 	} else {
 		setRawItem (key,optname,optval);

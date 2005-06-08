@@ -33,6 +33,12 @@ STATUS        : Status: Development
 #include "tablet/tabletselection.h"
 #include "tablet/tabletconnection.h"
 
+//=====================================
+// Defines
+//-------------------------------------
+#define MACROS_DIR  "/usr/share/sax/api/macros"
+#define USB_PORT    MACROS_DIR "/getUSBTabletPort"
+
 namespace SaXGUI {
 //====================================
 // Pre-class definitions

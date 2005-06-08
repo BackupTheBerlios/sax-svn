@@ -1196,6 +1196,20 @@ int SaXManipulateTablets::addPen (const QString& group) {
 	mImport -> setItem ( "Name"  , nameList.last()  );
 	return newPen;
 }
+//====================================
+// addPen
+//------------------------------------
+int SaXManipulateTablets::addPen (
+	const QString& vendor, const QString& model
+) {
+	// .../
+	//! add a new Pen or Eraser associated with the given vendor and model
+	//! name to the current pointer data. The contents of the
+	//! data record will set the InputFashion type for this addon
+	//! pointer device
+	// ----
+	return addPen (vendor+":"+model);
+}
 
 //====================================
 // removePen

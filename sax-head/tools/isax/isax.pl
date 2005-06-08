@@ -1103,21 +1103,21 @@ sub ConstructInputOptions {
 	$InputOptions{EmulateWheel}       = 1;
 	$InputOptions{EmulateWheelButton} = 1;
 
-	my $option = "";
 	foreach my $id (keys %{$input{InputDevice}}) {
-	if ($input{InputDevice}{$id}{Identifier} =~ /Mouse\[(.*)\]/) {
-		foreach my $opt (keys %{$input{InputDevice}{$id}{Option}}) {
-		if (! defined $InputOptions{$opt}) {
-			my $optval = $input{InputDevice}{$id}{Option}{$opt};
-			if ($optval ne "") {
-				$option = "$option,\"$opt\" \"$optval\"";
-				$option =~ s/^,//;
-				$input{InputDevice}{$id}{Option}{RawOption} = $option;
-				delete $input{InputDevice}{$id}{Option}{$opt};
+		my $option = "";
+		if ($input{InputDevice}{$id}{Identifier} =~ /Mouse\[(.*)\]/) {
+			foreach my $opt (keys %{$input{InputDevice}{$id}{Option}}) {
+			if (! defined $InputOptions{$opt}) {
+				my $optval = $input{InputDevice}{$id}{Option}{$opt};
+				if ($optval ne "") {
+					$option = "$option,\"$opt\" \"$optval\"";
+					$option =~ s/^,//;
+					$input{InputDevice}{$id}{Option}{RawOption} = $option;
+					delete $input{InputDevice}{$id}{Option}{$opt};
+				}
+			}
 			}
 		}
-		}
-	}
 	}
 	return %input;
 }

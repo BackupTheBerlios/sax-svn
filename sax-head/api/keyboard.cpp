@@ -120,6 +120,59 @@ void SCCKeyboard::apply ( void ) {
 // exportData
 //------------------------------------
 void SCCKeyboard::exportData ( void ) {
-	// TODO...
+	//====================================
+	// create Manipulator
+	//------------------------------------
+	SaXManipulateKeyboard saxKeyboard (
+		mSection["Keyboard"]
+	);
+	//====================================
+	// retrieve dialog data
+	//------------------------------------
+	QString type    = mKeyboardLayout  -> getType();
+	QString layout  = mKeyboardLayout  -> getLayout();
+	QString variant = mKeyboardLayout  -> getVariant();
+	QString option  = mKeyboardOptions -> getOptions();
+
+	//====================================
+	// save keyboard model/type
+	//------------------------------------
+	saxKeyboard.setXKBModel  ( type );
+
+	int count = 0;
+	//====================================
+	// save keyboard layout(s)
+	//------------------------------------
+	QStringList variants = QStringList::split ( ",",variant,true );
+	QStringList layouts  = QStringList::split ( ",",layout );
+	for (QStringList::Iterator it=layouts.begin();it!=layouts.end();++it) {
+		QString layout  (*it);
+		QString variant (variants[count]);
+		if (count == 0) {
+			saxKeyboard.setXKBLayout ( layout );
+			saxKeyboard.setXKBVariant (layout,variant);
+		} else {
+			saxKeyboard.addXKBLayout ( layout );
+			if (variant.isEmpty()) {
+				variant = ",";
+			}
+			saxKeyboard.setXKBVariant (layout,variant);
+		}
+		count++;
+	}
+	count = 0;
+	//====================================
+	// save keyboard options
+	//------------------------------------
+	QStringList options = QStringList::split ( ",",option );
+	for (QStringList::Iterator it=options.begin();it!=options.end();++it) {
+		QString option (*it);
+		if (count == 0) {
+			saxKeyboard.setXKBOption ( option );
+		} else {
+			saxKeyboard.addXKBOption ( option );
+		}
+		count++;
+	}
 }
 } // end namespace

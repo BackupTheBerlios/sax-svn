@@ -289,4 +289,16 @@ void SCCTabletPens::slotActivateEraser ( void ) {
 		mEraserProperties -> setDisabled ( false );
 	}
 }
+//====================================
+// getPenPropertyData
+//------------------------------------
+SCCTabletPenProperty* SCCTabletPens::getPenPropertyData ( void ) {
+	return mPenPropertyDialog;
+}
+//====================================
+// getEraserPropertyData
+//------------------------------------
+SCCTabletPenProperty* SCCTabletPens::getEraserPropertyData ( void ) {
+	return mEraserPropertyDialog;
+}
 } // end namespace
