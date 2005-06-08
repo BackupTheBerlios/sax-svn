@@ -1087,6 +1087,9 @@ sub ApiImportLayout {
 		
 		$count = 3;
 		for ($i=1;$i<@list;$i++) {
+			if ($list[$i] =~ /Mouse\[(.*)\]/) {
+				$count = $1;
+			}
 			my $driver = $api{Mouse}{"$count Driver"};
 			my $device = $api{Mouse}{"$count Device"};
 			if ((! defined $entity{$driver}{$device}) || ($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/)) {
@@ -1095,7 +1098,6 @@ sub ApiImportLayout {
 				$var{$l}{all}{InputDevice}{$count}{usage} = "SendCoreEvents";
 			}
 			$entity{$driver}{$device} = $count;
-			$count+=2;
 		}
 		last SWITCH;
 		};
