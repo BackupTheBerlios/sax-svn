@@ -313,24 +313,27 @@ void SCCMonitor::exportData ( void ) {
 		//====================================
 		// save resolution list
 		//------------------------------------
-		QString modesKey;
-		int color = display->getColorDepth();
-		QTextOStream (&modesKey) << "Modes:" << color;
-		mSection["Desktop"] -> removeEntry ( modesKey );
-		QList<QString> resList = display->getResolution();
-		QListIterator<QString> it ( resList );
-		for (; it.current(); ++it) {
-			QStringList tokens = QStringList::split ( "x",*it.current() );
-			int xaxis = tokens.first().toInt();
-			int yaxis = tokens.last().toInt();
-			saxDesktop.addResolution (
-				color,xaxis,yaxis
-			);
+		int colorDepths[5] = {8,15,16,24,32};
+		for (int n=0;n<5;n++) {
+			int color = colorDepths[n];
+			QString modesKey;
+			QTextOStream (&modesKey) << "Modes:" << color;
+			mSection["Desktop"] -> removeEntry ( modesKey );
+			QList<QString> resList = display->getResolution();
+			QListIterator<QString> it ( resList );
+			for (; it.current(); ++it) {
+				QStringList tokens = QStringList::split ( "x",*it.current() );
+				int xaxis = tokens.first().toInt();
+				int yaxis = tokens.last().toInt();
+				saxDesktop.addResolution (
+					color,xaxis,yaxis
+				);
+			}
 		}
 		//====================================
 		// save color depth
 		//------------------------------------
-		saxDesktop.setColorDepth ( color );
+		saxDesktop.setColorDepth ( display->getColorDepth() );
 
 		//====================================
 		// save monitor settings

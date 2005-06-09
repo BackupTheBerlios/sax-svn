@@ -15,6 +15,7 @@ SOURCES   += path.cpp
 SOURCES   += pointers.cpp
 SOURCES   += layout.cpp
 SOURCES   += device.cpp
+SOURCES   += file.cpp
 SOURCES   += interface.cpp
 
 HEADERS   += storage.h
@@ -33,6 +34,7 @@ HEADERS   += path.h
 HEADERS   += pointers.h
 HEADERS   += layout.h
 HEADERS   += device.h
+HEADERS   += file.h
 HEADERS   += interface.h
 
 

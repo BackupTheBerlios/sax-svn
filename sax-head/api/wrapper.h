@@ -20,6 +20,7 @@ STATUS        : Status: Development
 #define SCCWRAP_H 1
 
 #include <qthread.h>
+#include <qprogressdialog.h>
 #include "../libsax/sax.h"
 
 //===================================

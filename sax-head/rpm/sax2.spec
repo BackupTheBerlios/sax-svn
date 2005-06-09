@@ -105,7 +105,7 @@ Authors:
 %package -n sax2-gui
 Version:      1.7
 Release:      11
-Requires:     ImageMagick xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
+Requires:     ImageMagick xbanner sax2-tools qt3 fvwm2 tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
@@ -123,7 +123,7 @@ Authors:
 %package -n sax2-libsax
 Version:      7.1
 Release:      11
-Requires:     xbanner sax2-tools qt3 fvwm2 3ddiag tightvnc sax2
+Requires:     xbanner sax2-tools qt3 fvwm2 tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration library
 Group:        System/X11/Libraries
 Provides:     sax2:/usr/%{_lib}/libsax.so
@@ -361,6 +361,7 @@ fi
 /sbin/SaX2
 /sbin/sax2
 /sbin/sysp
+/sbin/capi
 /usr/share/sax/api/data/CardModules
 /usr/share/sax/api/data/LangCodes
 /usr/share/sax/api/data/PointerDevice

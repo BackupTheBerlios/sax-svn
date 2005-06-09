@@ -254,8 +254,13 @@ void Scan3D::Scan (void) {
 	// use the 3Ddiag-result script to check for the
 	// current 3D usability state
 	// ---
-	string diagString = qx ( DIAG,STDOUT,1,"%s",D3Answer );
-	data.active = atoi ( diagString.c_str() ) ^ 1;
+	data.active = 0;
+	string option ("--status3D");
+	string diagString = qx ( CAPI,STDOUT,1,"%s",option.c_str() );
+	int substr = diagString.find("enabled");
+	if (substr >= 0) {
+		data.active = 1;
+	}
 	strcpy (data.answer,D3Answer);
 	strcpy (data.specialflag,flag.c_str());
 }

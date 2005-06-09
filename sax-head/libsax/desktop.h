@@ -27,6 +27,7 @@ STATUS        : Status: Development
 #include "import.h"
 #include "card.h"
 #include "path.h"
+#include "file.h"
 
 namespace SaX {
 //====================================
@@ -35,6 +36,7 @@ namespace SaX {
 #define XSLOAD            "/usr/X11R6/bin/xsload"
 #define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
 #define PROFILE_DIR       "/usr/share/sax/profile/"
+#define MAP_DIR           "/usr/share/sax/sysp/maps/"
 
 //====================================
 // Interface class for dlopen ability

@@ -445,7 +445,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 	//====================================
 	// get Extensions for the active card
 	//------------------------------------
-	SaXManipulateCard cardInfo (mCard);
+	SaXManipulateCard cardInfo (mCard,mDesktopID);
 	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* driver  = cardData -> find ("3DDriver");
@@ -471,6 +471,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 			while (proc->isRunning()) {
 				usleep (1000);
 			}
+			bool foundBinaryNVidiaDriver = false;
 			QByteArray data = proc->readStdout();
 			QStringList lines = QStringList::split ("\n",data);
 			for ( QStringList::Iterator
@@ -478,12 +479,14 @@ bool SaXManipulateDesktop::enable3D (void) {
 			) {
 				QString line (*in);
 				if (line = "nvidia:NVIDIA Corporation") {
-					return true;
+					foundBinaryNVidiaDriver = true;
 				} 
 			}
-			excNvidiaDriverMissing();
-			qError (errorString(),EXC_NVIDIADRIVERMISSING);
-			return false;
+			if (! foundBinaryNVidiaDriver) {
+				excNvidiaDriverMissing();
+				qError (errorString(),EXC_NVIDIADRIVERMISSING);
+				return false;
+			}
 		}
 		//========================================
 		// have extension, add it
@@ -498,10 +501,65 @@ bool SaXManipulateDesktop::enable3D (void) {
 		//----------------------------------------
 		if (driver) {
 			cardInfo.setCardDriver (*driver);
-			return true;
 		}
-		// should not happen...
-		return false;
+	}
+	//====================================
+	// Import profiles if there are any
+	//------------------------------------
+	if (cardData) {
+		QStringList profiles;
+		QString* profile3D = cardData -> find ("3DProfile");
+		if ((profile3D) && (! profile3D->contains("DualHead"))) {
+			profiles += *profile3D;
+		}
+		SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
+		QDict<QString> driverMap = mapHandle.readDict();
+		QString driver = cardInfo.getCardDriver();
+		if ((! driver.isEmpty()) && (driverMap[driver])) {
+			QStringList items = QStringList::split ( ",", *driverMap[driver] );
+			profiles += items;
+		}
+		for (
+			QStringList::Iterator it=profiles.begin();
+			it != profiles.end(); ++it
+		) {
+			QString profile (*it);
+			SaXImportProfile* pProfile = new SaXImportProfile (
+				PROFILE_DIR + profile
+			);
+			pProfile -> doImport();
+			//====================================
+			// handle Card Options
+			//------------------------------------
+			SaXImport* mImportCard = pProfile -> getImport ( SAX_CARD );
+			if ( mImportCard ) {
+				QDict<QString> profileDriverOptions;
+				SaXManipulateCard saxProfileCard ( mImportCard );
+				profileDriverOptions = saxProfileCard.getOptions();
+				QDictIterator<QString> it ( profileDriverOptions );
+				for (; it.current(); ++it) {
+					QString key = it.currentKey();
+					QString val = *it.current();
+					cardInfo.addCardOption (key,val);
+				}
+			}
+			//====================================
+			// handle Desktop Options
+			//------------------------------------
+			SaXImport* mImportDesktop = pProfile -> getImport ( SAX_DESKTOP );
+			if ( mImportDesktop ) {
+				QDict<QString> profileDriverOptions;
+				SaXManipulateDesktop saxProfileDesktop (
+					mImportDesktop,mCard,mPath
+				);
+				//====================================
+				// Colordepth...
+				//------------------------------------
+				QString color = saxProfileDesktop.getColorDepth();
+				setColorDepth (color.toInt());
+			}
+		}
+		return true;
 	}
 	//====================================
 	// No CDB record found for mCardName
@@ -586,7 +644,6 @@ bool SaXManipulateDesktop::disable3D (void) {
 					return false;
 				}
 			}
-			return true;
 		}
 		//========================================
 		// have extension, remove it
@@ -600,10 +657,49 @@ bool SaXManipulateDesktop::disable3D (void) {
 		//----------------------------------------
 		if (driver2D) {
 			cardInfo.setCardDriver (*driver2D);
-			return true;
 		}
-		// should not happen...
-		return false;
+	}
+	//====================================
+	// Reset profiles if there are any
+	//------------------------------------
+	if (cardData) {
+		QStringList profiles;
+		QString* profile3D = cardData -> find ("3DProfile");
+		if ((profile3D) && (! profile3D->contains("DualHead"))) {
+			profiles += *profile3D;
+		}
+		SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
+		QDict<QString> driverMap = mapHandle.readDict();
+		QString driver = cardInfo.getCardDriver();
+		if ((! driver.isEmpty()) && (driverMap[driver])) {
+			QStringList items = QStringList::split ( ",", *driverMap[driver] );
+			profiles += items;
+		}
+		for (
+			QStringList::Iterator it=profiles.begin();
+			it != profiles.end(); ++it
+		) {
+			QString profile (*it);
+			SaXImportProfile* pProfile = new SaXImportProfile (
+				PROFILE_DIR + profile
+			);
+			pProfile -> doImport();
+			//====================================
+			// remove Card Options
+			//------------------------------------
+			SaXImport* mImportCard = pProfile -> getImport ( SAX_CARD );
+			if ( mImportCard ) {
+				QDict<QString> profileDriverOptions;
+				SaXManipulateCard saxProfileCard ( mImportCard );
+				profileDriverOptions = saxProfileCard.getOptions();
+				QDictIterator<QString> it ( profileDriverOptions );
+				for (; it.current(); ++it) {
+					QString key = it.currentKey();
+					cardInfo.removeCardOption (key);
+				}
+			}
+		}
+		return true;
 	}
 	//====================================
 	// No CDB record found for mCardName

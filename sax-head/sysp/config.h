@@ -79,7 +79,7 @@ STATUS        : Status: Up-to-date
 #define PROFILECOUNT      "/usr/share/sax/sysp/script/profilecount.pl"
 #define PSECTION          "/usr/share/sax/sysp/script/psection.pl"
 #define PDRIVER           "/usr/share/sax/sysp/script/profiledriver.pl"
-#define DIAG              "/usr/share/sax/sysp/script/diag.pl"
+#define CAPI              "/sbin/capi"
 #define GETVENDOR         "/usr/share/sax/sysp/script/vendor.pl"
 #define VBIOS             "/usr/share/sax/sysp/script/vbios.pl"
 

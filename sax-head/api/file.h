@@ -32,6 +32,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include "common/log.h"
 
+namespace SaXGUI {
 //====================================
 // Defines
 //------------------------------------
@@ -60,5 +61,5 @@ class SCCFile : public QFile {
 	public:
 	SCCFile ( const QString& );
 };
-
+} // end namespace
 #endif

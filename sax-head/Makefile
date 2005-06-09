@@ -87,6 +87,8 @@ all:
 	# building GUI and tools...
 	#--------------------------------------------
 	( cd api && ./.make )
+	( cd cpi && ./.make )
+	${MAKE} -C ./cpi all
 	${MAKE} -C ./api all
 	${MAKE} -C ./tools all
 
@@ -150,6 +152,7 @@ install:
 	install -m 755 ./xc.pl                                  ${SAXBINVZ}
 	install -m 755 ./tools/xwrapper/xw                      ${SBINVZ}
 	install -m 755 ./api/xapi                               ${SBINVZ}
+	install -m 755 ./api/capi                               ${SBINVZ}
 	install -m 755 ./api/macros/*                           ${APITOOLS}
 	install -m 755 ./startup/pci.pl                         ${SAXBINVZ}
 	install -m 755 ./sysp/sysp                              ${SBINVZ}

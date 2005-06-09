@@ -23,8 +23,9 @@ int main (int argc,char*argv[]) {
 	//=====================================
 	// init variables...
 	//-------------------------------------
-	bool mISaXMode = SAX_SYSTEM_CONFIG;
+	bool mAutoMode = false;
 	bool mUpdate   = false;
+	bool m3DStatus = false;
 
 	//=====================================
 	// init variables...
@@ -57,10 +58,11 @@ int main (int argc,char*argv[]) {
 			{"help"       , 0 , 0 , 'h'},
 			{"desktop"    , 1 , 0 , 'D'},
 			{"colordepth" , 1 , 0 , 'C'},
+			{"status3D"   , 0 , 0 , 'S'},
 			{"new"        , 0 , 0 , 'n'}
 		};
 		int c = getopt_long (
-			argc, argv, "hC:nD:",long_options, &option_index
+			argc, argv, "hC:nD:S",long_options, &option_index
 		);
 		if (c == -1) {
 			break;
@@ -70,13 +72,16 @@ int main (int argc,char*argv[]) {
 				logExit(); usage (0);
 			break;
 			case 'n':
-				mISaXMode = SAX_AUTO_PROBE;
+				mAutoMode = true;
 			break;
 			case 'C':
 				mColorDepth = atoi (optarg);
 			break;
 			case 'D':
 				mDesktop = atoi (optarg);
+			break;
+			case 'S':
+				m3DStatus = true;
 			break;
 			default:
 				logExit(); usage (1);
@@ -99,7 +104,10 @@ int main (int argc,char*argv[]) {
 	SaXConfig* config = new SaXConfig;
 	for (int id=0; id<7; id++) {
 		SaXImport* import = new SaXImport ( importID[id] );
-		import -> setSource ( mISaXMode );
+		import -> setSource ( SAX_SYSTEM_CONFIG );
+		if (mAutoMode) {
+			import -> setSource ( SAX_AUTO_PROBE );
+		}
 		import -> doImport();
 		config -> addImport (import);
 		section.insert (
@@ -113,6 +121,20 @@ int main (int argc,char*argv[]) {
 	if ( mColorDepth ) {
 		setDefaultColorDepth ( section,mDesktop,mColorDepth );
 		mUpdate = true;
+	}
+
+	//=====================================
+	// get 3D status information...
+	//-------------------------------------
+	if ( m3DStatus ) {
+		bool status = get3DStatus ( section,mDesktop );
+		if (status) {
+			printf ("enabled\n");
+			logExit(); exit (0);
+		} else {
+			printf ("disabled\n");
+			logExit(); exit (1);
+		}
 	}
 
 	//=====================================

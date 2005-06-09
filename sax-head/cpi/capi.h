@@ -36,6 +36,7 @@ STATUS        : Status: Development
 // Includes...
 //------------------------------------
 #include "color.h"
+#include "glinfo.h"
 
 //===================================
 // Prototypes...

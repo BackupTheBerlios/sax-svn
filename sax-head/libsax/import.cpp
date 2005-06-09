@@ -228,6 +228,10 @@ SaXImportProfile::SaXImportProfile (const QString & p) {
 	QString* profile = new QString (p);
 	mOptions.append ("-p");
 	mOptions.append (*profile);
+	mDesktop = 0;
+	mCard    = 0;
+	mPointers= 0;
+	mLayout  = 0;
 }
 
 //====================================

@@ -19,6 +19,7 @@ STATUS        : Status: Development
 **************/
 #include "file.h"
 
+namespace SaXGUI {
 //====================================
 // SCCFile constructor...
 //------------------------------------
@@ -144,4 +145,4 @@ QList<QString> SCCFile::getDataList (void) {
 	// ----
 	return (gtxlist);
 }
-
+} // end namespace
