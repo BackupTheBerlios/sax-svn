@@ -379,7 +379,6 @@ fi
 /usr/share/sax/sysp/script/preparelog.pl
 /usr/share/sax/sysp/script/checkmap.pl
 /usr/share/sax/sysp/script/profilecount.pl
-/usr/share/sax/sysp/script/diag.pl
 /usr/share/sax/sysp/script/psection.pl
 /usr/share/sax/sysp/script/profiledriver.pl
 /usr/share/sax/sysp/script/vendor.pl
