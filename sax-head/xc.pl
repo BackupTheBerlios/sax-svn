@@ -152,8 +152,8 @@ sub main {
 		# detected configuration file as final config file
 		# ---
 		$final = LinkConfiguration();
-		print "Automatic configuration is done\n";
-		print "A file $final has been written\n";
+		print "SaX: Automatic configuration is done\n";
+		print "SaX: The file $final has been written\n";
 		CleanTmp();
 		Exit(0);
 	}

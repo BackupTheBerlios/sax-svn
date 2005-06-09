@@ -11,6 +11,7 @@
 #==================================
 # Variables...
 #----------------------------------
+API="/sbin/xapi"
 DOTS="/sbin/dots"
 INIT="/usr/share/sax/init.pl"
 XC="/usr/share/sax/xc.pl"
@@ -365,6 +366,9 @@ IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $IGNORE_PROFILE"
 IN_TRIGGER=0
 IN_OPT=`echo $IN_OPT`
 if [ ! -z "$IN_OPT" ];then
+	IN_TRIGGER=1
+fi
+if [ ! -f $API ];then
 	IN_TRIGGER=1
 fi
 if [ $IN_TRIGGER = 0 ];then
