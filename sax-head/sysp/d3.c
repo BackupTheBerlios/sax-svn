@@ -251,7 +251,7 @@ void Scan3D::Scan (void) {
 		strcpy(data.remove ,none);
 	}
 	// ...
-	// use the 3Ddiag-result script to check for the
+	// use libsax capi program to check for the
 	// current 3D usability state
 	// ---
 	data.active = 0;
