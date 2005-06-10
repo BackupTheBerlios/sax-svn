@@ -76,7 +76,53 @@ void SCCVNC::import ( void ) {
 //=====================================
 // exportData
 //-------------------------------------
-void SCCVNC::exportData ( void ) {
-	// TODO
+bool SCCVNC::exportData ( void ) {
+	//=====================================
+	// check password...
+	//-------------------------------------
+	if ( (mVNCDisplay->isEnabled()) && (mVNCDisplay->isPWDProtected()) ) {
+	if (! mVNCDisplay->checkPassword()) {
+		return false;
+	}
+	}
+	//=====================================
+	// create manipulators...
+	//-------------------------------------
+	SaXManipulateVNC mVNC (
+		mSection["Card"],mSection["Pointers"],mSection["Keyboard"],
+		mSection["Layout"],mSection["Path"]
+	);
+	//=====================================
+	// remove VNC configuration
+	//-------------------------------------
+	mVNC.disableVNC();
+	mVNC.disableHTTPAccess();
+	mVNC.disablePasswordProtection();
+	mVNC.allowMultipleConnections (false);
+	mVNC.removeVNCKeyboard();
+	mVNC.removeVNCMouse();
+	
+	//=====================================
+	// setup VNC configuration
+	//-------------------------------------
+	if ( mVNCDisplay->isEnabled()) {
+		mVNC.enableVNC();
+		mVNC.addVNCKeyboard();
+		mVNC.addVNCMouse();
+
+		if ( mVNCDisplay->isHTTPEnabled() ) {
+			int HTTPPort = mVNCDisplay->getHTTPPort();
+			mVNC.enableHTTPAccess ( HTTPPort );
+		}
+		if ( mVNCDisplay->isPWDProtected() ) {
+			mVNC.enablePasswordProtection (
+				mVNCDisplay->getPassword()
+			);
+		}
+		if ( mVNCDisplay->isShared() ) {
+			mVNC.allowMultipleConnections (true);
+		}
+	}
+	return true;
 }
 } // end namespace

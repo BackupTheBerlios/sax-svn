@@ -167,7 +167,7 @@ void SCCTablet::slotActivate ( bool state ) {
 //====================================
 // exportData
 //------------------------------------
-void SCCTablet::exportData ( void ) {
+bool SCCTablet::exportData ( void ) {
 	//====================================
 	// create manipulators... 
 	//------------------------------------
@@ -311,5 +311,6 @@ void SCCTablet::exportData ( void ) {
 			}
 		}
 	}
+	return true;
 }
 } // end namespace

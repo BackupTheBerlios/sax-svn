@@ -58,7 +58,7 @@ class SCCTablet : public SCCDialog {
 	SCCTabletPens*       mTabletPens;
 
 	public:
-	void exportData ( void );
+	bool exportData ( void );
 	void enablePens ( bool );
 	void init   ( void );
 	void import ( void );

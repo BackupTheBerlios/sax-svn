@@ -72,7 +72,7 @@ class SCCMonitor : public SCCDialog {
 	QCheckBox*         mCheck3D;
 
 	public:
-	void exportData ( void );
+	bool exportData ( void );
 	void init   ( void );
 	void import ( void );
 

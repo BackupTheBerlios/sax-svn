@@ -275,7 +275,7 @@ void SCCMonitor::slotActivate3D ( void ) {
 //====================================
 // exportData
 //------------------------------------
-void SCCMonitor::exportData ( void ) {
+bool SCCMonitor::exportData ( void ) {
 	int card = 0;
 	//====================================
 	// save particular monitor data
@@ -709,5 +709,6 @@ void SCCMonitor::exportData ( void ) {
 	if (mCheck3D->isChecked()) {
 		saxDesktop.enable3D();
 	}
+	return true;
 }
 } // end namespace

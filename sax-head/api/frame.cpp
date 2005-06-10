@@ -683,32 +683,47 @@ void SCCFrame::slotFinish ( void ) {
 //=====================================
 // prepareConfiguration
 //-------------------------------------
-void SCCFrame::prepareConfiguration ( void ) {
+bool SCCFrame::prepareConfiguration ( void ) {
 	if ( ! mMonitor -> needInit() ) {
-		mMonitor -> exportData();
+	if ( ! mMonitor -> exportData() ) {
+		return false;
+	}
 	}
 	if ( ! mMouse -> needInit() ) {
-		mMouse -> exportData();
+	if ( ! mMouse -> exportData() ) {
+		return false;
+	}
 	}
 	if ( ! mKeyboard -> needInit() ) {
-		mKeyboard -> exportData();
+	if ( ! mKeyboard -> exportData() ) {
+		return false;
+	}
 	}
 	if ( ! mTablet -> needInit() ) {
-		mTablet -> exportData();
+	if ( ! mTablet -> exportData() ) {
+		return false;
+	}
 	}
 	if ( ! mToucher -> needInit() ) {
-		mToucher -> exportData();
+	if ( ! mToucher -> exportData() ) {
+		return false;
+	}
 	}
 	if ( ! mVNC -> needInit() ) {
-		mVNC -> exportData();
+	if ( ! mVNC -> exportData() ) {
+		return false;
 	}
+	}
+	return true;
 }
 
 //=====================================
 // saveConfiguration
 //-------------------------------------
 void SCCFrame::saveConfiguration ( void ) {
-	prepareConfiguration();
+	if (! prepareConfiguration()) {
+		return;
+	}
 	mConfig -> setMode (SAX_NEW);
 	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
 	if ( ! mConfig -> createConfiguration() ) {
@@ -748,7 +763,9 @@ void SCCFrame::saveConfiguration ( void ) {
 // testConfiguration
 //-------------------------------------
 void SCCFrame::testConfiguration ( void ) {
-	prepareConfiguration();
+	if (! prepareConfiguration()) {
+		return;
+	}
 	mConfig -> setMode (SAX_NEW);
 	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
 	qApp->setOverrideCursor ( Qt::forbiddenCursor );
@@ -818,7 +835,7 @@ void SCCFrame::installConfiguration ( void ) {
 void SCCFrame::evaluateAutoDetection ( void ) {
 	// .../
 	// check the imported data if there is something important
-	// missing. Checked values are DisplaySize and Monitor Name
+	// missing. Checked values may be DisplaySize and Monitor Name
 	// ----
 	// TODO
 }

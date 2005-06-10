@@ -43,7 +43,7 @@ class SCCVNC : public SCCDialog {
 	SCCVNCDisplay*  mVNCDisplay;
 	
 	public:
-	void exportData ( void );
+	bool exportData ( void );
 	void init   ( void );
 	void import ( void );
 

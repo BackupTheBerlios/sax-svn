@@ -143,6 +143,7 @@ class SaXManipulateKeyboardIF : public SaXKeyRules {
 	virtual QList<QString> getXKBOptionList  ( void ) = 0;
 	virtual QList<QString> getXKBLayout      ( void ) = 0;
 	virtual QList<QString> getXKBVariantList ( void ) = 0;
+	virtual QString getDriver ( void ) = 0;
 
 	public:
 	virtual bool selectKeyboard ( int ) = 0;
@@ -235,6 +236,7 @@ class SaXManipulateKeyboard : public SaXManipulateKeyboardIF {
 	QList<QString> getXKBOptionList  ( void );
 	QList<QString> getXKBLayout      ( void );
 	QList<QString> getXKBVariantList ( void );
+	QString getDriver ( void );
 
 	public:
 	bool selectKeyboard ( int );

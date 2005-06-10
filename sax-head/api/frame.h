@@ -159,7 +159,7 @@ class SCCFrame : public QWidget {
 	void saveConfiguration ( void );
 	void testConfiguration ( void );
 	void installConfiguration ( void );
-	void prepareConfiguration ( void );
+	bool prepareConfiguration ( void );
 
 	public:
 	void evaluateAutoDetection ( void );

@@ -86,7 +86,57 @@ void SCCTouchScreen::import ( void ) {
 //=====================================
 // exportData
 //-------------------------------------
-void SCCTouchScreen::exportData ( void ) {
-	// TODO
+bool SCCTouchScreen::exportData ( void ) {
+	//====================================
+	// create manipulators... 
+	//------------------------------------
+	SaXManipulateTouchscreens saxToucher (
+		mSection["Pointers"]
+	);
+	SaXManipulateDevices saxDevice (
+		mSection["Pointers"],mSection["Layout"]
+	);
+	//====================================
+	// search and remove toucherpanel(s)
+	//------------------------------------
+	int inputCount = mSection["Pointers"]->getCount();
+	for (int i=inputCount;i>=0;i--) {
+		if (saxToucher.selectPointer (i)) {
+		if (saxToucher.isTouchpanel()) {
+			saxDevice.removeInputDevice (i);
+		}
+		}
+	}
+	//====================================
+	// add touchpanel if enabled
+	//------------------------------------
+	QListIterator<SCCTouchSelection> it (mTouchDisplay);
+	for (; it.current() ; ++it) {
+		SCCTouchSelection* toucher = (SCCTouchSelection*)it.current();
+		if (toucher->isEnabled()) {
+			QString vendor = toucher->getVendor();
+			QString model  = toucher->getModel();
+			if (model.isEmpty()) {
+				continue;
+			}
+			int touchID = saxDevice.addInputDevice (SAX_INPUT_TOUCHPANEL);
+			saxToucher.selectPointer ( touchID );
+			saxToucher.setTouchPanel ( vendor,model );
+			//====================================
+			// save touchpanel connection port
+			//------------------------------------
+			QString port = toucher->getPortName();
+			if (port.contains ("ttyS0")) {
+				saxToucher.setDevice ( "/dev/ttyS0" );
+			}
+			if (port.contains ("ttyS1")) {
+				saxToucher.setDevice ( "/dev/ttyS1" );
+			}
+			if (port.contains ("USB")) {
+				saxToucher.setDevice ( "/dev/input/mice" );
+			}			
+		}
+	}
+	return true;
 }
 } // end namespace

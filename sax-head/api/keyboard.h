@@ -49,7 +49,7 @@ class SCCKeyboard : public SCCDialog {
 	QLineEdit*          mTestField;
 
 	public:
-	void exportData ( void );
+	bool exportData ( void );
 	void init   ( void );
 	void import ( void );
 

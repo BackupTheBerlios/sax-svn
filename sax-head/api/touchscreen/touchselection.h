@@ -82,6 +82,7 @@ class SCCTouchSelection : public SCCDialog {
 	public slots:
 	void slotActivateToucher ( void );
 	void slotVendor ( QListBoxItem* );
+	void slotName   ( QListBoxItem* );
 
 	signals:
 	void sigActivate ( bool );

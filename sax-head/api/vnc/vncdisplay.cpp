@@ -67,6 +67,7 @@ SCCVNCDisplay::SCCVNCDisplay (
 	mPWD2 = new QLineEdit ( pwd2 );
 	mPWD2 -> setEchoMode ( QLineEdit::Password );
 	mPWD2 -> setMaximumWidth ( 400 );
+	mPWD2 -> setDisabled ( true );
 
 	QLabel* hidden2 = new QLabel ( mEntries );
 	hidden2 -> setFixedHeight ( 5 );
@@ -114,12 +115,18 @@ SCCVNCDisplay::SCCVNCDisplay (
 // init
 //------------------------------------
 void SCCVNCDisplay::init ( void ) {
-	// nothing to be done for init...
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	mPWD = mText["NewPassword"];
 }
 //====================================
 // import
 //------------------------------------
 void SCCVNCDisplay::import ( void ) {
+	//=====================================
+	// get translation pointer
+	//-------------------------------------
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+
 	//====================================
 	// create VNC manipulator
 	//------------------------------------
@@ -138,6 +145,10 @@ void SCCVNCDisplay::import ( void ) {
 	//------------------------------------
 	if (mVNC.isPwdProtectionEnabled()) {
 		mCheckPWD -> setChecked ( true );
+		mPWD = mText["ChangePassword"];
+		mPWD1 -> setText ( mPWD );
+		mPWD1 -> setEchoMode ( QLineEdit::Normal );
+		mPWD2 -> setDisabled ( true );
 	}
 	//====================================
 	// handle VNC multi connection feature
@@ -152,6 +163,13 @@ void SCCVNCDisplay::import ( void ) {
 		mCheckHTTP -> setChecked ( true );
 		mHTTP -> setValue ( mVNC.getHTTPPort() );
 	}
+	//====================================
+	// connect input field
+	//------------------------------------
+	QObject::connect (
+		mPWD1      , SIGNAL ( textChanged       ( const QString &) ),
+		this       , SLOT   ( slotInput1Changed ( const QString &) )
+	);
 }
 //====================================
 // isEnabled
@@ -184,42 +202,66 @@ int SCCVNCDisplay::getHTTPPort ( void ) {
 	return mHTTP->value();
 }
 //====================================
-// setupPassword
+// checkPassword
 //------------------------------------
-void SCCVNCDisplay::setupPassword ( void ) {
+bool SCCVNCDisplay::checkPassword ( void ) {
 	if (mCheckPWD -> isOn()) {
+		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
 		if (mPWD2 -> isEnabled()) {
-		if (mPWD1->text() != mPWD2->text()) {
-			SCCMessage* mMessageBox = new SCCMessage (
-				qApp->mainWidget(), mTextPtr, SaXMessage::OK, "PWDMismatch",
-				"MessageCaption", SaXMessage::Critical
-			);
-			mMessageBox -> showMessage();
-			mPWD1->clear();
-			mPWD2->clear();
-			return;
-		} else if (mPWD1->text().length() < 6) {
-			SCCMessage* mMessageBox = new SCCMessage (
-				qApp->mainWidget(), mTextPtr, SaXMessage::OK, "PWDTooShort",
-				"MessageCaption", SaXMessage::Critical
-			);
-			mMessageBox -> showMessage();
-			mPWD1->clear();
-			mPWD2->clear();
-			return;
+			if (mPWD1->text() != mPWD2->text()) {
+				SCCMessage* mMessageBox = new SCCMessage (
+					qApp->mainWidget(), mTextPtr, SaXMessage::OK, "PWDMismatch",
+					"MessageCaption", SaXMessage::Critical
+				);
+				mMessageBox -> showMessage();
+				mPWD = mText["NewPassword"];
+				mPWD1->clear();
+				mPWD2->clear();
+				mPWD1 -> setText ( mPWD );
+				mPWD1 -> setEchoMode ( QLineEdit::Normal );
+				mPWD2->setDisabled ( true );
+				mPWD1->setFocus();
+				return false;
+			} else if (mPWD1->text().length() < 6) {
+				SCCMessage* mMessageBox = new SCCMessage (
+					qApp->mainWidget(), mTextPtr, SaXMessage::OK, "PWDTooShort",
+					"MessageCaption", SaXMessage::Critical
+				);
+				mMessageBox -> showMessage();
+				mPWD = mText["NewPassword"];
+				mPWD1->clear();
+				mPWD2->clear();
+				mPWD1 -> setText ( mPWD );
+				mPWD1 -> setEchoMode ( QLineEdit::Normal );
+				mPWD2->setDisabled ( true );
+				mPWD1->setFocus();
+				return false;
+			} else {
+				return true;
+			}
 		} else {
-			QProcess* proc = new QProcess ();
-			proc -> addArgument ( GETVNCPWD );
-			proc -> addArgument ( mPWD1->text() );
-			if ( ! proc -> start() ) {
-				return;
+			if (mPWD == mText["ChangePassword"]) {
+				return true;
+			} else {
+				SCCMessage* mMessageBox = new SCCMessage (
+					qApp->mainWidget(), mTextPtr, SaXMessage::OK, "PWDMismatch",
+					"MessageCaption", SaXMessage::Critical
+				);
+				mMessageBox -> showMessage();
+				return false;
 			}
-			while (proc->isRunning()) {
-				usleep (1000);
-			}
-		}
 		}
 	}
+	return false;
+}
+//====================================
+// getPassword
+//------------------------------------
+QString SCCVNCDisplay::getPassword ( void ) {
+	if (mCheckPWD -> isOn()) {
+		return mPWD1->text();
+	}
+	return QString();
 }
 //====================================
 // slotActivateVNC
@@ -249,6 +291,26 @@ void SCCVNCDisplay::slotHTTP ( bool on ) {
 		mHTTPEntries -> setDisabled (false);
 	} else {
 		mHTTPEntries -> setDisabled (true);
+	}
+}
+//====================================
+// slotInput1Changed
+//------------------------------------
+void SCCVNCDisplay::slotInput1Changed (const QString& data) {
+	if (mPWD1 -> echoMode() != QLineEdit::Password) {
+		mPWD1 -> setEchoMode ( QLineEdit::Password );
+		mPWD1 -> clear();
+		if (! mPWD2 -> isEnabled()) {
+			mPWD2 -> setDisabled (false);
+		}
+		QChar start;
+		for (unsigned int i=0;i< data.length();i++) {
+		if (data.at(i) != mPWD.at(i)) {
+			start = data.at(i);
+			break;
+		}
+		}
+		mPWD1 -> setText (start);
 	}
 }
 } // end namespace

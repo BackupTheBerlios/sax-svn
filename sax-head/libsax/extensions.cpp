@@ -70,7 +70,9 @@ SaXManipulateVNC::SaXManipulateVNC (
 		qError (errorString(),EXC_LAYOUTIMPORTBINDFAILED);
 		return;
 	}
-	mLayout = layout;
+	mLayout   = layout;
+	mPointer  = pointer;
+	mKeyboard = kbd;
 }
 
 //====================================
@@ -249,6 +251,9 @@ void SaXManipulateVNC::removeVNCMouse (void) {
 	if (! mLayout) {
 		return;
 	}
+	if (mVNCMouse == -1) {
+		mVNCMouse = searchVNCDevice ( SAX_VNC_MOUSE );
+	}
 	mManipPointer->removeInputDevice (mVNCMouse);
 	mLayout -> setItem ("VNC","");
 	mVNCMouse = -1;
@@ -264,9 +269,48 @@ void SaXManipulateVNC::removeVNCKeyboard (void) {
 	if (! mLayout) {
 		return;
 	}
+	if (mVNCKeyboard == -1) {
+		mVNCKeyboard = searchVNCDevice ( SAX_VNC_KEYBOARD );
+	}
 	mManipKeyboard->removeInputDevice (mVNCKeyboard);
 	mLayout -> setItem ("VNC","");
 	mVNCKeyboard = -1;
+}
+
+//====================================
+// searchVNCDevice
+//------------------------------------
+int SaXManipulateVNC::searchVNCDevice ( int flag ) {
+	SaXManipulateMice mManipInput ( mPointer );
+	SaXManipulateKeyboard mManipKeyboard ( mKeyboard );
+	int input1Count = mPointer->getCount();
+	int input2Count = mKeyboard->getCount();
+	int pINPUT = mPointer->getCurrentID();
+	int pKBD   = mKeyboard->getCurrentID();
+	int result = -1;
+	if (flag == SAX_VNC_MOUSE) {
+		for (int i=input1Count;i>=0;i--) {
+		if (mManipInput.selectPointer (i)) {
+			QString driver = mManipInput.getDriver();
+			if (driver == "rfbmouse") {
+				result = i; break;
+			}
+		}
+		}
+	}
+	if (flag == SAX_VNC_KEYBOARD) {
+		for (int i=input2Count;i>=0;i--) {
+		if (mManipKeyboard.selectKeyboard (i)) {
+			QString driver = mManipKeyboard.getDriver();
+			if (driver == "rfbkeyb") {
+				result = i; break;
+			}
+		}
+		}
+	} 
+	mManipInput.selectPointer ( pINPUT );
+	mManipKeyboard.selectKeyboard ( pKBD );
+	return result;
 }
 
 //====================================

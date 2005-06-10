@@ -155,7 +155,7 @@ void SCCMouse::slotActivate ( void ) {
 //====================================
 // exportData
 //------------------------------------
-void SCCMouse::exportData ( void ) {
+bool SCCMouse::exportData ( void ) {
 	int mouseID = 0;
 	QListIterator<SCCMouseDisplay> it (mMouseDisplay);
 	for (; it.current() ; ++it) {
@@ -228,5 +228,6 @@ void SCCMouse::exportData ( void ) {
 		}
 		//}
 	}
+	return true;
 }
 } // end namespace

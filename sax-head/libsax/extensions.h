@@ -28,6 +28,8 @@ STATUS        : Status: Development
 
 #include "import.h"
 #include "device.h"
+#include "pointers.h"
+#include "keyboard.h"
 #include "card.h"
 #include "path.h"
 
@@ -36,6 +38,8 @@ namespace SaX {
 // Defines...
 //------------------------------------
 #define SAX_CREATE_VNC_PWD  "/var/lib/sax/createVNC.sh"
+#define SAX_VNC_MOUSE       0
+#define SAX_VNC_KEYBOARD    1
 
 //====================================
 // Interface class for dlopen ability
@@ -169,10 +173,15 @@ class SaXManipulateVNC : public SaXManipulateVNCIF {
 	int mVNCKeyboard;
 
 	private:
-	SaXManipulateDevices* mManipKeyboard;
-	SaXManipulateDevices* mManipPointer;
-	SaXManipulatePath*    mManipModules;
-	SaXImport*            mLayout;
+	SaXManipulateDevices*  mManipKeyboard;
+	SaXManipulateDevices*  mManipPointer;
+	SaXManipulatePath*     mManipModules;
+	SaXImport*             mLayout;
+	SaXImport*             mPointer;
+	SaXImport*             mKeyboard;
+
+	private:
+	int searchVNCDevice    ( int );
 
 	public:
 	void addVNCKeyboard    ( void );

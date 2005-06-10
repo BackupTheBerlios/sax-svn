@@ -429,6 +429,19 @@ void SaXManipulateKeyboard::setMapping (
 }
 
 //====================================
+// getDriver
+//------------------------------------
+QString SaXManipulateKeyboard::getDriver (void) {
+	// .../
+	//! return the driver used for this keyboard device
+	// ----
+	if (! mImport) {
+		return QString();
+	}
+	return mImport -> getItem ("Driver");
+}
+
+//====================================
 // getXKBOptionList
 //------------------------------------
 QList<QString> SaXManipulateKeyboard::getXKBOptionList (void) {

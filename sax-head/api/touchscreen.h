@@ -48,7 +48,7 @@ class SCCTouchScreen : public SCCDialog {
 	QTabWidget* mTouchscreenTab;
 
 	public:
-	void exportData ( void );
+	bool exportData ( void );
 	void init   ( void );
 	void import ( void );
 

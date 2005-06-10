@@ -119,7 +119,7 @@ void SCCKeyboard::apply ( void ) {
 //====================================
 // exportData
 //------------------------------------
-void SCCKeyboard::exportData ( void ) {
+bool SCCKeyboard::exportData ( void ) {
 	//====================================
 	// create Manipulator
 	//------------------------------------
@@ -174,5 +174,6 @@ void SCCKeyboard::exportData ( void ) {
 		}
 		count++;
 	}
+	return true;
 }
 } // end namespace

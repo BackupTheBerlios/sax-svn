@@ -67,6 +67,10 @@ SCCTouchSelection::SCCTouchSelection (
 		this         , SLOT   (slotVendor    ( QListBoxItem* ))
 	);
 	QObject::connect (
+		mModelList   , SIGNAL (clicked       ( QListBoxItem* )),
+		this         , SLOT   (slotName      ( QListBoxItem* ))
+	);
+	QObject::connect (
 		mVendorList  , SIGNAL (returnPressed ( QListBoxItem* )),
 		this         , SLOT   (slotVendor    ( QListBoxItem* ))
 	);
@@ -166,6 +170,7 @@ void SCCTouchSelection::import ( void ) {
 			QListBoxItem* name = mModelList -> findItem ( modelName );
 			if ( name ) {
 				mModelList -> setSelected ( name, true );
+				slotName ( name );
 			}
 		}
 	}
@@ -210,9 +215,11 @@ void SCCTouchSelection::slotActivateToucher ( void ) {
 	if ( mCheckEnable -> isChecked()) {
 		mModelVendorGroup -> setDisabled ( false );
 		mPortGroup -> setDisabled ( false );
+		mEnabled = true;
 	} else {
 		mModelVendorGroup -> setDisabled ( true );
 		mPortGroup -> setDisabled ( true );
+		mEnabled = false;
 	}
 }
 //====================================
@@ -231,6 +238,30 @@ void SCCTouchSelection::slotVendor ( QListBoxItem* item ) {
 		mModelList -> insertItem (*it.current());
 	}
 	mModelList -> sort();
+}
+//====================================
+// slotName
+//------------------------------------
+void SCCTouchSelection::slotName ( QListBoxItem* item ) {
+	if (! mSaxToucher ) {
+		return;
+	}
+	QDict<QString> dataDict = mSaxToucher->getPanelData (
+		mVendorList->currentText(),item->text()
+	);
+	if (dataDict["Device"]) {
+		QString device = *dataDict["Device"];
+		QRegExp identifier ("/dev/input/event");
+		if (identifier.search (device) >= 0) {
+			mPortBox -> setCurrentItem ( 0 );
+		}
+		if (device == "/dev/ttyS0") {
+			mPortBox -> setCurrentItem ( 1 );
+		}
+		if (device == "/dev/ttyS1") {
+			mPortBox -> setCurrentItem ( 2 );
+		}
+	}
 }
 //====================================
 // getVendor

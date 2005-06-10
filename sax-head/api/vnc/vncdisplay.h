@@ -36,12 +36,6 @@ STATUS        : Status: Development
 //-------------------------------------
 #include "dialog.h"
 
-//=====================================
-// Defines
-//-------------------------------------
-#define MACROS_DIR  "/usr/share/sax/api/macros"
-#define GETVNCPWD   MACROS_DIR "/getVNCPassword"
-
 namespace SaXGUI {
 //====================================
 // Class SCCTabletSelection
@@ -59,6 +53,7 @@ class SCCVNCDisplay : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
+	QString        mPWD;
 
 	private:
 	QBoxLayout*    mMainLayout;
@@ -81,16 +76,18 @@ class SCCVNCDisplay : public SCCDialog {
 	bool isPWDProtected ( void );
 	bool isShared       ( void );
 	int  getHTTPPort    ( void );
-	void setupPassword  ( void );
+	bool checkPassword  ( void );
+	QString getPassword ( void );
 
 	public:
 	void init   ( void );
 	void import ( void );
 
 	public slots:
-	void slotActivateVNC ( bool );
-	void slotPassword    ( bool );
-	void slotHTTP        ( bool );
+	void slotInput1Changed ( const QString& );
+	void slotActivateVNC   ( bool );
+	void slotPassword      ( bool );
+	void slotHTTP          ( bool );
 
 	public:
 	SCCVNCDisplay (
