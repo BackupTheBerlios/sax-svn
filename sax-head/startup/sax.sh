@@ -112,7 +112,7 @@ function usage() {
 	echo "  enable automatic configuration." 
 	echo
 	echo "[ -l | --lowres ]"
-	echo "  use only 640x480 60 Hz standard mode."
+	echo "  use only 800x600@75 Hz standard mode."
 	echo "  DDC detection is switched off in this case"
 	echo
 	echo "[ -V | --vesa ]"
@@ -206,7 +206,7 @@ while true ; do
 		DIALOG="-O $2"
 	shift 2 ;;
 
-	-l|--lowres)                # enable 640x480 virtual screen to make
+	-l|--lowres)                # enable 800x600 virtual screen to make
 		LOW_RES="-v"            # sure this mode is used for config
 	shift ;;
 
