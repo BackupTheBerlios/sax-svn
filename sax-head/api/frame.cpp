@@ -540,10 +540,10 @@ void SCCFrame::slotCancel ( void ) {
 		);
 		QString result = mMessageBox -> showMessage();
 		if (result == mText["Yes"]) {
-			exitSaX();
+			exitSaX (1);
 		}
 	} else {
-		exitSaX();
+		exitSaX (1);
 	}
 }
 
@@ -640,7 +640,7 @@ void SCCFrame::loadApplication ( void ) {
 		mProgress.setProgress ( id + 1 );
 		qApp->processEvents();
 		if ( mProgress.wasCanceled() ) {
-			exitSaX();
+			exitSaX (1);
 		}
 		SaXImport* import = new SaXImport ( importID[id] );
 		import -> setSource ( SAX_SYSTEM_CONFIG );

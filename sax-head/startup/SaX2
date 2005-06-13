@@ -17,7 +17,6 @@ trap "signal" EXIT HUP INT TERM PIPE QUIT ABRT SEGV
 function signal {
 	killall dots.pl 2>/dev/null >/dev/null
 	test -n "$TMPFILE" && rm -f $TMPFILE
-	exit 0
 }
 
 function validRunlevel {
@@ -101,16 +100,6 @@ if [ ! "$UID" = 0 ];then
 	exit 0
 fi
 
-# Use sax2_sbus to configure Sun framebuffer cards
-# ------------------------------------------------
-if [ -x /sbin/sax2_sbus ] ; then
-	/sbin/sax2_sbus -s > /dev/null
-	if [ $? = 0 ] ; then
-		exit 0
-	fi
-fi
-
 # run the main sax start script...
 # ---------------------------------
 /sbin/sax.sh $*
-

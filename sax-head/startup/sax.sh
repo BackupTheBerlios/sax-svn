@@ -407,10 +407,11 @@ else
 	echo
 	$XC $XC_OPT 2>>$ERR
 fi
+exitCode=$?
 
 #==================================
 # restart GPM and exit
 #----------------------------------
 StartGPM; echo
-exit 0
+exit $exitCode
 
