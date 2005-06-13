@@ -983,6 +983,11 @@ msgstr "Пароль"
 msgid "<Enter new password...>"
 msgstr "<Введіть новий пароль...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Введіть новий пароль...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Перевірити пароль"
@@ -1029,6 +1034,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 - вихід з програми... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після "
+"наступного перезапуску графічної системи."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1405,13 +1445,6 @@ msgstr "Бездіяльний таймер..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після "
-#~ "наступного перезапуску графічної системи."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після "
@@ -1615,9 +1648,6 @@ msgstr "Бездіяльний таймер..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "Інформація запуску SaX2"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 - вихід з програми... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 - останні кроки..."

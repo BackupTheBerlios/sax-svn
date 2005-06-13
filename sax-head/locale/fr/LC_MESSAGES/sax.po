@@ -995,6 +995,11 @@ msgstr "Mot de passe"
 msgid "<Enter new password...>"
 msgstr "<Entrer un nouveau mot de passe...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Entrer un nouveau mot de passe...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Vérifier le mot de passe"
@@ -1042,6 +1047,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "Programme de sortie SaX2..."
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>La configuration a été enregistrée :</b><hr>Vos modifications seront "
+"effectives la prochaine fois que votre système graphique sera redémarré."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1424,13 +1464,6 @@ msgstr "Délai d'inactivité..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>La configuration a été enregistrée :</b><hr>Vos modifications seront "
-#~ "effectives la prochaine fois que votre système graphique sera redémarré."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>La configuration a été enregistrée :</b><hr>Vos modifications seront "
@@ -1637,9 +1670,6 @@ msgstr "Délai d'inactivité..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "Informations de démarrage SaX2"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "Programme de sortie SaX2..."
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "Étapes finales SaX2..."

@@ -976,6 +976,11 @@ msgstr "Senha"
 msgid "<Enter new password...>"
 msgstr "<Digitar nova senha...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Digitar nova senha...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Verificar senha"
@@ -1022,6 +1027,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "Saída do programa SaX2... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Configuração salva:</b><hr>Suas modificações entrarão em vigor na próxima "
+"vez em que o sistema gráfico for reiniciado."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1398,13 +1438,6 @@ msgstr "Temporizador ocioso..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Configuração salva:</b><hr>Suas modificações entrarão em vigor na "
-#~ "próxima vez em que o sistema gráfico for reiniciado."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Configuração salva:</b><hr>Suas modificações entrarão em vigor na "
@@ -1610,9 +1643,6 @@ msgstr "Temporizador ocioso..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "Informações de inicialização do SaX2"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "Saída do programa SaX2... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "Etapas finais do SaX2..."

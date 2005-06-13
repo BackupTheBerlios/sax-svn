@@ -995,6 +995,11 @@ msgstr "Συνθηματικό"
 msgid "<Enter new password...>"
 msgstr "<Εισάγετε νέο συνθηματικό...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Εισάγετε νέο συνθηματικό...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Επαλήθευση Συνθηματικού"
@@ -1042,6 +1047,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 έξοδος προγράμματος..."
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Οι ρυθμίσεις έχουν αποθηκευτεί:</b><hr>Παρακαλώ σημειώστε ότι οι "
+"διαμορφώσεις σας θα λειτουργήσουν μόλις επανεκκινηθεί το σύστημα γραφικών."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 # /tmp/xapi:514#
@@ -1424,13 +1464,6 @@ msgstr "Χρονομετρητής Αδράνειας..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Οι ρυθμίσεις έχουν αποθηκευτεί:</b><hr>Παρακαλώ σημειώστε ότι οι "
-#~ "διαμορφώσεις σας θα λειτουργήσουν μόλις επανεκκινηθεί το σύστημα γραφικών."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Οι ρυθμίσεις έχουν αποθηκευτεί:</b><hr>Παρακαλώ σημειώστε ότι οι "
@@ -1639,9 +1672,6 @@ msgstr "Χρονομετρητής Αδράνειας..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "Πληροφορίες εκκίνησης SaX2"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 έξοδος προγράμματος..."
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 τελικά βήματα..."

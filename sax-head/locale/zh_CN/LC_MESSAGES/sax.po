@@ -973,6 +973,11 @@ msgstr "口令"
 msgid "<Enter new password...>"
 msgstr "<输入新口令...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<输入新口令...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "校验口令"
@@ -1014,6 +1019,39 @@ msgstr "<b>软件安装：</b><hr>缺少某些包。 是否立即安装这些缺
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 退出程序... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr "<b>配置已保存：</b><hr>您的修改将在下次重启动图形系统时生效。"
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1371,11 +1409,6 @@ msgstr "空闲计时器..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr "<b>配置已保存：</b><hr>您的修改将在下次重启动图形系统时生效。"
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr "<b>配置已保存：</b><hr>您的修改将在下次<b>重引导</b>系统时生效。"
 
@@ -1566,9 +1599,6 @@ msgstr "空闲计时器..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "SaX2 启动信息"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 退出程序... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 最后步骤..."

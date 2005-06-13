@@ -987,6 +987,11 @@ msgstr "Passwort"
 msgid "<Enter new password...>"
 msgstr "<Neues Passwort eingeben...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Neues Passwort eingeben...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Passwort prüfen"
@@ -1034,6 +1039,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 beenden..."
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Die Konfiguration wurde gespeichert:</b><hr>Bitte beachten Sie, dass die "
+"Änderungen erst nach dem Neustart des graphischen Systems wirksam werden."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1411,14 +1451,6 @@ msgstr "Verbleibend..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Die Konfiguration wurde gespeichert:</b><hr>Bitte beachten Sie, dass "
-#~ "die Änderungen erst nach dem Neustart des graphischen Systems wirksam "
-#~ "werden."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Die Konfiguration wurde gespeichert:</b><hr>Bitte beachten Sie, dass "
@@ -1623,9 +1655,6 @@ msgstr "Verbleibend..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "SaX2-Startinformation"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 beenden..."
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 abschließende Schritte..."

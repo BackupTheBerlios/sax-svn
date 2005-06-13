@@ -983,6 +983,11 @@ msgstr "Slaptaþodis"
 msgid "<Enter new password...>"
 msgstr "<Ávesti naujà slaptaþodá...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Ávesti naujà slaptaþodá...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Patikrinti slaptaþodá"
@@ -1030,6 +1035,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 palieka programà... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti tik ið naujo "
+"paleidus grafinæ sistemà."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1401,13 +1441,6 @@ msgstr "Tuðèios eigos taimeris..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti tik ið naujo "
-#~ "paleidus grafinæ sistemà."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti <b>ið naujo "
@@ -1609,9 +1642,6 @@ msgstr "Tuðèios eigos taimeris..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "SaX2 paleidimo informacija"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 palieka programà... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 uþbaigiamieji þingsniai..."

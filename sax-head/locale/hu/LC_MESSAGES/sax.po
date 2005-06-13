@@ -1058,6 +1058,11 @@ msgstr "Jelszó"
 msgid "<Enter new password...>"
 msgstr "<Adja meg az új jelszót...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Adja meg az új jelszót...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Jelszó mégegyszer"
@@ -1105,6 +1110,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "Kilépés a SaX2 programból... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Beállítások mentése sikerült:</b><hr>Vegye figyelembe, hogy a módsítások "
+"csak a grafikus felület következő újraindításakor lépnek érvénybe."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1507,14 +1547,6 @@ msgstr "Tétlenség időzítő..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Beállítások mentése sikerült:</b><hr>Vegye figyelembe, hogy a "
-#~ "módsítások csak a grafikus felület következő újraindításakor lépnek "
-#~ "érvénybe."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Beállítások mentése sikerült:</b><hr>Vegye figyelembe, hogy a "
@@ -1739,9 +1771,6 @@ msgstr "Tétlenség időzítő..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "SaX2 indítási információk"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "Kilépés a SaX2 programból... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 - utolsó lépések..."

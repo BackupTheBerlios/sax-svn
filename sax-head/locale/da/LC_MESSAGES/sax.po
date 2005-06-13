@@ -975,6 +975,10 @@ msgstr ""
 msgid "<Enter new password...>"
 msgstr ""
 
+#. LineEdit contents: change password
+msgid "<Change password...>"
+msgstr ""
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr ""
@@ -1016,6 +1020,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 afslut program... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have effekt "
+"næste gang det grafiske system bliver genstartet."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1420,14 +1459,6 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have "
-#~ "effekt næste gang det grafiske system bliver genstartet."
-
-#, fuzzy
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have "
@@ -1611,9 +1642,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "SaX2 start-up information"
 #~ msgstr "SaX2 opstarts information"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 afslut program... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 de sidste skridt..."

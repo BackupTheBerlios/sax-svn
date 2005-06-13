@@ -984,6 +984,11 @@ msgstr "Wachtwoord"
 msgid "<Enter new password...>"
 msgstr "<Geef nieuw wachtwoord...>"
 
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password...>"
+msgstr "<Geef nieuw wachtwoord...>"
+
 #. LineEdit contents: verify password
 msgid "Verify password"
 msgstr "Wachtwoord controle"
@@ -1031,6 +1036,41 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing data"
+msgstr ""
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2 - Importing..."
+msgstr "SaX2 programma stoppen... "
+
+#. Progress window label text
+msgid "Initialize chache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving configuration failed:</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
+"the next time the graphics system is restarted. Do you want to exit SaX2 "
+"now ?"
+msgstr ""
+"<b>De configuratie is opgeslagen:</b><hr>Uw modificaties hebben pas effect "
+"wanneer u het grafische systeem opnieuw heeft opgestart."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing configuration failed:</b><hr>For further information please refer "
+"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
+"created from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1409,13 +1449,6 @@ msgstr "Idle timer..."
 
 #~ msgid ""
 #~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time the graphics system is restarted."
-#~ msgstr ""
-#~ "<b>De configuratie is opgeslagen:</b><hr>Uw modificaties hebben pas "
-#~ "effect wanneer u het grafische systeem opnieuw heeft opgestart."
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
 #~ "effect the next time your system is <b>rebooted</b>."
 #~ msgstr ""
 #~ "<b>De configuratie is opgeslagen:</b><hr>Uw modificatie hebben pas effect "
@@ -1621,9 +1654,6 @@ msgstr "Idle timer..."
 
 #~ msgid "SaX2 start-up information"
 #~ msgstr "SaX2 opstart informatie"
-
-#~ msgid "SaX2 exit program... "
-#~ msgstr "SaX2 programma stoppen... "
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 laatste stappen..."
