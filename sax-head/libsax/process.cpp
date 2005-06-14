@@ -24,7 +24,7 @@ namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
-SaXProcess::SaXProcess ( void ) {
+SaXProcess::SaXProcess ( int prog ) {
 	// .../
 	//! An object of this type is used to read information
 	//! from one of the interfaces ISAX CDB SYSP or PROFILE.
@@ -33,19 +33,30 @@ SaXProcess::SaXProcess ( void ) {
 	//! The CDB information is based on simple file reading
 	// ----
 	mProc = new QProcess ();
+	mProg = prog;
+}
+
+//====================================
+// setProgram...
+//------------------------------------
+void SaXProcess::setProgram ( int prog ) {
+	// .../
+	//! set the program to use for calling the process
+	// ----
+	mProg = prog;
 }
 
 //====================================
 // start...
 //------------------------------------
-void SaXProcess::start ( QList<char> args, int prog ) {
+void SaXProcess::start ( QList<char> args ) {
 	// .../
 	//! This start method will check if (prog) is a valid
 	//! program and call it by adding the options set in
 	//! args. After the call the appropriate evaluation
 	//! method is called to store the data
 	// ----
-	switch (prog) {
+	switch (mProg) {
 		case SAX_ISAX:
 			mProc -> addArgument ( ISAX );
 		break;
@@ -63,26 +74,16 @@ void SaXProcess::start ( QList<char> args, int prog ) {
 	for (; it.current(); ++it) {
 		mProc->addArgument ( it.current() );
 	}
+	connect (
+		mProc , SIGNAL ( processExited  (void)),
+		this  , SLOT   ( readFromStdout (void))
+	);
 	if ( ! mProc -> start() ) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
 	}
 	while (mProc->isRunning()) {
 		usleep (1000);
-	}
-	switch (prog) {
-		case SAX_ISAX:
-			storeData();
-		break;
-		case SAX_SYSP:
-			storeDataSysp();
-		break;
-		case SAX_PROF:
-			storeData();
-		break;
-		default:
-			storeData();
-		break;
 	}
 }
 
@@ -104,6 +105,29 @@ void SaXProcess::start ( int fileID ) {
 		break;
 		default:
 			storeDataCDB (fileID);
+		break;
+	}
+}
+
+//====================================
+// readFromStdout
+//------------------------------------
+void SaXProcess::readFromStdout ( void ) {
+	// .../
+	//! Ready to read process data from STDOUT
+	// ----
+	switch (mProg) {
+		case SAX_ISAX:
+			storeData();
+		break;
+		case SAX_SYSP:
+			storeDataSysp();
+		break;
+		case SAX_PROF:
+			storeData();
+		break;
+		default:
+			storeData();
 		break;
 	}
 }

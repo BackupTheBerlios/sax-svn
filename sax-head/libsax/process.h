@@ -90,7 +90,8 @@ namespace SaX {
 */
 class SaXProcessIF : public SaXStorage {
 	public:
-	virtual void start ( QList<char>, int = SAX_ISAX ) = 0;
+	virtual void setProgram ( int ) = 0;
+	virtual void start ( QList<char> ) = 0;
 	virtual void start ( int ) = 0;
 
 	public:
@@ -121,8 +122,11 @@ class SaXProcessIF : public SaXStorage {
 * \endcode
 */
 class SaXProcess : public SaXProcessIF {
+	Q_OBJECT
+
 	private:
 	QProcess*     mProc;
+	int           mProg;
 
 	private:
 	void storeData     ( void );
@@ -131,11 +135,15 @@ class SaXProcess : public SaXProcessIF {
 	void storeDataSYS  ( int  );
 
 	public:
-	void start ( QList<char>, int = SAX_ISAX );
+	void setProgram ( int );
+	void start ( QList<char> );
 	void start ( int );
 
+	public slots:
+	void readFromStdout ( void );
+
 	public:
-	SaXProcess ( void );
+	SaXProcess ( int = SAX_ISAX );
 };
 } // end namespace
 #endif
