@@ -231,8 +231,7 @@ install-docs:
 	#--------------------------------------------
 	install -m 644 ./LICENSE           ${PACKDOCVZ}
 	install -m 644 ./doc/README        ${PACKDOCVZ}
-	install -m 644 ./doc/en/compiled/* ${PACKDOCVZ}
-	install -m 644 ./doc/de/compiled/* ${PACKDOCVZ}
+	install -m 644 ./doc/sax.pdf       ${PACKDOCVZ}
 
 	#============================================
 	# SaX2 tools manual pages
