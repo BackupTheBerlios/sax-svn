@@ -131,10 +131,17 @@ class SaXException {
 };
 
 //==================================
+// Process class wrapper...
+//----------------------------------
+class SaXProcess {
+	public:
+	SaXProcess ( int = SAX_ISAX );
+};
+
+//==================================
 // ANSI C/C++ declarations...
 //----------------------------------
 %include "../../storage.h"
-%include "../../process.h"
 %include "../../export.h"
 %include "../../import.h"
 %include "../../init.h"
