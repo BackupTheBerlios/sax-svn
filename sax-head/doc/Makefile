@@ -7,7 +7,7 @@
 # project
 #
 all:
-	touch index/sax.ind
+	touch sax-index/sax.ind
 	latex sax.tex
 	latex sax.tex
 	mv sax.idx ./sax-index
@@ -19,6 +19,7 @@ clean:
 	rm -f sax-index/sax.ilg
 	rm -f sax-index/sax.ind
 	rm -f sax-index/sax.idx
+	rm -f *.dvi
 	rm -f *.idx
 	rm -f *.toc
 	rm -f *.log
