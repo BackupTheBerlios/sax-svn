@@ -14,6 +14,7 @@ all:
 	( cd ./sax-index && makeindex -g -s sax.ist sax.idx )
 	latex sax.tex
 	latex sax.tex
+	dvipdf sax.dvi
 
 dvi:
 	xdvi sax.dvi
