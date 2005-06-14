@@ -14,6 +14,9 @@ all:
 	( cd ./sax-index && makeindex -g -s sax.ist sax.idx )
 	latex sax.tex
 	latex sax.tex
+
+dvi:
+	xdvi sax.dvi
 	
 clean:
 	rm -f sax-index/sax.ilg
@@ -26,3 +29,4 @@ clean:
 	rm -f *.bmt
 	rm -f *.aux
 	rm -f *.mtc*
+	rm -f *.out
