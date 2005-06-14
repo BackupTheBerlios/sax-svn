@@ -389,10 +389,7 @@ fi
 /var/adm/perl-modules/sax2
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
-%doc %{_defaultdocdir}/sax2/sax.en.ps
-%doc %{_defaultdocdir}/sax2/sax.en.dvi
-%doc %{_defaultdocdir}/sax2/sax.de.ps
-%doc %{_defaultdocdir}/sax2/sax.de.dvi
+%doc %{_defaultdocdir}/sax2/sax.pdf
 
 #=================================================
 # SaX-GUI file list...  
