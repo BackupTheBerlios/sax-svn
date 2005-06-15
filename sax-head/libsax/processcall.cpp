@@ -86,7 +86,6 @@ bool SaXProcessCall::start ( void ) {
 	while ( mProc->isRunning() ) {
 		usleep (1000);
 	}
-	//fflush (stdout);
 	return true;
 }
 
