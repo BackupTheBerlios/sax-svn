@@ -103,9 +103,6 @@ void SaXInit::doInit (void) {
 		qError (errorString(),EXC_PERMISSIONDENIED);
 		return;
 	}
-	if (! setLock()) {
-		return;
-	}
 	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SAX_INIT );
 	QListIterator<char> it (mOptions);
@@ -115,10 +112,8 @@ void SaXInit::doInit (void) {
 	if ( ! proc -> start() ) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
-		unsetLock();
 		return;
 	}
-	unsetLock();
 }
 
 //====================================

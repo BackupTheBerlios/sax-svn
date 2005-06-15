@@ -37,6 +37,7 @@ namespace SaX {
 #define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
 #define PROFILE_DIR       "/usr/share/sax/profile/"
 #define MAP_DIR           "/usr/share/sax/sysp/maps/"
+#define SYSP_VENDOR       "/usr/share/sax/sysp/script/vendor.pl"
 
 //====================================
 // Interface class for dlopen ability
@@ -166,6 +167,9 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	QList<QString> mCDBMonitorList;
 	QDict<QString> mCDBMonitorData;
 	int            mDesktopID;
+
+	private:
+	QString getVendorForDriver ( const QString& );
 
 	public:
 	void calculateModelines ( bool );

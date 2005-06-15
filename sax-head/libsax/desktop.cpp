@@ -249,10 +249,8 @@ bool SaXManipulateDesktop::is3DCard (void) {
 				// check 3D driver installation
 				//------------------------------------
 				if ( driver == "nvidia") {
-					SaXImportSysp* p3D = new SaXImportSysp (SYSP_3D);
-					p3D -> doImport();
-					QString NVFlag = p3D -> getItem ("Flag");
-					if ((! NVFlag.isEmpty()) && (NVFlag != "NVDummy")) {
+					QString vendor = getVendorForDriver ( driver );
+					if (vendor == "NVIDIA Corporation") {
 						return true;
 					}
 					return false;
@@ -823,9 +821,8 @@ bool SaXManipulateDesktop::is3DEnabled (void) {
 	}
 	QString driver = mCard -> getItem ("Driver");
 	if (driver == "nvidia") {
-		SaXImportSysp* p3D = new SaXImportSysp (SYSP_3D);
-		p3D -> doImport();
-		if ((p3D->getItem("Flag")) && (p3D->getItem("Flag") == "NVReal")) {
+		QString vendor = getVendorForDriver ( driver );
+		if (vendor == "NVIDIA Corporation") {
 			return true;
 		}
 		return false;
@@ -1205,5 +1202,20 @@ void SaXManipulateDesktop::setCDBMonitorData (
 	mCDBMonitors -> addGroup (
 		group,key,value
 	);
+}
+//====================================
+// getVendorForDriver
+//------------------------------------
+QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
+	SaXProcessCall* proc = new SaXProcessCall ();
+	proc -> addArgument ( SYSP_VENDOR );
+	proc -> addArgument ( driver );
+	if ( ! proc -> start() ) {
+		excProcessFailed();
+		qError (errorString(),EXC_PROCESSFAILED);
+	}
+	QByteArray data = proc -> readStdout();
+	QStringList lines = QStringList::split ("\n",data);
+	return lines.first();
 }
 } // end namespace
