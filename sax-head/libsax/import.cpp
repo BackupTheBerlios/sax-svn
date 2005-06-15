@@ -163,8 +163,7 @@ void SaXImportSysp::doImport (void) {
 	//! call SaXProcess::start() to obtain the sysp provided
 	//! information
 	// ----
-	setProgram ( SAX_SYSP );
-	start ( mOptions );
+	start ( mOptions,SAX_SYSP );
 }
 
 //====================================
@@ -246,8 +245,7 @@ void SaXImportProfile::doImport (void) {
 	//! into single sections which can be retrieved using
 	//! getImport()
 	// ----
-	setProgram ( SAX_PROF );
-	start ( mOptions );
+	start ( mOptions,SAX_PROF );
 	splitImport();
 }
 

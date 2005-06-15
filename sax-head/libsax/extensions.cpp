@@ -118,7 +118,7 @@ void SaXManipulateVNC::setPassword (const QString& pwd) {
 	if (! setLock()) {
 		return;
 	}
-	QProcess* proc = new QProcess ();
+	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SAX_CREATE_VNC_PWD );
 	proc -> addArgument ( pwd );
 	if ( ! proc -> start() ) {
@@ -126,9 +126,6 @@ void SaXManipulateVNC::setPassword (const QString& pwd) {
 		qError (errorString(),EXC_PROCESSFAILED);
 		unsetLock();
 		return;
-	}
-	while (proc->isRunning()) {
-		usleep (1000);
 	}
 	unsetLock();
 }

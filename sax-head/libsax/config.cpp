@@ -195,14 +195,11 @@ bool SaXConfig::createConfiguration (void) {
 			return false;
 		}
 	}
-	QProcess* proc = new QProcess ();
+	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SAX_CREATE_API );
 	if ( ! proc -> start() ) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
-	}
-	while (proc->isRunning()) {
-		usleep (1000);
 	}
 	QFileInfo api (SAX_API_FILE);
 	if (! api.exists()) {
@@ -224,9 +221,6 @@ bool SaXConfig::createConfiguration (void) {
 	if ( ! proc -> start() ) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
-	}
-	while (proc->isRunning()) {
-		usleep (1000);
 	}
 	if (! xf86openConfigFile (CONFPATH,SAX_API_CONFIG,0)) {
 		excFileOpenFailed (0);
@@ -324,7 +318,7 @@ int SaXConfig::testConfiguration (void) {
 	if (! createConfiguration()) {
 		return -1;
 	}
-	QProcess* test = new QProcess ();
+	SaXProcessCall* test = new SaXProcessCall ();
 	test -> addArgument ( SAX_TEST_CONFIG );
 	test -> addArgument ( "-d"  );
 	test -> addArgument ( ":99" );
@@ -332,9 +326,6 @@ int SaXConfig::testConfiguration (void) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
 		return -1;
-	}
-	while (test->isRunning()) {
-		usleep (1000);
 	}
 	int exitCode = 0;
 	QByteArray data = test -> readStdout();

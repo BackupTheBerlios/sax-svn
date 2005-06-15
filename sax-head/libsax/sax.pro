@@ -17,6 +17,7 @@ SOURCES   += layout.cpp
 SOURCES   += device.cpp
 SOURCES   += file.cpp
 SOURCES   += interface.cpp
+SOURCES   += processcall.cpp
 
 HEADERS   += storage.h
 HEADERS   += import.h
@@ -36,6 +37,7 @@ HEADERS   += layout.h
 HEADERS   += device.h
 HEADERS   += file.h
 HEADERS   += interface.h
+HEADERS   += processcall.h
 
 
 QMAKE_CXXFLAGS += -rdynamic -DPIC

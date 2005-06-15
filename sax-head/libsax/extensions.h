@@ -24,8 +24,6 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include <qprocess.h>
-
 #include "import.h"
 #include "device.h"
 #include "pointers.h"

@@ -380,16 +380,13 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 			//====================================
 			// ask profile for changes if dynamic
 			//------------------------------------
-			QProcess* proc = new QProcess ();
+			SaXProcessCall* proc = new SaXProcessCall ();
 			proc -> addArgument ( SAX_PROFILE_CHECK );
 			proc -> addArgument ( *profile );
 			if ( ! proc -> start() ) {
 				excProcessFailed();
 				qError (errorString(),EXC_PROCESSFAILED);
 				return false;
-			}
-			while (proc->isRunning()) {
-				usleep (1000);
 			}
 			if (proc->exitStatus() == 0) {
 				return true;
@@ -461,15 +458,12 @@ bool SaXManipulateDesktop::enable3D (void) {
 		// nvidia drv. needed, check if installed
 		//----------------------------------------
 		if ((driver) && (*driver == "nvidia")) {
-			QProcess* proc = new QProcess ();
+			SaXProcessCall* proc = new SaXProcessCall ();
 			proc -> addArgument ( XSLOAD );
 			proc -> addArgument ( "-vendor" );
 			if ( ! proc -> start() ) {
 				excProcessFailed();
 				qError (errorString(),EXC_PROCESSFAILED);
-			}
-			while (proc->isRunning()) {
-				usleep (1000);
 			}
 			bool foundBinaryNVidiaDriver = false;
 			QByteArray data = proc->readStdout();
@@ -622,15 +616,12 @@ bool SaXManipulateDesktop::disable3D (void) {
 		// nvidia drv. needed, check if installed
 		//----------------------------------------
 		if ((driver) && (*driver == "nvidia")) {
-			QProcess* proc = new QProcess ();
+			SaXProcessCall* proc = new SaXProcessCall ();
 			proc -> addArgument ( XSLOAD );
 			proc -> addArgument ( "-vendor" );
 			if ( ! proc -> start() ) {
 				excProcessFailed();
 				qError (errorString(),EXC_PROCESSFAILED);
-			}
-			while (proc->isRunning()) {
-				usleep (1000);
 			}
 			QByteArray data = proc->readStdout();
 			QStringList lines = QStringList::split ("\n",data);

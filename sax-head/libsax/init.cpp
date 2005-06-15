@@ -106,7 +106,7 @@ void SaXInit::doInit (void) {
 	if (! setLock()) {
 		return;
 	}
-	QProcess* proc = new QProcess ();
+	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SAX_INIT );
 	QListIterator<char> it (mOptions);
 	for (; it.current(); ++it) {
@@ -117,9 +117,6 @@ void SaXInit::doInit (void) {
 		qError (errorString(),EXC_PROCESSFAILED);
 		unsetLock();
 		return;
-	}
-	while (proc->isRunning()) {
-		usleep (1000);
 	}
 	unsetLock();
 }

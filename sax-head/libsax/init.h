@@ -24,8 +24,7 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include <qprocess.h>
-
+#include "processcall.h"
 #include "exception.h"
 
 namespace SaX {

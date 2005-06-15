@@ -24,11 +24,11 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include <qprocess.h>
 #include <qregexp.h>
 
 #include "storage.h"
 #include "exception.h"
+#include "processcall.h"
 
 namespace SaX {
 //====================================
@@ -90,8 +90,7 @@ namespace SaX {
 */
 class SaXProcessIF : public SaXStorage {
 	public:
-	virtual void setProgram ( int ) = 0;
-	virtual void start ( QList<char> ) = 0;
+	virtual void start ( QList<char>,int = SAX_ISAX ) = 0;
 	virtual void start ( int ) = 0;
 
 	public:
@@ -122,11 +121,8 @@ class SaXProcessIF : public SaXStorage {
 * \endcode
 */
 class SaXProcess : public SaXProcessIF {
-	Q_OBJECT
-
 	private:
-	QProcess*     mProc;
-	int           mProg;
+	SaXProcessCall* mProc;
 
 	private:
 	void storeData     ( void );
@@ -135,15 +131,11 @@ class SaXProcess : public SaXProcessIF {
 	void storeDataSYS  ( int  );
 
 	public:
-	void setProgram ( int );
-	void start ( QList<char> );
+	void start ( QList<char>, int = SAX_ISAX );
 	void start ( int );
 
-	public slots:
-	void readFromStdout ( void );
-
 	public:
-	SaXProcess ( int = SAX_ISAX );
+	SaXProcess ( void );
 };
 } // end namespace
 #endif
