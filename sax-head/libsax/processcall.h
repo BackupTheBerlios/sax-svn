@@ -54,13 +54,16 @@ class SaXProcessCallIF : public QObject {
 //------------------------------------
 /*! \brief SaX2 -  Linux process execution class.
 *
+* The SaXProcessCall class provides an interface to call Linux
+* processes and wait for them until data to STDOUT has received
+* or the process has exited. SaXProcessCall objects are mainly
+* used within the SaXProcess implementation.
 */
 class SaXProcessCall : public SaXProcessCallIF {
 	Q_OBJECT
 
 	private:
 	QProcess*  mProc;
-	bool       mExited;
 
 	public:
 	void addArgument ( const QString& );
