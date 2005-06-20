@@ -1,31 +1,45 @@
 \chapter{The SaX Principle, based on X11 R6, Version 4.x}
 \label{cha:dsp}
 \minitoc
-In contrast to the existing SaX version (2.8), a three-layered model was
+SaX is based on a three-layered model which was
 developed for configuring X11. Briefly outlined, a registration of
 hardware is performed in the first layer, in the second layer the actual
 configuration takes place, which can either be completely automated or be
 done manually, using the information gathered up till now. The third layer
 serves to optimize the position and size of the image, after a successful
-configuration and start of the X server. 
+configuration and start of the X server.\\
 
-A further important difference to the existing version is that the graphical
-interface provides, as a result, a strictly formatted file which is then 
-imported, and which can be used to create the actual configuration
-file. This approach allows the graphical interface to be developed in a
-completely transparent manner. In this case it also doesn't matter with what
-means this was created. Whether this was done with ncurses, Tk, Qt or
-whatever it is based on, you must only ensure that the result of the
-configuration of a file matches the corresponding format. The format of this
-interface is described in chapter~\ref{cha:api}.\\
+As a result, the first layer will create a cache file named
+\textit{/var/cache/sax/files/config} which is then imported from the second
+layer to create the initial configuration suggestion. Up to this point
+a common formatted interface named \textbf{ISaX} serves as proxy between
+the configuration data and the program using the data. ISaX is able to
+provide a common interface between the cache data gathered up till now and
+the data contained in an eventually existing configuration file
+\textit{/etc/xorg.conf}. ISaX is also able to receive data of the same
+format as it will provide to create or modify the actual configuration
+file. The program using the data only needs to create such an interface
+file and request \textbf{isax} to create the X11 configuration. Using the
+interface more comfortable can be done by using the development
+library called \textbf{libsax}.\\
 
-The implementation of the new SaX version is based on the languages 
-\textbf{C} and \textbf{Perl}. Many small tools, for adjusting the mouse, for
+This approach allows the graphical interface to be developed in a completely
+transparent manner. In this case it also doesn't matter with what means
+this was created. Whether this was done with ncurses, Tk, Qt or whatever it
+is based on, you must only ensure that the result of the configuration is 
+either an ISaX interface file matching the corresponding format or use libsax
+if available in your destination language. The format of the interface is
+described in appendix ~\ref{cha:api}.\\
+
+The implementation of SaX is based on the languages 
+\textbf{C++} and \textbf{Perl}. Many small tools, for adjusting the mouse, for
 example, or for parsing various formats, were implemented in C. For reasons of
 performance, the storage and the re-reading of the hardware registration was
 also implemented in C. The principle and procedure of the configuration,
 writing the configuration file and the GUI which SaX itself suggests, were
-implemented in Perl or Perl-Tk.
+implemented in Qt.
+
+\newpage
 
 \index{init.pl}
 \section{Level 1: Init}
@@ -33,11 +47,11 @@ implemented in Perl or Perl-Tk.
 Init is represented by  \textbf{init.pl} and takes on the following tasks:\\
 \begin{itemize}
 \item Creating the principle file structure and determining default settings.
-\item Detection of hardware with reference to PCI/AGP graphics cards, pointer
-  devices, keyboard and monitor. The actual hardware scan is started by a sysp
-  (System-Profiler) call-up. Sysp is an independent program which is given its
-  functionality through insertable modules, which in turn can take on a
-  specific task. In the case of SaX, only modules were developed for detecting
+\item Detection of hardware with reference to PCI/PCI-E/AGP graphics cards,
+  pointer devices, keyboard and monitor. The actual hardware scan is started
+  by a sysp (System-Profiler) call-up. Sysp is an independent program which is
+  given its functionality through insertable modules, which in turn can take on
+  a specific task. In the case of SaX, only modules were developed for detecting
   the above-mentioned components. A description of the individual modules can
   be found in chapter ~\ref{cha:sys}.
 \item Entry of data into the hardware registry. By means of functions from the
@@ -62,40 +76,46 @@ XC (X-Configuration) is represented by xc.pl and
 takes over the following tasks:
 \begin{itemize}
 \item Reading the hardware registry. Reading in the registry is done very
-  quickly, since the data has already been saved in the form of a hash. Data
-  can thus be read in directly to a perl hash and processed further. 
+      quickly, since the data has already been saved in the form of a hash. Data
+      can thus be read in directly to a perl hash and processed further. 
 \item By means of the functions from \textit{CreateSections.pm}, 
-      a first automatic X11 file is created from the hardware registry. This
-      configuration is then used to start the X server. If the user is
-      satisfied with this configuration, no further configuration tool needs
-      to be started. The user can then choose if he wants to change the
-      position and size of the image, start SaX, abort the configuration or
-      save the current configuration.  The mode tuning is supported by a perl
-      module with the name \textit{XFineControl.pm}. This module is used both
-      at this point as well as later on in SaX, since the actual program
-      \textit{xfine} which makes changes to the screen, merely protocols the
-      changes to the modeline in \textit{/var/cache/xfine/...}.
-      The exact structure of the files in \textit{/var/cache/xfine/} and
-      how xfine functions is described in chapter ~\ref{cha:xfi}.
+      a first automatic X11 file is created from the hardware registry. If 
+      no X server is running this configuration is then used to start the
+      server. In this case the user is prompted with an information about
+      a first configuration suggestion. If the user is satisfied with
+      this configuration he can simply save it and no further configuration
+      tool needs to be started otherwise the user can start the SaX GUI or
+      abort the configuration. If there is a server running already,
+      xc will start the SaX GUI directly and import the actual configuration
+	  file. The mode tuning is supported by a perl module with the name
+      \textit{XFineControl.pm}. This module is used in SaX/libsax, since the
+      actual program \textit{xfine} which makes changes to the screen,
+      merely protocols the changes to the modeline in
+	  \textit{/var/cache/xfine/...}. The exact structure of the files
+      in \textit{/var/cache/xfine/} and how xfine functions is described
+      in chapter ~\ref{cha:xfi}.
 \item Starting the graphical interface. The interface itself in turn makes use
-  of the data stored in the hardware registry.
+      of the data stored in the hardware registry.
       Depending on whether an already existing configuration file should be
       read in or not, either data is used from the registry, or information
-      from the configuration file. The reading in of an already existing
-      configuration file is done by a perl module called
+      from the configuration file. Encapsulated into the \textbf{ISaX}
+      interface the following tasks can be done. The reading in of an already
+      existing configuration file is done by a perl module called
       \textit{ParseConfig.pm}. This module represents an extension of the 
       Perl interpreter and is based on the \textbf{libxf86config.a}, which is
-      included from version 4.x of X11 R6. The interface itself only has the
-      task of creating a Variables-API file, from which an X11 configuration
-      file is newly created, through a later import, using the
-      \textit{ImportAPI.pm} module in conjunction with the
-      \textit{CreateSections.pm} module. The newly created X11 configuration
+      included from version 4.x of X11 R6. The graphical interface itself
+      only has the task of creating a Variables-API file, from which an
+      X11 configuration file is newly created, through a later import, using
+      the \textit{ImportAPI.pm} module in conjunction with the
+      \textit{CreateSections.pm} module. Another possibility of creating
+	  the Variables-API file is using the methods from libsax. libsax
+      hides all the tasks of creating the Variables-API file and calling
+      \textbf{isax} within a high level C++ library. More information
+	  about libsax can be found in chapter ~\ref{cha:libsax}.
+      In case of testing the newly created X11 configuration the
       file is used to start a second instance of the X server. On this server
       the tuning tool xfine is started, to be able to make possible changes in
-      position and size. Saving the configuration file is done through the
-      SaveAndExit() function, which is a part of the SaX interface. This
-      function, however, is only set off by xfine, which should prevent a
-      non-functioning configuration file from being stored in the system. 
+      position and size.
 \end{itemize}
 
 \index{xw}
@@ -109,53 +129,38 @@ name \textit{xw} is derived from \textbf{xw}rapper. The program fulfills the
 following tasks:
 \begin{itemize}
 \item Starting the X server in its own process. Here the first option is
-  interpreted as the logfile name, the remaining options are passed on to the
-  X server. The server is started in a process created by xw through
-  fork(). The output of the X server in the child process, which is written
-  to the STDERR channel, is diverted to the logfile by a freeopen() call.
+      interpreted as the logfile name, the remaining options are passed on to
+	  the X server. The server is started in a process created by xw through
+      fork(). The output of the X server in the child process, which is written
+      to the STDERR channel, is diverted to the logfile by a freeopen() call.
       xw itself ( father ) remains in the foreground and waits. 
 \item Only when the SIGUSR1 signal has been received, which is sent by the X
-  server to the calling process, is the server ready to work. If the signal
-  arrives, then the father process is ended, whilst the child process ( X
-  server ) continues to function. The process number of the child process is
-  here output to STDOUT.
+      server to the calling process, is the server ready to work. If the signal
+      arrives, then the father process is ended, whilst the child process ( X
+      server ) continues to function. The process number of the child process is
+      here output to STDOUT.
+\item Set up background picture and surrounding corner marks
 \end{itemize}
 
 \index{options}
 \section{Startup Script}
 \label{sec:sta}
-The coordination of the processes \textbf{init.pl}, \textbf{xc.pl}
-and \textbf{xfine.pl} is controlled by the startup script \textit{sax.sh}, 
+The coordination of the processes \textbf{init.pl} and \textbf{xc.pl}
+is controlled by the startup script \textit{sax.sh}, 
 which is located in \textit{/sbin} and is usually called up by the 
 wrapper script \textit{/sbin/SaX2}. The wrapper here takes over the
 following tasks:
 \begin{itemize}
 \item Creating a secure, temporary directory with \textbf{mktemp}. 
 \item Testing for root permissions. If a normal user calls up the program,
-  then authentication is required. This is done by the xauth mechanism, via
-  the  \textit{sux} command, or via the xhost mechanism, if sux does not
-  exist. In both cases the root password has to be given.  
-\item Testing the X11 link environment. From version 4.x. of X11 onwards
-  there are various xinit calls to start the X server. The original
-  \textit{/usr/X11R6/bin/xinit} is now just a link to one of the two following
-  programs:
-      \begin{itemize}
-      \item /usr/X11R6/bin/xinit3x for X11 R6 v3.3.x
-      \item /usr/X11R6/bin/xinit4  for X11 R6 v4.x
-      \end{itemize} 
-      The script tests and sets this link, if it is needed. A corresponding
-      message and query is output, if the link does not point to xinit4. 
-\item Calling up the actual SaX2 startup script, \textbf{sax.sh}
+      then authentication is required. This is done by the xauth mechanism, via
+      the  \textit{sux} command, or via the xhost mechanism, if sux does not
+      exist. In both cases the root password has to be given.  
+\item Calling up the actual SaX2 startup script, \textbf{/sbin/sax.sh}
 \end{itemize}
 The ability to pass on options to the startup script is provided by the sum of
-options from init.pl and xc.pl.
-The following options are available:
+options from init.pl and xc.pl. The following options are available:
 \begin{itemize}
-\item \verb+-f | --forceinit+\\
-      With this option the hardware registry is deleted and then newly
-      created. If you include this option it will force init.pl to be called
-      up. 
-
 \item \verb+-b | --batchmode <interactive|profile>+\\
       With this option the so-called batch mode is activated.
       In this case SaX will not start immediately, but depending on the
@@ -179,8 +184,7 @@ The following options are available:
 \item \verb+-l | --lowres+\\
       With this option the DDC detection is switched off. This means that
       possible information provided by the monitor on its resolution options
-      will not be used. 
-      SaX will then start in 640x480 VGA mode.
+      will not be used. SaX will then start in 800x600 VGA mode.
 
 \item \verb+-m | --modules+\\
       With this option, a server module can be assigned for each graphics
@@ -210,9 +214,9 @@ The following options are available:
       The sequence of module allocation always increases by a step of one.
 
 \item \verb+-p | --pci+\\
-      With this information, SaX outputs the result of the PCI/AGP detection. 
-      The output is important in determining which chip number was assigned to
-      which graphics card.
+      With this information, SaX outputs the result of the PCI/PCI-E/AGP
+      detection. The output is important in determining which chip number
+      was assigned to which graphics card.
 
 \item \verb+-d | --display < Display-Number >+\\
       With this option the number of the display to be used can be defined. It
@@ -247,29 +251,40 @@ The following options are available:
       \textbf{NOTE:} Currently this option does not work for X1 R6 v4.0-based
       X servers.
 
-\item \verb+-o | --noscan+\\
-      This option creates a new registry from the current data of the system 
-      profiler (sysp) without carrying out a hardware scan.
+\item \verb+-s | --sysconfig+\\
+      this option tell SaX2 to import the system wide config file even
+      if SaX2 was started from a textconsole which normaly will import
+      the SaX2 HW detection data
 
-\item \verb+-w | --nowarn+\\
-      This option suppresses the warning messages on the use of a possibly
-      existing registry.
+\item \verb+--vesa+\\
+      This  option will set a given resolution and vertical sync value
+      (in Hz) as VESA standard resolution for  a  specific  card.  The
+      format is the following: \textbf{Card:XxY@VSync Example: 0:1024x768@85}
+
+\item \verb+--fullscreen+\\
+      start in fullscreen mode
+
+\item \verb+-i | --ignoreprofile+\\
+      This option will disable the use of profiles which are normally
+      applied automatically if defined for a specifc card or chipset
+
+\item \verb+-r | --reinit+\\
+      Remove detection database and re-init the hardware database
+
+\item \verb+-v | --version+\\
+      print version information and exit.
 \end{itemize}
 
-
-\newpage 
+\newpage
+ 
 \section{Diagram of procedures}
-
 \index{diagram of procedures}
 \begin{figure}[h]
 \centering
-\epsfig{file=figures/cheme.ps,width=11.5cm}
-\caption{SaX2 Flow diagram}
+%\caption{SaX: Diagram of procedures}
+%\vspace*{0.3cm}
+\includegraphics[scale=0.45]{figures/cheme.eps}
 \end{figure}
-
-
-
-
 
 %%% Local Variables: 
 %%% mode: latex
