@@ -10,7 +10,12 @@ void* myFunction (void*);
 int main (void) {
 	pthread_t outThreadID1;
 	pthread_t outThreadID2;
+	printf ("starting first thread\n");
 	pthread_create (&outThreadID1, 0, myFunction, 0);
+
+	usleep (500000);
+
+	printf ("starting second thread\n");
 	pthread_create (&outThreadID2, 0, myFunction, 0);
 
 	pthread_join (outThreadID1,NULL);
@@ -37,7 +42,7 @@ void* myFunction (void*) {
 		import -> setSource ( SAX_SYSTEM_CONFIG );
 		import -> doImport();
 		config -> addImport (import);
-		printf ("Importing %s\n",import->getSectionName().ascii());
+		printf ("_______Importing %s\n",import->getSectionName().ascii());
 		section.insert (
 			import->getSectionName(),import
 		);
