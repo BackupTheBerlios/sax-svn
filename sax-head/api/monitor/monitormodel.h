@@ -35,6 +35,7 @@ STATUS        : Status: Development
 #include <qlabel.h>
 #include <qspinbox.h>
 #include <qlistbox.h>
+#include <math.h>
 
 //=====================================
 // Includes

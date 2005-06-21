@@ -7,7 +7,7 @@ all:
 		-fno-strict-aliasing -pipe -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o libSaX.so -L/usr/X11R6/lib -L/usr/lib/qt3/lib \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
-	mcs -nologo -g -o SaX.dll -t:library SaX*.cs SWIGTYPE* && \
+	mcs -nologo -debug -out:SaX.dll -t:library SaX*.cs SWIGTYPE* && \
 		rm -f SaX*.cs SWIGTYPE*
 
 install_vendor:
