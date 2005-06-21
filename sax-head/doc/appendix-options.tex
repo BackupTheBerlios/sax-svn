@@ -6,7 +6,7 @@
 \item Four cards are inserted, of which the last 3 should be used. For cards 2
   and 4, modules should be set. In this case the command would be:
       \begin{verbatim}
-        SaX2 -c 1,2,3 -m 0=mga,2=nv
+        sax2 -c 1,2,3 -m 0=mga,2=nv
       \end{verbatim}
       The numbering of the chips begins with 0, as does the order of
       modules. The device 0 is connected to chip 1, device 1 to chip 2, device
@@ -17,12 +17,12 @@
       card. A multihead setup should be created which in each case uses the
       first chip on both cards:
       \begin{verbatim}
-        SaX2 -c 0 3 
+        sax2 -c 0 3 
       \end{verbatim}
       If modules need to be allocated for these chipsets, then it should be
       noted that these are detected as card 0 and card 1 and consequently the
       module option needs to be set to 0 and 1: 
       \begin{verbatim}
-        SaX -c 0,3 -m 0=mga,1=glint
+        sax2 -c 0,3 -m 0=mga,1=glint
       \end{verbatim}
 \end{enumerate}

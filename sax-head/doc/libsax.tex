@@ -3,14 +3,12 @@
 \label{cha:libsax}
 \minitoc
 
-Between the SaX GUI and the SaX engine an interface exists to
+Between the SaX2 GUI and the SaX2 engine an interface exists to
 transport the information from the GUI into the engine which
 is then able to create or modify the X11 configuration. This
-interface is called \textbf{ISaX}. A complete explanation about
-how SaX2 is structured can be found within the documentation
-at \textit{/usr/share/doc/packages/sax2}. 
-The ISaX interface is the basis for the C++ library explained here.
-The library is based on the following major topics:
+interface is called \textbf{ISaX}. The ISaX interface is the basis for
+the C++ library explained here. The library is divided into the
+following major areas:
 
 \begin{enumerate}
 \item \textbf{\underline{Init:}}\\
@@ -26,26 +24,25 @@ The library is based on the following major topics:
 The programmer starts with an init() sequence to be able to
 access the automatically generated configuration suggestion which is
 based on the hardware detection. After this it is possible to
-import,manipulate and export information.
+import,manipulate and export information. The task of initializing
+is done by \textbf{init.pl} explained in chapter ~\ref{sec:le1} and
+shown as black box in the SaX2: Diagram of procedures.
 
-\section{Rough diagram of SaX2 procedures}
-To give an introduction about how the ISaX interface is working
-as part of SaX2 the following rough overview will show the basics
-of the SaX2 engine.
+\section{Diagram of libsax procedures}
+The following diagram provides a more detailed description of
+what init.pl does and how \textbf{isax} interferes between the
+autoprobed data and the actual configuration file
+\textit{/etc/X11/xorg.conf}.
 
 \newpage
 
 \begin{figure}[h]
-\caption{SaX2 Flow diagram}
-\vspace*{0.2cm}
+\centering
 \includegraphics[scale=0.5]{figures/sax.eps}
+\caption{libsax diagram of procedures}
 \end{figure}
 
 \section{SaX Import Classes}
-%The programmer starts with an init() sequence to be able to
-%access the automatically generated configuration suggestion which is
-%based on the hardware detection. After this it is possible to
-%import a set of information. Following import methods are available:
 \begin{itemize}
 \item \textbf{\underline{ISAX}}\\
       The data of the currently used X11 configuration or the automatically
@@ -109,7 +106,7 @@ manipulation classes are specified:
       touchscreen configuration settings
 \end{itemize}
  
-After all manipulations to all \textbf{SaXImport} objects have been done
+After all manipulations to the \textbf{SaXImport} objects have been done
 the programmer needs to add the affected SaXImport objects to a
 \textbf{SaXConfig} object which handles the export. 
 
@@ -123,7 +120,7 @@ configuration.
 
 \section{libsax classes and inheritance}
 \begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{figures/tree.eps}
 \caption{libsax: object reference}
-\vspace*{0.1cm}
-\includegraphics[scale=0.5]{figures/tree.eps}
 \end{figure}

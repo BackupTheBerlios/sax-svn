@@ -4,7 +4,7 @@
 \minitoc
 
 In this chapter all variables which may be found in a variables 
-API file are explained. The variables API is normally created by SaX's own 
+API file are explained. The variables API is normally created by SaX2's own 
 configuration interface, but this is not absolutely necessary. As soon as a 
 variables API exists, this can be used to create a configuration file. 
 In conjunction with the \textit{ImportAPI} module and the
@@ -58,7 +58,7 @@ accordance with the monitor. If there is no screen at this point then
 \section{API File Overview Tables of all Possible Variables}
 Below, all variables which may appear in an API file are listed in tabular
 form. The contents of each table refer to a section in the API file. It should
-be noted that one API section covers a number of xorg.conf sections.
+be noted that one API section may cover a number of xorg.conf sections.
 
 %====================
 % Pfad Variablen
@@ -69,7 +69,7 @@ be noted that one API section covers a number of xorg.conf sections.
 \subsection{Path Variables: Section Files, Modules and Server Flags}
 \begin{tabular}[h]{|p{2cm}|p{4cm}|p{7cm}|}
  \hline
- \textbf{Card} & \textbf{Variable}     & \textbf{Format}                \\
+ \textbf{Identifier} & \textbf{Variable}     & \textbf{Format}                \\
  \hline
  Integer & FontPath     & String,String,String,...                       \\
  Integer & RgbPath      & String,String,String,...                       \\ 
@@ -85,10 +85,10 @@ be noted that one API section covers a number of xorg.conf sections.
 % Graphikkarten Variablen
 %--------------------------
 \index{Section!Device}
-\subsection{Graphics Card Variables: Device Section}
+\subsection{Card Variables: Device Section}
 \begin{tabular}[h]{|p{2cm}|p{4cm}|p{7cm}|}
  \hline
- \textbf{Card} & \textbf{Variable}     & \textbf{Format}        \\
+ \textbf{Identifier} & \textbf{Variable}     & \textbf{Format}        \\
  \hline
  Integer & Identifier      & String                             \\
  Integer & Driver          & String                             \\
@@ -115,7 +115,7 @@ be noted that one API section covers a number of xorg.conf sections.
 \subsection{Mouse Variables: InputDevice Section}
 \begin{tabular}[h]{|p{2cm}|p{4cm}|p{7cm}|}
  \hline
- \textbf{Card} & \textbf{Variable}     & \textbf{Format}        \\
+ \textbf{Identifier} & \textbf{Variable}     & \textbf{Format}        \\
  \hline
  Integer & Identifier       & String                             \\
  Integer & Driver           & String                             \\
@@ -153,10 +153,10 @@ be noted that one API section covers a number of xorg.conf sections.
 \index{Section!Monitor}
 \index{Section!Modes}
 \index{Section!Screen}
-\subsection{Screen Variables: Section Monitor,Modes and Screen}
+\subsection{Desktop Variables: Section Monitor,Modes and Screen}
 \begin{tabular}[h]{|p{2cm}|p{4cm}|p{7cm}|}
  \hline
- \textbf{Card} & \textbf{Variable}     & \textbf{Format}        \\
+ \textbf{Identifier} & \textbf{Variable}     & \textbf{Format}        \\
  \hline
  Integer & Identifier       & String                             \\  
  Integer & Device           & String                             \\
@@ -182,6 +182,7 @@ be noted that one API section covers a number of xorg.conf sections.
  Integer & Modes:16         & Mode,Mode,...                      \\
  Integer & Modes:24         & Mode,Mode,...                      \\
  Integer & Modes:32         & Mode,Mode,...                      \\
+ Integer & ImportXFineCache & Yes \verb+|+ No                    \\
  \hline
 \end{tabular}
 
@@ -192,7 +193,7 @@ be noted that one API section covers a number of xorg.conf sections.
 \subsection{Layout Variables: Section ServerLayout}
 \begin{tabular}[h]{|p{2cm}|p{4cm}|p{7cm}|}
  \hline
- \textbf{Card} & \textbf{Variable}     & \textbf{Format}        \\
+ \textbf{Identifier} & \textbf{Variable}     & \textbf{Format}        \\
  \hline
  Integer & Identifier                 & String                   \\
  Integer & Keyboard                   & String                   \\
@@ -202,13 +203,15 @@ be noted that one API section covers a number of xorg.conf sections.
  \hline
 \end{tabular}
 
+\newpage
+
 %====================
 % Tastatur Variablen
 %--------------------
 \subsection{Keyboard Variables: InputDevice Section}
 \begin{tabular}[h]{|p{2cm}|p{4cm}|p{7cm}|}
  \hline
- \textbf{Card} & \textbf{Variable}     & \textbf{Format}        \\
+ \textbf{Identifier} & \textbf{Variable}     & \textbf{Format}        \\
  \hline
  Integer & Identifier       & String                             \\
  Integer & Driver           & String                             \\
@@ -242,19 +245,20 @@ Keyboard {
  0 Protocol         =    Standard
  0 XkbLayout        =    de
  0 Identifier       =    Keyboard[0]
- 0 XkbModel         =    pc104
- 0 Driver           =    keyboard
+ 0 XkbModel         =    pc105
+ 0 XkbVariant       =    nodeadkeys
+ 0 Driver           =    kbd
 }
-
 Mouse {
- 1 Name             =    AutoDetected
- 1 Identifier       =    Mouse[1]
+ 1 ZAxisMapping     =    4 5
  1 Driver           =    mouse
- 1 Vendor           =    AutoDetected
- 1 Device           =    /dev/pointer0
- 1 Protocol         =    PS/2
+ 1 Device           =    /dev/input/mice
+ 1 ButtonNumber     =    5
+ 1 Vendor           =    Sysp
+ 1 Identifier       =    Mouse[1]
+ 1 Name             =    Autodetection
+ 1 Protocol         =    imps/2
 }
-
 Card {
  0 Name             =    RivaTNT
  0 Identifier       =    Device[0]
@@ -262,7 +266,6 @@ Card {
  0 Driver           =    nv
  0 Vendor           =    Nvidia
 }
-
 Desktop {
  0 VertRefresh      =    50-160
  0 Device           =    Device[0]
@@ -275,7 +278,6 @@ Desktop {
  0 HorizSync        =    27-115
  0 VendorName       =    Iiyama
 }
-
 Path {
  0 RgbPath          =    /usr/X11R6/lib/X11/rgb
  0 ModulePath       =    /usr/X11R6/lib/modules
@@ -283,12 +285,13 @@ Path {
  0 FontPath         =    /usr/X11R6/lib/X11/fonts/misc:unscaled
  0 ModuleLoad       =    dbe,type1,speedo,extmod,freetype
 }
-
 Layout {
  0 Screen:Screen[0] =    <none> <none> <none> <none>
  0 InputDevice      =    Mouse[1]
  0 Keyboard         =    Keyboard[0]
  0 Identifier       =    Layout[all]
+}
+Extensions {
 }
 \end{verbatim}
 \end{small}

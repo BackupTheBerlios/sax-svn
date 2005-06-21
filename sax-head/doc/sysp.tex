@@ -4,16 +4,17 @@
 \minitoc
 
 Sysp stands for \textbf{system profiler} and is an independent program for 
-detecting hardware data.
+detecting hardware data based on libhd.
 Sysp is constructed modularly and saves once detected data in so-called perl 
 DBM hash files. The data in these files can be read out and processed again
 through a sysp call. Detecting and saving information is a central part of
 \textit{init.pl}.
 This action is carried out once by SaX2 during the initialization. Use is made
-of the sysp data, which as a whole makes up the SaX registry, at various points in the configuration process:
+of the sysp data, which as a whole makes up the SaX2 registry, at various
+points in the configuration process:
 \begin{itemize}
 \item In \textit{xc.pl} to create the initial configuration.
-\item In \textit{xapi.pl} to make data visible in configuration dialogs.
+\item In \textit{xapi} to make data visible in configuration dialogs.
 \end{itemize} 
 Information which was detected by individual sysp modules is stored in the
 directory 
@@ -47,14 +48,12 @@ In the course of development for SaX2 the following sysp modules were written:
 \item \textbf{Xstuff}\\
       This module collects card-specific data, such as video memory, RamDAC
       speed, possible resolutions per DDC and the synchronization range of the
-      monitor in accordance with the resolutions detected. To detect this data
-      a minimal X11 configuration is created from the result of the
-      preceding sysp module, and the X server is started for a brief test
-      run. The output of the server is then processed and provides the
-      above-mentioned information. The minimum configuration for this server
-      start can be found under \textit{/tmp/config.sax}.
+      monitor in accordance with the resolutions detected. If there is more
+	  than one pysical graphics card a minimal X11 configuration is created
+      from the result of the preceding sysp module, and the X server is
+      started for a brief test run. The output of the server is then
+      processed and provides the above-mentioned information.
 \end{itemize}
-
 
 \section{Calling up sysp}
 \index{Sysp!call up}
@@ -64,26 +63,25 @@ by hand. For this case, two modes should be differentiated:
 \item Starting a query
 \item Starting a hardware detection ( scan )
 \end{itemize}
-\subsubsection{Sysp Query}
-The following command can be used to query data:
-\begin{itemize}
-\item \verb+sysp -q <Name of the sysp module>+
-\end{itemize}
 
-\subsubsection{Sysp Scan}
+\subsection{Sysp Query}
+The following command can be used to query data:
+
+\begin{Command}{8cm}
+sysp -q $<$ModuleName$>$
+\end{Command}
+
+\subsection{Sysp Scan}
 The following command can be used to start a hardware scan:
-\begin{itemize}
-\item \verb+sysp -s <Name of the sysp module> [ -o options ]+ 
-\end{itemize}
+
+\begin{Command}{8cm}
+sysp -s $<$ModuleName$>$ [ -o options ] 
+\end{Command}
+
 When scanning, it also possible, using the option \verb+-o+ , to pass on
 options for the scan. The option list always contains a colon as a separator. 
 An example of such a command could look like this:
-\begin{itemize}
-\item \verb+sysp -s server -o all:0=mga,1=ati+
-\end{itemize}
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: t
-%%% End: 
-
+\begin{Command}{8cm}
+sysp -s server -o all:0=mga,1=ati
+\end{Command}

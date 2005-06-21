@@ -15,17 +15,21 @@ that simplifies the task of
 interfacing different languages to C and C++ programs. In a nutshell,
 SWIG is a compiler that takes C declarations and creates the wrappers
 needed to access those declarations from other languages
-including csharp, java, perl5, php4, python or tcl.
-
-Concerning development requirements the following should be covered:
+including csharp, java, perl5, php4, python or tcl. Creating language
+bindings for libsax requires the following tasks:
 
 \begin{itemize}
-\item In case of well written libraries the process of generating
-      language bindings can be automated.
-\item typemaps for transforming the C++ types used within the library
+\item All libsax C++ header files must be available to create the binding
+\item C++ operator support is not available in many scripting languages.
+      Because of this reason the binding should disable operator support
+      and the library has to provide methods as well as operators.
+\item Typemaps for transforming the Qt types used within the library
       must be provided for each destination language.
-\item STL written libraries can make use of the typemaps already
-      provided by swig
+\item Qts Signal/Slot concept is not supported by the destination languages.
+      libsax is using this mechanism to implement exception handling.
+      As consequence only the traditional error handling is available for
+      the bindings and the SaXException class needs to be wrapped within
+	  the bindings interface definition.
 \end{itemize}
 
 \newpage
