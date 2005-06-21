@@ -24,9 +24,10 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
+#, fuzzy
 msgid ""
-"<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
 "<b>SaX2-förslag</b><hr>Det nu startade grafiksystemet bygger på ett förslag "
@@ -34,11 +35,12 @@ msgstr ""
 "inställningarna."
 
 #. Caption text for the startup information window
-msgid "Automatic graphics system set up"
+#, fuzzy
+msgid "Automatic Graphics System Setup"
 msgstr "Automatisk inställning av grafiksystem"
 
 #. Caption text for the main window
-msgid "SaX2 - SuSE Advanced X11 configuration"
+msgid "SaX2: SUSE Advanced X11 Configuration"
 msgstr ""
 
 #. Title text on the left side
@@ -54,7 +56,8 @@ msgid "&Help"
 msgstr "&Hjälp"
 
 #. Ok Button text
-msgid "&Ok"
+#, fuzzy
+msgid "&OK"
 msgstr "&OK"
 
 #. Yes Button text
@@ -71,100 +74,93 @@ msgid "&Cancel"
 msgstr "Avbr&yt"
 
 #. RTF text: exit SaX message
-msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
+#, fuzzy
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
 msgstr "<b>Avsluta SaX2:</b><hr>Vill du avsluta SaX2 nu?"
 
 #. Message box default caption text
-msgid "Message..."
+msgid "Message"
 msgstr ""
 
 #. Change configuration Button text
-msgid "C&hange configuration"
+#, fuzzy
+msgid "C&hange Configuration"
 msgstr "Ändra inställnin&gar"
 
 #. Short description of the Monitor module
-#, fuzzy
-msgid "Monitor System"
+#. Monitor name label
+msgid "Monitor"
 msgstr "Bildskärm"
 
 #. Basic description of what the monitor module is used for
 #, fuzzy
-msgid "Setup Card and Monitor properties"
+msgid "Set up card and monitor properties"
 msgstr "Ställ in bildskärmsegenskaper..."
 
 #. Short description of the Mouse module
-#, fuzzy
-msgid "Mouse System"
-msgstr "X11-system"
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "Mus"
 
 #. Basic description of what the mouse module is used for
 #, fuzzy
-msgid "Setup Mouse properties"
+msgid "Set up mouse properties"
 msgstr "Särskilda musegenskaper..."
 
 #. Short description of the Keyboard module
 #, fuzzy
-msgid "Keyboard System"
-msgstr "Tangentbord"
+msgid "Keyboard"
+msgstr "Tangentbordsmodell"
 
 #. Basic description of what the keyboard module is used for
 #, fuzzy
-msgid "Setup Keyboard properties"
+msgid "Set up keyboard properties"
 msgstr "Ställ in bildskärmsegenskaper..."
 
 #. Short description of the Tablet module
-#, fuzzy
-msgid "Tablet System"
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
 msgstr "Pekplatta"
 
 #. Basic description of what the tablet module is used for
 #, fuzzy
-msgid "Setup tablet properties"
+msgid "Set up tablet properties"
 msgstr "Ställ in bildskärmsegenskaper..."
 
 #. Short description of the Touchscreen module
-#, fuzzy
-msgid "Touchscreen System"
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
 msgstr "Pekskärm"
 
 #. Basic description of what the touchscreen module is used for
 #, fuzzy
-msgid "Setup touchscreen properties"
+msgid "Set up touchscreen properties"
 msgstr "Ställ in bildskärmsegenskaper..."
 
 #. Short description of the VNC module
-#, fuzzy
-msgid "VNC System"
-msgstr "X11-system"
+msgid "VNC"
+msgstr "VNC"
 
 #. Basic description of what the VNC module is used for
 #, fuzzy
-msgid "Setup remote access properties"
+msgid "Set up remote access properties"
 msgstr "Ställ in bildskärmsegenskaper..."
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
 msgstr "Skärm"
 
-#. Tab text for a display tab of the mouse dialog
-msgid "Mouse"
-msgstr "Mus"
-
-#. Activate display checkbox
-msgid "Activate this display"
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
 msgstr ""
 
 #. Activate mouse checkbox
-msgid "Activate this pointer"
+msgid "Activate This Pointer"
 msgstr ""
 
 #. Graphics Card name label
 msgid "Card"
 msgstr ""
-
-#. Monitor name label
-msgid "Monitor"
-msgstr "Bildskärm"
 
 #. Change data
 #, fuzzy
@@ -182,7 +178,7 @@ msgstr "Ställ in tangentbord..."
 
 #. Group box title for dual head setup
 #, fuzzy
-msgid "DualHead mode"
+msgid "Dual Head Mode"
 msgstr "Flerhuvudläge"
 
 #. Group box title for card options
@@ -200,25 +196,23 @@ msgstr "Aktivera mushjul"
 
 #. CheckBox label to activate the 3 Button emulation
 #, fuzzy
-msgid "Activate 3-button emulation"
+msgid "Activate 3-Button Emulation"
 msgstr "Aktivera 3-knappemulering"
 
 #. CheckBox label to activate the wheel emulation
-msgid "Emulate wheel with mouse button:"
+#, fuzzy
+msgid "Emulate Wheel with Mouse Button"
 msgstr "Emulera hjul med musknapp:"
 
 #. Group box title for card rotation
 #, fuzzy
-msgid "Rotate screen"
+msgid "Rotate Screen"
 msgstr "Rotera skärm"
 
 #. Group box title for the mouse test field
-msgid "Test field"
-msgstr "Testfält"
-
 #. Line edit label pointing to the keyboard test field
 #, fuzzy
-msgid "Test:"
+msgid "Test"
 msgstr "&Testa..."
 
 #. Button text in final step message box for testing the configuration
@@ -237,30 +231,32 @@ msgstr "Layout"
 
 #. Status line of mouse test field: ready
 #, fuzzy
-msgid "Testfield: Ready..."
-msgstr "Mustestfält: Klar..."
+msgid "Test ready"
+msgstr "Testfält"
 
 #. Status line of mouse test field: single button click
 #, fuzzy
-msgid "Single click: Done"
+msgid "Single Click: Done"
 msgstr "Enkelknappklick: Klar"
 
 #. Status line of mouse test field: double button click
 #, fuzzy
-msgid "Double click: Done"
+msgid "Double Click: Done"
 msgstr "Dubbelknappklick: Klar"
 
 #. Status line of mouse test field: wheel moved
 #, fuzzy
-msgid "Scrolling..."
+msgid "Scrolling"
 msgstr "ScrollLock-mappning"
 
 #. Status line of mouse test field: button pressed
-msgid "Button pressed..."
+#, fuzzy
+msgid "Button pressed"
 msgstr "Knapp nedtryckt..."
 
 #. Status line of mouse test field: button released
-msgid "Button released..."
+#, fuzzy
+msgid "Button released"
 msgstr "Knapp släppt..."
 
 #. Status line of mouse test field: wheel stopped
@@ -274,40 +270,43 @@ msgid "Properties"
 msgstr "Egenskaper..."
 
 #. Activate dual head mode checkbox
-msgid "Activate DualHead mode"
-msgstr ""
+#, fuzzy
+msgid "Activate Dual Head Mode"
+msgstr "Flerhuvudläge"
 
 #. Set display resolution
 #, fuzzy
-msgid "Resolution:"
+msgid "Resolution"
 msgstr "Upplösning Y"
 
-#. Set display colord
+#. Set display colors
 #, fuzzy
-msgid "Colors:"
+msgid "Colors"
 msgstr "Fär&ger"
 
 #. Activate 3D checkboc
 #, fuzzy
-msgid "Activate 3D acceleration"
+msgid "Activate 3D Acceleration"
 msgstr "3D-acceleration"
 
 #. Tab title: Setup monitor properties for card X
 #, fuzzy
-msgid "Monitor for card:"
+msgid "Monitor for Card"
 msgstr "Bildskärmsmodell"
 
 #. Tab title: Setup monitor for second channel on card X
-msgid "Second monitor for card:"
-msgstr ""
+#, fuzzy
+msgid "Second Monitor for Card"
+msgstr "Bildskärmsmodell"
 
 #. Tab title: Setup sync frequencies
 #, fuzzy
-msgid "Sync-Frequencies"
+msgid "Sync Frequencies"
 msgstr "&Frekvenser"
 
 #. Tab title: Setup display size
-msgid "Display size"
+#, fuzzy
+msgid "Display Size"
 msgstr "Skärmstorlek"
 
 #. Tab title: Setup the monitor arrangement
@@ -323,24 +322,24 @@ msgstr ""
 msgid "Activated in driver default mode"
 msgstr ""
 
+#. rwalter
 #. Monitor Model is unknown and should be changed
-#, fuzzy
-msgid "Unknown Monitor please change"
-msgstr "Okänd bildskärmsmodell"
-
+#. rwalter
 #. Mouse Model is unknown and should be changed
-msgid "Unknown Mouse please change"
-msgstr ""
+#, fuzzy
+msgid "Unconfigured"
+msgstr "Inte inställd"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
-"<b>Cannot deactivate all displays:</b><hr><nobr>At least one display has to "
-"be active</nobr>"
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
 msgstr ""
 
 #. Info label for dual head checkbox
-msgid "No configuration available please configure"
-msgstr ""
+#, fuzzy
+msgid "No configuration available"
+msgstr "Inställningarna sparades..."
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -368,77 +367,81 @@ msgstr ""
 
 #. Title for multihead modi
 #, fuzzy
-msgid "Multihead Modus"
+msgid "Multihead Mode"
 msgstr "Flerhuvudläge"
 
 #. Monitor X - connected to - CardY
 #, fuzzy
-msgid "Connected to"
+msgid "Connected To"
 msgstr "Ansluten till:"
 
 #. Tooltip text if monitor is unknown
 #, fuzzy
-msgid "Unknown monitor:"
+msgid "Unknown Monitor:"
 msgstr "Okänd bildskärm..."
 
 #. Tooltip text for primary monitor
 #, fuzzy
-msgid "Primary monitor:"
+msgid "Primary Monitor:"
 msgstr "Primär lägesrad:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
 #, fuzzy
-msgid "Monitor settings..."
+msgid "Monitor Settings"
 msgstr "Färgval..."
 
 #. Windowanager title for the mouse mode setup
-msgid "Mouse settings..."
-msgstr ""
+#, fuzzy
+msgid "Mouse Settings"
+msgstr "X11-system"
 
 #. Windowanager title for the card options dialog
 #, fuzzy
-msgid "Graphics card settings..."
+msgid "Graphics Card Settings"
 msgstr "Grafikkort"
 
 #. Windowanager title for the dual head setup
-msgid "Dualhead settings..."
-msgstr ""
+#, fuzzy
+msgid "Dual Head Settings"
+msgstr "Flerhuvudläge"
 
 #. Radiobutton don't rotate
-msgid "Not rotated"
+#, fuzzy
+msgid "Not Rotated"
 msgstr "Inte roterad"
 
 #. Radiobutton rotate to the left side
-msgid "To the left"
+#, fuzzy
+msgid "To the Left"
 msgstr "Åt vänster"
 
 #. Radiobutton rotate to the right side
-msgid "To the right"
+#, fuzzy
+msgid "To the Right"
 msgstr "Åt höger"
 
 #. Popup message to ask the user for an option value
 #, fuzzy
 msgid ""
-"<b>Option needs a value</b><hr><nobr>Please setup a value for the %1 option."
-"</nobr>"
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
 "<b>Alternativet %1 behöver ett värde</b><hr>Ställ in ett värde för det här "
 "alternativet."
 
 #. Group box title for the monitor vendor and name selection
 #, fuzzy
-msgid "Monitor: Vendor and Name selection"
+msgid "Monitor: Vendor and Name Selection"
 msgstr "Modell: Välj leverantör och namn..."
 
 #. Group box title for the mouse vendor and name selection
 #, fuzzy
-msgid "Mouse: Vendor and Name selection"
+msgid "Mouse: Vendor and Name Selection"
 msgstr "Modell: Välj leverantör och namn..."
 
 #. Group box title for the manual sync frequency set up
 #, fuzzy
-msgid "Manual sync frequency set up"
+msgid "Manual Sync Frequency Setup"
 msgstr "Manuell sync-frekvensinställning..."
 
 #. Group box title for the aspect/ratio selection
@@ -454,8 +457,7 @@ msgstr "Skärmstorlek i mm"
 msgid ""
 "<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
 "monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating you can decrease the sync ranges to more <i>powerless</i> "
-"values."
+"its maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Observera:</b><hr>Felinställda frekvenser kan skada bildskärmen. "
 "Kontrollera bildskärmshandboken för följande inställningar."
@@ -473,12 +475,13 @@ msgid "Horizontal:"
 msgstr "Horisontell:"
 
 #. Label text for second monitor name
-msgid "Second monitor:"
-msgstr ""
+#, fuzzy
+msgid "Second Monitor:"
+msgstr "Välj upplösningar"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second monitor resolution:"
+msgid "Second Monitor Resolution:"
 msgstr "Välj upplösningar"
 
 #. Label text for vertical sync frequency
@@ -494,20 +497,20 @@ msgid "Hz"
 msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
-msgid "Aspect Ratio:"
+msgid "Aspect Ratio"
 msgstr ""
 
 #. Label text for the diagonal length combo box
 #, fuzzy
-msgid "Diagonal:"
+msgid "Diagonal"
 msgstr "Horisontell:"
 
 #. Label text for the display size X-Axis
-msgid "X-Axis [mm]"
+msgid "X Axis [mm]"
 msgstr ""
 
 #. Label text for the display size Y-Axis
-msgid "Y-Axis [mm]"
+msgid "Y Axis [mm]"
 msgstr ""
 
 #. Something is not configured
@@ -519,17 +522,19 @@ msgid "inches"
 msgstr ""
 
 #. Message box of type Ok, telling to user to insert a CD or disk
+#, fuzzy
 msgid ""
-"<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
 "<b>Sätt i cd eller diskett</b><hr>Sätt in drivrutins-cd:n eller disketten "
 "från bildskärmsleverantören."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
+#, fuzzy
 msgid ""
-"<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged media or incorrectly formatted information files on the media."
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
 msgstr ""
 "<b>Läsfel</b><hr>Kunde inte läsa från cd eller diskett. Det kan bero på "
 "felaktig media eller ett felaktigt format på informationsfilen på mediat."
@@ -548,8 +553,9 @@ msgid "Xinerama"
 msgstr ""
 
 #. Tab text for the mouse model dialog
-msgid "Setup mouse model"
-msgstr ""
+#, fuzzy
+msgid "Mouse Model"
+msgstr "Mus"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
@@ -571,7 +577,8 @@ msgid "Variant:"
 msgstr "Variant"
 
 #. Group box title for the additional keyboard setup
-msgid "Additional Layout(s)"
+#, fuzzy
+msgid "Additional Layouts"
 msgstr "Ytterligare layouter"
 
 #. Table topic text describing the variant column
@@ -587,12 +594,13 @@ msgid "Keytable"
 msgstr "Tangentkarta"
 
 #. List View root item text
-msgid "Group Shift/Lock behavior"
+#, fuzzy
+msgid "Group Shift/Lock Behavior"
 msgstr "Skift/Lock-gruppbeteende"
 
 #. List View root item text
 #, fuzzy
-msgid "Use Keyboard LED to show alternate group"
+msgid "Use Keyboard LED to Show Alternate Group"
 msgstr "Använd tangentbordets LED för att visa alternativ grupp"
 
 #. List View root item text
@@ -607,17 +615,17 @@ msgstr "Position för Ctrl-tangenten"
 
 #. List View root item text
 #, fuzzy
-msgid "Third level chooser"
+msgid "Third Level Chooser"
 msgstr "Tredje nivån av väljare"
 
 #. List View root item text
 #, fuzzy
-msgid "Alt/Win key bahavior"
+msgid "Alt/Win Key Behavior"
 msgstr "Alt/win-tangenternas beteende"
 
 #. List View root item text
 #, fuzzy
-msgid "CapsLock key bahavior"
+msgid "CapsLock Key Behavior"
 msgstr "Caps Lock-tangentens beteende"
 
 #. List View item text: Radiobutton no item selected
@@ -638,7 +646,8 @@ msgid "Right Shift key changes group"
 msgstr "Höger Skift-tangent byter grupp"
 
 #. XKBFile extension text
-msgid "Left Win-key changes group"
+#, fuzzy
+msgid "Left Win key changes group"
 msgstr "Vänster Win-tangent byter grupp"
 
 #. XKBFile extension text
@@ -646,7 +655,8 @@ msgid "Left Alt key changes group"
 msgstr "Vänster Alt-tangent byter grupp"
 
 #. XKBFile extension text
-msgid "Both Win-keys switch group while pressed"
+#, fuzzy
+msgid "Both Win keys switch group while pressed"
 msgstr "Båda win-tangenter byter grupp när den hålls nere"
 
 #. XKBFile extension text
@@ -851,10 +861,6 @@ msgstr "Alt+Ctrl byter grupp"
 msgid "Right Win-key switches group while pressed"
 msgstr "Höger win-tangent byter grupp när den hålls nere"
 
-#. Tab title: Tablet vendor name selection
-msgid "Tablet"
-msgstr "Pekplatta"
-
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
 msgstr ""
@@ -864,26 +870,27 @@ msgid "Electronic Pens"
 msgstr ""
 
 #. Activate tablet checkbox
-msgid "Activate this tablet"
-msgstr ""
+#, fuzzy
+msgid "Activate This Tablet"
+msgstr "3D-acceleration"
 
 #. Group box title for the tablet vendor and name selection
 #, fuzzy
-msgid "Tablet: Vendor and Name selection"
+msgid "Tablet: Vendor and Name Selection"
 msgstr "Modell: Välj leverantör och namn..."
 
 #. Group box title for tablet port combobox
 #, fuzzy
-msgid "Connection port"
+msgid "Connection Port"
 msgstr "Ansluten till:"
 
 #. Group box title for tablet mode
 #, fuzzy
-msgid "Primary tablet mode"
+msgid "Primary Tablet Mode"
 msgstr "Primär inställning"
 
 #. Group box title for pen/eraser tablet mode
-msgid "Pen/Eraser Mode"
+msgid "Pen or Eraser Mode"
 msgstr ""
 
 #. Radiobutton for relative tablet mode
@@ -919,35 +926,32 @@ msgid "Add Eraser"
 msgstr "Lägg till raderare"
 
 #. Windowanager title for the tablet pen options dialog
-msgid "Pen/Eraser settings..."
+msgid "Pen or Eraser Settings"
 msgstr ""
 
 #. Tab title: Pen properties
 #, fuzzy
-msgid "Pen properties"
+msgid "Pen Properties"
 msgstr "Egenskaper..."
 
 #. Tab title: Eraser properties
 #, fuzzy
-msgid "Eraser properties"
+msgid "Eraser Properties"
 msgstr "Särskilda musegenskaper..."
 
-#. Tab text for a touchscreen tab of the touchscreen dialog
-msgid "Touchscreen"
-msgstr "Pekskärm"
-
 #. Activate/Assign touchscreen checkbox
-msgid "Assign a touchscreen to display number %1"
+msgid "Assign a Touchscreen to Display Number %1"
 msgstr ""
 
 #. Group box title for the touchscreen vendor and name selection
 #, fuzzy
-msgid "Touchscreen: Vendor and Name selection"
+msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Modell: Välj leverantör och namn..."
 
 #. Finish configuration message box
+#, fuzzy
 msgid ""
-"<b>Final steps:</b><hr>The last step is saving your new configuration. It is "
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
@@ -958,11 +962,13 @@ msgstr ""
 "b> för att stoppa servern."
 
 #. Tab title: VNC Server configuration
-msgid "VNC-Server"
-msgstr ""
+#, fuzzy
+msgid "VNC Server"
+msgstr "X11-system"
 
 #. Activate VNC server checkbox
-msgid "Allow access to display using VNC protocol"
+#, fuzzy
+msgid "Allow Access to Display Using VNC Protocol"
 msgstr "Tillåt åtkomst till skärm med VNC-protokollet"
 
 #. Group box title for the VNC options
@@ -971,7 +977,7 @@ msgstr "VNC-alternativ"
 
 #. Activate VNC password protection checkbox
 #, fuzzy
-msgid "Activate password protection"
+msgid "Activate Password Protection"
 msgstr "Aktivera lösenordsskydd"
 
 #. LineEdit label: enter password
@@ -979,16 +985,18 @@ msgid "Password"
 msgstr "Lösenord"
 
 #. LineEdit contents: enter new password
-msgid "<Enter new password...>"
+#, fuzzy
+msgid "<Enter new password>"
 msgstr "<Ange nytt lösenord...>"
 
 #. LineEdit contents: change password
 #, fuzzy
-msgid "<Change password...>"
+msgid "<Change password>"
 msgstr "<Ange nytt lösenord...>"
 
 #. LineEdit contents: verify password
-msgid "Verify password"
+#, fuzzy
+msgid "<Verify password>"
 msgstr "Verifiera lösenord"
 
 #. Activate HTTP access checkbox
@@ -997,7 +1005,8 @@ msgid "Activate HTTP Access"
 msgstr "Aktivera HTTP-åtkomst"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow multiple VNC connections"
+#, fuzzy
+msgid "Allow Multiple VNC Connections"
 msgstr "Tillåt flera VNC-anslutningar"
 
 #. SpinBox label to setup the HTTP port number
@@ -1006,62 +1015,62 @@ msgstr "HTTP-port"
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
-"<b>VNC Password mismatch</b><hr>The first and the second version of the "
-"password don't match ! Please try again."
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
 msgstr ""
 
 #. VNC message box appearing if password is too short
 msgid ""
-"<b>VNC Password fault</b><hr>The password field has been left empty or the "
-"password is too short. Please enter a password with at least six "
-"characters !."
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
 msgstr ""
 
 #. Install missing packages box
+#, fuzzy
 msgid ""
-"<b>Software installation:</b><hr>Some packages are missing. Install the "
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
 "<b>Programinstallation:</b><hr>Några paket saknas. Vill du installera de "
 "saknade paketen nu?"
 
 #. Caption text for the missing package info window
-msgid "Package installation"
+msgid "Package Installation"
 msgstr ""
 
 #. Progress bar title text
-msgid "Importing data"
-msgstr ""
+#, fuzzy
+msgid "Importing data..."
+msgstr "Avsluta SaX2..."
 
 #. Progress window caption text
 #, fuzzy
-msgid "SaX2 - Importing..."
+msgid "SaX2: Importing"
 msgstr "Avsluta SaX2..."
 
 #. Progress window label text
-msgid "Initialize chache..."
+msgid "Initialize cache..."
 msgstr ""
 
 #. Message box text: configuration cannot be saved
 msgid ""
-"<b>Saving configuration failed:</b><hr>The following report has been created:"
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
 
 #. Message box test: configuration has been saved
 #, fuzzy
 msgid ""
-"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
-"the next time the graphics system is restarted. Do you want to exit SaX2 "
-"now ?"
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
 "<b>Inställningarna har sparats:</b><hr>Observera att ändringarna träder i "
 "kraft nästa gång grafiksystemet startas."
 
 #. Message box text: testing the configuration has failed
 msgid ""
-"<b>Testing configuration failed:</b><hr>For further information please refer "
-"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
-"created from the calling instance:"
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1118,6 +1127,34 @@ msgstr "Inställningar på skärmen"
 
 msgid "Idle timer..."
 msgstr "Inaktivitetstidur..."
+
+#, fuzzy
+#~ msgid "Monitor System"
+#~ msgstr "Bildskärm"
+
+#, fuzzy
+#~ msgid "Keyboard System"
+#~ msgstr "Tangentbord"
+
+#, fuzzy
+#~ msgid "Tablet System"
+#~ msgstr "Pekplatta"
+
+#, fuzzy
+#~ msgid "Touchscreen System"
+#~ msgstr "Pekskärm"
+
+#, fuzzy
+#~ msgid "Test:"
+#~ msgstr "&Testa..."
+
+#, fuzzy
+#~ msgid "Testfield: Ready..."
+#~ msgstr "Mustestfält: Klar..."
+
+#, fuzzy
+#~ msgid "Unknown Monitor please change"
+#~ msgstr "Okänd bildskärmsmodell"
 
 #~ msgid "Component"
 #~ msgstr "Komponent"
@@ -1498,9 +1535,6 @@ msgstr "Inaktivitetstidur..."
 #~ msgid "X Server test information..."
 #~ msgstr "Testinformation för X-server..."
 
-#~ msgid "Configuration saved..."
-#~ msgstr "Inställningarna sparades..."
-
 #~ msgid "AccessX status information..."
 #~ msgstr "Statusinformation för AccessX..."
 
@@ -1539,9 +1573,6 @@ msgstr "Inaktivitetstidur..."
 
 #~ msgid "AccessX"
 #~ msgstr "AccessX"
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
 
 #~ msgid "X-Server accessable via VNC protocol:"
 #~ msgstr "X-server kan kommas åt via VNC-protokollet:"
@@ -1751,9 +1782,6 @@ msgstr "Inaktivitetstidur..."
 
 #~ msgid "Protocol"
 #~ msgstr "Protokoll"
-
-#~ msgid "Keyboard Model"
-#~ msgstr "Tangentbordsmodell"
 
 #~ msgid "Fi&nish"
 #~ msgstr "Sl&utför"

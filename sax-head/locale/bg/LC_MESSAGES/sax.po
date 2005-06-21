@@ -21,9 +21,10 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
+#, fuzzy
 msgid ""
-"<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. "
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
 "<b>SaX2 предложение</b><hr>Стартираната графична система е базирана на "
@@ -31,11 +32,12 @@ msgstr ""
 "случай променете настройката."
 
 #. Caption text for the startup information window
-msgid "Automatic graphics system set up"
+#, fuzzy
+msgid "Automatic Graphics System Setup"
 msgstr "Автоматична настройка на графичната среда"
 
 #. Caption text for the main window
-msgid "SaX2 - SuSE Advanced X11 configuration"
+msgid "SaX2: SUSE Advanced X11 Configuration"
 msgstr ""
 
 #. Title text on the left side
@@ -51,7 +53,8 @@ msgid "&Help"
 msgstr "&Помощ"
 
 #. Ok Button text
-msgid "&Ok"
+#, fuzzy
+msgid "&OK"
 msgstr "&OK"
 
 #. Yes Button text
@@ -68,100 +71,93 @@ msgid "&Cancel"
 msgstr "Прек&ъсване"
 
 #. RTF text: exit SaX message
-msgid "<b>Exit SaX2:</b><hr>Exit SaX2 now?"
+#, fuzzy
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
 msgstr "<b>Изход от SaX2:</b><hr>Желаете ли да излезете от SaX2 сега?"
 
 #. Message box default caption text
-msgid "Message..."
+msgid "Message"
 msgstr ""
 
 #. Change configuration Button text
-msgid "C&hange configuration"
+#, fuzzy
+msgid "C&hange Configuration"
 msgstr "Пром&яна на настройката"
 
 #. Short description of the Monitor module
-#, fuzzy
-msgid "Monitor System"
+#. Monitor name label
+msgid "Monitor"
 msgstr "Монитор"
 
 #. Basic description of what the monitor module is used for
 #, fuzzy
-msgid "Setup Card and Monitor properties"
+msgid "Set up card and monitor properties"
 msgstr "Настройка на параметрите на монитора..."
 
 #. Short description of the Mouse module
-#, fuzzy
-msgid "Mouse System"
-msgstr "X11"
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "Мишка"
 
 #. Basic description of what the mouse module is used for
 #, fuzzy
-msgid "Setup Mouse properties"
+msgid "Set up mouse properties"
 msgstr "Специални параметри на мишката..."
 
 #. Short description of the Keyboard module
 #, fuzzy
-msgid "Keyboard System"
-msgstr "Клавиатура"
+msgid "Keyboard"
+msgstr "Модел на клавиатурата"
 
 #. Basic description of what the keyboard module is used for
 #, fuzzy
-msgid "Setup Keyboard properties"
+msgid "Set up keyboard properties"
 msgstr "Настройка на параметрите на монитора..."
 
 #. Short description of the Tablet module
-#, fuzzy
-msgid "Tablet System"
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
 msgstr "Таблет"
 
 #. Basic description of what the tablet module is used for
 #, fuzzy
-msgid "Setup tablet properties"
+msgid "Set up tablet properties"
 msgstr "Настройка на параметрите на монитора..."
 
 #. Short description of the Touchscreen module
-#, fuzzy
-msgid "Touchscreen System"
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
 msgstr "Touchscreen"
 
 #. Basic description of what the touchscreen module is used for
 #, fuzzy
-msgid "Setup touchscreen properties"
+msgid "Set up touchscreen properties"
 msgstr "Настройка на параметрите на монитора..."
 
 #. Short description of the VNC module
-#, fuzzy
-msgid "VNC System"
-msgstr "X11"
+msgid "VNC"
+msgstr "VNC"
 
 #. Basic description of what the VNC module is used for
 #, fuzzy
-msgid "Setup remote access properties"
+msgid "Set up remote access properties"
 msgstr "Настройка на параметрите на монитора..."
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
 msgstr "Екран"
 
-#. Tab text for a display tab of the mouse dialog
-msgid "Mouse"
-msgstr "Мишка"
-
-#. Activate display checkbox
-msgid "Activate this display"
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
 msgstr ""
 
 #. Activate mouse checkbox
-msgid "Activate this pointer"
+msgid "Activate This Pointer"
 msgstr ""
 
 #. Graphics Card name label
 msgid "Card"
 msgstr ""
-
-#. Monitor name label
-msgid "Monitor"
-msgstr "Монитор"
 
 #. Change data
 #, fuzzy
@@ -179,7 +175,7 @@ msgstr "Настройка на клавиатура..."
 
 #. Group box title for dual head setup
 #, fuzzy
-msgid "DualHead mode"
+msgid "Dual Head Mode"
 msgstr "Multihead режим"
 
 #. Group box title for card options
@@ -197,25 +193,23 @@ msgstr "Разрешаване на колелцето на мишката"
 
 #. CheckBox label to activate the 3 Button emulation
 #, fuzzy
-msgid "Activate 3-button emulation"
+msgid "Activate 3-Button Emulation"
 msgstr "Разрешаване емулация на 3 бутона"
 
 #. CheckBox label to activate the wheel emulation
-msgid "Emulate wheel with mouse button:"
+#, fuzzy
+msgid "Emulate Wheel with Mouse Button"
 msgstr "Емулиране на колелце с бутон на мишката:"
 
 #. Group box title for card rotation
 #, fuzzy
-msgid "Rotate screen"
+msgid "Rotate Screen"
 msgstr "Завъртане на екрана"
 
 #. Group box title for the mouse test field
-msgid "Test field"
-msgstr "Пробно поле"
-
 #. Line edit label pointing to the keyboard test field
 #, fuzzy
-msgid "Test:"
+msgid "Test"
 msgstr "Про&ба..."
 
 #. Button text in final step message box for testing the configuration
@@ -234,30 +228,32 @@ msgstr "Оформление"
 
 #. Status line of mouse test field: ready
 #, fuzzy
-msgid "Testfield: Ready..."
-msgstr "Поле за проба на мишката: В готовност.."
+msgid "Test ready"
+msgstr "Пробно поле"
 
 #. Status line of mouse test field: single button click
 #, fuzzy
-msgid "Single click: Done"
+msgid "Single Click: Done"
 msgstr "Еднократно щракване: Изпълнено"
 
 #. Status line of mouse test field: double button click
 #, fuzzy
-msgid "Double click: Done"
+msgid "Double Click: Done"
 msgstr "Двукратно щракване: Изпълнено"
 
 #. Status line of mouse test field: wheel moved
 #, fuzzy
-msgid "Scrolling..."
+msgid "Scrolling"
 msgstr "Задаване на ScrollLock"
 
 #. Status line of mouse test field: button pressed
-msgid "Button pressed..."
+#, fuzzy
+msgid "Button pressed"
 msgstr "Бутонът е натиснат..."
 
 #. Status line of mouse test field: button released
-msgid "Button released..."
+#, fuzzy
+msgid "Button released"
 msgstr "Бутонът е освободен..."
 
 #. Status line of mouse test field: wheel stopped
@@ -271,40 +267,43 @@ msgid "Properties"
 msgstr "Аксесоари..."
 
 #. Activate dual head mode checkbox
-msgid "Activate DualHead mode"
-msgstr ""
+#, fuzzy
+msgid "Activate Dual Head Mode"
+msgstr "Multihead режим"
 
 #. Set display resolution
 #, fuzzy
-msgid "Resolution:"
+msgid "Resolution"
 msgstr "Разделителна способност Y"
 
-#. Set display colord
+#. Set display colors
 #, fuzzy
-msgid "Colors:"
+msgid "Colors"
 msgstr "Цвето&ве"
 
 #. Activate 3D checkboc
 #, fuzzy
-msgid "Activate 3D acceleration"
+msgid "Activate 3D Acceleration"
 msgstr "3D ускорение"
 
 #. Tab title: Setup monitor properties for card X
 #, fuzzy
-msgid "Monitor for card:"
+msgid "Monitor for Card"
 msgstr "Модел на монитора"
 
 #. Tab title: Setup monitor for second channel on card X
-msgid "Second monitor for card:"
-msgstr ""
+#, fuzzy
+msgid "Second Monitor for Card"
+msgstr "Модел на монитора"
 
 #. Tab title: Setup sync frequencies
 #, fuzzy
-msgid "Sync-Frequencies"
+msgid "Sync Frequencies"
 msgstr "&Честоти"
 
 #. Tab title: Setup display size
-msgid "Display size"
+#, fuzzy
+msgid "Display Size"
 msgstr "Размер на екрана"
 
 #. Tab title: Setup the monitor arrangement
@@ -320,24 +319,24 @@ msgstr ""
 msgid "Activated in driver default mode"
 msgstr ""
 
+#. rwalter
 #. Monitor Model is unknown and should be changed
-#, fuzzy
-msgid "Unknown Monitor please change"
-msgstr "Непознат модел на монитора"
-
+#. rwalter
 #. Mouse Model is unknown and should be changed
-msgid "Unknown Mouse please change"
-msgstr ""
+#, fuzzy
+msgid "Unconfigured"
+msgstr "Не е настроено"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
-"<b>Cannot deactivate all displays:</b><hr><nobr>At least one display has to "
-"be active</nobr>"
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
 msgstr ""
 
 #. Info label for dual head checkbox
-msgid "No configuration available please configure"
-msgstr ""
+#, fuzzy
+msgid "No configuration available"
+msgstr "Настройката е записана..."
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -365,76 +364,80 @@ msgstr ""
 
 #. Title for multihead modi
 #, fuzzy
-msgid "Multihead Modus"
+msgid "Multihead Mode"
 msgstr "Multihead режим"
 
 #. Monitor X - connected to - CardY
 #, fuzzy
-msgid "Connected to"
+msgid "Connected To"
 msgstr "Свързан към:"
 
 #. Tooltip text if monitor is unknown
 #, fuzzy
-msgid "Unknown monitor:"
+msgid "Unknown Monitor:"
 msgstr "Непознат монитор..."
 
 #. Tooltip text for primary monitor
 #, fuzzy
-msgid "Primary monitor:"
+msgid "Primary Monitor:"
 msgstr "Главна Modeline:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
 #, fuzzy
-msgid "Monitor settings..."
+msgid "Monitor Settings"
 msgstr "Избор на цвят..."
 
 #. Windowanager title for the mouse mode setup
-msgid "Mouse settings..."
-msgstr ""
+#, fuzzy
+msgid "Mouse Settings"
+msgstr "X11"
 
 #. Windowanager title for the card options dialog
 #, fuzzy
-msgid "Graphics card settings..."
+msgid "Graphics Card Settings"
 msgstr "Видеокарта"
 
 #. Windowanager title for the dual head setup
-msgid "Dualhead settings..."
-msgstr ""
+#, fuzzy
+msgid "Dual Head Settings"
+msgstr "Multihead режим"
 
 #. Radiobutton don't rotate
-msgid "Not rotated"
+#, fuzzy
+msgid "Not Rotated"
 msgstr "Не е завъртян"
 
 #. Radiobutton rotate to the left side
-msgid "To the left"
+#, fuzzy
+msgid "To the Left"
 msgstr "Наляво"
 
 #. Radiobutton rotate to the right side
-msgid "To the right"
+#, fuzzy
+msgid "To the Right"
 msgstr "Надясно"
 
 #. Popup message to ask the user for an option value
 #, fuzzy
 msgid ""
-"<b>Option needs a value</b><hr><nobr>Please setup a value for the %1 option."
-"</nobr>"
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
 "<b>Параметърът %1 трябва да има стойност.</b><hr>Моля въведете стойност."
 
 #. Group box title for the monitor vendor and name selection
 #, fuzzy
-msgid "Monitor: Vendor and Name selection"
+msgid "Monitor: Vendor and Name Selection"
 msgstr "Модел: Раздели Доставчик и Име"
 
 #. Group box title for the mouse vendor and name selection
 #, fuzzy
-msgid "Mouse: Vendor and Name selection"
+msgid "Mouse: Vendor and Name Selection"
 msgstr "Модел: Раздели Доставчик и Име"
 
 #. Group box title for the manual sync frequency set up
 #, fuzzy
-msgid "Manual sync frequency set up"
+msgid "Manual Sync Frequency Setup"
 msgstr "Ръчна настройка на честотите..."
 
 #. Group box title for the aspect/ratio selection
@@ -451,8 +454,7 @@ msgstr "Размер на екрана в [ mm ]"
 msgid ""
 "<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
 "monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating you can decrease the sync ranges to more <i>powerless</i> "
-"values."
+"its maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Внимание!</b><hr>Грешни диапазони на синхронизиране могат да повредят "
 "вашия монитор. Консултирайте се с ръководството на монитора за тези "
@@ -471,12 +473,13 @@ msgid "Horizontal:"
 msgstr "Хоризонтално:"
 
 #. Label text for second monitor name
-msgid "Second monitor:"
-msgstr ""
+#, fuzzy
+msgid "Second Monitor:"
+msgstr "Избор на разделителна способност"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second monitor resolution:"
+msgid "Second Monitor Resolution:"
 msgstr "Избор на разделителна способност"
 
 #. Label text for vertical sync frequency
@@ -492,20 +495,20 @@ msgid "Hz"
 msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
-msgid "Aspect Ratio:"
+msgid "Aspect Ratio"
 msgstr ""
 
 #. Label text for the diagonal length combo box
 #, fuzzy
-msgid "Diagonal:"
+msgid "Diagonal"
 msgstr "Хоризонтално:"
 
 #. Label text for the display size X-Axis
-msgid "X-Axis [mm]"
+msgid "X Axis [mm]"
 msgstr ""
 
 #. Label text for the display size Y-Axis
-msgid "Y-Axis [mm]"
+msgid "Y Axis [mm]"
 msgstr ""
 
 #. Something is not configured
@@ -517,17 +520,19 @@ msgid "inches"
 msgstr "инчове"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
+#, fuzzy
 msgid ""
-"<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the "
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
 "<b>Вкарайте CD или дискета</b><hr>Вкарайте CD или дискета от доставчика на "
 "монитора с приложения за екрана."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
+#, fuzzy
 msgid ""
-"<b>Read error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged media or incorrectly formatted information files on the media."
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
 msgstr ""
 "<b>Грешка при четенето</b><hr>CD-то или дискетата не може да се прочете. "
 "Това може да е вследствие на повреден носител или некоректен формат на "
@@ -547,8 +552,9 @@ msgid "Xinerama"
 msgstr ""
 
 #. Tab text for the mouse model dialog
-msgid "Setup mouse model"
-msgstr ""
+#, fuzzy
+msgid "Mouse Model"
+msgstr "Мишка"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
@@ -570,7 +576,8 @@ msgid "Variant:"
 msgstr "Вариант"
 
 #. Group box title for the additional keyboard setup
-msgid "Additional Layout(s)"
+#, fuzzy
+msgid "Additional Layouts"
 msgstr "Допълнително оформление"
 
 #. Table topic text describing the variant column
@@ -586,12 +593,13 @@ msgid "Keytable"
 msgstr "Клавишна таблица"
 
 #. List View root item text
-msgid "Group Shift/Lock behavior"
+#, fuzzy
+msgid "Group Shift/Lock Behavior"
 msgstr "Поведение на групата Shift/Lock"
 
 #. List View root item text
 #, fuzzy
-msgid "Use Keyboard LED to show alternate group"
+msgid "Use Keyboard LED to Show Alternate Group"
 msgstr ""
 "Използване на диодите на клавиатурата за показване на алтернативната група"
 
@@ -607,17 +615,17 @@ msgstr "Позиция на клавиша Control"
 
 #. List View root item text
 #, fuzzy
-msgid "Third level chooser"
+msgid "Third Level Chooser"
 msgstr "Превключватели за трето ниво"
 
 #. List View root item text
 #, fuzzy
-msgid "Alt/Win key bahavior"
+msgid "Alt/Win Key Behavior"
 msgstr "Поведение на Alt/Win клавишите "
 
 #. List View root item text
 #, fuzzy
-msgid "CapsLock key bahavior"
+msgid "CapsLock Key Behavior"
 msgstr "Поведение на CapsLock"
 
 #. List View item text: Radiobutton no item selected
@@ -638,7 +646,8 @@ msgid "Right Shift key changes group"
 msgstr "Десният Shift превключва групата"
 
 #. XKBFile extension text
-msgid "Left Win-key changes group"
+#, fuzzy
+msgid "Left Win key changes group"
 msgstr "Левия Win клавиш превключва групата"
 
 #. XKBFile extension text
@@ -646,7 +655,8 @@ msgid "Left Alt key changes group"
 msgstr "Левия Alt превключва групата"
 
 #. XKBFile extension text
-msgid "Both Win-keys switch group while pressed"
+#, fuzzy
+msgid "Both Win keys switch group while pressed"
 msgstr "Двата Win клавиша превключват групата, когато са натиснати"
 
 #. XKBFile extension text
@@ -852,10 +862,6 @@ msgstr "Alt+Ctrl превключва групата"
 msgid "Right Win-key switches group while pressed"
 msgstr "Десният Win клавиш превключва групата, когато е натиснат"
 
-#. Tab title: Tablet vendor name selection
-msgid "Tablet"
-msgstr "Таблет"
-
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
 msgstr ""
@@ -865,26 +871,27 @@ msgid "Electronic Pens"
 msgstr ""
 
 #. Activate tablet checkbox
-msgid "Activate this tablet"
-msgstr ""
+#, fuzzy
+msgid "Activate This Tablet"
+msgstr "3D ускорение"
 
 #. Group box title for the tablet vendor and name selection
 #, fuzzy
-msgid "Tablet: Vendor and Name selection"
+msgid "Tablet: Vendor and Name Selection"
 msgstr "Модел: Раздели Доставчик и Име"
 
 #. Group box title for tablet port combobox
 #, fuzzy
-msgid "Connection port"
+msgid "Connection Port"
 msgstr "Свързан към:"
 
 #. Group box title for tablet mode
 #, fuzzy
-msgid "Primary tablet mode"
+msgid "Primary Tablet Mode"
 msgstr "Първично настройване"
 
 #. Group box title for pen/eraser tablet mode
-msgid "Pen/Eraser Mode"
+msgid "Pen or Eraser Mode"
 msgstr ""
 
 #. Radiobutton for relative tablet mode
@@ -920,35 +927,32 @@ msgid "Add Eraser"
 msgstr "Добавяне на гума"
 
 #. Windowanager title for the tablet pen options dialog
-msgid "Pen/Eraser settings..."
+msgid "Pen or Eraser Settings"
 msgstr ""
 
 #. Tab title: Pen properties
 #, fuzzy
-msgid "Pen properties"
+msgid "Pen Properties"
 msgstr "Аксесоари..."
 
 #. Tab title: Eraser properties
 #, fuzzy
-msgid "Eraser properties"
+msgid "Eraser Properties"
 msgstr "Специални параметри на мишката..."
 
-#. Tab text for a touchscreen tab of the touchscreen dialog
-msgid "Touchscreen"
-msgstr "Touchscreen"
-
 #. Activate/Assign touchscreen checkbox
-msgid "Assign a touchscreen to display number %1"
+msgid "Assign a Touchscreen to Display Number %1"
 msgstr ""
 
 #. Group box title for the touchscreen vendor and name selection
 #, fuzzy
-msgid "Touchscreen: Vendor and Name selection"
+msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Модел: Раздели Доставчик и Име"
 
 #. Finish configuration message box
+#, fuzzy
 msgid ""
-"<b>Final steps:</b><hr>The last step is saving your new configuration. It is "
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
@@ -959,11 +963,13 @@ msgstr ""
 "за да прекъснете сървъра."
 
 #. Tab title: VNC Server configuration
-msgid "VNC-Server"
-msgstr ""
+#, fuzzy
+msgid "VNC Server"
+msgstr "X11"
 
 #. Activate VNC server checkbox
-msgid "Allow access to display using VNC protocol"
+#, fuzzy
+msgid "Allow Access to Display Using VNC Protocol"
 msgstr "Разрешаване на достъп до дисплея чрез VNC протокол"
 
 #. Group box title for the VNC options
@@ -972,7 +978,7 @@ msgstr "Параметри на VNC"
 
 #. Activate VNC password protection checkbox
 #, fuzzy
-msgid "Activate password protection"
+msgid "Activate Password Protection"
 msgstr "Разрешаване на защита с парола"
 
 #. LineEdit label: enter password
@@ -980,16 +986,18 @@ msgid "Password"
 msgstr "Парола"
 
 #. LineEdit contents: enter new password
-msgid "<Enter new password...>"
+#, fuzzy
+msgid "<Enter new password>"
 msgstr "<Въведете нова парола...>"
 
 #. LineEdit contents: change password
 #, fuzzy
-msgid "<Change password...>"
+msgid "<Change password>"
 msgstr "<Въведете нова парола...>"
 
 #. LineEdit contents: verify password
-msgid "Verify password"
+#, fuzzy
+msgid "<Verify password>"
 msgstr "Повторно парола"
 
 #. Activate HTTP access checkbox
@@ -998,7 +1006,8 @@ msgid "Activate HTTP Access"
 msgstr "Разрешаване на достъп чрез HTTP"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow multiple VNC connections"
+#, fuzzy
+msgid "Allow Multiple VNC Connections"
 msgstr "Разрешаване на множество VNC връзки"
 
 #. SpinBox label to setup the HTTP port number
@@ -1008,8 +1017,8 @@ msgstr "HTTP порт"
 #. VNC message box appearing if password strings doesn't match
 #, fuzzy
 msgid ""
-"<b>VNC Password mismatch</b><hr>The first and the second version of the "
-"password don't match ! Please try again."
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
 msgstr ""
 "<b>Несъответствие в паролите</b><hr>Първата и втората версия на паролата не "
 "съответстват! Моля, опитайте отново."
@@ -1017,58 +1026,58 @@ msgstr ""
 #. VNC message box appearing if password is too short
 #, fuzzy
 msgid ""
-"<b>VNC Password fault</b><hr>The password field has been left empty or the "
-"password is too short. Please enter a password with at least six "
-"characters !."
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
 msgstr ""
 "<b>Грешка с паролата</b><hr>Полето за паролата е оставено празно или "
 "паролата е твърде къса. Моля, въведете парола дълга поне 6 символа!"
 
 #. Install missing packages box
+#, fuzzy
 msgid ""
-"<b>Software installation:</b><hr>Some packages are missing. Install the "
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
 "<b>Инсталиране на програми:</b><hr>Някои пакети липсват. Желаете ли да "
 "инсталирате тези пакети?"
 
 #. Caption text for the missing package info window
-msgid "Package installation"
+msgid "Package Installation"
 msgstr ""
 
 #. Progress bar title text
-msgid "Importing data"
-msgstr ""
+#, fuzzy
+msgid "Importing data..."
+msgstr "Изход от SaX2..."
 
 #. Progress window caption text
 #, fuzzy
-msgid "SaX2 - Importing..."
+msgid "SaX2: Importing"
 msgstr "Изход от SaX2..."
 
 #. Progress window label text
-msgid "Initialize chache..."
+msgid "Initialize cache..."
 msgstr ""
 
 #. Message box text: configuration cannot be saved
 msgid ""
-"<b>Saving configuration failed:</b><hr>The following report has been created:"
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
 
 #. Message box test: configuration has been saved
 #, fuzzy
 msgid ""
-"<b>Configuration has been saved:</b><hr>Your modifications will take effect "
-"the next time the graphics system is restarted. Do you want to exit SaX2 "
-"now ?"
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
 "<b>Настройките са записани:</b><hr>Вашите промени ще имат ефект при "
 "следващото стартиране на графичната среда."
 
 #. Message box text: testing the configuration has failed
 msgid ""
-"<b>Testing configuration failed:</b><hr>For further information please refer "
-"to the file <i>/var/log/Xorg.99.log</i>. The following report has been "
-"created from the calling instance:"
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
 msgstr ""
 
 #. /.../
@@ -1125,6 +1134,34 @@ msgstr "Настройка на екрана"
 
 msgid "Idle timer..."
 msgstr "Време на бездействие..."
+
+#, fuzzy
+#~ msgid "Monitor System"
+#~ msgstr "Монитор"
+
+#, fuzzy
+#~ msgid "Keyboard System"
+#~ msgstr "Клавиатура"
+
+#, fuzzy
+#~ msgid "Tablet System"
+#~ msgstr "Таблет"
+
+#, fuzzy
+#~ msgid "Touchscreen System"
+#~ msgstr "Touchscreen"
+
+#, fuzzy
+#~ msgid "Test:"
+#~ msgstr "Про&ба..."
+
+#, fuzzy
+#~ msgid "Testfield: Ready..."
+#~ msgstr "Поле за проба на мишката: В готовност.."
+
+#, fuzzy
+#~ msgid "Unknown Monitor please change"
+#~ msgstr "Непознат модел на монитора"
 
 #~ msgid "Component"
 #~ msgstr "Компонент"
@@ -1548,9 +1585,6 @@ msgstr "Време на бездействие..."
 #~ msgid "X Server test information..."
 #~ msgstr "Информация за пробата на Х сървъра..."
 
-#~ msgid "Configuration saved..."
-#~ msgstr "Настройката е записана..."
-
 #~ msgid "AccessX status information..."
 #~ msgstr "Информация за статуса на AccessX..."
 
@@ -1589,9 +1623,6 @@ msgstr "Време на бездействие..."
 
 #~ msgid "AccessX"
 #~ msgstr "AccessX"
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
 
 #~ msgid "X-Server accessable via VNC protocol:"
 #~ msgstr "X-Сървър достъпен чрез VNC протокол:"
@@ -1812,9 +1843,6 @@ msgstr "Време на бездействие..."
 
 #~ msgid "Protocol"
 #~ msgstr "Протокол"
-
-#~ msgid "Keyboard Model"
-#~ msgstr "Модел на клавиатурата"
 
 #~ msgid "Fi&nish"
 #~ msgstr "&Край"

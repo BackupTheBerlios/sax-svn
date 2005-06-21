@@ -4,13 +4,13 @@
 # application code for the SaX2 and XFine GUI
 #
 # RTF text: Startup information for the user
-Suggestion=<b>SaX2 suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>Ok</b>. Otherwise, change the configuration.
+Suggestion=<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration.
 
 # Caption text for the startup information window
-SuggestionCaption=Automatic graphics system set up
+SuggestionCaption=Automatic Graphics System Setup
 
 # Caption text for the main window
-GUICaption=SaX2 - SuSE Advanced X11 configuration
+GUICaption=SaX2: SUSE Advanced X11 Configuration
 
 # Title text on the left side
 TitleLeft=SaX Control Center
@@ -22,7 +22,7 @@ TitleRight=SUSE Linux
 Help=&Help
 
 # Ok Button text
-Ok=&Ok
+Ok=&OK
 
 # Yes Button text
 Yes=&Yes
@@ -34,49 +34,49 @@ No=&No
 Cancel=&Cancel
 
 # RTF text: exit SaX message
-ExitSaX=<b>Exit SaX2:</b><hr>Exit SaX2 now?
+ExitSaX=<b>Exit SaX2</b><hr>Exit SaX2 now?
 
 # Message box default caption text
-MessageCaption=Message...
+MessageCaption=Message
 
 # Change configuration Button text
-Start=C&hange configuration
+Start=C&hange Configuration
 
 # Short description of the Monitor module
-MonitorModule=Monitor System
+MonitorModule=Monitor
 
 # Basic description of what the monitor module is used for 
-MonitorModuleTopic=Setup Card and Monitor properties
+MonitorModuleTopic=Set up card and monitor properties
 
 # Short description of the Mouse module
-MouseModule=Mouse System
+MouseModule=Mouse
 
 # Basic description of what the mouse module is used for
-MouseModuleTopic=Setup Mouse properties
+MouseModuleTopic=Set up mouse properties
 
 # Short description of the Keyboard module
-KeyboardModule=Keyboard System
+KeyboardModule=Keyboard
 
 # Basic description of what the keyboard module is used for
-KeyboardModuleTopic=Setup Keyboard properties
+KeyboardModuleTopic=Set up keyboard properties
 
 # Short description of the Tablet module
-TabletModule=Tablet System
+TabletModule=Tablet
 
 # Basic description of what the tablet module is used for
-TabletModuleTopic=Setup tablet properties
+TabletModuleTopic=Set up tablet properties
 
 # Short description of the Touchscreen module
-ToucherModule=Touchscreen System
+ToucherModule=Touchscreen
 
 # Basic description of what the touchscreen module is used for
-ToucherModuleTopic=Setup touchscreen properties
+ToucherModuleTopic=Set up touchscreen properties
 
 # Short description of the VNC module
-VNCModule=VNC System
+VNCModule=VNC
 
 # Basic description of what the VNC module is used for
-VNCModuleTopic=Setup remote access properties
+VNCModuleTopic=Set up remote access properties
 
 # Tab text for a display tab of the monitor dialog
 Display=Display
@@ -84,11 +84,11 @@ Display=Display
 # Tab text for a display tab of the mouse dialog
 Mouse=Mouse
 
-# Activate display checkbox
-ActivateDisplay=Activate this display
+# Activate display checkbox, Display=screen
+ActivateDisplay=Activate This Display
 
 # Activate mouse checkbox
-ActivateMouse=Activate this pointer
+ActivateMouse=Activate This Pointer
 
 # Graphics Card name label
 Card=Card
@@ -106,7 +106,7 @@ Options=&Options...
 Configure=Con&figure...
 
 # Group box title for dual head setup
-DualHeadMode=DualHead mode
+DualHeadMode=Dual Head Mode
 
 # Group box title for card options
 CardOptions=Options
@@ -118,19 +118,19 @@ MouseOptions=Options
 ActivateWheel=Activate Mouse Wheel
 
 # CheckBox label to activate the 3 Button emulation
-ButtonEmulation=Activate 3-button emulation
+ButtonEmulation=Activate 3-Button Emulation
 
 # CheckBox label to activate the wheel emulation
-EmulateWheel=Emulate wheel with mouse button:
+EmulateWheel=Emulate Wheel with Mouse Button
 
 # Group box title for card rotation
-Rotate=Rotate screen
+Rotate=Rotate Screen
 
 # Group box title for the mouse test field
-MouseTest=Test field
+MouseTest=Test
 
 # Line edit label pointing to the keyboard test field
-Test=Test:
+Test=Test
 
 # Button text in final step message box for testing the configuration
 FinalTest=&Test
@@ -145,22 +145,22 @@ XKBLayout=Layout
 XKBOptions=Options
 
 # Status line of mouse test field: ready
-MouseTestReady=Testfield: Ready...
+MouseTestReady=Test ready
 
 # Status line of mouse test field: single button click
-SingleClick=Single click: Done
+SingleClick=Single Click: Done
 
 # Status line of mouse test field: double button click
-DoubleClick=Double click: Done
+DoubleClick=Double Click: Done
 
 # Status line of mouse test field: wheel moved
-WheelMoved=Scrolling...
+WheelMoved=Scrolling
 
 # Status line of mouse test field: button pressed
-ButtonPressed=Button pressed...
+ButtonPressed=Button pressed
 
 # Status line of mouse test field: button released
-ButtonReleased=Button released...
+ButtonReleased=Button released
 
 # Status line of mouse test field: wheel stopped
 WheelReleased=Stopped: Done
@@ -169,28 +169,28 @@ WheelReleased=Stopped: Done
 Properties=Properties
 
 # Activate dual head mode checkbox
-ActivateDualHead=Activate DualHead mode
+ActivateDualHead=Activate Dual Head Mode
 
 # Set display resolution
-Resolution=Resolution:
+Resolution=Resolution
 
-# Set display colord
-Colors=Colors:
+# Set display colors
+Colors=Colors
 
 # Activate 3D checkboc
-Activate3D=Activate 3D acceleration
+Activate3D=Activate 3D Acceleration
 
 # Tab title: Setup monitor properties for card X
-MonitorForCard=Monitor for card:
+MonitorForCard=Monitor for Card
 
 # Tab title: Setup monitor for second channel on card X
-SecondMonitorForCard=Second monitor for card:
+SecondMonitorForCard=Second Monitor for Card
 
 # Tab title: Setup sync frequencies
-Sync=Sync-Frequencies
+Sync=Sync Frequencies
 
 # Tab title: Setup display size 
-DisplaySize=Display size
+DisplaySize=Display Size
 
 # Tab title: Setup the monitor arrangement 
 Arrange=Arrangement
@@ -201,17 +201,19 @@ ActivateInfo=Activated in %1 mode with %2
 # Short Information that something has been activated
 Activated=Activated in driver default mode
 
+#rwalter
 # Monitor Model is unknown and should be changed
-UnknownMonitorPleaseChange=Unknown Monitor please change
+UnknownMonitorPleaseChange=Unconfigured
 
+#rwalter
 # Mouse Model is unknown and should be changed
-UnknownMousePleaseChange=Unknown Mouse please change
+UnknownMousePleaseChange=Unconfigured
 
 # Message appears when user is trying to deactivate all displays
-PageFault=<b>Cannot deactivate all displays:</b><hr><nobr>At least one display has to be active</nobr>
+PageFault=<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>
 
 # Info label for dual head checkbox
-NoConfigAvailable=No configuration available please configure
+NoConfigAvailable=No configuration available
 
 # Radiobutton for traditional multihead mode
 ModusTraditional=Traditional Multihead:\nEach screen is an independent display
@@ -223,55 +225,55 @@ ModusClone=Cloned Multihead:\nEach display is a clone of the primary display
 ModusXinerama=Xinerama Multihead:\nBuild one big display out of all screens
 
 # Title for multihead modi
-Modus=Multihead Modus
+Modus=Multihead Mode
 
 # Title for the multihead arrangement
 Arrangement=Arrangement
 
 # Monitor X - connected to - CardY
-ConnectedTo=Connected to
+ConnectedTo=Connected To
 
 # Tooltip text if monitor is unknown
-UnknownMonitor=Unknown monitor:
+UnknownMonitor=Unknown Monitor:
 
 # Tooltip text for primary monitor
-PrimaryMonitor=Primary monitor:
+PrimaryMonitor=Primary Monitor:
 
 # Windowanager title for the monitor model setup
-MonitorCaption=Monitor settings...
+MonitorCaption=Monitor Settings
 
 # Windowanager title for the mouse mode setup
-MouseCaption=Mouse settings...
+MouseCaption=Mouse Settings
 
 # Windowanager title for the card options dialog
-CardCaption=Graphics card settings...
+CardCaption=Graphics Card Settings
 
 # Windowanager title for the second monitor model setup
-DualModelCaption=Monitor settings...
+DualModelCaption=Monitor Settings
 
 # Windowanager title for the dual head setup
-DualHeadCaption=Dualhead settings...
+DualHeadCaption=Dual Head Settings
 
 # Radiobutton don't rotate
-RotateNone=Not rotated
+RotateNone=Not Rotated
 
 # Radiobutton rotate to the left side
-RotateLeft=To the left
+RotateLeft=To the Left
 
 # Radiobutton rotate to the right side
-RotateRight=To the right
+RotateRight=To the Right
 
 # Popup message to ask the user for an option value
-ValueRequired=<b>Option needs a value</b><hr><nobr>Please setup a value for the %1 option.</nobr>
+ValueRequired=<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>
 
 # Group box title for the monitor vendor and name selection
-MonitorSelection=Monitor: Vendor and Name selection
+MonitorSelection=Monitor: Vendor and Name Selection
 
 # Group box title for the mouse vendor and name selection
-MouseSelection=Mouse: Vendor and Name selection
+MouseSelection=Mouse: Vendor and Name Selection
 
 # Group box title for the manual sync frequency set up
-SyncSelection=Manual sync frequency set up
+SyncSelection=Manual Sync Frequency Setup
 
 # Group box title for the aspect/ratio selection
 AspectSelection=Select Diagonal and Aspect Ratio
@@ -280,7 +282,7 @@ AspectSelection=Select Diagonal and Aspect Ratio
 SizeSelection=Display Size in [ mm ]
 
 # Text message telling to be carefull with the monitor sync frequencies
-FrqNote=<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating you can decrease the sync ranges to more <i>powerless</i> values.
+FrqNote=<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges.
 
 # Checkbox to activate DPMS
 DPMS=Activate DPMS
@@ -292,10 +294,10 @@ DiskInfo=Utility Disk...
 Horizontal=Horizontal:
 
 # Label text for second monitor name
-SecondMonitor=Second monitor:
+SecondMonitor=Second Monitor:
 
 # Label text for second monitor resolution
-SecondResolution=Second monitor resolution:
+SecondResolution=Second Monitor Resolution:
 
 # Label text for vertical sync frequency
 Vertical=Vertical:
@@ -307,16 +309,16 @@ Khz=KHz
 Hz=Hz
 
 # Label text for the aspect ratio combo box
-Aspect=Aspect Ratio:
+Aspect=Aspect Ratio
 
 # Label text for the diagonal length combo box
-Diagonal=Diagonal:
+Diagonal=Diagonal
 
 # Label text for the display size X-Axis
-XSize=X-Axis [mm]
+XSize=X Axis [mm]
 
 # Label text for the display size Y-Axis
-YSize=Y-Axis [mm]
+YSize=Y Axis [mm]
 
 # Something is not configured
 NotConfigured=Not configured
@@ -325,10 +327,10 @@ NotConfigured=Not configured
 UnitZoll=inches
 
 # Message box of type Ok, telling to user to insert a CD or disk
-DiskText=<b>Insert CD or disk</b><hr>Insert the display utility CD or disk from the monitor vendor.
+DiskText=<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor.
 
 # Message box of type Error, telling that the utility disk cannot be opened
-DiskError=<b>Read error</b><hr>Could not read from CD or disk. This may point to a damaged media or incorrectly formatted information files on the media.
+DiskError=<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files.
 
 # First gap of the ActivateInfo text: Multihead mode name
 Traditional=Traditional
@@ -340,7 +342,7 @@ Clone=Clone
 Xinerama=Xinerama
 
 # Tab text for the mouse model dialog
-SetupMouse=Setup mouse model
+SetupMouse=Mouse Model
 
 # Group box title for the primary keyboard setup
 KBDPrimary=Primary Setup
@@ -355,7 +357,7 @@ KBDLayoutLabel=Layout:
 KBDVariantLabel=Variant:
 
 # Group box title for the additional keyboard setup
-KBDAdditional=Additional Layout(s)
+KBDAdditional=Additional Layouts
 
 # Table topic text describing the variant column
 KBDVariant=Variant
@@ -370,10 +372,10 @@ KBDAddLayout=Layout
 KBDKey=Keytable
 
 # List View root item text
-XKBShiftLockGroup=Group Shift/Lock behavior
+XKBShiftLockGroup=Group Shift/Lock Behavior
 
 # List View root item text
-XKBUseKbdLed=Use Keyboard LED to show alternate group
+XKBUseKbdLed=Use Keyboard LED to Show Alternate Group
 
 # List View root item text
 XKBComposeKey=Compose Key Position
@@ -382,13 +384,13 @@ XKBComposeKey=Compose Key Position
 XKBControlKey=Control Key Position
 
 # List View root item text
-XKBThirdLevelChooser=Third level chooser
+XKBThirdLevelChooser=Third Level Chooser
 
 # List View root item text
-XKBAltWinKey=Alt/Win key bahavior
+XKBAltWinKey=Alt/Win Key Behavior
 
 # List View root item text
-XKBCapsLock=CapsLock key bahavior
+XKBCapsLock=CapsLock Key Behavior
 
 # List View item text: Radiobutton no item selected
 XKBNone=None
@@ -403,13 +405,13 @@ Both Ctrl keys together change group=Both Ctrl keys together change group
 Right Shift key changes group=Right Shift key changes group
 
 # XKBFile extension text
-Left Win-key changes group=Left Win-key changes group
+Left Win-key changes group=Left Win key changes group
 
 # XKBFile extension text
 Left Alt key changes group=Left Alt key changes group
 
 # XKBFile extension text
-Both Win-keys switch group while pressed=Both Win-keys switch group while pressed
+Both Win-keys switch group while pressed=Both Win keys switch group while pressed
 
 # XKBFile extension text
 uses internal capitalization. Shift doesn't cancel Caps.=uses internal capitalization. Shift doesn't cancel Caps
@@ -571,19 +573,19 @@ TabletPortAndMode=Port and Mode
 TabletElectronicPens=Electronic Pens
 
 # Activate tablet checkbox
-ActivateTablet=Activate this tablet
+ActivateTablet=Activate This Tablet
 
 # Group box title for the tablet vendor and name selection
-TabletSelection=Tablet: Vendor and Name selection
+TabletSelection=Tablet: Vendor and Name Selection
 
 # Group box title for tablet port combobox
-ConnectionPort=Connection port
+ConnectionPort=Connection Port
 
 # Group box title for tablet mode
-PrimaryTabletMode=Primary tablet mode
+PrimaryTabletMode=Primary Tablet Mode
 
 # Group box title for pen/eraser tablet mode
-PenTabletMode=Pen/Eraser Mode
+PenTabletMode=Pen or Eraser Mode
 
 # Group box title for tablet options
 TabletOptions=Options
@@ -613,85 +615,85 @@ AddPen=Add Pen
 AddEraser=Add Eraser
 
 # Windowanager title for the tablet pen options dialog
-TabletCaption=Pen/Eraser settings...
+TabletCaption=Pen or Eraser Settings
 
 # Tab title: Pen properties
-PenProperties=Pen properties
+PenProperties=Pen Properties
 
 # Tab title: Eraser properties
-EraserProperties=Eraser properties
+EraserProperties=Eraser Properties
 
 # Tab text for a touchscreen tab of the touchscreen dialog
 Touchscreen=Touchscreen
 
 # Activate/Assign touchscreen checkbox
-AssignToucher=Assign a touchscreen to display number %1
+AssignToucher=Assign a Touchscreen to Display Number %1
 
 # Group box title for the touchscreen vendor and name selection
-TouchSelection=Touchscreen: Vendor and Name selection
+TouchSelection=Touchscreen: Vendor and Name Selection
 
 # Finish configuration message box
-FinalSaX=<b>Final steps:</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to kill the server.
+FinalSaX=<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to kill the server.
 
 # Tab title: VNC Server configuration
-VNC=VNC-Server
+VNC=VNC Server
 
 # Activate VNC server checkbox
-EnableVNC=Allow access to display using VNC protocol
+EnableVNC=Allow Access to Display Using VNC Protocol
 
 # Group box title for the VNC options
 VNCOptions=VNC Options
 
 # Activate VNC password protection checkbox
-PWDProtect=Activate password protection
+PWDProtect=Activate Password Protection
 
 # LineEdit label: enter password
 Password=Password
 
 # LineEdit contents: enter new password
-NewPassword=<Enter new password...>
+NewPassword=<Enter new password>
 
 # LineEdit contents: change password
-ChangePassword=<Change password...>
+ChangePassword=<Change password>
 
 # LineEdit contents: verify password
-PasswordVerify=Verify password
+PasswordVerify=<Verify password>
 
 # Activate HTTP access checkbox
 VNCHTTP=Activate HTTP Access
 
 # Activate multiple VNC connection checkbox
-VNCShared=Allow multiple VNC connections
+VNCShared=Allow Multiple VNC Connections
 
 # SpinBox label to setup the HTTP port number
 HTTPPort=HTTP Port
 
 # VNC message box appearing if password strings doesn't match
-PWDMismatch=<b>VNC Password mismatch</b><hr>The first and the second version of the password don't match ! Please try again.
+PWDMismatch=<b>VNC Password Mismatch</b><hr>The first and the second version of the password do not match.
 
 # VNC message box appearing if password is too short 
-PWDTooShort=<b>VNC Password fault</b><hr>The password field has been left empty or the password is too short. Please enter a password with at least six characters !.
+PWDTooShort=<b>VNC Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters.
 
 # Install missing packages box
-InstallPackage=<b>Software installation:</b><hr>Some packages are missing. Install the missing packages now?
+InstallPackage=<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?
 
 # Caption text for the missing package info window
-InstallPackageCaption=Package installation
+InstallPackageCaption=Package Installation
 
 # Progress bar title text
-ImportDataFiles=Importing data
+ImportDataFiles=Importing data...
 
 # Progress window caption text
-ImportDataCaption=SaX2 - Importing...
+ImportDataCaption=SaX2: Importing
 
 # Progress window label text
-InitCache=Initialize chache...
+InitCache=Initialize cache...
 
 # Message box text: configuration cannot be saved
-SavingFailed=<b>Saving configuration failed:</b><hr>The following report has been created:
+SavingFailed=<b>Saving Configuration Failed</b><hr>The following report has been created:
 
 # Message box test: configuration has been saved
-SavingDone=<b>Configuration has been saved:</b><hr>Your modifications will take effect the next time the graphics system is restarted. Do you want to exit SaX2 now ?
+SavingDone=<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?
 
 # Message box text: testing the configuration has failed
-TestingFailed=<b>Testing configuration failed:</b><hr>For further information please refer to the file <i>/var/log/Xorg.99.log</i>. The following report has been created from the calling instance:
+TestingFailed=<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:
