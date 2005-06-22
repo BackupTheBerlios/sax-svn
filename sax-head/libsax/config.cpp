@@ -328,12 +328,10 @@ int SaXConfig::testConfiguration (void) {
 		return -1;
 	}
 	int exitCode = 0;
-	QByteArray data = test -> readStdout();
-	QStringList lines = QStringList::split ("\n",data);
-	for ( QStringList::Iterator
-		in = lines.begin(); in != lines.end(); ++in
-	) {
-		QString line (*in);
+	QList<QString> data = test -> readStdout();
+	QListIterator<QString> in (data);
+	for (; in.current(); ++in) {
+		QString line (*in.current());
 		exitCode = line.toInt();
 	}
 	switch (exitCode) {

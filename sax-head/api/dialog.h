@@ -24,6 +24,7 @@ STATUS        : Status: Development
 #include <qwidgetstack.h>
 #include <qlayout.h>
 #include <qdict.h>
+#include <qprocess.h>
 
 #include "../libsax/sax.h"
 

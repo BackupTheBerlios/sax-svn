@@ -464,12 +464,10 @@ bool SaXManipulateDesktop::enable3D (void) {
 				qError (errorString(),EXC_PROCESSFAILED);
 			}
 			bool foundBinaryNVidiaDriver = false;
-			QByteArray data = proc->readStdout();
-			QStringList lines = QStringList::split ("\n",data);
-			for ( QStringList::Iterator
-				in = lines.begin(); in != lines.end(); ++in
-			) {
-				QString line (*in);
+			QList<QString> data = proc->readStdout();
+			QListIterator<QString> in (data);
+			for (; in.current(); ++in) {
+				QString line (*in.current());
 				if (line = "nvidia:NVIDIA Corporation") {
 					foundBinaryNVidiaDriver = true;
 				} 
@@ -621,12 +619,10 @@ bool SaXManipulateDesktop::disable3D (void) {
 				excProcessFailed();
 				qError (errorString(),EXC_PROCESSFAILED);
 			}
-			QByteArray data = proc->readStdout();
-			QStringList lines = QStringList::split ("\n",data);
-			for ( QStringList::Iterator
-				in = lines.begin(); in != lines.end(); ++in
-			) {
-				QString line (*in);
+			QList<QString> data = proc->readStdout();
+			QListIterator<QString> in (data);
+			for (; in.current(); ++in) {
+				QString line (*in.current());
 				if (line = "nvidia:NVIDIA Corporation") {
 					excNvidiaDriverInstalled();
 					qError (errorString(),EXC_NVIDIADRIVERINSTALLED);
@@ -1214,8 +1210,7 @@ QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
 		excProcessFailed();
 		qError (errorString(),EXC_PROCESSFAILED);
 	}
-	QByteArray data = proc -> readStdout();
-	QStringList lines = QStringList::split ("\n",data);
-	return lines.first();
+	QList<QString> data = proc -> readStdout();
+	return *data.first();
 }
 } // end namespace

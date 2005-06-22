@@ -24,7 +24,13 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include <qprocess.h>
+#include <qlist.h>
+#include <qstring.h>
+
+//====================================
+// Defines...
+//------------------------------------
+#define LINESIZE 2048
 
 namespace SaX {
 //====================================
@@ -37,11 +43,11 @@ namespace SaX {
 * virtual table. For a detailed description of the class itself
 * please refer to the derived class definition
 */
-class SaXProcessCallIF : public QObject {
+class SaXProcessCallIF {
 	public:
 	virtual void addArgument ( const QString& ) = 0;
 	virtual void clearArguments ( void ) = 0;
-	virtual QByteArray readStdout ( void ) = 0;
+	virtual QList<QString> readStdout ( void ) = 0;
 	virtual bool start ( void ) = 0;
 	virtual int exitStatus ( void ) = 0;
 
@@ -60,20 +66,17 @@ class SaXProcessCallIF : public QObject {
 * used within the SaXProcess implementation.
 */
 class SaXProcessCall : public SaXProcessCallIF {
-	Q_OBJECT
-
 	private:
-	QProcess*  mProc;
+	QList<QString> mData;
+	QList<QString> mArguments;
+	int            mExitCode;
 
 	public:
 	void addArgument ( const QString& );
 	void clearArguments ( void );
-	QByteArray readStdout ( void );
+	QList<QString> readStdout ( void );
 	bool start ( void );
 	int exitStatus ( void );
-
-	public slots:
-	void readFromStdout ( void );
 
 	public:
 	SaXProcessCall ( void );

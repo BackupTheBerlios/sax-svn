@@ -264,13 +264,11 @@ void SaXProcess::storeDataSysp (void) {
 	//! Store data which has been written to STDOUT after
 	//! a previous sysp process call
 	// ----
-	QByteArray data = mProc->readStdout();
-	QStringList lines = QStringList::split ("\n",data);
-	for ( QStringList::Iterator
-		in = lines.begin(); in != lines.end(); ++in
-	) {
+	QList<QString> data = mProc->readStdout();
+	QListIterator<QString> in (data);
+	for (; in.current(); ++in) {
 		int id = 0;
-		QString line (*in);
+		QString line (*in.current());
 		QStringList tokens = QStringList::split ( "=>", line );
 		QString idstr = tokens.first();
 		QString data  = tokens.last();
@@ -297,12 +295,10 @@ void SaXProcess::storeData (void) {
 	//! Store data which has been written to STDOUT after
 	//! a previous isax process call
 	// ----
-	QByteArray data = mProc->readStdout();
-	QStringList lines = QStringList::split ("\n",data);
-	for ( QStringList::Iterator
-		in = lines.begin(); in != lines.end(); ++in
-	) {
-		QString line (*in);
+	QList<QString> data = mProc->readStdout();
+	QListIterator<QString> in (data);
+	for (; in.current(); ++in) {
+		QString line (*in.current());
 		QString cnr;
 		QString key;
 		QString val;

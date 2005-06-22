@@ -34,6 +34,7 @@ STATUS        : Status: Development
 #include <qwidgetstack.h>
 #include <qprogressdialog.h>
 #include <qlistview.h>
+#include <qprocess.h>
 #include <qlabel.h>
 #include <qvbox.h>
 #include <qdict.h>

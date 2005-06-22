@@ -25,90 +25,64 @@ namespace SaX {
 // Constructor...
 //------------------------------------
 SaXProcessCall::SaXProcessCall ( void ) {
-	// .../
-	//! An object of this type is used to create a QProcess
-	//! instance which receives all the data to run the
-	//! requested process. The start() method behaves differently
-	//! from the original QProcess::start() method. We will wait
-	//! for process termination within start() to be sure there
-	//! is all output data available after returning.
-	// ----
-	mProc = new QProcess ();
-	QObject::connect (
-		mProc , SIGNAL ( processExited  (void)),
-		this  , SLOT   ( readFromStdout (void))
-	);
+	mExitCode  = -1;
 }
 
 //====================================
 // addArgument
 //------------------------------------
 void SaXProcessCall::addArgument ( const QString& arg ) {
-	// .../
-	//! wrapper arround the QProcess::addArgument method
-	// ----
-	mProc->addArgument ( arg );
+	mArguments.append ( new QString(arg) );
 }
 
 //====================================
 // clearArguments
 //------------------------------------
 void SaXProcessCall::clearArguments ( void ) {
-	// .../
-	//! wrapper arround the QProcess::clearArguments method
-	// ----
-	mProc->clearArguments();
+	mArguments.clear();
+	mExitCode  = -1;
 }
 
 //====================================
 // exitStatus
 //------------------------------------
 int SaXProcessCall::exitStatus ( void ) {
-	// .../
-	//! wrapper arround the QProcess::exitStatus method
-	// ----
-	return mProc->exitStatus();
+	return mExitCode;
 }
 
 //====================================
 // start
 //------------------------------------
 bool SaXProcessCall::start ( void ) {
-	// .../
-	//! run the process now using QProcess::start() but
-	//! wait for the process while it's running. After
-	//! the process is done wait for data to be ready for
-	//! reading...
-	// ----
-	if ( ! mProc -> start() ) {
+	//====================================
+	// create program call string
+	//------------------------------------
+	QString program;
+	QListIterator<QString> it ( mArguments );
+	for (; it.current(); ++it ) {
+		program.append (*it.current() + " ");
+	}
+	//====================================
+	// start program and connect stream
+	//------------------------------------
+	char buf[LINESIZE];
+	FILE* fp = popen (program.ascii(),"r");
+	if ( ! fp ) {
 		return false;
 	}
-	while ( mProc->isRunning() ) {
-		usleep (1000);
+	while (NULL != (fgets(buf,sizeof(buf)-1,fp))) {
+		int line = strlen(buf)-1;
+		buf[line] = 0;
+		mData.append (new QString(buf));
 	}
+	mExitCode = pclose(fp);
 	return true;
 }
 
 //====================================
 // readStdout
 //------------------------------------
-QByteArray SaXProcessCall::readStdout ( void ) {
-	// .../
-	//! wrapper arround the QProcess::readStdout method
-	// ----
-	return mProc->readStdout();
-}
-
-//====================================
-// readFromStdout
-//------------------------------------
-void SaXProcessCall::readFromStdout ( void ) {
-	// .../
-	//! slot method to be called from QProcess after the process
-	//! is really finished. The manual page for QProcess suggest
-	//! to wait for this signal to become ready for reading
-	//! STDOUT data
-	// ----
-	fflush (stdout);
+QList<QString> SaXProcessCall::readStdout ( void ) {
+	return mData;
 }
 } // end namespace
