@@ -244,7 +244,7 @@ bool SaXManipulateDesktop::is3DCard (void) {
 		if (flag) {
 			QString  driver = mCard -> getItem ("Driver");
 			QString* driver3D = cardData -> find ("3DDriver");
-			if ( driver == *driver3D ) {
+			if ((driver3D) && (driver == *driver3D)) {
 				//====================================
 				// check 3D driver installation
 				//------------------------------------

@@ -413,6 +413,9 @@ void SCCMonitorDual::import ( void ) {
 	//====================================
 	// setup resolution ComboBox
 	//------------------------------------
+	if (! mResolutionDict[mSelectedResolution]) {
+		mSelectedResolution = "640x480";
+	}
 	mResolution -> setCurrentText (
 		*mResolutionDict[mSelectedResolution]
 	);
