@@ -92,9 +92,9 @@ msgstr "Pa&keisti konfigûracijà"
 msgid "Monitor"
 msgstr "Monitorius"
 
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "Konfigûruoti monitoriaus savybes..."
 
 #. Short description of the Mouse module
@@ -102,19 +102,19 @@ msgstr "Konfigûruoti monitoriaus savybes..."
 msgid "Mouse"
 msgstr "Pelë"
 
-#. Basic description of what the mouse module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "Specialiosios pelës savybës..."
+msgid "Mouse Properties"
+msgstr "Savybës..."
 
 #. Short description of the Keyboard module
 #, fuzzy
 msgid "Keyboard"
 msgstr "Klaviatûros modelis"
 
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "Konfigûruoti monitoriaus savybes..."
 
 #. Short description of the Tablet module
@@ -122,28 +122,28 @@ msgstr "Konfigûruoti monitoriaus savybes..."
 msgid "Tablet"
 msgstr "Grafinis planðetas"
 
-#. Basic description of what the tablet module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "Konfigûruoti monitoriaus savybes..."
+msgid "Tablet Properties"
+msgstr "Savybës..."
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Lytimasis ekranas"
 
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "Konfigûruoti monitoriaus savybes..."
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "Konfigûruoti monitoriaus savybes..."
 
 #. Tab text for a display tab of the monitor dialog
@@ -225,6 +225,7 @@ msgid "&Save"
 msgstr "Ið&saugoti"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr "Planas"
@@ -446,7 +447,7 @@ msgstr "Rankinis sinch. daþniø konfigûravimas..."
 
 #. Group box title for the aspect/ratio selection
 #, fuzzy
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr "Pasirinkite formatà..."
 
 #. Group box title for the display size setup
@@ -456,9 +457,9 @@ msgstr "Displëjaus dydis [ mm ]"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Pastaba:</b>Neteisingi sinch. intervalai gali paþeisti jûsø monitoriø. "
 "Konfigûruodami ðias nuostatas pavartykite monitoriaus apraðà."
@@ -472,7 +473,8 @@ msgid "Utility Disk..."
 msgstr "Pagalbinis diskas..."
 
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+#, fuzzy
+msgid "Horizontal"
 msgstr "Horizontaliai:"
 
 #. Label text for second monitor name
@@ -482,11 +484,12 @@ msgstr "Pasirinkti raiðkas"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "Pasirinkti raiðkas"
 
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+#, fuzzy
+msgid "Vertical"
 msgstr "Virtualiai:"
 
 #. Label text for hsync unit
@@ -564,27 +567,18 @@ msgstr "Pagrindinis konfigûravimas"
 
 #. Label text for the primary keyboard type
 #, fuzzy
-msgid "Type:"
+msgid "Type"
 msgstr "Tipas"
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "Planas"
-
 #. Label text for the primary keyboard variant
-#, fuzzy
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr "Variantas"
 
 #. Group box title for the additional keyboard setup
 #, fuzzy
 msgid "Additional Layouts"
 msgstr "Papildomas planas"
-
-#. Table topic text describing the variant column
-msgid "Variant"
-msgstr "Variantas"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -1135,6 +1129,22 @@ msgstr "Displëjaus konfigûracija"
 
 msgid "Idle timer..."
 msgstr "Tuðèios eigos taimeris..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Specialiosios pelës savybës..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Konfigûruoti monitoriaus savybes..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Planas"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Variantas"
 
 #, fuzzy
 #~ msgid "Monitor System"

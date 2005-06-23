@@ -86,9 +86,9 @@ msgstr "變更組態(&H)"
 msgid "Monitor"
 msgstr "監視器"
 
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "設定監視器內容..."
 
 #. Short description of the Mouse module
@@ -96,19 +96,19 @@ msgstr "設定監視器內容..."
 msgid "Mouse"
 msgstr "滑鼠"
 
-#. Basic description of what the mouse module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "特殊滑鼠內容..."
+msgid "Mouse Properties"
+msgstr "內容..."
 
 #. Short description of the Keyboard module
 #, fuzzy
 msgid "Keyboard"
 msgstr "鍵盤型號"
 
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "設定監視器內容..."
 
 #. Short description of the Tablet module
@@ -116,28 +116,28 @@ msgstr "設定監視器內容..."
 msgid "Tablet"
 msgstr "手寫板"
 
-#. Basic description of what the tablet module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "設定監視器內容..."
+msgid "Tablet Properties"
+msgstr "內容..."
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "觸控式螢幕"
 
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "設定監視器內容..."
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "設定監視器內容..."
 
 #. Tab text for a display tab of the monitor dialog
@@ -219,6 +219,7 @@ msgid "&Save"
 msgstr "儲存(&S)"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr "配置"
@@ -438,7 +439,7 @@ msgstr "手動同步頻率設定..."
 
 #. Group box title for the aspect/ratio selection
 #, fuzzy
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr "選取大小與畫面比例..."
 
 #. Group box title for the display size setup
@@ -448,9 +449,9 @@ msgstr "顯示大小 [ 公釐 ]"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>注意：</b><hr>錯誤的同步範圍可能會損毀您的監視器。如要進行以下設定，請參閱"
 "監視器手冊。"
@@ -464,7 +465,8 @@ msgid "Utility Disk..."
 msgstr "公用程式磁片..."
 
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+#, fuzzy
+msgid "Horizontal"
 msgstr "水平："
 
 #. Label text for second monitor name
@@ -474,11 +476,12 @@ msgstr "選取解析度"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "選取解析度"
 
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+#, fuzzy
+msgid "Vertical"
 msgstr "垂直："
 
 #. Label text for hsync unit
@@ -554,27 +557,18 @@ msgstr "主要設定"
 
 #. Label text for the primary keyboard type
 #, fuzzy
-msgid "Type:"
+msgid "Type"
 msgstr "類型"
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "配置"
-
 #. Label text for the primary keyboard variant
-#, fuzzy
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr "變異"
 
 #. Group box title for the additional keyboard setup
 #, fuzzy
 msgid "Additional Layouts"
 msgstr "其他配置"
-
-#. Table topic text describing the variant column
-msgid "Variant"
-msgstr "變異"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -1116,6 +1110,22 @@ msgstr "顯示器組態"
 
 msgid "Idle timer..."
 msgstr "閒置計時器..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "特殊滑鼠內容..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "設定監視器內容..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "配置"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "變異"
 
 #, fuzzy
 #~ msgid "Monitor System"

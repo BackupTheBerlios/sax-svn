@@ -88,9 +88,9 @@ msgstr "設定の変更 (&C)"
 msgid "Monitor"
 msgstr "モニター"
 
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "モニター特性の設定 ..."
 
 #. Short description of the Mouse module
@@ -98,19 +98,19 @@ msgstr "モニター特性の設定 ..."
 msgid "Mouse"
 msgstr "マウス"
 
-#. Basic description of what the mouse module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "特別なマウスの特性 ..."
+msgid "Mouse Properties"
+msgstr "特性 ..."
 
 #. Short description of the Keyboard module
 #, fuzzy
 msgid "Keyboard"
 msgstr "キーボードのモデル"
 
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "モニター特性の設定 ..."
 
 #. Short description of the Tablet module
@@ -118,28 +118,28 @@ msgstr "モニター特性の設定 ..."
 msgid "Tablet"
 msgstr "タブレット"
 
-#. Basic description of what the tablet module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "モニター特性の設定 ..."
+msgid "Tablet Properties"
+msgstr "特性 ..."
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "タッチスクリーン"
 
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "モニター特性の設定 ..."
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "モニター特性の設定 ..."
 
 #. Tab text for a display tab of the monitor dialog
@@ -221,6 +221,7 @@ msgid "&Save"
 msgstr "保存 (&S)"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr "配列"
@@ -442,7 +443,7 @@ msgstr "手動により、同期周波数を設定する ..."
 
 #. Group box title for the aspect/ratio selection
 #, fuzzy
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr "対角線とアスペクト比を選択してください..."
 
 #. Group box title for the display size setup
@@ -452,9 +453,9 @@ msgstr "画面のサイズ [ mm ]"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>警告:</b><hr>\n"
 "同期周波数に関してはモニターのマニュアルをご参照下さい。\n"
@@ -469,7 +470,8 @@ msgid "Utility Disk..."
 msgstr "ユーティリティーディスク ..."
 
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+#, fuzzy
+msgid "Horizontal"
 msgstr "水平:"
 
 #. Label text for second monitor name
@@ -479,11 +481,12 @@ msgstr "解像度の選択"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "解像度の選択"
 
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+#, fuzzy
+msgid "Vertical"
 msgstr "垂直:"
 
 #. Label text for hsync unit
@@ -563,27 +566,18 @@ msgstr "基本の設定"
 
 #. Label text for the primary keyboard type
 #, fuzzy
-msgid "Type:"
+msgid "Type"
 msgstr "タイプ"
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "配列"
-
 #. Label text for the primary keyboard variant
-#, fuzzy
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr "基本キー配列の型"
 
 #. Group box title for the additional keyboard setup
 #, fuzzy
 msgid "Additional Layouts"
 msgstr "追加キー配列"
-
-#. Table topic text describing the variant column
-msgid "Variant"
-msgstr "基本キー配列の型"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -1135,6 +1129,22 @@ msgstr "画面の設定:"
 
 msgid "Idle timer..."
 msgstr "アイドルタイマ ..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "特別なマウスの特性 ..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "モニター特性の設定 ..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "配列"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "基本キー配列の型"
 
 #, fuzzy
 #~ msgid "Monitor System"

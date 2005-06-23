@@ -109,9 +109,9 @@ msgid "Monitor"
 msgstr "Monitor"
 
 # /tmp/xapi:115
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "Képernyőtulajdonságok beállítása..."
 
 # /tmp/xapi:113
@@ -120,11 +120,11 @@ msgstr "Képernyőtulajdonságok beállítása..."
 msgid "Mouse"
 msgstr "Egér"
 
-# /tmp/xapi:115
-#. Basic description of what the mouse module is used for
+# /tmp/xapi:111
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "Különleges egértulajdonságok..."
+msgid "Mouse Properties"
+msgstr "Tulajdonságok..."
 
 # /tmp/xapi:215
 #. Short description of the Keyboard module
@@ -133,9 +133,9 @@ msgid "Keyboard"
 msgstr "Billentyűzet típusa"
 
 # /tmp/xapi:115
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "Képernyőtulajdonságok beállítása..."
 
 # /tmp/xapi:263
@@ -144,11 +144,11 @@ msgstr "Képernyőtulajdonságok beállítása..."
 msgid "Tablet"
 msgstr "Rajztábla"
 
-# /tmp/xapi:115
-#. Basic description of what the tablet module is used for
+# /tmp/xapi:111
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "Képernyőtulajdonságok beállítása..."
+msgid "Tablet Properties"
+msgstr "Tulajdonságok..."
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -156,9 +156,9 @@ msgid "Touchscreen"
 msgstr "Érintőképernyő"
 
 # /tmp/xapi:115
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "Képernyőtulajdonságok beállítása..."
 
 #. Short description of the VNC module
@@ -166,9 +166,9 @@ msgid "VNC"
 msgstr "VNC"
 
 # /tmp/xapi:115
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "Képernyőtulajdonságok beállítása..."
 
 # /tmp/xapi:281
@@ -259,6 +259,7 @@ msgid "&Save"
 msgstr "&Mentés"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr "Képernyők elrendezése"
@@ -500,7 +501,7 @@ msgstr "Kézi szinkronfrekvencia-beállítás..."
 
 #. Group box title for the aspect/ratio selection
 #, fuzzy
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr "Válassza ki az átlót és képarányt..."
 
 # /tmp/xapi:281
@@ -512,9 +513,9 @@ msgstr "Képernyő mérete [ mm ]-ben"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Figyelem:</b> <hr>A rossz szinkronbeállítás tönkreteheti a képernyőjét! "
 "Kérem olvassa el a képernyő kézikönyvét az alábbi beállításokhoz."
@@ -530,7 +531,8 @@ msgstr "Segédlemez..."
 
 # /tmp/xapi:359
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+#, fuzzy
+msgid "Horizontal"
 msgstr "Vízszintes:"
 
 # /tmp/xapi:347
@@ -542,12 +544,13 @@ msgstr "Felbontás(ok) kiválasztása"
 # /tmp/xapi:347
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "Felbontás(ok) kiválasztása"
 
 # /tmp/xapi:383
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+#, fuzzy
+msgid "Vertical"
 msgstr "Függőleges:"
 
 # /tmp/xapi:363
@@ -632,27 +635,18 @@ msgstr "Elsődleges beállítás"
 
 #. Label text for the primary keyboard type
 #, fuzzy
-msgid "Type:"
+msgid "Type"
 msgstr "Típus"
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "Képernyők elrendezése"
-
 #. Label text for the primary keyboard variant
-#, fuzzy
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr "Variáns"
 
 #. Group box title for the additional keyboard setup
 #, fuzzy
 msgid "Additional Layouts"
 msgstr "További elrendezés(ek)"
-
-#. Table topic text describing the variant column
-msgid "Variant"
-msgstr "Variáns"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -1220,6 +1214,24 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenség időzítő..."
+
+# /tmp/xapi:115
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Különleges egértulajdonságok..."
+
+# /tmp/xapi:115
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Képernyőtulajdonságok beállítása..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Képernyők elrendezése"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Variáns"
 
 # /tmp/xapi:337 /tmp/xapi:397
 #, fuzzy

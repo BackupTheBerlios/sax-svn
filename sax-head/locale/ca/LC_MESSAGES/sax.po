@@ -88,9 +88,9 @@ msgstr "Desar la Configuració"
 msgid "Monitor"
 msgstr "Monitor"
 
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "Propietats del Monitor"
 
 #. Short description of the Mouse module
@@ -99,19 +99,19 @@ msgstr "Propietats del Monitor"
 msgid "Mouse"
 msgstr "Ratolí..."
 
-#. Basic description of what the mouse module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "Propietats del Ratolí..."
+msgid "Mouse Properties"
+msgstr "Propietats"
 
 #. Short description of the Keyboard module
 #, fuzzy
 msgid "Keyboard"
 msgstr "Model de Teclat"
 
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "Propietats del Monitor"
 
 #. Short description of the Tablet module
@@ -120,28 +120,28 @@ msgstr "Propietats del Monitor"
 msgid "Tablet"
 msgstr "Tipus de Tauleta"
 
-#. Basic description of what the tablet module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "Propietats del Monitor"
+msgid "Tablet Properties"
+msgstr "Propietats"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr ""
 
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "Propietats del Monitor"
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr ""
 
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "Propietats del Monitor"
 
 #. Tab text for a display tab of the monitor dialog
@@ -225,6 +225,7 @@ msgid "&Save"
 msgstr "Desa"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 #, fuzzy
 msgid "Layout"
@@ -430,7 +431,7 @@ msgid "Manual Sync Frequency Setup"
 msgstr "Configuració Manual de les Freqüències"
 
 #. Group box title for the aspect/ratio selection
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr ""
 
 #. Group box title for the display size setup
@@ -441,9 +442,9 @@ msgstr "Retard en ms"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "Nota:\n"
 "Unes freqüències errònies poden fer malbé el monitor.\n"
@@ -460,7 +461,7 @@ msgstr "Disc d'Utilitats"
 
 #. Label text for horizontal sync frequency
 #, fuzzy
-msgid "Horizontal:"
+msgid "Horizontal"
 msgstr "Rang de freqüències horitzontal:"
 
 #. Label text for second monitor name
@@ -470,12 +471,12 @@ msgstr "Resolucio(ns)"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "Resolucio(ns)"
 
 #. Label text for vertical sync frequency
 #, fuzzy
-msgid "Vertical:"
+msgid "Vertical"
 msgstr "Virtual"
 
 #. Label text for hsync unit
@@ -555,24 +556,16 @@ msgid "Primary Setup"
 msgstr ""
 
 #. Label text for the primary keyboard type
-msgid "Type:"
+msgid "Type"
 msgstr ""
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "Disposició"
-
 #. Label text for the primary keyboard variant
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr ""
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr ""
-
-#. Table topic text describing the variant column
-msgid "Variant"
 msgstr ""
 
 #. Table topic text describing the status column
@@ -1095,6 +1088,18 @@ msgstr "Configuració"
 
 msgid "Idle timer..."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Propietats del Ratolí..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Propietats del Monitor"
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Disposició"
 
 #, fuzzy
 #~ msgid "Monitor System"

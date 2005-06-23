@@ -81,8 +81,8 @@ msgstr ""
 msgid "Monitor"
 msgstr ""
 
-#. Basic description of what the monitor module is used for
-msgid "Set up card and monitor properties"
+#. title of module dialog
+msgid "Card and Monitor Properties"
 msgstr ""
 
 #. Short description of the Mouse module
@@ -90,16 +90,16 @@ msgstr ""
 msgid "Mouse"
 msgstr ""
 
-#. Basic description of what the mouse module is used for
-msgid "Set up mouse properties"
+#. title of module dialog
+msgid "Mouse Properties"
 msgstr ""
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
 msgstr ""
 
-#. Basic description of what the keyboard module is used for
-msgid "Set up keyboard properties"
+#. title of module dialog
+msgid "Keyboard Properties"
 msgstr ""
 
 #. Short description of the Tablet module
@@ -107,8 +107,8 @@ msgstr ""
 msgid "Tablet"
 msgstr ""
 
-#. Basic description of what the tablet module is used for
-msgid "Set up tablet properties"
+#. title of module dialog
+msgid "Tablet Properties"
 msgstr ""
 
 #. Short description of the Touchscreen module
@@ -116,16 +116,16 @@ msgstr ""
 msgid "Touchscreen"
 msgstr ""
 
-#. Basic description of what the touchscreen module is used for
-msgid "Set up touchscreen properties"
+#. title of module dialog
+msgid "Touchscreen Properties"
 msgstr ""
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr ""
 
-#. Basic description of what the VNC module is used for
-msgid "Set up remote access properties"
+#. title of module dialog
+msgid "Remote Access Properties"
 msgstr ""
 
 #. Tab text for a display tab of the monitor dialog
@@ -197,6 +197,7 @@ msgid "&Save"
 msgstr ""
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr ""
@@ -376,7 +377,7 @@ msgid "Manual Sync Frequency Setup"
 msgstr ""
 
 #. Group box title for the aspect/ratio selection
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr ""
 
 #. Group box title for the display size setup
@@ -385,9 +386,9 @@ msgstr ""
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 
 #. Checkbox to activate DPMS
@@ -399,7 +400,7 @@ msgid "Utility Disk..."
 msgstr ""
 
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+msgid "Horizontal"
 msgstr ""
 
 #. Label text for second monitor name
@@ -407,11 +408,11 @@ msgid "Second Monitor:"
 msgstr ""
 
 #. Label text for second monitor resolution
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr ""
 
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+msgid "Vertical"
 msgstr ""
 
 #. Label text for hsync unit
@@ -479,23 +480,16 @@ msgid "Primary Setup"
 msgstr ""
 
 #. Label text for the primary keyboard type
-msgid "Type:"
-msgstr ""
-
-#. Label text for the primary keyboard layout
-msgid "Layout:"
+msgid "Type"
 msgstr ""
 
 #. Label text for the primary keyboard variant
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr ""
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr ""
-
-#. Table topic text describing the variant column
-msgid "Variant"
 msgstr ""
 
 #. Table topic text describing the status column

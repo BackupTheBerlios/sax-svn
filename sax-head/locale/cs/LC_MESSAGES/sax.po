@@ -102,9 +102,9 @@ msgstr "Z&měnit konfiguraci"
 msgid "Monitor"
 msgstr "Monitor"
 
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "Nastavit vlastnosti monitoru..."
 
 #. Short description of the Mouse module
@@ -112,19 +112,19 @@ msgstr "Nastavit vlastnosti monitoru..."
 msgid "Mouse"
 msgstr "Myš"
 
-#. Basic description of what the mouse module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "Vlastnosti myši..."
+msgid "Mouse Properties"
+msgstr "Vlastnosti..."
 
 #. Short description of the Keyboard module
 #, fuzzy
 msgid "Keyboard"
 msgstr "Model klávesnice"
 
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "Nastavit vlastnosti monitoru..."
 
 #. Short description of the Tablet module
@@ -132,28 +132,28 @@ msgstr "Nastavit vlastnosti monitoru..."
 msgid "Tablet"
 msgstr "Tablet"
 
-#. Basic description of what the tablet module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "Nastavit vlastnosti monitoru..."
+msgid "Tablet Properties"
+msgstr "Vlastnosti..."
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Dotyková obrazovka"
 
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "Nastavit vlastnosti monitoru..."
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "Nastavit vlastnosti monitoru..."
 
 #. Tab text for a display tab of the monitor dialog
@@ -235,6 +235,7 @@ msgid "&Save"
 msgstr "&Uložit"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr "Rozložení"
@@ -454,7 +455,7 @@ msgstr "Ruční nastavení sync. frekvence..."
 
 #. Group box title for the aspect/ratio selection
 #, fuzzy
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr "Zvolte uhlopříčku a poměr stran..."
 
 #. Group box title for the display size setup
@@ -464,9 +465,9 @@ msgstr "Velikost zobrazení v [ mm ]"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Poznámka:</b><hr>Chybné nastavení synchronizace může poškodit monitor. "
 "Ověřte si prosím následující nastavení v příručce monitoru."
@@ -480,7 +481,8 @@ msgid "Utility Disk..."
 msgstr "Disketa s utilitami..."
 
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+#, fuzzy
+msgid "Horizontal"
 msgstr "Vodorovně:"
 
 #. Label text for second monitor name
@@ -490,11 +492,12 @@ msgstr "Zvolit rozlišení"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "Zvolit rozlišení"
 
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+#, fuzzy
+msgid "Vertical"
 msgstr "Svisle:"
 
 #. Label text for hsync unit
@@ -572,27 +575,18 @@ msgstr "Primární zařízení"
 
 #. Label text for the primary keyboard type
 #, fuzzy
-msgid "Type:"
+msgid "Type"
 msgstr "Typ"
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "Rozložení"
-
 #. Label text for the primary keyboard variant
-#, fuzzy
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr "Varianta"
 
 #. Group box title for the additional keyboard setup
 #, fuzzy
 msgid "Additional Layouts"
 msgstr "Další rozložení"
-
-#. Table topic text describing the variant column
-msgid "Variant"
-msgstr "Varianta"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -1140,6 +1134,22 @@ msgstr "Konfigurace na obrazovce"
 
 msgid "Idle timer..."
 msgstr "Čekání..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Vlastnosti myši..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Nastavit vlastnosti monitoru..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Rozložení"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Varianta"
 
 #, fuzzy
 #~ msgid "Monitor System"

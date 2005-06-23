@@ -88,9 +88,9 @@ msgstr "Zmiana konfiguracji (&h)"
 msgid "Monitor"
 msgstr "Monitor"
 
-#. Basic description of what the monitor module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up card and monitor properties"
+msgid "Card and Monitor Properties"
 msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
 
 #. Short description of the Mouse module
@@ -98,19 +98,19 @@ msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
 msgid "Mouse"
 msgstr "Mysz"
 
-#. Basic description of what the mouse module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up mouse properties"
-msgstr "Specjalne w³a¶ciwo¶ci myszy..."
+msgid "Mouse Properties"
+msgstr "W³a¶ciwo¶ci..."
 
 #. Short description of the Keyboard module
 #, fuzzy
 msgid "Keyboard"
 msgstr "Model klawiatury"
 
-#. Basic description of what the keyboard module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up keyboard properties"
+msgid "Keyboard Properties"
 msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
 
 #. Short description of the Tablet module
@@ -118,28 +118,28 @@ msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
 msgid "Tablet"
 msgstr "Tablet"
 
-#. Basic description of what the tablet module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up tablet properties"
-msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
+msgid "Tablet Properties"
+msgstr "W³a¶ciwo¶ci..."
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Ekran dotykowy"
 
-#. Basic description of what the touchscreen module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up touchscreen properties"
+msgid "Touchscreen Properties"
 msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
-#. Basic description of what the VNC module is used for
+#. title of module dialog
 #, fuzzy
-msgid "Set up remote access properties"
+msgid "Remote Access Properties"
 msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
 
 #. Tab text for a display tab of the monitor dialog
@@ -221,6 +221,7 @@ msgid "&Save"
 msgstr "Zapi&sz"
 
 #. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
 msgstr "Uk³ad"
@@ -440,7 +441,7 @@ msgid "Manual Sync Frequency Setup"
 msgstr "Rêczne ustawienie czêstotliwo¶ci synchronizacji..."
 
 #. Group box title for the aspect/ratio selection
-msgid "Select Diagonal and Aspect Ratio"
+msgid "Diagonal and Aspect Ratio"
 msgstr ""
 
 #. Group box title for the display size setup
@@ -450,9 +451,9 @@ msgstr "Wymiary ekranu w [ mm ]"
 #. Text message telling to be carefull with the monitor sync frequencies
 #, fuzzy
 msgid ""
-"<b>Note:</b><br>Wrong sync ranges may damage your monitor. Consult the "
-"monitor manual for the settings.<br><br>If you want your monitor not to use "
-"its maximum rating, decrease the sync ranges."
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Uwaga:</b><hr>B³êdne zakresy synchronizacji mog± zniszczyæ twój monitor. "
 "Sprawd¼ poni¿sze ustawienie w dokumentacji."
@@ -466,7 +467,8 @@ msgid "Utility Disk..."
 msgstr "Dysk narzêdziowy..."
 
 #. Label text for horizontal sync frequency
-msgid "Horizontal:"
+#, fuzzy
+msgid "Horizontal"
 msgstr "Poziome:"
 
 #. Label text for second monitor name
@@ -476,11 +478,12 @@ msgstr "Wybierz rozdzielczo¶ci"
 
 #. Label text for second monitor resolution
 #, fuzzy
-msgid "Second Monitor Resolution:"
+msgid "Second Monitor Resolution"
 msgstr "Wybierz rozdzielczo¶ci"
 
 #. Label text for vertical sync frequency
-msgid "Vertical:"
+#, fuzzy
+msgid "Vertical"
 msgstr "Pionowe:"
 
 #. Label text for hsync unit
@@ -559,27 +562,18 @@ msgstr "Konfiguracja g³ówna"
 
 #. Label text for the primary keyboard type
 #, fuzzy
-msgid "Type:"
+msgid "Type"
 msgstr "Typ"
 
-#. Label text for the primary keyboard layout
-#, fuzzy
-msgid "Layout:"
-msgstr "Uk³ad"
-
 #. Label text for the primary keyboard variant
-#, fuzzy
-msgid "Variant:"
+#. Table topic text describing the variant column
+msgid "Variant"
 msgstr "Wariant"
 
 #. Group box title for the additional keyboard setup
 #, fuzzy
 msgid "Additional Layouts"
 msgstr "Uk³ady dodatkowe"
-
-#. Table topic text describing the variant column
-msgid "Variant"
-msgstr "Wariant"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -1129,6 +1123,22 @@ msgstr "Konfiguracja na wy¶wietlaczu"
 
 msgid "Idle timer..."
 msgstr "Licznik bezczynno¶ci..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Specjalne w³a¶ciwo¶ci myszy..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Ustawienie w³a¶ciwo¶ci monitora..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Uk³ad"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Wariant"
 
 #, fuzzy
 #~ msgid "Monitor System"
