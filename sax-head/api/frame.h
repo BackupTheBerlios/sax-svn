@@ -89,13 +89,20 @@ namespace SaXGUI {
 #if 0
 #define TITLE_GRADIENT     PIXDIR "/title-bar-gradient.png"
 #endif
-#define TITLE_PIXMAP       PIXDIR "/logo.png"
-#define POINTERS_PIXMAP    PIXDIR "/mouse.png"
-#define KEYBOARD_PIXMAP    PIXDIR "/keyboard.png"
-#define MONITORS_PIXMAP    PIXDIR "/monitor.png"
-#define VNCSERVE_PIXMAP    PIXDIR "/vnc.png"
-#define TOUCHERS_PIXMAP    PIXDIR "/touch.png"
-#define XTABLETS_PIXMAP    PIXDIR "/tablet.png"
+#define TITLE_PIXMAP           PIXDIR "/logo.png"
+#define POINTERS_PIXMAP        PIXDIR "/mouse.png"
+#define KEYBOARD_PIXMAP        PIXDIR "/keyboard.png"
+#define MONITORS_PIXMAP        PIXDIR "/monitor.png"
+#define VNCSERVE_PIXMAP        PIXDIR "/vnc.png"
+#define TOUCHERS_PIXMAP        PIXDIR "/touch.png"
+#define XTABLETS_PIXMAP        PIXDIR "/tablet.png"
+
+#define SMALL_POINTERS_PIXMAP  PIXDIR "/small_mouse.png"
+#define SMALL_KEYBOARD_PIXMAP  PIXDIR "/small_keyboard.png"
+#define SMALL_MONITORS_PIXMAP  PIXDIR "/small_monitor.png"
+#define SMALL_VNCSERVE_PIXMAP  PIXDIR "/small_vnc.png"
+#define SMALL_TOUCHERS_PIXMAP  PIXDIR "/small_touch.png"
+#define SMALL_XTABLETS_PIXMAP  PIXDIR "/small_tablet.png"
 
 //====================================
 // Class SCCFrame
@@ -129,6 +136,7 @@ class SCCFrame : public QWidget {
 	#else
 	QHBox*        mModuleTitleBox;
 	QVBox*        mModuleTitleLabel;
+	QLabel*       mModuleTitleIcon;
 	QLabel*       mModuleTitle;
 	#endif
 	QWidgetStack* mDialogStack;

@@ -245,21 +245,28 @@ SCCFrame::SCCFrame (
 	mModuleTitle -> setFocusPolicy ( QWidget::NoFocus );
 	#else
 	mModuleTitleBox   = new QHBox ( mDialogBox );
+
+	mModuleTitleIcon = new QLabel ( mModuleTitleBox );
+	
+	mModuleTitleBox -> setSpacing ( 10 );
 	mModuleTitleLabel = new QVBox ( mModuleTitleBox );
 	mModuleTitleBox -> setStretchFactor ( mModuleTitleLabel, 20 );
 	mModuleTitle = new QLabel ( mModuleTitleLabel );
-	QLabel* mTitleSeperator = new QLabel ( mModuleTitleLabel );
-	mTitleSeperator -> setFixedHeight ( 50 );
-	QLabel* mTitleIcon = new QLabel ( mModuleTitleBox );
-	QFont mTitleFont ("Serif",17,QFont::Normal,false);
-	QPixmap titleBarIconPixmap = QPixmap ( TITLE_PIXMAP );
+	//QLabel* mTitleSeperator = new QLabel ( mModuleTitleLabel );
+	//mTitleSeperator -> setFixedHeight ( 50 );
+	//QLabel* mTitleIcon = new QLabel ( mModuleTitleBox );
+	QFont mTitleFont (font());
+	mTitleFont.setPointSize (font().pointSize() + 5 );
+
+	//QPixmap titleBarIconPixmap = QPixmap ( TITLE_PIXMAP );
 	mModuleTitle -> setFont ( mTitleFont );
-	mTitleIcon   -> setPixmap ( titleBarIconPixmap );
+	//mTitleIcon   -> setPixmap ( titleBarIconPixmap );
 	#endif
 
 	//=====================================
 	// create widget stack (mWorkLayout)
 	//-------------------------------------
+	mDialogBox -> setSpacing ( 15 );
 	mDialogStack = new QWidgetStack ( mDialogBox );
 	mDialogBox -> setStretchFactor  ( mDialogStack,20 );
 
@@ -419,11 +426,12 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 	//=====================================
 	// prepare module title text/pixmap
 	//-------------------------------------
+	QPixmap titlePixmap;
+	#if 0
 	QPixmap pixmap;
 	if (item->pixmap()) {
 		pixmap = *item->pixmap();
 	}
-	#if 0
 	if (mModuleTitle->count() == 0) {
 		mModuleTitle -> insertItem ( pixmap,item->text(),0 );
 	} else {
@@ -434,24 +442,31 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 	QString selection = item -> text();
 	QString titletext = selection;
 	if (selection == mText["MonitorModule"]) {
-		titletext  = mText["MonitorModuleTopic"];
+		titletext   = mText["MonitorModuleTopic"];
+		titlePixmap = QPixmap ( SMALL_MONITORS_PIXMAP );
 	}
 	if (selection == mText["MouseModule"]) {
-		titletext  = mText["MouseModuleTopic"];
+		titletext   = mText["MouseModuleTopic"];
+		titlePixmap = QPixmap ( SMALL_POINTERS_PIXMAP );
 	}
 	if (selection == mText["KeyboardModule"]) {
-		titletext  = mText["KeyboardModuleTopic"];
+		titletext   = mText["KeyboardModuleTopic"];
+		titlePixmap = QPixmap ( SMALL_KEYBOARD_PIXMAP );
 	}
 	if (selection == mText["TabletModule"]) {	
-		titletext  = mText["TabletModuleTopic"];
+		titletext   = mText["TabletModuleTopic"];
+		titlePixmap = QPixmap ( SMALL_XTABLETS_PIXMAP );
 	}
 	if (selection == mText["ToucherModule"]) {
-		titletext  = mText["ToucherModuleTopic"];
+		titletext   = mText["ToucherModuleTopic"];
+		titlePixmap = QPixmap ( SMALL_TOUCHERS_PIXMAP );
 	}
 	if (selection == mText["VNCModule"]) {
-		titletext  = mText["VNCModuleTopic"];
+		titletext   = mText["VNCModuleTopic"];
+		titlePixmap = QPixmap ( SMALL_VNCSERVE_PIXMAP );
 	}
 	mModuleTitle -> setText ( titletext );
+	mModuleTitleIcon -> setPixmap ( titlePixmap );
 	#endif
 
 	//=====================================
