@@ -280,8 +280,8 @@ make doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
 # create startup link
 #-------------------------------------------------
 ( 
-	rm -f $RPM_BUILD_ROOT/sbin/sax2 && \
-	cd $RPM_BUILD_ROOT/sbin && ln -s SaX2 sax2
+	rm -f $RPM_BUILD_ROOT/usr/sbin/sax2 && \
+	cd $RPM_BUILD_ROOT/usr/sbin && ln -s SaX2 sax2
 )
 #=================================================
 # check for options file at /etc/X11/CardModules
@@ -356,12 +356,12 @@ fi
 /usr/share/sax/xc.pl
 /usr/share/sax/pci.pl
 /usr/share/sax/modules
-/sbin/sax.sh
-/sbin/sax2-vesa
-/sbin/SaX2
-/sbin/sax2
-/sbin/sysp
-/sbin/capi
+/usr/sbin/sax.sh
+/usr/sbin/sax2-vesa
+/usr/sbin/SaX2
+/usr/sbin/sax2
+/usr/sbin/sysp
+/usr/sbin/capi
 /usr/share/sax/api/data/CardModules
 /usr/share/sax/api/data/LangCodes
 /usr/share/sax/api/data/PointerDevice
@@ -429,8 +429,8 @@ fi
 /usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
 /usr/share/locale/uk/LC_MESSAGES/sax.mo
-/sbin/xapi
-/sbin/xfine
+/usr/sbin/xapi
+/usr/sbin/xfine
 %if %{suse_version} > 820
 /usr/share/applications/sax2.desktop
 %endif
@@ -446,31 +446,31 @@ fi
 %doc %{_mandir}/man1/xmode.1.gz
 %doc %{_mandir}/man1/xmset.1.gz
 %doc %{_mandir}/man1/xquery.1.gz
-/sbin/catch
-/sbin/corner
-/sbin/demo
-/sbin/demo.sh
-/sbin/dots
-/sbin/fake
-/sbin/hwupdate
-/sbin/isax
-/sbin/screen
-/sbin/testX
-/sbin/whois
-/sbin/wmstart
-/sbin/wrap
-/sbin/xbounce
-/sbin/xbound
-/sbin/xidle
-/sbin/xkbctrl
-/sbin/xkbset
-/sbin/xlook
-/sbin/xmirror
-/sbin/xmode
-/sbin/xmset
-/sbin/xquery
-/sbin/xupdate
-/sbin/xw
+/usr/sbin/catch
+/usr/sbin/corner
+/usr/sbin/demo
+/usr/sbin/demo.sh
+/usr/sbin/dots
+/usr/sbin/fake
+/usr/sbin/hwupdate
+/usr/sbin/isax
+/usr/sbin/screen
+/usr/sbin/testX
+/usr/sbin/whois
+/usr/sbin/wmstart
+/usr/sbin/wrap
+/usr/sbin/xbounce
+/usr/sbin/xbound
+/usr/sbin/xidle
+/usr/sbin/xkbctrl
+/usr/sbin/xkbset
+/usr/sbin/xlook
+/usr/sbin/xmirror
+/usr/sbin/xmode
+/usr/sbin/xmset
+/usr/sbin/xquery
+/usr/sbin/xupdate
+/usr/sbin/xw
 
 #=================================================
 # SaX-Ident file list...  

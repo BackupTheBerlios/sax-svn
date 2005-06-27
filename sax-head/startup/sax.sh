@@ -11,8 +11,8 @@
 #==================================
 # Variables...
 #----------------------------------
-API="/sbin/xapi"
-DOTS="/sbin/dots"
+API="/usr/sbin/xapi"
+DOTS="/usr/sbin/dots"
 INIT="/usr/share/sax/init.pl"
 XC="/usr/share/sax/xc.pl"
 PCI="/usr/share/sax/pci.pl"
@@ -86,7 +86,7 @@ function needHardwareUpdate() {
 	if [ ! -f "/var/cache/sax/files/config" ];then
 		return 1
 	fi
-	/sbin/hwupdate 2>/dev/null
+	/usr/sbin/hwupdate 2>/dev/null
 	if [ $? == 0 ];then
 		return 1
 	fi

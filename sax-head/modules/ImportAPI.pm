@@ -48,8 +48,8 @@ sub ApiInit {
 # Api import filter
 #
 	$import{ApiFile}    = "/var/cache/sax/files/apidata";
-	$import{Xmode}      = "/sbin/xmode";
-	$import{Sysp}       = "/sbin/sysp";
+	$import{Xmode}      = "/usr/sbin/xmode";
+	$import{Sysp}       = "/usr/sbin/sysp";
 	$import{FbSet}      = "fbset";
 }
 

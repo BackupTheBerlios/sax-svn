@@ -35,8 +35,8 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define ISAX               "/sbin/isax"
-#define SYSP               "/sbin/sysp"
+#define ISAX               "/usr/sbin/isax"
+#define SYSP               "/usr/sbin/sysp"
 #define PROF               "/var/lib/sax/createPRO.pl"
 
 #define CDBDIR             "/usr/share/sax/api/data/cdb/"

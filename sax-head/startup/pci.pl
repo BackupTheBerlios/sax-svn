@@ -19,7 +19,7 @@ init(); main();
 sub init {
 	# variable init...
 	# ------------------
-	$var{Sysp}     = "/sbin/sysp";
+	$var{Sysp}     = "/usr/sbin/sysp";
 
 	# option init...
 	# ----------------

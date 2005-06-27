@@ -38,7 +38,7 @@ sub installPackage {
 	print FD "\]\n";
 	close (FD);
 	system (
-		"/sbin/yast2 sw_single '\"$secure/files\"'"
+		"/usr/sbin/yast2 sw_single '\"$secure/files\"'"
 	);
 	cleanTmp();
 	foreach (@pacs) {

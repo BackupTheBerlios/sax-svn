@@ -150,8 +150,8 @@ following tasks:
 \label{sec:sta}
 The coordination of the processes \textbf{init.pl} and \textbf{xc.pl}
 is controlled by the startup script \textit{sax.sh}, 
-which is located in \textit{/sbin} and is usually called up by the 
-wrapper script \textit{/sbin/SaX2}. The wrapper here takes over the
+which is located in \textit{/usr/sbin} and is usually called up by the 
+wrapper script \textit{/usr/sbin/SaX2}. The wrapper here takes over the
 following tasks:
 \begin{itemize}
 \item Creating a secure, temporary directory with \textbf{mktemp}. 
@@ -159,7 +159,7 @@ following tasks:
       then authentication is required. This is done by the xauth mechanism, via
       the  \textit{sux} command, or via the xhost mechanism, if sux does not
       exist. In both cases the root password has to be given.  
-\item Calling up the actual SaX2 startup script, \textbf{/sbin/sax.sh}
+\item Calling up the actual SaX2 startup script, \textbf{/usr/sbin/sax.sh}
 \end{itemize}
 The ability to pass on options to the startup script is provided by the sum of
 options from init.pl and xc.pl. The following options are available:

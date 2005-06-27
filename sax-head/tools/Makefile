@@ -12,7 +12,7 @@
 # Variable setup...
 #------------------------------------
 buildroot   = /
-sax_tools   = ${buildroot}/sbin
+sax_tools   = ${buildroot}/usr/sbin
 
 CFLAGS      = -Wall
 VERSION     = 7.1

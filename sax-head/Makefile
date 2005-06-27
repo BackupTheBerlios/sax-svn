@@ -28,7 +28,7 @@ man_prefix     = ${buildroot}/usr/share/man
 #--------------------------------------------
 MANVZ          = ${man_prefix}/man1
 PACKDOCVZ      = ${doc_prefix}/sax2
-SBINVZ         = ${buildroot}/sbin
+SBINVZ         = ${buildroot}/usr/sbin
 SAXBINVZ       = ${sax_prefix}
 APIVZ          = ${sax_prefix}/api
 APIDATAVZ      = ${sax_prefix}/api/data

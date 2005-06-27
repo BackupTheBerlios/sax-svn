@@ -43,14 +43,14 @@ STATUS        : Status: Up-to-date
 #define TEXT_3D           "Do you want to enable 3D for this card ?"
 #define TMP_CONFIG        "/tmp/sysdata"
 #define XW_LOG            "/tmp/xwlog"
-#define XWRAPPER          "/sbin/xw"
+#define XWRAPPER          "/usr/sbin/xw"
 #define PROBE             "-probeonly"
 #define CONFIG            "-xf86config"
 #define BLANK             "-blank"
 #define NO_FLAG_QUESTION  99
 #define FB_DEV            "/dev/fb0"
 #define KILL              "/usr/bin/killall"
-#define QTASK             "/sbin/xapi"
+#define QTASK             "/usr/sbin/xapi"
 #define STDOUT            0
 #define STDERR            1
 #define STDNONE           2
@@ -79,7 +79,7 @@ STATUS        : Status: Up-to-date
 #define PROFILECOUNT      "/usr/share/sax/sysp/script/profilecount.pl"
 #define PSECTION          "/usr/share/sax/sysp/script/psection.pl"
 #define PDRIVER           "/usr/share/sax/sysp/script/profiledriver.pl"
-#define CAPI              "/sbin/capi"
+#define CAPI              "/usr/sbin/capi"
 #define GETVENDOR         "/usr/share/sax/sysp/script/vendor.pl"
 #define VBIOS             "/usr/share/sax/sysp/script/vbios.pl"
 

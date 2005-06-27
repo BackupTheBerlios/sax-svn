@@ -51,11 +51,11 @@ fi
 #----------------------------------------
 for param;do
 	if [ $param = "-v" ] || [ $param = "--version" ];then
-		/sbin/sax.sh -v
+		/usr/sbin/sax.sh -v
 		exit 0
 	fi
 	if [ $param = "-h" ] || [ $param = "--help" ];then
-		/sbin/sax.sh -h
+		/usr/sbin/sax.sh -h
 		exit 0
 	fi
 done
@@ -80,10 +80,10 @@ if [ ! "$UID" = 0 ];then
 
 	echo -n "SaX: root "
 	if [ -f "$SUX" ];then
-		sux -c "/sbin/SaX2 $*"
+		sux -c "/usr/sbin/SaX2 $*"
 	else
 		xhost + localhost > /dev/null 2>/dev/null
-		su - -c "/sbin/SaX2 $*"
+		su - -c "/usr/sbin/SaX2 $*"
 	fi
 
 	if [ ! "$?" = 0 ];then
@@ -102,4 +102,4 @@ fi
 
 # run the main sax start script...
 # ---------------------------------
-/sbin/sax.sh $*
+/usr/sbin/sax.sh $*

@@ -48,14 +48,14 @@ by hand. The following command can be used to query data about the graphics
 hardware from the current configuration:
 
 \begin{Command}{5cm}
-/sbin/isax -l Card
+/usr/sbin/isax -l Card
 \end{Command}
 
 When obtaining data from the SaX registry the call for graphics hardware
 will look like this:
 
 \begin{Command}{5cm}
-/sbin/isax -l Card -b
+/usr/sbin/isax -l Card -b
 \end{Command}
 
 \section{Creating configurations with isax}
@@ -71,7 +71,7 @@ The following command can be used to create a new configuration
 from the information specified in the sample file \textit{/var/lib/sax/apidata}:
 
 \begin{Command}{11cm}
-/sbin/isax -f /var/lib/sax/apidata -c /tmp/myconfig
+/usr/sbin/isax -f /var/lib/sax/apidata -c /tmp/myconfig
 \end{Command}
 
 When only modifying based on the currently installed configuration
@@ -80,7 +80,7 @@ contains only information about the changes which should be migrated
 with the current configuration data.
 
 \begin{Command}{11cm}
-/sbin/isax -f /var/lib/sax/apidata -c /tmp/myconfig -m
+/usr/sbin/isax -f /var/lib/sax/apidata -c /tmp/myconfig -m
 \end{Command}
 
 Both examples will create an output file specified with the option

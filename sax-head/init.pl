@@ -115,7 +115,7 @@ sub init {
 	# check for the Identity.map
 	# --------------------------
 	my $map = "/usr/share/sax/sysp/maps/Identity.map";
-	my $api = "/sbin/xapi";
+	my $api = "/usr/sbin/xapi";
 	if ( ! -f $map ) {
 		die "init: no Identity.map found";
 	}
@@ -146,21 +146,21 @@ sub init {
 	$spec{DbmNew}              = "/var/cache/sax/files/config.new";
 	$spec{DbmDir}              = "/var/cache/sax/files";
 	$spec{SyspDir}             = "/var/cache/sax/sysp/rdbms";
-	$spec{Sysp}                = "/sbin/sysp";
+	$spec{Sysp}                = "/usr/sbin/sysp";
 	$spec{FbSet}               = "fbset";
 	$spec{LogFile}             = "/var/log/SaX.log";
-	$spec{Xmode}               = "/sbin/xmode";
-	$spec{Xmset}               = "/sbin/xmset";
+	$spec{Xmode}               = "/usr/sbin/xmode";
+	$spec{Xmset}               = "/usr/sbin/xmset";
 	$spec{RcConfig}            = "/etc/rc.config";
 	$spec{RcSysConfigLang}     = "/etc/sysconfig/language";
 	$spec{SysConfig}           = "/etc/sysconfig";
 	$spec{Profile}             = "/usr/share/sax/pci.pl";
 	$spec{ProfileDir}          = "/usr/share/sax/profile/";
 	$spec{Monitors}            = "/usr/share/sax/api/data/cdb/Monitors";
-	$spec{Corner}              = "/sbin/corner";
+	$spec{Corner}              = "/usr/sbin/corner";
 	$spec{MD5}                 = "/usr/bin/md5sum";
-	$spec{ISaX}                = "/sbin/isax";
-	$spec{HwUpdate}            = "/sbin/hwupdate";
+	$spec{ISaX}                = "/usr/sbin/isax";
+	$spec{HwUpdate}            = "/usr/sbin/hwupdate";
 
 	# /.../
 	# check if sysp was able to detect a card

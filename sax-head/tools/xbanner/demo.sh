@@ -19,10 +19,10 @@ function init {
 #
 	XBANNER="/usr/X11R6/bin/xbanner"
 	FREE="/usr/X11R6/bin/freetemp"
-	XBOUND="/sbin/xbound"
-	FILE="/sbin/demo"
-	SCREEN="/sbin/screen"
-	XMIRROR="/sbin/xmirror"
+	XBOUND="/usr/sbin/xbound"
+	FILE="/usr/sbin/demo"
+	SCREEN="/usr/sbin/screen"
+	XMIRROR="/usr/sbin/xmirror"
 
 	DISP=$1
 	if [ -z "$DISP" ];then

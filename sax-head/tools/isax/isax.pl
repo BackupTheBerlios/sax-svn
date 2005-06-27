@@ -95,7 +95,7 @@ sub init {
 		$OutputFile = "/etc/X11/xorg.conf";
 	}
 	$init{TmpDir}      = CreateSecureDir(); 
-	$init{Xmode}       = "/sbin/xmode";
+	$init{Xmode}       = "/usr/sbin/xmode";
 	$init{ConfigFile}  = "/etc/X11/xorg.conf";
 	$init{BinaryFile}  = "/var/cache/sax/files/config";
 	$init{DbmNew}      = "/var/cache/sax/files/config.new";
