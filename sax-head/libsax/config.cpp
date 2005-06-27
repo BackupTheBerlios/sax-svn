@@ -264,29 +264,32 @@ void SaXConfig::commitConfiguration (void) {
 			al += line;
 		}
 		apiConfig.close();
+	} else {
+		return;
 	}
 	//====================================
 	// read current config file
 	//------------------------------------
 	QStringList cl;
 	if ( curConfig.open( IO_ReadOnly ) ) {
-		QTextStream stream( &apiConfig );
+		QTextStream stream( &curConfig );
 		QString line;
 		while ( !stream.atEnd() ) {
 			line = stream.readLine();
 			cl += line;
 		}
 		curConfig.close();
-	}
-	//====================================
-	// create a backup copy
-	//------------------------------------
-	if ( secConfig.open( IO_WriteOnly ) ) {
-		QTextStream stream ( &secConfig );
-		for (QStringList::Iterator it = cl.begin(); it != cl.end();++it) {
-			stream << *it << "\n";
+	
+		//====================================
+		// create a backup copy
+		//------------------------------------
+		if ( secConfig.open( IO_WriteOnly ) ) {
+			QTextStream stream ( &secConfig );
+			for (QStringList::Iterator it = cl.begin(); it != cl.end();++it) {
+				stream << *it << "\n";
+			}
+			secConfig.close();
 		}
-		secConfig.close();
 	}
 	//====================================
 	// install to system
