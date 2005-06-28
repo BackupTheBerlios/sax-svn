@@ -435,13 +435,14 @@ sub MergeParseResult {
 		$rawcount++;
 		}
 		} else {
-	    # option strings...
-	    # -------------------
+		# option strings...
+		# -------------------
 		if ($opt eq "Option") {
 			$setpath = "";
 			foreach $next (keys %{$device{$key}{$count}{$opt}}) {
 				$optval = $device{$key}{$count}{$opt}{$next};
-				$optval =~ s/ +//g;
+				$optval =~ s/^ +//g;
+				$optval =~ s/ $//g;
 				if ($optval eq "<none>") {
 					$setpath = "$setpath,$next";
 				} else {

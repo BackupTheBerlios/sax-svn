@@ -429,7 +429,7 @@ sub ParseDeviceSection {
 		foreach $i (@sections) {
 
 		#==========================================
-		# look up board and vendor name, the names 
+		# look up board and vendor names, the names 
 		# may contain blanks...
 		#------------------------------------------
 		if ($i =~ /vendor=\"([^\"]*)\"/) {
@@ -438,13 +438,25 @@ sub ParseDeviceSection {
 		if ($i =~ /board=\"([^\"]*)\"/) {
 			$parse{Device}{$count}{BoardName}  = $1;
 		}
+		if ($i =~ s/(SaXDualMonitorVendor:.*?,)//) {
+			my $vendor = $1;
+			$vendor =~ s/,$//;
+			my @option = split(/:/,$vendor);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
+		if ($i =~ s/(SaXDualMonitorModel:.*?,)//) {
+			my $model = $1;
+			$model =~ s/,$//;
+			my @option = split(/:/,$model);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
 
 		@line = split(/ /,$i);
 		foreach $n (@line) {
 			@value = split(/=/,$n);
 			if (defined $value[0]) {
 			SWITCH: for ($value[0]) {
-    		#========================================
+			#========================================
 			# Identifier...
 			#----------------------------------------
 			/^id/          && do { 
@@ -465,7 +477,7 @@ sub ParseDeviceSection {
 				$parse{Device}{$count}{Screen} = $value[1];
 				last SWITCH;
 			};
-    		#========================================
+			#========================================
 			# Card...
 			#---------------------------------------- 
 			/^card/        && do { 
