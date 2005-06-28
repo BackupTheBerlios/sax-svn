@@ -839,9 +839,7 @@ void SCCFrame::testConfiguration ( void ) {
 // installConfiguration
 //-------------------------------------
 void SCCFrame::installConfiguration ( void ) {
-	#if 0
 	mConfig -> commitConfiguration();
-	#endif
 }
 
 //=====================================
