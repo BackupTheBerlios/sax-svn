@@ -38,7 +38,7 @@ if [ "$vendor" = "The XFree86 Project" ] || \
 	echo "Desktop -> [X] ->  CalcModelines = no"            > $profile
 	echo "Monitor -> [X] ->  CalcAlgorithm = XServerPool"  >> $profile
 else
-	size=`hwinfo --monitor | grep Size: | cut -f2 -d:`
+	size=`/usr/sbin/hwinfo --monitor | grep Size: | cut -f2 -d:`
 	if [ ! -z "$size" ];then
 		size=`echo $size | cut -f1 -d" "`
 		xcm=`echo $size | cut -f1 -dx`

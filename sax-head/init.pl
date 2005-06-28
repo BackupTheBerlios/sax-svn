@@ -901,6 +901,7 @@ sub SetBatchMode {
 	my (%var)     = %{$_[0]};   # config hash
 	my ($profile) = $_[1];      # profile batch
 	my $line;                   # stdinput line after \n
+	my $index;                  # optinal list index given to variable
 	my @tree;                   # option tree
 	my @result;                 # grep result from tree
 	my $param;                  # parameter behind a key 
@@ -1009,6 +1010,11 @@ sub SetBatchMode {
 		# -----------------------
 		while ($_ =~ /{(.*?)}/) {
 			$line      = $1;
+			undef $index;
+			if ($line =~ /(.*):(.*)/) {
+				$line  = $1;
+				$index = $2;
+			}
 			$line      =~ s/ +//g;
 			@v         = split(/->/,$line);
 			$search    = join ("->",@v);
@@ -1018,6 +1024,10 @@ sub SetBatchMode {
 			$ViewValue = HGetValue(\%var,$search);
 			$ViewValue =~ s/^ +//g;
 			$ViewValue =~ s/ +$//g;
+			if (defined $index) {
+				my @list = split (/,/,$ViewValue);
+				$ViewValue = $list[$index];
+			}
 			$_ =~ s/{.*?}/$ViewValue/;
 		}
 		# push stream data...
