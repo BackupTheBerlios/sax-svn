@@ -440,7 +440,7 @@ int main (int argc, char*argv[]) {
 // errorHandler
 //---------------------
 int errorHandler (Display* dpy,XErrorEvent *err) {
-	return -1;
+	exit (1);
 }
 
 //=====================
