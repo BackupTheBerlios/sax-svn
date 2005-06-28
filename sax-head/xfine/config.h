@@ -36,11 +36,6 @@ STATUS        : Status: Up-to-date
 #define PIXNARROWER     PIXDIR "xfine-narrower.xpm"
 
 //==============================
-// Uni-Font...
-//------------------------------
-#define UNIFONT  "-gnu-unifont-medium-r-normal--16-160-75-75-p-80-iso10646-1"
-
-//==============================
 // Startup options...
 //------------------------------
 #define TDOMAIN         "/usr/share/locale"
