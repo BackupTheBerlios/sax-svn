@@ -384,6 +384,7 @@ void SaXConfig::setParseError (char* data) {
 	//! for later acces in getParseError()
 	// ----
 	QTextOStream (mParseErrorString) << data;
+	*mParseErrorString = mParseErrorString->stripWhiteSpace();
 }
 
 //====================================
@@ -458,7 +459,9 @@ void VErrorF (const char *f, va_list args) {
 		data = (char*)realloc (data, size);
 	}
 	if (self) {
+	if (strcmp(data,"\n") != 0) {
 		self -> setParseErrorValue (data);
+	}
 	}
 }
 void ErrorF (const char *f, ...) {
@@ -480,7 +483,9 @@ void ErrorF (const char *f, ...) {
 		data = (char*)realloc (data, size);
 	}
 	if (self) {
+	if (strcmp(data,"\n") != 0) {
 		self -> setParseError (data);
+	}
 	}
 }
 }

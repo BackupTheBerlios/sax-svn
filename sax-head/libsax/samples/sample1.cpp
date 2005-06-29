@@ -26,11 +26,13 @@ int main (void) {
 	if (mDesktop.selectDesktop (0)) {
 		mDesktop.addResolution (24,1600,1200);
 	}
+	section["Desktop"]->removeEntry("Identifier");
 	printf ("Writing configuration\n");
-	config -> setMode (SAX_MERGE);
+	config -> setMode (SAX_NEW);
 	if ( ! config -> createConfiguration() ) {
-		printf ("%s\n",config->errorString().ascii());
-		printf ("%s\n",config->getParseErrorValue().ascii());
+		printf ("\"%s\"\n",config->errorString().ascii());
+		printf ("\"%s\"\n",config->getParseErrorValue().ascii());
+		printf ("\"%s\"\n",config->getParseError().ascii());
 		return 1;
 	}
 	return 0;
