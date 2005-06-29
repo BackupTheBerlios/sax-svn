@@ -108,7 +108,7 @@ Release:      11
 Requires:     ImageMagick xbanner sax2-tools qt3 fvwm2 tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
-Provides:     sax2:/usr/X11R6/%{_lib}/sax/xapi
+Provides:     sax2:/usr/sbin/xapi
 
 %description -n sax2-gui
 This package contains the GUI for the SuSE Advanced X-Configuration

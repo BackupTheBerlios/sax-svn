@@ -342,15 +342,15 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	QString currentMode (
 		modeList.at (mScreen)
 	);
-	XStringList modeline (currentMode);
-	modeline.setSeperator (" ");
-	QList<char> timing = modeline.getList();
-	if (timing.count() == 0) {
+	if (currentMode.isEmpty()) {
 		log (L_INFO,
 			"XFineWindow::No mode information for screen: %d",mScreen
 		);
 		exit (0);
 	}
+	XStringList modeline (currentMode);
+	modeline.setSeperator (" ");
+	QList<char> timing = modeline.getList();
 	// ...
 	// disable next screen button if only one
 	// screen is available

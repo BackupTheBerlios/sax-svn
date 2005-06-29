@@ -42,10 +42,28 @@ SCCFrame::SCCFrame (
 	// show information box if set
 	//-------------------------------------
 	if (setinfo) {
+		QProcess* proc = new QProcess ();
+		proc -> addArgument ( XQUERY );
+		proc -> addArgument ( "-M" );
+		if ( ! proc -> start() ) {
+			exitSaX (1);
+		}
+		while (proc->isRunning()) {
+			usleep (1000);
+		}
+		QByteArray data = proc->readStdout();
+		QStringList lines = QStringList::split ("\n",data);
+		QStringList position = QStringList::split (" ",lines.first());
+		QStringList reslist  = QStringList::split (":",position.last());
+		int posx = reslist.first().toInt();
+		int posy = reslist.last().toInt();
+		posx = posx - 225;
+		posy = posy - 75;
 		SCCMessage* mMessageBox = new SCCMessage (
 			this, getTextPtr(), SaXMessage::INTRO,
 			"Suggestion","SuggestionCaption"
 		);
+		mMessageBox -> setGeometry ( posx,posy,450,150 );
 		QString result = mMessageBox -> showMessage();
 		if (result == mText["Cancel"]) {
 			exitSaX (2);	
@@ -89,10 +107,28 @@ SCCFrame::SCCFrame (
 			exitSaX();
 		}
 		if (package != "<none>") {
+			QProcess* proc = new QProcess ();
+			proc -> addArgument ( XQUERY );
+			proc -> addArgument ( "-M" );
+			if ( ! proc -> start() ) {
+				exitSaX (1);
+			}
+			while (proc->isRunning()) {
+				usleep (1000);
+			}
+			QByteArray data = proc->readStdout();
+			QStringList lines = QStringList::split ("\n",data);
+			QStringList position = QStringList::split (" ",lines.first());
+			QStringList reslist  = QStringList::split (":",position.last());
+			int posx = reslist.first().toInt();
+			int posy = reslist.last().toInt();
+			posx = posx - 200;
+			posy = posy - 75;
 			SCCMessage* mMessageBox = new SCCMessage (
 				this, getTextPtr(), SaXMessage::YES_NO,
 				"InstallPackage","InstallPackageCaption"
 			);
+			mMessageBox -> setGeometry ( posx,posy,400,150 );
 			QString result = mMessageBox -> showMessage();
 			if (result == mText["Yes"]) {
 				QProcess* proc = new QProcess (); 
