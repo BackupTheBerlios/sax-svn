@@ -357,7 +357,7 @@ SCCFrame::SCCFrame (
 	);
 	QObject::connect(
 		mModuleList, SIGNAL (selectionChanged ( QListBoxItem* )),
-		this      , SLOT   (slotSelected     ( QListBoxItem* ))
+		this       , SLOT   (slotSelected     ( QListBoxItem* ))
 	);
 
 	//=====================================
