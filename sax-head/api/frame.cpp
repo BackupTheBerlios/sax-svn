@@ -202,13 +202,11 @@ SCCFrame::SCCFrame (
 	//=====================================
 	// create seperator
 	//-------------------------------------
-	#if 1
 	mSeperator = new QFrame ( mMainFrame );
 	mSeperator -> setFixedHeight (2);
 	mSeperator -> setFrameStyle (
 		QFrame::HLine | QFrame::Raised
 	);
-	#endif
 
 	//=====================================
 	// create area panels
@@ -218,36 +216,9 @@ SCCFrame::SCCFrame (
 	mTitleLayout= new QHBoxLayout ( mMainLayout );
 	mWorkLayout = new QHBoxLayout ( mMainLayout );
 	mMainLayout -> addSpacing (10);
-	#if 1
 	mMainLayout -> addWidget      ( mSeperator  );
 	mMainLayout -> addSpacing (5);
-	#endif
 	mDoneLayout = new QHBoxLayout ( mMainLayout );
-
-	//=====================================
-	// create title bar (mTitleLayout)
-	//-------------------------------------
-	#if 0
-	mTitleBox = new QVBox ( mMainFrame );
-	QHBox* mTitleHBox  = new QHBox  ( mTitleBox );
-	QLabel* titleSpace = new QLabel ( mTitleBox );
-	titleSpace -> setFixedHeight ( 10 );
-	QPixmap titleBarGradientPixmap = QPixmap ( TITLE_GRADIENT );
-	QPixmap titleBarIconPixmap = QPixmap ( TITLE_PIXMAP );
-	mTitleHBox -> setPaletteBackgroundPixmap ( titleBarGradientPixmap );
-	mTitleHBox -> setMargin (5);
-	mTitleHBox -> setFrameStyle (
-		QFrame::Panel | QFrame::Raised
-	);
-	QFont mTitleFont ("Sans",20,QFont::Normal,true);
-	QLabel* mIcon = new QLabel ( mTitleHBox );
-	mIcon -> setPixmap ( titleBarIconPixmap );
-	QLabel* mTitle  = new QLabel (" " + mText["TitleLeft"],mTitleHBox);
-	mTitleHBox -> setStretchFactor ( mTitle, 20 );
-	QLabel* mVendor = new QLabel ( mText["TitleRight"],mTitleHBox );
-	mTitle  -> setFont (mTitleFont);
-	mVendor -> setFont (mTitleFont);
-	#endif
 
 	//=====================================
 	// create module listbox (mWorkLayout)
@@ -267,37 +238,16 @@ SCCFrame::SCCFrame (
 	QVBox* mDialogBox = new QVBox ( mMainFrame );
 	mDialogBox -> setFrameStyle (
 		QFrame::Box | QFrame::NoFrame
-		#if 0
-		QFrame::Box | QFrame::Raised
-		#endif
 	);
-	#if 0
-	mModuleTitle = new QListBox ( mDialogBox );
-	mModuleTitle -> setFrameStyle (
-		QFrame::Box | QFrame::NoFrame
-	);
-	mModuleTitle -> setVScrollBarMode (QScrollView::AlwaysOff);
-	mModuleTitle -> setSelected ( 0,true );
-	mModuleTitle -> setFocusPolicy ( QWidget::NoFocus );
-	#else
-	mModuleTitleBox   = new QHBox ( mDialogBox );
-
+	mModuleTitleBox  = new QHBox  ( mDialogBox );
 	mModuleTitleIcon = new QLabel ( mModuleTitleBox );
-	
 	mModuleTitleBox -> setSpacing ( 10 );
 	mModuleTitleLabel = new QVBox ( mModuleTitleBox );
 	mModuleTitleBox -> setStretchFactor ( mModuleTitleLabel, 20 );
 	mModuleTitle = new QLabel ( mModuleTitleLabel );
-	//QLabel* mTitleSeperator = new QLabel ( mModuleTitleLabel );
-	//mTitleSeperator -> setFixedHeight ( 50 );
-	//QLabel* mTitleIcon = new QLabel ( mModuleTitleBox );
 	QFont mTitleFont (font());
 	mTitleFont.setPointSize (font().pointSize() + 5 );
-
-	//QPixmap titleBarIconPixmap = QPixmap ( TITLE_PIXMAP );
 	mModuleTitle -> setFont ( mTitleFont );
-	//mTitleIcon   -> setPixmap ( titleBarIconPixmap );
-	#endif
 
 	//=====================================
 	// create widget stack (mWorkLayout)
@@ -328,9 +278,6 @@ SCCFrame::SCCFrame (
 	//=====================================
 	// add widgets to the layout structure
 	//-------------------------------------
-	#if 0
-	mTitleLayout -> addWidget  ( mTitleBox );
-	#endif
 	mWorkLayout  -> addWidget  ( mModuleBox );
 	mWorkLayout  -> addWidget  ( mDialogBox );
 	mWorkLayout  -> setStretchFactor ( mDialogBox,3 );
@@ -431,15 +378,6 @@ void SCCFrame::setupModules ( void ) {
 	mVNC      = new SCCVNC         ( mDialogStack,getTextPtr(),mSection,this );
 
 	//=====================================
-	// setup height for module title box
-	//-------------------------------------
-	#if 0
-	mModuleTitle -> setFixedHeight (
-		mModuleList -> item(0) -> height(mModuleTitle)
-	);
-	#endif
-
-	//=====================================
 	// start with monitor dialog
 	//-------------------------------------
 	mModuleList -> setSelected ( 0,true );
@@ -463,18 +401,6 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 	// prepare module title text/pixmap
 	//-------------------------------------
 	QPixmap titlePixmap;
-	#if 0
-	QPixmap pixmap;
-	if (item->pixmap()) {
-		pixmap = *item->pixmap();
-	}
-	if (mModuleTitle->count() == 0) {
-		mModuleTitle -> insertItem ( pixmap,item->text(),0 );
-	} else {
-		mModuleTitle -> changeItem ( pixmap,item->text(),0 );
-	}
-	mModuleTitle -> setSelected ( 0,true );
-	#else
 	QString selection = item -> text();
 	QString titletext = selection;
 	if (selection == mText["MonitorModule"]) {
@@ -503,7 +429,6 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 	}
 	mModuleTitle -> setText ( titletext );
 	mModuleTitleIcon -> setPixmap ( titlePixmap );
-	#endif
 
 	//=====================================
 	// run the selected dialog
@@ -625,19 +550,9 @@ void SCCFrame::hideFrame ( int frame ) {
 		case FRAME_MAIN:
 			mMainFrame -> hide();
 		break;
-		#if 0
-		case FRAME_TITLE:
-			mTitleBox -> hide();
-		break;
-		#endif
 		case FRAME_MODULES:
 			mModuleBox -> hide();
 		break;
-		#if 0
-		case FRAME_TOPIC:
-			mModuleTitle -> hide();
-		break;
-		#endif
 		default:
 		break;
 	}

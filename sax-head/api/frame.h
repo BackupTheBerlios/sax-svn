@@ -61,9 +61,6 @@ namespace SaXGUI {
 // Defines...
 //------------------------------------
 #define FRAME_MAIN         1
-#if 0
-#define FRAME_TITLE        2
-#endif
 #define FRAME_MODULES      3
 #define FRAME_TOPIC        4
 
@@ -86,9 +83,6 @@ namespace SaXGUI {
 //====================================
 // Defines...
 //------------------------------------
-#if 0
-#define TITLE_GRADIENT     PIXDIR "/title-bar-gradient.png"
-#endif
 #define TITLE_PIXMAP           PIXDIR "/logo.png"
 #define POINTERS_PIXMAP        PIXDIR "/mouse.png"
 #define KEYBOARD_PIXMAP        PIXDIR "/keyboard.png"
@@ -121,9 +115,7 @@ class SCCFrame : public QWidget {
 
 	private:
 	QFrame*       mMainFrame;
-	#if 1
 	QFrame*       mSeperator;
-	#endif
 	QBoxLayout*   mMainLayout;
 	QBoxLayout*   mTitleLayout;
 	QBoxLayout*   mWorkLayout;
@@ -131,18 +123,11 @@ class SCCFrame : public QWidget {
 
 	private:
 	QListBox*     mModuleList;
-	#if 0
-	QListBox*     mModuleTitle;
-	#else
 	QHBox*        mModuleTitleBox;
 	QVBox*        mModuleTitleLabel;
 	QLabel*       mModuleTitleIcon;
 	QLabel*       mModuleTitle;
-	#endif
 	QWidgetStack* mDialogStack;
-	#if 0
-	QHBox*        mTitleBox;
-	#endif
 	QHBox*        mModuleBox;
 
 	private:

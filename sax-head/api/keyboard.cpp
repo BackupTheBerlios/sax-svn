@@ -97,7 +97,6 @@ void SCCKeyboard::import ( void ) {
 // apply keyboard
 //------------------------------------
 void SCCKeyboard::apply ( void ) {
-	#if 0
 	if (mKeyboardTab->isVisible()) {
 		qApp->setOverrideCursor ( Qt::forbiddenCursor );
 		QString layoutApply = mKeyboardLayout  -> getApplyString();
@@ -114,7 +113,6 @@ void SCCKeyboard::apply ( void ) {
 		}
 		qApp->restoreOverrideCursor();
 	}
-	#endif
 }
 //====================================
 // exportData
