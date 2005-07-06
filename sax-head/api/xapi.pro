@@ -74,4 +74,4 @@ TARGET    += xapi
 
 QMAKE_CXXFLAGS = -fno-strict-aliasing
 unix:INCLUDEPATH += -I /usr/X11R6/include
-unix:LIBS += -L/usr/X11R6/lib -L/usr/X11R6/lib64 -L../libsax -lsax
+unix:LIBS += -L/usr/X11R6/lib -L../libsax -lsax
