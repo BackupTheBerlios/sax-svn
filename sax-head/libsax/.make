@@ -15,6 +15,7 @@ arch=`arch`
 if [ "$arch" = "x86_64" ];then
 	cat Makefile | \
 		sed -e s"@-fPIC@-fPIC -fno-strict-aliasing@"g \
+			-e s"@X11R6/lib@X11R6/lib64@"g \
 	> Makefile.new
 	mv Makefile.new Makefile
 fi

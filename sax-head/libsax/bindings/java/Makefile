@@ -13,7 +13,7 @@ all:
 		-I/usr/lib/jvm/java/include/linux\
 		-fno-strict-aliasing -pipe -O2 -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o SaX.so -L/usr/X11R6/lib \
-		-L/usr/X11R6/lib64 -L/usr/lib/qt3/lib \
+		-L/usr/X11R6/lib64 -L/usr/lib/qt3/lib -L/usr/lib/qt3/lib64 \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	${JAVAC} SaX*.java SWIGTYPE*
 	jar cf SaX.jar *.class && rm -f *.class SaX[^_]*.java SWIGTYPE*

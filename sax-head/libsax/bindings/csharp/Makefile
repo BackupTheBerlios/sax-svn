@@ -5,8 +5,8 @@ MONODLLD=${DESTDIR}/usr/lib/mono/gac/SaX
 all:
 	g++ -c -I/usr/X11R6/include -I/usr/lib/qt3/include \
 		-fno-strict-aliasing -pipe -fPIC SaX_wrap.cxx
-	g++ -shared SaX_wrap.o -o libSaX.so \
-		-L/usr/X11R6/lib -L/usr/X11R6/lib64 -L/usr/lib/qt3/lib \
+	g++ -shared SaX_wrap.o -o libSaX.so -L/usr/X11R6/lib \
+		-L/usr/X11R6/lib64 -L/usr/lib/qt3/lib -L/usr/lib/qt3/lib64 \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	mcs -nologo -debug -out:SaX.dll -t:library SaX*.cs SWIGTYPE* && \
 		rm -f SaX*.cs SWIGTYPE*
