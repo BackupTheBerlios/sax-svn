@@ -8,7 +8,11 @@
 # --------
 # Status: Up-to-date
 #
-nm /usr/X11R6/lib/libxf86config.a | grep -q xf86parseExtensions
+file=/usr/X11R6/lib/libxf86config.a
+if [ ! -f $file ];then
+	file=/usr/X11R6/lib64/libxf86config.a
+fi
+nm $file | grep -q xf86parseExtensions
 if [ $? = 0 ];then
 	echo "HAVE_EXTENSIONS_SECTION"
 else
