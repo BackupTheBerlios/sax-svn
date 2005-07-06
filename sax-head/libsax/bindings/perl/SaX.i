@@ -23,7 +23,7 @@
 // Allow QString refs as parameters
 //----------------------------------
 %typemap(in) QString&,QString& (QString temp) {
-	unsigned int len;
+	STRLEN len;
 	temp = SvPV($input,len);
 	$1 = &temp;
 }
