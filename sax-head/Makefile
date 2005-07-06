@@ -185,7 +185,8 @@ install:
 	# install architecture dependant Identity
 	#--------------------------------------------
 	if [ -f ./sysp/maps/arch/Identity.map.${ARCH} ];then \
-		install -m 644 ./sysp/maps/arch/Identity.map.${ARCH} ${MAPVZ} ;\
+		install -m 644 ./sysp/maps/arch/Identity.map.${ARCH} \
+			${MAPVZ}/Identity.map ;\
 	fi
 
 	#============================================

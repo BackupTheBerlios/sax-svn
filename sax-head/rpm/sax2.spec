@@ -541,6 +541,8 @@ fi
 # ------------------------------------------------
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
+%dir /usr/%{_lib}/mono
+%dir /usr/%{_lib}/mono/gac
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
