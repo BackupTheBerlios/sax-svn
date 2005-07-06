@@ -11,6 +11,7 @@
 # Build init
 buildroot      = /
 mandir         = /usr/share/man
+bindlib        = lib
 
 #============================================
 # Prefixs...
@@ -79,7 +80,10 @@ all:
 	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \
 		if [ -d ./bindings/$$i ];then \
-			( cd ./bindings/$$i && make -f Makefile.swig && make ) ;\
+		( \
+			cd ./bindings/$$i && \
+			make -f Makefile.swig && make BINDLIB=${bindlib} \
+		) ;\
 		fi \
 	done )
 
@@ -121,7 +125,10 @@ install:
 	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \
 		if [ -d ./bindings/$$i ];then \
-			( cd ./bindings/$$i && make DESTDIR=${buildroot} install_vendor ) ;\
+		( \
+			cd ./bindings/$$i && \
+			make DESTDIR=${buildroot} BINDLIB=${bindlib} install_vendor \
+		) ;\
 		fi \
 	done )
 

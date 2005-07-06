@@ -262,7 +262,7 @@ cp /tmp/sax.sh ./startup/sax.sh
 #=================================================
 # build sources
 #-------------------------------------------------
-make
+make bindlib=%{_lib}
 
 #=================================================
 # install sources
@@ -273,7 +273,7 @@ export ASK_FOR_CHANGELOG=no
 export TEMPLATE_CHECK=no
 export ARCH=`/bin/arch`
 make buildroot=$RPM_BUILD_ROOT \
-	 lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
+	 bindlib=%{_lib} lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
 make doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
 	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} install-docs
 #=================================================
@@ -531,16 +531,16 @@ fi
 # ------------------------------------------------
 %files -n sax2-libsax-java
 %defattr(-,root,root)
-%dir /usr/lib/sax
-%dir /usr/lib/sax/plugins
+%dir /usr/%{_lib}/sax
+%dir /usr/%{_lib}/sax/plugins
 /usr/share/java/SaX.jar
-/usr/lib/sax/plugins/SaX.so
+/usr/%{_lib}/sax/plugins/SaX.so
 
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
-%dir /usr/lib/mono/gac/SaX
-/usr/lib/mono/gac/SaX/*
-/usr/lib/libSaX.so
+%dir /usr/%{_lib}/mono/gac/SaX
+/usr/%{_lib}/mono/gac/SaX/*
+/usr/%{_lib}/libSaX.so

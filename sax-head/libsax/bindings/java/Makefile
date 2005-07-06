@@ -1,19 +1,20 @@
 DESTDIR = /
-PLUGSDIR=${DESTDIR}/usr/lib/sax/plugins
+BINDLIB = lib
+PLUGSDIR=${DESTDIR}/usr/${BINDLIB}/sax/plugins
 SHAREDIR=${DESTDIR}/usr/share/java
-JAVAC1=/usr/lib/java/bin/javac
-JAVAC2=/usr/lib/jvm/java-*-sun/bin/javac
+JAVAC1=/usr/${BINDLIB}/java/bin/javac
+JAVAC2=/usr/${BINDLIB}/jvm/java-*-sun/bin/javac
 JAVAC=`test -f ${JAVAC1} && echo ${JAVAC1} || echo ${JAVAC2}`
 
 all:
 	g++ -c \
 		-I/usr/X11R6/include \
-		-I/usr/lib/qt3/include \
+		-I/usr/${BINDLIB}/qt3/include \
 		-I/usr/lib/jvm/java/include \
 		-I/usr/lib/jvm/java/include/linux\
 		-fno-strict-aliasing -pipe -O2 -fPIC SaX_wrap.cxx
-	g++ -shared SaX_wrap.o -o SaX.so -L/usr/X11R6/lib \
-		-L/usr/X11R6/lib64 -L/usr/lib/qt3/lib -L/usr/lib/qt3/lib64 \
+	g++ -shared SaX_wrap.o -o SaX.so \
+		-L/usr/X11R6/${BINDLIB} -L/usr/${BINDLIB}/qt3/${BINDLIB} \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	${JAVAC} SaX*.java SWIGTYPE*
 	jar cf SaX.jar *.class && rm -f *.class SaX[^_]*.java SWIGTYPE*

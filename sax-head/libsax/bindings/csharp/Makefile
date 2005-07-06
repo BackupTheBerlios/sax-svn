@@ -1,12 +1,13 @@
 DESTDIR = /
-PLUGSDIR=${DESTDIR}/usr/lib
-MONODLLD=${DESTDIR}/usr/lib/mono/gac/SaX
+BINDLIB = lib
+PLUGSDIR=${DESTDIR}/usr/${BINDLIB}
+MONODLLD=${DESTDIR}/usr/${BINDLIB}/mono/gac/SaX
 
 all:
-	g++ -c -I/usr/X11R6/include -I/usr/lib/qt3/include \
+	g++ -c -I/usr/X11R6/include -I/usr/${BINDLIB}/qt3/include \
 		-fno-strict-aliasing -pipe -fPIC SaX_wrap.cxx
-	g++ -shared SaX_wrap.o -o libSaX.so -L/usr/X11R6/lib \
-		-L/usr/X11R6/lib64 -L/usr/lib/qt3/lib -L/usr/lib/qt3/lib64 \
+	g++ -shared SaX_wrap.o -o libSaX.so \
+		-L/usr/X11R6/${BINDLIB} -L/usr/${BINDLIB}/qt3/${BINDLIB} \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	mcs -nologo -debug -out:SaX.dll -t:library SaX*.cs SWIGTYPE* && \
 		rm -f SaX*.cs SWIGTYPE*
