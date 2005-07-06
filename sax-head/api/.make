@@ -10,3 +10,11 @@
 #
 export QMAKESPEC=/usr/lib/qt3/mkspecs/linux-g++/
 /usr/lib/qt3/bin/qmake -makefile -unix -o Makefile xapi.pro
+
+arch=`arch`
+if [ "$arch" = "x86_64" ];then
+	cat Makefile | \
+		sed -e s"@-fPIC@-fPIC -fno-strict-aliasing@"g \
+	> Makefile.new
+	mv Makefile.new Makefile
+fi
