@@ -42,10 +42,12 @@ namespace SaX {
 #define SAX_TEST_CONFIG "/var/lib/sax/createTST.pl"
 #define SAX_API_FILE    "/var/lib/sax/apidata"
 #define SAX_API_CONFIG  "/var/lib/sax/xorg.conf"
+#define SAX_SYS_MD5     "/var/lib/sax/xorg.conf.md5"
 #define SAX_SYS_CONFIG  "/etc/X11/xorg.conf"
 #define SAX_SYS_CSAVED  "/etc/X11/xorg.conf.saxsave"
 #define SAX_X11_LOADER  "/usr/X11R6/bin/Xorg"
 #define SAX_XFINE_CACHE "/var/cache/xfine"
+#define SAX_MD5_SUM     "/usr/bin/md5sum"
 #define CONFPATH        "%A,%R,/etc/%R,%P/etc/X11/%R,%E,%F,/etc/X11/%F"
 #define CONFERRORLINE   80
 
@@ -74,6 +76,7 @@ class SaXConfigIF : public SaXException {
 	virtual bool createConfiguration  ( void ) = 0;
 	virtual void commitConfiguration  ( void ) = 0;
 	virtual int  testConfiguration    ( void ) = 0;
+	virtual bool isChecksumOK         ( void ) = 0;
 
 	public:
 	virtual ~SaXConfigIF ( void ) { }
@@ -171,6 +174,7 @@ class SaXConfig : public SaXConfigIF {
 	bool createConfiguration  ( void );
 	void commitConfiguration  ( void );
 	int  testConfiguration    ( void );
+	bool isChecksumOK         ( void );
 
 	public:
 	SaXConfig ( int = SAX_MERGE );

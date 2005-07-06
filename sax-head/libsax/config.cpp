@@ -365,6 +365,56 @@ int SaXConfig::testConfiguration (void) {
 }
 
 //====================================
+// isChecksumOK...
+//------------------------------------
+bool SaXConfig::isChecksumOK (void) {
+	// .../
+	//! check if the installed configuration has a valid
+	//! checksum which means there are no manual made changes.
+	//! if there is no installed config file or the checksum
+	//! doesn't exist the function will return true. Otherwise
+	//! the result of the checksum test determines the return
+	//! value
+	// ---
+	QFile curConfig (SAX_SYS_CONFIG);
+	QFile curMDFile (SAX_SYS_MD5);
+	if (! curConfig.exists()) {
+		return true;
+	}
+	//====================================
+	// import stored MD5 sum (sum1)
+	//------------------------------------
+	if ( ! curMDFile.open( IO_ReadOnly ) ) {
+		return true;
+	}
+	QTextStream stream( &curMDFile );
+	QString MDSum1 = stream.readLine();
+	curMDFile.close();
+
+	//====================================
+	// create current MD5 sum (sum2)
+	//------------------------------------
+	SaXProcessCall* md5 = new SaXProcessCall ();
+	md5 -> addArgument ( SAX_MD5_SUM );
+	md5 -> addArgument ( SAX_SYS_CONFIG );
+	if ( ! md5 -> start() ) {
+		excProcessFailed();
+		qError (errorString(),EXC_PROCESSFAILED);
+		return true;     
+	}
+	QList<QString> data = md5 -> readStdout();
+	QString MDSum2 = *data.first();
+
+	//====================================
+	// check sum1 and sum2
+	//------------------------------------
+	if (MDSum2.contains(MDSum1)) {
+		return true;
+	}
+	return false;
+}
+
+//====================================
 // setParseErrorValue...
 //------------------------------------
 void SaXConfig::setParseErrorValue (char* data) {

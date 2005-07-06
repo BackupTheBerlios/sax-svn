@@ -656,6 +656,9 @@ sub CreateConfigFile {
 	SaveAsHostConfig (
 		$init{OutputFile}
 	);
+	CreateChecksum (
+		$init{OutputFile}
+	);
 }
 
 #---[ SaveAsHostConfig ]-------#
@@ -675,6 +678,17 @@ sub SaveAsHostConfig {
 		qx (cp $basename $hostname);
 	}
 	}
+}
+
+#---[ CreateChecksum ]-------#
+sub CreateChecksum {
+#-------------------------------------------------------
+# this function will create a MD5 checksum from the
+# configuration file created
+#
+	my $file = $_[0];
+	my $md5  = "/var/lib/sax/$file.md5";
+	qx (md5sum $file | cut -f 1 -d' ' > $md5);
 }
  
 #---[ ModifyConfiguration ]-----#
