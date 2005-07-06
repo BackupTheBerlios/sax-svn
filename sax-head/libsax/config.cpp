@@ -251,6 +251,8 @@ void SaXConfig::commitConfiguration (void) {
 	QFile apiConfig (SAX_API_CONFIG);
 	QFile curConfig (SAX_SYS_CONFIG);
 	QFile secConfig (SAX_SYS_CSAVED);
+	QFile apiMD5 (SAX_API_MD5);
+	QFile curMD5 (SAX_SYS_MD5);
 
 	//====================================
 	// read api created config file
@@ -264,6 +266,21 @@ void SaXConfig::commitConfiguration (void) {
 			al += line;
 		}
 		apiConfig.close();
+	} else {
+		return;
+	}
+	//====================================
+	// read api created MD5 sum
+	//------------------------------------
+	QStringList ml;
+	if ( apiMD5.open( IO_ReadOnly ) ) {
+		QTextStream stream( &apiMD5 );
+		QString line;
+		while ( !stream.atEnd() ) {
+			line = stream.readLine();
+			ml += line;
+		}
+		apiMD5.close();
 	} else {
 		return;
 	}
@@ -300,6 +317,16 @@ void SaXConfig::commitConfiguration (void) {
 			stream << *it << "\n";
 		}
 		curConfig.close();
+	}
+	//====================================
+	// install MD5 sum to system
+	//------------------------------------
+	if ( curMD5.open( IO_WriteOnly ) ) {
+		QTextStream stream ( &curMD5 );
+		for (QStringList::Iterator it = ml.begin(); it != ml.end();++it) {
+			stream << *it << "\n";
+		}
+		curMD5.close();
 	}
 	//====================================
 	// create symbolic loader links

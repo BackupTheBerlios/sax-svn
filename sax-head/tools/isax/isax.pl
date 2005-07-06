@@ -687,8 +687,14 @@ sub CreateChecksum {
 # configuration file created
 #
 	my $file = $_[0];
-	my $md5  = "/var/lib/sax/$file.md5";
-	qx (md5sum $file | cut -f 1 -d' ' > $md5);
+	my $md5  = "$file.md5";
+	my $sum = qx (/usr/bin/md5sum $file);
+	if ($sum =~ /(.*)  /) {
+		$sum = $1;
+		open (FD,">$md5") || return;
+		print FD $sum;
+		close FD;
+	}	
 }
  
 #---[ ModifyConfiguration ]-----#

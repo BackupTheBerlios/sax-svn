@@ -569,6 +569,16 @@ void SCCFrame::loadApplication ( void ) {
 	// mSection.
 	// ----
 	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	//=====================================
+	// check MD5 sum if available
+	//-------------------------------------
+	mConfig = new SaXConfig;
+	if (! mConfig->isChecksumOK()) {
+		log (L_INFO,"Checksum of installed configuration is invalid !\n");
+	}
+	//=====================================
+	// create progress dialog
+	//-------------------------------------
 	QProgressDialog mProgress (
 		mText["ImportDataFiles"],mText["Cancel"],8,this,"progress",true
 	);
@@ -601,7 +611,6 @@ void SCCFrame::loadApplication ( void ) {
 		SAX_PATH,
 		SAX_EXTENSIONS
 	};
-	mConfig = new SaXConfig;
 	for (int id=0; id<7; id++) {
 		mProgress.setProgress ( id + 1 );
 		qApp->processEvents();
