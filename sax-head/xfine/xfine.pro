@@ -19,3 +19,4 @@ HEADERS   += common/xlock.h
 CONFIG    += thread warn_on release
 unix:LIBS += -lm -lXss -lXinerama -lGL -lXxf86vm
 TARGET    += xfine
+unix:LIBS += -L/usr/X11R6/lib
