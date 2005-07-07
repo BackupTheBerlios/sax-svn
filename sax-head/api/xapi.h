@@ -34,6 +34,11 @@ STATUS        : Status: Development
 #include "frame.h"
 #include "common/log.h"
 
+//====================================
+// Defines...
+//------------------------------------
+#define XCMD "/usr/sbin/xcmd"
+
 //===================================
 // Prototypes...
 //-----------------------------------

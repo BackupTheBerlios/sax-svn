@@ -29,6 +29,7 @@ FASTPATH=""
 QUICK_START=""
 GPMSTATUS=3
 BATCH_MODE=""
+CMD_LINE=""
 AUTO_CONF=""
 LOW_RES=""
 XMODE=""
@@ -62,19 +63,19 @@ function privilege() {
 }
 function StartGPM() {
 	if [ "$GPMSTATUS" = 0 ];then 
-	if [ -f "/sbin/rcgpm" ];then
-		/sbin/rcgpm start 2>/dev/null >/dev/null
+	if [ -f "/etc/init.d/gpm" ];then
+		/etc/init.d/gpm start 2>/dev/null >/dev/null
 	fi
 	fi
 }
 function StopGPM() {
-	if [ ! -f "/sbin/rcgpm" ];then
+	if [ ! -f "/etc/init.d/gpm" ];then
 		return
 	fi
 	pidof gpm 2>/dev/null >/dev/null
 	GPMSTATUS=$?
 	if [ "$GPMSTATUS" = 0 ];then
-		/sbin/rcgpm stop 2>/dev/null >/dev/null
+		/etc/init.d/gpm stop 2>/dev/null >/dev/null
 	fi
 }
 function version() {
@@ -165,12 +166,18 @@ function usage() {
 	echo
 	echo "[ -v | --version ]"
 	echo "  print version information and exit"
+	echo
+	echo "[ -C | --cmdline=\"commandline-options\"]"
+	echo "  activate the commandline mode. The given value to this"
+	echo "  option is provided as input for the commandline."
+	echo "  For help about the current commandline options type"
+	echo "  sax2 --cmdhelp"
 }
 
 #==================================
 # get options
 #----------------------------------
-TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:if --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog:,fullscreen \
+TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:ifC:H --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog:,fullscreen,cmdline:,cmdhelp \
 -n 'SaX' -- "$@"`
 
 if [ $? != 0 ] ; then usage ; exit 1 ; fi
@@ -178,6 +185,10 @@ eval set -- "$TEMP"
 
 while true ; do
 	case "$1" in
+	-C|--cmdline)               # activate commandline mode
+		CMD_LINE=$2             # use value as options for xcmd call
+	shift 2 ;;                  
+
 	-b|--batchmode)             # set batch mode and apply file or give
 		BATCH_MODE="-b"         # us an interactive shell
 	shift 2 ;;
@@ -217,6 +228,10 @@ while true ; do
 	-u|--automode)              # do not set my mode suggestion, let X11
 		AUTOMODE="-u"           # select the resolution
 	shift ;;
+
+	-H|--cmdhelp)
+		$API -- --help          # get help about commandline mode...
+		exit 0 ;;
 
 	-h|--help)                  # get help message...
 		usage ;  exit 0 ;;
@@ -281,12 +296,6 @@ if test -r "$temp_QT_HOME_DIR/qtrc"; then
 fi
 
 #==================================
-# run the dots...
-#----------------------------------
-nice -n 19 $DOTS &
-sleep 1
-
-#==================================
 # export LANG from user environment
 #----------------------------------
 TMPFILE=`ls -1 /tmp/sax_lenv* 2>/dev/null` 
@@ -295,6 +304,12 @@ if [ -f "$TMPFILE" ];then
 else
 	export LANG=$LANG 
 fi
+
+#==================================
+# run the dots...
+#----------------------------------
+nice -n 19 $DOTS &
+sleep 1
 
 #==================================
 # clean sweep...
@@ -395,11 +410,19 @@ if [ $IN_TRIGGER = 1 ];then
 else
 	echo "SaX: initializing done, using cache data..."
 fi
+
+#==================================
+# check for commandline call
+#----------------------------------
+echo "SaX: startup"
+if [ ! -z "$CMD_LINE" ];then
+	$API -- $CMD_LINE 2>>$ERR
+	exit $?
+fi
  
 #==================================
 # start X11 manager... 
 #----------------------------------
-echo "SaX: startup"
 if [ -z "$AUTO_CONF" ];then
 	$XC $XC_OPT 2>>$ERR
 else

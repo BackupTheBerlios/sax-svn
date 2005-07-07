@@ -365,6 +365,12 @@ QDict<QString> SaXManipulateCard::getOptions (void) {
 	QString stdOptions = mImport -> getItem ("Option");
 	QString rawOptions = mImport -> getItem ("RawData");
 	//====================================
+	// remove commented options from data
+	//------------------------------------
+	rawOptions.replace(
+		QRegExp("#Option  \"(.*)\" \"(.*)\""),""
+	);
+	//====================================
 	// handle bool options
 	//------------------------------------
 	QStringList stdlist = QStringList::split ( ",", stdOptions );

@@ -70,10 +70,16 @@ bool SaXInit::needInit (void) {
 		unsetLock();
 		return true;
 	}
+	#if 0
+	// .../
+	// disabled libhd hardware flags check, this will be
+	// changed in the future and needs adaption
+	// ---
 	if (needUpdate()) {
 		unsetLock();
 		return true;
 	}
+	#endif
 	unsetLock();
 	return false;
 }

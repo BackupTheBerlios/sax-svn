@@ -1,5 +1,5 @@
 /**************
-FILE          : capi.cpp
+FILE          : xcmd.cpp
 ***************
 PROJECT       : SaX2 - SuSE advanced X configuration
               :
@@ -11,14 +11,14 @@ BELONGS TO    : commandline configuration tool for the X
 DESCRIPTION   : SaX2 commandline system using libsax to provide
               : configurations for the most important X11 capabilities
               : //.../
-              : - capi.cpp: main program start sequence
-              : - capi.h: buildins and defines
+              : - xcmd.cpp: main program start sequence
+              : - xcmd.h: buildins and defines
               : ----
               :
 STATUS        : Status: Development
 **************/
-#ifndef CAPIMAIN_H
-#define CAPIMAIN_H 1
+#ifndef XCMDMAIN_H
+#define XCMDMAIN_H 1
 
 //====================================
 // Includes...

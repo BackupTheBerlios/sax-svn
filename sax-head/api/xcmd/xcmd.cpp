@@ -1,5 +1,5 @@
 /**************
-FILE          : capi.cpp
+FILE          : xcmd.cpp
 ***************
 PROJECT       : SaX2 - SuSE advanced X configuration
               :
@@ -11,8 +11,8 @@ BELONGS TO    : commandline configuration tool for the X
 DESCRIPTION   : SaX2 commandline system using libsax to provide
               : configurations for the most important X11 capabilities
               : //.../
-              : - capi.cpp: main program start sequence
-              : - capi.h: buildins and defines
+              : - xcmd.cpp: main program start sequence
+              : - xcmd.h: buildins and defines
               : ----
               :
 STATUS        : Status: Development
@@ -34,11 +34,6 @@ int main (int argc,char*argv[]) {
 	int mColorDepth = 0;
 
 	//=====================================
-	// start logging...
-	//-------------------------------------
-	logInit();
-
-	//=====================================
 	// set library debugging...
 	//-------------------------------------
 	SaXException().setDebug (false);
@@ -46,7 +41,17 @@ int main (int argc,char*argv[]) {
 	//=====================================
 	// allocate main qt object...
 	//-------------------------------------
+	for (int i=0;i<argc;i++) {
+	if (QString(argv[i]) == "--help") {
+		usage (0);
+	}
+	}
 	QApplication SCCApp (argc,argv,false);
+
+	//=====================================
+	// start logging...
+	//-------------------------------------
+	logInit();
 
 	//=====================================
 	// get additional options...
@@ -160,12 +165,12 @@ int main (int argc,char*argv[]) {
 //-------------------------------------
 void usage (int code) {
 	// .../
-	// usage information for options to call the capi tool
+	// usage information for options to call the xcmd tool
 	// ----
-	printf ("Linux SaX2 Version 7.1 command level (capi)\n");
+	printf ("Linux SaX2 Version 7.1 command level (xcmd)\n");
 	printf ("(C) Copyright 2005 SuSE GmbH\n");
 	printf ("\n");
-	printf ("usage: capi [ options ]\n");
+	printf ("usage: xcmd [ options ]\n");
 	printf ("options:\n");
 	printf ("[ -h | --help\n");
 	printf ("   show this message and exit\n");

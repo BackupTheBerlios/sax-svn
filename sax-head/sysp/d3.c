@@ -251,12 +251,12 @@ void Scan3D::Scan (void) {
 		strcpy(data.remove ,none);
 	}
 	// ...
-	// use libsax capi program to check for the
+	// use libsax xcmd program to check for the
 	// current 3D usability state
 	// ---
 	data.active = 0;
 	string option ("--status3D");
-	string diagString = qx ( CAPI,STDOUT,1,"%s",option.c_str() );
+	string diagString = qx ( XCMD,STDOUT,1,"%s",option.c_str() );
 	int substr = diagString.find("enabled");
 	if (substr >= 0) {
 		data.active = 1;

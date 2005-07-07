@@ -128,6 +128,7 @@ void SCCMonitorCard::init ( void ) {
 			hasRotateSupport = true;
 		}
 	}
+	mOption -> sort();
 	//====================================
 	// check for rotate support
 	//------------------------------------

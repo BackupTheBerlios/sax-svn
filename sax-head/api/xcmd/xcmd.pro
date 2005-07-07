@@ -11,5 +11,5 @@ HEADERS   += ../common/log.h
 
 CONFIG    += qt warn_on release
 TARGET    = xcmd
-unix:LIBS += -L../libsax -lsax
+unix:LIBS += -L../../libsax -lsax
 unix:INCLUDEPATH += -I /usr/X11R6/include

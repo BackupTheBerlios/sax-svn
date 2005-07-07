@@ -277,11 +277,19 @@ make buildroot=$RPM_BUILD_ROOT \
 make doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
 	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} install-docs
 #=================================================
-# create startup link
+# create root startup link
 #-------------------------------------------------
 ( 
 	rm -f $RPM_BUILD_ROOT/usr/sbin/sax2 && \
 	cd $RPM_BUILD_ROOT/usr/sbin && ln -s SaX2 sax2
+)
+#=================================================
+# create user startup link
+#-------------------------------------------------
+(
+	mkdir -p $RPM_BUILD_ROOT/usr/X11R6/bin
+	rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/sax2 && \
+	cd $RPM_BUILD_ROOT/usr/X11R6/bin && ln -s /usr/sbin/SaX2 sax2
 )
 #=================================================
 # check for options file at /etc/X11/CardModules
@@ -359,9 +367,10 @@ fi
 /usr/sbin/sax.sh
 /usr/sbin/sax2-vesa
 /usr/sbin/SaX2
+/usr/X11R6/bin/sax2
 /usr/sbin/sax2
 /usr/sbin/sysp
-/usr/sbin/capi
+/usr/sbin/xcmd
 /usr/share/sax/api/data/CardModules
 /usr/share/sax/api/data/LangCodes
 /usr/share/sax/api/data/PointerDevice

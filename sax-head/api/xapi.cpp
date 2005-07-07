@@ -66,19 +66,44 @@ int main (int argc,char*argv[]) {
 	#endif
 
 	//=====================================
-	// start logging...
-	//-------------------------------------
-	logInit();
-
-	//=====================================
 	// allocate main qt object...
 	//-------------------------------------
 	for (int i=0;i<argc;i++) {
-	if (QString(argv[i]) == "--help") {
-		logExit(); usage (0);
-	}
+		//=====================================
+		// handle --help option...
+		//-------------------------------------
+		if (QString(argv[i]) == "--help") {
+			usage (0);
+		}
+		//=====================================
+		// handle commandline tool...
+		//-------------------------------------
+		if (QString(argv[i]) == "--") {
+			int index = 0;
+			char* args[argc];
+			for (int n=0;n<argc;n++) {
+				if (n < i) {
+					continue;
+				}
+				args[index] = (char*)malloc(strlen(argv[n])+1);
+				strcpy(args[index],argv[n]);
+				index++;
+			}
+			args[index] = 0;
+			execv (XCMD,args);
+			fprintf (
+				stderr,"xapi: can't run xcmd: %s\n",
+				strerror(errno)
+			);
+			exit (1);
+		}
 	}
 	QApplication SCCApp (argc,argv);
+
+	//=====================================
+	// start logging...
+	//-------------------------------------
+	logInit();
 
 	//=====================================
 	// get additional options...
@@ -238,7 +263,10 @@ void usage (int code) {
 	printf ("   initalize an idle timer based on the MIT screensaver\n");
 	printf ("   extension. The timer will wait until the signal\n");
 	printf ("   SIGUSR2 has been sent to the timer. After the signal\n");
-	printf ("   has been received a simple timer window appears\n");
+	printf ("   has been received a simple timer window appears\n\n");
+	printf ("[ -- <commandline options> ]\n");
+	printf ("   activate the commandline mode. For help about the\n");
+	printf ("   current commandline options type \"-- --help\"\n");
 	printf ("--\n");
 	exit (code);
 }
