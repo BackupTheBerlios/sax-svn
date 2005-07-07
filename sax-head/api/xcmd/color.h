@@ -1,5 +1,5 @@
 /**************
-FILE          : glinfo.cpp
+FILE          : color.cpp
 ***************
 PROJECT       : SaX2 - SuSE advanced X configuration
               :
@@ -11,23 +11,22 @@ BELONGS TO    : commandline configuration tool for the X
 DESCRIPTION   : SaX2 commandline system using libsax to provide
               : functions for setting the default color depth
               : //.../
-              : - glinfo.cpp: get info about 3D status
-              : - glinfo.h: header file for glinfo.cpp
+              : - color.cpp: set default color depth
+              : - color.h: header file for color.cpp
               : ----
               :
 STATUS        : Status: Development 
 **************/
-#ifndef CAPI3DSTATUS
-#define CAPI3DSTATUS 1
+#ifndef CAPICOLOR
+#define CAPICOLOR 1
 
 #include <qdict.h>
 
-#include "capi.h"
+#include "xcmd.h"
 
 //=====================================
 // Functions...
 //-------------------------------------
-bool get3DStatus ( QDict<SaXImport>,int );
+bool setDefaultColorDepth ( QDict<SaXImport>,int,int );
 
 #endif
-

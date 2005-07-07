@@ -1,15 +1,15 @@
 TEMPLATE  = app
-SOURCES   += capi.cpp
+SOURCES   += xcmd.cpp
 SOURCES   += color.cpp
 SOURCES   += glinfo.cpp
-SOURCES   += ../api/common/log.cpp
+SOURCES   += ../common/log.cpp
 
-HEADERS   += capi.h
+HEADERS   += xcmd.h
 HEADERS   += color.h
 HEADERS   += glinfo.h
-HEADERS   += ../api/common/log.h
+HEADERS   += ../common/log.h
 
 CONFIG    += qt warn_on release
-TARGET    = capi
+TARGET    = xcmd
 unix:LIBS += -L../libsax -lsax
 unix:INCLUDEPATH += -I /usr/X11R6/include

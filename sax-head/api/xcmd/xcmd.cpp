@@ -17,7 +17,7 @@ DESCRIPTION   : SaX2 commandline system using libsax to provide
               :
 STATUS        : Status: Development
 **************/
-#include "capi.h"
+#include "xcmd.h"
 
 int main (int argc,char*argv[]) {
 	//=====================================

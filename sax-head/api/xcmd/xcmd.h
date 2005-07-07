@@ -29,8 +29,8 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include "../libsax/sax.h"
-#include "../api/common/log.h"
+#include "../../libsax/sax.h"
+#include "../common/log.h"
 
 //====================================
 // Includes...
