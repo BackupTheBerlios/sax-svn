@@ -24,7 +24,7 @@ illustrate that:
 \begin{Command}{12cm}
 \begin{small}
 \begin{verbatim}
-#include <sax.h>
+#include <sax/sax.h>
 class myException : public SaXException {
     Q_OBJECT
 
@@ -32,7 +32,6 @@ class myException : public SaXException {
     myException ( SaXException* );
 
     private slots:
-    void processFailed (void);
     void permissionDenied (void);
 };
 \end{verbatim}
@@ -47,29 +46,15 @@ class myException : public SaXException {
 \begin{small}
 \begin{verbatim}
 #include <sax/sax.h>
-#include <sax/exception.h>
-
+#include "exception.h"
 myException::myException (SaXException* mException)  {
-    connect (
-        mException, SIGNAL
-            ( saxProcessFailed (void) ),
-        this, SLOT
-            ( processFailed (void) )
-    );
-    connect (
-        mException, SIGNAL
-            ( saxPermissionDenied (void) ),
-        this , SLOT
-            ( permissionDenied (void) )
+    QObject::connect (
+        mException , SIGNAL ( saxPermissionDenied (void) ),
+        this       , SLOT   ( permissionDenied    (void) )
     );
 }
-
-void myException::processFailed (void) {
-    printf ("Process call failed\n");
-}
-
 void myException::permissionDenied (void) {
-    printf ("Permission denied\n");
+    printf ("_______Permission denied\n");
 }
 \end{verbatim}
 \end{small}
@@ -81,13 +66,45 @@ void myException::permissionDenied (void) {
 \begin{small}
 \begin{verbatim}
 #include <sax/sax.h>
-#include <sax/exception.h>
-
+#include "exception.h"
 int main (void) {
+    SaXException().setDebug (true);
+
     SaXInit* init  = new SaXInit;
-    myException* e = new myException (init);
-    ...
+    new myException (init);
+
+    init->doInit();
 }
+\end{verbatim}
+\end{small}
+\end{Command}
+
+\textbf{\underline{main.pro}}
+
+\begin{Command}{12cm}
+\begin{small}
+\begin{verbatim}
+TEMPLATE  = app
+SOURCES   += exception.cpp
+SOURCES   += main.cpp
+HEADERS   += exception.h
+CONFIG    += qt warn_on release
+TARGET    = testlib
+unix:LIBS += -lsax
+unix:INCLUDEPATH += -I /usr/X11R6/include
+\end{verbatim}
+\end{small}
+\end{Command}
+
+\textbf{\underline{build with qmake}}
+
+\begin{Command}{12cm}
+\begin{small}
+\begin{verbatim}
+export QMAKESPEC=/usr/lib/qt3/mkspecs/linux-g++
+export PATH=$PATH:/usr/lib/qt3/bin/qmake
+qmake -makefile -unix -o Makefile main.pro
+make
 \end{verbatim}
 \end{small}
 \end{Command}
