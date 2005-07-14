@@ -64,9 +64,9 @@ STATUS        : Status: Development
 // Defines...
 //-------------------------------------
 #define DUAL_LEFTOF_KEY      "LeftOf"
-#define DUAL_ABOVEOF_KEY     "AboveOf"
+#define DUAL_ABOVEOF_KEY     "Above"
 #define DUAL_RIGHTOF_KEY     "RightOf"
-#define DUAL_BELOWOF_KEY     "BelowOf"
+#define DUAL_BELOWOF_KEY     "Below"
 #define DUAL_LEFTOF          0
 #define DUAL_ABOVEOF         1
 #define DUAL_RIGHTOF         2
@@ -145,6 +145,7 @@ class SCCMonitorDual : public SCCDialog {
 	void slotDualHead ( QPushButton* );
 	void slotMonitor  ( void );
 	void slotOk       ( void );
+	void slotClone    ( bool );
 
 	signals:
 	void sigDualModeChanged (SCCMonitorDisplay*);

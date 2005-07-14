@@ -138,6 +138,10 @@ SCCMonitorDual::SCCMonitorDual (
 		this            , SLOT   (slotOk  ( void ))
     );
 	QObject::connect (
+		mClone          , SIGNAL (toggled   ( bool )),
+		this            , SLOT   (slotClone ( bool ))
+	);
+	QObject::connect (
 		mLeftOfPrimary  , SIGNAL (clickedButton ( QPushButton* )),
 		this            , SLOT   (slotDualHead  ( QPushButton* ))
 	);
@@ -527,6 +531,13 @@ void SCCMonitorDual::setMonitorName (
 	mLabelSecondMonitor -> setText ( monitorName );
 	mMonitorVendor = vendor;
 	mMonitorModel  = model;
+}
+//=====================================
+// slotClone
+//-------------------------------------
+void SCCMonitorDual::slotClone ( bool on ) {
+	// TODO
+	mOrientationGroup -> setDisabled ( on );
 }
 //=====================================
 // slotOk
