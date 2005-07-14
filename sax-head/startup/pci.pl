@@ -43,7 +43,7 @@ sub main {
 	my $data;
 
 	if (defined $ProfileMode) {
-		$data = qx($var{Sysp} -p);
+		$data = qx($var{Sysp} -p -A no);
 	} else {
 		$data = qx($var{Sysp} -c);
 	}
