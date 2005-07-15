@@ -110,6 +110,8 @@ void SaXInit::doInit (void) {
 		return;
 	}
 	if (setenv ("HW_UPDATE","1",1) != 0) {
+		excInvalidArgument ( errno );
+		qError (errorString(),EXC_INVALIDARGUMENT);
 		return;
 	}
 	SaXProcessCall* proc = new SaXProcessCall ();
