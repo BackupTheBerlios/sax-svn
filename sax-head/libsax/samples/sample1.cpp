@@ -2,6 +2,11 @@
 
 int main (void) {
 	SaXException().setDebug (true);
+	SaXInit init;
+	if (init.needInit()) {
+		printf ("initialize cache...\n");
+		init.doInit();
+	}
 	QDict<SaXImport> section;
 	int importID[] = {
 		SAX_CARD,
@@ -26,6 +31,7 @@ int main (void) {
 	if (mDesktop.selectDesktop (0)) {
 		mDesktop.addResolution (24,1600,1200);
 	}
+	// test what happens if we intentionally add an error...
 	section["Desktop"]->removeEntry("Identifier");
 	printf ("Writing configuration\n");
 	config -> setMode (SAX_NEW);

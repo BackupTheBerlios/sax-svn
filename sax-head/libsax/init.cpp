@@ -109,6 +109,9 @@ void SaXInit::doInit (void) {
 		qError (errorString(),EXC_PERMISSIONDENIED);
 		return;
 	}
+	if (setenv ("HW_UPDATE","1",1) != 0) {
+		return;
+	}
 	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SAX_INIT );
 	QListIterator<char> it (mOptions);

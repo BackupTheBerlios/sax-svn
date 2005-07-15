@@ -496,62 +496,69 @@ void PrintMouseData(ScanMouse m) {
 	int mouse = 0;
 	int buttonCount = 0;
 	int devices[m.Count()];
-	//============================================
-	// sort out serial devices
-	//--------------------------------------------
-	for (int i = m.Count(); i > 0; i--) {
-		data = m.Pop();
-		devices[i] = 0;
-		if ( (strstr(data.device,"ttyS")) != NULL ) {
-			devices[i] = 1;
+	if (m.Count() == 1) {
+		//============================================
+		// only one device... use it
+		//--------------------------------------------
+		devices[0] = 1;
+	} else {
+		//============================================
+		// sort out serial devices
+		//--------------------------------------------
+		for (int i = m.Count()-1; i >= 0; i--) {
+			data = m.Pop();
+			devices[i] = 0;
+			if ( (strstr(data.device,"ttyS")) != NULL ) {
+				devices[i] = 1;
+			}
 		}
+		m.Reset();
+		//============================================
+		// sort out special profiled pointers
+		//--------------------------------------------
+		for (int i = m.Count()-1; i >= 0; i--) {
+			data = m.Pop();
+			if (devices[i] == 0) {
+			if (strcmp(data.profile,"synaptics") == 0) {
+				devices[i] = 1;
+			}
+			if (strcmp(data.profile,"alps") == 0) {
+				devices[i] = 1;
+			}
+			}
+		}
+		m.Reset();
+		//============================================
+		// sort out best match from the rest
+		//--------------------------------------------
+		for (int i = m.Count()-1; i >= 0; i--) {
+			data = m.Pop();
+			if (devices[i] == 0) {
+			if (data.buttons > buttonCount) {
+				buttonCount = data.buttons;
+			}
+			}
+		}
+		m.Reset();
+		for (int i = m.Count()-1; i >= 0; i--) {
+			data = m.Pop();
+			if (devices[i] == 0) {
+			if (strcmp(data.profile,"<undefined>") != 0) {
+				devices[i] = 1;
+				break;
+			}
+			if (data.buttons == buttonCount) {
+				devices[i] = 1;
+				break;
+			}
+			}
+		}
+		m.Reset();
 	}
-	m.Reset();
-	//============================================
-	// sort out special profiled pointers
-	//--------------------------------------------
-	for (int i = m.Count(); i > 0; i--) {
-		data = m.Pop();
-		if (devices[i] == 0) {
-		if (strcmp(data.profile,"synaptics") == 0) {
-			devices[i] = 1;
-		}
-		if (strcmp(data.profile,"alps") == 0) {
-			devices[i] = 1;
-		}
-		}
-	}
-	m.Reset();
-	//============================================
-	// sort out best match from the rest
-	//--------------------------------------------
-	for (int i = m.Count(); i > 0; i--) {
-		data = m.Pop();
-		if (devices[i] == 0) {
-		if (data.buttons > buttonCount) {
-			buttonCount = data.buttons;
-		}
-		}
-	}
-	m.Reset();
-	for (int i = m.Count(); i > 0; i--) {
-		data = m.Pop();
-		if (devices[i] == 0) {
-		if (strcmp(data.profile,"<undefined>") != 0) {
-			devices[i] = 1;
-			break;
-		}
-		if (data.buttons == buttonCount) {
-			devices[i] = 1;
-			break;
-		}
-		}
-	}
-	m.Reset();
 	//============================================
  	// print all devices...
 	//--------------------------------------------
-	for (int i = m.Count(); i > 0; i--) {
+	for (int i = m.Count()-1; i >= 0; i--) {
 		data = m.Pop();
 		if (devices[i] != 1) {
 			continue;
