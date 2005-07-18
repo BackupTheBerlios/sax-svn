@@ -46,7 +46,7 @@ STATUS        : Status: Development
 //=====================================
 // Defines...
 //-------------------------------------
-#define TIP_PIXDIR   "/suse/ms/api/figures"
+#define TIP_PIXDIR   "/usr/share/sax/api/figures"
 #define TIP_PIXMAP   TIP_PIXDIR "/tooltip.png"
 
 namespace SaXGUI {
