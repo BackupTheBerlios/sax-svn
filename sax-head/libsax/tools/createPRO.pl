@@ -72,9 +72,14 @@ sub init {
 sub PrepareProfile {
 #--------------------------------------------------
 # prepare profile. remove comments and special
-# symbols like REMOVE from the input stream
+# symbols like REMOVE from the input stream.
+# Check if this is a dynamic profile
 #
 	my @file;
+	if (-f "$Profile.sh") {
+		qx ($Profile.sh);
+		$Profile = "$Profile.tmp";
+	}
 	if (! open (FD,"$Profile")) {
 		return @file;
 	}
@@ -106,6 +111,7 @@ sub ImportProfile {
 	my $new;       # new device number
 	my @result;    # result as list
 	my @add;       # new sections through the profile
+	my $index;     # optinal list index given to variable
 	my $newsec;    # loop counter for new sections
 	my $data;      # raw profile key
 	my $line;      # raw profile data
@@ -155,6 +161,11 @@ sub ImportProfile {
 	foreach (@result) {
 	while ($_ =~ /{(.*?)}/) {
 		$line      = $1;
+		undef $index;
+		if ($line =~ /(.*):(.*)/) {
+			$line  = $1;
+			$index = $2;
+		}
 		$line      =~ s/ +//g;
 		@v         = split(/->/,$line);
 		$search    = join ("->",@v);
@@ -164,6 +175,10 @@ sub ImportProfile {
 		$ViewValue = HGetValue(\%import,$search);
 		$ViewValue =~ s/^ +//g;
 		$ViewValue =~ s/ +$//g;
+		if (defined $index) {
+			my @list = split (/,/,$ViewValue);
+			$ViewValue = $list[$index];
+		}
 		$_ =~ s/{.*?}/$ViewValue/;
 	}
 	if ($_ =~ /^(.*)=(.*)/) {
