@@ -212,7 +212,7 @@ Authors:
 #=================================================
 # Description sax2-libsax-csharp
 #-------------------------------------------------
-%ifnarch ia64
+%ifnarch ia64 ppc64
 %package -n sax2-libsax-csharp
 Version:      7.1
 Release:      11
@@ -550,7 +550,7 @@ fi
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
-%ifnarch ia64
+%ifnarch ia64 ppc64
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
 %dir /usr/%{_lib}/mono
