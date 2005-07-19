@@ -4,7 +4,8 @@ PLUGSDIR=${DESTDIR}/usr/${BINDLIB}/sax/plugins
 SHAREDIR=${DESTDIR}/usr/share/java
 JAVAC1=/usr/${BINDLIB}/java/bin/javac
 JAVAC2=/usr/lib/jvm/java-*-sun/bin/javac
-JAVAC=`test -f ${JAVAC1} && echo ${JAVAC1} || echo ${JAVAC2}`
+JAVAC3=/usr/lib/java/bin/javac
+JAVAC=`test -f ${JAVAC1} && echo ${JAVAC1} || test -f ${JAVAC2} && echo ${JAVAC2} || echo ${JAVAC3}`
 
 all:
 	g++ -c \
