@@ -17,9 +17,13 @@ function removeMonoDependency {
 # magic...
 #----------------------------------------
 case `uname -m` in
-	ia64)
-		echo "There is no mono available for this architecture"
+	ia64|ppc64)
+		echo "There is no mono system available for this architecture"
 		removeMonoDependency
+	;;
+	s390|s390x)
+		echo "There is no business case for SaX :-)"
+		exit 1
 	;;
 	*)
 		echo "Everything is fine :-)"
