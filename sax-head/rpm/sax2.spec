@@ -212,6 +212,7 @@ Authors:
 #=================================================
 # Description sax2-libsax-csharp
 #-------------------------------------------------
+%ifnarch ia64
 %package -n sax2-libsax-csharp
 Version:      7.1
 Release:      11
@@ -226,6 +227,7 @@ libsax with CSharp
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
+%endif
 
 #=================================================
 # Preparation...
@@ -548,6 +550,7 @@ fi
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
+%ifnarch ia64
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
 %dir /usr/%{_lib}/mono
@@ -555,3 +558,4 @@ fi
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
+%endif

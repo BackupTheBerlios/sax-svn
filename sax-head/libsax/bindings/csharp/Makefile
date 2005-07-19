@@ -3,7 +3,7 @@ BINDLIB = lib
 PLUGSDIR=${DESTDIR}/usr/${BINDLIB}
 MONODLLD=${DESTDIR}/usr/${BINDLIB}/mono/gac/SaX
 
-all:
+all:/usr/bin/mcs
 	g++ -c -I/usr/X11R6/include -I/usr/${BINDLIB}/qt3/include \
 		-fno-strict-aliasing -pipe -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o libSaX.so \

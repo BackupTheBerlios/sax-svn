@@ -117,7 +117,10 @@ sub main {
 		) {
 			next;
 		}
-		$archive = "$archive ./$dir/sax.$dir.po";
+		my $file = "./$dir/sax.$dir.po";
+		qx (cat $file | grep -v $pdate > $file.dif);
+		qx (mv $file.dif $file);
+		$archive = "$archive $file";
 	}
 	qx (cp $archive /tmp/sax);
 	qx (cp ./$Template/* ./$Help/sax*.txt ./sax.changes /tmp/sax 2>/dev/null);
