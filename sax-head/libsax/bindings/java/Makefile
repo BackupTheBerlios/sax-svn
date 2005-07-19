@@ -2,10 +2,7 @@ DESTDIR = /
 BINDLIB = lib
 PLUGSDIR=${DESTDIR}/usr/${BINDLIB}/sax/plugins
 SHAREDIR=${DESTDIR}/usr/share/java
-JAVAC1=/usr/${BINDLIB}/java/bin/javac
-JAVAC2=/usr/lib/jvm/java-*-sun/bin/javac
-JAVAC3=/usr/lib/java/bin/javac
-JAVAC=`test -f ${JAVAC1} && echo ${JAVAC1} || test -f ${JAVAC2} && echo ${JAVAC2} || echo ${JAVAC3}`
+JAVAC=${JAVA_BINDIR}/javac
 
 all:
 	g++ -c \
