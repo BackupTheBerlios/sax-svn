@@ -1,0 +1,997 @@
+# translation of sax.fi.po to
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Jyri Palokangas <jmp@netti.fi>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sax.fi\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2005-07-20 12:51+0300\n"
+"Last-Translator: Jyri Palokangas <jmp@netti.fi>\n"
+"Language-Team:  <fi@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.1\n"
+
+#. /.../
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for the SaX2 and XFine GUI
+#.
+#. RTF text: Startup information for the user
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 ehdotus</b><hr>Tällä hetkellä käytössä graafinen järjestelmä "
+"perustuu SaX2 tekemään ehdotukseen. Jos se on hyväksyttävä, paina <b>OK</b>. "
+"Muussa tapauksessa, muuta määritystä."
+
+#. Caption text for the startup information window
+msgid "Automatic Graphics System Setup"
+msgstr "Automaattinen graafisen järjestelmän asetus"
+
+#. Caption text for the main window
+msgid "SaX2: SUSE Advanced X11 Configuration"
+msgstr "SaX2: SUSE Advanced X11 määritys"
+
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr "SaX Ohjauskeskus"
+
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr "SUSE Linux"
+
+#. Help Button text
+msgid "&Help"
+msgstr "O&hje"
+
+#. Ok Button text
+msgid "&OK"
+msgstr "&OK"
+
+#. Yes Button text
+msgid "&Yes"
+msgstr "&Kyllä"
+
+#. No Button text
+msgid "&No"
+msgstr "&Ei"
+
+#. Cancel Button text
+#. Maximum length: 40  characters
+msgid "&Cancel"
+msgstr "&Peruuta"
+
+#. RTF text: exit SaX message
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
+msgstr "<b>Lopeta SaX2</b><hr>Lopetaanko SaX2 nyt?"
+
+#. Message box default caption text
+msgid "Message"
+msgstr "Viesti"
+
+#. Change configuration Button text
+msgid "C&hange Configuration"
+msgstr "Vai&hda määritystä"
+
+#. Short description of the Monitor module
+#. Monitor name label
+msgid "Monitor"
+msgstr "Monitori"
+
+#. title of module dialog
+msgid "Card and Monitor Properties"
+msgstr "Ohjaimen ja monitorin ominaisuudet"
+
+#. Short description of the Mouse module
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "Hiiri"
+
+#. title of module dialog
+msgid "Mouse Properties"
+msgstr "Hiiren ominaisuudet"
+
+#. Short description of the Keyboard module
+msgid "Keyboard"
+msgstr "Näppäimistö"
+
+#. title of module dialog
+msgid "Keyboard Properties"
+msgstr "Näppäimistön ominaisuudet"
+
+#. Short description of the Tablet module
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "Paneeli"
+
+#. title of module dialog
+msgid "Tablet Properties"
+msgstr "Paneelin ominaisuudet"
+
+#. Short description of the Touchscreen module
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "Kosketusnäyttö"
+
+#. title of module dialog
+msgid "Touchscreen Properties"
+msgstr "Kosketusnäytön ominaisuudet"
+
+#. Short description of the VNC module
+msgid "VNC"
+msgstr "VNC"
+
+#. title of module dialog
+msgid "Remote Access Properties"
+msgstr "Etäyhteyden ominaisuudet"
+
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "Näyttö"
+
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
+msgstr "Ota tämä näyttö käyttöön"
+
+#. Activate mouse checkbox
+msgid "Activate This Pointer"
+msgstr "Ota tämä osoitin käyttöön"
+
+#. Graphics Card name label
+msgid "Card"
+msgstr "Kortti"
+
+#. Change data
+msgid "&Change..."
+msgstr "&Muuta..."
+
+#. Set options for some kind of data
+msgid "&Options..."
+msgstr "V&alinnat..."
+
+#. Configure some data
+msgid "Con&figure..."
+msgstr "&Määritä..."
+
+#. Group box title for dual head setup
+msgid "Dual Head Mode"
+msgstr "Moninäyttötila"
+
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+msgid "Options"
+msgstr "Valinnat"
+
+#. CheckBox label to activate the mouse wheel
+msgid "Activate Mouse Wheel"
+msgstr "Ota hiiren rulla käyttöön"
+
+#. CheckBox label to activate the 3 Button emulation
+msgid "Activate 3-Button Emulation"
+msgstr "Ota käyttöön 3-napin emulointi"
+
+#. CheckBox label to activate the wheel emulation
+msgid "Emulate Wheel with Mouse Button"
+msgstr "Jäljittele rullaa hiiren näppäimellä"
+
+#. Group box title for card rotation
+msgid "Rotate Screen"
+msgstr "Käännä näyttöä"
+
+#. Group box title for the mouse test field
+#. Line edit label pointing to the keyboard test field
+msgid "Test"
+msgstr "Kokeile"
+
+#. Button text in final step message box for testing the configuration
+msgid "&Test"
+msgstr "&Kokeile"
+
+#. Button text in final step message box for saving the configuration
+msgid "&Save"
+msgstr "&Tallenna"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Asettelu"
+
+#. Status line of mouse test field: ready
+msgid "Test ready"
+msgstr "Kokeilu valmis"
+
+#. Status line of mouse test field: single button click
+msgid "Single Click: Done"
+msgstr "Yksi napautus: Tehty"
+
+#. Status line of mouse test field: double button click
+msgid "Double Click: Done"
+msgstr "Kaksoinapautus: Tehty"
+
+#. Status line of mouse test field: wheel moved
+msgid "Scrolling"
+msgstr "Rullaus"
+
+#. Status line of mouse test field: button pressed
+msgid "Button pressed"
+msgstr "Nappi painettu"
+
+#. Status line of mouse test field: button released
+msgid "Button released"
+msgstr "Nappi vapautettu"
+
+#. Status line of mouse test field: wheel stopped
+msgid "Stopped: Done"
+msgstr "Pysäytetty: Tehty"
+
+#. Group box title for properties
+msgid "Properties"
+msgstr "Ominaisuudet"
+
+#. Activate dual head mode checkbox
+msgid "Activate Dual Head Mode"
+msgstr "Ota moninäyttötila käyttöön"
+
+#. Set display resolution
+msgid "Resolution"
+msgstr "Resoluutio"
+
+#. Set display colors
+msgid "Colors"
+msgstr "Värit"
+
+#. Activate 3D checkboc
+msgid "Activate 3D Acceleration"
+msgstr "Ota 3D kiihdytys käyttöön"
+
+#. Tab title: Setup monitor properties for card X
+msgid "Monitor for Card"
+msgstr "Monitori kortille"
+
+#. Tab title: Setup monitor for second channel on card X
+msgid "Second Monitor for Card"
+msgstr "Toinen monitori kortille"
+
+#. Tab title: Setup sync frequencies
+msgid "Sync Frequencies"
+msgstr "Tahdista taajuudet"
+
+#. Tab title: Setup display size
+msgid "Display Size"
+msgstr "Näytön koko"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
+msgstr "Järjestely"
+
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
+msgstr "Ota käyttöön %1 tila %2"
+
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
+msgstr "Ota ajuri käyttöön oletustilassa"
+
+#. rwalter
+#. Monitor Model is unknown and should be changed
+#. rwalter
+#. Mouse Model is unknown and should be changed
+msgid "Unconfigured"
+msgstr "Määrittämätön"
+
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Kaikkien näyttöjen poistaminen käytöstä ei onnistu</b><hr><nobr>Ainakin "
+"yhden näytön tulee olla käytössä.</nobr>"
+
+#. Info label for dual head checkbox
+msgid "No configuration available"
+msgstr "Ei määritystä käytettävissä"
+
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"Perinteinen moninäyttö:\n"
+"Jokainen näyttö on itsenäinen näyttö"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"Kloonattu moninäyttö:\n"
+"Jokainen näyttö on ensisijaisen näytön kopio"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Xinerama moninäyttö:\n"
+"Rakenna yksi iso näyttö kaikista näytöistä"
+
+#. Title for multihead modi
+msgid "Multihead Mode"
+msgstr "Moninäyttötila"
+
+#. Monitor X - connected to - CardY
+msgid "Connected To"
+msgstr "Kytkettynä"
+
+#. Tooltip text if monitor is unknown
+msgid "Unknown Monitor:"
+msgstr "Tuntematon monitori:"
+
+#. Tooltip text for primary monitor
+msgid "Primary Monitor:"
+msgstr "Ensisijainen monitori:"
+
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+msgid "Monitor Settings"
+msgstr "Monitorin asetukset"
+
+#. Windowanager title for the mouse mode setup
+msgid "Mouse Settings"
+msgstr "Hiiren asetukset"
+
+#. Windowanager title for the card options dialog
+msgid "Graphics Card Settings"
+msgstr "Näytönohjaimen asetukset"
+
+#. Windowanager title for the dual head setup
+msgid "Dual Head Settings"
+msgstr "Moninäyttötilan asetukset"
+
+#. Radiobutton don't rotate
+msgid "Not Rotated"
+msgstr "Ei käännetty"
+
+#. Radiobutton rotate to the left side
+msgid "To the Left"
+msgstr "Vasemmalle"
+
+#. Radiobutton rotate to the right side
+msgid "To the Right"
+msgstr "Oikealle"
+
+#. Popup message to ask the user for an option value
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Valinta tarvitsee arvon</b><hr><nobr>Aseta arvo valinnalle %1.</nobr>"
+
+#. Group box title for the monitor vendor and name selection
+msgid "Monitor: Vendor and Name Selection"
+msgstr "Monitori: Valmistajan ja nimen valinta"
+
+#. Group box title for the mouse vendor and name selection
+msgid "Mouse: Vendor and Name Selection"
+msgstr "Hiiri: Valmistajan ja nimen valinta"
+
+#. Group box title for the manual sync frequency set up
+msgid "Manual Sync Frequency Setup"
+msgstr "Tahdista taajuudet käsinasetus"
+
+#. Group box title for the aspect/ratio selection
+msgid "Diagonal and Aspect Ratio"
+msgstr ""
+
+#. Group box title for the display size setup
+msgid "Display Size in [ mm ]"
+msgstr "Näytön koko [ mm ]"
+
+#. Text message telling to be carefull with the monitor sync frequencies
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
+msgstr "Ota DPMS käyttöön"
+
+#. Button to popup the disk dialog for reading the monitor utility disk
+msgid "Utility Disk..."
+msgstr ""
+
+#. Label text for horizontal sync frequency
+msgid "Horizontal"
+msgstr "Vaaka"
+
+#. Label text for second monitor name
+msgid "Second Monitor:"
+msgstr ""
+
+#. Label text for second monitor resolution
+msgid "Second Monitor Resolution"
+msgstr ""
+
+#. Label text for vertical sync frequency
+msgid "Vertical"
+msgstr ""
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "KHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio"
+msgstr ""
+
+#. Label text for the diagonal length combo box
+msgid "Diagonal"
+msgstr ""
+
+#. Label text for the display size X-Axis
+msgid "X Axis [mm]"
+msgstr ""
+
+#. Label text for the display size Y-Axis
+msgid "Y Axis [mm]"
+msgstr ""
+
+#. Something is not configured
+msgid "Not configured"
+msgstr ""
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr ""
+
+#. Message box of type Ok, telling to user to insert a CD or disk
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+
+#. Message box of type Error, telling that the utility disk cannot be opened
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Traditional"
+msgstr ""
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
+msgstr "Klooni"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
+msgstr "Xinerama"
+
+#. Tab text for the mouse model dialog
+msgid "Mouse Model"
+msgstr "Hiiren malli"
+
+#. Group box title for the primary keyboard setup
+msgid "Primary Setup"
+msgstr ""
+
+#. Label text for the primary keyboard type
+msgid "Type"
+msgstr "Tyyppi"
+
+#. Label text for the primary keyboard variant
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr "Muunnos"
+
+#. Group box title for the additional keyboard setup
+msgid "Additional Layouts"
+msgstr ""
+
+#. Table topic text describing the status column
+msgid "Status"
+msgstr "Tila"
+
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr ""
+
+#. List View root item text
+msgid "Group Shift/Lock Behavior"
+msgstr "Ryhmän Shift/Lock käyttäytyminen"
+
+#. List View root item text
+msgid "Use Keyboard LED to Show Alternate Group"
+msgstr "Käytä näppäimistön led -valoa näyttämään vaihtoehtoinen ryhmä"
+
+#. List View root item text
+msgid "Compose Key Position"
+msgstr ""
+
+#. List View root item text
+#. XKBFile extension text
+msgid "Control Key Position"
+msgstr "Ctrl näppäimen sijainti"
+
+#. List View root item text
+msgid "Third Level Chooser"
+msgstr "Kolmannen tason vaihtajat"
+
+#. List View root item text
+msgid "Alt/Win Key Behavior"
+msgstr "Alt/Win -näppäimen toiminta"
+
+#. List View root item text
+msgid "CapsLock Key Behavior"
+msgstr "CapsLock -näppäimen toiminta"
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
+msgstr "Ei mikään"
+
+#. XKBFile extension text
+msgid "Left Alt key switches group while pressed"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Both Ctrl keys together change group"
+msgstr "Molemmat Ctrl-näppäimet yhtäaikaisesti vaihtavat ryhmää"
+
+#. XKBFile extension text
+msgid "Right Shift key changes group"
+msgstr "Oikea vaihtonäppäin vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Left Win key changes group"
+msgstr "Vasen win-näppäin vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Left Alt key changes group"
+msgstr "Vasen Alt vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Both Win keys switch group while pressed"
+msgstr "Molemmat win-näppäimet yhtäaikaa painettuina vaihtavat ryhmää"
+
+#. XKBFile extension text
+msgid "Right Win-key is Compose"
+msgstr "Oikea Win -näppäin on Kirjoita uusi"
+
+#. XKBFile extension text
+msgid "Shift+CapsLock changes group"
+msgstr "Shift+CapsLock vaihtavat ryhmää"
+
+#. XKBFile extension text
+msgid "Right Alt key switches group while pressed"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr "Ctrl alhaalla vasemmalla"
+
+#. XKBFile extension text
+msgid "Press any of Win-keys to choose 3rd level"
+msgstr "Paina jotakin Win -painiketta siirtyäksesi 3. tasolle"
+
+#. XKBFile extension text
+msgid "Press Right Alt key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Ctrl key changes group"
+msgstr "Oikea Ctrl vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Right Alt is Compose"
+msgstr "Oikea Alt on Kirjoita uusi"
+
+#. XKBFile extension text
+msgid "Scroll_Lock LED shows alternative group"
+msgstr "ScrollLock -valo näyttää vaihtoehtoisen ryhmän"
+
+#. XKBFile extension text
+msgid "Control key at left of -A-"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr "Kolmannen tason vaihtajat"
+
+#. XKBFile extension text
+msgid "Both Shift keys together change group"
+msgstr "Molemmat vaihtonäppäimet yhtäaikaisesti vaihtavat ryhmää"
+
+#. XKBFile extension text
+msgid "uses internal capitalization. Shift cancels Caps"
+msgstr "käyttää sisäistä kapitalisointia. Shift ottaa Capsin pois."
+
+#. XKBFile extension text
+msgid "Make CapsLock an additional Control"
+msgstr "Tee Caps Lockista ylimääräinen Ctrl"
+
+#. XKBFile extension text
+msgid "Press Left Win-key to choose 3rd level"
+msgstr "Paina vasenta Win -painiketta siirtyäksesi 3. tasolle"
+
+#. XKBFile extension text
+msgid "Right Win-key changes group"
+msgstr "Oikea Win-näppäin vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Meta is mapped to the left Win-key"
+msgstr "Meta on määritelty vasempaan Win -näppäimeen."
+
+#. XKBFile extension text
+msgid "Caps_Lock LED shows alternative group"
+msgstr "CapsLock -valo näyttää vaihtoehtoisen ryhmän"
+
+#. XKBFile extension text
+msgid "Num_Lock LED shows alternative group"
+msgstr "NumLock -valo näyttää vaihtoehtoisen ryhmän"
+
+#. XKBFile extension text
+msgid "Left Shift key changes group"
+msgstr "Vasen vaihtonäppäin vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Left Win-key switches group while pressed"
+msgstr "Vasen Win -näppäin vaihtaa ryhmää painettuna"
+
+#. XKBFile extension text
+msgid "Menu is Compose"
+msgstr "Menu on Kirjoita uusi"
+
+#. XKBFile extension text
+msgid "Both Alt keys together change group"
+msgstr "Molemmat Alt-näppäimet yhtäaikaisesti vaihtavat ryhmää"
+
+#. XKBFile extension text
+msgid "Caps Lock key changes group"
+msgstr "Caps Lock vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Swap Control and Caps Lock"
+msgstr "Vaihda Ctrl -painiketta ja Caps Lockia"
+
+#. XKBFile extension text
+msgid "Press any of Alt keys to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Right Alt key changes group"
+msgstr "Oikea Alt vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Hyper is mapped to the Win-keys"
+msgstr "Hyper on määritelty Win -näppäimiin"
+
+#. XKBFile extension text
+msgid "Super is mapped to the Win-keys (default)"
+msgstr "Super on määritelty Win-näppäimiin (oletus)."
+
+#. XKBFile extension text
+msgid "Alt and Meta on the Alt keys (default)"
+msgstr "Alt ja Meta Alt -painikkeilla (oletus)."
+
+#. XKBFile extension text
+msgid "Add the standard behavior to Menu key"
+msgstr "Lisää normaali käyttäytyminen Menu -painikkeeseen"
+
+#. XKBFile extension text
+msgid "Press Right Control to choose 3rd level"
+msgstr "Paina oikeaa Ctrl -painiketta siirtyäksesi 3. tasolle"
+
+#. XKBFile extension text
+msgid "Alt+Shift changes group"
+msgstr "Alt+Shift vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Control+Shift changes group"
+msgstr "Ctrl+Shift vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "acts as Shift with locking. Shift cancels Caps"
+msgstr "toimi kuten Shift lukituksella. Shift estää Capsin."
+
+#. XKBFile extension text
+msgid "Use keyboard LED to show alternative group"
+msgstr "Käytä näppäimistön led -valoa näyttämään vaihtoehtoinen ryhmä"
+
+#. XKBFile extension text
+msgid "Press Right Win-key to choose 3rd level"
+msgstr "Paina oikeaa Win -painiketta siirtyäksesi 3. tasolle"
+
+#. XKBFile extension text
+msgid "Press Left Alt key to choose 3rd level"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Meta is mapped to the Win-keys"
+msgstr "Meta on määritelty Win -näppäimiin."
+
+#. XKBFile extension text
+msgid "Press Menu key to choose 3rd level"
+msgstr "Paina oikeaa Menu -painiketta siirtyäksesi 3. tasolle"
+
+#. XKBFile extension text
+msgid "Left Ctrl key changes group"
+msgstr "Vasen Ctrl-näppäin vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Menu key changes group"
+msgstr "Menu näppäin vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Alt+Control changes group"
+msgstr "Alt+Ctrl vaihtaa ryhmää"
+
+#. XKBFile extension text
+msgid "Right Win-key switches group while pressed"
+msgstr "Oikea Win -näppäin vaihtaa ryhmää painettuna"
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
+msgstr ""
+
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
+msgstr ""
+
+#. Activate tablet checkbox
+msgid "Activate This Tablet"
+msgstr "Ota tämä paneeli käyttöön"
+
+#. Group box title for the tablet vendor and name selection
+msgid "Tablet: Vendor and Name Selection"
+msgstr "Paneeli: Valmistajan ja nimen valinta"
+
+#. Group box title for tablet port combobox
+msgid "Connection Port"
+msgstr ""
+
+#. Group box title for tablet mode
+msgid "Primary Tablet Mode"
+msgstr "Paneelin ensisijainen tila"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen or Eraser Mode"
+msgstr ""
+
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr "Suhteellinen"
+
+#. Radiobutton for absolute tablet mode
+msgid "Absolute"
+msgstr ""
+
+#. Combobox item text for tablet port: USB
+msgid "USB"
+msgstr "USB"
+
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "Työkalut"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr ""
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr ""
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen or Eraser Settings"
+msgstr ""
+
+#. Tab title: Pen properties
+msgid "Pen Properties"
+msgstr ""
+
+#. Tab title: Eraser properties
+msgid "Eraser Properties"
+msgstr ""
+
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a Touchscreen to Display Number %1"
+msgstr ""
+
+#. Group box title for the touchscreen vendor and name selection
+msgid "Touchscreen: Vendor and Name Selection"
+msgstr "Kosketusnäyttö: Valmistajan ja nimen valinta"
+
+#. Finish configuration message box
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
+"kill the server."
+msgstr ""
+
+#. Tab title: VNC Server configuration
+msgid "VNC Server"
+msgstr "VNC palvelin"
+
+#. Activate VNC server checkbox
+msgid "Allow Access to Display Using VNC Protocol"
+msgstr ""
+
+#. Group box title for the VNC options
+msgid "VNC Options"
+msgstr "VNC valinnat"
+
+#. Activate VNC password protection checkbox
+msgid "Activate Password Protection"
+msgstr "Ota salasana suojaus käyttöön"
+
+#. LineEdit label: enter password
+msgid "Password"
+msgstr "Salasana"
+
+#. LineEdit contents: enter new password
+msgid "<Enter new password>"
+msgstr "<Anna uusi salasana>"
+
+#. LineEdit contents: change password
+msgid "<Change password>"
+msgstr "<Vaihda salasana>"
+
+#. LineEdit contents: verify password
+msgid "<Verify password>"
+msgstr "<Varmista salasana>"
+
+#. Activate HTTP access checkbox
+msgid "Activate HTTP Access"
+msgstr ""
+
+#. Activate multiple VNC connection checkbox
+msgid "Allow Multiple VNC Connections"
+msgstr ""
+
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
+msgstr "HTTP portti"
+
+#. VNC message box appearing if password strings doesn't match
+msgid ""
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
+msgstr ""
+
+#. VNC message box appearing if password is too short
+msgid ""
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
+msgstr ""
+
+#. Install missing packages box
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+
+#. Caption text for the missing package info window
+msgid "Package Installation"
+msgstr ""
+
+#. Progress bar title text
+msgid "Importing module"
+msgstr "Paketin asennus"
+
+#. Progress window caption text
+msgid "SaX2: Importing data..."
+msgstr "SaX2: Tuodaan tietoja..."
+
+#. Progress window label text
+msgid "Initialize cache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+
+#. /.../
+#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for XFine2
+#.
+#. Maximum length: 40  characters
+msgid "&Step size"
+msgstr "A&skelkoko"
+
+#. Maximum length: 40  characters
+msgid "Small"
+msgstr "Pieni"
+
+#. Maximum length: 40  characters
+msgid "Normal"
+msgstr "Normaali"
+
+#. Maximum length: 40  characters
+msgid "Big"
+msgstr "Suuri"
+
+#. Maximum length: 40  characters
+msgid "Huge"
+msgstr "Valtava"
+
+#. Maximum length: 40  characters
+msgid "&Next Screen"
+msgstr "Seuraava &näyttö"
+
+#. Maximum length: 40  characters
+msgid "S&ave"
+msgstr "T&allenna"
+
+#. Maximum length: 40  characters
+msgid "Change &Position"
+msgstr "Muuta &kohtaa"
+
+#. Maximum length: 40  characters
+msgid "C&hange Size"
+msgstr "Mu&uta kokoa"
+
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr ""
+
+#. Maximum length: 60  characters
+msgid "No video mode tuning available"
+msgstr ""
+
+msgid "Configuration on display"
+msgstr "Näytön määritys"
+
+msgid "Idle timer..."
+msgstr ""
