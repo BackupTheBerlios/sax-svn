@@ -443,7 +443,8 @@ bool SaXManipulateDesktop::enable3D (void) {
 	SaXManipulateCard cardInfo (mCard,mDesktopID);
 	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
-		QString* driver  = cardData -> find ("3DDriver");
+		QString* driver3D= cardData -> find ("3DDriver");
+		QString* driver2D= cardData -> find ("Driver");
 		QString* extends = cardData -> find ("Extension");
 		QString* flag    = cardData -> find ("Flag");
 		//========================================
@@ -455,7 +456,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 		//========================================
 		// nvidia drv. needed, check if installed
 		//----------------------------------------
-		if ((driver) && (*driver == "nvidia")) {
+		if ((driver3D) && (*driver3D == "nvidia")) {
 			SaXProcessCall* proc = new SaXProcessCall ();
 			proc -> addArgument ( XSLOAD );
 			proc -> addArgument ( "-vendor" );
@@ -489,8 +490,14 @@ bool SaXManipulateDesktop::enable3D (void) {
 		//========================================
 		// set driver to use with 3D
 		//----------------------------------------
-		if (driver) {
-			cardInfo.setCardDriver (*driver);
+		if (driver3D) {
+			QString currentDriver = cardInfo.getCardDriver();
+			if ((currentDriver != *driver3D) && (currentDriver != *driver2D)) {
+				excDriverMismatch (driver3D->ascii(),currentDriver.ascii());
+				qError (errorString(),EXC_DRIVERMISMATCH);
+			} else {
+				cardInfo.setCardDriver (*driver3D);
+			}
 		}
 	}
 	//====================================
@@ -598,7 +605,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 	SaXManipulateCard cardInfo (mCard);
 	QDict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
-		QString* driver  = cardData -> find ("3DDriver");
+		QString* driver3D= cardData -> find ("3DDriver");
 		QString* driver2D= cardData -> find ("Driver");
 		QString* extends = cardData -> find ("Extension");
 		QString* flag    = cardData -> find ("Flag");
@@ -611,7 +618,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 		//========================================
 		// nvidia drv. needed, check if installed
 		//----------------------------------------
-		if ((driver) && (*driver == "nvidia")) {
+		if ((driver3D) && (*driver3D == "nvidia")) {
 			SaXProcessCall* proc = new SaXProcessCall ();
 			proc -> addArgument ( XSLOAD );
 			proc -> addArgument ( "-vendor" );
@@ -640,8 +647,14 @@ bool SaXManipulateDesktop::disable3D (void) {
 		//========================================
 		// set driver to use with 2D
 		//----------------------------------------
-		if (driver2D) {
-			cardInfo.setCardDriver (*driver2D);
+		if ((driver2D) && (driver3D)) {
+			QString currentDriver = cardInfo.getCardDriver();
+			if ((currentDriver != *driver3D) && (currentDriver != *driver2D)) {
+				excDriverMismatch (driver2D->ascii(),currentDriver.ascii());
+				qError (errorString(),EXC_DRIVERMISMATCH);
+			} else {
+				cardInfo.setCardDriver (*driver2D);
+			}
 		}
 	}
 	//====================================

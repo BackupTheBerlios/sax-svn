@@ -85,6 +85,7 @@ namespace SaX {
 #define EXC_NVIDIADRIVERMISSING         "saxNvidiaDriverMissing"
 #define EXC_NVIDIADRIVERINSTALLED       "saxNvidiaDriverInstalled"
 #define EXC_XKBLAYOUTUNDEFINED          "saxXKBLayoutUndefined"
+#define EXC_DRIVERMISMATCH              "saxCDBDriverMismatch"
 
 //====================================
 // Defines (error texts)...
@@ -100,6 +101,7 @@ namespace SaX {
 #define ENVIDIAMIS       "NVIDIA binary driver missing"
 #define ENVIDIAINS       "NVIDIA binary driver installed"
 #define EXKBLAYOUT       "Undefined XKB layout"
+#define ECDBMISMATCH     "2D/3D driver from CDB doesn't match current driver"
 
 //====================================
 // Defines (error codes)...
@@ -115,6 +117,7 @@ namespace SaX {
 #define ENVIDIAMISID     264
 #define ENVIDIAINSID     265
 #define EXKBLAYOUTID     266
+#define ECDBMISMATCHID   267
 
 //====================================
 // Defines (locking)...
@@ -190,6 +193,7 @@ class SaXExceptionIF : public QObject {
 	virtual void excNvidiaDriverMissing        ( void ) = 0;
 	virtual void excNvidiaDriverInstalled      ( void ) = 0;
 	virtual void excXKBLayoutUndefined         ( const char* ) = 0;
+	virtual void excDriverMismatch             ( const char*,const char* ) = 0;
 
 	public:
 	virtual ~SaXExceptionIF ( void ) { }
@@ -326,6 +330,7 @@ class SaXException : public SaXExceptionIF {
 	void excNvidiaDriverMissing        ( void );
 	void excNvidiaDriverInstalled      ( void );
 	void excXKBLayoutUndefined         ( const char* );
+	void excDriverMismatch             ( const char*,const char* );
 
 	signals:
 	void saxProcessFailed              ( void );
@@ -363,6 +368,7 @@ class SaXException : public SaXExceptionIF {
 	void saxNvidiaDriverMissing        ( void );
 	void saxNvidiaDriverInstalled      ( void );
 	void saxXKBLayoutUndefined         ( const char* );
+	void saxDriverMismatch             ( const char*,const char* );
 
 	protected:
 	bool setLock   ( void );

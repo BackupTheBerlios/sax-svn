@@ -2,6 +2,12 @@
 Mon Jul 25 10:45:39 CEST 2005 - ms@suse.de
 
 - added fi -> Finnish translations from Dublin
+- fixed manual driver setup. If the option -m is used to set
+  the driver name it is not allowed to reset that driver by
+  libsax. libsax will now check the CDB driver name with the
+  optional driver name set manually and prefer the manually set
+  one in any case. An exception is thrown in the case where the
+  currently used driver does not fit the CDB driver(s). 
 
 -------------------------------------------------------------------
 Fri Jul 22 16:35:52 CEST 2005 - ms@suse.de

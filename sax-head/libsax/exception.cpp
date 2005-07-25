@@ -456,4 +456,10 @@ void SaXException::excXKBLayoutUndefined ( const char* layout ) {
 	setErrorCode (EXKBLAYOUT,EXKBLAYOUTID);
 	emit saxXKBLayoutUndefined (layout);
 }
+//! 2D/3D driver from CDB doesn't match current driver
+void SaXException::excDriverMismatch ( const char* cdb,const char* cur) {
+	setErrorCode (ECDBMISMATCH,ECDBMISMATCHID);
+	setErrorValue (QString(cdb)+" -> "+QString(cur));
+	emit saxDriverMismatch (cdb,cur);
+}
 } // end namespace
