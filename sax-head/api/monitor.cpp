@@ -586,6 +586,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key,position );
 							int mode = dualData->getMode();
 							if ( mode == DUAL_CLONE ) {
+								saxCard.removeCardOption (key);
 								saxCard.addCardOption (key,DUAL_CLONE_KEY);
 							}
 						}
