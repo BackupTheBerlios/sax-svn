@@ -1235,7 +1235,7 @@ QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
 //------------------------------------
 void SaXManipulateDesktop::setExtraModeline ( int x,int y,int refresh ) {
 	// .../
-	//! This function includes one modeline XxY@refresh Hz without
+	//! This method includes one modeline XxY with refresh Hz but without
 	//! checking if it fits into the current range. This method should
 	//! be used carefully
 	// ----
@@ -1250,7 +1250,7 @@ void SaXManipulateDesktop::setExtraModeline ( int x,int y,int refresh ) {
 //------------------------------------
 void SaXManipulateDesktop::addExtraModeline ( int x,int y,int refresh ) {
 	// .../
-	//! This function add a modeline XxY@refresh Hz without
+	//! This method add a modeline XxY with refresh Hz but without
 	//! checking if it fits into the current range. This method should
 	//! be used carefully
 	// ----
@@ -1272,8 +1272,8 @@ void SaXManipulateDesktop::addExtraModeline ( int x,int y,int refresh ) {
 //------------------------------------
 void SaXManipulateDesktop::removeExtraModeline ( int x,int y) {
 	// .../
-	//! This function removes a modeline XxY from the SpecialModeline
-	//! value
+	//! This function removes a modeline XxY from the
+	//! SpecialModeline value
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return;
