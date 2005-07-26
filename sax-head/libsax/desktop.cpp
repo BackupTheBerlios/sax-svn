@@ -1216,6 +1216,10 @@ void SaXManipulateDesktop::setCDBMonitorData (
 // getVendorForDriver
 //------------------------------------
 QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
+	// .../
+	//! obtain the SYSP vendor string referring to the given
+	//! driver name
+	// ----
 	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SYSP_VENDOR );
 	proc -> addArgument ( driver );
@@ -1225,5 +1229,89 @@ QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
 	}
 	QList<QString> data = proc -> readStdout();
 	return *data.first();
+}
+//====================================
+// setExtraModeline
+//------------------------------------
+void SaXManipulateDesktop::setExtraModeline ( int x,int y,int refresh ) {
+	// .../
+	//! This function includes one modeline XxY@refresh Hz without
+	//! checking if it fits into the current range. This method should
+	//! be used carefully
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return;
+	}
+	QString mode = calculateModeline ( x,y,refresh );
+	mDesktop -> setItem ( "SpecialModeline",mode );
+}
+//====================================
+// addExtraModeline
+//------------------------------------
+void SaXManipulateDesktop::addExtraModeline ( int x,int y,int refresh ) {
+	// .../
+	//! This function add a modeline XxY@refresh Hz without
+	//! checking if it fits into the current range. This method should
+	//! be used carefully
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return;
+	}
+	QString val;
+	QString key = "SpecialModeline";
+	QString mode = calculateModeline ( x,y,refresh );
+	if (! mDesktop -> getItem (key).isEmpty()) {
+		val = mDesktop -> getItem (key);
+	}
+	QTextOStream (&val) << val << "," << mode;
+	val.replace (QRegExp("^,"),"");
+	mDesktop -> setItem ( key,val );
+}
+//====================================
+// removeExtraModeline
+//------------------------------------
+void SaXManipulateDesktop::removeExtraModeline ( int x,int y) {
+	// .../
+	//! This function removes a modeline XxY from the SpecialModeline
+	//! value
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return;
+	}
+	QString val;
+	QString key = "SpecialModeline";
+	val.sprintf ("\"%dx%d\"",x,y);
+	QString current = mDesktop -> getItem (key);
+	QStringList lines = QStringList::split ( ",", current );
+	for (
+		QStringList::Iterator it=lines.begin();
+		it != lines.end(); ++it
+	) {
+		QString mode (*it);
+		if (mode.contains (val)) {
+			mDesktop -> removeItem (key,mode);
+		}
+	}
+}
+//====================================
+// calculateModeline
+//------------------------------------
+QString SaXManipulateDesktop::calculateModeline ( int x,int y,int refresh ) {
+	SaXProcessCall* proc = new SaXProcessCall ();
+	proc -> addArgument ( XMODE );
+	proc -> addArgument ( "-x" );
+	proc -> addArgument ( x );
+	proc -> addArgument ( "-y" );
+	proc -> addArgument ( y );
+	proc -> addArgument ( "-r" );
+	proc -> addArgument ( refresh + 2 );
+	if ( ! proc -> start() ) {
+		excProcessFailed();
+		qError (errorString(),EXC_PROCESSFAILED);
+	}
+	QList<QString> data = proc->readStdout();
+	QString result = *data.at(2);
+	result.replace (QRegExp("^Modeline "),"");
+	return result;
 }
 } // end namespace

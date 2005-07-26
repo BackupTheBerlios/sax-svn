@@ -26,6 +26,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include <qlist.h>
 #include <qstring.h>
+#include <qtextstream.h>
 
 //====================================
 // Defines...
@@ -46,6 +47,7 @@ namespace SaX {
 class SaXProcessCallIF {
 	public:
 	virtual void addArgument ( const QString& ) = 0;
+	virtual void addArgument ( int ) = 0;
 	virtual void clearArguments ( void ) = 0;
 	virtual QList<QString> readStdout ( void ) = 0;
 	virtual bool start ( void ) = 0;
@@ -73,6 +75,7 @@ class SaXProcessCall : public SaXProcessCallIF {
 
 	public:
 	void addArgument ( const QString& );
+	void addArgument ( int );
 	void clearArguments ( void );
 	QList<QString> readStdout ( void );
 	bool start ( void );

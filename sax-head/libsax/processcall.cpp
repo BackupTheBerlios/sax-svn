@@ -36,6 +36,15 @@ void SaXProcessCall::addArgument ( const QString& arg ) {
 }
 
 //====================================
+// addArgument
+//------------------------------------
+void SaXProcessCall::addArgument ( int arg ) {
+	QString argString;
+	QTextOStream (&argString) << arg;
+	addArgument ( argString );
+}
+
+//====================================
 // clearArguments
 //------------------------------------
 void SaXProcessCall::clearArguments ( void ) {

@@ -34,6 +34,7 @@ namespace SaX {
 // Defines...
 //------------------------------------
 #define XSLOAD            "/usr/X11R6/bin/xsload"
+#define XMODE             "/usr/sbin/xmode"
 #define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
 #define PROFILE_DIR       "/usr/share/sax/profile/"
 #define MAP_DIR           "/usr/share/sax/sysp/maps/"
@@ -52,6 +53,9 @@ namespace SaX {
 class SaXManipulateDesktopIF : public SaXException {
 	public:
 	virtual void calculateModelines ( bool ) = 0;
+	virtual void setExtraModeline ( int,int,int ) = 0;
+	virtual void addExtraModeline ( int,int,int ) = 0;
+	virtual void removeExtraModeline ( int,int ) = 0;
 	virtual void setResolution ( int,int,int ) = 0;
 	virtual void addResolution ( int,int,int ) = 0;
 	virtual void removeResolution ( int,int,int ) = 0;
@@ -170,9 +174,13 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 
 	private:
 	QString getVendorForDriver ( const QString& );
+	QString calculateModeline  ( int,int,int );
 
 	public:
 	void calculateModelines ( bool );
+	void setExtraModeline ( int,int,int );
+    void addExtraModeline ( int,int,int );
+    void removeExtraModeline ( int,int );
 	void setResolution ( int,int,int );
 	void addResolution ( int,int,int );
 	void removeResolution ( int,int,int );

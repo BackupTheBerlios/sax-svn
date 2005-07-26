@@ -2,7 +2,7 @@
 # profile to setup the second channel on a
 # radeon based laptop device using fglrx driver
 # ---------------------------------------------
-Device  -> [X] ->  Raw -> 20 -> Option = "MonitorLayout" "LVDS,CRT"
+Device  -> [X] ->  Raw -> 20 -> Option = "MonitorLayout" "AUTO,AUTO"
 Device  -> [X] ->  Raw -> 21 -> Option = "HSync2" "{Monitor->[X]->HorizSync}"
 Device  -> [X] ->  Raw -> 22 -> Option = "VRefresh2" "{Monitor->[X]->VertRefresh}"
 

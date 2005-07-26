@@ -402,6 +402,11 @@ bool SCCMonitor::exportData ( void ) {
 					saxCard.removeCardOption (it.currentKey());
 				}
 				//====================================
+				// delete special modelines
+				//------------------------------------
+				mSection["Desktop"] -> removeEntry ("SpecialModeline");
+
+				//====================================
 				// setup profile data
 				//------------------------------------
 				if (display->isDualModeEnabled()) {
@@ -482,6 +487,19 @@ bool SCCMonitor::exportData ( void ) {
 							int vsmin = dualModel->getVSmin();
 							QTextOStream (&vsync) << vsmin << "-" << vsmax;
 							saxCard.addCardOption ( key,vsync );
+							//====================================
+							// calculate one modeline for each res
+							//------------------------------------
+							QList<QString> rList=dualData->getResolutionList();
+							QListIterator<QString> ir (rList);
+							for (; ir.current(); ++ir) {
+								QStringList xy = QStringList::split (
+									"x",*ir.current()
+								);
+								int x = xy.first().toInt();
+								int y = xy.last().toInt();
+								saxDesktop.addExtraModeline ( x,y,vsmax );
+							}
 						}
 						//====================================
 						// setup profile NVidia data
@@ -490,6 +508,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key );
 						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
+							#if 1
 							QList<QString> resList=display->getResolution();
 							QString resolution2 = dualData->getResolution();
 							QString resolution1 = *resList.at(0);
@@ -497,6 +516,29 @@ bool SCCMonitor::exportData ( void ) {
 							QTextOStream (&resolution) <<
 								resolution1 << "," << resolution2;
 							saxCard.addCardOption ( key,resolution );
+							#endif
+							#if 0
+							QList<QString> rList1=display->getResolution();
+							QString resolution1 = *rList1.at(0);
+							QList<QString> rList2=dualData->getResolutionList();
+							QListIterator<QString> ir (rList2);
+							QString resolution;
+							int indexCount = 0;
+							for (; ir.current(); ++ir) {
+								QString metaItem;
+								if (indexCount == 0) {
+									QTextOStream (&metaItem) <<
+										resolution1 << "," << *ir.current();
+								} else {
+									QTextOStream (&metaItem) <<
+										*ir.current() << "," << *ir.current();
+								}
+								resolution.append (";"+metaItem);
+								indexCount++;
+							}
+							resolution.replace(QRegExp("^;"),"");
+							saxCard.addCardOption ( key,resolution );
+							#endif
 						}
 						if (key == "SecondMonitorHorizSync") {
 							QString hsync;
@@ -559,6 +601,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key );
 						}
 						if ((key== "MetaModes") && (driver == "radeon")) {
+							#if 1
 							QList<QString> resList=display->getResolution();
 							QString resolution2 = dualData->getResolution();
 							QString resolution1 = *resList.at(0);
@@ -566,6 +609,29 @@ bool SCCMonitor::exportData ( void ) {
 							QTextOStream (&resolution) <<
 								resolution1 << "-" << resolution2;
 							saxCard.addCardOption ( key,resolution );
+							#endif
+							#if 0
+							QList<QString> rList1=display->getResolution();
+							QString resolution1 = *rList1.at(0);
+							QList<QString> rList2=dualData->getResolutionList();
+							QListIterator<QString> ir (rList2);
+							QString resolution;
+							int indexCount = 0;
+							for (; ir.current(); ++ir) {
+								QString metaItem;
+								if (indexCount == 0) {
+									QTextOStream (&metaItem) <<
+										resolution1 << "," << *ir.current();
+								} else {
+									QTextOStream (&metaItem) <<
+										*ir.current() << "," << *ir.current();
+								}
+								resolution.append (";"+metaItem);
+								indexCount++;
+							}
+							resolution.replace(QRegExp("^;"),"");
+							saxCard.addCardOption ( key,resolution );
+							#endif
 						}
 						if (key == "CRT2Position") {
 							int orientation  = dualData->getLayout();

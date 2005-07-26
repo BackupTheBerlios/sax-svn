@@ -475,6 +475,12 @@ QString SCCMonitorDual::getResolution ( void ) {
 	return mSelectedResolution;
 }
 //====================================
+// getResolutionList
+//------------------------------------
+QList<QString> SCCMonitorDual::getResolutionList ( void ) {
+	return setupList ();
+}
+//====================================
 // getLayout
 //------------------------------------
 int SCCMonitorDual::getLayout ( void ) {
@@ -536,7 +542,6 @@ void SCCMonitorDual::setMonitorName (
 // slotClone
 //-------------------------------------
 void SCCMonitorDual::slotClone ( bool on ) {
-	// TODO
 	mOrientationGroup -> setDisabled ( on );
 }
 //=====================================
@@ -635,4 +640,66 @@ void SCCMonitorDual::slotDualHead ( QPushButton* btn ) {
 		mBelowOfPrimary -> setOn ( false );
 	}
 }
+//=====================================
+// setupList
+//-------------------------------------
+QList<QString> SCCMonitorDual::setupList ( void ) {
+	//====================================
+	// find first startup resolution
+	//------------------------------------
+	QString selected = mResolution->currentText();
+	QDictIterator<QString> it (mResolutionDict);
+	long basePixels  = 0;
+	int  basePixelsX = 0;
+	int  basePixelsY = 0;
+	mSelectedResolutionList.clear();
+	for (; it.current(); ++it) {
+		if (*it.current() == selected) {
+			QString* baseResolution = new QString (it.currentKey());
+			QStringList tokens = QStringList::split ( "x", *baseResolution );
+			int x = tokens.first().toInt();
+			int y = tokens.last().toInt();
+			basePixels  = x * y;
+			basePixelsX = x;
+			basePixelsY = y;
+			mSelectedResolutionList.append ( baseResolution );
+		}
+	}
+	//====================================
+	// append lower resolutions
+	//------------------------------------
+	it.toFirst();
+	int count = 0;
+	QDict<QString> metaResolution;
+	long sortResolution[mResolutionDict.count()];
+	for (; it.current(); ++it) {
+		QString* addResolution = new QString (it.currentKey());
+		QStringList tokens = QStringList::split ( "x", *addResolution );
+		int x = tokens.first().toInt();
+		int y = tokens.last().toInt();
+		int pixelSpace = x * y;
+		if ((pixelSpace < basePixels) && (x<=basePixelsX) && (y<=basePixelsY)) {
+			QString key;
+			QTextOStream (&key) << pixelSpace;
+			metaResolution.insert ( key,addResolution );
+			sortResolution[count] = pixelSpace;
+			count++;
+		}
+	}
+	for (int n=0;n<count;n++) {
+	for (int i=n+1;i<count;i++) {
+		if (sortResolution[n] < sortResolution[i]) {
+			long save = sortResolution[n];
+			sortResolution[n] = sortResolution[i];
+			sortResolution[i] = save;
+		}
+	}
+	}
+	for (int n=0;n<count;n++) {
+		QString key;
+		QTextOStream (&key) << sortResolution[n];
+		mSelectedResolutionList.append ( metaResolution[key] );
+	}
+	return mSelectedResolutionList;
+} 
 } // end namespace
