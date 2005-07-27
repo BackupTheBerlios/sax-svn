@@ -460,6 +460,9 @@ bool SaXManipulateCard::isNoteBook ( void ) {
 	struct dirent* entry = NULL;
 	DIR* batteryDir = NULL;
 	batteryDir = opendir (ACPI_BATTERY);
+	if (! batteryDir) {
+		return false;
+	}
 	int BATs = 0;
 	while (1) {
 		entry = readdir (batteryDir);
