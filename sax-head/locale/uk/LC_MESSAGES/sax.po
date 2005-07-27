@@ -7,13 +7,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.uk\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2005-03-08 13:22-0800\n"
+"PO-Revision-Date: 2005-07-24 15:51-0700\n"
 "Last-Translator: Ivan Petrouchtchak <iip@telus.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.1\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -23,39 +23,36 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>Пропозиція SaX2</b><hr>Зараз запущено графічну систему, яку запропоновано "
-"програмою SaX2. Якщо вона підходить, натисніть <b>Гаразд</b>. Інакше, "
-"змініть конфігурацію."
+"<b>Пропозиція SaX2</b><hr>В даний час запущено графічну систему, "
+"запропоновану програмою SaX2. Якщо вона підходить, натисніть <b>Гаразд</b>. "
+"Інакше, змініть конфігурацію."
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
 msgstr "Автоматичне налаштування графічної системи"
 
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
-msgstr ""
+msgstr "SaX2: Розширене налаштування X11 для SUSE"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "Центр керування SaX"
 
 #. Title text on the right side
 msgid "SUSE Linux"
-msgstr ""
+msgstr "SUSE Linux"
 
 #. Help Button text
 msgid "&Help"
 msgstr "&Довідка"
 
 #. Ok Button text
-#, fuzzy
 msgid "&OK"
 msgstr "&Гаразд"
 
@@ -73,16 +70,14 @@ msgid "&Cancel"
 msgstr "&Скасувати"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
 msgstr "<b>Вихід з SaX2:</b><hr>Вийти з SaX2?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "Повідомлення"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
 msgstr "З&мінити конфігурацію"
 
@@ -92,9 +87,8 @@ msgid "Monitor"
 msgstr "Монітор"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "Наставити властивості монітора..."
+msgstr "Властивості плати і монітора"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -102,19 +96,16 @@ msgid "Mouse"
 msgstr "Мишка"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "Властивості..."
+msgstr "Властивості мишки"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "Модель клавіатури"
+msgstr "Клавіатура"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "Наставити властивості монітора..."
+msgstr "Властивості клавіатури"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -122,9 +113,8 @@ msgid "Tablet"
 msgstr "Планшет"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "Властивості..."
+msgstr "Властивості планшета"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -132,18 +122,16 @@ msgid "Touchscreen"
 msgstr "Сенсорний екран"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "Наставити властивості монітора..."
+msgstr "Властивості сенсорного екрана"
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "Наставити властивості монітора..."
+msgstr "Властивості віддаленого доступу"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -151,73 +139,63 @@ msgstr "Дисплей"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Активувати цей дисплей"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "Активувати цей вказівний пристрій"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "Плата"
 
 #. Change data
-#, fuzzy
 msgid "&Change..."
-msgstr "<Змініть пароль...>"
+msgstr "&Змінити..."
 
 #. Set options for some kind of data
 msgid "&Options..."
 msgstr "&Параметри..."
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "Налаштувати клавіатуру..."
+msgstr "Нала&штувати..."
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
-msgstr "Мультимоніт. режим"
+msgstr "Мультимоніторний режим"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
-#, fuzzy
 msgid "Options"
-msgstr "&Параметри"
+msgstr "Параметри"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
-msgstr "Увімкнути коліщатко мишки"
+msgstr "Активувати коліщатко мишки"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
-msgstr "Увімкнути емуляцію 3-кнопок"
+msgstr "Активувати емуляцію 3-кнопок"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Емуляція коліщатка кнопкою мишки:"
+msgstr "Емуляція коліщатка кнопкою мишки"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
 msgstr "Обернути екран"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "&Тест..."
+msgstr "Тест"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "&Тест..."
+msgstr "&Тест"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -230,103 +208,86 @@ msgid "Layout"
 msgstr "Розкладка"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "Поле перевірки"
+msgstr "Готове для перевірки"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
 msgstr "Одинарне клацання кнопки: Завершено"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
 msgstr "Подвійне клацання кнопки: Завершено"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "Приписування ScrollLock"
+msgstr "Прокрутка"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "Кнопку натиснуто..."
+msgstr "Кнопку натиснуто"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "Кнопку відпущено..."
+msgstr "Кнопку відпущено"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
-msgstr "Коліщатко зупинилось: Завершено"
+msgstr "Зупинилось: Завершено"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
-msgstr "Властивості..."
+msgstr "Властивості"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Мультимоніт. режим"
+msgstr "Активувати мультимоніторний режим"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Роздільна здатність Y"
+msgstr "Роздільна здатність"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
-msgstr "&Кольори"
+msgstr "Кольори"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "3D-прискорення"
+msgstr "Активувати 3D-прискорення"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "Модель монітора"
+msgstr "Монітор для плати"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "Модель монітора"
+msgstr "Другий монітор для плати"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "&Частоти"
+msgstr "Частоти синхронізації"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
 msgstr "Розмір дисплея"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "Розташування"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "Активовано в режимі %1 з %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "Активовано в типовому режимі драйвера"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
 msgstr "Не налаштовано"
 
@@ -335,11 +296,12 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>Неможливо деактивувати всі дисплеї</b><hr><nobr>Принаймні один дисплей "
+"мусить бути активним.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Конфігурацію збережено..."
+msgstr "Немає конфігурації"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -366,130 +328,111 @@ msgstr ""
 "Збудувати один великий дисплей з усіх екранів"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
-msgstr "Мультимоніт. режим"
+msgstr "Мультимоніторний режим"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "З'єднаний з:"
+msgstr "З'єднано з"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Невідомий монітор..."
+msgstr "Невідомий монітор:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "Головна Modeline:"
+msgstr "Головний монітор:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "Вибір кольору..."
+msgstr "Параметри монітора"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "Система X11"
+msgstr "Параметри мишки"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "Графічна плата"
+msgstr "Параметри графічної плати"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Мультимоніт. режим"
+msgstr "Параметри мультимоніторного режиму"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
-msgstr "Не обернений"
+msgstr "Не обернено"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
 msgstr "Ліворуч"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
 msgstr "Праворуч"
 
 #. Popup message to ask the user for an option value
-#, fuzzy
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Параметр %1 потребує значення</b><hr>Будь ласка, наставте значення для "
-"цього параметра."
+"<b>Параметр потребує значення</b><hr><nobr>Встановіть значення для параметра "
+"%1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Модель: вибір назви та постачальника..."
+msgstr "Монітор: Вибір назви та постачальника"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Модель: вибір назви та постачальника..."
+msgstr "Мишка: Вибір назви та постачальника"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "Ручне налаштування частоти синхронізації..."
+msgstr "Ручне налаштування частоти синхронізації"
 
 #. Group box title for the aspect/ratio selection
-#, fuzzy
 msgid "Diagonal and Aspect Ratio"
-msgstr "Виберіть діагональ та пропорції..."
+msgstr "Діагональ та пропорції"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
 msgstr "Розмір дисплея в [мм]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Примітка:</b><hr>Неправильні діапазони синхронізації можуть пошкодити ваш "
-"монітор. Перегляньте інструкцію монітора для наступних параметрів."
+"монітор. Перегляньте інструкцію монітора щодо параметрів.<br><br>Якщо ви не "
+"хочете, щоб монітор використовував максимальні значення, зменшіть діапазони "
+"синхронізації."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "Активувати DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Диск з утилітами..."
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "По горизонталі:"
+msgstr "По горизонталі"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "Вибрати роздільну здатність"
+msgstr "Другий монітор:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "Вибрати роздільну здатність"
+msgstr "Роздільна здатність другого монітора"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "По вертикалі:"
+msgstr "По вертикалі"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -501,20 +444,19 @@ msgstr "Гц"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Пропорції"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "По горизонталі:"
+msgstr "По діагоналі"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "Вісь X [мм]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Вісь Y [мм]"
 
 #. Something is not configured
 msgid "Not configured"
@@ -525,7 +467,6 @@ msgid "inches"
 msgstr "дюймів"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
@@ -534,39 +475,35 @@ msgstr ""
 "постачальника монітора."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
 "<b>Помилка читання</b><hr>Не вдалось прочитати з КД або дискети. Це може "
-"вказувати на пошкоджений носій або неправильно форматовані інформаційні "
-"файли на носії."
+"вказувати на пошкоджений носій або неправильно відформатовані інформаційні "
+"файли."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "Традиційний режим активний"
+msgstr "Традиційний"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "Клон"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "Мишка"
+msgstr "Модель мишки"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
 msgstr "Головне налаштування"
 
 #. Label text for the primary keyboard type
-#, fuzzy
 msgid "Type"
 msgstr "Тип"
 
@@ -576,7 +513,6 @@ msgid "Variant"
 msgstr "Варіант"
 
 #. Group box title for the additional keyboard setup
-#, fuzzy
 msgid "Additional Layouts"
 msgstr "Додаткові розкладки"
 
@@ -589,19 +525,16 @@ msgid "Keytable"
 msgstr "Таблиця клавіш"
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
 msgstr "Поведінка групи Shift/Lock"
 
 #. List View root item text
-#, fuzzy
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Альтернативна група на індикаторі клавіатури"
+msgstr "Вживати індикатор на клавіатурі для показу альтернативної групи"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "Розташування клавіші Control"
+msgstr "Розташування клавіші Compose"
 
 #. List View root item text
 #. XKBFile extension text
@@ -609,26 +542,22 @@ msgid "Control Key Position"
 msgstr "Розташування клавіші Control"
 
 #. List View root item text
-#, fuzzy
 msgid "Third Level Chooser"
 msgstr "Вибір третього рівня"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
 msgstr "Поведінка клавіш Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
-msgstr "Поведінка клавіш CapsLock"
+msgstr "Поведінка клавіші CapsLock"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr ""
+msgstr "Нема"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed"
 msgstr "Ліва клавіша Win перемикає групу при натисканні"
 
@@ -641,7 +570,6 @@ msgid "Right Shift key changes group"
 msgstr "Зміна групи - права клавіша Shift"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group"
 msgstr "Зміна групи - ліва клавіша Win"
 
@@ -650,7 +578,6 @@ msgid "Left Alt key changes group"
 msgstr "Зміна групи - ліва клавіша Alt"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed"
 msgstr "Обидві клавіші Win перемикають групу при натисканні"
 
@@ -659,18 +586,16 @@ msgid "Right Win-key is Compose"
 msgstr "Права клавіша Win як Compose"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group"
-msgstr "Зміна групи - клавіша Caps Lock"
+msgstr "Зміна групи - клавіші Shift+CapsLock"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key switches group while pressed"
-msgstr "Права клавіша Win перемикає групу при натисканні"
+msgstr "Права клавіша Alt перемикає групу при натисканні"
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt"
-msgstr ""
+msgstr "Права клавіша Control працює як права Alt"
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -678,12 +603,11 @@ msgstr "Клавіша Control ліворуч знизу"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level"
-msgstr "Натисніть будь-яку з клавіш Win, щоб вибрати 3й рівень"
+msgstr "Натисніть будь-яку клавішу Win, щоб вибрати 3й рівень"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Alt key to choose 3rd level"
-msgstr "Натиснути праву клавішу Win, щоб вибрати 3й рівень"
+msgstr "Натисніть праву клавішу Alt, щоб вибрати 3-й рівень"
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group"
@@ -698,9 +622,8 @@ msgid "Scroll_Lock LED shows alternative group"
 msgstr "Індикатор Scroll_Lock показує альтернативну групу"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Клавіша Control ліворуч від \"A\""
+msgstr "Клавіша Control ліворуч від -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
@@ -711,9 +634,8 @@ msgid "Both Shift keys together change group"
 msgstr "Зміна групи - обидві клавіші Shift разом"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "uses internal capitalization. Shift cancels Caps"
-msgstr "Вживає внутрішній механізм великих літер. Shift скасовує Caps."
+msgstr "вживає внутрішній механізм великих літер. Shift скасовує Caps"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control"
@@ -728,9 +650,8 @@ msgid "Right Win-key changes group"
 msgstr "Зміна групи - права клавіша Win"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key"
-msgstr "Meta приписана до лівої клавіші Win."
+msgstr "Meta приписана до лівої клавіші Win"
 
 #. XKBFile extension text
 msgid "Caps_Lock LED shows alternative group"
@@ -765,9 +686,8 @@ msgid "Swap Control and Caps Lock"
 msgstr "Обміняти місцями клавіші Control та Caps Lock"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level"
-msgstr "Натисніть будь-яку з клавіш Win, щоб вибрати 3й рівень"
+msgstr "Натисніть будь-яку клавішу Alt, щоб вибрати 3й рівень"
 
 #. XKBFile extension text
 msgid "Right Alt key changes group"
@@ -775,31 +695,27 @@ msgstr "Зміна групи - права клавіша Alt"
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows"
-msgstr ""
+msgstr "Shift з номерними клавішами працює як в MS Windows"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server"
-msgstr ""
+msgstr "Спеціальні клавіші (Ctrl+Alt+<клавіша>) опрацьовуються в сервері"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys"
-msgstr "Hyper приписана до клавіші Win."
+msgstr "Hyper приписана до клавіш Win"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)"
-msgstr "Super приписана до клавіші Win (типове)."
+msgstr "Super приписана до клавіш Win (типово)"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)"
-msgstr "Alt та Meta на клавішах Alt (типове)."
+msgstr "Alt та Meta на клавішах Alt (типово)"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key"
-msgstr "Додати стандартну поведінку до клавіші Menu."
+msgstr "Додати стандартну поведінку до клавіші Menu"
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level"
@@ -814,9 +730,8 @@ msgid "Control+Shift changes group"
 msgstr "Зміна групи - Control+Shift"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "acts as Shift with locking. Shift cancels Caps"
-msgstr "Діє, як Shift з фіксацією. Shift скасовує Caps."
+msgstr "діє, як Shift з фіксацією. Shift скасовує Caps"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group"
@@ -827,14 +742,12 @@ msgid "Press Right Win-key to choose 3rd level"
 msgstr "Натиснути праву клавішу Win, щоб вибрати 3й рівень"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level"
-msgstr "Натисніть ліву клавішу Win, щоб вибрати 3й рівень"
+msgstr "Натисніть ліву клавішу Win, щоб вибрати 3-й рівень"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys"
-msgstr "Meta приписана до клавіші Win."
+msgstr "Meta приписана до клавіш Win"
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level"
@@ -858,35 +771,31 @@ msgstr "Права клавіша Win перемикає групу при на�
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "Порт і режим"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Електронні ручки"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3D-прискорення"
+msgstr "Активувати цей планшет"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Модель: вибір назви та постачальника..."
+msgstr "Планшет: Вибір назви та постачальника"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "З'єднаний з:"
+msgstr "Порт з'єднання"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Головне налаштування"
+msgstr "Головний режим планшета"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Режим ручки або гумки"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
@@ -914,7 +823,7 @@ msgstr "Інструменти"
 
 #. Add Pen Checkbox
 msgid "Add Pen"
-msgstr "Додати перо"
+msgstr "Додати ручку"
 
 #. Add Eraser Checkbox
 msgid "Add Eraser"
@@ -922,29 +831,25 @@ msgstr "Додати гумку"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "Параметри ручки або гумки"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Властивості..."
+msgstr "Властивості ручки"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Спеціальні властивості мишки..."
+msgstr "Властивості гумки"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Призначити сенсорний екран до дисплея номер %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Модель: вибір назви та постачальника..."
+msgstr "Сенсорний екран: Вибір назви та постачальника"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
@@ -957,12 +862,10 @@ msgstr ""
 "щоб знищити процес сервера."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "Система X11"
+msgstr "Сервер VNC"
 
 #. Activate VNC server checkbox
-#, fuzzy
 msgid "Allow Access to Display Using VNC Protocol"
 msgstr "Дозволити доступ до дисплея через протокол VNC"
 
@@ -971,36 +874,30 @@ msgid "VNC Options"
 msgstr "Параметри VNC"
 
 #. Activate VNC password protection checkbox
-#, fuzzy
 msgid "Activate Password Protection"
-msgstr "Увімкнути захист пароля"
+msgstr "Активувати захист пароля"
 
 #. LineEdit label: enter password
 msgid "Password"
 msgstr "Пароль"
 
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "<Введіть новий пароль...>"
+msgstr "<Ввести новий пароль>"
 
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "<Введіть новий пароль...>"
+msgstr "<Змінити пароль>"
 
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "Перевірити пароль"
+msgstr "<Перевірити пароль>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
-msgstr "Увімкнути доступ через HTTP"
+msgstr "Активувати доступ через HTTP"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple VNC Connections"
 msgstr "Дозволити декілька з'єднань VNC"
 
@@ -1009,25 +906,22 @@ msgid "HTTP Port"
 msgstr "Порт HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>Не співпадає пароль</b><hr>Перша та друга версія пароля не співпадають "
-"між собою! Будь ласка, спробуйте знов."
+"<b>Не збігається пароль VNC</b><hr>Перша та друга версія пароля не "
+"збігаються між собою."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>Помилка пароля</b><hr>Поле пароля порожнє або пароль занадто короткий. "
-"Будь ласка, введіть пароль, який складається з не менше шести символів!."
+"<b>Помилка пароля VNC</b><hr>Поле пароля порожнє або пароль занадто "
+"короткий. Введіть пароль, який складається з шести або більше символів."
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
@@ -1037,35 +931,33 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "Встановлення пакунків"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "SaX2 - вихід з програми... "
+msgstr "Імпортування модуля"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "SaX2 - вихід з програми... "
+msgstr "SaX2: Імпортування даних..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "Започаткування кешу..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
+"<b>Не вдалось зберегти конфігурацію</b><hr>Було створено наступний звіт:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
 "<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після "
-"наступного перезапуску графічної системи."
+"наступного перезапуску графічної системи. Вийти з SaX2 вже тепер?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1073,6 +965,8 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>Не вдалось перевірити конфігурацію</b><hr>Для подальшої інформації, див. "
+"у файл <tt>/var/log/Xorg.99.log</tt>. Було створено наступний звіт:"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1128,1577 +1022,3 @@ msgstr "Конфігурація на дисплеї"
 
 msgid "Idle timer..."
 msgstr "Бездіяльний таймер..."
-
-#, fuzzy
-#~ msgid "SaX2: Importing"
-#~ msgstr "SaX2 - вихід з програми... "
-
-#, fuzzy
-#~ msgid "Set up mouse properties"
-#~ msgstr "Спеціальні властивості мишки..."
-
-#, fuzzy
-#~ msgid "Set up tablet properties"
-#~ msgstr "Наставити властивості монітора..."
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Розкладка"
-
-#, fuzzy
-#~ msgid "Variant:"
-#~ msgstr "Варіант"
-
-#, fuzzy
-#~ msgid "Monitor System"
-#~ msgstr "Монітор"
-
-#, fuzzy
-#~ msgid "Keyboard System"
-#~ msgstr "Клавіатура"
-
-#, fuzzy
-#~ msgid "Tablet System"
-#~ msgstr "Планшет"
-
-#, fuzzy
-#~ msgid "Touchscreen System"
-#~ msgstr "Сенсорний екран"
-
-#, fuzzy
-#~ msgid "Test:"
-#~ msgstr "&Тест..."
-
-#, fuzzy
-#~ msgid "Testfield: Ready..."
-#~ msgstr "Поле перевірки мишки: Готово..."
-
-#, fuzzy
-#~ msgid "Unknown Monitor please change"
-#~ msgstr "Невідома модель монітора"
-
-#~ msgid "Component"
-#~ msgstr "Компонент"
-
-#~ msgid "with"
-#~ msgstr "з"
-
-#~ msgid "Not available"
-#~ msgstr "Не доступний"
-
-#~ msgid "Use the following AccessX settings"
-#~ msgstr "Використовувати наступні параметри AccessX"
-
-#~ msgid "Disable AccessX"
-#~ msgstr "Вимкнути AccessX"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Різне"
-
-#~ msgid "This screen is selected"
-#~ msgstr "Цей екран вибрано"
-
-#~ msgid "at"
-#~ msgstr "на"
-
-#~ msgid "Sync ranges"
-#~ msgstr "Діапазони синхр."
-
-#~ msgid "Wheel is moving..."
-#~ msgstr "Коліщатко рухається..."
-
-#~ msgid "Disable use of accented letters"
-#~ msgstr "Вимкнути акцентовані літери"
-
-#~ msgid "Clear test field"
-#~ msgstr "Очистити поле перевірки"
-
-#~ msgid "Mouse speed in pixels/sec"
-#~ msgstr "Швидкість мишки в пікселях/сек"
-
-#~ msgid "&Remove Tablet..."
-#~ msgstr "&Видалити планшет..."
-
-#~ msgid "Delay time: (ms)"
-#~ msgstr "Час затримки: (мс)"
-
-#~ msgid "Repeat rate: (Symbols/sec)"
-#~ msgstr "Частота повторення: (символів/сек)"
-
-#~ msgid "&Apply"
-#~ msgstr "&Застосувати"
-
-#~ msgid "Graphics engine starts with resolution:"
-#~ msgstr "Графічний рушій запускається з роздільною здатністю:"
-
-#~ msgid "Hardware"
-#~ msgstr "Обладнання"
-
-#~ msgid "Velocity"
-#~ msgstr "Швидкість"
-
-#~ msgid "Select Keyboard Layout"
-#~ msgstr "Виберіть розкладку клавіатури"
-
-#~ msgid "Symbol recurrence"
-#~ msgstr "Повторення символу"
-
-#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
-#~ msgstr "<nobr><h3>Тип клавіатури</h3></nobr>"
-
-#~ msgid "BusID"
-#~ msgstr "ІД шини"
-
-#~ msgid "ScreenID"
-#~ msgstr "ІД екрана"
-
-#~ msgid "Manufacturer Disk..."
-#~ msgstr "Диск виробника..."
-
-#~ msgid "Shift/Lock Group"
-#~ msgstr "Група Shift/Lock"
-
-#~ msgid "Ctrl Mapping"
-#~ msgstr "Приписування Ctrl"
-
-#~ msgid "LeftAlt mapping"
-#~ msgstr "Приписування LeftAlt"
-
-#~ msgid "RightAlt mapping"
-#~ msgstr "Приписування RightAlt"
-
-#~ msgid "RightCtl mapping"
-#~ msgstr "Приписування RightCtl"
-
-#~ msgid "Default"
-#~ msgstr "Типовий"
-
-#~ msgid "R-Alt switch group while pressed"
-#~ msgstr "Права Alt перемикає групу поки натиснута"
-
-#~ msgid "R-Alt switch group"
-#~ msgstr "Права Alt перемикає групу"
-
-#~ msgid "Both Shift Keys change group"
-#~ msgstr "Зміна групи - обидві клавіші Shift разом"
-
-#~ msgid "Ctrl and Shift change group"
-#~ msgstr "Зміна групи - Ctrl і Shift"
-
-#~ msgid "Alt and Ctrl change group"
-#~ msgstr "Зміна групи - Alt і Ctrl"
-
-#~ msgid "CapsLock as additional control"
-#~ msgstr "CapsLock як додаткове керування"
-
-#~ msgid "Swap Ctrl and CapsLock"
-#~ msgstr "Обміняти місцями клавіші Ctrl та CapsLock"
-
-#~ msgid "Ctrl Key at left of <A>"
-#~ msgstr "Клавіша Ctrl ліворуч від <A>"
-
-#~ msgid "Ctrl Key at bottom left"
-#~ msgstr "Клавіша Ctrl ліворуч знизу"
-
-#~ msgid "Modeline Algorithm"
-#~ msgstr "Алгоритм Modeline"
-
-#~ msgid "Color and Resolution"
-#~ msgstr "Колір і р. здатність"
-
-#~ msgid "Virtual Resolution"
-#~ msgstr "Вірт. розд. здатн."
-
-#~ msgid "Language Layout"
-#~ msgstr "Розкладка мови"
-
-#~ msgid "Screen Layout"
-#~ msgstr "Розкладка екрана"
-
-#~ msgid "Server layout:"
-#~ msgstr "Розкладка сервера:"
-
-#~ msgid "Mode:"
-#~ msgstr "Режим:"
-
-#~ msgid "MHz"
-#~ msgstr "МГц"
-
-#~ msgid "Enable or Disable AccessX"
-#~ msgstr "Увімкнути/вимкнути AccessX"
-
-#~ msgid "Enable 3D features"
-#~ msgstr "Увімкнути 3D-функції"
-
-#~ msgid "Enable DPMS"
-#~ msgstr "Увімкнути DPMS"
-
-#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштувати мультимоніторний режим...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштувати 3D/OpenGL...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштувати AccessX...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштувати VNC...</u></h3></nobr>"
-
-#~ msgid "Selected component:"
-#~ msgstr "Вибраний компонент:"
-
-#~ msgid "Click 'Apply' to test your settings."
-#~ msgstr "Натисніть \"Застосувати\", щоб перевірити налаштування."
-
-#~ msgid ""
-#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
-#~ "is a warning only but make sure your keyboard model is able to map all "
-#~ "the keys needed for the selected layout."
-#~ msgstr ""
-#~ "<b>Схоже, що поточна розкладка та модель, не дуже підходять</b><hr>Це "
-#~ "тільки попередження, але перевірте чи ваша модель клавіатури здатна "
-#~ "приписати всі клавіші необхідні для вибраної розкладки."
-
-#~ msgid ""
-#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
-#~ "3D subsystem is unable to work within a multihead environment."
-#~ msgstr ""
-#~ "<b>В мультимоніторних середовищах прискорення OpenGL неможливе.</"
-#~ "b><hr>Підсистема 3D не пристосована для роботи в мультимоніторних "
-#~ "середовищах."
-
-#~ msgid ""
-#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
-#~ "hardware 3D/OpenGL acceleration."
-#~ msgstr ""
-#~ "<b>3D прискорення неможливе</b><hr>Встановлена плата не може "
-#~ "використовувати апаратні засоби прискорення 3D/OpenGL."
-
-#~ msgid ""
-#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
-#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
-#~ "The currently used color setup does not fulfill this requirement. Verify "
-#~ "the current default color depth setup."
-#~ msgstr ""
-#~ "<b>Невідповідна глибина кольору для прискорення OpenGL</b><hr>Для "
-#~ "належного функціонування більшість драйверів OpenGL потребують глибину "
-#~ "кольору <b>16 біт (65536)</b>. Поточне налаштування кольору не "
-#~ "задовольняє цієї вимоги. Перевірте поточне налаштування глибини кольору."
-
-#~ msgid ""
-#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
-#~ "acceleration because the following packages are missing:"
-#~ msgstr ""
-#~ "<b>Відсутні необхідні базові пакунки</b><hr>Неможливо увімкнути "
-#~ "прискорення OpenGL, тому що немає наступних пакунків:"
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
-#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
-#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
-#~ "Online Update)."
-#~ msgstr ""
-#~ "<b>Неможливо увімкнути прискорення OpenGL</b><hr>В систему немає "
-#~ "офіційного драйвера nVidia для 2D/3D/OpenGL. Спочатку необхідно оновити "
-#~ "пакунки NVIDIA_GLX та NVIDIA_kernel з веб-сервера nVidia <i>(http://www."
-#~ "nvidia.com)</i>. Це можна зручно зробити за допомогою YOU (Мережне "
-#~ "оновлення YaST2)."
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
-#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
-#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
-#~ "list (usually at the bottom of the list). Note, that you need to mark the "
-#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
-#~ "before and the driver was uninstalled - for whatever reason."
-#~ msgstr ""
-#~ "<b>Неможливо увімкнути прискорення OpenGL</b><hr>Щоб увімкнути у цій "
-#~ "платі підсистему 3D, необхідно спочатку встановити комерційних драйвер "
-#~ "nVidia. Встановіть драйвер за допомогою <b>Мережного оновлення YaST (YOU)"
-#~ "</b>. В YOU виберіть <b>Латки встановлені та для встановлення</b> як "
-#~ "<b>Категорію латки</b> та виберіть зі списку латок <b>Звантажити "
-#~ "графічний драйвер NVIDIA(r)</b> (зазвичай, наприкінці списку). Примітка: "
-#~ "Необхідно позначити латку як <b>Оновлення</b> (клацніть правою кнопкою "
-#~ "мишки), якщо ви вже його колись встановлювали, а потім з якоїсь причини "
-#~ "драйвер було прибрано."
-
-#~ msgid ""
-#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
-#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
-#~ "the nVidia installer. The uninstall process will reset the original "
-#~ "driver from X.Org which does not provide any 3D hardware acceleration."
-#~ "<br><br><b>Do you want to continue?</b>"
-#~ msgstr ""
-#~ "<b>Вимкнути прискорення OpenGL</b><hr>Підсистема 3D базується на "
-#~ "комерційному драйвері nVidia. SaX2 потребує прибрати драйвер за допомогою "
-#~ "програми встановлення nVidia. Процес прибирання відновить оригінальний "
-#~ "драйвер X.Org, який не підтримує апаратне прискорення 3D."
-#~ "<br><br><b>Хочете продовжити?</b>"
-
-#~ msgid "Display size unknown..."
-#~ msgstr "Невідомий розмір дисплея..."
-
-#~ msgid ""
-#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
-#~ "couldn't be detected. Applications dealing with computer graphics like "
-#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
-#~ "about the real physical size of your display to work properly. Please "
-#~ "refer to your monitor manual to obtain the correct size values for the "
-#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
-#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
-#~ msgstr ""
-#~ "<b>Введіть розміри дисплея X/Y в [мм]</b><hr>Не вдається визначити "
-#~ "геометрію вашого дисплея. Програми, які працюють з комп'ютерною графікою, "
-#~ "такі як <b>Gimp</b> або бібліотеки відображення шрифтів, напр., <b>Xft</"
-#~ "b>, потребують інформацію про дійсний фізичний розмір вашого дисплея, щоб "
-#~ "працювати належним чином. Будь ласка, знайдіть правильні значення "
-#~ "розмірів для горизонтального (X) та вертикального (Y) напрямків в "
-#~ "інструкції вашого монітора. Значення необхідно ввести в [мм]."
-#~ "<br><br><b>Хочете наставити розміри дисплея?</b>"
-
-#~ msgid ""
-#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
-#~ "X and Y axis and click 'Add' to include the new resolution in the "
-#~ "standard resolution list."
-#~ msgstr ""
-#~ "<b>Додати визначену користувачем роздільну здатність</b><hr>Просто "
-#~ "введіть значення пікселів для осів X та Y і натисніть \"Додати\", щоб "
-#~ "вписати нову роздільну здатність в список стандартних роздільних "
-#~ "здатностей."
-
-#~ msgid "Available configuration components are:"
-#~ msgstr "Наявні конфігураційні компоненти:"
-
-#~ msgid ""
-#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
-#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
-#~ msgstr ""
-#~ "<b>Увімкнено AccessX:</b><hr>Основний вказівник мишки тепер доступний "
-#~ "через <b>цифрові клавіші</b>. Перевірте поведінку мишки за допомогою "
-#~ "цифрових клавіш."
-
-#~ msgid ""
-#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
-#~ "number pad is <b>disabled</b> now."
-#~ msgstr ""
-#~ "<b>Вимкнено AccessX:</b><hr>Тепер доступ до основного вказівника мишки "
-#~ "<b>вимкнено</b>."
-
-#~ msgid ""
-#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
-#~ "system?"
-#~ msgstr ""
-#~ "<b>Вилучити планшет:</b><hr>Дійсно вилучити з системи графічний планшет?"
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time your system is <b>rebooted</b>."
-#~ msgstr ""
-#~ "<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після "
-#~ "наступного <b>перезавантаження</b> вашої системи."
-
-#~ msgid ""
-#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
-#~ "in developmental phases so are, in part, still regarded as experimental. "
-#~ "Nevertheless, we have decided to include the drivers in our distribution "
-#~ "because of the high demand for 3D hardware acceleration in Linux. "
-#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
-#~ "are unable to offer any installation support for configuring 3D hardware "
-#~ "acceleration or if any problems related to this should arise."
-#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
-#~ msgstr ""
-#~ "<b>Виявлено плату з підтримкою 3D: <u>%1</u></b><hr>Всі драйвери 3D в "
-#~ "Linux знаходяться в стадії розробки, і тому до них відносяться як до "
-#~ "експериментальних. Однак, ми вирішили включити ці драйвери в дистрибутив, "
-#~ "через те що існує значний попит на підтримку апаратного прискорення 3D в "
-#~ "Linux. <br><br>Через, дещо, експериментальний стан драйверів OpenGL, ми "
-#~ "не можемо надати клієнтам підтримку у встановлені та налаштуванні "
-#~ "апаратного прискорення 3D або у вирішенні будь-яких проблем, пов'язаних з "
-#~ "ним.<br><br><b>Хочете увімкнути 3D для цієї плати?</b>"
-
-#~ msgid ""
-#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
-#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
-#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
-#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
-#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
-#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
-#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
-#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
-#~ "do not have any influence over the development of nVidia drivers."
-#~ "<br><br><b>Prepare 3D for this card?</b>"
-#~ msgstr ""
-#~ "<b>Виявлено плату з підтримкою 3D: <u>%1</u></b><hr>Драйвер, який "
-#~ "використовується для цієї плати не є офіційним драйвером 2D/3D/OpenGL від "
-#~ "nVidia з причин ліцензування. Поточний драйвер 3D/OpenGL, якщо ви "
-#~ "увімкнете 3D <b>не має</b> підтримки апаратного прискорення.<br><br> Щоб "
-#~ "використовувати драйвер 3D/OpenGL з підтримкою апаратного прискорення, "
-#~ "необхідно оновити пакунки NVIDIA_GLX та NVIDIA_kernel з веб-сервера "
-#~ "nVidia <i>(http://www.nvidia.com)</i>. Це можна зручно зробити за "
-#~ "допомогою YOU (Мережне оновлення YaST2).<br><br>Якщо у вас виникнуть "
-#~ "проблеми з драйвером 2D/3D/OpenGL від nVidia, зверніться до "
-#~ "постачальника, бо ми, на жаль, не маємо жодного впливу на розробку "
-#~ "драйверів nVidia.<br><br><b>Підготувати 3D для цієї плати?</b>"
-
-#~ msgid ""
-#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
-#~ "that comes with this distribution is still installed.  You should update "
-#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
-#~ "online update). Start the online update?"
-#~ msgstr ""
-#~ "<b>Оновлення ПЗ</b><hr>Макет драйвера nvidia без підтримки 3D, який "
-#~ "міститься в цьому дистрибутиві, однак, встановлюється. Вам необхідно "
-#~ "оновити (замінити) його на офіційні драйвери nvidia з ftp-сервера nvidia "
-#~ "через YOU (Мережне оновлення YaST2). Почати мережне оновлення?"
-
-#~ msgid ""
-#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
-#~ "resolution is not adjustable within framebuffer mode. Please select "
-#~ "another resolution than:"
-#~ msgstr ""
-#~ "<b>Не чинна роздільна здатність для режиму FBdev</b><hr>Поточна вибрана "
-#~ "роздільна здатність не може регулюватись з режиму framebuffer. Будь "
-#~ "ласка, виберіть іншу роздільну здатність, ніж:"
-
-#~ msgid ""
-#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
-#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
-#~ "currently selected monitor model is correct or select a lower resolution "
-#~ "than:"
-#~ msgstr ""
-#~ "<b>Вибрана роздільна здатність неможлива</b><hr>Вказана роздільна "
-#~ "здатність не поміщається в діапазон синхронізації монітора. Будь ласка, "
-#~ "перевірте чи правильно вибрано модель монітора або виберіть роздільну "
-#~ "здатність нижчу, ніж:"
-
-#~ msgid ""
-#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
-#~ "depth is not allowed for this configuration."
-#~ msgstr ""
-#~ "<b>Вибрано не чинну глибину кольору:</b><hr><b>4</b> або <b>15</b> -бітна "
-#~ "глибина кольору не дозволена для цієї конфігурації."
-
-#~ msgid ""
-#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
-#~ "is not allowed for this configuration. Select another resolution from the "
-#~ "list."
-#~ msgstr ""
-#~ "<b>Вибрано не чинну роздільну здатність:</b><hr>Встановлення цієї "
-#~ "роздільної здатності не дозволено для цієї конфігурації. Виберіть зі "
-#~ "списку іншу роздільну здатність."
-
-#~ msgid "<b>X Server test failed:</b><hr><br>"
-#~ msgstr "<b>Тест сервера X був невдалим:</b><hr><br>"
-
-#~ msgid "3D question..."
-#~ msgstr "3D питання..."
-
-#~ msgid "X Server test information..."
-#~ msgstr "Інформація про тест сервера X..."
-
-#~ msgid "AccessX status information..."
-#~ msgstr "Інформація про стан AccessX..."
-
-#~ msgid "Tablet warning..."
-#~ msgstr "Попередження планшета..."
-
-#~ msgid "Consideration..."
-#~ msgstr "Розгляд..."
-
-#~ msgid "Geometry"
-#~ msgstr "Геометрія"
-
-#~ msgid "Name:"
-#~ msgstr "Назва:"
-
-#~ msgid "Card and Desktop"
-#~ msgstr "Плата і стільниця"
-
-#~ msgid "Input Devices"
-#~ msgstr "Пристрої вводу"
-
-#~ msgid "Input-Devices"
-#~ msgstr "Пристрої вводу"
-
-#~ msgid "Desktop"
-#~ msgstr "Стільниця"
-
-#~ msgid "Multihead"
-#~ msgstr "Мультимоніторний"
-
-#~ msgid "Secondary Modeline:"
-#~ msgstr "Другорядна Modeline:"
-
-#~ msgid "Modeline"
-#~ msgstr "Modeline"
-
-#~ msgid "AccessX"
-#~ msgstr "AccessX"
-
-#~ msgid "X-Server accessable via VNC protocol:"
-#~ msgstr "X-сервер доступний через протокол VNC:"
-
-#~ msgid "Access Control"
-#~ msgstr "Керування доступом"
-
-#~ msgid "<b>Core Pointer...</b>"
-#~ msgstr "<b>Головний вказівник...</b>"
-
-#~ msgid "F&inalize >>"
-#~ msgstr "&Завершити >>"
-
-#~ msgid "<< &Back"
-#~ msgstr "<< &Назад"
-
-#~ msgid "&Next >>"
-#~ msgstr "&Далі >>"
-
-#~ msgid "&Exit"
-#~ msgstr "&Вийти"
-
-#~ msgid "&About..."
-#~ msgstr "Пр&о програму..."
-
-#~ msgid "About the author"
-#~ msgstr "Про автора"
-
-#~ msgid "Select virtual resolution for Mode %1"
-#~ msgstr "Виберіть віртуальну розд. здатність для режиму %1"
-
-#~ msgid ""
-#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
-#~ "of this product is</nobr><br>Marcus Schaefer"
-#~ msgstr ""
-#~ "<b>SaX2 - (c) 2000 SuSE Linux AG:</b><hr><nobr>Автор і супроводжувач цієї "
-#~ "програми</nobr><br>Marcus Schaefer"
-
-#~ msgid "&Modules..."
-#~ msgstr "&Модулі..."
-
-#~ msgid "&File"
-#~ msgstr "&Файл"
-
-#~ msgid "Loading CDB data: %1"
-#~ msgstr "Завантаження даних CDB: %1"
-
-#~ msgid "Loading base data: %1"
-#~ msgstr "Завантаження базових даних: %1"
-
-#~ msgid "Loading system data: %1"
-#~ msgstr "Завантаження системних даних: %1"
-
-#~ msgid "SaX2 start-up information"
-#~ msgstr "Інформація запуску SaX2"
-
-#~ msgid "SaX2 final steps..."
-#~ msgstr "SaX2 - останні кроки..."
-
-#~ msgid "Dialog information..."
-#~ msgstr "Діалогова інформація..."
-
-#~ msgid "Exception..."
-#~ msgstr "Виняток..."
-
-#~ msgid ""
-#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
-#~ "than one graphics device.  More are required to set up a multihead "
-#~ "configuration."
-#~ msgstr ""
-#~ "<b>Мультимоніторний режим неможливий:</b><hr>Ваша система не має більше "
-#~ "ніж один графічний пристрій. Необхідно мати більше ніж один для "
-#~ "мультимоніторного налаштування."
-
-#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
-#~ msgstr "<b>Припинити діалог:</b><hr>Закрити це діалогове вікно?"
-
-#~ msgid ""
-#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
-#~ msgstr ""
-#~ "<b>Не чинне налаштування:</b><hr>Потрібно налаштувати принаймні один "
-#~ "графічний пристрій."
-
-#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-#~ msgstr ""
-#~ "<b>Не чинне налаштування:</b><hr>Потрібно налаштувати принаймні один "
-#~ "монітор."
-
-#~ msgid ""
-#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
-#~ "monitor configuration. You are not allowed to remove this major entity."
-#~ msgstr ""
-#~ "<b>Неможливо видалити монітор:</b><hr>В системі є тільки одна "
-#~ "конфігурація монітора. Вилучення заборонене."
-
-#~ msgid ""
-#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
-#~ "dialog and start the selected one?"
-#~ msgstr ""
-#~ "<b>Запущений діалог:</b><hr>Діалогове вікно вже відкрите. Закрити цей "
-#~ "діалог і запустити вибраний?"
-
-#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
-#~ msgstr "<b>Завершення діалогу:</b><hr>Хочете вже завершити цей діалог?"
-
-#~ msgid ""
-#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
-#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
-#~ "needs to be rebooted first to activate the changes for resolution and/or "
-#~ "color settings."
-#~ msgstr ""
-#~ "<b>Останній крок:</b><hr>Останній крок -- збереження нової конфігурації. "
-#~ "Будь ласка, зверніть увагу: налаштування базується на <i>Framebuffer</i>, "
-#~ "тому необхідно спочатку перезапустити систему для активації змін в "
-#~ "параметрах роздільної здатності і/або кольору."
-
-#~ msgid "Unknown Graphics Card..."
-#~ msgstr "Невідома графічна плата..."
-
-#~ msgid ""
-#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
-#~ "manually. Start the configuration dialog to set up the graphics card now?"
-#~ msgstr ""
-#~ "<b>Не вдалось розпізнати графічну плату</b><hr>Налаштуйте вашу плату "
-#~ "вручну. Запустити вікно налаштування графічної плати тепер?"
-
-#~ msgid ""
-#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
-#~ "manually. Do you want to start the configuration dialog to setup the "
-#~ "display now ?"
-#~ msgstr ""
-#~ "<b>Не вдалось розпізнати монітор (%1)</b><hr>Будь ласка налаштуйте ваш "
-#~ "монітор вручну. Запустити вікно налаштування монітора тепер?"
-
-#~ msgid ""
-#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
-#~ "manually. Do you want to start the configuration dialog to setup the "
-#~ "display now ?"
-#~ msgstr ""
-#~ "<b>Не вдалось знайти монітор (%1) з ІД: %2</b><hr>Будь ласка налаштуйте "
-#~ "ваш монітор вручну. Запустити вікно налаштування монітора тепер?"
-
-#~ msgid "<b>Yes</b>"
-#~ msgstr "<b>Так</b>"
-
-#~ msgid "<b>No</b>"
-#~ msgstr "<b>Ні</b>"
-
-#~ msgid "File"
-#~ msgstr "Файл"
-
-#~ msgid "still locked"
-#~ msgstr "ще замкнено"
-
-#~ msgid "Please wait"
-#~ msgstr "Зачекайте, будь ласка"
-
-#~ msgid ""
-#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
-#~ "X11 Configuration Manager<br>"
-#~ msgstr ""
-#~ "<big><b>SaX2: Розширене налаштування X11</b></big><hr>Ласкаво просимо до "
-#~ "Менеджера налаштування X11 для SuSE<br>"
-
-#~ msgid "To start, double-click  an item in the component list."
-#~ msgstr "Щоб почати, двічі клацніть на елемент у списку компонентів."
-
-#~ msgid "X11 System Setup"
-#~ msgstr "Налаштування системи X11"
-
-#~ msgid "Value..."
-#~ msgstr "Значення..."
-
-#~ msgid "Primary device"
-#~ msgstr "Головний пристрій"
-
-#~ msgid "Driver:"
-#~ msgstr "Драйвер:"
-
-#~ msgid "X:"
-#~ msgstr "X:"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
-
-#~ msgid "Bus ID:"
-#~ msgstr "ІД шини:"
-
-#~ msgid "Card options"
-#~ msgstr "Параметри плати"
-
-#~ msgid "Key Mappings"
-#~ msgstr "Приписування клавіш"
-
-#~ msgid "&Current sync frequencies"
-#~ msgstr "&Поточні частоти синхронізації"
-
-#~ msgid "Current color depth"
-#~ msgstr "Поточна глибина кольору"
-
-#~ msgid "Current resolution"
-#~ msgstr "Поточна роздільна здатність"
-
-#~ msgid "HSync range"
-#~ msgstr "Діапазон HSync"
-
-#~ msgid "VSync range"
-#~ msgstr "Діапазон VSync"
-
-#~ msgid "[ mm ]"
-#~ msgstr "[мм]"
-
-#~ msgid "Device"
-#~ msgstr "Пристрій"
-
-#~ msgid "Protocol"
-#~ msgstr "Протокол"
-
-#~ msgid "Fi&nish"
-#~ msgstr "За&кінчити"
-
-#~ msgid "Abort"
-#~ msgstr "Припинити"
-
-#~ msgid "Configure XAccess: Mouse over keypad..."
-#~ msgstr "Налаштування XAccess: Мишка через цифрове клавішне поле..."
-
-#~ msgid "Configure VNC: Export display using the VNC protocol..."
-#~ msgstr "Налаштування VNC: Експорт дисплея за допомогою протоколу VNC..."
-
-#~ msgid "Configure input devices: Mouse configuration..."
-#~ msgstr "Налаштування пристроїв вводу: Налаштування мишки..."
-
-#~ msgid "Configure 3D/OpenGL subsystem..."
-#~ msgstr "Налаштування підсистеми 3D/OpenGL..."
-
-#~ msgid "Configure virtual resolutions..."
-#~ msgstr "Налаштувати віртуальні роздільні здатності..."
-
-#~ msgid "Configure graphics cards..."
-#~ msgstr "Налаштувати графічні картки..."
-
-#~ msgid "Configure Desktop: Colors and Resolutions..."
-#~ msgstr "Налаштувати стільницю: Кольори та роздільну здатність..."
-
-#~ msgid "Configure touch screens..."
-#~ msgstr "Налаштувати сенсорні екрани..."
-
-#~ msgid "Set up picture geometry..."
-#~ msgstr "Наставити геометрію малюнка..."
-
-#~ msgid "Configure multihead mode..."
-#~ msgstr "Налаштувати мультимоніторний режим..."
-
-#~ msgid ""
-#~ "Set up screen layout of your desktops (Double-click an icon will identify "
-#~ "the real screen)..."
-#~ msgstr ""
-#~ "Наставте розкладку екрану ваших стільниць (Подвійне клацання на "
-#~ "піктограму, ідентифікує дійсний екран)..."
-
-#~ msgid "Configure graphics tablet"
-#~ msgstr "Налаштувати графічний планшет"
-
-#~ msgid "Add new card..."
-#~ msgstr "Додати нову плату..."
-
-#~ msgid "Remove selected card"
-#~ msgstr "Вилучити вибрану плату"
-
-#~ msgid "Remove selected monitor"
-#~ msgstr "Вилучити вибраний монітор"
-
-#~ msgid "&Properties..."
-#~ msgstr "В&ластивості..."
-
-#~ msgid "Enable View-Only mode"
-#~ msgstr "Увімкнути режим \"тільки перегляд\""
-
-#~ msgid "&Add new touchscreen..."
-#~ msgstr "&Додати новий сенсорний екран..."
-
-#~ msgid "&Remove selected touchscreen"
-#~ msgstr "&Вилучити вибраний сенсорний екран"
-
-#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштовані сенсорні екрани:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштовані монітори</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштовані плати:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштовані мишки:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Поточна розкладка монітора:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Налаштовані стільниці:</u></h3></nobr>"
-
-#~ msgid "&Add new mouse..."
-#~ msgstr "&Додати нову мишку..."
-
-#~ msgid "&Remove selected mouse"
-#~ msgstr "&Вилучити вибрану мишку"
-
-#~ msgid "&General"
-#~ msgstr "&Загальне"
-
-#~ msgid "&Expert"
-#~ msgstr "&Експертні"
-
-#~ msgid "Vendor"
-#~ msgstr "Постачальник"
-
-#~ msgid "Selected"
-#~ msgstr "Вибрано"
-
-#~ msgid "Resolution X"
-#~ msgstr "Роздільна здатність X"
-
-#~ msgid "&Resolution(s) for %1 colors"
-#~ msgstr "&Роздільні здатності для кольорів - %1"
-
-#~ msgid "Possible"
-#~ msgstr "Можливий"
-
-#~ msgid "&Add this resolution"
-#~ msgstr "&Додати цю роздільну здатність"
-
-#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
-#~ msgstr "<big><b>Стан налаштованого AccessX</b></big><hr>"
-
-#~ msgid "<big><b>Current VNC status</b></big><hr>"
-#~ msgstr "<big><b>Поточний стан VNC</b></big><hr>"
-
-#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-#~ msgstr "<big><b>Поточний стан 3D/OpenGL</b></big><hr>"
-
-#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
-#~ msgstr ""
-#~ "<big><b>Поточне налаштування віртуальної роздільної здатності</b></"
-#~ "big><hr>"
-
-#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
-#~ msgstr "<big><b>Налаштовані графічні плати</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
-#~ msgstr "<big><b>Налаштовані стільниці</b></big><hr>"
-
-#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
-#~ msgstr "<big><b>Зараз активна синхронізація геометрії</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
-#~ msgstr "<big><b>Налаштована клавіатура</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured layout</b></big><hr>"
-#~ msgstr "<big><b>Налаштована розкладка</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
-#~ msgstr "<big><b>Налаштовані монітори</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-#~ msgstr "<big><b>Налаштовані вказівні пристрої</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
-#~ msgstr "<big><b>Стан налаштованого мультимон. режиму</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
-#~ msgstr "<big><b>Налаштований графічний планшет</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
-#~ msgstr "<big><b>Налаштований сенсорний екран</b></big><hr>"
-
-#~ msgid "<b><nobr>No information available</nobr></b>"
-#~ msgstr "<b><nobr>Інформація відсутня</nobr></b>"
-
-#~ msgid ""
-#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
-#~ "with the keypad. The table below points to the current status of AccessX."
-#~ msgstr ""
-#~ "<b>Віртуальна мишка:</b><hr>Наставте цифрове клавішне поле, щоб керувати "
-#~ "мишкою цифровими клавішами. Таблиця нижче вказує на поточний стан AccessX."
-
-#~ msgid ""
-#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
-#~ "desktop and all its programs remotely via a VNC viewer program"
-#~ msgstr ""
-#~ "<b>Сервер VNC:</b><hr>Налаштуйте сервер X для віддаленого доступу до "
-#~ "стільниці та всіх її прогам через програму-переглядач VNC"
-
-#~ msgid ""
-#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
-#~ "here. X.Org includes the direct rendering interface to use the 3D "
-#~ "capabilities of your graphics card. If your card and the corresponding "
-#~ "driver support 3D hardware acceleration, enable it in this dialog."
-#~ msgstr ""
-#~ "<b>Підсистема OpenGL:</b><hr>Наставте тут 3D-функціональність графічної "
-#~ "плати. X.Org містить інтерфейс прямого відтворення для використання 3D-"
-#~ "функціональності графічної плати. Якщо ваша плата і відповідний драйвер "
-#~ "підтримують апаратне прискорення 3D, увімкніть його в цьому вікні."
-
-#~ msgid ""
-#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
-#~ "resolution which is completely viewable. Beside this resolution you can "
-#~ "setup a resolution which lives outside the viewable area of your monitor "
-#~ "and comes up if you leave the edges of your monitor with the mouse. This "
-#~ "area is called a virtual resolution."
-#~ msgstr ""
-#~ "<b>Віртуальна роздільна здатність:</b><hr>Кожна окрема стільниця має свою "
-#~ "реальну роздільну здатність, яка цілком видима. Крім роздільної "
-#~ "здатності, ви можете наставити роздільну здатність, яка виходить за поля "
-#~ "видимої ділянки вашого монітора і з'являється, коли мишка виходить за "
-#~ "краї вашого монітора. Ця ділянка називається віртуальною роздільною "
-#~ "здатністю."
-
-#~ msgid ""
-#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
-#~ "graphics system consists of at least one graphics card but can be "
-#~ "combined to a so called <i>multihead environment</i> which consists of at "
-#~ "least two cards up to a maximum of 16 cards."
-#~ msgstr ""
-#~ "<b>Графічні плати:</b><hr>Тут налаштуйте ваше графічне обладнання. "
-#~ "Графічна система складається принаймні з однієї графічної плати, але може "
-#~ "бути сполучена у так зване <i>мультимоніторне середовище</i>, яке "
-#~ "складається з принаймні двох плат аж до максимуму - 16 плат."
-
-#~ msgid ""
-#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
-#~ "resolution and colors. Every desktop is an independent device and may "
-#~ "have a different color and/or resolution setup."
-#~ msgstr ""
-#~ "<b>Властивості стільниці:</b><hr>Налаштуйте параметри стільниці, такі як "
-#~ "роздільну здатність та кольори. Кожна стільниця -- це незалежний пристрій "
-#~ "і може мати відмінні налаштування кольору та роздільної здатності."
-
-#~ msgid ""
-#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
-#~ "displayed by the monitor. The table below point to the current used "
-#~ "Modeline(s)."
-#~ msgstr ""
-#~ " <b>Геометрія монітора:</b><hr>Налаштуйте позицію та розмір малюнка "
-#~ "зображеного на моніторі. Таблиця нижче вказує на поточну Modeline(s)."
-
-#~ msgid ""
-#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
-#~ "language environment with which it should work."
-#~ msgstr ""
-#~ "<b>Властивості клавіатури:</b><hr>Налаштуйте тип клавіатури та середовище "
-#~ "мови, з яким вона повинна працювати."
-
-#~ msgid ""
-#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
-#~ "a multihead environment. Set up the neighborhood relations of the "
-#~ "connected monitors simply via drag&drop. If you are not sure which "
-#~ "monitor belongs to the icon just double-click on it and you will see a "
-#~ "message on the corresponding screen."
-#~ msgstr ""
-#~ "<b>Розкладка стільниці:</b><hr>Якщо наявна більше ніж одна плата, ви "
-#~ "знаходитесь в мультимоніторному середовищі. Налаштуйте сусідство "
-#~ "приєднаних моніторів просто через &перетягування. Якщо ви не певні, який "
-#~ "монітор належить якій піктограмі, просто двічі клацніть на неї і ви "
-#~ "побачите повідомлення про відповідний екран."
-
-#~ msgid ""
-#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
-#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
-#~ "the monitor."
-#~ msgstr ""
-#~ "<b>Властивості монітора:</b><hr>Вкажіть модель монітора приєднаного до "
-#~ "графічної плати. Будьте обережні із вибором. Неправильні діапазони "
-#~ "синхронізації можуть пошкодити монітор."
-
-#~ msgid ""
-#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
-#~ "mouse pointer as well as settings like button emulation or wheel "
-#~ "functions."
-#~ msgstr ""
-#~ "<b>Властивості мишки:</b><hr>Налаштуйте основні параметри, щоб активувати "
-#~ "вказівник мишки, а також параметри, такі як емуляцію кнопки або "
-#~ "функціональність коліщатка."
-
-#~ msgid ""
-#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
-#~ "a multihead environment. Set up the multihead functioning here."
-#~ msgstr ""
-#~ "<b>Мультимоніторний режим:</b><hr>Якщо наявна більше ніж одна плата, ви "
-#~ "знаходитесь в мультимоніторному середовищі. Тут налаштуйте "
-#~ "функціональність мультимоніторного режиму."
-
-#~ msgid ""
-#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
-#~ "pointer devices, such as pens and erasers."
-#~ msgstr ""
-#~ "<b>Графічний планшет:</b><hr>Налаштуйте графічний планшет та відповідні "
-#~ "вказівні пристрої, такі як пера та гумки."
-
-#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
-#~ msgstr "<b>Сенсорний екран:</b><hr>Налаштуйте екран чутливий до дотику."
-
-#~ msgid "Disabled"
-#~ msgstr "Вимкнено"
-
-#~ msgid "Enabled"
-#~ msgstr "Увімкнено"
-
-#~ msgid "Wheel support"
-#~ msgstr "Підтримка коліщатка"
-
-#~ msgid "&Port"
-#~ msgstr "&Порт"
-
-#~ msgid "&Mode"
-#~ msgstr "&Режим"
-
-#~ msgid "Button emulation"
-#~ msgstr "Емуляція кнопки"
-
-#~ msgid "Primary Device:"
-#~ msgstr "Головний пристрій:"
-
-#~ msgid "Secondary Device:"
-#~ msgstr "Другорядний пристрій:"
-
-#~ msgid "Single Layout [ no multihead environment ]"
-#~ msgstr "Одинарна розкладка [без мультимоніторного середовища]"
-
-#~ msgid "Clone Mode Active"
-#~ msgstr "Режим клонування активний"
-
-#~ msgid "Xinerama Mode Active"
-#~ msgstr "Режим Xinerama активний"
-
-#~ msgid "Screens Layout Active"
-#~ msgstr "Розкладка екранів активна"
-
-#~ msgid "PC-98xx Series"
-#~ msgstr "Родина PC-98xx"
-
-#~ msgid "Canadian"
-#~ msgstr "Канадська"
-
-#~ msgid "Brazilian"
-#~ msgstr "Бразильська"
-
-#~ msgid "Bosnian"
-#~ msgstr "Боснійська"
-
-#~ msgid "Lithuanian qwerty (numeric)"
-#~ msgstr "Литовська qwerty (числова)"
-
-#~ msgid "Georgian (russian)"
-#~ msgstr "Грузинська (російська)"
-
-#~ msgid "Latvian"
-#~ msgstr "Латвійська"
-
-#~ msgid "Belarusian"
-#~ msgstr "Білоруська"
-
-#~ msgid "Czech (qwerty)"
-#~ msgstr "Чеська (qwerty)"
-
-#~ msgid "Northern Saami (Finland)"
-#~ msgstr "Північна Саамі (Фінляндія)"
-
-#~ msgid "Macedonian"
-#~ msgstr "Македонська"
-
-#~ msgid "U.S. English w/ deadkeys"
-#~ msgstr "Англійська (США) зі спецклавішами"
-
-#~ msgid "Malayalam"
-#~ msgstr "Малайська"
-
-#~ msgid "Burmese"
-#~ msgstr "Бірманська"
-
-#~ msgid "Kannada"
-#~ msgstr "Каннадська"
-
-#~ msgid "Mongolian"
-#~ msgstr "Монгольська"
-
-#~ msgid "Bengali"
-#~ msgstr "Бенгальська"
-
-#~ msgid "Romanian"
-#~ msgstr "Румунська"
-
-#~ msgid "Croatian"
-#~ msgstr "Хорватська"
-
-#~ msgid "U.S. English w/ ISO9995-3"
-#~ msgstr "Англійська (США) з ISO9995-3"
-
-#~ msgid "Lithuanian azerty standard"
-#~ msgstr "Литовська типова azerty"
-
-#~ msgid "Maltese"
-#~ msgstr "Мальтійська"
-
-#~ msgid "German"
-#~ msgstr "Німецька"
-
-#~ msgid "Hungarian"
-#~ msgstr "Угорська"
-
-#~ msgid "Russian"
-#~ msgstr "Російська"
-
-#~ msgid "Swedish"
-#~ msgstr "Шведська"
-
-#~ msgid "Turkish (F)"
-#~ msgstr "Турецька (F)"
-
-#~ msgid "Oriya"
-#~ msgstr "Орійська"
-
-#~ msgid "Slovenian"
-#~ msgstr "Словенська"
-
-#~ msgid "Slovak (qwerty)"
-#~ msgstr "Словацька (qwerty)"
-
-#~ msgid "Czech"
-#~ msgstr "Чеська"
-
-#~ msgid "Gujarati"
-#~ msgstr "Гуяраті"
-
-#~ msgid "Danish"
-#~ msgstr "Датська"
-
-#~ msgid "Dvorak"
-#~ msgstr "Dvorak"
-
-#~ msgid "Slovak"
-#~ msgstr "Словацька"
-
-#~ msgid "Dutch"
-#~ msgstr "Голландська"
-
-#~ msgid "Israeli"
-#~ msgstr "Ізраїльська"
-
-#~ msgid "Tamil"
-#~ msgstr "Тамільська"
-
-#~ msgid "Ogham"
-#~ msgstr "Огам"
-
-#~ msgid "Norwegian"
-#~ msgstr "Норвезька"
-
-#~ msgid "Gurmukhi"
-#~ msgstr "Гурмухі"
-
-#~ msgid "Serbian"
-#~ msgstr "Сербська"
-
-#~ msgid "Farsi"
-#~ msgstr "Фарсі"
-
-#~ msgid "Icelandic"
-#~ msgstr "Ісландська"
-
-#~ msgid "Italian"
-#~ msgstr "Італійська"
-
-#~ msgid "Estonian"
-#~ msgstr "Естонська"
-
-#~ msgid "Inuktitut"
-#~ msgstr "Інуктітут"
-
-#~ msgid "Swiss French"
-#~ msgstr "Швейцарська французька"
-
-#~ msgid "Swiss German"
-#~ msgstr "Швейцарська німецька"
-
-#~ msgid "Thai"
-#~ msgstr "Тайська"
-
-#~ msgid "Tajik"
-#~ msgstr "Таджицька"
-
-#~ msgid "Greek"
-#~ msgstr "Грецька"
-
-#~ msgid "Japanese"
-#~ msgstr "Японська"
-
-#~ msgid "Georgian (latin)"
-#~ msgstr "Грузинська (латинська)"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Українська"
-
-#~ msgid "Polish (qwertz)"
-#~ msgstr "Польська (qwertz)"
-
-#~ msgid "Syriac"
-#~ msgstr "Сирійська"
-
-#~ msgid "Turkish"
-#~ msgstr "Турецька"
-
-#~ msgid "Spanish"
-#~ msgstr "Іспанська"
-
-#~ msgid "Northern Saami (Sweden)"
-#~ msgstr "Північна Саамі (Швеція)"
-
-#~ msgid "Yugoslavian"
-#~ msgstr "Югославська"
-
-#~ msgid "Hindi"
-#~ msgstr "Хінді"
-
-#~ msgid "Finnish"
-#~ msgstr "Фінська"
-
-#~ msgid "French (alternative)"
-#~ msgstr "Французька (альтернативна)"
-
-#~ msgid "Hungarian (qwerty)"
-#~ msgstr "Угорська (qwerty)"
-
-#~ msgid "Russian (cyrillic phonetic)"
-#~ msgstr "Російська (фонетична кирилиця)"
-
-#~ msgid "Albanian"
-#~ msgstr "Албанська"
-
-#~ msgid "Polish"
-#~ msgstr "Польська"
-
-#~ msgid "Telugu"
-#~ msgstr "Телугу"
-
-#~ msgid "Armenian"
-#~ msgstr "Вірменська"
-
-#~ msgid "Northern Saami (Norway)"
-#~ msgstr "Північна Саамі (Норвегія)"
-
-#~ msgid "Latin America"
-#~ msgstr "Латиноамериканська"
-
-#~ msgid "French"
-#~ msgstr "Французька"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Великобританська"
-
-#~ msgid "Arabic"
-#~ msgstr "Арабська"
-
-#~ msgid "U.S. English"
-#~ msgstr "Англійська (США)"
-
-#~ msgid "Maltese (US layout)"
-#~ msgstr "Мальтійська (розкладка US)"
-
-#~ msgid "French Canadian"
-#~ msgstr "Французька канадська"
-
-#~ msgid "Portuguese"
-#~ msgstr "Португальська"
-
-#~ msgid "Belgian"
-#~ msgstr "Бельгійська"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Болгарська"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Азербайджанська"
-
-#~ msgid "Vietnamese"
-#~ msgstr "В'єтнамська"
-
-#~ msgid "Lao"
-#~ msgstr "Лаоська"
-
-#~ msgid "Microsoft Natural"
-#~ msgstr "Microsoft Natural"
-
-#~ msgid "Ennyah DKB-1008"
-#~ msgstr "Ennyah DKB-1008"
-
-#~ msgid "Logitech Deluxe Access Keyboard"
-#~ msgstr "Клавіатура Logitech Deluxe Access"
-
-#~ msgid "Microsoft Internet Keyboard"
-#~ msgstr "Клавіатура Microsoft Internet"
-
-#~ msgid "Samsung SDM 4500P"
-#~ msgstr "Samsung SDM 4500P"
-
-#~ msgid "Cherry Blue Line CyBo@rd"
-#~ msgstr "Cherry Blue Line CyBo@rd"
-
-#~ msgid "Dell"
-#~ msgstr "Dell"
-
-#~ msgid "Hewlett-Packard Omnibook XE3 GF"
-#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
-
-#~ msgid "IBM Rapid Access"
-#~ msgstr "IBM Rapid Access"
-
-#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
-#~ msgstr "Logitech Cordless Desktop Pro (альтернативна 2)"
-
-#~ msgid "Memorex MX1998"
-#~ msgstr "Memorex MX1998"
-
-#~ msgid "Trust Wireless Keyboard Classic"
-#~ msgstr "Trust Wireless Keyboard Classic"
-
-#~ msgid "Dell 101-key PC"
-#~ msgstr "Dell 101-key PC"
-
-#~ msgid "Brother Internet Keyboard"
-#~ msgstr "Клавіатура Brother Internet"
-
-#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-#~ msgstr "Лептоп/ноутбук Compaq (напр., Armada) клавіатура"
-
-#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-#~ msgstr "Лептоп/ноутбук Compaq (напр., Presario) Internet клавіатура"
-
-#~ msgid "IBM Rapid Access II"
-#~ msgstr "IBM Rapid Access II"
-
-#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-#~ msgstr "Клавіатура Logitech iTouch Cordless (model Y-RB6)"
-
-#~ msgid "Trust Direct Access Keyboard"
-#~ msgstr "Клавіатура Trust Direct Access"
-
-#~ msgid "Logitech Internet Navigator Keyboard"
-#~ msgstr "Клавіатура Logitech Internet Navigator"
-
-#~ msgid "SK-7100"
-#~ msgstr "SK-7100"
-
-#~ msgid "Acer AirKey V"
-#~ msgstr "Acer AirKey V"
-
-#~ msgid "BTC 9000A"
-#~ msgstr "BTC 9000A"
-
-#~ msgid "Toshiba Satellite S3000"
-#~ msgstr "Toshiba Satellite S3000"
-
-#~ msgid "Compaq Internet Keyboard (13 keys)"
-#~ msgstr "Клавіатура Compaq Internet (13 клавіш)"
-
-#~ msgid "Hewlett-Packard Omnibook XT1000"
-#~ msgstr "Hewlett-Packard Omnibook XT1000"
-
-#~ msgid "Logitech iTouch"
-#~ msgstr "Logitech iTouch"
-
-#~ msgid "SK-6200"
-#~ msgstr "SK-6200"
-
-#~ msgid "Compaq iPaq Keyboard"
-#~ msgstr "Клавіатура Compaq iPaq"
-
-#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
-#~ msgstr "Logitech Cordless Desktop Pro (альтернативна)"
-
-#~ msgid "Logitech Cordless Desktop Navigator"
-#~ msgstr "Logitech Cordless Desktop Navigator"
-
-#~ msgid "QTronix Scorpius 98N+"
-#~ msgstr "QTronix Scorpius 98N+"
-
-#~ msgid "Symplon PaceBook (tablet PC)"
-#~ msgstr "Symplon PaceBook (планшет ПК)"
-
-#~ msgid "Winbook Model XP5"
-#~ msgstr "Winbook Model XP5"
-
-#~ msgid "BTC 5113RF Multimedia"
-#~ msgstr "BTC 5113RF Мультимедія"
-
-#~ msgid "Diamond 9801 / 9802 series"
-#~ msgstr "Diamond 9801 / 9802 серія"
-
-#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-#~ msgstr "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-
-#~ msgid "Logitech Cordless Desktop Optical"
-#~ msgstr "Logitech Cordless Desktop Optical"
-
-#~ msgid "Logitech Internet Keyboard"
-#~ msgstr "Клавіатура Logitech Internet"
-
-#~ msgid "BTC 9000"
-#~ msgstr "BTC 9000"
-
-#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-#~ msgstr "Genius Comfy KB-16M / Genius MM клавіатура KWD-910"
-
-#~ msgid "Hewlett-Packard Internet Keyboard"
-#~ msgstr "Клавіатура Hewlett-Packard Internet"
-
-#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
-#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
-
-#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-#~ msgstr ""
-#~ "Microsoft Natural клавіатура Pro / Microsoft Internet клавіатура Pro"
-
-#~ msgid "Propeller Voyager (KTEZ-1000)"
-#~ msgstr "Propeller Voyager (KTEZ-1000)"
-
-#~ msgid "Brazilian ABNT2"
-#~ msgstr "Бразильська ABNT2"
-
-#~ msgid "Compaq Internet Keyboard (7 keys)"
-#~ msgstr "Клавіатура Compaq Internet (7 клавіш)"
-
-#~ msgid "Honeywell Euroboard"
-#~ msgstr "Honeywell Euroboard"
-
-#~ msgid "Logitech Cordless Desktop"
-#~ msgstr "Logitech Cordless Desktop"
-
-#~ msgid "Yahoo! Internet Keyboard"
-#~ msgstr "Клавіатура Yahoo! Internet"
-
-#~ msgid "Compaq Internet Keyboard (18 keys)"
-#~ msgstr "Клавіатура Compaq Internet (18 клавіш)"
-
-#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
-#~ msgstr "Лептоп/ноутбук Dell Inspiron 8xxx"
-
-#~ msgid "IBM Rapid Access II (alternate option)"
-#~ msgstr "IBM Rapid Access II (альтернативна)"
-
-#~ msgid "Logitech Cordless Desktop Pro"
-#~ msgstr "Logitech Cordless Desktop Pro"
-
-#~ msgid "Advance Scorpius KI"
-#~ msgstr "Advance Scorpius KI"
-
-#~ msgid "BTC 5126T"
-#~ msgstr "BTC 5126T"
-
-#~ msgid "Dexxa Wireless Desktop Keyboard"
-#~ msgstr "Клавіатура Dexxa Wireless Desktop"
-
-#~ msgid "Hewlett-Packard Omnibook 5xx"
-#~ msgstr "Hewlett-Packard Omnibook 5xx"
-
-#~ msgid "Memorex MX2750"
-#~ msgstr "Memorex MX2750"
-
-#~ msgid "SK-1300"
-#~ msgstr "SK-1300"
-
-#~ msgid "Generic 101-key PC"
-#~ msgstr "Звичайна 101-key PC"
-
-#~ msgid "Northgate OmniKey 101"
-#~ msgstr "Northgate OmniKey 101"
-
-#~ msgid "ACPI Standard"
-#~ msgstr "ACPI Стандартна"
-
-#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
-#~ msgstr "Cherry Blue Line CyBo@rd (альтернативна)"
-
-#~ msgid "Chicony Internet Keyboard"
-#~ msgstr "Клавіатура Chicony Internet"
-
-#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-#~ msgstr "Клавіатура Hewlett-Packard SK-2501 Multimedia"
-
-#~ msgid "Samsung SDM 4510P"
-#~ msgstr "Samsung SDM 4510P"
-
-#~ msgid "SK-2500"
-#~ msgstr "SK-2500"
-
-#~ msgid "SVEN Ergonomic 2500"
-#~ msgstr "SVEN Ergonomic 2500"
-
-#~ msgid "Generic 102-key (Intl) PC"
-#~ msgstr "Звичайна 102-key (Intl) PC"
-
-#~ msgid "Logitech Cordless Desktop iTouch"
-#~ msgstr "Logitech Cordless Desktop iTouch"
-
-#~ msgid "Chicony KB-9885"
-#~ msgstr "Chicony KB-9885"
-
-#~ msgid "Compaq Easy Access Keyboard"
-#~ msgstr "Клавіатура Compaq Easy Access"
-
-#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
-#~ msgstr "Клавіатура Hewlett-Packard 5181 Internet"
-
-#~ msgid "Hewlett-Packard Omnibook 500 FA"
-#~ msgstr "Hewlett-Packard Omnibook 500 FA"
-
-#~ msgid "Memorex MX2500 EZ-Access Keyboard"
-#~ msgstr "Клавіатура Memorex MX2500 EZ-Access"
-
-#~ msgid "Generic 104-key PC"
-#~ msgstr "Звичайна 104-key PC"
-
-#~ msgid "Everex STEPnote"
-#~ msgstr "Everex STEPnote"
-
-#~ msgid "Japanese 106-key"
-#~ msgstr "Японська 106-key"
-
-#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE та Pavilion N5xxx"
-
-#~ msgid "Hewlett-Packard Pavilion ZT11xx"
-#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
-
-#~ msgid "Logitech iTouch keyboard Internet Navigator"
-#~ msgstr "Logitech iTouch клавіатура Internet Navigator"
-
-#~ msgid "Generic 105-key (Intl) PC"
-#~ msgstr "Звичайна 105-key (Intl) PC"
-
-#~ msgid "Keytronic FlexPro"
-#~ msgstr "Keytronic FlexPro"
-
-#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-#~ msgstr "Клавіатура Hewlett-Packard SK-2505 Internet"
-
-#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
-#~ msgstr "Microsoft Internet клавіатура Pro, шведська"
-
-#~ msgid "Microsoft Office Keyboard"
-#~ msgstr "Клавіатура Microsoft Office"
-
-#~ msgid "Oretec MCK-800 MM/Internet keyboard"
-#~ msgstr "Клавіатура Oretec MCK-800 MM/Internet"
-
-#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
-#~ msgstr "Вживає внутрішній механізм великих літер. Shift не скасовує Caps."
-
-#~ msgid "R-Alt switches group while pressed"
-#~ msgstr "Альтернативна група при натиснутій правій Alt"
-
-#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-#~ msgstr "Діє, як Shift з фіксацією. Shift не скасовує Caps."
