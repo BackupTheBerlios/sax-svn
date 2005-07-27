@@ -63,10 +63,15 @@ STATUS        : Status: Development
 //=====================================
 // Defines...
 //-------------------------------------
-#define DUAL_LEFTOF_KEY      "LeftOf"
-#define DUAL_ABOVEOF_KEY     "Above"
-#define DUAL_RIGHTOF_KEY     "RightOf"
-#define DUAL_BELOWOF_KEY     "Below"
+#define DUAL_LEFTOF_KEY         "LeftOf"
+#define DUAL_ABOVEOF_KEY        "Above"
+#define DUAL_RIGHTOF_KEY        "RightOf"
+#define DUAL_BELOWOF_KEY        "Below"
+#define DUAL_FGLRX_LEFTOF_KEY   "Horizontal"
+#define DUAL_FGLRX_ABOVEOF_KEY  "Vertical"
+#define DUAL_FGLRX_RIGHTOF_KEY  "Horizontal,Reverse"
+#define DUAL_FGLRX_BELOWOF_KEY  "Vertical,Reverse"
+
 #define DUAL_LEFTOF          0
 #define DUAL_ABOVEOF         1
 #define DUAL_RIGHTOF         2

@@ -13,10 +13,10 @@ Device  -> [X] ->  Raw -> 25 -> Option = "CRT2Position" "Clone"
 # setup SaX meta options
 #--------------------------------
 Device  -> [X] -> Option = SaXDualHead
-Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "Clone"
+Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "LeftOf"
 Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "{Monitor->[X]->HorizSync}"
 Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
 Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "{Screen->[X]->Depth->16->Modes:0}"
-Device  -> [X] -> Raw -> 30 -> Option = "SaXDualMode" "Xinerama"
+Device  -> [X] -> Raw -> 30 -> Option = "SaXDualMode" "Clone"
 Device  -> [X] -> Raw -> 31 -> Option = "SaXDualMonitorVendor" "{Monitor->[X]->VendorName}"
 Device  -> [X] -> Raw -> 32 -> Option = "SaXDualMonitorModel" "{Monitor->[X]->ModelName}"

@@ -682,6 +682,29 @@ bool SCCMonitor::exportData ( void ) {
 						if ((key== "MonitorLayout") && (driver== "fglrx")) {
 							saxCard.addCardOption ( key,val );
 						}
+						if (key == "DesktopSetup") {
+							int orientation  = dualData->getLayout();
+							QString position = DUAL_FGLRX_LEFTOF_KEY;
+							switch (orientation) {
+								case DUAL_ABOVEOF:
+									position = DUAL_FGLRX_ABOVEOF_KEY;
+								break;
+								case DUAL_RIGHTOF:
+									position = DUAL_FGLRX_RIGHTOF_KEY;
+								break;
+								case DUAL_BELOWOF:
+									position = DUAL_FGLRX_BELOWOF_KEY;
+								break;
+								default:
+								break;
+							}
+							saxCard.addCardOption ( key,position );
+							int mode = dualData->getMode();
+							if ( mode == DUAL_CLONE ) {
+								saxCard.removeCardOption (key);
+								saxCard.addCardOption (key,DUAL_CLONE_KEY);
+							}
+						}
 						if (key == "HSync2") {
 							QString hsync;
 							int hsmax = dualModel->getHSmax();
