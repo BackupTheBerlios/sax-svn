@@ -7,13 +7,13 @@ Device  -> [X] ->  Raw -> 21 -> Option = "CRT2HSync" "{Monitor->[X]->HorizSync}"
 Device  -> [X] ->  Raw -> 22 -> Option = "CRT2VRefresh" "{Monitor->[X]->VertRefresh}"
 Device  -> [X] ->  Raw -> 23 -> Option = "IgnoreEDID" "yes"
 Device  -> [X] ->  Raw -> 24 -> Option = "MetaModes" "{Screen->[X]->Depth->16->Modes:0}-{Screen->[X]->Depth->16->Modes:0}"
-Device  -> [X] ->  Raw -> 25 -> Option = "CRT2Position" "RightOf"
+Device  -> [X] ->  Raw -> 25 -> Option = "CRT2Position" "Clone"
 
 #================================
 # setup SaX meta options
 #--------------------------------
 Device  -> [X] -> Option = SaXDualHead
-Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "RightOf"
+Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "Clone"
 Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "{Monitor->[X]->HorizSync}"
 Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
 Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "{Screen->[X]->Depth->16->Modes:0}"

@@ -7,6 +7,8 @@ Tue Jul 26 15:35:08 CEST 2005 - ms@suse.de
 - added modeline calculation for special modelines needed in
   combination with dualhead device driver options
 - update Identitiy maps, 3D support for i915GM chips
+- changed default dual-head mode to clone, to avoid missing windows
+  if the user didn't connect both monitors
 
 -------------------------------------------------------------------
 Mon Jul 25 10:45:39 CEST 2005 - ms@suse.de
