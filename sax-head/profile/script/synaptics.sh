@@ -18,7 +18,7 @@ profile="$profile.tmp"
 #====================================
 # Add default mouse if needed
 #------------------------------------
-sysp -q mouse | grep Profile | grep -qi "<undefined>"
+/usr/sbin/sysp -q mouse | grep Profile | grep -qi "<undefined>"
 if [ $? -ne 0 ];then
 	echo "InputDevice->[X+2]->Identifier = Mouse[[X+2]]"    >> $profile
 	echo "InputDevice->[X+2]->Driver     = mouse"           >> $profile
