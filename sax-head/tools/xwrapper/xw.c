@@ -305,9 +305,11 @@ void prepare (void) {
 			//=========================================
 			// set the background to a picture
 			//-----------------------------------------
-			char size[20] = "";
-			char sdpy[20] = "";
-			sprintf (size,"%dx%d+0+0!",xpixels,ypixels);
+			char xsize[20] = "";
+			char ysize[20] = "";
+			char sdpy[20]  = "";
+			sprintf (xsize,"%d",xpixels);
+			sprintf (ysize,"%d",ypixels);
 			sprintf (sdpy,"%s.%d",displayname,current_screen);
 			int bgpid = fork();
 			switch(bgpid) {
@@ -316,8 +318,8 @@ void prepare (void) {
 			break;
 			case 0:
 				execl (DISPLAY,
-					"display","-resize",size,"-window",
-					"root","-display",sdpy,BACKGROUND,NULL
+					"ximage","-xsize",xsize,"-ysize",ysize,
+					"-display",sdpy,"-image",BACKGROUND,NULL
 	            );
 			break;
 			default:

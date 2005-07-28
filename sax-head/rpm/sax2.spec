@@ -105,7 +105,7 @@ Authors:
 %package -n sax2-gui
 Version:      1.7
 Release:      11
-Requires:     ImageMagick xbanner sax2-tools qt3 fvwm2 tightvnc sax2
+Requires:     netpbm xbanner sax2-tools qt3 fvwm2 tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/sbin/xapi
@@ -470,6 +470,7 @@ fi
 /usr/sbin/testX
 /usr/sbin/whois
 /usr/sbin/wmstart
+/usr/sbin/ximage
 /usr/sbin/wrap
 /usr/sbin/xbounce
 /usr/sbin/xbound
