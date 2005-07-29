@@ -56,9 +56,11 @@ SCCKeyboard::SCCKeyboard (
 	mKeyboardTab -> addTab (
 		mKeyboardLayout , mText["XKBLayout"] 
 	);
+	#if 0
 	mKeyboardTab -> addTab (
 		mKeyboardOptions, mText["XKBOptions"]
 	);
+	#endif
 	QObject::connect (
 		mKeyboardLayout , SIGNAL (sigApply ( void )),
 		this            , SLOT   (apply    ( void ))
