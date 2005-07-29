@@ -56,8 +56,15 @@ if [ -z "$image" ];then
 fi
 
 #======================================
+# scale image
+#--------------------------------------
+/usr/bin/pngtopnm $image.png |\
+	/usr/bin/pnmscale -xsize=$xsize -ysize=$ysize |\
+	/usr/bin/pnmtopng \
+> $image.scaled.png
+
+#======================================
 # display image
 #--------------------------------------
-DISPLAY=$disp /usr/X11R6/bin/fvwm-root < /usr/bin/pngtopnm $image.png |\
-	/usr/bin/pnmscale -xsize=$xsize -ysize=$ysize |\
-/usr/bin/pnmtopng
+DISPLAY=$disp /usr/X11R6/bin/fvwm-root $image.scaled.png
+rm -f $image.scaled.png
