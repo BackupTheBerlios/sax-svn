@@ -1233,7 +1233,9 @@ QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
 //====================================
 // setExtraModeline
 //------------------------------------
-void SaXManipulateDesktop::setExtraModeline ( int x,int y,int refresh ) {
+void SaXManipulateDesktop::setExtraModeline (
+	int x,int y,int refresh,int hsync
+) {
 	// .../
 	//! This method includes one modeline XxY with refresh Hz but without
 	//! checking if it fits into the current range. This method should
@@ -1242,13 +1244,15 @@ void SaXManipulateDesktop::setExtraModeline ( int x,int y,int refresh ) {
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return;
 	}
-	QString mode = calculateModeline ( x,y,refresh );
+	QString mode = calculateModeline ( x,y,refresh,hsync );
 	mDesktop -> setItem ( "SpecialModeline",mode );
 }
 //====================================
 // addExtraModeline
 //------------------------------------
-void SaXManipulateDesktop::addExtraModeline ( int x,int y,int refresh ) {
+void SaXManipulateDesktop::addExtraModeline (
+	int x,int y,int refresh,int hsync
+) {
 	// .../
 	//! This method add a modeline XxY with refresh Hz but without
 	//! checking if it fits into the current range. This method should
@@ -1259,7 +1263,7 @@ void SaXManipulateDesktop::addExtraModeline ( int x,int y,int refresh ) {
 	}
 	QString val;
 	QString key = "SpecialModeline";
-	QString mode = calculateModeline ( x,y,refresh );
+	QString mode = calculateModeline ( x,y,refresh,hsync );
 	if (! mDesktop -> getItem (key).isEmpty()) {
 		val = mDesktop -> getItem (key);
 	}
@@ -1296,21 +1300,35 @@ void SaXManipulateDesktop::removeExtraModeline ( int x,int y) {
 //====================================
 // calculateModeline
 //------------------------------------
-QString SaXManipulateDesktop::calculateModeline ( int x,int y,int refresh ) {
-	SaXProcessCall* proc = new SaXProcessCall ();
-	proc -> addArgument ( XMODE );
-	proc -> addArgument ( "-x" );
-	proc -> addArgument ( x );
-	proc -> addArgument ( "-y" );
-	proc -> addArgument ( y );
-	proc -> addArgument ( "-r" );
-	proc -> addArgument ( refresh + 2 );
-	if ( ! proc -> start() ) {
-		excProcessFailed();
-		qError (errorString(),EXC_PROCESSFAILED);
+QString SaXManipulateDesktop::calculateModeline (
+	int x,int y,int refresh,int hsync
+) {
+	// .../
+	//! This function calculates a modeline which fits
+	//! into refresh and hsync whereas the line is bound
+	//! to the refresh value
+	// ----
+	QString result;
+	for (int r=refresh;r >= 50;r--) {
+		SaXProcessCall* proc = new SaXProcessCall ();
+		proc -> addArgument ( XMODE );
+		proc -> addArgument ( "-x" );
+		proc -> addArgument ( x );
+		proc -> addArgument ( "-y" );
+		proc -> addArgument ( y );
+		proc -> addArgument ( "-r" );
+		proc -> addArgument ( r + 2 );
+		if ( ! proc -> start() ) {
+			excProcessFailed();
+			qError (errorString(),EXC_PROCESSFAILED);
+		}
+		QList<QString> data = proc->readStdout();
+		int hs = data.at(0)->toInt();
+		result = *data.at(2);
+		if (hs <= hsync) {
+			break;
+		}
 	}
-	QList<QString> data = proc->readStdout();
-	QString result = *data.at(2);
 	result.replace (QRegExp("^Modeline "),"");
 	return result;
 }

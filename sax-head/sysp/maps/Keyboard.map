@@ -19,8 +19,8 @@ cf              : pc105 : fr_CA        : x          : xfree86 : x : x : x : x : 
 croat           : pc105 : hr           : x          : xfree86 : x : x : x : x : x
 lt.baltic       ; pc105 : lt           : x          : xfree86 : x : x : x : x : x
 cz-lat2-prog    : pc104 : cz,us        : x          : xfree86 : x : x : x : x : grp:shift_toggle
-cz-lat2         : pc104 : cz_qwerty,us : x          : xfree86 : x : x : x : x : grp:shift_toggle
-cz-lat2-us      : pc104 : cz_qwerty,us : x          : xfree86 : x : x : x : x : grp:shift_toggle
+cz-lat2         : pc104 : cz,us        : qwerty     : xfree86 : x : x : x : x : grp:shift_toggle
+cz-lat2-us      : pc104 : cz,us        : qwerty     : xfree86 : x : x : x : x : grp:shift_toggle
 cz-us-qwertz    : pc104 : cz,us        : x          : xfree86 : x : x : x : x : grp:shift_toggle
 de-lat1-nd      : pc105 : de           : nodeadkeys : xfree86 : x : x : x : x : x
 de-latin1-en    : pc105 : de           : x          : xfree86 : x : x : x : x : x
@@ -43,8 +43,8 @@ fr-pc           : pc102 : fr           : x          : xfree86 : x : x : x : x : 
 fr              : pc102 : fr           : x          : xfree86 : x : x : x : x : x
 fr_CH-latin1    : pc102 : fr_CH        : x          : xfree86 : x : x : x : x : x
 fr_CH           : pc102 : fr_CH        : x          : xfree86 : x : x : x : x : x
-gr-pc           : pc105 : us,el        : ,extended  : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
-gr              : pc105 : us,el        : ,extended  : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
+gr-pc           : pc105 : us,gr        : ,extended  : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
+gr              : pc105 : us,gr        : ,extended  : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
 hebrew          : pc102 : he           : x          : xfree86 : x : x : x : x : x
 hu              : pc102 : hu           : x          : xfree86 : x : x : x : x : x
 hu101           : pc101 : hu           : x          : xfree86 : x : x : x : x : x
@@ -105,8 +105,8 @@ sg-l1-lk450     : pc102 : de_CH        : x          : xfree86 : x : x : x : x : 
 sg-latin1-lk450 : pc104 : de_CH        : x          : xfree86 : x : x : x : x : x
 sg-latin1       : pc104 : de_CH        : x          : xfree86 : x : x : x : x : x
 sg              : pc104 : de_CH        : x          : xfree86 : x : x : x : x : x
-sk-prog-qwerty  : pc104 : sk_qwerty,us : x          : xfree86 : x : x : x : x : grp:shift_toggle
-sk-qwerty       : pc104 : sk_qwerty,us : x          : xfree86 : x : x : x : x : grp:shift_toggle
+sk-prog-qwerty  : pc104 : sk,us        : qwerty     : xfree86 : x : x : x : x : grp:shift_toggle
+sk-qwerty       : pc104 : sk,us        : qwerty     : xfree86 : x : x : x : x : grp:shift_toggle
 sk-qwertz       : pc104 : sk,us        : x          : xfree86 : x : x : x : x : grp:shift_toggle
 slovene         : pc105 : sl_SI        : x          : xfree86 : x : x : x : x : x
 sunkeymap       : type5 : us           : x          : xfree86 : x : x : x : x : x

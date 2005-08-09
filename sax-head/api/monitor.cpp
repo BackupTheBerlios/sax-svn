@@ -483,6 +483,7 @@ bool SCCMonitor::exportData ( void ) {
 						}
 						if (key == "SaXDualVSync") {
 							QString vsync;
+							int hsmax = dualModel->getHSmax();
 							int vsmax = dualModel->getVSmax();
 							int vsmin = dualModel->getVSmin();
 							QTextOStream (&vsync) << vsmin << "-" << vsmax;
@@ -498,7 +499,10 @@ bool SCCMonitor::exportData ( void ) {
 								);
 								int x = xy.first().toInt();
 								int y = xy.last().toInt();
-								saxDesktop.addExtraModeline ( x,y,vsmax );
+								log (L_INFO,
+									"Add special mode: %dx%d@%d\n",x,y,vsmax
+								);
+								saxDesktop.addExtraModeline ( x,y,vsmax,hsmax );
 							}
 						}
 						//====================================

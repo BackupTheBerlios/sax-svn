@@ -34,6 +34,11 @@ int main (int argc,char*argv[]) {
 	int mColorDepth = 0;
 
 	//=====================================
+	// init variables...
+	//-------------------------------------
+	QFileInfo xconfig (XORG_CONF);
+
+	//=====================================
 	// set library debugging...
 	//-------------------------------------
 	SaXException().setDebug (false);
@@ -110,6 +115,9 @@ int main (int argc,char*argv[]) {
 	for (int id=0; id<7; id++) {
 		SaXImport* import = new SaXImport ( importID[id] );
 		import -> setSource ( SAX_SYSTEM_CONFIG );
+		if (! xconfig.exists()) {
+			import -> setSource ( SAX_AUTO_PROBE );
+		}
 		if (mAutoMode) {
 			import -> setSource ( SAX_AUTO_PROBE );
 		}

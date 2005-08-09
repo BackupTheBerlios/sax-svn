@@ -24,6 +24,7 @@ STATUS        : Status: Development
 // Includes...
 //------------------------------------
 #include <qapplication.h>
+#include <qfileinfo.h>
 #include <getopt.h>
 
 //====================================
@@ -37,6 +38,11 @@ STATUS        : Status: Development
 //------------------------------------
 #include "color.h"
 #include "glinfo.h"
+
+//====================================
+// Defines...
+//------------------------------------
+#define XORG_CONF "/etc/X11/xorg.conf"
 
 //===================================
 // Prototypes...

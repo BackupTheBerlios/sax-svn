@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Tue Aug  9 10:16:33 CEST 2005 - ms@suse.de
+
+- update ident maps for all architectures
+- update translations from dublin: nb hu lt cs
+- fixed Keyboard.map to use _qwerty layouts as XKB variant (#102657)
+- fixed Keyboard.map use gr instead of el (#102657)
+- fixed sysp 3D check (xcmd) to work xorg.conf independently (#99694)
+- fixed modeline calculation on second head
+
+-------------------------------------------------------------------
 Fri Jul 29 11:49:32 CEST 2005 - ms@suse.de
 
 - added language nl and pl_PL from Dublin

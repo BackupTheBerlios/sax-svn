@@ -53,8 +53,8 @@ namespace SaX {
 class SaXManipulateDesktopIF : public SaXException {
 	public:
 	virtual void calculateModelines ( bool ) = 0;
-	virtual void setExtraModeline ( int,int,int ) = 0;
-	virtual void addExtraModeline ( int,int,int ) = 0;
+	virtual void setExtraModeline ( int,int,int,int ) = 0;
+	virtual void addExtraModeline ( int,int,int,int ) = 0;
 	virtual void removeExtraModeline ( int,int ) = 0;
 	virtual void setResolution ( int,int,int ) = 0;
 	virtual void addResolution ( int,int,int ) = 0;
@@ -174,12 +174,12 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 
 	private:
 	QString getVendorForDriver ( const QString& );
-	QString calculateModeline  ( int,int,int );
+	QString calculateModeline  ( int,int,int,int );
 
 	public:
 	void calculateModelines ( bool );
-	void setExtraModeline ( int,int,int );
-    void addExtraModeline ( int,int,int );
+	void setExtraModeline ( int,int,int,int );
+    void addExtraModeline ( int,int,int,int );
     void removeExtraModeline ( int,int );
 	void setResolution ( int,int,int );
 	void addResolution ( int,int,int );
