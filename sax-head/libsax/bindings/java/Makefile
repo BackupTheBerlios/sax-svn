@@ -5,6 +5,9 @@ SHAREDIR=${DESTDIR}/usr/share/java
 JAVAC=${JAVA_BINDIR}/javac
 
 all:
+	if [ ! -f ${JAVAC} ];then \
+		exit 1 ;\
+	fi
 	g++ -c \
 		-I/usr/X11R6/include \
 		-I/usr/${BINDLIB}/qt3/include \
@@ -18,6 +21,9 @@ all:
 	jar cf SaX.jar *.class && rm -f *.class SaX[^_]*.java SWIGTYPE*
 
 install_vendor:
+	if [ ! -f ./SaX.jar ];then \
+		exit 1 ;\
+	fi
 	install -d -m 755 ${PLUGSDIR}
 	install -d -m 755 ${SHAREDIR}
 	install -m 755 ./SaX.so  ${PLUGSDIR}

@@ -193,6 +193,7 @@ Authors:
 #=================================================
 # Description sax2-libsax-java
 #-------------------------------------------------
+%ifnarch ppc64
 %package -n sax2-libsax-java
 Version:      7.1
 Release:      11
@@ -207,7 +208,7 @@ libsax with Java
 Authors:      
 --------
     Marcus Schäfer <ms@suse.de>
-
+%endif
 
 #=================================================
 # Description sax2-libsax-csharp
@@ -542,12 +543,14 @@ fi
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
+%ifnarch ppc64
 %files -n sax2-libsax-java
 %defattr(-,root,root)
 %dir /usr/%{_lib}/sax
 %dir /usr/%{_lib}/sax/plugins
 /usr/share/java/SaX.jar
 /usr/%{_lib}/sax/plugins/SaX.so
+%endif
 
 #=================================================
 # SaX-libsax-csharp file list...  
