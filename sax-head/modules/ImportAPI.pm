@@ -672,7 +672,7 @@ sub ApiImportMouse {
 		};
 
 		/^EmulateWheel/             && do {
-		if ($value !~ /no/) {
+		if ($value =~ /\d+/) {
 			$var{InputDevice}{$card}{Option}{EmulateWheel} = "on";
 			$var{InputDevice}{$card}{Option}{EmulateWheelButton} = $value;
 		}

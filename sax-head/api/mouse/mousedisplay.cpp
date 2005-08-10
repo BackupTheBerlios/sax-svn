@@ -222,7 +222,9 @@ void SCCMouseDisplay::import ( void ) {
 	// handle mouse wheel emulation
 	//------------------------------------
 	if (mSaxMouse -> isWheelEmulated()) {
-		mCheckEmulateWheel -> setChecked ( true );
+		mCheckEmulateWheel  -> setChecked  ( true );
+		mEmulateWheelButton -> setDisabled ( false );
+		mEmulateWheelButton -> setValue ( mSaxMouse->getWheelEmulatedButton() );
 	}
 }
 //====================================

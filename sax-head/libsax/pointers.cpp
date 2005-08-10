@@ -494,6 +494,22 @@ bool SaXManipulateMice::isButtonEmulated (void) {
 }
 
 //====================================
+// getWheelEmulatedButton
+//------------------------------------
+int SaXManipulateMice::getWheelEmulatedButton (void) {
+	// .../
+	//! check if the wheel functions are emulated using
+	//! a special button which enables the emulation and 
+	//! return the number of this button
+	// ----
+	if (! isWheelEmulated()) {
+		return -1;
+	}
+	int btn = mImport -> getItem ("EmulateWheel").toInt();
+	return btn;
+}
+
+//====================================
 // getMouseList
 //------------------------------------
 QList<QString> SaXManipulateMice::getMouseList (void) {

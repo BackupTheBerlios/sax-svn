@@ -298,8 +298,8 @@ void SCCMonitorModel::import ( void ) {
 			mDisplaySizeX = displaySize.at(0)->toInt();
 			mDisplaySizeY = displaySize.at(1)->toInt();
 		} else {
-			mDisplaySizeX = 340;
-			mDisplaySizeY = 270;
+			mDisplaySizeX = 300;
+			mDisplaySizeY = 230;
 		}
 
 		//====================================

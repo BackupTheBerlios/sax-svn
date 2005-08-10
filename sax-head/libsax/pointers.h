@@ -131,6 +131,7 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 	virtual QList<QString> getMouseModelList  ( const QString& ) = 0;
 	virtual QDict<QString> getMouseData ( const QString& ) = 0;
 	virtual QDict<QString> getMouseData ( const QString&,const QString& ) = 0;
+	virtual int getWheelEmulatedButton  ( void ) = 0;
 
 	public:
 	virtual bool isWheelEnabled   ( void ) = 0;
@@ -212,6 +213,7 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	QList<QString> getMouseModelList  ( const QString& );
 	QDict<QString> getMouseData ( const QString& );
 	QDict<QString> getMouseData ( const QString&,const QString& );
+	int getWheelEmulatedButton  ( void );
 
 	public:
 	bool isWheelEnabled   ( void );
