@@ -110,23 +110,41 @@ void SCCMonitorCard::init ( void ) {
 	SaXManipulateCard saxCard (
 		mSection["Card"]
 	);
+	SaXManipulateDesktop saxDesktop (
+		mSection["Desktop"],mSection["Card"],mSection["Path"]
+	);
 	//====================================
 	// select card
 	//------------------------------------
+	saxDesktop.selectDesktop ( mDisplay );
 	saxCard.selectCard ( mDisplay );
 
 	//====================================
 	// get card options and fill the list
 	//------------------------------------
+	// create profile option dict...
+	QString profile = saxDesktop.getDualHeadProfile();
+	if (! profile.isEmpty()) {
+		SaXImportProfile* pProfile = new SaXImportProfile ( profile );
+		pProfile -> doImport();
+		SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
+		if ( mImport ) {
+			SaXManipulateCard saxProfileCard ( mImport );
+			mProfileDriverOptions = saxProfileCard.getOptions();
+		}
+	}
+	// fill list except dual head profile used settings...
 	bool hasRotateSupport = false;
 	QString driver = saxCard.getCardDriver();
 	mOptDict = saxCard.getCardOptions ( driver );
 	QDictIterator<QString> it (mOptDict);
 	for (; it.current(); ++it) {
+	if (! mProfileDriverOptions[it.currentKey()]) {
 		mOption -> insertItem ( it.currentKey() );
 		if (it.currentKey() == "Rotate") {
 			hasRotateSupport = true;
 		}
+	}
 	}
 	mOption -> sort();
 	//====================================
@@ -191,7 +209,9 @@ void SCCMonitorCard::import ( void ) {
 	QDictIterator<QString> io (mOptDict);
 	QDictIterator<QString> it (mSelectedOptions);
 	for (; io.current(); ++io) {
+	if (! mProfileDriverOptions[io.currentKey()]) {
 		mOption -> insertItem ( io.currentKey() );
+	}
 	}
 	for (; it.current(); ++it) {
 		QString opt;

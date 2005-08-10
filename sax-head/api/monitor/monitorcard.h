@@ -61,6 +61,7 @@ class SCCMonitorCard : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
+	QDict<QString> mProfileDriverOptions;
 	QDict<QString> mOptDict;
 
 	private:

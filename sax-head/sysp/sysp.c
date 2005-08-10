@@ -558,8 +558,15 @@ void PrintMouseData(ScanMouse m) {
 	//============================================
  	// print all devices...
 	//--------------------------------------------
+	bool haveStandardMouse = false;
 	for (int i = m.Count()-1; i >= 0; i--) {
 		data = m.Pop();
+		if (
+			(strcmp(data.device,"/dev/input/mice") == 0) &&
+			(strcmp(data.profile,"<undefined>") == 0)
+		) {
+			haveStandardMouse = true;
+		}
 		if (devices[i] != 1) {
 			continue;
 		}
@@ -576,6 +583,19 @@ void PrintMouseData(ScanMouse m) {
 		printf("Mouse%d    =>  DeviceID   : %s\n",mouse,data.did);
 		printf("Mouse%d    =>  Profile    : %s\n",mouse,data.profile);
 		mouse++;
+	}
+	if (! haveStandardMouse) {
+		int m = mouse;
+		printf("\n");
+		printf("Mouse%d    =>  Protocol   : explorerps/2\n",m);
+		printf("Mouse%d    =>  Device     : /dev/input/mice\n",m);
+		printf("Mouse%d    =>  Buttons    : 5\n",m);
+		printf("Mouse%d    =>  Wheel      : 1\n",m);
+		printf("Mouse%d    =>  Emulate    : 0\n",m);
+		printf("Mouse%d    =>  Name       : ImPS/2 Generic Wheel Mouse\n",m);
+		printf("Mouse%d    =>  VendorID   : 0x0210\n",m);
+		printf("Mouse%d    =>  DeviceID   : 0x0013\n",m);
+		printf("Mouse%d    =>  Profile    : <undefined>\n",m);
 	}
 	fflush(stdout);
 }

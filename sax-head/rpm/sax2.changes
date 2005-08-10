@@ -7,6 +7,8 @@ Tue Aug  9 10:16:33 CEST 2005 - ms@suse.de
 - fixed Keyboard.map use gr instead of el (#102657)
 - fixed sysp 3D check (xcmd) to work xorg.conf independently (#99694)
 - fixed modeline calculation on second head
+- fixed option list; Don't show options handled by dualhead profile
+- added default mouse if needed (#102656)
 
 -------------------------------------------------------------------
 Fri Jul 29 11:49:32 CEST 2005 - ms@suse.de

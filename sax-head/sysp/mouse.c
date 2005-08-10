@@ -101,7 +101,7 @@ void ScanMouse::Scan (void) {
 		MouseData* define = NULL;
 		define = (MouseData*)malloc(sizeof(MouseData));
 		strcpy(define->protocol,"Auto");
-		strcpy(define->device  ,"/dev/mouse");
+		strcpy(define->device  ,"/dev/input/mice");
 		define->emulate = 1;
 		define->buttons = 2;
 		define->wheel   = 0;
