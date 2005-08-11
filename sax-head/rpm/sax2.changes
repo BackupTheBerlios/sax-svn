@@ -1,7 +1,9 @@
 -------------------------------------------------------------------
 Wed Aug 10 18:23:50 CEST 2005 - ms@suse.de
 
+- fixed vmware X11 configuration using SaX/libsax (#99358)
 - fixed emulate wheel handling (#102656)
+- fixed alps touchpad default settings (AccelFactor,MaxSpeed)
 - according to seife we set the default display size to 300x230
   this enables all people to at least see the fonts in an
   acceptable size. This size applies only if the diplay size

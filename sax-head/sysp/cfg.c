@@ -87,7 +87,7 @@ string XF86ConfigFile::DoModuleSection (void) {
 string XF86ConfigFile::DoInputDeviceSection (void) {
 	string section;
 	section = "Section \"InputDevice\"\n";
-	section = section + " Driver     \"Keyboard\"\n";
+	section = section + " Driver     \"kbd\"\n";
 	section = section + " Identifier \"Keyboard[0]\"\n";
 	section = section + " Option     \"XkbLayout\" \"us\"\n";
 	section = section + " Option     \"XkbModel\"  \"pc104\"\n";

@@ -56,6 +56,7 @@ R {F}[ \t]*-[ \t]*{F}
 {F}[xX]{F}                    {strcpy(yylval.string,yytext);return(RESO);      }
 "Manufacturer:".*"Model:"     {strcpy(yylval.string,yytext);return(DDC);       }
 "vmware_colordepth:"          {strcpy(yylval.string,yytext);return(VMWARE);    }
+"depth:"                      {strcpy(yylval.string,yytext);return(VMWARE);    }
 "Max H-Image Size [cm]: horiz.:"  {strcpy(yylval.string,yytext);return(DPIX);  }
 "vert.:"                      {strcpy(yylval.string,yytext);return(DPIY);      }
 

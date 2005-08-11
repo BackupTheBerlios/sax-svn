@@ -73,7 +73,7 @@ sub AutoDetectSyncRanges {
 			# ------------------
 			/^Name/          && do {
 			push (@model_list,$query{$card}{$i});
-            last SWITCH;
+			last SWITCH;
 			};
 			# Vendor Name list...
 			# ---------------------

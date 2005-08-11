@@ -259,7 +259,10 @@ void prepare (void) {
 	//=========================================
 	// enable accessX...
 	//-----------------------------------------
-	XAccess(dpy,displayname);
+	// .../
+	// disable access X because vmware doesn't support it
+	// XAccess(dpy,displayname);
+
 	//=========================================
 	// set the fashion style for all displays
 	// including Xinerama handling here...
