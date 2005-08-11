@@ -312,6 +312,7 @@ bool SCCTablet::exportData ( void ) {
 				//------------------------------------
 				saxTablet.selectPointer ( tabletID );
 				QString device = saxTablet.getDevice();
+				saxPen.selectPointer ( sticks[n] );
 				saxPen.setDevice (device);
 			}
 			}
