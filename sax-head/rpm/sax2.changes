@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Aug 11 15:02:55 CEST 2005 - ms@suse.de
+
+- fixed libsax segfault in pointers.cpp
+- fixed libsax import code for addID() calls
+- fixed wacom tablet configuration, add Graphire-3 support
+- fixed Portuguese keyboard setup (removed nodeadkeys) (#103716)
+
+-------------------------------------------------------------------
 Wed Aug 10 18:23:50 CEST 2005 - ms@suse.de
 
 - fixed vmware X11 configuration using SaX/libsax (#99358)

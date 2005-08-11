@@ -76,7 +76,8 @@ void ScanMouse::Scan (void) {
 		if (
 			(strstr(lp->name,"Tablet") != NULL) ||
 			(strstr(lp->name,"tablet") != NULL) ||
-			(strstr(lp->name,"Intuos") != NULL)
+			(strstr(lp->name,"Intuos") != NULL) ||
+			(strstr(lp->name,"Wacom")  != NULL)
 		) {
 			// TODO...
 			// Tablet detected shouldn't be handled as mouse

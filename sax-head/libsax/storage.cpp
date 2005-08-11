@@ -244,6 +244,7 @@ bool SaXStorage::addID ( int id ) {
 		}
 		return true;
 	}
+	mCurrentID = id;
 	return false;
 }
 

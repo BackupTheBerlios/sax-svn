@@ -84,3 +84,31 @@ WACOM:GRAPHIRE / INTUOS Stylus (USB) {
  SendCoreEvents      = on
  RawOption           = "BottomX" "30000","BottomY" "24000"
 }
+
+#-----------------------#
+# Wacom Graphire Eraser #
+#-----------------------#
+WACOM:GRAPHIRE-3 CLASSIC Eraser (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ Option              = USB,Tilt
+ SendCoreEvents      = on
+ ButtonThreshold     = 5
+}
+
+#-----------------------#
+# Wacom Graphire Stylus #
+#-----------------------#
+WACOM:GRAPHIRE-3 CLASSIC Stylus (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ Option              = USB,Tilt
+ ButtonThreshold     = 5
+ SendCoreEvents      = on
+}

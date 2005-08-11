@@ -131,7 +131,11 @@ void SCCMouseModel::import ( void ) {
 		//====================================
 		// handle mouse vendor/model name
 		//------------------------------------
-		QString mouseModel = mSection["Pointers"]->getItem("Name");
+		QString mouseModel  = mSection["Pointers"]->getItem("Name");
+		QString mouseVendor = mSection["Pointers"]->getItem("Vendor");
+		if (mouseVendor != "Sysp") {
+			mouseModel=mouseVendor+";"+mouseModel;
+		}
 		if (! mouseModel.isEmpty()) {
 			QStringList vnlist = QStringList::split ( ";", mouseModel );
 			if (vnlist.count() == 2) {

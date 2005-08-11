@@ -196,6 +196,10 @@ void SCCMouseDisplay::import ( void ) {
 	// handle mouse name
 	//------------------------------------
 	QString mouseModel  = mSection["Pointers"]->getItem("Name");
+	QString mouseVendor = mSection["Pointers"]->getItem("Vendor");
+	if (mouseVendor != "Sysp") {
+		mouseModel=mouseVendor+";"+mouseModel;
+	}
 	if (! mouseModel.isEmpty()) {
 		mouseModel.replace(QRegExp(";")," ");
 		mLabelMouseName -> setText (

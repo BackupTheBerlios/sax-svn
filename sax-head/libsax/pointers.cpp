@@ -691,6 +691,7 @@ SaXManipulateTablets::SaXManipulateTablets (
 	//! tablet pointer devices including pens and erasers
 	// ----
 	mManipInputDevices = new SaXManipulateDevices (pointer,layout);
+	mCDBTabletModules = 0;
 	mCDBTablets = 0;
 	mCDBPens = 0;
 }

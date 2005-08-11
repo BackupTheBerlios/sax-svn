@@ -56,6 +56,21 @@ WACOM:GRAPHIRE / INTUOS (USB) {
 }
 
 #--------------------------#
+# Wacom Graphire tablet USB  #
+#--------------------------#
+WACOM:GRAPHIRE-3 CLASSIC (USB) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/input/event0
+ Option           = Tilt,USB
+ SendCoreEvents   = on
+ KernelLoad       = wacom
+ StylusLink       = GRAPHIRE-3 CLASSIC Stylus (USB)
+ EraserLink       = GRAPHIRE-3 CLASSIC Eraser (USB)
+}
+
+#--------------------------#
 # Tevion/Aiptek Tablet     #
 #--------------------------#
 TEVION / AIPTEK:ALDI Tablet (SERIAL) {
