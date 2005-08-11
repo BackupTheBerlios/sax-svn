@@ -307,6 +307,12 @@ bool SCCTablet::exportData ( void ) {
 				for (; io.current(); ++io) {
 					saxPen.addOption (io.currentKey(),*io.current());
 				}
+				//====================================
+				// save pen's device
+				//------------------------------------
+				saxTablet.selectPointer ( tabletID );
+				QString device = saxTablet.getDevice();
+				saxPen.setDevice (device);
 			}
 			}
 		}
