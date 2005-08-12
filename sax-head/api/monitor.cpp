@@ -491,18 +491,24 @@ bool SCCMonitor::exportData ( void ) {
 							//====================================
 							// calculate one modeline for each res
 							//------------------------------------
-							QList<QString> rList=dualData->getResolutionList();
-							QListIterator<QString> ir (rList);
-							for (; ir.current(); ++ir) {
-								QStringList xy = QStringList::split (
-									"x",*ir.current()
-								);
-								int x = xy.first().toInt();
-								int y = xy.last().toInt();
-								log (L_INFO,
-									"Add special mode: %dx%d@%d\n",x,y,vsmax
-								);
-								saxDesktop.addExtraModeline ( x,y,vsmax,hsmax );
+							QString algorithm=saxDesktop.getModelineAlgorithm();
+							if (algorithm != "XServerPool") {
+								QList<QString> rList;
+								rList=dualData->getResolutionList();
+								QListIterator<QString> ir (rList);
+								for (; ir.current(); ++ir) {
+									QStringList xy = QStringList::split (
+										"x",*ir.current()
+									);
+									int x = xy.first().toInt();
+									int y = xy.last().toInt();
+									log (L_INFO,
+										"Add special mode: %dx%d@%d\n",x,y,vsmax
+									);
+									saxDesktop.addExtraModeline (
+										x,y,vsmax,hsmax
+									);
+								}
 							}
 						}
 						//====================================
@@ -512,7 +518,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key );
 						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
-							#if 1
+							#if 0
 							QList<QString> resList=display->getResolution();
 							QString resolution2 = dualData->getResolution();
 							QString resolution1 = *resList.at(0);
@@ -521,7 +527,7 @@ bool SCCMonitor::exportData ( void ) {
 								resolution1 << "," << resolution2;
 							saxCard.addCardOption ( key,resolution );
 							#endif
-							#if 0
+							#if 1
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
@@ -605,7 +611,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key );
 						}
 						if ((key== "MetaModes") && (driver == "radeon")) {
-							#if 1
+							#if 0
 							QList<QString> resList=display->getResolution();
 							QString resolution2 = dualData->getResolution();
 							QString resolution1 = *resList.at(0);
@@ -614,7 +620,7 @@ bool SCCMonitor::exportData ( void ) {
 								resolution1 << "-" << resolution2;
 							saxCard.addCardOption ( key,resolution );
 							#endif
-							#if 0
+							#if 1
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
