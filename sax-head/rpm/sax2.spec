@@ -442,6 +442,7 @@ fi
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
 /usr/share/locale/uk/LC_MESSAGES/sax.mo
 /usr/share/locale/fi/LC_MESSAGES/sax.mo
+/usr/share/locale/pa/LC_MESSAGES/sax.mo
 /usr/sbin/xapi
 /usr/sbin/xfine
 %if %{suse_version} > 820
