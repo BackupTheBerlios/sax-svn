@@ -231,6 +231,7 @@ int doConf (int type, char *val, char *id) {
 	char *s;
 
 	hd_data = calloc(1, sizeof *hd_data);
+	hd_list (hd_data, hw_display, 1, NULL);
 	hd = hd_read_config(hd_data, id);
 
 	if (hd) {

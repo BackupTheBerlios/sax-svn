@@ -531,20 +531,36 @@ bool SCCMonitor::exportData ( void ) {
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QListIterator<QString> ir (rList2);
+							QString resolution2 = *rList2.at(0);
+							//====================================
+							// add primary meta mode
+							//------------------------------------
+							QString metaItem;
 							QString resolution;
-							int indexCount = 0;
+							QTextOStream (&metaItem) <<
+								resolution1 << "," << resolution2;
+							resolution.append (";"+metaItem);
+							//====================================
+							// add secondary meta modes
+							//------------------------------------
+							bool startMeta = false;
+							QListIterator<QString> ir (rList1);
 							for (; ir.current(); ++ir) {
+								if (! startMeta) {
+									startMeta = true; continue;
+								}
 								QString metaItem;
-								if (indexCount == 0) {
+								int cmpr = compareResolution (
+									*ir.current(),resolution2
+								);
+								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										resolution1 << "," << *ir.current();
+										*ir.current() << "," << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
 										*ir.current() << "," << *ir.current();
 								}
 								resolution.append (";"+metaItem);
-								indexCount++;
 							}
 							resolution.replace(QRegExp("^;"),"");
 							saxCard.addCardOption ( key,resolution );
@@ -624,20 +640,36 @@ bool SCCMonitor::exportData ( void ) {
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QListIterator<QString> ir (rList2);
+							QString resolution2 = *rList2.at(0);
+							//====================================
+							// add primary meta mode
+							//------------------------------------
+							QString metaItem;
 							QString resolution;
-							int indexCount = 0;
+							QTextOStream (&metaItem) <<
+								resolution1 << "," << resolution2;
+							resolution.append (";"+metaItem);
+							//====================================
+							// add secondary meta modes
+							//------------------------------------
+							bool startMeta = false;
+							QListIterator<QString> ir (rList1);
 							for (; ir.current(); ++ir) {
+								if (! startMeta) {
+									startMeta = true; continue;
+								}
 								QString metaItem;
-								if (indexCount == 0) {
+								int cmpr = compareResolution (
+									*ir.current(),resolution2
+								);
+								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										resolution1 << "," << *ir.current();
+										*ir.current() << "," << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
 										*ir.current() << "," << *ir.current();
 								}
 								resolution.append (";"+metaItem);
-								indexCount++;
 							}
 							resolution.replace(QRegExp("^;"),"");
 							saxCard.addCardOption ( key,resolution );
@@ -811,5 +843,26 @@ bool SCCMonitor::exportData ( void ) {
 		saxDesktop.enable3D();
 	}
 	return true;
+}
+
+//====================================
+// compareResolution
+//------------------------------------
+int SCCMonitor::compareResolution ( const QString& r1,const QString& r2 ) {
+	QStringList tokens1 = QStringList::split ( "x",r1 );
+	int x1 = tokens1.first().toInt();
+	int y1 = tokens1.last().toInt();
+	int p1 = x1 * y1;
+	QStringList tokens2 = QStringList::split ( "x",r2 );
+	int x2 = tokens2.first().toInt();
+	int y2 = tokens2.last().toInt();
+	int p2 = x2 * y2;
+	if ( p1 == p2 ) {
+		return 0;
+	}
+	if ( p1 > p2 ) {
+		return 1;
+	}
+	return -1;
 }
 } // end namespace

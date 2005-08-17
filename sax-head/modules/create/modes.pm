@@ -60,6 +60,7 @@ sub CreateModesSection {
 				if ($builtin ne "yes") {
 					@tmp = ();
 					sub numerisch { $a <=> $b; }
+					sub daccounts { $b <=> $a; }
 					foreach $mode (sort numerisch keys %{$var{Monitor}{$section}{$i}}) {
 					foreach $n (keys %{$var{Monitor}{$section}{$i}{$mode}}) {
 						$setting = $var{Monitor}{$section}{$i}{$mode}{$n};
@@ -91,7 +92,7 @@ sub CreateModesSection {
 							# print "### $res\n";
 
 							if (($res ne $oldres) && ($ldnr > 0)) {
-								foreach $m (sort numerisch keys %modes) {
+								foreach $m (sort daccounts keys %modes) {
 								if ($modes{$m} ne "") {
 									push(@result,$modes{$m});
 								}

@@ -1324,7 +1324,7 @@ sub GetModelines {
 						$calctool -x $x -y $y -r $i -n -d $clk -s $hsmax
 					);
 					@l = split(/\n/,$line);
-					$chs  = $l[0];
+					$chs  = $l[0] * 1e3;
 					$cvs  = $l[1];
 					$line = $l[2];
 					$found = 0;
@@ -1369,7 +1369,7 @@ sub GetModelines {
 					$line = qx($calctool -x $x -y $y -r $i -n);
 				}
 				@l = split(/\n/,$line);
-				$chs  = $l[0];
+				$chs  = $l[0] * 1e3;
 				$cvs  = $l[1];
 				$line = $l[2];
 				$found = 0; 

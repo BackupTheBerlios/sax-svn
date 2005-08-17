@@ -378,6 +378,7 @@ void SCCMonitorDisplay::import ( void ) {
 	// set primary resolution
 	QString resolutionKey = *mSelectedResolution.at(0);
 	mResolution -> setCurrentText (*mResolutionDict[resolutionKey]);
+	slotResolution ( mResolution->currentItem() );
 }
 //====================================
 // isEnabled

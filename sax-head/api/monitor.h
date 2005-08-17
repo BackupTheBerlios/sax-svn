@@ -80,6 +80,9 @@ class SCCMonitor : public SCCDialog {
 	void slotActivate   ( void );
 	void slotActivate3D ( void );
 
+	private:
+	int compareResolution ( const QString&,const QString& );
+
 	public:
 	SCCMonitor (
 		QWidgetStack*,QDict<QString>*,
