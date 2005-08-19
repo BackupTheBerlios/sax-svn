@@ -35,6 +35,10 @@ msgstr ""
 msgid "Automatic Graphics System Setup"
 msgstr "Automaattinen graafisen järjestelmän asetus"
 
+#. Caption text for informing the user
+msgid "Information..."
+msgstr ""
+
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
 msgstr "SaX2: SUSE Advanced X11 määritys"
@@ -993,6 +997,13 @@ msgstr ""
 "<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja,  <tt>/var/log/"
 "Xorg.99.log</tt> -tiedostosta. The following report has been created from "
 "the calling instance:"
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
+msgstr ""
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

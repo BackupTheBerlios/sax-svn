@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: SaX\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2004-09-17 17:19+0200\n"
-"Last-Translator: Craig Jeffares <cjeffares@novell.com>\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,42 +19,43 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>SaX2 の提案</b><hr>\n"
-"実行中のグラフィックシステムが SaX2 の提案に基づいています。\n"
-"それでよろしい場合は、<b>「確認」</b>をクリックして下さい。\n"
-"必要があれば、設定を変更して下さい。"
+"SaX2提案<hr>現在起動しているグラフィックスシステムはSaX2で作成された提案に基"
+"づいています。 この提案を受け入れる場合、OKをクリックします。  それ以外の場"
+"合、設定を変更してください。"
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
-msgstr "グラフィックシステムの自動設定"
+msgstr "自動グラフィックスシステムセットアップ"
+
+#. Caption text for informing the user
+#, fuzzy
+msgid "Information..."
+msgstr "ダイアログに関する情報 ..."
 
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
-msgstr ""
+msgstr "SaX2: SUSE Advanced X11環境設定"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "SaXコントロールセンター"
 
 #. Title text on the right side
 msgid "SUSE Linux"
-msgstr ""
+msgstr "SUSE Linux"
 
 #. Help Button text
 msgid "&Help"
 msgstr "ヘルプ (&H)"
 
 #. Ok Button text
-#, fuzzy
 msgid "&OK"
-msgstr "確認 (&O)"
+msgstr "OK(&O)"
 
 #. Yes Button text
 msgid "&Yes"
@@ -70,18 +71,16 @@ msgid "&Cancel"
 msgstr "キャンセル (&C)"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr "<b>SaX2 の終了:</b><hr>本当に今終了してよろしいですか。"
+msgstr "SaX2の終了<hr>SaX2を今終了しますか?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "メッセージ"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "設定の変更 (&C)"
+msgstr "環境設定の変更(&h)"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -89,9 +88,8 @@ msgid "Monitor"
 msgstr "モニター"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "モニター特性の設定 ..."
+msgstr "カードとモニタのプロパティ"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -99,19 +97,16 @@ msgid "Mouse"
 msgstr "マウス"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "特性 ..."
+msgstr "マウスのプロパティ"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "キーボードのモデル"
+msgstr "キーボード"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "モニター特性の設定 ..."
+msgstr "キーボードのプロパティ"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -119,9 +114,8 @@ msgid "Tablet"
 msgstr "タブレット"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "特性 ..."
+msgstr "タブレットのプロパティ"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -129,18 +123,16 @@ msgid "Touchscreen"
 msgstr "タッチスクリーン"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "モニター特性の設定 ..."
+msgstr "タッチスクリーンのプロパティ"
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "モニター特性の設定 ..."
+msgstr "リモートアクセスのプロパティ"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -148,73 +140,63 @@ msgstr "画面"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "このディスプレイを有効にする"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "このポインタを有効にする"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "カード"
 
 #. Change data
-#, fuzzy
 msgid "&Change..."
-msgstr "<パスワードを変更してください...>"
+msgstr "変更(&C)..."
 
 #. Set options for some kind of data
 msgid "&Options..."
 msgstr "オプション ... (&O)"
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "キーボードの設定 ..."
+msgstr "設定(&f)..."
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
-msgstr "マルチヘッド (Multihead) モード"
+msgstr "デュアルヘッドモード"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
-#, fuzzy
 msgid "Options"
-msgstr "オプション ... (&O)"
+msgstr "オプション(O)"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
 msgstr "マウスホイールを有効にする"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
-msgstr "3番目のボタンのエミュレーションを有効にする"
+msgstr "3ボタンエミュレーションを有効にする"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "マウスホイールをマウスボタンでエミュレートする:"
+msgstr "マウスボタンでホイールをエミュレート"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
-msgstr "画面を回転する"
+msgstr "画面の回転"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "テスト ...(&T)"
+msgstr "テスト(T)"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "テスト ...(&T)"
+msgstr "テスト(&T)"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -227,116 +209,100 @@ msgid "Layout"
 msgstr "配列"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "テスト入力欄"
+msgstr "テストの準備ができました"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
-msgstr "シングルクリック: 完成"
+msgstr "シングルクリック:完了"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
-msgstr "ダブルクリック: 完成"
+msgstr "ダブルクリック:完了"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "ScrollLock の挙動"
+msgstr "スクロール"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "ボタンが押されています ..."
+msgstr "ボタンが押されています"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "ボタンが放されました。"
+msgstr "ボタンから手を離しています"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
-msgstr "マウスホイールが止まりました。"
+msgstr "停止:完了"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
-msgstr "特性 ..."
+msgstr "プロパティ"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "マルチヘッド (Multihead) モード"
+msgstr "デュアルヘッドモードを有効にする"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Y の解像度"
+msgstr "解像度"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
-msgstr "色 (&C)"
+msgstr "色"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "3Dアクセラレーション"
+msgstr "3Dアクセラレーションを有効にする"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "モニターのモデル"
+msgstr "カードのモニタ"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "モニターのモデル"
+msgstr "カードの2番目のモニタ"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "周波数 (&F)"
+msgstr "同期化周波数"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
-msgstr "画像領域の幅と高さ"
+msgstr "ディスプレイサイズ"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "配列"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "%2の%1モードで有効にされています"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "ドライバのデフォルトモードで有効にされています"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
-msgstr "まだ設定されていません"
+msgstr "未設定"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"すべてのディスプレイを無効にできません<hr><nobr>少なくとも1つのディスプレイを"
+"アクティブにする必要があります。</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "設定が保存されました ..."
+msgstr "使用できる設定がありません"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -363,131 +329,110 @@ msgstr ""
 "全ての画面を統合する。"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
-msgstr "マルチヘッド (Multihead) モード"
+msgstr "マルチヘッドモード"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "次に接続されています："
+msgstr "接続先"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "未知のモニター ..."
+msgstr "不明なモニタ:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "第 1 のモードライン:"
+msgstr "1次モニタ:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "色の選択 ..."
+msgstr "モニタ設定"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "X11 システム"
+msgstr "マウス設定"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "グラフィックカード"
+msgstr "グラフィックスカード設定"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "マルチヘッド (Multihead) モード"
+msgstr "デュアルヘッド設定"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
-msgstr "回転していない"
+msgstr "回転せず"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
-msgstr "左回り"
+msgstr "左に"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
-msgstr "右回り"
+msgstr "右に"
 
 #. Popup message to ask the user for an option value
-#, fuzzy
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>%1 のオプションは空白では無効です。</b><hr>\n"
-"値を入力して下さい。"
+"オプションには値が必要です<hr><nobr>オプション%1に対して値をセットアップしま"
+"す。</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "型式: メーカーと名前の選択 ..."
+msgstr "モニタ: ベンダと名前の選択"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "型式: メーカーと名前の選択 ..."
+msgstr "マウス: ベンダと名前の選択"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "手動により、同期周波数を設定する ..."
+msgstr "手動同期化周波数設定"
 
 #. Group box title for the aspect/ratio selection
-#, fuzzy
 msgid "Diagonal and Aspect Ratio"
-msgstr "対角線とアスペクト比を選択してください..."
+msgstr "対角およびアスペクト比"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
 msgstr "画面のサイズ [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>警告:</b><hr>\n"
-"同期周波数に関してはモニターのマニュアルをご参照下さい。\n"
-"最高周波数を越えると、モニターに重大な害が及ぶ可能性があります。"
+"<b>注意:同期化の範囲を間違えると、モニタが損傷することがあります。 設定につい"
+"ては、モニタマニュアルを参照してください。モニタをその最大定格で使用しない場"
+"合、同期化範囲を減少してください。"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "DPMSを有効にする"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "ユーティリティーディスク ..."
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "水平:"
+msgstr "水平"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "解像度の選択"
+msgstr "2番目のモニタ:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "解像度の選択"
+msgstr "2番目のモニタ解像度"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "垂直:"
+msgstr "垂直"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -499,20 +444,19 @@ msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "アスペクト比"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "水平:"
+msgstr "対角"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "X軸[mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Y軸[mm]"
 
 #. Something is not configured
 msgid "Not configured"
@@ -523,49 +467,43 @@ msgid "inches"
 msgstr "インチ"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>CD またはディスクを挿入してください</b><hr>\n"
-"モニターのメーカーから提供されているディスプレイユーティリティー CD\n"
-"またはディスクを挿入してください。"
+"CDまたはディスクの挿入<hr>モニタベンダのディスプレイユーティリティCDまたは"
+"ディスクを挿入します。"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
-"<b>リードエラー</b><hr>\n"
-"CD またはディスクから読み込めません。\n"
-"メディアが壊れているかメディアのファイルが正しくフォーマットされていません。"
+"読み込みエラー<hr>CDまたはディスクから読み込めませんでした。 このエラーは、損"
+"傷を受けたメディアまたは間違ってフォーマットされた情報ファイルを指しているこ"
+"とがあります。"
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "従来のモードが有効"
+msgstr "伝統的"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "クローン"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "マウス"
+msgstr "マウスモデル"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
 msgstr "基本の設定"
 
 #. Label text for the primary keyboard type
-#, fuzzy
 msgid "Type"
 msgstr "タイプ"
 
@@ -575,9 +513,8 @@ msgid "Variant"
 msgstr "基本キー配列の型"
 
 #. Group box title for the additional keyboard setup
-#, fuzzy
 msgid "Additional Layouts"
-msgstr "追加キー配列"
+msgstr "追加レイアウト"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -588,19 +525,16 @@ msgid "Keytable"
 msgstr "キーマップ"
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
-msgstr "シフト/ロック動作をグループ化"
+msgstr "グループシフト/ロック動作"
 
 #. List View root item text
-#, fuzzy
 msgid "Use Keyboard LED to Show Alternate Group"
 msgstr "キーボード LED を別グループの表示に使用する"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "コントロールキーの位置"
+msgstr "Composeキーの位置"
 
 #. List View root item text
 #. XKBFile extension text
@@ -608,347 +542,294 @@ msgid "Control Key Position"
 msgstr "コントロールキーの位置"
 
 #. List View root item text
-#, fuzzy
 msgid "Third Level Chooser"
-msgstr "第三レベルの選択"
+msgstr "3番目のレベルChooser"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
-msgstr "Alt/ウィンドウズキーの挙動"
+msgstr "Alt/Winキーの動作"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
-msgstr "Caps ロックキーの挙動"
+msgstr "CapsLockキーの動作"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed."
-msgstr "左 Win キーを押すと、グループが変換されます"
+msgstr "左 Altキーを押すと、グループが変換されます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "両方の Ctrl キーでグループを変更します"
+msgstr "両方の Ctrl キーでグループを変更します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "右シフトキーでグループを切替え"
+msgstr "右シフトキーでグループを切り替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "左ウィンドウズキーでグループを切替え"
+msgstr "左Winキーでグループを切り替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "左 Alt キーでグループを切替え"
+msgstr "左Altキーでグループを切り替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed."
-msgstr "両方の Win キーを押すと、グループを変換"
+msgstr "両方のWinキーを押すと、グループが変換されます"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches group while pressed."
-msgstr "右 Win キーを押すと、グループが変換されます"
+msgstr "右Ctrlキーを押すと、グループが変換されます"
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "CapsLockを押すとシフト修飾キーがロックされます。"
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
 msgstr ""
+"CapsLockを押すと、アルファベット文字の通常の大文字使用が切り替わります。"
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "CapsLockはシフトを切り替えるため、すべてのキーに影響が出ます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key is Compose."
-msgstr "右ウィンドウズキーに Compose を割り当て"
+msgstr "右ウィンドウズキーにComposeを割り当てます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group."
-msgstr "Caps ロックキーでグループを切替え"
+msgstr "Shift+CapsLockを押すと、グループが変更されます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches group while pressed."
-msgstr "右 Alt キーを押すと、グループを変換"
+msgstr "右Altを押すと、グループが変換されます。"
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "右コントロールキーは右Altとして機能します。"
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
 msgstr "Ctrl キーは左下隅にあります"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "ウィンドウズキーで 3 番目のレベルを選択"
+msgstr "ウィンドウズキーで 3番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "右ウィンドウズキーで 3 番目のレベルを選択"
+msgstr "右Altキーで3 番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes group."
-msgstr "右コントロールキーでグループを切替え"
+msgstr "右コントロールキーでグループを切り替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "右 Alt キーに Compose を割り当て"
+msgstr "右AltキーにComposeを割り当てます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "右 Alt キーに Compose を割り当て"
+msgstr "右CtrlキーにComposeを割り当てます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative group."
-msgstr "Scroll ロック LED を別グループの表示に使う"
+msgstr "ScrollLock LED を別グループの表示に使います。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Control キーを A キーの左にあります"
+msgstr "-A-の左側のコントロールキー"
 
 #. XKBFile extension text
 msgid "Third level choosers"
 msgstr "第三レベルの選択"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "両側のシフトキーで同時に押してグループを切替え"
+msgstr "両側のシフトキーを同時に押してグループを切り替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "内部大文字を使用。シフトキーで Caps を解除"
+msgstr ""
+"CapsLockは内部の大文字を使用します。 シフトを押すとCapsLockがキャンセルされま"
+"す。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "CapsLock も Control として使用する"
+msgstr "CapsLockもControlとして使用します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "左ウィンドウズキーで 3 番目のレベルを選択"
+msgstr "左ウィンドウズキーで3番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "右ウィンドウズキーでグループを切替え"
+msgstr "右ウィンドウズキーでグループを切り替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
-msgstr "Meta を左ウィンドウズキーに割り当て"
+msgstr "Metaは左ウィンドウズキーにマップされます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative group."
-msgstr "Caps ロック LED を別グループを表示に使う"
+msgstr "CapsLock LEDを別グループの表示に使います。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative group."
-msgstr "Num ロック LED を別グループの表示に使う"
+msgstr "NumLock LEDを別グループの表示に使います。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "左シフトキーでグループを切替え"
+msgstr "左シフトキーでグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "左 Win キーを押すと、グループが変換されます"
+msgstr "左Winキーを押すと、グループが変換されます"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "メニューキーに Compose を割り当て"
+msgstr "メニューキーにComposeを割り当てます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "両側の Alt キーでグループを同時に押してグループを切替え"
+msgstr "両側のAltキーでグループを同時に押してグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "Caps ロックキーでグループを切替え"
+msgstr "CapsLockキーでグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
-msgstr "コントロールと Caps ロックキーを入れ替え"
+msgstr "コントロールとCapsLockをスワップします。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "ウィンドウズキーで 3 番目のレベルを選択"
+msgstr "Altキーで番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "右 Alt キーでグループを切替え"
+msgstr "右Altキーでグループを切替えます。"
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
 msgstr ""
+"numpadキーとシフトを同時に押すと、MS Windowsの場合と同じように機能します。"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "サーバで処理される特殊キー(Ctrl+Alt+<key>)。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper をウィンドウズキーに割り当て"
+msgstr "ハイパはウィンドウズキーにマップされます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Meta を左ウィンドウズキーに割り当て"
+msgstr "Altは右ウィンドウズキーとスーパーメニューにマップされます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)."
-msgstr "Super をウィンドウズキーに割り当て (デフォルト)"
+msgstr "スーパーはウィンドウズキーにマップされます(デフォルト)。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Alt 及び Meta を Alt キーに割り当て (デフォルト)"
+msgstr "AltキーのAltとMeta(デフォルト)。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
-msgstr "メニューキーに標準の挙動を追加"
+msgstr "標準動作をメニューキーに追加します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Alt 及び Meta を Alt キーに割り当て (デフォルト)"
+msgstr "AltとMetaはAltキーにあります(デフォルト)。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Control to choose 3rd level."
-msgstr "右コントロールキーで 3 番目のレベルを選択"
+msgstr "右コントロールキーで3番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Alt とシフトキーを同時に押してグループを切替え"
+msgstr "Alt とシフトキーを同時に押してグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "コントロールとシフトキーを同時に押してグループを切替え"
+msgstr "コントロールとシフトキーを同時に押してグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "ロックとシフトとして作動。シフトは Caps を解除"
+msgstr ""
+"CapsLockはロックしたシフトとして機能します。 シフトを押すとCapsLockがキャンセ"
+"ルされます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative group."
-msgstr "キーボード LED を別グループの表示に使用する"
+msgstr "キーボードLEDを別グループの表示に使用します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "右ウィンドウズキーで 3 番目のレベルを選択"
+msgstr "右ウィンドウズキーで3番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "左ウィンドウズキーで 3 番目のレベルを選択"
+msgstr "左Altキーで3番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys."
-msgstr "Meta をウィンドウズキーに割り当て"
+msgstr "Metaはウィンドウズキーにマップされます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Menu key to choose 3rd level."
-msgstr "メニューキーで 3 番目のレベルを選択"
+msgstr "メニューキーで3番目のレベルを選択します。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "左コントロールキーでグループを切替え"
+msgstr "左コントロールキーでグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "Menu キーでグループを切替え"
+msgstr "Menuキーでグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Alt とコントロールキーを同時に押してグループを切替え"
+msgstr "Altとコントロールキーを同時に押してグループを切替えます。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches group while pressed."
-msgstr "右 Win キーを押すと、グループが変換されます"
+msgstr "右ウィンドウズキーを押すと、グループが変換されます。"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "ポートとモード"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "電子ペン"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3Dアクセラレーション"
+msgstr "このタブレットを有効にする"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "型式: メーカーと名前の選択 ..."
+msgstr "タブレット: ベンダと名前の選択"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "次に接続されています："
+msgstr "接続ポート"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "基本の設定"
+msgstr "1次タブレットモード"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "ペンまたは消しゴムモード"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
@@ -984,57 +865,49 @@ msgstr "消しゴムの追加"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "ペンまたは消しゴム設定"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "特性 ..."
+msgstr "ペンのプロパティ"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "特別なマウスの特性 ..."
+msgstr "消しゴムのプロパティ"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "タッチスクリーンをディスプレイ番号%1に割り当て"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "型式: メーカーと名前の選択 ..."
+msgstr "タッチスクリーン: ベンダと名前の選択"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"<b>完了する:</b><hr>\n"
-"これをクリックすると、現在の設定が保存されます。\n"
-"保存する前に、テストすることをお薦めます。\n"
-"テストする際、画面に異常がみられる場合には、<b>[ Ctrl+Alt+Backspace ]</b>\n"
-"を押して、サーバーを中止して下さい。"
+"最終ステップ<hr>最後のステップは新しい環境設定を保存します。 保存する前に、新"
+"しい環境設定をテストすることをお勧めします。 テストサーバが破損したデスクトッ"
+"プを表示する場合、<b>[ Ctrl+Alt+Backspace ]</b>を押してサーバをキルしてくださ"
+"い。"
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "X11 システム"
+msgstr "VNCサーバ"
 
 #. Activate VNC server checkbox
-#, fuzzy
 msgid "Allow Access to Display Using VNC Protocol"
-msgstr "VNC プロトコルを用いてのアクセスを許可する"
+msgstr "VNCプロトコルを使用してディスプレイへのアクセスを許可"
 
 #. Group box title for the VNC options
 msgid "VNC Options"
 msgstr "VNC オプション"
 
 #. Activate VNC password protection checkbox
-#, fuzzy
 msgid "Activate Password Protection"
 msgstr "パスワード保護を有効にする"
 
@@ -1043,99 +916,96 @@ msgid "Password"
 msgstr "パスワード"
 
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "<新しいパスワードを入力してください...>"
+msgstr "<新しいパスワードの入力>"
 
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "<新しいパスワードを入力してください...>"
+msgstr "<パスワードの変更>"
 
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "パスワードの確認"
+msgstr "<パスワードの確認>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
-msgstr "HTTP アクセスを有効にする"
+msgstr "HTTPアクセスを有効にする"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple VNC Connections"
-msgstr "複数の VNC 接続を許可する"
+msgstr "複数のVNC接続を許可する"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP ポート"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>パスワードが不一致です</b><hr>最初と次のパスワードが一致しません。もう一度"
-"入力してください。"
+"VNCパスワードの不一致<hr>パスワードの最初と2番目のバージョンが一致しません。"
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>パスワードが不正</b><hr>パスワードに何も入力されなかったか、パスワードが短"
-"すぎます。少なくとも 6 文字を含むパスワードを入力してください。"
+"VNCパスワードの誤り<hr>パスワードフィールドが空白のままになっているか、パス"
+"ワードが短すぎます。 6文字以上でパスワードを入力してください。"
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>ソフトウェアのインストール:</b><hr>\n"
-"幾つか必要なパッケージがインストールされておりません。\n"
-"今、インストールしてよろしいですか。"
+"ソフトウェアのインストール<hr>一部のパッケージが見つかりません。 見つからない"
+"パッケージを今インストールしますか?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "パッケージのインストール"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "SaX2 の終了 ..."
+msgstr "モジュールをインポー中"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "SaX2 の終了 ..."
+msgstr "SaX2:データをインポート中..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "キャッシュを初期化中..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
+msgstr "設定の保存に失敗しました<hr>次のレポートが作成されています:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>設定が保存されました:</b><hr>\n"
-"今回加えた修正は、次回のグラフィックシステム起動時から有効になります。 "
+"保存された環境設定<hr>変更は次にグラフィックスシステムを再起動するときに有効"
+"になります。 SaX2を今終了しますか?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
 "<b>Testing Configuration Failed</b><hr>For further information, refer to the "
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
+msgstr ""
+"環境設定をテストできませんでした<hr>詳細については、ファイル<tt>/var/log/"
+"Xorg.99.log</tt>を参照してください。 次のレポートは呼び出しインスタンスから作"
+"成されています:"
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
 msgstr ""
 
 #. /.../
@@ -1781,9 +1651,6 @@ msgstr "アイドルタイマ ..."
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 の完了 ..."
-
-#~ msgid "Dialog information..."
-#~ msgstr "ダイアログに関する情報 ..."
 
 #~ msgid "Exception..."
 #~ msgstr "例外処理 ..."

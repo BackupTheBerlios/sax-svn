@@ -110,6 +110,7 @@ void SCCMouseTest::wheelEvent (int btn) {
 	if (btn > 0) {
 		setPixmap (4);
 	} else {
+		setPixmap (0);
 		setPixmap (5);
 	}
 	mStatus -> message (mText["WheelMoved"]);

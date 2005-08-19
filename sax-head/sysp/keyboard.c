@@ -101,6 +101,9 @@ void ScanKeyboard::Scan (void) {
 		kp.scrollock   = keymap.scrollock;
 		kp.rightctl    = keymap.rightctl;
 		kp.options     = keymap.options;
+		if (kp.options == "x") {
+			kp.options = "grp:alt_shift_toggle";
+		}
 		break;
 	}
 	}

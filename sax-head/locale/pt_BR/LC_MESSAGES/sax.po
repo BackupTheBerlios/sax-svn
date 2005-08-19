@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Sax\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2002-07-01 14:56+0200\n"
-"Last-Translator: Craig Jeffares <cjeffares@novell.com>\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,41 +19,43 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>Sugestão do SaX2</b><hr>O sistema gráfico atualmente selecionado é "
-"baseado em uma sugestão feita pelo SaX2. Se isso for aceitável, clique em "
-"<b>Ok</b>. Caso contrário, modifique a configuração."
+"<b>Sugestão do SaX2</b><hr>O sistema gráfico iniciado atualmente é baseado "
+"em uma sugestão feita pelo SaX2. Se isso for aceitável, clique em <b>OK</"
+"b>.  Caso contrário, mude a configuração."
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
-msgstr "Configuração automática do sistema gráfico"
+msgstr "Configuração Automática do Sistema Gráfico"
+
+#. Caption text for informing the user
+#, fuzzy
+msgid "Information..."
+msgstr "Informações da caixa de diálogo..."
 
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
-msgstr ""
+msgstr "SaX2: configuração do SUSE Advanced X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "Centro de Controle do SaX"
 
 #. Title text on the right side
 msgid "SUSE Linux"
-msgstr ""
+msgstr "SUSE Linux"
 
 #. Help Button text
 msgid "&Help"
 msgstr "&Ajuda"
 
 #. Ok Button text
-#, fuzzy
 msgid "&OK"
-msgstr "&Ok"
+msgstr "&OK"
 
 #. Yes Button text
 msgid "&Yes"
@@ -69,18 +71,16 @@ msgid "&Cancel"
 msgstr "&Cancelar"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr "<b>Sair do SaX2:</b><hr>Sair do SaX2 agora?"
+msgstr "<b>Sair do SaX2</b><hr>Sair do SaX2 agora?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "Mensagem"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "Alte&rar configuração"
+msgstr "M&udar Configuração"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -88,9 +88,8 @@ msgid "Monitor"
 msgstr "Monitor"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "Configurar propriedades do monitor..."
+msgstr "Propriedades da Placa e do Monitor"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -98,19 +97,16 @@ msgid "Mouse"
 msgstr "Mouse"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "Propriedades..."
+msgstr "Propriedades do Mouse"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "Modelo do Teclado"
+msgstr "Teclado"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "Configurar propriedades do monitor..."
+msgstr "Propriedades do Teclado"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -118,9 +114,8 @@ msgid "Tablet"
 msgstr "Mesa Digitalizadora"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "Propriedades..."
+msgstr "Propriedades da Mesa Digitalizadora"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -128,18 +123,16 @@ msgid "Touchscreen"
 msgstr "Tela Sensível ao Toque"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "Configurar propriedades do monitor..."
+msgstr "Propriedades da Tela Sensível ao Toque"
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "Configurar propriedades do monitor..."
+msgstr "Propriedades do Acesso Remoto"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -147,73 +140,63 @@ msgstr "Vídeo"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Ativar esta Exibição"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "Ativar este Ponteiro"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "Placa"
 
 #. Change data
-#, fuzzy
 msgid "&Change..."
-msgstr "<Mudar senha...>"
+msgstr "&Mudar..."
 
 #. Set options for some kind of data
 msgid "&Options..."
 msgstr "&Opções..."
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "Configurar teclado..."
+msgstr "Con&figurar..."
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
-msgstr "Modo Multihead"
+msgstr "Modo de Cabeça Dupla"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
-#, fuzzy
 msgid "Options"
-msgstr "&Opções"
+msgstr "Opções"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
-msgstr "Habilitar Roda do Mouse"
+msgstr "Ativar Roda do Mouse"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
-msgstr "Habilitar emulação de 3 botões"
+msgstr "Ativar Emulação de 3 Botões"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Emular roda com o botão do mouse:"
+msgstr "Emular Roda com Botão do Mouse"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
 msgstr "Girar Tela"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "&Testar..."
+msgstr "Teste"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "&Testar..."
+msgstr "&Testar"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -226,103 +209,86 @@ msgid "Layout"
 msgstr "Layout"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "Campo de teste"
+msgstr "Teste pronto"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
-msgstr "Clique único de botão: Concluído"
+msgstr "Único Clique: Concluído"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
-msgstr "Clique duplo de botão: Concluído"
+msgstr "Clique Duplo: Concluído"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "Mapeamento da Tecla ScrollLock"
+msgstr "Rolando"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "Botão pressionado..."
+msgstr "Botão pressionado"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "Botão liberado..."
+msgstr "Botão liberado"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
-msgstr "Roda parada: Concluído"
+msgstr "Interrompido: Concluído"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
-msgstr "Propriedades..."
+msgstr "Propriedades"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Modo Multihead"
+msgstr "Ativar Modo de Cabeça Dupla"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Resolução Y"
+msgstr "Resolução"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
-msgstr "&Cores"
+msgstr "Cores"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "Aceleração 3D"
+msgstr "Ativar Aceleração 3D"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "Monitor-Modelo"
+msgstr "Monitor para Placa"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "Monitor-Modelo"
+msgstr "Segundo Monitor para Placa"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "&Freqüências"
+msgstr "Freqüências de Sincronização"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
-msgstr "Tamanho do vídeo"
+msgstr "Tamanho da Tela"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "Localização"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "Ativado no modo %1 com %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "Ativado no modo padrão do driver"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
 msgstr "Não configurado"
 
@@ -331,11 +297,12 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>Impossível Desativar Todas as Telas</b><hr><nobr>Pelo menos uma tela deve "
+"estar ativa.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Configuração salva..."
+msgstr "Nenhuma configuração disponível"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -362,127 +329,111 @@ msgstr ""
 "Crie uma exibição grande a partir de todas as telas"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
-msgstr "Modo Multihead"
+msgstr "Modo Multicabeça"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "Conectado a:"
+msgstr "Conectado a"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Monitor Desconhecido..."
+msgstr "Monitor Desconhecido:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "Linha Modelo Primária:"
+msgstr "Monitor Principal:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "Seleção de cores..."
+msgstr "Configurações do Monitor"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "Sistema X11"
+msgstr "Configurações do Monitor"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "Placa de vídeo"
+msgstr "Configurações da Placa de Vídeo"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Modo Multihead"
+msgstr "Configurações de Cabeça Dupla"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
-msgstr "Não girada"
+msgstr "Não Girado"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
-msgstr "Para a esquerda"
+msgstr "Para a Esquerda"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
-msgstr "Para a direita"
+msgstr "Para a Direita"
 
 #. Popup message to ask the user for an option value
-#, fuzzy
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>A opção %1 requer um valor</b><hr>Configure um valor para a opção."
+msgstr ""
+"<b>A Opção Precisa de um Valor</b><hr><nobr>Configure um valor para a opção %"
+"1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Modelo: Seleção de Fornecedor e Nome..."
+msgstr "Monitor: Seleção de Fornecedor e Nome"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Modelo: Seleção de Fornecedor e Nome..."
+msgstr "Mouse: Seleção de Fornecedor e Nome"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "Configuração da freqüência de sincronização manual..."
+msgstr "Configuração Manual de Freqüência de Sincronização"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "Diagonal e Proporção"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
 msgstr "Tamanho do Vídeo em [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>Nota:</b><hr>intervalos de sincronização errados podem danificar o "
-"monitor. Consulte o manual do monitor para obter as configurações a seguir."
+"<b>Nota:</b> Faixas de sincronização incorretas podem danificar o monitor. "
+"Consulte o manual do monitor para obter as configurações.<br><br>Se quiser "
+"que o monitor não use sua classificação máxima, reduza as faixas de "
+"sincronização."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "Ativar DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Disco de Utilitários..."
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "Horizontal:"
+msgstr "Horizontal"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "Selecionar resoluções"
+msgstr "Segundo Monitor:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "Selecionar resoluções"
+msgstr "Resolução do Segundo Monitor"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "Vertical:"
+msgstr "Vertical"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -494,20 +445,19 @@ msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Proporção"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "Horizontal:"
+msgstr "Diagonal"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "Eixo X (mm)"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Eixo Y (mm)"
 
 #. Something is not configured
 msgid "Not configured"
@@ -515,51 +465,45 @@ msgstr "Não configurado"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "polegadas"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Inserir CD ou disco</b><hr>Insira o CD ou disco de utilitários de vídeo "
-"do fornecedor do monitor."
+"<b>Inserir CD ou Disco</b><hr>Insira o CD ou o disco do utilitário do "
+"fornecedor do monitor."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
-"<b>Erro de leitura</b><hr>Não foi possível ler o CD ou disco. Isso pode "
-"indicar uma mídia danificada ou arquivos de informações formatados "
-"incorretamente na mídia."
+"<b>Erro de Leitura</b><hr>Impossível ler do CD ou disco. Isso pode indicar "
+"uma mídia danificada ou arquivos de informações incorretamente formatados."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "Modo Tradicional Ativo"
+msgstr "Tradicional"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "Clone"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "Mouse"
+msgstr "Modelo do Mouse"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
 msgstr "Configuração Primária"
 
 #. Label text for the primary keyboard type
-#, fuzzy
 msgid "Type"
 msgstr "Tipo"
 
@@ -569,9 +513,8 @@ msgid "Variant"
 msgstr "Variante"
 
 #. Group box title for the additional keyboard setup
-#, fuzzy
 msgid "Additional Layouts"
-msgstr "Layout(s) Adicional(is)"
+msgstr "Layouts Adicionais"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -582,19 +525,16 @@ msgid "Keytable"
 msgstr "Tabela de Chaves"
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
-msgstr "Comportamento do grupo Shift/Lock"
+msgstr "Comportamento Deslocar/Bloquear Grupo "
 
 #. List View root item text
-#, fuzzy
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Usar LED do teclado para mostrar grupo alternativo"
+msgstr "Usar LED do Teclado para Mostrar Grupo Alternativo"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "Posição da Tecla Control"
+msgstr "Criar Posição da Tecla"
 
 #. List View root item text
 #. XKBFile extension text
@@ -602,347 +542,288 @@ msgid "Control Key Position"
 msgstr "Posição da Tecla Control"
 
 #. List View root item text
-#, fuzzy
 msgid "Third Level Chooser"
-msgstr "Seletores de terceiro nível"
+msgstr "Seletor de Terceiro Nível"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
-msgstr "Comportamento da tecla Alt/Windows"
+msgstr "Comportamento da Tecla Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
-msgstr "Comportamento da tecla CapsLock"
+msgstr "Comportamento da Tecla CapsLock"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed."
-msgstr "A tecla Windows esquerda alterna o grupo quando pressionada"
+msgstr "A tecla Alt esquerda alterna o grupo quando pressionada."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "Ambas as teclas Ctrl juntas alternam o grupo"
+msgstr "As teclas Ctrl juntas alternam o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "A tecla Shift direita alterna o grupo"
+msgstr "A tecla Shift direita alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "A tecla Windows esquerda alterna o grupo"
+msgstr "A tecla Win esquerda alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "A tecla Alt esquerda alterna o grupo"
+msgstr "A tecla Alt esquerda alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed."
-msgstr "Ambas as teclas Windows alternam o grupo quando pressionadas"
+msgstr "Ambas as teclas Win alternam o grupo quando pressionadas."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches group while pressed."
-msgstr "A tecla Windows direita alterna o grupo quando pressionada"
+msgstr "A tecla Ctrl direita alterna o grupo quando pressionada."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "CapsLock somente bloqueia o modificador Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
+msgstr "CapsLock alterna a capitalização normal de caracteres alfabéticos."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "CapsLock alterna Shift para que todas as teclas sejam afetadas."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key is Compose."
-msgstr "A tecla Windows direita é Compose"
+msgstr "A tecla Windows direita é Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group."
-msgstr "A tecla Caps Lock alterna o grupo"
+msgstr "Shift+CapsLock muda o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches group while pressed."
-msgstr "A tecla Alt Direita alterna o grupo quando pressionada"
+msgstr "A tecla R-Alt alterna o grupo quando pressionada."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "A tecla Control direita funciona como Alt direita."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
 msgstr "Tecla Control na parte inferior esquerda"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Pressione qualquer uma das teclas Windows para escolher o 3o. nível"
+msgstr "Pressione qualquer uma das teclas Windows para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Pressione a tecla Windows direita para escolher o 3o. nível"
+msgstr "Pressione a tecla Alt direita para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes group."
-msgstr "A tecla Ctrl direita alterna o grupo"
+msgstr "A tecla Ctrl direita alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "A tecla Alt direita é Compose"
+msgstr "A tecla Alt direita é Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "A tecla Alt direita é Compose"
+msgstr "A tecla Ctrl direita é Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative group."
-msgstr "O LED Scroll_Lock mostra o grupo alternativo"
+msgstr "O LED ScrollLock mostra o grupo alternativo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Tecla Control à esquerda de 'A'"
+msgstr "A tecla Ctrl à esquerda de -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
 msgstr "Seletores de terceiro nível"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "Ambas as teclas Shift juntas alternam o grupo"
+msgstr "As teclas Shift juntas alternam o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "usa capitalização interna. Shift cancela a tecla Caps."
+msgstr "CapsLock usa capitalização interna. Shift cancela CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "Tornar CapsLock uma tecla Control adicional"
+msgstr "Tornar CapsLock uma tecla Control adicional."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Pressione a tecla Windows esquerda para escolher o 3o. nível"
+msgstr "Pressione a tecla Windows esquerda para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "A tecla Windows direita alterna o grupo"
+msgstr "A tecla Windows direita alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
 msgstr "Meta é mapeado para a tecla Windows esquerda."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative group."
-msgstr "O LED Caps_Lock mostra o grupo alternativo"
+msgstr "O LED CapsLock mostra o grupo alternativo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative group."
-msgstr "O LED Num_Lock mostra o grupo alternativo"
+msgstr "O LED NumLock mostra o grupo alternativo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "A tecla Shift esquerda alterna o grupo"
+msgstr "A tecla Shift esquerda alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "A tecla Windows esquerda alterna o grupo quando pressionada"
+msgstr "A tecla Windows esquerda alterna o grupo quando pressionada."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "O Menu é Compose"
+msgstr "O Menu é Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "Ambas as teclas Alt juntas alternam o grupo"
+msgstr "As teclas Alt juntas alternam o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "A tecla Caps Lock alterna o grupo"
+msgstr "A tecla CapsLock alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
-msgstr "Trocar Control e Caps Lock"
+msgstr "Controle de Troca e CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Pressione qualquer uma das teclas Windows para escolher o 3o. nível"
+msgstr "Pressione qualquer uma das teclas Alt para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "A tecla Alt direita alterna o grupo"
+msgstr "A tecla Alt direita alterna o grupo."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
+msgstr "Shift com teclas do teclado numérico funciona como no MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "Teclas especiais (Ctrl+Alt+<key>) usadas em um servidor."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
 msgstr "Hyper é mapeado para as teclas Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Meta é mapeado para a tecla Windows esquerda."
+msgstr "Alt é mapeado para a tecla Windows direita e Super para o Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)."
 msgstr "Super é mapeado para as teclas Windows (padrão)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
 msgstr "Alt e Meta nas teclas Alt (padrão)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
 msgstr "Adicionar o comportamento padrão à tecla Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Alt e Meta nas teclas Alt (padrão)."
+msgstr "Alt e Meta estão nas teclas Alt (padrão)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Control to choose 3rd level."
-msgstr "Pressione a tecla Control direita para escolher o 3o. nível"
+msgstr "Pressione a tecla Control direita para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Alt+Shift alterna o grupo"
+msgstr "Alt+Shift alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "Control+Shift alterna o grupo"
+msgstr "Control+Shift alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "age como a tecla Shift quando travada. Shift cancela a tecla Caps."
+msgstr "CapLocks age como Shift com bloqueio. Shift cancela CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative group."
-msgstr "Usar LED do teclado para mostrar grupo alternativo"
+msgstr "Usar LED do teclado para mostrar grupo alternativo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Pressione a tecla Windows direita para escolher o 3o. nível"
+msgstr "Pressione a tecla Windows direita para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Pressione a tecla Windows esquerda para escolher o 3o. nível"
+msgstr "Pressione a tecla Alt esquerda para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta é mapeado para as teclas Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Menu key to choose 3rd level."
-msgstr "Pressione a tecla Menu para escolher o 3o. nível"
+msgstr "Pressione a tecla Menu para escolher o 3o. nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "A tecla Ctrl esquerda alterna o grupo"
+msgstr "A tecla Ctrl esquerda alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "A tecla Menu alterna o grupo"
+msgstr "A tecla Menu alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Alt+Control alterna o grupo"
+msgstr "Alt+Control alterna o grupo."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches group while pressed."
-msgstr "A tecla Windows direita alterna o grupo quando pressionada"
+msgstr "A tecla Windows direita alterna o grupo quando pressionada."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "Porta e Modo"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Canetas Eletrônicas"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "Aceleração 3D"
+msgstr "Ativar esta Mesa Digitalizadora"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Modelo: Seleção de Fornecedor e Nome..."
+msgstr "Mesa Digitalizadora: Seleção de Fornecedor e Nome"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "Conectado a:"
+msgstr "Porta de Conexão"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Configuração Primária"
+msgstr "Modo da Mesa Digitalizadora Principal"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Modo de Caneta ou Borracha"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
@@ -978,156 +859,149 @@ msgstr "Adicionar Borracha"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "Configurações de Caneta ou Borracha"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Propriedades..."
+msgstr "Propriedades da Caneta"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Propriedades especiais do mouse..."
+msgstr "Propriedades da Borracha"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Atribuir Tela Sensível ao Toque ao Número de Exibição %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Modelo: Seleção de Fornecedor e Nome..."
+msgstr "Tela Sensível ao Toque: Seleção de Fornecedor e Nome"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"<b>Etapas finais:</b><hr>A última etapa é salvar a nova configuração. É "
-"recomendável testar a nova configuração antes de salvá-la. Se o servidor de "
-"teste exibir uma área de trabalho corrompida, pressione <b>[ Ctrl+Alt"
-"+Backspace ]</b> para executar um comando kill no servidor."
+"<b>Etapas Finais</b><hr>A última etapa é gravar sua nova configuração. "
+"Recomenda-se testar a nova configuração antes de salvá-la. Se o servidor de "
+"teste mostrar uma área de trabalho corrompida, pressione <b>[ Ctrl+Alt"
+"+Backspace ]</b> para desativar o servidor."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "Sistema X11"
+msgstr "Servidor VNC"
 
 #. Activate VNC server checkbox
-#, fuzzy
 msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Permitir acesso para exibição usando o protocolo VNC"
+msgstr "Permitir Acesso ao Monitor Usando Protocolo VNC"
 
 #. Group box title for the VNC options
 msgid "VNC Options"
 msgstr "Opções do VNC"
 
 #. Activate VNC password protection checkbox
-#, fuzzy
 msgid "Activate Password Protection"
-msgstr "Habilitar proteção por senha"
+msgstr "Ativar Proteção de Senha"
 
 #. LineEdit label: enter password
 msgid "Password"
 msgstr "Senha"
 
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "<Digitar nova senha...>"
+msgstr "<Digite a nova senha>"
 
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "<Digitar nova senha...>"
+msgstr "<Mudar senha>"
 
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "Verificar senha"
+msgstr "<Verificar senha>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
-msgstr "Habilitar Acesso HTTP"
+msgstr "Ativar Acesso HTTP"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple VNC Connections"
-msgstr "Permitir várias conexões VNC"
+msgstr "Permitir Várias Conexões VNC"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "Porta HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>Incompatibilidade de senhas</b><hr>A primeira e a segunda versões de "
-"senha não correspondem! Tente novamente."
+"<b>Falta de Correspondência de Senha VNC</b><hr>A primeira e a segunda "
+"versões da senha não são iguais."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>Falha de senha</b><hr>O campo de senha foi deixado em branco ou a senha é "
-"curta demais. Digite uma senha com no mínimo seis caracteres."
+"<b>Falha de Senha VNC</b><hr>O campo da senha ficou vazio ou a senha é muito "
+"curta. Digite uma senha com pelo menos seis caracteres."
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>Instalação do software:</b><hr>Alguns pacotes estão ausentes. Instalar os "
+"<b>Instalação de Software:</b><hr>Alguns pacotes estão faltando. Instalar "
 "pacotes ausentes agora?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "Instalação de Pacotes"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "Saída do programa SaX2... "
+msgstr "Importando módulo"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "Saída do programa SaX2... "
+msgstr "SaX2: Importando dados..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "Inicializar cache..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
+"<b>Falha na Gravação da Configuração</b><hr>O seguinte relatório foi criado: "
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Configuração salva:</b><hr>Suas modificações entrarão em vigor na próxima "
-"vez em que o sistema gráfico for reiniciado."
+"<b>Configuração Gravada</b><hr>Suas modificações entrarão em vigor na "
+"próxima vez em que o sistema gráfico for reiniciado. Sair do SaX2 agora?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
 "<b>Testing Configuration Failed</b><hr>For further information, refer to the "
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
+msgstr ""
+"<b>Falha no Teste de Configuração</b><hr>Para obter mais informações, "
+"consulte o arquivo <tt>/var/log/Xorg.99.log</tt>. O seguinte relatório foi "
+"criado da instância de chamada:"
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
 msgstr ""
 
 #. /.../
@@ -1476,11 +1350,11 @@ msgstr "Temporizador ocioso..."
 #~ "subsistema 3D para esta placa, instale o driver comercial da nVidia "
 #~ "primeiro. Instale o driver usando o <b>YaST Online Update</b>. No YOU, "
 #~ "selecione <b>Patches Instaláveis e Instalados</b> como a <b>Categoria do "
-#~ "Patch</b> e selecione <b>Fazer Download do Driver Gráfico da NVIDIA®</b> "
-#~ "na lista de patches (geralmente, na parte inferior da lista). Observe que "
-#~ "é preciso marcar o patch como <b>Atualização</b> (clique o botão direito "
-#~ "do mouse) se você já o tiver instalado antes e o driver tiver sido "
-#~ "desinstalado por algum motivo."
+#~ "Patch</b> e selecione <b>Fazer Download do Driver Gráfico da NVIDIA(r)</"
+#~ "b> na lista de patches (geralmente, na parte inferior da lista). Observe "
+#~ "que é preciso marcar o patch como <b>Atualização</b> (clique o botão "
+#~ "direito do mouse) se você já o tiver instalado antes e o driver tiver "
+#~ "sido desinstalado por algum motivo."
 
 #~ msgid ""
 #~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
@@ -1754,9 +1628,6 @@ msgstr "Temporizador ocioso..."
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "Etapas finais do SaX2..."
-
-#~ msgid "Dialog information..."
-#~ msgstr "Informações da caixa de diálogo..."
 
 #~ msgid "Exception..."
 #~ msgstr "Exceção..."

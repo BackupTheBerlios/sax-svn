@@ -122,6 +122,11 @@ bool SCCVNC::exportData ( void ) {
 		if ( mVNCDisplay->isShared() ) {
 			mVNC.allowMultipleConnections (true);
 		}
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, mTextPtr, SaXMessage::OK,
+			"InfoVNC","InfoCaption"
+		);
+		mMessageBox -> showMessage();
 	}
 	return true;
 }

@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Aug 17 17:28:20 2005
+# Author: Marcus Schaefer <sax@suse.de>, Fri Aug 19 15:45:00 2005
 #
 # Template for monitor data
 # --------------------------
@@ -30829,8 +30829,9 @@ SAMSUNG:SYNCMASTER 470S 480S TFT  {
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 4S  {
  DDC=SAM0100
- Hsync=31-48
- Vsync=43-75
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
 }
 
 #==============================================
@@ -31208,6 +31209,39 @@ SAMSUNG:SYNCMASTER 710S  {
 }
 
 #==============================================
+# SyncMaster 720B
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 720B  {
+ DDC=SAM014C
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 720T (Analog)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 720T (ANALOG)  {
+ DDC=SAM0148
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 720T (Digital)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 720T (DIGITAL)  {
+ DDC=SAM0149
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
 # SYNCMASTER 750IFT(T)
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 750IFT(T)  {
@@ -31330,6 +31364,16 @@ SAMSUNG:SYNCMASTER 755DFT740DFT  {
  DDC=SAM0005
  Option=DPMS
  Hsync=30-85
+ Vsync=50-160
+}
+
+#==============================================
+# SyncMaster 757NF(T)/707NF/700NF
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 757NF(T)/707NF/700NF  {
+ DDC=SAM002A
+ Option=DPMS
+ Hsync=30-96
  Vsync=50-160
 }
 
@@ -31473,6 +31517,28 @@ SAMSUNG:SYNCMASTER 900SL PLUS(T)950SL PLUS(T)  {
  Option=DPMS
  Hsync=30-110
  Vsync=50-160
+}
+
+#==============================================
+# SyncMaster 920T (Analog)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 920T (ANALOG)  {
+ DDC=SAM014A
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 920T (Digital)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 920T (DIGITAL)  {
+ DDC=SAM014B
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
 }
 
 #==============================================

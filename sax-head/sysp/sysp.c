@@ -494,7 +494,7 @@ char* GetProfileDriver ( string profile ) {
 void PrintMouseData(ScanMouse m) {
 	MouseData data;
 	int mouse = 0;
-	int buttonCount = 0;
+	int buttonCount = -1;
 	int devices[m.Count()];
 	if (m.Count() == 1) {
 		//============================================

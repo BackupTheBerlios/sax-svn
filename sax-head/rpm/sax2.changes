@@ -1,4 +1,17 @@
 -------------------------------------------------------------------
+Wed Aug 17 18:49:14 CEST 2005 - ms@suse.de
+
+- fixed keyboard toggle setup (#105420)
+- fixed appearance of scrolling pixmaps in mouse test field (#105781)
+- fixed CDB entries for various SAMSUNG monitors (#105577) (#105565)
+- include information box if VNC has been activated to setup the
+  needed RFB and HTTP ports within the firewall setup as well (#105628)
+- fixed FireGL profile to use internal mode pool only
+- fixed mouse detection on ppc64, button detection with libhd
+  is failing (#102743)
+- update translations from dublin
+
+-------------------------------------------------------------------
 Mon Aug 15 19:32:36 CEST 2005 - ms@suse.de
 
 - fixed MetaModes handling according to bug (#104728)

@@ -36,6 +36,11 @@ msgstr ""
 msgid "Automatic Graphics System Setup"
 msgstr "Automatisk grafik system setup"
 
+#. Caption text for informing the user
+#, fuzzy
+msgid "Information..."
+msgstr "Dialog information..."
+
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
 msgstr ""
@@ -1091,6 +1096,13 @@ msgid ""
 "from the calling instance:"
 msgstr ""
 
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
+msgstr ""
+
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #. This file contains the gettext keys used within a gettext call in the
@@ -1716,9 +1728,6 @@ msgstr ""
 
 #~ msgid "SaX2 final steps..."
 #~ msgstr "SaX2 de sidste skridt..."
-
-#~ msgid "Dialog information..."
-#~ msgstr "Dialog information..."
 
 #~ msgid "Exception..."
 #~ msgstr "Undtagelse..."

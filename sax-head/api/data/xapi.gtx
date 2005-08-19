@@ -9,6 +9,9 @@ Suggestion=<b>SaX2 Suggestion</b><hr>The currently-started graphics system is ba
 # Caption text for the startup information window
 SuggestionCaption=Automatic Graphics System Setup
 
+# Caption text for informing the user
+InfoCaption=Information...
+
 # Caption text for the main window
 GUICaption=SaX2: SUSE Advanced X11 Configuration
 
@@ -718,3 +721,6 @@ SavingDone=<b>Configuration Saved</b><hr>Your modifications will take effect the
 
 # Message box text: testing the configuration has failed
 TestingFailed=<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:
+
+# Message box text: if VNC has been enabled the firewall should be checked
+InfoVNC=<b>VNC configuration information</b><hr>The VNC service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST.
