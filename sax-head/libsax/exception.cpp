@@ -158,7 +158,7 @@ QString SaXException::errorString ( void ) {
 	//! obtain currently set error message, on success
 	//! the string "Success" is returned
 	// ----
-	return *mErrorString;
+	return QString::fromLocal8Bit(*mErrorString);
 }
 
 //====================================
@@ -172,7 +172,7 @@ QString SaXException::errorValue ( void ) {
 	if (mErrorValue->isEmpty()) {
 		return "(null)";
 	}
-	return *mErrorValue;
+	return QString::fromLocal8Bit(*mErrorValue);
 }
 
 //====================================

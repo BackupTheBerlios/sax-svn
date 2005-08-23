@@ -207,6 +207,7 @@ int main (int argc,char*argv[]) {
 		}
 	}
 	sccGUI -> show();
+	sccGUI -> setCommonButtonWidth();
 	return SCCApp.exec();
 }
 

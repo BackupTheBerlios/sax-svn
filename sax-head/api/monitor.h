@@ -72,6 +72,7 @@ class SCCMonitor : public SCCDialog {
 	QCheckBox*         mCheck3D;
 
 	public:
+	void setCommonButtonWidth ( void );
 	bool exportData ( void );
 	void init   ( void );
 	void import ( void );

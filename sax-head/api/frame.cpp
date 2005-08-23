@@ -262,18 +262,6 @@ SCCFrame::SCCFrame (
 	mHelper = new QPushButton ( mText["Help"]  , mMainFrame );
 	mFinish = new QPushButton ( mText["Ok"]    , mMainFrame );
 	mCancel = new QPushButton ( mText["Cancel"], mMainFrame );
-	QPushButton* completionWidgets[] = {
-		mHelper,mFinish,mCancel
-	};
-	int fixedWidth = 0;
-	for (int i=0;i<3;i++) {
-	if (completionWidgets[i]->width() > fixedWidth) {
-		fixedWidth = completionWidgets[i]->width();
-	}
-	}
-	for (int i=0;i<3;i++) {
-		completionWidgets[i]->setFixedWidth (fixedWidth);
-	}
 
 	//=====================================
 	// add widgets to the layout structure
@@ -329,6 +317,25 @@ SCCFrame::SCCFrame (
 
 	// disabled until SuSE's help strategy is clear
 	mHelper -> setDisabled ( true );
+}
+
+//=====================================
+// setCommonButtonWidth
+//-------------------------------------
+void SCCFrame::setCommonButtonWidth ( void ) {
+	QPushButton* completionWidgets[] = {
+		mHelper,mFinish,mCancel
+	};
+	int fixedWidth = 0;
+	for (int i=0;i<3;i++) {
+	if (completionWidgets[i]->width() > fixedWidth) {
+		fixedWidth = completionWidgets[i]->width();
+	}
+	}
+	for (int i=0;i<3;i++) {
+		completionWidgets[i]->setFixedWidth (fixedWidth);
+	}
+	mMonitor->setCommonButtonWidth();
 }
 
 //=====================================

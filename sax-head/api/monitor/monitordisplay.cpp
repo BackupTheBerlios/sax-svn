@@ -111,21 +111,6 @@ SCCMonitorDisplay::SCCMonitorDisplay (
 	mConfigureDualHeadDialog -> import();
 
 	//=====================================
-	// set same width for all push buttons
-	//-------------------------------------
-	QPushButton* thisButtonWidgets[] = {
-		mCardOptions,mChangeMonitor,mConfigureDualHead
-	};
-	int fixedWidth = 0;
-	for (int i=0;i<3;i++) {
-	if (thisButtonWidgets[i]->width() > fixedWidth) {
-		fixedWidth = thisButtonWidgets[i]->width();
-	}
-	}
-	for (int i=0;i<3;i++) {
-		thisButtonWidgets[i]->setFixedWidth (fixedWidth);
-	}
-	//=====================================
 	// connect widgets
 	//-------------------------------------
 	QObject::connect (
@@ -613,6 +598,23 @@ void SCCMonitorDisplay::slotColors ( int index ) {
 			mSelectedColor = it.currentKey().toInt();
 			break;
 		}
+	}
+}
+//====================================
+// setCommonButtonWidth
+//------------------------------------
+void SCCMonitorDisplay::setCommonButtonWidth ( void ) {
+	QPushButton* thisButtonWidgets[] = {
+		mCardOptions,mChangeMonitor,mConfigureDualHead
+	};
+	int fixedWidth = 0;
+	for (int i=0;i<3;i++) {
+	if (thisButtonWidgets[i]->width() > fixedWidth) {
+		fixedWidth = thisButtonWidgets[i]->width();
+	}
+	}
+	for (int i=0;i<3;i++) {
+		thisButtonWidgets[i]->setFixedWidth (fixedWidth);
 	}
 }
 } // end namespace

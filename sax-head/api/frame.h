@@ -157,6 +157,7 @@ class SCCFrame : public QWidget {
 
 	public:
 	void evaluateAutoDetection ( void );
+	void setCommonButtonWidth ( void );
 	bool startDialog ( const QString& );
 	QDict<QString>* getTextPtr ( void );
 

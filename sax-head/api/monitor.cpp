@@ -721,7 +721,7 @@ bool SCCMonitor::exportData ( void ) {
 						//====================================
 						// setup profile FGLRX data
 						//------------------------------------
-						if ((key== "MonitorLayout") && (driver== "fglrx")) {
+						if (key== "ForceMonitors") {
 							saxCard.addCardOption ( key,val );
 						}
 						if (key == "DesktopSetup") {
@@ -760,6 +760,16 @@ bool SCCMonitor::exportData ( void ) {
 							int vsmin = dualModel->getVSmin();
 							QTextOStream (&vsync) << vsmin << "-" << vsmax;
 							saxCard.addCardOption ( key,vsync );
+						}
+						if (key == "Modes2") {
+							QString resolution;
+							QList<QString> rList2=dualData->getResolutionList();
+							QListIterator<QString> ir (rList2);
+							for (; ir.current(); ++ir) {
+								resolution.append(","+*ir.current());
+							}
+							resolution.replace(QRegExp("^,"),"");
+							saxCard.addCardOption ( key,resolution );
 						}
 					}
 				}
@@ -864,5 +874,15 @@ int SCCMonitor::compareResolution ( const QString& r1,const QString& r2 ) {
 		return 1;
 	}
 	return -1;
+}
+//====================================
+// setCommonButtonWidth
+//------------------------------------
+void SCCMonitor::setCommonButtonWidth ( void ) {
+	QListIterator<SCCMonitorDisplay> it (mMonitorDisplay);
+	for (; it.current(); ++it) {
+		SCCMonitorDisplay* display = it.current();
+		display->setCommonButtonWidth();
+	}
 }
 } // end namespace
