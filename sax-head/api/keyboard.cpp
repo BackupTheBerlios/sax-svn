@@ -140,6 +140,7 @@ bool SCCKeyboard::exportData ( void ) {
 	saxKeyboard.setXKBModel  ( type );
 
 	int count = 0;
+	int kbcnt = 0;
 	//====================================
 	// save keyboard layout(s)
 	//------------------------------------
@@ -160,6 +161,7 @@ bool SCCKeyboard::exportData ( void ) {
 		}
 		count++;
 	}
+	kbcnt = count;
 	count = 0;
 	//====================================
 	// save keyboard options
@@ -173,6 +175,15 @@ bool SCCKeyboard::exportData ( void ) {
 			saxKeyboard.addXKBOption ( option );
 		}
 		count++;
+	}
+	//====================================
+	// add keyboard toggle key
+	//------------------------------------
+	if (kbcnt == 1) {
+		saxKeyboard.removeXKBOption ("grp:alt_shift_toggle");
+	}
+	if ((kbcnt > 1) && (option.isEmpty())) {
+		saxKeyboard.setXKBOption ( "grp:alt_shift_toggle" );
 	}
 	return true;
 }
