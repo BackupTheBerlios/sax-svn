@@ -121,7 +121,6 @@ class SCCMonitorDual : public SCCDialog {
 	QLabel*        mLabelSecondResolution;
 	QComboBox*     mResolution;
 	QButtonGroup*  mModeGroup;
-	QRadioButton*  mTraditional;
 	QRadioButton*  mClone;
 	QRadioButton*  mXinerama;
 	QButtonGroup*  mOrientationGroup;

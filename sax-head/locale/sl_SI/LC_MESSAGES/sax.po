@@ -3,14 +3,14 @@
 # translation of abc.po to Slovenščina
 # translation of sax.sl_SI.po to Slovenščina
 # domain "sax.mo"
-# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
-# Janez Krek <janez.krek@euroteh.si>, 2003, 2004.
-# 
+# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
+# Janez Krek <janez.krek@euroteh.si>, 2003, 2004, 2005.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-09-05 20:45+0200\n"
+"PO-Revision-Date: 2005-08-31 15:27+0200\n"
 "Last-Translator: Janez Krek <janez.krek@euroteh.si>\n"
 "Language-Team: Slovenščina <sl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,8 @@ msgstr ""
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3);\n"
+"n%100==4 ? 2 : 3);\n"
+"n%100==4 ? 2 : 3);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -26,7 +28,6 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
@@ -37,33 +38,30 @@ msgstr ""
 "na <b>V redu</b> ali nastavitve sistema spremenite po svojih željah."
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
 msgstr "Samodejna nastavitev grafičnega sistema"
 
 #. Caption text for informing the user
-#, fuzzy
 msgid "Information..."
-msgstr "Informacije o pogovornem oknu..."
+msgstr "Informacije..."
 
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
-msgstr ""
+msgstr "SaX2: SUSE napredna prilagoditev X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "SaX Nadzorna plošča"
 
 #. Title text on the right side
 msgid "SUSE Linux"
-msgstr ""
+msgstr "SUSE Linux"
 
 #. Help Button text
 msgid "&Help"
 msgstr "&Pomoč"
 
 #. Ok Button text
-#, fuzzy
 msgid "&OK"
 msgstr "&V redu"
 
@@ -81,16 +79,14 @@ msgid "&Cancel"
 msgstr "&Prekini"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
 msgstr "<b>Zapustitev programa SaX2:</b><hr>Ali želite zapustiti SaX2?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "Sporočilo"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
 msgstr "&Spremeni prilagoditev"
 
@@ -100,9 +96,8 @@ msgid "Monitor"
 msgstr "Monitor"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "Nastavitev lastnosti monitorja..."
+msgstr "Nastavitev lastnosti monitorja in kartice"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -110,19 +105,16 @@ msgid "Mouse"
 msgstr "Miška"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "Lastnosti..."
+msgstr "Lastnosti miške"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "Model tipkovnce"
+msgstr "Tipkovnca"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "Nastavitev lastnosti monitorja..."
+msgstr "Lastnosti tipkovnice"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -130,9 +122,8 @@ msgid "Tablet"
 msgstr "Tableta"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "Lastnosti..."
+msgstr "Lastnosti tablete"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -140,18 +131,16 @@ msgid "Touchscreen"
 msgstr "Zaslon na dotik"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "Nastavitev lastnosti monitorja..."
+msgstr "Lastnosti zaslona na dotik"
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "Nastavitev lastnosti monitorja..."
+msgstr "Lastnosti oddaljenega dostopa"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -159,73 +148,63 @@ msgstr "Zaslon"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Aktiviraj ta zaslon"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "Aktiviraj ta kazalec"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "Kartica"
 
 #. Change data
-#, fuzzy
 msgid "&Change..."
-msgstr "<Spremeni geslo...>"
+msgstr "&Spremeni..."
 
 #. Set options for some kind of data
 msgid "&Options..."
 msgstr "M&ožnosti..."
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "Prilagoditev tipkovnice..."
+msgstr "&Prilagodi..."
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
-msgstr "Način z večimi izhodi"
+msgstr "Način z dvema izhodoma"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
-#, fuzzy
 msgid "Options"
-msgstr "M&ožnosti"
+msgstr "Možnosti"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
-msgstr "Omogoči kolešček na miški"
+msgstr "Aktiviraj kolešček na miški"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
-msgstr "Omogoči posnemanje 3 gumbov"
+msgstr "Aktiviraj posnemanje 3 gumbov"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Posnemaj kolešček z gumbom miške:"
+msgstr "Posnemaj kolešček z gumbom miške"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
 msgstr "Zasukaj zaslon"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "&Test..."
+msgstr "Test"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "&Test..."
+msgstr "&Test"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -238,103 +217,86 @@ msgid "Layout"
 msgstr "Izgled"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "Testno polje"
+msgstr "Test pripravljen"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
 msgstr "Enojni pritisk na gumb: Opravljen"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
 msgstr "Dvojni pritisk na gumb: Opravljen"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "Preslikava ScrollLock"
+msgstr "Pomikanje"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "Gumb pritisnjen..."
+msgstr "Gumb pritisnjen"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "Gumb spuščen..."
+msgstr "Gumb spuščen"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
 msgstr "Zaustavitev koleščka: Opravljeno"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
-msgstr "Lastnosti..."
+msgstr "Lastnosti"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Način z večimi izhodi"
+msgstr "Aktiviraj način z dvema izhodoma"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Ločljivost Y"
+msgstr "Ločljivost"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
-msgstr "&Barve"
+msgstr "Barve"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "3D pospeševanje"
+msgstr "Aktiviraj 3D pospeševanje"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "Model monitorja"
+msgstr "Monitor za kartico"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "Model monitorja"
+msgstr "Drugi monitor za kartico"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "&Frekvence"
+msgstr "Sync frekvence"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
 msgstr "Velikost zaslona"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "Ureditev"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "Aktiviran v %1 načinu z %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "Aktiviran v gonilniku prevzetem načinu"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
 msgstr "Neprilagojeno"
 
@@ -343,11 +305,12 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>Vseh zaslonov ni možno deaktivirati</b><hr><nobr>Najmanj en zaslon mora "
+"biti aktiviran.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Prilagoditev je shranjena..."
+msgstr "Nastavitev ni na voljo"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -374,129 +337,110 @@ msgstr ""
 "Iz vseh zaslonov sestavi enega velikega"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
 msgstr "Način z večimi izhodi"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "Priključen na:"
+msgstr "Priključen na"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Neznan model monitorja..."
+msgstr "Neznan monitor:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "Osnovni Modeline:"
+msgstr "Osnovni monitor:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "Izbira barv..."
+msgstr "Nastvitve monitorja"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "X11 sistem"
+msgstr "Nastavitve miške"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "Grafična kartica"
+msgstr "Nastavitve grafične kartice"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Način z večimi izhodi"
+msgstr "Nastavitev način z dvema izhodoma"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
 msgstr "Ni zasukan"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
 msgstr "V levo"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
 msgstr "V desno"
 
 #. Popup message to ask the user for an option value
-#, fuzzy
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Možnost %1 mora imeti vrednost</b><hr>Prosim vnestite vrednost za izbrano "
-"možnost."
+"<b>Možnost mora imeti vrednost</b><hr><nobr>Prosim vnesite vrednost za "
+"možnost %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Model: izbira proizvajalca in imena..."
+msgstr "Monitor: izbira proizvajalca in imena"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Model: izbira proizvajalca in imena..."
+msgstr "Miška: izbira proizvajalca in imena"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "Ročna nastavitev sync frekvenc..."
+msgstr "Ročna nastavitev sync frekvenc"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "Diagonala in razmerje stranic"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
 msgstr "Velikost zaslona v [mm]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>Komentar:</b><hr>Napačno območje sync frekvenc lahko poškoduje vaš "
-"monitor. Za naslednje nastavitve poglejte navodila za monitor."
+"<b>Opomba:</b><hr>Napačno območje sync frekvenc lahko poškoduje vaš monitor. "
+"Za naslednje nastavitve poglejte navodila za monitor.<br><br>Če ne želite "
+"uporabljati največjih vrednosti frekvenc, zmanjšanje njihovo območje."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "Aktiviraj DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Disketa s priročnimi orodji..."
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "Vodoravno:"
+msgstr "Vodoravno"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "Izbira ločljivosti"
+msgstr "Drugi monitor:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "Izbira ločljivosti"
+msgstr "Ločljivost drugega monitorja"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "Navpično:"
+msgstr "Navpično"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -508,20 +452,19 @@ msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Razmerje stranic"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "Vodoravno:"
+msgstr "Diagonala"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "X os [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Y os [mm]"
 
 #. Something is not configured
 msgid "Not configured"
@@ -529,19 +472,17 @@ msgstr "Neprilagojeno"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "inčev"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Vstavite CD ali disketo</b><hr>Prosim vstavite CD ali disketo s "
-"priročnimi orodji proizvajalca monitorja."
+"<b>Vstavite CD ali disketo</b><hr>Prosim vstavite CD ali disketo "
+"proizvajalca monitorja."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
@@ -551,29 +492,26 @@ msgstr ""
 "na mediju."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "Aktiviran tradicionalni način"
+msgstr "tradicionalni"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "kopirni"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "Miška"
+msgstr "Model miške"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
 msgstr "Glavna nastavitev"
 
 #. Label text for the primary keyboard type
-#, fuzzy
 msgid "Type"
 msgstr "Tip"
 
@@ -583,7 +521,6 @@ msgid "Variant"
 msgstr "Varianta"
 
 #. Group box title for the additional keyboard setup
-#, fuzzy
 msgid "Additional Layouts"
 msgstr "Dodatni izgled(i)"
 
@@ -596,369 +533,310 @@ msgid "Keytable"
 msgstr "Tabela tipk"
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
 msgstr "Shift/Lock vedenje skupine"
 
 #. List View root item text
-#, fuzzy
 msgid "Use Keyboard LED to Show Alternate Group"
 msgstr "Uporabi LED na tipkovnici za prikaz alternativne skupine"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "Položaj Tipke Control"
+msgstr "Položaj tipke Compose"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Položaj Tipke Control"
+msgstr "Položaj tipke Control"
 
 #. List View root item text
-#, fuzzy
 msgid "Third Level Chooser"
 msgstr "Izbira tretjega nivoja"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
 msgstr "Vedenje tipk Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
 msgstr "Vedenje tipke CapsLock"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr ""
+msgstr "brez izbire"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed."
-msgstr "Desni Alt zamenja skupino, če je pritisnjen "
+msgstr "Zamenajva skupine s pritiskom na levo tipko Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "Obe tipki Control skupaj zamenjata skupino"
+msgstr "Obe tipki Control skupaj zamenjata skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "Desna tipka Shift zamenja skupino"
+msgstr "Desna tipka Shift zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "Leva Win-tipka zamenja skupino"
+msgstr "Leva Win-tipka zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "Leva tipka Alt zamenja skupino"
+msgstr "Leva tipka Alt zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed."
-msgstr "Zamenjava skupine s pritiskom na obe Win-tipki"
+msgstr "Zamenjava skupine s pritiskom na obe Win-tipki."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches group while pressed."
-msgstr "Zamenajva skupine s pritiskom na desno Win-tipko"
+msgstr "Zamenjava skupine s pritiskom na desno Win-tipko."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "Tipka CapsLock zaklene Shift spremembe."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
+msgstr "Tipka CapsLock vključi/izključi navaden izpis velikih črk."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "Tipka CapsLock vključi/izključi Shift tako, da to vpliva na vse tipke."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key is Compose."
-msgstr "Desna Win-tipka sodeluje pri sestavljanju"
+msgstr "Desna Win-tipka sodeluje pri sestavljanju."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group."
-msgstr "Tipka Caps lock zamenja skupino"
+msgstr "Tipki Shift in CapsLock zamenjata skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches group while pressed."
-msgstr "Zamenajva skupine s pritiskom na tipk Desni Alt"
+msgstr "Zamenajva skupine s pritiskom na desni tipki Alt."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "Desna tipka Control deluje kot desna tipka Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
 msgstr "Tipka Control, ki je spodaj levo"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Pritisnite eno od Win tipk za izbiro tretjega nivoja"
+msgstr "Pritisnite eno od Win tipk za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Pritisnite desno Win-tipko za izbiro tretjega nivoja"
+msgstr "Pritisnite desno Win-tipko za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes group."
-msgstr "Desna tipka Control zamenja skupino"
+msgstr "Desna tipka Control zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "Desna tipka Alt sodeluje pri sestavljanju"
+msgstr "Desna tipka Alt sodeluje pri sestavljanju."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "Desna tipka Alt sodeluje pri sestavljanju"
+msgstr "Desna tipka Ctrl sodeluje pri sestavljanju."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative group."
-msgstr "Scroll_Lock LED prikazuje alternativno skupino"
+msgstr "ScrollLock LED prikazuje alternativno skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Tipka Control levo od 'A'"
+msgstr "Tipka Control levo od tipke -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
 msgstr "Izbira tretjega nivoja"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "Obe tipki Shift skupaj zamenjata skupino"
+msgstr "Obe tipki Shift skupaj zamenjata skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 msgstr ""
-"uporabi notranjo spremembo velikosti črk. Tipka Shift prekine delovanja "
-"tipke Caps"
+"Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine "
+"delovanje tipke CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "Naredi CapsLock kot dodatno Control"
+msgstr "Naredi CapsLock kot dodatno Control."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Pritisnite levo Win tipko za izbiro tretjega nivoja"
+msgstr "Pritisnite levo Win-tipko za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "Desna Win-tipka zamenja skupino"
+msgstr "Desna Win-tipka zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
-msgstr "Tipka Meta je preslikana v levo Win tipko"
+msgstr "Tipka Meta je preslikana v levo Win-tipko."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative group."
-msgstr "Caps_Lock LED prikazuje alternativno skupino"
+msgstr "CapsLock LED prikazuje alternativno skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative group."
-msgstr "Num_Lock LED prikazuje alternativno skupino"
+msgstr "NumLock LED prikazuje alternativno skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "Zamenajva skupine s pritiskom na levo tipko Shift"
+msgstr "Zamenajva skupine s pritiskom na levo tipko Shift."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "Desni Alt zamenja skupino, če je pritisnjen "
+msgstr "Desna tipka Alt zamenja skupino, če je pritisnjena."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "Tipka Menu je tipka za sestavljanje"
+msgstr "Tipka Menu je tipka za sestavljanje."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "Obe tipki Alt skupaj zamenjata skupino"
+msgstr "Obe tipki Alt skupaj zamenjata skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "Tipka Caps lock zamenja skupino"
+msgstr "Tipka CapsLock zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
-msgstr "Zamenjanj tipki Control in CapsLock"
+msgstr "Zamenjanj tipki Control in CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Pritisnite eno od Win tipk za izbiro tretjega nivoja"
+msgstr "Pritisnite eno od Win-tipk za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "Desna Alt tipka zamenja skupino"
+msgstr "Desna Alt tipka zamenja skupino."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
 msgstr ""
+"Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "Posebne tipke (Ctrl+Alt+<key>) se obdelajo v strežniku."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
 msgstr "Hyper je preslikan v Win+tipke."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Tipka Meta je preslikana v levo Win tipko"
+msgstr "Tipka Meta je preslikana v levo Win-tipko in Super v Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)."
 msgstr "Super je preslikan v Win+tipke (privzeto)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
 msgstr "Alt in Meta na tipkah Alt (privzeto)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
 msgstr "Dodaj običajno vedenje tipki Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys (default)."
 msgstr "Alt in Meta na tipkah Alt (privzeto)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Control to choose 3rd level."
-msgstr "Pritisnite desno tipko Control za izbiro tretjega nivoja"
+msgstr "Pritisnite desno tipko Control za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Pritisk na tipki Alt in Shift zamenja skupino"
+msgstr "Pritisk na tipki Alt in Shift zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "Pritisk na tipki in Shift zamenja skupino"
+msgstr "Pritisk na tipki Control in Shift zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "vedi se kot tipka Shift z zaklepanjem. Tipka Shift izključi Caps."
+msgstr ""
+"Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi "
+"CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative group."
-msgstr "Uporabi LED na tipkovnici za prikaz alternativne skupine"
+msgstr "Uporabi LED na tipkovnici za prikaz alternativne skupine."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Pritisnite desno Win-tipko za izbiro tretjega nivoja"
+msgstr "Pritisnite desno Win-tipko za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Pritisnite levo Win tipko za izbiro tretjega nivoja"
+msgstr "Pritisnite levo Win-tipko za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys."
 msgstr "Tipka Meta je preslikana v Win-tipke."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Menu key to choose 3rd level."
-msgstr "Pritisnite tipko Menu za izbiro tretjega nivoja"
+msgstr "Pritisnite tipko Menu za izbiro tretjega nivoja."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "Leva tipka Control zamenja skupino"
+msgstr "Leva tipka Control zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "Tipka Menu zamenja skupino"
+msgstr "Tipka Menu zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Pritisk na tipki Alt in Control zamenja skupino"
+msgstr "Pritisk na tipki Alt in Control zamenja skupino."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches group while pressed."
-msgstr "Zamenajva skupine s pritiskom na desno Win-tipko"
+msgstr "Zamenajva skupine s pritiskom na desno Win-tipko."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "Vrata in način"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Električna peresa"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3D pospeševanje"
+msgstr "Aktiviraj to tableto"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Model: izbira proizvajalca in imena..."
+msgstr "Tableta: izbira proizvajalca in imena"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "Priključen na:"
+msgstr "Povezava na vrata"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Glavna nastavitev"
+msgstr "Glavni način dela tablete"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Način peresa ali radirke"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
@@ -994,29 +872,25 @@ msgstr "Dodaj radirko"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "Nastavitve peresa ali radirke"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Lastnosti..."
+msgstr "Lastnosti peresa"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Posebne lastnosti miške..."
+msgstr "Lastnosti radirke"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Določi zaslon na dotik na zaslon številka %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Model: izbira proizvajalca in imena..."
+msgstr "Zaslon na dotik: izbira proizvajalca in imena"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
@@ -1025,16 +899,14 @@ msgid ""
 msgstr ""
 "<b>Zaključni koraki:</b><hr>Zadnji korak je shranitev vaših nastavitev. "
 "Priporočljivo je nove nastavitve preizkusiti, preden jih shranite. Če se "
-"testni strežnik naloži z nepopolnim namizjem, pritisnite <b>[ Ctrl-Alt-"
-"Backspace ]</b> za zaustavitev strežnika."
+"testni strežnik naloži z nepopolnim namizjem, pritisnite <b>[ Ctrl+Alt"
+"+Backspace ]</b> za zaustavitev strežnika."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "X11 sistem"
+msgstr "VNC strežnik"
 
 #. Activate VNC server checkbox
-#, fuzzy
 msgid "Allow Access to Display Using VNC Protocol"
 msgstr "Dovoli dostop do zaslona preko VNC protokola"
 
@@ -1043,36 +915,30 @@ msgid "VNC Options"
 msgstr "VNC možnosti"
 
 #. Activate VNC password protection checkbox
-#, fuzzy
 msgid "Activate Password Protection"
-msgstr "Omogoči zaščito z geslom"
+msgstr "Aktiviraj zaščito z geslom"
 
 #. LineEdit label: enter password
 msgid "Password"
 msgstr "Geslo"
 
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "<Vpiši novo geslo...>"
+msgstr "<Vpišite novo geslo>"
 
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "<Vpiši novo geslo...>"
+msgstr "<Spremenite geslo>"
 
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "Preveri geslo"
+msgstr "<Ponovno vpišite geslo>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
-msgstr "Onemogoči HTTP dostop"
+msgstr "Aktiviraj HTTP dostop"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple VNC Connections"
 msgstr "Dovoli več VNC povezav"
 
@@ -1081,25 +947,21 @@ msgid "HTTP Port"
 msgstr "HTTP vrata"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>Različni gesli</b><hr>Prva in druga verzija gesla se razlikujeta! "
-"Poizkusite znova."
+"<b>Razlika med VNC gesli</b><hr>Prva in druga verzija gesla se razlikujeta."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>Napaka v geslu</b><hr>Polje za vpis gesla je prazno ali pa\n"
-"je geslo prekratko. Vnesite geslo, ki je dolgo najmanj 6 znakov!"
+"<b>Napaka v VNC geslu</b><hr>Polje za vpis gesla je prazno ali pa je geslo "
+"prekratko. Vnesite geslo, ki je dolgo najmanj 6 (šest) znakov."
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
@@ -1109,35 +971,34 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "Namestitev paketa"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "SaX2 izhod iz programa... "
+msgstr "Uvoz modula"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "SaX2 izhod iz programa... "
+msgstr "SaX2: uvoz podatkov..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "Inicializacija medpomnilnika..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
+"<b>Shranitev nastavitev ni uspela</b><hr>Izdelano je bilo naslednje poročilo:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Shranitev prilagoditve:</b><hr>Vaše spremembe bodo upoštevane ob "
-"naslednjem zagonu grafičnega sistema."
+"<b>Prilagoditev shranjena</b><hr>Vaše spremembe bodo upoštevane ob "
+"naslednjem zagonu grafičnega sistema. Želite zaključiti z uporabo programa "
+"SaX2?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1145,6 +1006,9 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>Testna prilagoditev ni uspela</b><hr>Za dodatne informacije poglejte "
+"vsebino datoteke <tt>/var/log/Xorg.99.log</tt>. Izdelano je bilo naslednje "
+"poročilo:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1152,6 +1016,9 @@ msgid ""
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
+"<b>Informacije o nastavitvi VNC</b><hr>Storitev VNC za delovanje zahteva, da "
+"so na požarnem zidu odprta: TCP vrata 5900 in HTTP vrata (privzeta vrednost "
+"je 5800). To lahko nastavite z YaST."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1207,1580 +1074,3 @@ msgstr "Prilagoditev na zaslonu"
 
 msgid "Idle timer..."
 msgstr "Idle timer..."
-
-#, fuzzy
-#~ msgid "SaX2: Importing"
-#~ msgstr "SaX2 izhod iz programa... "
-
-#, fuzzy
-#~ msgid "Set up mouse properties"
-#~ msgstr "Posebne lastnosti miške..."
-
-#, fuzzy
-#~ msgid "Set up tablet properties"
-#~ msgstr "Nastavitev lastnosti monitorja..."
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Izgled"
-
-#, fuzzy
-#~ msgid "Variant:"
-#~ msgstr "Varianta"
-
-#, fuzzy
-#~ msgid "Monitor System"
-#~ msgstr "Monitor"
-
-#, fuzzy
-#~ msgid "Keyboard System"
-#~ msgstr "Tipkovnica"
-
-#, fuzzy
-#~ msgid "Tablet System"
-#~ msgstr "Tableta"
-
-#, fuzzy
-#~ msgid "Touchscreen System"
-#~ msgstr "Zaslon na dotik"
-
-#, fuzzy
-#~ msgid "Test:"
-#~ msgstr "&Test..."
-
-#, fuzzy
-#~ msgid "Testfield: Ready..."
-#~ msgstr "Polje za testiranje miške: Pripravljena..."
-
-#, fuzzy
-#~ msgid "Unknown Monitor please change"
-#~ msgstr "Neznan model monitorja"
-
-#~ msgid "Component"
-#~ msgstr "Komponenta"
-
-#~ msgid "with"
-#~ msgstr "z"
-
-#~ msgid "Not available"
-#~ msgstr "Ni na voljo"
-
-#~ msgid "Use the following AccessX settings"
-#~ msgstr "Uporabi naslednje AccessX nastavitve"
-
-#~ msgid "Disable AccessX"
-#~ msgstr "Onemogoči AccessX"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Razno"
-
-#~ msgid "This screen is selected"
-#~ msgstr "Izbran je ta zaslon"
-
-#~ msgid "at"
-#~ msgstr "pri"
-
-#~ msgid "Sync ranges"
-#~ msgstr "Sync območje"
-
-#~ msgid "Wheel is moving..."
-#~ msgstr "Premikanje koleščka..."
-
-#~ msgid "Disable use of accented letters"
-#~ msgstr "Onemogoči uporabo znakov z naglasi"
-
-#~ msgid "Clear test field"
-#~ msgstr "Izbris testnega polja"
-
-#~ msgid "Mouse speed in pixels/sec"
-#~ msgstr "Hitrost miške v pikah na sekundo"
-
-#~ msgid "&Remove Tablet..."
-#~ msgstr "Odst&ranitev tablete..."
-
-#~ msgid "Delay time: (ms)"
-#~ msgstr "Čas zamika v ms"
-
-#~ msgid "Repeat rate: (Symbols/sec)"
-#~ msgstr "Hitrost ponavljanja v znakih na sekundo"
-
-#~ msgid "&Apply"
-#~ msgstr "Uvelj&avi"
-
-#~ msgid "Graphics engine starts with resolution:"
-#~ msgstr "Grafika se zažene z ločljivostjo:"
-
-#~ msgid "Hardware"
-#~ msgstr "Strojna oprema"
-
-#~ msgid "Velocity"
-#~ msgstr "Hitrost"
-
-#~ msgid "Select Keyboard Layout"
-#~ msgstr "Izbira izgleda tipkovnice"
-
-#~ msgid "Symbol recurrence"
-#~ msgstr "Ponovljivost znakov"
-
-#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
-#~ msgstr "<nobr><h3>Tip tipkovnice</h3></nobr>"
-
-#~ msgid "BusID"
-#~ msgstr "BusID"
-
-#~ msgid "ScreenID"
-#~ msgstr "ID zaslona"
-
-#~ msgid "Manufacturer Disk..."
-#~ msgstr "Disketa proizvajalca..."
-
-#~ msgid "Shift/Lock Group"
-#~ msgstr "Skupina Shift/Lock"
-
-#~ msgid "Ctrl Mapping"
-#~ msgstr "Preslikava Control"
-
-#~ msgid "LeftAlt mapping"
-#~ msgstr "Preslikava LeviAlt"
-
-#~ msgid "RightAlt mapping"
-#~ msgstr "Preslikava DesniAlt"
-
-#~ msgid "RightCtl mapping"
-#~ msgstr "Preslikava DesniCtrl"
-
-#~ msgid "Default"
-#~ msgstr "Privzeto"
-
-#~ msgid "R-Alt switch group while pressed"
-#~ msgstr "Desni Alt zamenja skupino, če je pritisnjen "
-
-#~ msgid "R-Alt switch group"
-#~ msgstr "Desni Alt zamenja skupino"
-
-#~ msgid "Both Shift Keys change group"
-#~ msgstr "Obe tipki Shift zamenjata skupino"
-
-#~ msgid "Ctrl and Shift change group"
-#~ msgstr "Tipki Control in Shift zamenjata skupino"
-
-#~ msgid "Alt and Ctrl change group"
-#~ msgstr "Tipki Alt in Control zamenjata skupino"
-
-#~ msgid "CapsLock as additional control"
-#~ msgstr "CapsLock kot dodatna kontrola"
-
-#~ msgid "Swap Ctrl and CapsLock"
-#~ msgstr "Zamenjava tipk Control in CapsLock"
-
-#~ msgid "Ctrl Key at left of <A>"
-#~ msgstr "Tipka Control, ki je levo od <A>"
-
-#~ msgid "Ctrl Key at bottom left"
-#~ msgstr "Tipka Control, ki je spodaj levo"
-
-#~ msgid "Modeline Algorithm"
-#~ msgstr "Modeline algoritem"
-
-#~ msgid "Color and Resolution"
-#~ msgstr "Barve in ločljivost"
-
-#~ msgid "Virtual Resolution"
-#~ msgstr "Navidezna ločljivost"
-
-#~ msgid "Language Layout"
-#~ msgstr "Izgled jezika"
-
-#~ msgid "Screen Layout"
-#~ msgstr "Izgled zaslona"
-
-#~ msgid "Server layout:"
-#~ msgstr "Izgled strežnika:"
-
-#~ msgid "Mode:"
-#~ msgstr "Način:"
-
-#~ msgid "MHz"
-#~ msgstr "MHz"
-
-#~ msgid "Enable or Disable AccessX"
-#~ msgstr "Omogoči/onemogoči AccessX"
-
-#~ msgid "Enable 3D features"
-#~ msgstr "Omogoči 3D značilnosti"
-
-#~ msgid "Enable DPMS"
-#~ msgstr "Omogoči DMPS"
-
-#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Nastavitev načina z več izhodi...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Nastavitev 3D/OpenGL...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Nastavitev AccessX...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Nastavitev VNC...</u></h3></nobr>"
-
-#~ msgid "Selected component:"
-#~ msgstr "Izbrana komponenta:"
-
-#~ msgid "Click 'Apply' to test your settings."
-#~ msgstr "Pritisnite gumb 'Uveljavi' za preverjanje vaših nastavitev."
-
-#~ msgid ""
-#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
-#~ "is a warning only but make sure your keyboard model is able to map all "
-#~ "the keys needed for the selected layout."
-#~ msgstr ""
-#~ "<b>Izgleda, da se trenutni izbrani izgled in model tipkovnice ne ujemata "
-#~ "dobro.</b><hr> To je le opozorilo, vendar se prepričajte, da vaš model "
-#~ "tipkovnice omogoča izbiro vseh tipk v trenutno izbranem izgledu."
-
-#~ msgid ""
-#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
-#~ "3D subsystem is unable to work within a multihead environment."
-#~ msgstr ""
-#~ "<b>OpenGL pospeševanje ni možno v načinu z več izhodi</b><hr>3D podsistem "
-#~ "ne podpira delovanja z več izhodi."
-
-#~ msgid ""
-#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
-#~ "hardware 3D/OpenGL acceleration."
-#~ msgstr ""
-#~ "<b>3D pospeševanje ni mogoče</b><hr>Nameščena kartica ni zmožna podpore "
-#~ "strojnga 3D pospeševanja."
-
-#~ msgid ""
-#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
-#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
-#~ "The currently used color setup does not fulfill this requirement. Verify "
-#~ "the current default color depth setup."
-#~ msgstr ""
-#~ "<b>Napačna barva globina za OpenGL pospeševanje</b><hr>Večina OpenGL "
-#~ "gonilnikov zahteva za pravilno delovanje barvno globino <b>16 Bit (65536 "
-#~ "barv)</b>. Trenutna nastavitev barv ne zadosti tem zahtevam. Prosim "
-#~ "preverite trenutno nastavitev barvne globine."
-
-#~ msgid ""
-#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
-#~ "acceleration because the following packages are missing:"
-#~ msgstr ""
-#~ "<b>Zahtevani osnovni paketi manjkajo</b><hr>Vključitev OpenGL "
-#~ "pospeševanja ni možna, ker manjkajo naslednji paketi:"
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
-#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
-#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
-#~ "Online Update)."
-#~ msgstr ""
-#~ "<b>Vključitev OpenGL pospeševanja ni možna</b><hr>Na sistemu ni "
-#~ "nameščenih uradnih 2D/3D/OpenGL nVidia gonilnikov. Najprej posodobite "
-#~ "pakete NVIDIA_GLX in NVIDIA_kernel s spletne strani podjetja nVidia "
-#~ "(<i>http://www.nvidia.com</i>). Posodobitev lahko naredite tudi z YOU "
-#~ "(YaST2 Online Update)."
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
-#~ "for this card you need to install the commercial driver from nVidia "
-#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
-#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
-#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
-#~ "list (usually at the bottom of the list). Note, that you need to mark the "
-#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
-#~ "before and the driver was uninstalled - for whatever reason."
-#~ msgstr ""
-#~ "<b>OpenGL pospeševanje ni možno</b><hr>Za aktiviranje 3D podsistema te "
-#~ "grafične kartice, morate najprej namestiti komercialni nVidia gonilnik. "
-#~ "Gonilnik lahko namestite z uporabo <b>YaST Online Update</b>. V YOU kot "
-#~ "<b>Kategorijo popravka</b> izberete <b>Popravki, ki se jih da namestiti, "
-#~ "in ki so nameščeni</b> in s seznama popravkov (navadno na koncu seznama) "
-#~ "izberete <b>Download NVIDIA(r) Graphics Driver</b>. Obvestilo: če ste "
-#~ "popravek že namestili in ga iz kakrškega koli razloga tudi že odstranili, "
-#~ "morate popravek označiti kot <b>Posodobi</b> (preko pritiska na desni "
-#~ "gumb na miški)."
-
-#~ msgid ""
-#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
-#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
-#~ "the nVidia installer. The uninstall process will reset the original "
-#~ "driver from X.Org which does not provide any 3D hardware acceleration."
-#~ "<br><br><b>Do you want to continue?</b>"
-#~ msgstr ""
-#~ "<b>Izključi OpenGL pospeševanje</b><hr>3D podsistem temelji na "
-#~ "komercialnemu gonilniku nVidia. SaX2 za odstranitev gonilnika potrebuje "
-#~ "namestitveni program nVidie. Odstranitev gonilnika bo ponovno nastavila "
-#~ "originalni gonilnik sistema X.Org, ki ne omogoča strojnega 3D "
-#~ "pospeševanja. <br><br><b>Resnično želite nadaljevati?</b>"
-
-#~ msgid "Display size unknown..."
-#~ msgstr "Neznana velikost zaslona..."
-
-#~ msgid ""
-#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
-#~ "couldn't be detected. Applications dealing with computer graphics like "
-#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
-#~ "about the real physical size of your display to work properly. Please "
-#~ "refer to your monitor manual to obtain the correct size values for the "
-#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
-#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
-#~ msgstr ""
-#~ "<b>Vnesite X/Y dimenzije zaslona v [ mm ]</b><hr> Geometrije vašega "
-#~ "zaslona ni mogoče zaznati. Aplikacije za računalniško grafiko, kot npr. "
-#~ "<b>Gimp</b> ali knjižnice za upodabljanje pisav, npr.<b>Xft</b>, za "
-#~ "pravilno delovanje potrebujejo realno velikost vašega zaslona. Za "
-#~ "pravilne dimenzije zaslona v vodoravni (X) in navpični (Y) smeri poglejte "
-#~ "v navodila monitorja.Zahtevane dimenzije morate vpisati v milimetrih "
-#~ "[ mm ]. <br><br><b>Želite nastaviti dimenzijo zaslona ?</b>"
-
-#~ msgid ""
-#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
-#~ "X and Y axis and click 'Add' to include the new resolution in the "
-#~ "standard resolution list."
-#~ msgstr ""
-#~ "<b>Dodajanje uporabniške ločljivost</b><hr>Vnesite vrednosti v pikah za X "
-#~ "in Y os ter izberite gumb 'Dodaj' za dodajanje nove ločljivosti na seznam "
-#~ "standardnih ločljivosti"
-
-#~ msgid "Available configuration components are:"
-#~ msgstr "Na voljo so naslednje komponente za prilagoditev:"
-
-#~ msgid ""
-#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
-#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
-#~ msgstr ""
-#~ "<b>Omogočen AccessX:</b><hr>Osnovni kazalec miške je sedaj dosegljiv "
-#~ "preko <b>tipk na numeričnem delu tipkovnice</b>. Prosim preverite "
-#~ "obnašanje z uporabo numeričnega dela tipkovnice."
-
-#~ msgid ""
-#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
-#~ "number pad is <b>disabled</b> now."
-#~ msgstr ""
-#~ "<b>Onemogočen AccessX:</b><hr>Dosegljivost osnovnega kazalca miške preko "
-#~ "numeričnega dela tipkovnice je sedaj <b>onemogočena</b>."
-
-#~ msgid ""
-#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
-#~ "system?"
-#~ msgstr ""
-#~ "<b>Odstranitev tablete:</b><hr>Resnično želite odstraniti grafično "
-#~ "tableto s sistema?"
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time your system is <b>rebooted</b>."
-#~ msgstr ""
-#~ "<b>Shranitev prilagoditve:</b><hr>Vaše spremembe bodo upoštevane ob "
-#~ "naslednjem <b>zagonu</b> celotnega sistema."
-
-#~ msgid ""
-#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
-#~ "in developmental phases so are, in part, still regarded as experimental. "
-#~ "Nevertheless, we have decided to include the drivers in our distribution "
-#~ "because of the high demand for 3D hardware acceleration in Linux. "
-#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
-#~ "are unable to offer any installation support for configuring 3D hardware "
-#~ "acceleration or if any problems related to this should arise."
-#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
-#~ msgstr ""
-#~ "<b>Zaznana je bila kartica s 3D zmožnostmi: <u>%1</u></b><hr>Vsi 3D "
-#~ "gonilniki v Linuxu so v razvojni fazi in so zato, vsaj delno, označeni "
-#~ "kot eksperimentalni. Ne glede na to, smo se zaradi velikega povpraševanja "
-#~ "po podpori strojnega 3D pospeševanja v Linuxu odločili gonilnike "
-#~ "vključiti v distribucijo.<br><br>Zaradi eksperimentalnega statusa "
-#~ "gonilnikov OpenGL, namestitvena podpora ne vsebuje podpore za nastavitev "
-#~ "strojnega 3D pospeševanja ali reševanja težav s pospeševanjem. Zato "
-#~ "osnovna nastavitev grafičnega okolja X11 ne vsebuje nastavitve strojne "
-#~ "opreme za 3D.<br><br><b>Želite omogočiti 3D podporo za izbrano kartico?</"
-#~ "b>"
-
-#~ msgid ""
-#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
-#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
-#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
-#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
-#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
-#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
-#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
-#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
-#~ "do not have any influence over the development of nVidia drivers."
-#~ "<br><br><b>Prepare 3D for this card?</b>"
-#~ msgstr ""
-#~ "<b>Zaznana je bila kartica s 3D zmožnostmi:<u>%1</u></b><hr>Prosim, "
-#~ "bodite pozorni, da zaradi licenc to ni uradni nVidia gonilnik za 2D/3D/"
-#~ "OpenGL. Trenutno izbrani 3D/OpenGL gonilnik ne omogoča strojnega 3D "
-#~ "pospeševanja. <br><br>Če želite uporabljati strojno pospeševanje za 3D/"
-#~ "OpenGL, posodobite paket NVIDIA_GLX in NVIDIA_kernel za SuSE Linux s "
-#~ "spletne strani podjetja nVidia (<i>http://www.nvidia.com</i>). "
-#~ "Posodobitev lahko naredite preko orodja YOU (YaST2 Online Update)."
-#~ "<br><br>Če imate težave z nVidia gonilnikom za 2D/3D/OpenGL, se obrnite "
-#~ "na proizvajalca gonilnika, ker na žalost nimamo vpliva na razvoj nVidia "
-#~ "gonilnika.<br><br> <b>Želite omogočiti 3D pospeševanje za izbrano kartico?"
-#~ "</b> "
-
-#~ msgid ""
-#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
-#~ "that comes with this distribution is still installed.  You should update "
-#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
-#~ "online update). Start the online update?"
-#~ msgstr ""
-#~ "<b>Posodobitev programske opreme</b><hr>Še vedno imate nameščen nVidia "
-#~ "gonilnik brez 3D zmožnosti, ki je priložen SuSE Linuxu. Priporočeno je, "
-#~ "da gonilnik posodobite z uradnim nVidia gonilnikom s FTP strežnika z "
-#~ "orodjem YOU (YaST2 online update). Želite zagnati posodobitev?"
-
-#~ msgid ""
-#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
-#~ "resolution is not adjustable within framebuffer mode. Please select "
-#~ "another resolution than:"
-#~ msgstr ""
-#~ "<b>Za način FBdev je izbrana napačna ločljivost</b><hr>Trenutne "
-#~ "ločljivosti ni možno prilagoditi načinu framebuffer. Prosim izberite "
-#~ "drugačno ločljivost kot:"
-
-#~ msgid ""
-#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
-#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
-#~ "currently selected monitor model is correct or select a lower resolution "
-#~ "than:"
-#~ msgstr ""
-#~ "<b>Izbrana ločljivost ni na voljo</b><hr>Izbrana ločljivost ni možna "
-#~ "zaradi omejitve frekvenčnga območja monitorja. Prosim preverite, da ste "
-#~ "izbrali pravilen model monitorja ali izberite manjšo ločljivost kot: "
-
-#~ msgid ""
-#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
-#~ "depth is not allowed for this configuration."
-#~ msgstr ""
-#~ "<b>Izbrana je napačna globina (število) barv:</b><hr>Barvna globina <b>4</"
-#~ "b> ali <b>15</b> bitov ni na voljo za trenutno nastavitev."
-
-#~ msgid ""
-#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
-#~ "is not allowed for this configuration. Select another resolution from the "
-#~ "list."
-#~ msgstr ""
-#~ "<b>Izbrana je napačna ločljivost:</b><hr>Zahtevna ločljivost ni na voljo "
-#~ "za trenutno nastavitev. Iz seznama izberite drugo ločljivost."
-
-#~ msgid "<b>X Server test failed:</b><hr><br>"
-#~ msgstr "<b>Testiranje X strežnika ni uspelo:</b><hr><br>"
-
-#~ msgid "3D question..."
-#~ msgstr "vprašanje o 3D..."
-
-#~ msgid "X Server test information..."
-#~ msgstr "Informacije o testiranju X strežnika..."
-
-#~ msgid "AccessX status information..."
-#~ msgstr "Statusne informacije o AccessX..."
-
-#~ msgid "Tablet warning..."
-#~ msgstr "Opozorilo tablete..."
-
-#~ msgid "Consideration..."
-#~ msgstr "Premislek..."
-
-#~ msgid "Geometry"
-#~ msgstr "Geometrija"
-
-#~ msgid "Name:"
-#~ msgstr "Ime:"
-
-#~ msgid "Card and Desktop"
-#~ msgstr "Kartica in namizje"
-
-#~ msgid "Input Devices"
-#~ msgstr "Vhodne naprave"
-
-#~ msgid "Input-Devices"
-#~ msgstr "Vhodne naprave"
-
-#~ msgid "Desktop"
-#~ msgstr "Namizje"
-
-#~ msgid "Multihead"
-#~ msgstr "Več izhodov"
-
-#~ msgid "Secondary Modeline:"
-#~ msgstr "Drugi Modeline:"
-
-#~ msgid "Modeline"
-#~ msgstr "Modeline"
-
-#~ msgid "AccessX"
-#~ msgstr "AccessX"
-
-#~ msgid "X-Server accessable via VNC protocol:"
-#~ msgstr "X-Server je dostoper preko VNC protokola:"
-
-#~ msgid "Access Control"
-#~ msgstr "Nadzor dostopa"
-
-#~ msgid "<b>Core Pointer...</b>"
-#~ msgstr "<b>Osnovni kazalec...</b>"
-
-#~ msgid "F&inalize >>"
-#~ msgstr "&Dokončaj >>"
-
-#~ msgid "<< &Back"
-#~ msgstr "<< Na&zaj"
-
-#~ msgid "&Next >>"
-#~ msgstr "&Naprej >>"
-
-#~ msgid "&Exit"
-#~ msgstr "&Izhod"
-
-#~ msgid "&About..."
-#~ msgstr "O progr&amu..."
-
-#~ msgid "About the author"
-#~ msgstr "O avtorju"
-
-#~ msgid "Select virtual resolution for Mode %1"
-#~ msgstr "Izbira navidezne ločljivosti za način %1"
-
-#~ msgid ""
-#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
-#~ "of this product is</nobr><br>Marcus Schaefer"
-#~ msgstr ""
-#~ "<b>SaX2, (c) 2000 SuSE Linux AG:</b><hr><nobr>Avtor in vzdrževalec\n"
-#~ "paketa je</nobr><br>Marcus Schaefer"
-
-#~ msgid "&Modules..."
-#~ msgstr "&Moduli..."
-
-#~ msgid "&File"
-#~ msgstr "&Datoteka"
-
-#~ msgid "Loading CDB data: %1"
-#~ msgstr "Nalaganje CDB podatkov: %1"
-
-#~ msgid "Loading base data: %1"
-#~ msgstr "Nalaganje osnovnih podatkov: %1"
-
-#~ msgid "Loading system data: %1"
-#~ msgstr "Nalaganje sistemskih podatkov: %1"
-
-#~ msgid "SaX2 start-up information"
-#~ msgstr "SaX2 informacije ob zagonu"
-
-#~ msgid "SaX2 final steps..."
-#~ msgstr "SaX2 zaključni koraki..."
-
-#~ msgid "Exception..."
-#~ msgstr "Izjema..."
-
-#~ msgid ""
-#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
-#~ "than one graphics device.  More are required to set up a multihead "
-#~ "configuration."
-#~ msgstr ""
-#~ "<b>Nastavitev večizhodnega načina ni mogoča:</b><hr>Vaš sistem nima več "
-#~ "kot ene grafične naprave, kar je pogoj za prilagoditev večizhodnega "
-#~ "načina dela."
-
-#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
-#~ msgstr ""
-#~ "<b>Pogovorno okno za prekinitev:</b><hr>Ali želite prekiniti to pogovorno "
-#~ "okno?"
-
-#~ msgid ""
-#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
-#~ msgstr ""
-#~ "<b>Napačna nastavitev:</b><hr>Nastavljena mora biti najmanj ena grafična "
-#~ "naprava."
-
-#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-#~ msgstr ""
-#~ "<b>Napačna nastavitev:</b><hr>Nastavljen mora biti najmanj en monitor."
-
-#~ msgid ""
-#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
-#~ "monitor configuration. You are not allowed to remove this major entity."
-#~ msgstr ""
-#~ "<b>Monitorja ni možno odstraniti:</b><hr>sistem ima točno eno nastavitvev "
-#~ "monitorja, ki je ni dovoljeno odstraniti."
-
-#~ msgid ""
-#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
-#~ "dialog and start the selected one?"
-#~ msgstr ""
-#~ "<b>Pogovorno okno v teku:</b><hr>Pogovorno okno je že odprto. Želite "
-#~ "zapustiti odpro pogovorno okno in zagnati izbranega?"
-
-#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
-#~ msgstr ""
-#~ "<b>Zaključitev pogovornega okna:</b><hr>Ali želite zaključiti s trenutnim "
-#~ "pogovornim oknom?"
-
-#~ msgid ""
-#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
-#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
-#~ "needs to be rebooted first to activate the changes for resolution and/or "
-#~ "color settings."
-#~ msgstr ""
-#~ "<b>Zadnji korak:</b><hr>Zadnji korak je shranitev vaših nastavitev. "
-#~ "Nastavitev poteka v <i>Framebuffer</i> načinu in pred aktiviranjem "
-#~ "sprememb v nastavitvi ločljivosti ali/in barv morate sistem ponovno "
-#~ "zagnati."
-
-#~ msgid "Unknown Graphics Card..."
-#~ msgstr "Neznana grafična kartica..."
-
-#~ msgid ""
-#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
-#~ "manually. Start the configuration dialog to set up the graphics card now?"
-#~ msgstr ""
-#~ "<b>Grafične kartice ni možno zaznati</b><hr>Prosim, da vašo kartico "
-#~ "nastavite ročno. Želite zagnati pogovorno okno za nastavitev grafične "
-#~ "kartice?"
-
-#~ msgid ""
-#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
-#~ "manually. Do you want to start the configuration dialog to setup the "
-#~ "display now ?"
-#~ msgstr ""
-#~ "<b>Monitorja (%1) ni možno zaznati</b><hr>Prosim, da ročno nastavite vaš "
-#~ "monitor. Želite zagnati pogovorno okno za prilagoditev monitorja ?"
-
-#~ msgid ""
-#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
-#~ "manually. Do you want to start the configuration dialog to setup the "
-#~ "display now ?"
-#~ msgstr ""
-#~ "<b>Nisem našel monitorja (%1) z ID %2</b><hr>Prosim, da vaš monitor "
-#~ "nastavite ročno. Želite zagnati pogovorno okno za nastavitev monitorja?"
-
-#~ msgid "<b>Yes</b>"
-#~ msgstr "<b>Da</b>"
-
-#~ msgid "<b>No</b>"
-#~ msgstr "<b>Ne</b>"
-
-#~ msgid "File"
-#~ msgstr "Datoteka"
-
-#~ msgid "still locked"
-#~ msgstr "še vedno zaklenjeno"
-
-#~ msgid "Please wait"
-#~ msgstr "Prosim počakajte"
-
-#~ msgid ""
-#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
-#~ "X11 Configuration Manager<br>"
-#~ msgstr ""
-#~ "<big><b>SaX2: razširjena X11 prilagoditev</b></big><hr>Dobrodošli v SuSE "
-#~ "X11 upravljalniku nastavitev<br>"
-
-#~ msgid "To start, double-click  an item in the component list."
-#~ msgstr "Za začetek dvokliknite na del v seznamu komponent."
-
-#~ msgid "X11 System Setup"
-#~ msgstr "Nastavitev X11 sistema"
-
-#~ msgid "Value..."
-#~ msgstr "Vrednost..."
-
-#~ msgid "Primary device"
-#~ msgstr "Glavna naprava"
-
-#~ msgid "Driver:"
-#~ msgstr "Gonilnik:"
-
-#~ msgid "X:"
-#~ msgstr "X:"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
-
-#~ msgid "Bus ID:"
-#~ msgstr "Bus ID:"
-
-#~ msgid "Card options"
-#~ msgstr "Možnosti kartice"
-
-#~ msgid "Key Mappings"
-#~ msgstr "Preslikava tipk"
-
-#~ msgid "&Current sync frequencies"
-#~ msgstr "&Trenutne Sync frekvence"
-
-#~ msgid "Current color depth"
-#~ msgstr "Trenutna barvna globina"
-
-#~ msgid "Current resolution"
-#~ msgstr "Trenutna ločljivost"
-
-#~ msgid "HSync range"
-#~ msgstr "Obseg za HSync"
-
-#~ msgid "VSync range"
-#~ msgstr "Obseg za VSync"
-
-#~ msgid "[ mm ]"
-#~ msgstr "[ mm ]"
-
-#~ msgid "Device"
-#~ msgstr "Naprava"
-
-#~ msgid "Protocol"
-#~ msgstr "Protokol"
-
-#~ msgid "Fi&nish"
-#~ msgstr "Ko&nčaj"
-
-#~ msgid "Abort"
-#~ msgstr "Prekini"
-
-#~ msgid "Configure XAccess: Mouse over keypad..."
-#~ msgstr "Prilagoditev AccessX: miška pred numeričnim delom..."
-
-#~ msgid "Configure VNC: Export display using the VNC protocol..."
-#~ msgstr "Nastavi VNC: izvozi zaslov s pomočjo VNC protokola..."
-
-#~ msgid "Configure input devices: Mouse configuration..."
-#~ msgstr "Prilagoditev vhodne naprave: nastavitev miške..."
-
-#~ msgid "Configure 3D/OpenGL subsystem..."
-#~ msgstr "Prilagoditev 3D/OpenGL podsistema..."
-
-#~ msgid "Configure virtual resolutions..."
-#~ msgstr "Prilagoditev navidezne ločljivosti..."
-
-#~ msgid "Configure graphics cards..."
-#~ msgstr "Prilagoditev grafične kartice..."
-
-#~ msgid "Configure Desktop: Colors and Resolutions..."
-#~ msgstr "Prilagoditev namizja: barve in ločljivosti..."
-
-#~ msgid "Configure touch screens..."
-#~ msgstr "Prilagoditev na dotik občutljivih zaslonov..."
-
-#~ msgid "Set up picture geometry..."
-#~ msgstr "Nastavitev geometrije slike..."
-
-#~ msgid "Configure multihead mode..."
-#~ msgstr "Prilagoditev večizhodntega načina..."
-
-#~ msgid ""
-#~ "Set up screen layout of your desktops (Double-click an icon will identify "
-#~ "the real screen)..."
-#~ msgstr ""
-#~ "Nastavitev položajev zaslonov vaših namizij (Z dvojnim pritiskom na ikono "
-#~ "zaslona boste preverili, kateremu realmenu zaslonu ustreza ikonca)..."
-
-#~ msgid "Configure graphics tablet"
-#~ msgstr "Prilagoditev tablete"
-
-#~ msgid "Add new card..."
-#~ msgstr "Dodajanje nove kartice..."
-
-#~ msgid "Remove selected card"
-#~ msgstr "Odstrani izbrane kartice"
-
-#~ msgid "Remove selected monitor"
-#~ msgstr "Odstrani izbrani monitor"
-
-#~ msgid "&Properties..."
-#~ msgstr "&Lastnosti..."
-
-#~ msgid "Enable View-Only mode"
-#~ msgstr "Omogoči način pregleda (view-only)"
-
-#~ msgid "&Add new touchscreen..."
-#~ msgstr "Dod&aj nov na dotik občutljiv zaslon..."
-
-#~ msgid "&Remove selected touchscreen"
-#~ msgstr "Odst&ranitev izbranega zaslona"
-
-#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
-#~ msgstr ""
-#~ "<nobr><h3><u>Trenutno prilagojeni na dotik občtljivi zasloni:</u></h3></"
-#~ "nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Trenutno prilagojen(i) monitor(ji):</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Trenutno prilagojene kartice:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Trenutno prilagojene miške:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Trenutni izgled monitorja:</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Trenutno prilagojena namizja:</u></h3></nobr>"
-
-#~ msgid "&Add new mouse..."
-#~ msgstr "Dod&ajanje nove miške..."
-
-#~ msgid "&Remove selected mouse"
-#~ msgstr "Odst&ranitev izbrane miške"
-
-#~ msgid "&General"
-#~ msgstr "&Splošno"
-
-#~ msgid "&Expert"
-#~ msgstr "Za izkuš&ene"
-
-#~ msgid "Vendor"
-#~ msgstr "Proizvajalec"
-
-#~ msgid "Selected"
-#~ msgstr "Izbrano"
-
-#~ msgid "Resolution X"
-#~ msgstr "Ločljivost X"
-
-#~ msgid "&Resolution(s) for %1 colors"
-#~ msgstr "&Ločljivost(i) za %1 barv"
-
-#~ msgid "Possible"
-#~ msgstr "Možno"
-
-#~ msgid "&Add this resolution"
-#~ msgstr "Dod&ajanje ločljivost"
-
-#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojen AccessX status</b></big><hr>"
-
-#~ msgid "<big><b>Current VNC status</b></big><hr>"
-#~ msgstr "<big><b>Trenutni VNC status</b></big><hr>"
-
-#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-#~ msgstr "<big><b>Trenutni 3D/OpenGL status</b></big><hr>"
-
-#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
-#~ msgstr "<big><b>Trenutne nastavitve navideznih ločljivosti</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojene grafične kartice</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojena namizja</b></big><hr>"
-
-#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
-#~ msgstr "<big><b>Trenutno aktivna geometrijska časovnost</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojena tipkovnica</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured layout</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojeni izgledi</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojen(i) monitor(ji)</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojene kazalne naprave</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojeni večizhodni status</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
-#~ msgstr "<big><b>Trenutno prilagojene grafične tablete</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
-#~ msgstr ""
-#~ "<big><b>Trenutno prilagojeni na dotik občtljivi zasloni</b></big><hr>"
-
-#~ msgid "<b><nobr>No information available</nobr></b>"
-#~ msgstr "<b><nobr>Na voljo ni nobenih informacij</nobr></b>"
-
-#~ msgid ""
-#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
-#~ "with the keypad. The table below points to the current status of AccessX."
-#~ msgstr ""
-#~ "<b>Navidezna miška:</b><hr>Nastavite numerični del tipkovnice tako, da bo "
-#~ "možno nadzirati miško s pomočjo tipk na numeričnem delu. Spodnja tabela "
-#~ "kaže trenutni status AccessXa."
-
-#~ msgid ""
-#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
-#~ "desktop and all its programs remotely via a VNC viewer program"
-#~ msgstr ""
-#~ "<b>VNC strežnik:</b><hr>Nastavi X strežnik tako, da bo možen oddaljen "
-#~ "dostop do namizja in programov preko VNC programa"
-
-#~ msgid ""
-#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
-#~ "here. X.Org includes the direct rendering interface to use the 3D "
-#~ "capabilities of your graphics card. If your card and the corresponding "
-#~ "driver support 3D hardware acceleration, enable it in this dialog."
-#~ msgstr ""
-#~ "<b>OpenGL podsistem:</b><hr>Nastavite lahko 3D zmožnosti grafične "
-#~ "kartice. X.Org vključuje t.i. vmesnik za neposredno upodabljanje (direct "
-#~ "rendering interface) za uporabo 3D zmožnosti vaše grafične kartice. Če "
-#~ "vaša kartica in ustrezni gonilniki podpirajo strojno 3D pospeševanje, ga "
-#~ "v tem pogovornem oknu lahko omogočite."
-
-#~ msgid ""
-#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
-#~ "resolution which is completely viewable. Beside this resolution you can "
-#~ "setup a resolution which lives outside the viewable area of your monitor "
-#~ "and comes up if you leave the edges of your monitor with the mouse. This "
-#~ "area is called a virtual resolution."
-#~ msgstr ""
-#~ "<b>Navidezna ločljivost:</b><hr>Vsako posamezno namizje ima svojo realno "
-#~ "ločljivost, ki je na zaslonu v celoti vidna. Poleg te ločljivosti lahko "
-#~ "določite tudi ločljivost, ki je večja od vidne površine monitorja in jo "
-#~ "lahko vidite takrat, ko se s kazalcem miške približate robu vidnega polja "
-#~ "zaslona. To področje se imenuje navidezna ločljivost."
-
-#~ msgid ""
-#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
-#~ "graphics system consists of at least one graphics card but can be "
-#~ "combined to a so called <i>multihead environment</i> which consists of at "
-#~ "least two cards up to a maximum of 16 cards."
-#~ msgstr ""
-#~ "<b>Grafične kartice:</b><hr>Nastavite lahko grafično strojno opremo. "
-#~ "Grafični sistem ima najmanj eno grafično kartico. Več grafičnih kartic je "
-#~ "lahko združenih v t.i. <i>večizhodno okolje</i>, ki ga sestavljata "
-#~ "najmanj 2 (dve) in največ 16 (šestnajst) grafičnih kartic."
-
-#~ msgid ""
-#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
-#~ "resolution and colors. Every desktop is an independent device and may "
-#~ "have a different color and/or resolution setup."
-#~ msgstr ""
-#~ "<b>Lastnosti namizja:</b><hr>Nastavite lahko lastnosti namizja, kot so "
-#~ "ločljivost in barve. Namizja so med seboj neodvisna in imajo lahko "
-#~ "različno število barv in/ali ločljivost. "
-
-#~ msgid ""
-#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
-#~ "displayed by the monitor. The table below point to the current used "
-#~ "Modeline(s)."
-#~ msgstr ""
-#~ "<b>Geometrija monitorja:</b><hr>Nastavite položaj in velikost slike na "
-#~ "monitorju. Spodnja tabela prikazuje trenutno uporabljene vrstice Modeline."
-
-#~ msgid ""
-#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
-#~ "language environment with which it should work."
-#~ msgstr ""
-#~ "<b>Lastnosti tipkovnice:</b><hr>Nastavite tip tipkovnice in jezikovno "
-#~ "okolje v katerem želite delati."
-
-#~ msgid ""
-#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
-#~ "a multihead environment. Set up the neighborhood relations of the "
-#~ "connected monitors simply via drag&drop. If you are not sure which "
-#~ "monitor belongs to the icon just double-click on it and you will see a "
-#~ "message on the corresponding screen."
-#~ msgstr ""
-#~ "<b>Izgled namizja:</b><hr>Z več kot eno kartico, lahko nastavite t.i. "
-#~ "večizhodni način dela in sosedske povezave med priključenimi monitorji z "
-#~ "uporabo tehnike povleci in spusti. Če niste prepričani, katera ikona "
-#~ "predstavlja kateri monitor, izvedite dvojni pritisk na ikoni in na "
-#~ "ustreznem zaslonu se bo pojavilo sporočilo."
-
-#~ msgid ""
-#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
-#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
-#~ "the monitor."
-#~ msgstr ""
-#~ "<b>Lastnosti monitorja:</b><hr>Nastavite model monitorja, priključenega "
-#~ "na grafično kartico. Vendar pazite pri vnosu: napačne vrednosti za "
-#~ "območje sync frekvenc lahko poškoduje vaš monitor."
-
-#~ msgid ""
-#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
-#~ "mouse pointer as well as settings like button emulation or wheel "
-#~ "functions."
-#~ msgstr ""
-#~ "<b>Lastnosti miške:</b><hr>Nastavite osnovne parametre za aktiviranje "
-#~ "osnovnega kazalca miše, kot tudi nastavitev posnemanj gumbov ali funkcije "
-#~ "koleščka na miški."
-
-#~ msgid ""
-#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
-#~ "a multihead environment. Set up the multihead functioning here."
-#~ msgstr ""
-#~ "<b>Večizhodni način:</b><hr>Če je v sistemu na voljo več grafičnih "
-#~ "kartic, lahko nastavite t.i. večizhodni način, ki ga lahko nastavite "
-#~ "tukaj."
-
-#~ msgid ""
-#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
-#~ "pointer devices, such as pens and erasers."
-#~ msgstr ""
-#~ "<b>Grafična tableta:</b><hr>Nastavite grafično tableto in ustrezne "
-#~ "kazalce: npr. peresa  in radirke."
-
-#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
-#~ msgstr ""
-#~ "<b>Na dotik občutljivi zaslon:</b><hr>Nastavite na dotik občutljive "
-#~ "zaslone."
-
-#~ msgid "Disabled"
-#~ msgstr "Onemogočeno"
-
-#~ msgid "Enabled"
-#~ msgstr "Omogočeno"
-
-#~ msgid "Wheel support"
-#~ msgstr "Podpra koleščku na miški"
-
-#~ msgid "&Port"
-#~ msgstr "&Vrata"
-
-#~ msgid "&Mode"
-#~ msgstr "&Način"
-
-#~ msgid "Button emulation"
-#~ msgstr "Posnemanje gumbov"
-
-#~ msgid "Primary Device:"
-#~ msgstr "Glavna naprava:"
-
-#~ msgid "Secondary Device:"
-#~ msgstr "Pomožna naprava:"
-
-#~ msgid "Single Layout [ no multihead environment ]"
-#~ msgstr "En izgled [ ni večizhodnega okolja ]"
-
-#~ msgid "Clone Mode Active"
-#~ msgstr "Aktiviran kopirni način"
-
-#~ msgid "Xinerama Mode Active"
-#~ msgstr "Aktiviran Xinerama način"
-
-#~ msgid "Screens Layout Active"
-#~ msgstr "Aktiviran izgled zaslonov"
-
-#~ msgid "PC-98xx Series"
-#~ msgstr "PC-98xx Series"
-
-#~ msgid "Canadian"
-#~ msgstr "Kanadski"
-
-#~ msgid "Brazilian"
-#~ msgstr "Brazilski"
-
-#~ msgid "Bosnian"
-#~ msgstr "Bosanski"
-
-#~ msgid "Lithuanian qwerty (numeric)"
-#~ msgstr "Litvijski qwerty (numerični)"
-
-#~ msgid "Georgian (russian)"
-#~ msgstr "Georgian (rusko)"
-
-#~ msgid "Latvian"
-#~ msgstr "Letonski"
-
-#~ msgid "Belarusian"
-#~ msgstr "Beloruski"
-
-#~ msgid "Czech (qwerty)"
-#~ msgstr "Češki (qwerty)"
-
-#~ msgid "Northern Saami (Finland)"
-#~ msgstr "Severno Saamski (Finska)"
-
-#~ msgid "Macedonian"
-#~ msgstr "Makedonski"
-
-#~ msgid "U.S. English w/ deadkeys"
-#~ msgstr "Ameriško angleški z mrtvimi tipkami"
-
-#~ msgid "Malayalam"
-#~ msgstr "Malayalam"
-
-#~ msgid "Burmese"
-#~ msgstr "Burmanski"
-
-#~ msgid "Kannada"
-#~ msgstr "Kannada"
-
-#~ msgid "Mongolian"
-#~ msgstr "Mongolski"
-
-#~ msgid "Bengali"
-#~ msgstr "Bengalski"
-
-#~ msgid "Romanian"
-#~ msgstr "Romunski"
-
-#~ msgid "Croatian"
-#~ msgstr "Hrvaški"
-
-#~ msgid "U.S. English w/ ISO9995-3"
-#~ msgstr "Ameriško angleški z ISO9995-3"
-
-#~ msgid "Lithuanian azerty standard"
-#~ msgstr "Litvijski - azerty standard"
-
-#~ msgid "Maltese"
-#~ msgstr "Malteški"
-
-#~ msgid "German"
-#~ msgstr "Nemški"
-
-#~ msgid "Hungarian"
-#~ msgstr "Madžarski"
-
-#~ msgid "Russian"
-#~ msgstr "Ruski"
-
-#~ msgid "Swedish"
-#~ msgstr "Švedski"
-
-#~ msgid "Turkish (F)"
-#~ msgstr "Turški (F)"
-
-#~ msgid "Oriya"
-#~ msgstr "Oriya"
-
-#~ msgid "Slovenian"
-#~ msgstr "Slovenski"
-
-#~ msgid "Slovak (qwerty)"
-#~ msgstr "Slovaški (qwerty)"
-
-#~ msgid "Czech"
-#~ msgstr "Češki"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Danish"
-#~ msgstr "Danski"
-
-#~ msgid "Dvorak"
-#~ msgstr "Dvorak"
-
-#~ msgid "Slovak"
-#~ msgstr "Slovaški"
-
-#~ msgid "Dutch"
-#~ msgstr "Nizozemski"
-
-#~ msgid "Israeli"
-#~ msgstr "Izraelski"
-
-#~ msgid "Tamil"
-#~ msgstr "Tamilski"
-
-#~ msgid "Ogham"
-#~ msgstr "Ogham"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norveški"
-
-#~ msgid "Gurmukhi"
-#~ msgstr "Gurmukhi"
-
-#~ msgid "Serbian"
-#~ msgstr "Srbski"
-
-#~ msgid "Farsi"
-#~ msgstr "Farsi"
-
-#~ msgid "Icelandic"
-#~ msgstr "Islandski"
-
-#~ msgid "Italian"
-#~ msgstr "Italijanski"
-
-#~ msgid "Estonian"
-#~ msgstr "Estonski"
-
-#~ msgid "Inuktitut"
-#~ msgstr "Inuktitut"
-
-#~ msgid "Swiss French"
-#~ msgstr "Švicarski (franocski)"
-
-#~ msgid "Swiss German"
-#~ msgstr "Švicarski (nemški)"
-
-#~ msgid "Thai"
-#~ msgstr "Tajski"
-
-#~ msgid "Tajik"
-#~ msgstr "Tajik"
-
-#~ msgid "Greek"
-#~ msgstr "Grški"
-
-#~ msgid "Japanese"
-#~ msgstr "Japonski"
-
-#~ msgid "Georgian (latin)"
-#~ msgstr "Georgian (latin)"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ukrajinski"
-
-#~ msgid "Polish (qwertz)"
-#~ msgstr "Poljski (qwertz)"
-
-#~ msgid "Syriac"
-#~ msgstr "Sirijski"
-
-#~ msgid "Turkish"
-#~ msgstr "Turški"
-
-#~ msgid "Spanish"
-#~ msgstr "Španski"
-
-#~ msgid "Northern Saami (Sweden)"
-#~ msgstr "Severno Saami (Švedska)"
-
-#~ msgid "Yugoslavian"
-#~ msgstr "Jugoslovanski"
-
-#~ msgid "Hindi"
-#~ msgstr "Hindi"
-
-#~ msgid "Finnish"
-#~ msgstr "Finski"
-
-#~ msgid "French (alternative)"
-#~ msgstr "Francoski (alternativa)"
-
-#~ msgid "Hungarian (qwerty)"
-#~ msgstr "Madžarski (qwerty)"
-
-#~ msgid "Russian (cyrillic phonetic)"
-#~ msgstr "Ruski (cirilica)"
-
-#~ msgid "Albanian"
-#~ msgstr "Albanski"
-
-#~ msgid "Polish"
-#~ msgstr "Poljski"
-
-#~ msgid "Telugu"
-#~ msgstr "Telugu"
-
-#~ msgid "Armenian"
-#~ msgstr "Armenski"
-
-#~ msgid "Northern Saami (Norway)"
-#~ msgstr "Severno Saami (Norveška)"
-
-#~ msgid "Latin America"
-#~ msgstr "Latinsko ameriški"
-
-#~ msgid "French"
-#~ msgstr "Francoski"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Angleški"
-
-#~ msgid "Arabic"
-#~ msgstr "Arabski"
-
-#~ msgid "U.S. English"
-#~ msgstr "Ameriško angleški"
-
-#~ msgid "Maltese (US layout)"
-#~ msgstr "Malteški (ameriški izgled)"
-
-#~ msgid "French Canadian"
-#~ msgstr "Kanadski (francoski)"
-
-#~ msgid "Portuguese"
-#~ msgstr "Portugalski"
-
-#~ msgid "Belgian"
-#~ msgstr "Belgijski"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Bolgarski"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Azejbardžanski"
-
-#~ msgid "Vietnamese"
-#~ msgstr "Vietnamski"
-
-#~ msgid "Lao"
-#~ msgstr "Lao"
-
-#~ msgid "Microsoft Natural"
-#~ msgstr "Microsoft Natural"
-
-#~ msgid "Ennyah DKB-1008"
-#~ msgstr "Ennyah DKB-1008"
-
-#~ msgid "Logitech Deluxe Access Keyboard"
-#~ msgstr "Logitech Deluxe Access Keyboard"
-
-#~ msgid "Microsoft Internet Keyboard"
-#~ msgstr "Microsoft Internet Keyboard"
-
-#~ msgid "Samsung SDM 4500P"
-#~ msgstr "Samsung SDM 4500P"
-
-#~ msgid "Cherry Blue Line CyBo@rd"
-#~ msgstr "Cherry Blue Line CyBo@rd"
-
-#~ msgid "Dell"
-#~ msgstr "Dell"
-
-#~ msgid "Hewlett-Packard Omnibook XE3 GF"
-#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
-
-#~ msgid "IBM Rapid Access"
-#~ msgstr "IBM Rapid Access"
-
-#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
-#~ msgstr "Logitech Cordless Desktop Pro (druga alternativna možnost)"
-
-#~ msgid "Memorex MX1998"
-#~ msgstr "Memorex MX1998"
-
-#~ msgid "Trust Wireless Keyboard Classic"
-#~ msgstr "Trust Wireless Keyboard Classic"
-
-#~ msgid "Dell 101-key PC"
-#~ msgstr "Dell 101-key PC"
-
-#~ msgid "Brother Internet Keyboard"
-#~ msgstr "Brother Internet Keyboard"
-
-#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-#~ msgstr "Tipkovnica prenosnika Compaq (npr. Armada)"
-
-#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-#~ msgstr "Spletna tipkovnica prenosnika Compaq (npr. Presario)"
-
-#~ msgid "IBM Rapid Access II"
-#~ msgstr "IBM Rapid Access II"
-
-#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-#~ msgstr "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-
-#~ msgid "Trust Direct Access Keyboard"
-#~ msgstr "Trust Direct Access Keyboard"
-
-#~ msgid "Logitech Internet Navigator Keyboard"
-#~ msgstr "Logitech Internet Navigator Keyboard"
-
-#~ msgid "SK-7100"
-#~ msgstr "SK-7100"
-
-#~ msgid "Acer AirKey V"
-#~ msgstr "Acer AirKey V"
-
-#~ msgid "BTC 9000A"
-#~ msgstr "BTC 9000A"
-
-#~ msgid "Toshiba Satellite S3000"
-#~ msgstr "Toshiba Satellite S3000"
-
-#~ msgid "Compaq Internet Keyboard (13 keys)"
-#~ msgstr "Spletna tipkovnica Compaq (13 tipk)"
-
-#~ msgid "Hewlett-Packard Omnibook XT1000"
-#~ msgstr "Hewlett-Packard Omnibook XT1000"
-
-#~ msgid "Logitech iTouch"
-#~ msgstr "Logitech iTouch"
-
-#~ msgid "SK-6200"
-#~ msgstr "SK-6200"
-
-#~ msgid "Compaq iPaq Keyboard"
-#~ msgstr "Compaq iPaq Keyboard"
-
-#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
-#~ msgstr "Logitech Cordless Desktop Pro (alternativna možnost)"
-
-#~ msgid "Logitech Cordless Desktop Navigator"
-#~ msgstr "Logitech Cordless Desktop Navigator"
-
-#~ msgid "QTronix Scorpius 98N+"
-#~ msgstr "QTronix Scorpius 98N+"
-
-#~ msgid "Symplon PaceBook (tablet PC)"
-#~ msgstr "Symplon PaceBook (tablet PC)"
-
-#~ msgid "Winbook Model XP5"
-#~ msgstr "Winbook Model XP5"
-
-#~ msgid "BTC 5113RF Multimedia"
-#~ msgstr "BTC 5113RF Multimedia"
-
-#~ msgid "Diamond 9801 / 9802 series"
-#~ msgstr "Diamond serije 9801 / 9802"
-
-#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-#~ msgstr "Hewlett-Packard Omnibook XE4xxx in ZE4xxx"
-
-#~ msgid "Logitech Cordless Desktop Optical"
-#~ msgstr "Logitech Cordless Desktop Optical"
-
-#~ msgid "Logitech Internet Keyboard"
-#~ msgstr "Logitech Internet Keyboard"
-
-#~ msgid "BTC 9000"
-#~ msgstr "BTC 9000"
-
-#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-#~ msgstr "Tipkovnica Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-
-#~ msgid "Hewlett-Packard Internet Keyboard"
-#~ msgstr "Hewlett-Packard Internet Keyboard"
-
-#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
-#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
-
-#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-#~ msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-
-#~ msgid "Propeller Voyager (KTEZ-1000)"
-#~ msgstr "Propeller Voyager (KTEZ-1000)"
-
-#~ msgid "Brazilian ABNT2"
-#~ msgstr "Brazilian ABNT2"
-
-#~ msgid "Compaq Internet Keyboard (7 keys)"
-#~ msgstr "Spletna tipkovnica Compaq (7 tipk)"
-
-#~ msgid "Honeywell Euroboard"
-#~ msgstr "Honeywell Euroboard"
-
-#~ msgid "Logitech Cordless Desktop"
-#~ msgstr "Logitech Cordless Desktop"
-
-#~ msgid "Yahoo! Internet Keyboard"
-#~ msgstr "Yahoo! Internet Keyboard"
-
-#~ msgid "Compaq Internet Keyboard (18 keys)"
-#~ msgstr "Spletna tipkovnica Compaq (18 tipk)"
-
-#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
-#~ msgstr "Prenosnik Dell Inspiron 8xxx"
-
-#~ msgid "IBM Rapid Access II (alternate option)"
-#~ msgstr "IBM Rapid Access II (alternativna možnost)"
-
-#~ msgid "Logitech Cordless Desktop Pro"
-#~ msgstr "Logitech Cordless Desktop Pro"
-
-#~ msgid "Advance Scorpius KI"
-#~ msgstr "Advance Scorpius KI"
-
-#~ msgid "BTC 5126T"
-#~ msgstr "BTC 5126T"
-
-#~ msgid "Dexxa Wireless Desktop Keyboard"
-#~ msgstr "Dexxa Wireless Desktop Keyboard"
-
-#~ msgid "Hewlett-Packard Omnibook 5xx"
-#~ msgstr "Hewlett-Packard Omnibook 5xx"
-
-#~ msgid "Memorex MX2750"
-#~ msgstr "Memorex MX2750"
-
-#~ msgid "SK-1300"
-#~ msgstr "SK-1300"
-
-#~ msgid "Generic 101-key PC"
-#~ msgstr "Splošna tipkovnica s 101 tipko"
-
-#~ msgid "Northgate OmniKey 101"
-#~ msgstr "Northgate OmniKey 101"
-
-#~ msgid "ACPI Standard"
-#~ msgstr "ACPI Standard"
-
-#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
-#~ msgstr "Cherry Blue Line CyBo@rd (alternativna možnost)"
-
-#~ msgid "Chicony Internet Keyboard"
-#~ msgstr "Chicony Internet tipkovnica"
-
-#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-#~ msgstr "Hewlett-Packard SK-2501 večpredstavna tipkovnica"
-
-#~ msgid "Samsung SDM 4510P"
-#~ msgstr "Samsung SDM 4510P"
-
-#~ msgid "SK-2500"
-#~ msgstr "SK-2500"
-
-#~ msgid "SVEN Ergonomic 2500"
-#~ msgstr "SVEN Ergonomic 2500"
-
-#~ msgid "Generic 102-key (Intl) PC"
-#~ msgstr "Splošna mednarodna tipkovnica s 102 tipkama"
-
-#~ msgid "Logitech Cordless Desktop iTouch"
-#~ msgstr "Logitech Cordless Desktop iTouch"
-
-#~ msgid "Chicony KB-9885"
-#~ msgstr "Chicony KB-9885"
-
-#~ msgid "Compaq Easy Access Keyboard"
-#~ msgstr "Compaq Easy Access tipkovnica"
-
-#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
-#~ msgstr "Hewlett-Packard 5181 Internet tipkovnica"
-
-#~ msgid "Hewlett-Packard Omnibook 500 FA"
-#~ msgstr "Hewlett-Packard Omnibook 500 FA"
-
-#~ msgid "Memorex MX2500 EZ-Access Keyboard"
-#~ msgstr "Memorex MX2500 EZ-Access tipkovnica"
-
-#~ msgid "Generic 104-key PC"
-#~ msgstr "Splošna tipkovnica s 104 tipkami"
-
-#~ msgid "Everex STEPnote"
-#~ msgstr "Everex STEPnote"
-
-#~ msgid "Japanese 106-key"
-#~ msgstr "Japonska tipkovica s 106 tipkami"
-
-#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE in Pavilion N5xxx"
-
-#~ msgid "Hewlett-Packard Pavilion ZT11xx"
-#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
-
-#~ msgid "Logitech iTouch keyboard Internet Navigator"
-#~ msgstr "Logitech iTouch keyboard Internet Navigator"
-
-#~ msgid "Generic 105-key (Intl) PC"
-#~ msgstr "Splošna mednarodna tipkovnica s 105 tipkami"
-
-#~ msgid "Keytronic FlexPro"
-#~ msgstr "Keytronic FlexPro"
-
-#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-#~ msgstr "Hewlett-Packard SK-2505 Internet tipkovnica"
-
-#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
-#~ msgstr "Microsoft Internet Keyboard Pro, Swedish"
-
-#~ msgid "Microsoft Office Keyboard"
-#~ msgstr "Microsoft Office tipkovnica"
-
-#~ msgid "Oretec MCK-800 MM/Internet keyboard"
-#~ msgstr "Oretec MCK-800 MM/Internet tipkovnica"
-
-#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
-#~ msgstr ""
-#~ "uporabi notranjo spremembo velikosti črk. Tipka Shift ne prekine "
-#~ "delovanja tipke Caps"
-
-#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-#~ msgstr ""
-#~ "odzivaj se kot tipka Shift z zaklepanjem. Tipka Shift ne prekine "
-#~ "delovanja tipke Caps"

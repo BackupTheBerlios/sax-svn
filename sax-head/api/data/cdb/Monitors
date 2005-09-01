@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Aug 19 15:45:00 2005
+# Author: Marcus Schaefer <sax@suse.de>, Thu Sep  1 10:44:40 2005
 #
 # Template for monitor data
 # --------------------------
@@ -3219,9 +3219,20 @@ APPLE:TWO-PAGE MONOCHROME  {
 #==============================================
 # AppleVision 850
 #----------------------------------------------
-APPLE COMPUTER, INC.:APPLEVISION 850  {
+APPLE:APPLEVISION 850  {
  Hsync=30-82
  Vsync=50-120
+}
+
+#==============================================
+# Color LCD
+#----------------------------------------------
+APPLE:COLOR LCD  {
+ DDC=APP9C21
+ Option=DPMS
+ Hsync=32-60
+ Resolution=1280x854
+ Vsync=50-70
 }
 
 #==============================================
@@ -31517,6 +31528,17 @@ SAMSUNG:SYNCMASTER 900SL PLUS(T)950SL PLUS(T)  {
  Option=DPMS
  Hsync=30-110
  Vsync=50-160
+}
+
+#==============================================
+# SyncMaster 910T
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 910T  {
+ DDC=SAM010E
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
 }
 
 #==============================================

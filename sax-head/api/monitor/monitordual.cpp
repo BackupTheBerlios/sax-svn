@@ -76,7 +76,6 @@ SCCMonitorDual::SCCMonitorDual (
 		1,Horizontal,mText["DualHeadMode"],toolBox
 	);
 	toolBox -> setSpacing ( 15 );
-	mTraditional = new QRadioButton ( mText["ModusTraditional"], mModeGroup );
     mClone       = new QRadioButton ( mText["ModusClone"], mModeGroup );
     mXinerama    = new QRadioButton ( mText["ModusXinerama"], mModeGroup );
 	mOrientationGroup = new QButtonGroup (
@@ -227,7 +226,7 @@ void SCCMonitorDual::init ( void ) {
 	// setup default layout and mode
 	//------------------------------------
 	mLeftOfPrimary -> setOn    ( true );
-	mTraditional -> setChecked ( true );
+	mClone -> setChecked ( true );
 
 	//====================================
 	// import dualhead profile if set
@@ -427,9 +426,6 @@ void SCCMonitorDual::import ( void ) {
 	// setup dualhead mode RadioButton
 	//------------------------------------
 	switch (mDualHeadMode) {
-		case DUAL_TRADITIONAL:
-			mTraditional -> setChecked ( true );
-		break;
 		case DUAL_CLONE:
 			mClone -> setChecked ( true );
 		break;
@@ -437,7 +433,7 @@ void SCCMonitorDual::import ( void ) {
 			mXinerama -> setChecked ( true );
 		break;
 		default:
-			mTraditional -> setChecked ( true );
+			mClone -> setChecked ( true );
 		break;
 	};
 	//====================================
@@ -572,9 +568,6 @@ void SCCMonitorDual::slotOk ( void ) {
 	//=====================================
 	// save state of dualhead modus
 	//-------------------------------------
-	if (mTraditional -> isChecked()) {
-		mDualHeadMode = DUAL_TRADITIONAL; 
-	}
 	if (mClone -> isChecked()) {
 		mDualHeadMode = DUAL_CLONE;
 	}
