@@ -1,5 +1,5 @@
 -------------------------------------------------------------------
-Fri Aug 26 17:06:46 CEST 2005 - ms@suse.de
+Thu Sep  1 10:58:57 CEST 2005 - ms@suse.de
 
 - added support for SYNCMASTER 910T (#113795)
 - added support for APPLE Color LCD (#113795)
@@ -8,6 +8,17 @@ Fri Aug 26 17:06:46 CEST 2005 - ms@suse.de
   implementing MergedFB [#113344]
 - update translations from dublin [uk,bg,pa,pl_PL,nl,lt,cs,sl_SI]
 - update Identity maps for all architectures [#102976]
+
+-------------------------------------------------------------------
+Wed Aug 31 13:56:20 CEST 2005 - ro@suse.de
+
+- remove config-dist.sh completely
+- add ExcludeArch s390 s390x to specfile (last function from above)
+
+-------------------------------------------------------------------
+Wed Aug 31 01:41:43 CEST 2005 - ro@suse.de
+
+- ia64 has mono, remove extra hacks for ia64
 
 -------------------------------------------------------------------
 Thu Aug 25 10:04:26 CEST 2005 - ms@suse.de
