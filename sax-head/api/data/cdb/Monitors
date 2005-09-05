@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep  5 11:23:23 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep  5 12:20:09 2005
 #
 # Template for monitor data
 # --------------------------
@@ -3235,13 +3235,24 @@ APPLE:APPLEVISION 850  {
 }
 
 #==============================================
-# Color LCD
+# COLOR LCD 9C19
 #----------------------------------------------
-APPLE:COLOR LCD  {
- DDC=APP9C21
+APPLE:COLOR LCD 9C19  {
+ DDC=APP9C19
  Option=DPMS
  Hsync=32-60
  Resolution=1024x768
+ Vsync=50-70
+}
+
+#==============================================
+# Color LCD 9C21
+#----------------------------------------------
+APPLE:COLOR LCD 9C21  {
+ DDC=APP9C21
+ Option=DPMS
+ Hsync=32-60
+ Resolution=1280x854
  Vsync=50-70
 }
 
