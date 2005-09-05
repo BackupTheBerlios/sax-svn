@@ -147,6 +147,9 @@ void SCCMonitorCard::init ( void ) {
 	}
 	}
 	mOption -> sort();
+	if (mOption -> count() == 0) {
+		mOptionGroup -> setDisabled (true);
+	}
 	//====================================
 	// check for rotate support
 	//------------------------------------
@@ -258,7 +261,10 @@ void SCCMonitorCard::setTitle ( const QString & title ) {
 //=====================================
 // slotOption
 //-------------------------------------
-void SCCMonitorCard::slotOption ( QListBoxItem* ) {
+void SCCMonitorCard::slotOption ( QListBoxItem* boxItem ) {
+	if (! boxItem) {
+		return;
+	}
 	//=====================================
 	// get translation pointer
 	//-------------------------------------

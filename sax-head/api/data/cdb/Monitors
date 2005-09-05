@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Sep  1 10:44:40 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep  5 11:23:23 2005
 #
 # Template for monitor data
 # --------------------------
@@ -69,6 +69,16 @@
 --> LCD:1280X1024@75HZ  {
  Hsync=31-82
  Vsync=58-75
+}
+
+#==============================================
+# 1280x600@60Hz
+#----------------------------------------------
+--> LCD:1280X600@60HZ  {
+ Option=DPMS
+ Hsync=31-39
+ Modeline="1280x600" 61.50 1280 1336 1464 1648 600 601 604 622
+ Vsync=50-65
 }
 
 #==============================================
@@ -3231,7 +3241,7 @@ APPLE:COLOR LCD  {
  DDC=APP9C21
  Option=DPMS
  Hsync=32-60
- Resolution=1280x854
+ Resolution=1024x768
  Vsync=50-70
 }
 
