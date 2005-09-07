@@ -14,7 +14,7 @@
 use strict;
 use Env;
 
-my $bios = qx (/usr/sbin/hwinfo --bios | grep "VESA BIOS");
+my $bios = qx (/usr/sbin/hwinfo --vbe | grep "VESA BIOS");
 if ($bios =~ /VESA BIOS/) {
 	print "1\n"; exit 1;
 } else {

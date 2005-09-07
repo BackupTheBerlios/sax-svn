@@ -224,8 +224,8 @@ QString SaXManipulateCard::getCardName (void) {
 	// search name in SYSP data
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (pCard -> setID ( mCard )) {
-		pCard -> doImport();
 		QString mCardName;
 		QTextOStream (&mCardName) <<
 			pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
@@ -255,8 +255,8 @@ QString SaXManipulateCard::getCardVendor (void) {
 	// search vendor in SYSP data
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (pCard -> setID ( mCard )) {
-		pCard -> doImport();
 		return pCard->getItem("Vendor");
 	}
 	//====================================
@@ -280,8 +280,8 @@ QString SaXManipulateCard::getCardModel (void) {
 	// search model in SYSP data
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (pCard -> setID ( mCard )) {
-		pCard -> doImport();
 		return pCard->getItem("Device");
 	}
 	//====================================

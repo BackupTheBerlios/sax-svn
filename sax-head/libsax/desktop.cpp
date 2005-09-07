@@ -225,10 +225,10 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (! pCard -> setID ( mDesktopID )) {
 		return false;
 	}
-	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
 		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
@@ -312,10 +312,10 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (! pCard -> setID ( mDesktopID )) {
 		return QString();
 	}
-	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
 		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
@@ -358,10 +358,10 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (! pCard -> setID ( mDesktopID )) {
 		return false;
 	}
-	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
 		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
@@ -422,10 +422,10 @@ bool SaXManipulateDesktop::enable3D (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (! pCard -> setID ( mDesktopID )) {
 		return false;
 	}
-	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
 		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");
@@ -584,10 +584,10 @@ bool SaXManipulateDesktop::disable3D (void) {
 	// get sysp card name
 	//------------------------------------
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
+	pCard -> doImport();
 	if (! pCard -> setID ( mDesktopID )) {
 		return false;
 	}
-	pCard -> doImport();
 	QString mCardName;
 	QTextOStream (&mCardName) <<
 		pCard->getItem("Vendor") << ":" << pCard->getItem("Device");

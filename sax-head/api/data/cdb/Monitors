@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep  5 12:20:09 2005
+# Author: Marcus Schaefer <sax@suse.de>, Tue Sep  6 10:41:17 2005
 #
 # Template for monitor data
 # --------------------------
@@ -33887,6 +33887,17 @@ SONY:GDM-W900  {
  Hsync=30-96
  Resolution=1152x864
  Vsync=50-160
+}
+
+#==============================================
+# GRT995MP
+#----------------------------------------------
+SONY:GRT995MP  {
+ DDC=LGPC954
+ Option=DPMS
+ Hsync=31-60
+ Resolution=1024x768
+ Vsync=30-65
 }
 
 #==============================================

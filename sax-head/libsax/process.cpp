@@ -283,7 +283,9 @@ void SaXProcess::storeDataSysp (void) {
 		addID (id);
 		val = val.stripWhiteSpace();
 		key = key.stripWhiteSpace();
-		setItem (key,val);
+		if ((! key.isEmpty()) && (! val.isEmpty())) {
+			setItem (key,val);
+		}
 	}
 }
 
