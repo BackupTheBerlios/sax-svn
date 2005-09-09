@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Sep  9 01:31:14 CEST 2005 - ro@suse.de
+
+- added check-build.sh
+  (require 2.6.13 or newer on buildhost, otherwise mono may hang) 
+
+-------------------------------------------------------------------
 Wed Sep  7 11:21:10 CEST 2005 - ms@suse.de
 
 - fixed VBIOS detection due to hwinfo semantic changes (#115567)
