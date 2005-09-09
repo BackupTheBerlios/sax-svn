@@ -385,7 +385,15 @@ sub SetDefaultScreen {
 	# special case for PPC... need 15bit colordepth
 	# -----------------------------------------------
 	if (($architecture =~ /ppc/i) && ($flag_list[$i] eq "DEFAULT")) {
-		$var{Screen}{$i}{DefaultDepth}         = "15";
+		SWITCH: for ($var{Device}{$i}{Driver}) {
+			/^r128|^radeon|^nv/  && do {
+				$var{Screen}{$i}{DefaultDepth} = "16";
+				last SWITCH;
+			};
+			# default case...
+			# -----------------
+			$var{Screen}{$i}{DefaultDepth} = "15";
+		}
 	}
 	return(%var);
 }

@@ -63,7 +63,6 @@ SCCFrame::SCCFrame (
 			this, getTextPtr(), SaXMessage::INTRO,
 			"Suggestion","SuggestionCaption"
 		);
-		mMessageBox -> setGeometry ( posx,posy,450,150 );
 		QString result = mMessageBox -> showMessage();
 		if (result == mText["Cancel"]) {
 			exitSaX (2);	
