@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Sep  9 13:58:33 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 12 08:13:13 2005
 #
 # Template for monitor data
 # --------------------------
@@ -31462,6 +31462,17 @@ SAMSUNG:SYNCMASTER 770S TFT MAGICSYNCMASTER L17S-AN  {
  Option=DPMS
  Hsync=30-81
  Vsync=56-76
+}
+
+#==============================================
+# Syncmaster 793 MB
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 793 MB  {
+ DDC=SAM0107
+ Option=DPMS
+ Hsync=30-71
+ Resolution=1280x1024
+ Vsync=50-160
 }
 
 #==============================================
