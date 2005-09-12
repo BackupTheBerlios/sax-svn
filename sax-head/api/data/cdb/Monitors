@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 12 08:13:13 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 12 18:52:13 2005
 #
 # Template for monitor data
 # --------------------------
@@ -3264,6 +3264,17 @@ APPLE:COLOR LCD 9C21  {
  Option=DPMS
  Hsync=32-60
  Resolution=1280x854
+ Vsync=50-70
+}
+
+#==============================================
+# COLOR LCD 9C2B
+#----------------------------------------------
+APPLE:COLOR LCD 9C2B  {
+ DDC=APP9C2B
+ Option=DPMS
+ Hsync=32-60
+ Resolution=1024x768
  Vsync=50-70
 }
 

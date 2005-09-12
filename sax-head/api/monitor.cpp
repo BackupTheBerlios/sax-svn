@@ -761,7 +761,7 @@ bool SCCMonitor::exportData ( void ) {
 							QTextOStream (&vsync) << vsmin << "-" << vsmax;
 							saxCard.addCardOption ( key,vsync );
 						}
-						if (key == "Modes2") {
+						if (key == "Mode2") {
 							QString resolution;
 							QList<QString> rList2=dualData->getResolutionList();
 							QListIterator<QString> ir (rList2);
