@@ -1384,7 +1384,7 @@ sub EnableMouse {
 # enable the mouse pointer again after
 # it was disabled using DisableMouse()
 #
-	system("$spec{Xmset} -d $dpy --enable 2>/dev/null >/dev/null");
+#	system("$spec{Xmset} -d $dpy --enable 2>/dev/null >/dev/null");
 }
 
 #---[ DisableMouse ]----#
@@ -1393,7 +1393,7 @@ sub DisableMouse {
 # disable mouse to prevent us from haply
 # mouse events
 #
-	system("$spec{Xmset} -d $dpy --disable 2>/dev/null >/dev/null");
+#	system("$spec{Xmset} -d $dpy --disable 2>/dev/null >/dev/null");
 }
 
 #----[ usage ]----#

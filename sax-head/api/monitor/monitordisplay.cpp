@@ -362,6 +362,16 @@ void SCCMonitorDisplay::import ( void ) {
 	mColors -> setCurrentText (*mColorDict[colorKey]);
 	// set primary resolution
 	QString resolutionKey = *mSelectedResolution.at(0);
+	if (! mResolutionDict[resolutionKey]) {
+		log (L_WARN,
+			"SCCMonitorDisplay::Warning: res key %s is missing\n",
+			resolutionKey.ascii()
+		);
+		log (L_WARN,
+			"SCCMonitorDisplay::Warning: reset to default 640x480 key\n"
+		);
+		resolutionKey="640x480";
+	}
 	mResolution -> setCurrentText (*mResolutionDict[resolutionKey]);
 	slotResolution ( mResolution->currentItem() );
 }

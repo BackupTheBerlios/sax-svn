@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Tue Sep 13 08:45:32 CEST 2005 - ms@suse.de
+
+- added support for another IBook G4 display (#116594)
+- fixed PPC keyboard detection to use pc105 as default model (#116946)
+- switched off using xmset for enabled/disable mouse in init.pl (#116946)
+- fixed monitor display bug crashing sax if an unknown resolution
+  key is used. This happens for example on 720x400 displays (#116946)
+
+-------------------------------------------------------------------
 Mon Sep 12 18:52:30 CEST 2005 - ms@suse.de
 
 - added support for another IBook G4 display (#116481)

@@ -35,6 +35,6 @@ SWITCH: for ($machine) {
 	};
 	# any other ( default )...
 	# -------------------------
-	print "pc104\n";
+	print "pc105\n";
 }
 
