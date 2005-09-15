@@ -269,9 +269,6 @@ void prepare (void) {
 	//------------------------------------------
 	CountScreens (dpy);
 	for (count = 0;count < scr_count; count++) {
-		#if 0
-		int bannerpid;
-		#endif
 		int current_screen = scr[count];
 		Window root = RootWindow(dpy, current_screen);
 		int depth   = DefaultDepth   (dpy,current_screen);
@@ -344,7 +341,7 @@ void prepare (void) {
 		//-----------------------------------------
 		setBounding (dpy,current_screen);
 		//=========================================
-		// set the SuSE Linux banner
+		// print a hint in each screen
 		//-----------------------------------------
 		if (DisplayPlanes (dpy, current_screen) >= 8) {
 			sprintf(dspstr,"%s",displayname);
@@ -352,29 +349,10 @@ void prepare (void) {
 			sprintf(display,"%s.%d",dspstr,current_screen);
 			sprintf(x,"%d",DisplayWidth  (dpy,current_screen) - 150);
 			sprintf(y,"%d",DisplayHeight (dpy,current_screen) - 80);
-			#if 0
-			bannerpid = fork();
-		    switch(bannerpid) {
-			case -1:
-				perror("fork"); exit(1);
-			break;
-			case 0:
-				execl (
-				XBanner,"xbanner",
-				"-file",XBannerFile,"-display",display,
-				"-px",x,"-py",y,NULL
-				);
-			break;
-			default:
-			waitpid (
-				bannerpid, NULL, 0
-			);
-			}
-			#endif
 			//===================================================
-			// create a xlook banner on all non primary screen
-			// pointing out, that this screen is not the one
-			// the configuration program is running on
+			// create a xlook banner text on all non primary screen
+			// pointing out, that this screen is not the one the
+			// configuration program is running on
 			//---------------------------------------------------
 			if (current_screen > 0) {
 				int HasRender;
