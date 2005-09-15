@@ -509,7 +509,7 @@ sub init {
 
 	# /.../
 	# handle the module list (Option -m X=..) with the highest 
-	# priority. Therefore we had to check the ModuleList against
+	# priority. Therefore we had to check the ModuleList again
 	# because it may be modified via a profile
 	# ---
 	if ($ModuleList ne "none") {
