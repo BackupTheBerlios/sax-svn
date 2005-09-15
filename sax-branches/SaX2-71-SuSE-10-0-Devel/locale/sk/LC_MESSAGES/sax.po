@@ -1,0 +1,2807 @@
+# translation of sax.po to Slovak
+# domain "sax.mo"
+# Slovak message file for SaX 2.
+# Copyright (C) 2000 SuSE GmbH.
+# Milan Hromada <mhromada@elas.sk>, 2000.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003.
+# Stanislav Visnovsky <visnov@suse.cz>, 2003.
+# Andrej Kacian <andrej@kacian.sk>, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME sax\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2005-03-08 20:52+0100\n"
+"Last-Translator: Andrej Kacian <andrej@kacian.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10\n"
+"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. /.../
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for the SaX2 and XFine GUI
+#.
+#. RTF text: Startup information for the user
+#, fuzzy
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Návrh SaX2</b><hr>Momentálne spustený grafický systém je založený na "
+"návrhu, ktorý pripravil SaX2. Ak je použiteľný, stlačte <b>OK</b>, inak "
+"nastavenie upravte."
+
+#. Caption text for the startup information window
+#, fuzzy
+msgid "Automatic Graphics System Setup"
+msgstr "Automatické nastavenie grafického systému"
+
+#. Caption text for informing the user
+#, fuzzy
+msgid "Information..."
+msgstr "Informácie o dialógu..."
+
+#. Caption text for the main window
+msgid "SaX2: SUSE Advanced X11 Configuration"
+msgstr ""
+
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr ""
+
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr ""
+
+#. Help Button text
+msgid "&Help"
+msgstr "&Pomocník"
+
+#. Ok Button text
+#, fuzzy
+msgid "&OK"
+msgstr "&OK"
+
+#. Yes Button text
+msgid "&Yes"
+msgstr "Án&o"
+
+#. No Button text
+msgid "&No"
+msgstr "&Nie"
+
+#. Cancel Button text
+#. Maximum length: 40  characters
+msgid "&Cancel"
+msgstr "&Zrušiť"
+
+#. RTF text: exit SaX message
+#, fuzzy
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
+msgstr "<b>Ukončenie SaX2:</b><hr>Chcete ukončiť SaX2?"
+
+#. Message box default caption text
+msgid "Message"
+msgstr ""
+
+#. Change configuration Button text
+#, fuzzy
+msgid "C&hange Configuration"
+msgstr "&Upraviť konfiguráciu"
+
+#. Short description of the Monitor module
+#. Monitor name label
+msgid "Monitor"
+msgstr "Monitor"
+
+#. title of module dialog
+#, fuzzy
+msgid "Card and Monitor Properties"
+msgstr "Nastavenie vlastností monitoru..."
+
+#. Short description of the Mouse module
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "Myš"
+
+#  Maximum length: 40  characters
+#. title of module dialog
+#, fuzzy
+msgid "Mouse Properties"
+msgstr "Vlastnosti..."
+
+#. Short description of the Keyboard module
+#, fuzzy
+msgid "Keyboard"
+msgstr "Model klávesnice"
+
+#. title of module dialog
+#, fuzzy
+msgid "Keyboard Properties"
+msgstr "Nastavenie vlastností monitoru..."
+
+#. Short description of the Tablet module
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "Tablet"
+
+#  Maximum length: 40  characters
+#. title of module dialog
+#, fuzzy
+msgid "Tablet Properties"
+msgstr "Vlastnosti..."
+
+#. Short description of the Touchscreen module
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "Dotyková obrazovka"
+
+#. title of module dialog
+#, fuzzy
+msgid "Touchscreen Properties"
+msgstr "Nastavenie vlastností monitoru..."
+
+#  Maximum length: 20  characters
+#. Short description of the VNC module
+msgid "VNC"
+msgstr "VNC"
+
+#. title of module dialog
+#, fuzzy
+msgid "Remote Access Properties"
+msgstr "Nastavenie vlastností monitoru..."
+
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "Obrazovka"
+
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
+msgstr ""
+
+#. Activate mouse checkbox
+msgid "Activate This Pointer"
+msgstr ""
+
+#. Graphics Card name label
+msgid "Card"
+msgstr ""
+
+#  Maximum length: 60  characters
+#. Change data
+#, fuzzy
+msgid "&Change..."
+msgstr "<Zmeňte heslo...>"
+
+#. Set options for some kind of data
+msgid "&Options..."
+msgstr "&Možnosti..."
+
+#. Configure some data
+#, fuzzy
+msgid "Con&figure..."
+msgstr "Nastaviť klávesnicu..."
+
+#. Group box title for dual head setup
+#, fuzzy
+msgid "Dual Head Mode"
+msgstr "Režim viacerých obrazoviek"
+
+#  Maximum length: 20  characters
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+#, fuzzy
+msgid "Options"
+msgstr "&Možnosti"
+
+#. CheckBox label to activate the mouse wheel
+#, fuzzy
+msgid "Activate Mouse Wheel"
+msgstr "Povoliť koliesko myši"
+
+#. CheckBox label to activate the 3 Button emulation
+#, fuzzy
+msgid "Activate 3-Button Emulation"
+msgstr "Povoliť emuláciu 3. tlačidla"
+
+#. CheckBox label to activate the wheel emulation
+#, fuzzy
+msgid "Emulate Wheel with Mouse Button"
+msgstr "Emulovať koliesko tlačidlom myši:"
+
+#. Group box title for card rotation
+#, fuzzy
+msgid "Rotate Screen"
+msgstr "Otočenie obrazovky"
+
+#. Group box title for the mouse test field
+#. Line edit label pointing to the keyboard test field
+#, fuzzy
+msgid "Test"
+msgstr "O&testovať..."
+
+#. Button text in final step message box for testing the configuration
+#, fuzzy
+msgid "&Test"
+msgstr "O&testovať..."
+
+#. Button text in final step message box for saving the configuration
+msgid "&Save"
+msgstr "&Uložiť"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Klávesnica"
+
+#. Status line of mouse test field: ready
+#, fuzzy
+msgid "Test ready"
+msgstr "Testovacie pole"
+
+#. Status line of mouse test field: single button click
+#, fuzzy
+msgid "Single Click: Done"
+msgstr "Jednoduché kliknutie: Hotovo"
+
+#. Status line of mouse test field: double button click
+#, fuzzy
+msgid "Double Click: Done"
+msgstr "Dvojité kliknutie: Hotovo"
+
+#. Status line of mouse test field: wheel moved
+#, fuzzy
+msgid "Scrolling"
+msgstr "Mapovanie ScrollLock"
+
+#. Status line of mouse test field: button pressed
+#, fuzzy
+msgid "Button pressed"
+msgstr "Tlačidlo stlačené..."
+
+#. Status line of mouse test field: button released
+#, fuzzy
+msgid "Button released"
+msgstr "Tlačidlo pustené..."
+
+#. Status line of mouse test field: wheel stopped
+#, fuzzy
+msgid "Stopped: Done"
+msgstr "Koliesko zastavené: Hotovo"
+
+#  Maximum length: 40  characters
+#. Group box title for properties
+#, fuzzy
+msgid "Properties"
+msgstr "Vlastnosti..."
+
+#. Activate dual head mode checkbox
+#, fuzzy
+msgid "Activate Dual Head Mode"
+msgstr "Režim viacerých obrazoviek"
+
+#. Set display resolution
+#, fuzzy
+msgid "Resolution"
+msgstr "Rozlíšenie Y"
+
+#. Set display colors
+#, fuzzy
+msgid "Colors"
+msgstr "&Farby"
+
+#. Activate 3D checkboc
+#, fuzzy
+msgid "Activate 3D Acceleration"
+msgstr "3D akcelerácia"
+
+#. Tab title: Setup monitor properties for card X
+#, fuzzy
+msgid "Monitor for Card"
+msgstr "Model monitora"
+
+#. Tab title: Setup monitor for second channel on card X
+#, fuzzy
+msgid "Second Monitor for Card"
+msgstr "Model monitora"
+
+#. Tab title: Setup sync frequencies
+#, fuzzy
+msgid "Sync Frequencies"
+msgstr "&Frekvencie"
+
+#. Tab title: Setup display size
+#, fuzzy
+msgid "Display Size"
+msgstr "Veľkosť obrazovky"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
+msgstr ""
+
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
+msgstr ""
+
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
+msgstr ""
+
+#. rwalter
+#. Monitor Model is unknown and should be changed
+#. rwalter
+#. Mouse Model is unknown and should be changed
+#, fuzzy
+msgid "Unconfigured"
+msgstr "Nekonfigurované"
+
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+
+#. Info label for dual head checkbox
+#, fuzzy
+msgid "No configuration available"
+msgstr "Nastavenie uložené..."
+
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"Tradičný režim viacnásobných obrazoviek:\n"
+"Každá obrazovka je nezávislá"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"Klonované viacnásobné obrazovky:\n"
+"Každá obrazovka je klon primárnej"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Viacnásobné obrazovky Xinerama:\n"
+"Vytvoriť jednu veľkú obrazovku z viacerých"
+
+#. Title for multihead modi
+#, fuzzy
+msgid "Multihead Mode"
+msgstr "Režim viacerých obrazoviek"
+
+#. Monitor X - connected to - CardY
+#, fuzzy
+msgid "Connected To"
+msgstr "Pripojený k:"
+
+#. Tooltip text if monitor is unknown
+#, fuzzy
+msgid "Unknown Monitor:"
+msgstr "Neznámy monitor..."
+
+#. Tooltip text for primary monitor
+#, fuzzy
+msgid "Primary Monitor:"
+msgstr "Primárny režim:"
+
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+#, fuzzy
+msgid "Monitor Settings"
+msgstr "Výber farieb..."
+
+#. Windowanager title for the mouse mode setup
+#, fuzzy
+msgid "Mouse Settings"
+msgstr "Systém X11"
+
+#. Windowanager title for the card options dialog
+#, fuzzy
+msgid "Graphics Card Settings"
+msgstr "Grafická karta"
+
+#. Windowanager title for the dual head setup
+#, fuzzy
+msgid "Dual Head Settings"
+msgstr "Režim viacerých obrazoviek"
+
+#. Radiobutton don't rotate
+#, fuzzy
+msgid "Not Rotated"
+msgstr "Bez otočenia"
+
+#. Radiobutton rotate to the left side
+#, fuzzy
+msgid "To the Left"
+msgstr "Doľava"
+
+#. Radiobutton rotate to the right side
+#, fuzzy
+msgid "To the Right"
+msgstr "Doprava"
+
+#. Popup message to ask the user for an option value
+#, fuzzy
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Možnosť %1 vyžaduje hodnotu</b><hr>Prosím, nastavte túto hodnotu pre túto "
+"voľbu."
+
+#. Group box title for the monitor vendor and name selection
+#, fuzzy
+msgid "Monitor: Vendor and Name Selection"
+msgstr "Model: výber výrobcu a mena..."
+
+#. Group box title for the mouse vendor and name selection
+#, fuzzy
+msgid "Mouse: Vendor and Name Selection"
+msgstr "Model: výber výrobcu a mena..."
+
+#. Group box title for the manual sync frequency set up
+#, fuzzy
+msgid "Manual Sync Frequency Setup"
+msgstr "Ručné nastavenie synchronizačných frekvencií..."
+
+#. Group box title for the aspect/ratio selection
+#, fuzzy
+msgid "Diagonal and Aspect Ratio"
+msgstr "Zvoľte diagonálu a pomer strán..."
+
+#. Group box title for the display size setup
+msgid "Display Size in [ mm ]"
+msgstr "Veľkosť obrazu v mm"
+
+#. Text message telling to be carefull with the monitor sync frequencies
+#, fuzzy
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Poznámka:</b>Nesprávne nastavenie synchronizácie môže poškodiť váš "
+"monitor. Pre nasledujúce nastavenie konzultujte príručku vášho monitoru."
+
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
+msgstr ""
+
+#. Button to popup the disk dialog for reading the monitor utility disk
+msgid "Utility Disk..."
+msgstr "Disk s nástrojmi..."
+
+#. Label text for horizontal sync frequency
+#, fuzzy
+msgid "Horizontal"
+msgstr "Horizontálne:"
+
+#. Label text for second monitor name
+#, fuzzy
+msgid "Second Monitor:"
+msgstr "Vyberte rozlíšenie"
+
+#. Label text for second monitor resolution
+#, fuzzy
+msgid "Second Monitor Resolution"
+msgstr "Vyberte rozlíšenie"
+
+#. Label text for vertical sync frequency
+#, fuzzy
+msgid "Vertical"
+msgstr "Vertikálne:"
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "kHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio"
+msgstr ""
+
+#. Label text for the diagonal length combo box
+#, fuzzy
+msgid "Diagonal"
+msgstr "Horizontálne:"
+
+#. Label text for the display size X-Axis
+msgid "X Axis [mm]"
+msgstr ""
+
+#. Label text for the display size Y-Axis
+msgid "Y Axis [mm]"
+msgstr ""
+
+#. Something is not configured
+msgid "Not configured"
+msgstr "Nekonfigurované"
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr "inchov"
+
+#  RTF text: no limit
+#. Message box of type Ok, telling to user to insert a CD or disk
+#, fuzzy
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Vložte disk</b>Vložte disk alebo CD s nástrojmi od výrobcu monitora."
+
+#  RTF text: no limit
+#. Message box of type Error, telling that the utility disk cannot be opened
+#, fuzzy
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Chyba pri čítaní</b><hr>Nepodarilo sa prečítať CD alebo disk. Možno sa je "
+"médium poškodené alebo nie sú informácie v správnom formáte."
+
+#. First gap of the ActivateInfo text: Multihead mode name
+#, fuzzy
+msgid "Traditional"
+msgstr "Aktívny tradičný režim"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
+msgstr ""
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
+msgstr ""
+
+#. Tab text for the mouse model dialog
+#, fuzzy
+msgid "Mouse Model"
+msgstr "Myš"
+
+#. Group box title for the primary keyboard setup
+msgid "Primary Setup"
+msgstr "Primárne nastavenie"
+
+#. Label text for the primary keyboard type
+#, fuzzy
+msgid "Type"
+msgstr "Typ"
+
+#. Label text for the primary keyboard variant
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr "Variant"
+
+#. Group box title for the additional keyboard setup
+#, fuzzy
+msgid "Additional Layouts"
+msgstr "Ďalšie klávesnice"
+
+#. Table topic text describing the status column
+msgid "Status"
+msgstr "Stav"
+
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr "Tabuľka znakov"
+
+#. List View root item text
+#, fuzzy
+msgid "Group Shift/Lock Behavior"
+msgstr "Zoskupiť chovanie Shift/Lock"
+
+#. List View root item text
+#, fuzzy
+msgid "Use Keyboard LED to Show Alternate Group"
+msgstr "Použiť LED klávesnice pre zobrazenie alternatívnej skupiny"
+
+#. List View root item text
+#, fuzzy
+msgid "Compose Key Position"
+msgstr "Pozícia klávesu Control"
+
+#. List View root item text
+#. XKBFile extension text
+msgid "Control Key Position"
+msgstr "Pozícia klávesu Control"
+
+#. List View root item text
+#, fuzzy
+msgid "Third Level Chooser"
+msgstr "Výber tretej úrovne"
+
+#. List View root item text
+#, fuzzy
+msgid "Alt/Win Key Behavior"
+msgstr "Chovanie klávesu Alt/Win"
+
+#. List View root item text
+#, fuzzy
+msgid "CapsLock Key Behavior"
+msgstr "Chovanie Caps Lock"
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Alt key switches group while pressed."
+msgstr "Ľavý Win-kláves prepína skupinu pri stlačení"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Both Ctrl keys together change group."
+msgstr "Oba klávesy Shift menia skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Shift key changes group."
+msgstr "Pravý Win-kláves mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Win key changes group."
+msgstr "Ľavý Win-kláves mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Alt key changes group."
+msgstr "Oba klávesy Shift menia skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Both Win keys switch group while pressed."
+msgstr "Oba Win-klávesy prepínajú skupinu pri stlačení"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Ctrl key switches group while pressed."
+msgstr "Pravý Win-kláves prepína skupinu pri stlačení"
+
+#. XKBFile extension text
+msgid "CapsLock just locks the Shift modifier."
+msgstr ""
+
+#. XKBFile extension text
+msgid "CapsLock toggles normal capitalization of alphabetic characters."
+msgstr ""
+
+#. XKBFile extension text
+msgid "CapsLock toggles Shift so all keys are affected."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Win-key is Compose."
+msgstr "Pravý Win-kláves je Compose"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Shift+CapsLock changes group."
+msgstr "Caps Lock mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "R-Alt switches group while pressed."
+msgstr "R-Alt prepína skupinu pri stlačení"
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr "Control vľavo dole"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press any of Win-keys to choose 3rd level."
+msgstr "Stlačenie niektorého Win-klávesu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Right Alt key to choose 3rd level."
+msgstr "Stlačenie pravého Win-klávesu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Ctrl key changes group."
+msgstr "Pravý Ctrl mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Alt is Compose."
+msgstr "Pravý Alt je Compose"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Ctrl is Compose."
+msgstr "Pravý Alt je Compose"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "ScrollLock LED shows alternative group."
+msgstr "Scroll_Lock LED zobrazuje alternatívnu skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Control key at left of -A-"
+msgstr "Control naľavo od 'A'"
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr "Výber tretej úrovne"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Both Shift keys together change group."
+msgstr "Spoločné stlačenie oboch Shift mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
+msgstr "používa vnútorné veľké písmená. Shift ruší Caps."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Make CapsLock an additional Control."
+msgstr "CapsLock ako ďalší Control"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Left Win-key to choose 3rd level."
+msgstr "Stlačenie ľavého Win-klávesu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Win-key changes group."
+msgstr "Pravý Win-kláves mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Meta is mapped to the left Win-key."
+msgstr "Meta je mapovaný na ľavý Win-kláves."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock LED shows alternative group."
+msgstr "Caps_Lock LED zobrazuje alternatívnu skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "NumLock LED shows alternative group."
+msgstr "Num_Lock LED zobrazuje alternatívnu skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Shift key changes group."
+msgstr "Ľavý Shift mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Win-key switches group while pressed."
+msgstr "Ľavý Win-kláves prepína skupinu pri stlačení"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Menu is Compose."
+msgstr "Menu je Compose"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Both Alt keys together change group."
+msgstr "Oba klávesy Alt menia skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock key changes group."
+msgstr "Caps Lock mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Swap Control and CapsLock."
+msgstr "Prehodiť Control a Caps Lock"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press any of Alt keys to choose 3rd level."
+msgstr "Stlačenie niektorého Win-klávesu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Alt key changes group."
+msgstr "Pravý Alt mení skupinu"
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Hyper is mapped to the Win-keys."
+msgstr "Hyper je mapovaný na Win-klávesy."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt is mapped to the right Win-key and Super to Menu."
+msgstr "Meta je mapovaný na ľavý Win-kláves."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Super is mapped to the Win-keys (default)."
+msgstr "Super je mapovaný na Win-klávesy (štandardné)."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt and Meta on the Alt keys (default)."
+msgstr "Alt a Meta na klávesy Alt (štandardné)."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Add the standard behavior to Menu key."
+msgstr "Pridať štandardné chovanie klávesu Meta."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt and Meta are on the Alt keys (default)."
+msgstr "Alt a Meta na klávesy Alt (štandardné)."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Right Control to choose 3rd level."
+msgstr "Stlačenie pravého Control vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt+Shift changes group."
+msgstr "Alt+Shift mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Control+Shift changes group."
+msgstr "Control+Shift mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
+msgstr "funguje ako Shift so zámkom. Shift ruší Caps."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Use keyboard LED to show alternative group."
+msgstr "Použiť LED klávesnice pre zobrazenie alternatívnej skupiny"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Right Win-key to choose 3rd level."
+msgstr "Stlačenie pravého Win-klávesu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Left Alt key to choose 3rd level."
+msgstr "Stlačenie ľavého Win-klávesu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Meta is mapped to the Win-keys."
+msgstr "Meta je mapovaný na Win-klávesy."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Menu key to choose 3rd level."
+msgstr "Stlačenie klávesu Menu vyberá 3. úroveň"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Ctrl key changes group."
+msgstr "Ľavý Ctrl mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Menu key changes group."
+msgstr "Kláves Menu mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt+Control changes group."
+msgstr "Alt+Control mení skupinu"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Win-key switches group while pressed."
+msgstr "Pravý Win-kláves prepína skupinu pri stlačení"
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
+msgstr ""
+
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
+msgstr ""
+
+#. Activate tablet checkbox
+#, fuzzy
+msgid "Activate This Tablet"
+msgstr "3D akcelerácia"
+
+#. Group box title for the tablet vendor and name selection
+#, fuzzy
+msgid "Tablet: Vendor and Name Selection"
+msgstr "Model: výber výrobcu a mena..."
+
+#. Group box title for tablet port combobox
+#, fuzzy
+msgid "Connection Port"
+msgstr "Pripojený k:"
+
+#. Group box title for tablet mode
+#, fuzzy
+msgid "Primary Tablet Mode"
+msgstr "Primárne nastavenie"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen or Eraser Mode"
+msgstr ""
+
+#  Maximum length: 20  characters
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr "Relatívny"
+
+#  Maximum length: 20  characters
+#. Radiobutton for absolute tablet mode
+msgid "Absolute"
+msgstr "Absolútne"
+
+#  Maximum length: 20  characters
+#. Combobox item text for tablet port: USB
+msgid "USB"
+msgstr "USB"
+
+#  Maximum length: 20  characters
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#  Maximum length: 20  characters
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "Nástroje"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr "Pridať pero"
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr "Pridať gumu"
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen or Eraser Settings"
+msgstr ""
+
+#  Maximum length: 40  characters
+#. Tab title: Pen properties
+#, fuzzy
+msgid "Pen Properties"
+msgstr "Vlastnosti..."
+
+#. Tab title: Eraser properties
+#, fuzzy
+msgid "Eraser Properties"
+msgstr "Špeciálne vlastnosti myši..."
+
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a Touchscreen to Display Number %1"
+msgstr ""
+
+#. Group box title for the touchscreen vendor and name selection
+#, fuzzy
+msgid "Touchscreen: Vendor and Name Selection"
+msgstr "Model: výber výrobcu a mena..."
+
+#. Finish configuration message box
+#, fuzzy
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
+"kill the server."
+msgstr ""
+"<b>Záverečné kroky</b><hr>Posledný krok je uloženie nového nastavenia. Pred "
+"uložením sa doporučuje otestovať nové nastavenie. Ak bude testovací server "
+"zobrazovať poškodenú plochu, stlačte <b>[ Ctrl+Alt+Backspace ]</b>, čím ho "
+"ukončíte."
+
+#. Tab title: VNC Server configuration
+#, fuzzy
+msgid "VNC Server"
+msgstr "Systém X11"
+
+#  Maximum length: 60  characters
+#. Activate VNC server checkbox
+#, fuzzy
+msgid "Allow Access to Display Using VNC Protocol"
+msgstr "Povoliť prístup k obrazovke pomocou VNC protokolu"
+
+#  Maximum length: 20  characters
+#. Group box title for the VNC options
+msgid "VNC Options"
+msgstr "Možnosti VNC"
+
+#  Maximum length: 60  characters
+#. Activate VNC password protection checkbox
+#, fuzzy
+msgid "Activate Password Protection"
+msgstr "Zapnúť ochranu heslom"
+
+#  Maximum length: 40  characters
+#. LineEdit label: enter password
+msgid "Password"
+msgstr "Heslo"
+
+#  Maximum length: 60  characters
+#. LineEdit contents: enter new password
+#, fuzzy
+msgid "<Enter new password>"
+msgstr "<Zadajte nové heslo...>"
+
+#  Maximum length: 60  characters
+#. LineEdit contents: change password
+#, fuzzy
+msgid "<Change password>"
+msgstr "<Zadajte nové heslo...>"
+
+#  Maximum length: 40  characters
+#. LineEdit contents: verify password
+#, fuzzy
+msgid "<Verify password>"
+msgstr "Overte heslo"
+
+#  Maximum length: 40  characters
+#. Activate HTTP access checkbox
+#, fuzzy
+msgid "Activate HTTP Access"
+msgstr "Povoliť HTTP prístup"
+
+#  Maximum length: 40  characters
+#. Activate multiple VNC connection checkbox
+#, fuzzy
+msgid "Allow Multiple VNC Connections"
+msgstr "Povoliť viacero VNC pripojení"
+
+#  Maximum length: 40  characters
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
+msgstr "HTTP Port"
+
+#  RTF text: no limit
+#. VNC message box appearing if password strings doesn't match
+#, fuzzy
+msgid ""
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
+msgstr ""
+"<b>Heslá sa nezhodujú</b><hr>Prvá a druhá verzia hesla sa nezhodujú! Prosím, "
+"skúste znovu."
+
+#  RTF text: no limit
+#. VNC message box appearing if password is too short
+#, fuzzy
+msgid ""
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
+msgstr ""
+"<b>Chyba hesla</b><hr>Vstup pre heslo je prázdny, alebo je heslo prikrátke. "
+"Prosím, zadajte heslo s aspoň šiestimi znakmi !."
+
+#. Install missing packages box
+#, fuzzy
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Inštalácia software:</b><hr>Nemáte nainštalované niektoré balíky. Chcete "
+"ich nainštalovať teraz?"
+
+#. Caption text for the missing package info window
+msgid "Package Installation"
+msgstr ""
+
+#. Progress bar title text
+#, fuzzy
+msgid "Importing module"
+msgstr "Ukončenie SaX2..."
+
+#. Progress window caption text
+#, fuzzy
+msgid "SaX2: Importing data..."
+msgstr "Ukončenie SaX2..."
+
+#. Progress window label text
+msgid "Initialize cache..."
+msgstr ""
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+
+#. Message box test: configuration has been saved
+#, fuzzy
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Nastavenie bolo uložené:</b><hr>Vaše zmeny sa prejavia pri budúcom štarte "
+"grafického systému."
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
+msgstr ""
+
+#. /.../
+#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for XFine2
+#.
+#. Maximum length: 40  characters
+msgid "&Step size"
+msgstr "Veľkosť &kroku"
+
+#. Maximum length: 40  characters
+msgid "Small"
+msgstr "Malý"
+
+#. Maximum length: 40  characters
+msgid "Normal"
+msgstr "Normálny"
+
+#. Maximum length: 40  characters
+msgid "Big"
+msgstr "Veľký"
+
+#. Maximum length: 40  characters
+msgid "Huge"
+msgstr "Obrovský"
+
+#. Maximum length: 40  characters
+msgid "&Next Screen"
+msgstr "&Nasledujúca obrazovka"
+
+#. Maximum length: 40  characters
+msgid "S&ave"
+msgstr "&Uložiť"
+
+#. Maximum length: 40  characters
+msgid "Change &Position"
+msgstr "Upraviť &pozíciu"
+
+#. Maximum length: 40  characters
+msgid "C&hange Size"
+msgstr "Upraviť &veľkosť"
+
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr "Obrazovka"
+
+#. Maximum length: 60  characters
+msgid "No video mode tuning available"
+msgstr "Vyladenie video režimu nie je k dispozícii"
+
+msgid "Configuration on display"
+msgstr "Konfigurácia obrazovky"
+
+msgid "Idle timer..."
+msgstr "Čakanie..."
+
+#, fuzzy
+#~ msgid "SaX2: Importing"
+#~ msgstr "Ukončenie SaX2..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Špeciálne vlastnosti myši..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Nastavenie vlastností monitoru..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Klávesnica"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Variant"
+
+#, fuzzy
+#~ msgid "Monitor System"
+#~ msgstr "Monitor"
+
+#, fuzzy
+#~ msgid "Keyboard System"
+#~ msgstr "Klávesnica"
+
+#, fuzzy
+#~ msgid "Tablet System"
+#~ msgstr "Tablet"
+
+#, fuzzy
+#~ msgid "Touchscreen System"
+#~ msgstr "Dotyková obrazovka"
+
+#, fuzzy
+#~ msgid "Test:"
+#~ msgstr "O&testovať..."
+
+#, fuzzy
+#~ msgid "Testfield: Ready..."
+#~ msgstr "Testovacie pole myši: Pripravené..."
+
+#, fuzzy
+#~ msgid "Unknown Monitor please change"
+#~ msgstr "Neznámy model monitoru"
+
+#  /.../
+#  Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#  This file contains the gettext keys used within a gettext call in the
+#  application code for SaX2
+#  Maximum length: 20  characters
+#~ msgid "Component"
+#~ msgstr "Komponent"
+
+#~ msgid "with"
+#~ msgstr "s"
+
+#~ msgid "Not available"
+#~ msgstr "Nie je k dispozícii"
+
+#~ msgid "Use the following AccessX settings"
+#~ msgstr "Použiť nasledujúce nastavenia AccessX"
+
+#~ msgid "Disable AccessX"
+#~ msgstr "Zakázať AccessX"
+
+#  Maximum length: 60  characters
+#~ msgid "Miscellaneous"
+#~ msgstr "Rôzne"
+
+#~ msgid "This screen is selected"
+#~ msgstr "Táto obrazovka je vybraná"
+
+#~ msgid "at"
+#~ msgstr "na"
+
+#~ msgid "Sync ranges"
+#~ msgstr "Rozsah synchronizácie"
+
+#~ msgid "Wheel is moving..."
+#~ msgstr "Koliesko je v pohybe..."
+
+#~ msgid "Disable use of accented letters"
+#~ msgstr "Vypnúť používanie písmen s mäkčeňmi a dĺžňami"
+
+#~ msgid "Clear test field"
+#~ msgstr "Vyčistiť testovacie pole"
+
+#~ msgid "Mouse speed in pixels/sec"
+#~ msgstr "Rýchlosť myši v bodoch za sekundu"
+
+#~ msgid "&Remove Tablet..."
+#~ msgstr "O&dstrániť tablet..."
+
+#~ msgid "Delay time: (ms)"
+#~ msgstr "Oneskorenie: (ms)"
+
+#~ msgid "Repeat rate: (Symbols/sec)"
+#~ msgstr "Rýchlosť opakovania: (znakov/sekundu)"
+
+#~ msgid "&Apply"
+#~ msgstr "&Použiť"
+
+#~ msgid "Graphics engine starts with resolution:"
+#~ msgstr "Grafický systém sa spustí v rozlíšení:"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgid "Velocity"
+#~ msgstr "Rýchlosť"
+
+#~ msgid "Select Keyboard Layout"
+#~ msgstr "Vyberte rozloženie kláves"
+
+#~ msgid "Symbol recurrence"
+#~ msgstr "Opakovanie symbolu"
+
+#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
+#~ msgstr "<nobr><h3>Typ klávesnice</h3></nobr>"
+
+#~ msgid "BusID"
+#~ msgstr "ID zbernice"
+
+#~ msgid "ScreenID"
+#~ msgstr "ID obrazovky"
+
+#~ msgid "Manufacturer Disk..."
+#~ msgstr "Disk od výrobcu..."
+
+#~ msgid "Shift/Lock Group"
+#~ msgstr "Skupina Shift/Lock"
+
+#~ msgid "Ctrl Mapping"
+#~ msgstr "Mapovanie Ctrl"
+
+#~ msgid "LeftAlt mapping"
+#~ msgstr "Mapovanie ľavého Alt"
+
+#~ msgid "RightAlt mapping"
+#~ msgstr "Mapovanie pravého Alt"
+
+#~ msgid "RightCtl mapping"
+#~ msgstr "Mapovanie pravého Ctl"
+
+#~ msgid "Default"
+#~ msgstr "Štandardné"
+
+#~ msgid "R-Alt switch group while pressed"
+#~ msgstr "Počas držania pravý Alt prepína skupinu"
+
+#~ msgid "R-Alt switch group"
+#~ msgstr "Pravý Alt prepína skupinu"
+
+#~ msgid "Both Shift Keys change group"
+#~ msgstr "Oba klávesy Shift menia skupinu"
+
+#~ msgid "Ctrl and Shift change group"
+#~ msgstr "Ctrl a Shift mení skupinu"
+
+#~ msgid "Alt and Ctrl change group"
+#~ msgstr "Alt a Ctrl mení skupinu"
+
+#~ msgid "CapsLock as additional control"
+#~ msgstr "CapsLock ako ďalší Control"
+
+#~ msgid "Swap Ctrl and CapsLock"
+#~ msgstr "Vymeniť Ctrl a CapsLock"
+
+#~ msgid "Ctrl Key at left of <A>"
+#~ msgstr "Ctrl vľavo od <A>"
+
+#~ msgid "Ctrl Key at bottom left"
+#~ msgstr "Ctrl vľavo dole"
+
+#~ msgid "Modeline Algorithm"
+#~ msgstr "Algoritmus výpočtu rozmerov a posunu obrazu"
+
+#~ msgid "Color and Resolution"
+#~ msgstr "Farebná hĺbka a rozlíšenie"
+
+#~ msgid "Virtual Resolution"
+#~ msgstr "Virtuálne rozlíšenie"
+
+#~ msgid "Language Layout"
+#~ msgstr "Jazyk klávesnice"
+
+#~ msgid "Screen Layout"
+#~ msgstr "Vzhľad obrazovky"
+
+#~ msgid "Server layout:"
+#~ msgstr "Vzhľad serveru:"
+
+#~ msgid "Mode:"
+#~ msgstr "Režim:"
+
+#~ msgid "MHz"
+#~ msgstr "MHz"
+
+#~ msgid "Enable or Disable AccessX"
+#~ msgstr "Povolenie alebo zákaz AccessX"
+
+#~ msgid "Enable 3D features"
+#~ msgstr "Povoliť funkcie 3D"
+
+#~ msgid "Enable DPMS"
+#~ msgstr "Povoliť DPMS"
+
+#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
+#~ msgstr ""
+#~ "<nobr><h3><u>Nastavenie režimu viacerých obrazoviek...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Nastavenie 3D/OpenGL...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Nastavenie AccessX...</u></h3></nobr>"
+
+#  Maximum length: 40  characters
+#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Nastavenie VNC...</u></h3></nobr>"
+
+#~ msgid "Selected component:"
+#~ msgstr "Vybraný komponent:"
+
+#~ msgid "Click 'Apply' to test your settings."
+#~ msgstr "Kliknutím 'Použiť' otestujte svoje nastavenie."
+
+#~ msgid ""
+#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
+#~ "is a warning only but make sure your keyboard model is able to map all "
+#~ "the keys needed for the selected layout."
+#~ msgstr ""
+#~ "<b>Aktuálne rozloženie a model klávesnice si príliš nezodpovedajú.</"
+#~ "b><hr>Toto je iba varovanie, ale overte, že vaša klávesnica dokáže "
+#~ "namapovať všetky klávesy potrebné pre vybrané rozloženie."
+
+#~ msgid ""
+#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
+#~ "3D subsystem is unable to work within a multihead environment."
+#~ msgstr ""
+#~ "<b>Akcelerácia OpenGL nie je možná v prostredí viacnásobných obrazoviek.</"
+#~ "b><hr>3D subsystém nedokáže pracovať v tomto prostredí."
+
+#~ msgid ""
+#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
+#~ "hardware 3D/OpenGL acceleration."
+#~ msgstr ""
+#~ "<b>3D akcelerácia nie je možná</b><hr>Nainštalovaná karta nedokáže "
+#~ "používať 3D/OpenGL hardwarovú akceleráciu."
+
+#~ msgid ""
+#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
+#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
+#~ "The currently used color setup does not fulfill this requirement. Verify "
+#~ "the current default color depth setup."
+#~ msgstr ""
+#~ "<b>Nesprávna farebná hĺbka pre akceleráciu OpenGL</b><hr>Väčšina "
+#~ "ovládačov OpenGL vyžaduje farebnú hĺbku <b>16 bitov (65536)</b> pre "
+#~ "správne fungovanie. Momentálne nastavenie farieb túto požiadavku nespĺňa. "
+#~ "Skontrolujte toto nastavenie."
+
+#~ msgid ""
+#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
+#~ "acceleration because the following packages are missing:"
+#~ msgstr ""
+#~ "<b>Chýbajú požadované základné balíky</b><hr>Nie je možné povoliť "
+#~ "akceleráciu OpenGL, pretože chýbajú tieto balíky:"
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
+#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
+#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
+#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
+#~ "Online Update)."
+#~ msgstr ""
+#~ "<b>Nie je možné zapnúť akceleráciu OpenGL</b><hr>Systém neposkytuje "
+#~ "oficiálne ovládače 2D/3D/OpenGL od firmy nVidia. Zaktualizujte najprv "
+#~ "balíky NVIDIA_GLX a NVIDIA_kernel z webového serveru nVidia.<i>(http://"
+#~ "www.nvidia.com)</i>. Dokáže to aj veľmi pohodlne YOU (YaST2 Online "
+#~ "Update)."
+
+#  RTF text: no limit
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
+#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
+#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
+#~ "list (usually at the bottom of the list). Note, that you need to mark the "
+#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
+#~ "before and the driver was uninstalled - for whatever reason."
+#~ msgstr ""
+#~ "<b>Nemôžem zapnúť OpenGL akceleráciu</b><hr>Pre aktiváciu 3D subsystému "
+#~ "na tejto karte musíte najskôr nainštalovať komerčné ovládače od nVidie. "
+#~ "Ovládače nainštalujete pomocou <b>Online aktualizácie YaST</b>. Tam "
+#~ "zvolíte kategóriu <b>Inštalovateľné a nainštalované opravy</b> a zo "
+#~ "zoznamu vyberiete <b>Stiahnuť grafický ovládač NVIDIA(r)</b>. Ak ste túto "
+#~ "opravu už inštalovali, a z nejakého dôvodu bola odstránená, musíte ju "
+#~ "teraz označit ako aktualizáciu."
+
+#  RTF text: no limit
+#~ msgid ""
+#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
+#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
+#~ "the nVidia installer. The uninstall process will reset the original "
+#~ "driver from X.Org which does not provide any 3D hardware acceleration."
+#~ "<br><br><b>Do you want to continue?</b>"
+#~ msgstr ""
+#~ "<b>Nie je možné vypnúť akceleráciu OpenGL</b><hr>Pre vypnutie 3D "
+#~ "subsystému odinštalujte komerčný ovládač firmy nVidia. Musíte to urobiť "
+#~ "pomocou inštalátora firmy nVidia. Tým sa obnoví pôvodný ovládač X.Org, "
+#~ "ktorý žiadnu 3D hardwarovú akceleráciu nepodporuje."
+
+#  Maximum length: 70 characters
+#~ msgid "Display size unknown..."
+#~ msgstr "Neznáma veľkosť obrazovky..."
+
+#  RTF text: no limit
+#~ msgid ""
+#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
+#~ "couldn't be detected. Applications dealing with computer graphics like "
+#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
+#~ "about the real physical size of your display to work properly. Please "
+#~ "refer to your monitor manual to obtain the correct size values for the "
+#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
+#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
+#~ msgstr ""
+#~ "<b>Rozmer obrazovky v [ mm ]</b><hr>Rozmery vašej obrazovky sa nedali "
+#~ "zistiť. Aplikácie, pracujúce s počítačovou grafikou, ako napríklad "
+#~ "<b>Gimp</b>, alebo knižnice na vykresľovanie textu, ako napríklad <b>Xft</"
+#~ "b>, musia poznať skutočnú fyzickú veľkosť vašej obrazovky, aby fungovali "
+#~ "správne. Prosím obráťte sa na manuál k vášmu monitoru ohľadne správnych "
+#~ "hodnôt pre horizontálny (X) a vertikálny (Y) smer. Hodnoty musia byť "
+#~ "zadané v milimetroch.<br><br><b>Chcete nastaviť veľkosť obrazovky ?</b>"
+
+#~ msgid ""
+#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
+#~ "X and Y axis and click 'Add' to include the new resolution in the "
+#~ "standard resolution list."
+#~ msgstr ""
+#~ "<b>Pridať používateľské rozlíšenie</b><hr>Jednoducho zadajte počty bodov "
+#~ "pre os X a Y a stlačte 'Pridať' pre pridanie nového rozlíšenia do zoznamu "
+#~ "štandardných rozlíšení."
+
+#~ msgid "Available configuration components are:"
+#~ msgstr "Dostupné komponenty nastavenia sú:"
+
+#~ msgid ""
+#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
+#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
+#~ msgstr ""
+#~ "<b>AccessX povolené:</b><hr>Hlavný kurzor myši je teraz možné ovládať "
+#~ "<b>klávesmi na numerickej klávesnici</b>. Otestujte si chovanie kurzoru."
+
+#~ msgid ""
+#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
+#~ "number pad is <b>disabled</b> now."
+#~ msgstr ""
+#~ "<b>AccessX zakázané:</b><hr>Ovládanie hlavného kurzoru myši pomocou "
+#~ "numerickej klávesnice je teraz <b>vypnuté</b>."
+
+#~ msgid ""
+#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
+#~ "system?"
+#~ msgstr ""
+#~ "<b>Odstrániť tablet:</b><hr>Naozaj odstrániť grafický tablet zo systému?"
+
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time your system is <b>rebooted</b>."
+#~ msgstr ""
+#~ "<b>Nastavenie bolo uložené:</b><hr>Vaše zmeny sa prejavia pri budúcom "
+#~ "<b>reštarte počítača</b>."
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
+#~ "in developmental phases so are, in part, still regarded as experimental. "
+#~ "Nevertheless, we have decided to include the drivers in our distribution "
+#~ "because of the high demand for 3D hardware acceleration in Linux. "
+#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
+#~ "are unable to offer any installation support for configuring 3D hardware "
+#~ "acceleration or if any problems related to this should arise."
+#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Nájdená karta podporujúca 3D:<u>%1</u></b><hr>Všetky 3D ovládače pre "
+#~ "Linux sú vo vývoji a preto považované za experimentálne. Aj tak sme sa "
+#~ "rozhodli ich do distribúcie zahrnúť, pretože sú stále žiadané. "
+#~ "<br><br>Kvôli ich experimentálnemu stavu ale nedokážeme pre ne poskytovať "
+#~ "inštalačnú podporu pri konfigurácii 3D hardwarovej akcelerácie, ani pri "
+#~ "problémoch s nimi súvisiacich.<br><br><b>Chcete pre túto kartu zapnúť 3D?"
+#~ "</b>"
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
+#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
+#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
+#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
+#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
+#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
+#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
+#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
+#~ "do not have any influence over the development of nVidia drivers."
+#~ "<br><br><b>Prepare 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Nájdená karta podporujúca 3D: <u>%1</u></b><hr>Ovládač použitý pre "
+#~ "túto kartu nie je oficiálny ovládač 2D/3D/OpenGL od firmy nVidia, kvôli "
+#~ "licencii. Použitý ovládač 3D/OpenGL, ak ho zapnete, <b>nie je</b> "
+#~ "hardwarovo akcelerovaný.<br><br> Pre podporu hardwarovo akcelerovaného 3D/"
+#~ "OpenGL musíte aktualizovať balíky NVIDIA_GLX a NVIDIA_kernel z webového "
+#~ "serveru firmy nVidia <i>(http://www.nvidia.com)</i>. Pohodlne sa to dá "
+#~ "urobiť pomocou YOU (YaST2 Online Update).<br><br>Ak budete mať problémy s "
+#~ "ovládačmi 2D/3D/OpenGL firmy nVidia, kontaktujte výrobcu, pretože nie je "
+#~ "možné, aby sme ovplyvnili vývoj ovládačov nVidia..<br><br><b>Chcete "
+#~ "zapnúť 3D pre túto kartu?</b>"
+
+#~ msgid ""
+#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
+#~ "that comes with this distribution is still installed.  You should update "
+#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
+#~ "online update). Start the online update?"
+#~ msgstr ""
+#~ "<b>Aktualizácia software</b><hr>Ešte stále sú nainštalované náhradné "
+#~ "ovládače pre karty nVidia bez podpory 3D. Mali by ste ich aktualizovať na "
+#~ "oficiálne ovládače firmy nVidia z FTP serveru pomocou YOU (YaST2 Online "
+#~ "Update). Chcete spustiť aktualizáciu?"
+
+#~ msgid ""
+#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
+#~ "resolution is not adjustable within framebuffer mode. Please select "
+#~ "another resolution than:"
+#~ msgstr ""
+#~ "<b>Neplatné rozlíšenie pre režim FBdev</b><hr>Momentálne vybrané "
+#~ "rozlíšenie nie je možné upraviť v režime framebuffer. Prosím, vyberte iné "
+#~ "rozlíšenie než:"
+
+#~ msgid ""
+#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
+#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
+#~ "currently selected monitor model is correct or select a lower resolution "
+#~ "than:"
+#~ msgstr ""
+#~ "<b>Vybrané rozlíšenie nie je k dispozícii</b><hr>Vybrané rozlíšenie "
+#~ "neodpovedá rozsahu synchronizácie monitoru. Prosím, upravte vybraný model "
+#~ "monitoru alebo vyberte nižšie rozlíšenie než:"
+
+#~ msgid ""
+#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
+#~ "depth is not allowed for this configuration."
+#~ msgstr ""
+#~ "<b>Vybraná neplatná farebná hĺbka</b><hr><b>4</b> alebo <b>15</b>-bitové "
+#~ "farby nie sú pre túto konfiguráciu povolené."
+
+#~ msgid ""
+#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
+#~ "is not allowed for this configuration. Select another resolution from the "
+#~ "list."
+#~ msgstr ""
+#~ "<b>Vybrané neplatné rozlíšenie:</b><hr>Požadované nastavenie rozlíšenia "
+#~ "nie je pre toto nastavenie povolené. Vyberte zo zoznamu iné rozlíšenie."
+
+#~ msgid "<b>X Server test failed:</b><hr><br>"
+#~ msgstr "<b>Test X serveru zlyhal:</b><hr><br>"
+
+#~ msgid "3D question..."
+#~ msgstr "Otázka 3D..."
+
+#~ msgid "X Server test information..."
+#~ msgstr "Informácie o teste X serveru..."
+
+#~ msgid "AccessX status information..."
+#~ msgstr "Stavová informácia o AccessX..."
+
+#~ msgid "Tablet warning..."
+#~ msgstr "Varovanie pre tablet..."
+
+#~ msgid "Consideration..."
+#~ msgstr "Rozhodnutie..."
+
+#~ msgid "Geometry"
+#~ msgstr "Geometria"
+
+#~ msgid "Name:"
+#~ msgstr "Meno:"
+
+#~ msgid "Card and Desktop"
+#~ msgstr "Karta a plocha"
+
+#~ msgid "Input Devices"
+#~ msgstr "Vstupné zariadenia"
+
+#~ msgid "Input-Devices"
+#~ msgstr "Vstupné zariadenia"
+
+#~ msgid "Desktop"
+#~ msgstr "Plocha"
+
+#~ msgid "Multihead"
+#~ msgstr "Viacnásobné obrazovky"
+
+#~ msgid "Secondary Modeline:"
+#~ msgstr "Sekundárny režim:"
+
+#~ msgid "Modeline"
+#~ msgstr "Režim"
+
+#~ msgid "AccessX"
+#~ msgstr "AccessX"
+
+#  Maximum length: 60  characters
+#~ msgid "X-Server accessable via VNC protocol:"
+#~ msgstr "X-Server dostupný cez VNC protokol:"
+
+#  Maximum length: 25  characters
+#~ msgid "Access Control"
+#~ msgstr "Prístupové práva"
+
+#~ msgid "<b>Core Pointer...</b>"
+#~ msgstr "<b>Hlavný kurzor...</b>"
+
+#~ msgid "F&inalize >>"
+#~ msgstr "&Dokončiť >>"
+
+#~ msgid "<< &Back"
+#~ msgstr "<< Do&zadu"
+
+#~ msgid "&Next >>"
+#~ msgstr "Do&predu >>"
+
+#~ msgid "&Exit"
+#~ msgstr "&Koniec"
+
+#~ msgid "&About..."
+#~ msgstr "&O programe..."
+
+#~ msgid "About the author"
+#~ msgstr "O autorovi"
+
+#~ msgid "Select virtual resolution for Mode %1"
+#~ msgstr "Vyberte virtuálne rozlíšenie pre režim %1"
+
+#~ msgid ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
+#~ "of this product is</nobr><br>Marcus Schaefer"
+#~ msgstr ""
+#~ "<b>SaX (c) 2000 SuSE AG:</b><hr><nobr>Autor a správca tohto produktu je</"
+#~ "nobr><br>Marcus Schaefer"
+
+#~ msgid "&Modules..."
+#~ msgstr "&Moduly..."
+
+#~ msgid "&File"
+#~ msgstr "&Súbor"
+
+#~ msgid "Loading CDB data: %1"
+#~ msgstr "Načítavam dáta CBS: %1"
+
+#~ msgid "Loading base data: %1"
+#~ msgstr "Načítavam základné dáta: %1"
+
+#~ msgid "Loading system data: %1"
+#~ msgstr "Načítavam systémové dáta: %1"
+
+#~ msgid "SaX2 start-up information"
+#~ msgstr "Informácie o štarte SaX2"
+
+#~ msgid "SaX2 final steps..."
+#~ msgstr "Záverečné kroky SaX2..."
+
+#~ msgid "Exception..."
+#~ msgstr "Výnimka..."
+
+#~ msgid ""
+#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
+#~ "than one graphics device.  More are required to set up a multihead "
+#~ "configuration."
+#~ msgstr ""
+#~ "<b>Nastavenie viacnásobných obrazoviek nie je možné:</b>Váš systém "
+#~ "obsahuje iba jednu grafickú kartu. Pre nastavenie viacnásobných "
+#~ "obrazoviek je nutných viac ako jedna."
+
+#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
+#~ msgstr "<b>Prerušenie:</b><hr>Ukončiť tento dialóg?"
+
+#~ msgid ""
+#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+#~ msgstr ""
+#~ "<b>Neplatné nastavenie:</b><hr>Musíte nastaviť aspoň jedno zariadenie."
+
+#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
+#~ msgstr "<b>Neplatné nastavenie:</b><hr>Musíte nastaviť aspoň jeden monitor."
+
+#  RTF text: no limit
+#~ msgid ""
+#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
+#~ "monitor configuration. You are not allowed to remove this major entity."
+#~ msgstr ""
+#~ "<b>Monitor sa neda odstrániť:</b><hr>Systém povoľuje konfiguráciu práve "
+#~ "jedného monitoru. Túto hlavnú entitu nemôžete odstrániť."
+
+#~ msgid ""
+#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
+#~ "dialog and start the selected one?"
+#~ msgstr ""
+#~ "<b>Spustenie dialógu:</b><hr>Dialóg už je zobrazený.  Chcete ukončiť už "
+#~ "otvorený a spustiť vybraný?"
+
+#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
+#~ msgstr "<b>Ukončenie dialógu:</b><hr>Chcete teraz ukončiť tento dialóg?"
+
+#~ msgid ""
+#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
+#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
+#~ "needs to be rebooted first to activate the changes for resolution and/or "
+#~ "color settings."
+#~ msgstr ""
+#~ "<b>Záverečné kroky</b><hr>Posledný krok je uloženie nového nastavenia. "
+#~ "Uvedomte si, že nastavenie je založené na <b>Framebuffer</b> a že váš "
+#~ "systém je nutné najprv reštartovať, aby sa zmeny v rozlíšení a farebnej "
+#~ "hĺbke prejavili."
+
+#~ msgid "Unknown Graphics Card..."
+#~ msgstr "Neznáma grafická karta..."
+
+#~ msgid ""
+#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
+#~ "manually. Start the configuration dialog to set up the graphics card now?"
+#~ msgstr ""
+#~ "<b>Nepodarilo sa nájsť grafickú kartu</b><hr>Musíte ju nastaviť ručne. "
+#~ "Chcete spustiť dialóg pre nastavenie grafickej karty?"
+
+#~ msgid ""
+#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Nepodarilo sa nájsť monitor (%1)</b><hr>Prosím, nastavte monitor "
+#~ "ručne. Chcete spustiť dialóg pre nastavenie monitoru?"
+
+#~ msgid ""
+#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Nenájdený monitor (%1) s ID %2</b><hr>Prosím, nastavte monitor ručne. "
+#~ "Chcete spustiť dialóg pre jeho nastavenie?"
+
+#  Maximum length: 20  characters
+#~ msgid "<b>Yes</b>"
+#~ msgstr "<b>Áno</b>"
+
+#  Maximum length: 20  characters
+#~ msgid "<b>No</b>"
+#~ msgstr "<b>Nie</b>"
+
+#~ msgid "File"
+#~ msgstr "Súbor"
+
+#~ msgid "still locked"
+#~ msgstr "stále zamknuté"
+
+#~ msgid "Please wait"
+#~ msgstr "Prosím, čakajte"
+
+#~ msgid ""
+#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
+#~ "X11 Configuration Manager<br>"
+#~ msgstr ""
+#~ "<big><b>SaX2: Rozšírené nastavenie X11</b></big><hr>Víta vás SuSE správca "
+#~ "nastavenia X11<br>"
+
+#~ msgid "To start, double-click  an item in the component list."
+#~ msgstr "Pre spustenie dvakrát kliknite na položku v zozname komponent."
+
+#~ msgid "X11 System Setup"
+#~ msgstr "Nastavenie systému X11"
+
+#~ msgid "Value..."
+#~ msgstr "Hodnota..."
+
+#~ msgid "Primary device"
+#~ msgstr "Primárne zariadenie"
+
+#~ msgid "Driver:"
+#~ msgstr "Ovládač:"
+
+#~ msgid "X:"
+#~ msgstr "X:"
+
+#~ msgid "Y:"
+#~ msgstr "Y:"
+
+#~ msgid "Bus ID:"
+#~ msgstr "ID zbernice:"
+
+#~ msgid "Card options"
+#~ msgstr "Možnosti karty"
+
+#~ msgid "Key Mappings"
+#~ msgstr "Mapovanie kláves"
+
+#~ msgid "&Current sync frequencies"
+#~ msgstr "&Aktuálne synch. frekvencie"
+
+#~ msgid "Current color depth"
+#~ msgstr "Aktuálna farebná hĺbka"
+
+#~ msgid "Current resolution"
+#~ msgstr "Aktuálne rozlíšenie"
+
+#~ msgid "HSync range"
+#~ msgstr "Rozsah HSync"
+
+#~ msgid "VSync range"
+#~ msgstr "Rozsah VSync"
+
+#~ msgid "[ mm ]"
+#~ msgstr "[ mm ]"
+
+#~ msgid "Device"
+#~ msgstr "Zariadenie"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokol"
+
+#~ msgid "Fi&nish"
+#~ msgstr "&Dokončiť"
+
+#~ msgid "Abort"
+#~ msgstr "Prerušiť"
+
+#~ msgid "Configure XAccess: Mouse over keypad..."
+#~ msgstr "Nastavenie AccessX: Myš pomocou klávesnice..."
+
+#  Maximum length: 100  characters
+#~ msgid "Configure VNC: Export display using the VNC protocol..."
+#~ msgstr "Nastavenie VNC: Exportovať obrazovku pomocou VNC protokolu..."
+
+#~ msgid "Configure input devices: Mouse configuration..."
+#~ msgstr "Nastavenie vstupných zariadení: Konfigurácia myši..."
+
+#~ msgid "Configure 3D/OpenGL subsystem..."
+#~ msgstr "Nastavenie subsystému pre 3D/OpenGL..."
+
+#~ msgid "Configure virtual resolutions..."
+#~ msgstr "Nastavenie virtuálnych rozlíšení..."
+
+#~ msgid "Configure graphics cards..."
+#~ msgstr "Nastavenie grafických kariet...."
+
+#~ msgid "Configure Desktop: Colors and Resolutions..."
+#~ msgstr "Nastavenie plochy: Farby a rozlíšenie..."
+
+#~ msgid "Configure touch screens..."
+#~ msgstr "Nastavenie dotykových obrazoviek..."
+
+#~ msgid "Set up picture geometry..."
+#~ msgstr "Nastavenie geometrie obrazu..."
+
+#~ msgid "Configure multihead mode..."
+#~ msgstr "Nastavenie režimu pre viac obrazoviek..."
+
+#~ msgid ""
+#~ "Set up screen layout of your desktops (Double-click an icon will identify "
+#~ "the real screen)..."
+#~ msgstr ""
+#~ "Nastavenie rozloženia vašich obrazoviek (Dvakrát kliknite na ikonu pre "
+#~ "identifikáciu skutočnej obrazovky)..."
+
+#~ msgid "Configure graphics tablet"
+#~ msgstr "Nastaviť grafický tablet"
+
+#~ msgid "Add new card..."
+#~ msgstr "Pridať novú kartu..."
+
+#~ msgid "Remove selected card"
+#~ msgstr "Odstrániť vybranú kartu"
+
+#~ msgid "Remove selected monitor"
+#~ msgstr "Odstrániť označený monitor"
+
+#~ msgid "&Properties..."
+#~ msgstr "&Vlastnosti..."
+
+#  Maximum length: 40  characters
+#~ msgid "Enable View-Only mode"
+#~ msgstr "Zapnúť sledovací režim"
+
+#~ msgid "&Add new touchscreen..."
+#~ msgstr "&Pridať novú dotykovú obrazovku..."
+
+#~ msgid "&Remove selected touchscreen"
+#~ msgstr "&Odstrániť vybranú dotykovú obrazovku"
+
+#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
+#~ msgstr ""
+#~ "<nobr><h3><u>Momentálne nastavené dotykové obrazovky:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Momentálne nastavené monitory</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Momentálne nastavené karty:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Momentálne nastavené myši:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Momentálne rozloženie monitoru:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Momentálne nastavené plochy:</u></h3></nobr>"
+
+#~ msgid "&Add new mouse..."
+#~ msgstr "&Pridať novú myš..."
+
+#~ msgid "&Remove selected mouse"
+#~ msgstr "&Odstrániť vybranú myš"
+
+#~ msgid "&General"
+#~ msgstr "&Všeobecné"
+
+#~ msgid "&Expert"
+#~ msgstr "E&xpertné"
+
+#~ msgid "Vendor"
+#~ msgstr "Výrobca"
+
+#~ msgid "Selected"
+#~ msgstr "Vybrané"
+
+#~ msgid "Resolution X"
+#~ msgstr "Rozlíšenie X"
+
+#~ msgid "&Resolution(s) for %1 colors"
+#~ msgstr "&Rozlíšenia pre %1 farieb"
+
+#~ msgid "Possible"
+#~ msgstr "Dostupné"
+
+#~ msgid "&Add this resolution"
+#~ msgstr "&Pridať toto rozlíšenie"
+
+#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavený stav AccessX</b></big><hr>"
+
+#  Maximum length: 60  characters
+#~ msgid "<big><b>Current VNC status</b></big><hr>"
+#~ msgstr "<big><b>Momentálny stav VNC</b></big><hr>"
+
+#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
+#~ msgstr "<big><b>Momentálny stav 3D/OpenGL</b></big><hr>"
+
+#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené virtuálne rozlíšenie</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené grafické karty</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené plochy</b></big><hr>"
+
+#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
+#~ msgstr "<big><b>Momentálne aktívne časovanie geometrie</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavená klávesnica</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured layout</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené rozloženie</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené monitory</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené polohovacie zariadenia</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
+#~ msgstr ""
+#~ "<big><b>Momentálne nastavený stav viacnásobných obrazoviek</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavený grafický tablet</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
+#~ msgstr "<big><b>Momentálne nastavené dotykové obrazovky</b></big><hr>"
+
+#~ msgid "<b><nobr>No information available</nobr></b>"
+#~ msgstr "<b><nobr>Nedostupné žiadne informácie</nobr></b>"
+
+#~ msgid ""
+#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
+#~ "with the keypad. The table below points to the current status of AccessX."
+#~ msgstr ""
+#~ "<b>Virtuálna myš:</b><hr>Nastavte numerickú klávesnicu pre ovládanie "
+#~ "kurzoru myši. Tabuľka dole zobrazuje aktuálny stav AccessX."
+
+#  RTF text: no limit
+#~ msgid ""
+#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
+#~ "desktop and all its programs remotely via a VNC viewer program"
+#~ msgstr ""
+#~ "<b>VNC Server:</b><hr>Nastavte X-Server, aby ste mohli vzdialene "
+#~ "pristupovať na plochu pomocou VNC klienta"
+
+#  RTF text: no limit
+#~ msgid ""
+#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
+#~ "here. X.Org includes the direct rendering interface to use the 3D "
+#~ "capabilities of your graphics card. If your card and the corresponding "
+#~ "driver support 3D hardware acceleration, enable it in this dialog."
+#~ msgstr ""
+#~ "<b>Subsystém OpenGL:</b><hr>Nastavte funkcie 3D grafickej karty. X.Org "
+#~ "obsahuje rozhranie pre priame zobrazovanie pre využitie 3D podpory vašej "
+#~ "grafickej karty. Ak vaša karta a jej ovládač podporujú hardwarovú "
+#~ "akceleráciu, v tomto dialógu ju môžete zapnúť."
+
+#~ msgid ""
+#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
+#~ "resolution which is completely viewable. Beside this resolution you can "
+#~ "setup a resolution which lives outside the viewable area of your monitor "
+#~ "and comes up if you leave the edges of your monitor with the mouse. This "
+#~ "area is called a virtual resolution."
+#~ msgstr ""
+#~ "<b>Virtuálne rozlíšenie:</b><hr>Každá jednotlivá obrazovka má skutočné "
+#~ "rozlíšenie, ktoré je možné naraz zobraziť. Okrem tohto rozlíšenie je "
+#~ "možné nastaviť iné, ktoré je mimo zobraziteľnú oblasť vášho monitoru a je "
+#~ "dostupná opustením okrajov monitoru pomocou myši. Táto oblasť sa označuje "
+#~ "ako virtuálne rozlíšenie."
+
+#~ msgid ""
+#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
+#~ "graphics system consists of at least one graphics card but can be "
+#~ "combined to a so called <i>multihead environment</i> which consists of at "
+#~ "least two cards up to a maximum of 16 cards."
+#~ msgstr ""
+#~ "<b>Grafické karty:</b><hr>Tu nastavte svoje grafické karty. Grafický "
+#~ "systém obsahuje aspoň jednu kartu, ktorú je možné skombinovať do "
+#~ "prostredia <i>viacnásobných obrazoviek</i>, ktoré obsahuje aspoň dve a "
+#~ "maximálne 16 grafických kariet."
+
+#~ msgid ""
+#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
+#~ "resolution and colors. Every desktop is an independent device and may "
+#~ "have a different color and/or resolution setup."
+#~ msgstr ""
+#~ "<b>Vlastnosti plochy:</b><hr>Tu nastavte vlastnosti vašej plochy, ako je "
+#~ "rozlíšenie a farby. Každá plocha je nezávislé zariadenie a môže mať iné "
+#~ "rozlíšenie a počet farieb."
+
+#~ msgid ""
+#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
+#~ "displayed by the monitor. The table below point to the current used "
+#~ "Modeline(s)."
+#~ msgstr ""
+#~ "<b>Geometria monitoru:</b><hr>Nastavte pozíciu a veľkosť obrazu na "
+#~ "monitore. Tabuľka dole ukazuje použitý režim."
+
+#~ msgid ""
+#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
+#~ "language environment with which it should work."
+#~ msgstr ""
+#~ "<b>Vlastnosti klávesnice:</b><hr>Nastavte typ klávesnice a jazyk, ktorým "
+#~ "chcete pracovať."
+
+#~ msgid ""
+#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the neighborhood relations of the "
+#~ "connected monitors simply via drag&drop. If you are not sure which "
+#~ "monitor belongs to the icon just double-click on it and you will see a "
+#~ "message on the corresponding screen."
+#~ msgstr ""
+#~ "<b>Rozloženie plochy:</b><hr>Ak je dostupných viac ako jedna karta, "
+#~ "pracujete v prostredí viacnásobných obrazoviek. Nastavte vzťahy medzi "
+#~ "monitormi jednoducho ťahaním myšou. Ak neviete určite, ktorý monitor "
+#~ "patrí ktorej ikone, jednoducho na ikonu dvakrát kliknite a na obrazovke "
+#~ "sa zobrazí správa."
+
+#~ msgid ""
+#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
+#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
+#~ "the monitor."
+#~ msgstr ""
+#~ "<b>Vlastnosti monitoru:</b><hr>Nastavte modely monitorov pripojeného ku "
+#~ "grafickým kartám. Vyberajte pozorne, nesprávne rozsahy synchronizácie "
+#~ "môžu poškodiť monitor."
+
+#~ msgid ""
+#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
+#~ "mouse pointer as well as settings like button emulation or wheel "
+#~ "functions."
+#~ msgstr ""
+#~ "<b>Vlastnosti myši:</b><hr>Tu nastavte základné parametre pre myš, ako je "
+#~ "emulácia tlačidiel a podpora kolieska."
+
+#~ msgid ""
+#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the multihead functioning here."
+#~ msgstr ""
+#~ "<b>Režim viacnásobných obrazoviek:</b><hr>Ak máte viac ako jednu grafickú "
+#~ "kartu, používate prostredie s viacerými obrazovkami. Jeho fungovanie "
+#~ "môžete nastaviť tu."
+
+#~ msgid ""
+#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
+#~ "pointer devices, such as pens and erasers."
+#~ msgstr ""
+#~ "<b>Grafický tablet:</b><hr>Nastavte grafický tablet a zodpovedajúce "
+#~ "polohovacie zariadenia, ako sú perá a gumy."
+
+#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
+#~ msgstr ""
+#~ "<b>Dotyková obrazovka:</b><hr>Nastavenie obrazovky citlivej na tlak."
+
+#~ msgid "Disabled"
+#~ msgstr "Vypnuté"
+
+#~ msgid "Enabled"
+#~ msgstr "Zapnuté"
+
+#~ msgid "Wheel support"
+#~ msgstr "Podpora kolieska"
+
+#~ msgid "&Port"
+#~ msgstr "&Port"
+
+#  Maximum length: 30  characters
+#~ msgid "&Mode"
+#~ msgstr "&Režim:"
+
+#~ msgid "Button emulation"
+#~ msgstr "Emulácia tlačidiel"
+
+#~ msgid "Primary Device:"
+#~ msgstr "Primárne zariadenie:"
+
+#~ msgid "Secondary Device:"
+#~ msgstr "Sekundárne zariadenie:"
+
+#~ msgid "Single Layout [ no multihead environment ]"
+#~ msgstr "Jediné rozloženie [ bez viacnásobných obrazoviek ]"
+
+#~ msgid "Clone Mode Active"
+#~ msgstr "Aktívny režim klonov"
+
+#~ msgid "Xinerama Mode Active"
+#~ msgstr "Aktívny režim Xinerama"
+
+#~ msgid "Screens Layout Active"
+#~ msgstr "Aktívne rozloženie obrazoviek"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx"
+
+#~ msgid "Canadian"
+#~ msgstr "Kanadská"
+
+#~ msgid "Brazilian"
+#~ msgstr "Brazílska"
+
+#~ msgid "Bosnian"
+#~ msgstr "Bosniacka"
+
+#~ msgid "Lithuanian qwerty (numeric)"
+#~ msgstr "Litovská qwerty (numerická)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "Gruzínska (azbuka)"
+
+#~ msgid "Latvian"
+#~ msgstr "Lotyšská"
+
+#~ msgid "Belarusian"
+#~ msgstr "Bieloruská"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "Česká (qwerty)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "Severná laponská (Fínsko)"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macedónska"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "U.S.A. anglická s mŕtvymi klávesmi"
+
+#~ msgid "Malayalam"
+#~ msgstr "Malayalamská"
+
+#~ msgid "Burmese"
+#~ msgstr "Burmská"
+
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgid "Mongolian"
+#~ msgstr "Mongolská"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengálska"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumunská"
+
+#~ msgid "Croatian"
+#~ msgstr "Chorvátska"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "U.S.A. anglická s ISO9995-3"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr "Litovská azerty štandardná"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltézska"
+
+#~ msgid "German"
+#~ msgstr "Nemecká"
+
+#~ msgid "Hungarian"
+#~ msgstr "Maďarská"
+
+#~ msgid "Russian"
+#~ msgstr "Ruská"
+
+#~ msgid "Swedish"
+#~ msgstr "Švédska"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "Turecká (F)"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovinská"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "Slovenská (qwerty)"
+
+#~ msgid "Czech"
+#~ msgstr "Česká"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gudžarati"
+
+#~ msgid "Danish"
+#~ msgstr "Dánska"
+
+#~ msgid "Dvorak"
+#~ msgstr "Dvorak"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovenská"
+
+#~ msgid "Dutch"
+#~ msgstr "Holandská"
+
+#~ msgid "Israeli"
+#~ msgstr "Izraelská"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamilská"
+
+#~ msgid "Ogham"
+#~ msgstr "Ogham"
+
+#~ msgid "Norwegian"
+#~ msgstr "Nórska"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmuchská"
+
+#~ msgid "Serbian"
+#~ msgstr "Srbská"
+
+#~ msgid "Farsi"
+#~ msgstr "Farsí"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandská"
+
+#~ msgid "Italian"
+#~ msgstr "Talianska"
+
+#~ msgid "Estonian"
+#~ msgstr "Estónska"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitutská"
+
+#~ msgid "Swiss French"
+#~ msgstr "Švajčiarska francúzska"
+
+#~ msgid "Swiss German"
+#~ msgstr "Švajčiarska nemecká"
+
+#~ msgid "Thai"
+#~ msgstr "Thajská"
+
+#~ msgid "Tajik"
+#~ msgstr "Tadžitská"
+
+#~ msgid "Greek"
+#~ msgstr "Grécka"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonská"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "Gruzínska (latinka)"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrajinská"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "Poľská (qwertz)"
+
+#~ msgid "Syriac"
+#~ msgstr "Syrská"
+
+#~ msgid "Turkish"
+#~ msgstr "Turecká"
+
+#~ msgid "Spanish"
+#~ msgstr "Španielska"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "Severná laponská (Švédsko)"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "Juhoslovanská"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindská"
+
+#~ msgid "Finnish"
+#~ msgstr "Fínska"
+
+#~ msgid "French (alternative)"
+#~ msgstr "Francúzska (alternatívna)"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "Maďarská (qwerty)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "Ruská (fonetická azbuka)"
+
+#~ msgid "Albanian"
+#~ msgstr "Albánska"
+
+#~ msgid "Polish"
+#~ msgstr "Poľská"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Armenian"
+#~ msgstr "Arménska"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "Severná laponská (Nórsko)"
+
+#~ msgid "Latin America"
+#~ msgstr "Latinská Amerika"
+
+#~ msgid "French"
+#~ msgstr "Francúzska"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Spojeného kráľovstvo"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabská"
+
+#~ msgid "U.S. English"
+#~ msgstr "U.S.A. anglická"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "Maltézska (US)"
+
+#~ msgid "French Canadian"
+#~ msgstr "Kanadská francúzska"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugalská"
+
+#~ msgid "Belgian"
+#~ msgstr "Belgická"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulharská"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Ázerbajdžanská"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamská"
+
+#~ msgid "Lao"
+#~ msgstr "Laoská"
+
+#~ msgid "Microsoft Natural"
+#~ msgstr "Microsoft Natural"
+
+#~ msgid "Ennyah DKB-1008"
+#~ msgstr "Ennyah DKB-1008"
+
+#~ msgid "Logitech Deluxe Access Keyboard"
+#~ msgstr "Logitech Deluxe Access Keyboard"
+
+#~ msgid "Microsoft Internet Keyboard"
+#~ msgstr "Microsoft Internet Keyboard"
+
+#~ msgid "Samsung SDM 4500P"
+#~ msgstr "Samsung SDM 4500P"
+
+#~ msgid "Cherry Blue Line CyBo@rd"
+#~ msgstr "Cherry Blue Line CyBo@rd"
+
+#~ msgid "Dell"
+#~ msgstr "Dell"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GF"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
+
+#~ msgid "IBM Rapid Access"
+#~ msgstr "IBM Rapid Access"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternatívna 2)"
+
+#~ msgid "Memorex MX1998"
+#~ msgstr "Memorex MX1998"
+
+#~ msgid "Trust Wireless Keyboard Classic"
+#~ msgstr "Trust Wireless Keyboard Classic"
+
+#~ msgid "Dell 101-key PC"
+#~ msgstr "DELL PC 101 kláves"
+
+#~ msgid "Brother Internet Keyboard"
+#~ msgstr "Brother Internet Keyboard"
+
+#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
+#~ msgstr "Laptop/notebook Compaq (napr. Armada) Laptop Keyboard"
+
+#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
+#~ msgstr "Laptop/notebook Compaq (napr. Presario) Internet Keyboard"
+
+#~ msgid "IBM Rapid Access II"
+#~ msgstr "IBM Rapid Access II"
+
+#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
+#~ msgstr "Logitech iTouch Cordless Keyboard (model Y-RB6)"
+
+#~ msgid "Trust Direct Access Keyboard"
+#~ msgstr "Trust Direct Access Keyboard"
+
+#~ msgid "Logitech Internet Navigator Keyboard"
+#~ msgstr "Logitech Internet Navigator Keyboard"
+
+#~ msgid "SK-7100"
+#~ msgstr "SK-7100"
+
+#~ msgid "Acer AirKey V"
+#~ msgstr "Acer AirKey V"
+
+#~ msgid "BTC 9000A"
+#~ msgstr "BTC 9000A"
+
+#~ msgid "Toshiba Satellite S3000"
+#~ msgstr "Toshiba Satellite S3000"
+
+#~ msgid "Compaq Internet Keyboard (13 keys)"
+#~ msgstr "Compaq Internet Keyboard (13 kláves)"
+
+#~ msgid "Hewlett-Packard Omnibook XT1000"
+#~ msgstr "Hewlett-Packard Omnibook XT1000"
+
+#~ msgid "Logitech iTouch"
+#~ msgstr "Logitech iTouch"
+
+#~ msgid "SK-6200"
+#~ msgstr "SK-6200"
+
+#~ msgid "Compaq iPaq Keyboard"
+#~ msgstr "Compaq iPaq Keyboard"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternatívna)"
+
+#~ msgid "Logitech Cordless Desktop Navigator"
+#~ msgstr "Logitech Cordless Desktop Navigator"
+
+#~ msgid "QTronix Scorpius 98N+"
+#~ msgstr "QTronix Scorpius 98N+"
+
+#~ msgid "Symplon PaceBook (tablet PC)"
+#~ msgstr "Symplon PaceBook (tablet PC)"
+
+#~ msgid "Winbook Model XP5"
+#~ msgstr "Winbook Model XP5"
+
+#~ msgid "BTC 5113RF Multimedia"
+#~ msgstr "BTC 5113RF Multimedia"
+
+#~ msgid "Diamond 9801 / 9802 series"
+#~ msgstr "Diamond série 9801 / 9802"
+
+#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE4xxx a ZE4xxx"
+
+#~ msgid "Logitech Cordless Desktop Optical"
+#~ msgstr "Logitech Cordless Desktop Optical"
+
+#~ msgid "Logitech Internet Keyboard"
+#~ msgstr "Logitech Internet Keyboard"
+
+#~ msgid "BTC 9000"
+#~ msgstr "BTC 9000"
+
+#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+#~ msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+
+#~ msgid "Hewlett-Packard Internet Keyboard"
+#~ msgstr "Hewlett-Packard Internet Keyboard"
+
+#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
+#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
+
+#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+#~ msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+
+#~ msgid "Propeller Voyager (KTEZ-1000)"
+#~ msgstr "Propeller Voyager (KTEZ-1000)"
+
+#~ msgid "Brazilian ABNT2"
+#~ msgstr "Brazílska ABNT2"
+
+#~ msgid "Compaq Internet Keyboard (7 keys)"
+#~ msgstr "Compaq Internet Keyboard (7 kláves)"
+
+#~ msgid "Honeywell Euroboard"
+#~ msgstr "Honeywell Euroboard"
+
+#~ msgid "Logitech Cordless Desktop"
+#~ msgstr "Logitech Cordless Desktop"
+
+#~ msgid "Yahoo! Internet Keyboard"
+#~ msgstr "Yahoo! Internet Keyboard"
+
+#~ msgid "Compaq Internet Keyboard (18 keys)"
+#~ msgstr "Compaq Internet Keyboard (18 kláves)"
+
+#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
+#~ msgstr "Laptop/notebook Dell Inspiron 8xxx"
+
+#~ msgid "IBM Rapid Access II (alternate option)"
+#~ msgstr "IBM Rapid Access II (alternatívna)"
+
+#~ msgid "Logitech Cordless Desktop Pro"
+#~ msgstr "Logitech Cordless Desktop Pro"
+
+#~ msgid "Advance Scorpius KI"
+#~ msgstr "Advance Scorpius KI"
+
+#~ msgid "BTC 5126T"
+#~ msgstr "BTC 5126T"
+
+#~ msgid "Dexxa Wireless Desktop Keyboard"
+#~ msgstr "Dexxa Wireless Desktop Keyboard"
+
+#~ msgid "Hewlett-Packard Omnibook 5xx"
+#~ msgstr "Hewlett-Packard Omnibook 5xx"
+
+#~ msgid "Memorex MX2750"
+#~ msgstr "Memorex MX2750"
+
+#~ msgid "SK-1300"
+#~ msgstr "SK-1300"
+
+#~ msgid "Generic 101-key PC"
+#~ msgstr "Všeobecná PC 101 kláves"
+
+#~ msgid "Northgate OmniKey 101"
+#~ msgstr "Northgate OmniKey 101"
+
+#~ msgid "ACPI Standard"
+#~ msgstr "Štandardné ACPI"
+
+#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
+#~ msgstr "Cherry Blue Line CyBo@rd (alternatívna)"
+
+#~ msgid "Chicony Internet Keyboard"
+#~ msgstr "Chicony Internet Keyboard"
+
+#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
+#~ msgstr "Hewlett-Packard SK-2501 Multimedia Keyboard"
+
+#~ msgid "Samsung SDM 4510P"
+#~ msgstr "Samsung SDM 4510P"
+
+#~ msgid "SK-2500"
+#~ msgstr "SK-2500"
+
+#~ msgid "SVEN Ergonomic 2500"
+#~ msgstr "SVEN Ergonomic 2500"
+
+#~ msgid "Generic 102-key (Intl) PC"
+#~ msgstr "Všeobecná PC 102 kláves (medz.)"
+
+#~ msgid "Logitech Cordless Desktop iTouch"
+#~ msgstr "Logitech Cordless Desktop iTouch"
+
+#~ msgid "Chicony KB-9885"
+#~ msgstr "Chicony KB-9885"
+
+#~ msgid "Compaq Easy Access Keyboard"
+#~ msgstr "Compaq Easy Access Keyboard"
+
+#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
+#~ msgstr "Hewlett-Packard 5181 Internet Keyboard"
+
+#~ msgid "Hewlett-Packard Omnibook 500 FA"
+#~ msgstr "Hewlett-Packard Omnibook 500 FA"
+
+#~ msgid "Memorex MX2500 EZ-Access Keyboard"
+#~ msgstr "Memorex MX2500 EZ-Access Keyboard"
+
+#~ msgid "Generic 104-key PC"
+#~ msgstr "Všeobecná PC 104 kláves"
+
+#~ msgid "Everex STEPnote"
+#~ msgstr "Everex STEPnote"
+
+#~ msgid "Japanese 106-key"
+#~ msgstr "Japonská 106 kláves"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE a Pavilion N5xxx"
+
+#~ msgid "Hewlett-Packard Pavilion ZT11xx"
+#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
+
+#~ msgid "Logitech iTouch keyboard Internet Navigator"
+#~ msgstr "Logitech iTouch Internet Navigator"
+
+#~ msgid "Generic 105-key (Intl) PC"
+#~ msgstr "Všeobecná PC 105 kláves (medz.)"
+
+#~ msgid "Keytronic FlexPro"
+#~ msgstr "Keytronic FlexPro"
+
+#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
+#~ msgstr "Hewlett-Packard SK-2505 Internet Keyboard"
+
+#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
+#~ msgstr "Microsoft Internet Keyboard Pro, švédska"
+
+#~ msgid "Microsoft Office Keyboard"
+#~ msgstr "Microsoft Office Keyboard"
+
+#~ msgid "Oretec MCK-800 MM/Internet keyboard"
+#~ msgstr "Oretec MCK-800 MM/Internet keyboard"
+
+#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
+#~ msgstr "používa vnútorné veľké písmená. Shift neruší Caps."
+
+#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
+#~ msgstr "funguje ako Shift so zámkom. Shift neruší Caps."

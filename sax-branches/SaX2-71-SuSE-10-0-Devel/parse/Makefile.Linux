@@ -1,0 +1,32 @@
+#/.../
+# Copyright (c) 2001 SuSE GmbH Nuernber, Germany.  All rights reserved.
+# Author: Marcus Schaefer <sax@suse.de>, 2005
+#
+# Makefile to build XF86Config parser
+# --
+# XFree.pm
+# 
+# Version 7.1
+# Status: Up-to-date
+#
+EXTSEC = `./check_exts.sh`
+
+all:
+	swig -D${EXTSEC} -perl5 XFree.i
+	perl Makefile.PL
+
+test:
+	gcc -O2 parse.c -o parse -L/usr/X11R6/lib -L/usr/X11R6/lib64 \
+		-I/usr/X11R6/include -DX_BYTE_ORDER=X_LITTLE_ENDIAN \
+		-DNEW_INPUT -DNDEBUG -D${EXTSEC} \
+		-lxf86config -lm
+
+clean:
+	rm -f pm_to_blib
+	rm -f XFree_wrap.*
+	rm -f XFree.bs
+	rm -f Makefile
+	rm -f Makefile.old
+	rm -f XFree.pm
+	rm -rf blib/
+	rm -rf parse

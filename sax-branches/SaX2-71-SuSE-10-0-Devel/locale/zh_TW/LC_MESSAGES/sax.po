@@ -1,0 +1,2555 @@
+# SaX Translations.
+# Craig Jeffares cjeffares@novell.com
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sax\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2002-07-01 14:56+0200\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. /.../
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for the SaX2 and XFine GUI
+#.
+#. RTF text: Startup information for the user
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 建議</b><hr>目前啟動的圖形系統是以 SaX2 的建議為基礎。如果可以接受，"
+"請按一下<b>確定</b>。否則，請變更組態。"
+
+#. Caption text for the startup information window
+msgid "Automatic Graphics System Setup"
+msgstr "自動圖形系統設定"
+
+#. Caption text for informing the user
+msgid "Information..."
+msgstr "資訊..."
+
+#. Caption text for the main window
+msgid "SaX2: SUSE Advanced X11 Configuration"
+msgstr "SaX2：SUSE 進階 X11 組態"
+
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr "SaX 控制中心"
+
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr "SUSE Linux"
+
+#. Help Button text
+msgid "&Help"
+msgstr "說明(&H)"
+
+#. Ok Button text
+msgid "&OK"
+msgstr "確定(&O)"
+
+#. Yes Button text
+msgid "&Yes"
+msgstr "是(&Y)"
+
+#. No Button text
+msgid "&No"
+msgstr "否(&N)"
+
+#. Cancel Button text
+#. Maximum length: 40  characters
+msgid "&Cancel"
+msgstr "取消(&C)"
+
+#. RTF text: exit SaX message
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
+msgstr "<b>結束 SaX2</b><hr>現在結束 SaX2？"
+
+#. Message box default caption text
+msgid "Message"
+msgstr "訊息"
+
+#. Change configuration Button text
+msgid "C&hange Configuration"
+msgstr "變更組態(&H)"
+
+#. Short description of the Monitor module
+#. Monitor name label
+msgid "Monitor"
+msgstr "監視器"
+
+#. title of module dialog
+msgid "Card and Monitor Properties"
+msgstr "顯示卡與顯示器內容"
+
+#. Short description of the Mouse module
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "滑鼠"
+
+#. title of module dialog
+msgid "Mouse Properties"
+msgstr "滑鼠內容"
+
+#. Short description of the Keyboard module
+msgid "Keyboard"
+msgstr "鍵盤"
+
+#. title of module dialog
+msgid "Keyboard Properties"
+msgstr "鍵盤內容"
+
+#. Short description of the Tablet module
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "手寫板"
+
+#. title of module dialog
+msgid "Tablet Properties"
+msgstr "手寫板內容"
+
+#. Short description of the Touchscreen module
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "觸控式螢幕"
+
+#. title of module dialog
+msgid "Touchscreen Properties"
+msgstr "觸控式螢幕內容"
+
+#. Short description of the VNC module
+msgid "VNC"
+msgstr "VNC"
+
+#. title of module dialog
+msgid "Remote Access Properties"
+msgstr "遠端存取內容"
+
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "顯示器"
+
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
+msgstr "啟用此顯示器"
+
+#. Activate mouse checkbox
+msgid "Activate This Pointer"
+msgstr "啟用此指標"
+
+#. Graphics Card name label
+msgid "Card"
+msgstr "介面卡"
+
+#. Change data
+msgid "&Change..."
+msgstr "變更(&C)..."
+
+#. Set options for some kind of data
+msgid "&Options..."
+msgstr "選項(&O)..."
+
+#. Configure some data
+msgid "Con&figure..."
+msgstr "設定(&F)..."
+
+#. Group box title for dual head setup
+msgid "Dual Head Mode"
+msgstr "雙頭模式"
+
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+msgid "Options"
+msgstr "選項"
+
+#. CheckBox label to activate the mouse wheel
+msgid "Activate Mouse Wheel"
+msgstr "啟用滑鼠滾輪"
+
+#. CheckBox label to activate the 3 Button emulation
+msgid "Activate 3-Button Emulation"
+msgstr "啟用三鍵式模擬功能"
+
+#. CheckBox label to activate the wheel emulation
+msgid "Emulate Wheel with Mouse Button"
+msgstr "以滑鼠按鈕模擬滾輪"
+
+#. Group box title for card rotation
+msgid "Rotate Screen"
+msgstr "旋轉螢幕"
+
+#. Group box title for the mouse test field
+#. Line edit label pointing to the keyboard test field
+msgid "Test"
+msgstr "測試"
+
+#. Button text in final step message box for testing the configuration
+msgid "&Test"
+msgstr "測試(&T)"
+
+#. Button text in final step message box for saving the configuration
+msgid "&Save"
+msgstr "儲存(&S)"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "配置"
+
+#. Status line of mouse test field: ready
+msgid "Test ready"
+msgstr "測試已備妥"
+
+#. Status line of mouse test field: single button click
+msgid "Single Click: Done"
+msgstr "按一下：完成"
+
+#. Status line of mouse test field: double button click
+msgid "Double Click: Done"
+msgstr "按兩下：完成"
+
+#. Status line of mouse test field: wheel moved
+msgid "Scrolling"
+msgstr "捲動"
+
+#. Status line of mouse test field: button pressed
+msgid "Button pressed"
+msgstr "按鈕已按下"
+
+#. Status line of mouse test field: button released
+msgid "Button released"
+msgstr "按鈕已放開"
+
+#. Status line of mouse test field: wheel stopped
+msgid "Stopped: Done"
+msgstr "已停止：完成"
+
+#. Group box title for properties
+msgid "Properties"
+msgstr "內容"
+
+#. Activate dual head mode checkbox
+msgid "Activate Dual Head Mode"
+msgstr "啟用雙頭模式"
+
+#. Set display resolution
+msgid "Resolution"
+msgstr "解析度"
+
+#. Set display colors
+msgid "Colors"
+msgstr "色彩"
+
+#. Activate 3D checkboc
+msgid "Activate 3D Acceleration"
+msgstr "使用 3D 加速"
+
+#. Tab title: Setup monitor properties for card X
+msgid "Monitor for Card"
+msgstr "顯示卡連接的顯示器"
+
+#. Tab title: Setup monitor for second channel on card X
+msgid "Second Monitor for Card"
+msgstr "顯示卡連接的第二部顯示器"
+
+#. Tab title: Setup sync frequencies
+msgid "Sync Frequencies"
+msgstr "同步頻率"
+
+#. Tab title: Setup display size
+msgid "Display Size"
+msgstr "顯示器大小"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
+msgstr "排列"
+
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
+msgstr "在 %1 模式中使用 %2 啟用"
+
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
+msgstr "以驅動程式預設模式啟用"
+
+#. rwalter
+#. Monitor Model is unknown and should be changed
+#. rwalter
+#. Mouse Model is unknown and should be changed
+msgid "Unconfigured"
+msgstr "未設定"
+
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr "<b>無法停用所有顯示器</b><hr><nobr>至少要有一台顯示器是作用中。</nobr>"
+
+#. Info label for dual head checkbox
+msgid "No configuration available"
+msgstr "無可用的組態"
+
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"傳統多螢幕顯示：\n"
+"每一個螢幕是一個獨立的顯示器"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"複製的多螢幕顯示：\n"
+"每一個顯示器是主要顯示器的複製物"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Xinerama 多螢幕顯示：\n"
+"將所有螢幕建置為一個大的顯示器"
+
+#. Title for multihead modi
+msgid "Multihead Mode"
+msgstr "多螢幕顯示模式"
+
+#. Monitor X - connected to - CardY
+msgid "Connected To"
+msgstr "連線至"
+
+#. Tooltip text if monitor is unknown
+msgid "Unknown Monitor:"
+msgstr "未知的顯示器："
+
+#. Tooltip text for primary monitor
+msgid "Primary Monitor:"
+msgstr "主要的顯示器："
+
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+msgid "Monitor Settings"
+msgstr "顯示器設定"
+
+#. Windowanager title for the mouse mode setup
+msgid "Mouse Settings"
+msgstr "滑鼠設定"
+
+#. Windowanager title for the card options dialog
+msgid "Graphics Card Settings"
+msgstr "圖形配接卡設定"
+
+#. Windowanager title for the dual head setup
+msgid "Dual Head Settings"
+msgstr "雙頭設定"
+
+#. Radiobutton don't rotate
+msgid "Not Rotated"
+msgstr "未旋轉"
+
+#. Radiobutton rotate to the left side
+msgid "To the Left"
+msgstr "向左"
+
+#. Radiobutton rotate to the right side
+msgid "To the Right"
+msgstr "向右"
+
+#. Popup message to ask the user for an option value
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>選項需要值</b><hr><nobr>請為選項 %1 設定一個值。</nobr>"
+
+#. Group box title for the monitor vendor and name selection
+msgid "Monitor: Vendor and Name Selection"
+msgstr "顯示器：廠商和名稱選項"
+
+#. Group box title for the mouse vendor and name selection
+msgid "Mouse: Vendor and Name Selection"
+msgstr "滑鼠：廠商和名稱選項"
+
+#. Group box title for the manual sync frequency set up
+msgid "Manual Sync Frequency Setup"
+msgstr "手動同步頻率設定"
+
+#. Group box title for the aspect/ratio selection
+msgid "Diagonal and Aspect Ratio"
+msgstr "對角線與畫面比例"
+
+#. Group box title for the display size setup
+msgid "Display Size in [ mm ]"
+msgstr "顯示大小 [ 公釐 ]"
+
+#. Text message telling to be carefull with the monitor sync frequencies
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>注意事項：</b>錯誤的同步範圍可能會損毀您的顯示器。請參閱顯示器手冊進行設"
+"定。<br><br>如果您希望您的顯示器不要使用最大等級，請降低同步範圍。"
+
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
+msgstr "啟用 DPMS"
+
+#. Button to popup the disk dialog for reading the monitor utility disk
+msgid "Utility Disk..."
+msgstr "公用程式磁片..."
+
+#. Label text for horizontal sync frequency
+msgid "Horizontal"
+msgstr "水平"
+
+#. Label text for second monitor name
+msgid "Second Monitor:"
+msgstr "第二顯示器："
+
+#. Label text for second monitor resolution
+msgid "Second Monitor Resolution"
+msgstr "第二顯示器解析度"
+
+#. Label text for vertical sync frequency
+msgid "Vertical"
+msgstr "垂直"
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "KHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio"
+msgstr "畫面比例"
+
+#. Label text for the diagonal length combo box
+msgid "Diagonal"
+msgstr "對角線"
+
+#. Label text for the display size X-Axis
+msgid "X Axis [mm]"
+msgstr "X 軸 [mm]"
+
+#. Label text for the display size Y-Axis
+msgid "Y Axis [mm]"
+msgstr "Y 軸 [mm]"
+
+#. Something is not configured
+msgid "Not configured"
+msgstr "未設定"
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr "英吋"
+
+#. Message box of type Ok, telling to user to insert a CD or disk
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr "<b>插入 CD 或磁片</b><hr>插入顯示器公用程式 CD 或顯示器廠商的磁片。"
+
+#. Message box of type Error, telling that the utility disk cannot be opened
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>讀取錯誤</b><hr>無法從 CD 或磁片讀取。這可能是因為媒體已損毀或資訊檔案的格"
+"式錯誤。"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Traditional"
+msgstr "傳統的"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
+msgstr "複製品"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
+msgstr "Xinerama"
+
+#. Tab text for the mouse model dialog
+msgid "Mouse Model"
+msgstr "滑鼠型號"
+
+#. Group box title for the primary keyboard setup
+msgid "Primary Setup"
+msgstr "主要設定"
+
+#. Label text for the primary keyboard type
+msgid "Type"
+msgstr "類型"
+
+#. Label text for the primary keyboard variant
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr "變異"
+
+#. Group box title for the additional keyboard setup
+msgid "Additional Layouts"
+msgstr "傳統的配置"
+
+#. Table topic text describing the status column
+msgid "Status"
+msgstr "狀態"
+
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr "可以輸入"
+
+#. List View root item text
+msgid "Group Shift/Lock Behavior"
+msgstr "群組 Shift/Lock 行為"
+
+#. List View root item text
+msgid "Use Keyboard LED to Show Alternate Group"
+msgstr "使用鍵盤指示燈來顯示替代群組"
+
+#. List View root item text
+msgid "Compose Key Position"
+msgstr "組成鍵位置"
+
+#. List View root item text
+#. XKBFile extension text
+msgid "Control Key Position"
+msgstr "Control 鍵位置"
+
+#. List View root item text
+msgid "Third Level Chooser"
+msgstr "第三層選擇工具"
+
+#. List View root item text
+msgid "Alt/Win Key Behavior"
+msgstr "Alt/Win 鍵行為"
+
+#. List View root item text
+msgid "CapsLock Key Behavior"
+msgstr "CapsLock 鍵行為"
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
+msgstr "無"
+
+#. XKBFile extension text
+msgid "Left Alt key switches group while pressed."
+msgstr "按下左方 Alt 鍵切換群組。"
+
+#. XKBFile extension text
+msgid "Both Ctrl keys together change group."
+msgstr "兩個 Ctrl 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Right Shift key changes group."
+msgstr "右方 Shift 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Left Win key changes group."
+msgstr "左方 Win鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Left Alt key changes group."
+msgstr "左方 Alt 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Both Win keys switch group while pressed."
+msgstr "按下時兩個 Win 鍵切換群組。"
+
+#. XKBFile extension text
+msgid "Right Ctrl key switches group while pressed."
+msgstr "按下右方 Ctrl 鍵切換群組。"
+
+#. XKBFile extension text
+msgid "CapsLock just locks the Shift modifier."
+msgstr "CapsLock 會鎖定 Shift 切換鍵。"
+
+#. XKBFile extension text
+msgid "CapsLock toggles normal capitalization of alphabetic characters."
+msgstr "CapsLock 可開關一般字母字元的大寫功能。"
+
+#. XKBFile extension text
+msgid "CapsLock toggles Shift so all keys are affected."
+msgstr "CapsLock 可開關 Shift 鍵，因此所有按鍵都會受到影響。"
+
+#. XKBFile extension text
+msgid "Right Win-key is Compose."
+msgstr "右方 Win 鍵是撰寫。"
+
+#. XKBFile extension text
+msgid "Shift+CapsLock changes group."
+msgstr "Shift+CapsLock 變更群組。"
+
+#. XKBFile extension text
+msgid "R-Alt switches group while pressed."
+msgstr "按下右方 Alt 鍵切換群組。"
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt."
+msgstr "右 Control 鍵執行右 Alt 鍵的功能。"
+
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr "左下方 Control 鍵"
+
+#. XKBFile extension text
+msgid "Press any of Win-keys to choose 3rd level."
+msgstr "按任何 Win 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Press Right Alt key to choose 3rd level."
+msgstr "按右方 Alt 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Right Ctrl key changes group."
+msgstr "右方 Ctrl 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Right Alt is Compose."
+msgstr "右方 Alt 是撰寫。"
+
+#. XKBFile extension text
+msgid "Right Ctrl is Compose."
+msgstr "右方 Ctrl 是撰寫。"
+
+#. XKBFile extension text
+msgid "ScrollLock LED shows alternative group."
+msgstr "ScrollLock 指示燈顯示替代群組。"
+
+#. XKBFile extension text
+msgid "Control key at left of -A-"
+msgstr "-A- 左方的 Control 鍵"
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr "第三層選擇器"
+
+#. XKBFile extension text
+msgid "Both Shift keys together change group."
+msgstr "兩個 Shift 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
+msgstr "CapsLock 使用內容大寫。Shift 會取消 CapsLock。"
+
+#. XKBFile extension text
+msgid "Make CapsLock an additional Control."
+msgstr "讓 CapsLock 成為其他控制。"
+
+#. XKBFile extension text
+msgid "Press Left Win-key to choose 3rd level."
+msgstr "按左方 Win 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Right Win-key changes group."
+msgstr "右方 Win鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Meta is mapped to the left Win-key."
+msgstr "Meta 對應至左方 Win 鍵。"
+
+#. XKBFile extension text
+msgid "CapsLock LED shows alternative group."
+msgstr "CapsLock 指示燈顯示替代群組。"
+
+#. XKBFile extension text
+msgid "NumLock LED shows alternative group."
+msgstr "NumLock 指示燈顯示替代群組。"
+
+#. XKBFile extension text
+msgid "Left Shift key changes group."
+msgstr "左方 Shift 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Left Win-key switches group while pressed."
+msgstr "按下左方 Win 鍵切換群組。"
+
+#. XKBFile extension text
+msgid "Menu is Compose."
+msgstr "Menu 鍵是撰寫。"
+
+#. XKBFile extension text
+msgid "Both Alt keys together change group."
+msgstr "兩個 Alt 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "CapsLock key changes group."
+msgstr "CapsLock 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Swap Control and CapsLock."
+msgstr "交換 Ctrl 與 CapsLock。"
+
+#. XKBFile extension text
+msgid "Press any of Alt keys to choose 3rd level."
+msgstr "按任何 Alt 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Right Alt key changes group."
+msgstr "右方 Alt 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows."
+msgstr "Shift 鍵與數字鍵執行 MS Windows 鍵的功能。"
+
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
+msgstr "特殊鍵 (Ctrl+Alt+<key>) 會在伺服器中處理。"
+
+#. XKBFile extension text
+msgid "Hyper is mapped to the Win-keys."
+msgstr "Hyper 對應至 Win 鍵。"
+
+#. XKBFile extension text
+msgid "Alt is mapped to the right Win-key and Super to Menu."
+msgstr "Alt 對應至右方 Win 鍵，Super 對應至 Menu 鍵。"
+
+#. XKBFile extension text
+msgid "Super is mapped to the Win-keys (default)."
+msgstr "Super 對應至 Win 鍵 (預設值)。"
+
+#. XKBFile extension text
+msgid "Alt and Meta on the Alt keys (default)."
+msgstr "Alt 鍵上的 Alt 和 Meta (預設值)。"
+
+#. XKBFile extension text
+msgid "Add the standard behavior to Menu key."
+msgstr "新增標準行為 Menu 鍵。"
+
+#. XKBFile extension text
+msgid "Alt and Meta are on the Alt keys (default)."
+msgstr "Alt 和 Meta 在 Alt 鍵之上(預設值)。"
+
+#. XKBFile extension text
+msgid "Press Right Control to choose 3rd level."
+msgstr "按右方 Control 選擇第三層"
+
+#. XKBFile extension text
+msgid "Alt+Shift changes group."
+msgstr "Alt+Shift 變更群組。"
+
+#. XKBFile extension text
+msgid "Control+Shift changes group."
+msgstr "Control+Shift 變更群組。"
+
+#. XKBFile extension text
+msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
+msgstr "CapsLock 當成 Shift 鎖定。Shift 會取消 CapsLock。"
+
+#. XKBFile extension text
+msgid "Use keyboard LED to show alternative group."
+msgstr "使用鍵盤指示燈來顯示替代群組。"
+
+#. XKBFile extension text
+msgid "Press Right Win-key to choose 3rd level."
+msgstr "按右方 Win 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Press Left Alt key to choose 3rd level."
+msgstr "按左方 Alt 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Meta is mapped to the Win-keys."
+msgstr "Meta 對應至 Win 鍵。"
+
+#. XKBFile extension text
+msgid "Press Menu key to choose 3rd level."
+msgstr "按 Menu 鍵選擇第三層。"
+
+#. XKBFile extension text
+msgid "Left Ctrl key changes group."
+msgstr "左方 Ctrl 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Menu key changes group."
+msgstr "Menu 鍵變更群組。"
+
+#. XKBFile extension text
+msgid "Alt+Control changes group."
+msgstr "Alt+Control 變更群組。"
+
+#. XKBFile extension text
+msgid "Right Win-key switches group while pressed."
+msgstr "按下右方 Win 鍵切換群組。"
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
+msgstr "埠與模式"
+
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
+msgstr "電子筆"
+
+#. Activate tablet checkbox
+msgid "Activate This Tablet"
+msgstr "啟用此手寫板"
+
+#. Group box title for the tablet vendor and name selection
+msgid "Tablet: Vendor and Name Selection"
+msgstr "手寫板：廠商和名稱選項"
+
+#. Group box title for tablet port combobox
+msgid "Connection Port"
+msgstr "連接埠"
+
+#. Group box title for tablet mode
+msgid "Primary Tablet Mode"
+msgstr "主要手寫板模式"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen or Eraser Mode"
+msgstr "筆或橡皮擦模式"
+
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr "相對"
+
+#. Radiobutton for absolute tablet mode
+msgid "Absolute"
+msgstr "絕對"
+
+#. Combobox item text for tablet port: USB
+msgid "USB"
+msgstr "USB"
+
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "工具"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr "新增筆"
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr "新增橡皮擦"
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen or Eraser Settings"
+msgstr "筆或橡皮擦設定"
+
+#. Tab title: Pen properties
+msgid "Pen Properties"
+msgstr "筆內容"
+
+#. Tab title: Eraser properties
+msgid "Eraser Properties"
+msgstr "橡皮擦內容"
+
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a Touchscreen to Display Number %1"
+msgstr "指定觸控式螢幕顯示數字 %1"
+
+#. Group box title for the touchscreen vendor and name selection
+msgid "Touchscreen: Vendor and Name Selection"
+msgstr "觸控式螢幕：廠商和名稱選項"
+
+#. Finish configuration message box
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
+"kill the server."
+msgstr ""
+"<b>最終步驟</b><hr>最後一個步驟是儲存您新的組態。建議在儲存之前，先測試新的組"
+"態。如果測試伺服器顯示損毀的桌面，請按 <b>[Ctrl+Alt+Backspace]</b> 刪除伺服"
+"器。"
+
+#. Tab title: VNC Server configuration
+msgid "VNC Server"
+msgstr "VNC 伺服器"
+
+#. Activate VNC server checkbox
+msgid "Allow Access to Display Using VNC Protocol"
+msgstr "允許使用 VNC 協定存取顯示器"
+
+#. Group box title for the VNC options
+msgid "VNC Options"
+msgstr "VNC 選項"
+
+#. Activate VNC password protection checkbox
+msgid "Activate Password Protection"
+msgstr "啟用密碼保護"
+
+#. LineEdit label: enter password
+msgid "Password"
+msgstr "密碼"
+
+#. LineEdit contents: enter new password
+msgid "<Enter new password>"
+msgstr "<輸入新密碼>"
+
+#. LineEdit contents: change password
+msgid "<Change password>"
+msgstr "<變更密碼>"
+
+#. LineEdit contents: verify password
+msgid "<Verify password>"
+msgstr "<檢驗密碼>"
+
+#. Activate HTTP access checkbox
+msgid "Activate HTTP Access"
+msgstr "啟用 HTTP 存取"
+
+#. Activate multiple VNC connection checkbox
+msgid "Allow Multiple VNC Connections"
+msgstr "允許多重 VNC 連線"
+
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
+msgstr "HTTP 埠"
+
+#. VNC message box appearing if password strings doesn't match
+msgid ""
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
+msgstr "<b>VNC 密碼不相符</b><hr>第一個和第二個密碼版本不相符。"
+
+#. VNC message box appearing if password is too short
+msgid ""
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
+msgstr ""
+"<b>密碼錯誤</b><hr>密碼欄位為空白或者密碼太短。請輸入至少 6 個字元的密碼。"
+
+#. Install missing packages box
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr "<b>軟體安裝：</b><hr>缺少部份套裝軟體。立即安裝缺少的套裝軟體？"
+
+#. Caption text for the missing package info window
+msgid "Package Installation"
+msgstr "套件安裝"
+
+#. Progress bar title text
+msgid "Importing module"
+msgstr "匯入模組"
+
+#. Progress window caption text
+msgid "SaX2: Importing data..."
+msgstr "SaX2：正在輸入資料..."
+
+#. Progress window label text
+msgid "Initialize cache..."
+msgstr "起始快取..."
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>儲存組態失敗</b><hr>已建立下列報告："
+
+#. Message box test: configuration has been saved
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>組態已儲存</b><hr>下次重新啟動圖形系統時，您所做的修改將會生效。現在結束 "
+"SaX2？"
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>測試組態失敗</b><hr>如需詳細資訊，請參閱 <tt>/var/log/Xorg.99.log</tt> 檔"
+"案。下列報告已經透過呼叫實例建立："
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
+msgstr ""
+"<b>VNC 組態資訊</b><hr>VNC 服務要求防火牆中必須開啟 TCP 埠 5900 和一個 HTTP "
+"埠 (預設為 5800)。您可以使用 YaST 設定這一項。"
+
+#. /.../
+#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for XFine2
+#.
+#. Maximum length: 40  characters
+msgid "&Step size"
+msgstr "步驟大小(&S)"
+
+#. Maximum length: 40  characters
+msgid "Small"
+msgstr "小"
+
+#. Maximum length: 40  characters
+msgid "Normal"
+msgstr "一般"
+
+#. Maximum length: 40  characters
+msgid "Big"
+msgstr "大"
+
+#. Maximum length: 40  characters
+msgid "Huge"
+msgstr "巨大"
+
+#. Maximum length: 40  characters
+msgid "&Next Screen"
+msgstr "下一個畫面(&N)"
+
+#. Maximum length: 40  characters
+msgid "S&ave"
+msgstr "儲存(&A)"
+
+#. Maximum length: 40  characters
+msgid "Change &Position"
+msgstr "變更位置(&P)"
+
+#. Maximum length: 40  characters
+msgid "C&hange Size"
+msgstr "變更大小(&H)"
+
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr "螢幕"
+
+#. Maximum length: 60  characters
+msgid "No video mode tuning available"
+msgstr "沒有可調整的視訊模式"
+
+msgid "Configuration on display"
+msgstr "顯示器組態"
+
+msgid "Idle timer..."
+msgstr "閒置計時器..."
+
+#, fuzzy
+#~ msgid "SaX2: Importing"
+#~ msgstr "SaX2 結束程式... "
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "特殊滑鼠內容..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "設定監視器內容..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "配置"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "變異"
+
+#, fuzzy
+#~ msgid "Monitor System"
+#~ msgstr "監視器"
+
+#, fuzzy
+#~ msgid "Keyboard System"
+#~ msgstr "鍵盤"
+
+#, fuzzy
+#~ msgid "Tablet System"
+#~ msgstr "手寫板"
+
+#, fuzzy
+#~ msgid "Touchscreen System"
+#~ msgstr "觸控式螢幕"
+
+#, fuzzy
+#~ msgid "Test:"
+#~ msgstr "測試(&T)..."
+
+#, fuzzy
+#~ msgid "Testfield: Ready..."
+#~ msgstr "滑鼠測試欄位：就緒..."
+
+#, fuzzy
+#~ msgid "Unknown Monitor please change"
+#~ msgstr "不明的監視器型號"
+
+#~ msgid "Component"
+#~ msgstr "元件"
+
+#~ msgid "with"
+#~ msgstr "與"
+
+#~ msgid "Not available"
+#~ msgstr "無法使用"
+
+#~ msgid "Use the following AccessX settings"
+#~ msgstr "使用以下 AccessX 設定"
+
+#~ msgid "Disable AccessX"
+#~ msgstr "停用 AccessX"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "其他"
+
+#~ msgid "This screen is selected"
+#~ msgstr "已選取此螢幕"
+
+#~ msgid "at"
+#~ msgstr "於"
+
+#~ msgid "Sync ranges"
+#~ msgstr "同步範圍"
+
+#~ msgid "Wheel is moving..."
+#~ msgstr "滾輪正在移動..."
+
+#~ msgid "Disable use of accented letters"
+#~ msgstr "停用重音字母"
+
+#~ msgid "Clear test field"
+#~ msgstr "清除測試欄位"
+
+#~ msgid "Mouse speed in pixels/sec"
+#~ msgstr "滑鼠速度 (像素/秒)"
+
+#~ msgid "&Remove Tablet..."
+#~ msgstr "移除手寫板(&R)..."
+
+#~ msgid "Delay time: (ms)"
+#~ msgstr "延遲時間：(毫秒)"
+
+#~ msgid "Repeat rate: (Symbols/sec)"
+#~ msgstr "重複速率：(符號/秒)"
+
+#~ msgid "&Apply"
+#~ msgstr "套用(&A)"
+
+#~ msgid "Graphics engine starts with resolution:"
+#~ msgstr "圖形引擎啟動解析度："
+
+#~ msgid "Hardware"
+#~ msgstr "硬體"
+
+#~ msgid "Velocity"
+#~ msgstr "速度"
+
+#~ msgid "Select Keyboard Layout"
+#~ msgstr "選取鍵盤配置"
+
+#~ msgid "Symbol recurrence"
+#~ msgstr "符號重複"
+
+#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
+#~ msgstr "<nobr><h3>鍵盤類型</h3></nobr>"
+
+#~ msgid "BusID"
+#~ msgstr "匯流排 ID"
+
+#~ msgid "ScreenID"
+#~ msgstr "螢幕 ID"
+
+#~ msgid "Manufacturer Disk..."
+#~ msgstr "製造商磁片..."
+
+#~ msgid "Shift/Lock Group"
+#~ msgstr "Shift/Lock 群組"
+
+#~ msgid "Ctrl Mapping"
+#~ msgstr "Ctrl 對應"
+
+#~ msgid "LeftAlt mapping"
+#~ msgstr "左方 Alt 對應"
+
+#~ msgid "RightAlt mapping"
+#~ msgstr "右方 Alt 對應"
+
+#~ msgid "RightCtl mapping"
+#~ msgstr "右方 Ctl 對應"
+
+#~ msgid "Default"
+#~ msgstr "預設值"
+
+#~ msgid "R-Alt switch group while pressed"
+#~ msgstr "按下右方 Alt 的切換群組"
+
+#~ msgid "R-Alt switch group"
+#~ msgstr "右方 Alt 切換群組"
+
+#~ msgid "Both Shift Keys change group"
+#~ msgstr "兩個 Shift 鍵變更群組"
+
+#~ msgid "Ctrl and Shift change group"
+#~ msgstr "Ctrl 與 Shift 變更群組"
+
+#~ msgid "Alt and Ctrl change group"
+#~ msgstr " Alt 與 Ctrl 變更群組"
+
+#~ msgid "CapsLock as additional control"
+#~ msgstr "CapsLock 為其他控制"
+
+#~ msgid "Swap Ctrl and CapsLock"
+#~ msgstr "交換 Ctrl 與 CapsLock"
+
+#~ msgid "Ctrl Key at left of <A>"
+#~ msgstr "左方 Ctrl 鍵 <A>"
+
+#~ msgid "Ctrl Key at bottom left"
+#~ msgstr "左下方的 Ctrl 鍵"
+
+#~ msgid "Modeline Algorithm"
+#~ msgstr "Modeline 演算法"
+
+#~ msgid "Color and Resolution"
+#~ msgstr "色彩和解析度"
+
+#~ msgid "Virtual Resolution"
+#~ msgstr "虛擬解析度"
+
+#~ msgid "Language Layout"
+#~ msgstr "語言配置"
+
+#~ msgid "Screen Layout"
+#~ msgstr "螢幕配置"
+
+#~ msgid "Server layout:"
+#~ msgstr "伺服器配置："
+
+#~ msgid "Mode:"
+#~ msgstr "模式："
+
+#~ msgid "MHz"
+#~ msgstr "MHz"
+
+#~ msgid "Enable or Disable AccessX"
+#~ msgstr "啟用或停用 AccessX"
+
+#~ msgid "Enable 3D features"
+#~ msgstr "啟用 3D 功能"
+
+#~ msgid "Enable DPMS"
+#~ msgstr "啟用 DPMS"
+
+#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>設定多螢幕顯示模式...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>3D/OpenGL 設定...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>AccessX 設定...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>VNC 設定...</u></h3></nobr>"
+
+#~ msgid "Selected component:"
+#~ msgstr "選取的元件："
+
+#~ msgid "Click 'Apply' to test your settings."
+#~ msgstr "按一下「套用」，測試您的設定。"
+
+#~ msgid ""
+#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
+#~ "is a warning only but make sure your keyboard model is able to map all "
+#~ "the keys needed for the selected layout."
+#~ msgstr ""
+#~ "<b>目前的配置和型號似乎不相符</b><hr>這只是警告而已，但是請確定您的鍵盤型"
+#~ "號可以對應所選配置需要的所有按鍵。"
+
+#~ msgid ""
+#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
+#~ "3D subsystem is unable to work within a multihead environment."
+#~ msgstr ""
+#~ "<b>多螢幕顯示環境無法使用 OpenGL 加速</b><hr>3D 子系統無法在多螢幕顯示環境"
+#~ "下工作。"
+
+#~ msgid ""
+#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
+#~ "hardware 3D/OpenGL acceleration."
+#~ msgstr ""
+#~ "<b>無法使用 3D 加速</b><hr>安裝的配接卡無法使用硬體 3D/OpenGL 加速。"
+
+#~ msgid ""
+#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
+#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
+#~ "The currently used color setup does not fulfill this requirement. Verify "
+#~ "the current default color depth setup."
+#~ msgstr ""
+#~ "<b>OpenGL 加速的色彩深度不相符</b><hr>大部份 的 OpenGL 驅動程式需要 <b>16 "
+#~ "位元 (65536)</b> 的色彩深度才能正常工作。目前使用的色彩設定無法滿足此需"
+#~ "求。檢查目前的預設色彩深度設定。"
+
+#~ msgid ""
+#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
+#~ "acceleration because the following packages are missing:"
+#~ msgstr ""
+#~ "<b>缺少需要的基礎套裝軟體</b><hr>無法啟用 OpenGL 加速，因為缺少以下的套裝"
+#~ "軟體："
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
+#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
+#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
+#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
+#~ "Online Update)."
+#~ msgstr ""
+#~ "<b>無法啟用 OpenGL 加速</b><hr>系統未提供 nVidia 的正式 2D/3D/OpenGL 驅動"
+#~ "程式。先從 nVidia 網站伺服器更新套裝軟體 NVIDIA_GLX 和 NVIDIA_kernel <i>"
+#~ "(http://www.nvidia.com)</i> 。YOU (YaST2 線上更新) 也可以達到目的。"
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
+#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
+#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
+#~ "list (usually at the bottom of the list). Note, that you need to mark the "
+#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
+#~ "before and the driver was uninstalled - for whatever reason."
+#~ msgstr ""
+#~ "<b>無法啟用 OpenGL 加速</b><hr>要啟用此配接卡的 3D 子系統，您需要先從 "
+#~ "nVidia 安裝商用驅動程式。使用 <b>YaST 線上更新</b>安裝驅動程式在 YOU 選取"
+#~ "<b>可安裝和已安裝的修補程式</b>當成<b>修補程式類別</b>，然後選取從修補程式"
+#~ "清單<b>下載的 NVIDIA(r) 圖形驅動程式</b> (通常位於清單的結尾)。注意：如果"
+#~ "之前曾安裝過，但是因為某些原因將它解除安裝，則需要將修補程式標示成<b>更新"
+#~ "</b> (按滑鼠右鍵)。"
+
+#~ msgid ""
+#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
+#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
+#~ "the nVidia installer. The uninstall process will reset the original "
+#~ "driver from X.Org which does not provide any 3D hardware acceleration."
+#~ "<br><br><b>Do you want to continue?</b>"
+#~ msgstr ""
+#~ "<b>停用 OpenGL 加速</b><hr>3D 子系統是以 nVidia 的商用驅動程式為基礎的。"
+#~ "SaX2 需要使用 nVidia 安裝程式來解除安裝。解除安裝程序會重設為 X.Org 的原始"
+#~ "驅動程式，此驅動程式不提供任何 3D 硬體加速。<br><br><b>您要繼續？</b>"
+
+#~ msgid "Display size unknown..."
+#~ msgstr "顯示大小未知..."
+
+#~ msgid ""
+#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
+#~ "couldn't be detected. Applications dealing with computer graphics like "
+#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
+#~ "about the real physical size of your display to work properly. Please "
+#~ "refer to your monitor manual to obtain the correct size values for the "
+#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
+#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
+#~ msgstr ""
+#~ "<b>輸入 X/Y 顯示大小 [ 公釐 ]</b><hr>無法偵測顯示器的幾何定義。處理電腦圖"
+#~ "形的應用程式，例如 <b>Gimp</b> 或前端轉換程式庫，例如 <b>Xft</b> 需要知道"
+#~ "顯示器正確工作的實際大小。請參閱您的監視器手冊，取得水平 (X) 和垂直 (Y) 方"
+#~ "向的正確大小。值必須以 [ 公釐 ] 為單位輸入。<br><br><b>要設定顯示器大小？"
+#~ "</b>"
+
+#~ msgid ""
+#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
+#~ "X and Y axis and click 'Add' to include the new resolution in the "
+#~ "standard resolution list."
+#~ msgstr ""
+#~ "<b>新增使用者定義解析度</b><hr>只要輸入 X 和 Y 軸的像素值，然後按一下「新"
+#~ "增」就可以在標準解析度中新增解析度。"
+
+#~ msgid "Available configuration components are:"
+#~ msgstr "可用的組態元件："
+
+#~ msgid ""
+#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
+#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
+#~ msgstr ""
+#~ "<b>AccessX 啟用：</b><hr>核心滑鼠指標現在可以透過<b>數字鍵</b>存取。使用數"
+#~ "字鍵測試行為。"
+
+#~ msgid ""
+#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
+#~ "number pad is <b>disabled</b> now."
+#~ msgstr ""
+#~ "<b>AccessX 停用：</b><hr>現在<b>停用</b>透過數字鍵存取核心滑鼠指標。"
+
+#~ msgid ""
+#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
+#~ "system?"
+#~ msgstr "<b>移除手寫板：</b><hr>要從系統移除圖形手寫板？"
+
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time your system is <b>rebooted</b>."
+#~ msgstr ""
+#~ "<b>組態已儲存：</b><hr>下次<b>重新啟動</b>圖形系統時，所做的修改將會生效。"
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
+#~ "in developmental phases so are, in part, still regarded as experimental. "
+#~ "Nevertheless, we have decided to include the drivers in our distribution "
+#~ "because of the high demand for 3D hardware acceleration in Linux. "
+#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
+#~ "are unable to offer any installation support for configuring 3D hardware "
+#~ "acceleration or if any problems related to this should arise."
+#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>偵測到 3D 功能配接卡：<u>%1</u></b><hr>Linux 的所有 3D 驅動程式都處於開"
+#~ "發階段，所以仍屬於實驗性質。不過，由於Linux 對 3D 硬體加速的高度需求，我們"
+#~ "決定在此版本包括驅動程式。<br><br>因為 OpenGL 驅動程式仍處於實驗階段，所以"
+#~ "我們無法提供任何設定 3D 硬體加速或發生相關問題時的安裝支援。<br><br><b>真"
+#~ "的要啟用此配接卡的 3D 功能？</b>"
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
+#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
+#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
+#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
+#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
+#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
+#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
+#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
+#~ "do not have any influence over the development of nVidia drivers."
+#~ "<br><br><b>Prepare 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>偵測到 3D 功能配接卡：<u>%1</u></b><hr>基於授權因素，此配接卡使用的驅動"
+#~ "程式不是 nVidia 的官方 2D/3D/OpenGL 驅動程式。如果您啟用的 3D <b>不是</b>"
+#~ "使用硬體加速的時候，會使用 3D/OpenGL 驅動程式。<br><br>要使用硬體加速的 "
+#~ "3D/OpenGL，請從 nVidia 網站伺服器更新套裝軟體 NVIDIA_GLX 和 NVIDIA_kernel "
+#~ "<i>(http://www.nvidia.com)</i>。YOU (YaST2 線上更新) 也可以達到此目的。"
+#~ "<br><br>如果從 nVidia 取得 2D/3D/OpenGL 驅動程式發生問題，請洽詢廠商。很抱"
+#~ "歉，我們對於 nVidia 驅動程式的開發，沒有任何影響力。<br><br><b>準備使用配"
+#~ "接卡的的 3D 嗎？</b>"
+
+#~ msgid ""
+#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
+#~ "that comes with this distribution is still installed.  You should update "
+#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
+#~ "online update). Start the online update?"
+#~ msgstr ""
+#~ "<b>軟體更新</b><hr>仍安裝此版本附帶之不含 3D 功能 的一般 nvidia 驅動程式。"
+#~ "您應該使用YOU (YaST2 線上更新) 從nvidia ftp 伺服器，更新為官方 nvidia 驅動"
+#~ "程式。開始線上更新？"
+
+#~ msgid ""
+#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
+#~ "resolution is not adjustable within framebuffer mode. Please select "
+#~ "another resolution than:"
+#~ msgstr ""
+#~ "<b>無效的 FBdev 解析度模式</b><hr>目前選取的解析度無法在框架緩衝區模式中調"
+#~ "整。請選取其他的解析度："
+
+#~ msgid ""
+#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
+#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
+#~ "currently selected monitor model is correct or select a lower resolution "
+#~ "than:"
+#~ msgstr ""
+#~ "<b>選取的解析度無法使用</b><hr>選取的解析度不適合監視器的同步範圍。請確定"
+#~ "目前選取的監視器型號正確，或者選取除較低的解析度："
+
+#~ msgid ""
+#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
+#~ "depth is not allowed for this configuration."
+#~ msgstr ""
+#~ "<b>選取的色彩深度無效：</b><hr>此組態不能使用A <b>4</b> 或 <b>15</b> 位元"
+#~ "色彩深度。"
+
+#~ msgid ""
+#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
+#~ "is not allowed for this configuration. Select another resolution from the "
+#~ "list."
+#~ msgstr ""
+#~ "<b>選取的解析度無效：</b><hr>此組態無法使用設定的解析度。從清單選取其他解"
+#~ "析度。"
+
+#~ msgid "<b>X Server test failed:</b><hr><br>"
+#~ msgstr "<b>X 伺服器測試失敗：</b><hr><br>"
+
+#~ msgid "3D question..."
+#~ msgstr "3D 問題..."
+
+#~ msgid "X Server test information..."
+#~ msgstr "X 伺服器測試資訊..."
+
+#~ msgid "AccessX status information..."
+#~ msgstr "AccessX 狀態資訊..."
+
+#~ msgid "Tablet warning..."
+#~ msgstr "手寫板警告..."
+
+#~ msgid "Consideration..."
+#~ msgstr "考慮事項..."
+
+#~ msgid "Geometry"
+#~ msgstr "幾何定義"
+
+#~ msgid "Name:"
+#~ msgstr "名稱："
+
+#~ msgid "Card and Desktop"
+#~ msgstr "配接卡和桌面"
+
+#~ msgid "Input Devices"
+#~ msgstr "輸入裝置"
+
+#~ msgid "Input-Devices"
+#~ msgstr "輸入裝置"
+
+#~ msgid "Desktop"
+#~ msgstr "桌面"
+
+#~ msgid "Multihead"
+#~ msgstr "多螢幕顯示"
+
+#~ msgid "Secondary Modeline:"
+#~ msgstr "次要 Modeline:"
+
+#~ msgid "Modeline"
+#~ msgstr "Modeline"
+
+#~ msgid "AccessX"
+#~ msgstr "AccessX"
+
+#~ msgid "X-Server accessable via VNC protocol:"
+#~ msgstr "可透過 VNC 協定存取的 X 伺服器:"
+
+#~ msgid "Access Control"
+#~ msgstr "存取控制"
+
+#~ msgid "<b>Core Pointer...</b>"
+#~ msgstr "<b>核心指標...</b>"
+
+#~ msgid "F&inalize >>"
+#~ msgstr "完成(&I) >>"
+
+#~ msgid "<< &Back"
+#~ msgstr "<< 上一步(&B)"
+
+#~ msgid "&Next >>"
+#~ msgstr "下一步(&N) >>"
+
+#~ msgid "&Exit"
+#~ msgstr "結束(&E)"
+
+#~ msgid "&About..."
+#~ msgstr "關於(&A)..."
+
+#~ msgid "About the author"
+#~ msgstr "關於作者"
+
+#~ msgid "Select virtual resolution for Mode %1"
+#~ msgstr "選取模型 %1 的虛擬解析度"
+
+#~ msgid ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
+#~ "of this product is</nobr><br>Marcus Schaefer"
+#~ msgstr ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG：</b><hr><nobr>此產品的作者和維護人員是"
+#~ "</nobr><br>Marcus Schaefer"
+
+#~ msgid "&Modules..."
+#~ msgstr "模組(&M)..."
+
+#~ msgid "&File"
+#~ msgstr "檔案(&F)"
+
+#~ msgid "Loading CDB data: %1"
+#~ msgstr "載入 CDB 資料： %1"
+
+#~ msgid "Loading base data: %1"
+#~ msgstr "載入基礎資料： %1"
+
+#~ msgid "Loading system data: %1"
+#~ msgstr "載入系統資料： %1"
+
+#~ msgid "SaX2 start-up information"
+#~ msgstr "SaX2 啟動資訊"
+
+#~ msgid "SaX2 final steps..."
+#~ msgstr "SaX2 最終步驟..."
+
+#~ msgid "Exception..."
+#~ msgstr "例外..."
+
+#~ msgid ""
+#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
+#~ "than one graphics device.  More are required to set up a multihead "
+#~ "configuration."
+#~ msgstr ""
+#~ "<b>無法設定多螢幕顯示：</b><hr>您的系統未提供一個以上的圖形裝置。需要一個"
+#~ "以上的圖形裝置才能設定多螢幕顯示組態。"
+
+#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
+#~ msgstr "<b>終止對話方塊：</b><hr>終止此對話方塊？"
+
+#~ msgid ""
+#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+#~ msgstr "<b>設定無效：</b><hr>至少必須設定一個圖形裝置。"
+
+#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
+#~ msgstr "<b>設定無效：</b><hr>至少必須設定一個監視器。"
+
+#~ msgid ""
+#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
+#~ "monitor configuration. You are not allowed to remove this major entity."
+#~ msgstr ""
+#~ "<b>無法移除監視器：</b><hr>系統只提供一個監視器組態。不允許您移除此主要實"
+#~ "體。"
+
+#~ msgid ""
+#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
+#~ "dialog and start the selected one?"
+#~ msgstr ""
+#~ "<b>執行對話方塊：</b><hr>對話方塊已經開啟。終止開啟的對話方塊並啟動選取的"
+#~ "對話方塊？"
+
+#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
+#~ msgstr "<b>結束對話方塊：</b><hr>現在要結束此對話方塊？"
+
+#~ msgid ""
+#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
+#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
+#~ "needs to be rebooted first to activate the changes for resolution and/or "
+#~ "color settings."
+#~ msgstr ""
+#~ "<b>最終步驟:</b><hr>最後一個步驟是儲存您的組態。請注意組態是以<i>框架緩衝"
+#~ "區</i>為基礎，而且您的系統需要先重新啟動，才能讓解析度和/或色彩設定的變更"
+#~ "生效。"
+
+#~ msgid "Unknown Graphics Card..."
+#~ msgstr "不明的圖形配接卡..."
+
+#~ msgid ""
+#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
+#~ "manually. Start the configuration dialog to set up the graphics card now?"
+#~ msgstr ""
+#~ "<b>無法偵測圖形配接卡</b><hr>手動設定您的配接卡。現在啟動組態對話方塊以設"
+#~ "定圖形配接卡？"
+
+#~ msgid ""
+#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>無法偵測監視器 (%1)</b><hr>請手動設定您的監視器。現在要啟動組態對話方塊"
+#~ "以設定顯示器？"
+
+#~ msgid ""
+#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>監視器  (%1) 與 ID：%2 找不到</b><hr>請手動設定您的監視器。現在要啟動組"
+#~ "態對話方塊以設定顯示器？"
+
+#~ msgid "<b>Yes</b>"
+#~ msgstr "<b>是</b>"
+
+#~ msgid "<b>No</b>"
+#~ msgstr "<b>否</b>"
+
+#~ msgid "File"
+#~ msgstr "檔案"
+
+#~ msgid "still locked"
+#~ msgstr "仍然鎖定"
+
+#~ msgid "Please wait"
+#~ msgstr "請稍候"
+
+#~ msgid ""
+#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
+#~ "X11 Configuration Manager<br>"
+#~ msgstr ""
+#~ "<big><b>SaX2:Extended X11 組態</b></big><hr>歡迎使用 SuSE X11 組態管理員"
+#~ "<br>"
+
+#~ msgid "To start, double-click  an item in the component list."
+#~ msgstr "若要開始，請按兩下元件清單中的項目。"
+
+#~ msgid "X11 System Setup"
+#~ msgstr "X11 系統設定"
+
+#~ msgid "Value..."
+#~ msgstr "值..."
+
+#~ msgid "Primary device"
+#~ msgstr "主要裝置"
+
+#~ msgid "Driver:"
+#~ msgstr "驅動程式："
+
+#~ msgid "X:"
+#~ msgstr "X："
+
+#~ msgid "Y:"
+#~ msgstr "Y："
+
+#~ msgid "Bus ID:"
+#~ msgstr "匯流排 ID："
+
+#~ msgid "Card options"
+#~ msgstr "配接卡選項"
+
+#~ msgid "Key Mappings"
+#~ msgstr "按鍵對應"
+
+#~ msgid "&Current sync frequencies"
+#~ msgstr "目前的同步頻率(&C)"
+
+#~ msgid "Current color depth"
+#~ msgstr "目前的色彩深度"
+
+#~ msgid "Current resolution"
+#~ msgstr "目前的解析度"
+
+#~ msgid "HSync range"
+#~ msgstr "HSync 範圍"
+
+#~ msgid "VSync range"
+#~ msgstr "VSync 範圍"
+
+#~ msgid "[ mm ]"
+#~ msgstr "[ 公釐 ]"
+
+#~ msgid "Device"
+#~ msgstr "裝置"
+
+#~ msgid "Protocol"
+#~ msgstr "協定"
+
+#~ msgid "Fi&nish"
+#~ msgstr "完成(&N)"
+
+#~ msgid "Abort"
+#~ msgstr "終止"
+
+#~ msgid "Configure XAccess: Mouse over keypad..."
+#~ msgstr "設定 Xaccess：滑鼠控制鍵台..."
+
+#~ msgid "Configure VNC: Export display using the VNC protocol..."
+#~ msgstr "設定 VNC：使用 VNC 協定輸出顯示..."
+
+#~ msgid "Configure input devices: Mouse configuration..."
+#~ msgstr "設定輸入裝置：滑鼠組態..."
+
+#~ msgid "Configure 3D/OpenGL subsystem..."
+#~ msgstr "設定 3D/OpenGL 子系統..."
+
+#~ msgid "Configure virtual resolutions..."
+#~ msgstr "設定虛擬解析度..."
+
+#~ msgid "Configure graphics cards..."
+#~ msgstr "設定圖形配接卡..."
+
+#~ msgid "Configure Desktop: Colors and Resolutions..."
+#~ msgstr "設定桌面：色彩和解析度..."
+
+#~ msgid "Configure touch screens..."
+#~ msgstr "設定觸控式螢幕..."
+
+#~ msgid "Set up picture geometry..."
+#~ msgstr "設定影像尺寸..."
+
+#~ msgid "Configure multihead mode..."
+#~ msgstr "設定多螢幕顯示模式..."
+
+#~ msgid ""
+#~ "Set up screen layout of your desktops (Double-click an icon will identify "
+#~ "the real screen)..."
+#~ msgstr "設定桌面的螢幕配置 (按兩下圖示會識別實際螢幕)..."
+
+#~ msgid "Configure graphics tablet"
+#~ msgstr "設定圖形手寫板"
+
+#~ msgid "Add new card..."
+#~ msgstr "新增配接卡..."
+
+#~ msgid "Remove selected card"
+#~ msgstr "移除選取的配接卡"
+
+#~ msgid "Remove selected monitor"
+#~ msgstr "移除選取的監視器"
+
+#~ msgid "&Properties..."
+#~ msgstr "內容(&P)..."
+
+#~ msgid "Enable View-Only mode"
+#~ msgstr "啟用僅檢視模式"
+
+#~ msgid "&Add new touchscreen..."
+#~ msgstr "新增觸控式螢幕(&A)..."
+
+#~ msgid "&Remove selected touchscreen"
+#~ msgstr "移除選取的觸控式螢幕(&R)"
+
+#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>目前設定的觸控式螢幕：</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>目前設定的監視器</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>目前設定的配接卡：</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>目前設定的滑鼠：</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>目前的監視器配置：</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>目前設定的桌面：:</u></h3></nobr>"
+
+#~ msgid "&Add new mouse..."
+#~ msgstr "新增滑鼠(&A)..."
+
+#~ msgid "&Remove selected mouse"
+#~ msgstr "移除選取的滑鼠(&R)"
+
+#~ msgid "&General"
+#~ msgstr "一般(&G)"
+
+#~ msgid "&Expert"
+#~ msgstr "專家(&E)"
+
+#~ msgid "Vendor"
+#~ msgstr "廠商"
+
+#~ msgid "Selected"
+#~ msgstr "已選取"
+
+#~ msgid "Resolution X"
+#~ msgstr "解析度 X"
+
+#~ msgid "&Resolution(s) for %1 colors"
+#~ msgstr "%1 色彩的解析度(&R)"
+
+#~ msgid "Possible"
+#~ msgstr "可能"
+
+#~ msgid "&Add this resolution"
+#~ msgstr "新增此解析度(&A)"
+
+#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
+#~ msgstr "<big><b>目前設定的 AccessX 狀態</b></big><hr>"
+
+#~ msgid "<big><b>Current VNC status</b></big><hr>"
+#~ msgstr "<big><b>目前的 VNC 狀態</b></big><hr>"
+
+#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
+#~ msgstr "<big><b>目前的 3D/OpenGL 狀態</b></big><hr>"
+
+#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
+#~ msgstr "<big><b>目前的虛擬解析度設定</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
+#~ msgstr "<big><b>目前設定的圖形配接卡</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
+#~ msgstr "<big><b>目前設定的桌面</b></big><hr>"
+
+#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
+#~ msgstr "<big><b>目前作用中的幾何時機</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
+#~ msgstr "<big><b>目前設定的鍵盤</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured layout</b></big><hr>"
+#~ msgstr "<big><b>目前設定的配置</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
+#~ msgstr "<big><b>目前設定的監視器</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
+#~ msgstr "<big><b>目前設定的指標裝置</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
+#~ msgstr "<big><b>目前設定的多螢幕顯示狀態</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
+#~ msgstr "<big><b>目前設定的圖形手寫板</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
+#~ msgstr "<big><b>目前設定的觸控式螢幕</b></big><hr>"
+
+#~ msgid "<b><nobr>No information available</nobr></b>"
+#~ msgstr "<b><nobr>沒有可用的資訊</nobr></b>"
+
+#~ msgid ""
+#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
+#~ "with the keypad. The table below points to the current status of AccessX."
+#~ msgstr ""
+#~ "<b>虛擬滑鼠：</b><hr>設定數字鍵台，使用鍵台來控制滑鼠。以下表格指向 "
+#~ "AccessX 的目前狀態。"
+
+#~ msgid ""
+#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
+#~ "desktop and all its programs remotely via a VNC viewer program"
+#~ msgstr ""
+#~ "<b>VNC 伺服器：</b><hr>設定可以透過 VNC 檢閱程式，遠端存取 X-Server的桌面"
+#~ "和所有程式"
+
+#~ msgid ""
+#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
+#~ "here. X.Org includes the direct rendering interface to use the 3D "
+#~ "capabilities of your graphics card. If your card and the corresponding "
+#~ "driver support 3D hardware acceleration, enable it in this dialog."
+#~ msgstr ""
+#~ "<b>OpenGL 子系統：</b><hr>在此設定圖形配接卡的 3D 功能。X.Org 包含直接轉換"
+#~ "介面來使用圖形配接卡的 3D 功能。如果您的配接卡和相應的驅動程式支援 3D 硬體"
+#~ "加速，請在此對話方塊啟用它。"
+
+#~ msgid ""
+#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
+#~ "resolution which is completely viewable. Beside this resolution you can "
+#~ "setup a resolution which lives outside the viewable area of your monitor "
+#~ "and comes up if you leave the edges of your monitor with the mouse. This "
+#~ "area is called a virtual resolution."
+#~ msgstr ""
+#~ "<b>虛擬解析度：</b><hr>每一個單一桌面都有自己可以完全檢視的真實解析度。除"
+#~ "了此解析度，您可以在監視器可檢視區域以外設定適用的解析度，而且如果您的滑鼠"
+#~ "離開監視器的邊緣就會啟用。此區域稱為虛擬解析度。"
+
+#~ msgid ""
+#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
+#~ "graphics system consists of at least one graphics card but can be "
+#~ "combined to a so called <i>multihead environment</i> which consists of at "
+#~ "least two cards up to a maximum of 16 cards."
+#~ msgstr ""
+#~ "<b>圖形配接卡：</b><hr>在此設定您的圖形配接卡。圖形系統是由至少一個圖形配"
+#~ "接卡組成的，可以結合 2 到 16 張配接卡組成所謂<i>多螢幕顯示環境</i>。"
+
+#~ msgid ""
+#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
+#~ "resolution and colors. Every desktop is an independent device and may "
+#~ "have a different color and/or resolution setup."
+#~ msgstr ""
+#~ "<b>桌面內容.:</b><hr>設定桌面的設定，例如解析度和色彩。每一個桌面是一個獨"
+#~ "立裝置，而且可設定不同的色彩和/或解析度。"
+
+#~ msgid ""
+#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
+#~ "displayed by the monitor. The table below point to the current used "
+#~ "Modeline(s)."
+#~ msgstr ""
+#~ " <b>監視器幾何定義：</b><hr>設定監視器顯示的圖片位置和大小。以下表格指向目"
+#~ "前使用的 Modeline。"
+
+#~ msgid ""
+#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
+#~ "language environment with which it should work."
+#~ msgstr "<b>鍵盤內容：</b><hr>設定鍵盤的類型以及適當的語言環境。"
+
+#~ msgid ""
+#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the neighborhood relations of the "
+#~ "connected monitors simply via drag&drop. If you are not sure which "
+#~ "monitor belongs to the icon just double-click on it and you will see a "
+#~ "message on the corresponding screen."
+#~ msgstr ""
+#~ "<b>桌面配置：</b><hr>如果有一張以上的配接卡，您就是處於多螢幕顯示環境。透"
+#~ "過拖曳方式，為連接的監視器設定彼此關係。如果您不確定監視器屬於哪一個圖示，"
+#~ "只要在圖示上按兩下就會在相應的螢幕看到訊息。"
+
+#~ msgid ""
+#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
+#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
+#~ "the monitor."
+#~ msgstr ""
+#~ "<b>監視器內容：</b><hr>設定連接至圖形配接器的監視器型號。請小心選擇。錯誤"
+#~ "的同步範圍可能會損毀監視器。"
+
+#~ msgid ""
+#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
+#~ "mouse pointer as well as settings like button emulation or wheel "
+#~ "functions."
+#~ msgstr ""
+#~ "<b>滑鼠內容：</b><hr>設定基本參數來啟動核心滑鼠指標以及類似按鈕模擬或滾輪"
+#~ "功能等等的設定。"
+
+#~ msgid ""
+#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the multihead functioning here."
+#~ msgstr ""
+#~ "<b>多螢幕顯示模式：</b><hr>如果有一張以上的配接卡，您就是處於多螢幕顯示環"
+#~ "境。在此設定多螢幕顯示功能。"
+
+#~ msgid ""
+#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
+#~ "pointer devices, such as pens and erasers."
+#~ msgstr ""
+#~ "<b>圖形手寫板：</b><hr>設定圖形手寫板以及相應的指標裝置，例如筆和橡皮擦。"
+
+#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
+#~ msgstr "<b>觸控式螢幕：</b><hr>設定受壓感應螢幕。"
+
+#~ msgid "Disabled"
+#~ msgstr "停用"
+
+#~ msgid "Enabled"
+#~ msgstr "啟用"
+
+#~ msgid "Wheel support"
+#~ msgstr "滾輪支援"
+
+#~ msgid "&Port"
+#~ msgstr "埠(&P)"
+
+#~ msgid "&Mode"
+#~ msgstr "模式(&M)"
+
+#~ msgid "Button emulation"
+#~ msgstr "按鈕模擬"
+
+#~ msgid "Primary Device:"
+#~ msgstr "主要裝置："
+
+#~ msgid "Secondary Device:"
+#~ msgstr "次要裝置："
+
+#~ msgid "Single Layout [ no multihead environment ]"
+#~ msgstr "單一配置 [ 沒有多螢幕顯示環境 ]"
+
+#~ msgid "Clone Mode Active"
+#~ msgstr "複製模式作用中"
+
+#~ msgid "Xinerama Mode Active"
+#~ msgstr "Xinerama 模式作用中"
+
+#~ msgid "Screens Layout Active"
+#~ msgstr "螢幕配置作用中"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx 系列"
+
+#~ msgid "Canadian"
+#~ msgstr "加拿大文"
+
+#~ msgid "Brazilian"
+#~ msgstr "巴西文"
+
+#~ msgid "Bosnian"
+#~ msgstr "波士尼亞文"
+
+#~ msgid "Lithuanian qwerty (numeric)"
+#~ msgstr "立陶宛文 qwerty (數字)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "喬治亞文 (俄文)"
+
+#~ msgid "Latvian"
+#~ msgstr "拉托維亞文"
+
+#~ msgid "Belarusian"
+#~ msgstr "白俄羅斯文"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "捷克文 (qwerty)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "北薩米文 (芬蘭)"
+
+#~ msgid "Macedonian"
+#~ msgstr "馬其頓文"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "美式英文 (含 deadkey)"
+
+#~ msgid "Malayalam"
+#~ msgstr "馬來文"
+
+#~ msgid "Burmese"
+#~ msgstr "緬甸文"
+
+#~ msgid "Kannada"
+#~ msgstr "坎那達文"
+
+#~ msgid "Mongolian"
+#~ msgstr "蒙古文"
+
+#~ msgid "Bengali"
+#~ msgstr "孟加拉文"
+
+#~ msgid "Romanian"
+#~ msgstr "羅馬尼亞文"
+
+#~ msgid "Croatian"
+#~ msgstr "克羅埃西亞文"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "美式英文 (含 ISO9995-3)"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr "立陶宛文azerty 標準"
+
+#~ msgid "Maltese"
+#~ msgstr "馬爾他文"
+
+#~ msgid "German"
+#~ msgstr "德文"
+
+#~ msgid "Hungarian"
+#~ msgstr "匈牙利文"
+
+#~ msgid "Russian"
+#~ msgstr "俄文"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典文"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "土耳其文 (F)"
+
+#~ msgid "Oriya"
+#~ msgstr "歐利亞文"
+
+#~ msgid "Slovenian"
+#~ msgstr "斯洛維尼亞文"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "斯洛伐克文 (qwerty)"
+
+#~ msgid "Czech"
+#~ msgstr "捷克文"
+
+#~ msgid "Gujarati"
+#~ msgstr "古吉拉特文"
+
+#~ msgid "Danish"
+#~ msgstr "丹麥文"
+
+#~ msgid "Dvorak"
+#~ msgstr "Dvorak"
+
+#~ msgid "Slovak"
+#~ msgstr "斯洛伐克文"
+
+#~ msgid "Dutch"
+#~ msgstr "荷蘭文"
+
+#~ msgid "Israeli"
+#~ msgstr "以色列文"
+
+#~ msgid "Tamil"
+#~ msgstr "坦米爾文"
+
+#~ msgid "Ogham"
+#~ msgstr "歐甘文"
+
+#~ msgid "Norwegian"
+#~ msgstr "挪威文"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "果魯穆奇"
+
+#~ msgid "Serbian"
+#~ msgstr "塞爾維亞文"
+
+#~ msgid "Farsi"
+#~ msgstr "波斯文"
+
+#~ msgid "Icelandic"
+#~ msgstr "冰島文"
+
+#~ msgid "Italian"
+#~ msgstr "義利文"
+
+#~ msgid "Estonian"
+#~ msgstr "愛沙尼亞文"
+
+#~ msgid "Inuktitut"
+#~ msgstr "依奴提圖特文"
+
+#~ msgid "Swiss French"
+#~ msgstr "瑞士法文"
+
+#~ msgid "Swiss German"
+#~ msgstr "瑞士德文"
+
+#~ msgid "Thai"
+#~ msgstr " 泰文"
+
+#~ msgid "Tajik"
+#~ msgstr "塔吉克文"
+
+#~ msgid "Greek"
+#~ msgstr "希臘文"
+
+#~ msgid "Japanese"
+#~ msgstr "日文"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "喬治亞文 (拉丁文)"
+
+#~ msgid "Ukrainian"
+#~ msgstr "烏克蘭文"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "波蘭文 (qwertz)"
+
+#~ msgid "Syriac"
+#~ msgstr "敘利亞文"
+
+#~ msgid "Turkish"
+#~ msgstr "土耳其文"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙文"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "北薩米文 (瑞典)"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "斯拉夫文"
+
+#~ msgid "Hindi"
+#~ msgstr "印度文"
+
+#~ msgid "Finnish"
+#~ msgstr "芬蘭文"
+
+#~ msgid "French (alternative)"
+#~ msgstr "法文 (替代)"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "匈牙利文 (qwerty)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "俄文 (斯拉夫注音)"
+
+#~ msgid "Albanian"
+#~ msgstr "阿爾巴尼亞文"
+
+#~ msgid "Polish"
+#~ msgstr "波蘭文"
+
+#~ msgid "Telugu"
+#~ msgstr "特拉古文"
+
+#~ msgid "Armenian"
+#~ msgstr "亞美尼亞文"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "北薩米文 (挪威)"
+
+#~ msgid "Latin America"
+#~ msgstr "拉丁美洲"
+
+#~ msgid "French"
+#~ msgstr "法文"
+
+#~ msgid "United Kingdom"
+#~ msgstr "英國"
+
+#~ msgid "Arabic"
+#~ msgstr "阿拉伯文"
+
+#~ msgid "U.S. English"
+#~ msgstr "美式英文"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "馬爾他文 (美國配置)"
+
+#~ msgid "French Canadian"
+#~ msgstr "加拿大法文"
+
+#~ msgid "Portuguese"
+#~ msgstr "葡萄牙文"
+
+#~ msgid "Belgian"
+#~ msgstr "比利時文"
+
+#~ msgid "Bulgarian"
+#~ msgstr "保加利亞文"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "亞塞拜然文"
+
+#~ msgid "Vietnamese"
+#~ msgstr "越南文"
+
+#~ msgid "Lao"
+#~ msgstr "寮國文"
+
+#~ msgid "Microsoft Natural"
+#~ msgstr "Microsoft Natural"
+
+#~ msgid "Ennyah DKB-1008"
+#~ msgstr "Ennyah DKB-1008"
+
+#~ msgid "Logitech Deluxe Access Keyboard"
+#~ msgstr "Logitech Deluxe Access 鍵盤"
+
+#~ msgid "Microsoft Internet Keyboard"
+#~ msgstr "Microsoft Internet 鍵盤"
+
+#~ msgid "Samsung SDM 4500P"
+#~ msgstr "Samsung SDM 4500P"
+
+#~ msgid "Cherry Blue Line CyBo@rd"
+#~ msgstr "Cherry Blue Line CyBo@rd"
+
+#~ msgid "Dell"
+#~ msgstr "Dell"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GF"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
+
+#~ msgid "IBM Rapid Access"
+#~ msgstr "IBM Rapid Access"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternate option2)"
+
+#~ msgid "Memorex MX1998"
+#~ msgstr "Memorex MX1998"
+
+#~ msgid "Trust Wireless Keyboard Classic"
+#~ msgstr "Trust Wireless Keyboard Classic"
+
+#~ msgid "Dell 101-key PC"
+#~ msgstr "Dell 101-key PC"
+
+#~ msgid "Brother Internet Keyboard"
+#~ msgstr "Brother Internet 鍵盤"
+
+#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
+#~ msgstr "膝上型/筆記型 Compaq (如 Armada) 膝上型鍵盤"
+
+#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
+#~ msgstr "膝上型/筆記型 Compaq (如 Presario) Internet 鍵盤"
+
+#~ msgid "IBM Rapid Access II"
+#~ msgstr "IBM Rapid Access II"
+
+#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
+#~ msgstr "Logitech iTouch 無線鍵盤 (型號 Y-RB6)"
+
+#~ msgid "Trust Direct Access Keyboard"
+#~ msgstr "Trust Direct Access 鍵盤"
+
+#~ msgid "Logitech Internet Navigator Keyboard"
+#~ msgstr "Logitech Internet Navigator 鍵盤"
+
+#~ msgid "SK-7100"
+#~ msgstr "SK-7100"
+
+#~ msgid "Acer AirKey V"
+#~ msgstr "Acer AirKey V"
+
+#~ msgid "BTC 9000A"
+#~ msgstr "BTC 9000A"
+
+#~ msgid "Toshiba Satellite S3000"
+#~ msgstr "Toshiba Satellite S3000"
+
+#~ msgid "Compaq Internet Keyboard (13 keys)"
+#~ msgstr "Compaq Internet 鍵盤 (13 鍵)"
+
+#~ msgid "Hewlett-Packard Omnibook XT1000"
+#~ msgstr "Hewlett-Packard Omnibook XT1000"
+
+#~ msgid "Logitech iTouch"
+#~ msgstr "Logitech iTouch"
+
+#~ msgid "SK-6200"
+#~ msgstr "SK-6200"
+
+#~ msgid "Compaq iPaq Keyboard"
+#~ msgstr "Compaq iPaq 鍵盤"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
+#~ msgstr "Logitech Cordless Desktop Pro (替代選項)"
+
+#~ msgid "Logitech Cordless Desktop Navigator"
+#~ msgstr "Logitech Cordless Desktop Navigator"
+
+#~ msgid "QTronix Scorpius 98N+"
+#~ msgstr "QTronix Scorpius 98N+"
+
+#~ msgid "Symplon PaceBook (tablet PC)"
+#~ msgstr "Symplon PaceBook (平板電腦)"
+
+#~ msgid "Winbook Model XP5"
+#~ msgstr "Winbook Model XP5"
+
+#~ msgid "BTC 5113RF Multimedia"
+#~ msgstr "BTC 5113RF 多媒體"
+
+#~ msgid "Diamond 9801 / 9802 series"
+#~ msgstr "Diamond 9801 / 9802 系列"
+
+#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE4xxx 和 ZE4xxx"
+
+#~ msgid "Logitech Cordless Desktop Optical"
+#~ msgstr "Logitech Cordless Desktop Optical"
+
+#~ msgid "Logitech Internet Keyboard"
+#~ msgstr "Logitech Internet 鍵盤"
+
+#~ msgid "BTC 9000"
+#~ msgstr "BTC 9000"
+
+#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+#~ msgstr "Genius Comfy KB-16M / Genius MM 鍵盤 KWD-910"
+
+#~ msgid "Hewlett-Packard Internet Keyboard"
+#~ msgstr "Hewlett-Packard Internet 鍵盤"
+
+#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
+#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
+
+#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+#~ msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+
+#~ msgid "Propeller Voyager (KTEZ-1000)"
+#~ msgstr "Propeller Voyager (KTEZ-1000)"
+
+#~ msgid "Brazilian ABNT2"
+#~ msgstr "Brazilian ABNT2"
+
+#~ msgid "Compaq Internet Keyboard (7 keys)"
+#~ msgstr "Compaq Internet 鍵盤 (7 鍵)"
+
+#~ msgid "Honeywell Euroboard"
+#~ msgstr "Honeywell Euroboard"
+
+#~ msgid "Logitech Cordless Desktop"
+#~ msgstr "Logitech Cordless Desktop"
+
+#~ msgid "Yahoo! Internet Keyboard"
+#~ msgstr "Yahoo!Internet 鍵盤"
+
+#~ msgid "Compaq Internet Keyboard (18 keys)"
+#~ msgstr "Compaq Internet 鍵盤 (18 鍵)"
+
+#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
+#~ msgstr "Laptop/notebook Dell Inspiron 8xxx"
+
+#~ msgid "IBM Rapid Access II (alternate option)"
+#~ msgstr "IBM Rapid Access II (替代選項)"
+
+#~ msgid "Logitech Cordless Desktop Pro"
+#~ msgstr "Logitech Cordless Desktop Pro"
+
+#~ msgid "Advance Scorpius KI"
+#~ msgstr "Advance Scorpius KI"
+
+#~ msgid "BTC 5126T"
+#~ msgstr "BTC 5126T"
+
+#~ msgid "Dexxa Wireless Desktop Keyboard"
+#~ msgstr "Dexxa Wireless Desktop 鍵盤"
+
+#~ msgid "Hewlett-Packard Omnibook 5xx"
+#~ msgstr "Hewlett-Packard Omnibook 5xx"
+
+#~ msgid "Memorex MX2750"
+#~ msgstr "Memorex MX2750"
+
+#~ msgid "SK-1300"
+#~ msgstr "SK-1300"
+
+#~ msgid "Generic 101-key PC"
+#~ msgstr "通用 101 鍵個人電腦"
+
+#~ msgid "Northgate OmniKey 101"
+#~ msgstr "Northgate OmniKey 101"
+
+#~ msgid "ACPI Standard"
+#~ msgstr "ACPI 標準"
+
+#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
+#~ msgstr "Cherry Blue Line CyBo@rd (替代選項)"
+
+#~ msgid "Chicony Internet Keyboard"
+#~ msgstr "Chicony Internet 鍵盤"
+
+#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
+#~ msgstr "Hewlett-Packard SK-2501 多媒體鍵盤"
+
+#~ msgid "Samsung SDM 4510P"
+#~ msgstr "Samsung SDM 4510P"
+
+#~ msgid "SK-2500"
+#~ msgstr "SK-2500"
+
+#~ msgid "SVEN Ergonomic 2500"
+#~ msgstr "SVEN Ergonomic 2500"
+
+#~ msgid "Generic 102-key (Intl) PC"
+#~ msgstr "通用 102 鍵 (Intl) 個人電腦"
+
+#~ msgid "Logitech Cordless Desktop iTouch"
+#~ msgstr "Logitech Cordless Desktop iTouch"
+
+#~ msgid "Chicony KB-9885"
+#~ msgstr "Chicony KB-9885"
+
+#~ msgid "Compaq Easy Access Keyboard"
+#~ msgstr "Compaq Easy Access 鍵盤"
+
+#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
+#~ msgstr "Hewlett-Packard 5181 Internet 鍵盤"
+
+#~ msgid "Hewlett-Packard Omnibook 500 FA"
+#~ msgstr "Hewlett-Packard Omnibook 500 FA"
+
+#~ msgid "Memorex MX2500 EZ-Access Keyboard"
+#~ msgstr "Memorex MX2500 EZ-Access 鍵盤"
+
+#~ msgid "Generic 104-key PC"
+#~ msgstr "通用 104 鍵個人電腦"
+
+#~ msgid "Everex STEPnote"
+#~ msgstr "Everex STEPnote"
+
+#~ msgid "Japanese 106-key"
+#~ msgstr "日文 106 鍵"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GC、GD、GE 和 Pavilion N5xxx"
+
+#~ msgid "Hewlett-Packard Pavilion ZT11xx"
+#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
+
+#~ msgid "Logitech iTouch keyboard Internet Navigator"
+#~ msgstr "Logitech iTouch keyboard Internet Navigator"
+
+#~ msgid "Generic 105-key (Intl) PC"
+#~ msgstr "通用 105 鍵 (Intl) 個人電腦"
+
+#~ msgid "Keytronic FlexPro"
+#~ msgstr "Keytronic FlexPro"
+
+#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
+#~ msgstr "Hewlett-Packard SK-2505 Internet 鍵盤"
+
+#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
+#~ msgstr "Microsoft Internet Keyboard Pro，瑞典"
+
+#~ msgid "Microsoft Office Keyboard"
+#~ msgstr "Microsoft Office 鍵盤"
+
+#~ msgid "Oretec MCK-800 MM/Internet keyboard"
+#~ msgstr "Oretec MCK-800 MM/Internet 鍵盤"
+
+#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
+#~ msgstr "使用內容大寫。Shift 不會取消 Caps。"
+
+#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
+#~ msgstr "當成 Shift 鎖定。Shift 不會取消 Caps。"

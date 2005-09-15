@@ -1,0 +1,2668 @@
+# translation of sax.po to 
+# translation of sax.po to français
+# translation of sax.fr.po to Français
+# domain "sax.mo"
+# French message file for SaX.
+# Copyright (C)  SuSE GmbH, 2000..2001
+# Francoise Lermen <flermen@suse.de>, 2000..2001.
+# Patricia Vaz <Patricia.Vaz@suse.de>, 2003,2004.
+# Patricia Vaz <patricia.vaz@suse.com>, 2004.
+# Patricia Vaz <patricia@suse.de>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sax\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2005-03-06 18:20+0100\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+
+#. /.../
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for the SaX2 and XFine GUI
+#.
+#. RTF text: Startup information for the user
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Suggestion SaX2</b><hr>Le système graphique actuellement démarré est "
+"proposé par SaX2. S'il est acceptable, cliquez sur <b>OK</b>. Sinon, changez "
+"la configuration."
+
+#. Caption text for the startup information window
+msgid "Automatic Graphics System Setup"
+msgstr "Configuration automatique du système graphique"
+
+#. Caption text for informing the user
+msgid "Information..."
+msgstr "Informations..."
+
+#. Caption text for the main window
+msgid "SaX2: SUSE Advanced X11 Configuration"
+msgstr "SaX2 : configuration X11 avancée SUSE"
+
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr "Centre de contrôle SaX"
+
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr "SUSE Linux"
+
+#. Help Button text
+msgid "&Help"
+msgstr "&Aide"
+
+#. Ok Button text
+msgid "&OK"
+msgstr "&OK"
+
+#. Yes Button text
+msgid "&Yes"
+msgstr "&Oui"
+
+#. No Button text
+msgid "&No"
+msgstr "&Non"
+
+#. Cancel Button text
+#. Maximum length: 40  characters
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#. RTF text: exit SaX message
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
+msgstr "<b>Quitter SaX2</b><hr>Quitter SaX2 maintenant ?"
+
+#. Message box default caption text
+msgid "Message"
+msgstr "Message"
+
+#. Change configuration Button text
+msgid "C&hange Configuration"
+msgstr "C&hanger la configuration"
+
+#. Short description of the Monitor module
+#. Monitor name label
+msgid "Monitor"
+msgstr "Écran"
+
+#. title of module dialog
+msgid "Card and Monitor Properties"
+msgstr "Propriétés de carte et de moniteur"
+
+#. Short description of the Mouse module
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "Souris"
+
+#. title of module dialog
+msgid "Mouse Properties"
+msgstr "Propriétés de la souris"
+
+#. Short description of the Keyboard module
+msgid "Keyboard"
+msgstr "Clavier"
+
+#. title of module dialog
+msgid "Keyboard Properties"
+msgstr "Propriétés du clavier"
+
+#. Short description of the Tablet module
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "Tablette"
+
+#. title of module dialog
+msgid "Tablet Properties"
+msgstr "Propriétés de la tablette"
+
+#. Short description of the Touchscreen module
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "Écran tactile"
+
+#. title of module dialog
+msgid "Touchscreen Properties"
+msgstr "Propriétés de l'écran tactile"
+
+#. Short description of the VNC module
+msgid "VNC"
+msgstr "VNC"
+
+#. title of module dialog
+msgid "Remote Access Properties"
+msgstr "Propriétés d'accès à distance"
+
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "Afficher"
+
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
+msgstr "Activer cet écran"
+
+#. Activate mouse checkbox
+msgid "Activate This Pointer"
+msgstr "Activer ce pointeur"
+
+#. Graphics Card name label
+msgid "Card"
+msgstr "Carte"
+
+#. Change data
+msgid "&Change..."
+msgstr "&Changer..."
+
+#. Set options for some kind of data
+msgid "&Options..."
+msgstr "&Options..."
+
+#. Configure some data
+msgid "Con&figure..."
+msgstr "Con&figurer..."
+
+#. Group box title for dual head setup
+msgid "Dual Head Mode"
+msgstr "Mode duplex"
+
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+msgid "Options"
+msgstr "Options"
+
+#. CheckBox label to activate the mouse wheel
+msgid "Activate Mouse Wheel"
+msgstr "Activer la roulette de la souris"
+
+#. CheckBox label to activate the 3 Button emulation
+msgid "Activate 3-Button Emulation"
+msgstr "Activer l'émulation 3 boutons"
+
+#. CheckBox label to activate the wheel emulation
+msgid "Emulate Wheel with Mouse Button"
+msgstr "Émuler la roulette avec le bouton de la souris"
+
+#. Group box title for card rotation
+msgid "Rotate Screen"
+msgstr "Rotation de l'écran"
+
+#. Group box title for the mouse test field
+#. Line edit label pointing to the keyboard test field
+msgid "Test"
+msgstr "Test"
+
+#. Button text in final step message box for testing the configuration
+msgid "&Test"
+msgstr "&Test"
+
+#. Button text in final step message box for saving the configuration
+msgid "&Save"
+msgstr "&Enregistrer"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Disposition"
+
+#. Status line of mouse test field: ready
+msgid "Test ready"
+msgstr "Test prêt"
+
+#. Status line of mouse test field: single button click
+msgid "Single Click: Done"
+msgstr "Simple clic : terminé"
+
+#. Status line of mouse test field: double button click
+msgid "Double Click: Done"
+msgstr "Double clic : terminé"
+
+#. Status line of mouse test field: wheel moved
+msgid "Scrolling"
+msgstr "Défilement"
+
+#. Status line of mouse test field: button pressed
+msgid "Button pressed"
+msgstr "Bouton pressé"
+
+#. Status line of mouse test field: button released
+msgid "Button released"
+msgstr "Bouton relâché"
+
+#. Status line of mouse test field: wheel stopped
+msgid "Stopped: Done"
+msgstr "Arrêté : terminé"
+
+#. Group box title for properties
+msgid "Properties"
+msgstr "Propriétés"
+
+#. Activate dual head mode checkbox
+msgid "Activate Dual Head Mode"
+msgstr "Activer le mode duplex"
+
+#. Set display resolution
+msgid "Resolution"
+msgstr "Résolution"
+
+#. Set display colors
+msgid "Colors"
+msgstr "Couleurs"
+
+#. Activate 3D checkboc
+msgid "Activate 3D Acceleration"
+msgstr "Activer l'accélération 3D"
+
+#. Tab title: Setup monitor properties for card X
+msgid "Monitor for Card"
+msgstr "Moniteur pour carte"
+
+#. Tab title: Setup monitor for second channel on card X
+msgid "Second Monitor for Card"
+msgstr "Second moniteur pour carte"
+
+#. Tab title: Setup sync frequencies
+msgid "Sync Frequencies"
+msgstr "Synchroniser les fréquences"
+
+#. Tab title: Setup display size
+msgid "Display Size"
+msgstr "Taille de l'écran"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
+msgstr "Agencement"
+
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
+msgstr "Activé en mode %1 avec %2"
+
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
+msgstr "Activé dans le mode par défaut du pilote"
+
+#. rwalter
+#. Monitor Model is unknown and should be changed
+#. rwalter
+#. Mouse Model is unknown and should be changed
+msgid "Unconfigured"
+msgstr "Non configuré"
+
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Impossible de désactiver tous les écrans</b><hr><nobr>Au moins un écran "
+"doit être actif.</nobr>"
+
+#. Info label for dual head checkbox
+msgid "No configuration available"
+msgstr "Aucune configuration disponible"
+
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"Multihead traditionnel :\n"
+"Chaque moniteur est un écran indépendant"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"Multihead cloné :\n"
+"Chaque écran est un clône de l'écran primaire"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Multihead Xinerama :\n"
+"Forme un écran géant avec tous les moniteurs"
+
+#. Title for multihead modi
+msgid "Multihead Mode"
+msgstr "Mode multihead"
+
+#. Monitor X - connected to - CardY
+msgid "Connected To"
+msgstr "Connecté à"
+
+#. Tooltip text if monitor is unknown
+msgid "Unknown Monitor:"
+msgstr "Moniteur inconnu :"
+
+#. Tooltip text for primary monitor
+msgid "Primary Monitor:"
+msgstr "Moniteur principal :"
+
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+msgid "Monitor Settings"
+msgstr "Paramètres du moniteur"
+
+#. Windowanager title for the mouse mode setup
+msgid "Mouse Settings"
+msgstr "Paramètres de la souris"
+
+#. Windowanager title for the card options dialog
+msgid "Graphics Card Settings"
+msgstr "Paramètres de la carte graphique"
+
+#. Windowanager title for the dual head setup
+msgid "Dual Head Settings"
+msgstr "Paramètres duplex"
+
+#. Radiobutton don't rotate
+msgid "Not Rotated"
+msgstr "Pas de rotation"
+
+#. Radiobutton rotate to the left side
+msgid "To the Left"
+msgstr "Vers la gauche"
+
+#. Radiobutton rotate to the right side
+msgid "To the Right"
+msgstr "Vers la droite"
+
+#. Popup message to ask the user for an option value
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>L'option requiert une valeur</b><hr><nobr>Définissez une valeur pour "
+"l'option %1.</nobr>"
+
+#. Group box title for the monitor vendor and name selection
+msgid "Monitor: Vendor and Name Selection"
+msgstr "Moniteur : sélection du nom et du fournisseur"
+
+#. Group box title for the mouse vendor and name selection
+msgid "Mouse: Vendor and Name Selection"
+msgstr "Souris : sélection du nom et du fournisseur"
+
+#. Group box title for the manual sync frequency set up
+msgid "Manual Sync Frequency Setup"
+msgstr "Synchroniser manuellement les fréquences"
+
+#. Group box title for the aspect/ratio selection
+msgid "Diagonal and Aspect Ratio"
+msgstr "Rapport largeur/hauteur et diagonale"
+
+#. Group box title for the display size setup
+msgid "Display Size in [ mm ]"
+msgstr "Taille de l'écran en [ mm ]"
+
+#. Text message telling to be carefull with the monitor sync frequencies
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Remarque :</b> de mauvaises plages de synchronisation peuvent endommager "
+"le moniteur. Consultez les paramètres dans le manuel du moniteur.<br><br>Si "
+"vous ne voulez pas que le moniteur utilise le rythme maximum, diminuez les "
+"plages de synchronisation."
+
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
+msgstr "Activer DPMS"
+
+#. Button to popup the disk dialog for reading the monitor utility disk
+msgid "Utility Disk..."
+msgstr "Disquette utilitaire..."
+
+#. Label text for horizontal sync frequency
+msgid "Horizontal"
+msgstr "Horizontale"
+
+#. Label text for second monitor name
+msgid "Second Monitor:"
+msgstr "Second moniteur :"
+
+#. Label text for second monitor resolution
+msgid "Second Monitor Resolution"
+msgstr "Résolution du second moniteur"
+
+#. Label text for vertical sync frequency
+msgid "Vertical"
+msgstr "Verticale"
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "KHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio"
+msgstr "Rapport largeur/hauteur"
+
+#. Label text for the diagonal length combo box
+msgid "Diagonal"
+msgstr "Diagonale"
+
+#. Label text for the display size X-Axis
+msgid "X Axis [mm]"
+msgstr "Axe X [mm]"
+
+#. Label text for the display size Y-Axis
+msgid "Y Axis [mm]"
+msgstr "Axe Y [mm]"
+
+#. Something is not configured
+msgid "Not configured"
+msgstr "Non configuré"
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr "Pouces"
+
+#. Message box of type Ok, telling to user to insert a CD or disk
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Insérer le CD ou la disquette</b><hr>Insérez le CD ou la disquette "
+"utilitaire de l'écran, fourni par le fabricant du moniteur."
+
+#. Message box of type Error, telling that the utility disk cannot be opened
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Erreur de lecture</b><hr>Impossible de lire le CD ou la disquette. Cela "
+"peut provenir d'un support endommagé ou de fichiers d'informations non "
+"correctement formatés."
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Traditional"
+msgstr "Traditionnel"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
+msgstr "Clone"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
+msgstr "Xinerama"
+
+#. Tab text for the mouse model dialog
+msgid "Mouse Model"
+msgstr "Modèle de souris"
+
+#. Group box title for the primary keyboard setup
+msgid "Primary Setup"
+msgstr "Configuration primaire"
+
+#. Label text for the primary keyboard type
+msgid "Type"
+msgstr "Type"
+
+#. Label text for the primary keyboard variant
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr "Variante"
+
+#. Group box title for the additional keyboard setup
+msgid "Additional Layouts"
+msgstr "Dispositions supplémentaires"
+
+#. Table topic text describing the status column
+msgid "Status"
+msgstr "État"
+
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr "Table d'encodage (keytable)"
+
+#. List View root item text
+msgid "Group Shift/Lock Behavior"
+msgstr "Comportement du groupe Maj/Verr"
+
+#. List View root item text
+msgid "Use Keyboard LED to Show Alternate Group"
+msgstr "Utiliser les diodes du clavier pour montrer un groupe alternatif"
+
+#. List View root item text
+msgid "Compose Key Position"
+msgstr "Position de la touche Compose"
+
+#. List View root item text
+#. XKBFile extension text
+msgid "Control Key Position"
+msgstr "Position de la touche Contrôle"
+
+#. List View root item text
+msgid "Third Level Chooser"
+msgstr "Sélecteur de troisième niveau"
+
+#. List View root item text
+msgid "Alt/Win Key Behavior"
+msgstr "Comportement des touches Alt/Win"
+
+#. List View root item text
+msgid "CapsLock Key Behavior"
+msgstr "Comportement de la touche VerrMaj"
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
+msgstr "Aucun"
+
+#. XKBFile extension text
+msgid "Left Alt key switches group while pressed."
+msgstr "La touche Alt gauche change de groupe."
+
+#. XKBFile extension text
+msgid "Both Ctrl keys together change group."
+msgstr "Les deux touches Ctrl simultanément changent de groupe."
+
+#. XKBFile extension text
+msgid "Right Shift key changes group."
+msgstr "La touche Maj droite change de groupe."
+
+#. XKBFile extension text
+msgid "Left Win key changes group."
+msgstr "La touche Win gauche change de groupe."
+
+#. XKBFile extension text
+msgid "Left Alt key changes group."
+msgstr "La touche Alt gauche change de groupe."
+
+#. XKBFile extension text
+msgid "Both Win keys switch group while pressed."
+msgstr "Les deux touches Win changent de groupe."
+
+#. XKBFile extension text
+msgid "Right Ctrl key switches group while pressed."
+msgstr "La touche Ctrl droite change de groupe."
+
+#. XKBFile extension text
+msgid "CapsLock just locks the Shift modifier."
+msgstr "La touche VerrMaj verrouille seulement le modificateur Maj."
+
+#. XKBFile extension text
+msgid "CapsLock toggles normal capitalization of alphabetic characters."
+msgstr ""
+"La touche VerrMaj bascule la capitalisation habituelle des caractères "
+"alphabétiques."
+
+#. XKBFile extension text
+msgid "CapsLock toggles Shift so all keys are affected."
+msgstr ""
+"La touche VerrMaj bascule la touche Maj pour affecter l'ensemble des touches."
+
+#. XKBFile extension text
+msgid "Right Win-key is Compose."
+msgstr "La touche Win droite est Compose."
+
+#. XKBFile extension text
+msgid "Shift+CapsLock changes group."
+msgstr "Maj+VerrMaj change de groupe."
+
+#. XKBFile extension text
+msgid "R-Alt switches group while pressed."
+msgstr "Alt droite change de groupe."
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt."
+msgstr "La touche Contrôle droite fonctionne comme la touche Alt droite."
+
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr "Touche Ctrl en bas à gauche"
+
+#. XKBFile extension text
+msgid "Press any of Win-keys to choose 3rd level."
+msgstr ""
+"Appuyez sur n'importe quelle touche Win pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Press Right Alt key to choose 3rd level."
+msgstr "Appuyez sur la touche Win droite pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Right Ctrl key changes group."
+msgstr "La touche Ctrl droite change de groupe."
+
+#. XKBFile extension text
+msgid "Right Alt is Compose."
+msgstr "La touche Alt droite est Compose."
+
+#. XKBFile extension text
+msgid "Right Ctrl is Compose."
+msgstr "La touche Ctrl droite est Compose."
+
+#. XKBFile extension text
+msgid "ScrollLock LED shows alternative group."
+msgstr "La diode Arrêt défilement montre un groupe alternatif."
+
+#. XKBFile extension text
+msgid "Control key at left of -A-"
+msgstr "Touche Contrôle à gauche de -A-"
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr "Sélectionneur troisième niveau"
+
+#. XKBFile extension text
+msgid "Both Shift keys together change group."
+msgstr "Les deux touches Maj simultanément changent de groupe."
+
+#. XKBFile extension text
+msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
+msgstr ""
+"VerrMaj utilise la capitalisation interne. La touche Maj annule VerrMaj."
+
+#. XKBFile extension text
+msgid "Make CapsLock an additional Control."
+msgstr "VerrMaj est une touche Contrôle supplémentaire"
+
+#. XKBFile extension text
+msgid "Press Left Win-key to choose 3rd level."
+msgstr "Presser la touche Win gauche pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Right Win-key changes group."
+msgstr "La touche Win droite change de groupe."
+
+#. XKBFile extension text
+msgid "Meta is mapped to the left Win-key."
+msgstr "Méta correspond à la touche Win gauche."
+
+#. XKBFile extension text
+msgid "CapsLock LED shows alternative group."
+msgstr "La diode VerrMaj montre un groupe alternatif."
+
+#. XKBFile extension text
+msgid "NumLock LED shows alternative group."
+msgstr "La diode VerrNum montre un groupe alternatif."
+
+#. XKBFile extension text
+msgid "Left Shift key changes group."
+msgstr "La touche Maj gauche change de groupe."
+
+#. XKBFile extension text
+msgid "Left Win-key switches group while pressed."
+msgstr "La touche Win gauche change de groupe."
+
+#. XKBFile extension text
+msgid "Menu is Compose."
+msgstr "Menu est Compose."
+
+#. XKBFile extension text
+msgid "Both Alt keys together change group."
+msgstr "Les deux touches Alt simultanément changent de groupe."
+
+#. XKBFile extension text
+msgid "CapsLock key changes group."
+msgstr "La touche VerrMaj change de groupe."
+
+#. XKBFile extension text
+msgid "Swap Control and CapsLock."
+msgstr "Permuter Contrôle et VerrMaj."
+
+#. XKBFile extension text
+msgid "Press any of Alt keys to choose 3rd level."
+msgstr "Presser n'importe quelle touche Alt pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Right Alt key changes group."
+msgstr "La touche Alt droite change de groupe."
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows."
+msgstr "Maj avec les touches du pavé numérique fonctionne comme sous Windows."
+
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
+msgstr "Touches spéciales (Ctrl+Alt+<key>) gérées dans un serveur."
+
+#. XKBFile extension text
+msgid "Hyper is mapped to the Win-keys."
+msgstr "Hyper correspond aux touches Win."
+
+#. XKBFile extension text
+msgid "Alt is mapped to the right Win-key and Super to Menu."
+msgstr "Alt correspond à la touche Win droite et Super à la touche Menu."
+
+#. XKBFile extension text
+msgid "Super is mapped to the Win-keys (default)."
+msgstr "Super correspond aux touches Win (par défaut)."
+
+#. XKBFile extension text
+msgid "Alt and Meta on the Alt keys (default)."
+msgstr "Alt et Méta sur les touches Alt (par défaut)."
+
+#. XKBFile extension text
+msgid "Add the standard behavior to Menu key."
+msgstr "Ajouter le comportement standard à la touche Menu."
+
+#. XKBFile extension text
+msgid "Alt and Meta are on the Alt keys (default)."
+msgstr "Alt et Méta sur les touches Alt (par défaut)."
+
+#. XKBFile extension text
+msgid "Press Right Control to choose 3rd level."
+msgstr ""
+"Presser sur la touche Contrôle droite pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Alt+Shift changes group."
+msgstr "Alt+Maj change de groupe"
+
+#. XKBFile extension text
+msgid "Control+Shift changes group."
+msgstr "Contrôle+Maj change de groupe."
+
+#. XKBFile extension text
+msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
+msgstr ""
+"VerrMaj agit comme Maj avec verrouillage. La touche Maj annule CapsLock."
+
+#. XKBFile extension text
+msgid "Use keyboard LED to show alternative group."
+msgstr "Utiliser les diodes du clavier pour montrer un groupe alternatif."
+
+#. XKBFile extension text
+msgid "Press Right Win-key to choose 3rd level."
+msgstr "Appuyez sur la touche Win droite pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Press Left Alt key to choose 3rd level."
+msgstr "Appuyez sur la touche Alt gauche pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Meta is mapped to the Win-keys."
+msgstr "Méta correspond aux touches Win."
+
+#. XKBFile extension text
+msgid "Press Menu key to choose 3rd level."
+msgstr "Appuyez sur la touche Menu pour choisir le troisième niveau."
+
+#. XKBFile extension text
+msgid "Left Ctrl key changes group."
+msgstr "La touche Ctrl gauche change de groupe."
+
+#. XKBFile extension text
+msgid "Menu key changes group."
+msgstr "La touche Menu change de groupe."
+
+#. XKBFile extension text
+msgid "Alt+Control changes group."
+msgstr "Alt+Contrôle change de groupe."
+
+#. XKBFile extension text
+msgid "Right Win-key switches group while pressed."
+msgstr "La touche Win droite change de groupe."
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
+msgstr "Port et mode"
+
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
+msgstr "Stylets"
+
+#. Activate tablet checkbox
+msgid "Activate This Tablet"
+msgstr "Activer cette tablette"
+
+#. Group box title for the tablet vendor and name selection
+msgid "Tablet: Vendor and Name Selection"
+msgstr "Tablette : sélection du nom et du fournisseur"
+
+#. Group box title for tablet port combobox
+msgid "Connection Port"
+msgstr "Port de connexion"
+
+#. Group box title for tablet mode
+msgid "Primary Tablet Mode"
+msgstr "Mode tablette principale"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen or Eraser Mode"
+msgstr "Mode stylo ou gomme"
+
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr "Relatif"
+
+#. Radiobutton for absolute tablet mode
+msgid "Absolute"
+msgstr "Absolu"
+
+#. Combobox item text for tablet port: USB
+msgid "USB"
+msgstr "USB"
+
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "Outils"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr "Ajouter crayon"
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr "Ajouter gomme"
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen or Eraser Settings"
+msgstr "Paramètres stylo ou gomme"
+
+#. Tab title: Pen properties
+msgid "Pen Properties"
+msgstr "Propriétés du stylo"
+
+#. Tab title: Eraser properties
+msgid "Eraser Properties"
+msgstr "Propriétés de la gomme"
+
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a Touchscreen to Display Number %1"
+msgstr "Affecter un écran tactile au numéro d'écran %1"
+
+#. Group box title for the touchscreen vendor and name selection
+msgid "Touchscreen: Vendor and Name Selection"
+msgstr "Écran tactile : sélection du nom et du fournisseur"
+
+#. Finish configuration message box
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
+"kill the server."
+msgstr ""
+"<b>Étapes finales</b><hr>La dernière étape est l'enregistrement de votre "
+"configuration. Il est recommandé de tester la nouvelle configuration avant "
+"de l'enregistrer. Si le serveur de test affiche un bureau corrompu, appuyez "
+"sur <b>[ Ctrl+Alt+Retour arrière ]</b> pour supprimer (kill) le serveur."
+
+#. Tab title: VNC Server configuration
+msgid "VNC Server"
+msgstr "Serveur VNC"
+
+#. Activate VNC server checkbox
+msgid "Allow Access to Display Using VNC Protocol"
+msgstr "Autoriser l'accès à l'écran en utilisant le protocole VNC"
+
+#. Group box title for the VNC options
+msgid "VNC Options"
+msgstr "Options VNC"
+
+#. Activate VNC password protection checkbox
+msgid "Activate Password Protection"
+msgstr "Activer la protection par mot de passe"
+
+#. LineEdit label: enter password
+msgid "Password"
+msgstr "Mot de passe"
+
+#. LineEdit contents: enter new password
+msgid "<Enter new password>"
+msgstr "<Entrer le nouveau mot de passe>"
+
+#. LineEdit contents: change password
+msgid "<Change password>"
+msgstr "<Changer le mot de passe>"
+
+#. LineEdit contents: verify password
+msgid "<Verify password>"
+msgstr "<Vérifier le mot de passe>"
+
+#. Activate HTTP access checkbox
+msgid "Activate HTTP Access"
+msgstr "Activer l'accès HTTP"
+
+#. Activate multiple VNC connection checkbox
+msgid "Allow Multiple VNC Connections"
+msgstr "Autoriser plusieurs connexions VNC"
+
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
+msgstr "Port HTTP"
+
+#. VNC message box appearing if password strings doesn't match
+msgid ""
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
+msgstr ""
+"<b>Non concordance de mot de passe VNC</b><hr>La première et la seconde "
+"version du mot de passe ne correspondent pas."
+
+#. VNC message box appearing if password is too short
+msgid ""
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
+msgstr ""
+"<b>Erreur de mot de passe VNC</b><hr>Le champ mot de passe est vide ou le "
+"mot de passe est trop court. Entrez un mot de passe de six caractères au "
+"moins."
+
+#. Install missing packages box
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Installation du logiciel :</b><hr>Certains paquetages sont manquants. "
+"Installer les paquetages manquants maintenant ?"
+
+#. Caption text for the missing package info window
+msgid "Package Installation"
+msgstr "Installation des paquetages"
+
+#. Progress bar title text
+msgid "Importing module"
+msgstr "Importation du module"
+
+#. Progress window caption text
+msgid "SaX2: Importing data..."
+msgstr "SaX2 : importation des données..."
+
+#. Progress window label text
+msgid "Initialize cache..."
+msgstr "Initialiser le cache..."
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+"<b>Échec de l'enregistrement de la configuration</b><hr>Le rapport suivant a "
+"été créé :"
+
+#. Message box test: configuration has been saved
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Configuration enregistrée</b><hr>Vos modifications prendront effet au "
+"prochain redémarrage du système graphique. Quitter SaX2 maintenant ?"
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Échec du test de la configuration</b><hr>Pour plus d'informations, "
+"consultez le fichier <tt>/var/log/Xorg.99.log</tt>. Le rapport suivant a été "
+"créé par l'instance appelante :"
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
+msgstr ""
+"<b>Informations de configuration VNC</b><hr>Le service VNC requiert que le "
+"port TCP 5900 et qu'un port HTTP (5800 par défaut) soient ouverts dans le "
+"pare-feu.  Utilisez YaST pour configurer ces éléments."
+
+#. /.../
+#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for XFine2
+#.
+#. Maximum length: 40  characters
+msgid "&Step size"
+msgstr "&Taille de pas"
+
+#. Maximum length: 40  characters
+msgid "Small"
+msgstr "Petit"
+
+#. Maximum length: 40  characters
+msgid "Normal"
+msgstr "Normal"
+
+#. Maximum length: 40  characters
+msgid "Big"
+msgstr "Grand"
+
+#. Maximum length: 40  characters
+msgid "Huge"
+msgstr "Très grand"
+
+#. Maximum length: 40  characters
+msgid "&Next Screen"
+msgstr "&Prochain écran"
+
+#. Maximum length: 40  characters
+msgid "S&ave"
+msgstr "E&nregistrer"
+
+#. Maximum length: 40  characters
+msgid "Change &Position"
+msgstr "Changer la &position"
+
+#. Maximum length: 40  characters
+msgid "C&hange Size"
+msgstr "C&hanger la taille"
+
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr "Écran"
+
+#. Maximum length: 60  characters
+msgid "No video mode tuning available"
+msgstr "Réglage du mode vidéo non disponible"
+
+msgid "Configuration on display"
+msgstr "Configuration sur le display"
+
+msgid "Idle timer..."
+msgstr "Délai d'inactivité..."
+
+#, fuzzy
+#~ msgid "SaX2: Importing"
+#~ msgstr "Programme de sortie SaX2..."
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Propriétés spéciales de la souris..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Définir les propriétés du moniteur..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Disposition"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Variante"
+
+#, fuzzy
+#~ msgid "Monitor System"
+#~ msgstr "Écran"
+
+#, fuzzy
+#~ msgid "Keyboard System"
+#~ msgstr "Clavier"
+
+#, fuzzy
+#~ msgid "Tablet System"
+#~ msgstr "Tablette"
+
+#, fuzzy
+#~ msgid "Touchscreen System"
+#~ msgstr "Écran tactile"
+
+#, fuzzy
+#~ msgid "Test:"
+#~ msgstr "&Test..."
+
+#, fuzzy
+#~ msgid "Testfield: Ready..."
+#~ msgstr "Champ de test de la souris : prêt..."
+
+#, fuzzy
+#~ msgid "Unknown Monitor please change"
+#~ msgstr "Modèle d'écran inconnu"
+
+#~ msgid "Component"
+#~ msgstr "Composant"
+
+#~ msgid "with"
+#~ msgstr "avec"
+
+#~ msgid "Not available"
+#~ msgstr "Non disponible"
+
+#~ msgid "Use the following AccessX settings"
+#~ msgstr "Utiliser les paramètres AccessX suivants"
+
+#~ msgid "Disable AccessX"
+#~ msgstr "Désactiver AccessX"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Divers"
+
+#~ msgid "This screen is selected"
+#~ msgstr "Cet écran est sélectionné"
+
+#~ msgid "at"
+#~ msgstr "at"
+
+#~ msgid "Sync ranges"
+#~ msgstr "Fréquences"
+
+#~ msgid "Wheel is moving..."
+#~ msgstr "Mollette en train de bouger..."
+
+#~ msgid "Disable use of accented letters"
+#~ msgstr "Désactiver usage lettres accentuées"
+
+#~ msgid "Clear test field"
+#~ msgstr "Effacer champ de test"
+
+#~ msgid "Mouse speed in pixels/sec"
+#~ msgstr "Vitesse de la souris en pixels/sec"
+
+#~ msgid "&Remove Tablet..."
+#~ msgstr "&Supprimer tablette..."
+
+#~ msgid "Delay time: (ms)"
+#~ msgstr "Durée du délai : (ms)"
+
+#~ msgid "Repeat rate: (Symbols/sec)"
+#~ msgstr "Vitesse de répétition : (symboles/sec)"
+
+#~ msgid "&Apply"
+#~ msgstr "&Appliquer"
+
+#~ msgid "Graphics engine starts with resolution:"
+#~ msgstr "L'engin graphique démarre avec la résolution :"
+
+#~ msgid "Hardware"
+#~ msgstr "Matériel"
+
+#~ msgid "Velocity"
+#~ msgstr "Vitesse"
+
+#~ msgid "Select Keyboard Layout"
+#~ msgstr "Sélectionner la disposition du clavier"
+
+#~ msgid "Symbol recurrence"
+#~ msgstr "Récurrence symbole"
+
+#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
+#~ msgstr "<nobr><h3>Type de clavier</h3></nobr>"
+
+#~ msgid "BusID"
+#~ msgstr "ID bus"
+
+#~ msgid "ScreenID"
+#~ msgstr "ID écran"
+
+#~ msgid "Manufacturer Disk..."
+#~ msgstr "Fabricant disque..."
+
+#~ msgid "Shift/Lock Group"
+#~ msgstr "Groupe Shift/Lock"
+
+#~ msgid "Ctrl Mapping"
+#~ msgstr "Assignation de Ctrl"
+
+#~ msgid "LeftAlt mapping"
+#~ msgstr "Assignation de LeftAlt"
+
+#~ msgid "RightAlt mapping"
+#~ msgstr "Assignation de RightAlt"
+
+#~ msgid "RightCtl mapping"
+#~ msgstr "Assignation de RightCtl"
+
+#~ msgid "Default"
+#~ msgstr "Par défaut"
+
+#~ msgid "R-Alt switch group while pressed"
+#~ msgstr "R-Alt change de groupe"
+
+#~ msgid "R-Alt switch group"
+#~ msgstr "R-Alt change de groupe"
+
+#~ msgid "Both Shift Keys change group"
+#~ msgstr "Les deux touches Shift changent de groupe"
+
+#~ msgid "Ctrl and Shift change group"
+#~ msgstr "Ctrl et Shift changent de groupe"
+
+#~ msgid "Alt and Ctrl change group"
+#~ msgstr "Alt et Ctrl changent de groupe"
+
+#~ msgid "CapsLock as additional control"
+#~ msgstr "Verrnum en tant que contrôle additionnel"
+
+#~ msgid "Swap Ctrl and CapsLock"
+#~ msgstr "Échanger Ctrl et Verrmaj"
+
+#~ msgid "Ctrl Key at left of <A>"
+#~ msgstr "Touche Ctrl à gauche de <Q>"
+
+#~ msgid "Ctrl Key at bottom left"
+#~ msgstr "Touche Ctrl en bas à gauche"
+
+#~ msgid "Modeline Algorithm"
+#~ msgstr "Algorithme modeline"
+
+#~ msgid "Color and Resolution"
+#~ msgstr "Couleur/Résolution"
+
+#~ msgid "Virtual Resolution"
+#~ msgstr "Résolution virtuelle"
+
+#~ msgid "Language Layout"
+#~ msgstr "Présentation de la langue"
+
+#~ msgid "Screen Layout"
+#~ msgstr "Présentation écran"
+
+#~ msgid "Server layout:"
+#~ msgstr "Présentation serveur"
+
+#~ msgid "Mode:"
+#~ msgstr "Mode :"
+
+#~ msgid "MHz"
+#~ msgstr "MHz"
+
+#~ msgid "Enable or Disable AccessX"
+#~ msgstr "Activer ou Désactiver AccessX"
+
+#~ msgid "Enable 3D features"
+#~ msgstr "Activer propriétés 3D"
+
+#~ msgid "Enable DPMS"
+#~ msgstr "Activer DPMS"
+
+#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Définir mode multihead...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Configuration 3D/OpenGL...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Configuration AccessX...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Configuration VNC...</u></h3></nobr>"
+
+#~ msgid "Selected component:"
+#~ msgstr "Composant sélectionné :"
+
+#~ msgid "Click 'Apply' to test your settings."
+#~ msgstr "Cliquez sur 'Appliquer' pour tester vos paramètres."
+
+#~ msgid ""
+#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
+#~ "is a warning only but make sure your keyboard model is able to map all "
+#~ "the keys needed for the selected layout."
+#~ msgstr ""
+#~ "<b>La disposition et le modèle actuels ne semblent pas adaptés</"
+#~ "b><hr>Ceci n'est qu'un avertissement mais assurez-vous que le modèle de "
+#~ "clavier est capable d'établir une correspondance de toutes les touches "
+#~ "nécessaires à la disposition de clavier sélectionnée."
+
+#~ msgid ""
+#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
+#~ "3D subsystem is unable to work within a multihead environment."
+#~ msgstr ""
+#~ "<b>Accélération OpenGL impossible dans des environnements multihead</"
+#~ "b><hr> Le sous-système 3D est incapable de travailler dans un "
+#~ "environnement multihead."
+
+#~ msgid ""
+#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
+#~ "hardware 3D/OpenGL acceleration."
+#~ msgstr ""
+#~ "<b>Accélération 3D impossible</b><hr> La carte installée ne peut pas "
+#~ "utiliser l'accélération matérielle 3D/OpenGL."
+
+#~ msgid ""
+#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
+#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
+#~ "The currently used color setup does not fulfill this requirement. Verify "
+#~ "the current default color depth setup."
+#~ msgstr ""
+#~ "<b>Profondeur de couleur erronée pour accélération OpenGL </b><hr>La "
+#~ "plupart des pilotes OpenGL nécessitent une profondeur de couleur de <b>16 "
+#~ "bits (65536)</b> pour fonctionner correctement. La configuration de "
+#~ "couleur actuellement utilisée ne remplit pas ces conditions. Vérifiez la "
+#~ "configuration de profondeur de couleur par défaut actuelle."
+
+#~ msgid ""
+#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
+#~ "acceleration because the following packages are missing:"
+#~ msgstr ""
+#~ "<b>Les paquetages de base nécessaires manquent</b><hr>Impossible "
+#~ "d'activer l'accélération OpenGL car les paquetages suivants manquent :"
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
+#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
+#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
+#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
+#~ "Online Update)."
+#~ msgstr ""
+#~ "<b>Impossible d'activer l'accélération OpenGL</b><hr>Le système ne "
+#~ "fournit pas le pilote officiel 2D/3D/OpenGL de nVidia. Actualisez d'abord "
+#~ "les paquetages NVIDIA_GLX et NVIDIA_kernel avec les versions plus "
+#~ "récentes disponibles sur le serveur web nVidia <i>(http://www.nvidia.com)"
+#~ "</i>. Ceci peut aussi être réalisé confortablement à l'aide de YOU (YaST2 "
+#~ "Online Update)."
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
+#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
+#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
+#~ "list (usually at the bottom of the list). Note, that you need to mark the "
+#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
+#~ "before and the driver was uninstalled - for whatever reason."
+#~ msgstr ""
+#~ "<b>Impossible d'activer l'accélération OpenGL</b><hr>Pour activer le sous-"
+#~ "système 3D pour cette carte, vous devez d'abord installer le pilote "
+#~ "commercial de nVidia. Installez le pilote en utilisant <b>YaST Online "
+#~ "Update</b>. Dans YOU, sélectionnez la <b>Catégorie de patches</"
+#~ "b><b>Patches installables et installés</b> puis sélectionnez "
+#~ "<b>Télécharger pilote NVIDIA(r) Graphics</b> dans la liste de patches (en "
+#~ "bas de la liste généralement). Notez que vous devez marquer le patch "
+#~ "comme une <b>Mise à jour</b> (un clic du bouton de droite de la souris) "
+#~ "si vous l'avez déjà installé avant et que le pilote a été désinstallé "
+#~ "pour une raison quelconque."
+
+#~ msgid ""
+#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
+#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
+#~ "the nVidia installer. The uninstall process will reset the original "
+#~ "driver from X.Org which does not provide any 3D hardware acceleration."
+#~ "<br><br><b>Do you want to continue?</b>"
+#~ msgstr ""
+#~ "<b>Désactiver l'accélération OpenGL</b><hr>Le sous-système 3D est basé "
+#~ "sur le pilote commercial de nVidia. SaX2 doit désinstaller le pilote à "
+#~ "l'aide de l'installeur nVidia. Le processus de désinstallation "
+#~ "réinitialisera le pilote original de X.Org qui ne fournit aucune "
+#~ "accélération matérielle 3D.<br><br><b>Voulez-vous continuer ?</b>"
+
+#~ msgid "Display size unknown..."
+#~ msgstr "Taille de l'écran inconnue..."
+
+#~ msgid ""
+#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
+#~ "couldn't be detected. Applications dealing with computer graphics like "
+#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
+#~ "about the real physical size of your display to work properly. Please "
+#~ "refer to your monitor manual to obtain the correct size values for the "
+#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
+#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
+#~ msgstr ""
+#~ "<b>Entrez la taille de l'écran X/Y en [ mm ]</b><hr>La géométrie de votre "
+#~ "écran n'a pas pu être détecté. Les applications graphiques telles que "
+#~ "<b>Gimp</b> ou les bibliothèques de rendu de fontes telles que <b>Xft</b> "
+#~ "doivent connaître la taille physique réelle de votre écran pour "
+#~ "fonctionner correctement. Veuillez consulter le manuel accompagnant votre "
+#~ "moniteur pour connaître les valeurs de taille correctes pour la direction "
+#~ "horizontale (X) et la direction verticale (Y). Les valeurs doivent être "
+#~ "entrées en [ mm ].<br><br><b>Voulez-vous configurer la taille de l'écran ?"
+#~ "</b>"
+
+#~ msgid ""
+#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
+#~ "X and Y axis and click 'Add' to include the new resolution in the "
+#~ "standard resolution list."
+#~ msgstr ""
+#~ "<b>Ajouter une résolution définie par l'utilisateur</b><hr>Entrez "
+#~ "simplement les valeurs de pixel pour l'axe des X et celui des Y et "
+#~ "cliquez 'Ajouter' pour inclure la nouvelle résolution dans la liste de "
+#~ "résolutions standards."
+
+#~ msgid "Available configuration components are:"
+#~ msgstr "Composants disponibles pour configuration :"
+
+#~ msgid ""
+#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
+#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
+#~ msgstr ""
+#~ "<b>AccessX activé :</b><hr>Le curseur de la souris est maintenant "
+#~ "contrôlable à l'aide des <b>touches du pavé numérique</b>. Testez le "
+#~ "comportement avec le pavé numérique."
+
+#~ msgid ""
+#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
+#~ "number pad is <b>disabled</b> now."
+#~ msgstr ""
+#~ "<b>AccessX désactivé :</b><hr>Le contrôle du curseur de la souris à "
+#~ "l'aide du pavé numérique est maintenant <b>désactivé</b>."
+
+#~ msgid ""
+#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
+#~ "system?"
+#~ msgstr ""
+#~ "<b>Supprimer la tablette :</b><hr>Vraiment supprimer la tablette "
+#~ "graphique du système ?"
+
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time your system is <b>rebooted</b>."
+#~ msgstr ""
+#~ "<b>La configuration a été enregistrée :</b><hr>Vos modifications seront "
+#~ "effectives la prochaine fois que votre système sera <b>réamorcé</b>."
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
+#~ "in developmental phases so are, in part, still regarded as experimental. "
+#~ "Nevertheless, we have decided to include the drivers in our distribution "
+#~ "because of the high demand for 3D hardware acceleration in Linux. "
+#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
+#~ "are unable to offer any installation support for configuring 3D hardware "
+#~ "acceleration or if any problems related to this should arise."
+#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Carte capable de 3D détectée : <u>%1</u></b><hr>Tous les pilotes 3D "
+#~ "sous Linux sont toujours en développement et sont donc encore à un stade "
+#~ "expérimental. Néanmoins, nous avons décidé d'inclure ces pilotes dans "
+#~ "notre distribution en raison de la forte demande pour l'accélération "
+#~ "matérielle 3D sous Linux. <br><br>Étant donné le stade quelque peu "
+#~ "expérimental des pilotes OpenGL, nous ne pouvons offrir aucune assistance "
+#~ "technique à l'installation pour la configuration de l'accélération "
+#~ "matérielle 3D ou si un problème survenait à ce sujet.<br><br><b>Voulez-"
+#~ "vous vraiment activer l'accélération 3D pour cette carte ?</b>"
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
+#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
+#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
+#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
+#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
+#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
+#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
+#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
+#~ "do not have any influence over the development of nVidia drivers."
+#~ "<br><br><b>Prepare 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Carte capable de 3D détectée : <u>%1</u></b><hr>Le pilote utilisé pour "
+#~ "cette carte n'est pas un pilote 2D/3D/OpenGL officiel de nVidia pour des "
+#~ "raisons de licence. Le pilote 3D/OpenGL utilisé si vous activez le 3D ne "
+#~ "fonctionne <b>pas</b> en accélération matérielle.<br><br> Pour utiliser "
+#~ "3D/OpenGL en accélération matérielle, actualisez les paquetages "
+#~ "NVIDIA_GLX et NVIDIA_kernel depuis le serveur web nVidia <i>(http://www."
+#~ "nvidia.com)</i>. Ceci peut aussi être réalisé confortablement à l'aide de "
+#~ "YOU (YaST2 Online Update).<br><br>Si vous rencontrez des problèmes avec "
+#~ "le pilote 2D/3D/OpenGL de nVidia, consultez le fabricant, nous n'avons "
+#~ "malheureusement aucune influence sur le développement des pilotes nVidia."
+#~ "<br><br><b>Préparer 3D pour cette carte ?</b>"
+
+#~ msgid ""
+#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
+#~ "that comes with this distribution is still installed.  You should update "
+#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
+#~ "online update). Start the online update?"
+#~ msgstr ""
+#~ "<b>Actualisation des logiciels :</b><hr>Le pseudo pilote nvidia sans "
+#~ "accélération 3D qui est fourni avec cette distribution est encore "
+#~ "installé. Vous pouvez actualiser avec les pilotes officiels nvidia qui se "
+#~ "trouvent sur le serveur ftp de nvidia en utilisant YOU (YaST2 online "
+#~ "update). Commencer la mise à jour en ligne ?"
+
+#~ msgid ""
+#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
+#~ "resolution is not adjustable within framebuffer mode. Please select "
+#~ "another resolution than:"
+#~ msgstr ""
+#~ "<b>Résolution invalide pour le mode FBdev</b><hr>La résolution "
+#~ "actuellement sélectionnée n'est pas ajustable dans le mode framebuffer. "
+#~ "Veuillez sélectionner une autre résolution que :"
+
+#~ msgid ""
+#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
+#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
+#~ "currently selected monitor model is correct or select a lower resolution "
+#~ "than:"
+#~ msgstr ""
+#~ "<b>Résolution sélectionnée non disponible</b><hr>La résolution "
+#~ "sélectionnée ne correspond à aucune fréquence de synchronisation du "
+#~ "moniteur. Veuillez vérifier si le modèle de moniteur est correct ou "
+#~ "sélectionner une résolution inférieure à :"
+
+#~ msgid ""
+#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
+#~ "depth is not allowed for this configuration."
+#~ msgstr ""
+#~ "<b>Profondeur de couleur sélectionnée invalide :</b><hr>Une profondeur de "
+#~ "couleur de <b>4</b> ou <b>15</b> bits n'est pas autorisée dans cette "
+#~ "configuration."
+
+#~ msgid ""
+#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
+#~ "is not allowed for this configuration. Select another resolution from the "
+#~ "list."
+#~ msgstr ""
+#~ "<b>Résolution sélectionnée invalide :</b><hr>La résolution sélectionnée "
+#~ "n'est pas autorisée dans cette configuration. Sélectionnez une autre "
+#~ "résolution dans la liste."
+
+#~ msgid "<b>X Server test failed:</b><hr><br>"
+#~ msgstr "<b>Échec du test du serveur X :</b><hr><br>"
+
+#~ msgid "3D question..."
+#~ msgstr "Question 3D..."
+
+#~ msgid "X Server test information..."
+#~ msgstr "Informations sur le test du serveur X..."
+
+#~ msgid "AccessX status information..."
+#~ msgstr "Information sur l'état d'AccessX..."
+
+#~ msgid "Tablet warning..."
+#~ msgstr "Avertissement au sujet de la tablette..."
+
+#~ msgid "Consideration..."
+#~ msgstr "Considération..."
+
+#~ msgid "Geometry"
+#~ msgstr "Géométrie"
+
+#~ msgid "Name:"
+#~ msgstr "Nom :"
+
+#~ msgid "Card and Desktop"
+#~ msgstr "Carte et bureau"
+
+#~ msgid "Input Devices"
+#~ msgstr "Périphériques d'entrée"
+
+#~ msgid "Input-Devices"
+#~ msgstr "Périphériques d'entrée"
+
+#~ msgid "Desktop"
+#~ msgstr "Bureau"
+
+#~ msgid "Multihead"
+#~ msgstr "Multihead"
+
+#~ msgid "Secondary Modeline:"
+#~ msgstr "Modeline secondaire :"
+
+#~ msgid "Modeline"
+#~ msgstr "Modeline"
+
+#~ msgid "AccessX"
+#~ msgstr "AccessX"
+
+#~ msgid "X-Server accessable via VNC protocol:"
+#~ msgstr "Serveur X accessible via protocole VNC :"
+
+#~ msgid "Access Control"
+#~ msgstr "Contrôle d'accès"
+
+#~ msgid "<b>Core Pointer...</b>"
+#~ msgstr "<b>Pointeur...</b>"
+
+#~ msgid "F&inalize >>"
+#~ msgstr "F&inaliser >>"
+
+#~ msgid "<< &Back"
+#~ msgstr "<< &Retour"
+
+#~ msgid "&Next >>"
+#~ msgstr "&Suivant >>"
+
+#~ msgid "&Exit"
+#~ msgstr "&Sortir"
+
+#~ msgid "&About..."
+#~ msgstr "À &propos de..."
+
+#~ msgid "About the author"
+#~ msgstr "À propos de l'auteur"
+
+#~ msgid "Select virtual resolution for Mode %1"
+#~ msgstr "Sélectionner résolution virtuelle pour mode %1"
+
+#~ msgid ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
+#~ "of this product is</nobr><br>Marcus Schaefer"
+#~ msgstr ""
+#~ "<b>SaX est (c) 2000 SuSE Linux AG:</b><hr><nobr>L'auteur et mainteneur de "
+#~ "ce produit est</nobr><br>Marcus Schaefer"
+
+#~ msgid "&Modules..."
+#~ msgstr "&Modules..."
+
+#~ msgid "&File"
+#~ msgstr "&Fichier"
+
+#~ msgid "Loading CDB data: %1"
+#~ msgstr "Chargement des données CDB : %1"
+
+#~ msgid "Loading base data: %1"
+#~ msgstr "Chargement des données de base : %1"
+
+#~ msgid "Loading system data: %1"
+#~ msgstr "Chargement des données système : %1"
+
+#~ msgid "SaX2 start-up information"
+#~ msgstr "Informations de démarrage SaX2"
+
+#~ msgid "SaX2 final steps..."
+#~ msgstr "Étapes finales SaX2..."
+
+#~ msgid "Exception..."
+#~ msgstr "Exception..."
+
+#~ msgid ""
+#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
+#~ "than one graphics device.  More are required to set up a multihead "
+#~ "configuration."
+#~ msgstr ""
+#~ "<b>Configuration multihead impossible :</b><hr>Votre système ne fournit "
+#~ "pas plus d'un périphérique graphique. Plus sont nécessaires pour définir "
+#~ "une configuration multihead."
+
+#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
+#~ msgstr ""
+#~ "<b>Interrompre le dialogue :</b><hr>Désirez-vous interrompre ce dialogue ?"
+
+#~ msgid ""
+#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+#~ msgstr ""
+#~ "<b>Configuration invalide :</b><hr>Un périphérique graphique au moins "
+#~ "doit être configuré."
+
+#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
+#~ msgstr ""
+#~ "<b>Configuration invalide :</b><hr>Un moniteur au moins doit être "
+#~ "configuré."
+
+#~ msgid ""
+#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
+#~ "monitor configuration. You are not allowed to remove this major entity."
+#~ msgstr ""
+#~ "<b>Le moniteur ne peut pas être supprimé :</b><hr>Le système fournit "
+#~ "exactement une configuration de moniteur. Vous n'êtes pas autorisé à "
+#~ "supprimer cette entité majeure."
+
+#~ msgid ""
+#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
+#~ "dialog and start the selected one?"
+#~ msgstr ""
+#~ "<b>Dialogue en cours :</b><hr>Un dialogue est déjà ouvert. Interrompre le "
+#~ "dialogue ouvert et démarrer le dialogue sélectionné ?"
+
+#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
+#~ msgstr ""
+#~ "<b>Conclure le dialogue :</b><hr> Désirez-vous conclure ce dialogue "
+#~ "maintenant ?"
+
+#~ msgid ""
+#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
+#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
+#~ "needs to be rebooted first to activate the changes for resolution and/or "
+#~ "color settings."
+#~ msgstr ""
+#~ "<b>Étape finale :</b><hr>La dernière étape est l'enregistrement de votre "
+#~ "nouvelle configuration. Veuillez noter que la configuration est basée sur "
+#~ "<i>Framebuffer</i> et que votre système nécessite tout d'abord un "
+#~ "redémarrage pour activer les modifications des paramètres de résolution "
+#~ "et/ou de couleur."
+
+#~ msgid "Unknown Graphics Card..."
+#~ msgstr "Carte graphique inconnue..."
+
+#~ msgid ""
+#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
+#~ "manually. Start the configuration dialog to set up the graphics card now?"
+#~ msgstr ""
+#~ "<b>La carte graphique n'a pas pu être détectée</b><hr>Veuillez configurer "
+#~ "votre carte manuellement. Démarrer le dialogue de configuration pour "
+#~ "définir la carte graphique maintenant ?"
+
+#~ msgid ""
+#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Le moniteur (%1) n'a pas pu être détecté</b><hr>Veuillez configurer "
+#~ "votre moniteur manuellement. Voulez-vous démarrer le dialogue de "
+#~ "configuration pour définir l'écran maintenant ?"
+
+#~ msgid ""
+#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Moniteur (%1) d'ID : %2 non trouvé</b><hr>Veuillez configurer votre "
+#~ "moniteur manuellement. Voulez-vous démarrer le dialogue de configuration "
+#~ "pour configurer l'écran maintenant ?"
+
+#~ msgid "<b>Yes</b>"
+#~ msgstr "<b>Oui</b>"
+
+#~ msgid "<b>No</b>"
+#~ msgstr "<b>Non</b>"
+
+#~ msgid "File"
+#~ msgstr "Fichier"
+
+#~ msgid "still locked"
+#~ msgstr "encore verrouillé"
+
+#~ msgid "Please wait"
+#~ msgstr "Veuillez patienter"
+
+#~ msgid ""
+#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
+#~ "X11 Configuration Manager<br>"
+#~ msgstr ""
+#~ "<big><b>SaX2 : Configuration X11 étendue</b></big><hr>Bienvenue dans le "
+#~ "gestionnaire de configuration X11 de SuSE<br>"
+
+#~ msgid "To start, double-click  an item in the component list."
+#~ msgstr "Pour démarrer, double-cliquez un élement de la liste de composants."
+
+#~ msgid "X11 System Setup"
+#~ msgstr "Configuration système X11"
+
+#~ msgid "Value..."
+#~ msgstr "Valeur..."
+
+#~ msgid "Primary device"
+#~ msgstr "Periphérique primaire"
+
+#~ msgid "Driver:"
+#~ msgstr "Pilote :"
+
+#~ msgid "X:"
+#~ msgstr "X :"
+
+#~ msgid "Y:"
+#~ msgstr "Y :"
+
+#~ msgid "Bus ID:"
+#~ msgstr "ID bus :"
+
+#~ msgid "Card options"
+#~ msgstr "Options de la carte"
+
+#~ msgid "Key Mappings"
+#~ msgstr "Assignation des touches"
+
+#~ msgid "&Current sync frequencies"
+#~ msgstr "Fréquences synchronisation &actuelles"
+
+#~ msgid "Current color depth"
+#~ msgstr "Profondeur de couleurs actuelle"
+
+#~ msgid "Current resolution"
+#~ msgstr "Résolution actuelle"
+
+#~ msgid "HSync range"
+#~ msgstr "Fréquences horizontales"
+
+#~ msgid "VSync range"
+#~ msgstr "Fréquences verticales"
+
+#~ msgid "[ mm ]"
+#~ msgstr "[ mm ]"
+
+#~ msgid "Device"
+#~ msgstr "Périphérique"
+
+#~ msgid "Protocol"
+#~ msgstr "Protocole"
+
+#~ msgid "Fi&nish"
+#~ msgstr "T&erminer"
+
+#~ msgid "Abort"
+#~ msgstr "Interrompre"
+
+#~ msgid "Configure XAccess: Mouse over keypad..."
+#~ msgstr "Configurer XAccess : souris sur le clavier..."
+
+#~ msgid "Configure VNC: Export display using the VNC protocol..."
+#~ msgstr "Configurer VNC : exporter l'écran en utilisant le protocole VNC..."
+
+#~ msgid "Configure input devices: Mouse configuration..."
+#~ msgstr ""
+#~ "Configurer les périphériques d'entrée : configuration de la souris..."
+
+#~ msgid "Configure 3D/OpenGL subsystem..."
+#~ msgstr "Configurer le sous-système 3D/OpenGL..."
+
+#~ msgid "Configure virtual resolutions..."
+#~ msgstr "Configurer les résolutions virtuelles..."
+
+#~ msgid "Configure graphics cards..."
+#~ msgstr "Configurer les cartes graphiques..."
+
+#~ msgid "Configure Desktop: Colors and Resolutions..."
+#~ msgstr "Configurer le bureau : couleurs et résolutions..."
+
+#~ msgid "Configure touch screens..."
+#~ msgstr "Configurer les écrans tactiles..."
+
+#~ msgid "Set up picture geometry..."
+#~ msgstr "Définir la géométrie de l'image..."
+
+#~ msgid "Configure multihead mode..."
+#~ msgstr "Configurer mode multihead..."
+
+#~ msgid ""
+#~ "Set up screen layout of your desktops (Double-click an icon will identify "
+#~ "the real screen)..."
+#~ msgstr ""
+#~ "Définir la présentation écran pour vos bureaux (un double-clic sur une "
+#~ "icône identifie l'écran réel)..."
+
+#~ msgid "Configure graphics tablet"
+#~ msgstr "Configurer la tablette graphique"
+
+#~ msgid "Add new card..."
+#~ msgstr "Ajouter une nouvelle carte..."
+
+#~ msgid "Remove selected card"
+#~ msgstr "Supprimer la carte sélectionnée"
+
+#~ msgid "Remove selected monitor"
+#~ msgstr "Supprimer le moniteur sélectionné"
+
+#~ msgid "&Properties..."
+#~ msgstr "&Propriétés..."
+
+#~ msgid "Enable View-Only mode"
+#~ msgstr "Activer le mode View-Only"
+
+#~ msgid "&Add new touchscreen..."
+#~ msgstr "&Ajouter un nouvel écran tactile..."
+
+#~ msgid "&Remove selected touchscreen"
+#~ msgstr "&Supprimer l'écran tactile sélectionné"
+
+#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
+#~ msgstr ""
+#~ "<nobr><h3><u>Écrans tactiles actuellement configurés :</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Moniteurs actuellement configurés :</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Cartes actuellement configurées :</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Souris actuellement configurées :</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Présentation actuelle du moniteur :</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Bureaux actuellement configurés :</u></h3></nobr>"
+
+#~ msgid "&Add new mouse..."
+#~ msgstr "&Ajouter une nouvelle souris..."
+
+#~ msgid "&Remove selected mouse"
+#~ msgstr "&Supprimer la souris sélectionnée"
+
+#~ msgid "&General"
+#~ msgstr "&Général"
+
+#~ msgid "&Expert"
+#~ msgstr "&Expert"
+
+#~ msgid "Vendor"
+#~ msgstr "Fabricant"
+
+#~ msgid "Selected"
+#~ msgstr "Sélectionné"
+
+#~ msgid "Resolution X"
+#~ msgstr "Résolution X"
+
+#~ msgid "&Resolution(s) for %1 colors"
+#~ msgstr "&Résolution(s) pour %1 couleurs"
+
+#~ msgid "Possible"
+#~ msgstr "Possible"
+
+#~ msgid "&Add this resolution"
+#~ msgstr "&Ajouter cette résolution"
+
+#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
+#~ msgstr "<big><b>État de l'AccessX actuellement configuré :</b></big><hr>"
+
+#~ msgid "<big><b>Current VNC status</b></big><hr>"
+#~ msgstr "<big><b>État VNC actuel</b></big><hr>"
+
+#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
+#~ msgstr "<big><b>État du 3D/OpenGL actuel :</b></big><hr>"
+
+#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
+#~ msgstr ""
+#~ "<big><b>Configuration de la résolution virtuelle actuelle :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
+#~ msgstr "<big><b>Cartes graphique actuellement configurées :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
+#~ msgstr "<big><b>Bureaux actuellement configurés :</b></big><hr>"
+
+#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
+#~ msgstr "<big><b>Timings géométrie actuellement actifs :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
+#~ msgstr "<big><b>Clavier actuellement configuré :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured layout</b></big><hr>"
+#~ msgstr "<big><b>Disposition actuellement configurée :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
+#~ msgstr "<big><b>Moniteurs actuellement configurés :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
+#~ msgstr "<big><b>Pointeurs actuellement configurés :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
+#~ msgstr "<big><b>État multihead actuellement configuré :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
+#~ msgstr "<big><b>Tablette graphique actuellement configurée :</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
+#~ msgstr "<big><b>Écran tactile actuellement configuré :</b></big><hr>"
+
+#~ msgid "<b><nobr>No information available</nobr></b>"
+#~ msgstr "<b><nobr>Pas d'informations disponibles</nobr></b>"
+
+#~ msgid ""
+#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
+#~ "with the keypad. The table below points to the current status of AccessX."
+#~ msgstr ""
+#~ "<b>Souris virtuelle :</b><hr>Configurer le pavé numérique pour contrôler "
+#~ "la souris avec les touches du pavé numérique. Le tableau ci-dessous "
+#~ "indique l'état actuel de AccessX."
+
+#~ msgid ""
+#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
+#~ "desktop and all its programs remotely via a VNC viewer program"
+#~ msgstr ""
+#~ "<b>Serveur VNC :</b><hr>Configurer le serveur X pour pouvoir accéder au "
+#~ "bureau et à tous ses programmes à distance à travers un programme de "
+#~ "visualisation VNC"
+
+#~ msgid ""
+#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
+#~ "here. X.Org includes the direct rendering interface to use the 3D "
+#~ "capabilities of your graphics card. If your card and the corresponding "
+#~ "driver support 3D hardware acceleration, enable it in this dialog."
+#~ msgstr ""
+#~ "<b>Sous-système OpenGL :</b><hr>Configurer ici les propriétés 3D de la "
+#~ "carte graphique. X.Org inclut l'interface de rendu direct pour utiliser "
+#~ "les propriétés 3D de votre carte graphique. Si votre carte et le pilote "
+#~ "correspondant supportent l'accélération matérielle 3D, activez-la dans ce "
+#~ "dialogue."
+
+#~ msgid ""
+#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
+#~ "resolution which is completely viewable. Beside this resolution you can "
+#~ "setup a resolution which lives outside the viewable area of your monitor "
+#~ "and comes up if you leave the edges of your monitor with the mouse. This "
+#~ "area is called a virtual resolution."
+#~ msgstr ""
+#~ "<b>Résolution virtuelle :</b><hr>Chaque moniteur a sa propre résolution "
+#~ "qui est totalement visible. Outre cette résolution, vous pouvez définir "
+#~ "une résolution hors des limites visibles de votre moniteur et qui "
+#~ "apparaît si vous débordez des limites de votre moniteur avec le curseur "
+#~ "de la souris. Cette zone s'appelle la résolution virtuelle."
+
+#~ msgid ""
+#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
+#~ "graphics system consists of at least one graphics card but can be "
+#~ "combined to a so called <i>multihead environment</i> which consists of at "
+#~ "least two cards up to a maximum of 16 cards."
+#~ msgstr ""
+#~ "<b>Cartes graphiques :</b><hr>Configurez ici votre matériel graphique. Le "
+#~ "système graphique consiste au moins en une carte graphique, mais peut "
+#~ "également être combiné à un <i>environnement multihead</i> qui consiste "
+#~ "en au moins deux cartes jusqu'à un maximum de 16 cartes."
+
+#~ msgid ""
+#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
+#~ "resolution and colors. Every desktop is an independent device and may "
+#~ "have a different color and/or resolution setup."
+#~ msgstr ""
+#~ "<b>Propriétés de l'écran :</b><hr>Configurez votre écran avec des "
+#~ "paramètres tels que résolution et couleurs. Chaque écran est un "
+#~ "périphérique et peut avoir une configuration de couleurs et résolution "
+#~ "différente."
+
+#~ msgid ""
+#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
+#~ "displayed by the monitor. The table below point to the current used "
+#~ "Modeline(s)."
+#~ msgstr ""
+#~ "<b>Géométrie du moniteur :</b><hr>Configurez la position et la taille de "
+#~ "l'image affichée par votre moniteur. Le tableau ci-dessous vous indique le"
+#~ "(s) modeline(s) actuellement utilisé(s)."
+
+#~ msgid ""
+#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
+#~ "language environment with which it should work."
+#~ msgstr ""
+#~ "<b>Propriétés du clavier :</b><hr>Configurez le type de clavier et "
+#~ "l'environnement linguistique dans lequel il doit fonctionner."
+
+#~ msgid ""
+#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the neighborhood relations of the "
+#~ "connected monitors simply via drag&drop. If you are not sure which "
+#~ "monitor belongs to the icon just double-click on it and you will see a "
+#~ "message on the corresponding screen."
+#~ msgstr ""
+#~ "<b>Disposition de l'écran :</b><hr>Si plus d'une carte est disponible, "
+#~ "vous avez un environnement multihead. Configurez les relations de "
+#~ "voisinage des moniteurs connectés par glissé-déposé. Si vous ne savez pas "
+#~ "avec certitude quel moniteur correspond à une icône, double-cliquez sur "
+#~ "celle-ci et un message s'affichera sur l'écran correspondant."
+
+#~ msgid ""
+#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
+#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
+#~ "the monitor."
+#~ msgstr ""
+#~ "<b>Propriétés du moniteur :</b><hr>Configurez le modèle de moniteur "
+#~ "connecté aux cartes graphiques. Attention à votre choix. De mauvaises "
+#~ "fréquences de synchronisation peuvent endommager votre moniteur."
+
+#~ msgid ""
+#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
+#~ "mouse pointer as well as settings like button emulation or wheel "
+#~ "functions."
+#~ msgstr ""
+#~ "<b>Propriétés de la souris :</b><hr>Configurez les paramètres de base "
+#~ "pour activer le curseur de la souris ainsi que les paramètres tels que "
+#~ "fonctions de la mollette ou émulation de bouton."
+
+#~ msgid ""
+#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the multihead functioning here."
+#~ msgstr ""
+#~ "<b>Mode multihead :</b><hr>Si plus d'une carte est disponible, vous avez "
+#~ "un environnement multihead. Configurez la fonctionnalié multihead ici."
+
+#~ msgid ""
+#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
+#~ "pointer devices, such as pens and erasers."
+#~ msgstr ""
+#~ "<b>Tablette graphique :</b><hr>Configurez une tablette graphique et les "
+#~ "périphériques de pointage correspondant tels que crayons et gommes."
+
+#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
+#~ msgstr "<b>Écran tactile :</b><hr>Configurez un écran tactile."
+
+#~ msgid "Disabled"
+#~ msgstr "Désactivé"
+
+#~ msgid "Enabled"
+#~ msgstr "Activé"
+
+#~ msgid "Wheel support"
+#~ msgstr "Support de la mollette"
+
+#~ msgid "&Port"
+#~ msgstr "&Port"
+
+#~ msgid "&Mode"
+#~ msgstr "&Mode"
+
+#~ msgid "Button emulation"
+#~ msgstr "Bouton d'émulation"
+
+#~ msgid "Primary Device:"
+#~ msgstr "Périphérique primaire :"
+
+#~ msgid "Secondary Device:"
+#~ msgstr "Périphérique secondaire :"
+
+#~ msgid "Single Layout [ no multihead environment ]"
+#~ msgstr "Présentation simple [ pas d'environnement multihead ]"
+
+#~ msgid "Clone Mode Active"
+#~ msgstr "Mode clone actif"
+
+#~ msgid "Xinerama Mode Active"
+#~ msgstr "Mode Xinerama actif"
+
+#~ msgid "Screens Layout Active"
+#~ msgstr "Disposition active des écrans"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "Séries PC-98xx"
+
+#~ msgid "Canadian"
+#~ msgstr "Canadien"
+
+#~ msgid "Brazilian"
+#~ msgstr "Brésilien"
+
+#~ msgid "Bosnian"
+#~ msgstr "Bosniaque"
+
+#~ msgid "Lithuanian qwerty (numeric)"
+#~ msgstr "Lithuanien qwerty (numérique)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "Géorgien (russe)"
+
+#~ msgid "Latvian"
+#~ msgstr "Letton"
+
+#~ msgid "Belarusian"
+#~ msgstr "Bélarusse"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "Tchèque (qwerty)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "Saami (Finlande)"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macédonien"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "Anglais US avec touches mortes"
+
+#~ msgid "Malayalam"
+#~ msgstr "Malayalam"
+
+#~ msgid "Burmese"
+#~ msgstr "Birman"
+
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgid "Mongolian"
+#~ msgstr "Mongolien"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengali"
+
+#~ msgid "Romanian"
+#~ msgstr "Roumain"
+
+#~ msgid "Croatian"
+#~ msgstr "Croate"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "Anglais US avec ISO9995-3"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr "Lithuanien azerty standard"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltais"
+
+#~ msgid "German"
+#~ msgstr "Allemand"
+
+#~ msgid "Hungarian"
+#~ msgstr "Hongrois"
+
+#~ msgid "Russian"
+#~ msgstr "Russe"
+
+#~ msgid "Swedish"
+#~ msgstr "Suédois"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "Turc (F)"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovène"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "Slovaque (qwerty)"
+
+#~ msgid "Czech"
+#~ msgstr "Tchèque"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Danish"
+#~ msgstr "Danois"
+
+#~ msgid "Dvorak"
+#~ msgstr "Dvorak"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovaque"
+
+#~ msgid "Dutch"
+#~ msgstr "Néerlandais"
+
+#~ msgid "Israeli"
+#~ msgstr "Hébreux"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgid "Ogham"
+#~ msgstr "Ogham"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norvégien"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmukhi"
+
+#~ msgid "Serbian"
+#~ msgstr "Serbe"
+
+#~ msgid "Farsi"
+#~ msgstr "Farsi"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandais"
+
+#~ msgid "Italian"
+#~ msgstr "Italien"
+
+#~ msgid "Estonian"
+#~ msgstr "Estonien"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Swiss French"
+#~ msgstr "Français (Suisse)"
+
+#~ msgid "Swiss German"
+#~ msgstr "Allemand (Suisse)"
+
+#~ msgid "Thai"
+#~ msgstr "Thaïlandais"
+
+#~ msgid "Tajik"
+#~ msgstr "Tajik"
+
+#~ msgid "Greek"
+#~ msgstr "Grec"
+
+#~ msgid "Japanese"
+#~ msgstr "Japanais"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "Géorgien (latin)"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainien"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "Polonais (qwertz)"
+
+#~ msgid "Syriac"
+#~ msgstr "Syriaque"
+
+#~ msgid "Turkish"
+#~ msgstr "Turc"
+
+#~ msgid "Spanish"
+#~ msgstr "Espagnol"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "Saami (Suède)"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "Yougoslave"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Finnish"
+#~ msgstr "Finnois"
+
+#~ msgid "French (alternative)"
+#~ msgstr "Français (alternatif)"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "Hongrois (qwerty)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "Russe (phonétique cyrillique)"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanais"
+
+#~ msgid "Polish"
+#~ msgstr "Polonais"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Armenian"
+#~ msgstr "Arménien"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "Saami (Norvège)"
+
+#~ msgid "Latin America"
+#~ msgstr "Amérique latine"
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Royaume Uni"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabe"
+
+#~ msgid "U.S. English"
+#~ msgstr "Anglais US"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "Maltais (disposition US)"
+
+#~ msgid "French Canadian"
+#~ msgstr "Français (Canada)"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugais"
+
+#~ msgid "Belgian"
+#~ msgstr "Belge"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgare"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbaïdjanais"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamien"
+
+#~ msgid "Lao"
+#~ msgstr "Lao"
+
+#~ msgid "Microsoft Natural"
+#~ msgstr "Microsoft Natural"
+
+#~ msgid "Ennyah DKB-1008"
+#~ msgstr "Ennyah DKB-1008"
+
+#~ msgid "Logitech Deluxe Access Keyboard"
+#~ msgstr "Clavier Logitech Deluxe Access"
+
+#~ msgid "Microsoft Internet Keyboard"
+#~ msgstr "Clavier Microsoft Internet"
+
+#~ msgid "Samsung SDM 4500P"
+#~ msgstr "Samsung SDM 4500P"
+
+#~ msgid "Cherry Blue Line CyBo@rd"
+#~ msgstr "Cherry Blue Line CyBo@rd"
+
+#~ msgid "Dell"
+#~ msgstr "Dell"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GF"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
+
+#~ msgid "IBM Rapid Access"
+#~ msgstr "IBM Rapid Access"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternate option2)"
+
+#~ msgid "Memorex MX1998"
+#~ msgstr "Memorex MX1998"
+
+#~ msgid "Trust Wireless Keyboard Classic"
+#~ msgstr "Trust Wireless Keyboard Classic"
+
+#~ msgid "Dell 101-key PC"
+#~ msgstr "Dell 101-key PC"
+
+#~ msgid "Brother Internet Keyboard"
+#~ msgstr "Clavier Brother Internet"
+
+#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
+#~ msgstr "Clavier laptop/notebook Compaq (par ex. Armada) Laptop"
+
+#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
+#~ msgstr "Clavier laptop/notebook Compaq (par ex. Presario) Internet"
+
+#~ msgid "IBM Rapid Access II"
+#~ msgstr "IBM Rapid Access II"
+
+#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
+#~ msgstr "Clavier Logitech iTouch Cordless (modèle Y-RB6)"
+
+#~ msgid "Trust Direct Access Keyboard"
+#~ msgstr "Clavier Trust Direct Access"
+
+#~ msgid "Logitech Internet Navigator Keyboard"
+#~ msgstr "Clavier Logitech Internet Navigator"
+
+#~ msgid "SK-7100"
+#~ msgstr "SK-7100"
+
+#~ msgid "Acer AirKey V"
+#~ msgstr "Acer AirKey V"
+
+#~ msgid "BTC 9000A"
+#~ msgstr "BTC 9000A"
+
+#~ msgid "Toshiba Satellite S3000"
+#~ msgstr "Toshiba Satellite S3000"
+
+#~ msgid "Compaq Internet Keyboard (13 keys)"
+#~ msgstr "Clavier Compaq Internet (13 clés)"
+
+#~ msgid "Hewlett-Packard Omnibook XT1000"
+#~ msgstr "Hewlett-Packard Omnibook XT1000"
+
+#~ msgid "Logitech iTouch"
+#~ msgstr "Logitech iTouch"
+
+#~ msgid "SK-6200"
+#~ msgstr "SK-6200"
+
+#~ msgid "Compaq iPaq Keyboard"
+#~ msgstr "Clavier Compaq iPaq"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
+#~ msgstr "Logitech Cordless Desktop Pro (alternate option)"
+
+#~ msgid "Logitech Cordless Desktop Navigator"
+#~ msgstr "Logitech Cordless Desktop Navigator"
+
+#~ msgid "QTronix Scorpius 98N+"
+#~ msgstr "QTronix Scorpius 98N+"
+
+#~ msgid "Symplon PaceBook (tablet PC)"
+#~ msgstr "Symplon PaceBook (tablet PC)"
+
+#~ msgid "Winbook Model XP5"
+#~ msgstr "Winbook Model XP5"
+
+#~ msgid "BTC 5113RF Multimedia"
+#~ msgstr "BTC 5113RF Multimedia"
+
+#~ msgid "Diamond 9801 / 9802 series"
+#~ msgstr "Séries Diamond 9801 / 9802"
+
+#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
+
+#~ msgid "Logitech Cordless Desktop Optical"
+#~ msgstr "Logitech Cordless Desktop Optical"
+
+#~ msgid "Logitech Internet Keyboard"
+#~ msgstr "Clavier Logitech Internet"
+
+#~ msgid "BTC 9000"
+#~ msgstr "BTC 9000"
+
+#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+#~ msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+
+#~ msgid "Hewlett-Packard Internet Keyboard"
+#~ msgstr "Clavier Hewlett-Packard Internet"
+
+#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
+#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
+
+#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+#~ msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+
+#~ msgid "Propeller Voyager (KTEZ-1000)"
+#~ msgstr "Propeller Voyager (KTEZ-1000)"
+
+#~ msgid "Brazilian ABNT2"
+#~ msgstr "Brésilien ABNT2"
+
+#~ msgid "Compaq Internet Keyboard (7 keys)"
+#~ msgstr "Clavier Compaq Internet (7 clés)"
+
+#~ msgid "Honeywell Euroboard"
+#~ msgstr "Honeywell Euroboard"
+
+#~ msgid "Logitech Cordless Desktop"
+#~ msgstr "Logitech Cordless Desktop"
+
+#~ msgid "Yahoo! Internet Keyboard"
+#~ msgstr "Clavier Yahoo! Internet"
+
+#~ msgid "Compaq Internet Keyboard (18 keys)"
+#~ msgstr "Clavier Compaq Internet (18 clés)"
+
+#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
+#~ msgstr "Laptop/notebook Dell Inspiron 8xxx"
+
+#~ msgid "IBM Rapid Access II (alternate option)"
+#~ msgstr "IBM Rapid Access II (alternate option)"
+
+#~ msgid "Logitech Cordless Desktop Pro"
+#~ msgstr "Logitech Cordless Desktop Pro"
+
+#~ msgid "Advance Scorpius KI"
+#~ msgstr "Advance Scorpius KI"
+
+#~ msgid "BTC 5126T"
+#~ msgstr "BTC 5126T"
+
+#~ msgid "Dexxa Wireless Desktop Keyboard"
+#~ msgstr "Dexxa Wireless Desktop Keyboard"
+
+#~ msgid "Hewlett-Packard Omnibook 5xx"
+#~ msgstr "Hewlett-Packard Omnibook 5xx"
+
+#~ msgid "Memorex MX2750"
+#~ msgstr "Memorex MX2750"
+
+#~ msgid "SK-1300"
+#~ msgstr "SK-1300"
+
+#~ msgid "Generic 101-key PC"
+#~ msgstr "PC générique 101 clés"
+
+#~ msgid "Northgate OmniKey 101"
+#~ msgstr "Northgate OmniKey 101"
+
+#~ msgid "ACPI Standard"
+#~ msgstr "ACPI Standard"
+
+#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
+#~ msgstr "Cherry Blue Line CyBo@rd (alternate option)"
+
+#~ msgid "Chicony Internet Keyboard"
+#~ msgstr "Clavier Chicony Internet"
+
+#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
+#~ msgstr "Clavier Hewlett-Packard SK-2501 Multimedia"
+
+#~ msgid "Samsung SDM 4510P"
+#~ msgstr "Samsung SDM 4510P"
+
+#~ msgid "SK-2500"
+#~ msgstr "SK-2500"
+
+#~ msgid "SVEN Ergonomic 2500"
+#~ msgstr "SVEN Ergonomic 2500"
+
+#~ msgid "Generic 102-key (Intl) PC"
+#~ msgstr "PC générique 102 clés (Intl)"
+
+#~ msgid "Logitech Cordless Desktop iTouch"
+#~ msgstr "Logitech Cordless Desktop iTouch"
+
+#~ msgid "Chicony KB-9885"
+#~ msgstr "Chicony KB-9885"
+
+#~ msgid "Compaq Easy Access Keyboard"
+#~ msgstr "Clavier Compaq Easy Access"
+
+#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
+#~ msgstr "Clavier Hewlett-Packard 5181 Internet"
+
+#~ msgid "Hewlett-Packard Omnibook 500 FA"
+#~ msgstr "Hewlett-Packard Omnibook 500 FA"
+
+#~ msgid "Memorex MX2500 EZ-Access Keyboard"
+#~ msgstr "Clavier Memorex MX2500 EZ-Access"
+
+#~ msgid "Generic 104-key PC"
+#~ msgstr "PC générique 104 clés"
+
+#~ msgid "Everex STEPnote"
+#~ msgstr "Everex STEPnote"
+
+#~ msgid "Japanese 106-key"
+#~ msgstr "Japonais 106 clés"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
+
+#~ msgid "Hewlett-Packard Pavilion ZT11xx"
+#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
+
+#~ msgid "Logitech iTouch keyboard Internet Navigator"
+#~ msgstr "Logitech iTouch keyboard Internet Navigator"
+
+#~ msgid "Generic 105-key (Intl) PC"
+#~ msgstr "PC générique 105 clés (Intl)"
+
+#~ msgid "Keytronic FlexPro"
+#~ msgstr "Keytronic FlexPro"
+
+#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
+#~ msgstr "Clavier Hewlett-Packard SK-2505 Internet"
+
+#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
+#~ msgstr "Microsoft Internet Keyboard Pro, Suédois"
+
+#~ msgid "Microsoft Office Keyboard"
+#~ msgstr "Microsoft Office Keyboard"
+
+#~ msgid "Oretec MCK-800 MM/Internet keyboard"
+#~ msgstr "Oretec MCK-800 MM/Internet keyboard"
+
+#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
+#~ msgstr "usage interne des majuscules. Shift n'annule pas Maj."
+
+#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
+#~ msgstr "agit comme Shift avec le verrouillage. Shift n'annule pas Maj."
