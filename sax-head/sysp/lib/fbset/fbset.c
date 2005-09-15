@@ -41,39 +41,8 @@ struct inode;
 //====================================
 // Globals...
 //------------------------------------
-static int Opt_test = 0;
 static int Opt_verbose = 0;
-static int Opt_xfree86 = 0;
-static int Opt_all = 0;
-
-static const char *Opt_fb = NULL;
 const char *Opt_modedb = DEFAULT_MODEDBFILE;
-static const char *Opt_xres = NULL;
-static const char *Opt_yres = NULL;
-static const char *Opt_vxres = NULL;
-static const char *Opt_vyres = NULL;
-static const char *Opt_depth = NULL;
-static const char *Opt_pixclock = NULL;
-static const char *Opt_left = NULL;
-static const char *Opt_right = NULL;
-static const char *Opt_upper = NULL;
-static const char *Opt_lower = NULL;
-static const char *Opt_hslen = NULL;
-static const char *Opt_vslen = NULL;
-static const char *Opt_accel = NULL;
-static const char *Opt_hsync = NULL;
-static const char *Opt_vsync = NULL;
-static const char *Opt_csync = NULL;
-static const char *Opt_gsync = NULL;
-static const char *Opt_extsync = NULL;
-static const char *Opt_bcast = NULL;
-static const char *Opt_laced = NULL;
-static const char *Opt_double = NULL;
-static const char *Opt_move = NULL;
-static const char *Opt_step = NULL;
-static const char *Opt_rgba = NULL;
-static const char *Opt_nonstd = NULL;
-static const char *Opt_grayscale = NULL;
 
 struct VideoMode *VideoModes = NULL;
 static struct textentry {
