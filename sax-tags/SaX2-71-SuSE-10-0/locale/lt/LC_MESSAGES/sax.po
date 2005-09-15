@@ -1,0 +1,2631 @@
+# translation of sax.po to Lithuanian
+# SAX.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Linas Spraunius <linas@operis.org>, 2001.
+# Linas Spraunius <mail@operis.org>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sax\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2005-08-30 15:13+0200\n"
+"Last-Translator: Linas Spraunius <linas@operis.org>\n"
+"Language-Team: Lithuanian <i18n@operis.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-13\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. /.../
+#. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for the SaX2 and XFine GUI
+#.
+#. RTF text: Startup information for the user
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 pasiûlymas</b><hr>Ðiuo metu paleista grafinë sistema yra pasiûlyta "
+"SaX2 programos. Jei jums tai patinka, spauskite <b>Gerai</b>. Kitu atveju "
+"galite keiskite konfigûracijà."
+
+#. Caption text for the startup information window
+msgid "Automatic Graphics System Setup"
+msgstr "Automatinis vaizdo sistemos konfigûravimas"
+
+#. Caption text for informing the user
+msgid "Information..."
+msgstr "Informacija..."
+
+#. Caption text for the main window
+msgid "SaX2: SUSE Advanced X11 Configuration"
+msgstr "SaX2: Papildoma SUSE X11 konfigûracija"
+
+#. Title text on the left side
+msgid "SaX Control Center"
+msgstr "SaX valdymo centras"
+
+#. Title text on the right side
+msgid "SUSE Linux"
+msgstr "SUSE Linux"
+
+#. Help Button text
+msgid "&Help"
+msgstr "&Pagalba"
+
+#. Ok Button text
+msgid "&OK"
+msgstr "&Gerai"
+
+#. Yes Button text
+msgid "&Yes"
+msgstr "&Taip"
+
+#. No Button text
+msgid "&No"
+msgstr "&Ne"
+
+#. Cancel Button text
+#. Maximum length: 40  characters
+msgid "&Cancel"
+msgstr "&Atðaukti"
+
+#. RTF text: exit SaX message
+msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
+msgstr "<b>Iðeiti ið SaX2:</b><hr>Ar iðeiti ið SaX2?"
+
+#. Message box default caption text
+msgid "Message"
+msgstr "Praneðimas"
+
+#. Change configuration Button text
+msgid "C&hange Configuration"
+msgstr "Pa&keisti konfigûracijà"
+
+#. Short description of the Monitor module
+#. Monitor name label
+msgid "Monitor"
+msgstr "Monitorius"
+
+#. title of module dialog
+msgid "Card and Monitor Properties"
+msgstr "Plokðtës ir monitoriaus savybës"
+
+#. Short description of the Mouse module
+#. Tab text for a display tab of the mouse dialog
+msgid "Mouse"
+msgstr "Pelë"
+
+#. title of module dialog
+msgid "Mouse Properties"
+msgstr "Pelës savybës"
+
+#. Short description of the Keyboard module
+msgid "Keyboard"
+msgstr "Klaviatûra"
+
+#. title of module dialog
+msgid "Keyboard Properties"
+msgstr "Klaviatûros savybës"
+
+#. Short description of the Tablet module
+#. Tab title: Tablet vendor name selection
+msgid "Tablet"
+msgstr "Grafinis planðetas"
+
+#. title of module dialog
+msgid "Tablet Properties"
+msgstr "Planðeto savybës"
+
+#. Short description of the Touchscreen module
+#. Tab text for a touchscreen tab of the touchscreen dialog
+msgid "Touchscreen"
+msgstr "Lytimasis ekranas"
+
+#. title of module dialog
+msgid "Touchscreen Properties"
+msgstr "Lytimojo ekrano savybës"
+
+#. Short description of the VNC module
+msgid "VNC"
+msgstr "VNC"
+
+#. title of module dialog
+msgid "Remote Access Properties"
+msgstr "Nuotolinio prisijungimo savybës"
+
+#. Tab text for a display tab of the monitor dialog
+msgid "Display"
+msgstr "Displëjus"
+
+#. Activate display checkbox, Display=screen
+msgid "Activate This Display"
+msgstr "Aktyvuoti ðá displëjø"
+
+#. Activate mouse checkbox
+msgid "Activate This Pointer"
+msgstr "Aktyvuoti ðá þymeklá"
+
+#. Graphics Card name label
+msgid "Card"
+msgstr "Plokðtë"
+
+#. Change data
+msgid "&Change..."
+msgstr "&Pakeisti..."
+
+#. Set options for some kind of data
+msgid "&Options..."
+msgstr "P&arinktys..."
+
+#. Configure some data
+msgid "Con&figure..."
+msgstr "Kon&figûruoti..."
+
+#. Group box title for dual head setup
+msgid "Dual Head Mode"
+msgstr "Dviekranë veiksena"
+
+#. Group box title for card options
+#. Group box title for mouse options
+#. Tab text for an options tab of the keyboard dialog
+#. Group box title for tablet options
+msgid "Options"
+msgstr "Parinktys"
+
+#. CheckBox label to activate the mouse wheel
+msgid "Activate Mouse Wheel"
+msgstr "Ájungti pelës ratukà"
+
+#. CheckBox label to activate the 3 Button emulation
+msgid "Activate 3-Button Emulation"
+msgstr "Ájungti 3 mygtuko emuliacijà"
+
+#. CheckBox label to activate the wheel emulation
+msgid "Emulate Wheel with Mouse Button"
+msgstr "Emuliuoti ratukà pelës klaviðu"
+
+#. Group box title for card rotation
+msgid "Rotate Screen"
+msgstr "Pasukti ekranà"
+
+#. Group box title for the mouse test field
+#. Line edit label pointing to the keyboard test field
+msgid "Test"
+msgstr "Bandymas"
+
+#. Button text in final step message box for testing the configuration
+msgid "&Test"
+msgstr "&Bandymas"
+
+#. Button text in final step message box for saving the configuration
+msgid "&Save"
+msgstr "Ið&saugoti"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Planas"
+
+#. Status line of mouse test field: ready
+msgid "Test ready"
+msgstr "Bandymas paruoðtas"
+
+#. Status line of mouse test field: single button click
+msgid "Single Click: Done"
+msgstr "Vienkartinis paspaudimas: Atlikta"
+
+#. Status line of mouse test field: double button click
+msgid "Double Click: Done"
+msgstr "Dvigubas paspaudimas: Atlikta"
+
+#. Status line of mouse test field: wheel moved
+msgid "Scrolling"
+msgstr "Slinkimas"
+
+#. Status line of mouse test field: button pressed
+msgid "Button pressed"
+msgstr "Klaviðas paspaustas"
+
+#. Status line of mouse test field: button released
+msgid "Button released"
+msgstr "Klaviðas atleistas"
+
+#. Status line of mouse test field: wheel stopped
+msgid "Stopped: Done"
+msgstr "Sustabdytas: Atlikta"
+
+#. Group box title for properties
+msgid "Properties"
+msgstr "Savybës"
+
+#. Activate dual head mode checkbox
+msgid "Activate Dual Head Mode"
+msgstr "Aktyvuoti dviekranæ veiksenà"
+
+#. Set display resolution
+msgid "Resolution"
+msgstr "Raiðka"
+
+#. Set display colors
+msgid "Colors"
+msgstr "Spalvos"
+
+#. Activate 3D checkboc
+msgid "Activate 3D Acceleration"
+msgstr "Aktyvuoti 3D spartinimà"
+
+#. Tab title: Setup monitor properties for card X
+msgid "Monitor for Card"
+msgstr "Monitorius plokðtei"
+
+#. Tab title: Setup monitor for second channel on card X
+msgid "Second Monitor for Card"
+msgstr "Antrasis monitorius plokðtei"
+
+#. Tab title: Setup sync frequencies
+msgid "Sync Frequencies"
+msgstr "Sinch. daþniai"
+
+#. Tab title: Setup display size
+msgid "Display Size"
+msgstr "Displëjaus dydis"
+
+#. Tab title: Setup the monitor arrangement
+#. Title for the multihead arrangement
+msgid "Arrangement"
+msgstr "Iðdëstymas"
+
+#. Information about dual head mode. %1=the dual head modus %2=the resolution
+msgid "Activated in %1 mode with %2"
+msgstr "Aktyvuota veiksena %1 su %2"
+
+#. Short Information that something has been activated
+msgid "Activated in driver default mode"
+msgstr "Aktyvuota áprasta tvarkyklës veiksena"
+
+#. rwalter
+#. Monitor Model is unknown and should be changed
+#. rwalter
+#. Mouse Model is unknown and should be changed
+msgid "Unconfigured"
+msgstr "Nesukonfigûruotas"
+
+#. Message appears when user is trying to deactivate all displays
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Nepavykste deaktyvuoti visø ekranø</b><hr><nobr>Maþiausiai vienas ekranas "
+"turi bûti aktyvus.</nobr>"
+
+#. Info label for dual head checkbox
+msgid "No configuration available"
+msgstr "Nëra konfigûracijos"
+
+#. Radiobutton for traditional multihead mode
+msgid ""
+"Traditional Multihead:\n"
+"Each screen is an independent display"
+msgstr ""
+"Tradicinë daugiaekranë veiksena:\n"
+"Kiekvienas ekranas yra nepriklausomas displëjus"
+
+#. Radiobutton for cloned multihead mode
+msgid ""
+"Cloned Multihead:\n"
+"Each display is a clone of the primary display"
+msgstr ""
+"Klonuota daugiaekranë veiksena:\n"
+"Kiekvienas displëjus yra pirminio displëjaus klonas"
+
+#. Radiobutton for xinerama multihead mode
+msgid ""
+"Xinerama Multihead:\n"
+"Build one big display out of all screens"
+msgstr ""
+"Xinerama daugiaekranë veiksena:\n"
+"Ið visø ekranø sukuriamas vienas didelis displëjus"
+
+#. Title for multihead modi
+msgid "Multihead Mode"
+msgstr "Daugiaekranë veiksena"
+
+#. Monitor X - connected to - CardY
+msgid "Connected To"
+msgstr "Prijungtas prie"
+
+#. Tooltip text if monitor is unknown
+msgid "Unknown Monitor:"
+msgstr "Neþinomas monitorius:"
+
+#. Tooltip text for primary monitor
+msgid "Primary Monitor:"
+msgstr "Pirminis monitorius:"
+
+#. Windowanager title for the monitor model setup
+#. Windowanager title for the second monitor model setup
+msgid "Monitor Settings"
+msgstr "Monitoriaus nuostatos"
+
+#. Windowanager title for the mouse mode setup
+msgid "Mouse Settings"
+msgstr "Pelës nuostatos"
+
+#. Windowanager title for the card options dialog
+msgid "Graphics Card Settings"
+msgstr "Vaizdo plokðtës nuostatos"
+
+#. Windowanager title for the dual head setup
+msgid "Dual Head Settings"
+msgstr "Dviekranës veiksenos nuostatos"
+
+#. Radiobutton don't rotate
+msgid "Not Rotated"
+msgstr "Nepasuktas"
+
+#. Radiobutton rotate to the left side
+msgid "To the Left"
+msgstr "Á kairæ"
+
+#. Radiobutton rotate to the right side
+msgid "To the Right"
+msgstr "Á deðinæ"
+
+#. Popup message to ask the user for an option value
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Parametrui reikia vertës</b><hr><nobr>Nustatykite vertæ parametrui %1.</"
+"nobr>"
+
+#. Group box title for the monitor vendor and name selection
+msgid "Monitor: Vendor and Name Selection"
+msgstr "Monitorius: Gamintojo ir pavadinimo pasirinkimas"
+
+#. Group box title for the mouse vendor and name selection
+msgid "Mouse: Vendor and Name Selection"
+msgstr "Pelë: Gamintojo ir pavadinimo pasirinkimas"
+
+#. Group box title for the manual sync frequency set up
+msgid "Manual Sync Frequency Setup"
+msgstr "Rankinis sinch. daþniø konfigûravimas"
+
+#. Group box title for the aspect/ratio selection
+msgid "Diagonal and Aspect Ratio"
+msgstr "Ástriþainës ir padëties santykis"
+
+#. Group box title for the display size setup
+msgid "Display Size in [ mm ]"
+msgstr "Displëjaus dydis [ mm ]"
+
+#. Text message telling to be carefull with the monitor sync frequencies
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Pastaba:</b>Neteisingi sinch. intervalai gali paþeisti jûsø monitoriø. "
+"Konfigûruodami ðias nuostatas pavartykite monitoriaus apraðà.<br><br>Jei "
+"nenorite, kad jûsø monitorius naudotø maksimaliu pajëgumu, sumaþinkite "
+"sinch. intervalus."
+
+#. Checkbox to activate DPMS
+msgid "Activate DPMS"
+msgstr "Aktyvuoti DPMS"
+
+#. Button to popup the disk dialog for reading the monitor utility disk
+msgid "Utility Disk..."
+msgstr "Pagalbinis diskas..."
+
+#. Label text for horizontal sync frequency
+msgid "Horizontal"
+msgstr "Horizontaliai"
+
+#. Label text for second monitor name
+msgid "Second Monitor:"
+msgstr "Antrasis monitorius:"
+
+#. Label text for second monitor resolution
+msgid "Second Monitor Resolution"
+msgstr "Antrojo monitoriaus raiðka"
+
+#. Label text for vertical sync frequency
+msgid "Vertical"
+msgstr "Vertikaliai"
+
+#. Label text for hsync unit
+msgid "KHz"
+msgstr "KHz"
+
+#. Label text for vsync unit
+msgid "Hz"
+msgstr "Hz"
+
+#. Label text for the aspect ratio combo box
+msgid "Aspect Ratio"
+msgstr "Padëties santykis"
+
+#. Label text for the diagonal length combo box
+msgid "Diagonal"
+msgstr "Ástriþainë"
+
+#. Label text for the display size X-Axis
+msgid "X Axis [mm]"
+msgstr "X aðis [mm]"
+
+#. Label text for the display size Y-Axis
+msgid "Y Axis [mm]"
+msgstr "Y aðis [mm]"
+
+#. Something is not configured
+msgid "Not configured"
+msgstr "Nesukonfigûruota"
+
+#. Unit name for inches in german zoll
+msgid "inches"
+msgstr "coliai"
+
+#. Message box of type Ok, telling to user to insert a CD or disk
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Ádëkite CD arba diskà</b><hr>Ádëkite displëjaus pagalbiná CD arba "
+"monitoriaus gamintojo pateiktà diskà."
+
+#. Message box of type Error, telling that the utility disk cannot be opened
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Skaitymo klaida</b><hr>Nepavyksta perskaityti ið CD arba disko. Tai gali "
+"bûti dël paþeisto disko arba blogo formato bylø."
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Traditional"
+msgstr "Tradicinë"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Clone"
+msgstr "Klonas"
+
+#. First gap of the ActivateInfo text: Multihead mode name
+msgid "Xinerama"
+msgstr "Xinerama"
+
+#. Tab text for the mouse model dialog
+msgid "Mouse Model"
+msgstr "Pelës modelis"
+
+#. Group box title for the primary keyboard setup
+msgid "Primary Setup"
+msgstr "Pagrindinis konfigûravimas"
+
+#. Label text for the primary keyboard type
+msgid "Type"
+msgstr "Tipas"
+
+#. Label text for the primary keyboard variant
+#. Table topic text describing the variant column
+msgid "Variant"
+msgstr "Variantas"
+
+#. Group box title for the additional keyboard setup
+msgid "Additional Layouts"
+msgstr "Papildomi iðdëstymai"
+
+#. Table topic text describing the status column
+msgid "Status"
+msgstr "Bûsena"
+
+#. Table topic text describing the keytable column
+msgid "Keytable"
+msgstr "Klaviðø lentelë"
+
+#. List View root item text
+msgid "Group Shift/Lock Behavior"
+msgstr "Grupës Shift/Lock elgsena"
+
+#. List View root item text
+msgid "Use Keyboard LED to Show Alternate Group"
+msgstr "Naudoti klaviatûros LED alternatyvios grupës rodymui"
+
+#. List View root item text
+msgid "Compose Key Position"
+msgstr "Compose klaviðo pozicija"
+
+#. List View root item text
+#. XKBFile extension text
+msgid "Control Key Position"
+msgstr "Control klaviðo pozicija"
+
+#. List View root item text
+msgid "Third Level Chooser"
+msgstr "Treèiojo lygio pasirinkimas"
+
+#. List View root item text
+msgid "Alt/Win Key Behavior"
+msgstr "Alt/Win klaviðo elgsena"
+
+#. List View root item text
+msgid "CapsLock Key Behavior"
+msgstr "CapsLock klaviðo elgsena"
+
+#. List View item text: Radiobutton no item selected
+msgid "None"
+msgstr "Nieko"
+
+#. XKBFile extension text
+msgid "Left Alt key switches group while pressed."
+msgstr "Paspaudus kairysis Win klaviðas persijungia grupæ."
+
+#. XKBFile extension text
+msgid "Both Ctrl keys together change group."
+msgstr "Abu Ctrl klaviðai kartu keièia grupæ."
+
+#. XKBFile extension text
+msgid "Right Shift key changes group."
+msgstr "Deðinys Shift klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Left Win key changes group."
+msgstr "Kairys Win klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Left Alt key changes group."
+msgstr "Kairys Alt klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Both Win keys switch group while pressed."
+msgstr "Abu Win klaviðai keièia grupæ."
+
+#. XKBFile extension text
+msgid "Right Ctrl key switches group while pressed."
+msgstr "Nuspaustas deðinys Ctrl klaviðas perjungia grupæ."
+
+#. XKBFile extension text
+msgid "CapsLock just locks the Shift modifier."
+msgstr "CapsLock uþrakina Shift modifikatoriø."
+
+#. XKBFile extension text
+msgid "CapsLock toggles normal capitalization of alphabetic characters."
+msgstr "CapsLock ájungia normalià didþiøjø alfabetiniø simboliø veiksenà."
+
+#. XKBFile extension text
+msgid "CapsLock toggles Shift so all keys are affected."
+msgstr "CapsLock ájungia Shift taip, jog paveikiami visi klaviðai."
+
+#. XKBFile extension text
+msgid "Right Win-key is Compose."
+msgstr "Deðinys Win klaviðas yra Compose."
+
+#. XKBFile extension text
+msgid "Shift+CapsLock changes group."
+msgstr "Shift+CapsLock keièia grupæ."
+
+#. XKBFile extension text
+msgid "R-Alt switches group while pressed."
+msgstr "R-Alt keièia grupæ."
+
+#. XKBFile extension text
+msgid "Right Control key works as Right Alt."
+msgstr "Deðinys Control klaviðas veikia kaip deðinysis Alt."
+
+#. XKBFile extension text
+msgid "Control key at bottom left"
+msgstr "Control klaviðas apaèioje kairëje"
+
+#. XKBFile extension text
+msgid "Press any of Win-keys to choose 3rd level."
+msgstr "Spauskite bet koká Win klaviðà 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Press Right Alt key to choose 3rd level."
+msgstr "Spauskite deðiná Win klaviðà 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Right Ctrl key changes group."
+msgstr "Deðinys Ctrl klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Right Alt is Compose."
+msgstr "Deðinysis Alt yra Compose."
+
+#. XKBFile extension text
+msgid "Right Ctrl is Compose."
+msgstr "Deðinysis Ctrl yra Compose."
+
+#. XKBFile extension text
+msgid "ScrollLock LED shows alternative group."
+msgstr "Scroll_Lock LED rodo alternatyvià grupæ"
+
+#. XKBFile extension text
+msgid "Control key at left of -A-"
+msgstr "Control klaviðas -A- kairëje"
+
+#. XKBFile extension text
+msgid "Third level choosers"
+msgstr "Treèiojo lygio pasirinkimas"
+
+#. XKBFile extension text
+msgid "Both Shift keys together change group."
+msgstr "Abu Shift klaviðai kartu keièia grupæ."
+
+#. XKBFile extension text
+msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
+msgstr "CapsLock naudoja vidiná raidþiø didinimà. Shift atðaukia CapsLock."
+
+#. XKBFile extension text
+msgid "Make CapsLock an additional Control."
+msgstr "Padaryti CapsLock papildomu Control."
+
+#. XKBFile extension text
+msgid "Press Left Win-key to choose 3rd level."
+msgstr "Spauskite kairájá Win klaviðà 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Right Win-key changes group."
+msgstr "Deðinys Win klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Meta is mapped to the left Win-key."
+msgstr "Meta susietas su kairiu Win klaviðu."
+
+#. XKBFile extension text
+msgid "CapsLock LED shows alternative group."
+msgstr "CapsLock LED rodo alternatyvià grupæ."
+
+#. XKBFile extension text
+msgid "NumLock LED shows alternative group."
+msgstr "NumLock LED rodo alternatyvià grupæ."
+
+#. XKBFile extension text
+msgid "Left Shift key changes group."
+msgstr "Kairys Shift klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Left Win-key switches group while pressed."
+msgstr "Paspaudus kairá Win persijungia grupë."
+
+#. XKBFile extension text
+msgid "Menu is Compose."
+msgstr "Meniu yra Compose."
+
+#. XKBFile extension text
+msgid "Both Alt keys together change group."
+msgstr "Abu Alt klaviðai kartu keièia grupæ."
+
+#. XKBFile extension text
+msgid "CapsLock key changes group."
+msgstr "CapsLock klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Swap Control and CapsLock."
+msgstr "Sukeisti Control ir CapsLock."
+
+#. XKBFile extension text
+msgid "Press any of Alt keys to choose 3rd level."
+msgstr "Spauskite bet koká Win klaviða 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Right Alt key changes group."
+msgstr "Deðinys Alt klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Shift with numpad keys works as in MS Windows."
+msgstr "Shift su klaviatûros skaitmenø sritimi veikia kaip MS Windows."
+
+#. XKBFile extension text
+msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
+msgstr "Specialûs klaviðai (Ctrl+Alt+<klaviðas>) apdorojami serveryje."
+
+#. XKBFile extension text
+msgid "Hyper is mapped to the Win-keys."
+msgstr "Hyper susietas su Win klaviðais."
+
+#. XKBFile extension text
+msgid "Alt is mapped to the right Win-key and Super to Menu."
+msgstr "Alt susietas su deðiniu Win klaviðu, o Super - su Meniu."
+
+#. XKBFile extension text
+msgid "Super is mapped to the Win-keys (default)."
+msgstr "Super susietas su Win klaviðu (áprasta)."
+
+#. XKBFile extension text
+msgid "Alt and Meta on the Alt keys (default)."
+msgstr "Alt ir Meta Alt klaviðams (áprasta)."
+
+#. XKBFile extension text
+msgid "Add the standard behavior to Menu key."
+msgstr "Pridëti standarninæ elgsenà Meniu klaviðui."
+
+#. XKBFile extension text
+msgid "Alt and Meta are on the Alt keys (default)."
+msgstr "Alt ir Meta Alt klaviðams (áprasta)."
+
+#. XKBFile extension text
+msgid "Press Right Control to choose 3rd level."
+msgstr "Spauskite deðiná Control 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Alt+Shift changes group."
+msgstr "Alt+Shift keièia grupæ."
+
+#. XKBFile extension text
+msgid "Control+Shift changes group."
+msgstr "Control+Shift keièia grupæ."
+
+#. XKBFile extension text
+msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
+msgstr "CapsLock veikia kaip Shift su rakinimu. Shift atðaukia CapsLock."
+
+#. XKBFile extension text
+msgid "Use keyboard LED to show alternative group."
+msgstr "Naudoti klaviatûros LED alternatyvios grupës rodymui."
+
+#. XKBFile extension text
+msgid "Press Right Win-key to choose 3rd level."
+msgstr "Spauskite deðiná Win klaviðà 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Press Left Alt key to choose 3rd level."
+msgstr "Spauskite kairájá Alt klaviðà 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Meta is mapped to the Win-keys."
+msgstr "Meta susietas su Win klaviðais."
+
+#. XKBFile extension text
+msgid "Press Menu key to choose 3rd level."
+msgstr "Spauskite Meniu klaviðà 3-iam lygiui."
+
+#. XKBFile extension text
+msgid "Left Ctrl key changes group."
+msgstr "Kairys Ctrl klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Menu key changes group."
+msgstr "Meniu klaviðas keièia grupæ."
+
+#. XKBFile extension text
+msgid "Alt+Control changes group."
+msgstr "Alt+Control keièia grupæ."
+
+#. XKBFile extension text
+msgid "Right Win-key switches group while pressed."
+msgstr "Nuspaustas deðinys Win perjungia grupæ."
+
+#. Tab title: Tablet port and mode selection
+msgid "Port and Mode"
+msgstr "Prievadas ir veiksena"
+
+#. Tab title: Tablet electronic pens (pen,eraser)
+msgid "Electronic Pens"
+msgstr "Elektroninës plunksnos"
+
+#. Activate tablet checkbox
+msgid "Activate This Tablet"
+msgstr "Aktyvuoti ðá planðetà"
+
+#. Group box title for the tablet vendor and name selection
+msgid "Tablet: Vendor and Name Selection"
+msgstr "Planðetas: Gamintojo ir pavadinimo pasirinkimas"
+
+#. Group box title for tablet port combobox
+msgid "Connection Port"
+msgstr "Pajungimo prievadas"
+
+#. Group box title for tablet mode
+msgid "Primary Tablet Mode"
+msgstr "Pirminë planðeto veiksena"
+
+#. Group box title for pen/eraser tablet mode
+msgid "Pen or Eraser Mode"
+msgstr "Plunksnos arba trintuko veiksena"
+
+#. Radiobutton for relative tablet mode
+msgid "Relative"
+msgstr "Reliatyvus"
+
+#. Radiobutton for absolute tablet mode
+msgid "Absolute"
+msgstr "Absoliutus"
+
+#. Combobox item text for tablet port: USB
+msgid "USB"
+msgstr "USB"
+
+#. Combobox item text for tablet port: ttyS0
+msgid "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#. Combobox item text for tablet port: ttyS1
+msgid "COM-2 [ /dev/ttyS1 ]"
+msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Group box title for the tablet tools (pen/eraser)
+msgid "Tools"
+msgstr "Árankiai"
+
+#. Add Pen Checkbox
+msgid "Add Pen"
+msgstr "Pridëti plunksnà"
+
+#. Add Eraser Checkbox
+msgid "Add Eraser"
+msgstr "Pridëti trintukà"
+
+#. Windowanager title for the tablet pen options dialog
+msgid "Pen or Eraser Settings"
+msgstr "Plunksnos arba trintuko nuostatos"
+
+#. Tab title: Pen properties
+msgid "Pen Properties"
+msgstr "Plunksnos savybës"
+
+#. Tab title: Eraser properties
+msgid "Eraser Properties"
+msgstr "Trintuko savybës"
+
+#. Activate/Assign touchscreen checkbox
+msgid "Assign a Touchscreen to Display Number %1"
+msgstr "Priskirti lytimàjá ekranà vaizduoklio numeriui %1"
+
+#. Group box title for the touchscreen vendor and name selection
+msgid "Touchscreen: Vendor and Name Selection"
+msgstr "Lytimasis ekranas: Gamintojo ir pavadinimo pasirinkimas"
+
+#. Finish configuration message box
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
+"kill the server."
+msgstr ""
+"<b>Baigiamieji þingsniai:</b><hr>Paskutinis þingsnis- iðsaugoti jûsø naujà "
+"konfigûracijà. Rekomenduojama iðbandyti konfigûracijà prieð jà iðsaugant. "
+"Jei serveris rodo iðkraipytà darbalauká, spauskite:<b>[ Ctrl-Alt-Backspace ]"
+"</b>, taip priverstinai iðjungsite serverá."
+
+#. Tab title: VNC Server configuration
+msgid "VNC Server"
+msgstr "VNC serveris"
+
+#. Activate VNC server checkbox
+msgid "Allow Access to Display Using VNC Protocol"
+msgstr "Leisti prieigà prie ekrano naudojantis VNC protokolu"
+
+#. Group box title for the VNC options
+msgid "VNC Options"
+msgstr "VNC parinktys"
+
+#. Activate VNC password protection checkbox
+msgid "Activate Password Protection"
+msgstr "Aktyvuoti apsaugà slaptaþodþiu"
+
+#. LineEdit label: enter password
+msgid "Password"
+msgstr "Slaptaþodis"
+
+#. LineEdit contents: enter new password
+msgid "<Enter new password>"
+msgstr "<Ávesti naujà slaptaþodá>"
+
+#. LineEdit contents: change password
+msgid "<Change password>"
+msgstr "<Pakeisti slaptaþodá>"
+
+#. LineEdit contents: verify password
+msgid "<Verify password>"
+msgstr "<Patikrinti slaptaþodá>"
+
+#. Activate HTTP access checkbox
+msgid "Activate HTTP Access"
+msgstr "Ájungti HTTP prieigà"
+
+#. Activate multiple VNC connection checkbox
+msgid "Allow Multiple VNC Connections"
+msgstr "Leisti kelis VNC prisijungimus"
+
+#. SpinBox label to setup the HTTP port number
+msgid "HTTP Port"
+msgstr "HTTP prieiga"
+
+#. VNC message box appearing if password strings doesn't match
+msgid ""
+"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
+"password do not match."
+msgstr ""
+"<b>Nesutampa VNC slaptaþodþiai</b><hr>Nesutampa pirmoji ir antroji "
+"slaptaþodþio versijos."
+
+#. VNC message box appearing if password is too short
+msgid ""
+"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
+"password is too short. Enter a password with at least six characters."
+msgstr ""
+"<b>Netinkamas VNC slaptaþodis</b><hr>Slaptaþodþio laukelis yra paliktas "
+"tuðèias arba slaptaþodis yra per trumpas. Praðome ávesti slaptaþodá ne "
+"trumpesná, kaip ðeðiø simboliø ilgio."
+
+#. Install missing packages box
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Programinës árangos diegimas:</b><hr>Trûksta kai kuriø paketø. Ar ádiegti "
+"trûkstamus paketus?"
+
+#. Caption text for the missing package info window
+msgid "Package Installation"
+msgstr "Paketo diegimas"
+
+#. Progress bar title text
+msgid "Importing module"
+msgstr "Modulio importas"
+
+#. Progress window caption text
+msgid "SaX2: Importing data..."
+msgstr "SaX2: Importuojami duomenys..."
+
+#. Progress window label text
+msgid "Initialize cache..."
+msgstr "Inicializuoti talpyklà..."
+
+#. Message box text: configuration cannot be saved
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Nepavyko iðsaugoti konfigûracijos</b><hr>Sukurtas toks praneðimas:"
+
+#. Message box test: configuration has been saved
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti tik ið naujo "
+"paleidus grafinæ sistemà. Iðeiti ið SAX2?"
+
+#. Message box text: testing the configuration has failed
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Nepavyko iðbandyti konfigûracijos</b><hr>Detaliau þiûrëkite byloje <tt>/"
+"var/log/Xorg.99.log</tt>. Sukurtas toks praneðimas:"
+
+#. Message box text: if VNC has been enabled the firewall should be checked
+msgid ""
+"<b>VNC configuration information</b><hr>The VNC service requires that the "
+"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
+"You can configure this with YaST."
+msgstr ""
+"<b>VNC konfigûracijos informacija</b><hr>VNC paslaugai reikia, kad uþkardos "
+"TCP prievadas 5900 ir HTTP prievadas (5800 áprastinis) bûtø atverti. Tai "
+"galite sukonfigûruoti su YaST."
+
+#. /.../
+#. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#. This file contains the gettext keys used within a gettext call in the
+#. application code for XFine2
+#.
+#. Maximum length: 40  characters
+msgid "&Step size"
+msgstr "Þing&snio dydis"
+
+#. Maximum length: 40  characters
+msgid "Small"
+msgstr "Maþas"
+
+#. Maximum length: 40  characters
+msgid "Normal"
+msgstr "Normalus"
+
+#. Maximum length: 40  characters
+msgid "Big"
+msgstr "Didelis"
+
+#. Maximum length: 40  characters
+msgid "Huge"
+msgstr "Milþiniðkas"
+
+#. Maximum length: 40  characters
+msgid "&Next Screen"
+msgstr "Kitas ekra&nas"
+
+#. Maximum length: 40  characters
+msgid "S&ave"
+msgstr "Iðs&augoti"
+
+#. Maximum length: 40  characters
+msgid "Change &Position"
+msgstr "&Pakeisti pozicijà"
+
+#. Maximum length: 40  characters
+msgid "C&hange Size"
+msgstr "K&eisti dydá"
+
+#. Maximum length: 40  characters
+msgid "Screen"
+msgstr "Ekranas"
+
+#. Maximum length: 60  characters
+msgid "No video mode tuning available"
+msgstr "Negalimas video veiksenos derinimas"
+
+msgid "Configuration on display"
+msgstr "Displëjaus konfigûracija"
+
+msgid "Idle timer..."
+msgstr "Tuðèios eigos taimeris..."
+
+#, fuzzy
+#~ msgid "SaX2: Importing"
+#~ msgstr "SaX2 palieka programà... "
+
+#, fuzzy
+#~ msgid "Set up mouse properties"
+#~ msgstr "Specialiosios pelës savybës..."
+
+#, fuzzy
+#~ msgid "Set up tablet properties"
+#~ msgstr "Konfigûruoti monitoriaus savybes..."
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Planas"
+
+#, fuzzy
+#~ msgid "Variant:"
+#~ msgstr "Variantas"
+
+#, fuzzy
+#~ msgid "Monitor System"
+#~ msgstr "Monitorius"
+
+#, fuzzy
+#~ msgid "Keyboard System"
+#~ msgstr "Klaviatûra"
+
+#, fuzzy
+#~ msgid "Tablet System"
+#~ msgstr "Grafinis planðetas"
+
+#, fuzzy
+#~ msgid "Touchscreen System"
+#~ msgstr "Lytimasis ekranas"
+
+#, fuzzy
+#~ msgid "Test:"
+#~ msgstr "&Bandymas..."
+
+#, fuzzy
+#~ msgid "Testfield: Ready..."
+#~ msgstr "Pelës testinis laukelis: Pasiruoðta..."
+
+#, fuzzy
+#~ msgid "Unknown Monitor please change"
+#~ msgstr "Neþinomas monitoriaus modelis"
+
+#~ msgid "Component"
+#~ msgstr "Komponentas"
+
+#~ msgid "with"
+#~ msgstr "su"
+
+#~ msgid "Not available"
+#~ msgstr "Nëra"
+
+#~ msgid "Use the following AccessX settings"
+#~ msgstr "Naudoti sekanèias AccessX nuostatas"
+
+#~ msgid "Disable AccessX"
+#~ msgstr "Iðjungti AccessX"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Ávairûs"
+
+#~ msgid "This screen is selected"
+#~ msgstr "Ðis ekranas yra pasirinktas"
+
+#~ msgid "at"
+#~ msgstr "ties"
+
+#~ msgid "Sync ranges"
+#~ msgstr "Sinch. intervalai"
+
+#~ msgid "Wheel is moving..."
+#~ msgstr "Ratukas juda..."
+
+#~ msgid "Disable use of accented letters"
+#~ msgstr "Uþdrausti kirèiuotø raidþiø naudojimà"
+
+#~ msgid "Clear test field"
+#~ msgstr "Iðvalyti bandymø laukelá"
+
+#~ msgid "Mouse speed in pixels/sec"
+#~ msgstr "Pelës sparta pikseliai/sekundæ"
+
+#~ msgid "&Remove Tablet..."
+#~ msgstr "&Paðalinti grafiná planðetà..."
+
+#~ msgid "Delay time: (ms)"
+#~ msgstr "Uþdelsimo laikas: (ms)"
+
+#~ msgid "Repeat rate: (Symbols/sec)"
+#~ msgstr "Pasikartojimo sparta: (simboliai/sekundæ)"
+
+#~ msgid "&Apply"
+#~ msgstr "&Vykdyti"
+
+#~ msgid "Graphics engine starts with resolution:"
+#~ msgstr "Grafinis variklis paleidþiamas su raiðka:"
+
+#~ msgid "Hardware"
+#~ msgstr "Átaisai"
+
+#~ msgid "Velocity"
+#~ msgstr "Daþnis"
+
+#~ msgid "Select Keyboard Layout"
+#~ msgstr "Pasirinkti klaviatûros iðdëstymà"
+
+#~ msgid "Symbol recurrence"
+#~ msgstr "Simbolio pasikartojimo sparta"
+
+#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
+#~ msgstr "<nobr><h3>Klaviatûros tipas</h3></nobr>"
+
+#~ msgid "BusID"
+#~ msgstr "Magistralës ID"
+
+#~ msgid "ScreenID"
+#~ msgstr "EkranoID"
+
+#~ msgid "Manufacturer Disk..."
+#~ msgstr "Gamintojo diskas..."
+
+#~ msgid "Shift/Lock Group"
+#~ msgstr "Pastumti/Uþrakinti grupæ"
+
+#~ msgid "Ctrl Mapping"
+#~ msgstr "Ctrl sàryðis"
+
+#~ msgid "LeftAlt mapping"
+#~ msgstr "Kairiojo Alt sàryðis"
+
+#~ msgid "RightAlt mapping"
+#~ msgstr "Deðiniojo Alt sàryðis"
+
+#~ msgid "RightCtl mapping"
+#~ msgstr "Deðiniojo Ctl sàryðis"
+
+#~ msgid "Default"
+#~ msgstr "Áprastas"
+
+#~ msgid "R-Alt switch group while pressed"
+#~ msgstr "Paspaustas deð. Alt perjungia grupæ"
+
+#~ msgid "R-Alt switch group"
+#~ msgstr "Deð. Alt perjungia grupæ"
+
+#~ msgid "Both Shift Keys change group"
+#~ msgstr "Abu Shift klaviðai pakeièia grupæ"
+
+#~ msgid "Ctrl and Shift change group"
+#~ msgstr "Ctrl ir Shift pakeièia grupæ"
+
+#~ msgid "Alt and Ctrl change group"
+#~ msgstr "Alt ir Ctrl pakeièia grupæ"
+
+#~ msgid "CapsLock as additional control"
+#~ msgstr "CapsLock papildomam valdymui"
+
+#~ msgid "Swap Ctrl and CapsLock"
+#~ msgstr "Sukeisti Ctrl ir CapsLock"
+
+#~ msgid "Ctrl Key at left of <A>"
+#~ msgstr "Ctrl yra <A> kairëje"
+
+#~ msgid "Ctrl Key at bottom left"
+#~ msgstr "Ctrl yra kairëje apaèioje"
+
+#~ msgid "Modeline Algorithm"
+#~ msgstr "Skleistinës algoritmas"
+
+#~ msgid "Color and Resolution"
+#~ msgstr "Spalva ir raiðka"
+
+#~ msgid "Virtual Resolution"
+#~ msgstr "Virtuali raiðka"
+
+#~ msgid "Language Layout"
+#~ msgstr "Kalba"
+
+#~ msgid "Screen Layout"
+#~ msgstr "Ekranø iðdëstymas"
+
+#~ msgid "Server layout:"
+#~ msgstr "Serverio iðdëstymas:"
+
+#~ msgid "Mode:"
+#~ msgstr "Veiksena:"
+
+#~ msgid "MHz"
+#~ msgstr "MHz"
+
+#~ msgid "Enable or Disable AccessX"
+#~ msgstr "Ájungti arba iðjungti AccessX"
+
+#~ msgid "Enable 3D features"
+#~ msgstr "Ájungti 3D savybes"
+
+#~ msgid "Enable DPMS"
+#~ msgstr "Ájungti DPMS"
+
+#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Konfigûruoti daugiaekranæ veiksenà...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>3D/OpenGL konfigûravimas...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>AccessX konfigûravimas...</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>VNC konfigûracija...</u></h3></nobr>"
+
+#~ msgid "Selected component:"
+#~ msgstr "Paþymëtas komponentas:"
+
+#~ msgid "Click 'Apply' to test your settings."
+#~ msgstr "Nuostatø patikrinimui spauskite ¥Vykdyti´."
+
+#~ msgid ""
+#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
+#~ "is a warning only but make sure your keyboard model is able to map all "
+#~ "the keys needed for the selected layout."
+#~ msgstr ""
+#~ "<b>Neatrodo, kad dabartinis planas ir modelis tiktø vienas kitam</"
+#~ "b><hr>Tai tik perspëjimas, bet ásitikinkite, kad jûsø klaviatûros modelis "
+#~ "susieti visus klaviðus, reikalingus pasirinktam planui."
+
+#~ msgid ""
+#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
+#~ "3D subsystem is unable to work within a multihead environment."
+#~ msgstr ""
+#~ "<b>OpenGL spartinimas negalimas daugiaekranëse aplinkose</b><hr>3D "
+#~ "posistemë negali veikti daugiaekranëje aplinkoje."
+
+#~ msgid ""
+#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
+#~ "hardware 3D/OpenGL acceleration."
+#~ msgstr ""
+#~ "<b>3D spartinimas negalimas</b><hr>Ádiegta plokðtë negali panaudoti 3D/"
+#~ "OpenGL spartinimo."
+
+#~ msgid ""
+#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
+#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
+#~ "The currently used color setup does not fulfill this requirement. Verify "
+#~ "the current default color depth setup."
+#~ msgstr ""
+#~ "<b>OpenGL spartinimui netinka spalvumas</b><hr>Dauguma OpenGL tvarkykliø "
+#~ "veikia su <b>16 bitø (65536)</b> spalvumu. Ðiuo metu naudojamas spalvumas "
+#~ "netenkina ðio reikalavimo. Patikrinkite dabartinæ numatytàjà spalvumo "
+#~ "konfigûracijà."
+
+#~ msgid ""
+#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
+#~ "acceleration because the following packages are missing:"
+#~ msgstr ""
+#~ "<b>Trûksta reikiamø paketø</b><hr>Nepavyksta ájungti OpenGL spartinimo, "
+#~ "kadangi trûksta sekanèiø paketø:"
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
+#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
+#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
+#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
+#~ "Online Update)."
+#~ msgstr ""
+#~ "<b>Nepavyksta ájungti OpenGL spartinimo</b><hr>Sistema nepateikia "
+#~ "oficialios 2D/3D/OpenGL nVidia tvarkyklës. Paketus NVIDIA_GLX ir "
+#~ "NVIDIA_kernel atnaujinkite ið nVidia web serverio <i>(http://www.nvidia."
+#~ "com)</i>. Tai galima padaryti ir su YOU (YaST2 atnaujinimas internetu)."
+
+#~ msgid ""
+#~ "<b>Cannot enable OpenGL acceleration</b><hr>To activate the 3D subsystem "
+#~ "for this card you need to install the commercial driver from nVidia "
+#~ "first. Install the driver by using <b>YaST Online Update</b>. Inside YOU "
+#~ "select <b>Installable and Installed Patches</b> as <b>Patch Category</b> "
+#~ "and select <b>Download NVIDIA(r) Graphics Driver</b> from the patches "
+#~ "list (usually at the bottom of the list). Note, that you need to mark the "
+#~ "patch as <b>Update</b> (right mouse click) if you already installed it "
+#~ "before and the driver was uninstalled - for whatever reason."
+#~ msgstr ""
+#~ "<b>Nepavyksta ájungti OpenGL spartinimo</b><hr>Norëdami ðiai plokðtei "
+#~ "aktyvuoti 3D posistemæ, jums reikia ádiegti komercinæ tvarkyklæ ið "
+#~ "nVidia. Naudodami <b>YaST atnaujinimà internetu</b> ádiekite tvarkyklæ. "
+#~ "YOU progarmoje <b>Diegtinos ir ádiegtos pataisos</b> nustatykite á "
+#~ "<b>Pataisos kategorijà</b> ir pataisø sàraðe pasirinkite <b>Download "
+#~ "NVIDIA(r) Graphics Driver</b>. Jei jûs buvote jà ádiegæ ir po to "
+#~ "iðdiegëte, jums reikia paþymëti pataisà á <b>Atnaujinti</b> (deðinys "
+#~ "pelës mygtukas)."
+
+#~ msgid ""
+#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
+#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
+#~ "the nVidia installer. The uninstall process will reset the original "
+#~ "driver from X.Org which does not provide any 3D hardware acceleration."
+#~ "<br><br><b>Do you want to continue?</b>"
+#~ msgstr ""
+#~ "<b>Iðjungti OpenGL spartinimà</b><hr>3D posistemë pagrásta komercine "
+#~ "nVidia tvarkykle. SaX2 reikia iðdiegti tvarkyklæ su nVidia diegimo "
+#~ "programa. Iðdiegimo procesas panaudos originalià tvarkyklæ ið X.Org, kuri "
+#~ "neteikia 3D spartinimo.<br><br><b>Norite tæsti?</b>"
+
+#~ msgid "Display size unknown..."
+#~ msgstr "Displëjaus dydis neþinomas..."
+
+#~ msgid ""
+#~ "<b>Enter X/Y Display size in [ mm ]</b><hr>The geometry of your display "
+#~ "couldn't be detected. Applications dealing with computer graphics like "
+#~ "<b>Gimp</b> or font rendering libraries like <b>Xft</b> need to know "
+#~ "about the real physical size of your display to work properly. Please "
+#~ "refer to your monitor manual to obtain the correct size values for the "
+#~ "horizontal (X) and vertical (Y) direction. The values are required to be "
+#~ "entered in [ mm ].<br><br><b>Do you want to setup the display size ?</b>"
+#~ msgstr ""
+#~ "<b>Áveskite X/Y ekrano dydá [ mm ]</b><hr>Nepavyksta nustatyti jûsø "
+#~ "ekrano dydá. Programoms, dirbanèioms su grafika, tokioms kaip <b>Gimp</b> "
+#~ "arba ðriftø perteikimo bibliotekoms, tokioms kaip <b>Xft</b>, reikia "
+#~ "þinoti tikrà ekrano dydá, kad galëtø veikti teisingai. Praðome paskaityti "
+#~ "savo monitoriaus þinynà ir suþinoti tikràsias horizontaliosios (X) ir "
+#~ "vertikaliosios (Y) krypèiø vertes. Vertes reikia ávesti milimetrais."
+#~ "<br><br><b>Ar norite nustatyti ekrano dydá?</b>"
+
+#~ msgid ""
+#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
+#~ "X and Y axis and click 'Add' to include the new resolution in the "
+#~ "standard resolution list."
+#~ msgstr ""
+#~ "<b>Pridëti vartotojo nustatytà raiðkà</b><hr>Norëdami átraukti naujà "
+#~ "raiðkà á standartiniø raiðkø sàraðà, áveskite X ir Y aðiø taðkø skaièiø "
+#~ "ir spauskite ¥Pridëti´."
+
+#~ msgid "Available configuration components are:"
+#~ msgstr "Galimi konfigûracijos komponentai:"
+
+#~ msgid ""
+#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
+#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
+#~ msgstr ""
+#~ "<b>AccessX ájungtas:</b><hr>Kursorius dabar pasiekiamas per <b>deðinëje "
+#~ "klaviatûros pusëje esanèius skaièiø klaviðus</b>. Praðome patikrinti jø "
+#~ "elgsenà."
+
+#~ msgid ""
+#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
+#~ "number pad is <b>disabled</b> now."
+#~ msgstr ""
+#~ "<b>AccessX iðjungtas:</b><hr>Kursoriaus pasiekimas naudojant skaièiø "
+#~ "klaviðus dabar <b>iðjungtas</b>."
+
+#~ msgid ""
+#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
+#~ "system?"
+#~ msgstr ""
+#~ "<b>Paðalinti grafiná planðetà:</b><hr>Ar tikrai norite paðalinti grafiná "
+#~ "planðetà ið sistemos?"
+
+#~ msgid ""
+#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
+#~ "effect the next time your system is <b>rebooted</b>."
+#~ msgstr ""
+#~ "<b>Konfigûracija iðsaugota:</b><hr>Pakeitimai pradës galioti <b>ið naujo "
+#~ "paleidus</b> sistemà."
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
+#~ "in developmental phases so are, in part, still regarded as experimental. "
+#~ "Nevertheless, we have decided to include the drivers in our distribution "
+#~ "because of the high demand for 3D hardware acceleration in Linux. "
+#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
+#~ "are unable to offer any installation support for configuring 3D hardware "
+#~ "acceleration or if any problems related to this should arise."
+#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Surasta plokðtë su 3D spartinimu: <u>%1</u></b><hr>Visos 3D tvarkyklës "
+#~ "Linux sistemai yra vystymosi etape ir ið dalies jas galima traktuoti kaip "
+#~ "eksperimentines. Taèiau mes nusprendëme átraukti tvarkykles á mûsø "
+#~ "distribucijà dël didelio 3D spartinimo poreikio Linux sistemoje. "
+#~ "<br><br>Dël OpenGL tvarkykliø eksperimentinës bûklës, mes negalime "
+#~ "pasiûlyti jokios ádiegimo pagalbos 3D spartinimo konfigûravimui ir dël to "
+#~ "kilusioms problemoms spræsti.<br><br><b>Ar norite ájungti 3D spartinimà "
+#~ "sekanèiai plokðtei?</b>"
+
+#~ msgid ""
+#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
+#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
+#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
+#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
+#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
+#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
+#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
+#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
+#~ "do not have any influence over the development of nVidia drivers."
+#~ "<br><br><b>Prepare 3D for this card?</b>"
+#~ msgstr ""
+#~ "<b>Detektuota plokðtë su 3D spartinimu: <u>%1</u></b><hr>Dël licencijos "
+#~ "problemø tai nëra oficiali nVidia 2D/3D/OpenGL tvarkyklë. Naudojama 3D/"
+#~ "OpenGL tvarkyklë, jei ájungsite 3D, <b>nëra</b> átaiso spartinama."
+#~ "<br><br>Jei norite naudoti átaiso spartinamà 3D/OpenGL, atnaujinkite "
+#~ "paketus NVIDIA_GLX ir NVIDIA_kernel SuSE Linux sistemai ið nVidia "
+#~ "interneto svetainës (http://www.nvidia.com). Tai galite padaryti ir su "
+#~ "YOU (YaST2 atnaujinimas internetu).<br><br>Jei atsiranda problemø su "
+#~ "2D/3D/OpenGL tvarkykle ið nVidia, pasikonsultuokite su gamintoju, kadangi "
+#~ "mes neturime jokios átakos nVidia tvarkykliø kûrimui.<br><br><b>Paruoðti "
+#~ "3D ðiai plokðtei?</b>"
+
+#~ msgid ""
+#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
+#~ "that comes with this distribution is still installed.  You should update "
+#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
+#~ "online update). Start the online update?"
+#~ msgstr ""
+#~ "<b>Programø atnaujinimas</b><hr>Jûs vis dar turite ádiegtà netikusià "
+#~ "nvidia tvarkyklæ be 3D galimybës, kuri gaunama su SuSE Linux. Todël jûs "
+#~ "turëtume atnaujinti tai iki oficialios nvidia tvarkyklës ið nvidia ftp "
+#~ "serverio su programa YOU (YaST2 atnaujinimas internetu). Ar paleisti "
+#~ "atnaujinimà internetu?"
+
+#~ msgid ""
+#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
+#~ "resolution is not adjustable within framebuffer mode. Please select "
+#~ "another resolution than:"
+#~ msgstr ""
+#~ "<b>Pasirinkta netinkama raiðka FBdev veiksenai:</b><hr>Ði raiðka nëra "
+#~ "keièiama ¥framebuffer´ veiksenoje. Praðome pasirinkti kitokià raiðkà:"
+
+#~ msgid ""
+#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
+#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
+#~ "currently selected monitor model is correct or select a lower resolution "
+#~ "than:"
+#~ msgstr ""
+#~ "<b>Pasirinkta raiðka netinka</b><hr>Pasirinkta raiðka neatitinka "
+#~ "monitoriaus sinchronizacijos rëþiø. Patikrinkite, ar ðiuo metu "
+#~ "pasirinktas monitoriaus modelis teisingas, arba áverskite maþesnæ raiðkà, "
+#~ "nei:"
+
+#~ msgid ""
+#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
+#~ "depth is not allowed for this configuration."
+#~ msgstr ""
+#~ "<b>Pasirinktas neteisingas spalvumas:</b><hr><b>4</b> arba <b>15</b> bitø "
+#~ "spalvumas negalimas ðiai konfigûracijai."
+
+#~ msgid ""
+#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
+#~ "is not allowed for this configuration. Select another resolution from the "
+#~ "list."
+#~ msgstr ""
+#~ "<b>Pasirinkta netinkama raiðka:</b><hr>Ðiai konfigûracijai negalima "
+#~ "nustatyti reikalaujamos raiðkos. Praðome ið sàraðo pasirinkti kità raiðkà."
+
+#~ msgid "<b>X Server test failed:</b><hr><br>"
+#~ msgstr "<b>Nepavyko X serverio bandymas:</b><hr><br>"
+
+#~ msgid "3D question..."
+#~ msgstr "3D klausimas..."
+
+#~ msgid "X Server test information..."
+#~ msgstr "X serveris bando informacijà..."
+
+#~ msgid "AccessX status information..."
+#~ msgstr "AccessX bûsenos informacija..."
+
+#~ msgid "Tablet warning..."
+#~ msgstr "Grafinio planðeto áspëjimas..."
+
+#~ msgid "Consideration..."
+#~ msgstr "Svarstymas..."
+
+#~ msgid "Geometry"
+#~ msgstr "Geometrija"
+
+#~ msgid "Name:"
+#~ msgstr "Vardas:"
+
+#~ msgid "Card and Desktop"
+#~ msgstr "Plokðtë ir darbalaukis"
+
+#~ msgid "Input Devices"
+#~ msgstr "Ávesties árenginiai"
+
+#~ msgid "Input-Devices"
+#~ msgstr "Ávesties árenginiai"
+
+#~ msgid "Desktop"
+#~ msgstr "Darbalaukis"
+
+#~ msgid "Multihead"
+#~ msgstr "Daugiaekranis"
+
+#~ msgid "Secondary Modeline:"
+#~ msgstr "Antrinë skleistinë:"
+
+#~ msgid "Modeline"
+#~ msgstr "Skleistinë"
+
+#~ msgid "AccessX"
+#~ msgstr "AccessX"
+
+#~ msgid "X-Server accessable via VNC protocol:"
+#~ msgstr "X-serveris, pasiekiamas VNC protokolu:"
+
+#~ msgid "Access Control"
+#~ msgstr "Prieigos valdymas"
+
+#~ msgid "<b>Core Pointer...</b>"
+#~ msgstr "<b>Pelës þymeklis...</b>"
+
+#~ msgid "F&inalize >>"
+#~ msgstr "&Uþbaigti >>"
+
+#~ msgid "<< &Back"
+#~ msgstr "<< A&tgal"
+
+#~ msgid "&Next >>"
+#~ msgstr "T&oliau >>"
+
+#~ msgid "&Exit"
+#~ msgstr "&Iðeiti"
+
+#~ msgid "&About..."
+#~ msgstr "Api&e..."
+
+#~ msgid "About the author"
+#~ msgstr "Apie autoriø"
+
+#~ msgid "Select virtual resolution for Mode %1"
+#~ msgstr "Pasirinkite virtualià raiðkà modai %1"
+
+#~ msgid ""
+#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
+#~ "of this product is</nobr><br>Marcus Schaefer"
+#~ msgstr ""
+#~ "<b>SaX2 (c) 2000 SuSE LinuxAG:</b><hr><nobr>Produkto autorius ir "
+#~ "vystytojas yra</nobr><br> Marcus Schaefer"
+
+#~ msgid "&Modules..."
+#~ msgstr "&Moduliai..."
+
+#~ msgid "&File"
+#~ msgstr "&Byla"
+
+#~ msgid "Loading CDB data: %1"
+#~ msgstr "Ákeliami CDB duomenys: %1"
+
+#~ msgid "Loading base data: %1"
+#~ msgstr "Ákeliami pagrindiniai duomenys: %1"
+
+#~ msgid "Loading system data: %1"
+#~ msgstr "Ákeliami sisteminiai duomenys: %1"
+
+#~ msgid "SaX2 start-up information"
+#~ msgstr "SaX2 paleidimo informacija"
+
+#~ msgid "SaX2 final steps..."
+#~ msgstr "SaX2 uþbaigiamieji þingsniai..."
+
+#~ msgid "Exception..."
+#~ msgstr "Iðimtis..."
+
+#~ msgid ""
+#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
+#~ "than one graphics device.  More are required to set up a multihead "
+#~ "configuration."
+#~ msgstr ""
+#~ "<b>Daugiaekranës veiksenos konfigûravimas negalimas:</b><hr>Jûsø sistema "
+#~ "turi tik vienà vaizdo árenginá. Daugiaekranës veiksenos konfigûravimui "
+#~ "reikia daugiau nei vieno árenginio"
+
+#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
+#~ msgstr "<b>Nutraukti dialogà:</b><hr>Nutraukti ðá dialogà?"
+
+#~ msgid ""
+#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
+#~ msgstr ""
+#~ "<b>Netinkama konfigûracija:</b><hr>Turi bûti sukonfigûruotas maþiausiai "
+#~ "vienas árenginys."
+
+#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
+#~ msgstr ""
+#~ "<b>Netinkama konfigûracija:</b><hr>Turi bûti sukonfigûruotas maþiausiai "
+#~ "vienas árenginys."
+
+#~ msgid ""
+#~ "<b>Monitor cannot be removed:</b><hr>The system provides exactly one "
+#~ "monitor configuration. You are not allowed to remove this major entity."
+#~ msgstr ""
+#~ "<b>Negalima paðalinti monitoriaus:</b><hr>Sistema pateikia vieno "
+#~ "monitoriaus konfigûracijà. Jums negalima jos paðalinti."
+
+#~ msgid ""
+#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
+#~ "dialog and start the selected one?"
+#~ msgstr ""
+#~ "<b>Paleistas dialogas:</b><hr>Dialogas jau yra paleistas. Nutraukti já ir "
+#~ "paleisti pasirinktà?"
+
+#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
+#~ msgstr "<b>Uþbaigti dialogà:</b><hr>Ar norite uþbaigti ðá dialogà?"
+
+#~ msgid ""
+#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
+#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
+#~ "needs to be rebooted first to activate the changes for resolution and/or "
+#~ "color settings."
+#~ msgstr ""
+#~ "<b>Baigiamasis þingsnis:</b><hr>Paskutinis þingsnis- iðsaugoti jûsø naujà "
+#~ "konfigûracijà. Turëkite omeny, kad konfigûracija pagrásta <i>Framebuffer</"
+#~ "i>  árenginiu ir jûsø sistemà pirma reikia perkrauti, kad bûtø aktyyvuoti "
+#~ "raiðkos ir/arba spalvø nuostatø pakeitimai."
+
+#~ msgid "Unknown Graphics Card..."
+#~ msgstr "Neþinoma vaizdo plokðtë..."
+
+#~ msgid ""
+#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
+#~ "manually. Start the configuration dialog to set up the graphics card now?"
+#~ msgstr ""
+#~ "<b>Nepavyko detektuoti vaizdo plokðtës</b><hr>Rankiniu bûdu "
+#~ "konfigûruokite savo plokðtæ. Ar norite dabar paleisti konfigûracijos "
+#~ "dialogà vaizdo plokðtës konfigûravimui?"
+
+#~ msgid ""
+#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Nepavyko detektuoti monitoriaus (%1)</b><hr>Praðome já konfigûruoti "
+#~ "rankiniu bûdu. Ar norite dabar paleisti konfigûracijos dialogà "
+#~ "monitoriaus konfigûravimui ?"
+
+#~ msgid ""
+#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
+#~ "manually. Do you want to start the configuration dialog to setup the "
+#~ "display now ?"
+#~ msgstr ""
+#~ "<b>Nepavyko rasti monitoriaus (%1) su ID: %2</b><hr>Praðome monitoriø "
+#~ "konfigûruoti rankiniu bûdu. Ar norite dabar paleisti konfigûracijos "
+#~ "dialogà monitoriaus konfigûravimui ?"
+
+#~ msgid "<b>Yes</b>"
+#~ msgstr "<b>Taip</b>"
+
+#~ msgid "<b>No</b>"
+#~ msgstr "<b>Ne</b>"
+
+#~ msgid "File"
+#~ msgstr "Byla"
+
+#~ msgid "still locked"
+#~ msgstr "vis dar apsaugota"
+
+#~ msgid "Please wait"
+#~ msgstr "Praðome palaukti"
+
+#~ msgid ""
+#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
+#~ "X11 Configuration Manager<br>"
+#~ msgstr ""
+#~ "<big><b>SaX2: Iðplëstas X11 konfigûravimas </b></big><hr>Sveiki atvykæ á "
+#~ "SuSE X11 konfigûracijos tvarkyklæ<br>"
+
+#~ msgid "To start, double-click  an item in the component list."
+#~ msgstr ""
+#~ "Norëdami paleisti, dukart spustelëkite ant komponentø sàraðo elemento."
+
+#~ msgid "X11 System Setup"
+#~ msgstr "X11 sistemos konfigûravimas"
+
+#~ msgid "Value..."
+#~ msgstr "Vertë..."
+
+#~ msgid "Primary device"
+#~ msgstr "Pagrindinis árenginys"
+
+#~ msgid "Driver:"
+#~ msgstr "Tvarkyklë:"
+
+#~ msgid "X:"
+#~ msgstr "X:"
+
+#~ msgid "Y:"
+#~ msgstr "Y:"
+
+#~ msgid "Bus ID:"
+#~ msgstr "Magistralës ID:"
+
+#~ msgid "Card options"
+#~ msgstr "Plokðtës savybës"
+
+#~ msgid "Key Mappings"
+#~ msgstr "Klaviðø sàryðiai"
+
+#~ msgid "&Current sync frequencies"
+#~ msgstr "Dabartiniai &sinchronizacijos daþniai"
+
+#~ msgid "Current color depth"
+#~ msgstr "Dabartinis spalvumas"
+
+#~ msgid "Current resolution"
+#~ msgstr "Dabartinë raiðka"
+
+#~ msgid "HSync range"
+#~ msgstr "Horiz. sinchronizavimo intervalas"
+
+#~ msgid "VSync range"
+#~ msgstr "Vert. sinchronizavimo intervalas"
+
+#~ msgid "[ mm ]"
+#~ msgstr "[ mm ]"
+
+#~ msgid "Device"
+#~ msgstr "Árenginys"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokolas"
+
+#~ msgid "Fi&nish"
+#~ msgstr "&Uþbaigti"
+
+#~ msgid "Abort"
+#~ msgstr "Nutraukti"
+
+#~ msgid "Configure XAccess: Mouse over keypad..."
+#~ msgstr "Konfigûruoti AccessX: Pelë per klaviðus..."
+
+#~ msgid "Configure VNC: Export display using the VNC protocol..."
+#~ msgstr ""
+#~ "Konfigûruokite VNC: Naudodamiesi VNC protokolu eksportuokite ekranà..."
+
+#~ msgid "Configure input devices: Mouse configuration..."
+#~ msgstr "Ávesties árenginiø konfigûravimas: Pelës konfigûravimas..."
+
+#~ msgid "Configure 3D/OpenGL subsystem..."
+#~ msgstr "Konfigûruoti 3D/OpenGL posistemæ..."
+
+#~ msgid "Configure virtual resolutions..."
+#~ msgstr "Konfigûruoti virtualià raiðkà..."
+
+#~ msgid "Configure graphics cards..."
+#~ msgstr "Konfigûruoti vaizdo plokðtes..."
+
+#~ msgid "Configure Desktop: Colors and Resolutions..."
+#~ msgstr "Konfigûruoti darbalauká: spalvas ir raiðkas..."
+
+#~ msgid "Configure touch screens..."
+#~ msgstr "Konfigûruoti lytimuosius ekranus..."
+
+#~ msgid "Set up picture geometry..."
+#~ msgstr "Konfigûruoti vaizdo geometrijà..."
+
+#~ msgid "Configure multihead mode..."
+#~ msgstr "Konfigûruoti daugiaekranæ veiksenà..."
+
+#~ msgid ""
+#~ "Set up screen layout of your desktops (Double-click an icon will identify "
+#~ "the real screen)..."
+#~ msgstr ""
+#~ "Konfigûruokite darbalaukio ekranø iðdëstymà (Dukart paspaudus, bus ident. "
+#~ "realus ekranas)..."
+
+#~ msgid "Configure graphics tablet"
+#~ msgstr "Konfigûruoti grafinius planðetus"
+
+#~ msgid "Add new card..."
+#~ msgstr "Pridëti naujà plokðtæ..."
+
+#~ msgid "Remove selected card"
+#~ msgstr "Paðalinti paþymëtà plokðtæ"
+
+#~ msgid "Remove selected monitor"
+#~ msgstr "Paðalinti paþymëtà monitoriø"
+
+#~ msgid "&Properties..."
+#~ msgstr "&Savybës..."
+
+#~ msgid "Enable View-Only mode"
+#~ msgstr "Ájungti tik rodymo veiksenà"
+
+#~ msgid "&Add new touchscreen..."
+#~ msgstr "Pridëti n&aujà lytimàjá ekranà..."
+
+#~ msgid "&Remove selected touchscreen"
+#~ msgstr "Paða&linti paþymëtà lytimàjá ekranà"
+
+#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
+#~ msgstr ""
+#~ "<nobr><h3><u>Ðiuo metu sukonfigûruoti lytimieji ekranai:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Dabar sukonfigûruoti monitoriai</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Dabar sukonfigûruotos plokðtës:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Dabar sukonfigûruota pelë:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Dabartinis monitoriø iðdëstymas:</u></h3></nobr>"
+
+#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
+#~ msgstr "<nobr><h3><u>Dabar sukonfigûruoti darbalaukiai:</u></h3></nobr>"
+
+#~ msgid "&Add new mouse..."
+#~ msgstr "Pridëti n&aujà pelæ..."
+
+#~ msgid "&Remove selected mouse"
+#~ msgstr "Paða&linti paþymëtà pelæ"
+
+#~ msgid "&General"
+#~ msgstr "Pa&grindai"
+
+#~ msgid "&Expert"
+#~ msgstr "&Ekspertas"
+
+#~ msgid "Vendor"
+#~ msgstr "Gamintojas"
+
+#~ msgid "Selected"
+#~ msgstr "Paþymëtas"
+
+#~ msgid "Resolution X"
+#~ msgstr "Raiðka X"
+
+#~ msgid "&Resolution(s) for %1 colors"
+#~ msgstr "&Raiðka(os) %1 spalvoms"
+
+#~ msgid "Possible"
+#~ msgstr "Galimas"
+
+#~ msgid "&Add this resolution"
+#~ msgstr "Pridëti ðià r&aiðkà"
+
+#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruoto AccessX bûsena</b></big><hr>"
+
+#~ msgid "<big><b>Current VNC status</b></big><hr>"
+#~ msgstr "<big><b>Dabartinë VNC bûsena</b></big><hr>"
+
+#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
+#~ msgstr "<big><b>Dabartinë 3D/OpenGL bûsena</b></big><hr>"
+
+#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
+#~ msgstr "<big><b>Dabartinës virtualios raiðkos konfigûracija</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruota vaizdo plokðtës</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruoti darbalaukiai</b></big><hr>"
+
+#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
+#~ msgstr "<big><b>Ðiuo metu aktyvûs geometrijos laikai</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruota klaviatûra</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured layout</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruotas iðdëstymas</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruoti monitoriai</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruoti þymeklio árenginiai</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
+#~ msgstr ""
+#~ "<big><b>Dabar sukonfigûruotos daugiaekranës veiksenos bûsena</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
+#~ msgstr "<big><b>Dabar sukonfigûruotas grafinis planðetas</b></big><hr>"
+
+#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
+#~ msgstr "<big><b>Ðiuo metu sukonfigûruotas lytimasis ekranas</b></big><hr>"
+
+#~ msgid "<b><nobr>No information available</nobr></b>"
+#~ msgstr "<b><nobr>Nëra informacijos</nobr></b>"
+
+#~ msgid ""
+#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
+#~ "with the keypad. The table below points to the current status of AccessX."
+#~ msgstr ""
+#~ "<b>Virtuali pelë:</b><hr>Konfigûruoti skaitinius klaviðus, kad jie galëtø "
+#~ "kontroliuoti pelæ. Apaèioje esanti lentelë nurodo dabartinæ AccessX "
+#~ "bûsenà."
+
+#~ msgid ""
+#~ "<b>VNC Server:</b><hr>Set up the X-Server to be able to access the "
+#~ "desktop and all its programs remotely via a VNC viewer program"
+#~ msgstr ""
+#~ "<b>VNC serveris:</b><hr>Sukonfigûruokite X-serverá, kad galëtumëte "
+#~ "pasiekti savo darbalauká per VNC programà"
+
+#~ msgid ""
+#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
+#~ "here. X.Org includes the direct rendering interface to use the 3D "
+#~ "capabilities of your graphics card. If your card and the corresponding "
+#~ "driver support 3D hardware acceleration, enable it in this dialog."
+#~ msgstr ""
+#~ "<b>OpenGL posistemë:</b><hr>Èia konfigûruokite vaizdo plokðtës 3D "
+#~ "savybës. X.Org turi savyje tiesioginio vaizdavimo sàsajà, kuri leidþia "
+#~ "panaudoti vaizdo plokðtës 3D galimybes. Jei jûsø plokðtë ir atitinkama "
+#~ "tvarkyklë palaiko 3D spartinimà, jûs galite já ájungti ðiame dialoge."
+
+#~ msgid ""
+#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
+#~ "resolution which is completely viewable. Beside this resolution you can "
+#~ "setup a resolution which lives outside the viewable area of your monitor "
+#~ "and comes up if you leave the edges of your monitor with the mouse. This "
+#~ "area is called a virtual resolution."
+#~ msgstr ""
+#~ "<b>Virtuali raiðka:</b><hr>Kiekvienas darbalaukis turi savo tikrà raiðkà, "
+#~ "kuri yra matoma. Be ðios raiðkos, jûs galite sukonfigûruoti raiðkà, kuri "
+#~ "patenka uþ matomos monitoriaus srities ir pasirodo tuomet, kai pelës "
+#~ "kursoriø stumiate uþ monitoriaus matomos srities. Ði sritis vadinama "
+#~ "virtualia raiðka."
+
+#~ msgid ""
+#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
+#~ "graphics system consists of at least one graphics card but can be "
+#~ "combined to a so called <i>multihead environment</i> which consists of at "
+#~ "least two cards up to a maximum of 16 cards."
+#~ msgstr ""
+#~ "<b>Vaizdo plokðtës:</b><hr>Èia konfigûruokite savo vaizdo átaisus. Vaizdo "
+#~ "sistemà sudaro maþiausiai viena vaizdo plokðtë, taèiau gali bûti "
+#~ "kombinuojama taip vadinama <i>daugiaekranë aplinka</i>, kurià sudaro nuo "
+#~ "dviejø iki 16 plokðèiø."
+
+#~ msgid ""
+#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
+#~ "resolution and colors. Every desktop is an independent device and may "
+#~ "have a different color and/or resolution setup."
+#~ msgstr ""
+#~ "<b>Darbalaukio savybës:</b><hr>Konfigûruokite savo darbalaukio nuostatas, "
+#~ "tokias kaip raiðkà ir spalvas. Kiekvienas darbalaukis yra nepriklausomas "
+#~ "árenginys ir gali turëti skirtingà spalvà ir/arba raiðkà."
+
+#~ msgid ""
+#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
+#~ "displayed by the monitor. The table below point to the current used "
+#~ "Modeline(s)."
+#~ msgstr ""
+#~ "<b>Monitoriaus geometrija:</b><hr>Konfigûruojamas monitoriaus rodomo "
+#~ "vaizdo dydis bei pozicija. Apaèioje esanti lentelë rodo ðiuo metu "
+#~ "naudojamas skleistines."
+
+#~ msgid ""
+#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
+#~ "language environment with which it should work."
+#~ msgstr ""
+#~ "<b>Klaviatûros savybës:</b><hr>Konfigûruokite klaviatûros tipà bei kalbà."
+
+#~ msgid ""
+#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the neighborhood relations of the "
+#~ "connected monitors simply via drag&drop. If you are not sure which "
+#~ "monitor belongs to the icon just double-click on it and you will see a "
+#~ "message on the corresponding screen."
+#~ msgstr ""
+#~ "<b>Darbalaukio iðdëstymas:</b><hr>Jei yra daugiau nei viena plokðtë, jûs "
+#~ "esate daugiaekranës veiksenos aplinkoje. Sukonfigûruokite prijungtø "
+#~ "monitoriø kaimyninius ryðius nutempdami piktogramas. Jei neþinote, kuris "
+#~ "monitorius priklauso kokiai piktogramai, paspauskite dukart ant jos ir "
+#~ "jûs pamatysite praneðimà atitinkamame ekrane."
+
+#~ msgid ""
+#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
+#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
+#~ "the monitor."
+#~ msgstr ""
+#~ "<b>Monitoriaus savybës:</b><hr>Konfigûruojamas prie vaizdo plokðèiø "
+#~ "prijungto monitoriaus modelis. Pasirinkdami bûkite atsargûs. Blogi "
+#~ "sinchronizavimo intervalai gali sugadinti jûsø monitoriø."
+
+#~ msgid ""
+#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
+#~ "mouse pointer as well as settings like button emulation or wheel "
+#~ "functions."
+#~ msgstr ""
+#~ "<b>Pelës savybës:</b><hr>Pagrindiniø parametrø konfigûravimas, norint "
+#~ "aktyvuoti pagrindiná pelës þymeklá, taip pat ir mygtukø emuliavimo arba "
+#~ "ratuko funkcijas."
+
+#~ msgid ""
+#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
+#~ "a multihead environment. Set up the multihead functioning here."
+#~ msgstr ""
+#~ "<b>Daugiaekranë veiksena:</b><hr>Jei yra daugiau nei viena plokðtë, jûs "
+#~ "esate taip vadinamoje daugiaekranëje aplinkoje. Èia konfigûruokite "
+#~ "daugiaekranæ veiksenà."
+
+#~ msgid ""
+#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
+#~ "pointer devices, such as pens and erasers."
+#~ msgstr ""
+#~ "<b>Grafinis planðetas:</b><hr>Konfigûruoja grafinius planðetus ir "
+#~ "atitinkamus árenginius, kaip plunksnas ir trintukus."
+
+#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
+#~ msgstr "<b>Lytimasis ekranas:</b><hr>Konfigûruoja slëgiui jautrø ekranà."
+
+#~ msgid "Disabled"
+#~ msgstr "Iðjungta"
+
+#~ msgid "Enabled"
+#~ msgstr "Ájungta"
+
+#~ msgid "Wheel support"
+#~ msgstr "Ratuko palaikymas"
+
+#~ msgid "&Port"
+#~ msgstr "&Prievadas"
+
+#~ msgid "&Mode"
+#~ msgstr "&Veiksena"
+
+#~ msgid "Button emulation"
+#~ msgstr "Mygtuko emuliacija"
+
+#~ msgid "Primary Device:"
+#~ msgstr "Pagrindinis árenginys:"
+
+#~ msgid "Secondary Device:"
+#~ msgstr "Papildomas árenginys:"
+
+#~ msgid "Single Layout [ no multihead environment ]"
+#~ msgstr "Pavienis iðdëstymas [ nëra daugiaekranës aplinkos ]"
+
+#~ msgid "Clone Mode Active"
+#~ msgstr "Klonavimo veiksena aktyvi"
+
+#~ msgid "Xinerama Mode Active"
+#~ msgstr "Xinerama veiksena aktyvi"
+
+#~ msgid "Screens Layout Active"
+#~ msgstr "Ekranø iðdëstymas aktyvus"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx serija"
+
+#~ msgid "Canadian"
+#~ msgstr "Kanadieèiø"
+
+#~ msgid "Brazilian"
+#~ msgstr "Brazilø"
+
+#~ msgid "Bosnian"
+#~ msgstr "Bosnijos"
+
+#~ msgid "Lithuanian qwerty (numeric)"
+#~ msgstr "Lietuviø qwerty (ant skaièiø)"
+
+#~ msgid "Georgian (russian)"
+#~ msgstr "Gruzinø (rusø)"
+
+#~ msgid "Latvian"
+#~ msgstr "Latviø"
+
+#~ msgid "Belarusian"
+#~ msgstr "Baltarusiø"
+
+#~ msgid "Czech (qwerty)"
+#~ msgstr "Èekø (qwerty)"
+
+#~ msgid "Northern Saami (Finland)"
+#~ msgstr "Ðiauriniø Samiø (Suomiø)"
+
+#~ msgid "Macedonian"
+#~ msgstr "Makedonieèiø"
+
+#~ msgid "U.S. English w/ deadkeys"
+#~ msgstr "JAV anglø w/ miræ klaviðai"
+
+#~ msgid "Malayalam"
+#~ msgstr "Malajø"
+
+#~ msgid "Burmese"
+#~ msgstr "Birmieèiø"
+
+#~ msgid "Kannada"
+#~ msgstr "Kanadieèiø"
+
+#~ msgid "Mongolian"
+#~ msgstr "Mongolø"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengalø"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumunø"
+
+#~ msgid "Croatian"
+#~ msgstr "Kroatø"
+
+#~ msgid "U.S. English w/ ISO9995-3"
+#~ msgstr "JAV anglø w/ ISO9995-3"
+
+#~ msgid "Lithuanian azerty standard"
+#~ msgstr "Lietuviø azerty standartinë"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltieèiø"
+
+#~ msgid "German"
+#~ msgstr "Vokieèiø"
+
+#~ msgid "Hungarian"
+#~ msgstr "Vengrø"
+
+#~ msgid "Russian"
+#~ msgstr "Rusø"
+
+#~ msgid "Swedish"
+#~ msgstr "Ðvedø"
+
+#~ msgid "Turkish (F)"
+#~ msgstr "Turkø (F)"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Slovenian"
+#~ msgstr "Svolënø"
+
+#~ msgid "Slovak (qwerty)"
+#~ msgstr "Slovakø (qwerty)"
+
+#~ msgid "Czech"
+#~ msgstr "Èekø"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Danish"
+#~ msgstr "Danø"
+
+#~ msgid "Dvorak"
+#~ msgstr "Dvorak"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovakø"
+
+#~ msgid "Dutch"
+#~ msgstr "Olandø"
+
+#~ msgid "Israeli"
+#~ msgstr "Þydø"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamilø"
+
+#~ msgid "Ogham"
+#~ msgstr "Ogham"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norvegø"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmukhi"
+
+#~ msgid "Serbian"
+#~ msgstr "Serbø"
+
+#~ msgid "Farsi"
+#~ msgstr "Persø"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandø"
+
+#~ msgid "Italian"
+#~ msgstr "Italø"
+
+#~ msgid "Estonian"
+#~ msgstr "Estø"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Swiss French"
+#~ msgstr "Ðveicarijos prancûzø"
+
+#~ msgid "Swiss German"
+#~ msgstr "Ðveicarijos"
+
+#~ msgid "Thai"
+#~ msgstr "Tailandieèiø"
+
+#~ msgid "Tajik"
+#~ msgstr "Tadþikø"
+
+#~ msgid "Greek"
+#~ msgstr "Graikø"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonø"
+
+#~ msgid "Georgian (latin)"
+#~ msgstr "Gruzinø (lotyniðka)"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainieèiø"
+
+#~ msgid "Polish (qwertz)"
+#~ msgstr "Lenkø (qwertz)"
+
+#~ msgid "Syriac"
+#~ msgstr "Sirø"
+
+#~ msgid "Turkish"
+#~ msgstr "Turkø"
+
+#~ msgid "Spanish"
+#~ msgstr "Ispanø"
+
+#~ msgid "Northern Saami (Sweden)"
+#~ msgstr "Ðiauriniø samiø (ðvedø)"
+
+#~ msgid "Yugoslavian"
+#~ msgstr "Jugoslavø"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Finnish"
+#~ msgstr "Suomiø"
+
+#~ msgid "French (alternative)"
+#~ msgstr "Prancûzø (alternatyvus)"
+
+#~ msgid "Hungarian (qwerty)"
+#~ msgstr "Vengrø (qwerty)"
+
+#~ msgid "Russian (cyrillic phonetic)"
+#~ msgstr "Rusø (fonetinis)"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanø"
+
+#~ msgid "Polish"
+#~ msgstr "Lenkø"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Armenian"
+#~ msgstr "Armënø"
+
+#~ msgid "Northern Saami (Norway)"
+#~ msgstr "Ðiauriniø samiø (norvegø)"
+
+#~ msgid "Latin America"
+#~ msgstr "Lotynø Amerika"
+
+#~ msgid "French"
+#~ msgstr "Prancûzø"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Jungtinë Karalystë"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabø"
+
+#~ msgid "U.S. English"
+#~ msgstr "JAV anglø"
+
+#~ msgid "Maltese (US layout)"
+#~ msgstr "Maltieèiø (US iðdëstymas)"
+
+#~ msgid "French Canadian"
+#~ msgstr "Prancûzø kanadieèiø"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugalø"
+
+#~ msgid "Belgian"
+#~ msgstr "Belgø"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgarø"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbaidþanieèiø"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamieèiø"
+
+#~ msgid "Lao"
+#~ msgstr "Laosieèiø"
+
+#~ msgid "Microsoft Natural"
+#~ msgstr "Microsoft Natural"
+
+#~ msgid "Ennyah DKB-1008"
+#~ msgstr "Ennyah DKB-1008"
+
+#~ msgid "Logitech Deluxe Access Keyboard"
+#~ msgstr "Logitech Deluxe Access klaviatûra"
+
+#~ msgid "Microsoft Internet Keyboard"
+#~ msgstr "Microsoft Internet klaviatûra"
+
+#~ msgid "Samsung SDM 4500P"
+#~ msgstr "Samsung SDM 4500P"
+
+#~ msgid "Cherry Blue Line CyBo@rd"
+#~ msgstr "Cherry Blue Line CyBo@rd"
+
+#~ msgid "Dell"
+#~ msgstr "Dell"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GF"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
+
+#~ msgid "IBM Rapid Access"
+#~ msgstr "IBM Rapid Access"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
+#~ msgstr "Logitech Cordless Desktop Pro (papildoma option2)"
+
+#~ msgid "Memorex MX1998"
+#~ msgstr "Memorex MX1998"
+
+#~ msgid "Trust Wireless Keyboard Classic"
+#~ msgstr "Trust Wireless Keyboard Classic"
+
+#~ msgid "Dell 101-key PC"
+#~ msgstr "Dell 101-key PC"
+
+#~ msgid "Brother Internet Keyboard"
+#~ msgstr "Brother Internet klaviatûra"
+
+#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
+#~ msgstr "Neðiojamojo Compaq (pvz. Armada) Laptop Keyboard"
+
+#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
+#~ msgstr "Laptop/notebook Compaq (pvz. Presario) Internet klaviatûra"
+
+#~ msgid "IBM Rapid Access II"
+#~ msgstr "IBM Rapid Access II"
+
+#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
+#~ msgstr "Logitech iTouch Cordless klaviatûra (modelis Y-RB6)"
+
+#~ msgid "Trust Direct Access Keyboard"
+#~ msgstr "Trust Direct Access klaviatûra"
+
+#~ msgid "Logitech Internet Navigator Keyboard"
+#~ msgstr "Logitech Internet Navigator klaviatûra"
+
+#~ msgid "SK-7100"
+#~ msgstr "SK-7100"
+
+#~ msgid "Acer AirKey V"
+#~ msgstr "Acer AirKey V"
+
+#~ msgid "BTC 9000A"
+#~ msgstr "BTC 9000A"
+
+#~ msgid "Toshiba Satellite S3000"
+#~ msgstr "Toshiba Satellite S3000"
+
+#~ msgid "Compaq Internet Keyboard (13 keys)"
+#~ msgstr "Compaq Internet klaviatûra (13 klaviðø)"
+
+#~ msgid "Hewlett-Packard Omnibook XT1000"
+#~ msgstr "Hewlett-Packard Omnibook XT1000"
+
+#~ msgid "Logitech iTouch"
+#~ msgstr "Logitech iTouch"
+
+#~ msgid "SK-6200"
+#~ msgstr "SK-6200"
+
+#~ msgid "Compaq iPaq Keyboard"
+#~ msgstr "Compaq iPaq klaviatûra"
+
+#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
+#~ msgstr "Logitech Cordless Desktop Pro (papildoma parinktis)"
+
+#~ msgid "Logitech Cordless Desktop Navigator"
+#~ msgstr "Logitech Cordless Desktop Navigator"
+
+#~ msgid "QTronix Scorpius 98N+"
+#~ msgstr "QTronix Scorpius 98N+"
+
+#~ msgid "Symplon PaceBook (tablet PC)"
+#~ msgstr "Symplon PaceBook (tablet PC)"
+
+#~ msgid "Winbook Model XP5"
+#~ msgstr "Winbook Model XP5"
+
+#~ msgid "BTC 5113RF Multimedia"
+#~ msgstr "BTC 5113RF Multimedia"
+
+#~ msgid "Diamond 9801 / 9802 series"
+#~ msgstr "Diamond 9801 / 9802 serijos"
+
+#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE4xxx ir ZE4xxx"
+
+#~ msgid "Logitech Cordless Desktop Optical"
+#~ msgstr "Logitech Cordless Desktop Optical"
+
+#~ msgid "Logitech Internet Keyboard"
+#~ msgstr "Logitech Internet klaviatûra"
+
+#~ msgid "BTC 9000"
+#~ msgstr "BTC 9000"
+
+#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+#~ msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
+
+#~ msgid "Hewlett-Packard Internet Keyboard"
+#~ msgstr "Hewlett-Packard Internet klaviatûra"
+
+#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
+#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
+
+#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+#~ msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
+
+#~ msgid "Propeller Voyager (KTEZ-1000)"
+#~ msgstr "Propeller Voyager (KTEZ-1000)"
+
+#~ msgid "Brazilian ABNT2"
+#~ msgstr "Brazilø ABNT2"
+
+#~ msgid "Compaq Internet Keyboard (7 keys)"
+#~ msgstr "Compaq Internet klaviatûra (7 klaviðai)"
+
+#~ msgid "Honeywell Euroboard"
+#~ msgstr "Honeywell Euroboard"
+
+#~ msgid "Logitech Cordless Desktop"
+#~ msgstr "Logitech Cordless Desktop"
+
+#~ msgid "Yahoo! Internet Keyboard"
+#~ msgstr "Yahoo! Internet klaviatûra"
+
+#~ msgid "Compaq Internet Keyboard (18 keys)"
+#~ msgstr "Compaq Internet klaviatûra (18 klaviðø)"
+
+#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
+#~ msgstr "Neðiojamasis Dell Inspiron 8xxx"
+
+#~ msgid "IBM Rapid Access II (alternate option)"
+#~ msgstr "IBM Rapid Access II (papildoma parinktis)"
+
+#~ msgid "Logitech Cordless Desktop Pro"
+#~ msgstr "Logitech Cordless Desktop Pro"
+
+#~ msgid "Advance Scorpius KI"
+#~ msgstr "Advance Scorpius KI"
+
+#~ msgid "BTC 5126T"
+#~ msgstr "BTC 5126T"
+
+#~ msgid "Dexxa Wireless Desktop Keyboard"
+#~ msgstr "Dexxa Wireless Desktop klaviatûra"
+
+#~ msgid "Hewlett-Packard Omnibook 5xx"
+#~ msgstr "Hewlett-Packard Omnibook 5xx"
+
+#~ msgid "Memorex MX2750"
+#~ msgstr "Memorex MX2750"
+
+#~ msgid "SK-1300"
+#~ msgstr "SK-1300"
+
+#~ msgid "Generic 101-key PC"
+#~ msgstr "Bendrasis 101-klaviðø PK"
+
+#~ msgid "Northgate OmniKey 101"
+#~ msgstr "Northgate OmniKey 101"
+
+#~ msgid "ACPI Standard"
+#~ msgstr "ACPI Standard"
+
+#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
+#~ msgstr "Cherry Blue Line CyBo@rd (papaildoma parinktis)"
+
+#~ msgid "Chicony Internet Keyboard"
+#~ msgstr "Chicony Internet klaviatûra"
+
+#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
+#~ msgstr "Hewlett-Packard SK-2501 Multimedia klaviatûra"
+
+#~ msgid "Samsung SDM 4510P"
+#~ msgstr "Samsung SDM 4510P"
+
+#~ msgid "SK-2500"
+#~ msgstr "SK-2500"
+
+#~ msgid "SVEN Ergonomic 2500"
+#~ msgstr "SVEN Ergonomic 2500"
+
+#~ msgid "Generic 102-key (Intl) PC"
+#~ msgstr "Bendroji 102-key (Intl) PC"
+
+#~ msgid "Logitech Cordless Desktop iTouch"
+#~ msgstr "Logitech Cordless Desktop iTouch"
+
+#~ msgid "Chicony KB-9885"
+#~ msgstr "Chicony KB-9885"
+
+#~ msgid "Compaq Easy Access Keyboard"
+#~ msgstr "Compaq Easy Access klaviatûra"
+
+#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
+#~ msgstr "Hewlett-Packard 5181 Internet klaviatûra"
+
+#~ msgid "Hewlett-Packard Omnibook 500 FA"
+#~ msgstr "Hewlett-Packard Omnibook 500 FA"
+
+#~ msgid "Memorex MX2500 EZ-Access Keyboard"
+#~ msgstr "Memorex MX2500 EZ-Access klaviatûra"
+
+#~ msgid "Generic 104-key PC"
+#~ msgstr "Bendroji 104 klaviðø PK"
+
+#~ msgid "Everex STEPnote"
+#~ msgstr "Everex STEPnote"
+
+#~ msgid "Japanese 106-key"
+#~ msgstr "Japonø 106 klaviðø"
+
+#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
+#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE ir Pavilion N5xxx"
+
+#~ msgid "Hewlett-Packard Pavilion ZT11xx"
+#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
+
+#~ msgid "Logitech iTouch keyboard Internet Navigator"
+#~ msgstr "Logitech iTouch keyboard Internet Navigator"
+
+#~ msgid "Generic 105-key (Intl) PC"
+#~ msgstr "Bendroji 105 klaviðø (Intl) PK"
+
+#~ msgid "Keytronic FlexPro"
+#~ msgstr "Keytronic FlexPro"
+
+#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
+#~ msgstr "Hewlett-Packard SK-2505 Internet klaviatûra"
+
+#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
+#~ msgstr "Microsoft Internet Keyboard Pro, Ðvedø"
+
+#~ msgid "Microsoft Office Keyboard"
+#~ msgstr "Microsoft Office klaviatûra"
+
+#~ msgid "Oretec MCK-800 MM/Internet keyboard"
+#~ msgstr "Oretec MCK-800 MM/Internet klaviatûra"
+
+#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
+#~ msgstr "Shift neatðaukia Caps."
+
+#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
+#~ msgstr "veikia kaip Shift su uþrakinimu. Shift neatðaukia Caps."

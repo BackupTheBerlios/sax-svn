@@ -1,0 +1,29 @@
+# /.../
+# Twinview profile for Quadro4 cards. This profile assume two
+# identical monitors connected to the card ! Please make sure
+# this is true before using this profile
+# --------------------------------------
+Desktop -> [X] ->  CalcModelines = no
+Monitor -> [X] ->  CalcAlgorithm = XServerPool
+Device  -> [X] ->  Driver        = nvidia
+Device  -> [X] ->  Screen        = 0
+
+#================================
+# setup twinview options
+#--------------------------------
+Device  -> [X] -> Option = TwinView,SaXDualHead
+Device  -> [X] ->  Raw -> 11 -> Option = "SecondMonitorHorizSync" "{Monitor->[X]->HorizSync}"
+Device  -> [X] ->  Raw -> 12 -> Option = "SecondMonitorVertRefresh" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] ->  Raw -> 13 -> Option = "MetaModes" "{Screen->[X]->Depth->16->Modes:0},{Screen->[X]->Depth->16->Modes:0}"
+Device  -> [X] ->  Raw -> 14 -> Option = "TwinViewOrientation" "Clone"
+
+#================================
+# setup SaX meta options
+#--------------------------------
+Device  -> [X] -> Raw -> 15 -> Option = "SaXDualOrientation" "RightOf"
+Device  -> [X] -> Raw -> 16 -> Option = "SaXDualHSync" "{Monitor->[X]->HorizSync}"
+Device  -> [X] -> Raw -> 17 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
+Device  -> [X] -> Raw -> 18 -> Option = "SaXDualResolution" "{Screen->[X]->Depth->16->Modes:0}"
+Device  -> [X] -> Raw -> 19 -> Option = "SaXDualMode" "Clone"
+Device  -> [X] -> Raw -> 20 -> Option = "SaXDualMonitorVendor" "{Monitor->[X]->VendorName}"
+Device  -> [X] -> Raw -> 21 -> Option = "SaXDualMonitorModel" "{Monitor->[X]->ModelName}"

@@ -1,0 +1,51 @@
+#/.../
+# Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Maintainer: Marcus Schaefer <sax@suse.de>, 2001
+# Identity.map file to identify PCI/AGP cards
+#
+# Format:
+# -------
+# NAME          = <vendor name of device>
+# DEVICE        = <device name of device>
+# VID           = <vendor ID hex>
+# DID           = <device ID hex>
+# SERVER        = <server module name>
+# EXT           = [+-]e1,[+-]e2,..
+# OPT           = o1,o2,..
+# RAW           = r1,r2,..
+# PROFILE       = <file name of profile file>
+# SCRIPT3D      = <script name of 3D environment script>
+# PACKAGE3D     = <package list needed to enable 3D>
+# FLAG          = <flag to perform a user decision [ 3D, DEFAULT ]>
+# SUBVENDOR     = Subvendor ID
+# SUBDEVICE     = Subdevice ID
+#
+# --> field seperator is the § sign
+#
+# Note:
+# -----
+#  - each description needs a single line
+#  - every line needs to specify all keywords even if there
+#    is no setting for it
+#
+
+#-----------------------------------#
+# Unclassified Card
+#-----------------------------------#
+NAME=Unclassified§DEVICE=Graphics§VID=0x1234§DID=0x5678§SERVER=fbdev§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# VESA Framebuffer
+#-----------------------------------#
+NAME=VESA§DEVICE=Framebuffer Graphics§VID=0x1234§DID=0x5678§SERVER=fbdev§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# VESA Card
+#-----------------------------------#
+NAME=VESA§DEVICE=Vesa-BIOS Graphics§VID=0x1234§DID=0x5678§SERVER=vesa§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
+
+#-----------------------------------#
+# DUMMY Card
+#-----------------------------------#
+NAME=DUMMY§DEVICE=Dummy Graphics§VID=0x1234§DID=0x5678§SERVER=dummy§EXT=§OPT=§RAW=§PROFILE=nobus§SCRIPT3D=§PACKAGE3D=§FLAG=DEFAULT
