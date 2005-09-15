@@ -50,7 +50,6 @@ STATUS        : Status: Up-to-date
 //------------------------------
 #define KILLALL         "/usr/bin/killall"
 #define XQUERY          "/usr/sbin/xquery"
-#define WRAPMOUSE       "/usr/sbin/wrap"
 #define XSETROOT        "/usr/X11R6/bin/xsetroot"
 
 //==============================

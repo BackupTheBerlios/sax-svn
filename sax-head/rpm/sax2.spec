@@ -112,7 +112,7 @@ Authors:
 %package -n sax2-gui
 Version:      1.7
 Release:      18
-Requires:     netpbm xbanner sax2-tools qt3 fvwm2 tightvnc sax2
+Requires:     netpbm sax2-tools qt3 fvwm2 tightvnc sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/sbin/xapi
@@ -132,7 +132,7 @@ Authors:
 %package -n sax2-libsax
 Version:      7.1
 Release:      18
-Requires:     xbanner sax2-tools qt3 fvwm2 tightvnc sax2
+Requires:     sax2-tools qt3 fvwm2 tightvnc sax2
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
 Provides:     sax2:/usr/%{_lib}/libsax.so
@@ -479,27 +479,17 @@ fi
 %doc %{_mandir}/man1/xmode.1.gz
 %doc %{_mandir}/man1/xmset.1.gz
 %doc %{_mandir}/man1/xquery.1.gz
-/usr/sbin/catch
 /usr/sbin/corner
-/usr/sbin/demo
-/usr/sbin/demo.sh
 /usr/sbin/dots
-/usr/sbin/fake
 /usr/sbin/hwupdate
 /usr/sbin/isax
-/usr/sbin/screen
 /usr/sbin/testX
 /usr/sbin/whois
 /usr/sbin/wmstart
 /usr/sbin/ximage
-/usr/sbin/wrap
-/usr/sbin/xbounce
-/usr/sbin/xbound
 /usr/sbin/xidle
 /usr/sbin/xkbctrl
-/usr/sbin/xkbset
 /usr/sbin/xlook
-/usr/sbin/xmirror
 /usr/sbin/xmode
 /usr/sbin/xmset
 /usr/sbin/xquery

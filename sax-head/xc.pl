@@ -505,7 +505,6 @@ sub init {
 	$SIG{PIPE}  = "HandleTmpSignal";
 	$SIG{TERM}  = "HandleTmpSignal";
 
-	$spec{WrapMouse}   = "/usr/sbin/wrap";
 	$spec{Sysp}        = "/usr/sbin/sysp"; 
 	$spec{DbmFile}     = "/var/cache/sax/files/config"; 
 	$spec{HWFlag}      = "/var/cache/sax/files/hardware.chg";
