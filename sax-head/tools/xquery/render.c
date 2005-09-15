@@ -86,7 +86,7 @@ void showRenderText (char* param,Display* dpy,int screen) {
 		XftDrawStringUtf8 (
 			xc.FTdraw, xc.FTcolor,
 			xt.FTfont, 0, (int)((2 / 3.0) * xt.XTheight),
-			text, strlen(text)
+			(unsigned char*)text, strlen(text)
 		);
 		XCopyArea (
 			xi.dpy,xc.PBack,win,xi.DGc,0,0,xt.XTwidth,xt.XTheight,0,0

@@ -142,7 +142,7 @@ int main(int argc,char *argv[]) {
 	XftDrawStringUtf8 (
 		xc.FTdraw, xc.FTcolor,
 		xt.FTfont, 0, (2 / 3.0) * xt.XTheight,
-		text, strlen(text)
+		(unsigned char*)text, strlen(text)
 	);
 	XCopyArea(
 		xi.dpy,xc.PAint,win,xi.DGc,0,0,xt.XTwidth,xt.XTheight,0,0
@@ -166,9 +166,9 @@ int main(int argc,char *argv[]) {
 		xc.FTcolor->color.green = (xc.color.green * i) / MASK;
 		xc.FTcolor->color.blue  = (xc.color.blue  * i) / MASK;
 		XftDrawStringUtf8 (
-            xc.FTdraw, xc.FTcolor,
-            xt.FTfont, 0, (2 / 3.0) * xt.XTheight,
-            text,strlen (text)
+			xc.FTdraw, xc.FTcolor,
+			xt.FTfont, 0, (2 / 3.0) * xt.XTheight,
+			(unsigned char*)text,strlen (text)
         );
 		XCopyArea(
 			xi.dpy,xc.PAint,win,
@@ -290,7 +290,7 @@ XTFont XFontSetup (XInit xi,char *text) {
 	pattern = XftFontMatch (xi.dpy,xi.DScreen,pattern,NULL);
 	xt.FTfont = XftFontOpenPattern (xi.dpy, pattern);
 	XftTextExtentsUtf8 (
-		xi.dpy,xt.FTfont,text,strlen(text),&FTinfo
+		xi.dpy,xt.FTfont,(unsigned char*)text,strlen(text),&FTinfo
 	);
 	xt.XTheight = xt.FTfont->height;
 	xt.XTwidth  = FTinfo.xOff;

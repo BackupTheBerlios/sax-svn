@@ -94,8 +94,6 @@ install:
 	for i in `find -type f -perm 755 | grep -v libX | grep -v plog.pl`;do \
 		install -m 755 $$i ${sax_tools} ;\
 	done
-	install -m 644 ./xbanner/demo   ${sax_tools}
-	install -m 644 ./xbanner/screen ${sax_tools}
 	mv ${sax_tools}/isax.pl ${sax_tools}/isax
 	mv ${sax_tools}/xkbctrl.pl ${sax_tools}/xkbctrl
 	mv ${sax_tools}/xupdate.pl ${sax_tools}/xupdate

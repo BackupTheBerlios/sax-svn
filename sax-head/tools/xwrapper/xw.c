@@ -674,7 +674,7 @@ XImage* setText (Display* dpy,int screen,char* text, int* x, int* y) {
 	pattern = XftFontMatch (dpy,screen,pattern,NULL);
 	FTfont  = XftFontOpenPattern (dpy, pattern);
 	XftTextExtentsUtf8 (
-		dpy,FTfont,text,strlen(text),&FTinfo
+		dpy,FTfont,(unsigned char*)text,strlen(text),&FTinfo
 	);
 	XTwidth = FTinfo.xOff;
 	XTheight= FTfont->height + 20;
@@ -700,7 +700,7 @@ XImage* setText (Display* dpy,int screen,char* text, int* x, int* y) {
 	y1 = (int)((DHeight / 2) - (XTheight / 2));
 
 	XftDrawStringUtf8 (
-		FTdraw, FTcolor,FTfont,x1,y1,text,strlen(text)
+		FTdraw, FTcolor,FTfont,x1,y1,(unsigned char*)text,strlen(text)
 	);
 	XFlush (dpy);
 	y1 = (int)((DHeight / 2) - XTheight);

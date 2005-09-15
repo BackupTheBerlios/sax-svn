@@ -214,7 +214,8 @@ int main (int argc, char*argv[]) {
     //---------------------------------
 	if (active == TRUE) {
 		Window dummy;
-		int x,y,rx,ry,mask,i;
+		unsigned int mask;
+		int x,y,rx,ry,i;
 		int x1,y1,x2,y2;
 
 		if (IsXinerama(dpy)) {
