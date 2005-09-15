@@ -190,10 +190,11 @@ void SCCMonitorArrange::setArrangement (
 		QString model  = monitorData->getModelName();
 		QString monitorInfo;
 		if ( vendor != model ) {
-			QTextOStream (&monitorInfo) <<
+			QTextOStream (&monitorInfo) << "<b>[" << count << "]</b> " << 
 				mText["PrimaryMonitor"] << " " << vendor << " " << model;
 		} else {
-			monitorInfo = mText["UnknownMonitor"];
+			QTextOStream (&monitorInfo) << "<b>[" << count << "]</b> " <<
+				mText["UnknownMonitor"];
 		}
 		QString toolTip;
 		QTextOStream (&toolTip)
@@ -268,10 +269,11 @@ void SCCMonitorArrange::setCleanArrangement (
 		QString model  = monitorData->getModelName();
 		QString monitorInfo;
 		if ( vendor != model ) {
-			QTextOStream (&monitorInfo) <<
+			QTextOStream (&monitorInfo) << "<b>[" << count << "]</b> " <<
 				mText["PrimaryMonitor"] << " " << vendor << " " << model;
 		} else {
-			monitorInfo = mText["UnknownMonitor"];
+			QTextOStream (&monitorInfo) << "<b>[" << count << "]</b> " <<
+				mText["UnknownMonitor"];
 		}
 		QString toolTip;
 		QTextOStream (&toolTip)
@@ -326,10 +328,11 @@ void SCCMonitorArrange::setToolTip ( SCCMonitorDisplay* display ) {
 		QString model  = monitorData->getModelName();
 		QString monitorInfo;
 		if ( vendor != model ) {
-			QTextOStream (&monitorInfo) <<
+			QTextOStream (&monitorInfo) << "<b>[" << mFig->getID() << "]</b> "<<
 				mText["PrimaryMonitor"] << " " << vendor << " " << model;
 		} else {
-			monitorInfo = mText["UnknownMonitor"];
+			QTextOStream (&monitorInfo) << "<b>[" << mFig->getID() << "]</b> "<<
+				mText["UnknownMonitor"];
 		}
 		QString toolTip;
 		QTextOStream (&toolTip)

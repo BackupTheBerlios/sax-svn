@@ -272,7 +272,16 @@ while true ; do
 
 	--)
 	if [ "$BATCH_MODE" = "-b" ];then
-		BATCH_MODE="-b $2"
+		BATCH_FILE=$2
+		if [ -z $BATCH_FILE ];then
+			BATCH_MODE="-b"	
+		else
+			echo $BATCH_FILE | grep -q /
+			if [ $? -ne 0 ];then
+				BATCH_FILE=/usr/share/sax/profile/$BATCH_FILE
+			fi
+			BATCH_MODE="-b $BATCH_FILE"
+		fi
 	fi
 	shift;
 	break;;
