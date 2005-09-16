@@ -290,22 +290,7 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	SaXManipulateCard cardInfo (mCard);
 	if (cardInfo.isNoteBook()) {
 		QString driver = mCard -> getItem ("Driver");
-		if ((driver == "i810") || (driver == "i915")) {
-			QTextOStream (&result)
-				<< PROFILE_DIR << "Intel_DualHead_DriverOptions";
-		}
-		if (driver == "nvidia") {
-			QTextOStream (&result)
-				<< PROFILE_DIR << "NVidia_DualHead_DriverOptions";
-		}
-		if (driver == "radeon") {
-			QTextOStream (&result)
-				<< PROFILE_DIR << "Radeon_DualHead_DriverOptions";
-		}
-		if (driver == "fglrx") {
-			QTextOStream (&result)
-				<< PROFILE_DIR << "FGLRX_DualHead_DriverOptions";
-		}
+		result = getDriverOptionsDualHeadProfile ( driver );
 		return result;
 	}
 	//====================================
@@ -329,8 +314,23 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	if ( cardData ) {
 		QString* profile = cardData -> find ("Profile");
 		if ((profile) && (profile->contains("DualHead_DriverOptions"))) {
-			QTextOStream (&result)
-				<< PROFILE_DIR << *profile;
+			//====================================
+			// check if drivers do match...
+			//------------------------------------
+			QString syspDriver = pCard -> getItem ("Module");
+			QString* CDB2DDriver = cardData -> find ("Driver");
+			QString* CDB3DDriver = cardData -> find ("3DDriver");
+			if (
+				((CDB2DDriver) && (syspDriver == *CDB2DDriver)) ||
+				((CDB3DDriver) && (syspDriver == *CDB2DDriver))
+			) {
+				QTextOStream (&result) << PROFILE_DIR << *profile;
+				return result;
+			}
+			//====================================
+			// drivers don't match check driver...
+			//------------------------------------
+			result = getDriverOptionsDualHeadProfile ( syspDriver );
 			return result;
 		}
 	}
@@ -375,6 +375,21 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	if ( cardData ) {
 		QString* profile = cardData -> find ("Profile");
 		if ((profile) && (profile->contains("DualHead_DriverOptions"))) {
+			//====================================
+			// check if drivers do match...
+			//------------------------------------
+			QString syspDriver = pCard -> getItem ("Module");
+			QString* CDB2DDriver = cardData -> find ("Driver");
+			QString* CDB3DDriver = cardData -> find ("3DDriver");
+			if (
+				((CDB2DDriver) && (syspDriver != *CDB2DDriver)) &&
+				((CDB3DDriver) && (syspDriver != *CDB2DDriver))
+			) {
+				*profile = getDriverOptionsDualHeadProfile ( syspDriver );
+			}
+			if (profile->isEmpty()) {
+				return false;
+			}
 			//====================================
 			// ask profile for changes if dynamic
 			//------------------------------------
@@ -1330,6 +1345,31 @@ QString SaXManipulateDesktop::calculateModeline (
 		}
 	}
 	result.replace (QRegExp("^Modeline "),"");
+	return result;
+}
+//====================================
+// getDriverOptionsDualHeadProfile
+//------------------------------------
+QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
+	const QString& driver
+) {
+	QString result;
+	if ((driver == "i810") || (driver == "i915")) {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "Intel_DualHead_DriverOptions";
+	}
+	if (driver == "nvidia") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "NVidia_DualHead_DriverOptions";
+	}
+	if (driver == "radeon") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "Radeon_DualHead_DriverOptions";
+	}
+	if (driver == "fglrx") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "FGLRX_DualHead_DriverOptions";
+	}
 	return result;
 }
 } // end namespace

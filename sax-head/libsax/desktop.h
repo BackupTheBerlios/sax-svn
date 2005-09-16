@@ -175,6 +175,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	private:
 	QString getVendorForDriver ( const QString& );
 	QString calculateModeline  ( int,int,int,int );
+	QString getDriverOptionsDualHeadProfile ( const QString& );
 
 	public:
 	void calculateModelines ( bool );

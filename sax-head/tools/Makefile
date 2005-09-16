@@ -72,7 +72,7 @@ clean:
 	fi \
 	done
 	${MAKE} -C ./plog -f Makefile.Linux clean
-	rm -f whois/whois
+	rm -f whereiam/whereiam
 	rm -f configure.in
 	rm -f Makefile.am
 	rm -f aclocal.m4

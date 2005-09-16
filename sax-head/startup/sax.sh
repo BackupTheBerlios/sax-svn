@@ -104,10 +104,11 @@ function usage() {
 	echo "[ -h | --help ]"
 	echo "  show this message and exit"
 	echo
-	echo "[ -b | --batchmode [ filename ]]"
-	echo "  enable batch mode to set configuration options"
-	echo "  via the SaX2 shell. Optionally give a full qualified file"
-	echo "  location holding the profile data"
+	echo "[ -b | --batchmode [ filename,filename,... ]]"
+	echo "  Activate the SaX2 batch modus. If no filename is given an"
+	echo "  interactive shell is started to set/overwrite configuration"
+	echo "  parameters. If the filename doesn't contain any / characters"
+	echo "  it is asumed to be found in /usr/share/sax/profile"
 	echo
 	echo "[ -a | --auto ]"
 	echo "  enable automatic configuration." 

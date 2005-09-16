@@ -1,5 +1,5 @@
-bin_PROGRAMS = whois
-whois_SOURCES = \
+bin_PROGRAMS = whereiam
+whereiam_SOURCES = \
 	remote.c \
 	ifaddrs.c \
 	proc/devname.c \
@@ -7,4 +7,4 @@ whois_SOURCES = \
 	proc/version.c \
 	proc/alloc.c \
 	proc/pwcache.c \
-	whois.c
+	whereiam.c

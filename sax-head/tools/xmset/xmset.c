@@ -39,7 +39,7 @@ STATUS        : Status: Up-to-date
 #include <fcntl.h>
 #include <errno.h>
 
-#include "../whois/remote.h"
+#include "../whereiam/remote.h"
 #include "hwdata.h"
 
 //========================================

@@ -1,5 +1,5 @@
 /**************
-FILE          : whois.c
+FILE          : whereiam.c
 ***************
 PROJECT       : SaX2 - SuSE advanced X configuration
               :
@@ -9,7 +9,7 @@ AUTHORS       : Thomas Fehr <fehr@suse.de>
 BELONGS TO    : configuration tool for the X window system 
               : released under the GPL license
               :
-DESCRIPTION   : whois will check if the currently used
+DESCRIPTION   : whereiam will check if the currently used
               : X11 Display link point to a remote or a local
               : display: Exit codes:
               : ---

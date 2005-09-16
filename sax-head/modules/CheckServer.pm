@@ -31,7 +31,7 @@ sub GetDisplay {
 	# X11 forwarding and check for the DISPLAY variable
 	# ---
 	my @displayStatus;
-	system ("/usr/sbin/whois");
+	system ("/usr/sbin/whereiam");
 	if ($? >> 8 == 1) {
 	if (defined $ENV{DISPLAY}) {
 		$displayStatus[0] = $ENV{DISPLAY};

@@ -930,261 +930,265 @@ sub SetBatchMode {
 	my $res;                    # calc resolution
 	my $tim;                    # calc timing
 
-	if ($profile eq "interactive") {
-		print "\n";
-		print "Linux SaX Version 7.1 startup level (init) (2001-04-06)\n";
-		print "(C) Copyright 2001 - SuSE GmbH\n";
-		print "\n";
-	}
-
-	# create profile list if defined...
-	# ----------------------------------
-	SWITCH: for ($profile) {
-	# automatic profile detection mode
-	# ----------------------------------
-	/^profile$/       && do {
-		# ProfileData was defined using ReadProfile()...
-		last SWITCH;
-	};
-
-	# interactive mode
-	# ------------------
-	/^interactive$/   && do {
-		@ProfileData = ();
-		$ProfileSize = 0;
-		last SWITCH;
-	};
-
-	# default: use file as profile
-	# ------------------------------
-	@ProfileData = ();
-	print "SaX: including profile: $profile...\n";
-	#==========================================
-	# Check if there is a profile script which
-	# should run before the profile is opened
-	#------------------------------------------
-	if (-f "$profile.sh") {
-		print "SaX: calling profile script: $profile.sh\n";
-		qx ($profile.sh);
-		$profile = "$profile.tmp";
-	}
-	open (FD,$profile) || die "init: could not open file: $profile";
-	while(<FD>) {
-		chomp($_);
-		if ($_ =~ /^#/) {
-			next;
-		}
-		SWITCH: for ($_) {
-		/^.*\[X\].*/         && do {
-			$_ =~ s/\[X\]/0/g;
-		};
-
-		/^.*\[X\+([1-9]).*/  && do {
-			$id = $1;
-			$_ =~ s/\[X\+[1-9]\]/$id/g;
-		};
-
-		/\[REMOVE\]/         && do {
-		if ($_ =~ /(.*)=.*/) {
-			$line    = $1;
-			$line    =~ s/ +//g;
-			@v       = split (/->/,$line);
-			$search  = join("->",@v);
-			%var = HRemoveValue (\%var,$search);
-		}
-		};
-		}
-		if ($_ !~ /\[REMOVE\]/) {
-			push(@ProfileData,$_);
-		}
-	}
-	close(FD);
-	$ProfileSize = @ProfileData;
-	$profile     = "profile";
-	}
-
-	if ($ProfileSize > 0) {
-	foreach (@ProfileData) {
-		# look for eventually defined variables in the
-		# profile data stream...
-		# -----------------------
-		while ($_ =~ /{(.*?)}/) {
-			$line      = $1;
-			undef $index;
-			if ($line =~ /(.*):(.*)/) {
-				$line  = $1;
-				$index = $2;
-			}
-			$line      =~ s/ +//g;
-			@v         = split(/->/,$line);
-			$search    = join ("->",@v);
-			$size      = @v;
-			$ViewValue = "";
-			$ViewRef   = "";
-			$ViewValue = HGetValue(\%var,$search);
-			$ViewValue =~ s/^ +//g;
-			$ViewValue =~ s/ +$//g;
-			if (defined $index) {
-				my @list = split (/,/,$ViewValue);
-				$ViewValue = $list[$index];
-			}
-			$_ =~ s/{.*?}/$ViewValue/;
-		}
-		# push stream data...
-		# --------------------
-		push(@plist,$_);
-	}
-	push(@plist,"exit");
-	}
-
-	# /.../
-	# read data via readline from /dev/tty or import
-	# profile data given from file
-	# ---
-	while (1) {
-		if ( $profile ne "profile" ) {
-			# /.../
-			# no profile file name specified, read from
-			# STDIN using readline
-			# ---
-			my $prompt = "SaX> ";
-			if (! defined $term) {
-				$term = Term::ReadLine->new ( "SaX Profile Mode" );
-			}
-			last unless defined ( 
-				$_ = $term->readline ($prompt) 
-			);
-			$term->addhistory($_) if /\S/;
-		} else {
-			# /.../
-			# profile file contents saved in @plist
-			# read lines from list (plist)
-			# ---
-			last unless defined ( 
-				$_ = shift(@plist) 
-			);
-		}
-		s/^\s+//;
-		next if /^$/;
-		$_ = 'h' if /^\s*\?/;
-		if (/^(?:q(?:uit)?|bye|exit)$/i) {
-			last;
-		} else {
-	 
-		$line = $_;
-		SWITCH: for ($line) {
-		#-----------------------------------------#
-		# get help...                             #
-		# ----------------------------------------# 
-		/^help/i  && do {
-			help();
-			last SWITCH;
-		};
-
-		#-----------------------------------------#
-		# abort ( lost changes )...               #
-		# ----------------------------------------#
-		/^abort/i  && do {
-			print "batch mode aborted...\n";
-			$AbortBatch = "yes";
-			return(%var);
-			last SWITCH;
-		};
-
-		#-----------------------------------------#
-		# set a variable use HSetValue function   #
-		# ----------------------------------------#
-		/^(.*)=(.*)/   &&  do {
-			$key   = $1;
-			$value = $2;
-			$key   =~ s/ +//g;
-			$value =~ s/^ +//g;
-			@v     = split(/->/,$key);
-			$str   = join("->",@v);
-			%var   = HSetValue(\%var,$str,$value);
-			if ($profile ne "profile") {
-				$str =~ s/->/}{/g;
-				print "\t\033[32m<set>:\033[m\017{$str} to \"$value\"\n\n";
-			}
-			last SWITCH;
-		};
-
-		#-----------------------------------------#
-		# list the variable tree use HGet()...    #
-		# ----------------------------------------# 
-		/^list/i  &&  do {
-			@tree = CreateTreeList(\%var); 
-			if ($line =~ /(.*)\/(.*)\//) {
-				$expr = $2; 
-				@result = grep(/$expr/i,@tree);
-			} else {
-				@result = @tree;
-			}
-			foreach $i (@result) {
-				print "$i\n";
-			}
+	my @profileList = split (/,/,$profile);
+	foreach my $profile (@profileList) {
+		if ($profile eq "interactive") {
 			print "\n";
-			last SWITCH;
-		};
+			print "Linux SaX Version 7.1 startup level (init) (2001-04-06)\n";
+			print "(C) Copyright 2001 - SuSE GmbH\n";
+			print "\n";
+		}
+
+		# create profile list if defined...
+		# ----------------------------------
+		SWITCH: for ($profile) {
+			# automatic profile detection mode
+			# ----------------------------------
+			/^profile$/       && do {
+				# ProfileData was defined using ReadProfile()...
+				last SWITCH;
+			};
+
+			# interactive mode
+			# ------------------
+			/^interactive$/   && do {
+				@ProfileData = ();
+				$ProfileSize = 0;
+				last SWITCH;
+			};
+
+			# default: use file as profile
+			# ------------------------------
+			@ProfileData = ();
+			print "SaX: including profile: $profile...\n";
+			#==========================================
+			# Check if there is a profile script which
+			# should run before the profile is opened
+			#------------------------------------------
+			if (-f "$profile.sh") {
+				print "SaX: calling profile script: $profile.sh\n";
+				qx ($profile.sh);
+				$profile = "$profile.tmp";
+			}
+			open (FD,$profile) ||
+				die "init: could not open file: $profile";
+			while(<FD>) {
+				chomp($_);
+				if ($_ =~ /^#/) {
+					next;
+				}
+				SWITCH: for ($_) {
+					/^.*\[X\].*/         && do {
+						$_ =~ s/\[X\]/0/g;
+					};
 	
-		#-----------------------------------------#
-		# calculate a modeline...                 #
-		# ----------------------------------------#
-		/^calc/i  && do {
-			if ($line =~ /calc(.*)x(.*)->(.*)/) {
-			$x     = $1;
-			$y     = $2;
-			$vsmax = $3;
-			$x =~ s/ +//g;
-			$y =~ s/ +//g;    
-			$vsmax =~ s/ +//g;
-			$ml = qx($spec{Xmode} -x $x -y $y -r $vsmax);
-			@mode  = split(/\n/,$ml);
-			$hsmax = $mode[0];
-			$vsmax = $mode[1];
-			$ml    = $mode[2];
-			$ml    =~ /Modeline \"(.*)\" (.*)/;
-			$res   = $1;
-			$tim   = $2;
-			print "Hsync:    $hsmax Khz\n";  
-			print "Vsync:    $vsmax Hz\n";
-			print "Modeline: $res\n";
-			print "Timing:   $tim\n";
-			print "\n";
+					/^.*\[X\+([1-9]).*/  && do {
+						$id = $1;
+						$_ =~ s/\[X\+[1-9]\]/$id/g;
+					};
+	
+					/\[REMOVE\]/         && do {
+					if ($_ =~ /(.*)=.*/) {
+						$line    = $1;
+						$line    =~ s/ +//g;
+						@v       = split (/->/,$line);
+						$search  = join("->",@v);
+						%var = HRemoveValue (\%var,$search);
+					}
+					};
+				}
+				if ($_ !~ /\[REMOVE\]/) {
+					push(@ProfileData,$_);
+				}
 			}
-			last SWITCH;
-		};
+			close(FD);
+			$ProfileSize = @ProfileData;
+			$profile     = "profile";
+		}
 
-		#-----------------------------------------#
-		# see a value use the HGetValue function  #
-		# ----------------------------------------#
-		/^see/i  && do {
-			chomp($line);
-			$line      =~ s/see//; 
-			$line      =~ s/ +//g;
-			@v         = split(/->/,$line);
-			$size      = @v;
-			$ViewValue = "";
-			$ViewRef   = ""; 
-			$search    = join("->",@v);
+		if ($ProfileSize > 0) {
+		foreach (@ProfileData) {
+			# look for eventually defined variables in the
+			# profile data stream...
+			# -----------------------
+			while ($_ =~ /{(.*?)}/) {
+				$line      = $1;
+				undef $index;
+				if ($line =~ /(.*):(.*)/) {
+					$line  = $1;
+					$index = $2;
+				}
+				$line      =~ s/ +//g;
+				@v         = split(/->/,$line);
+				$search    = join ("->",@v);
+				$size      = @v;
+				$ViewValue = "";
+				$ViewRef   = "";
+				$ViewValue = HGetValue(\%var,$search);
+				$ViewValue =~ s/^ +//g;
+				$ViewValue =~ s/ +$//g;
+				if (defined $index) {
+					my @list = split (/,/,$ViewValue);
+					$ViewValue = $list[$index];
+				}
+				$_ =~ s/{.*?}/$ViewValue/;
+			}
+			# push stream data...
+			# --------------------
+			push(@plist,$_);
+		}
+		push(@plist,"exit");
+		}
 
-			$v = HGetValue(\%var,$search);
-			if ($v eq "") {
-			$ViewRef = HGetValue(\%var,$search,"GET_REF");
-			if ($ViewRef eq "") {
-				print "Value not defined\n\n";
+		# /.../
+		# read data via readline from /dev/tty or import
+		# profile data given from file
+		# ---
+		while (1) {
+			if ( $profile ne "profile" ) {
+				# /.../
+				# no profile file name specified, read from
+				# STDIN using readline
+				# ---
+				my $prompt = "SaX> ";
+				if (! defined $term) {
+					$term = Term::ReadLine->new ( "SaX Profile Mode" );
+				}
+				last unless defined ( 
+					$_ = $term->readline ($prompt) 
+				);
+				$term->addhistory($_) if /\S/;
 			} else {
-				while(($k,$v) = each(%{$ViewRef})) {
-					printf("%-15s %-3s %-30s\n",$search,"->",$k);
+				# /.../
+				# profile file contents saved in @plist
+				# read lines from list (plist)
+				# ---
+				last unless defined ( 
+					$_ = shift(@plist) 
+				);
+			}
+			s/^\s+//;
+			next if /^$/;
+			$_ = 'h' if /^\s*\?/;
+			if (/^(?:q(?:uit)?|bye|exit)$/i) {
+				last;
+			} else {
+		 
+			$line = $_;
+			SWITCH: for ($line) {
+			#-----------------------------------------#
+			# get help...                             #
+			# ----------------------------------------# 
+			/^help/i  && do {
+				help();
+				last SWITCH;
+			};
+
+			#-----------------------------------------#
+			# abort ( lost changes )...               #
+			# ----------------------------------------#
+			/^abort/i  && do {
+				print "batch mode aborted...\n";
+				$AbortBatch = "yes";
+				return(%var);
+				last SWITCH;
+			};
+
+			#-----------------------------------------#
+			# set a variable use HSetValue function   #
+			# ----------------------------------------#
+			/^(.*)=(.*)/   &&  do {
+				$key   = $1;
+				$value = $2;
+				$key   =~ s/ +//g;
+				$value =~ s/^ +//g;
+				@v     = split(/->/,$key);
+				$str   = join("->",@v);
+				%var   = HSetValue(\%var,$str,$value);
+				if ($profile ne "profile") {
+					$str =~ s/->/}{/g;
+					print "\t\033[32m<set>:\033[m\017{$str} to \"$value\"\n\n";
+				}
+				last SWITCH;
+			};
+
+			#-----------------------------------------#
+			# list the variable tree use HGet()...    #
+			# ----------------------------------------# 
+			/^list/i  &&  do {
+				@tree = CreateTreeList(\%var); 
+				if ($line =~ /(.*)\/(.*)\//) {
+					$expr = $2; 
+					@result = grep(/$expr/i,@tree);
+				} else {
+					@result = @tree;
+				}
+				foreach $i (@result) {
+					print "$i\n";
 				}
 				print "\n";
+				last SWITCH;
+			};
+	
+			#-----------------------------------------#
+			# calculate a modeline...                 #
+			# ----------------------------------------#
+			/^calc/i  && do {
+				if ($line =~ /calc(.*)x(.*)->(.*)/) {
+				$x     = $1;
+				$y     = $2;
+				$vsmax = $3;
+				$x =~ s/ +//g;
+				$y =~ s/ +//g;    
+				$vsmax =~ s/ +//g;
+				$ml = qx($spec{Xmode} -x $x -y $y -r $vsmax);
+				@mode  = split(/\n/,$ml);
+				$hsmax = $mode[0];
+				$vsmax = $mode[1];
+				$ml    = $mode[2];
+				$ml    =~ /Modeline \"(.*)\" (.*)/;
+				$res   = $1;
+				$tim   = $2;
+				print "Hsync:    $hsmax Khz\n";  
+				print "Vsync:    $vsmax Hz\n";
+				print "Modeline: $res\n";
+				print "Timing:   $tim\n";
+				print "\n";
+				}
+				last SWITCH;
+			};
+
+			#-----------------------------------------#
+			# see a value use the HGetValue function  #
+			# ----------------------------------------#
+			/^see/i  && do {
+				chomp($line);
+				$line      =~ s/see//; 
+				$line      =~ s/ +//g;
+				@v         = split(/->/,$line);
+				$size      = @v;
+				$ViewValue = "";
+				$ViewRef   = ""; 
+				$search    = join("->",@v);
+	
+				$v = HGetValue(\%var,$search);
+				if ($v eq "") {
+				$ViewRef = HGetValue(\%var,$search,"GET_REF");
+				if ($ViewRef eq "") {
+					print "Value not defined\n\n";
+				} else {
+					while(($k,$v) = each(%{$ViewRef})) {
+						printf("%-15s %-3s %-30s\n",$search,"->",$k);
+					}
+					print "\n";
+				}
+				} else {
+					printf("%-15s %-3s %-30s\n\n",$search,"=",$v);
+				}
+				last SWITCH;
+			};
 			}
-			} else {
-				printf("%-15s %-3s %-30s\n\n",$search,"=",$v);
 			}
-			last SWITCH;
-		};
-		}
 		}
 	}
 	return(%var);

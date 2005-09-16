@@ -484,7 +484,7 @@ fi
 /usr/sbin/hwupdate
 /usr/sbin/isax
 /usr/sbin/testX
-/usr/sbin/whois
+/usr/sbin/whereiam
 /usr/sbin/wmstart
 /usr/sbin/ximage
 /usr/sbin/xidle
