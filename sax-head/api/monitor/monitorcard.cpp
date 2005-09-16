@@ -216,6 +216,7 @@ void SCCMonitorCard::import ( void ) {
 		mOption -> insertItem ( io.currentKey() );
 	}
 	}
+	mOption -> sort();
 	for (; it.current(); ++it) {
 		QString opt;
 		if ( it.current()->isEmpty()) {
