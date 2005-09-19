@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Sat Sep 17 13:21:00 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 19 11:49:38 2005
 #
 # Template for monitor data
 # --------------------------
@@ -26067,6 +26067,15 @@ NOKIA:800XI  {
 }
 
 #==============================================
+# 920C
+#----------------------------------------------
+NOKIA:920C  {
+ Option=DPMS
+ Hsync=30-96
+ Vsync=50-160
+}
+
+#==============================================
 # P766DULR
 #----------------------------------------------
 OKANO:P766DULR  {
@@ -30859,6 +30868,17 @@ SAMSUNG:SYNCMASTER 400TFT (LXA41*)  {
  Option=DPMS
  Hsync=43-48
  Vsync=50-60
+}
+
+#==============================================
+# SyncMaster 406
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 406  {
+ DDC=SAM0027
+ Option=DPMS
+ Hsync=30-71
+ Resolution=1024x768
+ Vsync=50-160
 }
 
 #==============================================

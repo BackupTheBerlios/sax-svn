@@ -3,6 +3,8 @@ Thu Sep 15 12:22:27 CEST 2005 - ms@suse.de
 
 - fixed name clash for whois (#117228)
 - fixed monitor entry for Dell 2001FP (#117290)
+- added Nokia 920C monitor data to the CDB (#117638)
+- added Samsung SyncMaster 406 monitor to the CDB (#117657)
 - fixed getDualHeadProfile() method to recognize if the driver
   has changed by the user. The returned profile additionally depends
   on the driver changed by the user. Related to bug: (#113344)
