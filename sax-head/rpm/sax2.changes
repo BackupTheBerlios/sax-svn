@@ -1,6 +1,7 @@
 -------------------------------------------------------------------
 Thu Sep 15 12:22:27 CEST 2005 - ms@suse.de
 
+- implement enhancement part 3) from Bug: (#113344)
 - fixed name clash for whois (#117228)
 - fixed monitor entry for Dell 2001FP (#117290)
 - added Nokia 920C monitor data to the CDB (#117638)
@@ -12,6 +13,9 @@ Thu Sep 15 12:22:27 CEST 2005 - ms@suse.de
 - did some code cleanup, removed old tools fixed warnings
 - allow multiple profiles to be set using the option -b
 - update Identity maps for alle architectures
+- removed similarity check in detect/Monitor.pm. According to
+  some Bugs like for example #117657 this check will lead to a
+  misdetected monitor.
 
 -------------------------------------------------------------------
 Tue Sep 13 08:45:32 CEST 2005 - ms@suse.de

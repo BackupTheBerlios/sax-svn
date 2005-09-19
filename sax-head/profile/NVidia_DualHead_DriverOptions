@@ -3,10 +3,12 @@
 # identical monitors connected to the card ! Please make sure
 # this is true before using this profile
 # --------------------------------------
-Desktop -> [X] ->  CalcModelines = no
-Monitor -> [X] ->  CalcAlgorithm = XServerPool
-Device  -> [X] ->  Driver        = nvidia
-Device  -> [X] ->  Screen        = 0
+SaXMeta -> [X] ->  SAX_NO_CDB_CHECK = 1
+
+Desktop -> [X] ->  CalcModelines    = no
+Monitor -> [X] ->  CalcAlgorithm    = XServerPool
+Device  -> [X] ->  Driver           = nvidia
+Device  -> [X] ->  Screen           = 0
 
 #================================
 # setup twinview options

@@ -313,45 +313,6 @@ sub GetDDCRecord {
 	}
 	}
 	#=========================================
-	# look for a similar model...
-	#-----------------------------------------
-	$found = 0;
-	$max   = 70;
-	foreach $vendor (keys %result) {
-	if ($found) { last; }
-	foreach $name (keys %{$result{$vendor}}) {
-		my $orig = $vendor.$name;
-		my $siml = similarity ($orig,$model);
-		if ($siml >= $max) {
-			# print "+++ $vendor $name -> $siml\n";
-			@ddc = ();
-			push(@ddc,$vendor);
-			push(@ddc,$name);
-			$result{$vendor}{$name}{Hsync} =~ /(.*)-(.*)/;
-			push(@ddc,$1);
-			push(@ddc,$2);
-			$result{$vendor}{$name}{Vsync} =~ /(.*)-(.*)/;
-			push(@ddc,$1);
-			push(@ddc,$2);
-			push(@ddc,$result{$vendor}{$name}{Modeline});
-			push(@ddc,$result{$vendor}{$name}{Profile});
-			push(@ddc,$result{$vendor}{$name}{Resolution});
-			$max = $siml;
-			$found = 1;
-		}
-	}
-	}
-	if (defined $ddc[0]) {
-		if (! defined $ddc[6]) { $ddc[6] = ""; }
-		if (! defined $ddc[7]) { $ddc[7] = ""; }
-	}
-	if (! defined $ddc[8]) {
-		$ddc[8] = "";
-	}
-	if (defined $ddc[0]) {
-		return (@ddc);
-	}
-	#=========================================
 	# If ID wasn't found but detected, add it
 	#-----------------------------------------
 	if ($id ne "<undefined>") {

@@ -38,6 +38,7 @@ namespace SaX {
 #define ISAX               "/usr/sbin/isax"
 #define SYSP               "/usr/sbin/sysp"
 #define PROF               "/var/lib/sax/createPRO.pl"
+#define META               "/var/lib/sax/createMTA.pl"
 
 #define CDBDIR             "/usr/share/sax/api/data/cdb/"
 #define DATADIR            "/usr/share/sax/api/data/"
@@ -61,15 +62,16 @@ namespace SaX {
 #define SAX_SYSP           12
 #define SAX_CDB            13
 #define SAX_PROF           14
+#define SAX_META           15
 
-#define CDB_CARDS          15
-#define CDB_MONITORS       16
-#define CDB_PENS           17
-#define CDB_POINTERS       18
-#define CDB_TABLETS        19
-#define CDB_TOUCHERS       20
-#define CDB_CARDMODULES    21
-#define CDB_TABLETMODULES  22
+#define CDB_CARDS          16
+#define CDB_MONITORS       17
+#define CDB_PENS           18
+#define CDB_POINTERS       19
+#define CDB_TABLETS        20
+#define CDB_TOUCHERS       21
+#define CDB_CARDMODULES    22
+#define CDB_TABLETMODULES  23
 
 #define SYSP_MOUSE         30
 #define SYSP_KEYBOARD      31

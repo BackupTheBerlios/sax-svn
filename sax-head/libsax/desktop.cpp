@@ -283,6 +283,15 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return QString();
 	}
+	//===================================
+	// Check SaXMeta data...
+	//-----------------------------------
+	QDict<QString> metaData = getMetaData();
+	if (metaData["SAX_NO_CDB_CHECK"]) {
+		QString driver  = mCard -> getItem ("Driver");
+		QString profile = getDriverOptionsDualHeadProfile ( driver );
+		return profile;
+	}
 	//====================================
 	// check special laptop case
 	//------------------------------------
@@ -352,6 +361,21 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	//! to a DualHead profile the method will return true
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return false;
+	}
+	//===================================
+	// Check SaXMeta data...
+	//-----------------------------------
+	QDict<QString> metaData = getMetaData();
+	if (metaData["SAX_NO_DUAL_MODE"]) {
+		return false;
+	}
+	if (metaData["SAX_NO_CDB_CHECK"]) {
+		QString driver  = mCard -> getItem ("Driver");
+		QString profile = getDriverOptionsDualHeadProfile ( driver );
+		if (! profile.isEmpty()) {
+			return true;
+		}
 		return false;
 	}
 	//====================================
@@ -1353,6 +1377,11 @@ QString SaXManipulateDesktop::calculateModeline (
 QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 	const QString& driver
 ) {
+	// .../
+	//! This private function assigns a DriverOptions profile
+	//! to the current driver. If there is no mapping possible
+	//! an empty string is returned
+	// ----
 	QString result;
 	if ((driver == "i810") || (driver == "i915")) {
 		QTextOStream (&result)
@@ -1371,5 +1400,25 @@ QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 			<< PROFILE_DIR << "FGLRX_DualHead_DriverOptions";
 	}
 	return result;
+}
+//====================================
+// getMetaData
+//------------------------------------
+QDict<QString> SaXManipulateDesktop::getMetaData ( void ) {
+	// .../
+	//! This private function returns the dictionary asociated
+	//! with the SaXMeta data used in profiles. The data is used
+	//! internally only and affects the behaviour of the methods
+	//! isDualHeadCard and getDualHeadProfile
+	//! ----
+	QString cardID;
+	QTextOStream (&cardID) << mDesktopID;
+	QList<char> metaOptions;
+	metaOptions.append ( "-c" );
+	metaOptions.append ( cardID.ascii() );
+	SaXProcess* proc = new SaXProcess ();
+	proc->start ( metaOptions , SAX_META );
+	QDict<QString> metaData = proc->getCurrentTable();
+	return metaData;
 }
 } // end namespace

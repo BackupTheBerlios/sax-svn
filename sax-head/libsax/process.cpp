@@ -55,6 +55,9 @@ void SaXProcess::start ( QList<char> args, int prog ) {
 		case SAX_PROF:
 			mProc -> addArgument ( PROF );
 		break;
+		case SAX_META:
+			mProc -> addArgument ( META );
+		break;
 		default:
 			mProc -> addArgument ( ISAX );
 		break;
@@ -75,6 +78,9 @@ void SaXProcess::start ( QList<char> args, int prog ) {
 			storeDataSysp();
 		break;
 		case SAX_PROF:
+			storeData();
+		break;
+		case SAX_META:
 			storeData();
 		break;
 		default:

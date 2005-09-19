@@ -1,11 +1,13 @@
 # /.../
 # Multihead profile for Quadro4 cards
 # ---------------------------------------------
-Desktop -> [X] ->  CalcModelines = no
-Monitor -> [X] ->  CalcAlgorithm = XServerPool
-Device  -> [X] ->  Driver        = nvidia
-Device  -> [X] ->  Screen        = 0
-Device  -> [X] ->  Option        = IgnoreEDID
+SaXMeta -> [X] ->  SAX_NO_DUAL_MODE   = 1
+
+Desktop -> [X] ->  CalcModelines      = no
+Monitor -> [X] ->  CalcAlgorithm      = XServerPool
+Device  -> [X] ->  Driver             = nvidia
+Device  -> [X] ->  Screen             = 0
+Device  -> [X] ->  Option             = IgnoreEDID
 
 # new device for Screen 1
 # ------------------------
