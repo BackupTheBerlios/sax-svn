@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 19 11:49:38 2005
+# Author: Marcus Schaefer <sax@suse.de>, Tue Sep 20 11:44:58 2005
 #
 # Template for monitor data
 # --------------------------
@@ -39077,6 +39077,15 @@ VIEWSONIC:VPD150  {
  Option=DPMS
  Hsync=24-70
  Vsync=50-85
+}
+
+#==============================================
+# VX 800
+#----------------------------------------------
+VIEWSONIC:VX 800  {
+ Option=DPMS
+ Hsync=30-83
+ Vsync=50-75
 }
 
 #==============================================
