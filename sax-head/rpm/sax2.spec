@@ -132,7 +132,7 @@ Authors:
 %package -n sax2-libsax
 Version:      7.1
 Release:      18
-Requires:     sax2-tools qt3 fvwm2 tightvnc sax2
+Requires:     sax2-tools qt3 fvwm2 tightvnc sax2 855resolution
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
 Provides:     sax2:/usr/%{_lib}/libsax.so

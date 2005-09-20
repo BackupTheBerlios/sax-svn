@@ -34,6 +34,8 @@ sub createXOrgConfig {
 		qx (cat $spec{CDir}/keyboard | grep -v '^0' >> $spec{CDir}/input);
 		qx (mv  $spec{CDir}/keyboard.new $spec{CDir}/keyboard);
 	}
+	my $patchBIOS = 0;
+	my $BIOSData  = "ok";
 	my @configFile = (
 		"card",
 		"desktop",
@@ -85,6 +87,13 @@ sub createXOrgConfig {
 				my $line = sprintf (" %s %-20s =     %s\n",
 					$list[0],$list[1],$list[2]
 				);
+				if ($list[2] =~ /^i810 *$/) {
+					$patchBIOS=1;
+				}
+				if ($list[1] =~ /^Modes:16 *$/) {
+					my @reslist = split (/,/,$list[2]);
+					$BIOSData = shift (@reslist);
+				}
 				print $api $line;
 			}
 			print $api "\}\n\n";
@@ -92,6 +101,11 @@ sub createXOrgConfig {
 		$handle->close;
 	}
 	$api->close();
+	if ($patchBIOS == 1) {
+		return $BIOSData;
+	} else {
+		return "ok";
+	}
 }
 
 
@@ -99,4 +113,21 @@ sub createXOrgConfig {
 # Run... 
 #-------------------------------------
 init();
-createXOrgConfig();
+my $patchBIOS = createXOrgConfig();
+if ($patchBIOS ne "ok") {
+	#=====================================
+	# patching bios using 855resolution
+	#-------------------------------------
+	my $tool = "/usr/sbin/855resolution";
+	if ( -f $tool ) {
+		my @xy = split (/x/,$patchBIOS);
+		my $result = qx ($tool 3c $xy[0] $xy[1] 2>&1);
+		my $args = "3c $xy[0] $xy[1]";
+		my $key  = "VIDEOBIOS_PARAMETERS";
+		my $file = "/etc/sysconfig/videobios";
+		if (-f $file) {
+			qx (cat $file | sed -e s!$key=.*!$key=\\""$args"\\"! > $file.tmp);
+			qx (mv $file.tmp $file);
+		}
+	}
+}
