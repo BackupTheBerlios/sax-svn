@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Sep 20 11:44:58 2005
+# Author: Marcus Schaefer <sax@suse.de>, Wed Sep 21 10:44:07 2005
 #
 # Template for monitor data
 # --------------------------
@@ -9318,6 +9318,18 @@ DELL:2001FP  {
  Hsync=31-80
  Resolution=1600x1200
  Vsync=56-60
+}
+
+#==============================================
+# 2405 FPW
+#----------------------------------------------
+DELL:2405 FPW  {
+ DDC=DELA010
+ Option=DPMS
+ Hsync=30-81
+ Modeline="1920x1200" 154.00 1920 1976 2008 2080 1200 1203 1209 1235 +hsync +vsync
+ Resolution=1920x1200
+ Vsync=56-76
 }
 
 #==============================================
