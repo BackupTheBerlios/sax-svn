@@ -10,7 +10,9 @@ Device  -> [X]   ->  Screen           = 0
 
 # new device for Screen 1
 # ------------------------
-Device  -> [X+1] ->  BusID            = {Device -> [X] -> BusID}
+$BusID = Device -> [X] -> BusID
+
+Device  -> [X+1] ->  BusID            = ${BusID}
 Device  -> [X+1] ->  VendorName       = Matrox
 Device  -> [X+1] ->  Identifier       = Device[[X+1]]
 Device  -> [X+1] ->  BoardName        = MGA G400 AGP

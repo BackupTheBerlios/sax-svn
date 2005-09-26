@@ -11,12 +11,12 @@
 # don't want to create a configuration mix with radeon/fglrx drivers,
 # which simply doesn't work.
 
-Device  -> [X+1] = [REMOVE]
-Screen  -> [X+1] = [REMOVE]
-Monitor -> [X+1] = [REMOVE]
+!remove Device  -> [X+1]
+!remove Screen  -> [X+1]
+!remove Monitor -> [X+1]
 
-ServerLayout -> all -> Screen -> 1 = [REMOVE]
-ServerLayput -> all -> Screen -> 0 -> top    =
-ServerLayout -> all -> Screen -> 0 -> bottom =
-ServerLayout -> all -> Screen -> 0 -> left   =
-ServerLayout -> all -> Screen -> 0 -> right  =
+!remove ServerLayout -> all -> Screen -> 1
+ServerLayput -> all -> Screen -> 0 -> top    = 
+ServerLayout -> all -> Screen -> 0 -> bottom = 
+ServerLayout -> all -> Screen -> 0 -> left   = 
+ServerLayout -> all -> Screen -> 0 -> right  = 

@@ -66,10 +66,12 @@ LC             = LC_MESSAGES
 
 all:
 	#============================================
-	# building config parser and system profiler
+	# building parsers and system profiler
 	#--------------------------------------------
 	${MAKE} -C ./parse -f Makefile.Linux all
+	${MAKE} -C ./spp   -f Makefile.swig  all
 	${MAKE} -C ./parse all
+	${MAKE} -C ./spp   all
 	${MAKE} -C ./sysp  all
 
 	#============================================
@@ -118,6 +120,11 @@ install:
 	# install X11 parser...
 	#--------------------------------------------
 	( cd parse && make DESTDIR=${buildroot} install_vendor )
+
+	#============================================
+	# install SaX Profile parser...
+	#--------------------------------------------
+	( cd spp && make DESTDIR=${buildroot} install_vendor )
 
 	#============================================
 	# install language bindings...

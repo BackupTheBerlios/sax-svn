@@ -4,9 +4,15 @@
 # ---------------------------------------------
 SaXMeta -> [X] ->  SAX_NO_CDB_CHECK = 1
 
-Device  -> [X] ->  Raw -> 20 -> Option = "Mode2" "{Screen->[X]->Depth->16->Modes:0}"
-Device  -> [X] ->  Raw -> 21 -> Option = "HSync2" "{Monitor->[X]->HorizSync}"
-Device  -> [X] ->  Raw -> 22 -> Option = "VRefresh2" "{Monitor->[X]->VertRefresh}"
+$Modes       = Screen  -> [X] -> Depth -> 16 -> Modes
+$HorizSync   = Monitor -> [X] -> HorizSync
+$VertRefresh = Monitor -> [X] -> VertRefresh
+$VendorName  = Monitor -> [X] -> VendorName
+$ModelName   = Monitor -> [X] -> ModelName
+
+Device  -> [X] ->  Raw -> 20 -> Option = "Mode2" "${Modes[0]}"
+Device  -> [X] ->  Raw -> 21 -> Option = "HSync2" "${HorizSync}"
+Device  -> [X] ->  Raw -> 22 -> Option = "VRefresh2" "${VertRefresh}"
 Device  -> [X] ->  Raw -> 23 -> Option = "DesktopSetup" "Clone"
 Device  -> [X] ->  Raw -> 24 -> Option = "ForceMonitors" "auto,crt1"
 
@@ -15,9 +21,9 @@ Device  -> [X] ->  Raw -> 24 -> Option = "ForceMonitors" "auto,crt1"
 #--------------------------------
 Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "LeftOf"
-Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "{Monitor->[X]->HorizSync}"
-Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "{Monitor->[X]->VertRefresh}"
-Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "{Screen->[X]->Depth->16->Modes:0}"
+Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "${HorizSync}"
+Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "${VertRefresh}"
+Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "${Modes[0]}"
 Device  -> [X] -> Raw -> 30 -> Option = "SaXDualMode" "Clone"
-Device  -> [X] -> Raw -> 31 -> Option = "SaXDualMonitorVendor" "{Monitor->[X]->VendorName}"
-Device  -> [X] -> Raw -> 32 -> Option = "SaXDualMonitorModel" "{Monitor->[X]->ModelName}"
+Device  -> [X] -> Raw -> 31 -> Option = "SaXDualMonitorVendor" "${VendorName}"
+Device  -> [X] -> Raw -> 32 -> Option = "SaXDualMonitorModel" "${ModelName}"
