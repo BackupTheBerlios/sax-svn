@@ -66,7 +66,7 @@ sub init {
 		"device|d=i"    => \$ProfileDevice, 
 		"ycp|y"         => \$PrintYCP,
 		"plusycp"       => \$PlusYCP,
-		"binary|b"      => \$ImportBinary,
+		"binary|b:s"    => \$ImportBinary,
 		"help|h"        => \&usage,
 		"<>"            => \&usage
 	);
@@ -194,6 +194,9 @@ sub ImportConfig {
 	# file because --binary is set. We will include the SaX2
 	# written binary version of the detection information
 	# ----------------------------------------------------- 
+	if ($ImportBinary ne "") {
+		$init{BinaryFile} = $ImportBinary;
+	}
 	if (! -s $init{BinaryFile}) {
 		die "ISaX: could not import file: $init{BinaryFile}";
 	}

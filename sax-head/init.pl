@@ -20,10 +20,9 @@ use HashMap;
 use FileHandle;
 use SPPParse;
 
-#==================================================
-# this is the global var hash which build the 
-# fundamental basics of the whole configuration
-#--------------------------------------------------
+#==========================================
+# Globals
+#------------------------------------------
 my %var;                # hold configuration parameter
 my %spec;               # hold specifications for init.pl
 my $StartBatchMode;     # option variable: start batch mode y/n
@@ -38,27 +37,23 @@ my $CardNumber;         # option variable: card to use
 my $UseGPM;             # option variable: use gpm as repeater
 my $MouseDevice;        # option variable: core pointer device
 my $MouseProtocol;      # option variable: core pointer protocol
-
-#my @ProfileAddSections; # profile add section list
-#my @ProfileData;        # profile data
-#my $ProfileSize;        # size of profile
-#my $AbortBatch;         # abort batch mode
-#my $ViewValue;          # Tree view
-#my $ViewRef;            # Tree view reference
-
-my $haveServer;         # Is there a server for later access
-my $dpy      = ":0.0";  # display to use
-
-
-my $Quiet;              # answer questions with [yes|no] [3D...]
+my $Quiet = 1;          # answer questions with [yes|no] [3D...]
 my $HWScanNeeded = 1;   # indicate if scan(),detect() call is needed
 my $logHandle;          # log handler
 my $D3Answer = "no";    # answer to the 3D question
+my $haveServer;         # Is there a server for later access
+my $dpy      = ":0.0";  # display to use
 
+#==========================================
+# Globals
+#------------------------------------------
 our %mop;               # monitor profile hash
 our %idp;               # input device profile hash
 our %xdp;               # X11 driver profile hash
 
+#==========================================
+# Call init...
+#------------------------------------------
 init();
 
 #==========================================
@@ -425,7 +420,7 @@ sub init {
 			foreach my $id (keys %autoProfile) {
 				my @profileList = split (/,/,$autoProfile{$id});
 				foreach my $profile (@profileList) {
-					prepareProfile ( $spec{ProfileDir}.$profile );
+					prepareProfile ( $spec{ProfileDir}.$profile,$id );
 				}
 				$include = 1;
 			}
@@ -554,7 +549,7 @@ sub scan {
 	$querystr = "mouse";
 	$subject  = "Sysp: Mouse detection data";
 	$result   = callSysp ( $querystr );
-	Logger ( $subject."\n".$result.",".$logHandle );
+	Logger ( $subject."\n".$result,$logHandle );
 	Debug  ( $result );
 
 	#==========================================
@@ -563,7 +558,7 @@ sub scan {
 	$querystr = "keyboard";
 	$subject  = "Sysp: Keyboard detection data";
 	$result   = callSysp ( $querystr );
-	Logger ( $subject."\n".$result.",".$logHandle );
+	Logger ( $subject."\n".$result,$logHandle );
 	Debug  ( $result );
 
 	#==========================================
@@ -587,7 +582,7 @@ sub scan {
 	if ($result =~ /.*Flag.*:.*3D.*/) {
 		$D3Answer = "yes";
 	}
-	Logger ( $subject."\n".$result.",".$logHandle );
+	Logger ( $subject."\n".$result,$logHandle );
 	my $serverLines = split("\n",$result);
 	if ($serverLines < 3) {
 		die $result;
@@ -605,7 +600,7 @@ sub scan {
 		$result = qx ($spec{Sysp} -s $querystr);
 	}
 	chomp $result;
-	Logger ( $subject."\n".$result.",".$logHandle );
+	Logger ( $subject."\n".$result,$logHandle );
 	my $xstuffLines = split("\n",$result);
 	if ($xstuffLines < 3) {
 		die $result;

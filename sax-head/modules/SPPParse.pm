@@ -53,13 +53,13 @@ sub prepareProfile {
 	}
 	my $basename = qx (basename $profile);
 	if (-f "$profile.sh") {
-		print "SPPParse: calling profile script: [$card]::$basename";
+		print "SPP: calling device [$card] profile script: $basename";
 		qx ($profile.sh);
 		$profile = "$profile.tmp";
 	}
-	print "SPPParse: including profile: [$card]::$basename";
+	print "SPP: prepare device [$card] profile: $basename";
 	open (FD,$profile) ||
-		die "SPPParse: could not open file: $profile";
+		die "SPP: could not open file: $profile";
 	while (my $line = <FD>) {
 		chomp ($line);
 		if ($line =~ /^#/) {
@@ -110,7 +110,7 @@ sub prepareNewSections {
 	my %data = %{$_[0]};
 	@newSections = unique (@newSections);
 	foreach my $newsection (@newSections) {
-		print "SPPParse: profile add new section(s) -> moving: $newsection\n";
+		print "SPP: profile will add new section(s) -> moving: $newsection\n";
 		%data = HMoveBranch (\%data,$newsection);
 	}
 	return %data;
@@ -126,6 +126,7 @@ sub includeProfile {
 	# and return a new data dictionary
 	# ---
 	my %data = %{$_[0]};
+	my $info = $_[1];
 	if (@profileData == 0) {
 		#==========================================
 		# no profile information use shell
@@ -138,9 +139,10 @@ sub includeProfile {
 		# include data from @profileData
 		#------------------------------------------
 		%data = prepareNewSections (\%data);
+		print "SPP: including prepared profile(s)...\n";
 		foreach (@profileData) {
 		if ($parser->parseLine ($_)) {
-			%data = handleAction (\%data,$parser->getAction());
+			%data = handleAction (\%data,$parser->getAction(),$info);
 		}
 		}
 	}
@@ -159,11 +161,20 @@ sub handleAction {
 	# ---
 	my %data  = %{$_[0]};
 	my @parse = @{$_[1]};
-
+	my %info  = {};
+	if (defined $_[2]) {
+		%info  = %{$_[2]};
+	} else {
+		undef %info;
+	}
 	#==========================================
 	# update variable hash
 	#------------------------------------------
-	updateVariableHash ( \%data );
+	if (defined %info) {
+		updateVariableHash ( \%info );
+	} else {
+		updateVariableHash ( \%data );
+	}
 
 	#==========================================
 	# check if action is needed...
