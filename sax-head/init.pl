@@ -37,10 +37,10 @@ my $CardNumber;         # option variable: card to use
 my $UseGPM;             # option variable: use gpm as repeater
 my $MouseDevice;        # option variable: core pointer device
 my $MouseProtocol;      # option variable: core pointer protocol
-my $Quiet = 1;          # answer questions with [yes|no] [3D...]
 my $HWScanNeeded = 1;   # indicate if scan(),detect() call is needed
 my $logHandle;          # log handler
 my $D3Answer = "no";    # answer to the 3D question
+my $Quiet = $D3Answer;  # answer questions with [yes|no] [3D...]
 my $haveServer;         # Is there a server for later access
 my $dpy      = ":0.0";  # display to use
 

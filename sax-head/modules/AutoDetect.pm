@@ -45,7 +45,7 @@ sub GetQuery {
 
 	$QueryStatus = 0;
 
-	$result = qx($spec{Sysp} -q $querystr;echo);
+	$result = qx ($spec{Sysp} -q $querystr);
 	if ($result =~ /.*no information.*/i) {
 		$QueryStatus = -1; return; 
 	}
@@ -121,7 +121,7 @@ sub GetHotQuery {
 
 	$QueryStatus = 0;
 
-	$result = qx($spec{Sysp} -q $querystr;echo);
+	$result = qx ($spec{Sysp} -q $querystr);
 	if ($result =~ /.*no information.*/i) {
 		$QueryStatus = -1; return;
 	} 
