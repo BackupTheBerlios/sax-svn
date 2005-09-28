@@ -292,6 +292,16 @@ IdentifyDevice (
 			i = fgroup[FLAG_3D];
 		}
 		} else {
+		#if 0
+		// in former times this code was used to display a X11 based
+		// message box to ask the user if he wants to enable 3D. we are
+		// omitting the code of this if/else statement completely by
+		// setting the answer to this question with the sysp option
+		// [-A] within init.pl. So basically this code is never reached.
+		// The current implementation therefore doesn't support displaying
+		// a special 3D message box and that's the reason why the following
+		// block is disabled
+		// ---
 		// ask me using X11 [Qt interface]...
 		str optdrv = "--driver";
 		str opt3d  = "--3d";
@@ -315,6 +325,7 @@ IdentifyDevice (
 		if (atoi(code.c_str()) == 0) {
 			i = fgroup[FLAG_3D];
 		}
+		#endif
 		}
 	}
 	// handle other flags...

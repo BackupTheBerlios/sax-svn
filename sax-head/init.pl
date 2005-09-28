@@ -570,13 +570,8 @@ sub scan {
 		$result   = qx 
 		($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList -A $Quiet);
 	} else {
-		if ($haveServer == 1) {
-			$result   = qx
-			($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList -x);
-		} else {
-			$result   = qx 
-			($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList);
-		}
+		$result   = qx 
+		($spec{Sysp} -s $querystr -C $CardNumber -M $ModuleList);
 	}
 	chomp $result;
 	if ($result =~ /.*Flag.*:.*3D.*/) {
