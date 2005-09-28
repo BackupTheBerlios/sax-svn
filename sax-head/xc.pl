@@ -87,6 +87,7 @@ sub main {
 	my @part8;    # configuration part 8
 	my @part9;    # configuration part 9
 	my @part10;   # configuration part 10
+	my @part11;   # configuration part 11
 
 	my $disp       = ":0.0";
 	my $haveServer = 0;
@@ -129,6 +130,7 @@ sub main {
 	@part8  = CreateScreenSection (\%var);        
 	@part9  = CreateServerLayoutSection (\%var);  
 	@part10 = CreateDRISection ();                
+	@part11 = CreateExtensionsSection (\%var);
 
 	# write new AutoConf file...
 	# ----------------------------
@@ -144,6 +146,7 @@ sub main {
 	print HANDLE @part8;  print HANDLE "\n";
 	print HANDLE @part9;  print HANDLE "\n";
 	print HANDLE @part10; print HANDLE "\n";
+	print HANDLE @part11; print HANDLE "\n";
 	close(HANDLE);
 
 	if (defined $EnableAutoConf) {

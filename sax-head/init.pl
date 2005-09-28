@@ -255,6 +255,11 @@ sub init {
 	$var{Device}{0}{BusID}                      = "";
 
 	#==========================================
+	# Extensions specification                     
+	#------------------------------------------
+	$var{Extensions}{0}{Composite}              = "on";
+
+	#==========================================
 	# Screen specification                     
 	#------------------------------------------
 	$var{Screen}{0}{Identifier}                 = "Screen[0]";
