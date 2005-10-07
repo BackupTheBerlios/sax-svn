@@ -42,6 +42,9 @@
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString* val = new QString (*it.current());
+		if (! val->ascii()) {
+			val = new QString("");
+		}
 		svs[i] = sv_newmortal();
 		hv_store(hash,
 			key.ascii(), key.length(),
