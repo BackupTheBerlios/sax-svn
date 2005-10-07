@@ -67,7 +67,7 @@ SCCMouseDisplay::SCCMouseDisplay (
 		mText["EmulateWheel"],wheelBox
 	);
 	wheelBox -> setSpacing ( 10 );
-	mEmulateWheelButton = new QSpinBox ( 4,10,1,wheelBox );
+	mEmulateWheelButton = new QSpinBox ( 1,10,1,wheelBox );
 	// third group with mouse test field
 	splitBox -> setSpacing ( 15 );
 	QVBox* rightBox = new QVBox ( splitBox );

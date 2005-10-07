@@ -248,9 +248,13 @@ void ScanXStuff::Scan (void) {
 	if (handle) {
 		handle.close();
 		fb = FbGetData();
-		sprintf(fbstring,"\"%dx%d\" %.2f %s %s %s",
-			fb->x,fb->y,fb->clock,fb->ht,fb->vt,fb->flags
-		);
+		if ((fb) && (fb->x >= 800) && (fb->y >= 600)) {
+			sprintf(fbstring,"\"%dx%d\" %.2f %s %s %s",
+				fb->x,fb->y,fb->clock,fb->ht,fb->vt,fb->flags
+			);
+		} else {
+			fb = NULL;
+		}
 	}
 	// ...
 	// merge all the data. If only one card is detected
@@ -311,9 +315,9 @@ void ScanXStuff::Scan (void) {
 			stuff[i].vesa      = parse[mapnr].modes;
 		} else {
 			stuff[i].vesacount = -1;
-			stuff[i].vesa[0].x = 640;
-			stuff[i].vesa[0].y = 480;
-			stuff[i].vesa[0].hsync = 25;
+			stuff[i].vesa[0].x = 800;
+			stuff[i].vesa[0].y = 600;
+			stuff[i].vesa[0].hsync = 38;
 			stuff[i].vesa[0].vsync = 60;
 		}
 
@@ -332,9 +336,9 @@ void ScanXStuff::Scan (void) {
 			ddc = 0;
 		} else if ((stuff[i].vesacount == -1) && (fb == NULL)) {
 			stuff[i].vesacount = 1;
-			stuff[i].vesa[0].x = 640;
-			stuff[i].vesa[0].y = 480;
-			stuff[i].vesa[0].hsync = 25;
+			stuff[i].vesa[0].x = 800;
+			stuff[i].vesa[0].y = 600;
+			stuff[i].vesa[0].hsync = 38;
 			stuff[i].vesa[0].vsync = 60;
 		}
 		}
@@ -371,26 +375,25 @@ void ScanXStuff::Scan (void) {
 			// check if the detected resolutions are part
 			// of the following list
 			// ---
-			XMode vesaStandard[16];
-			vesaStandard[0].x  = 640;  vesaStandard[0].y  = 480;
-			vesaStandard[1].x  = 800;  vesaStandard[1].y  = 600;
-			vesaStandard[2].x  = 1024; vesaStandard[2].y  = 768;
-			vesaStandard[3].x  = 1152; vesaStandard[3].y  = 864;
-			vesaStandard[4].x  = 1280; vesaStandard[4].y  = 768;
-			vesaStandard[5].x  = 1280; vesaStandard[5].y  = 800;
-			vesaStandard[6].x  = 1280; vesaStandard[6].y  = 960;
-			vesaStandard[7].x  = 1280; vesaStandard[7].y  = 1024;
-			vesaStandard[8].x  = 1440; vesaStandard[8].y  = 900;
-			vesaStandard[9].x  = 1400; vesaStandard[9].y  = 1050;
-			vesaStandard[10].x = 1600; vesaStandard[10].y = 1000;
-			vesaStandard[11].x = 1600; vesaStandard[11].y = 1024;
-			vesaStandard[12].x = 1600; vesaStandard[12].y = 1200;
-			vesaStandard[13].x = 1680; vesaStandard[13].y = 1050;
-			vesaStandard[14].x = 1900; vesaStandard[14].y = 1200;
-			vesaStandard[15].x = 1920; vesaStandard[15].y = 1200;
+			XMode vesaStandard[15];
+			vesaStandard[0].x  = 800;  vesaStandard[0].y  = 600;
+			vesaStandard[1].x  = 1024; vesaStandard[1].y  = 768;
+			vesaStandard[2].x  = 1152; vesaStandard[2].y  = 864;
+			vesaStandard[3].x  = 1280; vesaStandard[3].y  = 768;
+			vesaStandard[4].x  = 1280; vesaStandard[4].y  = 800;
+			vesaStandard[5].x  = 1280; vesaStandard[5].y  = 960;
+			vesaStandard[6].x  = 1280; vesaStandard[6].y  = 1024;
+			vesaStandard[7].x  = 1440; vesaStandard[7].y  = 900;
+			vesaStandard[8].x  = 1400; vesaStandard[8].y  = 1050;
+			vesaStandard[9].x  = 1600; vesaStandard[9].y  = 1000;
+			vesaStandard[10].x = 1600; vesaStandard[10].y = 1024;
+			vesaStandard[11].x = 1600; vesaStandard[11].y = 1200;
+			vesaStandard[12].x = 1680; vesaStandard[12].y = 1050;
+			vesaStandard[13].x = 1900; vesaStandard[13].y = 1200;
+			vesaStandard[14].x = 1920; vesaStandard[14].y = 1200;
 	
 			int isStandard = false;
-			for (int i=0;i<16;i++) {
+			for (int i=0;i<15;i++) {
 			if ((mode.x == vesaStandard[i].x)&&(mode.y == vesaStandard[i].y)) {
 				isStandard = true;
 				break;
