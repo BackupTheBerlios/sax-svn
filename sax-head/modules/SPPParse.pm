@@ -213,6 +213,12 @@ sub handleAction {
 		return %data;
 	}
 	#==========================================
+	# handle special value keys
+	#------------------------------------------
+	if ($action =~ /__VESA__/) {
+		$action =~ s/__VESA__/--> VESA/g;
+	}
+	#==========================================
 	# want to set a value
 	#------------------------------------------
 	%data = actionDoSetValue ( \%data,$keytag,$action );
