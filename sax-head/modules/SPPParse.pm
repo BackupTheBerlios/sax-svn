@@ -161,7 +161,7 @@ sub handleAction {
 	# ---
 	my %data  = %{$_[0]};
 	my @parse = @{$_[1]};
-	my %info  = {};
+	my %info  = ();
 	if (defined $_[2]) {
 		%info  = %{$_[2]};
 	} else {
@@ -193,7 +193,7 @@ sub handleAction {
 		$rcount = 0;
 		$rspace = 0;
 		@rsteps = ();
-		%rhash  = {};
+		%rhash  = ();
 		$key    = "";
 		actionReadTree ( \%data,$keytag );
 		return %data;
