@@ -679,8 +679,15 @@ void CountScreens (Display *dpy) {
 	if ( XineramaIsActive(dpy)) {
 		screens = XineramaQueryScreens(dpy, &s_num);
 		scr_count = s_num;
-		for (count = 0;count < scr_count; count++) {
-		scr[count] = screens[count].screen_number;
+		for (count = 0;count < s_num; count++) {
+			if (count > 0) {
+			if ((screens[count].x_org == 0) && (screens[count].y_org == 0)) {
+				// is cloned; do not handle that screen
+				scr_count--;
+				continue;
+			}
+			}
+			scr[count] = screens[count].screen_number;
 		}
 	} else {
 		scr_count = ScreenCount(dpy);
