@@ -1,5 +1,8 @@
-# Fire GL-X Profile
-# ------------------
+# /.../
+# FireGL profile applied as driver profile to the fglrx
+# driver to setup all available options of this driver
+# -------------------------------------------------------
+Device  -> [X] ->  Driver = fglrx
 Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
 
