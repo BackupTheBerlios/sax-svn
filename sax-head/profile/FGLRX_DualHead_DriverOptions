@@ -4,15 +4,9 @@
 # ---------------------------------------------
 SaXMeta -> [X] ->  SAX_NO_CDB_CHECK = 1
 
-$Modes       = Screen  -> [X] -> Depth -> 16 -> Modes
-$HorizSync   = Monitor -> [X] -> HorizSync
-$VertRefresh = Monitor -> [X] -> VertRefresh
-$VendorName  = Monitor -> [X] -> VendorName
-$ModelName   = Monitor -> [X] -> ModelName
-
-Device  -> [X] ->  Raw -> 20 -> Option = "Mode2" "${Modes[0]}"
-Device  -> [X] ->  Raw -> 21 -> Option = "HSync2" "${HorizSync}"
-Device  -> [X] ->  Raw -> 22 -> Option = "VRefresh2" "${VertRefresh}"
+Device  -> [X] ->  Raw -> 20 -> Option = "Mode2" "1024x768"
+Device  -> [X] ->  Raw -> 21 -> Option = "HSync2" "31-48"
+Device  -> [X] ->  Raw -> 22 -> Option = "VRefresh2" "50-60"
 Device  -> [X] ->  Raw -> 23 -> Option = "DesktopSetup" "Clone"
 Device  -> [X] ->  Raw -> 24 -> Option = "ForceMonitors" "auto,crt1"
 
@@ -21,9 +15,9 @@ Device  -> [X] ->  Raw -> 24 -> Option = "ForceMonitors" "auto,crt1"
 #--------------------------------
 Device  -> [X] -> Option = SaXDualHead
 Device  -> [X] -> Raw -> 26 -> Option = "SaXDualOrientation" "LeftOf"
-Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "${HorizSync}"
-Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "${VertRefresh}"
-Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "${Modes[0]}"
+Device  -> [X] -> Raw -> 27 -> Option = "SaXDualHSync" "31-48"
+Device  -> [X] -> Raw -> 28 -> Option = "SaXDualVSync" "50-60"
+Device  -> [X] -> Raw -> 29 -> Option = "SaXDualResolution" "1024x768"
 Device  -> [X] -> Raw -> 30 -> Option = "SaXDualMode" "Clone"
-Device  -> [X] -> Raw -> 31 -> Option = "SaXDualMonitorVendor" "${VendorName}"
-Device  -> [X] -> Raw -> 32 -> Option = "SaXDualMonitorModel" "${ModelName}"
+Device  -> [X] -> Raw -> 31 -> Option = "SaXDualMonitorVendor" "__VESA__"
+Device  -> [X] -> Raw -> 32 -> Option = "SaXDualMonitorModel" "1024X768@60HZ"
