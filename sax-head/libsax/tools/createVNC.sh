@@ -15,4 +15,4 @@ VNCDIR="/root/.vnc"
 if [ ! -d $VNCDIR ];then
     mkdir -p $VNCDIR && chmod 700 $VNCDIR
 fi
-echo $1 | vncpasswd -f > $VNCDIR/passwd
+echo $1 | /usr/sbin/vncpasswd > $VNCDIR/passwd

@@ -112,7 +112,7 @@ Authors:
 %package -n sax2-gui
 Version:      1.7
 Release:      18
-Requires:     netpbm sax2-tools qt3 fvwm2 tightvnc sax2
+Requires:     netpbm sax2-tools qt3 fvwm2 sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/sbin/xapi
@@ -132,7 +132,7 @@ Authors:
 %package -n sax2-libsax
 Version:      7.1
 Release:      18
-Requires:     sax2-tools qt3 fvwm2 tightvnc sax2 855resolution
+Requires:     sax2-tools qt3 fvwm2 sax2 855resolution
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
 Provides:     sax2:/usr/%{_lib}/libsax.so
@@ -496,6 +496,7 @@ fi
 /usr/sbin/xmset
 /usr/sbin/xquery
 /usr/sbin/xupdate
+/usr/sbin/vncpasswd
 /usr/sbin/xw
 #=================================================
 # SaX-Ident file list...  

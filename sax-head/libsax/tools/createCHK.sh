@@ -2,7 +2,8 @@
 # Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Marcus Schaefer <sax@suse.de>, 2005
-# libsax script: create VNC password using the vncpasswd program
+# libsax script: call the given profile script with param <check>
+# to find out if this is a dualhead script or not
 # --
 #
 # CVS ID:
