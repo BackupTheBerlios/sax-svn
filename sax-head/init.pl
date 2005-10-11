@@ -139,7 +139,6 @@ sub init {
 	$spec{Sysp}                = "/usr/sbin/sysp";
 	$spec{LogFile}             = "/var/log/SaX.log";
 	$spec{Xmode}               = "/usr/sbin/xmode";
-	$spec{Xmset}               = "/usr/sbin/xmset";
 	$spec{RcConfig}            = "/etc/rc.config";
 	$spec{RcSysConfigLang}     = "/etc/sysconfig/language";
 	$spec{SysConfig}           = "/etc/sysconfig";
@@ -149,7 +148,6 @@ sub init {
 	$spec{Corner}              = "/usr/sbin/corner";
 	$spec{MD5}                 = "/usr/bin/md5sum";
 	$spec{ISaX}                = "/usr/sbin/isax";
-	$spec{HwUpdate}            = "/usr/sbin/hwupdate";
 
 	#==========================================
 	# check if we have a card, if not exit 
