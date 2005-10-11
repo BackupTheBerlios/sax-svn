@@ -481,7 +481,6 @@ fi
 %doc %{_mandir}/man1/xkbctrl.1.gz
 %doc %{_mandir}/man1/xkbset.1.gz
 %doc %{_mandir}/man1/xmode.1.gz
-%doc %{_mandir}/man1/xmset.1.gz
 %doc %{_mandir}/man1/xquery.1.gz
 /usr/sbin/corner
 /usr/sbin/dots
@@ -494,9 +493,7 @@ fi
 /usr/sbin/xkbctrl
 /usr/sbin/xlook
 /usr/sbin/xmode
-/usr/sbin/xmset
 /usr/sbin/xquery
-/usr/sbin/xupdate
 /usr/sbin/vncpasswd
 /usr/sbin/xw
 #=================================================
