@@ -485,7 +485,6 @@ fi
 %doc %{_mandir}/man1/xquery.1.gz
 /usr/sbin/corner
 /usr/sbin/dots
-/usr/sbin/hwupdate
 /usr/sbin/isax
 /usr/sbin/testX
 /usr/sbin/whereiam

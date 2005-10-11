@@ -87,10 +87,6 @@ function needHardwareUpdate() {
 	if [ ! -f "/var/cache/sax/files/config" ];then
 		return 1
 	fi
-	/usr/sbin/hwupdate 2>/dev/null
-	if [ $? == 0 ];then
-		return 1
-	fi
 	return 0
 }
 function usage() {
