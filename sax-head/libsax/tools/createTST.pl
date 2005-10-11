@@ -15,7 +15,6 @@ use strict;
 use Env;
 
 use Getopt::Long;
-use Locale::gettext;
 use FileHandle;
 use POSIX;
 
