@@ -335,7 +335,6 @@ if [ -f "$SVNB" ];then
 fi
 SVN=`version`
 DATE=`LANG=POSIX date`
-FBSET=`fbset -i 2>/dev/null`
 echo "/*************"                                                   >> $ERR
 echo "SaX2 log     : $SVN"                                              >> $ERR
 echo "**************"                                                   >> $ERR
@@ -362,10 +361,11 @@ echo "*************/"                                                   >> $ERR
 echo "============================"                                     >> $ERR
 echo "Framebuffer Info:"                                                >> $ERR
 echo "----------------------------"                                     >> $ERR
-if [ -z "$FBSET" ];then
+head -n 0 /dev/fb0 >/dev/null 2>&1
+if [ "$?" -ne 0 ];then
 	echo "Framebuffer not active"                                       >> $ERR
 else
-	echo "$FBSET"                                                       >> $ERR
+	echo "Framebuffer is active"                                        >> $ERR
 fi
 echo                                                                    >> $ERR
 

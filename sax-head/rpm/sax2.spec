@@ -8,15 +8,15 @@
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  dbus-1 doxygen fbset flex ghostscript-fonts-std glib2 graphviz hal hwinfo hwinfo-devel java2-devel-packages mono-devel-packages python python-devel qt3-devel-packages swig sysfsutils udev update-desktop-files wireless-tools x-devel-packages xorg-x11-driver-options xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-server yacc readline-devel
+# neededforbuild  dbus-1 doxygen flex ghostscript-fonts-std glib2 graphviz hal hwinfo hwinfo-devel java2-devel-packages mono-devel-packages python python-devel qt3-devel-packages swig sysfsutils udev update-desktop-files wireless-tools x-devel-packages xorg-x11-driver-options xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-server yacc readline-devel
 
-BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel gettext-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libcom_err libgcc libnscd libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils dbus-1 doxygen expat fbset fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext ghostscript-fonts-std glib2 gnome-filesystem graphviz hal hwinfo hwinfo-devel java-1_4_2-sun java-1_4_2-sun-devel jpackage-utils libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool mono-basic mono-core mono-data mono-data-sqlite mono-devel mono-web perl python python-devel qt3 qt3-devel rpm swig sysfsutils udev update-alternatives update-desktop-files wireless-tools xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-libs xorg-x11-server
+BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel gettext-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libcom_err libgcc libnscd libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils dbus-1 doxygen expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext ghostscript-fonts-std glib2 gnome-filesystem graphviz hal hwinfo hwinfo-devel java-1_4_2-sun java-1_4_2-sun-devel jpackage-utils libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool mono-basic mono-core mono-data mono-data-sqlite mono-devel mono-web perl python python-devel qt3 qt3-devel rpm swig sysfsutils udev update-alternatives update-desktop-files wireless-tools xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-driver-options xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-libs xorg-x11-server
 
 #=================================================
 # Description sax2
 #-------------------------------------------------
 Name:         sax2
-Requires:     perl perl-gettext fbset readline
+Requires:     perl perl-gettext readline
 Requires:     sax2-ident sax2-tools
 %if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
@@ -419,6 +419,8 @@ fi
 %{perl_vendorarch}/auto/PLog
 %{perl_vendorarch}/SPP.pm
 %{perl_vendorarch}/auto/SPP
+%{perl_vendorarch}/FBSet.pm
+%{perl_vendorarch}/auto/FBSet
 /var/adm/perl-modules/sax2
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README

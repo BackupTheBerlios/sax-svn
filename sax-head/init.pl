@@ -137,7 +137,6 @@ sub init {
 	$spec{DbmDir}              = "/var/cache/sax/files";
 	$spec{SyspDir}             = "/var/cache/sax/sysp/rdbms";
 	$spec{Sysp}                = "/usr/sbin/sysp";
-	$spec{FbSet}               = "fbset";
 	$spec{LogFile}             = "/var/log/SaX.log";
 	$spec{Xmode}               = "/usr/sbin/xmode";
 	$spec{Xmset}               = "/usr/sbin/xmset";

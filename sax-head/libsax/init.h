@@ -83,11 +83,6 @@ class SaXInit : public SaXInitIF {
 	private:
 	QList<char> mOptions;
 
-	private:
-	bool needUpdate   ( void );
-	bool scanHDstatus ( bool = false );
-	bool saveHDstatus ( int,char*,char* );
-
 	public:
 	bool needInit (void);
 	void ignoreProfile (void);

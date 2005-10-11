@@ -28,7 +28,7 @@ all:${AIM}
 libsysp.a:
 	${MAKE} -C ${PLOG}   all
 	${MAKE} -C ${PCI}    all
-	${MAKE} -C ${FBSET}  all
+	${MAKE} -C ${FBSET}  -f Makefile.swig all
 	${MAKE} -C ${HW}     all
 	${MAKE} -C ${COMMON} all
 
@@ -45,7 +45,7 @@ clean:
 	rm -f pci/lib/libpci.a
 	${MAKE} -C ${PLOG}   clean
 	${MAKE} -C ${PCI}    clean
-	${MAKE} -C ${FBSET}  clean
+	${MAKE} -C ${FBSET}  -f Makefile.swig clean
 	${MAKE} -C ${HW}     clean
 	${MAKE} -C ${COMMON} clean
 

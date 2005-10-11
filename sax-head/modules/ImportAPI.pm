@@ -16,6 +16,7 @@ use lib '/usr/share/sax/modules';
 
 use strict;
 use XFineControl;
+use FBSet;
 use Fonts;
 
 #========================================
@@ -50,7 +51,6 @@ sub ApiInit {
 	$import{ApiFile}    = "/var/cache/sax/files/apidata";
 	$import{Xmode}      = "/usr/sbin/xmode";
 	$import{Sysp}       = "/usr/sbin/sysp";
-	$import{FbSet}      = "fbset";
 }
 
 #---[ ApiRead ]-----#
@@ -1184,13 +1184,9 @@ sub GetModelines {
 
 	my (@modeline,@res,@l,@param,@clocklist,@data);
 	my ($x,$y,$hs,$vs,$i,$line,$calctool,$chs,$cvs,$oldline,$r,$vesafb,$fbtime);
-	my ($zf,$rr,$hfl,$vfl,$dcf,$clocks,$clk,$hsmax,$fbset,$mode,$found);
+	my ($zf,$rr,$hfl,$vfl,$dcf,$clocks,$clk,$hsmax,$mode,$found);
 	my %fbmodes;
 	my %query;
-
-	# set FbSet binary to use...
-	# ---------------------------
-	$fbset = $import{FbSet};
 
 	# decide for a tool to calculate
 	# -------------------------------
@@ -1283,8 +1279,8 @@ sub GetModelines {
 		if ($modus eq "fbdev") {
 			# UseFrameBufferTiming is active...
 			# -----------------------------------
-			$vesafb = GetFramebufferResolution($fbset);
-			$fbtime = GetFramebufferTimings($fbset);
+			$vesafb = GetFramebufferResolution();
+			$fbtime = GetFramebufferTimings();
 			@data   = split(/ /,$vesafb);
 			$line   = "Modeline \"$data[0]x$data[1]\" $fbtime";
 			push(@modeline,$line);
@@ -1404,32 +1400,12 @@ sub GetFramebufferResolution {
 # this function check for the framebuffer settings
 # and treat the result as Vesa mode
 #
-	my $fbset = $_[0];
-	my $mode;     # Mode part of fbset -x
-	my $data;     # Data part of fbset -x
-	my $hsync;    # hsync value
-	my $vsync;    # vsync value
-	my @size;     # X and Y values
-
-	$mode = qx($fbset -x | grep ^Mode);
-	$data = qx($fbset -x | grep "# D");
-
-	if ($mode =~ /.*\"(.*)\".*/) {
-		$mode = $1;  $mode =~ s/ +//g;
-		@size = split(/x/,$mode);
-	} else {
-		return;
-	}
-
-	if ($data =~ /.*H: (.*) kHz, V: (.*) Hz/) {
-		$hsync = $1; $hsync =~ s/ +//g;
-		$vsync = $2; $vsync =~ s/ +//g;
-		$hsync = int($hsync);
-		$vsync = int($vsync);
-	} else {
-		return;
-	}
-	return("@size $hsync $vsync");
+	my $data  = FBSet::FbGetData();
+	my $xres  = $data->swig_x_get();
+	my $yres  = $data->swig_y_get();
+	my $hsync = sprintf ("%.0f",$data->swig_hsync_get());
+	my $vsync = sprintf ("%.0f",$data->swig_vsync_get());
+	return("$xres $yres $hsync $vsync");
 }
 
 #----[ GetFramebufferTimings ]-----#
@@ -1438,35 +1414,12 @@ sub GetFramebufferTimings {
 # get the X11 modeline timings for the 
 # framebuffer mode
 #
-	my $fbset = $_[0];
-	my $clock;
-	my $ht;
-	my $vt;
-	my $flags;
-	my $mode;
-
-	$clock = qx($fbset -x | grep -i DotClock);
-	$ht    = qx($fbset -x | grep -i HTimings);
-	$vt    = qx($fbset -x | grep -i VTimings);
-	$flags = qx($fbset -x | grep -i Flags);
-
-	$clock =~ s/DotClock//i; $clock =~ s/\n//g;
-	$clock =~ s/ +//g;
-	$ht    =~ s/HTimings//i; $ht =~ s/\n//g;
-	$ht    =~ s/^ +//g; $ht =~ s/ +$//g;
-	$vt    =~ s/VTimings//i; $vt =~ s/\n//g;
-	$vt    =~ s/^ +//g; $vt    =~ s/ +$//g;
-	$flags =~ s/Flags//i; $flags =~ s/\n//g;
-	$flags =~ /(.*)#.*/;
-	if ($1 ne "") {
-		$flags = $1;
-	}
-	$flags =~ s/^ +//g;
-	$flags =~ s/ +$//g;
-	$flags =~ s/\"//g;
-
-	$mode  = "$clock $ht $vt $flags";
-	return($mode);
+	my $data  = FBSet::FbGetData();
+	my $clock = sprintf ("%.2f",$data->swig_clock_get());
+	my $flags = $data->swig_flags_get();
+	my $ht = $data->swig_ht_get();
+	my $vt = $data->swig_vt_get();
+	return ("$clock $ht $vt $flags");
 }
 
 #-----[ GetHotQuery ]-----#

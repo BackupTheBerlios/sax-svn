@@ -17,6 +17,7 @@ use lib '/usr/X11R6/lib/';
 
 use Env;
 use XFree;
+use FBSet;
 use ParseConfig;
 use CreateSections;
 use ImportAPI;
@@ -100,8 +101,6 @@ sub init {
 	$init{BinaryFile}  = "/var/cache/sax/files/config";
 	$init{DbmNew}      = "/var/cache/sax/files/config.new";
 	$init{XFineCache}  = "/var/cache/xfine";
-	$init{LILOCode}    = "/var/cache/sax/files/lilocode.ycp";
-	$init{FbSet}       = "fbset";
 	$init{ListFile}    = "$init{TmpDir}/apidata";
 	$init{ListSection} = $ListSection;
 	$init{OutputFile}  = $OutputFile;
@@ -1011,24 +1010,12 @@ sub GetFbColor {
 # this function test for the framebuffer
 # color depth
 #
-	my $geometry;
-	my @glist;
-	my $depth;
-
-	$geometry = qx($init{FbSet} | grep geometry);
-	@glist = split(/ +/,$geometry);
-	$depth = pop(@glist);
-	chomp($depth);
-	$depth =~ s/ +//g;
-	if ($depth == 24) {
-		$depth = 32;
+	my $data = FBSet::FbGetData();
+	my $cols = $data->swig_depth_get();
+	if ($cols < 8) {
+		return 8;
 	}
-
-	if ($depth eq "") {
-		return(8);
-	} else {
-		return($depth)
-	}
+	return $cols;
 }
 
 #---[ GetFbResolution ]-----#
@@ -1037,43 +1024,10 @@ sub GetFbResolution {
 # this function test for the framebuffer
 # resolution
 #
-	my $geometry;
-	my @glist;
-	my $x;
-	my $y;
-	my $res;
-
-	if ((-f $init{LILOCode}) && (open (FD,$init{LILOCode}))) {
-		#==============================================
-		# lilocode.ycp exist... we will use this file
-		# to show the future resolution
-		#----------------------------------------------
-		while(my $line = <FD>) {
-		if ($line =~ /(.*),(.*)/) {
-			$line = $2; $line =~ s/\"//g; $line=~ s/ +//g;
-			close (FD); return ($line);
-		}
-		}
-	} else {
-		#==============================================
-		# ask the framebuffer for the current 
-		# resolution
-		#----------------------------------------------
-		$geometry = qx($init{FbSet} | grep geometry);
-		$geometry =~ s/^ +//g;
-		$geometry =~ s/ +$//g;
-		@glist = split(/ +/,$geometry);
-		$x = $glist[1];
-		$y = $glist[2];
-		$res = "$x x $y";
-		$res =~ s/ //g;
-
-		if ($res eq "") {
-			return("640x480");
-		} else {
-			return($res)
-		}
-	}
+	my $data = FBSet::FbGetData();
+	my $xres = $data->swig_x_get();
+	my $yres = $data->swig_y_get();
+	return $xres."x".$yres;
 }
 
 #---[ ConstructInputOptions ]-----#

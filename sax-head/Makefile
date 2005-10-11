@@ -75,6 +75,12 @@ all:
 	${MAKE} -C ./sysp  all
 
 	#============================================
+	# building framebuffer info module
+	#--------------------------------------------
+	${MAKE} -C ./sysp/lib/fbset -f Makefile.swig swig
+	${MAKE} -C ./sysp/lib/fbset all
+
+	#============================================
 	# building libsax and bindings...
 	#--------------------------------------------
 	( cd libsax && doxygen sax.dox && ./.make )
@@ -125,6 +131,11 @@ install:
 	# install SaX Profile parser...
 	#--------------------------------------------
 	( cd spp && make DESTDIR=${buildroot} install_vendor )
+
+	#============================================
+	# install SaX Framebuffer info module...
+	#--------------------------------------------
+	( cd sysp/lib/fbset && make DESTDIR=${buildroot} install_vendor )
 
 	#============================================
 	# install language bindings...
