@@ -230,18 +230,21 @@ bool SaXException::unsetLock ( void ) {
 //! process did not start
 void SaXException::excProcessFailed (void) {
 	setErrorCode (EAGAIN);
+	emit saxGlobalException (EXC_PROCESSFAILED);
 	emit saxProcessFailed();
 }
 
 //! import cannot initialize section option
 void SaXException::excImportSectionFailed (void) {
 	setErrorCode (EISAXIMPORT,EISAXIMPORTID);
+	emit saxGlobalException (EXC_IMPORTSECTIONFAILED);
 	emit saxImportSectionFailed();
 }
 
 //! export cannot initialize section file
 void SaXException::excExportSectionFailed (void) {
 	setErrorCode (EISAXEXPORT,EISAXEXPORTID);
+	emit saxGlobalException (EXC_EXPORTSECTIONFAILED);
 	emit saxExportSectionFailed();
 }
 
@@ -249,6 +252,7 @@ void SaXException::excExportSectionFailed (void) {
 void SaXException::excFileOpenFailed (int e) {
 	setErrorCode (ENOENT);
 	setErrorValue (e);
+	emit saxGlobalException (EXC_FILEOPENFAILED);
 	emit saxFileOpenFailed (e);
 }
 
@@ -256,24 +260,28 @@ void SaXException::excFileOpenFailed (int e) {
 void SaXException::excNoStorage (int id) {
 	setErrorCode (ENODATA);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_NOSTORAGE);
 	emit saxNoStorage (id);
 }
 
 //! CDB file does not exist
 void SaXException::excCDBFileFailed (void) {
 	setErrorCode (ENOENT);
+	emit saxGlobalException (EXC_CDBFILEFAILED);
 	emit saxCDBFileFailed ();
 }
 
 //! root privileges required
 void SaXException::excPermissionDenied (void) {
 	setErrorCode (EACCES);
+	emit saxGlobalException (EXC_PERMISSIONDENIED);
 	emit saxPermissionDenied ();
 }
 
 //! profile file not found
 void SaXException::excProfileNotFound (void) {
 	setErrorCode (ENOENT);
+	emit saxGlobalException (EXC_PROFILENOTFOUND);
 	emit saxProfileNotFound ();
 }
 
@@ -281,6 +289,7 @@ void SaXException::excProfileNotFound (void) {
 void SaXException::excProfileUndefined (int id) {
 	setErrorCode (EPROFILE,EPROFILEID);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_PROFILEUNDEFINED);
 	emit saxProfileUndefined (id);
 }
 
@@ -288,6 +297,7 @@ void SaXException::excProfileUndefined (int id) {
 void SaXException::excImportAlreadyAdded (int id) {
 	setErrorCode (EALREADY);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_IMPORTALREADYADDED);
 	emit saxImportAlreadyAdded (id);
 }
 
@@ -295,18 +305,21 @@ void SaXException::excImportAlreadyAdded (int id) {
 void SaXException::excUnknownImport (SaXImport* in) {
 	setErrorCode (EBADF);
 	setErrorValue ((void*)in);
+	emit saxGlobalException (EXC_UNKNOWNIMPORT);
 	emit saxUnknownImport (in);
 }
 
 //! the /var/lib/sax/apidata file does not exist
 void SaXException::excNoAPIFileFound (void) {
 	setErrorCode (ENOENT);
+	emit saxGlobalException (EXC_NOAPIFILEFOUND);
 	emit saxNoAPIFileFound ();
 }
 
 //! a NULL pointer was used as argument
 void SaXException::excNullPointerArgument (void) {
 	setErrorCode (EINVAL);
+	emit saxGlobalException (EXC_NULLPOINTERARGUMENT);
 	emit saxNullPointerArgument ();
 }
 
@@ -314,6 +327,7 @@ void SaXException::excNullPointerArgument (void) {
 void SaXException::excDesktopImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_DESKTOPIMPORTBINDFAILED);
 	emit saxDesktopImportBindFailed (id);
 }
 
@@ -321,6 +335,7 @@ void SaXException::excDesktopImportBindFailed (int id) {
 void SaXException::excCardImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_CARDIMPORTBINDFAILED);
 	emit saxCardImportBindFailed (id);
 }
 
@@ -328,6 +343,7 @@ void SaXException::excCardImportBindFailed (int id) {
 void SaXException::excPointerImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_POINTERIMPORTBINDFAILED);
 	emit saxPointerImportBindFailed (id);
 }
 
@@ -335,6 +351,7 @@ void SaXException::excPointerImportBindFailed (int id) {
 void SaXException::excKeyboardImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_KEYBOARDIMPORTBINDFAILED);
 	emit saxKeyboardImportBindFailed (id);
 }
 
@@ -342,6 +359,7 @@ void SaXException::excKeyboardImportBindFailed (int id) {
 void SaXException::excPathImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_PATHIMPORTBINDFAILED);
 	emit saxPathImportBindFailed (id);
 }
 
@@ -349,6 +367,7 @@ void SaXException::excPathImportBindFailed (int id) {
 void SaXException::excExtensionsImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_EXTENSIONSIMPORTBINDFAILED);
 	emit saxExtensionsImportBindFailed (id);
 }
 
@@ -356,12 +375,14 @@ void SaXException::excExtensionsImportBindFailed (int id) {
 void SaXException::excLayoutImportBindFailed (int id) {
 	setErrorCode (EBADF);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_LAYOUTIMPORTBINDFAILED);
 	emit saxLayoutImportBindFailed (id);
 }
 
 //! the /usr/X11R6/lib/X11/xkb/rules/(rule) file couldn't be opened
 void SaXException::excXKBLoadRulesFailed (void) {
 	setErrorCode (ENOENT);
+	emit saxGlobalException (EXC_XKBLOADRULESFAILED);
 	emit saxXKBLoadRulesFailed ();
 }
 
@@ -369,6 +390,7 @@ void SaXException::excXKBLoadRulesFailed (void) {
 void SaXException::excCDBRecordNotFound (const char* group) {
 	setErrorCode (ECDBGROUP,ECDBGROUPID);
 	setErrorValue (group);
+	emit saxGlobalException (EXC_CDBRECORDNOTFOUND);
 	emit saxCDBRecordNotFound (group);
 }
 
@@ -376,6 +398,7 @@ void SaXException::excCDBRecordNotFound (const char* group) {
 void SaXException::excWrongInputFashion (const char* fashion) {
 	setErrorCode (EFASHION,EFASHIONID);
 	setErrorValue (fashion);
+	emit saxGlobalException (EXC_WRONGINPUTFASHION);
 	emit saxWrongInputFashion (fashion);
 }
 
@@ -383,6 +406,7 @@ void SaXException::excWrongInputFashion (const char* fashion) {
 void SaXException::excSetStorageIDFailed (int id) {
 	setErrorCode (ERECORD,ERECORDID);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_SETSTORAGEIDFAILED);
 	emit saxSetStorageIDFailed (id);
 }
 
@@ -390,6 +414,7 @@ void SaXException::excSetStorageIDFailed (int id) {
 void SaXException::excPointerFashionTypeFailed (const char* fashion) {
 	setErrorCode (EFASHION,EFASHIONID);
 	setErrorValue (fashion);
+	emit saxGlobalException (EXC_POINTERFASHIONTYPEFAILED);
 	emit saxPointerFashionTypeFailed (fashion);
 }
 
@@ -397,6 +422,7 @@ void SaXException::excPointerFashionTypeFailed (const char* fashion) {
 void SaXException::excInvalidArgument (int id) {
 	setErrorCode (EINVAL);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_INVALIDARGUMENT);
 	emit saxInvalidArgument (id);
 }
 
@@ -404,18 +430,21 @@ void SaXException::excInvalidArgument (int id) {
 void SaXException::excInvalidArgument (const char* arg) {
 	setErrorCode (EINVAL);
 	setErrorValue (arg);
+	emit saxGlobalException (EXC_INVALIDARGUMENT);
 	emit saxInvalidArgument (arg);
 }
 
 //! the call to flock LOCK_EX failed
 void SaXException::excLockSetFailed (int error) {
 	setErrorCode (error);
+	emit saxGlobalException (EXC_LOCKSETFAILED);
 	emit saxLockSetFailed (error);
 }
 
 //! the call to flock LOCK_UN failed
 void SaXException::excLockUnsetFailed (int error) {
 	setErrorCode (error);
+	emit saxGlobalException (EXC_LOCKUNSETFAILED);
 	emit saxLockUnsetFailed (error);
 }
 
@@ -423,12 +452,14 @@ void SaXException::excLockUnsetFailed (int error) {
 void SaXException::excGetScreenLayoutFailed (int id) {
 	setErrorCode (ESCREEN,ESCREENID);
 	setErrorValue (id);
+	emit saxGlobalException (EXC_GETSCREENLAYOUTFAILED);
 	emit saxGetScreenLayoutFailed (id);
 }
 
 //! empty InputDevice definition in layout section
 void SaXException::excGetInputLayoutFailed (void) {
 	setErrorCode (ENODEV);
+	emit saxGlobalException (EXC_GETINPUTLAYOUTFAILED);
 	emit saxGetInputLayoutFailed();
 }
 
@@ -436,30 +467,36 @@ void SaXException::excGetInputLayoutFailed (void) {
 void SaXException::excEmptyCDBGroup (const char* name) {
 	setErrorCode (ECDBDATA,ECDBDATAID);
 	setErrorValue (name);
+	emit saxGlobalException (EXC_EMPTYCDBGROUP);
 	emit saxEmptyCDBGroup (name);
 }
 
 //! The binary NVIDIA driver is missing
 void SaXException::excNvidiaDriverMissing ( void ) {
 	setErrorCode (ENVIDIAMIS,ENVIDIAMISID);
+	emit saxGlobalException (EXC_NVIDIADRIVERMISSING);
 	emit saxNvidiaDriverMissing();
 }
 
 //! The binary NVIDIA driver is installed
 void SaXException::excNvidiaDriverInstalled ( void ) {
 	setErrorCode (ENVIDIAINS,ENVIDIAINSID);
+	emit saxGlobalException (EXC_NVIDIADRIVERINSTALLED);
 	emit saxNvidiaDriverInstalled();
 }
 
 //! layout not defined/used -> variant cannot be set
 void SaXException::excXKBLayoutUndefined ( const char* layout ) {
 	setErrorCode (EXKBLAYOUT,EXKBLAYOUTID);
+	emit saxGlobalException (EXC_XKBLAYOUTUNDEFINED);
 	emit saxXKBLayoutUndefined (layout);
 }
+
 //! 2D/3D driver from CDB doesn't match current driver
 void SaXException::excDriverMismatch ( const char* cdb,const char* cur) {
 	setErrorCode (ECDBMISMATCH,ECDBMISMATCHID);
 	setErrorValue (QString(cdb)+" -> "+QString(cur));
+	emit saxGlobalException (EXC_DRIVERMISMATCH);
 	emit saxDriverMismatch (cdb,cur);
 }
 } // end namespace

@@ -415,7 +415,7 @@ bool SCCMonitor::exportData ( void ) {
 					SCCMonitorDualModel* dualModel;
 					dualData  = display->getDualData();
 					dualModel = dualData->getDualModelData();
-					saxCard.addCardOption ("SaXDualHead");
+					saxCard.addCardOption ("SaXDualHead",0);
 					for (; it.current(); ++it) {
 						QString key = it.currentKey();
 						QString val = *it.current();
@@ -515,7 +515,7 @@ bool SCCMonitor::exportData ( void ) {
 						// setup profile NVidia data
 						//------------------------------------
 						if (key == "TwinView") {
-							saxCard.addCardOption ( key );
+							saxCard.addCardOption ( key,0 );
 						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
 							#if 0
@@ -607,7 +607,7 @@ bool SCCMonitor::exportData ( void ) {
 						// setup profile Radeon data
 						//------------------------------------
 						if (key == "MergedFB") {
-							saxCard.addCardOption ( key );
+							saxCard.addCardOption ( key,0 );
 						}
 						if (key == "CRT2HSync") {
 							QString hsync;
@@ -624,7 +624,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key,vsync );
 						}
 						if (key == "IgnoreEDID") {
-							saxCard.addCardOption ( key );
+							saxCard.addCardOption ( key,0 );
 						}
 						if ((key== "MetaModes") && (driver == "radeon")) {
 							#if 0
@@ -705,7 +705,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key,val );
 						}
 						if (key == "Clone") {
-							saxCard.addCardOption ( key );
+							saxCard.addCardOption ( key,0 );
 						}
 						if (key == "CloneRefresh") {
 							QString vsync;

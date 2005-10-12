@@ -195,7 +195,7 @@ void SaXManipulateVNC::allowMultipleConnections (bool allow) {
 	// ----
 	if (allow) {
 		removeCardOption ("alwaysshared");
-		addCardOption    ("alwaysshared");
+		addCardOption    ("alwaysshared",0);
 	} else {
 		removeCardOption ("alwaysshared");
 	}

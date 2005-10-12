@@ -49,8 +49,8 @@ namespace SaX {
 class SaXManipulateCardIF : public SaXException {
 	public:
 	virtual void setCardDriver ( const QString& ) = 0;
-	virtual void setCardOption ( const QString& , const QString& = 0 ) = 0;
-	virtual void addCardOption ( const QString& , const QString& = 0 ) = 0;
+	virtual void setCardOption ( const QString& , const QString& ) = 0;
+	virtual void addCardOption ( const QString& , const QString& ) = 0;
 	virtual void removeCardOption ( const QString& ) = 0;
 	virtual void setBusID ( const QString& ) = 0;
 	virtual void setScreenID ( int ) = 0;
@@ -136,8 +136,8 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 
 	public:
 	void setCardDriver ( const QString& );
-	void setCardOption ( const QString& , const QString& = 0 );
-	void addCardOption ( const QString& , const QString& = 0 );
+	void setCardOption ( const QString& , const QString& );
+	void addCardOption ( const QString& , const QString& );
 	void removeCardOption ( const QString& );
 	void setBusID ( const QString& );
 	void setScreenID ( int );

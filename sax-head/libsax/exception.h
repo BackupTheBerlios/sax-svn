@@ -370,6 +370,9 @@ class SaXException : public SaXExceptionIF {
 	void saxXKBLayoutUndefined         ( const char* );
 	void saxDriverMismatch             ( const char*,const char* );
 
+	signals:
+	void saxGlobalException            ( const char* );
+
 	protected:
 	bool setLock   ( void );
 	bool unsetLock ( void );
