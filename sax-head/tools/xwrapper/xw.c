@@ -407,10 +407,59 @@ void prepare (void) {
 			perror("fork"); exit(1);
 		break;
 		case 0:
-		while(1) {
-			usleep (50000);
-			RedrawWindow();
-		}
+			{
+			FILE* fd = NULL;
+			char s_idle[80];
+			char s_load[80];
+			char s_nice[80];
+			char s_null[80];
+			long idle,load,nice,pval;
+			long old_idle,old_nice,old_load = 0;
+			int mouse_is_arrow = 1;
+			Window root = RootWindow(dpy,0);
+			Cursor cursor;
+			while(1) {
+				RedrawWindow();
+				if ((fd=fopen ("/proc/stat","r"))) {
+					fscanf (fd,"cpu %s %s %s %s\n",s_load,s_nice,s_null,s_idle);
+					fclose (fd);
+				}
+				idle = atol (s_idle);
+				nice = atol (s_nice);
+				load = atol (s_load);
+
+				pval = (load-old_load)+(nice-old_nice)+(idle-old_idle);
+				if (pval) {
+					pval = ((load-old_load)*100)/pval;
+				} else {
+					pval = 100;
+				}
+				if (pval >= 70) {
+					if (mouse_is_arrow) {
+						cursor = CreateCursorFromName(dpy,0,"watch");
+						if (cursor) {
+							XDefineCursor (dpy,root,cursor);
+							XFreeCursor (dpy,cursor);
+						}
+						mouse_is_arrow = 0;
+					}
+				} else {
+					if (! mouse_is_arrow) {
+						cursor = CreateCursorFromName(dpy,0,"top_left_arrow");
+						if (cursor) {
+							XDefineCursor (dpy,root,cursor);
+							XFreeCursor (dpy,cursor);
+						}
+						mouse_is_arrow = 1;
+					}
+				}
+				old_idle = idle;
+				old_load = load;
+				old_nice = nice;
+
+				usleep (50000);
+			}
+			}
 		break;
 		}
 	}
