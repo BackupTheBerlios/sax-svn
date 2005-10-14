@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Oct  7 11:30:57 2005
+# Author: Marcus Schaefer <sax@suse.de>, Fri Oct 14 14:26:08 2005
 #
 # Template for monitor data
 # --------------------------
@@ -37776,6 +37776,17 @@ VIDEOSEVEN:L15C (LCD)  {
  Option=DPMS
  Hsync=30-60
  Vsync=40-75
+}
+
+#==============================================
+# L19B
+#----------------------------------------------
+VIDEOSEVEN:L19B  {
+ DDC=VSN9003
+ Option=DPMS
+ Hsync=30-82
+ Resolution=1280x1024
+ Vsync=50-75
 }
 
 #==============================================
