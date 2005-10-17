@@ -46,10 +46,6 @@ ERR="/var/log/SaX.log"
 SHC="/bin/sh"
 SUX="/usr/X11R6/bin/sux"
 
-if [ -z "$DISPLAY" ];then
-	export DISPLAY=:0
-fi
-
 #========================================
 # Main
 #----------------------------------------

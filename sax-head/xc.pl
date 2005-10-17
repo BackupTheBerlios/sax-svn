@@ -9,11 +9,6 @@
 # Status: Up-to-date
 #
 use lib   '/usr/share/sax/modules';
-use lib   '/usr/X11R6/lib';
-
-# strict checking disabled because this cause problems 
-# with SuSE 7.0 in combination with the Env module
-# -------------------------------------------------
 use strict;
 use Env;
 
@@ -23,22 +18,18 @@ use CheckServer;
 use ParseConfig;
 use Getopt::Long;
 use Storable;
-use FileHandle;
 use XFree; 
 
-no strict "subs";
-no strict "refs";
-
-#==================================================
-# this is the global var hash which build the 
-# fundamental basics of the whole configuration
-#--------------------------------------------------
+#==========================================
+# Globals
+#------------------------------------------
 my %var;                   # hold all the configuration parameters
 my %spec;                  # hold specifications for xc.pl
 my $EnableAutoConf;        # option variable: enable auto config
 my $YaSTMode;              # called from YaST2
 my $StartWithSystemConfig; # option start with system config
 my $EnableXF86AutoMode;    # option variable: enable auto modeline
+my $DialogToStartWith;     # dialog to start with (xapi option)
 my $Display;               # option variable: set Display 
 my $TmpDir;                # secure dir name
 my %tune;                  # tune hash for changed mode timings
@@ -46,70 +37,56 @@ my $logHandle;             # log file handle
 my $FullScreen;            # full screen mode
 my $NoCheckPacs;           # do not check package requirements
 my $NoIntro;               # prevent intro appearance
-my $NoBorder;              # suppress border around main window (obsolete)
-my $UniFont;               # force usage of UniCode font        (obsolete)
-my $FrameWidth = 0;        # default frame width for xapi       (obsolete)
-my $DialogToStartWith;     # dialog to start with (xapi option)
 
+#==========================================
+# Call main...
+#------------------------------------------
 main();
-#==================================================
-# next there is the main function which has the
-# following tasks:
-#
-# 0 -> init all the needed variables
-# 1 -> open the configuration hash with the 
-#      autodetection data
-# 2 -> open LOG handler
-# 3 -> create auto configuration
-#      0 -> save this configuration
-#      1 -> proceed with X-Server check
-# 4 -> if there is no X-Server running start
-#      an own X-Server otherwhise try to access
-#      the running one
-# 5 -> start SaX2
-#
-#--------------------------------------------------
-#----[ main ]--------#
+
+#==========================================
+# main
+#------------------------------------------
 sub main {
-#--------------------------------------------------
-# start point with main 
-#
-	my $exit;     # exit codes
-	my $final;    # name of final config file
-	my @part0;    # configuration part 0
-	my @part1;    # configuration part 1
-	my @part2;    # configuration part 2
-	my @part3;    # configuration part 3
-	my @part4;    # configuration part 4
-	my @part5;    # configuration part 5
-	my @part6;    # configuration part 6
-	my @part7;    # configuration part 7
-	my @part8;    # configuration part 8
-	my @part9;    # configuration part 9
-	my @part10;   # configuration part 10
-	my @part11;   # configuration part 11
-
-	my $disp       = ":0.0";
-	my $haveServer = 0;
-
-	# some global xc specifications...
-	# ---------------------------------
+	# ...
+	# This function will open the configuration hash (registry)
+	# created by init.pl and will create configuration suggestion
+	# from this data. If there is no X-Server running start
+	# my own X-Server otherwhise try to access the running one.
+	# The last step is to run the GUI (xapi) on the server
+	# ---
+	#==========================================
+	# Initialize xc options and spec hash
+	#------------------------------------------
 	init();
 
-	# open configuration hash...
-	# ---------------------------
+	#==========================================
+	# Open configuration hash...
+	#------------------------------------------
 	if ((prepare()) == -1) {
 		print "xc: level 2... abort\n";
 		Exit(0);
 	}
 
-	# open LOG file handler...
-	# -------------------------
+	#==========================================
+	# Open LOG file handler...
+	#------------------------------------------
 	$logHandle = OpenLog();
 
-	# first create the automatic configuration file and
-	# write the result configuration to the LOG...
-	# ------------------------------------------------
+	#==========================================
+	# Create config suggestion
+	#------------------------------------------
+	my @part0;    # header
+	my @part1;    # Files section
+	my @part2;    # Module section
+	my @part3;    # ServerFlags section
+	my @part4;    # InputDevice sections
+	my @part5;    # Monitor sections
+	my @part6;    # Modes sections
+	my @part7;    # Device section
+	my @part8;    # Screen section
+	my @part9;    # ServerLayout section
+	my @part10;   # DRI section
+	my @part11;   # Extensions section
 	my $crt = "glx,dri,fgl1";
 	@part0  = CreateHeaderSection ();
 	@part1  = CreateFilesSection  (\%var);
@@ -132,8 +109,9 @@ sub main {
 	@part10 = CreateDRISection ();                
 	@part11 = CreateExtensionsSection (\%var);
 
-	# write new AutoConf file...
-	# ----------------------------
+	#==========================================
+	# Write preliminary config file
+	#------------------------------------------
 	open (HANDLE,">$spec{AutoConf}");
 	print HANDLE @part0;  print HANDLE "\n";
 	print HANDLE @part1;  print HANDLE "\n";
@@ -147,70 +125,71 @@ sub main {
 	print HANDLE @part9;  print HANDLE "\n";
 	print HANDLE @part10; print HANDLE "\n";
 	print HANDLE @part11; print HANDLE "\n";
-	close(HANDLE);
+	close HANDLE;
 
+	#==========================================
+	# Write automatic config file and exit
+	#------------------------------------------
 	if (defined $EnableAutoConf) {
 		# /.../
 		# Auto configuration is enabled. This will save the auto
 		# detected configuration file as final config file
 		# ---
-		$final = LinkConfiguration();
+		my $final = LinkConfiguration();
 		print "SaX: Automatic configuration is done\n";
 		print "SaX: The file $final has been written\n";
 		CleanTmp();
 		Exit(0);
 	}
 
-	# /.../
-	# auto configuration is disabled...
-	# test if there is another server active, if yes run
-	# there otherwise start a new one
-	# ---
-	my @displayStatus;
+	#==========================================
+	# Check display server status
+	#------------------------------------------
+	my $disp = ":0.0";
+	my $haveServer = 0;
+	my @displayStatus = ();
 	my @xpid = GetPids();
 	if (@xpid > 0) {
-	#============================================
-	# check on local system according to pid's
-	#--------------------------------------------
-	@displayStatus = GetDisplay (@xpid,$spec{Corner});
-	$disp = $displayStatus[0];
-	if ($displayStatus[1] eq "grant") {
-		$haveServer = 1;
-	}
-	} else {
-	#============================================
-	# check for remote access, x11 forward
-	#--------------------------------------------
-	@displayStatus = X11ForwardEnabled();
-	if ($displayStatus[1] eq "grant") {
+		#============================================
+		# check on local system according to pid's
+		#--------------------------------------------
+		@displayStatus = GetDisplay (@xpid,$spec{Corner});
 		$disp = $displayStatus[0];
-		$haveServer = 1;
-	}
+		if ($displayStatus[1] eq "grant") {
+			$haveServer = 1;
+		}
+	} else {
+		#============================================
+		# check for remote access, x11 forward
+		#--------------------------------------------
+		@displayStatus = X11ForwardEnabled();
+		if ($displayStatus[1] eq "grant") {
+			$disp = $displayStatus[0];
+			$haveServer = 1;
+		}
 	}
 
-	# /.../
-	# add log message to SaX.log
-	# ---
+	#==========================================
+	# Apply log message about display status
+	#------------------------------------------
 	Logger ("Startup...",$logHandle);
 	if ($haveServer) {
-	Logger ("Startup on already running Server:
-		$displayStatus[0] -> $displayStatus[1]",
-		$logHandle
-	);
+		Logger ("Startup on already running Server:
+			$displayStatus[0] -> $displayStatus[1]",
+			$logHandle
+		);
 	} else {
-	Logger ("Startup on new Server: <$disp>",
-		$logHandle
-	);
-	Logger ($spec{AutoConf},
-		$logHandle
-	);
+		Logger ("Startup on new Server: <$disp>",
+			$logHandle
+		);
+		Logger ($spec{AutoConf},
+			$logHandle
+		);
 	}
 
-	# /.../
-	# if ! haveServer start a new server using xw.
-	# Note: this server allways runs on terminal provided via: 
-	# GetVirtualTerminal()
-	# ---
+	#==========================================
+	# Start new X-Server if needed
+	#------------------------------------------
 	$spec{haveServer} = $haveServer;
 	if ($haveServer == 0) {
 		my $vt = GetVirtualTerminal();
@@ -230,8 +209,9 @@ sub main {
 		close(FD);
 		unlink($spec{XpidFile});
 
-		# save terminal settings...
-		# --------------------------
+		#==========================================
+		# save terminal settings to /var/log/xvt
+		#------------------------------------------
 		my $terminal = 7;
 		my $tty = Getty();
 		unlink($spec{XTerminal});
@@ -240,114 +220,82 @@ sub main {
 		print FD "TTyT:$tty\n";
 		close(FD);
 
-		# Hmm, is the server up... 
-		# -------------------------
+		#==========================================
+		# Check if the server starts up correctly
+		#------------------------------------------
 		if (CheckPID($spec{Xpid}) != 0) {
-		# /.../
-		# look if there are packages missing...
-		# --------------------------------------
-		my $install = "<none>";
-		my $data = qx($spec{Sysp} -q 3d);
-		if ($data =~ /Card3D0.*Install.*:(.*)\n.*/) {
-			$install = $1;
-			$install =~ s/ +//g;
+			#==========================================
+			# check for missing packages
+			#------------------------------------------
+			my $install = "<none>";
+			my $data = qx($spec{Sysp} -q 3d);
+			if ($data =~ /Card3D0.*Install.*:(.*)\n.*/) {
+				$install = $1;
+				$install =~ s/ +//g;
+			}
+			if ($install ne "<none>") {
+				print "xc: missing base package:\n";
+				print "    please install the following package(s):\n";
+				print "\n";
+				print "    $install\n";   
+				print "\n";
+				print "xc: abort...\n";
+			} else {
+				#==========================================
+				# Server startup failed... abort
+				#------------------------------------------
+				print "\n";
+				print "xc: sorry could not start configuration server\n";
+				print "xc: for details refer to the log file:\n";
+				print "\n";
+				print "    $spec{LogFile}\n";
+				print "\n";
+				print "xc: abort...\n";
+			}
+			Logger($spec{Xmsg},$logHandle);
+			unlink($spec{Xmsg});
+			Exit(0);
 		}
-		if ($install ne "<none>") {
-			print "xc: missing base package:\n";
-			print "    please install the following package(s):\n";
-			print "\n";
-			print "    $install\n";   
-			print "\n";
-			print "xc: abort...\n";
-		} else {
-			# /.../
-			# all packages there something serious happened...
-			# -------------------------------------------------
-			print "\n";
-			print "xc: sorry could not start configuration server\n";
-			print "xc: this could have the following reasons:\n";
-			print "\n";
-			print "  - the card is still not supported. To get\n";
-			print "    further information about the driver status\n";
-			print "    please have a look at:\n";
-			print "\n";
-			print "    http://http://www.x.org\n";
-			print "\n";
-			print "  - the card was not detected correctly. In\n"; 
-			print "    this case please get the information which\n"; 
-			print "    X11 module provide support for the card\n";
-			print "    and set the module using the following\n"; 
-			print "    command:\n";
-			print "\n";
-			print "    sax2 -m 0=<name of the module>\n";
-			print "\n";
-			print "    Note: 0 is a digit not a letter\n";
-			print "    Note: Information about modules are\n"; 
-			print "          provided on the mentioned WWW-Page\n";
-			print "\n";
-			print "  - the card was detected but the server fails\n";
-			print "    to start in spite of the detection. In this\n";
-			print "    case something more serious had happened.\n";
-			print "    Please have a look at the log file:\n"; 
-			print "\n";
-			print "    $spec{LogFile}\n";
-			print "\n";   
-			print "xc: if you can not determine the cause\n"; 
-			print "    please get in contact with:\n";
-			print "\n";
-			print "    <support\@suse.de>\n";
-			print "\n";
-			print "    Please include the log file and a detailed\n";
-			print "    description into your e-mail\n";
-			print "\n";
-			print "xc: abort...\n";
-		}
-		Logger($spec{Xmsg},$logHandle);
-		unlink($spec{Xmsg});
-		Exit(0);
-		}
-		sleep (1);
 	}
-	# /.../
-	# check package information via xapi and create the
-	# initial option line used for startup
-	# [sysp -q 3d]
-	# ------------
+	#==========================================
+	# prepare the options passed to xapi (GUI)
+	#------------------------------------------
 	my @parent = getParentName();
 	my $apiopt = "--middle";
-	# 1)
+
 	#=======================================
 	# Check if we are called from YaST2
 	#---------------------------------------
 	if (defined $YaSTMode) {
 		$apiopt = "--yast";
 	}
-	# 2)
 	#=======================================
 	# Check if we are called from SaX2
 	#---------------------------------------
 	if (($haveServer) && ($parent[0] eq "sax")) {
 		$apiopt = "";
 	}
-	# 3)
 	#=======================================
-	# for own server check size
+	# In case of own server; check size
 	#---------------------------------------
 	if ($haveServer == 0) {
 		$apiopt .= " --sizecheck";
 	}
-	# 4)
 	#=======================================
 	# Check for package check flag
 	#--------------------------------------- 
 	if (! defined $NoCheckPacs) {
 		system ("$spec{Xapi} $apiopt --checkpacs -display $disp");
 	}
-
-	# /.../
-	# add the config file and the X11 log file
-	# to the SaX.log file
-	# ---
+	#=======================================
+	# Check for fullscreen mode
+	#---------------------------------------
+	if (defined $FullScreen) {
+		$apiopt = $apiopt." --fullscreen";
+	}
+	#==========================================
+	# Apply log message about server status
+	#------------------------------------------
 	if ($haveServer == 0) {
 		my $glxinfo = qx (/usr/X11R6/bin/glxinfo -display $disp);
 		Logger ($spec{Xmsg},$logHandle);
@@ -355,122 +303,119 @@ sub main {
 		unlink ($spec{Xmsg});
 	}
 
-	# /.../
-	# run the do you like it program...
-	# ----
-	if (defined $FullScreen) {
-		$apiopt = $apiopt." --fullscreen";
-	}
+	#=======================================
+	# Show the intro message
+	#---------------------------------------
+	my $exit = 2;
 	if (defined $NoIntro) {
+		#=======================================
+		# Don't want to see a intro message
+		#---------------------------------------
 		$exit = 1;
 	} else {
-	if ($haveServer == 0) {
-		system ("$spec{Xapi} $apiopt --info -display $disp");
-		$exit = $? >> 8;
-		my @xpid = GetPids();
-		if (@xpid > 0) {
-			@displayStatus = GetDisplay (@xpid,$spec{Corner});
-			$disp = $displayStatus[0];
-			if ($displayStatus[1] ne "grant") {
+		if ($haveServer == 0) {
+			#=======================================
+			# Call intro and save exit code
+			#---------------------------------------
+			system ("$spec{Xapi} $apiopt --info -display $disp");
+			$exit = $? >> 8;
+			#=======================================
+			# Get information about our own server
+			#---------------------------------------
+			my @xpid = GetPids();
+			if (@xpid > 0) {
+				@displayStatus = GetDisplay (@xpid,$spec{Corner});
+				$disp = $displayStatus[0];
+				if ($displayStatus[1] ne "grant") {
+					$exit = 2;
+				}
+			} else {
 				$exit = 2;
 			}
 		} else {
-			$exit = 2;
+			#=======================================
+			# There is already a server to access
+			#---------------------------------------
+			$exit = 1;
 		}
-	} else {
-		$exit = 1;
 	}
-	}
-
-	# /.../
-	# handle the pseudo exit code from the do you
-	# like it call
-	# ---
+	#=======================================
+	# Handle the exit code from the intro
+	#---------------------------------------
 	my $exitCode = 0;
-	SWITCH: for ($exit) {
-	/^1/          &&  do {
-	#==========================
-	# Run the X11 manager...
-	#--------------------------
-	if (open (OPT,">$spec{StartOptions}")) {
-		print OPT $apiopt;
-		close OPT;
-	}
-	if (defined $DialogToStartWith) {
-		$apiopt = "$apiopt -O $DialogToStartWith";
-	}
-	if ($haveServer == 0) {
-		if ((defined $StartWithSystemConfig) && (HeaderOK())) {
-		system ("$spec{Xapi} $apiopt -display $disp");
-		} else {
-		system ("$spec{Xapi} $apiopt --mode auto -display $disp");
+	if ($exit == 1) {
+		#=======================================
+		# (1) Run the GUI (xapi)...
+		#---------------------------------------
+		if (open (OPT,">$spec{StartOptions}")) {
+			print OPT $apiopt;
+			close OPT;
 		}
-	} else {
-		if (-f $spec{HWFlag}) {
-		system ("$spec{Xapi} $apiopt --mode auto -display $disp");
-		} else {
-		system ("$spec{Xapi} $apiopt -display $disp");
+		if (defined $DialogToStartWith) {
+			$apiopt = "$apiopt -O $DialogToStartWith";
 		}
+		if ($haveServer == 0) {
+			if ((defined $StartWithSystemConfig) && (HeaderOK())) {
+				system ("$spec{Xapi} $apiopt -display $disp");
+			} else {
+				system ("$spec{Xapi} $apiopt --mode auto -display $disp");
+			}
+		} else {
+			if (-f $spec{HWFlag}) {
+				system ("$spec{Xapi} $apiopt --mode auto -display $disp");
+			} else {
+				system ("$spec{Xapi} $apiopt -display $disp");
+			}
+		}
+		$exitCode = $? >> 8;
+	} elsif ($exit == 0) {
+		#=======================================
+		# (0) Save the configuration file
+		#---------------------------------------
+		# /.../
+		# recreate Module Section because some modues not used
+		# for initial configuration are needed for final 
+		# configuration
+		# ----
+		@part2  = CreateModuleSection(\%var);
+		open (HANDLE,">$spec{AutoConf}");
+		print HANDLE @part0;  print HANDLE "\n";
+		print HANDLE @part1;  print HANDLE "\n";
+		print HANDLE @part2;  print HANDLE "\n";
+		print HANDLE @part3;  print HANDLE "\n";
+		print HANDLE @part4;  print HANDLE "\n";
+		print HANDLE @part5;  print HANDLE "\n";
+		print HANDLE @part6;  print HANDLE "\n";
+		print HANDLE @part7;  print HANDLE "\n";
+		print HANDLE @part8;  print HANDLE "\n";
+		print HANDLE @part9;  print HANDLE "\n";
+		print HANDLE @part10; print HANDLE "\n";
+		close(HANDLE);
+
+		LinkConfiguration();
+		$exitCode = 1;
 	}
-	$exitCode = $? >> 8;
-	last SWITCH;
-	};
-
-	/^0/          &&  do {
-	#==========================
-	# Save...
-	#--------------------------
-	# recreate Module Section because some modues not used
-	# for initial configuration are needed for final 
-	# configuration
-	# -------------
-	@part2  = CreateModuleSection(\%var);
-	open (HANDLE,">$spec{AutoConf}");
-	print HANDLE @part0;  print HANDLE "\n";
-	print HANDLE @part1;  print HANDLE "\n";
-	print HANDLE @part2;  print HANDLE "\n";
-	print HANDLE @part3;  print HANDLE "\n";
-	print HANDLE @part4;  print HANDLE "\n";
-	print HANDLE @part5;  print HANDLE "\n";
-	print HANDLE @part6;  print HANDLE "\n";
-	print HANDLE @part7;  print HANDLE "\n";
-	print HANDLE @part8;  print HANDLE "\n";
-	print HANDLE @part9;  print HANDLE "\n";
-	print HANDLE @part10; print HANDLE "\n";
-	close(HANDLE);
-
-	$final = LinkConfiguration();
-	$exitCode = 1;
-	last SWITCH;
-	};
-
-	/^2/          &&  do {
-	#==========================
-	# Abort...
-	#--------------------------
-	last SWITCH;
-	};
-	}
-
-	# kill the server...
-	# ------------------
+	#=======================================
+	# In case of own server; Kill it now
+	#---------------------------------------
 	if ($haveServer == 0) {
 		Kill ($spec{Xpid});
 	}
+	#=======================================
+	# Clean temp dir and exit
+	#---------------------------------------
 	CleanTmp();
 	Exit ($exitCode);
 }
 
-#==================================================
-# next there are all the functions needed to work
-# in the main routine
-#--------------------------------------------------
-#---[ CreateSecureDir ]-----#
+#==========================================
+# CreateSecureDir
+#------------------------------------------
 sub CreateSecureDir {
-#----------------------------------------------
-# this function create a secure tmp directory
-# and return the name of the directory
-#
+	# ...
+	# this function create a secure tmp directory
+	# and return the name of the directory
+	# ---
 	my $saxdir = "sax2-$$";
 	my $result = mkdir("/tmp/$saxdir",0700);
 	if ($result == 0) {
@@ -480,24 +425,25 @@ sub CreateSecureDir {
 	return($saxdir);
 }
 
-#---[ CleanTmp ]----#
+#==========================================
+# CleanTmp
+#------------------------------------------
 sub CleanTmp {
-#----------------------------------------------
-# this function send a signal to the process
-# itself and forces removement of the tmp dir
-#
-	kill(15,$$);
+	# ...
+	# this function send a signal to the process
+	# itself and forces removement of the tmp dir
+	# ---
+	kill (15,$$);
 }
 
 #----[ init ]----#
 sub init {
-#------------------------------------
-# init some data and test for root
-#
-	autoflush STDOUT 1;
-
-	# secure directory and signals...
-	# --------------------------------
+	# ...
+	# init spec hash and test for root privileges
+	# ---
+	#==========================================
+	# Create secure directory
+	#------------------------------------------
 	$TmpDir = CreateSecureDir();
 
 	$SIG{HUP}   = "HandleTmpSignal";
@@ -519,17 +465,13 @@ sub init {
 	$spec{Xapi}        = "/usr/sbin/xapi";
 	$spec{Intro}       = "/usr/share/sax/intro.pl";
 	$spec{Corner}      = "/usr/sbin/corner";
-	$spec{Xpid}        = undef;
-	$spec{NewServer}   = undef;
-	$spec{IntroPid}    = undef;
-	$spec{Demo}        = "/usr/sbin/demo.sh";
 	$spec{XTerminal}   = "/var/log/xvt";
-	$spec{Twm}         = "/usr/X11R6/bin/twm";
-	$spec{TwmRc}       = "/usr/share/sax/api/data/twmrc";
 	$spec{StartOptions}= "/var/cache/sax/files/xapi.opt";
 
-	# get options...
-	# --------------
+	#==========================================
+	# Get options...
+	#------------------------------------------
+	undef ($spec{Xpid});
 	undef ($YaSTMode);
 	undef ($EnableAutoConf);
 	undef ($Display);
@@ -547,10 +489,7 @@ sub init {
 		"sysconfig|s"    => \$StartWithSystemConfig,
 		"fullscreen|f"   => \$FullScreen,
 		"nocheckpacs|p"  => \$NoCheckPacs,
-		"noborder"       => \$NoBorder,
-		"unifont"        => \$UniFont,
 		"nointro|n"      => \$NoIntro,
-		"framewidth|w=i" => \$FrameWidth,
 		"dialog|O=s"     => \$DialogToStartWith,
 		"help|h"         => \&usage,
 		"<>"             => \&usage
@@ -563,87 +502,83 @@ sub init {
 		$EnableAutoConf = "";
 	}
 
-	#--------------#
-	# test on root #
-	#--------------#
-	my $user = qx(whoami);
+	#==========================================
+	# Test for root privileges
+	#------------------------------------------
+	my $user = qx (whoami);
 	if ($user !~ /root/i) {
 		print "xc: only root can do this\n";
 		exit(0);
 	}
 }
 
-#----[ reaper ]----#
-sub reaper {
+#==========================================
+# prepare
 #------------------------------------------
-# prevent us from zombies, using wait
-#
-	my $waitedpid = wait;
-	$SIG{CHLD} = \&reaper;
-}
-
-#----[ prepare ]----#
 sub prepare {
-#------------------------------------------
-# read saved hash data from file
-#
+	# ...
+	# read saved data dictionary hash from file
+	# import registry information
+	# ---
 	my $hashref;
 	if (! -s $spec{DbmFile}) {
-	print "xc: could not open tree: $spec{DbmFile}\n";
-	return(-1);
+		print "xc: could not open tree: $spec{DbmFile}\n";
+		return -1;
 	}
 	eval {
 		$hashref = retrieve($spec{DbmFile});
 	};
 	if (! defined $hashref) {
-	print "xc: could not open tree: $spec{DbmFile}\n";
-	return(-1);
+		print "xc: could not open tree: $spec{DbmFile}\n";
+		return -1;
 	}
 	%var = %{$hashref};
-	return(0);
+	return 0;
 }
 
-
-#----[ save ]--------#
+#==========================================
+# save
+#------------------------------------------
 sub save {
-#-------------------------------------------
-# save hash data as file $spec{DbmFile}
-#
+	# ...
+	# save hash data as file $spec{DbmFile}
+	# ---
 	unlink($spec{DbmFile});
 	if(!store(\%var,$spec{DbmFile})) {
 		print "init: could not create tree: $spec{DbmFile}\n";
-		return(-1);
+		return -1;
 	}
-	return(0);
+	return 0;
 }
 
-#---[ HandleTmpSignal ]-----#
+#==========================================
+# HandleTmpSignal
+#------------------------------------------
 sub HandleTmpSignal {
-#----------------------------------------------
-# signal function to remove tmp stuff
-#
-	qx(rm -rf /tmp/$TmpDir);
-	qx(rm -rf /tmp/sysp-*);
+	# ...
+	# signal function to remove tmp stuff
+	# ---
+	qx (rm -rf /tmp/$TmpDir);
+	qx (rm -rf /tmp/sysp-*);
 }
 
-#---[ Logger ]-------#
+#==========================================
+# Logger
+#------------------------------------------
 sub Logger {
-#----------------------------------------------------- 
-# append log file data to LOG handler...
-#
+	# ...
+	# Append log file data to LOG handler...
+	# ---
 	my $data   = $_[0];
 	my $handle = $_[1];
 	my $date   = qx (
 		LANG=POSIX /bin/date "+%d-%h %H:%M:%S"
 	);
 	$date =~ s/\n$//;
-	if (! defined $handle) {
-		$handle = STDOUT;
-	}
 	if (-f $data) {
-		#===============================
+		#==========================================
 		# got file for logging
-		#-------------------------------
+		#------------------------------------------
 		print $handle "$date <X> Logging File contents: $data [\n";
 		my $xf = new FileHandle;
 		if ($xf->open("$data")) {
@@ -657,9 +592,9 @@ sub Logger {
 		print $handle "]\n";
 		$xf->close;
 	} else {
-		#===============================
+		#==========================================
 		# got string data for logging
-		#-------------------------------
+		#------------------------------------------
 		print $handle "$date <X> ";
 		my $lineWrap = 0;
 		$data =~ s/^\n//;
@@ -682,13 +617,15 @@ sub Logger {
 	}
 }
 
-#--[ LinkConfiguration ]-----#
+#==========================================
+# LinkConfiguration
+#------------------------------------------
 sub LinkConfiguration {
-#-----------------------------------------------------
-# this function is called to copy the temporar config
-# file to /etc/X11/xorg.conf and create the symbolic 
-# X links
-# 
+	# ...
+	# this function is called to copy the temporary config
+	# file to /etc/X11/xorg.conf and create the symbolic 
+	# X links
+	# --- 
 	my $final  = "/etc/X11/xorg.conf";
 	my $save   = "/etc/X11/xorg.conf.saxsave";
 	my $server = "/usr/X11R6/bin/XFree86";
@@ -697,104 +634,114 @@ sub LinkConfiguration {
 		$server = "/usr/X11R6/bin/Xorg";
 	}
 	if (-f $final) {
-		qx(cp $final $save);
+		qx (cp $final $save);
 	}
+	#==========================================
+	# Save configuration to /etc/X11
+	#------------------------------------------
+	qx (cp $spec{AutoConf} $final);
 
-	# save configuration to /etc/X11...
-	# ----------------------------------
-	qx(cp $spec{AutoConf} $final);
-
-	# create links...
-	# ----------------
+	#==========================================
+	# Create startup links
+	#------------------------------------------
 	if (-f $server) {
-		qx(rm -f /usr/X11R6/bin/X);
-		qx(rm -f /var/X11R6/bin/X);
-		qx(ln -s /var/X11R6/bin/X /usr/X11R6/bin/X);
-		qx(ln -s $server /var/X11R6/bin/X);
+		qx (rm -f /usr/X11R6/bin/X);
+		qx (rm -f /var/X11R6/bin/X);
+		qx (ln -s /var/X11R6/bin/X /usr/X11R6/bin/X);
+		qx (ln -s $server /var/X11R6/bin/X);
 	}
-	unlink ($spec{HWFlag});
-	return ($final);
+	unlink ( $spec{HWFlag} );
+	return ( $final );
 }
 
-#----[ Exit ]--------#
-sub Exit {
+#==========================================
+# Exit
 #------------------------------------------
-# exit function wrapper which close the
-# LOG handler first...
-#
+sub Exit {
+	# ...
+	# exit function wrapper which close the
+	# LOG handler first...
+	# ---
 	my $code = $_[0];
 	CloseLog ($logHandle);
 	qx (rm -rf $TmpDir);
 	exit ($code);
 }
 
-#----[ Getty ]-------#
+#==========================================
+# Getty
+#------------------------------------------
 sub Getty {
-#--------------------------------------------------
-# look for the terminal ID and return it. Please
-# note this function has to return a number
-#
+	# ...
+	# look for the terminal ID and return it. Please
+	# note this function has to return a number
+	# ---
 	my $tty;
-	$tty = qx(tty | cut -f2 -dy);
+	$tty = qx (tty | cut -f2 -dy);
 	return($tty);
 }
 
-#----[ CheckPID ]----#
+#==========================================
+# CheckPID
+#------------------------------------------
 sub CheckPID {
-#--------------------------------------------------
-# check if the given process id still exist in
-# the process table
-#
+	# ...
+	# check if the given process id still exist in
+	# the process table
+	# ---
 	my $pid = $_[0];
-	my $exit;
-
 	if ($pid eq "") {
-		return(1);
+		return 1;
 	}
-	sleep(2); qx(ps $pid);
-	$exit = $? >> 8;
-	return($exit);
+	sleep(2); qx (ps $pid);
+	my $exit = $? >> 8;
+	return $exit;
 }
 
-#----[ OpenLog ]-----#
+#==========================================
+# OpenLog
+#------------------------------------------
 sub OpenLog {
-#--------------------------------------------------
-# remove old auto configuration file and open a 
-# new log file descriptor...
-#
+	# ...
+	# remove old auto configuration file and open a 
+	# new log file descriptor...
+	# ---
 	my $io;
-	unlink($spec{AutoConf});
+	unlink ($spec{AutoConf});
  
 	$io = new FileHandle;
 	if (! $io->open(">>$spec{LogFile}")) {
 		die "xc: could not create LogFile: $spec{LogFile}";
 	}
-
 	my $LOG = $io->fileno;
 	open(STDERR,">&$LOG") ||
-	die "could not duplicate LOG on stderr";
-
+		die "could not duplicate LOG on stderr";
 	binmode($io, ':unix');
 	return ($io);
 }
 
-#----[ CloseLog ]----#
+#==========================================
+# CloseLog
+#------------------------------------------
 sub CloseLog {
-#--------------------------------------------------
-# close current log file descriptor...
-#
+	# ...
+	# close current log file descriptor...
+	# ---
 	my $io = $_[0];
 	if (defined $io) {
 		$io->close;
 	}
 }
 
-#---[ Kill ]-------#
+#==========================================
+# Kill
+#------------------------------------------
 sub Kill {
-#--------------------------------------
-# my own kill function to make sure
-# the process is really killed
-#
+	# ...
+	# This function will try to kill a process with
+	# signal 15 first and if it still exists with signal
+	# number 9 to be sure it gets killed
+	# ---
 	my $pid = $_[0];
 	my $err;
 
@@ -805,46 +752,18 @@ sub Kill {
 	$err = $? >> 8;
 	if ($err > 0) {
 		Logger ("die hard on pid: $pid",$logHandle);
-		sleep(1);
-		system("kill -9 $pid");
+		system ("kill -9 $pid");
 	}
 }
 
-#---[ headerOK ]------#
-sub headerOK {
-#-------------------------------------------
-# check the xorg.conf header if the given
-# file was created using SaX2 / ISaX
-#
-	my $file = $_[0];
-	my $hunk = "SaX generated X11 config file";
-
-	# /.../
-	# first check if the file exist and could
-	# be opened
-	# ---
-	if (! -f $file) {
-		return (0);
-	}
-	if (! open (FD,$file)) {
-		return (0);
-	}
-	while (<FD>) {
-	if ($_ =~ /$hunk/) {
-		close (FD);
-		return (1);
-	}
-	}
-	close (FD);
-	return (0);
-}
-
-#---[ getParentName ]------#
+#==========================================
+# getParentName
+#------------------------------------------
 sub getParentName {
-#-------------------------------------------
-# get the name of the parent process calling
-# this script
-#
+	# ...
+	# get the name of the parent process calling
+	# this script
+	# ---
 	my @return;
 	my $parent = getppid();
 	my $name = qx ( cat /proc/$parent/cmdline );
@@ -865,45 +784,70 @@ sub getParentName {
 	);
 }
 
-#---[ HeaderOK ]----#
+#==========================================
+# HeaderOK
+#------------------------------------------
 sub HeaderOK {
-#--------------------------------------------
-# check if the header of the config file is
-# create from SaX2/ISaX... otherwhise this
-# file shouldn't be read
-#
+	# ...
+	# check if the header of the config file has been created
+	# from SaX2/ISaX... otherwhise this file shouldn't be
+	# read in
+	# ---
 	my $config = "/etc/X11/xorg.conf";
 	open (FD,$config) || return 0;
 	my $check = <FD>;
 	chomp ($check);
 	close (FD);
 	if ($check eq "# /.../") {
-		return (1);
+		return 1;
 	}
-	return (0);
+	return 0;
 }
 
-#---[ usage ]------#
+#==========================================
+# usage
+#------------------------------------------
 sub usage {
-#--------------------------------
-# if you need help :-)
-#
-	print "Linux SaX Version 7.1 level (xc) (2002-02-19)\n";
-	print "(C) Copyright 2002 - SuSE GmbH\n";
+	# ...
+	# usage message for calling xc.pl
+	# ---
+	print "Linux SaX Version 7.1 level (xc) (2005-09-26)\n";
+	print "(C) Copyright 2005 - SUSE LINUX Products GmbH\n";
 	print "\n";
 
 	print "usage: xc [ options ]\n";
 	print "options:\n";
 	print "[ -a | --auto ]\n";
 	print "   enable automatic configuration\n";
+	print "\n";
 	print "[ -x | --xmode ]\n";
 	print "   do not use sax calculated Modelines,\n";
 	print "   use the server generated once instead\n";
+	print "\n";
 	print "[ -s | --sysconfig ]\n";
 	print "   this option will only take effect if xc\n";
 	print "   has to start its own X-Server. It will than\n";
 	print "   read the system installed config file\n";
 	print "   instead of the HW detection data\n" ;
+	print "[ -y | --yast ]\n";
+	print "\n";
+	print "   start in yast mode which passed the option\n";
+	print "   named --yast to the xapi binary\n";
+	print "\n";
+	print "[ -f | --fullscreen ]\n";
+	print "   start the GUI in fullscreen mode\n";
+	print "\n";
+	print "[ -O | --dialog ]\n";
+	print "   pass the option --dialog to the xapi binary\n";
+	print "\n";
+	print "[ -n | --nointro ]\n";
+	print "   skip the greeting message\n";
+	print "\n";
+	print "[ -p | --nocheckpacs ]\n";
+	print "   skip the check for required packages\n";
+	print "\n";
+	print "[ -h | --help ]\n";
+	print "   show this message\n";
 	print "--\n";
 	Exit(0);
 }

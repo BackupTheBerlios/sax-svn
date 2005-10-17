@@ -434,7 +434,7 @@ void prepare (void) {
 				} else {
 					pval = 100;
 				}
-				if (pval >= 70) {
+				if (pval >= 12) {
 					if (mouse_is_arrow) {
 						cursor = CreateCursorFromName(dpy,0,"watch");
 						if (cursor) {
