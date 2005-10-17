@@ -106,6 +106,15 @@ FbData* FbGetData(void) {
 	GetVarScreenInfo(fh, &var);
 	ConvertToVideoMode(&var, &vmode);
 
+	#if 1
+	// .../
+	// limit the framebuffer to a 60Hz mode
+	// ...
+	vmode.hrate = (60.0 / vmode.vrate) * vmode.hrate;
+	vmode.drate = (vmode.xres+vmode.right+vmode.hslen+vmode.left) * vmode.hrate;
+	vmode.vrate = 60;
+	#endif
+
 	fb->x     = vmode.xres;
 	fb->y     = vmode.yres;
 	fb->depth = vmode.depth;
