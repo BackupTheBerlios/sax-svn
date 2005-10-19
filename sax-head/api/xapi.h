@@ -32,6 +32,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include "config.h"
 #include "frame.h"
+#include "profile.h"
 #include "common/log.h"
 
 //====================================

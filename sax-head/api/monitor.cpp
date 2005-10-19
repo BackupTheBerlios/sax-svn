@@ -19,6 +19,11 @@ STATUS        : Status: Development
 **************/
 #include "monitor.h"
 
+//====================================
+// Globals
+//------------------------------------
+extern SaXGUI::SCCWidgetProfile* SaXWidgetProfile;
+
 namespace SaXGUI {
 //====================================
 // Constructor
@@ -382,8 +387,7 @@ bool SCCMonitor::exportData ( void ) {
 		//------------------------------------
 		QString profile = saxDesktop.getDualHeadProfile();
 		if (! profile.isEmpty()) {
-			SaXImportProfile* pProfile = new SaXImportProfile ( profile );
-			pProfile -> doImport();
+			SaXImportProfile* pProfile = SaXWidgetProfile->getProfile (profile);
 			SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
 			if ( mImport ) {
 				//====================================

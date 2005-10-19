@@ -31,6 +31,7 @@ STATUS        : Status: Development
 #include "common/log.h"
 #include "wrapper.h"
 #include "message.h"
+#include "profile.h"
 #include "file.h"
 
 namespace SaXGUI {

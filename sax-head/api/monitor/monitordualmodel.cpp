@@ -19,6 +19,11 @@ STATUS        : Status: Development
 **************/
 #include "monitordualmodel.h"
 
+//====================================
+// Globals
+//------------------------------------
+extern SaXGUI::SCCWidgetProfile* SaXWidgetProfile;
+
 namespace SaXGUI {
 //====================================
 // Constructor
@@ -183,8 +188,7 @@ void SCCMonitorDualModel::init ( void ) {
 	//------------------------------------
 	QString profile = mSaxDesktop -> getDualHeadProfile();
 	if (! profile.isEmpty()) {
-		SaXImportProfile* pProfile = new SaXImportProfile ( profile );
-		pProfile -> doImport();
+		SaXImportProfile* pProfile = SaXWidgetProfile->getProfile ( profile );
 		SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
 		if ( mImport ) {
 			SaXManipulateCard saxProfileCard ( mImport );

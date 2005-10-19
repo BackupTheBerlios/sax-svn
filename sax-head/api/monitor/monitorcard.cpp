@@ -19,6 +19,11 @@ STATUS        : Status: Development
 **************/
 #include "monitorcard.h"
 
+//====================================
+// Globals
+//------------------------------------
+extern SaXGUI::SCCWidgetProfile* SaXWidgetProfile;
+
 namespace SaXGUI {
 //====================================
 // Constructor
@@ -125,8 +130,7 @@ void SCCMonitorCard::init ( void ) {
 	// create profile option dict...
 	QString profile = saxDesktop.getDualHeadProfile();
 	if (! profile.isEmpty()) {
-		SaXImportProfile* pProfile = new SaXImportProfile ( profile );
-		pProfile -> doImport();
+		SaXImportProfile* pProfile = SaXWidgetProfile->getProfile ( profile );
 		SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
 		if ( mImport ) {
 			SaXManipulateCard saxProfileCard ( mImport );

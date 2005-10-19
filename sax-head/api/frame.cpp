@@ -19,6 +19,11 @@ STATUS        : Status: Development
 **************/
 #include "frame.h"
 
+//=====================================
+// Globals
+//-------------------------------------
+extern QString SaXDisplay;
+
 namespace SaXGUI {
 //=====================================
 // Constructor
@@ -45,6 +50,8 @@ SCCFrame::SCCFrame (
 		QProcess* proc = new QProcess ();
 		proc -> addArgument ( XQUERY );
 		proc -> addArgument ( "-M" );
+		proc -> addArgument ( "--display" );
+		proc -> addArgument ( SaXDisplay );
 		if ( ! proc -> start() ) {
 			exitSaX (1);
 		}
@@ -109,6 +116,8 @@ SCCFrame::SCCFrame (
 			QProcess* proc = new QProcess ();
 			proc -> addArgument ( XQUERY );
 			proc -> addArgument ( "-M" );
+			proc -> addArgument ( "--display" );
+			proc -> addArgument ( SaXDisplay );
 			if ( ! proc -> start() ) {
 				exitSaX (1);
 			}
@@ -164,6 +173,8 @@ SCCFrame::SCCFrame (
 			QProcess* proc = new QProcess ();
 			proc -> addArgument ( XQUERY );
 			proc -> addArgument ( "-M" );
+			proc -> addArgument ( "--display" );
+			proc -> addArgument ( SaXDisplay );
 			if ( ! proc -> start() ) {
 				return; 
 			}

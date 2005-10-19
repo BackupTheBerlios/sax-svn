@@ -23,6 +23,12 @@ STATUS        : Status: Development
 // Globals
 //-------------------------------------
 SaXGUI::SCCFrame* sccGUI = 0;
+SaXGUI::SCCWidgetProfile* SaXWidgetProfile = new SaXGUI::SCCWidgetProfile();
+
+//=====================================
+// Globals
+//-------------------------------------
+QString SaXDisplay (":0");
 
 //=====================================
 // main program...
@@ -74,6 +80,14 @@ int main (int argc,char*argv[]) {
 		//-------------------------------------
 		if (QString(argv[i]) == "--help") {
 			usage (0);
+		}
+		//=====================================
+		// handle -display option...
+		//-------------------------------------
+		if (QString(argv[i]) == "-display") {
+		if (argv[i+1]) {
+			SaXDisplay = argv[i+1];
+		}
 		}
 		//=====================================
 		// handle commandline tool...
