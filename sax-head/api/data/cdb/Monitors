@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Oct 14 14:26:08 2005
+# Author: Marcus Schaefer <sax@suse.de>, Fri Oct 21 13:05:56 2005
 #
 # Template for monitor data
 # --------------------------
@@ -15260,9 +15260,10 @@ HEWLETT-PACKARD:D8906A HP P700 17-INCH MONITOR  {
 # D8907 P720
 #----------------------------------------------
 HEWLETT-PACKARD:D8907 P720  {
- DDC=HWP22BC
+ DDC=HWP22CB
  Option=DPMS
  Hsync=30-85
+ Resolution=1280x1024
  Vsync=50-160
 }
 
