@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Oct 21 12:43:20 CEST 2005 - ms@suse.de
+
+- fixed enable3D function in libsax, do not set wrong colordepth
+- fixed md5sum check which prevent writing the configuration
+  because someone changed the output format of md5sum
+
+-------------------------------------------------------------------
 Fri Oct 21 11:08:58 CEST 2005 - ms@suse.de
 
 - changed NVidia_DualHead_DriverOptions from bash to perl

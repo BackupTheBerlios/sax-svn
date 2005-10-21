@@ -592,7 +592,9 @@ bool SaXManipulateDesktop::enable3D (void) {
 				// Colordepth...
 				//------------------------------------
 				QString color = saxProfileDesktop.getColorDepth();
-				setColorDepth (color.toInt());
+				if (! color.isEmpty()) {
+					setColorDepth (color.toInt());
+				}
 			}
 		}
 		return true;

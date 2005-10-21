@@ -691,7 +691,8 @@ sub CreateChecksum {
 	my $file = $_[0];
 	my $md5  = "$file.md5";
 	my $sum = qx (/usr/bin/md5sum $file);
-	if ($sum =~ /(.*)  /) {
+	$sum = quotemeta ($sum);
+	if ($sum =~ /(.*) +/) {
 		$sum = $1;
 		open (FD,">$md5") || return;
 		print FD $sum;
