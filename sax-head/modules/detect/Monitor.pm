@@ -339,38 +339,6 @@ sub GetDDCRecord {
 	return;
 }
 
-#---[ similarity ]--------#
-sub similarity {
-#-------------------------------------------
-# check for similar strings. This function
-# will return a percentage of similarity
-# in two strings
-#
-	my $name0 = $_[0];
-	my $name1 = $_[1];
-
-	#==========================================
-	# remove special signs, prepare names
-	#------------------------------------------
-	$name0 = lc ($name0); $name1 = lc ($name1);
-	$name0 =~ s/[ \.\/\\\-\$\"?\@%()\[\]]//g;
-	$name1 =~ s/[ \.\/\\\-\$\"?\@%()\[\]]//g;
-	my $l0 = length ($name0);
-	my $l1 = length ($name1);
-
-	#==========================================
-	# check for name in 0 and 1 and vice versa
-	#------------------------------------------
-	if ($name0 =~ s/$name1//) {
-		my $result = $l0 - length($name0);
-		return int( (100 / $l0) * $result );
-	} elsif ($name1 =~ s/$name0//) {
-		my $result = $l1 - length($name1);
-		return int( (100 / $l1) * $result );
-	}
-	return (0);
-}
-
 #----[ GetGroupRecord ]------------#
 sub GetGroupRecord {
 #-------------------------------------------------
