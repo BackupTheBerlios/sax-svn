@@ -176,7 +176,7 @@ void SaXStorage::addRawItem (
 // Delete from raw item...
 //------------------------------------
 void SaXStorage::removeRawItem (
-	const QString & key, const QString & optname
+	const QString & key, const QString & opt
 ) {
 	// .../
 	//! set special item value used for options including a value
@@ -184,13 +184,15 @@ void SaXStorage::removeRawItem (
 	//! is a comma separated list of key value pairs separated by
 	//! a space each. This method will remove such a value pair
 	// ----
+	QString optname = opt;
 	QString expression (",");
 	if (key == "RawData") {
-		expression = "Option";
+		expression = ",Option";
+		optname.replace (QRegExp("^Option"),"");
 	}
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
 	if (currentValue) {
-		QStringList optlist = QStringList::split ( ",", *currentValue );
+		QStringList	optlist = QStringList::split ( expression, *currentValue );
 		QStringList result;
 		for ( QStringList::Iterator
 			in = optlist.begin(); in != optlist.end(); ++in
@@ -200,7 +202,7 @@ void SaXStorage::removeRawItem (
 				result.append (item);
 			}
 		}
-		QString newValue = result.join (",");
+		QString newValue = result.join (expression);
 		setItem (key,newValue);
 	}
 }
