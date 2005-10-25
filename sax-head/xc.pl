@@ -356,14 +356,18 @@ sub main {
 		}
 		if ($haveServer == 0) {
 			if ((defined $StartWithSystemConfig) && (HeaderOK())) {
+				print "SaX: importing current configuration...\n";
 				system ("$spec{Xapi} $apiopt -display $disp");
 			} else {
+				print "SaX: using cache data...\n";
 				system ("$spec{Xapi} $apiopt --mode auto -display $disp");
 			}
 		} else {
-			if (-f $spec{HWFlag}) {
+			if ((-f $spec{HWFlag}) || (! HeaderOK())) {
+				print "SaX: using cache data...\n";
 				system ("$spec{Xapi} $apiopt --mode auto -display $disp");
 			} else {
+				print "SaX: importing current configuration...\n";
 				system ("$spec{Xapi} $apiopt -display $disp");
 			}
 		}
@@ -793,14 +797,26 @@ sub HeaderOK {
 	# from SaX2/ISaX... otherwhise this file shouldn't be
 	# read in
 	# ---
-	my $config = "/etc/X11/xorg.conf";
-	open (FD,$config) || return 0;
-	my $check = <FD>;
-	chomp ($check);
-	close (FD);
-	if ($check eq "# /.../") {
+	my $file = "/etc/X11/xorg.conf";
+	my $hunk = "SaX generated X11 config file";
+	my $msg1 = "SaX: header check failed !\n";
+	my $msg2 = "SaX: will not import $file\n";
+	if (! -f $file) {
+		print $msg1.$msg2;
+		return 0;
+	}
+	if (! open (FD,$file)) {
+		print $msg1.$msg2;
+		return 0;
+	}
+	while (<FD>) {
+	if ($_ =~ /$hunk/) {
+		close FD;
 		return 1;
 	}
+	}
+	close FD;
+	print $msg1.$msg2;
 	return 0;
 }
 

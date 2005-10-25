@@ -405,17 +405,23 @@ echo -ne "\r"
 
 if [ $IN_TRIGGER = 1 ];then
 	echo "SaX: initializing please wait..."
+	if [ -f /etc/X11/xorg.conf ];then
+		echo "SaX: your current configuration will not be read in"
+		echo
+	fi
 	$INIT $IN_OPT --quiet no
 	if [ ! $? = 0 ];then
 		quit
 	fi
 else
-	echo "SaX: initializing done, using cache data..."
+	echo "SaX: initialization already done"
+	echo "SaX: call [ sax2 -r ] if your system has changed !"
 fi
 
 #==================================
 # check for commandline call
 #----------------------------------
+echo
 echo "SaX: startup"
 if [ ! -z "$CMD_LINE" ];then
 	$API -- $CMD_LINE 2>>$ERR
