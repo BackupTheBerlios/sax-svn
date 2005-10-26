@@ -12,6 +12,7 @@
 #
 use lib '/usr/share/sax/modules/detect';
 
+use FBSet;
 use Card;
 use Fonts;
 use Keyboard;
