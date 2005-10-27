@@ -5,18 +5,20 @@
 # Copyright (C) SuSE AG.
 # Gudmund Areskoug <fta@algonet.se>, 2001.
 # Mattias Newzella <newzella@linux.nu>, 2002,2003, 2004.
-# 
+# Mattias Newzella <newzella@linux.se>, 2005.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-09-05 20:46+0200\n"
-"Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
+"PO-Revision-Date: 2005-09-18 18:43+0200\n"
+"Last-Translator: Mattias Newzella <newzella@linux.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
+"X-Generator: KBabel 1.10.1\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -24,7 +26,6 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
@@ -35,33 +36,30 @@ msgstr ""
 "inställningarna."
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
 msgstr "Automatisk inställning av grafiksystem"
 
 #. Caption text for informing the user
-#, fuzzy
 msgid "Information..."
-msgstr "Dialoginformation..."
+msgstr "Information..."
 
 #. Caption text for the main window
 msgid "SaX2: SUSE Advanced X11 Configuration"
-msgstr ""
+msgstr "SaX2: SUSE:s avancerade X11-inställningar"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "SaX inställningscentral"
 
 #. Title text on the right side
 msgid "SUSE Linux"
-msgstr ""
+msgstr "SUSE Linux"
 
 #. Help Button text
 msgid "&Help"
 msgstr "&Hjälp"
 
 #. Ok Button text
-#, fuzzy
 msgid "&OK"
 msgstr "&OK"
 
@@ -79,16 +77,14 @@ msgid "&Cancel"
 msgstr "Avbr&yt"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr "<b>Avsluta SaX2:</b><hr>Vill du avsluta SaX2 nu?"
+msgstr "<b>Avsluta SaX2</b><hr>Avsluta SaX2 nu?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "Meddelande"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
 msgstr "Ändra inställnin&gar"
 
@@ -98,9 +94,8 @@ msgid "Monitor"
 msgstr "Bildskärm"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "Ställ in bildskärmsegenskaper..."
+msgstr "Kort- och bildskärmsegenskaper"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -108,19 +103,16 @@ msgid "Mouse"
 msgstr "Mus"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "Egenskaper..."
+msgstr "Musegenskaper"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "Tangentbordsmodell"
+msgstr "Tangentbord"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "Ställ in bildskärmsegenskaper..."
+msgstr "Tangentbordsegenskaper"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -128,9 +120,8 @@ msgid "Tablet"
 msgstr "Pekplatta"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "Egenskaper..."
+msgstr "Pekplattaegenskaper"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -138,18 +129,16 @@ msgid "Touchscreen"
 msgstr "Pekskärm"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "Ställ in bildskärmsegenskaper..."
+msgstr "Pekskärmsegenskaper"
 
 #. Short description of the VNC module
 msgid "VNC"
 msgstr "VNC"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "Ställ in bildskärmsegenskaper..."
+msgstr "Egenskaper för fjärråtkomst"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -157,32 +146,29 @@ msgstr "Skärm"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Aktivera den här skärmen"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "Aktivera den här pekaren"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "Kort"
 
 #. Change data
-#, fuzzy
 msgid "&Change..."
-msgstr "<Ändra lösenord...>"
+msgstr "&Ändra..."
 
 #. Set options for some kind of data
 msgid "&Options..."
 msgstr "A&lternativ..."
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "Ställ in tangentbord..."
+msgstr "S&täll in..."
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
 msgstr "Flerhuvudläge"
 
@@ -190,40 +176,33 @@ msgstr "Flerhuvudläge"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
-#, fuzzy
 msgid "Options"
-msgstr "&Alternativ"
+msgstr "Alternativ"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
 msgstr "Aktivera mushjul"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
 msgstr "Aktivera 3-knappemulering"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Emulera hjul med musknapp:"
+msgstr "Emulera hjul med musknapp"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
 msgstr "Rotera skärm"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "&Testa..."
+msgstr "Testa"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "&Testa..."
+msgstr "&Testa"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -236,103 +215,86 @@ msgid "Layout"
 msgstr "Layout"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "Testfält"
+msgstr "Test klart"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
 msgstr "Enkelknappklick: Klar"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
 msgstr "Dubbelknappklick: Klar"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "ScrollLock-mappning"
+msgstr "Rullning"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "Knapp nedtryckt..."
+msgstr "Knapp nedtryckt"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "Knapp släppt..."
+msgstr "Knapp släppt"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
-msgstr "Hjul stoppat: Klar"
+msgstr "Stoppat: Klar"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
-msgstr "Egenskaper..."
+msgstr "Egenskaper"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Flerhuvudläge"
+msgstr "Aktivera flerhuvudläge"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Upplösning Y"
+msgstr "Upplösning"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
-msgstr "Fär&ger"
+msgstr "Färger"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "3D-acceleration"
+msgstr "Aktivera 3D-acceleration"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "Bildskärmsmodell"
+msgstr "Bildskärm för kort"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "Bildskärmsmodell"
+msgstr "Andra bildskärm för kort"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "&Frekvenser"
+msgstr "Synkfrekvenser"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
 msgstr "Skärmstorlek"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "Arrangemang"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "Aktiverad i %1-läge med %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "Aktiverad i drivrutinens standardläge"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
 msgstr "Inte inställd"
 
@@ -341,11 +303,12 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>Kan inte inaktivera alla skärmar</b><hr><nobr>Minst en skärm måste vara "
+"aktiv.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Inställningarna sparades..."
+msgstr "Ingen inställning tillgänglig"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -372,87 +335,72 @@ msgstr ""
 "Gör en stor skärm av alla skärmar."
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
 msgstr "Flerhuvudläge"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "Ansluten till:"
+msgstr "Ansluten till"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Okänd bildskärm..."
+msgstr "Okänd bildskärm:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "Primär lägesrad:"
+msgstr "Primär bildskärm:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "Färgval..."
+msgstr "Bildskärmsinställningar"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "X11-system"
+msgstr "Musinställningar"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "Grafikkort"
+msgstr "Grafikkortsinställningar"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Flerhuvudläge"
+msgstr "Flerhuvudlägesinställningar"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
 msgstr "Inte roterad"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
 msgstr "Åt vänster"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
 msgstr "Åt höger"
 
 #. Popup message to ask the user for an option value
-#, fuzzy
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Alternativet %1 behöver ett värde</b><hr>Ställ in ett värde för det här "
-"alternativet."
+"<b>Alternativet behöver ett värde</b><hr><nobr>Ställ in ett värde för "
+"alternativet %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Modell: Välj leverantör och namn..."
+msgstr "Bildskärm: Välj leverantör och namn"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Modell: Välj leverantör och namn..."
+msgstr "Mus: Välj leverantör och namn"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "Manuell sync-frekvensinställning..."
+msgstr "Manuell sync-frekvensinställning"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "Diagonal och proportion"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
@@ -470,31 +418,27 @@ msgstr ""
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "Aktivera DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Drivrutinsdisk..."
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "Horisontell:"
+msgstr "Horisontell"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "Välj upplösningar"
+msgstr "Sekundär bildskärm:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "Välj upplösningar"
+msgstr "Upplösning för sekundär skärm"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "Vertikal:"
+msgstr "Vertikal"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -506,20 +450,19 @@ msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Proportion"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "Horisontell:"
+msgstr "Diagonal"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "X-axel [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Y-axel [mm]"
 
 #. Something is not configured
 msgid "Not configured"
@@ -527,10 +470,9 @@ msgstr "Inte inställd"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "tum"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
@@ -539,7 +481,6 @@ msgstr ""
 "från bildskärmsleverantören."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
@@ -548,29 +489,26 @@ msgstr ""
 "felaktig media eller ett felaktigt format på informationsfilen på mediat."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "Traditionellt läge aktivt"
+msgstr "Traditionell"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "Klon"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "Mus"
+msgstr "Musmodell"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
 msgstr "Primär inställning"
 
 #. Label text for the primary keyboard type
-#, fuzzy
 msgid "Type"
 msgstr "Typ"
 
@@ -580,7 +518,6 @@ msgid "Variant"
 msgstr "Variant"
 
 #. Group box title for the additional keyboard setup
-#, fuzzy
 msgid "Additional Layouts"
 msgstr "Ytterligare layouter"
 
@@ -593,12 +530,10 @@ msgid "Keytable"
 msgstr "Tangentkarta"
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
 msgstr "Skift/Lock-gruppbeteende"
 
 #. List View root item text
-#, fuzzy
 msgid "Use Keyboard LED to Show Alternate Group"
 msgstr "Använd tangentbordets LED för att visa alternativ grupp"
 
@@ -613,58 +548,48 @@ msgid "Control Key Position"
 msgstr "Position för Ctrl-tangenten"
 
 #. List View root item text
-#, fuzzy
 msgid "Third Level Chooser"
 msgstr "Tredje nivån av väljare"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
 msgstr "Alt/win-tangenternas beteende"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
 msgstr "Caps Lock-tangentens beteende"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed."
-msgstr "Vänster win-tangent byter grupp när den hålls nere"
+msgstr "Vänster Alt-tangent byter grupp när den hålls nere."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "Båda Ctrl-tangenterna tillsammans byter grupp"
+msgstr "Båda Ctrl-tangenterna tillsammans byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "Höger Skift-tangent byter grupp"
+msgstr "Höger Skift-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "Vänster Win-tangent byter grupp"
+msgstr "Vänster Win-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "Vänster Alt-tangent byter grupp"
+msgstr "Vänster Alt-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed."
-msgstr "Båda win-tangenter byter grupp när den hålls nere"
+msgstr "Båda win-tangenterna byter grupp när de hålls nere."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches group while pressed."
-msgstr "Höger win-tangent byter grupp när den hålls nere"
+msgstr "Höger Ctrl-tangent byter grupp när den hålls nere."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -679,281 +604,233 @@ msgid "CapsLock toggles Shift so all keys are affected."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key is Compose."
-msgstr "Höger win-tangent är komponera"
+msgstr "Höger win-tangent är komponera."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group."
-msgstr "Caps Lock-tangenten byter grupp"
+msgstr "Skift + Caps Lock byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches group while pressed."
-msgstr "R-Alt skiftar grupp när nedtryckt"
+msgstr "R-Alt byter grupp när nedtryckt."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "Höger Ctrl-tangent fungerar som höger Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
 msgstr "Ctrl-tangent längst ner till vänster"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Tryck på någon av win-tangenterna för att välja tredje nivån"
+msgstr "Tryck på någon av win-tangenterna för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Tryck höger win-tangent för att välja tredje nivån"
+msgstr "Tryck höger Alt-tangent för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes group."
-msgstr "Höger Ctrl-tangent byter grupp"
+msgstr "Höger Ctrl-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "Höger alt-tangent är komponera"
+msgstr "Höger alt-tangent är komponera."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "Höger alt-tangent är komponera"
+msgstr "Höger Ctrl är komponera."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative group."
-msgstr "Scroll Lock LED visar alternativ grupp"
+msgstr "Scroll Lock LED visar alternativ grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Ctrl-tangent till vänster om \"A\""
+msgstr "Ctrl-tangent till vänster om -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
 msgstr "Tredje nivån av väljare"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "Båda skift-tangenterna samtidigt byter grupp"
+msgstr "Båda skift-tangenterna samtidigt byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "använder internationellt skiftläge. Skift upphäver Caps Lock."
+msgstr ""
+"Caps Lock använder internationellt skiftläge. Skift upphäver Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "Gör CapsLock till ytterligare kontroll"
+msgstr "Gör Caps Lock till ytterligare kontroll."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Tryck vänster win-tangent för att välja tredje nivån"
+msgstr "Tryck vänster win-tangent för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "Höger win-tangent byter grupp"
+msgstr "Höger win-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
 msgstr "Meta tilldelas till vänster win-tangent."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative group."
-msgstr "Caps Lock LED visar alternativ grupp"
+msgstr "Caps Lock LED visar alternativ grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative group."
-msgstr "Num Lock LED visar alternativ grupp"
+msgstr "Num Lock LED visar alternativ grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "Vänster Skift-tangent byter grupp"
+msgstr "Vänster Skift-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "Vänster win-tangent byter grupp när den hålls nere"
+msgstr "Vänster win-tangent byter grupp när den hålls nere."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "Meny är komponera"
+msgstr "Meny är komponera."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "Båda skift-tangenterna samtidigt byter grupp"
+msgstr "Båda Alt-tangenterna samtidigt byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "Caps Lock-tangenten byter grupp"
+msgstr "Caps Lock-tangenten byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
-msgstr "Byt position för Ctrl och Caps Lock"
+msgstr "Byt position för Ctrl och Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Tryck på någon av win-tangenterna för att välja tredje nivån"
+msgstr "Tryck på någon av Alt-tangenterna för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "Höger Alt-tangent byter grupp"
+msgstr "Höger Alt-tangent byter grupp."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
+msgstr "Skift med numeriska tangenter fungerar som i MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper tilldelas till win-tangenterna."
+msgstr "Hyper tilldelas win-tangenterna."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Meta tilldelas till vänster win-tangent."
+msgstr "Alt tilldelas höger win-tangent och Super tilldelas Meny."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)."
-msgstr "Super tilldelas till win-tangenterna (standard)."
+msgstr "Super tilldelas win-tangenterna (standard)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
 msgstr "Alt och meta på alt-tangenterna (standard)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
 msgstr "Lägger till standardbeteendet till meny-tangenten."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys (default)."
 msgstr "Alt och meta på alt-tangenterna (standard)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Control to choose 3rd level."
-msgstr "Tryck på höger Ctrl-tangent för att välja tredje nivån"
+msgstr "Tryck på höger Ctrl-tangent för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Alt+skift byter grupp"
+msgstr "Alt+skift byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "Ctrl+skift byter grupp"
+msgstr "Ctrl+skift byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "fungerar som Skift med låsning. Skift upphäver Caps Lock."
+msgstr "Caps Lock fungerar som Skift med låsning. Skift upphäver Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative group."
-msgstr "Använd tangentbordets LED för att visa alternativ grupp"
+msgstr "Använd tangentbordets LED för att visa alternativ grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Tryck höger win-tangent för att välja tredje nivån"
+msgstr "Tryck höger win-tangent för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Tryck vänster win-tangent för att välja tredje nivån"
+msgstr "Tryck vänster Alt-tangent för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys."
-msgstr "Meta tilldelas till win-tangenterna."
+msgstr "Meta tilldelas win-tangenterna."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Menu key to choose 3rd level."
-msgstr "Tryck på meny-tangenten för att välja tredje nivån"
+msgstr "Tryck på meny-tangenten för att välja tredje nivån."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "Vänster Ctrl-tangent byter grupp"
+msgstr "Vänster Ctrl-tangent byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "Meny-tangenten byter grupp"
+msgstr "Meny-tangenten byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Alt+Ctrl byter grupp"
+msgstr "Alt+Ctrl byter grupp."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches group while pressed."
-msgstr "Höger win-tangent byter grupp när den hålls nere"
+msgstr "Höger win-tangent byter grupp när den hålls nere."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "Port och läge"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Elektroniska pennor"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3D-acceleration"
+msgstr "Aktivera den här pekplattan"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Modell: Välj leverantör och namn..."
+msgstr "Pekplatta: Välj leverantör och namn"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "Ansluten till:"
+msgstr "Anslutningsport"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Primär inställning"
+msgstr "Primärt läge för pekplatta"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Penn- eller raderare-läge"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
@@ -989,47 +866,41 @@ msgstr "Lägg till raderare"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "Inställningar för penna eller raderare"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Egenskaper..."
+msgstr "Egenskaper för penna"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Särskilda musegenskaper..."
+msgstr "Egenskaper för raderare"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Tilldela en pekskärm till skärm nummer %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Modell: Välj leverantör och namn..."
+msgstr "Pekskärm: Välj leverantör och namn"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"<b>De sista stegen:</b><hr>Det sista steget är att spara de nya "
+"<b>De sista stegen</b><hr>Det sista steget är att spara de nya "
 "inställningarna. Du rekommenderas att först testa de nya inställningarna. Om "
 "testservern visar en dålig skärmbild trycker du på <b>[Ctrl+Alt+Backsteg]</"
 "b> för att stoppa servern."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "X11-system"
+msgstr "VNC-server"
 
 #. Activate VNC server checkbox
-#, fuzzy
 msgid "Allow Access to Display Using VNC Protocol"
 msgstr "Tillåt åtkomst till skärm med VNC-protokollet"
 
@@ -1038,7 +909,6 @@ msgid "VNC Options"
 msgstr "VNC-alternativ"
 
 #. Activate VNC password protection checkbox
-#, fuzzy
 msgid "Activate Password Protection"
 msgstr "Aktivera lösenordsskydd"
 
@@ -1047,27 +917,22 @@ msgid "Password"
 msgstr "Lösenord"
 
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "<Ange nytt lösenord...>"
+msgstr "<Ange nytt lösenord>"
 
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "<Ange nytt lösenord...>"
+msgstr "<Ändra lösenord>"
 
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "Verifiera lösenord"
+msgstr "<Verifiera lösenord>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
 msgstr "Aktivera HTTP-åtkomst"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple VNC Connections"
 msgstr "Tillåt flera VNC-anslutningar"
 
@@ -1080,53 +945,55 @@ msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
+"<b>VNC-lösenord överensstämmer inte</b><hr>Det första och andra lösenordet "
+"överensstämmer inte."
 
 #. VNC message box appearing if password is too short
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
+"<b>Fel på VNC-lösenord</b><hr>Lösenordsfältet har lämnats tomt eller så är "
+"lösenordet för kort. Ange ett lösenord med minst sex tecken."
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>Programinstallation:</b><hr>Några paket saknas. Vill du installera de "
-"saknade paketen nu?"
+"<b>Programinstallation:</b><hr>Några paket saknas. Installera de saknade "
+"paketen nu?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "Paketinstallation"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "Avsluta SaX2..."
+msgstr "Importerar modul"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "Avsluta SaX2..."
+msgstr "SaX2: Importerar data..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "Initiera cache..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
+"<b>Misslyckades med att spara inställning</b><hr>Följande rapport har "
+"skapats:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Inställningarna har sparats:</b><hr>Observera att ändringarna träder i "
-"kraft nästa gång grafiksystemet startas."
+"<b>Inställningarna har sparats</b><hr>Observera att ändringarna träder i "
+"kraft nästa gång grafiksystemet startas om. Avsluta SaX2 nu?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1134,6 +1001,9 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>Misslyckades med att testa inställningar</b><hr>Se filen <tt>/var/log/"
+"Xorg.99.log</tt> för mer information. Följande rapport har skapats från "
+"anropande instans:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1141,6 +1011,9 @@ msgid ""
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
+"<b>Information om VNC-inställningar</b><hr>VNC-tjänsten kräver att TCP-port "
+"5900 och HTTP-port (5800 som standard) öppnas i brandväggen. Du kan ställa "
+"in detta med YaST."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1196,1506 +1069,3 @@ msgstr "Inställningar på skärmen"
 
 msgid "Idle timer..."
 msgstr "Inaktivitetstidur..."
-
-#, fuzzy
-#~ msgid "SaX2: Importing"
-#~ msgstr "Avsluta SaX2..."
-
-#, fuzzy
-#~ msgid "Set up mouse properties"
-#~ msgstr "Särskilda musegenskaper..."
-
-#, fuzzy
-#~ msgid "Set up tablet properties"
-#~ msgstr "Ställ in bildskärmsegenskaper..."
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Layout"
-
-#, fuzzy
-#~ msgid "Variant:"
-#~ msgstr "Variant"
-
-#, fuzzy
-#~ msgid "Monitor System"
-#~ msgstr "Bildskärm"
-
-#, fuzzy
-#~ msgid "Keyboard System"
-#~ msgstr "Tangentbord"
-
-#, fuzzy
-#~ msgid "Tablet System"
-#~ msgstr "Pekplatta"
-
-#, fuzzy
-#~ msgid "Touchscreen System"
-#~ msgstr "Pekskärm"
-
-#, fuzzy
-#~ msgid "Test:"
-#~ msgstr "&Testa..."
-
-#, fuzzy
-#~ msgid "Testfield: Ready..."
-#~ msgstr "Mustestfält: Klar..."
-
-#, fuzzy
-#~ msgid "Unknown Monitor please change"
-#~ msgstr "Okänd bildskärmsmodell"
-
-#~ msgid "Component"
-#~ msgstr "Komponent"
-
-#~ msgid "with"
-#~ msgstr "med"
-
-#~ msgid "Not available"
-#~ msgstr "Inte tillgänglig"
-
-#~ msgid "Use the following AccessX settings"
-#~ msgstr "Använd följande inställningar för AccessX"
-
-#~ msgid "Disable AccessX"
-#~ msgstr "Inaktivera AccessX"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Diverse"
-
-#~ msgid "This screen is selected"
-#~ msgstr "Den här skärmen är vald"
-
-#~ msgid "at"
-#~ msgstr "på"
-
-#~ msgid "Sync ranges"
-#~ msgstr "Sync-frekvensområden"
-
-#~ msgid "Wheel is moving..."
-#~ msgstr "Hjulet rör sig..."
-
-#~ msgid "Disable use of accented letters"
-#~ msgstr "Inaktivera tecken med accent"
-
-#~ msgid "Clear test field"
-#~ msgstr "Töm testfältet"
-
-#~ msgid "Mouse speed in pixels/sec"
-#~ msgstr "Mushastighet i bildpunkter/sek"
-
-#~ msgid "&Remove Tablet..."
-#~ msgstr "Ta bo&rt platta..."
-
-#~ msgid "Delay time: (ms)"
-#~ msgstr "Fördröjning: (ms)"
-
-#~ msgid "Repeat rate: (Symbols/sec)"
-#~ msgstr "Upprepningshastighet (tecken/s)"
-
-#~ msgid "&Apply"
-#~ msgstr "Verkst&äll"
-
-#~ msgid "Graphics engine starts with resolution:"
-#~ msgstr "Grafikmotorn startas med upplösningen:"
-
-#~ msgid "Hardware"
-#~ msgstr "Hårdvara"
-
-#~ msgid "Velocity"
-#~ msgstr "Hastighet"
-
-#~ msgid "Select Keyboard Layout"
-#~ msgstr "Välj tangentbordslayout"
-
-#~ msgid "Symbol recurrence"
-#~ msgstr "Teckenupprepning"
-
-#~ msgid "<nobr><h3>Keyboard Type</h3></nobr>"
-#~ msgstr "<nobr><h3>Tangentbordstyp</h3></nobr>"
-
-#~ msgid "BusID"
-#~ msgstr "Buss-ID"
-
-#~ msgid "ScreenID"
-#~ msgstr "Skärm-ID"
-
-#~ msgid "Manufacturer Disk..."
-#~ msgstr "Tillverkarens disk..."
-
-#~ msgid "Shift/Lock Group"
-#~ msgstr "Skift/låsning grupp"
-
-#~ msgid "Ctrl Mapping"
-#~ msgstr "Ctrl-mappning"
-
-#~ msgid "LeftAlt mapping"
-#~ msgstr "Mappa vänster Alt"
-
-#~ msgid "RightAlt mapping"
-#~ msgstr "Mappa höger Alt"
-
-#~ msgid "RightCtl mapping"
-#~ msgstr "Mappa höger Ctrl"
-
-#~ msgid "Default"
-#~ msgstr "Standard"
-
-#~ msgid "R-Alt switch group while pressed"
-#~ msgstr "R-Alt skiftar grupp när nedtryckt"
-
-#~ msgid "R-Alt switch group"
-#~ msgstr "R-Alt byt grupp"
-
-#~ msgid "Both Shift Keys change group"
-#~ msgstr "Båda Skift-tangenterna byt grupp"
-
-#~ msgid "Ctrl and Shift change group"
-#~ msgstr "Ctrl och Skift byt grupp"
-
-#~ msgid "Alt and Ctrl change group"
-#~ msgstr "Alt och Ctrl byt grupp"
-
-#~ msgid "CapsLock as additional control"
-#~ msgstr "CapsLock som ytyerligare kontroll"
-
-#~ msgid "Swap Ctrl and CapsLock"
-#~ msgstr "Skifta Ctrl och CapsLock"
-
-#~ msgid "Ctrl Key at left of <A>"
-#~ msgstr "Ctrl-tangent till vänster om <A>"
-
-#~ msgid "Ctrl Key at bottom left"
-#~ msgstr "Ctrl-tangent nederst till vänster"
-
-#~ msgid "Modeline Algorithm"
-#~ msgstr "Algoritm för lägesrad"
-
-#~ msgid "Color and Resolution"
-#~ msgstr "Färg och upplösning"
-
-#~ msgid "Virtual Resolution"
-#~ msgstr "Virtuell upplösning"
-
-#~ msgid "Language Layout"
-#~ msgstr "Språkinställningar"
-
-#~ msgid "Screen Layout"
-#~ msgstr "Skärmlayout"
-
-#~ msgid "Server layout:"
-#~ msgstr "Serverlayout:"
-
-#~ msgid "Mode:"
-#~ msgstr "Läge:"
-
-#~ msgid "MHz"
-#~ msgstr "MHz"
-
-#~ msgid "Enable or Disable AccessX"
-#~ msgstr "Aktivera eller inaktivera AccessX"
-
-#~ msgid "Enable 3D features"
-#~ msgstr "Aktivera 3D-funktioner"
-
-#~ msgid "Enable DPMS"
-#~ msgstr "Aktivera DPMS"
-
-#~ msgid "<nobr><h3><u>Set up multihead mode...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Ställ in flerhuvudläge...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>3D/OpenGL setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Ställ in 3D/OpenGL...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>AccessX setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Ställ in AccessX...</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>VNC setup...</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Ställ in VNC...</u></h3></nobr>"
-
-#~ msgid "Selected component:"
-#~ msgstr "Vald komponent:"
-
-#~ msgid "Click 'Apply' to test your settings."
-#~ msgstr "Klicka på \"Verkställ\" för att testa inställningarna."
-
-#~ msgid ""
-#~ "<b>Current Layout and Model doesn't seem to be a good match</b><hr>This "
-#~ "is a warning only but make sure your keyboard model is able to map all "
-#~ "the keys needed for the selected layout."
-#~ msgstr ""
-#~ "<b>Aktuell layout och modell verkar inte matcha</b><hr>Det här är endast "
-#~ "en varning, men se till så att tangentbordsmodellen kan mappa alla "
-#~ "tangenter som krävs för den valda layouten."
-
-#~ msgid ""
-#~ "<b>OpenGL acceleration not possible in multihead environments</b><hr>The "
-#~ "3D subsystem is unable to work within a multihead environment."
-#~ msgstr ""
-#~ "<b>OpenGL-acceleration fungerar inte i flerhuvudmiljöer</b><hr>3D-"
-#~ "undersystemet fungerar inte i flerhuvudmiljö."
-
-#~ msgid ""
-#~ "<b>3D Acceleration impossible</b><hr>The installed card cannot use "
-#~ "hardware 3D/OpenGL acceleration."
-#~ msgstr ""
-#~ "<b>3D-acceleration fungerar inte</b><hr>Det installerade kortet kan inte "
-#~ "använda hårdvaruaccelererad 3D/OpenGL."
-
-#~ msgid ""
-#~ "<b>Mismatched color depth for OpenGL acceleration</b><hr>Most OpenGL "
-#~ "drivers require a color depth of <b>16 Bit (65536)</b> to work properly. "
-#~ "The currently used color setup does not fulfill this requirement. Verify "
-#~ "the current default color depth setup."
-#~ msgstr ""
-#~ "<b>Fel färgdjup för OpenGL-acceleration</b><hr>De flesta OpenGL- "
-#~ "drivrutinerna kräver ett färgdjup på <b>16 bitar (65536)</b> för att "
-#~ "fungera korrekt. De aktuella färginställningarna uppfyller inte det här "
-#~ "kravet. Kontrollera det aktuella inställda standardfärgjupet."
-
-#~ msgid ""
-#~ "<b>Required base packages are missing</b><hr>Cannot enable OpenGL "
-#~ "acceleration because the following packages are missing:"
-#~ msgstr ""
-#~ "<b>Baspaket som krävs saknas</b><hr>OpenGL-acceleration kunde inte "
-#~ "aktiveras eftersom dessa paket saknas:"
-
-#~ msgid ""
-#~ "<b>Cannot enable OpenGL acceleration</b><hr>The system does not provide "
-#~ "the official 2D/3D/OpenGL driver from nVidia. Update the packages "
-#~ "NVIDIA_GLX and NVIDIA_kernel from the nVidia web server <i>(http://www."
-#~ "nvidia.com)</i> first. This can also be done comfortably with YOU (YaST2 "
-#~ "Online Update)."
-#~ msgstr ""
-#~ "<b>Kan inte aktivera OpenGL-acceleration</b><hr>Systemet tillhandahåller "
-#~ "inte den officiella 2D/3D/OpenGL-drivrutinen från nVidia. Uppdatera först "
-#~ "paketen NVIDIA_GLX och NVIDIA_kernel från nvidias webbserver <i>(http://"
-#~ "www.nvidia.com)</i>. Detta kan också göras med YOU (YaST2 Online Update)."
-
-#~ msgid ""
-#~ "<b>Disable OpenGL acceleration</b><hr>The 3D subsystem is based on the "
-#~ "commercial driver from nVidia. SaX2 needs to uninstall the driver using "
-#~ "the nVidia installer. The uninstall process will reset the original "
-#~ "driver from X.Org which does not provide any 3D hardware acceleration."
-#~ "<br><br><b>Do you want to continue?</b>"
-#~ msgstr ""
-#~ "<b>Inaktivera OpenGL-acceleration</b><hr>3D-delsystemet är baserat på den "
-#~ "kommersiella drivrutinen från nVidia. Sax2 måste avinstallera drivrutinen "
-#~ "med nVidias installationsprogram. Avinstallationsprocessen kommer att "
-#~ "återaktivera den ursprungliga drivrutinen från X.Org som inte "
-#~ "tillhandahåller någon 3D-hårdvaruacceleration.<br><br><b>Vill du "
-#~ "fortsätta?</b>"
-
-#~ msgid "Display size unknown..."
-#~ msgstr "Okänd skärmstorlek..."
-
-#~ msgid ""
-#~ "<b>Add user-defined resolution</b><hr>Just enter the pixel values for the "
-#~ "X and Y axis and click 'Add' to include the new resolution in the "
-#~ "standard resolution list."
-#~ msgstr ""
-#~ "<b>Lägg till användardefinierad upplösning</b><hr>Ange antal bildpunkter "
-#~ "på X- och Y-axlarna och klicka på \"Lägg till\" för lägga till den nya "
-#~ "upplösningen i listan över standardupplösningar."
-
-#~ msgid "Available configuration components are:"
-#~ msgstr "Dessa komponenter kan ställas in:"
-
-#~ msgid ""
-#~ "<b>AccessX Enabled:</b><hr>The core mouse pointer is now accessable via "
-#~ "the <b>number pad keys</b>. Test the behavior using the number pad."
-#~ msgstr ""
-#~ "<b>AccessX aktiverat:</b><hr>Standardmuspekaren kan nu nås via "
-#~ "<b>siffertangentbordet</b>. Prova musbeteendet med siffertangentbordet."
-
-#~ msgid ""
-#~ "<b>AccessX Disabled:</b><hr>Accessing the core mouse pointer via the "
-#~ "number pad is <b>disabled</b> now."
-#~ msgstr ""
-#~ "<b>AccessX inaktiverat:</b><hr>Standardmuspekaren kan nu <b>inte</b> nås "
-#~ "via siffertangentbordet."
-
-#~ msgid ""
-#~ "<b>Remove Tablet:</b><hr>Really remove the graphics tablet from the "
-#~ "system?"
-#~ msgstr ""
-#~ "<b>Ta bort platta:</b><hr>Vill du verkligen ta bort grafikplattan från "
-#~ "systemet?"
-
-#~ msgid ""
-#~ "<b>Configuration has been saved:</b><hr>Your modifications will take "
-#~ "effect the next time your system is <b>rebooted</b>."
-#~ msgstr ""
-#~ "<b>Inställningarna har sparats:</b><hr>Observera att ändringarna träder i "
-#~ "kraft nästa gång systemet <b>startas om</b>."
-
-#~ msgid ""
-#~ "<b>3D capable card detected: <u>%1</u></b><hr>All 3D drivers in Linux are "
-#~ "in developmental phases so are, in part, still regarded as experimental. "
-#~ "Nevertheless, we have decided to include the drivers in our distribution "
-#~ "because of the high demand for 3D hardware acceleration in Linux. "
-#~ "<br><br>Because of the somewhat experimental status of OpenGL drivers, we "
-#~ "are unable to offer any installation support for configuring 3D hardware "
-#~ "acceleration or if any problems related to this should arise."
-#~ "<br><br><b>Do you want to enable 3D for this card?</b>"
-#~ msgstr ""
-#~ "<b>Kort med 3D-egenskaper hittades: <u>%1</u></b><hr>Alla 3D-drivrutiner "
-#~ "i Linux befinner sig på utvecklingsstadiet och ska därför fortfarande ses "
-#~ "som experimentella. Vi har ändå beslutat ta med dem i vår distribution på "
-#~ "grund av den starka efterfrågan efter hårdvaruacceleration av 3D i Linux. "
-#~ "<br><br>På grund av att OpenGL-drivrutinerna är något experimentella kan "
-#~ "vi inte ge någon installationssupport för inställning av "
-#~ "hårdvaruaccelererad 3D, eller om problem som hänger ihop med det dyker "
-#~ "upp.<br><br><b>Vill du aktivera 3D för det här kortet?</b>"
-
-#~ msgid ""
-#~ "<b>3D capable card detected: <u>%1</u></b><hr>The driver used for this "
-#~ "card is not an official 2D/3D/OpenGL driver from nVidia for licensing "
-#~ "reasons. The 3D/OpenGL driver used if you enable 3D is <b>not</b> "
-#~ "hardware-accelerated.<br><br> To use hardware-accelerated 3D/OpenGL, "
-#~ "update the packages NVIDIA_GLX and NVIDIA_kernel from the nVidia web "
-#~ "server <i>(http://www.nvidia.com)</i>. This can also be done comfortably "
-#~ "with YOU (YaST2 Online Update).<br><br>If there are problems with the "
-#~ "2D/3D/OpenGL driver from nVidia, consult the vendor, as we unfortunately "
-#~ "do not have any influence over the development of nVidia drivers."
-#~ "<br><br><b>Prepare 3D for this card?</b>"
-#~ msgstr ""
-#~ "<b>Kort med 3D-funktioner hittades: <u>%1</u></b><hr>Observera att detta "
-#~ "av licensskäl inte är någon officiell 2D/3D/OpenGL-drivrutin från nVidia. "
-#~ "3D/OpenGL-drivrutinen som används om du aktiverar 3D är <b>inte</b> "
-#~ "hårdvaruaccelererad.<br><br> Om du vill använda hårdvaruaccelererad 3D/"
-#~ "OpenGL, uppdaterar du paketen NVIDIA_GLX och NVIDIA_kernel för SuSE Linux "
-#~ "från nVidias webbserver (http://www.nvidia.com). Du kan också göra det "
-#~ "bekvämt via YOU (YaST2 Online Update).<br><br>Om du får problem med "
-#~ "nVidias 2D/3D/OpenGL-drivrutin, måste du tala med leverantören eftersom "
-#~ "vi tyvärr inte kan påverka nVidias drivrutinsutveckling.<br><br><b>Vill "
-#~ "du aktivera 3D för detta kort?</b>"
-
-#~ msgid ""
-#~ "<b>Software update</b><hr>The dummy nvidia driver with no 3D capability "
-#~ "that comes with this distribution is still installed.  You should update "
-#~ "to the official nvidia drivers from the nvidia ftp server with YOU (YaST2 "
-#~ "online update). Start the online update?"
-#~ msgstr ""
-#~ "<b>Programuppdatering</b><hr>Du har fortfarande nVidia-testdrivrutinen "
-#~ "utan 3D-funktioner som levereras med den här distributionen installerad. "
-#~ "Du bör därför uppdatera till officiell nVidia-drivrutin från nVidias FTP-"
-#~ "server med YOU (YaST2 online update). Vill du starta online-uppdateringen?"
-
-#~ msgid ""
-#~ "<b>Invalid Resolution for FBdev mode</b><hr>The currently selected "
-#~ "resolution is not adjustable within framebuffer mode. Please select "
-#~ "another resolution than:"
-#~ msgstr ""
-#~ "<b>Ogiltig upplösning för FBdev-läge</b><hr>Den valda upplösningen kan "
-#~ "inte justeras i framebuffer-läge. Välj en annan upplösning än:"
-
-#~ msgid ""
-#~ "<b>Selected Resolution not available</b><hr>The selected resolution "
-#~ "doesn't fit into the sync-ranges of the monitor. Please prove if the "
-#~ "currently selected monitor model is correct or select a lower resolution "
-#~ "than:"
-#~ msgstr ""
-#~ "<b>Vald upplösning inte tillgänglig</b><hr>Den valda upplösningen passar "
-#~ "inte med skärmens sync-frekvensområden. Kontrollera att du har valt "
-#~ "korrekt skärmmodell eller välj en lägre upplösning än:"
-
-#~ msgid ""
-#~ "<b>Invalid color depth selected:</b><hr>A <b>4</b> or <b>15</b> bit color "
-#~ "depth is not allowed for this configuration."
-#~ msgstr ""
-#~ "<b>Ogiltigt färgdjup valt:</b><hr><b>4</b> eller <b>15</b> bitars "
-#~ "färgdjup är inte tillåtet för den här inställningen."
-
-#~ msgid ""
-#~ "<b>Invalid Resolution selected:</b><hr>Setting the requested resolution "
-#~ "is not allowed for this configuration. Select another resolution from the "
-#~ "list."
-#~ msgstr ""
-#~ "<b>Ogiltig upplösning valdes:</b><hr>För den här konfigurationen kan inte "
-#~ "det alternativet väljas. Välj en annan upplösning från listan."
-
-#~ msgid "<b>X Server test failed:</b><hr><br>"
-#~ msgstr "<b>X-servertestet misslyckades:</b><hr><br>"
-
-#~ msgid "3D question..."
-#~ msgstr "3D-fråga..."
-
-#~ msgid "X Server test information..."
-#~ msgstr "Testinformation för X-server..."
-
-#~ msgid "AccessX status information..."
-#~ msgstr "Statusinformation för AccessX..."
-
-#~ msgid "Tablet warning..."
-#~ msgstr "Pekplattevarning..."
-
-#~ msgid "Consideration..."
-#~ msgstr "Övervägande..."
-
-#~ msgid "Geometry"
-#~ msgstr "Geometri"
-
-#~ msgid "Name:"
-#~ msgstr "Namn:"
-
-#~ msgid "Card and Desktop"
-#~ msgstr "Kort och skrivbord"
-
-#~ msgid "Input Devices"
-#~ msgstr "Inmatningsenheter"
-
-#~ msgid "Input-Devices"
-#~ msgstr "Inmatningsenheter"
-
-#~ msgid "Desktop"
-#~ msgstr "Skrivbord"
-
-#~ msgid "Multihead"
-#~ msgstr "Flerhuvudläge"
-
-#~ msgid "Secondary Modeline:"
-#~ msgstr "Sekundär lägesrad:"
-
-#~ msgid "Modeline"
-#~ msgstr "Lägesrad"
-
-#~ msgid "AccessX"
-#~ msgstr "AccessX"
-
-#~ msgid "X-Server accessable via VNC protocol:"
-#~ msgstr "X-server kan kommas åt via VNC-protokollet:"
-
-#~ msgid "Access Control"
-#~ msgstr "Åtkomstkontroll"
-
-#~ msgid "<b>Core Pointer...</b>"
-#~ msgstr "<b>Standardpekare...</b>"
-
-#~ msgid "F&inalize >>"
-#~ msgstr "Slut&för >>"
-
-#~ msgid "<< &Back"
-#~ msgstr "<< Till&baka"
-
-#~ msgid "&Next >>"
-#~ msgstr "&Nästa >>"
-
-#~ msgid "&Exit"
-#~ msgstr "Avsl&uta"
-
-#~ msgid "&About..."
-#~ msgstr "&Om..."
-
-#~ msgid "About the author"
-#~ msgstr "Om upphovsmannen"
-
-#~ msgid "Select virtual resolution for Mode %1"
-#~ msgstr "Välj virtuell upplösning för läge %1"
-
-#~ msgid ""
-#~ "<b>SaX2 is (c) 2000 SuSE Linux AG:</b><hr><nobr>The author and maintainer "
-#~ "of this product is</nobr><br>Marcus Schaefer"
-#~ msgstr ""
-#~ "<b>SaX © 2000 SuSE Linux AG</b><hr><nobr>Upphovsman och ansvarig för den "
-#~ "här produkten är</nobr><br>Marcus Schaefer"
-
-#~ msgid "&Modules..."
-#~ msgstr "&Moduler..."
-
-#~ msgid "&File"
-#~ msgstr "Ar&kiv"
-
-#~ msgid "Loading CDB data: %1"
-#~ msgstr "Laddar CDB-data: %1"
-
-#~ msgid "Loading base data: %1"
-#~ msgstr "Laddar basdata: %1"
-
-#~ msgid "Loading system data: %1"
-#~ msgstr "Laddar systemdata: %1"
-
-#~ msgid "SaX2 start-up information"
-#~ msgstr "SaX2-startinformation"
-
-#~ msgid "SaX2 final steps..."
-#~ msgstr "SaX2 sista stegen..."
-
-#~ msgid "Exception..."
-#~ msgstr "Undantag..."
-
-#~ msgid ""
-#~ "<b>Multihead setup not possible:</b><hr>Your system does not provide more "
-#~ "than one graphics device.  More are required to set up a multihead "
-#~ "configuration."
-#~ msgstr ""
-#~ "<b>Flerhuvudläge ej möjligt:</b><hr>Systemet har bara en grafikenhet. "
-#~ "Fler krävs för att ställa in flerhuvudkonfiguration."
-
-#~ msgid "<b>Abort dialog:</b><hr>Abort this dialog?"
-#~ msgstr "<b>Avbryt dialogen:</b><hr>Vill du avbryta den här dialogrutan?"
-
-#~ msgid ""
-#~ "<b>Invalid setup:</b><hr>At least one graphics device must be configured."
-#~ msgstr ""
-#~ "<b>Ogiltiga inställningar:</b><hr>Minst en grafikenhet måste ställas in."
-
-#~ msgid "<b>Invalid setup:</b><hr>At least one monitor must be configured."
-#~ msgstr "<b>Ogiltig inställning:</b><hr>Minst en skärm måste ställas in."
-
-#~ msgid ""
-#~ "<b>Running dialog:</b><hr>A dialog is already open.  Abort the open "
-#~ "dialog and start the selected one?"
-#~ msgstr ""
-#~ "<b>Pågående dialog:</b><hr>En dialogruta är redan öppen. Vill du avbryta "
-#~ "den och starta den valda?"
-
-#~ msgid "<b>Conclude dialog:</b><hr>Do you want to conclude this dialog now?"
-#~ msgstr ""
-#~ "<b>Slutför dialogen:</b><hr>Vill du slutföra den här dialogrutan nu?"
-
-#~ msgid ""
-#~ "<b>Final step:</b><hr>The last step is saving your new configuration. "
-#~ "Please note the configuration is <i>Framebuffer</i> based and your system "
-#~ "needs to be rebooted first to activate the changes for resolution and/or "
-#~ "color settings."
-#~ msgstr ""
-#~ "<b>Sista steget:</b><hr>Sista steget är att spara de nya inställningarna."
-#~ "Observera att inställningarna är <i>Framebuffer</i>-baserade och att "
-#~ "systemet måste startas om för att aktivera ändringarna för upplösning och/"
-#~ "eller färger."
-
-#~ msgid "Unknown Graphics Card..."
-#~ msgstr "Okänt grafikkort..."
-
-#~ msgid ""
-#~ "<b>The graphics card could not be detected</b><hr>Configure your card "
-#~ "manually. Start the configuration dialog to set up the graphics card now?"
-#~ msgstr ""
-#~ "<b>Grafikkortet kunde inte identifieras</b><hr>Ställ in kortet manuellt. "
-#~ "Vill du starta inställningsdialogrutan för att ställa in grafikkortet nu?"
-
-#~ msgid ""
-#~ "<b>The Monitor (%1) couldn't be detected</b><hr>Please setup your monitor "
-#~ "manually. Do you want to start the configuration dialog to setup the "
-#~ "display now ?"
-#~ msgstr ""
-#~ "<b>Bildskärmen (%1) kunde inte identifieras</b><hr> Ställ in bildskärmen "
-#~ "manuellt. Vill du starta inställningsdialogrutan för att ställa in "
-#~ "bildskärmen nu?"
-
-#~ msgid ""
-#~ "<b>Monitor (%1) with ID: %2 not found</b><hr>Please setup your monitor "
-#~ "manually. Do you want to start the configuration dialog to setup the "
-#~ "display now ?"
-#~ msgstr ""
-#~ "<b>Bildskärm (%1) med ID: %2 kunde inte identifieras</b><hr>Ställ in "
-#~ "bildskärmen manuellt. Vill du starta inställningsdialogrutan för att "
-#~ "ställa in bildskärmen nu?"
-
-#~ msgid "<b>Yes</b>"
-#~ msgstr "<b>Ja</b>"
-
-#~ msgid "<b>No</b>"
-#~ msgstr "<b>Nej</b>"
-
-#~ msgid "File"
-#~ msgstr "Arkiv"
-
-#~ msgid "still locked"
-#~ msgstr "fortfarande låst"
-
-#~ msgid "Please wait"
-#~ msgstr "Vänta"
-
-#~ msgid ""
-#~ "<big><b>SaX2: Extended X11 Configuration</b></big><hr>Welcome to the SuSE "
-#~ "X11 Configuration Manager<br>"
-#~ msgstr ""
-#~ "<big><b>SaX2: Avancerade X11-inställningar</b></big><hr>Välkommen till "
-#~ "SuSE:s inställningsverktyg för X11<br>"
-
-#~ msgid "To start, double-click  an item in the component list."
-#~ msgstr "Starta genom att dubbelklicka på något objekt i komponentlistan."
-
-#~ msgid "X11 System Setup"
-#~ msgstr "Systeminställningar för X11"
-
-#~ msgid "Value..."
-#~ msgstr "Värde..."
-
-#~ msgid "Primary device"
-#~ msgstr "Primär enhet"
-
-#~ msgid "Driver:"
-#~ msgstr "Drivrutin:"
-
-#~ msgid "X:"
-#~ msgstr "X:"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
-
-#~ msgid "Bus ID:"
-#~ msgstr "Buss-ID:"
-
-#~ msgid "Card options"
-#~ msgstr "Kortalternativ"
-
-#~ msgid "Key Mappings"
-#~ msgstr "Tangentmappningar"
-
-#~ msgid "&Current sync frequencies"
-#~ msgstr "Akt&uella sync-frekvenser"
-
-#~ msgid "Current color depth"
-#~ msgstr "Aktuellt färgdjup"
-
-#~ msgid "Current resolution"
-#~ msgstr "Aktuell upplösning"
-
-#~ msgid "HSync range"
-#~ msgstr "Hsync-frekvensområde"
-
-#~ msgid "VSync range"
-#~ msgstr "Vsync-frekvensområde"
-
-#~ msgid "[ mm ]"
-#~ msgstr "[mm]"
-
-#~ msgid "Device"
-#~ msgstr "Enhet"
-
-#~ msgid "Protocol"
-#~ msgstr "Protokoll"
-
-#~ msgid "Fi&nish"
-#~ msgstr "Sl&utför"
-
-#~ msgid "Abort"
-#~ msgstr "Avbryt"
-
-#~ msgid "Configure XAccess: Mouse over keypad..."
-#~ msgstr "Ställ in XAccess: Mus via tangentbordet..."
-
-#~ msgid "Configure VNC: Export display using the VNC protocol..."
-#~ msgstr "Ställ in VNC: Exportera skärm med VNC-protokollet..."
-
-#~ msgid "Configure input devices: Mouse configuration..."
-#~ msgstr "Ställ in inmatningsenheter: Musinställningar..."
-
-#~ msgid "Configure 3D/OpenGL subsystem..."
-#~ msgstr "Ställ in undersystem för 3D/OpenGL..."
-
-#~ msgid "Configure virtual resolutions..."
-#~ msgstr "Ställ in virtuella upplösningar..."
-
-#~ msgid "Configure graphics cards..."
-#~ msgstr "Ställ in grafikkort..."
-
-#~ msgid "Configure Desktop: Colors and Resolutions..."
-#~ msgstr "Skrivbordsinställningar: Färger och upplösningar..."
-
-#~ msgid "Configure touch screens..."
-#~ msgstr "Ställ in pekskärm(ar)..."
-
-#~ msgid "Set up picture geometry..."
-#~ msgstr "Ställ in bildgeometri..."
-
-#~ msgid "Configure multihead mode..."
-#~ msgstr "Ställ in flerhuvudläge..."
-
-#~ msgid ""
-#~ "Set up screen layout of your desktops (Double-click an icon will identify "
-#~ "the real screen)..."
-#~ msgstr ""
-#~ "Ställ in skärmlayouten för skrivborden (dubbelklicka på en ikon för att "
-#~ "identifiera den verkliga skärmen)."
-
-#~ msgid "Configure graphics tablet"
-#~ msgstr "Ställ in grafikplatta"
-
-#~ msgid "Add new card..."
-#~ msgstr "Lägg till nytt kort..."
-
-#~ msgid "Remove selected card"
-#~ msgstr "Ta bort valt kort"
-
-#~ msgid "Remove selected monitor"
-#~ msgstr "Ta bort vald skärm"
-
-#~ msgid "&Properties..."
-#~ msgstr "Egenska&per..."
-
-#~ msgid "Enable View-Only mode"
-#~ msgstr "Aktivera läget Endast visa"
-
-#~ msgid "&Add new touchscreen..."
-#~ msgstr "L&ägg till ny pekskärm..."
-
-#~ msgid "&Remove selected touchscreen"
-#~ msgstr "Ta bo&rt den valda pekskärmen"
-
-#~ msgid "<nobr><h3><u>Currently configured touchscreens:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Inställda pekskärmar</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured monitors</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Inställda skärmar</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured cards:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Inställda kort</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured mice:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Inställda möss</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Current Monitor Layout:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Aktuell bildskärmslayout</u></h3></nobr>"
-
-#~ msgid "<nobr><h3><u>Currently configured desktops:</u></h3></nobr>"
-#~ msgstr "<nobr><h3><u>Inställda skrivbord</u></h3></nobr>"
-
-#~ msgid "&Add new mouse..."
-#~ msgstr "L&ägg till ny mus..."
-
-#~ msgid "&Remove selected mouse"
-#~ msgstr "Ta bo&rt den valda musen"
-
-#~ msgid "&General"
-#~ msgstr "All&mänt"
-
-#~ msgid "&Expert"
-#~ msgstr "&Expert"
-
-#~ msgid "Vendor"
-#~ msgstr "Leverantör"
-
-#~ msgid "Selected"
-#~ msgstr "Vald"
-
-#~ msgid "Resolution X"
-#~ msgstr "Upplösning X"
-
-#~ msgid "&Resolution(s) for %1 colors"
-#~ msgstr "Upplösning(a&r) för %1 färger"
-
-#~ msgid "Possible"
-#~ msgstr "Möjlig"
-
-#~ msgid "&Add this resolution"
-#~ msgstr "L&ägg till den här upplösningen"
-
-#~ msgid "<big><b>Currently configured AccessX Status</b></big><hr>"
-#~ msgstr "<big><b>Inställd AccessX-status</b></big><hr>"
-
-#~ msgid "<big><b>Current VNC status</b></big><hr>"
-#~ msgstr "<big><b>Aktuell VNC-status</b></big><hr>"
-
-#~ msgid "<big><b>Current 3D/OpenGL status</b></big><hr>"
-#~ msgstr "<big><b>Aktuell 3D/OpenGL-status</b></big><hr>"
-
-#~ msgid "<big><b>Current Virtual resolution setup</b></big><hr>"
-#~ msgstr "<big><b>Inställd virtuell upplösning</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured graphics cards</b></big><hr>"
-#~ msgstr "<big><b>Inställda grafikkort</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured desktops</b></big><hr>"
-#~ msgstr "<big><b>Inställda skrivbord</b></big><hr>"
-
-#~ msgid "<big><b>Currently active geometry timings</b></big><hr>"
-#~ msgstr "<big><b>Inställd aktiv geometrisynkronisering</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured keyboard</b></big><hr>"
-#~ msgstr "<big><b>Inställt tangentbord</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured layout</b></big><hr>"
-#~ msgstr "<big><b>Inställd layout</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured monitors</b></big><hr>"
-#~ msgstr "<big><b>Inställda bildskärmar</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured pointer devices</b></big><hr>"
-#~ msgstr "<big><b>Inställda pekdon</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured multihead status</b></big><hr>"
-#~ msgstr "<big><b>Inställd flerhuvudstatus</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured graphics tablet</b></big><hr>"
-#~ msgstr "<big><b>Inställd grafikplatta</b></big><hr>"
-
-#~ msgid "<big><b>Currently configured touchscreen</b></big><hr>"
-#~ msgstr "<big><b>Inställd pekskärm</b></big><hr>"
-
-#~ msgid "<b><nobr>No information available</nobr></b>"
-#~ msgstr "<b><nobr>Ingen information tillgänglig</nobr></b>"
-
-#~ msgid ""
-#~ "<b>Virtual mouse:</b><hr>Set up the numeric keypad to control the mouse "
-#~ "with the keypad. The table below points to the current status of AccessX."
-#~ msgstr ""
-#~ "<b>Virtuell mus:</b><hr>Använd siffertangentbordet för att styra "
-#~ "muspekaren med tangentbordet. Tabellen nedan visar aktuell status för "
-#~ "AccessX."
-
-#~ msgid ""
-#~ "<b>OpenGL Subsystem:</b><hr>Set up the 3D features of the graphics card "
-#~ "here. X.Org includes the direct rendering interface to use the 3D "
-#~ "capabilities of your graphics card. If your card and the corresponding "
-#~ "driver support 3D hardware acceleration, enable it in this dialog."
-#~ msgstr ""
-#~ "<b>Undersystem för OpenGL:</b><hr>Ställ in grafikkortets 3D-funktioner "
-#~ "här. I X.Org ingår ett direktrenderingsgränsnitt för att dra nytta av "
-#~ "grafikkortets 3D-egenskaper. Om kortet med tillhörande drivrutin stödjer "
-#~ "hårdvaruaccelererad 3D kan du aktivera det i den här dialogrutan."
-
-#~ msgid ""
-#~ "<b>Virtual resolution:</b><hr>Every single desktop has its real "
-#~ "resolution which is completely viewable. Beside this resolution you can "
-#~ "setup a resolution which lives outside the viewable area of your monitor "
-#~ "and comes up if you leave the edges of your monitor with the mouse. This "
-#~ "area is called a virtual resolution."
-#~ msgstr ""
-#~ "<b>Virtuell upplösning:</b><hr>Varje enskillt skrivbord har sin egen "
-#~ "riktiga upplösning som är fullständigt visningsbar. Förutom denna "
-#~ "uppösning kan du ställa in en upplösning som lever utanför det "
-#~ "visningsbara området på skärmen och som visar sig om du lämnar hörnen på "
-#~ "skärmen med musen. Detta område kallas virtuell upplösning."
-
-#~ msgid ""
-#~ "<b>Graphics cards:</b><hr>Set up your graphics hardware here. The "
-#~ "graphics system consists of at least one graphics card but can be "
-#~ "combined to a so called <i>multihead environment</i> which consists of at "
-#~ "least two cards up to a maximum of 16 cards."
-#~ msgstr ""
-#~ "<b>Grafikkort:</b><hr>Ställ in grafikhårdvaran här. Grafiksystemet består "
-#~ "av minst ett grafikkkort men kan kombineras till en så kallad "
-#~ "<i>flerhuvudmiljö</i> vilken består av minst två kort och som mest 16 "
-#~ "kort."
-
-#~ msgid ""
-#~ "<b>Desktop properties:</b><hr>Set up your desktop with settings like "
-#~ "resolution and colors. Every desktop is an independent device and may "
-#~ "have a different color and/or resolution setup."
-#~ msgstr ""
-#~ "<b>Skrivbordsegenskaper:</b><hr>Ställ in upplösningar och färger för "
-#~ "skrivbordet. Varje skrivbord är en oberoende enhet och kan ha ett annat "
-#~ "färgdjup och/eller upplösning."
-
-#~ msgid ""
-#~ " <b>Monitor geometry:</b><hr>Setup the position and size of the picture "
-#~ "displayed by the monitor. The table below point to the current used "
-#~ "Modeline(s)."
-#~ msgstr ""
-#~ " <b>Bildskärmsgeometri:</b><hr>Ställ in position och storlek på bildytan "
-#~ "som visas på bildskärmen. Tabellen nedan visar de nu använda lägesraderna."
-
-#~ msgid ""
-#~ "<b>Keyboard properties:</b><hr>Set up the type of the keyboard and the "
-#~ "language environment with which it should work."
-#~ msgstr ""
-#~ "<b>Tangentbordsegenskaper:</b><hr>Ställ in vilken typ av tangentbord och "
-#~ "vilken språkmiljö du vill använda."
-
-#~ msgid ""
-#~ "<b>Desktop layout:</b><hr>If more than one card is available, you are in "
-#~ "a multihead environment. Set up the neighborhood relations of the "
-#~ "connected monitors simply via drag&drop. If you are not sure which "
-#~ "monitor belongs to the icon just double-click on it and you will see a "
-#~ "message on the corresponding screen."
-#~ msgstr ""
-#~ "<b>Skrivbordslayout:</b><hr>Om fler än ett kort kan användas är det en "
-#~ "flerhuvudmiljö. Ställ in inbördes position för de anslutna bildskärmarna "
-#~ "via drag&släpp. Om du inte vet vilken skärm som tillhör ikonen, "
-#~ "dubbelklicka på den och du ser ett meddelande på motsvarande skärm."
-
-#~ msgid ""
-#~ "<b>Monitor properties:</b><hr>Set up the monitor model connected to the "
-#~ "graphics cards. Be careful in your choice. Wrong sync ranges may damage "
-#~ "the monitor."
-#~ msgstr ""
-#~ "<b>Bildskärmsegenskaper:</b><hr>Ställ in bildskärmsmodellen som är "
-#~ "ansluten till grafikkortet (-en). Välj noga. Fel frekvensgränser kan "
-#~ "skada bildskärmen."
-
-#~ msgid ""
-#~ "<b>Mouse properties:</b><hr>Set up basic paramaters to activate the core "
-#~ "mouse pointer as well as settings like button emulation or wheel "
-#~ "functions."
-#~ msgstr ""
-#~ "<b>Musegenskaper:</b><hr>Gör grundinställningar för aktivering av "
-#~ "standardmuspekaren och ställ in knappemulering eller hjulfunktioner."
-
-#~ msgid ""
-#~ "<b>Multihead mode:</b><hr>If more than one card is available, you are in "
-#~ "a multihead environment. Set up the multihead functioning here."
-#~ msgstr ""
-#~ "<b>Flerhuvudläge:</b><hr>Om mer än ett kort finns tillgängligt är du i en "
-#~ "flerhuvudmiljö. Ställ in flerhuvudfunktionerna här."
-
-#~ msgid ""
-#~ "<b>Graphics tablet:</b><hr>Set up a graphics tablet and the corresponding "
-#~ "pointer devices, such as pens and erasers."
-#~ msgstr ""
-#~ "<b>Grafikplatta:</b><hr>Ställ in grafikplattor med tillhörande pekdon som "
-#~ "pennor och raderare."
-
-#~ msgid "<b>Touchscreen:</b><hr>Set up a pressure sensitive screen."
-#~ msgstr "<b>Pekskärm:</b><hr>Ställ in en beröringskänslig skärm."
-
-#~ msgid "Disabled"
-#~ msgstr "Inaktiverad"
-
-#~ msgid "Enabled"
-#~ msgstr "Aktiverad"
-
-#~ msgid "Wheel support"
-#~ msgstr "Hjulstöd"
-
-#~ msgid "&Port"
-#~ msgstr "&Port"
-
-#~ msgid "&Mode"
-#~ msgstr "&Läge"
-
-#~ msgid "Button emulation"
-#~ msgstr "Knappemulering"
-
-#~ msgid "Primary Device:"
-#~ msgstr "Primär enhet:"
-
-#~ msgid "Secondary Device:"
-#~ msgstr "Sekundär enhet:"
-
-#~ msgid "Single Layout [ no multihead environment ]"
-#~ msgstr "Enskärmslayout [ingen flerhuvudmiljö]"
-
-#~ msgid "Clone Mode Active"
-#~ msgstr "Klonläge aktivt"
-
-#~ msgid "Xinerama Mode Active"
-#~ msgstr "Xinerama-läge aktivt"
-
-#~ msgid "Screens Layout Active"
-#~ msgstr "Skärmlayout aktiv"
-
-#~ msgid "PC-98xx Series"
-#~ msgstr "PC-98xx-serien"
-
-#~ msgid "Canadian"
-#~ msgstr "Kanadensiskt"
-
-#~ msgid "Brazilian"
-#~ msgstr "Brasilianskt"
-
-#~ msgid "Bosnian"
-#~ msgstr "Bosniskt"
-
-#~ msgid "Lithuanian qwerty (numeric)"
-#~ msgstr "Litauisk qwerty (siffertangentbord)"
-
-#~ msgid "Georgian (russian)"
-#~ msgstr "Georgisk (ryska)"
-
-#~ msgid "Latvian"
-#~ msgstr "Lettiskt"
-
-#~ msgid "Belarusian"
-#~ msgstr "Vitryskt"
-
-#~ msgid "Czech (qwerty)"
-#~ msgstr "Tjeckiskt (qwerty)"
-
-#~ msgid "Northern Saami (Finland)"
-#~ msgstr "Samisk (Finland)"
-
-#~ msgid "Macedonian"
-#~ msgstr "Makedonskt"
-
-#~ msgid "U.S. English w/ deadkeys"
-#~ msgstr "Am. engelskt med stumma tangenter"
-
-#~ msgid "Malayalam"
-#~ msgstr "Malayalam"
-
-#~ msgid "Burmese"
-#~ msgstr "Burmesiska"
-
-#~ msgid "Kannada"
-#~ msgstr "Kanaresiska"
-
-#~ msgid "Mongolian"
-#~ msgstr "Mongoliska"
-
-#~ msgid "Bengali"
-#~ msgstr "Bengaliskt"
-
-#~ msgid "Romanian"
-#~ msgstr "Rumänskt"
-
-#~ msgid "Croatian"
-#~ msgstr "Kroatiskt"
-
-#~ msgid "U.S. English w/ ISO9995-3"
-#~ msgstr "Amerikansk engelsk med ISO9995-3"
-
-#~ msgid "Lithuanian azerty standard"
-#~ msgstr "Litauisk azerty standard"
-
-#~ msgid "Maltese"
-#~ msgstr "Maltesiska"
-
-#~ msgid "German"
-#~ msgstr "Tyskt"
-
-#~ msgid "Hungarian"
-#~ msgstr "Ungerskt"
-
-#~ msgid "Russian"
-#~ msgstr "Ryskt"
-
-#~ msgid "Swedish"
-#~ msgstr "Svenskt"
-
-#~ msgid "Turkish (F)"
-#~ msgstr "Turkisk (F)"
-
-#~ msgid "Oriya"
-#~ msgstr "Oriya"
-
-#~ msgid "Slovenian"
-#~ msgstr "Slovenskt"
-
-#~ msgid "Slovak (qwerty)"
-#~ msgstr "Slovakiskt (qwerty)"
-
-#~ msgid "Czech"
-#~ msgstr "Tjeckiskt"
-
-#~ msgid "Gujarati"
-#~ msgstr "Gujarati"
-
-#~ msgid "Danish"
-#~ msgstr "Danskt"
-
-#~ msgid "Dvorak"
-#~ msgstr "Dvorak"
-
-#~ msgid "Slovak"
-#~ msgstr "Slovakiskt"
-
-#~ msgid "Dutch"
-#~ msgstr "Nederländsk"
-
-#~ msgid "Israeli"
-#~ msgstr "Israeliskt"
-
-#~ msgid "Tamil"
-#~ msgstr "Tamilsk"
-
-#~ msgid "Ogham"
-#~ msgstr "Ogham"
-
-#~ msgid "Norwegian"
-#~ msgstr "Norskt"
-
-#~ msgid "Gurmukhi"
-#~ msgstr "Gurmukhi"
-
-#~ msgid "Serbian"
-#~ msgstr "Serbiskt"
-
-#~ msgid "Farsi"
-#~ msgstr "Farsi"
-
-#~ msgid "Icelandic"
-#~ msgstr "Isländskt"
-
-#~ msgid "Italian"
-#~ msgstr "Italienskt"
-
-#~ msgid "Estonian"
-#~ msgstr "Estniskt"
-
-#~ msgid "Inuktitut"
-#~ msgstr "Inuktitut"
-
-#~ msgid "Swiss French"
-#~ msgstr "Schweiziskt franskt"
-
-#~ msgid "Swiss German"
-#~ msgstr "Tyskschweizisk"
-
-#~ msgid "Thai"
-#~ msgstr "Thailändskt"
-
-#~ msgid "Tajik"
-#~ msgstr "Tadzjikiska"
-
-#~ msgid "Greek"
-#~ msgstr "Grekiskt"
-
-#~ msgid "Japanese"
-#~ msgstr "Japanskt"
-
-#~ msgid "Georgian (latin)"
-#~ msgstr "Georgisk (latinsk)"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ukrainskt"
-
-#~ msgid "Polish (qwertz)"
-#~ msgstr "Polsk (qwerty)"
-
-#~ msgid "Syriac"
-#~ msgstr "Syriskt"
-
-#~ msgid "Turkish"
-#~ msgstr "Turkiskt"
-
-#~ msgid "Spanish"
-#~ msgstr "Spanskt"
-
-#~ msgid "Northern Saami (Sweden)"
-#~ msgstr "Samisk (Sverige)"
-
-#~ msgid "Yugoslavian"
-#~ msgstr "Jugoslavisk"
-
-#~ msgid "Hindi"
-#~ msgstr "Hindi"
-
-#~ msgid "Finnish"
-#~ msgstr "Finskt"
-
-#~ msgid "French (alternative)"
-#~ msgstr "Franskt (alternativ)"
-
-#~ msgid "Hungarian (qwerty)"
-#~ msgstr "Ungerskt (qwerty)"
-
-#~ msgid "Russian (cyrillic phonetic)"
-#~ msgstr "Rysk (kyrillisk fonetik)"
-
-#~ msgid "Albanian"
-#~ msgstr "Albanskt"
-
-#~ msgid "Polish"
-#~ msgstr "Polskt"
-
-#~ msgid "Telugu"
-#~ msgstr "Telugu"
-
-#~ msgid "Armenian"
-#~ msgstr "Armensk"
-
-#~ msgid "Northern Saami (Norway)"
-#~ msgstr "Samisk (Norge)"
-
-#~ msgid "Latin America"
-#~ msgstr "Latinamerikansk"
-
-#~ msgid "French"
-#~ msgstr "Franskt"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Storbritannien"
-
-#~ msgid "Arabic"
-#~ msgstr "Arabiskt"
-
-#~ msgid "U.S. English"
-#~ msgstr "Engelskamerikansk"
-
-#~ msgid "Maltese (US layout)"
-#~ msgstr "Maltesisk (amerikansk layout)"
-
-#~ msgid "French Canadian"
-#~ msgstr "Franskkanadensisk"
-
-#~ msgid "Portuguese"
-#~ msgstr "Portugisiskt"
-
-#~ msgid "Belgian"
-#~ msgstr "Belgiskt"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Bulgariskt"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Azerbajdzjanska"
-
-#~ msgid "Vietnamese"
-#~ msgstr "Vietnamesiskt"
-
-#~ msgid "Lao"
-#~ msgstr "Laotiska"
-
-#~ msgid "Microsoft Natural"
-#~ msgstr "Microsoft Natural"
-
-#~ msgid "Ennyah DKB-1008"
-#~ msgstr "Ennyah DKB-1008"
-
-#~ msgid "Logitech Deluxe Access Keyboard"
-#~ msgstr "Logitech Deluxe Access Keyboard"
-
-#~ msgid "Microsoft Internet Keyboard"
-#~ msgstr "Microsoft Internet Keyboard"
-
-#~ msgid "Samsung SDM 4500P"
-#~ msgstr "Samsung SDM 4500P"
-
-#~ msgid "Cherry Blue Line CyBo@rd"
-#~ msgstr "Cherry Blue Line CyBo@rd"
-
-#~ msgid "Dell"
-#~ msgstr "Dell"
-
-#~ msgid "Hewlett-Packard Omnibook XE3 GF"
-#~ msgstr "Hewlett-Packard Omnibook XE3 GF"
-
-#~ msgid "IBM Rapid Access"
-#~ msgstr "IBM Rapid Access"
-
-#~ msgid "Logitech Cordless Desktop Pro (alternate option2)"
-#~ msgstr "Logitech Cordless Desktop Pro (alternativ 2)"
-
-#~ msgid "Memorex MX1998"
-#~ msgstr "Memorex MX1998"
-
-#~ msgid "Trust Wireless Keyboard Classic"
-#~ msgstr "Trust Wireless Keyboard Classic"
-
-#~ msgid "Dell 101-key PC"
-#~ msgstr "Dell 101-tangenters PC"
-
-#~ msgid "Brother Internet Keyboard"
-#~ msgstr "Brother Internet Keyboard"
-
-#~ msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-#~ msgstr "Bärbar Compaq (t ex Armada) tangentbord för bärbar"
-
-#~ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
-#~ msgstr "Bärbar Compaq (t ex Presario) Internettangentbord"
-
-#~ msgid "IBM Rapid Access II"
-#~ msgstr "IBM Rapid Access II"
-
-#~ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-#~ msgstr "Logitech iTouch trådlöst tangentbord (modell Y-RB6)"
-
-#~ msgid "Trust Direct Access Keyboard"
-#~ msgstr "Trust Direct Access Keyboard"
-
-#~ msgid "Logitech Internet Navigator Keyboard"
-#~ msgstr "Logitech Internet Navigator Keyboard"
-
-#~ msgid "SK-7100"
-#~ msgstr "SK-7100"
-
-#~ msgid "Acer AirKey V"
-#~ msgstr "Acer AirKey V"
-
-#~ msgid "BTC 9000A"
-#~ msgstr "BTC 9000A"
-
-#~ msgid "Toshiba Satellite S3000"
-#~ msgstr "Toshiba Satellite S3000"
-
-#~ msgid "Compaq Internet Keyboard (13 keys)"
-#~ msgstr "Compaq Internet Keyboard (13 tangenter)"
-
-#~ msgid "Hewlett-Packard Omnibook XT1000"
-#~ msgstr "Hewlett-Packard Omnibook XT1000"
-
-#~ msgid "Logitech iTouch"
-#~ msgstr "Logitech iTouch"
-
-#~ msgid "SK-6200"
-#~ msgstr "SK-6200"
-
-#~ msgid "Compaq iPaq Keyboard"
-#~ msgstr "Compaq iPaq-tangentbord"
-
-#~ msgid "Logitech Cordless Desktop Pro (alternate option)"
-#~ msgstr "Logitech Cordless Desktop Pro (alternativt)"
-
-#~ msgid "Logitech Cordless Desktop Navigator"
-#~ msgstr "Logitech Cordless Desktop Navigator"
-
-#~ msgid "QTronix Scorpius 98N+"
-#~ msgstr "QTronix Scorpius 98N+"
-
-#~ msgid "Symplon PaceBook (tablet PC)"
-#~ msgstr "Symplon PaceBook (PC-pekplatta)"
-
-#~ msgid "Winbook Model XP5"
-#~ msgstr "Winbook Model XP5"
-
-#~ msgid "BTC 5113RF Multimedia"
-#~ msgstr "BTC 5113RF Multimedia"
-
-#~ msgid "Diamond 9801 / 9802 series"
-#~ msgstr "Diamond 9801/9802-serien"
-
-#~ msgid "Hewlett-Packard Omnibook XE4xxx and ZE4xxx"
-#~ msgstr "Hewlett-Packard Omnibook XE4xxx och ZE4xxx"
-
-#~ msgid "Logitech Cordless Desktop Optical"
-#~ msgstr "Logitech Cordless Desktop Optical"
-
-#~ msgid "Logitech Internet Keyboard"
-#~ msgstr "Logitech Internet Keyboard"
-
-#~ msgid "BTC 9000"
-#~ msgstr "BTC 9000"
-
-#~ msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
-#~ msgstr "Genius Comfy KB-16M/Genius MM Keyboard KWD-910"
-
-#~ msgid "Hewlett-Packard Internet Keyboard"
-#~ msgstr "Hewlett-Packard Internet Keyboard"
-
-#~ msgid "Logitech Cordless Freedom/Desktop Navigator"
-#~ msgstr "Logitech Cordless Freedom/Desktop Navigator"
-
-#~ msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
-#~ msgstr "Microsoft Natural Keyboard Pro/Microsoft Internet Keyboard Pro"
-
-#~ msgid "Propeller Voyager (KTEZ-1000)"
-#~ msgstr "Propeller Voyager (KTEZ-1000)"
-
-#~ msgid "Brazilian ABNT2"
-#~ msgstr "Brazilian ABNT2"
-
-#~ msgid "Compaq Internet Keyboard (7 keys)"
-#~ msgstr "Compaq Internet Keyboard (7 tangenter)"
-
-#~ msgid "Honeywell Euroboard"
-#~ msgstr "Honeywell Euroboard"
-
-#~ msgid "Logitech Cordless Desktop"
-#~ msgstr "Logitech Cordless Desktop"
-
-#~ msgid "Yahoo! Internet Keyboard"
-#~ msgstr "Yahoo! Internet Keyboard"
-
-#~ msgid "Compaq Internet Keyboard (18 keys)"
-#~ msgstr "Compaq Internet Keyboard (18 tangenter)"
-
-#~ msgid "Laptop/notebook Dell Inspiron 8xxx"
-#~ msgstr "Bärbar Dell Inspiron 8xxx"
-
-#~ msgid "IBM Rapid Access II (alternate option)"
-#~ msgstr "IBM Rapid Access II (alternativ)"
-
-#~ msgid "Logitech Cordless Desktop Pro"
-#~ msgstr "Logitech Cordless Desktop Pro"
-
-#~ msgid "Advance Scorpius KI"
-#~ msgstr "Advance Scorpius KI"
-
-#~ msgid "BTC 5126T"
-#~ msgstr "BTC 5126T"
-
-#~ msgid "Dexxa Wireless Desktop Keyboard"
-#~ msgstr "Dexxa Wireless Desktop Keyboard"
-
-#~ msgid "Hewlett-Packard Omnibook 5xx"
-#~ msgstr "Hewlett-Packard Omnibook 5xx"
-
-#~ msgid "Memorex MX2750"
-#~ msgstr "Memorex MX2750"
-
-#~ msgid "SK-1300"
-#~ msgstr "SK-1300"
-
-#~ msgid "Generic 101-key PC"
-#~ msgstr "Generellt 101-tangenters PC"
-
-#~ msgid "Northgate OmniKey 101"
-#~ msgstr "Northgate OmniKey 101"
-
-#~ msgid "ACPI Standard"
-#~ msgstr "ACPI-standard"
-
-#~ msgid "Cherry Blue Line CyBo@rd (alternate option)"
-#~ msgstr "Cherry Blue Line CyBo@rd (alternativ)"
-
-#~ msgid "Chicony Internet Keyboard"
-#~ msgstr "Chicony Internet Keyboard"
-
-#~ msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
-#~ msgstr "Hewlett-Packard SK-2501 Multimediatangentbord"
-
-#~ msgid "Samsung SDM 4510P"
-#~ msgstr "Samsung SDM 4510P"
-
-#~ msgid "SK-2500"
-#~ msgstr "SK-2500"
-
-#~ msgid "SVEN Ergonomic 2500"
-#~ msgstr "SVEN Ergonomic 2500"
-
-#~ msgid "Generic 102-key (Intl) PC"
-#~ msgstr "Generellt 102-tangenters (internationellt) PC"
-
-#~ msgid "Logitech Cordless Desktop iTouch"
-#~ msgstr "Logitech Cordless Desktop iTouch"
-
-#~ msgid "Chicony KB-9885"
-#~ msgstr "Chicony KB-9885"
-
-#~ msgid "Compaq Easy Access Keyboard"
-#~ msgstr "Compaq Easy Access Keyboard"
-
-#~ msgid "Hewlett-Packard 5181 Internet Keyboard"
-#~ msgstr "Hewlett-Packard 5181 Internet Keyboard"
-
-#~ msgid "Hewlett-Packard Omnibook 500 FA"
-#~ msgstr "Hewlett-Packard Omnibook 500 FA"
-
-#~ msgid "Memorex MX2500 EZ-Access Keyboard"
-#~ msgstr "Memorex MX2500 EZ-Access Keyboard"
-
-#~ msgid "Generic 104-key PC"
-#~ msgstr "Generellt 104-tangenters PC"
-
-#~ msgid "Everex STEPnote"
-#~ msgstr "Everex STEPnote"
-
-#~ msgid "Japanese 106-key"
-#~ msgstr "Japanskt 106-tangenters"
-
-#~ msgid "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx"
-#~ msgstr "Hewlett-Packard Omnibook XE3 GC, GD, GE och Pavilion N5xxx"
-
-#~ msgid "Hewlett-Packard Pavilion ZT11xx"
-#~ msgstr "Hewlett-Packard Pavilion ZT11xx"
-
-#~ msgid "Logitech iTouch keyboard Internet Navigator"
-#~ msgstr "Logitech iTouch keyboard Internet Navigator"
-
-#~ msgid "Generic 105-key (Intl) PC"
-#~ msgstr "Generellt 105-tangenters (internationellt) PC"
-
-#~ msgid "Keytronic FlexPro"
-#~ msgstr "Keytronic FlexPro"
-
-#~ msgid "Hewlett-Packard SK-2505 Internet Keyboard"
-#~ msgstr "Hewlett-Packard SK-2505 Internet Keyboard"
-
-#~ msgid "Microsoft Internet Keyboard Pro, Swedish"
-#~ msgstr "Microsoft Internet Keyboard Pro, Svenskt"
-
-#~ msgid "Microsoft Office Keyboard"
-#~ msgstr "Microsoft Office-tangentbord"
-
-#~ msgid "Oretec MCK-800 MM/Internet keyboard"
-#~ msgstr "Oretec MCK-800 MM/Internet keyboard"
-
-#~ msgid "uses internal capitalization. Shift doesn't cancel Caps."
-#~ msgstr "använder intern skiftlåsning. Skift upphäver inte Caps."
-
-#~ msgid "acts as Shift with locking. Shift doesn't cancel Caps."
-#~ msgstr "fungerar som Skift med låsning. Skift upphäver inte Caps Lock."
