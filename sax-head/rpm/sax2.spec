@@ -50,6 +50,8 @@ Requires:     sax2_sbus
 %endif
 ExcludeArch:  s390 s390x
 
+%define sub_package 0
+
 %description
 This package contains the SuSE Advanced X-Configuration
 
@@ -234,6 +236,7 @@ Authors:
 #=================================================
 # Description sax2-libsax-csharp
 #-------------------------------------------------
+%if%sub_package
 %ifnarch ppc64
 %package -n sax2-libsax-csharp
 Version:      7.1
@@ -252,6 +255,7 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
+%endif
 %endif
 %prep
 %setup -n sax -a 1
@@ -565,6 +569,7 @@ fi
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
+%if%sub_package
 %ifnarch ppc64
 
 %files -n sax2-libsax-csharp
@@ -574,4 +579,5 @@ fi
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
+%endif
 %endif

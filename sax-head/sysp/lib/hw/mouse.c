@@ -51,7 +51,7 @@ MouseData* MouseGetData(void) {
 		strcpy(data->device,"/dev/mouse");
 		strcpy(data->protocol,"Auto");
 		data->buttons = -1;
-		data->wheel   = -1;
+		data->wheel   = 1;
 		data->emulate = 1;
 		data->next    = NULL;
 
