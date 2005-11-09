@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Oct 27 15:28:30 2005
+# Author: Marcus Schaefer <sax@suse.de>, Wed Nov  9 18:01:55 2005
 #
 # Template for monitor data
 # --------------------------
@@ -31672,6 +31672,17 @@ SAMSUNG:SYNCMASTER 910T  {
 }
 
 #==============================================
+# SyncMaster 913v
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 913V  {
+ DDC=SAM0115
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
 # SyncMaster 920T (Analog)
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 920T (ANALOG)  {
@@ -32076,7 +32087,10 @@ SANYO:LMU-TF 181A1  {
 # BT15+
 #----------------------------------------------
 SCEPTRE:BT15+  {
- Hsync=24-60
+ DDC=SPT1505
+ Option=DPMS
+ Hsync=30-60
+ Resolution=1024x768
  Vsync=56-75
 }
 
