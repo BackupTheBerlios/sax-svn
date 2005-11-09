@@ -83,7 +83,8 @@ all:
 	#============================================
 	# building libsax and bindings...
 	#--------------------------------------------
-	( cd libsax && dot -c && doxygen sax.dox && ./.make )
+	( cd libsax && test -f libgvplugin_dot_layout.so && dot -c || true )
+	( cd libsax && doxygen sax.dox && ./.make )
 	${MAKE} -C ./libsax all
 	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \

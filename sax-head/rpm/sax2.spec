@@ -50,7 +50,11 @@ Requires:     sax2_sbus
 %endif
 ExcludeArch:  s390 s390x
 
+%if %{suse_version} > 1000
 %define sub_package 0
+%else
+%define sub_package 1
+%endif
 
 %description
 This package contains the SuSE Advanced X-Configuration
