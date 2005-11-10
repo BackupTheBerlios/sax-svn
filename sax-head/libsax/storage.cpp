@@ -203,6 +203,10 @@ void SaXStorage::removeRawItem (
 			}
 		}
 		QString newValue = result.join (expression);
+		QRegExp rx ("^Option");
+		if (rx.search (newValue) == -1) {
+			newValue = "Option" + newValue;
+		}
 		setItem (key,newValue);
 	}
 }
