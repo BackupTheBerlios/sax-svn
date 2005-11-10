@@ -181,7 +181,7 @@ sub init {
 	#==========================================
 	# ServerFlags specification                
 	#------------------------------------------
-	$var{ServerFlags}{0}{Option}                = "AllowMouseOpenFail";
+	$var{ServerFlags}{0}{AllowMouseOpenFail}    = "on";
 	$var{ServerFlags}{0}{"blank time"}          = "";
 	$var{ServerFlags}{0}{"standby time"}        = "";
 	$var{ServerFlags}{0}{"suspend time"}        = "";

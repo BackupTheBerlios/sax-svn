@@ -765,7 +765,7 @@ sub usage {
 	print "     Desktop    -> Section Monitor,Modes,Screen\n";
 	print "     Keyboard   -> Section InputDevice\n";
 	print "     Mouse      -> Section InputDevice\n";
-	print "     Path       -> Section Files,Module\n";
+	print "     Path       -> Section Files,Module,ServerFlags\n";
 	print "     Layout     -> Section ServerLayout\n";
 	print "     Extensions -> Section Extensions\n";
 	print "  /.../\n";
