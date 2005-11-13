@@ -1,4 +1,8 @@
-bin_PROGRAMS = whereiam
+sbin_PROGRAMS = whereiam
+
+WARN_CFLAGS = @WARN_CFLAGS@
+AM_CFLAGS = $(WARN_CFLAGS)
+
 whereiam_SOURCES = \
 	remote.c \
 	ifaddrs.c \

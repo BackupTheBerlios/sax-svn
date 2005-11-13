@@ -1,4 +1,8 @@
-bin_PROGRAMS = corner
+sbin_PROGRAMS = corner
+
+WARN_CFLAGS = @WARN_CFLAGS@
+AM_CFLAGS = $(WARN_CFLAGS)
+
 corner_SOURCES = \
 	corner.c
 

@@ -1,4 +1,7 @@
-bin_PROGRAMS = xquery
+sbin_PROGRAMS = xquery
+
+WARN_CFLAGS = @WARN_CFLAGS@
+
 xquery_SOURCES = \
 	render.c \
 	nstring.c \
@@ -9,4 +12,6 @@ xquery_LDFLAGS = \
 	-lX11 -lXext -lXft
 
 xquery_CFLAGS = `/usr/X11R6/bin/xft-config --cflags`
+xquery_CFLAGS+= $(WARN_CFLAGS)
+
 xquery_LDADD  = -lXinerama -lXxf86vm

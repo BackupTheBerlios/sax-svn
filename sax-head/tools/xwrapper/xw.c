@@ -414,7 +414,9 @@ void prepare (void) {
 			char s_nice[80];
 			char s_null[80];
 			long idle,load,nice,pval;
-			long old_idle,old_nice,old_load = 0;
+			long old_idle = 0;
+			long old_nice = 0;
+			long old_load = 0;
 			int mouse_is_arrow = 1;
 			Window root = RootWindow(dpy,0);
 			Cursor cursor;

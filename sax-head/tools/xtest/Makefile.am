@@ -1,4 +1,8 @@
-bin_PROGRAMS = testX
+sbin_PROGRAMS = testX
+
+WARN_CFLAGS = @WARN_CFLAGS@
+AM_CFLAGS = $(WARN_CFLAGS)
+
 testX_SOURCES = \
 	../xwrapper/xaccess.c \
 	xtest.c

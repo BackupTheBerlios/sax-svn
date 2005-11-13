@@ -101,6 +101,7 @@ all:
 	#--------------------------------------------
 	( cd api && ./.make )
 	( cd api/xcmd && ./.make )
+	( cd tools && make -f Makefile.ac buildroot=${buildroot} )
 	${MAKE} -C ./api/xcmd all
 	${MAKE} -C ./api all
 	${MAKE} -C ./tools all
@@ -234,15 +235,14 @@ install:
 	#============================================
 	# install tools...
 	#--------------------------------------------
-	${MAKE} -C ./tools install \
-		buildroot=${buildroot} sax_prefix=${sax_prefix} DESTDIR=${buildroot}
+	${MAKE} -C ./tools install
 
 	#============================================
 	# install XFine2...
 	#--------------------------------------------
-	install -m 644 ./xfine/figures/*                        ${XFINEPIXMAPS}
-	install -m 755 ./xfine/xfine                            ${SBINVZ}
-	install -m 644 ./xfine/xfine.gtx                        ${XFINEBINVZ}
+	install -m 644 ./xfine/figures/*   ${XFINEPIXMAPS}
+	install -m 755 ./xfine/xfine       ${SBINVZ}
+	install -m 644 ./xfine/xfine.gtx   ${XFINEBINVZ}
 
 	@echo "remember to have fun..."
 	@echo "your SuSE team :-)"
