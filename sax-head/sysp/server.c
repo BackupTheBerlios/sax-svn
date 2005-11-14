@@ -360,12 +360,13 @@ void ScanServer::Scan(void) {
 	for(PciData* p=first; p; p=p->next) {
 		ServerData data;
 
-		data.cls  = p->cls;
-		data.bus  = p->bus;
-		data.slot = p->slot;
-		data.func = p->func;
-		data.vid  = p->vid;
-		data.did  = p->did;
+		data.cls    = p->cls;
+		data.domain = p->domain;
+		data.bus    = p->bus;
+		data.slot   = p->slot;
+		data.func   = p->func;
+		data.vid    = p->vid;
+		data.did    = p->did;
 
 		if (p->bus == 0) {
 			data.bustype = "PCI";
@@ -433,6 +434,7 @@ void ScanServer::Scan(void) {
 		data.subdevice = 0x0000;
 		data.vid       = UNCVID;
 		data.did       = UNCDID;
+		data.domain    = 0x0;
 		data.bus       = 0x0;       // there is a profile
 		data.slot      = 0x1;       // called nobus which will
 		data.func      = 0x2;       // remove the wrong BusID entry
@@ -467,13 +469,15 @@ void ScanServer::Scan(void) {
 	int slot  = 0;
 	int group = 0;
 	int card  = 0;
+	int dom   = 0;
 	for (int i=0;i<n;i++) {
 		equals[group] = graphics[i];
 		bus  = graphics[i].bus;
 		slot = graphics[i].slot;
+		dom  = graphics[i].domain;
 
 		for(int k=0;k<n;k++) {
-		if ((k != i) && (graphics[k].bus==bus) && (graphics[k].slot==slot)) {
+		if ((k != i) && (graphics[k].bus==bus) && (graphics[k].slot==slot) && (graphics[k].domain==dom)) {
 			group++;
 			equals[group] = graphics[k];
 			graphics.erase(k); n--;
@@ -729,7 +733,8 @@ void ScanServer::Scan(void) {
 				exit(1);
 			}
 			cfg.SetBus (
-				graphics[n].bus,graphics[n].slot,graphics[n].func
+				graphics[n].domain,graphics[n].bus,
+				graphics[n].slot,graphics[n].func
 			);
 
 			section[4] = section[4] + "\n" + cfg.DoMonitorSection();
@@ -762,7 +767,8 @@ void ScanServer::Scan(void) {
 		} catch (...) {
 			// ...
 		}
-		unlink(file);
+		printf ("++++++ %s\n",file);
+		//unlink(file);
 
 		// check the primary device...
 		// ----------------------------
@@ -828,6 +834,7 @@ int ScanServer::Read(void) {
 		// include data to object...
 		// ---
 		data.cls       = input.cls;
+		data.domain    = input.domain;
 		data.bus       = input.bus;
 		data.slot      = input.slot;
 		data.func      = input.func;
@@ -888,6 +895,7 @@ int ScanServer::Save(void) {
 		strcpy(save.package3d  , data.package3d.c_str());
 		strcpy(save.drvprofile , data.drvprofile.c_str());
 		save.cls               = data.cls;
+		save.domain            = data.domain;
 		save.bus               = data.bus;
 		save.slot              = data.slot;
 		save.func              = data.func;

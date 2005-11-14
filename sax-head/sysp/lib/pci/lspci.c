@@ -236,13 +236,13 @@ PciData* PciCollectData (struct device *d) {
  data = (PciData*)malloc(sizeof(PciData));
  data->next = NULL;
 
-
- data->bus  = p->bus;
- data->slot = p->dev;
- data->func = p->func;
- data->vid  = p->vendor_id;
- data->did  = p->device_id;
- data->cls  = get_conf_word(d, PCI_CLASS_DEVICE);
+ data->domain = p->domain;
+ data->bus    = p->bus;
+ data->slot   = p->dev;
+ data->func   = p->func;
+ data->vid    = p->vendor_id;
+ data->did    = p->device_id;
+ data->cls    = get_conf_word(d, PCI_CLASS_DEVICE);
  
  switch (htype) {
   case PCI_HEADER_TYPE_NORMAL:

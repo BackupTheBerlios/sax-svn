@@ -1,9 +1,7 @@
 /*
- *	Status: Up-to-date
- *
  *	The PCI Library -- Configuration Access via /proc/bus/pci
  *
- *	Copyright (c) 1997--1999 Martin Mares <mj@atrey.karlin.mff.cuni.cz>
+ *	Copyright (c) 1997--2003 Martin Mares <mj@ucw.cz>
  *
  *	Can be freely distributed and used under the terms of the GNU GPL.
  */
@@ -20,70 +18,12 @@
 #include <sys/types.h>
 
 #include "internal.h"
-
-/*
- *  We'd like to use pread/pwrite for configuration space accesses, but
- *  unfortunately it isn't simple at all since all libc's until glibc 2.1
- *  don't define it.
- */
-
-#if defined(__GLIBC__) && __GLIBC__ == 2 && __GLIBC_MINOR__ > 0
-/* glibc 2.1 or newer -> pread/pwrite supported automatically */
-
-#elif defined(i386) && defined(__GLIBC__)
-/* glibc 2.0 on i386 -> call syscalls directly */
-#include <asm/unistd.h>
-#include <syscall-list.h>
-#ifndef SYS_pread
-#define SYS_pread 180
-#endif
-static int pread(unsigned int fd, void *buf, size_t size, loff_t where)
-{ return syscall(SYS_pread, fd, buf, size, where); }
-#ifndef SYS_pwrite
-#define SYS_pwrite 181
-#endif
-static int pwrite(unsigned int fd, void *buf, size_t size, loff_t where)
-{ return syscall(SYS_pwrite, fd, buf, size, where); }
-
-#elif defined(i386)
-/* old libc on i386 -> call syscalls directly the old way */
-#include <asm/unistd.h>
-static _syscall5(int, pread, unsigned int, fd, void *, buf, size_t, size, u32, where_lo, u32, where_hi);
-static _syscall5(int, pwrite, unsigned int, fd, void *, buf, size_t, size, u32, where_lo, u32, where_hi);
-static int do_read(struct pci_dev *d UNUSED, int fd, void *buf, size_t size, int where) { return pread(fd, buf, size, where, 0); }
-static int do_write(struct pci_dev *d UNUSED, int fd, void *buf, size_t size, int where) { return pwrite(fd, buf, size, where, 0); }
-#define HAVE_DO_READ
-
-#else
-/* In all other cases we use lseek/read/write instead to be safe */
-#define make_rw_glue(op) \
-	static int do_##op(struct pci_dev *d, int fd, void *buf, size_t size, int where)	\
-	{											\
-	  struct pci_access *a = d->access;							\
-	  int r;										\
-	  if (a->fd_pos != where && lseek(fd, where, SEEK_SET) < 0)				\
-	    return -1;										\
-	  r = op(fd, buf, size);								\
-	  if (r < 0)										\
-	    a->fd_pos = -1;									\
-	  else											\
-	    a->fd_pos = where + r;								\
-	  return r;										\
-	}
-make_rw_glue(read)
-make_rw_glue(write)
-#define HAVE_DO_READ
-#endif
-
-#ifndef HAVE_DO_READ
-#define do_read(d,f,b,l,p) pread(f,b,l,p)
-#define do_write(d,f,b,l,p) pwrite(f,b,l,p)
-#endif
+#include "pread.h"
 
 static void
 proc_config(struct pci_access *a)
 {
-  a->method_params[PCI_ACCESS_PROC_BUS_PCI] = PATH_PROC_BUS_PCI;
+  a->method_params[PCI_ACCESS_PROC_BUS_PCI] = PCI_PATH_PROC_BUS_PCI;
 }
 
 static int
@@ -132,12 +72,8 @@ proc_scan(struct pci_access *a)
       struct pci_dev *d = pci_alloc_dev(a);
       unsigned int dfn, vend, cnt, known;
 
-      cnt = sscanf(buf,
-#ifdef HAVE_LONG_ADDRESS
-	     "%x %x %x %llx %llx %llx %llx %llx %llx %llx %llx %llx %llx %llx %llx %llx %llx",
-#else
-	     "%x %x %x %lx %lx %lx %lx %lx %lx %lx %lx %lx %lx %lx %lx %lx %lx",
-#endif
+#define F " " PCIADDR_T_FMT
+      cnt = sscanf(buf, "%x %x %x" F F F F F F F F F F F F F F,
 	     &dfn,
 	     &vend,
 	     &d->irq,
@@ -155,6 +91,7 @@ proc_scan(struct pci_access *a)
 	     &d->size[4],
 	     &d->size[5],
 	     &d->rom_size);
+#undef F
       if (cnt != 9 && cnt != 10 && cnt != 17)
 	a->error("proc: parse error (read only %d items)", cnt);
       d->bus = dfn >> 8U;
@@ -184,11 +121,14 @@ proc_setup(struct pci_dev *d, int rw)
 
   if (a->cached_dev != d || a->fd_rw < rw)
     {
-      char buf[256];
+      char buf[1024];
+      int e;
       if (a->fd >= 0)
 	close(a->fd);
-      if (snprintf(buf, sizeof(buf), "%s/%02x/%02x.%d", a->method_params[PCI_ACCESS_PROC_BUS_PCI],
-		   d->bus, d->dev, d->func) == sizeof(buf))
+      e = snprintf(buf, sizeof(buf), "%s/%02x/%02x.%d",
+		   a->method_params[PCI_ACCESS_PROC_BUS_PCI],
+		   d->bus, d->dev, d->func);
+      if (e < 0 || e >= (int) sizeof(buf))
 	a->error("File name too long");
       a->fd_rw = a->writeable || rw;
       a->fd = open(buf, a->fd_rw ? O_RDWR : O_RDONLY);
@@ -215,10 +155,7 @@ proc_read(struct pci_dev *d, int pos, byte *buf, int len)
       return 0;
     }
   else if (res != len)
-    {
-      d->access->warning("proc_read: tried to read %d bytes at %d, but got only %d", len, pos, res);
-      return 0;
-    }
+    return 0;
   return 1;
 }
 
@@ -238,7 +175,7 @@ proc_write(struct pci_dev *d, int pos, byte *buf, int len)
     }
   else if (res != len)
     {
-      d->access->warning("proc_write: tried to write %d bytes at %d, but got only %d", len, pos, res);
+      d->access->warning("proc_write: tried to write %d bytes at %d, but only %d succeeded", len, pos, res);
       return 0;
     }
   return 1;
@@ -252,7 +189,7 @@ proc_cleanup_dev(struct pci_dev *d)
 }
 
 struct pci_methods pm_linux_proc = {
-  "/proc/bus/pci",
+  "Linux-proc",
   proc_config,
   proc_detect,
   proc_init,
@@ -264,4 +201,3 @@ struct pci_methods pm_linux_proc = {
   NULL,					/* init_dev */
   proc_cleanup_dev
 };
-

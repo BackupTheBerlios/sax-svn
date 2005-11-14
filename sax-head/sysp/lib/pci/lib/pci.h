@@ -1,9 +1,7 @@
 /*
- *	Status: Up-to-date
- *
  *	The PCI Library
  *
- *	Copyright (c) 1997--1999 Martin Mares <mj@atrey.karlin.mff.cuni.cz>
+ *	Copyright (c) 1997--2004 Martin Mares <mj@ucw.cz>
  *
  *	Can be freely distributed and used under the terms of the GNU GPL.
  */
@@ -12,52 +10,8 @@
 #define _PCI_LIB_H
 
 #include "config.h"
-
-#ifdef HAVE_OWN_HEADER_H
 #include "header.h"
-#else
-#include <linux/pci.h>
-#endif
-
-/*
- *	Types
- */
-
-#ifdef OS_LINUX
-#include <linux/types.h>
-
-typedef __u8 byte;
-typedef __u8 u8;
-typedef __u16 word;
-typedef __u16 u16;
-typedef __u32 u32;
-#endif
-
-#ifdef OS_FREEBSD
-#include <sys/types.h>
-
-typedef u_int8_t byte;
-typedef u_int8_t u8;
-typedef u_int16_t word;
-typedef u_int16_t u16;
-typedef u_int32_t u32;
-#endif
-
-#ifdef OS_AIX
-#include <sys/param.h>
-
-typedef u_int8_t byte;
-typedef u_int8_t u8;
-typedef u_int16_t word;
-typedef u_int16_t u16;
-typedef u_int32_t u32;
-#endif
-
-#ifdef HAVE_LONG_ADDRESS
-typedef unsigned long long pciaddr_t;
-#else
-typedef unsigned long pciaddr_t;
-#endif
+#include "types.h"
 
 /*
  *	PCI Access Structure
@@ -66,15 +20,19 @@ typedef unsigned long pciaddr_t;
 struct pci_methods;
 struct nl_entry;
 
-#define PCI_ACCESS_AUTO			0	/* Autodetection (params: none) */
-#define PCI_ACCESS_PROC_BUS_PCI		1	/* Linux /proc/bus/pci (params: path) */
-#define PCI_ACCESS_SYSCALLS		2	/* pciconfig_read() syscalls (params: none) */
-#define PCI_ACCESS_I386_TYPE1		3	/* i386 ports, type 1 (params: none) */
-#define PCI_ACCESS_I386_TYPE2		4	/* i386 ports, type 2 (params: none) */
-#define PCI_ACCESS_FBSD_DEVICE		5	/* FreeBSD /dev/pci (params: path) */
-#define PCI_ACCESS_AIX_DEVICE		6	/* /dev/pci0, /dev/bus0, etc. */
-#define PCI_ACCESS_DUMP			7	/* Dump file (params: filename) */
-#define PCI_ACCESS_MAX			8
+enum pci_access_type {
+  /* Known access methods, remember to update access.c as well */
+  PCI_ACCESS_AUTO,			/* Autodetection (params: none) */
+  PCI_ACCESS_SYS_BUS_PCI,		/* Linux /sys/bus/pci (params: path) */
+  PCI_ACCESS_PROC_BUS_PCI,		/* Linux /proc/bus/pci (params: path) */
+  PCI_ACCESS_I386_TYPE1,		/* i386 ports, type 1 (params: none) */
+  PCI_ACCESS_I386_TYPE2,		/* i386 ports, type 2 (params: none) */
+  PCI_ACCESS_FBSD_DEVICE,		/* FreeBSD /dev/pci (params: path) */
+  PCI_ACCESS_AIX_DEVICE,		/* /dev/pci0, /dev/bus0, etc. */
+  PCI_ACCESS_NBSD_LIBPCI,		/* NetBSD libpci */
+  PCI_ACCESS_DUMP,			/* Dump file (params: filename) */
+  PCI_ACCESS_MAX
+};
 
 struct pci_access {
   /* Options you can change: */
@@ -110,7 +68,7 @@ void pci_cleanup(struct pci_access *);
 
 /* Scanning of devices */
 void pci_scan_bus(struct pci_access *acc);
-struct pci_dev *pci_get_dev(struct pci_access *acc, int bus, int dev, int func); /* Raw access to specified device */
+struct pci_dev *pci_get_dev(struct pci_access *acc, int domain, int bus, int dev, int func); /* Raw access to specified device */
 void pci_free_dev(struct pci_dev *);
 
 /*
@@ -119,12 +77,12 @@ void pci_free_dev(struct pci_dev *);
 
 struct pci_dev {
   struct pci_dev *next;			/* Next device in the chain */
-  word bus;				/* Higher byte can select host bridges */
-  byte dev, func;			/* Device and function */
+  u16 domain;				/* PCI domain (host bridge) */
+  u8 bus, dev, func;			/* Bus inside domain, device and function */
 
   /* These fields are set by pci_fill_info() */
   int known_fields;			/* Set of info fields already known */
-  word vendor_id, device_id;		/* Identity of the device */
+  u16 vendor_id, device_id;		/* Identity of the device */
   int irq;				/* IRQ number */
   pciaddr_t base_addr[6];		/* Base addresses */
   pciaddr_t size[6];			/* Region sizes */
@@ -134,23 +92,23 @@ struct pci_dev {
   /* Fields used internally: */
   struct pci_access *access;
   struct pci_methods *methods;
-  byte *cache;				/* Cached information */
+  u8 *cache;				/* Cached config registers */
   int cache_len;
-  int hdrtype;				/* Direct methods: header type */
+  int hdrtype;				/* Cached low 7 bits of header type, -1 if unknown */
   void *aux;				/* Auxillary data */
 };
 
 #define PCI_ADDR_IO_MASK (~(pciaddr_t) 0x3)
 #define PCI_ADDR_MEM_MASK (~(pciaddr_t) 0xf)
 
-byte pci_read_byte(struct pci_dev *, int pos); /* Access to configuration space */
-word pci_read_word(struct pci_dev *, int pos);
+u8 pci_read_byte(struct pci_dev *, int pos); /* Access to configuration space */
+u16 pci_read_word(struct pci_dev *, int pos);
 u32  pci_read_long(struct pci_dev *, int pos);
-int pci_read_block(struct pci_dev *, int pos, byte *buf, int len);
-int pci_write_byte(struct pci_dev *, int pos, byte data);
-int pci_write_word(struct pci_dev *, int pos, word data);
+int pci_read_block(struct pci_dev *, int pos, u8 *buf, int len);
+int pci_write_byte(struct pci_dev *, int pos, u8 data);
+int pci_write_word(struct pci_dev *, int pos, u16 data);
 int pci_write_long(struct pci_dev *, int pos, u32 data);
-int pci_write_block(struct pci_dev *, int pos, byte *buf, int len);
+int pci_write_block(struct pci_dev *, int pos, u8 *buf, int len);
 
 int pci_fill_info(struct pci_dev *, int flags); /* Fill in device information */
 
@@ -161,14 +119,14 @@ int pci_fill_info(struct pci_dev *, int flags); /* Fill in device information */
 #define PCI_FILL_SIZES		16
 #define PCI_FILL_RESCAN		0x10000
 
-void pci_setup_cache(struct pci_dev *, byte *cache, int len);
+void pci_setup_cache(struct pci_dev *, u8 *cache, int len);
 
 /*
  *	Filters
  */
 
 struct pci_filter {
-  int bus, slot, func;			/* -1 = ANY */
+  int domain, bus, slot, func;			/* -1 = ANY */
   int vendor, device;
 };
 
@@ -192,4 +150,3 @@ void pci_free_name_list(struct pci_access *a);
 #define PCI_LOOKUP_NUMERIC 0x10000
 
 #endif
-

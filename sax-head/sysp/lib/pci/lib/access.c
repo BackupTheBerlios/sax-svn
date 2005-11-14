@@ -1,9 +1,7 @@
 /*
- *	Status: Up-to-date
- *
  *	The PCI Library -- User Access
  *
- *	Copyright (c) 1997--1999 Martin Mares <mj@atrey.karlin.mff.cuni.cz>
+ *	Copyright (c) 1997--2003 Martin Mares <mj@ucw.cz>
  *
  *	Can be freely distributed and used under the terms of the GNU GPL.
  */
@@ -17,34 +15,39 @@
 
 static struct pci_methods *pci_methods[PCI_ACCESS_MAX] = {
   NULL,
-#ifdef HAVE_PM_LINUX_PROC
+#ifdef PCI_HAVE_PM_LINUX_SYSFS
+  &pm_linux_sysfs,
+#else
+  NULL,
+#endif
+#ifdef PCI_HAVE_PM_LINUX_PROC
   &pm_linux_proc,
 #else
   NULL,
 #endif
-#ifdef HAVE_PM_SYSCALLS
-  &pm_syscalls,
-#else
-  NULL,
-#endif
-#ifdef HAVE_PM_INTEL_CONF
+#ifdef PCI_HAVE_PM_INTEL_CONF
   &pm_intel_conf1,
   &pm_intel_conf2,
 #else
   NULL,
   NULL,
 #endif
-#ifdef HAVE_PM_FBSD_DEVICE
+#ifdef PCI_HAVE_PM_FBSD_DEVICE
   &pm_fbsd_device,
 #else
   NULL,
 #endif
-#ifdef HAVE_PM_AIX_DEVICE
+#ifdef PCI_HAVE_PM_AIX_DEVICE
   &pm_aix_device,
 #else
   NULL,
 #endif
-#ifdef HAVE_PM_DUMP
+#ifdef PCI_HAVE_PM_NBSD_LIBPCI
+  &pm_nbsd_libpci,
+#else
+  NULL,
+#endif
+#ifdef PCI_HAVE_PM_DUMP
   &pm_dump,
 #else
   NULL,
@@ -54,13 +57,11 @@ static struct pci_methods *pci_methods[PCI_ACCESS_MAX] = {
 struct pci_access *
 pci_alloc(void)
 {
-  struct pci_access *a = NULL;
+  struct pci_access *a = (pci_access*)malloc(sizeof(struct pci_access));
   int i;
 
-  a = (struct pci_access *)malloc(sizeof(struct pci_access));
-
   bzero(a, sizeof(*a));
-  a->id_file_name = PATH_PCI_IDS;
+  a->id_file_name = PCI_PATH_IDS;
   for(i=0; i<PCI_ACCESS_MAX; i++)
     if (pci_methods[i] && pci_methods[i]->config)
       pci_methods[i]->config(a);
@@ -90,9 +91,9 @@ pci_generic_error(char *msg, ...)
   va_list args;
 
   va_start(args, msg);
-  //fputs("pcilib: ", stderr);
-  //vfprintf(stderr, msg, args);
-  //fputc('\n', stderr);
+  fputs("pcilib: ", stderr);
+  vfprintf(stderr, msg, args);
+  fputc('\n', stderr);
   exit(1);
 }
 
@@ -102,9 +103,9 @@ pci_generic_warn(char *msg, ...)
   va_list args;
 
   va_start(args, msg);
-  //fputs("pcilib: ", stderr);
-  //vfprintf(stderr, msg, args);
-  //fputc('\n', stderr);
+  fputs("pcilib: ", stderr);
+  vfprintf(stderr, msg, args);
+  fputc('\n', stderr);
 }
 
 static void
@@ -118,7 +119,7 @@ pci_generic_debug(char *msg, ...)
 }
 
 static void
-pci_null_debug(char * UNUSED msg, ...)
+pci_null_debug(char *msg UNUSED, ...)
 {
 }
 
@@ -188,11 +189,12 @@ pci_scan_bus(struct pci_access *a)
 struct pci_dev *
 pci_alloc_dev(struct pci_access *a)
 {
-  struct pci_dev *d = (struct pci_dev*)pci_malloc(a, sizeof(struct pci_dev));
+  struct pci_dev *d = (pci_dev*)pci_malloc(a, sizeof(struct pci_dev));
 
   bzero(d, sizeof(*d));
   d->access = a;
   d->methods = a->methods;
+  d->hdrtype = -1;
   if (d->methods->init_dev)
     d->methods->init_dev(d);
   return d;
@@ -208,10 +210,11 @@ pci_link_dev(struct pci_access *a, struct pci_dev *d)
 }
 
 struct pci_dev *
-pci_get_dev(struct pci_access *a, int bus, int dev, int func)
+pci_get_dev(struct pci_access *a, int domain, int bus, int dev, int func)
 {
   struct pci_dev *d = pci_alloc_dev(a);
 
+  d->domain = domain;
   d->bus = bus;
   d->dev = dev;
   d->func = func;
@@ -273,7 +276,7 @@ pci_write_data(struct pci_dev *d, void *buf, int pos, int len)
     d->access->error("Unaligned write: pos=%02x,len=%d", pos, len);
   if (pos + len <= d->cache_len)
     memcpy(d->cache + pos, buf, len);
-  return d->methods->write((struct pci_dev*)d, pos, (byte*)buf, len);
+  return d->methods->write(d, pos, (byte*)buf, len);
 }
 
 int
@@ -326,4 +329,3 @@ pci_setup_cache(struct pci_dev *d, byte *cache, int len)
   d->cache = cache;
   d->cache_len = len;
 }
-

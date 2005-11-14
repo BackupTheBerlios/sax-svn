@@ -82,6 +82,7 @@ struct Keymap_S {
 };
 
 struct ServerData {
+	int domain;
 	int cls;
 	int bus;
 	int slot;
@@ -106,6 +107,7 @@ struct ServerData {
 };
 
 struct ServerData_S {
+	int domain;
 	int cls;
 	int bus;
 	int slot;

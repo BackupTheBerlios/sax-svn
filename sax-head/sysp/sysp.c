@@ -645,6 +645,7 @@ void PrintServerData(ScanServer s) {
 		if (card > 0) {
 			printf("\n");
 		}
+		printf("Card%d     =>  DomainId   : 0x%01x\n",card,data.domain);
 		printf("Card%d     =>  BusId      : 0x%01x\n",card,data.bus);
 		printf("Card%d     =>  SlotId     : 0x%02x\n",card,data.slot);
 		printf("Card%d     =>  FuncId     : 0x%01x\n",card,data.func);

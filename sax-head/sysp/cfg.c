@@ -256,9 +256,9 @@ void XF86ConfigFile::SetDeviceOption (string opt) {
 //=========================================
 // XF86ConfigFile: set BusID string...
 //-----------------------------------------
-void XF86ConfigFile::SetBus (int b,int s,int f) {
+void XF86ConfigFile::SetBus (int d,int b,int s,int f) {
 	str busid_str; 
-	sprintf(busid_str,"%d:%d:%d",b,s,f);
+	sprintf(busid_str,"PCI:%d@%d:%d:%d",b,d,s,f);
 	busid = busid_str;
 	bus[idc]  = b;
 	slot[idc] = s; 

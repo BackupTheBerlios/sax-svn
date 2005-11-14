@@ -69,6 +69,7 @@ typedef struct {
 } MsgDetect;
 
 typedef struct PciData_t {
+ int domain;
  int cls;
  int bus;
  int slot;

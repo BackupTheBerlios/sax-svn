@@ -30,4 +30,3 @@ int main(void)
   pci_cleanup(pacc);		/* Close everything */
   return 0;
 }
-

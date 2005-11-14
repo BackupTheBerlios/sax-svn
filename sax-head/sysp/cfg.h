@@ -63,7 +63,7 @@ class XF86ConfigFile {
 	public:
 	void SetMouseProperties (str prot,str dev);
 	void SetColorDepth (int depth);
-	void SetBus (int b,int s,int f);
+	void SetBus (int d,int b,int s,int f);
 	int  SetDriver (string module);
 	void SetVideoRam (int mem);
 	void CallXF86Loader (str file="/etc/X11/xorg.conf");

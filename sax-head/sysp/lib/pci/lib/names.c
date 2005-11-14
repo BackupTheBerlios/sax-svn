@@ -1,9 +1,7 @@
 /*
- *	Status: Up-to-date
- *
  *	The PCI Library -- ID to Name Translation
  *
- *	Copyright (c) 1997--2000 Martin Mares <mj@atrey.karlin.mff.cuni.cz>
+ *	Copyright (c) 1997--2002 Martin Mares <mj@ucw.cz>
  *
  *	Can be freely distributed and used under the terms of the GNU GPL.
  */
@@ -66,7 +64,7 @@ static int nl_add(struct pci_access *a, int cat, int id1, int id2, int id3, int 
     n = n->next;
   if (n)
     return 1;
-  n = (struct nl_entry*)pci_malloc(a, sizeof(struct nl_entry));
+  n = (nl_entry*)pci_malloc(a, sizeof(struct nl_entry));
   n->id1 = id1;
   n->id2 = id2;
   n->id3 = id3;
@@ -98,19 +96,10 @@ parse_name_list(struct pci_access *a)
       lino++;
       q = p;
       while (*p && *p != '\n')
-	{
-	  if (*p == '#')
-	    {
-	      *p++ = 0;
-	      while (*p && *p != '\n')
-		p++;
-	      break;
-	    }
-	  p++;
-	}
+	p++;
       if (*p == '\n')
 	*p++ = 0;
-      if (!*q)
+      if (!*q || *q == '#')
 	continue;
       r = p;
       while (r > q && r[-1] == ' ')
@@ -122,17 +111,17 @@ parse_name_list(struct pci_access *a)
 	{
 	  if (q[0] == 'C' && q[1] == ' ')
 	    {
-	      if (strlen((char*)q+2) < 3 ||
+	      if (strlen((const char*)q+2) < 3 ||
 		  q[4] != ' ' ||
-		  sscanf((char*)q+2, "%x", &id1) != 1)
+		  sscanf((const char*)q+2, "%x", &id1) != 1)
 		goto parserr;
 	      cat = NL_CLASS;
 	    }
 	  else
 	    {
-	      if (strlen((char*)q) < 5 ||
+	      if (strlen((const char*)q) < 5 ||
 		  q[4] != ' ' ||
-		  sscanf((char*)q, "%x", &id1) != 1)
+		  sscanf((const char*)q, "%x", &id1) != 1)
 		goto parserr;
 	      cat = NL_VENDOR;
 	    }
@@ -145,7 +134,7 @@ parse_name_list(struct pci_access *a)
 	  case NL_VENDOR:
 	  case NL_DEVICE:
 	  case NL_SUBSYSTEM:
-	    if (sscanf((char*)q, "%x", &id2) != 1 || q[4] != ' ')
+	    if (sscanf((const char*)q, "%x", &id2) != 1 || q[4] != ' ')
 	      goto parserr;
 	    q += 5;
 	    cat = NL_DEVICE;
@@ -154,7 +143,7 @@ parse_name_list(struct pci_access *a)
 	  case NL_CLASS:
 	  case NL_SUBCLASS:
 	  case NL_PROGIF:
-	    if (sscanf((char*)q, "%x", &id2) != 1 || q[2] != ' ')
+	    if (sscanf((const char*)q, "%x", &id2) != 1 || q[2] != ' ')
 	      goto parserr;
 	    q += 3;
 	    cat = NL_SUBCLASS;
@@ -168,7 +157,7 @@ parse_name_list(struct pci_access *a)
 	  {
 	  case NL_DEVICE:
 	  case NL_SUBSYSTEM:
-	    if (sscanf((char*)q, "%x%x", &id3, &id4) != 2 || q[9] != ' ')
+	    if (sscanf((const char*)q, "%x%x", &id3, &id4) != 2 || q[9] != ' ')
 	      goto parserr;
 	    q += 10;
 	    cat = NL_SUBSYSTEM;
@@ -176,7 +165,7 @@ parse_name_list(struct pci_access *a)
 	  case NL_CLASS:
 	  case NL_SUBCLASS:
 	  case NL_PROGIF:
-	    if (sscanf((char*)q, "%x", &id3) != 1 || q[2] != ' ')
+	    if (sscanf((const char*)q, "%x", &id3) != 1 || q[2] != ' ')
 	      goto parserr;
 	    q += 3;
 	    cat = NL_PROGIF;
@@ -218,9 +207,7 @@ load_name_list(struct pci_access *a)
   if (read(fd, a->nl_list, st.st_size) != st.st_size)
     err_name_list(a, "read");
   a->nl_list[st.st_size] = 0;
-  a->nl_hash = (struct nl_entry **)pci_malloc(
-   a, sizeof(struct nl_entry *) * HASH_SIZE
-  );
+  a->nl_hash = (nl_entry**)pci_malloc(a, sizeof(struct nl_entry *) * HASH_SIZE);
   bzero(a->nl_hash, sizeof(struct nl_entry *) * HASH_SIZE);
   parse_name_list(a);
   close(fd);
@@ -286,7 +273,7 @@ pci_lookup_name(struct pci_access *a, char *buf, int size, int flags, u32 arg1, 
       if (n = nl_lookup(a, num, NL_VENDOR, arg3, 0, 0, 0))
 	return (char*)n->name;
       else
-	res = snprintf(buf, size, "%04x", arg1);
+	res = snprintf(buf, size, "%04x", arg3);
       break;
     case PCI_LOOKUP_DEVICE | PCI_LOOKUP_SUBSYSTEM:
       if (n = nl_lookup(a, num, NL_SUBSYSTEM, arg1, arg2, arg3, arg4))
@@ -294,7 +281,7 @@ pci_lookup_name(struct pci_access *a, char *buf, int size, int flags, u32 arg1, 
       else if (arg1 == arg3 && arg2 == arg4 && (n = nl_lookup(a, num, NL_DEVICE, arg1, arg2, 0, 0)))
 	return (char*)n->name;
       else
-	res = snprintf(buf, size, "%04x", arg2);
+	res = snprintf(buf, size, "%04x", arg4);
       break;
     case PCI_LOOKUP_VENDOR | PCI_LOOKUP_DEVICE | PCI_LOOKUP_SUBSYSTEM:
       if (!num)
@@ -345,6 +332,5 @@ pci_lookup_name(struct pci_access *a, char *buf, int size, int flags, u32 arg1, 
     default:
       return "<pci_lookup_name: invalid request>";
     }
-  return (res == size) ? (char*)"<too-large>" : (char*)buf;
+  return (res == size) ? (char*)"<too-large>" : buf;
 }
-

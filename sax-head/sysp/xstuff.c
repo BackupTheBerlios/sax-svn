@@ -200,7 +200,10 @@ void ScanXStuff::Scan (void) {
 				cout << "SaX: sorry could not open /dev/fb0... abort" << endl;
 				exit(1);
 			}
-			srvmsg.SetBus (graphics[n].bus,graphics[n].slot,graphics[n].func);
+			srvmsg.SetBus (
+				graphics[n].domain,graphics[n].bus,
+				graphics[n].slot,graphics[n].func
+			);
 			srvmsg.SetDeviceOption (graphics[n].option);
 
 			section[4] = section[4] + "\n" + srvmsg.DoMonitorSection();

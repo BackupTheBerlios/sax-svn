@@ -1,32 +1,26 @@
 /*
- *	Status: Up-to-date
- *
  *	The PCI Library -- Direct Configuration access via i386 Ports
  *
- *	Copyright (c) 1997--1999 Martin Mares <mj@atrey.karlin.mff.cuni.cz>
+ *	Copyright (c) 1997--2004 Martin Mares <mj@ucw.cz>
  *
  *	Can be freely distributed and used under the terms of the GNU GPL.
  */
 
 #include <unistd.h>
 
-#ifdef __GLIBC__
-#include <sys/io.h>
-#else
-#include <asm/io.h>
-#endif
-
 #include "internal.h"
 
-static int intel_iopl_set = -1;
-
-static int
-intel_setup_io(void)
-{
-  if (intel_iopl_set < 0)
-    intel_iopl_set = (iopl(3) < 0) ? 0 : 1;
-  return intel_iopl_set;
-}
+#if defined(PCI_OS_LINUX)
+#include "i386-io-linux.h"
+#elif defined(PCI_OS_GNU)
+#include "i386-io-hurd.h"
+#elif defined(PCI_OS_SUNOS)
+#include "i386-io-sunos.h"
+#elif defined(PCI_OS_WINDOWS)
+#include "i386-io-windows.h"
+#else
+#error Do not know how to access I/O ports on this OS.
+#endif
 
 static void
 conf12_init(struct pci_access *a)
@@ -36,17 +30,16 @@ conf12_init(struct pci_access *a)
 }
 
 static void
-conf12_cleanup(struct pci_access * UNUSED a)
+conf12_cleanup(struct pci_access *a UNUSED)
 {
-  iopl(3);
-  intel_iopl_set = -1;
+  intel_cleanup_io();
 }
 
 /*
  * Before we decide to use direct hardware access mechanisms, we try to do some
  * trivial checks to ensure it at least _seems_ to be working -- we just test
  * whether bus 00 contains a host bridge (this is similar to checking
- * techniques used in X11, but ours should be more reliable since we
+ * techniques used in XFree86, but ours should be more reliable since we
  * attempt to make use of direct access hints provided by the PCI BIOS).
  *
  * This should be close to trivial, but it isn't, because there are buggy
@@ -63,9 +56,9 @@ intel_sanity_check(struct pci_access *a, struct pci_methods *m)
   d.func = 0;
   for(d.dev = 0; d.dev < 32; d.dev++)
     {
-      u16 cls, vendor;
-      if (m->read(&d, PCI_CLASS_DEVICE, (byte *) &cls, sizeof(cls)) &&
-	  (cls == cpu_to_le16(PCI_CLASS_BRIDGE_HOST) || cls == cpu_to_le16(PCI_CLASS_DISPLAY_VGA)) ||
+      u16 class, vendor;
+      if (m->read(&d, PCI_CLASS_DEVICE, (byte *) &class, sizeof(class)) &&
+	  (class == cpu_to_le16(PCI_CLASS_BRIDGE_HOST) || class == cpu_to_le16(PCI_CLASS_DISPLAY_VGA)) ||
 	  m->read(&d, PCI_VENDOR_ID, (byte *) &vendor, sizeof(vendor)) &&
 	  (vendor == cpu_to_le16(PCI_VENDOR_ID_INTEL) || vendor == cpu_to_le16(PCI_VENDOR_ID_COMPAQ)))
 	{
@@ -109,6 +102,10 @@ static int
 conf1_read(struct pci_dev *d, int pos, byte *buf, int len)
 {
   int addr = 0xcfc + (pos&3);
+
+  if (pos >= 256)
+    return 0;
+
   outl(0x80000000 | ((d->bus & 0xff) << 16) | (PCI_DEVFN(d->dev, d->func) << 8) | (pos&~3), 0xcf8);
 
   switch (len)
@@ -132,6 +129,10 @@ static int
 conf1_write(struct pci_dev *d, int pos, byte *buf, int len)
 {
   int addr = 0xcfc + (pos&3);
+
+  if (pos >= 256)
+    return 0;
+
   outl(0x80000000 | ((d->bus & 0xff) << 16) | (PCI_DEVFN(d->dev, d->func) << 8) | (pos&~3), 0xcf8);
 
   switch (len)
@@ -180,6 +181,9 @@ conf2_read(struct pci_dev *d, int pos, byte *buf, int len)
 {
   int addr = 0xc000 | (d->dev << 8) | pos;
 
+  if (pos >= 256)
+    return 0;
+
   if (d->dev >= 16)
     /* conf2 supports only 16 devices per bus */
     return 0;
@@ -208,6 +212,9 @@ static int
 conf2_write(struct pci_dev *d, int pos, byte *buf, int len)
 {
   int addr = 0xc000 | (d->dev << 8) | pos;
+
+  if (pos >= 256)
+    return 0;
 
   if (d->dev >= 16)
     d->access->error("conf2_write: only first 16 devices exist.");
@@ -259,4 +266,3 @@ struct pci_methods pm_intel_conf2 = {
   NULL,					/* init_dev */
   NULL					/* cleanup_dev */
 };
-
