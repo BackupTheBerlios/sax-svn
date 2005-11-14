@@ -7,6 +7,7 @@ sub AutoDetectServer {
 	my (%spec) = %{$_[0]}; # specs
 	my (%var)  = %{$_[1]}; # config hash
 	my @query;             # the query string
+	my @dom_list;          # list of domain id's
 	my @bus_list;          # list of bus id`s
 	my @slot_list;         # list of slot id`s
 	my @func_list;         # list of function id`s
@@ -17,6 +18,7 @@ sub AutoDetectServer {
 	my $bus;               # bus  id DEZ
 	my $slot;              # slot id DEZ 
 	my $func;              # func id DEZ
+	my $dom;               # domain id DEZ
 	my $glx = "open";      # 3D and rendering support
 
 	@query = GetQuery("server",\%spec);
@@ -24,25 +26,28 @@ sub AutoDetectServer {
 		return(-1);
 	}
 
-	for ($i=0;$i<@query;$i+=14) {
+	for ($i=0;$i<@query;$i+=15) {
+		push (@dom_list,$query[$i]);
+	}
+	for ($i=1;$i<@query;$i+=15) {
 		push (@bus_list,$query[$i]);
 	}
-	for ($i=1;$i<@query;$i+=14) {
+	for ($i=2;$i<@query;$i+=15) {
 		push (@slot_list,$query[$i]);
 	}
-	for ($i=2;$i<@query;$i+=14) {
+	for ($i=3;$i<@query;$i+=15) {
 		push (@func_list,$query[$i]);
 	}
-	for ($i=3;$i<@query;$i+=14) {
+	for ($i=4;$i<@query;$i+=15) {
 		push (@vendor_list,$query[$i]);
 	}
-	for ($i=4;$i<@query;$i+=14) {
+	for ($i=5;$i<@query;$i+=15) {
 		push (@device_list,$query[$i]);
 	}
-	for ($i=7;$i<@query;$i+=14) {
+	for ($i=8;$i<@query;$i+=15) {
 		push (@module_list,$query[$i]);
 	}
-	for ($i=13;$i<@query;$i+=14) {
+	for ($i=14;$i<@query;$i+=15) {
 		push (@drvprofile_list,$query[$i]);
 	}
 
@@ -53,7 +58,8 @@ sub AutoDetectServer {
 		$bus  = hex($bus_list[$i]); 
 		$slot = hex($slot_list[$i]);
 		$func = hex($func_list[$i]);
-		$busid = "$bus:$slot:$func";
+		$dom  = hex($dom_list[$i]);
+		$busid = "PCI:$bus\@$dom:$slot:$func";
 		$var{Device}{$i}{BusID} = $busid;
 	} else {
 		$var{Device}{$i}{BusID} = "";

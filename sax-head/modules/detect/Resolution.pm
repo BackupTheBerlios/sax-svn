@@ -31,7 +31,7 @@ sub AutoDetectResolution {
 	# get the vendor id list as basic list...
 	# -----------------------------------------
 	@idquery = GetQuery("server",\%spec);
-	for ($i=5;$i<@idquery;$i+=13) {
+	for ($i=6;$i<@idquery;$i+=15) {
 		push (@flag_list,$idquery[$i+5]); # get 3D flags
 		push (@vid_list,$idquery[$i]);    # get Vendor ID`s
 	}

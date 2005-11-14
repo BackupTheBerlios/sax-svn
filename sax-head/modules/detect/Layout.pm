@@ -13,7 +13,7 @@ sub AutoDetectServerLayout {
 	my $size;              # number of cards detected
 
 	@idquery = GetQuery("server",\%spec);
-	for ($i=5;$i<@idquery;$i+=13) {
+	for ($i=6;$i<@idquery;$i+=15) {
 		push(@vid_list,$idquery[$i]);
 	}
 	$size = @vid_list;
