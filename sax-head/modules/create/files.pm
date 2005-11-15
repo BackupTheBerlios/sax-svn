@@ -99,7 +99,6 @@ sub CreateFilesSection {
 	# re-apply (security reasons)
 	# ---
 	my $io = new FileHandle;
-	if (isSecureMiscExtension()) {
 	if ($io->open("/usr/share/sax/api/data/PointerDevice")) {
 		while (my $device = <$io>) {
 		chomp ($device);
@@ -108,25 +107,9 @@ sub CreateFilesSection {
 		}
 		}
 	}
-	}
 	# create footer line...
 	push (@result,"EndSection\n");
 	return (@result);
-}
-
-#---[ isSecureMiscExtension ]---#
-sub isSecureMiscExtension {
-#----------------------------------------------------
-# the return code of this function is patched during 
-# the build according to the special contents of the
-# libxf86config.a Some tools normally not installed
-# are used, therefore the check is done in the spec 
-# file
-#
-	my $miscExitCode=1;
-	return (
-		$miscExitCode
-	);
 }
 
 1;

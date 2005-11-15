@@ -1,0 +1,22 @@
+#!/bin/sh
+
+BUILD_ROOT=$1
+
+if [ -f "/usr/X11R6/bin/xsload" ];then
+	MD=/usr/X11R6/lib/modules/drivers
+	for i in ati_drv.so radeon_drv.so atimisc_drv.so r128_drv.so;do
+		test -f $MD/$i && mv $MD/$i /tmp
+	done
+	/usr/X11R6/bin/xsload > /tmp/CardModules
+	if [ -f /etc/X11/CardModules.addon ];then
+		cat /etc/X11/CardModules.addon >> /tmp/CardModules
+	else
+		echo "Warning addon options not found"
+		echo "package xorg-x11-driver-options is missing ?"
+	fi
+	cp /tmp/CardModules \
+		$BUILD_ROOT/usr/share/sax/api/data/CardModules
+	for i in ati_drv.so radeon_drv.so atimisc_drv.so r128_drv.so;do
+		test -f /tmp/$i && mv /tmp/$i $MD
+	done
+fi

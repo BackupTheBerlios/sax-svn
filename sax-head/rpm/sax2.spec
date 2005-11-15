@@ -36,10 +36,7 @@ Release:      18
 Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
-Source1:      sax2_pixmaps.tar.bz2
-Source2:      sax2_nvidia.tar.bz2
-Source3:      sax2.desktop
-NoSource:     2
+Source1:      sax2.desktop
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 %if %{suse_version} > 820
 Provides:     sax xfine
@@ -262,27 +259,11 @@ Authors:
 %endif
 %endif
 %prep
-%setup -n sax -a 1
-if [ -f $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2 ];then
-	tar -xvjf $RPM_SOURCE_DIR/sax2_nvidia.tar.bz2
-	if [ ! -d /usr/X11R6/%{_lib}/modules/drivers/ ];then
-		mkdir -p /usr/X11R6/%{_lib}/modules/drivers/
-	fi
-	cp nvidia_drv.o /usr/X11R6/%{_lib}/modules/drivers/
-fi
+%setup -n sax
 # %patch
 
 %build
 test -e /.buildenv && . /.buildenv
-#=================================================
-# patch files.pm according to misc extension
-#-------------------------------------------------
-. modules/create/.patch.sh
-if [ "$SECURE_MISC" = "no" ];then
-	cat ./modules/create/files.pm | \
-	sed -e s@miscExitCode=1@miscExitCode=0@ > ./modules/create/files.pm.new
-	mv ./modules/create/files.pm.new ./modules/create/files.pm
-fi
 #=================================================
 # add SuSE version to sax.sh script...
 #-------------------------------------------------
@@ -297,61 +278,19 @@ make bindlib=%{_lib} buildroot=$RPM_BUILD_ROOT
 #=================================================
 # install sources
 #-------------------------------------------------
-
 %install
 rm -rf $RPM_BUILD_ROOT
-export ASK_FOR_CHANGELOG=no
-export TEMPLATE_CHECK=no
-export ARCH=`/bin/arch`
 make buildroot=$RPM_BUILD_ROOT \
-	 bindlib=%{_lib} lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} install
-make doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
-	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} install-docs
-#=================================================
-# create root startup link
-#-------------------------------------------------
-( 
-	rm -f $RPM_BUILD_ROOT/usr/sbin/sax2 && \
-	cd $RPM_BUILD_ROOT/usr/sbin && ln -s SaX2 sax2
-)
-#=================================================
-# create user startup link
-#-------------------------------------------------
-(
-	mkdir -p $RPM_BUILD_ROOT/usr/X11R6/bin
-	rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/sax2 && \
-	cd $RPM_BUILD_ROOT/usr/X11R6/bin && ln -s /usr/sbin/SaX2 sax2
-)
-#=================================================
-# check for options file at /etc/X11/CardModules
-#-------------------------------------------------
-%ifarch %ix86
-if [ -f "/usr/X11R6/bin/xsload" ];then
-	MD=/usr/X11R6/lib/modules/drivers
-	for i in ati_drv.o radeon_drv.o atimisc_drv.o r128_drv.o;do
-		test -f $MD/$i && mv $MD/$i /tmp
-	done
-	/usr/X11R6/bin/xsload > /tmp/CardModules
-	cat /etc/X11/CardModules.addon >> /tmp/CardModules
-	cp /tmp/CardModules \
-		$RPM_BUILD_ROOT/usr/share/sax/api/data/CardModules
-	for i in ati_drv.o radeon_drv.o atimisc_drv.o r128_drv.o;do
-		test -f /tmp/$i && mv /tmp/$i $MD
-	done
-fi
-%endif
-#=================================================
-# install desktop icon...
-#-------------------------------------------------
-install -d -m 755 $RPM_BUILD_ROOT/usr/share/pixmaps
-install -m 644 api/figures/sax2.png \
-	$RPM_BUILD_ROOT/usr/share/pixmaps/
+	 bindlib=%{_lib} \
+	 lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} \
+	 doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
+	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} \
+	 install
+# SuSE specific build instructions...
 #=================================================
 # check perl .packlist...
 #-------------------------------------------------
-%if %{suse_version} > 820
 %perl_process_packlist
-%endif
 #=================================================
 # remove unpacked sources...
 #-------------------------------------------------

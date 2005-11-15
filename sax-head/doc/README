@@ -1,34 +1,48 @@
 What is SaX2
 ------------
-SaX2 is SuSEs advanced X11 configuration tool. It can be used as
-standalone application as well as it is integrated into the 
-YaST2 configuration workflow. Once installed you can use
-
-	yast2 x11
-
-or directly
+SaX2 is a X11 configuration tool. It can be used as standalone
+application as well as it provides a developer library for
+your own X configuration program. When installed simply call
 
 	sax2
 
+What is libsax
+--------------
+libsax is a C++ development library available in different languages.
+You can use plain C++ as well as perl, python, java, etc... to
+implement your own understanding of a X configuration program. The
+current GUI implementation of sax itself is a C++ written client.
+Further information how to use the library can be found here:
+
+	/usr/share/doc/packages/libsax/html/index.html
 
 How to build and install SaX2
-------------------------------
- 1) Install the source RPM (sax2.spm) with YaST2
+-----------------------------
+1) Prepare for build
 
- 2) Enter the source directory:
+	mkdir $HOME/sax && cd $HOME/sax
+	svn co https://svn.berlios.de/svnroot/repos/sax/sax-head .
+	./.doit -p --local
+	cd /tmp/svnsax.XXXXXX
 
-	su root
-	cd /usr/src/packages/SPECS
+		---> XXXXXX must be replaced according to the .doit output
 
- 3) Build the package:
+2) Start manual compilation
+
+	tar -xvf sax2.tar.bz2
+	cd sax && make && make install
+
+2) Alternatively use rpmbuild
 
 	rpmbuild -ba sax2.spec
 
- 4) Find the RPM packages at:
+		--> Find the RPM packages at: /usr/src/packages/RPMS/...
 
-	/usr/src/packages/RPMS/...
+Where to ask for help
+---------------------
+	SaX-User  list <https://lists.berlios.de/mailman/listinfo/sax-users>
+	SaX-Devel list <https://lists.berlios.de/mailman/listinfo/sax-devel>
 
 --
 Remember to have fun :-)
 Marcus
-

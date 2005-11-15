@@ -13,6 +13,12 @@ buildroot      = /
 mandir         = /usr/share/man
 bindlib        = lib
 
+ASK_FOR_CHANGELOG=no
+TEMPLATE_CHECK=no
+ARCH=`/bin/arch`
+
+export
+
 #============================================
 # Prefixs...
 #--------------------------------------------
@@ -56,6 +62,7 @@ XFINEPIXMAPS   = ${xfi_prefix}/figures
 LIBDOCDIR      = ${usr_prefix}/share/doc/packages/libsax
 LIBTOOLDIR     = ${buildroot}/var/lib/sax
 WMVZ           = ${usr_prefix}/X11R6/share/fvwm
+X11BINDIR      = ${usr_prefix}/X11R6/bin
 
 #============================================
 # Helpers
@@ -83,7 +90,7 @@ all:
 	#============================================
 	# building libsax and bindings...
 	#--------------------------------------------
-	( cd libsax && test -f libgvplugin_dot_layout.so && dot -c || true )
+	( test -f /usr/lib/graphviz/libgvplugin_dot_layout.so && dot -c || true )
 	( cd libsax && doxygen sax.dox && ./.make )
 	${MAKE} -C ./libsax all
 	( cd libsax && \
@@ -112,7 +119,7 @@ all:
 	( cd xfine && ./.make )
 	${MAKE} -C ./xfine all
 
-install:
+install:install-docs
 	#============================================
 	# Install base directories
 	#--------------------------------------------
@@ -244,6 +251,24 @@ install:
 	install -m 755 ./xfine/xfine       ${SBINVZ}
 	install -m 644 ./xfine/xfine.gtx   ${XFINEBINVZ}
 
+	#============================================
+	# create startup links...
+	#--------------------------------------------
+	install -d -m 755 ${X11BINDIR}
+	( rm -f ${SBINVZ}/sax2 && cd ${SBINVZ} && ln -s SaX2 sax2 )
+	( rm -f ${X11BINDIR}/sax2 && cd ${X11BINDIR} && ln -s /usr/sbin/SaX2 sax2 )
+
+	#============================================
+	# create options file using xsload
+	#--------------------------------------------
+	./.xsload ${buildroot}
+
+	#=============================================
+	# install desktop icon...
+	#---------------------------------------------
+	install -d -m 755 ${buildroot}/usr/share/pixmaps
+	install -m 644 api/figures/sax2.png ${buildroot}/usr/share/pixmaps
+	
 	@echo "remember to have fun..."
 	@echo "your SuSE team :-)"
 

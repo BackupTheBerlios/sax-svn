@@ -144,7 +144,6 @@ sub checkout {
 		qx( mv sax/.build . );
 	}
 	chdir "./sax";
-	qx (tar -cjf sax2_pixmaps.tar.bz2 api/figures/*.* xfine/figures/*.*);
 	qx (./.archive);
 	chdir $pacdir;
 	qx( mv sax/*.bz2 . );

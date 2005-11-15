@@ -334,7 +334,7 @@ DATE=`LANG=POSIX date`
 echo "/*************"                                                   >> $ERR
 echo "SaX2 log     : $SVN"                                              >> $ERR
 echo "**************"                                                   >> $ERR
-echo "SVN BUILD    : $BNR"                                              >> $ERR
+echo "SVN RELEASE  : $BNR"                                              >> $ERR
 echo "             :"                                                   >> $ERR
 echo "DESCRIPTION  : X11 configuration log file to collect information" >> $ERR
 echo "             : about detection, startup and configuration."       >> $ERR
