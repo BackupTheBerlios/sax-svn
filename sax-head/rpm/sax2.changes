@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Wed Nov 16 11:17:16 CET 2005 - ms@suse.de
+
+- added Intel_DualHead profile for Xinerama configuration (#133828)
+- added Samtron 94v to the monitor CDB (#132640)
+- removed exception in xc.pl which causes the modules glx,dri NOT
+  to be included into the temporary X configuration used by SaX
+  to start its own X-Server. There are configurations which requires
+  the modules to be loaded otherwise the server will not start at all
+- added ia64 devices for testing purposes
+
+-------------------------------------------------------------------
 Tue Nov 15 14:54:35 CET 2005 - ms@suse.de
 
 - simplify manual build process:

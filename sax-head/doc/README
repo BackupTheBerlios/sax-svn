@@ -16,9 +16,27 @@ Further information how to use the library can be found here:
 
 	/usr/share/doc/packages/libsax/html/index.html
 
+Requirements for SaX2
+---------------------
+SaX requires the following software to compile/work correctly
+
+	- XOrg           [ mandatory ]
+	- perl           [ mandatory ]
+	- netpbm         [ mandatory ]
+	- qt3            [ mandatory ]
+	- fvwm2          [ mandatory ]
+	- readline       [ mandatory ]
+	- hwinfo         [ mandatory ]
+
+	- 855resolution  [ optional  ]
+	- Java jre       [ optional  ]
+	- Mono           [ optional  ]
+	- python         [ optional  ]
+
+
 How to build and install SaX2
 -----------------------------
-1) Prepare for build
+2) Prepare for build
 
 	mkdir $HOME/sax && cd $HOME/sax
 	svn co https://svn.berlios.de/svnroot/repos/sax/sax-head .
@@ -27,13 +45,17 @@ How to build and install SaX2
 
 		---> XXXXXX must be replaced according to the .doit output
 
-2) Start manual compilation
+3) Start manual compilation
 
 	tar -xvf sax2.tar.bz2
 	cd sax && make && make install
 
-2) Alternatively use rpmbuild
+		---> to install into an alternative root directory you
+			 can specify: make install buildroot=<root-path>
 
+3) Alternatively use rpmbuild
+
+	cp * /usr/src/packages/SOURCES
 	rpmbuild -ba sax2.spec
 
 		--> Find the RPM packages at: /usr/src/packages/RPMS/...

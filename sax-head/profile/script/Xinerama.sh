@@ -27,6 +27,9 @@ sub getProfile {
 		/^fglrx/     && do {
 			return "$dir/FGLRX_DualHead";
 		};
+		/^i810|i915/ && do {
+			return "$dir/Intel_DualHead";
+		};
 		die "Xinerama: no DualHead profile available";
 	}
 }

@@ -4,8 +4,9 @@ BUILD_ROOT=$1
 
 if [ -f "/usr/X11R6/bin/xsload" ];then
 	MD=/usr/X11R6/lib/modules/drivers
-	for i in ati_drv.so radeon_drv.so atimisc_drv.so r128_drv.so;do
-		test -f $MD/$i && mv $MD/$i /tmp
+	for i in ati_drv radeon_drv atimisc_drv r128_drv;do
+		test -f $MD/$i.so && mv $MD/$i.so /tmp
+		test -f $MD/$i.o && mv $MD/$i.o /tmp
 	done
 	/usr/X11R6/bin/xsload > /tmp/CardModules
 	if [ -f /etc/X11/CardModules.addon ];then
@@ -16,7 +17,9 @@ if [ -f "/usr/X11R6/bin/xsload" ];then
 	fi
 	cp /tmp/CardModules \
 		$BUILD_ROOT/usr/share/sax/api/data/CardModules
-	for i in ati_drv.so radeon_drv.so atimisc_drv.so r128_drv.so;do
-		test -f /tmp/$i && mv /tmp/$i $MD
+	for i in ati_drv radeon_drv atimisc_drv r128_drv;do
+		test -f /tmp/$i.so && mv /tmp/$i.so $MD
+		test -f /tmp/$i.o && mv /tmp/$i.o $MD
 	done
+	exit 0
 fi

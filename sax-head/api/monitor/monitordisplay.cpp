@@ -206,6 +206,9 @@ void SCCMonitorDisplay::init ( void ) {
 			mDualHeadGroup -> setDisabled ( true );
 		}
 	}
+	if (saxDesktop.isXineramaMode()) {
+		mDualHeadGroup -> hide();
+	}
 	//====================================
 	// insert available resolutions
 	//------------------------------------

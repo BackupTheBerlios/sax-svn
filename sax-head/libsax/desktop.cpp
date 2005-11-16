@@ -352,6 +352,22 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 }
 
 //====================================
+// isXineramaMode
+//------------------------------------
+bool SaXManipulateDesktop::isXineramaMode (void) {
+	// .../
+	// check the meta data information if the configuration
+	// workflow requested to use Xinerama instead of the
+	// default dual mode workflow based on MergedFB
+	// ----
+	QDict<QString> metaData = getMetaData();
+	if (metaData["SAX_NO_DUAL_MODE"]) {
+		return true;
+	}
+	return false;
+}
+
+//====================================
 // isDualHeadCard
 //------------------------------------
 bool SaXManipulateDesktop::isDualHeadCard (void) {
@@ -367,9 +383,6 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	// Check SaXMeta data...
 	//-----------------------------------
 	QDict<QString> metaData = getMetaData();
-	if (metaData["SAX_NO_DUAL_MODE"]) {
-		return false;
-	}
 	if (metaData["SAX_NO_CDB_CHECK"]) {
 		QString driver  = mCard -> getItem ("Driver");
 		QString profile = getDriverOptionsDualHeadProfile ( driver );

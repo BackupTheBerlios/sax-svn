@@ -90,6 +90,7 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual bool is3DEnabled    ( void ) = 0;
 	virtual bool is3DCard       ( void ) = 0;
 	virtual bool isDualHeadCard ( void ) = 0;
+	virtual bool isXineramaMode ( void ) = 0;
 	virtual bool DPMSEnabled    ( void ) = 0;
 	virtual QString getMonitorVendor ( void ) = 0;
 	virtual QString getMonitorName   ( void ) = 0;
@@ -215,6 +216,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	bool is3DEnabled    ( void );
 	bool is3DCard       ( void );
 	bool isDualHeadCard ( void );
+	bool isXineramaMode ( void );
 	bool DPMSEnabled    ( void );
 	QString getMonitorVendor ( void );
 	QString getMonitorName   ( void );

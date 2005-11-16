@@ -423,8 +423,8 @@ sub init {
 				my @profileList = split (/,/,$autoProfile{$id});
 				foreach my $profile (@profileList) {
 					prepareProfile ( $spec{ProfileDir}.$profile,$id );
+					$include = 1;
 				}
-				$include = 1;
 			}
 		}
 		if ($include == 1) {

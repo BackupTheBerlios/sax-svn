@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Nov  9 18:01:55 2005
+# Author: Marcus Schaefer <sax@suse.de>, Wed Nov 16 11:16:02 2005
 #
 # Template for monitor data
 # --------------------------
@@ -31915,6 +31915,17 @@ SAMTRON:77P76P(T)  {
  Option=DPMS
  Hsync=30-96
  Vsync=50-160
+}
+
+#==============================================
+# 94V
+#----------------------------------------------
+SAMTRON:94V  {
+ DDC=STN0022
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
 }
 
 #==============================================

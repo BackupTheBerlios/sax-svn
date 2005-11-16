@@ -87,14 +87,9 @@ sub main {
 	my @part9;    # ServerLayout section
 	my @part10;   # DRI section
 	my @part11;   # Extensions section
-	my $crt = "glx,dri,fgl1";
-	@part0  = CreateHeaderSection ();
-	@part1  = CreateFilesSection  (\%var);
-	if (defined $EnableAutoConf) {
-		@part2 = CreateModuleSection (\%var);
-	} else {
-		@part2 = CreateModuleSection (\%var,$crt);
-	}
+	@part0 = CreateHeaderSection ();
+	@part1 = CreateFilesSection  (\%var);
+	@part2 = CreateModuleSection (\%var);
 	@part3 = CreateServerFlagsSection (\%var);
 	@part4 = CreateInputDeviceSection (\%var);
 	if (defined $EnableXF86AutoMode) {

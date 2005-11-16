@@ -1,7 +1,8 @@
 # /.../
 # Multihead profile for Quadro4 cards
 # ---------------------------------------------
-SaXMeta -> [X] ->  SAX_NO_DUAL_MODE   = 1
+SaXMeta -> [X]   ->  SAX_NO_DUAL_MODE = 1
+SaXMeta -> [X+1] ->  SAX_NO_DUAL_MODE = 1
 
 Desktop -> [X] ->  CalcModelines      = no
 Monitor -> [X] ->  CalcAlgorithm      = XServerPool
