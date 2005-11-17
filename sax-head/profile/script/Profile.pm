@@ -89,6 +89,7 @@ sub ProfileReadXLogFile {
 	if (! -f $xorglogname) {
 		$xorglogname = "/var/log/Xorg.0.log";
 	}
+	local $/;
 	open (FD, "<$xorglogname") ||
 		die "*** $stdname: Cannot read X.org log $xorglogname";
 	my $xorglog = <FD>;
