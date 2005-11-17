@@ -46,12 +46,19 @@ SCCMonitorDisplay::SCCMonitorDisplay (
 	mCardMonitorGroup = new QButtonGroup (
 		1,Horizontal,"",this
 	);
-	QHBox* cardBox = new QHBox ( mCardMonitorGroup );
-	QHBox* moniBox = new QHBox ( mCardMonitorGroup );
-	mLabelCardName = new QLabel ( mText["Card"],cardBox );
+	QHBox* CMBox = new QHBox ( mCardMonitorGroup );
+	QVBox* leftCMBox  = new QVBox ( CMBox );
+	leftCMBox -> setSpacing ( 10 );
+	QVBox* rightCMBox = new QVBox ( CMBox );
+	rightCMBox -> setSpacing ( 10 );
+	mLabelCardText    = new QLabel ( mText["Card"]+": ",leftCMBox );
+	mLabelMonitorText = new QLabel ( mText["Monitor"]+": ",leftCMBox );
+	QHBox* cardBox = new QHBox ( rightCMBox );
+	QHBox* moniBox = new QHBox ( rightCMBox );
+	mLabelCardName = new QLabel ( cardBox );
 	mCardOptions   = new QPushButton ( mText["Options"],cardBox);
 	cardBox -> setStretchFactor ( mLabelCardName, 20 );
-	mLabelMonitorName = new QLabel ( mText["Monitor"],moniBox );
+	mLabelMonitorName = new QLabel ( moniBox );
 	mChangeMonitor    = new QPushButton ( mText["Change"],moniBox);
 	moniBox -> setStretchFactor ( mLabelMonitorName, 20 );
 	// second group with properties
@@ -334,17 +341,17 @@ void SCCMonitorDisplay::import ( void ) {
 	//------------------------------------
 	// set card and monitor name...
 	mLabelCardName -> setText (
-		mText["Card"]+":\t "+mCardVendor+" "+mCardModel
+		mCardVendor+" "+mCardModel
 	);
 	if (mMonitorVendor.contains ("Unknown",false) ||
 	   (mMonitorModel.contains("Unknonw",false))
 	) {
 		mLabelMonitorName -> setText (
-			mText["Monitor"]+":\t "+mText["UnknownMonitorPleaseChange"]
+			mText["UnknownMonitorPleaseChange"]
 		);
 	} else {
 		mLabelMonitorName -> setText (
-			mText["Monitor"]+":\t "+mMonitorVendor+" "+mMonitorModel
+			mMonitorVendor+" "+mMonitorModel
 		);
 	}
 	// set tab titles for toplevel dialogs...

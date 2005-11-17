@@ -90,6 +90,8 @@ class SCCMonitorDisplay : public SCCDialog {
 	QButtonGroup*    mCardMonitorGroup;
 	QLabel*          mLabelCardName;
 	QLabel*          mLabelMonitorName;
+	QLabel*          mLabelCardText;
+	QLabel*          mLabelMonitorText;
 	QPushButton*     mCardOptions;
 	QPushButton*     mChangeMonitor;
 	QButtonGroup*    mPropertyGroup;

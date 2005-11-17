@@ -1,8 +1,10 @@
 #!/usr/bin/perl
 
+use lib '/usr/share/sax/profile';
+
 use strict;
-use Getopt::Long;
 use Storable;
+use Profile;
 
 #====================================
 # Functions...
@@ -37,21 +39,16 @@ sub getProfile {
 #====================================
 # Init profile script
 #------------------------------------
-my $profile = qx(basename $0 | cut -f1 -d.);
-chomp $profile;
-$profile = "/usr/share/sax/profile/$profile";
-if (( ! -f $profile ) || ( $< != 0 )) {
-	die "MergedFB: no such file or permission denied";
-}
+my $profile = ProfileInitScript();
 
 #====================================
-# Copy profile
+# Do the profile adaptions...
 #------------------------------------
-qx (cp $profile $profile.tmp);
 my $used = getProfile();
 print STDERR "MergedFB: selected profile: $used\n";
-if ( -f "$used.sh" ) {
-	print STDERR "MergedFB: calling profile script: $used.sh\n";
+if ( -f "$used.pl" ) {
+	print STDERR "MergedFB: calling profile script: $used.pl\n";
+	qx ($used.pl);
 	$used="$used.tmp";
 }
-qx (cp $used $profile.tmp);
+qx (cp $used $profile);

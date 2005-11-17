@@ -70,7 +70,7 @@ SCCMonitorDual::SCCMonitorDual (
 	mChangeMonitor = new QPushButton ( mText["Change"],mMoniBox);
 	mMoniBox -> setStretchFactor ( mLabelSecondMonitor, 20 );
 	mResBox = new QHBox ( mChangeGroup );
-	mLabelSecondResolution = new QLabel ( mText["SecondResolution"],mResBox );
+	mLabelSecondResolution = new QLabel (mText["SecondResolution"]+":",mResBox);
 	mResolution = new QComboBox ( false, mResBox );
 	mResBox -> setStretchFactor ( mLabelSecondResolution, 20 );
 	mResolution -> setFixedWidth ( 200 );
@@ -532,7 +532,7 @@ void SCCMonitorDual::setMonitorName (
 	//-------------------------------------
 	QString monitorName;
 	QTextOStream (&monitorName) <<
-		mText["Monitor"]<< ":\t " << vendor << " " << model;
+		mText["SecondMonitor"] << " " << vendor << " " << model;
 	mLabelSecondMonitor -> clear();
 	mLabelSecondMonitor -> setText ( monitorName );
 	mMonitorVendor = vendor;

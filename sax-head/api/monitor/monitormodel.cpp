@@ -467,7 +467,6 @@ void SCCMonitorModel::slotOk ( void ) {
 	//-------------------------------------
 	QString monitorName;
 	QTextOStream (&monitorName) <<
-		mText["Monitor"]<< ":\t " <<
 		mSelectedMonitorVendor << " " << mSelectedMonitorName;
 	pDisplay -> setMonitorName ( monitorName );
 
