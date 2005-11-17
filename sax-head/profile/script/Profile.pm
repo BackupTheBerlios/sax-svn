@@ -170,7 +170,7 @@ sub ProfileIntelGetMonitorLayout {
 	if (/^\(..\) I[89].0\([0-9]+\): Primary Pipe is A,/m) {
 		$connected="$primary,$secondary";
 	}
-	print STDERR "*** Checked XOrg log file:";
+	print STDERR "*** Checked XOrg log file:\n";
 	print STDERR "*** Selecting $connected as monitor configuration.\n";
 	return $connected;
 }
