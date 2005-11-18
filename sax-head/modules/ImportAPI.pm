@@ -1347,7 +1347,8 @@ sub GetModelines {
 				$x = $1;
 				$y = $2;
 				$hsmax = $hs / 1e3;
-				for ($i=$vs;$i>=60;$i-=10) {
+				my $mcount = 0;
+				for ($i=$vs;$i>=60;$i--) {
 				if ($modus eq "secure") {
 					# CheckDesktopGeometry...
 					# ------------------------
@@ -1374,7 +1375,10 @@ sub GetModelines {
 				}
 				if ($found == 0) {
 				if (($chs <= $hs) && ($cvs <= $vs)) {
-					push(@modeline,$line);
+					if ($mcount < 3) {
+						push(@modeline,$line);
+						$mcount++;
+					}
 				}
 				} 
 				}

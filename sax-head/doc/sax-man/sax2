@@ -23,7 +23,13 @@ Available command line options are the following:
 -b \fI[filename,filename,...]\fP
 Activate the SaX2 batch modus. If no filename is given an interactive
 shell is started to set/overwrite configuration parameters. If the filename
-doesn't contain any / characters it is assumed to be found in /usr/share/sax/profile
+doesn't contain any / characters it is assumed to be found in /usr/share/sax/profile.
+.TP
+-b \fIXinerama | MergedFB\fP
+Special call for -b, if Xinerama is specified SaX2 will automatically
+search for a profile to enable dualhead in old Xinerama style. If MergedFB
+is specified SaX2 will automatically search for a dualhead profile to
+activate dualhead using merged framebuffer.
 .TP
 -a
 Auto configure modus. Create an automatic configuration without any

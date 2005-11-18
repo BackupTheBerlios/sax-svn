@@ -32,6 +32,9 @@ sub getProfile {
 		/^i810|i915/ && do {
 			return "$dir/Intel_DualHead";
 		};
+		/^mga/       && do {
+			return "$dir/Matrox_DualHead";
+		};
 		die "Xinerama: no DualHead profile available";
 	}
 }
