@@ -109,6 +109,10 @@ void ScanXStuff::Scan (void) {
 	srvmsg.SetFile(SERVER_STUFF_DATA);
 	server.SetFile(SERVER_DATA);
 	// ...
+	// retrieve VESA BIOS version
+	// --------------------------
+	char* vbios = vesaBIOS();
+	// ...
 	// if no server scan data is present, scan it
 	// -------------------------------------------
 	if (server.Read() < 0) {
@@ -276,8 +280,12 @@ void ScanXStuff::Scan (void) {
 		sprintf(primary,"%02d-%02d-%d",
 		parse[mapnr].pbus,parse[mapnr].pslot,parse[mapnr].pfunc);  
 
+		stuff[i].vbios  = "<undefined>";
 		stuff[i].model  = "<undefined>";
 		stuff[i].vendor = "<undefined>";
+		if (vbios) {
+			stuff[i].vbios = vbios;
+		}
 		if (parse[mapnr].model != "") {
 			stuff[i].model = parse[mapnr].model;
 		}
@@ -495,6 +503,7 @@ int ScanXStuff::Save (void) {
 		strcpy(part1.dtype     , data.dtype.c_str());
 		strcpy(part1.model     , data.model.c_str());
 		strcpy(part1.vendor    , data.vendor.c_str());
+		strcpy(part1.vbios     , data.vbios.c_str());
 		part1.vmdepth          = data.vmdepth;
 		part1.hsync            = data.hsync;
 		part1.vsync            = data.vsync;
@@ -541,6 +550,7 @@ int ScanXStuff::Read (void) {
 		// read base data...
 		// -------------------
 		handle.read((char*)&part1,sizeof(part1));
+		data.vbios     = part1.vbios;
 		data.ddc       = part1.ddc;
 		data.dtype     = part1.dtype;
 		data.model     = part1.model;

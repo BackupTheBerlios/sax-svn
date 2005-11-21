@@ -718,10 +718,6 @@ bool SCCMonitor::exportData ( void ) {
 							QTextOStream (&vsync) << vsmin << "-" << vsmax;
 							saxCard.addCardOption ( key,vsync );
 						}
-						if (key == "Modes") {
-							QString resolution2 = dualData->getResolution();
-							saxCard.addCardOption ( key,resolution2 );
-						}
 						//====================================
 						// setup profile FGLRX data
 						//------------------------------------

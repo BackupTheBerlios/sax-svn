@@ -535,8 +535,19 @@ void SCCMonitorDual::setMonitorName (
 		mText["SecondMonitor"] << " " << vendor << " " << model;
 	mLabelSecondMonitor -> clear();
 	mLabelSecondMonitor -> setText ( monitorName );
-	mMonitorVendor = vendor;
-	mMonitorModel  = model;
+	mLabelSecondMonitorModel  = model;
+	mLabelSecondMonitorVendor = vendor;
+}
+//====================================
+// setResolution
+//------------------------------------
+void SCCMonitorDual::setResolution ( const QString & resolution ) {
+	if (! mResolutionDict[resolution]) {
+    	return;
+	}
+	mResolution -> setCurrentText (
+		*mResolutionDict[resolution]
+	);
 }
 //=====================================
 // slotClone
@@ -548,6 +559,11 @@ void SCCMonitorDual::slotClone ( bool on ) {
 // slotOk
 //-------------------------------------
 void SCCMonitorDual::slotOk ( void ) {
+	//=====================================
+	// call Ok handler for DualModel
+	//-------------------------------------
+	mChangeMonitorDualModelDialog -> slotVerifiedOk ();
+
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
@@ -593,6 +609,12 @@ void SCCMonitorDual::slotOk ( void ) {
 	if (mBelowOfPrimary -> isOn()) {
 		mDualHeadArrangement = DUAL_BELOWOF;
 	}
+	//=====================================
+	// save state of second monitor
+	//-------------------------------------
+	mMonitorVendor = mLabelSecondMonitorVendor;
+	mMonitorModel  = mLabelSecondMonitorModel;
+
 	//=====================================
 	// update parents dual info label
 	//-------------------------------------

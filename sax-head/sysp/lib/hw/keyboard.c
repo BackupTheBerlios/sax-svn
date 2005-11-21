@@ -50,11 +50,7 @@ KbdData* KeyboardGetData(void) {
 
 		// save hddata to new struct...
 		// -----------------------------
-		#if HD_VERSION >= 5
 		di = hd->driver_info;
-		#else
-		di = hd_driver_info(hd_data, hd);
-		#endif
 		if(di && di->any.type == di_kbd) {
 		if (di->kbd.XkbRules) {
 			strcpy(data->rules,di->kbd.XkbRules);

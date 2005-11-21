@@ -81,7 +81,6 @@ STATUS        : Status: Up-to-date
 #define PDRIVER           "/usr/share/sax/sysp/script/profiledriver.pl"
 #define XCMD              "/usr/sbin/xcmd"
 #define GETVENDOR         "/usr/share/sax/sysp/script/vendor.pl"
-#define VBIOS             "/usr/share/sax/sysp/script/vbios.pl"
 
 #ifdef XORG_LOADER
 #define  LOADER_NAME      "Xorg"

@@ -1,5 +1,5 @@
 CC  = g++ -Wall -L/usr/X11R6/lib -L/usr/X11R6/lib64 `../tools/check_loader.sh`
-LIB = ./lib/libsysp.a -lfl -lhd -lstdc++ -lX11
+LIB = ./lib/libsysp.a ./lib/libhd/libhd.a -lfl -lstdc++ -lX11 -lhal -lsysfs
 
 OBJ = sysp.o mouse.o keyboard.o server.o cfg.o xstuff.o d3.o
 SYS = ./lib

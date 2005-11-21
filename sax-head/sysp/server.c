@@ -928,12 +928,11 @@ int ScanServer::haveFBdev (void) {
 // ScanServer: check for VESA BIOS
 //--------------------------------------
 int ScanServer::haveVesaBIOS (void) {
-	string status = "0";
-	status = qx ( VBIOS,STDOUT );
-	if (status == "1") {
-		return (1);
+	char* vbios = vesaBIOS();
+	if (vbios) {
+		return 1;
 	}
-	return (0);
+	return 0;
 }
 
 //======================================

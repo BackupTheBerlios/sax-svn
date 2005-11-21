@@ -337,15 +337,10 @@ int SCCMonitorDualModel::getVSmax ( void ) {
 	return mVsyncMax;
 }
 //=====================================
-// slotOk
+// slotVerifiedOk
 //-------------------------------------
-void SCCMonitorDualModel::slotOk ( void ) {
-	//=====================================
-	// get parent SCCMonitorDisplay ptr
-	//-------------------------------------
-	SCCMonitorDual* pDual = (SCCMonitorDual*)mParent;
-
-	//=====================================
+void SCCMonitorDualModel::slotVerifiedOk ( void ) {
+	//=====================================  
 	// save data to dialog export variables
 	//-------------------------------------
 	mHsyncMin = mHSpinMin -> value();
@@ -361,13 +356,49 @@ void SCCMonitorDualModel::slotOk ( void ) {
 	}
 	mSelectedMonitorVendor = mVendorList -> selectedItem()->text();
 	mSelectedMonitorName   = mModelList  -> selectedItem()->text();
+}
+
+//=====================================
+// slotOk
+//-------------------------------------
+void SCCMonitorDualModel::slotOk ( void ) {
+	//=====================================
+	// get parent SCCMonitorDisplay ptr
+	//-------------------------------------
+	SCCMonitorDual* pDual = (SCCMonitorDual*)mParent;
 
 	//=====================================
 	// update monitor label
 	//-------------------------------------
+	if ((! mVendorList->selectedItem()) || (! mModelList->selectedItem())) {
+		return;
+	}
 	pDual -> setMonitorName (
-		mSelectedMonitorVendor,mSelectedMonitorName
+		mVendorList -> selectedItem()->text(),
+		mModelList  -> selectedItem()->text()
 	);
+
+	//=====================================
+	// update resolution
+	//-------------------------------------
+	QRegExp resExp ("[0-9]+x[0-9]+");
+	resExp.setCaseSensitive (false);
+	int rpos = resExp.search (mModelList  -> selectedItem()->text(),0);
+	if (rpos >= 0) {
+		QString res = mModelList->selectedItem()->text().lower();
+		int npos = 0;
+		for (int n=rpos;n<(int)res.length();n++) {
+		if ((res.at(n) == 'x') || (res.at(n).isDigit())) {
+			npos++;
+		} else {
+			break;
+		}
+		}
+		QString* substr = new QString (
+			res.mid (rpos,npos)
+		);
+		pDual -> setResolution ( *substr );
+	}
 }
 //=====================================
 // slotName
@@ -379,6 +410,9 @@ void SCCMonitorDualModel::slotName ( QListBoxItem* item ) {
 	if (! mSaxDesktop ) {
 		return;
 	}
+	//=====================================
+	// include frequencies
+	//-------------------------------------
 	mCDBMonitorData = mSaxDesktop->getCDBMonitorData (
 		mVendorList->selectedItem()->text(),item->text()
 	);

@@ -194,6 +194,7 @@ struct StuffData {
 	string dtype;
 	string model;
 	string vendor;
+	string vbios;
 	int hsync;
 	int vsync;
 	int vesacount;
@@ -216,6 +217,7 @@ struct StuffData_S {
 	str dtype;
 	str model;
 	str vendor;
+	str vbios;
 	str primary;
 	str chipset;
 	int hsync;

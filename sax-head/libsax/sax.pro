@@ -1,5 +1,5 @@
 TEMPLATE  = lib
-VERSION   = 7.1
+VERSION   = 7.2
 SOURCES   += storage.cpp
 SOURCES   += import.cpp
 SOURCES   += process.cpp

@@ -64,14 +64,9 @@ MouseData* MouseGetData(void) {
 		//===================================
 		// save hddata to struct...
 		// ----------------------------------
-		#if HD_VERSION >= 5
 		di = hd->driver_info;
-		#else
-		di = hd_driver_info(hd_data, hd);
-		#endif
 		if(di && di->any.type == di_mouse && di->mouse.xf86) {
 			strcpy(data->protocol,di->mouse.xf86);
-			#ifdef WHEEL_SUPPORT
 			if (di->mouse.buttons) {
 				data->buttons = di->mouse.buttons;
 			}
@@ -92,7 +87,6 @@ MouseData* MouseGetData(void) {
 				data->buttons = (data->wheel * 2) + data->buttons;
 			}
 			}
-			#endif
 		}
 		if (hd->unix_dev_name) {
 			strcpy(data->device,hd->unix_dev_name);

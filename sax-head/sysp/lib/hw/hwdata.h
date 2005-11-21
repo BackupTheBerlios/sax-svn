@@ -20,17 +20,14 @@ STATUS        : development
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <hd.h>
 
+#include "../libhd/hd/hd.h"
 #include "../syslib.h"
 
 //===================================
 // Defines...
 //-----------------------------------
 #define ID_VALUE(id) ((id) & 0xffff)
-#ifndef HD_VERSION
-#define HD_VERSION 1
-#endif
 
 //===================================
 // Prototypes...
@@ -40,6 +37,7 @@ extern "C" char *vend_id2str(unsigned vend);
 KbdData* KeyboardGetData (void);
 MouseData* MouseGetData (void);
 int TvSupport (void);
+char* vesaBIOS (void);
 MsgDetect MonitorGetData (void);
 unsigned long MemorySize (void);
 

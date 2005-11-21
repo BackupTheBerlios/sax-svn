@@ -101,6 +101,7 @@ class SCCMonitorDualModel : public SCCDialog {
 	void show ( void );
 
 	public:
+	void slotVerifiedOk   ( void );
 	QString getVendorName ( void );
 	QString getModelName  ( void );
 	int getHSmin ( void );

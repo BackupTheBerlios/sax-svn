@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Nov 16 11:16:02 2005
+# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 21 12:57:37 2005
 #
 # Template for monitor data
 # --------------------------
@@ -34453,6 +34453,28 @@ SONY:SDM-N50TV  {
  Option=DPMS
  Hsync=30-60
  Vsync=50-65
+}
+
+#==============================================
+# SDM-P234 (ANALOG)
+#----------------------------------------------
+SONY:SDM-P234 (ANALOG)  {
+ DDC=SNY03D0
+ Option=DPMS
+ Hsync=28-92
+ Resolution=1920x1200
+ Vsync=57-85
+}
+
+#==============================================
+# SDM-P234 (DIGITAL)
+#----------------------------------------------
+SONY:SDM-P234 (DIGITAL)  {
+ DDC=SNY02D0
+ Option=DPMS
+ Hsync=28-75
+ Resolution=1920x1200
+ Vsync=57-63
 }
 
 #==============================================

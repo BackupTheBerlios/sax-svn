@@ -734,6 +734,7 @@ void PrintStuffData(ScanXStuff s) {
 			card,data.vmdepth
 		);
 		}
+		printf ("Card%d     =>  VesaBios   : %s\n",card,data.vbios.c_str());
 		card++;
 	}
 	fflush(stdout);

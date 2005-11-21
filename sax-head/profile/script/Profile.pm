@@ -9,8 +9,9 @@ use SaX;
 sub ProfileGetDualDisplaySize {
 	my $x = 0;
 	my $y = 0;
-	my $size = qx (/usr/sbin/hwinfo --monitor | grep Size: | cut -f2 -d:);
-	if ($size =~ /(\d+)x(\d+) cm/) {
+	my $sysp = "/usr/sbin/sysp";
+	my $size = qx ($sysp -q xstuff | grep Size | head -n 1 | cut -f2 -d:);
+	if ($size =~ /(\d+)x(\d+)/) {
 		$x = $1;
 		$y = $2;
 		$x = $x * 10 * 2;

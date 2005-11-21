@@ -20,12 +20,14 @@ PCI      = ./pci
 FBSET    = ./fbset
 HW       = ./hw
 COMMON   = ./common
+LIBHD    = ./libhd
 
 # build...
 # ---------
 all:${AIM}
 
 libsysp.a:
+	${MAKE} -C ${LIBHD}  all
 	${MAKE} -C ${PLOG}   all
 	${MAKE} -C ${PCI}    all
 	${MAKE} -C ${FBSET}  -f Makefile.swig all
@@ -48,4 +50,5 @@ clean:
 	${MAKE} -C ${FBSET}  -f Makefile.swig clean
 	${MAKE} -C ${HW}     clean
 	${MAKE} -C ${COMMON} clean
+	${MAKE} -C ${LIBHD}  clean
 

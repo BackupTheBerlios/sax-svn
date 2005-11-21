@@ -6,10 +6,8 @@
 # --
 # Status: Up-to-date
 #
-WHEEL  = `./check_wheel.sh`
-DDC    = `./check_ddc.sh`
-CC     = g++ -Wall -fpic -O2 -D${WHEEL} -D${DDC}
-OBJ    = mouse.o tv.o keyboard.o monitor.o memory.o
+CC     = g++ -Wall -fpic -O2
+OBJ    = mouse.o tv.o keyboard.o monitor.o memory.o vbios.o
 CFLAGS = -Wall -O2
 
 all: ${OBJ}
@@ -28,6 +26,9 @@ memory.o:memory.c hwdata.h
 
 tv.o:tv.c hwdata.h
 	${CC} ${CFLAGS} -c tv.c
+
+vbios.o:vbios.c hwdata.h
+	${CC} ${CFLAGS} -c vbios.c
 
 clean:
 	rm -f *.o

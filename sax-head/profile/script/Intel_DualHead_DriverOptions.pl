@@ -26,12 +26,11 @@ if (ProfileIsNoteBookHardware()) {
 	print FD "$dx->Raw->20->Option=\"MonitorLayout\" \"$mlayout\"\n";
 	print FD "$dx->Raw->21->Option=\"Clone\" \"yes\"\n";
 	print FD "$dx->Raw->22->Option=\"CloneRefresh\" \"50-60\"\n";
-	print FD "$dx->Raw->23->Option=\"Modes\" \"1024x768\"\n";
 	print FD "$dx->Option=SaXDualHead\n";
 	print FD "$dx->Raw->24->Option=\"SaXDualOrientation\" \"off\"\n";
 	print FD "$dx->Raw->25->Option=\"SaXDualHSync\" \"off\"\n";
 	print FD "$dx->Raw->26->Option=\"SaXDualVSync\" \"50-60\"\n";
-	print FD "$dx->Raw->27->Option=\"SaXDualResolution\" \"1024x768\"\n";
+	print FD "$dx->Raw->27->Option=\"SaXDualResolution\" \"off\"\n";
 	print FD "$dx->Raw->28->Option=\"SaXDualMode\" \"off\"\n";
 	print FD "$dx->Raw->29->Option=\"SaXDualMonitorVendor\" \"__VESA__\"\n";
 	print FD "$dx->Raw->30->Option=\"SaXDualMonitorModel\" \"1024X768@60HZ\"\n";

@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Sun Nov 20 17:16:04 CET 2005 - ms@suse.de
+
+- fixed MonitorLayout setup for intel devices (#134378)
+- fixed SaX2 init not to enter the batch mode accidently (#134623)
+- added Schwab SGI monitors 1920x1200 from SONY (#134496)
+- add a copy of libhd to the repository to support non SuSE dists
+- removed Modes Option from the Intel MergedFB option set.
+  This option is no longer available within the intel driver
+- libsax version 7.2
+
+-------------------------------------------------------------------
 Thu Nov 17 16:16:18 CET 2005 - ms@suse.de
 
 - improved modeline calculation in ImportAPI.pm

@@ -20,9 +20,7 @@ STATUS        : development
 // Internal functions...
 //-----------------------------------
 void toUpper  (char*);
-#if HD_VERSION >= 5
 char *dumpHID (hd_id_t*, char*, int);
-#endif
 
 //===================================
 // MonitorGetData...
@@ -55,17 +53,11 @@ MsgDetect MonitorGetData (void) {
 	// Check for LCD panel with data located in the VESA
 	// BIOS. Note not all display can be detected here
 	// ---
-	#if HD_VERSION >= 5
 	sprintf(display.displaytype,"CRT");
 	if (strstr (dumpHID (&hd->device, buf, sizeof buf),"LCD")) {
 		sprintf(display.displaytype,"LCD/TFT");
 	}
-	#endif
-	#if HD_VERSION >= 5
 	di0 = hd->driver_info;
-	#else
-	di0 = hd_driver_info(hd_data, hd);
-	#endif
 	for(di = di0, i = 0; di; di = di->next, i++) {
 	if (di->any.type == di_display) {
 		display.hsync_max = 0;
@@ -87,18 +79,10 @@ MsgDetect MonitorGetData (void) {
 	for(; hd; hd = hd->next) {
 		sprintf(display.ddc,"%c",'\0');
 
-		#ifdef DDC_SUPPORT
-		#if HD_VERSION >= 5
 		snprintf(display.ddc, strlen(display.ddc) - 1, "%s%04x",
-		vend_id2str(hd->vendor.id),ID_VALUE(hd->device.id)
+			vend_id2str(hd->vendor.id),ID_VALUE(hd->device.id)
 		);
-		#else
-		snprintf(display.ddc, strlen(display.ddc) - 1, "%s%04x",
-		vend_id2str(hd->vend),ID_VALUE(hd->dev)
-		);
-		#endif
 		toUpper (display.ddc);
-		#endif
 
 		int count = 0;
 		for(res = hd->res; res; res = res->next) {
@@ -152,8 +136,8 @@ MsgDetect MonitorGetData (void) {
 		}
 		// ...
 		// save only the first data block
-		// normally hwinfo will only detect data from
-		// one monitor
+		// libhd will only get data from the primary 
+		// monitor
 		// ---
 		break;
 	}
@@ -176,7 +160,6 @@ void toUpper(char* string) {
 //=====================================
 // Dump HID device name
 //-------------------------------------
-#if HD_VERSION >= 5
 char* dumpHID (hd_id_t *hid, char *buf, int buf_size) {
 	char *s;
 	int i;
@@ -189,4 +172,3 @@ char* dumpHID (hd_id_t *hid, char *buf, int buf_size) {
 	}
 	return buf;
 }
-#endif
