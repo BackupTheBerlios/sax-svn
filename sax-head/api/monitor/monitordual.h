@@ -97,8 +97,6 @@ class SCCMonitorDual : public SCCDialog {
 	int            mDisplay;
 	QString        mMonitorModel;
 	QString        mMonitorVendor;
-	QString        mLabelSecondMonitorVendor;
-	QString        mLabelSecondMonitorModel;
 	QString        mSelectedResolution;
 	QList<QString> mSelectedResolutionList;
 	int            mDualHeadMode;

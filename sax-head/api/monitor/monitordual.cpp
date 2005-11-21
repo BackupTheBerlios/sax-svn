@@ -535,8 +535,6 @@ void SCCMonitorDual::setMonitorName (
 		mText["SecondMonitor"] << " " << vendor << " " << model;
 	mLabelSecondMonitor -> clear();
 	mLabelSecondMonitor -> setText ( monitorName );
-	mLabelSecondMonitorModel  = model;
-	mLabelSecondMonitorVendor = vendor;
 }
 //====================================
 // setResolution
@@ -612,8 +610,8 @@ void SCCMonitorDual::slotOk ( void ) {
 	//=====================================
 	// save state of second monitor
 	//-------------------------------------
-	mMonitorVendor = mLabelSecondMonitorVendor;
-	mMonitorModel  = mLabelSecondMonitorModel;
+	mMonitorVendor = mChangeMonitorDualModelDialog->getVendorName();
+	mMonitorModel  = mChangeMonitorDualModelDialog->getModelName();
 
 	//=====================================
 	// update parents dual info label
