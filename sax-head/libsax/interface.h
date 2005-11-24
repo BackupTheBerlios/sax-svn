@@ -120,8 +120,8 @@ typedef void* (*Factory) ();
 *
 * \code
 * g++ loader.cpp -o loader \
-*     -Wall -O2 -I/usr/lib/qt3/include -I/usr/X11R6/include \
-*     -L/usr/lib/qt3/lib/ -ldl -lqt-mt
+*     -Wall -O2 -I$QTDIR/include -I/usr/X11R6/include \
+*     -L$QTDIR/lib/ -ldl -lqt-mt
 * \endcode
 */
 struct EntryPoint {

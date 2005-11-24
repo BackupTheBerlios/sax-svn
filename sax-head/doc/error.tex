@@ -101,8 +101,8 @@ unix:INCLUDEPATH += -I /usr/X11R6/include
 \begin{Command}{12cm}
 \begin{small}
 \begin{verbatim}
-export QMAKESPEC=/usr/lib/qt3/mkspecs/linux-g++
-export PATH=$PATH:/usr/lib/qt3/bin/qmake
+export QMAKESPEC=$QTDIR/mkspecs/linux-g++
+export PATH=$PATH:$QTDIR/bin/qmake
 qmake -makefile -unix -o Makefile main.pro
 make
 \end{verbatim}

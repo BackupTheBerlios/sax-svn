@@ -4,10 +4,10 @@ PLUGSDIR=${DESTDIR}/usr/${BINDLIB}
 MONODLLD=${DESTDIR}/usr/${BINDLIB}/mono/gac/SaX
 
 all:/usr/bin/mcs
-	g++ -c -I/usr/X11R6/include -I/usr/${BINDLIB}/qt3/include \
+	g++ -c -I/usr/X11R6/include -I${QTDIR}/include \
 		-fno-strict-aliasing -pipe -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o libSaX.so \
-		-L/usr/X11R6/${BINDLIB} -L/usr/${BINDLIB}/qt3/${BINDLIB} \
+		-L/usr/X11R6/${BINDLIB} -L${QTDIR}/${BINDLIB} \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	mcs -nologo -debug -out:SaX.dll -t:library SaX*.cs SWIGTYPE* && \
 		rm -f SaX*.cs SWIGTYPE*

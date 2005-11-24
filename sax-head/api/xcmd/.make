@@ -8,8 +8,8 @@
 # --------
 # Status: Up-to-date
 #
-export QMAKESPEC=/usr/lib/qt3/mkspecs/linux-g++/
-/usr/lib/qt3/bin/qmake -makefile -unix -o Makefile xcmd.pro
+export QMAKESPEC=$QTDIR/mkspecs/linux-g++/
+$QTDIR/bin/qmake -makefile -unix -o Makefile xcmd.pro
 
 arch=`arch`
 if [ "$arch" = "x86_64" ] || [ "$arch" = "ppc64" ];then

@@ -10,12 +10,12 @@ all:
 	fi
 	g++ -c \
 		-I/usr/X11R6/include \
-		-I/usr/${BINDLIB}/qt3/include \
+		-I${QTDIR}/include \
 		-I/usr/lib/jvm/java/include \
 		-I/usr/lib/jvm/java/include/linux\
 		-fno-strict-aliasing -pipe -O2 -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o SaX.so \
-		-L/usr/X11R6/${BINDLIB} -L/usr/${BINDLIB}/qt3/${BINDLIB} \
+		-L/usr/X11R6/${BINDLIB} -L${QTDIR}/${BINDLIB} \
 		-L../../ -lm -lxf86config -lqt-mt -lsax -lxkbfile
 	${JAVAC} SaX*.java SWIGTYPE*
 	jar cf SaX.jar *.class && rm -f *.class SaX[^_]*.java SWIGTYPE*
