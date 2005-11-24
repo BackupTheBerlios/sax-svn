@@ -598,17 +598,22 @@ int SaXManipulateCard::getHeads ( void ) {
 					realCount += 2;
 					continue;
 				}
-				if (mProfile == "Matrox_G400") {
+				if (mProfile == "Intel_DualHead_DriverOptions") {
+					headCount += 2;
+					realCount += 1;
+					continue;
+				}
+				if (mProfile == "Intel_DualHead") {
 					headCount += 2;
 					realCount += 2;
 					continue;
 				}
-				if (mProfile == "Matrox_G450") {
+				if (mProfile == "Matrox_DualHead_DriverOptions") {
 					headCount += 2;
-					realCount += 2;
+					realCount += 1;
 					continue;
 				}
-				if (mProfile == "Matrox_G550") {
+				if (mProfile == "Matrox_DualHead") {
 					headCount += 2;
 					realCount += 2;
 					continue;

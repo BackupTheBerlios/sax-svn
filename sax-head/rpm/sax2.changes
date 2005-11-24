@@ -3,6 +3,8 @@ Tue Nov 22 12:17:12 CET 2005 - ms@suse.de
 
 - removed old nvidia profile and added the information to the new
   driver profile NVidia/NVidia.pl. Update CDB as well (#127510)
+- add support for Matrox merged framebuffer (G450/G550) (#135423)
+- fixed virtual screen resolution setup (#135423)
 - use QTDIR environment for build process
 
 -------------------------------------------------------------------

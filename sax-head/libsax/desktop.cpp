@@ -172,7 +172,7 @@ void SaXManipulateDesktop::setVirtualResolution (int c,int x,int y) {
 	QString key;
 	QString val;
 	key.sprintf ("Virtual:%d",c);
-	val.sprintf ("%dx%d",x,y);
+	val.sprintf ("%d %d",x,y);
 	mDesktop -> setItem ( key,val );
 }
 
@@ -1413,6 +1413,10 @@ QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 	if (driver == "fglrx") {
 		QTextOStream (&result)
 			<< PROFILE_DIR << "FGLRX_DualHead_DriverOptions";
+	}
+	if (driver == "mga") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "Matrox_DualHead_DriverOptions";
 	}
 	return result;
 }
