@@ -1025,6 +1025,7 @@ sub LayoutGetServerLayout {
 	my $left;
 	my $right;
 	my $bottom;
+	my $rel;
 	my $top;
 
 	my $section    = "ServerLayout";
@@ -1059,6 +1060,10 @@ sub LayoutGetServerLayout {
 		$left   = $dialog{$section}{all}{Screen}{$id}{left};
 		$right  = $dialog{$section}{all}{Screen}{$id}{right};
 		$bottom = $dialog{$section}{all}{Screen}{$id}{bottom};
+		$rel    = $dialog{$section}{all}{Screen}{$id}{relative};
+		if ($rel =~ /^(\d+)-(\d+)-(.*)/) {
+			push (@result,DLine("0","Relative:$screen","$3,$1,$2"));
+		}
 		push(@result,DLine("0","Screen:$screen","$left $right $top $bottom"));
 	}
 	# end API Layout interface...

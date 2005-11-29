@@ -384,6 +384,7 @@ sub ParseServerLayoutSection {
 				$parse{Layout}{$count}{Screen}{$screen[0]}{bottom} = $screen[3];
 				$parse{Layout}{$count}{Screen}{$screen[0]}{left}   = $screen[4];
 				$parse{Layout}{$count}{Screen}{$screen[0]}{right}  = $screen[5];
+				$parse{Layout}{$count}{Screen}{$screen[0]}{relative}=$screen[6];
 			}
 			#========================================
 			# get input devices...

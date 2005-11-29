@@ -1162,6 +1162,16 @@ sub ApiImportLayout {
 		$screen++;
 		last SWITCH;
 		};
+
+		/^Relative/         && do {
+		$id = $key; $id =~ s/Relative://;
+		if ($id =~ /Screen\[(.*)\]/) {
+			$screen = $1;
+		}
+		if ($value =~ /(.*),(\d+),(\d+)/) {
+			$var{ServerLayout}{all}{Screen}{$screen}{relative} = "$2-$3-$1";
+		}
+		};
 		}
 	}
 	return(%var);

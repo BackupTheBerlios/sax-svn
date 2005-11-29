@@ -31,13 +31,13 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define SAX_SINGLE_HEAD    300
-#define SAX_XINERAMA       301
-#define SAX_TRADITIONAL    302
-#define SAX_CLONE          303
-#define SAX_TWINVIEW       304
-#define SAX_TWINVIEW_CLONE 305
-#define SAX_UNKNOWN_MODE   306
+#define SAX_SINGLE_HEAD     300
+#define SAX_XINERAMA        301
+#define SAX_TRADITIONAL     302
+#define SAX_CLONE           303
+#define SAX_MERGED_FB       304
+#define SAX_MERGED_FB_CLONE 305
+#define SAX_UNKNOWN_MODE    306
 
 //====================================
 // Interface class for dlopen ability
@@ -53,6 +53,8 @@ class SaXManipulateLayoutIF : public SaXException {
 	public:
 	virtual void setXOrgMultiheadMode ( int ) = 0;
 	virtual bool setXOrgLayout ( int, int, int, int, int ) = 0;
+	virtual bool setRelative ( int, int, int, int ) = 0;
+	virtual bool removeRelative ( int ) = 0;
 
 	public:
 	virtual int getMultiheadMode ( void ) = 0;
@@ -135,6 +137,9 @@ class SaXManipulateLayout : public SaXManipulateLayoutIF {
 	public:
 	void setXOrgMultiheadMode ( int );
 	bool setXOrgLayout ( int, int, int, int, int );
+	bool setRelative ( int, int, int, int );
+	bool removeRelative ( int );
+
 
 	public:
 	int getMultiheadMode ( void );

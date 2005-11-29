@@ -89,17 +89,20 @@ void SCCMonitorArrange::import ( void ) {
 		case SAX_CLONE:
 			isCloned = true;
 		break;
-		case SAX_TWINVIEW_CLONE:
-			isCloned = true;
-		break;
 		case SAX_TRADITIONAL:
-			isTraditional = true;
-		break;
-		case SAX_TWINVIEW:
 			isTraditional = true;
 		break;
 		case SAX_XINERAMA:
 			isXinerama = true;
+		break;
+		default:
+			log (L_WARN,
+				"SCCMonitorArrange::Warning: couldn't get multihead mode\n"
+			);
+			log (L_WARN,
+				"SCCMonitorArrange::Warning: using default clone mode\n"
+			);
+			isCloned = true;
 		break;
 	}
 	//====================================

@@ -301,10 +301,12 @@ sub PrepareLayout {
 		}
 	}
 	foreach my $id (keys %screen) {
-		$dialog{ServerLayout}{all}{Screen}{$id}{left}   = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{right}  = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{top}    = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{bottom} = "<none>";
+		my $rel = $screen{$id}{relative};
+		$dialog{ServerLayout}{all}{Screen}{$id}{left}     = "<none>";
+		$dialog{ServerLayout}{all}{Screen}{$id}{right}    = "<none>";
+		$dialog{ServerLayout}{all}{Screen}{$id}{top}      = "<none>";
+		$dialog{ServerLayout}{all}{Screen}{$id}{bottom}   = "<none>";
+		$dialog{ServerLayout}{all}{Screen}{$id}{relative} = $rel;
 		if (defined $layout{$id}{left}) {
 			my $n= $layout{$id}{left};
 			$dialog{ServerLayout}{all}{Screen}{$id}{left}   = "Screen[$n]";

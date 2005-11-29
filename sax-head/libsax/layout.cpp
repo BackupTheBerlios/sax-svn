@@ -81,6 +81,65 @@ void SaXManipulateLayout::setXOrgMultiheadMode ( int mode ) {
 }
 
 //====================================
+// setRelative
+//------------------------------------
+bool SaXManipulateLayout::setRelative (
+	int relativeTo,int originForScreen, int x, int y
+) {
+	// .../
+	//! These give the screen's location relative to another screen.
+	//! When positioning  to the right or left, the top edges are aligned.
+	//! When positioning above or below, the left  edges  are  aligned.
+	//! The Relative  form  specifies  the offset of the screen's origin
+	//! (upper left  corner)  relative  to  the origin of another screen.
+	//! Example:
+	//!   
+	//!         1024
+	//!     |---------- |
+	//!     |           | 640
+	//! 768 |     0     |-----|
+	//!     |           |  1  | 480
+	//!     |---------- |-----|
+	//! 
+	//! 
+	//! To achieve this allignment the origin (upper left corner) of
+	//! Screen[1] must be set to X=1024 Y=288 RELATIVE to Screen[0]
+	//! This means the following function call
+	//!
+	//!     setRelative ( 0,1,1024,288 )
+	//!
+	// ----
+	SaXManipulateCard cardData (mCard); 
+	if (! cardData.selectCard (relativeTo)) {
+		return false;
+	}
+	QString screenID; screenID.sprintf ("%d",relativeTo);
+	QString origin; origin.sprintf ("Screen[%d],%d,%d",originForScreen,x,y);
+	mLayout -> setItem (
+		QString("Relative:Screen["+ screenID + "]"),origin
+	);
+	return true;	
+}
+
+//====================================
+// removeRelative
+//------------------------------------
+bool SaXManipulateLayout::removeRelative ( int screen ) {
+	// .../
+	//! remove the Relative position information from the
+	//! ServerLayout section if there is such an information
+	// ----
+	SaXManipulateCard cardData (mCard);
+	if (! cardData.selectCard (screen)) {
+		return false;
+	}
+	QString remove;
+	remove.sprintf ("Relative:Screen[%d]",screen);
+	mLayout -> removeEntry ( remove );
+	return true;
+}
+
+//====================================
 // setLayout
 //------------------------------------
 bool SaXManipulateLayout::setXOrgLayout (
@@ -134,23 +193,52 @@ int SaXManipulateLayout::getMultiheadMode ( void ) {
 	QString clone = mLayout -> getItem ("Clone");
 	QString xrama = mLayout -> getItem ("Xinerama");
 	//====================================
-	// check for nvidia TwinView mode...
+	// check for merged framebuffer...
 	//------------------------------------
 	if (mCard->getCount() == 1) {
 		SaXManipulateCard cardData (mCard);
 		for (int card=0;card<mCard->getCount();card++) {
 			cardData.selectCard (card);
 			QDict<QString> options = cardData.getOptions();
+			//====================================
+			// nvidia...
+			//------------------------------------
 			if (options["TwinView"]) {
 				if (*options["TwinView"] == "Clone") {
-					return SAX_TWINVIEW_CLONE;
+					return SAX_MERGED_FB_CLONE;
 				} else {
-					return SAX_TWINVIEW;
+					return SAX_MERGED_FB;
 				}
 			}
-			// TODO...
-			// more driver specific multihead
-			// tactics may follow here
+			//====================================
+			// fglrx...
+			//------------------------------------
+			if (options["DesktopSetup"]) {
+				if (*options["DesktopSetup"] == "Clone") {
+					return SAX_MERGED_FB_CLONE;
+				} else {
+					return SAX_MERGED_FB;
+				}
+			}
+			//====================================
+			// intel...
+			//------------------------------------
+			if (options["Clone"]) {
+				return SAX_MERGED_FB_CLONE;
+			}
+			//====================================
+			// matrox / radeon...
+			//------------------------------------
+			if (options["MergedFB"]) {
+				if (
+					(*options["Monitor2Position"] == "Clone") ||
+					(*options["CRT2Position"] == "Clone")
+				) {
+					return SAX_MERGED_FB_CLONE;
+				} else {
+					return SAX_MERGED_FB;
+				}
+			}
 		}
 	}
 	//====================================

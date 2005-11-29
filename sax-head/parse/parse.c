@@ -413,6 +413,7 @@ char* GetLayoutSpecs (XF86ConfigPtr conf) {
 	char left[8192]    = "";
 	char bottom[8192]  = "";
 	char right[8192]   = "";
+	char relative[8192]= "";
 	char screen[8192]  = "";
 	char input[8192]   = "";
 	int  num           = 0;
@@ -454,66 +455,7 @@ char* GetLayoutSpecs (XF86ConfigPtr conf) {
 			strcat(result,line);
 		}
 
-		/* set screen old format... */
-		ap = (XF86ConfAdjacencyPtr) lp->lay_adjacency_lst;
-		if ((ap != NULL) && (ap->adj_where == -1)) {
-			strcpy(screen,"screen=");
-			count = 0;
-			for (ap;ap;ap=ap->list.next) {
-				num = -1;
-				strcpy(id,    "<none>");
-				strcpy(top,   "<none>");
-				strcpy(bottom,"<none>");
-				strcpy(left,  "<none>");
-				strcpy(right, "<none>");
-				if (ap->adj_screen_str != NULL) {
-					strcpy(id,ap->adj_screen_str);
-				}
-				if (ap->adj_scrnum > 0) {
-					num = ap->adj_scrnum;
-				}
-				if (
-					(ap->adj_top_str != NULL) && 
-					(strcmp(ap->adj_top_str,"") != 0)
-				) {
-					strcpy(top,ap->adj_top_str);
-				}
-				if (
-					(ap->adj_bottom_str != NULL)  &&
-					(strcmp(ap->adj_bottom_str,"") != 0)
-				) {
-					strcpy(bottom,ap->adj_bottom_str);
-				}
-				if (
-					(ap->adj_left_str   != NULL)  &&
-					(strcmp(ap->adj_left_str,"") != 0)
-				) {
-					strcpy(left,ap->adj_left_str);
-				}
-				if (
-					(ap->adj_right_str  != NULL)  &&
-					(strcmp(ap->adj_right_str,"")  != 0)
-				) {
-					strcpy(right,ap->adj_right_str);
-				}
-				if (count == 0) {
-					sprintf (
-						line,"%s,%d,%s,%s,%s,%s", id,num,top,bottom,left,right
-					);
-				} else {
-					sprintf (
-						line,":%s,%d,%s,%s,%s,%s",id,num,top,bottom,left,right
-					);
-				}
-				count++;
-				strcat(screen,line);
-			}
-   
-			sprintf(line,"%s ",screen);
-			strcat(result,line);
-		} 
-   
-		/* set screen... new format */
+		/* set screen... */
 		ap = (XF86ConfAdjacencyPtr) lp->lay_adjacency_lst;
 		hp = (XF86ConfAdjacencyPtr) lp->lay_adjacency_lst;
 		if ((ap != NULL) && (ap->adj_where != -1)) {
@@ -533,10 +475,11 @@ char* GetLayoutSpecs (XF86ConfigPtr conf) {
 				strcpy(scid,ap->adj_screen_str);
 				strcpy(sc[scount],scid);
 				scount++;
-				strcpy(top,   "<none>");
-				strcpy(bottom,"<none>");
-				strcpy(left,  "<none>");
-				strcpy(right, "<none>");
+				strcpy(top,     "<none>");
+				strcpy(bottom,  "<none>");
+				strcpy(left,    "<none>");
+				strcpy(right,   "<none>");
+				strcpy(relative,"<none>");
 				for (hp;hp;hp=hp->list.next) {
 					if (strcmp(scid,hp->adj_screen_str) == 0) {
 						switch(hp->adj_where) {
@@ -556,17 +499,23 @@ char* GetLayoutSpecs (XF86ConfigPtr conf) {
 							strcpy(bottom,hp->adj_refscreen);
 							break;
 						}
+						case 5: {
+							sprintf(relative,"%d-%d-%s",
+							hp->adj_x,hp->adj_y,hp->adj_refscreen);
+						}
 						}
 					}
 				}
 				hp = (XF86ConfAdjacencyPtr) lp->lay_adjacency_lst;
 				if (scount == 1) {
 					sprintf ( line,
-						"%s,%d,%s,%s,%s,%s",scid,num,top,bottom,left,right
+						"%s,%d,%s,%s,%s,%s,%s",
+						scid,num,top,bottom,left,right,relative
 					);
 				} else {
 					sprintf ( line,
-						":%s,%d,%s,%s,%s,%s",scid,num,top,bottom,left,right
+						":%s,%d,%s,%s,%s,%s,%s",
+						scid,num,top,bottom,left,right,relative
 					); 
 				}
 				strcat(screen,line);

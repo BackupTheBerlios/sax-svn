@@ -329,15 +329,15 @@ void SaXProcess::storeData (void) {
 			break;
 			default:
 				bool isNumber = false;
-				if (key == "Screen") {
+				if ((key == "Screen") || (key == "Relative")) {
 					QRegExp idExp ("^(\\d+)$");
 					if (idExp.search (val,0) >= 0) {
 						isNumber=true;
 					}
 				}
 				if (
-					((key == "Screen") && (!isNumber)) ||
-					 (key == "Modes")||(key == "Virtual")
+					(((key == "Screen") || (key == "Relative")) &&
+					 (!isNumber)) || (key == "Modes")||(key == "Virtual")
 				) {
 					key = key+":"+val;
 					val = item;

@@ -50,6 +50,7 @@ sub CreateServerLayoutSection {
 				my $bot   = $var{ServerLayout}{all}{$i}{$scrnr}{bottom};
 				my $left  = $var{ServerLayout}{all}{$i}{$scrnr}{left};
 				my $right = $var{ServerLayout}{all}{$i}{$scrnr}{right};
+				my $rel   = $var{ServerLayout}{all}{$i}{$scrnr}{relative};
 				my @ID;
 				push (@screenList,$id);
 				if ($id  =~ /Screen\[(.*)\]/) {
@@ -86,6 +87,13 @@ sub CreateServerLayoutSection {
 				) {
 					push(@configList,"  $i       \"$id\"\n");
 					$single = 1;
+				}
+				if (($rel ne "") && ($rel =~ /(\d+)-(\d+)-(.*)/)) {
+					my $x = $1;
+					my $y = $2;
+					my $s = $3;
+					my $rsetup = "\"$id\" Relative \"$s\" $x $y";
+					push(@result,"  Screen       $rsetup\n");
 				}
 				}
 			}
