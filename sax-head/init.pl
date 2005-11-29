@@ -411,6 +411,12 @@ sub init {
 		}
 	}
 	#==========================================
+	# save preliminary hash [registry]
+	#------------------------------------------
+	if (save() == -1) {
+		die "init: level 1... abort";
+	}
+	#==========================================
 	# handle automatic applied profiles
 	#------------------------------------------
 	if (! defined $UseDbmNew) {
@@ -454,6 +460,12 @@ sub init {
 			%var = includeProfile (\%var);
 			clearProfile();
 		}
+	}
+	#==========================================
+	# save preliminary hash [registry]
+	#------------------------------------------
+	if (save() == -1) {
+		die "init: level 1... abort";
 	}
 	#==========================================
 	# handle option -b | --batch
