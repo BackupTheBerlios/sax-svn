@@ -6,6 +6,11 @@ Device  -> [X] ->  Driver = fglrx
 Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
 
+# ...
+# disable Composite extension for FireGL devices
+# ---------------------------------------------- 
+!remove Extensions -> [X] -> Composite
+
 Screen->[X]->DefaultDepth    = 24
 Module->[X]->Load            = dbe,type1,freetype,extmod,glx,v4l,dri
 Device->[X]->Raw->11->Option = "#NoDDC"
@@ -51,3 +56,4 @@ Device->[X]->Raw->50->Option = "FSAAMSPosY5" "0.000000"
 Device->[X]->Raw->51->Option = "UseFastTLS" "0"
 Device->[X]->Raw->52->Option = "BlockSignalsOnLock" "on"
 Device->[X]->Raw->53->Option = "ForceGenericCPU" "no"
+Device->[X]->Raw->54->Option = "EnablePrivateBackZ" "yes"

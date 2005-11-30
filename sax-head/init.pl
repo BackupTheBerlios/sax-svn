@@ -417,6 +417,10 @@ sub init {
 		die "init: level 1... abort";
 	}
 	#==========================================
+	# clean profile directory
+	#------------------------------------------
+	qx (rm -f $spec{ProfileDir}/*.tmp);
+	#==========================================
 	# handle automatic applied profiles
 	#------------------------------------------
 	if (! defined $UseDbmNew) {

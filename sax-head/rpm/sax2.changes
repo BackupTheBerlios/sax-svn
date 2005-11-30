@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Wed Nov 30 12:49:38 CET 2005 - ms@suse.de
+
+- added EnablePrivateBackZ for FireGL devices (#135708)
+- disable Composite extension for FireGL and NVidia (#135708,#118580)
+- fixed Radeon_DualHead_DriverOptions profile to know about the
+  FGLRX_DualHead_DriverOptions profile when needed (#135708)
+- fixed bug including an option multiple times
+
+-------------------------------------------------------------------
 Mon Nov 28 19:49:44 CET 2005 - ms@suse.de
 
 - remove FGLRX_SingleHead profile (#135708)

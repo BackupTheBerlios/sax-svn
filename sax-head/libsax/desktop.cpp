@@ -717,14 +717,14 @@ bool SaXManipulateDesktop::disable3D (void) {
 	if (cardData) {
 		QStringList profiles;
 		QString* profile3D = cardData -> find ("3DProfile");
+		QString* driver3D  = cardData -> find ("3DDriver");
 		if ((profile3D) && (! profile3D->contains("DualHead"))) {
 			profiles += *profile3D;
 		}
 		SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
 		QDict<QString> driverMap = mapHandle.readDict();
-		QString driver = cardInfo.getCardDriver();
-		if ((! driver.isEmpty()) && (driverMap[driver])) {
-			QStringList items = QStringList::split ( ",", *driverMap[driver] );
+		if ((driver3D) && (driverMap[*driver3D])) {
+			QStringList items = QStringList::split ( ",", *driverMap[*driver3D] );
 			profiles += items;
 		}
 		for (

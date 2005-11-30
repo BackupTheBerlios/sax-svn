@@ -52,12 +52,12 @@ sub prepareProfile {
 		$card = 0;
 	}
 	my $basename = qx (basename $profile);
+	print "SPP: prepare device [$card] profile: $basename";
 	if (-f "$profile.pl") {
 		print "SPP: calling device [$card] profile script: $basename";
 		qx ($profile.pl);
 		$profile = "$profile.tmp";
 	}
-	print "SPP: prepare device [$card] profile: $basename";
 	open (FD,$profile) ||
 		die "SPP: could not open file: $profile";
 	while (my $line = <FD>) {

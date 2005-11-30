@@ -654,7 +654,6 @@ bool SCCMonitor::exportData ( void ) {
 								int x2 = r2.first().toInt();
 								int y2 = r2.last().toInt();
 								int orientation  = dualData->getLayout();
-								printf ("+++++++++ %d\n",orientation);
 								int x = 0;
 								int y = 0;
 								switch (orientation) {
