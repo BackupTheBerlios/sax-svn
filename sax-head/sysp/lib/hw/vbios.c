@@ -17,7 +17,7 @@ STATUS        : development
 #include "hwdata.h"
 
 //===================================
-// TvSupport...
+// vesaBIOS...
 //-----------------------------------
 char* vesaBIOS (void) {
 	bios_info_t *bt;
@@ -26,7 +26,10 @@ char* vesaBIOS (void) {
  
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	hd = hd_list(hd_data, hw_vbe, 1, NULL);
-  
+
+	if (! hd) {
+		return 0;
+	}
 	if (!hd->detail || hd->detail->type != hd_detail_bios) {
 		return 0;
 	}
