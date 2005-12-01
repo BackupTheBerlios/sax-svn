@@ -16,6 +16,6 @@ my $profile = ProfileInitScript();
 if (ProfileIsXOrgVendor ("nvidia")) {
 	open (FD,">",$profile) ||
 		die "NVidia: Can't open $profile: $!";
-	print "Device -> [X] -> Driver = nv\n";
+	print FD "Device -> [X] -> Driver = nv\n";
 	close FD;
 }

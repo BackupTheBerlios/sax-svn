@@ -63,6 +63,7 @@ sub ProfileInitScript {
 sub ProfileIsXOrgVendor {
 	my $driver = $_[0];
 	my $vendor = qx(/usr/share/sax/sysp/script/vendor.pl $driver);
+	chomp $vendor;
 	if (($vendor eq "The XFree86 Project") || ($vendor eq "X.Org Foundation")) {
 		return 1;
 	}
@@ -74,6 +75,7 @@ sub ProfileIsXOrgVendor {
 #-------------------------------------
 sub ProfileNVDualCheck {
 	my $vendor = qx(/usr/share/sax/sysp/script/vendor.pl nvidia);
+	chomp $vendor;
 	if (($vendor eq "The XFree86 Project") || ($vendor eq "X.Org Foundation")) {
 		print "single\n";
 	} else {
