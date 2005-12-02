@@ -1,6 +1,10 @@
 #!/usr/bin/perl
 
+use lib   '/usr/share/sax/modules';
+
 use strict;
+use CreateSections;
+use Storable;
 use SaX;
 
 #=====================================
@@ -88,10 +92,9 @@ sub ProfileNVDualCheck {
 #-------------------------------------
 sub ProfileReadXLogFile {
 	my $stdname = ProfileName();
+	my $xconfig = ProfileCreatePreliminaryConfig();
+	qx (X -probeonly -logverbose 255 -xf86config $xconfig :99 >/dev/null 2>&1);
 	my $xorglogname = "/var/log/Xorg.99.log";
-	if (! -f $xorglogname) {
-		$xorglogname = "/var/log/Xorg.0.log";
-	}
 	local $/;
 	open (FD, "<$xorglogname") ||
 		die "*** $stdname: Cannot read X.org log $xorglogname";
@@ -173,7 +176,6 @@ sub ProfileIntelGetMonitorLayout {
 	if (/^\(..\) I[89].0\([0-9]+\): Primary Pipe is A,/m) {
 		$connected="$primary,$secondary";
 	}
-	print STDERR "*** Checked XOrg log file:\n";
 	print STDERR "*** Selecting $connected as monitor configuration.\n";
 	return $connected;
 }
@@ -184,6 +186,7 @@ sub ProfileIntelGetMonitorLayout {
 sub ProfileIntelSetupMonitorLayout {
 	my $profile = $_[0];
 	my $stdname = ProfileName();
+	local $/;
 	open (FD,"<",$profile) ||
 		die "*** $stdname: Can't open $profile: $!";
 	my $profileData = <FD>;
@@ -195,6 +198,59 @@ sub ProfileIntelSetupMonitorLayout {
 	print FD $profileData;
 	close FD;
 	return $monitorLayout;
+}
+
+#=====================================
+# ProfileCreatePreliminaryConfig
+#-------------------------------------
+sub ProfileCreatePreliminaryConfig {
+	my $cfgfile = "/tmp/xorg.conf.$$";
+	my $config  = "/var/cache/sax/files/config";
+	my $stdname = ProfileName();
+
+	#==========================================
+	# Retrieve registry data
+	#------------------------------------------
+	my $hashref = retrieve($config);
+	if (! defined $hashref) {
+		die "*** $stdname: can not load sax registry";
+	}
+	my %var = %{$hashref};
+
+	#==========================================
+	# Create config suggestion
+	#------------------------------------------
+	my @part0  = CreateHeaderSection ();
+	my @part1  = CreateFilesSection  (\%var);
+	my @part2  = CreateModuleSection (\%var);
+	my @part3  = CreateServerFlagsSection (\%var);
+	my @part4  = CreateInputDeviceSection (\%var);
+	my @part5  = CreateMonitorSection (\%var,"yes");
+	my @part7  = CreateDeviceSection (\%var);
+	my @part8  = CreateScreenSection (\%var);
+	my @part9  = CreateServerLayoutSection (\%var);
+	my @part10 = CreateDRISection ();
+	my @part11 = CreateExtensionsSection (\%var);
+
+	#==========================================
+	# Write preliminary config file
+	#------------------------------------------
+	open (HANDLE,">$cfgfile") ||
+		die "*** $stdname: Can't open file: $cfgfile : $!";
+	print HANDLE @part0;  print HANDLE "\n";
+	print HANDLE @part1;  print HANDLE "\n";
+	print HANDLE @part2;  print HANDLE "\n";
+	print HANDLE @part3;  print HANDLE "\n";
+	print HANDLE @part4;  print HANDLE "\n";
+	print HANDLE @part5;  print HANDLE "\n";
+	print HANDLE @part7;  print HANDLE "\n";
+	print HANDLE @part8;  print HANDLE "\n";
+	print HANDLE @part9;  print HANDLE "\n";
+	print HANDLE @part10; print HANDLE "\n";
+	print HANDLE @part11; print HANDLE "\n";
+	close HANDLE;
+
+	return $cfgfile;
 }
 
 1;

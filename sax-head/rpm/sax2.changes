@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Dec  1 17:00:09 CET 2005 - ms@suse.de
+
+- fixed Profile.pm module for Intel DualHead setup
+- added ProfileCreatePreliminaryConfig() function to Profile.pm
+  to be able to run probeonly servers. This is needed to check
+  for the MonitorLayout on Intel and NVidia devices
+
+-------------------------------------------------------------------
 Thu Dec  1 10:30:11 CET 2005 - ms@suse.de
 
 - added SiS driver profile to support the control protocol
