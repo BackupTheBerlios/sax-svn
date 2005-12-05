@@ -316,7 +316,7 @@ fi
 %defattr(-,root,root)
 %dir /usr/share/sax/api
 %dir /usr/share/sax/api/data
-%dir /usr/share/doc/packages/sax2
+%dir %{_defaultdocdir}/sax2
 %dir /usr/X11R6/share/fvwm
 %dir /usr/share/sax
 %dir /usr/share/sax/sysp/script
