@@ -10,7 +10,7 @@ swig:spp.o spp.tab.o lex.yy.o
 
 spp:spp.tab.o lex.yy.o spp.o example.o
 	g++ -Wall -O2 -o example example.o spp.o spp.tab.o lex.yy.o \
-		-L${QTDIR}/lib -I${QTDIR}/include -lfl -lreadline -lqt-mt
+		-L${QTDIR}/lib -I${QTDIR}/include -lfl -lreadline -lqt-mt -lncurses
 
 example.o:example.cpp
 	g++ -Wall -O2 -fpic -c example.cpp -I. -I${QTDIR}/include

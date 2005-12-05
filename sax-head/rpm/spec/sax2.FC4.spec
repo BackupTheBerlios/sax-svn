@@ -1,11 +1,11 @@
 #
 # spec file for package sax2 (Version 7.1)
 #
-# Copyright (c) 2005 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# Copyright (c) 2005 Marcus Schaefer, Isny, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
-# Please submit bugfixes or comments via http://www.suse.de/feedback/
+# Please submit bugfixes or comments via http://www.berlios.de/sax
 #
 
 # BuildRequires:
@@ -14,10 +14,10 @@
 # Description sax2
 #-------------------------------------------------
 Name:         sax2
-Requires:     perl readline hal dbus-1
+Requires:     perl readline ncurses hal dbus
 Requires:     sax2-ident sax2-tools
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot
-Requires:     xorg-x11-server
+Requires:     xorg-x11
 Summary:      SuSE advanced X Window System-configuration
 Version:      7.1
 Release:      18
@@ -36,7 +36,7 @@ This package contains the SuSE Advanced X-Configuration
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-tools
@@ -58,7 +58,7 @@ mouse and keyboard.
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-ident
@@ -83,7 +83,7 @@ setting up the card with SaX2.
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-gui
@@ -91,7 +91,7 @@ Authors:
 %package -n sax2-gui
 Version:      1.7
 Release:      18
-Requires:     netpbm sax2-tools qt3 fvwm2 sax2
+Requires:     netpbm sax2-tools qt fvwm2 sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/sbin/xapi
@@ -103,7 +103,7 @@ This package contains the GUI for the SuSE Advanced X-Configuration
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-libsax
@@ -111,7 +111,7 @@ Authors:
 %package -n sax2-libsax
 Version:      7.1
 Release:      18
-Requires:     sax2-tools qt3 fvwm2 sax2 855resolution
+Requires:     sax2-tools qt fvwm2 sax2 855resolution
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
 Provides:     sax2:/usr/%{_lib}/libsax.so
@@ -123,7 +123,7 @@ libsax provides a C++ written library to manage X11 configurations
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-libsax-devel
@@ -143,7 +143,7 @@ libsax in your own development environment
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-libsax-perl
@@ -163,7 +163,7 @@ written programs
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-libsax-python
@@ -184,7 +184,7 @@ written programs
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 #=================================================
 # Description sax2-libsax-java
@@ -207,7 +207,7 @@ written programs
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 %endif
 %endif
@@ -231,7 +231,7 @@ programs
 
 Authors:
 --------
-    Marcus Schäfer <ms@suse.de>
+    Marcus Schäfer <marcus.schaefer@gmail.com>
 
 %endif
 %endif

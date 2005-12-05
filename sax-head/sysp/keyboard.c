@@ -53,9 +53,7 @@ void ScanKeyboard::Scan (void) {
 	RcData config;
 	Keymap keymap;
  
-	if (! rcdata.SetFile(RC_SYSCONFIG,"keyboard")) {
-		rcdata.SetFile(RC_CONFIG);
-	}
+	rcdata.SetFile(RC_SYSCONFIG,"keyboard");
 	rckeymap.SetFile(KBD_MAP);
 
 	config = rcdata.ImportRcConfig();

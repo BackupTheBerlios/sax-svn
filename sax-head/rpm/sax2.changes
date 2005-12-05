@@ -1,10 +1,18 @@
 -------------------------------------------------------------------
+Fri Dec  2 12:05:46 CET 2005 - ms@suse.de
+
+- added option --complete to the cards.pl helper, this option will
+  include the PCI vendor/subvendor ID's if specified
+- removed old code refering to rc.config handling
+- update FireGL driver profile
+
+-------------------------------------------------------------------
 Thu Dec  1 17:00:09 CET 2005 - ms@suse.de
 
-- fixed Profile.pm module for Intel DualHead setup
+- fixed Profile.pm module for Intel DualHead setup (#136363)
 - added ProfileCreatePreliminaryConfig() function to Profile.pm
   to be able to run probeonly servers. This is needed to check
-  for the MonitorLayout on Intel and NVidia devices
+  for the MonitorLayout on Intel and NVidia devices (#136363)
 
 -------------------------------------------------------------------
 Thu Dec  1 10:30:11 CET 2005 - ms@suse.de

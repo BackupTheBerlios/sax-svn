@@ -16,7 +16,7 @@ BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp 
 # Description sax2
 #-------------------------------------------------
 Name:         sax2
-Requires:     perl readline hal dbus-1
+Requires:     perl readline ncurses hal dbus-1
 Requires:     sax2-ident sax2-tools
 %if %{suse_version} >= 810
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq

@@ -139,7 +139,6 @@ sub init {
 	$spec{Sysp}                = "/usr/sbin/sysp";
 	$spec{LogFile}             = "/var/log/SaX.log";
 	$spec{Xmode}               = "/usr/sbin/xmode";
-	$spec{RcConfig}            = "/etc/rc.config";
 	$spec{RcSysConfigLang}     = "/etc/sysconfig/language";
 	$spec{SysConfig}           = "/etc/sysconfig";
 	$spec{Profile}             = "/usr/share/sax/pci.pl";

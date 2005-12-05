@@ -1,7 +1,7 @@
 DESTDIR = /
 BINDLIB = lib
-PYTHON  = `readlink /usr/${BINDLIB}/python`
-PACKDIR = ${DESTDIR}/usr/${BINDLIB}/${PYTHON}/site-packages
+PYVER   = `python -c "import sys; v=sys.version_info[:2]; print '%d.%d'%v"`
+PACKDIR = ${DESTDIR}/usr/${BINDLIB}/python${PYVER}/site-packages
 MODDIR  = ${PACKDIR}/SaX
 
 export LD_LIBRARY_PATH=../../

@@ -39,7 +39,6 @@ if (! defined %spec) {
 	$spec{StaticFontPathList}  = "$dataDir/StaticFontPathList";
 	$spec{LangFirstPath}       = "$dataDir/LangFirstPath";
 	$spec{LangCodes}           = "$dataDir/LangCodes";
-	$spec{RcConfig}            = "/etc/rc.config";
 }
 
 #---[ ApiInit ]-----#

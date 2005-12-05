@@ -51,8 +51,11 @@ FULLSCREEN=""
 #==================================
 # Functions...
 #----------------------------------
+function killProc() {
+	kill `pidof $1`
+}
 function quit() {
-	/sbin/killproc $DOTS
+	killProc $DOTS
 	exit 1
 }
 function privilege() {
@@ -90,7 +93,7 @@ function needHardwareUpdate() {
 	return 0
 }
 function usage() {
-	/sbin/killproc $DOTS
+	killProc $DOTS
 	# ...
 	echo "Linux SaX Version 7.1 (2005-03-22)"
 	echo "(C) Copyright 2002 - SuSE GmbH <Marcus Schaefer sax@suse.de>"
@@ -400,7 +403,7 @@ export HW_UPDATE=$IN_TRIGGER
 # call init now...
 #----------------------------------
 StopGPM
-/sbin/killproc $DOTS
+killProc $DOTS
 echo -ne "\r"
 
 if [ $IN_TRIGGER = 1 ];then

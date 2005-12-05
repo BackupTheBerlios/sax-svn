@@ -10,7 +10,7 @@ sub AutoDetectFontPath {
 
 	my $setting;   # current FontPath setting
 	my @list;      # single paths in a list
-	my $language;  # language spec from rc.config
+	my $language;  # language spec from /etc/sysconfig/keyboard
 	my %lang;      # language ISO code table
 	my %path;      # first path definitions per language
 	my %stat;      # static font path list
@@ -47,7 +47,7 @@ sub AutoDetectFontPath {
 	$setting   = $var{Files}{0}{FontPath};
 	if ($setting ne "") {
 		@list     = split(/,/,$setting);
-		$language = GetRcLang($spec{RcConfig},$spec{RcSysConfigLang});
+		$language = GetRcLang($spec{RcSysConfigLang});
 		$language =~ s/ +//g;
 		$language = lc($language);
 
@@ -120,24 +120,19 @@ sub ReadTable {
 
 #----[ GetRcLang ]----#
 sub GetRcLang {
-#--------------------------------------
-# this function look at the rc.config 
-# and get the RC_LANG statement...
+#-------------------------------------------------
+# this function reads the /etc/sysconfig/language 
+# file and get the RC_LANG statement...
 #
-	my $file1 = $_[0];
-	my $file2 = $_[1];
-	my $file  = $file1;
+	my $file = $_[0];
+	my $search = "RC_LANG";
 	my $l;
 
-	# /.../
-	# if the sysconfig file exist, use the
-	# sysconfig file not the rc.config
-	# --------------------------------
-	if (-f $file2) {
-		$file = $file2;
+	if (! -f $file) {
+		$file   = "/etc/sysconfig/i18n";
+		$search = "LANG";
 	}
-
-	$l = qx(cat $file | grep RC_LANG);
+	$l = qx(cat $file | grep $search);
 	$l =~ /.*=\"(.*)\".*/;
 	$l = $1;
 

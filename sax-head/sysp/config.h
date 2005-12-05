@@ -26,7 +26,6 @@ STATUS        : Status: Up-to-date
 //==============================
 // paths...
 //------------------------------
-#define RC_CONFIG         "/etc/rc.config"
 #define RC_SYSCONFIG      "/etc/sysconfig/"
 #define INPUT_MAP         "/usr/share/sax/sysp/maps/Input.map"
 #define DRIVER_MAP        "/usr/share/sax/sysp/maps/Driver.map"

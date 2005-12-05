@@ -59,7 +59,7 @@ INCVZ          = ${usr_prefix}/include/sax
 LOCALEVZ       = ${usr_prefix}/share/locale
 XFINEBINVZ     = ${xfi_prefix}
 XFINEPIXMAPS   = ${xfi_prefix}/figures
-LIBDOCDIR      = ${usr_prefix}/share/doc/packages/libsax
+LIBDOCDIR      = ${doc_prefix}/libsax
 LIBTOOLDIR     = ${buildroot}/var/lib/sax
 WMVZ           = ${usr_prefix}/X11R6/share/fvwm
 X11BINDIR      = ${usr_prefix}/X11R6/bin
@@ -270,7 +270,6 @@ install:install-docs
 	install -m 644 api/figures/sax2.png ${buildroot}/usr/share/pixmaps
 	
 	@echo "remember to have fun..."
-	@echo "your SuSE team :-)"
 
 install-docs:
 	#============================================

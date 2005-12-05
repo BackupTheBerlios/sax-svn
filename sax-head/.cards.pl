@@ -5,6 +5,7 @@ use Getopt::Long;
 
 my %var;
 my $file;
+my $Complete;
 
 #----[ init ]-----#
 sub init {
@@ -12,7 +13,8 @@ sub init {
 # init some data structures
 #
 	my $result = GetOptions (
-		"file|f=s" => \$file,
+		"file|f=s"   => \$file,
+		"complete|c" => \$Complete
 	);
 	$var{Identity} = $file;
 }
@@ -227,6 +229,24 @@ sub IdentityToCard {
 		if ($1 ne "") {
 			push(@result," 3DProfile = $1\n");
 		}
+		};
+
+		# which Vendor/Device ID's...
+		# ---------------------------
+		/.*§VID=(.*)§DID=(.*)§SERVER.*/ && do {
+			if (defined $Complete) {
+				push(@result," VendorID  = $1\n");
+				push(@result," DeviceID  = $2\n");
+			}
+		};
+
+		# which SUB Vendor/Device ID's...
+		# -------------------------------
+		/.*§SUBVENDOR=(.*)§SUBDEVICE=(.*)/  && do {
+			if (defined $Complete) {
+				push(@result," SVendorID = $1\n");
+				push(@result," SDeviceID = $2\n");
+			}
 		};
 		}
 		}
