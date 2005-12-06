@@ -141,11 +141,11 @@ sub checkout {
 	chdir $pacdir;
 	qx( mv sax/rpm/* . );
 	if (-f "/etc/SuSE-release") {
-		print "Using spec file for SuSE Linux";
-		qx( mv spec/sax2.spec . && rm -rf spec );
+		print "Using spec file for SuSE Linux\n";
+		qx( mv spec/sax2.spec ./sax2.spec && rm -rf spec );
 	} elsif (-f "/etc/redhat-release") {
-		print "Using spec file for Fedora Linux";
-		qx( mv spec/sax2.FC4.spec . && rm -rf spec );
+		print "Using spec file for Fedora Linux\n";
+		qx( mv spec/sax2.FC4.spec ./sax2.spec && rm -rf spec );
 	} else {
 		print "Warning: no spec file found for this system\n";
 	}

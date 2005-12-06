@@ -56,16 +56,6 @@ How to build and install SaX2
 
 3) Alternatively use rpmbuild
 
-	cd spec
-
-		---> choose the correct spec file according to your
-			 operating system:
-
-			 - sax2.FC4.spec -> Fedora Core 4
-			 - sax2.spec     -> SuSE Linux (latest version)
-
-	mv <one spec file> ../sax2.spec
-	cd .. && rm -rf spec
 	cp * /usr/src/packages/SOURCES
 	rpmbuild -ba sax2.spec
 
