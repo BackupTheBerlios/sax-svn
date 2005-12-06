@@ -24,6 +24,7 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
+#include <math.h>
 #include "import.h"
 #include "card.h"
 #include "path.h"
@@ -65,6 +66,7 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual bool enable3D  ( void ) = 0;
 	virtual bool disable3D ( void ) = 0;
 	virtual void setDisplaySize ( int,int ) = 0;
+	virtual void setDisplayRatioAndTraversal ( double ,int, int ) = 0;
 	virtual void setHsyncRange ( double,double ) = 0;
 	virtual void setVsyncRange ( double,double ) = 0;
 	virtual void enableDPMS  ( void ) = 0;
@@ -85,6 +87,8 @@ class SaXManipulateDesktopIF : public SaXException {
 	public:
 	virtual QList<QString> getResolutions ( int  ) = 0;
 	virtual QList<QString> getDisplaySize ( void ) = 0;
+	virtual QList<QString> getDisplayRatio( void ) = 0;
+	virtual QString getDisplayTraversal   ( void ) = 0;
 	virtual QList<QString> getHsyncRange  ( void ) = 0;
 	virtual QList<QString> getVsyncRange  ( void ) = 0;
 	virtual bool is3DEnabled    ( void ) = 0;
@@ -193,6 +197,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	bool enable3D  ( void );
 	bool disable3D ( void );
 	void setDisplaySize ( int,int );
+	void setDisplayRatioAndTraversal ( double ,int, int );
 	void setHsyncRange ( double,double );
 	void setVsyncRange ( double,double );
 	void enableDPMS  ( void );
@@ -211,6 +216,8 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	public:
 	QList<QString> getResolutions ( int  );
 	QList<QString> getDisplaySize ( void );
+	QList<QString> getDisplayRatio( void );
+	QString getDisplayTraversal   ( void );
 	QList<QString> getHsyncRange  ( void );
 	QList<QString> getVsyncRange  ( void );
 	bool is3DEnabled    ( void );

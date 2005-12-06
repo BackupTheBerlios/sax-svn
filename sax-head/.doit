@@ -140,6 +140,15 @@ sub checkout {
 	my $pacdir = svnup (@_);
 	chdir $pacdir;
 	qx( mv sax/rpm/* . );
+	if (-f "/etc/SuSE-release") {
+		print "Using spec file for SuSE Linux";
+		qx( mv spec/sax2.spec . && rm -rf spec );
+	} elsif (-f "/etc/redhat-release") {
+		print "Using spec file for Fedora Linux";
+		qx( mv spec/sax2.FC4.spec . && rm -rf spec );
+	} else {
+		print "Warning: no spec file found for this system\n";
+	}
 	if (defined $Build) {
 		qx( mv sax/.build . );
 	}

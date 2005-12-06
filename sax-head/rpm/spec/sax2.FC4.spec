@@ -8,7 +8,7 @@
 # Please submit bugfixes or comments via http://www.berlios.de/sax
 #
 
-# BuildRequires:
+BuildRequires: acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib diffutils e2fsprogs file filesystem findutils flex gawk gdbm-devel glibc glibc-devel grep groff gzip info less libacl libattr libgcc libselinux libstdc++ m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools openssl pam patch popt procps psmisc rcs readline sed strace tar texinfo unzip util-linux zlib zlib-devel autoconf automake binutils doxygen expat fontconfig fontconfig-devel freeglut gcc gcc-c++ gdbm gettext glib2 graphviz hal jpackage-utils libjpeg libjpeg-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl python python-devel rpm swig sysfsutils udev wireless-tools xorg-x11-devel xorg-x11-libs hal-devel
 
 #=================================================
 # Description sax2
@@ -16,7 +16,7 @@
 Name:         sax2
 Requires:     perl readline ncurses hal dbus
 Requires:     sax2-ident sax2-tools
-PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot
+PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
 Requires:     xorg-x11
 Summary:      SuSE advanced X Window System-configuration
 Version:      7.1
@@ -28,6 +28,7 @@ BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 ExcludeArch:  s390 s390x
 
 %define sub_package 0
+
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -239,10 +240,17 @@ Authors:
 %setup -n sax
 # %patch
 
+cat > filter_depends.sh <<EOF
+#!/bin/sh
+/usr/lib/rpm/find-requires.perl $* | grep -v 'perl(.*)'
+EOF
+chmod +x filter_depends.sh
+%define __find_requires %_builddir/%name-%version/filter_depends.sh
+
 %build
 test -e /.buildenv && . /.buildenv
 #=================================================
-# add SuSE version to sax.sh script...
+# add version to sax.sh script...
 #-------------------------------------------------
 cat ./startup/sax.sh | \
 	sed -e s@SuSE-Linux@"$BUILD_DISTRIBUTION_NAME"@ \

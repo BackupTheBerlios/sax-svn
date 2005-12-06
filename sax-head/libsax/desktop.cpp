@@ -778,6 +778,28 @@ void SaXManipulateDesktop::setDisplaySize (int width,int height) {
 }
 
 //====================================
+// setDisplayRatioAndTraversal
+//------------------------------------
+void SaXManipulateDesktop::setDisplayRatioAndTraversal (
+	double traversal,int aspect, int ratio
+) {
+	// .../
+	//! set the DisplaySize in [mm] for the traversal and ratio
+	//! of the currently selected display
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return;
+	}
+	traversal = traversal * 25.4;
+	double ar = (double)aspect / (double)ratio;
+	double y = sqrt ( (traversal * traversal) / (ar * ar + 1.0) );
+	double x = ar * y;
+	setDisplaySize (
+		(int)(round(x)),(int)(round(y))
+	);
+}
+
+//====================================
 // setHsyncRange
 //------------------------------------
 void SaXManipulateDesktop::setHsyncRange (double hsmin,double hsmax) {
@@ -954,6 +976,62 @@ QList<QString> SaXManipulateDesktop::getDisplaySize (void) {
 	result.append (
 		new QString(sizeList.last())
 	);
+	return result;
+}
+
+//====================================
+// getDisplayTraversal
+//------------------------------------
+QString SaXManipulateDesktop::getDisplayTraversal (void) {
+	// .../
+	//! get the traversal length according to the information
+	//! from the getDisplaySize() method
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return QString();
+	}
+	QList<QString> size = getDisplaySize();
+	if (size.isEmpty()) {
+		return QString();
+	}
+	int x = size.at(0)->toInt();
+	int y = size.at(1)->toInt();
+	double traversal = sqrt (x*x + y*y) / 25.4;
+	QString result;
+	QTextOStream (&result) << traversal;
+	return result;
+}
+
+//====================================
+// getDisplayRatio
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
+	// .../
+	//! get the aspect ratio x/y values according to the
+	//! information from the getDisplaySize() method
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return QList<QString>();
+	}
+	QString* setX = new QString ("5");
+	QString* setY = new QString ("4");
+	QList<QString> result;
+	QList<QString> size = getDisplaySize();
+	if (size.isEmpty()) {
+		return QList<QString>();
+	}
+	int x = size.at(0)->toInt();
+	int y = size.at(1)->toInt();
+	double ar = (double)x / (double)y;
+	if ( ar > 1.5 ) {
+		*setX = "16";
+		*setY = "10";
+	} else if ( ar >= 1.33 ) {
+		*setX = "4";
+		*setY = "3";
+	}
+	result.append (setX);
+	result.append (setY);
 	return result;
 }
 
