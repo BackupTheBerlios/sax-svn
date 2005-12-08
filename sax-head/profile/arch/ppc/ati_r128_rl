@@ -1,7 +1,0 @@
-Monitor->[X]->HorizSync       = 30-70
-Monitor->[X]->VertRefresh     = 50-125
-Desktop->[X]->CalcModelines   = no
-Desktop->[X]->Modelines       = Modeline "640x480" 55.00 640 672 732 864 480 488 494 530,Modeline "800x600" 64.06 800 840 968 1040 600 612 621 648 +HSync +VSync,Modeline "1024x768" 78.741 1024 1058 1154 1312 768 769 772 800 +HSync +VSync,
-Screen->[X]->Depth->15->Modes = 1024x768
-Device->[X]->Option           = usefbdev,hw_cursor,dpms
-
