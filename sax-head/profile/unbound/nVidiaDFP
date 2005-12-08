@@ -1,7 +1,0 @@
-# /.../
-# Enable the following Option(s) if you are using a
-# digital Flatpanel in combination with the nVidia
-# binary only driver
-# ------------------
-Device->[X]->Raw->0->Option  = "ConnectedMonitor" "DFP"
-Screen->[X]->Option          = "IgnoreEDID"
