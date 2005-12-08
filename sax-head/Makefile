@@ -176,7 +176,7 @@ install:install-docs
 	#============================================
 	# install core files...
 	#--------------------------------------------
-	for i in `find ./profile -type f`; do \
+	for i in `find ./profile -type f | grep -v TREE`; do \
 		echo $$i | grep -q .pl$			&& \
 		install -m 755 $$i ${PROFILE}	|| \
 		install -m 644 $$i ${PROFILE}	;\
