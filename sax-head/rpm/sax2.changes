@@ -2,6 +2,8 @@
 Thu Dec  8 13:00:09 CET 2005 - ms@suse.de
 
 - update Identity maps for all architectures (#127510)
+- include hwinfo changes to detect the correct input device
+  names. This was broken due to changes in sysfs (#134032)
 
 -------------------------------------------------------------------
 Wed Dec  7 12:43:41 CET 2005 - ms@suse.de
