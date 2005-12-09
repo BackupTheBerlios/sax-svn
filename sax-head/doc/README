@@ -4,7 +4,7 @@ SaX2 is a X11 configuration tool. It can be used as standalone
 application as well as it provides a developer library for
 your own X configuration program. When installed simply call
 
-	sax2
+    sax2
 
 What is libsax
 --------------
@@ -14,57 +14,66 @@ implement your own understanding of a X configuration program. The
 current GUI implementation of sax itself is a C++ written client.
 Further information how to use the library can be found here:
 
-	/usr/share/doc/packages/libsax/html/index.html
+    /usr/share/doc/packages/libsax/html/index.html
 
 Requirements for SaX2
 ---------------------
 SaX requires the following software to compile/work correctly
 
-	- XOrg           [ mandatory ]
-	- perl           [ mandatory ]
-	- netpbm         [ mandatory ]
-	- qt v3          [ mandatory ]
-	- fvwm2          [ mandatory ]
-	- readline       [ mandatory ]
-	- hal            [ mandatory ]
-	- dbus           [ mandatory ]
+    - XOrg           [ mandatory ]
+    - perl           [ mandatory ]
+    - netpbm         [ mandatory ]
+    - qt v3          [ mandatory ]
+    - fvwm2          [ mandatory ]
+    - readline       [ mandatory ]
+    - hal            [ mandatory ]
+    - dbus           [ mandatory ]
 
-	- 855resolution  [ optional  ]
-	- Java jre       [ optional  ]
-	- Mono           [ optional  ]
-	- python         [ optional  ]
+    - 855resolution  [ optional  ]
+    - Java jre       [ optional  ]
+    - Mono           [ optional  ]
+    - python         [ optional  ]
 
 
-How to build and install SaX2
------------------------------
-2) Prepare for build
+1) How to prepare building SaX2
+-------------------------------
+- Prepare for build directly from subversion
 
-	mkdir $HOME/sax && cd $HOME/sax
-	svn co https://svn.berlios.de/svnroot/repos/sax/sax-head .
-	./.doit -p --local
-	cd /tmp/svnsax.XXXXXX
+    mkdir $HOME/sax && cd $HOME/sax
+    svn co https://svn.berlios.de/svnroot/repos/sax/sax-head .
+    ./.doit -p --local
+    cd /tmp/svnsax.XXXXXX
 
-		---> XXXXXX must be replaced according to the .doit output
+        ---> XXXXXX must be replaced according to the .doit output
 
-3) Start manual compilation
+- Or use the tarball from ftp:
 
-	tar -xvf sax2.tar.bz2
-	cd sax && make && make install
+    mkdir /tmp/svnsax.XXXXXX
+    cd /tmp/svnsax.XXXXXX
+    wget ftp://ftp.berlios.de/pub/sax/sax2.tar.bz2 .
 
-		---> to install into an alternative root directory you
-			 can specify: make install buildroot=<root-path>
 
-3) Alternatively use rpmbuild
+2) How to build and install SaX2
+--------------------------------
+- Start manual compilation
 
-	cp * /usr/src/packages/SOURCES
-	rpmbuild -ba sax2.spec
+    tar -xvf sax2.tar.bz2
+    cd sax && make && make install
 
-		--> Find the RPM packages at: /usr/src/packages/RPMS/...
+        ---> to install into an alternative root directory you
+             can specify: make install buildroot=<root-path>
+
+- Alternatively use rpmbuild
+
+    cp * /usr/src/packages/SOURCES
+    rpmbuild -ba sax2.spec
+
+        ---> Find the RPM packages at: /usr/src/packages/RPMS/...
 
 Where to ask for help
 ---------------------
-	SaX-User  list <https://lists.berlios.de/mailman/listinfo/sax-users>
-	SaX-Devel list <https://lists.berlios.de/mailman/listinfo/sax-devel>
+    SaX-User  list <https://lists.berlios.de/mailman/listinfo/sax-users>
+    SaX-Devel list <https://lists.berlios.de/mailman/listinfo/sax-devel>
 
 --
 Remember to have fun :-)
