@@ -20,19 +20,23 @@ Requirements for SaX2
 ---------------------
 SaX requires the following software to compile/work correctly
 
-    - XOrg           [ mandatory ]
-    - perl           [ mandatory ]
-    - netpbm         [ mandatory ]
-    - qt v3          [ mandatory ]
-    - fvwm2          [ mandatory ]
-    - readline       [ mandatory ]
-    - hal            [ mandatory ]
-    - dbus           [ mandatory ]
+    - XOrg      +devel packages   [ mandatory ]
+    - ncurses   +devel packages   [ mandatory ]
+    - qt v3     +devel packages   [ mandatory ]
+    - readline  +devel packages   [ mandatory ]
+    - hal       +devel packages   [ mandatory ]
+    - dbus      +devel packages   [ mandatory ]
 
-    - 855resolution  [ optional  ]
-    - Java jre       [ optional  ]
-    - Mono           [ optional  ]
-    - python         [ optional  ]
+    - bison                       [ mandatory ]
+    - flex                        [ mandatory ]
+    - fvwm2                       [ mandatory ]
+    - netpbm                      [ mandatory ]
+    - perl                        [ mandatory ]
+
+    - 855resolution               [ optional  ]
+    - Java jre                    [ optional  ]
+    - Mono                        [ optional  ]
+    - python                      [ optional  ]
 
 
 1) How to prepare building SaX2
