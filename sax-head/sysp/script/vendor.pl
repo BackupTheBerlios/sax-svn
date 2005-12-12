@@ -21,6 +21,11 @@ sub vendorName {
 # return <none>
 #
 	my $driver = $_[0];
+	# FIXME
+	# workaround for Bug: #137374, to be removed ASAP
+	if ($driver eq "nvidia") {
+		return "NVIDIA Corporation";
+	}
 	my $xsload = "/usr/X11R6/bin/xsload";
 	if (! -f $xsload) {
 		return ("<none>");
