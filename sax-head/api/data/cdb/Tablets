@@ -36,7 +36,6 @@ WACOM:GRAPHIRE / INTUOS (SERIAL) {
  SendCoreEvents   = on
  StylusLink       = GRAPHIRE / INTUOS Stylus (SERIAL)
  EraserLink       = GRAPHIRE / INTUOS Eraser (SERIAL)
- RawOption        = "BottomX" "30000"
 }
 
 #--------------------------#
@@ -52,7 +51,6 @@ WACOM:GRAPHIRE / INTUOS (USB) {
  KernelLoad       = wacom
  StylusLink       = GRAPHIRE / INTUOS Stylus (USB)
  EraserLink       = GRAPHIRE / INTUOS Eraser (USB)
- RawOption        = "BottomX" "30000","BottomY" "24000"
 }
 
 #--------------------------#

@@ -40,7 +40,6 @@ WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = eraser
- RawOption           = "BottomX" "30000"
 }
 
 #-----------------------#
@@ -52,7 +51,6 @@ WACOM:GRAPHIRE / INTUOS Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "BottomX" "30000"
 }
 
 #-----------------------#
@@ -67,7 +65,6 @@ WACOM:GRAPHIRE / INTUOS Eraser (USB) {
  Option              = USB,Tilt
  SendCoreEvents      = on
  ButtonThreshold     = 5
- RawOption           = "BottomX" "30000","BottomY" "24000"
 }
 
 #-----------------------#
@@ -82,7 +79,6 @@ WACOM:GRAPHIRE / INTUOS Stylus (USB) {
  Option              = USB,Tilt
  ButtonThreshold     = 5
  SendCoreEvents      = on
- RawOption           = "BottomX" "30000","BottomY" "24000"
 }
 
 #-----------------------#
