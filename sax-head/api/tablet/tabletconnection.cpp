@@ -115,6 +115,12 @@ QString SCCTabletConnection::getPortName ( void ) {
 	return mPortBox->currentText();
 }
 //====================================
+// isAutoPort
+//------------------------------------
+bool SCCTabletConnection::isAutoPort ( void ) {
+	return ! mPortGroup->isEnabled();
+}
+//====================================
 // getTabletMode
 //------------------------------------
 int SCCTabletConnection::getTabletMode ( void ) {
@@ -171,7 +177,7 @@ void SCCTabletConnection::setPort ( const QString& device ) {
 //====================================
 // setOptions
 //------------------------------------
-void SCCTabletConnection::setOptions ( QDict<QString> options ) {
+void SCCTabletConnection::setOptions ( const QDict<QString>& options ) {
 	if (! mOptionDict.isEmpty()) {
 		mOptionList->clear();
 		QDictIterator<QString> it (mOptionDict);
@@ -303,6 +309,10 @@ void SCCTabletConnection::slotTablet (
 	//------------------------------------
 	if (tabletDict["Device"]) {
 		QString device = *tabletDict["Device"];
+		mPortGroup -> setDisabled ( false );
+		if (device == "AUTO") {
+			mPortGroup -> setDisabled ( true );
+		}
 		QRegExp identifier ("/dev/input/event");
 		if (identifier.search (device) >= 0) {
 			mPortBox -> setCurrentItem ( 0 );

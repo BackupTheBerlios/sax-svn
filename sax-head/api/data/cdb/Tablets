@@ -117,3 +117,13 @@ NUMONICS:GRIDMASTER {
  BaudRate            = 19200
  RawOption           = "Cursor" "Stylus"
 }
+
+#--------------------------#
+# ACECAD Tablet            #
+#--------------------------#
+ACECAD:ACECAT FLAIR {
+  Driver             = acecad
+  Device             = AUTO
+  TabletMode         = Absolute
+  RawOption          = "Model" "Flair","ReportSpeed" "85"
+}

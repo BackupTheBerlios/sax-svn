@@ -70,13 +70,14 @@ class SCCTabletConnection : public SCCDialog {
 
 	public:
 	QString getPortName ( void );
+	bool isAutoPort     ( void );
 	int getTabletMode   ( void );
 	QDict<QString> getOptions ( void );
 
 	public:
 	void setMode ( const QString& );
 	void setPort ( const QString& );
-	void setOptions ( QDict<QString> );
+	void setOptions ( const QDict<QString>& );
 
 	public:
 	void init   ( void );

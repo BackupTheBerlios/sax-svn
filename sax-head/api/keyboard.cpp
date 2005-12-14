@@ -56,7 +56,7 @@ SCCKeyboard::SCCKeyboard (
 	mKeyboardTab -> addTab (
 		mKeyboardLayout , mText["XKBLayout"] 
 	);
-	#if 0
+	#if 1
 	mKeyboardTab -> addTab (
 		mKeyboardOptions, mText["XKBOptions"]
 	);

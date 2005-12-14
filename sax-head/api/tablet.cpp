@@ -210,23 +210,25 @@ bool SCCTablet::exportData ( void ) {
 			//====================================
 			// save tablet connection port
 			//------------------------------------
-			QString port = mTabletConnection->getPortName();
-			if (port.contains ("ttyS0")) {
-				saxTablet.setDevice ( "/dev/ttyS0" );
-			}
-			if (port.contains ("ttyS1")) {
-				saxTablet.setDevice ( "/dev/ttyS1" );
-			}
-			if (port.contains ("USB")) {
-				QProcess* proc = new QProcess ();
-				proc -> addArgument ( USB_PORT );
-				if (proc -> start()) {
-					while (proc->isRunning()) {
-						usleep (1000);
+			if (! mTabletConnection->isAutoPort()) {
+				QString port = mTabletConnection->getPortName();
+				if (port.contains ("ttyS0")) {
+					saxTablet.setDevice ( "/dev/ttyS0" );
+				}
+				if (port.contains ("ttyS1")) {
+					saxTablet.setDevice ( "/dev/ttyS1" );
+				}
+				if (port.contains ("USB")) {
+					QProcess* proc = new QProcess ();
+					proc -> addArgument ( USB_PORT );
+					if (proc -> start()) {
+						while (proc->isRunning()) {
+							usleep (1000);
+						}
+						QByteArray data = proc->readStdout();
+						QStringList lines = QStringList::split ("\n",data);
+						saxTablet.setDevice ( lines.first() );
 					}
-					QByteArray data = proc->readStdout();
-					QStringList lines = QStringList::split ("\n",data);
-					saxTablet.setDevice ( lines.first() );
 				}
 			}
 			//====================================
