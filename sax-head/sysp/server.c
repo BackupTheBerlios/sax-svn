@@ -471,16 +471,22 @@ void ScanServer::Scan(void) {
 	int card  = 0;
 	int dom   = 0;
 	for (int i=0;i<n;i++) {
+		if (graphics[i].bus == -1) {
+			continue;
+		} 
 		equals[group] = graphics[i];
 		bus  = graphics[i].bus;
 		slot = graphics[i].slot;
 		dom  = graphics[i].domain;
 
 		for(int k=0;k<n;k++) {
-		if ((k != i) && (graphics[k].bus==bus) && (graphics[k].slot==slot) && (graphics[k].domain==dom)) {
+		if ((k != i) &&
+			(graphics[k].bus==bus) && (graphics[k].slot==slot) &&
+			(graphics[k].domain==dom)
+		) {
 			group++;
 			equals[group] = graphics[k];
-			graphics.erase(k); n--;
+			graphics[k].bus = -1;
 		}
 		} 
 		if (group == 0) {
@@ -488,7 +494,6 @@ void ScanServer::Scan(void) {
 			// no multiple devices found...
 			// -----------------------------
 			save[card] = graphics[i]; card++;
-			graphics.erase(i);
 		} else {
 			// ...
 			// multiple device found:
