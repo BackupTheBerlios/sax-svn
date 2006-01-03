@@ -91,7 +91,7 @@ STATUS        : Status: Development
 *     if ($mDesktop->selectDesktop (0)) {
 *         $mDesktop->setColorDepth (24);
 *     }
-*     $config->setMode (SaX::SAX_MERGE);
+*     $config->setMode ($SaX::SAX_MERGE);
 *     $config->createConfiguration();
 * }
 *
