@@ -333,8 +333,14 @@ void SaXConfig::commitConfiguration (void) {
 	//------------------------------------
 	unlink  ("/usr/X11R6/bin/X");
 	unlink  ("/var/X11R6/bin/X");
-	symlink ("/var/X11R6/bin/X","/usr/X11R6/bin/X");
-	symlink (SAX_X11_LOADER    ,"/var/X11R6/bin/X");
+	if ((symlink ("/var/X11R6/bin/X","/usr/X11R6/bin/X")) != 0) {
+		excFileOpenFailed ( errno );
+		qError (errorString(),EXC_FILEOPENFAILED);
+	}
+	if ((symlink (SAX_X11_LOADER    ,"/var/X11R6/bin/X")) != 0) {
+		excFileOpenFailed ( errno );
+		qError (errorString(),EXC_FILEOPENFAILED);
+	}
 }
 
 //====================================

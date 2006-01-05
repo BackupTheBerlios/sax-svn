@@ -15,7 +15,7 @@ BuildRequires: acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib 
 # Description sax2
 #-------------------------------------------------
 Name:         sax2
-Requires:     perl readline ncurses hal dbus
+Requires:     perl readline ncurses hal dbus binutils
 Requires:     sax2-ident sax2-tools
 PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
 Requires:     xorg-x11

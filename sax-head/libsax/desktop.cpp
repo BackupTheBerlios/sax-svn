@@ -509,21 +509,9 @@ bool SaXManipulateDesktop::enable3D (void) {
 		// nvidia drv. needed, check if installed
 		//----------------------------------------
 		if ((driver3D) && (*driver3D == "nvidia")) {
-			SaXProcessCall* proc = new SaXProcessCall ();
-			proc -> addArgument ( XSLOAD );
-			proc -> addArgument ( "-vendor" );
-			if ( ! proc -> start() ) {
-				excProcessFailed();
-				qError (errorString(),EXC_PROCESSFAILED);
-			}
 			bool foundBinaryNVidiaDriver = false;
-			QList<QString> data = proc->readStdout();
-			QListIterator<QString> in (data);
-			for (; in.current(); ++in) {
-				QString line (*in.current());
-				if (line = "nvidia:NVIDIA Corporation") {
-					foundBinaryNVidiaDriver = true;
-				} 
+			if ((getVendorForDriver(*driver3D)) == "NVIDIA Corporation") {
+				foundBinaryNVidiaDriver = true;
 			}
 			if (! foundBinaryNVidiaDriver) {
 				excNvidiaDriverMissing();
@@ -673,22 +661,10 @@ bool SaXManipulateDesktop::disable3D (void) {
 		// nvidia drv. needed, check if installed
 		//----------------------------------------
 		if ((driver3D) && (*driver3D == "nvidia")) {
-			SaXProcessCall* proc = new SaXProcessCall ();
-			proc -> addArgument ( XSLOAD );
-			proc -> addArgument ( "-vendor" );
-			if ( ! proc -> start() ) {
-				excProcessFailed();
-				qError (errorString(),EXC_PROCESSFAILED);
-			}
-			QList<QString> data = proc->readStdout();
-			QListIterator<QString> in (data);
-			for (; in.current(); ++in) {
-				QString line (*in.current());
-				if (line = "nvidia:NVIDIA Corporation") {
-					excNvidiaDriverInstalled();
-					qError (errorString(),EXC_NVIDIADRIVERINSTALLED);
-					return false;
-				}
+			if ((getVendorForDriver(*driver3D)) == "NVIDIA Corporation") {
+				excNvidiaDriverInstalled();
+				qError (errorString(),EXC_NVIDIADRIVERINSTALLED);
+				return false;
 			}
 		}
 		//========================================

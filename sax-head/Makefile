@@ -258,11 +258,6 @@ install:install-docs
 	( rm -f ${SBINVZ}/sax2 && cd ${SBINVZ} && ln -s SaX2 sax2 )
 	( rm -f ${X11BINDIR}/sax2 && cd ${X11BINDIR} && ln -s /usr/sbin/SaX2 sax2 )
 
-	#============================================
-	# create options file using xsload
-	#--------------------------------------------
-	./.xsload ${buildroot}
-
 	#=============================================
 	# install desktop icon...
 	#---------------------------------------------

@@ -34,7 +34,6 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define XSLOAD            "/usr/X11R6/bin/xsload"
 #define XMODE             "/usr/sbin/xmode"
 #define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
 #define PROFILE_DIR       "/usr/share/sax/profile/"

@@ -140,7 +140,7 @@ int main(int argc,char *argv[]) {
 			strcpy(themodule,optarg);       // ScanModule call
 		break;
 
-		case 'f':                           // Do not call xsload in 3D
+		case 'f':                           // Do not call vendor.pl in 3D
 			checkFlag = 0;                  // scanning
 		break;
 

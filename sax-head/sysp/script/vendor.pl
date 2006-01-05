@@ -16,48 +16,25 @@ use Env;
 #---[ vendorName ]----#
 sub vendorName {
 #-----------------------------------------------
-# call xsload and filter the given driver name
-# if it exist return the vendor string otherwhise
-# return <none>
+# call strings and filter the given object data
+# to check for one of the vendor names listed
+# in @vendor
 #
 	my $driver = $_[0];
-	# FIXME
-	# workaround for Bug: #137374, to be removed ASAP
-	if ($driver eq "nvidia") {
-		return "NVIDIA Corporation";
+	my @vendor = (
+		"X.Org Foundation",
+		"The XFree86 Project",
+		"NVIDIA Corporation",
+		"FireGL - ATI Technologies Inc."
+	);
+	my $drvfile = "/usr/X11R6/lib/modules/drivers/".$driver."_drv.*";
+	my $objdump = qx (/usr/bin/strings $drvfile 2>/dev/null);
+	foreach my $vname (@vendor) {
+	if ($objdump =~ /$vname/) {
+		return $vname;
 	}
-	my $xsload = "/usr/X11R6/bin/xsload";
-	if (! -f $xsload) {
-		return ("<none>");
 	}
-	my $data = qx ($xsload -vendor);
-	my @list = split(/\n/,$data);
-	foreach my $line (@list) {
-	if ($line =~ /(.*):(.*)/) {
-		if ($driver eq $1) {
-			return $2;
-		}
-	}	
-	}
-	if ($driver =~ /^nv/) {
-		if (installed ("XFree86")) {
-			return ("The XFree86 Project");
-		} else {
-			return ("X.Org Foundation");
-		}
-	} else {
-		return ("<none>");
-	}
-}
-
-sub installed {
-	my $pac = $_[0];
-	qx (rpm -q $pac);
-	my $code = $? >> 8;
-	if ($code >= 1) {
-		return undef;
-	}
-	return 1;
+	return ("<none>");
 }
 
 my $vendor = vendorName ( $ARGV[0] );

@@ -40,7 +40,7 @@ Scan3D::Scan3D (int ask,int xavailable,str cardnr,str copt) {
 }
 
 //===========================================
-// Scan3D: set flag to call xsload or not
+// Scan3D: set flag to call vendor.pl or not
 //-------------------------------------------
 void Scan3D::SetCheck (int status) {
 	checkflag = status;
@@ -153,7 +153,7 @@ void Scan3D::Scan (void) {
 		}
 	}
 	// ...
-	// call xsload to check if the driver used is not an
+	// call vendor.pl to check if the driver used is not an
 	// X11 driver and set special flags according to
 	// this driver:
 	// ---
