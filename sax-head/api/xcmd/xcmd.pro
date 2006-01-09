@@ -13,5 +13,5 @@ CONFIG    += qt warn_on release
 TARGET    = xcmd
 
 QMAKE_CXXFLAGS = -fno-strict-aliasing
-unix:INCLUDEPATH += -I /usr/X11R6/include
+unix:INCLUDEPATH += /usr/X11R6/include
 unix:LIBS += -L/usr/X11R6/lib -L../../libsax -lsax

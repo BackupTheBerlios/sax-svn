@@ -91,7 +91,8 @@ all:
 	# building libsax and bindings...
 	#--------------------------------------------
 	( test -f /usr/lib/graphviz/libgvplugin_dot_layout.so && dot -c || true )
-	( cd libsax && doxygen sax.dox && ./.make )
+	( cd libsax && doxygen sax.dox )
+	( cd libsax && ./.make )
 	${MAKE} -C ./libsax all
 	( cd libsax && \
 	for i in `ls -1 ./bindings`; do \

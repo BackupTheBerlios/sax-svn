@@ -2,7 +2,7 @@
 
 int main (void) {
 	SaXImportProfile* pProfile = new SaXImportProfile (
-		"/usr/X11R6/lib/sax/profile/firegl"
+		"/usr/share/sax/profile/FireGL"
 	);
 	pProfile -> doImport();
 	SaXImport* mImport = pProfile -> getImport();
