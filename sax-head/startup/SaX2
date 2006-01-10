@@ -58,6 +58,10 @@ for param;do
 		/usr/sbin/sax.sh -h
 		exit 0
 	fi
+	if [ $param = "-H" ] || [ $param = "--cmdhelp" ];then
+		/usr/sbin/sax.sh --cmdhelp
+		exit 0
+	fi
 done
 validRunlevel
 

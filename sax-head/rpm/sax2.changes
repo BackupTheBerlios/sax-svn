@@ -4,6 +4,7 @@ Mon Jan  9 12:36:09 CET 2006 - ms@suse.de
 - added DELL monitors to the database (#141720,#141721)
 - exchanged /usr/X11R6/include with /usr/include/X11 where possible.
   First step to be prepared for xorg7 (X11R7)
+- allow commandline help to be showed without root privileges
 - removed post-arch fixes from qmake generated Makefile. qmake
   handles it correctly now
 
