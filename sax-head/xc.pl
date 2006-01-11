@@ -169,6 +169,7 @@ sub main {
 	#------------------------------------------
 	Logger ("Startup...",$logHandle);
 	if ($haveServer) {
+		print "SaX: X-Server: $displayStatus[0] -> $displayStatus[1]\n";
 		Logger ("Startup on already running Server:
 			$displayStatus[0] -> $displayStatus[1]",
 			$logHandle

@@ -1,5 +1,5 @@
 /**************
-FILE          : vncpasswd.c
+FILE          : vncp.c
 ***************
 PROJECT       : SaX2 - SuSE advanced X configuration
               :
@@ -14,7 +14,7 @@ DESCRIPTION   : Program to create a password string used for
               :
 STATUS        : Status: Development
 **************/
-#include "vncpasswd.h"
+#include "vncp.h"
 
 //=====================================
 // Main

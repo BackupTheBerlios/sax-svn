@@ -1,4 +1,4 @@
 SUBDIRS = \
-	corner dots vncpasswd whereiam xidle \
+	corner dots vncp whereiam xidle \
 	xlook xmode xquery xtest xwrapper \
 	isax xkbctrl plog

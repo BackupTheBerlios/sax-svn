@@ -1,5 +1,5 @@
 /**************
-FILE          : vncpasswd.h
+FILE          : vncp.h
 ***************
 PROJECT       : SaX2 - SuSE advanced X configuration
               :

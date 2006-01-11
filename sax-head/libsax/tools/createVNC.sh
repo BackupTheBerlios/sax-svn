@@ -2,7 +2,7 @@
 # Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Marcus Schaefer <sax@suse.de>, 2005
-# libsax script: create VNC password using the vncpasswd program
+# libsax script: create VNC password using the vncp program
 # --
 #
 # CVS ID:
@@ -15,4 +15,4 @@ VNCDIR="/root/.vnc"
 if [ ! -d $VNCDIR ];then
     mkdir -p $VNCDIR && chmod 700 $VNCDIR
 fi
-echo $1 | /usr/sbin/vncpasswd > $VNCDIR/passwd
+echo $1 | /usr/sbin/vncp > $VNCDIR/passwd

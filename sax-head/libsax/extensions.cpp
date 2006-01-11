@@ -113,7 +113,7 @@ void SaXManipulateVNC::setPassword (const QString& pwd) {
 	//! restricted access can be set up by creating a
 	//! password file. This file is set within the rfbauth
 	//! option. This method is used to create the password
-	//! file by using the vncpasswd program
+	//! file by using the vncp program
 	// ----
 	if (! setLock()) {
 		return;

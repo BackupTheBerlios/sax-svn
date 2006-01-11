@@ -408,7 +408,7 @@ fi
 /usr/sbin/xlook
 /usr/sbin/xmode
 /usr/sbin/xquery
-/usr/sbin/vncpasswd
+/usr/sbin/vncp
 /usr/sbin/xw
 #=================================================
 # SaX-Ident file list...  
