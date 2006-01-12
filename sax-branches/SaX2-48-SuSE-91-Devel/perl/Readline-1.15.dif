@@ -1,0 +1,143 @@
+--- ./Gnu.xs.orig	2004-10-17 17:37:53.000000000 +0000
++++ ./Gnu.xs	2005-11-28 17:11:23.000000000 +0000
+@@ -201,18 +201,13 @@ extern int tputs PARAMS((const char *, i
+ extern char *xfree PARAMS((char *));
+ 
+ #else /* not OS2_USEDLL */
+-static void
+-xfree (string)
+-     char *string;
+-{
+-  if (string)
+-    free (string);
++static void xfree (char* string) {
++  if (string) free (string);
+ }
+ #endif /* not OS2_USEDLL */
+ 
+ static char *
+-dupstr(s)			/* duplicate string */
+-     char *s;
++dupstr(char* s)			/* duplicate string */
+ {
+   /*
+    * Use xmalloc(), because allocated block will be freed in the GNU
+@@ -859,7 +854,7 @@ attempted_completion_function_wrapper(te
+       matches[0] = matches[1];
+       matches[1] = NULL;
+     } else if (count == 1 && !matches[0]) { /* in case of a list of undef */
+-      xfree(matches);
++      xfree((char*)matches);
+       matches = NULL;
+     }
+   } else {
+@@ -1310,7 +1305,7 @@ rl_add_defun(name, fn, key = -1)
+ 	  fntbl[i].pfn = newSVsv(fn);
+ 	  
+ 	  /* rl_add_defun() always returns 0. */
+-	  rl_add_defun(dupstr(name), fntbl[i].wrapper, key);
++	  rl_add_defun(dupstr((char*)name), fntbl[i].wrapper, key);
+ 	  RETVAL = fntbl[i].wrapper;
+ 	}
+     OUTPUT:
+@@ -1509,7 +1504,7 @@ _rl_generic_bind_macro(keyseq, macro, ma
+ 	Keymap map
+     PROTOTYPE: $$;$
+     CODE:
+-	RETVAL = rl_generic_bind(ISMACR, keyseq, dupstr(macro), map);
++	RETVAL = rl_generic_bind(ISMACR, keyseq, dupstr((char*)macro), map);
+     OUTPUT:
+ 	RETVAL
+ 
+@@ -1824,7 +1819,7 @@ rl_push_macro_input(macro)
+ 	const char *	macro
+     PROTOTYPE: $
+     CODE:
+-	rl_push_macro_input(dupstr(macro));
++	rl_push_macro_input(dupstr((char*)macro));
+ 
+  #
+  #	2.4.8 Character Input
+@@ -1974,7 +1969,7 @@ rl_display_match_list(pmatches, plen = -
+ 
+ 	  for (i = 1; i <= len; i++)
+ 	    xfree(matches[i]);
+-	  xfree(matches);
++	  xfree((char*)matches);
+ 	}
+ 
+ #endif /* (RL_VERSION_MAJOR >= 4) */
+--- ./Gnu/XS.pm.orig	2004-10-17 17:03:20.000000000 +0000
++++ ./Gnu/XS.pm	2005-11-28 17:11:23.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	XS.pm : perl function definition for Term::ReadLine::Gnu
+ #
+--- ./Gnu/euc_jp.pm.orig	2001-04-22 13:35:41.000000000 +0000
++++ ./Gnu/euc_jp.pm	2005-11-28 17:11:23.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	euc_jp.pm : EUC Japanese Character Support Functions
+ #		This modules is experimental.  API may be changed.
+--- ./eg/fileman.orig	1998-02-28 10:01:34.000000000 +0000
++++ ./eg/fileman	2005-11-28 17:11:23.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ # $Id: fileman,v 1.1 1998-02-28 19:01:24+09 hayashi Exp $
+ #
+--- ./eg/perlsh.orig	2002-06-14 05:41:13.000000000 +0000
++++ ./eg/perlsh	2005-11-28 17:11:23.000000000 +0000
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	$Id: perlsh,v 1.24 2001-10-27 22:59:15-05 hayashi Exp $	
+ #
+--- ./eg/pftp.orig	1999-03-19 17:46:02.000000000 +0000
++++ ./eg/pftp	2005-11-28 17:11:23.000000000 +0000
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	$Id: pftp,v 1.9 1999-03-20 02:46:02+09 hayashi Exp $
+ #
+--- ./eg/ptksh+.orig	1999-03-14 16:43:20.000000000 +0000
++++ ./eg/ptksh+	2005-11-28 17:11:23.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ #
+ # $Id: ptksh+,v 1.5 1997/04/01 17:15:34 ach Exp ach $
+ #
+--- ./ppport.h.orig	1999-03-27 01:18:14.000000000 +0000
++++ ./ppport.h	2005-11-28 17:11:23.000000000 +0000
+@@ -40,7 +40,7 @@
+    special defines should be used, ppport.h can be run through Perl to check
+    your source code. Simply say:
+    
+-   	perl -x ppport.h *.c *.h *.xs foo/*.c [etc]
++   	perl -x ppport.h *.c *.h *.xs foo/foo.c [etc]
+    
+    The result will be a list of patches suggesting changes that should at
+    least be acceptable, if not necessarily the most efficient solution, or a
+--- ./typemap.orig	2004-10-17 16:44:57.000000000 +0000
++++ ./typemap	2005-11-28 17:17:35.000000000 +0000
+@@ -21,7 +21,11 @@ OUTPUT
+ T_STDIO
+ 	{
+ 	    GV *gv = newGVgen("$Package");
+-	    PerlIO *fp = PerlIO_importFILE($var,0);
++	    PerlIO *fp = PerlIO_fdopen(fileno($var), "r+");
++	    if (!fp)
++		fp = PerlIO_fdopen(fileno($var), "w");
++	    if (!fp)
++		fp = PerlIO_fdopen(fileno($var), "r");
+ 	    if ( fp && do_open(gv, "+<&", 3, FALSE, 0, 0, fp) )
+ 		sv_setsv($arg, sv_bless(newRV((SV*)gv), gv_stashpv("$Package",1)));
+ 	    else
