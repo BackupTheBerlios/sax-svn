@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Jan 12 13:07:42 CET 2006 - ms@suse.de
+
+- changed sysp mouse detection to know about the real device (#142657)
+- changed sysp keyboard detection to detect all keyboards (#142657)
+- enable calculation of modelines for the nv driver
+- fixed MetaModes setup for laptop users
+
+-------------------------------------------------------------------
 Mon Jan  9 12:36:09 CET 2006 - ms@suse.de
 
 - removed runlevel check on startup (#135605)

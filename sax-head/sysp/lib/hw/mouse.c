@@ -49,6 +49,7 @@ MouseData* MouseGetData(void) {
 		strcpy(data->vid,buf);
 		strcpy(data->name,hd->model);
 		strcpy(data->device,"/dev/mouse");
+		strcpy(data->realdev,"null");
 		strcpy(data->protocol,"Auto");
 		data->buttons = -1;
 		data->wheel   = 1;
@@ -90,6 +91,14 @@ MouseData* MouseGetData(void) {
 		}
 		if (hd->unix_dev_name) {
 			strcpy(data->device,hd->unix_dev_name);
+		}
+		if (hd->unix_dev_names && hd->unix_dev_names->next) {
+			str_list_t* str = hd->unix_dev_names;
+			for (; str; str = str->next) {
+			if (strstr (str->str,"event")) {
+				strcpy(data->realdev,str->str);
+			}
+			}
 		}
 		last = data;
 	}

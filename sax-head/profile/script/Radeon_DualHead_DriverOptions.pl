@@ -39,7 +39,7 @@ if (glob("/usr/X11R6/lib/modules/drivers/fglrx_drv*")) {
 		print FD "$dx->Raw->21->Option=\"CRT2HSync\" \"31-48\"\n";
 		print FD "$dx->Raw->22->Option=\"CRT2VRefresh\" \"50-60\"\n";
 		print FD "$dx->Raw->23->Option=\"IgnoreEDID\" \"yes\"\n";
-		print FD "$dx->Raw->24->Option=\"MetaModes\" \"\${Modes[0]}-1024x768\"\n";
+		print FD "$dx->Raw->24->Option=\"MetaModes\" \"\${Modes[0]},1024x768;1024x768,1024x768\"\n";
 		print FD "$dx->Raw->25->Option=\"CRT2Position\" \"Clone\"\n";
 		print FD "$dx->Option=SaXDualHead\n";
 		print FD "$dx->Raw->26->Option=\"SaXDualOrientation\" \"LeftOf\"\n";

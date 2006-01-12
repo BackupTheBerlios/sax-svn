@@ -37,15 +37,27 @@ using namespace std;
 //-------------------------------------
 class ScanKeyboard {
 	protected:
-	Keymap kp;
+	map<int,Keymap> qK;
 	string file;
-	string kmap;
+	int elements;
+	int current;
  
 	public:
 	void SetFile (str name);
+	void Push (Keymap e);
+	void Reset (void);
 	void Scan (void);
+	Keymap Pop (void);
+	int  Count () { return elements; }
 	int  Save (void);
 	int  Read (void);
-	ScanKeyboard (str keymap);
-	Keymap Pop (void);
+	ScanKeyboard (void);
+
+	public:
+	class ReadLastElement : public::exception {
+		public:
+		virtual const char* what() const throw() {
+			return "read last element...";
+		}
+	};
 };

@@ -39,6 +39,8 @@ KbdData* KeyboardGetData(void) {
 		strcpy(data->rules,"undef");
 		strcpy(data->model,"undef");
 		strcpy(data->layout,"undef");
+		strcpy(data->name,"undef");
+		strcpy(data->device,"undef");
 		data->next = NULL;
 
 		if (last != NULL) {
@@ -60,6 +62,12 @@ KbdData* KeyboardGetData(void) {
 		}
 		if (di->kbd.XkbLayout) {
 			strcpy(data->layout,di->kbd.XkbLayout);
+		}
+		if (hd->unix_dev_name) {
+			strcpy(data->device,hd->unix_dev_name);
+		}
+		if (hd->model) {
+			strcpy(data->name,hd->model);
 		}
 		}
 		last = data;

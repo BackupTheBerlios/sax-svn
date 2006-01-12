@@ -100,6 +100,7 @@ typedef struct MouseData_t {
  str did;
  str vid;
  str profile;
+ str realdev;
  int emulate;
  int wheel;
  int buttons;
@@ -110,6 +111,8 @@ typedef struct KbdData_t {
  str rules;
  str model;
  str layout;
+ str name;
+ str device;
  struct KbdData_t* next;
 } KbdData;
 

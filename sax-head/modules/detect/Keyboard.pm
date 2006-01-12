@@ -7,8 +7,8 @@ sub AutoDetectKeyboard {
 #
 	my (%spec) = %{$_[0]}; # specs
 	my (%var)  = %{$_[1]}; # config hash
+	my $kbd = 0;           # number of keyboard
 	my %query;             # the query string
-	my $kbd;               # number of keyboards
 	my $i;
 	my $value;
 
@@ -17,8 +17,6 @@ sub AutoDetectKeyboard {
 		return(-1);
 	}
 
-	foreach $kbd (sort numbers keys %query) {
-	if ($kbd ne "") {
 	foreach $i (sort keys %{$query{$kbd}}) {
 		$value = $query{$kbd}{$i};
 		$value =~ s/^ +//g;
@@ -59,8 +57,6 @@ sub AutoDetectKeyboard {
 		if ($i =~ /RightCtl/)    {
 			$var{InputDevice}{0}{Option}{RightCtl}    = $value;
 		}
-	}
-	}
 	}
 	return(%var);
 }

@@ -252,7 +252,7 @@ void ScanModule(str name) {
 	// Keyboard scan
 	// ---
 	if (module == "keyboard") {
-		ScanKeyboard key(KBD_MAP);
+		ScanKeyboard key;
 		key.SetFile(KEYBOARD_DATA);
 		key.Scan(); PrintKeyboardData(key);
 		if (! InfoOnly) {
@@ -340,7 +340,7 @@ void QueryModule(str name) {
 	// Keyboard query
 	// ---
 	if (module == "keyboard") {
-		ScanKeyboard key(KBD_MAP);
+		ScanKeyboard key;
 		key.SetFile(KEYBOARD_DATA);
 		if (key.Read() == 0) {
 			PrintKeyboardData(key); exit(0);
@@ -567,8 +567,10 @@ void PrintMouseData(ScanMouse m) {
 		) {
 			haveStandardMouse = true;
 		}
+		bool deviceIsANutShell = false;
 		if (devices[i] != 1) {
-			continue;
+			deviceIsANutShell = true;
+			//continue;
 		}
 		if (mouse > 0) {
 			printf("\n");
@@ -582,6 +584,12 @@ void PrintMouseData(ScanMouse m) {
 		printf("Mouse%d    =>  VendorID   : %s\n",mouse,data.vid);
 		printf("Mouse%d    =>  DeviceID   : %s\n",mouse,data.did);
 		printf("Mouse%d    =>  Profile    : %s\n",mouse,data.profile);
+		printf("Mouse%d    =>  RealDevice : %s\n",mouse,data.realdev);
+		if (deviceIsANutShell) {
+			printf("Mouse%d    =>  NutShell   : 1\n",mouse);
+		} else {
+			printf("Mouse%d    =>  NutShell   : 0\n",mouse);
+		}
 		mouse++;
 	}
 	if (! haveStandardMouse) {
@@ -596,6 +604,8 @@ void PrintMouseData(ScanMouse m) {
 		printf("Mouse%d    =>  VendorID   : 0x0210\n",m);
 		printf("Mouse%d    =>  DeviceID   : 0x0013\n",m);
 		printf("Mouse%d    =>  Profile    : <undefined>\n",m);
+		printf("Mouse%d    =>  RealDevice : <undefined>\n",m);
+		printf("Mouse%d    =>  NutShell   : 0\n",m);
 	}
 	fflush(stdout);
 }
@@ -605,30 +615,39 @@ void PrintMouseData(ScanMouse m) {
 //--------------------------------------------
 void PrintKeyboardData(ScanKeyboard k) {
 	Keymap data;
- 
-	data = k.Pop();
-	printf("Keyboard0 =>  XkbModel   : %s\n",data.model.c_str());
-	printf("Keyboard0 =>  XkbLayout  : %s\n",data.layout.c_str());
-	if (data.variant != "x") {
-		printf("Keyboard0 =>  XkbVariant : %s\n",data.variant.c_str());
-	}
-	if (data.options != "x") {
-	printf("Keyboard0 =>  XkbOptions : %s\n",data.options.c_str());
-	}
-	if (data.keycodes != "xfree86") {
-	printf("Keyboard0 =>  XkbKeyCodes: %s\n",data.keycodes.c_str()); 
-	}
-	if (data.leftalt != "x")    {
-	printf("Keyboard0 =>  LeftAlt    : %s\n",data.leftalt.c_str());
-	}
-	if (data.rightalt != "x")   {
-	printf("Keyboard0 =>  RightAlt   : %s\n",data.rightalt.c_str());
-	}
-	if (data.scrollock != "x")  {
-	printf("Keyboard0 =>  ScrollLock : %s\n",data.scrollock.c_str());
-	}
-	if (data.rightctl != "x")   {
-	printf("Keyboard0 =>  RightCtl   : %s\n",data.rightctl.c_str());
+	int kbd = 0;
+
+	for (int i = k.Count()-1; i >= 0; i--) { 
+		data = k.Pop();
+		if (kbd > 0) {                                             
+			printf("\n");                                             
+		}
+		printf("Keyboard%d =>  XkbModel   : %s\n",kbd,data.model.c_str());
+		printf("Keyboard%d =>  XkbLayout  : %s\n",kbd,data.layout.c_str());
+		if (data.variant != "x") {
+			printf("Keyboard%d =>  XkbVariant : %s\n",kbd,data.variant.c_str());
+		}
+		if (data.options != "x") {
+		printf("Keyboard%d =>  XkbOptions : %s\n",kbd,data.options.c_str());
+		}
+		if (data.keycodes != "xfree86") {
+		printf("Keyboard%d =>  XkbKeyCodes: %s\n",kbd,data.keycodes.c_str()); 
+		}
+		if (data.leftalt != "x")    {
+		printf("Keyboard%d =>  LeftAlt    : %s\n",kbd,data.leftalt.c_str());
+		}
+		if (data.rightalt != "x")   {
+		printf("Keyboard%d =>  RightAlt   : %s\n",kbd,data.rightalt.c_str());
+		}
+		if (data.scrollock != "x")  {
+		printf("Keyboard%d =>  ScrollLock : %s\n",kbd,data.scrollock.c_str());
+		}
+		if (data.rightctl != "x")   {
+		printf("Keyboard%d =>  RightCtl   : %s\n",kbd,data.rightctl.c_str());
+		}
+		printf("Keyboard%d =>  Name       : %s\n",kbd,data.name.c_str());
+		printf("Keyboard%d =>  RealDevice : %s\n",kbd,data.device.c_str());
+		kbd++;
 	}
 	fflush(stdout);
 }

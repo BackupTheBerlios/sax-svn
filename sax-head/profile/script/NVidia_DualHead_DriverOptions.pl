@@ -24,8 +24,8 @@ my $profile = ProfileInitScript();
 if (ProfileIsXOrgVendor ("nvidia")) {
 	open (FD,">",$profile) ||
 		die "NVidia_DualHead_DriverOptions: Can't open $profile: $!";
-	print FD "Desktop -> [X] -> CalcModelines = no\n";
-	print FD "Monitor -> [X] -> CalcAlgorithm = XServerPool\n";
+	print FD "Desktop -> [X] -> CalcModelines = yes\n";
+	print FD "Monitor -> [X] -> CalcAlgorithm = CheckDesktopGeometry\n";
 	close FD;
 } else {
 	my ($x,$y) = ProfileGetDualDisplaySize();
@@ -43,7 +43,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		print FD "Device->[X]->Option = TwinView,SaXDualHead\n";
 		print FD "$dx->11->Option=\"SecondMonitorHorizSync\" \"31-48\"\n";
 		print FD "$dx->12->Option=\"SecondMonitorVertRefresh\" \"50-60\"\n";
-		print FD "$dx->13->Option=\"MetaModes\" \"\${Modes[0]},1024x768\"\n";
+		print FD "$dx->13->Option=\"MetaModes\" \"\${Modes[0]},1024x768;1024x768,1024x768\"\n";
 		print FD "$dx->14->Option=\"TwinViewOrientation\" \"Clone\"\n";
 		print FD "$dx->15->Option=\"SaXDualOrientation\" \"RightOf\"\n";
 		print FD "$dx->16->Option=\"SaXDualHSync\" \"31-48\"\n";

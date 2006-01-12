@@ -55,6 +55,8 @@ struct Keymap {
 	string rightalt;
 	string scrollock;
 	string rightctl;
+	string name;
+	string device;
 };
 
 struct Input {
@@ -79,6 +81,8 @@ struct Keymap_S {
 	str rightalt;
 	str scrollock;
 	str rightctl;
+	str name;
+	str device;
 };
 
 struct ServerData {
