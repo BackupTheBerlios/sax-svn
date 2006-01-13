@@ -90,6 +90,24 @@ function needHardwareUpdate() {
 	if [ ! -f "/var/cache/sax/files/config" ];then
 		return 1
 	fi
+	CF="/etc/X11/xorg.conf"
+	for i in `/usr/sbin/isax -l Card | grep Driver | cut -f3 -d:`;do
+		echo "SaX: Checking update status for $i driver"
+		case $i in
+			nvidia)
+			if [ "/usr/X11R6/lib/modules/drivers/${i}_drv.so" -nt $CF ];then
+				echo "SaX: NVidia driver is newer than config -> calling reinit"
+				return 1
+			fi
+			;;
+			radeon)
+			if [ "/usr/X11R6/lib/modules/drivers/fglrx_drv.so" -nt $CF ];then
+				echo "SaX: FireGL driver is newer than config -> calling reinit"
+				return 1
+			fi
+			;;
+		esac
+	done
 	return 0
 }
 function usage() {

@@ -16,10 +16,19 @@ STATUS        : development
 **************/
 #include "hwdata.h"
 
+#include <stdarg.h>
+#include <dirent.h>
+
+//===================================
+// Defines...
+//-----------------------------------
+#define ACPI_BATTERY  "/proc/acpi/battery"
+
 //===================================
 // Internal functions...
 //-----------------------------------
 void toUpper  (char*);
+bool isNoteBook (void);
 char *dumpHID (hd_id_t*, char*, int);
 
 //===================================
@@ -55,6 +64,8 @@ MsgDetect MonitorGetData (void) {
 	// ---
 	sprintf(display.displaytype,"CRT");
 	if (strstr (dumpHID (&hd->device, buf, sizeof buf),"LCD")) {
+		sprintf(display.displaytype,"LCD/TFT");
+	} else if (isNoteBook()) {
 		sprintf(display.displaytype,"LCD/TFT");
 	}
 	di0 = hd->driver_info;
@@ -142,6 +153,36 @@ MsgDetect MonitorGetData (void) {
 		break;
 	}
 	return (display);
+}
+
+//=====================================
+// check for battery -> laptop
+//-------------------------------------
+bool isNoteBook ( void ) {
+	struct dirent* entry = NULL;
+	DIR* batteryDir = NULL;
+	batteryDir = opendir (ACPI_BATTERY);
+	if (! batteryDir) {
+		return false;
+	}
+	int BATs = 0;
+	while (1) {
+		entry = readdir (batteryDir);
+		if (! entry) {
+			break;
+		}
+		if (
+			(strcmp(entry->d_name,".") == 0) ||
+			(strcmp(entry->d_name,"..") == 0)
+		) {
+			continue;
+		}
+		BATs++;
+	}
+	if (BATs == 0) {
+		return false;
+	}
+	return true;
 }
 
 //=====================================

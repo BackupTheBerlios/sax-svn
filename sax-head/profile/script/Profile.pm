@@ -201,6 +201,83 @@ sub ProfileIntelSetupMonitorLayout {
 }
 
 #=====================================
+# ProfileNVidiaGetMonitorLayout
+#-------------------------------------
+sub ProfileNVidiaGetMonitorLayout {
+	my $xorglog = ProfileReadXLogFile();
+	my $bootdev;
+	my $otherdevs;
+	my $connected;
+	$_ = $xorglog;
+	my $I = '^\(..\) NVIDIA\(\d+\): ';
+	my $B = 'Boot display device\(?s?\)?: ';
+	my $S = 'Supported display device\(?s?\)?: ';
+	if (/$I$B(.*?)\s*$/m) {
+		$bootdev = $1;
+		if ($bootdev =~ /,\s*(DFP[^,]*)/) {
+			$bootdev = $1;
+		} elsif ($bootdev =~ /,\s*(CRT[^,]*)/) {
+			$bootdev = $1;
+		} else {
+			$bootdev =~ s/,.*$//;
+		}
+	} else {
+		$bootdev = "AUTO";
+	}
+	if (/$I$S(.*?)\s*$/m) {
+		($otherdevs = $1) =~ s/$bootdev//;
+	} else {
+		$otherdevs="AUTO";
+	}
+	if ($bootdev =~ /CRT/) {
+		print STDERR "*** Device booted into CRT. OOPS! This might not be what you intended!\n";
+	}
+	if ($bootdev =~ /DFP/ || $bootdev =~ /CRT/) {
+		if ($otherdevs =~ /DFP/) {
+		if ($otherdevs =~ /CRT/) {
+			print STDERR "*** Secondary output might be a flat panel or a CRT.\n";
+			print STDERR "    Change AUTO to DFP or CRT to activate the according output\n";
+			print STDERR "    without hardware plugged in.\n";
+			$connected = "$bootdev,AUTO";
+		} else {
+			$connected = "$bootdev,DFP";
+		}
+		} elsif ($otherdevs =~ /CRT/) {
+			$connected = "$bootdev,CRT";
+		} else {
+			print STDERR "*** No known secondary output found.\n";
+			$connected = "$bootdev,AUTO";
+		}
+	} else {
+		print STDERR "*** Unknown boot display device.\n";
+		$connected = "$bootdev,AUTO";
+	}
+
+	print STDERR "*** Selecting $connected as monitor configuration.\n";
+	return $connected;
+}
+
+#=====================================
+# ProfileNvidiaSetupMonitorLayout
+#-------------------------------------
+sub ProfileNVidiaSetupMonitorLayout {
+	my $profile = $_[0];
+	my $stdname = ProfileName();
+	local $/;
+	open (FD,"<",$profile) ||
+		die "*** $stdname: Can't open $profile: $!";
+	my $profileData = <FD>;
+	my $monitorLayout = ProfileNVidiaGetMonitorLayout();
+	$profileData =~ s/\[MONITORLAYOUT\]/$monitorLayout/;
+	close FD;
+	open (FD,">",$profile) ||
+		die "*** $stdname: Can't open $profile: $!";
+	print FD $profileData;
+	close FD;
+	return $monitorLayout;
+}
+
+#=====================================
 # ProfileCreatePreliminaryConfig
 #-------------------------------------
 sub ProfileCreatePreliminaryConfig {

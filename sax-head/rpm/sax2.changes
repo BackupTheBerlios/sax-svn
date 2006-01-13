@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Fri Jan 13 15:02:52 CET 2006 - ms@suse.de
+
+- added timestamp check for binary only drivers
+- added 1280x800@60Hz to the LCD section of the CDB
+- fixed sysp detection -> better check for laptop hardware
+- fixed sysp detection -> use framebuffer timing if display.vesacount==0
+- added support for external VGA on nvidia laptops, Thanks to
+  Matthias Hopf <mhopf@suse.de> providing the profile code
+- update all translations from Dublin
+
+-------------------------------------------------------------------
 Thu Jan 12 13:07:42 CET 2006 - ms@suse.de
 
 - changed sysp mouse detection to know about the real device (#142657)

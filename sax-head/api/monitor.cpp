@@ -528,6 +528,9 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "TwinView") {
 							saxCard.addCardOption ( key,0 );
 						}
+						if (key == "ConnectedMonitor") {
+							saxCard.addCardOption ( key,0 );
+						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
