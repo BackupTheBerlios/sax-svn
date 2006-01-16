@@ -794,7 +794,7 @@ sub HeaderOK {
 	# read in
 	# ---
 	my $file = "/etc/X11/xorg.conf";
-	my $hunk = "SaX generated X11 config file";
+	my $hunk = "SaX generated X.* config file";
 	my $msg1 = "SaX: header check failed !\n";
 	my $msg2 = "SaX: will not import $file\n";
 	if (! -f $file) {
