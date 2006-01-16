@@ -344,7 +344,7 @@ void SCCMonitorDisplay::import ( void ) {
 		mCardVendor+" "+mCardModel
 	);
 	if (mMonitorVendor.contains ("Unknown",false) ||
-	   (mMonitorModel.contains("Unknonw",false))
+	   (mMonitorModel.contains("Unknown",false))
 	) {
 		mLabelMonitorName -> setText (
 			mText["UnknownMonitorPleaseChange"]
