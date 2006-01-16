@@ -227,44 +227,51 @@ sub PrepareLayoutDefaults {
 # this function is called to set default values to 
 # the ServerLayout section
 #
-	$dialog{ServerLayout}{all}{Identifier} = "Layout[all]";
-
 	foreach my $id (keys %{$dialog{InputDevice}}) {
-	my $input = $dialog{InputDevice}{$id}{Identifier};
-	if ($id % 2 == 0) {
-		#============================================
-		# this are keyboard devices
-		#--------------------------------------------
-		$dialog{ServerLayout}{all}{InputDevice}{$id}{usage} = "CoreKeyboard";
-		$dialog{ServerLayout}{all}{InputDevice}{$id}{id}    = $input
-	} else {
-		#============================================
-		# this are mouse devices
-		#--------------------------------------------
-		my $event  = "CorePointer";
-		if ($id != 1) {
-			$event = "SendCoreEvents";
+		my $lid   = "all";
+		my $input = $dialog{InputDevice}{$id}{Identifier};
+		foreach my $layoutID (keys %{$dialog{ServerLayout}}) {
+		if (defined $dialog{ServerLayout}{$layoutID}{InputDevice}{$id}) {
+			$lid = $layoutID;
+			last;
 		}
-		if (defined $dialog{ServerLayout}{all}{InputDevice}{$id}) {
-			$dialog{ServerLayout}{all}{InputDevice}{$id}{usage} = $event;
-			$dialog{ServerLayout}{all}{InputDevice}{$id}{id}    = $input;
 		}
-	}
+		if ($id % 2 == 0) {
+			#============================================
+			# this are keyboard devices
+			#--------------------------------------------
+			$dialog{ServerLayout}{$lid}{InputDevice}{$id}{usage}="CoreKeyboard";
+			$dialog{ServerLayout}{$lid}{InputDevice}{$id}{id}   =$input;
+		} else {
+			#============================================
+			# this are mouse devices
+			#--------------------------------------------
+			my $event  = "CorePointer";
+			if ($id != 1) {
+				$event = "SendCoreEvents";
+			}
+			if (defined $dialog{ServerLayout}{$lid}{InputDevice}{$id}) {
+				$dialog{ServerLayout}{$lid}{InputDevice}{$id}{usage} = $event;
+				$dialog{ServerLayout}{$lid}{InputDevice}{$id}{id}    = $input;
+			}
+		}
 	}
 	# / ... /
 	# look up Xinerama/and Clone mode...
 	# -----------------------------------
-	if (! defined $dialog{ServerLayout}{all}{Option}{Xinerama}) {
-		$dialog{ServerLayout}{all}{Option}{Xinerama}     = "off";
-	}
-	if ($dialog{ServerLayout}{all}{Option}{Xinerama} eq "") {
-		$dialog{ServerLayout}{all}{Option}{Xinerama}     = "off";
-	}
-	if (! defined $dialog{ServerLayout}{all}{Option}{Clone}) {
-		$dialog{ServerLayout}{all}{Option}{Clone}        = "off";
-	}
-	if ($dialog{ServerLayout}{all}{Option}{Clone} eq "") {
-		$dialog{ServerLayout}{all}{Option}{Clone}        = "off";
+	foreach my $lid (keys %{$dialog{ServerLayout}}) {
+		if (! defined $dialog{ServerLayout}{$lid}{Option}{Xinerama}) {
+			$dialog{ServerLayout}{$lid}{Option}{Xinerama}     = "off";
+		}
+		if ($dialog{ServerLayout}{$lid}{Option}{Xinerama} eq "") {
+			$dialog{ServerLayout}{$lid}{Option}{Xinerama}     = "off";
+		}
+		if (! defined $dialog{ServerLayout}{$lid}{Option}{Clone}) {
+			$dialog{ServerLayout}{$lid}{Option}{Clone}        = "off";
+		}
+		if ($dialog{ServerLayout}{$lid}{Option}{Clone} eq "") {
+			$dialog{ServerLayout}{$lid}{Option}{Clone}        = "off";
+		}
 	}
 }
 
@@ -276,52 +283,55 @@ sub PrepareLayout {
 # to handle within SaX2 later
 #
 	my %layout;
-	my %screen = %{$dialog{ServerLayout}{all}{Screen}};
-	foreach my $id (keys %screen) {
-		my $leftOf  = $screen{$id}{left};
-		my $rightOf = $screen{$id}{right};
-		my $above   = $screen{$id}{top};
-		my $beneath = $screen{$id}{bottom};
-		
-		if ($leftOf  =~ /Screen\[(.*)\]/) {
-			$layout{$id}{right} = $1;
-			$layout{$1}{left} = $id;
+	foreach my $lid (keys %{$dialog{ServerLayout}}) {
+
+		my %screen = %{$dialog{ServerLayout}{$lid}{Screen}};
+		foreach my $id (keys %screen) {
+			my $leftOf  = $screen{$id}{left};
+			my $rightOf = $screen{$id}{right};
+			my $above   = $screen{$id}{top};
+			my $beneath = $screen{$id}{bottom};
+
+			if ($leftOf  =~ /Screen\[(.*)\]/) {
+				$layout{$id}{right} = $1;
+				$layout{$1}{left} = $id;
+			}
+			if ($rightOf =~ /Screen\[(.*)\]/) {
+				$layout{$id}{left} = $1;
+				$layout{$1}{right} = $id;
+			}
+			if ($above   =~ /Screen\[(.*)\]/) {
+				$layout{$id}{bottom} = $1;
+				$layout{$1}{top} = $id;
+			}
+			if ($beneath =~ /Screen\[(.*)\]/) {
+				$layout{$id}{top} = $1;
+				$layout{$1}{bottom} = $id;
+			}
 		}
-		if ($rightOf =~ /Screen\[(.*)\]/) {
-			$layout{$id}{left} = $1;
-			$layout{$1}{right} = $id;
-		}
-		if ($above   =~ /Screen\[(.*)\]/) {
-			$layout{$id}{bottom} = $1;
-			$layout{$1}{top} = $id;
-		}
-		if ($beneath =~ /Screen\[(.*)\]/) {
-			$layout{$id}{top} = $1;
-			$layout{$1}{bottom} = $id;
-		}
-	}
-	foreach my $id (keys %screen) {
-		my $rel = $screen{$id}{relative};
-		$dialog{ServerLayout}{all}{Screen}{$id}{left}     = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{right}    = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{top}      = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{bottom}   = "<none>";
-		$dialog{ServerLayout}{all}{Screen}{$id}{relative} = $rel;
-		if (defined $layout{$id}{left}) {
-			my $n= $layout{$id}{left};
-			$dialog{ServerLayout}{all}{Screen}{$id}{left}   = "Screen[$n]";
-		}
-		if (defined $layout{$id}{right}) {
-			my $n= $layout{$id}{right};
-			$dialog{ServerLayout}{all}{Screen}{$id}{right}  = "Screen[$n]";
-		}
-		if (defined $layout{$id}{top}) {
-			my $n= $layout{$id}{top};
-			$dialog{ServerLayout}{all}{Screen}{$id}{top}    = "Screen[$n]";
-		}
-		if (defined $layout{$id}{bottom}) {
-			my $n= $layout{$id}{bottom};
-			$dialog{ServerLayout}{all}{Screen}{$id}{bottom} = "Screen[$n]";
+		foreach my $id (keys %screen) {
+			my $rel = $screen{$id}{relative};
+			$dialog{ServerLayout}{$lid}{Screen}{$id}{left}     = "<none>";
+			$dialog{ServerLayout}{$lid}{Screen}{$id}{right}    = "<none>";
+			$dialog{ServerLayout}{$lid}{Screen}{$id}{top}      = "<none>";
+			$dialog{ServerLayout}{$lid}{Screen}{$id}{bottom}   = "<none>";
+			$dialog{ServerLayout}{$lid}{Screen}{$id}{relative} = $rel;
+			if (defined $layout{$id}{left}) {
+				my $n= $layout{$id}{left};
+				$dialog{ServerLayout}{$lid}{Screen}{$id}{left}   = "Screen[$n]";
+			}
+			if (defined $layout{$id}{right}) {
+				my $n= $layout{$id}{right};
+				$dialog{ServerLayout}{$lid}{Screen}{$id}{right}  = "Screen[$n]";
+			}
+			if (defined $layout{$id}{top}) {
+				my $n= $layout{$id}{top};
+				$dialog{ServerLayout}{$lid}{Screen}{$id}{top}    = "Screen[$n]";
+			}
+			if (defined $layout{$id}{bottom}) {
+				my $n= $layout{$id}{bottom};
+				$dialog{ServerLayout}{$lid}{Screen}{$id}{bottom} = "Screen[$n]";
+			}
 		}
 	}
 }

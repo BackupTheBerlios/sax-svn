@@ -22,14 +22,19 @@ sub CreateServerLayoutSection {
 	my (%var)  = %{$_[0]};  # configuration hash (argument)  
 	my @result = ();
 
-	my $clone = $var{ServerLayout}{all}{Option}{Clone};
-	push (@result,"Section \"ServerLayout\"\n");
-	push (@result,PrintLine("Identifier","\"Layout\[all\]\""));
-	#===========================================
-	# create body...
-	#-------------------------------------------
-	foreach my $i (sort keys %{$var{ServerLayout}{all}}) {
-	SWITCH: for ($i) {
+	foreach my $lid (sort keys %{$var{ServerLayout}}) {
+		if ($lid eq "") {
+			next;
+		}
+		my $clone = $var{ServerLayout}{$lid}{Option}{Clone};
+		my $ident = $var{ServerLayout}{$lid}{Identifier};
+		push (@result,"Section \"ServerLayout\"\n");
+		push (@result,PrintLine("Identifier","\"$ident\""));
+		#===========================================
+		# create body...
+		#-------------------------------------------
+		foreach my $i (sort keys %{$var{ServerLayout}{$lid}}) {
+		SWITCH: for ($i) {
 		#===========================================
 		# Screen...
 		#------------------------------------------- 
@@ -44,13 +49,13 @@ sub CreateServerLayoutSection {
 			my @configList;
 			my @indexList;
 			my @screenList;
-			foreach my $scrnr (sort keys %{$var{ServerLayout}{all}{$i}}) {
-				my $id    = $var{ServerLayout}{all}{$i}{$scrnr}{id};
-				my $top   = $var{ServerLayout}{all}{$i}{$scrnr}{top};
-				my $bot   = $var{ServerLayout}{all}{$i}{$scrnr}{bottom};
-				my $left  = $var{ServerLayout}{all}{$i}{$scrnr}{left};
-				my $right = $var{ServerLayout}{all}{$i}{$scrnr}{right};
-				my $rel   = $var{ServerLayout}{all}{$i}{$scrnr}{relative};
+			foreach my $scrnr (sort keys %{$var{ServerLayout}{$lid}{$i}}) {
+				my $id    = $var{ServerLayout}{$lid}{$i}{$scrnr}{id};
+				my $top   = $var{ServerLayout}{$lid}{$i}{$scrnr}{top};
+				my $bot   = $var{ServerLayout}{$lid}{$i}{$scrnr}{bottom};
+				my $left  = $var{ServerLayout}{$lid}{$i}{$scrnr}{left};
+				my $right = $var{ServerLayout}{$lid}{$i}{$scrnr}{right};
+				my $rel   = $var{ServerLayout}{$lid}{$i}{$scrnr}{relative};
 				my @ID;
 				push (@screenList,$id);
 				if ($id  =~ /Screen\[(.*)\]/) {
@@ -100,28 +105,28 @@ sub CreateServerLayoutSection {
 			# check for redundant layout...
 			# -------------------------------
 			if (! $single) {
-			my @finalList;
-			for (my $i=0;$i<@indexList;$i++) {
-				my @item = split(/:/,$indexList[$i]);
-				my $a = $item[2];
-				my $c = $item[0];
-				my $b = $item[1] * -1;
-				my $search = "$a:$b:$c";
-				my $found  = 0;
-				for (my $n=0;$n<@indexList;$n++) {
-				if ($indexList[$n] eq $search) {
-					push (@finalList,$configList[$n]);
-					$indexList[$i] = "";
-					$indexList[$n] = "";
-					$found = 1;
-					last;
+				my @finalList;
+				for (my $i=0;$i<@indexList;$i++) {
+					my @item = split(/:/,$indexList[$i]);
+					my $a = $item[2];
+					my $c = $item[0];
+					my $b = $item[1] * -1;
+					my $search = "$a:$b:$c";
+					my $found  = 0;
+					for (my $n=0;$n<@indexList;$n++) {
+					if ($indexList[$n] eq $search) {
+						push (@finalList,$configList[$n]);
+						$indexList[$i] = "";
+						$indexList[$n] = "";
+						$found = 1;
+						last;
+					}
+					}
+					if ((! $found ) && ($indexList[$i] ne "")) {
+						push (@finalList,$configList[$i]);
+					}
 				}
-				}
-				if ((! $found ) && ($indexList[$i] ne "")) {
-					push (@finalList,$configList[$i]);
-				}
-			}
-			@configList = @finalList;
+				@configList = @finalList;
 			}
 			foreach (@configList) {
 			if ($_ =~ /(Screen\[.*\]).*\".*\"/) {
@@ -139,44 +144,43 @@ sub CreateServerLayoutSection {
 				}
 			}
 			}
+			@screenList = sortList (@screenList);
 			foreach (@screenList) {
-			if (defined $_) {
 				push(@result,"  Screen       \"$_\"\n");
 			}
-			}
-			@result = sortList (@result);
 			last SWITCH;
 		};
 		#===========================================
 		# InputDevice setting...
 		#-------------------------------------------
 		/^InputDevice/    && do {
-		foreach my $devnr (sort keys %{$var{ServerLayout}{all}{$i}}) {
-			my $input_id  = $var{ServerLayout}{all}{$i}{$devnr}{id};
-			my $input_use = $var{ServerLayout}{all}{$i}{$devnr}{usage};
+			foreach my $devnr (sort keys %{$var{ServerLayout}{$lid}{$i}}) {
+				my $input_id  = $var{ServerLayout}{$lid}{$i}{$devnr}{id};
+				my $input_use = $var{ServerLayout}{$lid}{$i}{$devnr}{usage};
 	  
-			if ($input_id ne "") {
-				push(@result,PrintLine($i,"\"$input_id\" \"$input_use\""));
+				if ($input_id ne "") {
+					push(@result,PrintLine($i,"\"$input_id\" \"$input_use\""));
+				}
 			}
-		}
-		last SWITCH;
+			last SWITCH;
 		};   
 		#===========================================
 		# Option setting...
 		#-------------------------------------------
 		/^Option/         && do {
-		foreach my $optname (sort keys %{$var{ServerLayout}{all}{$i}}) {
-			my $value = $var{ServerLayout}{all}{$i}{$optname};
-			if ($value ne "") {
-				push(@result,PrintLine("Option","\"$optname\" \"$value\""));
+			foreach my $optname (sort keys %{$var{ServerLayout}{$lid}{$i}}) {
+				my $value = $var{ServerLayout}{$lid}{$i}{$optname};
+				if ($value ne "") {
+					push(@result,PrintLine("Option","\"$optname\" \"$value\""));
+				}
 			}
-		}
-		last SWITCH;
+			last SWITCH;
 		};
+		}
+		}
+		# create footer line...
+		push(@result,"EndSection\n\n");
 	}
-	}
-	# create footer line...
-	push(@result,"EndSection\n");
 	return(@result);
 }
 
@@ -187,22 +191,22 @@ sub sortList {
 # numbers in the server layout specifications
 #
 	my @list = @_;
+	my @index;
 	my @tmp;
 	my @erg;
-	
+
 	foreach (@list) {
-	if ($_ =~ /\"Screen\[(.*)\]\"/) {
-	if (! defined $tmp[$1]) {
-		$tmp[$1] = $_;
-	} else {
-		push (@tmp,$_);
-	}
-	} else {
-		push (@erg,$_);
-	}
-	}
-	foreach (@tmp) {
-		push (@erg,$_);
+		if (! defined $_) {
+			next;
+		}
+		if ($_ =~ /Screen\[(.*)\]/) {
+			if (! defined $index[$1]) {
+				push (@erg,$_);
+			}
+			$index[$1] = $1;
+		} else {
+			push (@erg,$_);
+		}
 	}
 	return (@erg);
 }

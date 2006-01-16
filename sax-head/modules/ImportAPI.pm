@@ -1055,22 +1055,25 @@ sub ApiImportLayout {
 	@pair = split(/ /,$_);
 	$card = $pair[0];
 	$key  = $pair[1];
-
+	my $lid = $card;
+	if ($lid == 0) {
+		$lid = "all";
+	}
 	SWITCH: for ($key) {
 		/^Identifier/       && do {
-		$var{ServerLayout}{all}{Identifier} = $value;
+		$var{ServerLayout}{$lid}{Identifier} = $value;
 		last SWITCH;
 		};
 
 		/^Keyboard/         && do {
 		@list = split(/,/,$value);
-		$var{ServerLayout}{all}{InputDevice}{0}{id}    = $list[0];
-		$var{ServerLayout}{all}{InputDevice}{0}{usage} = "CoreKeyboard";
+		$var{ServerLayout}{$lid}{InputDevice}{0}{id}    = $list[0];
+		$var{ServerLayout}{$lid}{InputDevice}{0}{usage} = "CoreKeyboard";
 
 		$count = 2;
 		for ($i=1;$i<@list;$i++) {
-		$var{ServerLayout}{all}{InputDevice}{$count}{id}    = $list[$i];
-		$var{ServerLayout}{all}{InputDevice}{$count}{usage} = "CoreKeyboard";
+		$var{ServerLayout}{$lid}{InputDevice}{$count}{id}    = $list[$i];
+		$var{ServerLayout}{$lid}{InputDevice}{$count}{usage} = "CoreKeyboard";
 		$count+=2;
 		}
 		last SWITCH;
@@ -1078,8 +1081,8 @@ sub ApiImportLayout {
 
 		/^InputDevice/      && do {
 		@list = split(/,/,$value);
-		$var{ServerLayout}{all}{InputDevice}{1}{id}    = $list[0];
-		$var{ServerLayout}{all}{InputDevice}{1}{usage} = "CorePointer";
+		$var{ServerLayout}{$lid}{InputDevice}{1}{id}    = $list[0];
+		$var{ServerLayout}{$lid}{InputDevice}{1}{usage} = "CorePointer";
 		my $driver = $api{Mouse}{"1 Driver"};
 		my $device = $api{Mouse}{"1 Device"};
 		$entity{$driver}{$device} = 1;
@@ -1091,7 +1094,10 @@ sub ApiImportLayout {
 			}
 			my $driver = $api{Mouse}{"$count Driver"};
 			my $device = $api{Mouse}{"$count Device"};
-			if ((! defined $entity{$driver}{$device}) || ($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/)) {
+			if (
+				(! defined $entity{$driver}{$device}) ||
+				($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/)
+			) {
 				my $l = "ServerLayout";
 				$var{$l}{all}{InputDevice}{$count}{id}    = $list[$i];
 				$var{$l}{all}{InputDevice}{$count}{usage} = "SendCoreEvents";
@@ -1103,34 +1109,34 @@ sub ApiImportLayout {
 
 		/^Xinerama/         && do {
 		if ($value =~ /on/i) {
-			$var{ServerLayout}{all}{Option}{Xinerama} = "on";
+			$var{ServerLayout}{$lid}{Option}{Xinerama} = "on";
 		} else {
-			$var{ServerLayout}{all}{Option}{Xinerama} = "off";
+			$var{ServerLayout}{$lid}{Option}{Xinerama} = "off";
 		}
 		last SWITCH;
 		};
 
 		/^Clone/            && do {
 		if ($value =~ /on/i) {
-			$var{ServerLayout}{all}{Option}{Clone} = "on";
+			$var{ServerLayout}{$lid}{Option}{Clone} = "on";
 		} else {
-			$var{ServerLayout}{all}{Option}{Clone} = "off";
+			$var{ServerLayout}{$lid}{Option}{Clone} = "off";
 		}
 		last SWITCH;
 		};
 
 		/^VNC/              && do {
-		$var{ServerLayout}{all}{Option}{VNC} = $value;
+		$var{ServerLayout}{$lid}{Option}{VNC} = $value;
 		my @idlist = split (/ /,$value);
 		if ($idlist[0] > 0) {
 			my $mID = $idlist[0];
-			$var{ServerLayout}{all}{InputDevice}{$mID}{id} = "Mouse[$mID]";
-			$var{ServerLayout}{all}{InputDevice}{$mID}{usage} = "ExtraPointer";
+			$var{ServerLayout}{$lid}{InputDevice}{$mID}{id} = "Mouse[$mID]";
+			$var{ServerLayout}{$lid}{InputDevice}{$mID}{usage}= "ExtraPointer";
 		}
 		if ($idlist[1] > 0) {
 			my $kID = $idlist[1];
-			$var{ServerLayout}{all}{InputDevice}{$kID}{id} = "Keyboard[$kID]";
-			$var{ServerLayout}{all}{InputDevice}{$kID}{usage} = "ExtraKeyboard";
+			$var{ServerLayout}{$lid}{InputDevice}{$kID}{id} = "Keyboard[$kID]";
+			$var{ServerLayout}{$lid}{InputDevice}{$kID}{usage}= "ExtraKeyboard";
 		}
 		last SWITCH;
 		};
@@ -1141,22 +1147,22 @@ sub ApiImportLayout {
 		if ($id =~ /Screen\[(.*)\]/) {
 			$screen = $1;
 		}
-		$var{ServerLayout}{all}{Screen}{$screen}{id}     = $id;
+		$var{ServerLayout}{$lid}{Screen}{$screen}{id}     = $id;
 		if ($geo[1] !~ /none/i) {
 			#print STDERR "$screen : left -> $geo[1]\n";
-			$var{ServerLayout}{all}{Screen}{$screen}{left}  = $geo[1];
+			$var{ServerLayout}{$lid}{Screen}{$screen}{left}  = $geo[1];
 		}
 		if ($geo[0] !~ /none/i) {
 			#print STDERR "$screen : right -> $geo[0]\n";
-			$var{ServerLayout}{all}{Screen}{$screen}{right} = $geo[0];
+			$var{ServerLayout}{$lid}{Screen}{$screen}{right} = $geo[0];
 		}
 		if ($geo[3] !~ /none/i) {
 			#print STDERR "$screen : top -> $geo[3]\n";
-			$var{ServerLayout}{all}{Screen}{$screen}{top}   = $geo[3];
+			$var{ServerLayout}{$lid}{Screen}{$screen}{top}   = $geo[3];
 		}
 		if ($geo[2] !~ /none/i) {
 			#print STDERR "$screen : bottom -> $geo[2]\n";
-			$var{ServerLayout}{all}{Screen}{$screen}{bottom}= $geo[2];
+			$var{ServerLayout}{$lid}{Screen}{$screen}{bottom}= $geo[2];
 		}
 		$screen++;
 		last SWITCH;
@@ -1168,7 +1174,7 @@ sub ApiImportLayout {
 			$screen = $1;
 		}
 		if ($value =~ /(.*),(\d+),(\d+)/) {
-			$var{ServerLayout}{all}{Screen}{$screen}{relative} = "$2-$3-$1";
+			$var{ServerLayout}{$lid}{Screen}{$screen}{relative} = "$2-$3-$1";
 		}
 		};
 		}

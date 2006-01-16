@@ -315,12 +315,19 @@ sub MergeParseResult {
 	}
 	foreach $key (keys %layout) {
 	foreach $count (keys %{$layout{$key}}) {
+	if ($layout{$key}{$count}{Identifier} =~ /Layout\[(.*)\]/) {
+		my $lid = $1;
 		foreach $name (keys %{$layout{$key}{$count}}) {
 		SWITCH: for ($name) {
+		/^Identifier/i && do {
+			my $identString = $layout{$key}{$count}{$name};
+			$result{ServerLayout}{$lid}{Identifier} = $identString;
+			last SWITCH;
+		};
 		/^Option/i    && do {
 			foreach $opt (keys %{$layout{$key}{$count}{$name}}) {
 				$optval = $layout{$key}{$count}{$name}{$opt};
-				$result{ServerLayout}{all}{Option}{$opt} = $optval;
+				$result{ServerLayout}{$lid}{Option}{$opt} = $optval;
 			}
 			last SWITCH;
 		};
@@ -329,13 +336,13 @@ sub MergeParseResult {
 			if ($opt =~ /.*\[(.*)\]/) {
 				$id = $1;
 				$id =~ s/ +//g;
-				$result{ServerLayout}{all}{Screen}{$id}{id} = $opt;
+				$result{ServerLayout}{$lid}{Screen}{$id}{id} = $opt;
 				foreach $scr (keys %{$layout{$key}{$count}{$name}{$opt}}) {
 					$optval = $layout{$key}{$count}{$name}{$opt}{$scr};
 					if ($optval =~ /none/) {
-						$result{ServerLayout}{all}{Screen}{$id}{$scr} = "";
+						$result{ServerLayout}{$lid}{Screen}{$id}{$scr}= "";
 					} else {
-						$result{ServerLayout}{all}{Screen}{$id}{$scr} = $optval;
+						$result{ServerLayout}{$lid}{Screen}{$id}{$scr}= $optval;
 					}
 				}
 			}
@@ -346,18 +353,19 @@ sub MergeParseResult {
 			foreach $opt (keys %{$layout{$key}{$count}{$name}}) {
 			if ($opt =~ /.*\[(.*)\]/) {
 				$id = $1; $id =~ s/ +//g;
-				$result{ServerLayout}{all}{InputDevice}{$id}{id} = $opt;
+				$result{ServerLayout}{$lid}{InputDevice}{$id}{id} = $opt;
 				$optval = $layout{$key}{$count}{$name}{$opt};
-				$result{ServerLayout}{all}{InputDevice}{$id}{usage} = $optval;
+				$result{ServerLayout}{$lid}{InputDevice}{$id}{usage} = $optval;
 			}
 			}
 			last SWITCH;
 		};
 		# default
 		# --------
-		$result{ServerLayout}{all}{$name} = $layout{$key}{$count}{$name};
+		$result{ServerLayout}{$lid}{$name} = $layout{$key}{$count}{$name};
 		} 
 		}
+	}
 	}
 	}
 
@@ -1018,6 +1026,7 @@ sub LayoutGetServerLayout {
 # --> Used sections: ServerLayout
 #
 	my @result;
+	my $count;
 	my $inputline;
 	my $id;
 	my $value;
@@ -1029,42 +1038,51 @@ sub LayoutGetServerLayout {
 	my $top;
 
 	my $section    = "ServerLayout";
-	my $identifier = $dialog{$section}{all}{Identifier};
-	my $xinerama   = $dialog{$section}{all}{Option}{Xinerama};
-	my $clone      = $dialog{$section}{all}{Option}{Clone};
 
 	# begin API Layout interface...
 	# -------------------------------
 	push(@result,"Layout {\n");
-	push(@result,DLine("0","Identifier",$identifier));
-	push(@result,DLine("0","Xinerama",$xinerama));
-	push(@result,DLine("0","Clone",$clone));
+	foreach my $lid (keys %{$dialog{$section}}) {
+		$count = $lid;
+		if ($count eq "all") {
+			$count = 0;
+		} 
+		my $identifier = $dialog{$section}{$lid}{Identifier};
+		my $xinerama   = $dialog{$section}{$lid}{Option}{Xinerama};
+		my $clone      = $dialog{$section}{$lid}{Option}{Clone};
+		push(@result,DLine("$count","Identifier",$identifier));
+		push(@result,DLine("$count","Xinerama",$xinerama));
+		push(@result,DLine("$count","Clone",$clone));
 
-	foreach $id (keys %{$dialog{$section}{all}{InputDevice}}) {
-		$value = $dialog{$section}{all}{InputDevice}{$id}{id};
-		if ($value eq "") { 
-			next; 
+		$inputline = "";
+		foreach $id (keys %{$dialog{$section}{$lid}{InputDevice}}) {
+			$value = $dialog{$section}{$lid}{InputDevice}{$id}{id};
+			if ($value eq "") { 
+				next; 
+			}
+			if ($id % 2 == 0) {
+				push(@result,DLine("$count","Keyboard",$value));
+			} else {
+				$inputline = "$inputline,$value";
+			}
 		}
-		if ($id % 2 == 0) {
-			push(@result,DLine("0","Keyboard",$value));
-		} else {
-			$inputline = "$inputline,$value";
-		}
-	}
-	$inputline =~ s/^,+//;
-	push(@result,DLine("0","InputDevice",$inputline));
+		$inputline =~ s/^,+//;
+		push(@result,DLine("$count","InputDevice",$inputline));
 
-	foreach $id (keys %{$dialog{$section}{all}{Screen}}) {
-		$screen = $dialog{$section}{all}{Screen}{$id}{id};
-		$top    = $dialog{$section}{all}{Screen}{$id}{top};
-		$left   = $dialog{$section}{all}{Screen}{$id}{left};
-		$right  = $dialog{$section}{all}{Screen}{$id}{right};
-		$bottom = $dialog{$section}{all}{Screen}{$id}{bottom};
-		$rel    = $dialog{$section}{all}{Screen}{$id}{relative};
-		if ($rel =~ /^(\d+)-(\d+)-(.*)/) {
-			push (@result,DLine("0","Relative:$screen","$3,$1,$2"));
+		foreach $id (keys %{$dialog{$section}{$lid}{Screen}}) {
+			$screen = $dialog{$section}{$lid}{Screen}{$id}{id};
+			$top    = $dialog{$section}{$lid}{Screen}{$id}{top};
+			$left   = $dialog{$section}{$lid}{Screen}{$id}{left};
+			$right  = $dialog{$section}{$lid}{Screen}{$id}{right};
+			$bottom = $dialog{$section}{$lid}{Screen}{$id}{bottom};
+			$rel    = $dialog{$section}{$lid}{Screen}{$id}{relative};
+			if ($rel =~ /^(\d+)-(\d+)-(.*)/) {
+				push (@result,DLine("$cound","Relative:$screen","$3,$1,$2"));
+			}
+			push (@result,
+				DLine("$count","Screen:$screen","$left $right $top $bottom")
+			);
 		}
-		push(@result,DLine("0","Screen:$screen","$left $right $top $bottom"));
 	}
 	# end API Layout interface...
 	# -----------------------------

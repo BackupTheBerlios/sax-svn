@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use lib '/usr/share/sax/profile';
+use lib '.';
 
 use strict;
 use Profile;
@@ -28,11 +29,11 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 	print FD "Monitor -> [X] -> CalcAlgorithm = CheckDesktopGeometry\n";
 	close FD;
 } else {
-
 	#====================================
 	# Do the profile adaptions...
 	#------------------------------------
 	my $mlayout = ProfileNVidiaSetupMonitorLayout ($profile);
+	my ($CA,$CB) = split (/,/,$mlayout);
 	my ($x,$y) = ProfileGetDualDisplaySize();
 	if (ProfileIsNoteBookHardware()) {
 		open (FD,">",$profile) ||
@@ -48,7 +49,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		print FD "Device->[X]->Option = TwinView,SaXDualHead\n";
 		print FD "$dx->11->Option=\"SecondMonitorHorizSync\" \"31-48\"\n";
 		print FD "$dx->12->Option=\"SecondMonitorVertRefresh\" \"50-60\"\n";
-		print FD "$dx->13->Option=\"MetaModes\" \"\${Modes[0]},1024x768;1024x768,1024x768\"\n";
+		print FD "$dx->13->Option=\"MetaModes\" \"$CA:\${Modes[0]},$CB:1024x768;$CA:1024x768,$CB:1024x768\"\n";
 		print FD "$dx->14->Option=\"TwinViewOrientation\" \"Clone\"\n";
 		print FD "$dx->15->Option=\"ConnectedMonitor\" \"$mlayout\"\n";
 		print FD "$dx->16->Option=\"SaXDualOrientation\" \"RightOf\"\n";
@@ -63,6 +64,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		open (FD,">>",$profile) ||
 			die "NVidia_DualHead_DriverOptions: Can't open $profile: $!";
 		print FD "Monitor->[X]->DisplaySize=$x $y\n";
+		print FD "Device->[X]->Raw->22->Option=\"MetaModes\" \"$CA:\${Modes[0]},$CB:\${Modes[0]}\"\n";
 		close FD;
 	}
 }

@@ -529,9 +529,18 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key,0 );
 						}
 						if (key == "ConnectedMonitor") {
-							saxCard.addCardOption ( key,0 );
+							saxCard.addCardOption ( key,val );
 						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
+							QString channelA = "AUTO";
+							QString channelB = "AUTO";
+							if (profileDriverOptions["ConnectedMonitor"]) {
+								QStringList cs = QStringList::split (",",
+									*profileDriverOptions["ConnectedMonitor"]
+								);
+								channelA = cs.first();
+								channelB = cs.last();
+							}
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
@@ -542,7 +551,8 @@ bool SCCMonitor::exportData ( void ) {
 							QString metaItem;
 							QString resolution;
 							QTextOStream (&metaItem) <<
-								resolution1 << "," << resolution2;
+								channelA << ":" << resolution1 << "," <<
+								channelB << ":" << resolution2;
 							resolution.append (";"+metaItem);
 							//====================================
 							// add secondary meta modes
@@ -559,10 +569,12 @@ bool SCCMonitor::exportData ( void ) {
 								);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "," << resolution2;
+										channelA << ":" << *ir.current() << "," <<
+										channelB << ":" << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "," << *ir.current();
+										channelA << ":" << *ir.current() << "," <<
+										channelB << ":" << *ir.current();
 								}
 								resolution.append (";"+metaItem);
 							}
