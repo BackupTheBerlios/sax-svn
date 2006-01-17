@@ -3,6 +3,7 @@
 use lib   '/usr/share/sax/modules';
 
 use strict;
+use Env;
 use CreateSections;
 use Storable;
 use SaX;
@@ -92,9 +93,11 @@ sub ProfileNVDualCheck {
 #-------------------------------------
 sub ProfileReadXLogFile {
 	my $stdname = ProfileName();
-	my $xconfig = ProfileCreatePreliminaryConfig();
-	qx (X -probeonly -logverbose 255 -xf86config $xconfig :99 >/dev/null 2>&1);
 	my $xorglogname = "/var/log/Xorg.99.log";
+	if (($ENV{HW_UPDATE} == 1) || (! -f $xorglogname)) {
+		my $xc = ProfileCreatePreliminaryConfig();
+		qx (X -probeonly -logverbose 255 -xf86config $xc :99 >/dev/null 2>&1);
+	}
 	local $/;
 	open (FD, "<$xorglogname") ||
 		die "*** $stdname: Cannot read X.org log $xorglogname";
