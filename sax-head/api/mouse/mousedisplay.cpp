@@ -52,9 +52,12 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mouseBox -> setStretchFactor ( mLabelMouseName, 20 );
 	// second group with mouse options
 	QHBox* splitBox = new QHBox ( this );
-	QVBox* leftBox  = new QVBox ( splitBox );
+	// create stack widget for different mouse option dialogs
+	mOptionStack = new QWidgetStack ( splitBox );
+	// insert standard mouse option dialog
+	QVBox* leftMouseBox  = new QVBox ( mOptionStack );
 	mMouseOptionGroup = new QButtonGroup (
-		1,Horizontal,mText["MouseOptions"],leftBox
+		1,Horizontal,mText["MouseOptions"],leftMouseBox
 	);
 	mCheck3BtnEmulation = new QCheckBox (
 		mText["ButtonEmulation"],mMouseOptionGroup
@@ -62,12 +65,26 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mCheckMouseWheel    = new QCheckBox (
 		mText["ActivateWheel"],mMouseOptionGroup
 	);
+	mCheckInvertXAxis   = new QCheckBox (
+		mText["InvertXAxis"],mMouseOptionGroup
+	);
+	mCheckInvertYAxis   = new QCheckBox (
+		mText["InvertYAxis"],mMouseOptionGroup
+	);
 	QHBox* wheelBox = new QHBox ( mMouseOptionGroup );
 	mCheckEmulateWheel = new QCheckBox (
 		mText["EmulateWheel"],wheelBox
 	);
 	wheelBox -> setSpacing ( 10 );
 	mEmulateWheelButton = new QSpinBox ( 1,10,1,wheelBox );
+	// insert standard synaptics option dialog
+	QVBox* leftSynapticsBox  = new QVBox ( mOptionStack );
+	// TODO
+	// add code for synaptics options dialog here
+	// ...
+	// add stacked widgets...
+	mMouseOptID = mOptionStack -> addWidget ( leftMouseBox );
+	mSynapOptID = mOptionStack -> addWidget ( leftSynapticsBox );
 	// third group with mouse test field
 	splitBox -> setSpacing ( 15 );
 	QVBox* rightBox = new QVBox ( splitBox );
@@ -77,7 +94,7 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mTestField = new SCCMouseTest (
 		mTextPtr,mMouseTestGroup
 	);
-	splitBox -> setStretchFactor ( leftBox, 20 );
+	splitBox -> setStretchFactor ( mOptionStack, 20 );
 
 	//=====================================
 	// create toplevel dialogs
@@ -116,6 +133,11 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mMainLayout -> addWidget  ( mMouseNameGroup );
 	mMainLayout -> addSpacing ( 15 );
 	mMainLayout -> addWidget  ( splitBox );
+
+	//=====================================       
+	// Show standard mouse options
+	//-------------------------------------
+	mOptionStack -> raiseWidget ( mMouseOptID );
 
 	//=====================================
 	// save display number
@@ -221,6 +243,18 @@ void SCCMouseDisplay::import ( void ) {
 	//------------------------------------
 	if (mSaxMouse -> isWheelEnabled()) {
 		mCheckMouseWheel -> setChecked ( true );
+	}
+	//====================================
+	// handle X axis invertation
+	//------------------------------------
+	if (mSaxMouse -> isYAxisInverted ()) {
+		mCheckInvertYAxis -> setChecked ( true );   
+	}
+	//====================================
+	// handle X axis invertation
+	//------------------------------------
+	if (mSaxMouse -> isXAxisInverted ()) {
+		mCheckInvertXAxis -> setChecked ( true );
 	}
 	//====================================
 	// handle mouse wheel emulation
@@ -330,6 +364,18 @@ bool SCCMouseDisplay::isWheelEmulationEnabled  ( void ) {
 //------------------------------------
 bool SCCMouseDisplay::isWheelEnabled ( void ) {
 	return mCheckMouseWheel->isChecked();
+}
+//====================================
+// isXInverted
+//------------------------------------
+bool SCCMouseDisplay::isXInverted ( void ) {
+	return mCheckInvertXAxis->isChecked();
+}
+//====================================
+// isYInverted
+//------------------------------------
+bool SCCMouseDisplay::isYInverted ( void ) {
+	return mCheckInvertYAxis->isChecked();
 }
 //====================================
 // getWheelButton

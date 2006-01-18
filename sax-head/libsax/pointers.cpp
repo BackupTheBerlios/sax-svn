@@ -396,6 +396,34 @@ void SaXManipulateMice::enableWheel  (void) {
 }
 
 //====================================
+// enableXAxisInvertation
+//------------------------------------
+void SaXManipulateMice::enableXAxisInvertation (void) {
+	// .../
+	//! enable the mouse X axis invertation by setting the
+	//! option InvX entry to on
+	// ----
+	if (! mImport) {
+		return;
+	}
+	mImport -> setItem ("InvX","on");
+}
+                                              
+//====================================
+// enableYAxisInvertation
+//------------------------------------
+void SaXManipulateMice::enableYAxisInvertation (void) {
+	// .../
+	//! enable the mouse Y axis invertation by setting the
+	//! option InvY entry to on
+	// ----                                               
+	if (! mImport) {                                       
+		return;                                              
+	}
+	mImport -> setItem ("InvY","on");
+}                   
+
+//====================================
 // disableWheel
 //------------------------------------
 void SaXManipulateMice::disableWheel (void) {
@@ -407,6 +435,34 @@ void SaXManipulateMice::disableWheel (void) {
 		return;
 	}
 	mImport -> setItem ("ZAxisMapping","");
+}
+
+//====================================
+// disableXAxisInvertation
+//------------------------------------
+void SaXManipulateMice::disableXAxisInvertation (void) {
+	// .../
+	//! disable the mouse X axis invertation by removing the
+	//! option InvX entry
+	// ----
+	if (! mImport) {
+		return;
+	}
+	mImport -> setItem ("InvX","");
+}
+
+//====================================
+// disableYAxisInvertation
+//------------------------------------
+void SaXManipulateMice::disableYAxisInvertation (void) {
+	// .../
+	//! disable the mouse Y axis invertation by removing the
+	//! option InvY entry
+	// ----
+	if (! mImport) {
+		return;
+	}
+	mImport -> setItem ("InvY","");
 }
 
 //====================================
@@ -443,7 +499,7 @@ bool SaXManipulateMice::isMouse (void) {
 }
 
 //====================================
-// wheelEnabled
+// isWheelEnabled
 //------------------------------------
 bool SaXManipulateMice::isWheelEnabled (void) {
 	// .../
@@ -461,7 +517,43 @@ bool SaXManipulateMice::isWheelEnabled (void) {
 }
 
 //====================================
-// wheelEmulated
+// isXAxisInverted
+//------------------------------------
+bool SaXManipulateMice::isXAxisInverted (void) {
+	// .../
+	//! check if the mouse X axis has been inverted. This is done
+	//! by checking the InvX keyword
+	// ----
+	if (! mImport) {
+		return false;
+	}
+	QString xaxis = mImport -> getItem ("InvX");
+	if (xaxis == "on") {                      
+		return true; 
+	}                                                            
+	return false;
+}
+
+//====================================
+// isYAxisInverted
+//------------------------------------
+bool SaXManipulateMice::isYAxisInverted (void) {
+	// .../
+	//! check if the mouse Y axis has been inverted. This is done
+	//! by checking the InvY keyword
+	// ----
+	if (! mImport) {
+		return false;                 
+	}
+	QString yaxis = mImport -> getItem ("InvY");
+	if (yaxis == "on") {  
+		return true;                                   
+	}
+	return false;
+}
+
+//====================================
+// isWheelEmulated
 //------------------------------------
 bool SaXManipulateMice::isWheelEmulated (void) {
 	// .../
@@ -479,7 +571,7 @@ bool SaXManipulateMice::isWheelEmulated (void) {
 }
 
 //====================================
-// buttonEmulation
+// isButtonEmulated
 //------------------------------------
 bool SaXManipulateMice::isButtonEmulated (void) {
 	// .../

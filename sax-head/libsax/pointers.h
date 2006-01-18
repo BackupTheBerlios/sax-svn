@@ -124,6 +124,10 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 	virtual void disable3ButtonEmulation ( void ) = 0;
 	virtual void enableWheel  ( void ) = 0;
 	virtual void disableWheel ( void ) = 0;
+	virtual void enableXAxisInvertation  ( void ) = 0;
+	virtual void enableYAxisInvertation  ( void ) = 0;
+	virtual void disableXAxisInvertation ( void ) = 0;
+	virtual void disableYAxisInvertation ( void ) = 0;
 
 	public:
 	virtual QList<QString> getMouseList       ( void ) = 0;
@@ -137,6 +141,8 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 	virtual bool isWheelEnabled   ( void ) = 0;
 	virtual bool isWheelEmulated  ( void ) = 0;
 	virtual bool isButtonEmulated ( void ) = 0;
+	virtual bool isXAxisInverted  ( void ) = 0;
+	virtual bool isYAxisInverted  ( void ) = 0;
 	virtual bool isMouse ( void ) = 0;
 
 	public:
@@ -206,6 +212,10 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	void disable3ButtonEmulation ( void );
 	void enableWheel  ( void );
 	void disableWheel ( void );
+	void enableXAxisInvertation  ( void );
+	void enableYAxisInvertation  ( void );
+	void disableXAxisInvertation ( void );
+	void disableYAxisInvertation ( void );
 
 	public:
 	QList<QString> getMouseList       ( void );
@@ -219,6 +229,8 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	bool isWheelEnabled   ( void );
 	bool isWheelEmulated  ( void );
 	bool isButtonEmulated ( void );
+	bool isXAxisInverted  ( void );
+	bool isYAxisInverted  ( void );
 	bool isMouse ( void );
 
 	public:

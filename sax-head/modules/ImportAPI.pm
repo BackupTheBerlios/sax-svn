@@ -670,6 +670,20 @@ sub ApiImportMouse {
 		last SWITCH;
 		};
 
+		/^InvX/                     && do {
+		if (($value !~ /off/i) && ($value !~ /none/i)) {
+			$var{InputDevice}{$card}{Option}{InvX} = $value;
+		}
+		last SWITCH;
+		};
+
+		/^InvX/                     && do {
+		if (($value !~ /off/i) && ($value !~ /none/i)) {
+			$var{InputDevice}{$card}{Option}{InvY} = $value;
+		}
+        last SWITCH;          
+        };
+
 		/^EmulateWheel/             && do {
 		if ($value =~ /\d+/) {
 			$var{InputDevice}{$card}{Option}{EmulateWheel} = "on";

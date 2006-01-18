@@ -61,6 +61,8 @@ class SCCMouseDisplay : public SCCDialog {
 
 	private:
 	QBoxLayout*      mMainLayout;
+	int              mMouseOptID;
+    int              mSynapOptID;
 
 	private:
 	QCheckBox*       mCheckEnable;
@@ -71,10 +73,13 @@ class SCCMouseDisplay : public SCCDialog {
 	QCheckBox*       mCheck3BtnEmulation;
 	QCheckBox*       mCheckMouseWheel;
 	QCheckBox*       mCheckEmulateWheel;
+	QCheckBox*       mCheckInvertXAxis;
+	QCheckBox*       mCheckInvertYAxis;
 	QSpinBox*        mEmulateWheelButton;
 	QButtonGroup*    mMouseTestGroup;
 	SCCMouseTest*    mTestField;
 	SCCMouseModel*   mChangeMouseModelDialog;
+	QWidgetStack*    mOptionStack;
 
 	public:
 	bool isEnabled  ( void );
@@ -83,6 +88,8 @@ class SCCMouseDisplay : public SCCDialog {
 	bool isButtonEmulationEnabled ( void );
 	bool isWheelEmulationEnabled  ( void );
 	bool isWheelEnabled ( void );
+	bool isXInverted    ( void );
+	bool isYInverted    ( void );
 	int  getWheelButton ( void );
 	void setButtonEmulationEnabled ( bool );
 	void setWheelEmulationEnabled  ( bool );

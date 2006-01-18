@@ -213,6 +213,20 @@ bool SCCMouse::exportData ( void ) {
 			saxMouse.enableWheel();
 		}
 		//====================================
+		// save mouse X axis invertation data
+		//------------------------------------
+		saxMouse.disableXAxisInvertation();
+		if (display->isXInverted()) {
+			saxMouse.enableXAxisInvertation();
+		}
+		//====================================
+		// save mouse Y axis invertation data
+		//------------------------------------
+		saxMouse.disableYAxisInvertation();
+		if (display->isYInverted()) {
+			saxMouse.enableYAxisInvertation();
+		}
+		//====================================
 		// save mouse wheel emulation data
 		//------------------------------------
 		saxMouse.disableWheelEmulation();
