@@ -405,7 +405,7 @@ bool SCCMonitor::exportData ( void ) {
 				for (; it.current(); ++it) {
 					saxCard.removeCardOption (it.currentKey());
 				}
-				#if 1
+				#if 1 // to be removed as soon as possible
 				//====================================               
 				// fix broken cards                                     
 				//------------------------------------
