@@ -405,6 +405,12 @@ bool SCCMonitor::exportData ( void ) {
 				for (; it.current(); ++it) {
 					saxCard.removeCardOption (it.currentKey());
 				}
+				#if 1
+				//====================================               
+				// fix broken cards                                     
+				//------------------------------------
+				fixBrokenCards (saxCard,false);
+				#endif
 				//====================================
 				// delete special modelines
 				//------------------------------------
@@ -569,12 +575,12 @@ bool SCCMonitor::exportData ( void ) {
 								);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										channelA << ":" << *ir.current() << "," <<
-										channelB << ":" << resolution2;
+										channelA <<":"<< *ir.current() << "," <<
+										channelB <<":"<< resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										channelA << ":" << *ir.current() << "," <<
-										channelB << ":" << *ir.current();
+										channelA <<":"<< *ir.current() << "," <<
+										channelB <<":"<< *ir.current();
 								}
 								resolution.append (";"+metaItem);
 							}
@@ -719,6 +725,11 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "MergedFB") {
 							saxCard.addCardOption ( key,0 );
 						}
+						#if 1 // to be removed as soon as possible
+						if ((key== "MonitorLayout") && (driver == "radeon")) {
+							fixBrokenCards (saxCard,true);
+						}
+						#endif
 						if (key == "CRT2HSync") {
 							QString hsync;
 							int hsmax = dualModel->getHSmax();
@@ -980,4 +991,29 @@ void SCCMonitor::setCommonButtonWidth ( void ) {
 		display->setCommonButtonWidth();
 	}
 }
+#if 1 // to be removed as soon as possible
+//====================================
+// fixBrokenCards
+//------------------------------------
+void SCCMonitor::fixBrokenCards ( SaXManipulateCard& saxCard, bool enable ) {
+	SaXImportSysp* card = new SaXImportSysp (SYSP_CARD);
+	card->doImport();
+	QString vid  (card->getItem("VID"));
+	QString did  (card->getItem("DID"));
+	QString svid (card->getItem("SUB-VID"));       
+	QString sdid (card->getItem("SUB-DID"));
+	if (
+		(vid  =="0x1002") && (did  =="0x5653") &&
+		(svid =="0x1025") && (sdid =="0x007e")
+	) {
+		// Special case for Ferrari F-4000 X700 card
+		saxCard.removeCardOption ("MonitorLayout");
+		if (enable) {
+			saxCard.addCardOption ("MonitorLayout","LVDS,CRT");
+		} else {
+			saxCard.addCardOption ("MonitorLayout","LVDS");
+		}
+	}
+}
+#endif
 } // end namespace

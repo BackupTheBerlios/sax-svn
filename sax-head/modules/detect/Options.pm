@@ -67,13 +67,19 @@ sub AutoDetectOptions {
 	# ---------------------------------------
 	for($i=0;$i<@rawdef_list;$i++) {
 	if (($rawdef_list[$i] ne "") && ($rawdef_list[$i] !~ /None/)) {
-		@rawlist = split(/,/,$rawdef_list[$i]);
+		@rawlist = split(/#Option |Option /,$rawdef_list[$i]);
 		$count   = 0;
 		foreach (@rawlist) {
+			if ($_ eq "") {
+				next;
+			}
+			$_ =~ s/,$//;
+			$_ =~ s/^ +//;
+			$_ =~ s/ +$//;
 			@elements = split(/ +/,$_);
 			$el = $elements[0];
-			$va = $_; $va =~ s/$el//;
-			$var{Device}{$i}{Raw}{$count}{$el} = $va;
+			$va = $elements[1];
+			$var{Device}{$i}{Raw}{$count}{Option} = "$el $va";
 			$count++;
 		}
 	} 

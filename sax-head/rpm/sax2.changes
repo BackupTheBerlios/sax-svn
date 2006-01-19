@@ -1,15 +1,21 @@
 -------------------------------------------------------------------
 Tue Jan 17 16:45:59 CET 2006 - ms@suse.de
 
+- added special case handling for the Radeon X700 card (#120424)
 - added support for inverting mouse axis (#142569)
+- added hwinfo patch from Steffen Winterfeldt <snwint@suse.de>
+  which fixes DDC detection on mulihead cards, great job Steffen !
+- fixed RawDef option handling from Identity map RAW entries
 - fixed Profile.pm to call X -probeonly only if needed
+- update Identity maps for all architectures
 
 -------------------------------------------------------------------
 Mon Jan 16 14:40:50 CET 2006 - ms@suse.de
 
 - prepared sax2 to be able to parse/create multiseat configurations.
   This feature is up to now not implemented completely (#142657)
-- fixed NVidia MetaModes setup according to information from                      Andy Ritger <aritger@nvidia.com>
+- fixed NVidia MetaModes setup according to information from
+  Andy Ritger <aritger@nvidia.com>
 
 -------------------------------------------------------------------
 Fri Jan 13 15:02:52 CET 2006 - ms@suse.de
