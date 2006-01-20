@@ -535,17 +535,28 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key,0 );
 						}
 						if (key == "ConnectedMonitor") {
-							saxCard.addCardOption ( key,val );
+							QStringList cs = QStringList::split (",",val);
+							QString channelA = cs.first();
+							QString channelB = cs.last();
+							if ((channelA == "AUTO") || (channelB == "AUTO")) {
+								saxCard.removeCardOption ( key );
+							} else {
+								saxCard.addCardOption ( key,val );
+							}
 						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
-							QString channelA = "AUTO";
-							QString channelB = "AUTO";
+							QString channelA = "AUTO:";
+							QString channelB = "AUTO:";
 							if (profileDriverOptions["ConnectedMonitor"]) {
 								QStringList cs = QStringList::split (",",
 									*profileDriverOptions["ConnectedMonitor"]
 								);
-								channelA = cs.first();
-								channelB = cs.last();
+								channelA = cs.first() + ":";
+								channelB = cs.last()  + ":";
+							}
+							if ((channelA == "AUTO:") || (channelB == "AUTO:")) {
+								channelA = "";
+								channelB = "";
 							}
 							QList<QString> rList1=display->getResolution();
 							QString resolution1 = *rList1.at(0);
@@ -557,8 +568,8 @@ bool SCCMonitor::exportData ( void ) {
 							QString metaItem;
 							QString resolution;
 							QTextOStream (&metaItem) <<
-								channelA << ":" << resolution1 << "," <<
-								channelB << ":" << resolution2;
+								channelA << resolution1 << "," <<
+								channelB << resolution2;
 							resolution.append (";"+metaItem);
 							//====================================
 							// add secondary meta modes
@@ -575,12 +586,12 @@ bool SCCMonitor::exportData ( void ) {
 								);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										channelA <<":"<< *ir.current() << "," <<
-										channelB <<":"<< resolution2;
+										channelA << *ir.current() << "," <<
+										channelB << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										channelA <<":"<< *ir.current() << "," <<
-										channelB <<":"<< *ir.current();
+										channelA << *ir.current() << "," <<
+										channelB << *ir.current();
 								}
 								resolution.append (";"+metaItem);
 							}
