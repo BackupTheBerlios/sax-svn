@@ -286,7 +286,8 @@ int main (int argc, char*argv[]) {
 	if (GetModeLineData (dpy,current_screen)) {
 		float hsync = AppRes.field[HSyncStart].val;
 		float vsync = AppRes.field[VSyncStart].val;
-		if ((hsync == 0) || ( vsync == 0)) {
+		float clock = AppRes.field[PixelClock].val;
+		if ((hsync == 0) || ( vsync == 0) || (clock < 0) || (clock > 500e3)) {
 			printf("%d no\n",current_screen);
 		} else {
 			printf("%d yes\n",current_screen);
