@@ -29,7 +29,7 @@
 #  Mode                 = string
 #  Load                 = string
 #  Option               = string,string
-#  RawOption            = string,string,...
+#  RawOption            = quotedoptionstring quotedvaluestring,...
 # }
 
 #----------------------#
@@ -82,4 +82,16 @@ ELO:2300-TOUCHSCREEN  {
  ButtonThreshold      = 17
  ButtonNumber         = 1
  SendCoreEvents       = on
+}
+
+#--------------------------#
+# Wacom Penabled TabletPC  #
+#--------------------------#
+Wacom:PenabledTabletPC  {
+ Driver               = wacom
+ Device               = /dev/ttyS0
+ SendCoreEvents       = on
+ TouchType            = stylus
+ Mode                 = Absolute
+ RawOption            = "ForceDevice" "ISDV4"
 }
