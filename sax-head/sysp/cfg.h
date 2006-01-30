@@ -30,6 +30,7 @@ STATUS        : Status: Up-to-date
 #include <signal.h>
 #include <algorithm>
 #include <list>
+#include <math.h>
 
 using namespace std;
 
@@ -56,6 +57,9 @@ class XF86ConfigFile {
 	int elements;
 	int current;
 	string file;
+
+	private:
+	int toDec (int v);
 
 	private:
 	int idc;

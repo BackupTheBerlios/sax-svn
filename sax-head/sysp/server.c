@@ -772,8 +772,7 @@ void ScanServer::Scan(void) {
 		} catch (...) {
 			// ...
 		}
-		printf ("++++++ %s\n",file);
-		//unlink(file);
+		unlink(file);
 
 		// check the primary device...
 		// ----------------------------
