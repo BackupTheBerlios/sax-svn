@@ -16,6 +16,7 @@ bindlib        = lib
 ASK_FOR_CHANGELOG=no
 TEMPLATE_CHECK=no
 ARCH=`/bin/arch`
+QTDIR=`test -z $QTDIR && echo $QTDIR || echo /usr/lib/qt3`
 
 export
 

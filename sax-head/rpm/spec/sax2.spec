@@ -1,21 +1,16 @@
 #
 # spec file for package sax2 (Version 7.1)
 #
-# Copyright (c) 2005 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# Copyright (c) 2006 SUSE LINUX Products GmbH, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
-# Please submit bugfixes or comments via http://www.suse.de/feedback/
+# Please submit bugfixes or comments via http://bugs.opensuse.org
 #
 
-# neededforbuild  dbus-1 doxygen flex ghostscript-fonts-std glib2 graphviz hal java2-devel-packages mono-devel-packages python python-devel qt3-devel-packages swig sysfsutils udev update-desktop-files wireless-tools x-devel-packages xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-server yacc readline-devel hal-devel dbus-1-devel
 
-BuildRequires: aaa_base acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db devs diffutils e2fsprogs file filesystem fillup findutils flex gawk gdbm-devel gettext-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libcom_err libgcc libnscd libselinux libstdc++ libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openssl pam pam-modules patch permissions popt procinfo procps psmisc pwdutils rcs readline sed strace sysvinit tar tcpd texinfo timezone unzip util-linux vim zlib zlib-devel autoconf automake binutils dbus-1 doxygen expat fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gcc gcc-c++ gdbm gettext ghostscript-fonts-std glib2 gnome-filesystem graphviz hal java-1_4_2-sun java-1_4_2-sun-devel jpackage-utils libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool mono-basic mono-core mono-data mono-data-sqlite mono-devel mono-web perl python python-devel qt3 qt3-devel rpm swig sysfsutils udev update-alternatives update-desktop-files wireless-tools xorg-x11-Mesa xorg-x11-Mesa-devel xorg-x11-devel xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-libs xorg-x11-server hal-devel dbus-1-devel
-
-#=================================================
-# Description sax2
-#-------------------------------------------------
 Name:         sax2
+BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages libdrm-devel libjpeg-devel mono-basic mono-data-sqlite mono-devel python-devel qt3-devel readline-devel swig sysfsutils udev update-desktop-files wireless-tools xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi
 Requires:     perl readline ncurses hal dbus-1 binutils
 Requires:     sax2-ident sax2-tools
 %if %{suse_version} >= 810
@@ -32,7 +27,7 @@ Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration
 Version:      7.1
-Release:      18
+Release:      70
 Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
@@ -45,8 +40,7 @@ Obsoletes:    sax xfine
 %ifarch sparc sparc64
 Requires:     sax2_sbus
 %endif
-ExcludeArch:  s390 s390x
-
+ExcludeArch:  s390
 %if %{suse_version} > 1000
 %define sub_package 0
 %else
@@ -62,12 +56,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-tools
-#-------------------------------------------------
 %package -n sax2-tools
 Version:      2.7
-Release:      18
+Release:      70
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     sax2-ident coreutils
@@ -84,12 +75,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-ident
-#-------------------------------------------------
 %package -n sax2-ident
 Version:      1.7
-Release:      18
+Release:      70
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/share/sax/sysp/maps/Identity.map
@@ -109,12 +97,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-gui
-#-------------------------------------------------
 %package -n sax2-gui
 Version:      1.7
-Release:      18
+Release:      70
 Requires:     netpbm sax2-tools qt3 fvwm2 sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
@@ -129,12 +114,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-libsax
-#-------------------------------------------------
 %package -n sax2-libsax
 Version:      7.1
-Release:      18
+Release:      70
 Requires:     sax2-tools qt3 fvwm2 sax2 855resolution
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
@@ -149,12 +131,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-libsax-devel
-#-------------------------------------------------
 %package -n sax2-libsax-devel
 Version:      7.1
-Release:      18
+Release:      70
 Requires:     sax2-libsax
 Summary:      SaX management library header files for X Window System-configuration development
 Group:        Development/Libraries/X11
@@ -169,12 +148,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-libsax-perl
-#-------------------------------------------------
 %package -n sax2-libsax-perl
 Version:      7.1
-Release:      18
+Release:      70
 Requires:     sax2-libsax
 Summary:      Language binding to use libsax with perl
 Group:        Development/Libraries/X11
@@ -189,12 +165,9 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-libsax-python
-#-------------------------------------------------
 %package -n sax2-libsax-python
 Version:      7.1 
-Release:      18
+Release:      70
 Requires:     sax2-libsax
 %{py_requires}
 Summary:      Language binding to use libsax with python
@@ -211,13 +184,10 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-#=================================================
-# Description sax2-libsax-java
-#-------------------------------------------------
 %ifnarch ppc64
 %package -n sax2-libsax-java
 Version:      7.1
-Release:      18
+Release:      70
 Requires:     sax2-libsax jre1.2.x
 Summary:      Language binding to use libsax with java
 Group:        Development/Libraries/X11
@@ -234,14 +204,11 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %endif
-#=================================================
-# Description sax2-libsax-csharp
-#-------------------------------------------------
 %if%sub_package
 %ifnarch ppc64
 %package -n sax2-libsax-csharp
 Version:      7.1
-Release:      18
+Release:      70
 Requires:     sax2-libsax mono
 Summary:      Language binding to use libsax with C#
 Group:        Development/Libraries/X11
@@ -278,6 +245,7 @@ make bindlib=%{_lib} buildroot=$RPM_BUILD_ROOT
 #=================================================
 # install sources
 #-------------------------------------------------
+
 %install
 rm -rf $RPM_BUILD_ROOT
 make buildroot=$RPM_BUILD_ROOT \
@@ -412,6 +380,7 @@ fi
 /usr/share/locale/uk/LC_MESSAGES/sax.mo
 /usr/share/locale/fi/LC_MESSAGES/sax.mo
 /usr/share/locale/pa/LC_MESSAGES/sax.mo
+/usr/share/locale/km/LC_MESSAGES/sax.mo
 /usr/sbin/xapi
 /usr/sbin/xfine
 %if %{suse_version} > 820

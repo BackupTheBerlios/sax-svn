@@ -435,6 +435,14 @@ sub MergeParseResult {
 			$result{Device}{$count}{$opt} = $optval;
 			last SWITCH;
 		};
+		/^ChipId/          && do {
+			$result{Device}{$count}{$opt} = $optval;
+			last SWITCH;
+		};
+		/^ChipRev/          && do {
+			$result{Device}{$count}{$opt} = $optval;
+			last SWITCH;
+		};
 		# default is raw data...
 		# ----------------------- 
 		if ($optval =~ /[0-9]*/) {

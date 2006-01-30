@@ -383,6 +383,7 @@ fi
 /usr/share/locale/uk/LC_MESSAGES/sax.mo
 /usr/share/locale/fi/LC_MESSAGES/sax.mo
 /usr/share/locale/pa/LC_MESSAGES/sax.mo
+/usr/share/locale/km/LC_MESSAGES/sax.mo
 /usr/sbin/xapi
 /usr/sbin/xfine
 #=================================================

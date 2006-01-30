@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Jan 13 18:33:41 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Jan 30 10:24:59 2006
 #
 # Template for monitor data
 # --------------------------
@@ -28751,6 +28751,17 @@ PHILIPS:200B (20INCHCM5600)  {
  Option=DPMS
  Hsync=30-82
  Vsync=50-120
+}
+
+#==============================================
+# 200P4
+#----------------------------------------------
+PHILIPS:200P4  {
+ DDC=PHL0819
+ Option=DPMS
+ Hsync=30-92
+ Resolution=1600x1200
+ Vsync=56-85
 }
 
 #==============================================

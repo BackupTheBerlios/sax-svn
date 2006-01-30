@@ -159,7 +159,7 @@ sub LoadText {
 		$line =~ /(.*)=(.*)/;
 		my $key   = $1;
 		my $value = $2;
-		push(@result,"text{$key} = gettext(\"$value\");\n");
+		push(@result,"text{\"$key\"} = gettext(\"$value\");\n");
 	} elsif ($line =~ /^#/) {
 		$line =~ s/^#/\/\//;
 		$line =~ s/^ +//;

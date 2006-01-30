@@ -789,6 +789,16 @@ sub ApiImportCard {
 		last SWITCH;
 		};
 
+		/^ChipId/          && do {
+		$var{Device}{$card}{ChipId} = $value;
+		last SWITCH;
+		};
+
+		/^ChipRev/          && do {
+		$var{Device}{$card}{ChipRev} = $value;
+		last SWITCH;
+		};
+
 		/^Option/          && do {
 		$var{Device}{$card}{Option} = $value;
 		last SWITCH;
