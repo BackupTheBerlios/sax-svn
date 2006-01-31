@@ -231,6 +231,7 @@ Authors:
 
 %build
 test -e /.buildenv && . /.buildenv
+test -z $QTDIR && export QTDIR=/usr/lib/qt3
 #=================================================
 # add SuSE version to sax.sh script...
 #-------------------------------------------------
