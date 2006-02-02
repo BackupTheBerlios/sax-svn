@@ -1,3 +1,4 @@
+# translation of sax.po to suomi
 # translation of UUSIsax.po to
 # translation of sax.po to
 # translation of sax.fi.po to
@@ -5,13 +6,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Jyri Palokangas <jmp@netti.fi>, 2005, 2006.
+# Ilkka Pirskanen <ilkka.pirskanen@kolumbus.fi>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.fi\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-01-13 08:48+0200\n"
+"PO-Revision-Date: 2006-01-31 22:16+0200\n"
 "Last-Translator: Jyri Palokangas <jmp@netti.fi>\n"
-"Language-Team:  <fi@li.org>\n"
+"Language-Team: suomi <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,9 +30,9 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>SaX2 ehdotus</b><hr>Tällä hetkellä käytössä graafinen järjestelmä "
-"perustuu SaX2 tekemään ehdotukseen. Jos se on hyväksyttävä, paina <b>OK</b>. "
-"Muussa tapauksessa, muuta määritystä."
+"<b>SaX2 ehdotus</b><hr>Tällä hetkellä käytössä oleva graafinen järjestelmä "
+"perustuu SaX2:n tekemään ehdotukseen. Jos se on hyväksyttävissä, paina "
+"<b>OK</b>. Muussa tapauksessa muuta määritystä."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -178,19 +180,19 @@ msgstr "Ota hiiren rulla käyttöön"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "Käänteinen X-akseli"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "Käänteinen Y-akseli"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr "Ota käyttöön 3-napin emulointi"
+msgstr "Ota käyttöön 3. painikkeen emulointi"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Jäljittele rullaa hiiren näppäimellä"
+msgstr "Jäljittele rullaa hiiren painikkeella"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
@@ -225,19 +227,19 @@ msgstr "Yksi napautus: Tehty"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr "Kaksoinapautus: Tehty"
+msgstr "Kaksoisnapautus: Tehty"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
-msgstr "Rullaus"
+msgstr "Vieritys"
 
 #. Status line of mouse test field: button pressed
 msgid "Button pressed"
-msgstr "Nappi painettu"
+msgstr "Painike painettu"
 
 #. Status line of mouse test field: button released
 msgid "Button released"
-msgstr "Nappi vapautettu"
+msgstr "Painike vapautettu"
 
 #. Status line of mouse test field: wheel stopped
 msgid "Stopped: Done"
@@ -261,7 +263,7 @@ msgstr "Värit"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr "Ota 3D kiihdytys käyttöön"
+msgstr "Ota 3D-kiihdytys käyttöön"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
@@ -273,7 +275,7 @@ msgstr "Toinen monitori kortille"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
-msgstr "Tahdista taajuudet"
+msgstr "Tahdistustaajuudet"
 
 #. Tab title: Setup display size
 msgid "Display Size"
@@ -286,11 +288,11 @@ msgstr "Järjestely"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr "Ota käyttöön %1 tila %2"
+msgstr "Otettu käyttöön %1 tila %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr "Ota ajuri käyttöön oletustilassa"
+msgstr "Ohjain otettu käyttöön oletustilassa"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
@@ -304,8 +306,8 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Kaikkien näyttöjen poistaminen käytöstä ei onnistu</b><hr><nobr>Ainakin "
-"yhden näytön tulee olla käytössä.</nobr>"
+"<b>Kaikkien näyttöjä ei voida poistaa käytöstä</b><hr> <nobr>Ainakin yhden "
+"näytön tulee olla käytössä.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -324,7 +326,7 @@ msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
-"Kloonattu moninäyttö:\n"
+"Monistettu moninäyttö:\n"
 "Jokainen näyttö on ensisijaisen näytön kopio"
 
 #. Radiobutton for xinerama multihead mode
@@ -332,7 +334,7 @@ msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
-"Xinerama moninäyttö:\n"
+"Xinerama-moninäyttö:\n"
 "Rakenna yksi iso näyttö kaikista näytöistä"
 
 #. Title for multihead modi
@@ -396,11 +398,11 @@ msgstr "Hiiri: Valmistajan ja nimen valinta"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr "Tahdista taajuudet käsinasetus"
+msgstr "Tahdistustaajuuden käsinasetus"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr "Kulma ja sivusuhde"
+msgstr "Läpimitta ja kuvasuhde"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
@@ -422,7 +424,7 @@ msgstr "Ota DPMS käyttöön"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr "Ohjelmalevy...."
+msgstr "Ohjelmalevy..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
@@ -454,15 +456,15 @@ msgstr "Kuvasuhde"
 
 #. Label text for the diagonal length combo box
 msgid "Diagonal"
-msgstr "Vino"
+msgstr "Läpimitta"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr "X akseli [mm]"
+msgstr "X-akseli [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr "Y akseli [mm]"
+msgstr "Y-akseli [mm]"
 
 #. Something is not configured
 msgid "Not configured"
@@ -486,7 +488,7 @@ msgid ""
 "damaged medium or incorrectly formatted information files."
 msgstr ""
 "<b>Lukuvirhe</b><hr>CD:n tai levykkeen lukeminen ei onnistu. Tämä voi johtua "
-"viallisesta mediasta tai väärin muodostetuista informaatio-tiedostoista."
+"viallisesta mediasta tai väärin muodostetuista informaatiotiedostoista."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -494,7 +496,7 @@ msgstr "Perinteinen"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr "Klooni"
+msgstr "Monistettu"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
@@ -519,7 +521,7 @@ msgstr "Muunnos"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr "Lisäkartat"
+msgstr "Lisäasettelut"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -539,12 +541,12 @@ msgstr "Käytä näppäimistön led -valoa näyttämään vaihtoehtoinen ryhmä"
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Luo uusi- näppäimen sijainti"
+msgstr "Luo uusi -näppäimen sijainti"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Ctrl näppäimen sijainti"
+msgstr "Ctrl-näppäimen sijainti"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -552,23 +554,23 @@ msgstr "Kolmannen tason vaihtajat"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr "Alt/Win -näppäimen toiminta"
+msgstr "Alt/Win-näppäimen toiminta"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr "CapsLock -näppäimen toiminta"
+msgstr "CapsLock-näppäimen toiminta"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr "Ei mikään"
+msgstr "Ei mitään"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "Vasen Alt-näppäin vaihtaa ryhmää painettuna"
+msgstr "Vasen Alt-näppäin vaihtaa ryhmää painettuna."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr "Molemmat Ctrl-näppäimet yhtäaikaisesti vaihtavat ryhmää"
+msgstr "Molemmat Ctrl-näppäimet yhtäaikaisesti vaihtavat ryhmää."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
@@ -580,15 +582,15 @@ msgstr "Vasen Win-näppäin vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr "Vasen Alt vaihtaa ryhmää"
+msgstr "Vasen Alt-näppäin vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr "Molemmat Win -näppäimet vaihtavat ryhmää painettuna"
+msgstr "Molemmat Win-näppäimet vaihtavat ryhmää painettuna."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr "Oikea Alt-näppäin vaihtaa ryhmää painettuna"
+msgstr "Oikea Ctrl-näppäin vaihtaa ryhmää painettuna."
 
 #. XKBFile extension text
 #, fuzzy
@@ -606,23 +608,24 @@ msgstr "CapsLock vaihtaa kirjainten merkkikokoa."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "CapsLock vaihtaa Shift joten tämä vaikuttaa kaikkiin näppäimiin."
+msgstr ""
+"CapsLock vaihtaa vaihtonäppäimen, joten tämä vaikuttaa kaikkiin näppäimiin."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr "Oikea Win -näppäin on Kirjoita uusi."
+msgstr "Oikea Win-näppäin on Kirjoita uusi."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr "Shift+CapsLock vaihtavat ryhmää."
+msgstr "Shift+CapsLock vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr "Oikea Alt -näppäin vaihtaa ryhmää painettuna."
+msgstr "Oikea Alt-näppäin vaihtaa ryhmää painettuna."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr "Oikea Ctrl toimii kuten oikea Alt"
+msgstr "Oikea Ctrl toimii kuten oikea Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -630,11 +633,11 @@ msgstr "Ctrl alhaalla vasemmalla"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Paina jotakin Win -painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina jotakin Win-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Paina oikeaa Alt -painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina oikeaa Alt-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
@@ -650,7 +653,7 @@ msgstr "Oikea Ctrl on Kirjoita uusi."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
-msgstr "ScrollLock  LED-valo näyttää vaihtoehtoisen ryhmän"
+msgstr "ScrollLock LED-valo näyttää vaihtoehtoisen ryhmän."
 
 #. XKBFile extension text
 msgid "Control key at left of -A-"
@@ -662,12 +665,12 @@ msgstr "Kolmannen tason vaihtajat"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
-msgstr "Molemmat vaihtonäppäimet yhtäaikaisesti vaihtavat ryhmää"
+msgstr "Molemmat vaihtonäppäimet yhtäaikaisesti vaihtavat ryhmää."
 
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "CapsLock toimi kuten Shift lukituksella. Shift estää CapsLockin."
+msgstr "CapsLock toimi kuten Shift lukituksella. Shift poistaa CapsLockin."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
@@ -680,7 +683,7 @@ msgstr "Tee CapsLockista ylimääräinen Ctrl."
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Paina vasenta Win -painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina vasenta Win-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
@@ -688,15 +691,15 @@ msgstr "Oikea Win-näppäin vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
-msgstr "Meta on määritelty vasempaan Win -näppäimeen."
+msgstr "Meta on määritelty vasempaan Win-näppäimeen."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
-msgstr "CapsLock -valo näyttää vaihtoehtoisen ryhmän."
+msgstr "CapsLock-valo näyttää vaihtoehtoisen ryhmän."
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative group."
-msgstr "NumLock -valo näyttää vaihtoehtoisen ryhmän."
+msgstr "NumLock-valo näyttää vaihtoehtoisen ryhmän."
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
@@ -704,7 +707,7 @@ msgstr "Vasen vaihtonäppäin vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
-msgstr "Vasen Win -näppäin vaihtaa ryhmää painettuna."
+msgstr "Vasen Win-näppäin vaihtaa ryhmää painettuna."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
@@ -720,11 +723,11 @@ msgstr "Caps Lock vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr "Vaihda Ctrl -painiketta ja CapsLockia."
+msgstr "Vaihda Ctrl ja CapsLock."
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Paina jotakin Alt-painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina jotakin Alt-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
@@ -741,11 +744,11 @@ msgstr "Erikoisnäppäimet (Ctrl+Alt+<key>) käsitellään palvelimella."
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper on määritelty Win -näppäimiin"
+msgstr "Hyper on määritelty Win-näppäimiin."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Alt on määritelty oikeaan Win -näppäimeen ja Super Menuun."
+msgstr "Alt on määritelty oikeaan Win-näppäimeen ja Super Menuun."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
@@ -753,19 +756,19 @@ msgstr "Super on määritelty Win-näppäimiin (oletus)."
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Alt ja Meta Alt -painikkeilla (oletus)."
+msgstr "Alt ja Meta Alt-näppäimillä (oletus)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr "Lisää normaali käyttäytyminen Menu -painikkeeseen."
+msgstr "Lisää normaali käyttäytyminen Menu-näppäimeen."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Alt ja Meta Alt -painikkeilla (oletus)."
+msgstr "Alt ja Meta Alt-näppäimillä (oletus)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "Paina oikeaa Ctrl -painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina oikeaa Ctrl-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
@@ -777,27 +780,27 @@ msgstr "Ctrl+Shift vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "CapsLock toimi kuten Shift lukituksella. Shift estää CapsLockin."
+msgstr "CapsLock toimi kuten Shift lukituksella. Shift poistaa CapsLockin."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr "Käytä näppäimistön LED -valoa näyttämään vaihtoehtoinen ryhmä."
+msgstr "Käytä näppäimistön LED-valoa näyttämään vaihtoehtoinen ryhmä."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Paina oikeaa Win -painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina oikeaa Win-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Paina vasenta Alt -näppäintä siirtyäksesi 3. tasolle"
+msgstr "Paina vasenta Alt-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
-msgstr "Meta on määritelty Win -näppäimiin."
+msgstr "Meta on määritelty Win-näppäimiin."
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr "Paina oikeaa Menu -painiketta siirtyäksesi 3. tasolle."
+msgstr "Paina oikeaa Menu-näppäintä siirtyäksesi 3. tasolle."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
@@ -805,7 +808,7 @@ msgstr "Vasen Ctrl-näppäin vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr "Menu näppäin vaihtaa ryhmää."
+msgstr "Menu-näppäin vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
@@ -813,7 +816,7 @@ msgstr "Alt+Ctrl vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr "Oikea Win -näppäin vaihtaa ryhmää painettuna."
+msgstr "Oikea Win-näppäin vaihtaa ryhmää painettuna."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -833,7 +836,7 @@ msgstr "Paneeli: Valmistajan ja nimen valinta"
 
 #. Group box title for tablet port combobox
 msgid "Connection Port"
-msgstr "Yhteys portti"
+msgstr "Kytkentäportti"
 
 #. Group box title for tablet mode
 msgid "Primary Tablet Mode"
@@ -849,7 +852,7 @@ msgstr "Suhteellinen"
 
 #. Radiobutton for absolute tablet mode
 msgid "Absolute"
-msgstr "Pysyvä"
+msgstr "Kiinteä"
 
 #. Combobox item text for tablet port: USB
 msgid "USB"
@@ -904,24 +907,24 @@ msgid ""
 msgstr ""
 "<b>Viimeiset vaiheet</b><hr>Viimeinen vaihe on uuden määrityksen "
 "tallentaminen. On suositeltavaa kokeilla uutta määritystä ennen sen "
-"tallennusta. Jos koepalvelin näyttää korruptoituneen työpöydän, paina <b>"
-"[ Ctrl+Alt+Backspace ]</b> lopettaaksesi palvelimen."
+"tallennusta. Jos koepalvelin näyttää vaurioituneen työpöydän, paina <b>[ Ctrl"
+"+Alt+Backspace ]</b> lopettaaksesi palvelinohjelman suorituksen."
 
 #. Tab title: VNC Server configuration
 msgid "VNC Server"
-msgstr "VNC palvelin"
+msgstr "VNC-palvelin"
 
 #. Activate VNC server checkbox
 msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Salli yhteys näyttöön käyttäen VNC protokollaa"
+msgstr "Salli pääsy näyttöön käyttäen VNC-yhteyskäytäntöä"
 
 #. Group box title for the VNC options
 msgid "VNC Options"
-msgstr "VNC valinnat"
+msgstr "VNC-valinnat"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr "Ota salasana suojaus käyttöön"
+msgstr "Ota salasanasuojaus käyttöön"
 
 #. LineEdit label: enter password
 msgid "Password"
@@ -941,22 +944,22 @@ msgstr "<Varmista salasana>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
-msgstr "Ota HTTP yhteys käyttöön"
+msgstr "Ota HTTP-yhteys käyttöön"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple VNC Connections"
-msgstr "Salli monta VNC yhteyttä"
+msgstr "Salli monta VNC-yhteyttä"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
-msgstr "HTTP portti"
+msgstr "HTTP-portti"
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>VNC salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan versio "
+"<b>VNC-salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan versio "
 "eivät täsmää."
 
 #. VNC message box appearing if password is too short
@@ -964,8 +967,8 @@ msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>VNC salasana ongelma</b><hr>Salasana kenttä on jätetty tyhjäksi tai "
-"salasana on liian lyhyt. Anna salasana joka on vähintään kuusi merkkiä."
+"<b>VNC-salasanavirhe</b><hr>Salasanakenttä on jätetty tyhjäksi tai salasana "
+"on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä."
 
 #. Install missing packages box
 msgid ""
@@ -1001,8 +1004,8 @@ msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Määritys tallennettiin</b><hr>Muutokset tulevat voimaan seuraavan kerran "
-"kun grafiikkajärjestelmä uudelleen käynnistetään. Lopetetaanko SaX2 nyt?"
+"<b>Määritys tallennettiin</b><hr>Muutokset tulevat voimaan seuraavan kerran, "
+"kun grafiikkajärjestelmä uudelleenkäynnistetään. Lopetetaanko SaX2 nyt?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1010,9 +1013,8 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
-"<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja,  <tt>/var/log/"
-"Xorg.99.log</tt> -tiedostosta. The following report has been created from "
-"the calling instance:"
+"<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja tiedostosta <tt>/"
+"var/log/Xorg.99.log</tt>. Seuraava raportti luotiin kutsuvasta ilmentymästä:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1020,8 +1022,8 @@ msgid ""
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
-"<b>VNC määritystietoja</b><hr>VNC palvelu vaatii että TCP portti 5900 ja "
-"HTTP portti (5800 oletuksena) ovat auki palomuurissa. Voit määrittää tämän "
+"<b>VNC-määritystietoja</b><hr>VNC-palvelu vaatii, että TCP portti 5900 ja "
+"HTTP-portti (oletuksena 5800) ovat auki palomuurissa. Voit määrittää tämän "
 "YaSTilla."
 
 #. /.../
@@ -1059,7 +1061,7 @@ msgstr "T&allenna"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
-msgstr "Muuta &kohtaa"
+msgstr "Muuta &sijaintia"
 
 #. Maximum length: 40  characters
 msgid "C&hange Size"
@@ -1077,4 +1079,4 @@ msgid "Configuration on display"
 msgstr "Näytön määritys"
 
 msgid "Idle timer..."
-msgstr "Aikalaskuri...."
+msgstr "Aikalaskuri..."

@@ -80,7 +80,7 @@ void ScanXStuff::Reset (void) {
 int ScanXStuff::
 FindParseData (map<int,ParseData> m,int bus,int slot,int func) {
 	for (int i=0;i<(int)m.size();i++) {
-	if ((m[i].bus == bus) && (m[i].slot == slot) && (m[i].func == func)) {
+	if ((m[i].pbus == bus) && (m[i].pslot == slot) && (m[i].pfunc == func)) {
 		return(i);
 	}
 	}
@@ -199,21 +199,22 @@ void ScanXStuff::Scan (void) {
 			// create dynamic sections...
 			// ---------------------------
 			for (int n=0;n<card;n++) {
-			srvmsg.SetSectionID(n);
-			if ((srvmsg.SetDriver(graphics[n].module)) == 1) {
-				cout << "SaX: sorry could not open /dev/fb0... abort" << endl;
-				exit(1);
-			}
-			srvmsg.SetBus (
-				graphics[n].domain,graphics[n].bus,
-				graphics[n].slot,graphics[n].func
-			);
-			srvmsg.SetDeviceOption (graphics[n].option);
-
-			section[4] = section[4] + "\n" + srvmsg.DoMonitorSection();
-			section[5] = section[5] + "\n" + srvmsg.DoScreenSection();
-			section[6] = section[6] + "\n" + srvmsg.DoDeviceSection();
-			section[7] = section[7] + "\n" + srvmsg.DoServerFlagsSection();
+				srvmsg.SetSectionID(n);
+				if ((srvmsg.SetDriver(graphics[n].module)) == 1) {
+					cout << "SaX: sorry could not open /dev/fb0... abort\n";
+					exit(1);
+				}
+				if (graphics[0].module != "vmware") {
+					srvmsg.SetBus (
+						graphics[n].domain,graphics[n].bus,
+						graphics[n].slot,graphics[n].func
+					);
+				}
+				srvmsg.SetDeviceOption (graphics[n].option);
+				section[4] = section[4] + "\n" + srvmsg.DoMonitorSection();
+				section[5] = section[5] + "\n" + srvmsg.DoScreenSection();
+				section[6] = section[6] + "\n" + srvmsg.DoDeviceSection();
+				section[7] = section[7] + "\n" + srvmsg.DoServerFlagsSection();
 			}
 
 			// write sections to file...
@@ -237,11 +238,11 @@ void ScanXStuff::Scan (void) {
 	// and save it to parse...
 	// -------------------------
 	if ((graphics.size() > 1) || (graphics[0].module == "vmware")) {
-	card = 0;
-	for (int i = srvmsg.Count(); i > 0; i--) {
-		parse[card] = srvmsg.Pop();
-		card++;
-	}
+		card = 0;
+		for (int i = srvmsg.Count(); i > 0; i--) {
+			parse[card] = srvmsg.Pop();
+			card++;
+		}
 	}
 	if (precard > card) {
 		cout << "SaX: ups lost card during probing... abort" << endl;
@@ -278,7 +279,7 @@ void ScanXStuff::Scan (void) {
 		sprintf(current,"%02d-%02d-%d",
 		graphics[i].bus,graphics[i].slot,graphics[i].func);
 		sprintf(primary,"%02d-%02d-%d",
-		parse[mapnr].pbus,parse[mapnr].pslot,parse[mapnr].pfunc);  
+		parse[mapnr].pbus,parse[mapnr].pslot,parse[mapnr].pfunc);
 
 		stuff[i].vbios  = "<undefined>";
 		stuff[i].model  = "<undefined>";
@@ -368,12 +369,6 @@ void ScanXStuff::Scan (void) {
 	if (display.vsync_max > 0) { 
 		stuff[0].vsync = display.vsync_max; 
 	}
-	if ((display.dpix > 0) && (display.dpix < 100))     { 
-		stuff[0].dpix  = display.dpix; 
-	}
-	if ((display.dpiy > 0) && (display.dpiy < 100))     { 
-		stuff[0].dpiy  = display.dpiy; 
-	}
 	stuff[0].vesacount = display.vesacount;
 	if (display.vesacount > 0) {
 		int vesaCount = 0;
@@ -445,6 +440,16 @@ void ScanXStuff::Scan (void) {
 		}
 	}
 	}
+	}
+	// ...
+	// save the DisplaySize if valid
+	// -----------------------------
+	if (
+		((display.dpix > 0) && (display.dpix < 100)) &&
+		((display.dpiy > 0) && (display.dpiy < 100))
+	) {
+		stuff[0].dpix  = display.dpix;
+		stuff[0].dpiy  = display.dpiy;
 	}
 	// ...
 	// save the stuff result...

@@ -59,9 +59,6 @@ class XF86ConfigFile {
 	string file;
 
 	private:
-	int toDec (int v);
-
-	private:
 	int idc;
 
 	public:

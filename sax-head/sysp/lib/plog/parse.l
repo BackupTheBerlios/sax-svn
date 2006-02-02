@@ -36,6 +36,7 @@ R {F}[ \t]*-[ \t]*{F}
 "Will alloc AGP framebuffer:" {strcpy(yylval.string,yytext);return(MEMORY);    }
 "kB of"                       {strcpy(yylval.string,yytext);return(MEMORY);    }
 "VESA VBE Total Mem:"         {strcpy(yylval.string,yytext);return(MEMORY);    }
+"vram:  "                     {strcpy(yylval.string,yytext);return(MEMORY);    }
 "Chipset"[ \t]*:              {strcpy(yylval.string,yytext);return(CHIPSET);   }
 "VESA Video Modes"[ \t]*:     {strcpy(yylval.string,yytext);return(VESA);      }
 {F}[xX]{F}@{F}Hz              {strcpy(yylval.string,yytext);return(VESAMODE);  }

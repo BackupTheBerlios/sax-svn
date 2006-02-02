@@ -258,47 +258,12 @@ void XF86ConfigFile::SetDeviceOption (string opt) {
 //-----------------------------------------
 void XF86ConfigFile::SetBus (int d,int b,int s,int f) {
 	str busid_str;
-	d = toDec (d);
-	b = toDec (b);
-	s = toDec (s);
-	f = toDec (f);
 	sprintf(busid_str,"PCI:%d@%d:%d:%d",b,d,s,f);
 	busid = busid_str;
 	bus[idc]  = b;
 	slot[idc] = s; 
 	func[idc] = f;
 	idc++;
-}
-
-//=========================================
-// XF86ConfigFile: toDec...
-//-----------------------------------------
-int XF86ConfigFile::toDec (int v) {
-	char number[128] = "";
-	sprintf (number,"%d",v);
-	int size = strlen (number);
-	int result = 0;
-	for (int n=size-1;n>=0;n--) {
-		char item = number[n];
-		int  val  = 0;
-		switch (item) {
-			case '0': val = 0;  break;
-			case '1': val = 1;  break;
-			case '2': val = 2;  break;
-			case '3': val = 3;  break;
-			case '4': val = 4;  break;
-			case '5': val = 5;  break;
-			case '6': val = 6;  break;
-			case '7': val = 7;  break;
-			case '8': val = 8;  break;
-			case '9': val = 9;  break;
-			default:
-				return v;
-			break;
-		}
-		result += (int)(val * pow (16,size-n-1));
-	}
-	return result;
 }
 
 //=========================================

@@ -84,7 +84,6 @@ void parsemsg(MsgDetect *msg) {
 	str left,right;
 	str x,y;
 	int dac;
-	int mem;
 
 	// store the ID strings...
 	// ------------------------
@@ -164,15 +163,7 @@ void parsemsg(MsgDetect *msg) {
 			}
 			if (strcmp(key,"MEM")  == 0) {
 				strcpy(msg[n].primary,pdev);
-				mem = atoi(value);
-				if ((mem != 0) && (mem < 140000)) {
-					// assuming M-Byte value...
-					msg[n].memory = atol(value);
-				} else {
-					// assuming K-Byte value...
-					msg[n].memory = atol(value);
-					msg[n].memory = msg[n].memory / 1024;
-				}
+				msg[n].memory = atol(value);
 			}
 			if (strcmp(key,"DAC")  == 0) {
 				dac = atoi(value);

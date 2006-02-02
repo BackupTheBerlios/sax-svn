@@ -737,11 +737,12 @@ void ScanServer::Scan(void) {
 				cout << "SaX: sorry could not open /dev/fb0... abort" << endl;
 				exit(1);
 			}
-			cfg.SetBus (
-				graphics[n].domain,graphics[n].bus,
-				graphics[n].slot,graphics[n].func
-			);
-
+			if (graphics[0].module != "vmware") {
+				cfg.SetBus (
+					graphics[n].domain,graphics[n].bus,
+					graphics[n].slot,graphics[n].func
+				);
+			}
 			section[4] = section[4] + "\n" + cfg.DoMonitorSection();
 			section[5] = section[5] + "\n" + cfg.DoScreenSection();
 			section[6] = section[6] + "\n" + cfg.DoDeviceSection();

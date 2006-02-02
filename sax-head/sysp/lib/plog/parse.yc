@@ -39,6 +39,14 @@ void yyerror ( char *s)
  return;
 }
 
+char* toKb (str value) {
+	char* result = (char*)malloc (sizeof(char)*200);
+	long mem = atol (value);
+	mem = mem / 1024;
+	sprintf (result,"%ld",mem);
+	return result;
+}
+
 void logs(str key,str value)  {
  strcpy(detect[detectindex].key,key);
  strcpy(detect[detectindex].value,value);
@@ -78,7 +86,7 @@ ausdruck : error 			{ yyerrok;yyclearin; }
          | Section 			{ }
          ;
 
-Section  : PROBED     ID { strcpy(ActId,$2); } MEMORY  FLOAT  { logs("MEM",$5); }
+Section  : PROBED     ID { strcpy(ActId,$2); } MEMORY  FLOAT  { logs("MEM",toKb($5)); }
          | DEFAULT    ID { strcpy(ActId,$2); } MEMORY  FLOAT  { logs("MEM",$5); }
          | INFO       ID { strcpy(ActId,$2); } MEMORY  FLOAT  { logs("MEM",$5); }
          | INFO       PDEV BUSID { sprintf(pdev,"%s",$3); }

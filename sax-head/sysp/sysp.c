@@ -562,8 +562,12 @@ void PrintMouseData(ScanMouse m) {
 	for (int i = m.Count()-1; i >= 0; i--) {
 		data = m.Pop();
 		if (
-			(strcmp(data.device,"/dev/input/mice") == 0) &&
-			(strcmp(data.profile,"<undefined>") == 0)
+			(strcmp(data.device,"/dev/input/mice") == 0) && (
+				(strcmp(data.profile,"<undefined>") == 0) || (
+					(strcmp(data.profile,"alps") != 0) &&
+					(strcmp(data.profile,"synaptics") != 0)
+				)
+			)
 		) {
 			haveStandardMouse = true;
 		}
