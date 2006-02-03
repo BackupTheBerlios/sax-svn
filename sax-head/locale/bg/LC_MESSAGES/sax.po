@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.bg\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-01-03 14:22+0200\n"
+"PO-Revision-Date: 2006-02-02 00:14+0200\n"
 "Last-Translator: Borislav Mitev <morbid_viper@tkzs.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,8 +27,8 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>SaX2 предложение</b><hr>Стартираната графична система е базирана на "
-"предложение на SaX2. Ако е приемлива за Вас натиснете <b>OK</b>, в противен "
-"случай променете настройката."
+"предложение на SaX2. Ако е приемлива за Вас натиснете <b>Добре</b>, в "
+"противен случай променете настройката."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -52,7 +52,7 @@ msgstr "&Помощ"
 
 #. Ok Button text
 msgid "&OK"
-msgstr "&OK"
+msgstr "&Добре"
 
 #. Yes Button text
 msgid "&Yes"
@@ -176,11 +176,11 @@ msgstr "Активиране колелцето на мишката"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "Обръщане на X осите"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "Обръщане на Y осите"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -1027,6 +1027,101 @@ msgstr ""
 "<b>Информация за настройката на VNC</b><hr>VNC услугата изисква в защитната "
 "стена да бъдат отворени TCP порт 5900 и HTTP порт (5800 по подразбиране). "
 "Можете да настроите това от YaST."
+
+#. XKBFile extension text
+msgid "Miscellaneous compatibility options"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Add the EuroSign to the 5 key."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock key behavior"
+msgstr "Поведение на CapsLock"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt/Win key behavior"
+msgstr "Поведение на Alt/Win клавишите "
+
+#. XKBFile extension text
+msgid "Adding the EuroSign to certain keys"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Caps Lock is Compose."
+msgstr "Menu е Compose."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Right Ctrl key works as Right Alt."
+msgstr "Десният Control работи като десен Alt."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Ctrl key at bottom left"
+msgstr "Клавишът Control долу ляво"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Ctrl key at left of 'A'"
+msgstr "Клавишът Control отляво на -A-"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Make CapsLock an additional Ctrl."
+msgstr "CapsLock като допълнителен Ctrl."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Swap Ctrl and CapsLock."
+msgstr "Смяна местата на Ctrl и CapsLock."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Ctrl key position"
+msgstr "Позиция на клавиша Control"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
+msgstr "Специални клавиши (Ctrl+Alt+<клавиш>), поддържани от сървъра."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Press Right Ctrl to choose 3rd level."
+msgstr "Натиснете десния Control за да изберете трето ниво."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Ctrl+Shift changes group."
+msgstr "Ctrl+Shift превключва групата."
+
+#. XKBFile extension text
+msgid "Add the EuroSign to the E key."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Add the EuroSign to the 2 key."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "key Compose key position"
+msgstr "Позиция на клавиша Control"
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt+Ctrl changes group."
+msgstr "Alt+Ctrl превключва групата."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Group Shift/Lock behavior"
+msgstr "Поведение на групата Shift/Lock"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

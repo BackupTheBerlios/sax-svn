@@ -143,7 +143,12 @@ void SCCKeyboardOptions::init ( void ) {
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString val = mText[*it.current()];
-
+		if (val.isEmpty()) {
+			log (L_WARN,
+				"SCCKeyboardOptions::Warning: unknown XKB key: %s\n",
+				it.current()->ascii()
+			);
+		}
 		if (key.contains("caps:")) {
 			new QCheckListItem (mIDCapsLock,val,QCheckListItem::RadioButton);
 		}
