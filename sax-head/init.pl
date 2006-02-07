@@ -253,7 +253,7 @@ sub init {
 	#==========================================
 	# Extensions specification                     
 	#------------------------------------------
-	$var{Extensions}{0}{Composite}              = "on";
+	# $var{Extensions}{0}{Composite}              = "on";
 
 	#==========================================
 	# Screen specification                     

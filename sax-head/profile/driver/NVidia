@@ -5,8 +5,3 @@
 Device  -> [X] ->  Driver = nvidia
 Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
-
-# ...
-# disable Composite extension for NVidia devices
-# ----------------------------------------------
-!remove Extensions -> [X] -> Composite

@@ -6,11 +6,6 @@ Device  -> [X] ->  Driver = fglrx
 Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
 
-# ...
-# disable Composite extension for FireGL devices
-# ---------------------------------------------- 
-!remove Extensions -> [X] -> Composite
-
 Screen->[X]->DefaultDepth    = 24
 Module->[X]->Load            = dbe,type1,freetype,extmod,glx,v4l,dri
 Device->[X]->Raw->11->Option = "#NoDDC"

@@ -55,16 +55,12 @@ SCCTabletSelection::SCCTabletSelection (
 		this         , SLOT   (slotActivateTablet ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (clicked       ( QListBoxItem* )),
-		this         , SLOT   (slotVendor    ( QListBoxItem* ))
+		mVendorList  , SIGNAL (selectionChanged ( QListBoxItem* )),
+		this         , SLOT   (slotVendor       ( QListBoxItem* ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (returnPressed ( QListBoxItem* )),
-		this         , SLOT   (slotVendor    ( QListBoxItem* ))
-	);
-	QObject::connect (
-		mModelList   , SIGNAL (clicked       ( QListBoxItem* )),
-		this         , SLOT   (slotName      ( QListBoxItem* ))
+		mModelList   , SIGNAL (selectionChanged ( QListBoxItem* )),
+		this         , SLOT   (slotName         ( QListBoxItem* ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -171,6 +167,7 @@ void SCCTabletSelection::slotVendor ( QListBoxItem* item ) {
 	}
 	mModelList -> sort();
 	emit sigActivate ( false );
+	mVendorList->setFocus();
 }
 //====================================
 // slotName
@@ -181,6 +178,7 @@ void SCCTabletSelection::slotName ( QListBoxItem* ) {
 		mVendorList->currentText(),
 		mModelList->currentText()
 	);
+	mModelList->setFocus();
 }
 //====================================
 // slotActivateTablet

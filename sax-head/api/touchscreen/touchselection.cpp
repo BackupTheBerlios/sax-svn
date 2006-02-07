@@ -63,16 +63,12 @@ SCCTouchSelection::SCCTouchSelection (
 		this         , SLOT   (slotActivateToucher ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (clicked       ( QListBoxItem* )),
-		this         , SLOT   (slotVendor    ( QListBoxItem* ))
+		mVendorList  , SIGNAL (selectionChanged ( QListBoxItem* )),
+		this         , SLOT   (slotVendor       ( QListBoxItem* ))
 	);
 	QObject::connect (
-		mModelList   , SIGNAL (clicked       ( QListBoxItem* )),
-		this         , SLOT   (slotName      ( QListBoxItem* ))
-	);
-	QObject::connect (
-		mVendorList  , SIGNAL (returnPressed ( QListBoxItem* )),
-		this         , SLOT   (slotVendor    ( QListBoxItem* ))
+		mModelList   , SIGNAL (selectionChanged ( QListBoxItem* )),
+		this         , SLOT   (slotName         ( QListBoxItem* ))
 	);
 	//=====================================
 	// add widgets to the layout

@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Tue Feb  7 10:13:24 CET 2006 - ms@suse.de
+
+- fixed GUI listbox keyboard handling (#148340)
+- fixed CDB monitor entry: Nokia:445XiPlus (#145245)
+- disable Composite extension. This extension is broken on
+  ati,nv,nvidia,fglrx and has therefore no business case. It is
+  only creating tons of bugs (#118580) (#148475)
+- added khmer keyboard configuration (#143348)
+
+-------------------------------------------------------------------
 Fri Feb  3 14:48:00 CET 2006 - ms@suse.de
 
 - adapt XKB options due to changes in libxkbfile

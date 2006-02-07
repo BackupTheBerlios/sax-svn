@@ -72,12 +72,8 @@ SCCMouseModel::SCCMouseModel (
 		this         , SLOT   (slotOk ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (clicked    (QListBoxItem *)),
-		this         , SLOT   (slotVendor (QListBoxItem *))
-	);
-	QObject::connect (
-		mVendorList  , SIGNAL (returnPressed (QListBoxItem *)),
-		this         , SLOT   (slotVendor    (QListBoxItem *))
+		mVendorList  , SIGNAL (selectionChanged (QListBoxItem *)),
+		this         , SLOT   (slotVendor       (QListBoxItem *))
 	);
 }
 //=====================================
