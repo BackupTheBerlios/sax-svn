@@ -79,7 +79,11 @@ sub AutoDetectOptions {
 			@elements = split(/ +/,$_);
 			$el = $elements[0];
 			$va = $elements[1];
-			$var{Device}{$i}{Raw}{$count}{Option} = "$el $va";
+			if ($rawdef_list[$i] =~ /#Option $el $va/) {
+				$var{Device}{$i}{Raw}{$count}{Option} = "#$el $va";
+			} else {
+				$var{Device}{$i}{Raw}{$count}{Option} = "$el $va";
+			}
 			$count++;
 		}
 	} 

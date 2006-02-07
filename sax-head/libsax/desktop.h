@@ -35,6 +35,7 @@ namespace SaX {
 // Defines...
 //------------------------------------
 #define XMODE             "/usr/sbin/xmode"
+#define XQUERY            "/usr/sbin/xquery"
 #define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
 #define PROFILE_DIR       "/usr/share/sax/profile/"
 #define MAP_DIR           "/usr/share/sax/sysp/maps/"
@@ -85,6 +86,7 @@ class SaXManipulateDesktopIF : public SaXException {
 
 	public:
 	virtual QList<QString> getResolutions ( int  ) = 0;
+	virtual QList<QString> getResolutionFromServer ( void ) = 0;
 	virtual QList<QString> getDisplaySize ( void ) = 0;
 	virtual QList<QString> getDisplayRatio( void ) = 0;
 	virtual QString getDisplayTraversal   ( void ) = 0;
@@ -214,6 +216,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 
 	public:
 	QList<QString> getResolutions ( int  );
+	QList<QString> getResolutionFromServer ( void );
 	QList<QString> getDisplaySize ( void );
 	QList<QString> getDisplayRatio( void );
 	QString getDisplayTraversal   ( void );

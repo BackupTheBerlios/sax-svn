@@ -256,8 +256,28 @@ void SCCMonitorDisplay::init ( void ) {
 	SCCFile colHandle ( COL_FILE );
 	mColorDict = colHandle.readDict();
 	QDictIterator<QString> ic (mColorDict);
+	int index  = 0;
+	int maxcol = 0;
+	int colKey[mColorDict.count()];
 	for (; ic.current(); ++ic) {
-		mColors -> insertItem ( *ic.current() );
+		colKey[index] = ic.currentKey().toInt();
+		if (maxcol > colKey[index]) {
+			maxcol = colKey[index];
+		}
+		index++;
+	}
+	for (unsigned int n=0;n<mColorDict.count();n++) {
+	for (unsigned int x=n;x<mColorDict.count();x++) {
+		if (colKey[n] < colKey[x]) {
+			int save  = colKey[n];
+			colKey[n] = colKey[x];
+			colKey[x] = save;
+		}
+	}
+	}
+	for (unsigned int n=0;n<mColorDict.count();n++) {
+		QString key; QTextOStream (&key) << colKey[n];
+		mColors -> insertItem ( *mColorDict[key] );
 	}
 }
 //====================================
@@ -310,6 +330,15 @@ void SCCMonitorDisplay::import ( void ) {
 	// handle resolution list
 	//------------------------------------
 	mSelectedResolution = saxDesktop.getResolutions (mSelectedColor);
+	if (mSelectedResolution.isEmpty()) {
+		mSelectedResolution = saxDesktop.getResolutionFromServer();
+		log (L_WARN,"SCCMonitorDisplay::No Modes for %d bit, asking server\n",
+			mSelectedColor
+		);
+		log (L_WARN,"SCCMonitorDisplay::Mode from server: %s\n",
+			mSelectedResolution.at(0)->ascii()
+		);
+	}
 
 	//====================================
 	// handle dualhead mode

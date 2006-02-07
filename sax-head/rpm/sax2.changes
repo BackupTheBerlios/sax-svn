@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Tue Feb  7 16:20:28 CET 2006 - ms@suse.de
+
+- fixed RawDef options handling for comments (#148292)
+- fixed sort order of color depth values (#148697)
+- added libsax method getResolutionFromServer(). This allows
+  asking the server for its currently used resolution. If the
+  resolution isn't set within xorg.conf the SaX2 GUI will call
+  the new method to ask the server for the resolution. ATI's
+  binary driver required that method. (#148737)
+- update translations from Dublin
+
+-------------------------------------------------------------------
 Tue Feb  7 10:13:24 CET 2006 - ms@suse.de
 
 - fixed GUI listbox keyboard handling (#148340)

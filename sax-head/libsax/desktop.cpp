@@ -927,6 +927,44 @@ QList<QString> SaXManipulateDesktop::getResolutions (int color) {
 }
 
 //====================================
+// getResolutionsFromServer
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
+	// .../
+	//! return the resolution the currently running server is using
+	//! This call will only work if there is a server which can be
+	//! asked for the resolution. The xquery -r call is used to obtain
+	//! the resolution
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return QList<QString>();
+	}
+	QList<QString> defaultList;
+	defaultList.append (new QString("800x600"));
+	SaXProcessCall* proc = new SaXProcessCall();
+	proc -> addArgument ( XQUERY );
+	proc -> addArgument ( "-r" );
+	if ( ! proc -> start() ) {
+		return defaultList;
+	}
+	QList<QString> data = proc->readStdout();
+	QListIterator<QString> in (data);
+	for (; in.current(); ++in) {
+		QRegExp modeExp ("(\\d+) (.*)");
+		int rpos = modeExp.search (*in.current(),0);
+		if (rpos >= 0) {
+			int id = modeExp.cap(1).toInt();
+			if (id == mDesktopID) {
+				QList<QString> result;
+				result.append (new QString (modeExp.cap(2)));
+				return result;
+			}
+		}
+	}
+	return defaultList;
+}
+
+//====================================
 // getDisplaySize
 //------------------------------------
 QList<QString> SaXManipulateDesktop::getDisplaySize (void) {
