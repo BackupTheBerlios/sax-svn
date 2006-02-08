@@ -57,7 +57,8 @@ static struct {
   { 1400, 1050, "Acer", "TravelMate 660", NULL },
   { 1400, 1050, "Dell Computer Corporation", "Inspiron 8000", NULL },
   { 1600, 1200, "Dell Computer Corporation", "Inspiron 8200", NULL },
-  { 1600, 1200, "Dell Computer Corporation", "Latitude C840", NULL }
+  { 1600, 1200, "Dell Computer Corporation", "Latitude C840", NULL },
+  { 1024,  600, "FUJITSU SIEMENS", "LIFEBOOK P1510", NULL }
 };
 
 #define BIOS_TEST

@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Feb  7 11:57:01 2006
+# Author: Marcus Schaefer <sax@suse.de>, Wed Feb  8 12:18:46 2006
 #
 # Template for monitor data
 # --------------------------
@@ -15,6 +15,16 @@
 #  DPI                  = X [mm] Y [mm]
 # }
 #
+
+#==============================================
+# 1024X600@60HZ
+#----------------------------------------------
+--> LCD:1024X600@60HZ  {
+ Option=DPMS
+ Hsync=31-60
+ Modeline="1024x600" 48.96 1024 1064 1168 1312 600 601 604 622 -hsync -vsync
+ Vsync=30-60
+}
 
 #==============================================
 # 1024X768@60HZ

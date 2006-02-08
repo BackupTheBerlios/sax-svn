@@ -381,7 +381,7 @@ void ScanXStuff::Scan (void) {
 			// check if the detected resolutions are part
 			// of the following list
 			// ---
-			XMode vesaStandard[15];
+			XMode vesaStandard[16];
 			vesaStandard[0].x  = 800;  vesaStandard[0].y  = 600;
 			vesaStandard[1].x  = 1024; vesaStandard[1].y  = 768;
 			vesaStandard[2].x  = 1152; vesaStandard[2].y  = 864;
@@ -397,9 +397,10 @@ void ScanXStuff::Scan (void) {
 			vesaStandard[12].x = 1680; vesaStandard[12].y = 1050;
 			vesaStandard[13].x = 1900; vesaStandard[13].y = 1200;
 			vesaStandard[14].x = 1920; vesaStandard[14].y = 1200;
+			vesaStandard[15].x = 1024; vesaStandard[15].y = 600;
 	
 			int isStandard = false;
-			for (int i=0;i<15;i++) {
+			for (int i=0;i<16;i++) {
 			if ((mode.x == vesaStandard[i].x)&&(mode.y == vesaStandard[i].y)) {
 				isStandard = true;
 				break;
