@@ -1180,6 +1180,8 @@ typedef struct {
   struct {
     unsigned width;
     unsigned height;
+    unsigned xsize;
+    unsigned ysize;
     char *vendor;
     char *name;
   } lcd;

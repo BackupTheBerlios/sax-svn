@@ -128,6 +128,9 @@ if ($patchBIOS ne "ok") {
 		if (-f $file) {
 			qx (cat $file | sed -e s!$key=.*!$key=\\""$args"\\"! > $file.tmp);
 			qx (mv $file.tmp $file);
+			$key = "VIDEOBIOS_PATCH";
+			qx (cat $file | sed -e s!$key=.*!$key=\\""yes"\\"! > $file.tmp);
+			qx (mv $file.tmp $file);
 		}
 	}
 }

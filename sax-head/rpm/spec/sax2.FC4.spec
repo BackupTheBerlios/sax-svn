@@ -26,7 +26,7 @@ Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
-ExcludeArch:  s390 s390x
+ExcludeArch:  s390
 
 %define sub_package 0
 %define __perl_requires %{nil}
@@ -193,7 +193,7 @@ Authors:
 # Description sax2-libsax-java
 #-------------------------------------------------
 %if%sub_package
-%ifnarch ppc64
+%ifnarch ppc64 s390x
 %package -n sax2-libsax-java
 Version:      7.1
 Release:      18
@@ -470,7 +470,7 @@ fi
 # SaX-libsax-java file list...  
 # ------------------------------------------------
 %if%sub_package
-%ifnarch ppc64
+%ifnarch ppc64 s390x
 
 %files -n sax2-libsax-java
 %defattr(-,root,root)

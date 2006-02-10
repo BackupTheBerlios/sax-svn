@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Feb  8 12:18:46 2006
+# Author: Marcus Schaefer <sax@suse.de>, Fri Feb 10 16:39:56 2006
 #
 # Template for monitor data
 # --------------------------
@@ -14171,6 +14171,17 @@ FUJITSU:VL-P150  {
 }
 
 #==============================================
+# W5382 Amilo LCD Monitor
+#----------------------------------------------
+FUJITSU:W5382 AMILO LCD MONITOR  {
+ DDC=AUO2114
+ Option=DPMS
+ Hsync=30-52
+ Resolution=1280x800
+ Vsync=50-60
+}
+
+#==============================================
 # X176
 #----------------------------------------------
 FUJITSU:X176  {
@@ -20210,6 +20221,17 @@ IIYAMA:MT9017T  {
  Option=DPMS
  Hsync=27-92
  Vsync=50-160
+}
+
+#==============================================
+# PLE480/481
+#----------------------------------------------
+IIYAMA:PLE480/481  {
+ DDC=IVM4826
+ Option=DPMS
+ Hsync=30-82
+ Resolution=1280x1024
+ Vsync=55-60
 }
 
 #==============================================

@@ -52,7 +52,7 @@ FULLSCREEN=""
 # Functions...
 #----------------------------------
 function killProc() {
-	kill `pidof $1`
+	kill `pidof $1` 2>/dev/null
 }
 function quit() {
 	killProc $DOTS

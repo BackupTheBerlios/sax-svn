@@ -184,7 +184,7 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%ifnarch ppc64
+%ifnarch ppc64 s390x
 %package -n sax2-libsax-java
 Version:      7.1
 Release:      70
@@ -469,7 +469,7 @@ fi
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
-%ifnarch ppc64
+%ifnarch ppc64 s390x
 
 %files -n sax2-libsax-java
 %defattr(-,root,root)

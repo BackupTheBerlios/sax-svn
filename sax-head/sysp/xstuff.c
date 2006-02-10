@@ -451,6 +451,7 @@ void ScanXStuff::Scan (void) {
 	) {
 		stuff[0].dpix  = display.dpix;
 		stuff[0].dpiy  = display.dpiy;
+		stuff[0].ddc   = display.ddc;
 	}
 	// ...
 	// save the stuff result...
