@@ -7,7 +7,7 @@
 #
 # Please submit bugfixes or comments via http://bugs.opensuse.org
 #
-# neededforbuild  dbus-1 doxygen flex ghostscript-fonts-std glib2 graphviz hal java2-devel-packages mono-devel-packages python python-devel qt3-devel-packages swig sysfsutils udev update-desktop-files wireless-tools x-devel-packages xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-server yacc readline-devel hal-devel dbus-1-devel
+# neededforbuild  dbus-1 doxygen flex ghostscript-fonts-std glib2 graphviz hal java2-devel-packages mono-devel-packages python python-devel qt3-devel-packages swig sysfsutils udev update-desktop-files wireless-tools x-devel-packages xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi yacc readline-devel hal-devel dbus-1-devel
 
 Name:         sax2
 BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages libdrm-devel libjpeg-devel mono-basic mono-data-sqlite mono-devel python-devel qt3-devel readline-devel swig sysfsutils udev update-desktop-files wireless-tools xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi
