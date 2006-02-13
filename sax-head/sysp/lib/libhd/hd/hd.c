@@ -5741,4 +5741,26 @@ int hd_read_mmap(hd_data_t *hd_data, char *name, unsigned char *buf, off_t start
   return 1;
 }
 
+/*
+ * Get hardware data base dir (default: /var/lib/hardware).
+ */
+char *hd_get_hddb_dir()
+{
+  char *s = getenv("LIBHD_HDDB_DIR");
+
+  return s && *s ? s : HARDWARE_DIR;
+}
+
+
+/*
+ * Convenience function. Returns static buffer with full path.
+ */
+char *hd_get_hddb_path(char *sub)
+{
+  static char *dir = NULL;
+
+  str_printf(&dir, 0, "%s/%s", hd_get_hddb_dir(), sub);
+
+  return dir;
+}
 

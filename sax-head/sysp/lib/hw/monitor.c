@@ -100,12 +100,12 @@ MsgDetect MonitorGetData (void) {
 		switch (res->any.type) {
 			case res_size:
 			if (res->size.unit == size_unit_cm) {
-			display.dpix = 0;
-			display.dpiy = 0;
-			if ((res->size.val1) && (res->size.val2)) {
-			display.dpix = (int)res->size.val1;
-			display.dpiy = (int)res->size.val2;
-			}
+				display.dpix = 0;
+				display.dpiy = 0;
+				if ((res->size.val1) && (res->size.val2)) {
+					display.dpix = (int)res->size.val1;
+					display.dpiy = (int)res->size.val2;
+				}
 			}
 			break;
 

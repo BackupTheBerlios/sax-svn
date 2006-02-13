@@ -242,6 +242,11 @@ hal_prop_t *hal_get_str(hal_prop_t *prop, const char *key);
 hal_prop_t *hal_get_list(hal_prop_t *prop, const char *key);
 char *hal_get_useful_str(hal_prop_t *prop, const char *key);       
 
+hal_device_t *hal_find_device(hd_data_t *hd_data, char *udi);
+
+char *hd_get_hddb_dir(void);
+char *hd_get_hddb_path(char *sub);
+
 
 #ifdef __cplusplus
 }

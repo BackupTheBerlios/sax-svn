@@ -645,6 +645,9 @@ void dump_normal(hd_data_t *hd_data, hd_t *h, FILE *f)
                 case size_unit_cm:
                   s = "cm";
                   break;
+                case size_unit_mm:
+                  s = "mm";
+                  break;
                 case size_unit_sectors:
                   s = "sectors";
                   break;
@@ -1175,8 +1178,13 @@ void dump_sys(hd_data_t *hd_data, hd_t *hd, FILE *f)
   if(st->system_type) {
     dump_line("SystemType: \"%s\"\n", st->system_type);
   }
+
   if(st->generation) {
     dump_line("Generation: \"%s\"\n", st->generation);
+  }
+
+  if(st->formfactor) {
+    dump_line("Formfactor: \"%s\"\n", st->formfactor);
   }
 
   if(st->lang) {
