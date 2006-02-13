@@ -112,7 +112,7 @@ msgstr "Tastatureigenschaften"
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
 msgid "Tablet"
-msgstr "Graphiktablet"
+msgstr "Grafiktablet"
 
 #. title of module dialog
 msgid "Tablet Properties"
@@ -562,7 +562,7 @@ msgstr "Belegung von Alt- und Windows-Tasten"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr "Belegung der Feststell-Taste"
+msgstr "Belegung der Feststelltaste"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -570,7 +570,7 @@ msgstr "Ohne"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "Durch Drücken der linken Alt-Taste wird die Gruppe gewechselt."
+msgstr "Drücken der linken Alt-Taste wechselt die gewechselt."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
@@ -578,7 +578,7 @@ msgstr "Drücken beider Strg-Tasten ändert die Gruppe."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr "Rechte Umschalttaste ändert die Gruppe,"
+msgstr "Rechte Umschalttaste ändert die Gruppe."
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
@@ -597,11 +597,10 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Drücken der rechten Strg-Taste wechselt die Gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 msgstr ""
-"Feststelltaste verwendet interne Kapitalisierung. Umschalttaste deaktiviert "
-"Feststellung."
+"Feststelltaste verwendet interne Großschreibung. Durch die Umschalttaste "
+"wird die Feststelltaste nicht deaktiviert."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -610,7 +609,7 @@ msgstr "Die Feststelltaste sperrt nur die Umschalttaste."
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
 msgstr ""
-"Die Feststelltaste aktiviert die normale Kapitalisierung alphabetischer "
+"Die Feststelltaste aktiviert die normale Großschreibung alphabetischer "
 "Zeichen."
 
 #. XKBFile extension text
@@ -629,7 +628,7 @@ msgstr "Umschalttaste+Feststelltaste ändert die Gruppe."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr "Durch Drücken der rechten Alt-Taste wird die Gruppe gewechselt."
+msgstr "Drücken der rechten Alt-Taste wechselt die Gruppe."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
@@ -676,16 +675,15 @@ msgid "Both Shift keys together change group."
 msgstr "Beide Umschalttasten zusammen ändern die Gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 msgstr ""
-"Die Feststelltaste funktioniert wie Umschalt mit Sperre. Umschalttaste "
-"deaktiviert Feststellung."
+"Die Feststelltaste funktioniert wie Umschalt mit Sperre. Durch die "
+"Umschalttaste wird die Feststelltaste nicht deaktiviert."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 msgstr ""
-"Feststelltaste verwendet interne Kapitalisierung. Umschalttaste deaktiviert "
+"Feststelltaste verwendet interne Großschreibung. Umschalttaste deaktiviert "
 "Feststellung."
 
 #. XKBFile extension text
@@ -1047,96 +1045,82 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Verschiedene Kompatibilitätsoptionen"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Eurozeichen der Taste '5' zuweisen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key behavior"
-msgstr "Belegung der Feststell-Taste"
+msgstr "Belegung der Feststelltaste"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt/Win key behavior"
 msgstr "Belegung von Alt- und Windows-Tasten"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Zuweisen des Eurozeichens zu bestimmten Tasten"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Menütaste ist Compose."
+msgstr "Die Feststelltaste dient als Compose-Taste."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key works as Right Alt."
 msgstr "Die rechte Strg-Taste fungiert als rechte Alt-Taste."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at bottom left"
-msgstr "Steuerungstaste unten links"
+msgstr "Strg-Taste unten links"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at left of 'A'"
-msgstr "Strg-Taste links neben -A-"
+msgstr "Strg-Taste links neben 'A'"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Ctrl."
-msgstr "Feststelltaste zu zusätzlicher Steuerungstaste machen."
+msgstr "Feststelltaste zu zusätzlicher Strg-Taste machen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Ctrl and CapsLock."
 msgstr "Strg- und Feststelltaste vertauschen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key position"
-msgstr "Control Key Position"
+msgstr "Position der Strg-Taste"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "Sondertasten(Strg+Alt+<key>) werden von einem Server verwaltet."
+msgstr ""
+"Sondertasten (Strg+Alt+&lt;Taste&gt;) werden von einem Server verwaltet."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Ctrl to choose 3rd level."
 msgstr "Drücken der rechten Strg-Taste wählt die dritte Ebene an."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift changes group."
-msgstr "Strg+Umschalt ändert die Gruppe."
+msgstr "Strg+Umschalttaste ändert die Gruppe."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Eurozeichen der Taste 'E' zuweisen."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Eurozeichen der Taste '2' zuweisen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
 msgstr "Position der Compose-Taste"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl changes group."
 msgstr "Alt+Strg ändert die Gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Group Shift/Lock behavior"
 msgstr "Umschalt- und Hochstell-Tasten gruppieren"
 

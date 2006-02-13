@@ -18,6 +18,7 @@ STATUS        : development
 
 #include <stdarg.h>
 #include <dirent.h>
+#include <math.h>
 
 //===================================
 // Defines...
@@ -99,9 +100,15 @@ MsgDetect MonitorGetData (void) {
 		for(res = hd->res; res; res = res->next) {
 		switch (res->any.type) {
 			case res_size:
+			display.dpix = 0;
+			display.dpiy = 0;
+			if (res->size.unit == size_unit_mm) {
+				if ((res->size.val1) && (res->size.val2)) {
+					display.dpix = (int)(round (res->size.val1 / 10.0));
+					display.dpiy = (int)(round (res->size.val2 / 10.0));
+				}
+			}
 			if (res->size.unit == size_unit_cm) {
-				display.dpix = 0;
-				display.dpiy = 0;
 				if ((res->size.val1) && (res->size.val2)) {
 					display.dpix = (int)res->size.val1;
 					display.dpiy = (int)res->size.val2;
