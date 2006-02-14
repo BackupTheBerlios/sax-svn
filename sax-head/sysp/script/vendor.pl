@@ -27,8 +27,9 @@ sub vendorName {
 		"NVIDIA Corporation",
 		"FireGL - ATI Technologies Inc."
 	);
-	my $lib = "lib";
-	if (-d "/usr/X11R6/lib64" ) {
+	my $lib  = "lib";
+	my $arch = qx (uname -i); chomp $arch;
+	if (($arch eq "x86_64") || ($arch eq "ia64")) {
 		$lib = "lib64";
 	}
 	my $drvfile = "/usr/X11R6/$lib/modules/drivers/".$driver."_drv.*";
