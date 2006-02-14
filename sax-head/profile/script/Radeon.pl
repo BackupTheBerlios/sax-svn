@@ -14,6 +14,6 @@ my $profile = ProfileInitScript();
 # Do the profile adaptions...
 #------------------------------------
 my $fglrx="/usr/share/sax/profile/FireGL";
-if (glob("/usr/X11R6/lib/modules/drivers/fglrx_drv*")) {
+if (! ProfileIsXOrgVendor ("fglrx")) {
 	qx (cp $fglrx $profile);
 }

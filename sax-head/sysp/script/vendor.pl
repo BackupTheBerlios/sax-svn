@@ -27,14 +27,18 @@ sub vendorName {
 		"NVIDIA Corporation",
 		"FireGL - ATI Technologies Inc."
 	);
-	my $drvfile = "/usr/X11R6/lib/modules/drivers/".$driver."_drv.*";
+	my $lib = "lib";
+	if (-d "/usr/X11R6/lib64" ) {
+		$lib = "lib64";
+	}
+	my $drvfile = "/usr/X11R6/$lib/modules/drivers/".$driver."_drv.*";
 	my $objdump = qx (/usr/bin/strings $drvfile 2>/dev/null);
 	foreach my $vname (@vendor) {
 	if ($objdump =~ /$vname/) {
 		return $vname;
 	}
 	}
-	return ("<none>");
+	return ($vendor[0]);
 }
 
 my $vendor = vendorName ( $ARGV[0] );
