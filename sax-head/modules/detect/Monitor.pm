@@ -53,43 +53,43 @@ sub AutoDetectSyncRanges {
 		SWITCH: for ($i) {
 			# vertical sync ranges...
 			# -------------------------
-			/^Vsync/         && do {
+			/^Vsync$/      && do {
 			push (@vsync_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# horizontal sync ranges...
 			# ---------------------------
-			/^Hsync/         && do {
+			/^Hsync$/      && do {
 			push (@hsync_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# DDC Id list...
 			# ---------------
-			/^DDC/           && do {
+			/^DDC$/        && do {
 			push (@ddc_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# Model Name list...
 			# ------------------
-			/^Name/          && do {
+			/^Name$/       && do {
 			push (@model_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# Vendor Name list...
 			# ---------------------
-			/^Vendor/          && do {
+			/^Vendor$/     && do {
 			push (@vendor_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# display type list...
 			# ---------------------
-			/^Display/       && do {
+			/^Display$/    && do {
 			push (@dtype_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# vesa frequencies list...
 			# -------------------------
-			/^Vesa/          && do {
+			/^Vesa$/       && do {
 			$detectvesa = 1;
 			push(@vesa_list,"true");
 			last SWITCH;

@@ -192,17 +192,17 @@ struct ParseData_S {
 };
 
 struct StuffData {
-	string ddc;
+	string ddc[4];
 	string primary;
 	string chipset;
-	string dtype;
-	string model;
-	string vendor;
+	string dtype[4];
+	string model[4];
+	string vendor[4];
 	string vbios;
-	int hsync;
-	int vsync;
-	int vesacount;
-	map <int,XMode> vesa;
+	int hsync[4];
+	int vsync[4];
+	int vesacount[4];
+	map <int,XMode> vesa[4];
 	int dacspeed;
 	long videoram; 
 	string current;
@@ -211,22 +211,23 @@ struct StuffData {
 	string extension; 
 	string driver;
 	string fbtiming;
-	int dpix;
-	int dpiy;
+	int dpix[4];
+	int dpiy[4];
 	int vmdepth;
+	int port;
 };
 
 struct StuffData_S {
-	str ddc;
-	str dtype;
-	str model;
-	str vendor;
+	str ddc[4];
+	str dtype[4];
+	str model[4];
+	str vendor[4];
 	str vbios;
 	str primary;
 	str chipset;
-	int hsync;
-	int vsync;
-	int vesacount;
+	int hsync[4];
+	int vsync[4];
+	int vesacount[4];
 	int dacspeed;
 	long videoram;
 	str current;
@@ -235,9 +236,10 @@ struct StuffData_S {
 	str extension;
 	str driver;
 	str fbtiming;
-	int dpix;
-	int dpiy;
+	int dpix[4];
+	int dpiy[4];
 	int vmdepth;
+	int port;
 };
 
 struct D3Data {

@@ -44,7 +44,7 @@ typedef struct {
  int vsync;
 } mode;
 
-typedef struct {
+typedef struct MsgDetect_t {
  str id;
  int cards;
  long memory;
@@ -66,6 +66,8 @@ typedef struct {
  int dpiy;
  str model;
  str vendor;
+ int port;
+ struct MsgDetect_t* next;
 } MsgDetect;
 
 typedef struct PciData_t {
@@ -124,7 +126,7 @@ extern PciData* PciGetData(void);
 extern FbData* FbGetData(void);
 extern MouseData* MouseGetData(void);
 extern KbdData* KeyboardGetData(void); 
-extern MsgDetect MonitorGetData(void);
+extern MsgDetect* MonitorGetData(void);
 extern unsigned long MemorySize (void);
 extern int TvSupport (void);
 extern char* vesaBIOS (void);

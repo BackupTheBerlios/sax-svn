@@ -64,7 +64,6 @@ int CheckQuestionOnly = 0;
 int CheckPCIVendor    = 0;
 int task              = 10;
 int checkFlag         = 1;
-int ddc               = 1;
 str themodule         = "";
 string ModuleToUse    = "";
 string CardToUse      = "";
@@ -113,7 +112,6 @@ int main(int argc,char *argv[]) {
 			{"ask"         , 1 , 0 , 'A'},
 			{"xbox"        , 0 , 0 , 'x'},
 			{"profile"     , 0 , 0 , 'p'},
-			{"noddc"       , 0 , 0 , 'd'},
 			{"remove"      , 0 , 0 , 'r'},
 			{"nocheckflag" , 0 , 0 , 'f'},
 			{"info"        , 0 , 0 , 'i'},
@@ -123,7 +121,7 @@ int main(int argc,char *argv[]) {
 		};
 
 		c = getopt_long (
-			argc, argv, "s:q:cC:M:A:prihdxnPf",long_options, &option_index
+			argc, argv, "s:q:cC:M:A:prihxnPf",long_options, &option_index
 		);
 		if (c == -1)
 		break;
@@ -148,10 +146,6 @@ int main(int argc,char *argv[]) {
 			CheckPCIVendor = 1;             // driver for unknown cards
 		break;
 
-		case 'd':                           // do not use DDC data
-			ddc = 0;
-		break; 
-  
 		case 'n':                           // during server scan
 			CheckQuestionOnly = 1;          // check for 3D question only
 		break;
@@ -290,9 +284,6 @@ void ScanModule(str name) {
 		str card   ; strcpy(card,CardToUse.c_str());
 		ScanXStuff stuff (AskForFlag,UseXForQuestions,card,module);
 		stuff.SetFile(STUFF_DATA);
-		if (ddc == 0) {
-			stuff.DisableDDC();
-		}
 		stuff.Scan(); PrintStuffData(stuff);
 		if (! InfoOnly) {
 			stuff.Save();
@@ -709,20 +700,42 @@ void PrintStuffData(ScanXStuff s) {
 		if (data.extension == "") { 
 			data.extension = "None"; 
 		}
-		printf ("Card%d     =>  DDC        : %s\n",card,data.ddc.c_str());
-		printf ("Card%d     =>  Name       : %s\n",card,data.model.c_str());
-		printf ("Card%d     =>  Vendor     : %s\n",card,data.vendor.c_str());
+		printf ("Card%d     =>  DDC        : %s\n",card,data.ddc[0].c_str());
+		if (data.port > 1) {
+		printf ("Card%d     =>  DDC[2]     : %s\n",card,data.ddc[1].c_str());
+		}
+		printf ("Card%d     =>  Name       : %s\n",card,data.model[0].c_str());
+		printf ("Card%d     =>  Vendor     : %s\n",card,data.vendor[0].c_str());
+		if (data.port > 1) {
+		printf ("Card%d     =>  Name[2]    : %s\n",card,data.model[1].c_str());
+        printf ("Card%d     =>  Vendor[2]  : %s\n",card,data.vendor[1].c_str());
+		}
 		printf ("Card%d     =>  Primary    : %s\n",card,data.primary.c_str());
 		printf ("Card%d     =>  Chipset    : %s\n",card,data.chipset.c_str());
-		printf ("Card%d     =>  Vsync      : %d\n",card,data.vsync);
-		printf ("Card%d     =>  Hsync      : %d\n",card,data.hsync);
-		if (data.vesacount > 0) {
-		for (int n=0;n<data.vesacount;n++) {
-			if (data.vesa[n].x > 0) {
+		printf ("Card%d     =>  Vsync      : %d\n",card,data.vsync[0]);
+		printf ("Card%d     =>  Hsync      : %d\n",card,data.hsync[0]);
+		if (data.port > 1) {
+		printf ("Card%d     =>  Vsync[2]   : %d\n",card,data.vsync[1]);
+		printf ("Card%d     =>  Hsync[2]   : %d\n",card,data.hsync[1]);
+		}
+		if (data.vesacount[0] > 0) {
+		for (int n=0;n<data.vesacount[0];n++) {
+			if (data.vesa[0][n].x > 0) {
 				printf ("Card%d     =>  Vesa       : %d %d %d %d\n",card,
-				data.vesa[n].x,data.vesa[n].y,
-				data.vesa[n].hsync,data.vesa[n].vsync);
+				data.vesa[0][n].x,data.vesa[0][n].y,
+				data.vesa[0][n].hsync,data.vesa[0][n].vsync);
 			}
+		}
+		}
+		if (data.port > 1) {
+		if (data.vesacount[1] > 0) {
+		for (int n=0;n<data.vesacount[1];n++) {
+			if (data.vesa[1][n].x > 0) {
+				printf ("Card%d     =>  Vesa[2]    : %d %d %d %d\n",card,
+				data.vesa[1][n].x,data.vesa[1][n].y,
+				data.vesa[1][n].hsync,data.vesa[1][n].vsync);
+			}
+		}
 		}
 		}
 		if (TvSupport()) {
@@ -740,17 +753,34 @@ void PrintStuffData(ScanXStuff s) {
 		printf ("Card%d     =>  Extension  : %s\n",card,data.extension.c_str());
 		printf ("Card%d     =>  Module     : %s\n",card,data.driver.c_str());
 		if (
-			(data.dtype == "CRT")     || 
-			(data.dtype == "LCD/TFT")
+			(data.dtype[0] == "CRT")     || 
+			(data.dtype[0] == "LCD/TFT")
 		) {
-		printf ("Card%d     =>  Display    : %s\n",card,data.dtype.c_str());
+		printf ("Card%d     =>  Display    : %s\n",card,data.dtype[0].c_str());
 		} else {
 		printf ("Card%d     =>  Display    : NUL\n",card);
 		}
-		if ((data.dpix > 0) && (data.dpiy > 0)) {
+		if (data.port > 1) {
+		if (
+			(data.dtype[1] == "CRT")     ||
+			(data.dtype[1] == "LCD/TFT")
+		) {
+		printf ("Card%d     =>  Display[2] : %s\n",card,data.dtype[1].c_str());
+		} else {
+		printf ("Card%d     =>  Display[2] : NUL\n",card);
+		}
+		}
+		if ((data.dpix[0] > 0) && (data.dpiy[0] > 0)) {
 		printf ("Card%d     =>  Size       : %dx%d\n",
-			card,data.dpix,data.dpiy
+			card,data.dpix[0],data.dpiy[0]
 		);
+		}
+		if (data.port > 1) {
+		if ((data.dpix[1] > 0) && (data.dpiy[1] > 0)) {
+		printf ("Card%d     =>  Size[2]    : %dx%d\n",
+			card,data.dpix[1],data.dpiy[1]
+		);
+		}
 		}
 		if (data.vmdepth > 0) {
 		printf ("Card%d     =>  ColorDepth : %d\n",

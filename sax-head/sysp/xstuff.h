@@ -46,7 +46,6 @@ class ScanXStuff {
 	int withx;
 	str card;
 	str cardopt;
-	int ddc;
 
 	public:
 	void SetFile (str name);
@@ -59,8 +58,6 @@ class ScanXStuff {
 	int  Read (void);
 	ScanXStuff (void);
 	ScanXStuff (int ask,int xavailable,str cardnr,str copt);
-	void DisableDDC (void);
-	void EnableDDC (void);
 
 	private:
 	int FindParseData (map<int,ParseData> m,int bus,int slot,int func);

@@ -79,6 +79,9 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual QDict<QString> getCDBMonitorData (
 		const QString&,const QString&
 	) = 0;
+	virtual QDict<QString> getCDBMonitorIDData (
+		const QString&
+	) = 0;
 	virtual void setCDBMonitorData (
 		const QString&, const QString&,
 		const QString&, const QString&
@@ -209,6 +212,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	QList<QString> getCDBMonitorVendorList ( void );
 	QList<QString> getCDBMonitorModelList  ( const QString& );
 	QDict<QString> getCDBMonitorData ( const QString&, const QString& );
+	QDict<QString> getCDBMonitorIDData ( const QString& );
 	void setCDBMonitorData (
 		const QString&, const QString&,
 		const QString&, const QString&

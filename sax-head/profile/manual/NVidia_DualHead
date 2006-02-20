@@ -20,6 +20,7 @@ $Hsync  = Monitor-> [X] -> HorizSync
 $Vsync  = Monitor-> [X] -> VertRefresh
 $Mmodel = Monitor-> [X] -> ModelName
 $Mvendor= Monitor-> [X] -> VendorName
+$Size   = Monitor-> [X] -> DisplaySize
 
 Device  -> [X+1] ->  BusID            = ${BusID}
 Device  -> [X+1] ->  VendorName       = ${Vendor}
@@ -45,3 +46,4 @@ Monitor -> [X+1] ->  ModelName        = ${Mmodel}
 Monitor -> [X+1] ->  HorizSync        = ${Hsync}
 Monitor -> [X+1] ->  VendorName       = ${Mvendor}
 Monitor -> [X+1] ->  Identifier       = Monitor[[X+1]]
+Monitor -> [X+1] ->  DisplaySize      = ${Size}

@@ -443,7 +443,13 @@ sub init {
 	}
 	}
 	#==========================================
-	# Handle option -vesa
+	# Handle option -v | --virtual
+	#------------------------------------------
+	if (defined $Virtual) {
+		$CreateVESAProfile = '0:640x480@60';
+	}
+	#==========================================
+	# Handle option --vesa
 	#------------------------------------------
 	if (defined $CreateVESAProfile) {
 		if ($CreateVESAProfile =~ /(.*):(.*)x(.*)\@(.*)/) {
@@ -606,11 +612,7 @@ sub scan {
 	#------------------------------------------
 	$querystr = "xstuff";
 	$subject  = "Sysp: XStuff detection data";
-	if (defined $Virtual) {
-		$result = qx ($spec{Sysp} -s $querystr -d);
-	} else {
-		$result = qx ($spec{Sysp} -s $querystr);
-	}
+	$result = qx ($spec{Sysp} -s $querystr);
 	chomp $result;
 	Logger ( $subject."\n".$result,$logHandle );
 	my $xstuffLines = split("\n",$result);

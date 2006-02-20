@@ -79,13 +79,13 @@ sub AutoDetectResolution {
 			};
 			# Display size in cm...
 			# ------------------------
-			/^Size/          && do {
+			/^Size$/         && do {
 			push (@dpi_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# The VESA resolution list...
 			# ----------------------------
-			/^Vesa/          && do {
+			/^Vesa$/         && do {
 			$detectvesa = 1;
 			push (@vesa_list,"true");
 			last SWITCH;

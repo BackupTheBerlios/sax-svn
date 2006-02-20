@@ -12,16 +12,23 @@ use SaX;
 # ProfileGetDualDisplaySize
 #-------------------------------------
 sub ProfileGetDualDisplaySize {
-	my $x = 0;
-	my $y = 0;
+	my $x1 = 0;
+	my $x2 = 0;
+	my $x  = 0;
+	my $y  = 0;
 	my $sysp = "/usr/sbin/sysp";
-	my $size = qx ($sysp -q xstuff | grep Size | head -n 1 | cut -f2 -d:);
-	if ($size =~ /(\d+)x(\d+)/) {
-		$x = $1;
-		$y = $2;
-		$x = $x * 10 * 2;
-		$y = $y * 10;
+	my $s1 = qx ($sysp -q xstuff | grep Size | head -n 1 | cut -f2 -d:);
+	my $s2 = qx ($sysp -q xstuff | grep Size | tail -n 1 | cut -f2 -d:);
+	if ($s1 =~ /(\d+)x(\d+)/) {
+		$x1 = $1 * 10;
+		$y  = $2 * 10;
 	}
+	if ($s2 =~ /(\d+)x(\d+)/) {
+		$x2 = $1  * 10;
+	} else {
+		$x2 = $x1;
+	}
+	$x = $x1 + $x2;
 	return ($x,$y);
 }
 
@@ -233,14 +240,15 @@ sub ProfileNVidiaGetMonitorLayout {
 		$otherdevs="AUTO";
 	}
 	if ($bootdev =~ /CRT/) {
-		print STDERR "*** Device booted into CRT. OOPS! This might not be what you intended!\n";
+		print STDERR "*** Device booted into CRT.\n";
+		print STDERR "*** OOPS! This might not be what you intended!\n";
 	}
 	if ($bootdev =~ /DFP/ || $bootdev =~ /CRT/) {
 		if ($otherdevs =~ /DFP/) {
 		if ($otherdevs =~ /CRT/) {
-			print STDERR "*** Secondary output might be a flat panel or a CRT.\n";
-			print STDERR "    Change AUTO to DFP or CRT to activate the according output\n";
-			print STDERR "    without hardware plugged in.\n";
+			print STDERR "*** Secondary output might be both: DFP or a CRT.\n";
+			print STDERR "    Change AUTO to DFP or CRT to activate\n";
+			print STDERR "    the output without hardware plugged in.\n";
 			$connected = "$bootdev,AUTO";
 		} else {
 			$connected = "$bootdev,DFP";
@@ -331,6 +339,87 @@ sub ProfileCreatePreliminaryConfig {
 	close HANDLE;
 
 	return $cfgfile;
+}
+
+#=====================================
+# ProfileGetDDC2Data
+#-------------------------------------
+sub ProfileGetDDC2Data {
+	my %result = ();
+	#=====================================
+	# get SYSP xstuff ...[2] data
+	#-------------------------------------
+	my $xstuff = new SaX::SaXImportSysp ($SaX::SYSP_DESKTOP);
+	$xstuff->doImport();
+	my $ddc = $xstuff->getItem("DDC[2]");
+	if (! defined $ddc) {
+		return %result;
+	}
+	#=====================================
+	# Save DDC record values
+	#-------------------------------------
+	if (defined $xstuff->getItem("Vendor[2]")) {
+	if (defined $xstuff->getItem("Name[2]")) {
+		$result{Model}  = $xstuff->getItem("Name[2]");
+		$result{Vendor} = $xstuff->getItem("Vendor[2]");
+	}
+	}
+	if (defined $xstuff->getItem("Vesa[2]")) {
+	if ($xstuff->getItem("Vesa[2]") =~ /(.*) (.*) .* .*/)	{
+		$result{Resolution} = "$1x$2";
+	}
+	}
+	if (defined $xstuff->getItem("Hsync[2]")) {
+		$result{Hsync} = "31-".$xstuff->getItem("Hsync[2]");
+	}
+	if (defined $xstuff->getItem("Vsync[2]")) {
+		$result{Vsync} = "50-".$xstuff->getItem("Vsync[2]");
+	}
+	if (defined $xstuff->getItem("Size[2]")) {
+	if ($xstuff->getItem("Size[2]") =~ /(.*)x(.*)/) {
+		my $x = $1 * 10;
+		my $y = $2 * 10;
+		$result{Size} = "$x $y";
+	}
+	}
+	#=====================================
+	# get CDB monitor pointer
+	#-------------------------------------
+	my %section;
+	my @importID = (
+		$SaX::SAX_CARD, $SaX::SAX_DESKTOP, $SaX::SAX_PATH
+	);
+	foreach my $id (@importID) {
+		my $import = new SaX::SaXImport ( $id );
+		$import->setSource ( $SaX::SAX_AUTO_PROBE );
+		$import->doImport();
+		$section{$import->getSectionName()} = $import;
+	}
+	my $mDesktop = new SaX::SaXManipulateDesktop (
+		$section{Desktop},$section{Card},$section{Path}
+	);
+	my %data = %{$mDesktop->getCDBMonitorIDData ($ddc)};
+	if (defined %data) {
+		#=====================================
+		# Found monitor in the CDB
+		#-------------------------------------
+		if (defined $data{Name}) {
+		if ($data{Name} =~ /(.*):(.*)/) {
+			$result{Model}  = $2;
+			$result{Vendor} = $1;
+		}
+		}
+		if (defined $data{Resolution}) {
+			$result{Resolution} = $data{Resolution};
+		}
+		if (defined $data{HorizSync}) {
+			$result{Hsync} = $data{HorizSync};
+		}
+		if (defined $data{VertRefresh}) {
+			$result{Vsync} = $data{VertRefresh};
+		}
+	}
+	return %result;
 }
 
 1;

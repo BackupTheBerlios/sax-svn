@@ -183,7 +183,7 @@ void SCCMonitorDualModel::init ( void ) {
 	// import dualhead profile if set
 	//------------------------------------
 	QString profile = mSaxDesktop -> getDualHeadProfile();
-	if (! profile.isEmpty()) {
+	if ((! profile.isEmpty()) && (! mSaxDesktop->isXineramaMode())) {
 		SaXImportProfile* pProfile = SaXWidgetProfile->getProfile ( profile );
 		SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
 		if ( mImport ) {

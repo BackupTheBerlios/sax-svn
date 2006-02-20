@@ -71,6 +71,7 @@ Version:      1.7
 Release:      18
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
+Requires:     sax2-libsax-perl
 Provides:     sax2:/usr/share/sax/sysp/maps/Identity.map
 Provides:     sax2-tools:/usr/share/sax/sysp/maps/Identity.map
 Provides:     saxident

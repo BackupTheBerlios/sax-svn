@@ -1336,6 +1336,37 @@ QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
 	return mCDBMonitorData;
 }
 //====================================
+// get data dict for a CDB monitor
+//------------------------------------
+QDict<QString> SaXManipulateDesktop::getCDBMonitorIDData (
+	const QString& id
+) {
+	// .../
+	//! return the monitor data dictionary associated with the
+	//! given DDC id.
+	// ----
+	mCDBMonitorData.clear();
+	if ( ! mCDBMonitors ) {
+		mCDBMonitors = new SaXProcess ();
+		mCDBMonitors -> start (CDB_MONITORS);
+	}
+	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	QDictIterator< QDict<QString> > it (CDBData);
+	bool found = false;
+	for (; it.current(); ++it) {
+		mCDBMonitorData = *it.current();
+		if ((mCDBMonitorData["DDC"]) && (*mCDBMonitorData["DDC"] == id)) {
+			mCDBMonitorData.insert ("Name",new QString(it.currentKey()));
+			found = true;
+			break;
+		}
+	}
+	if (! found) {
+		mCDBMonitorData.clear();
+	}
+	return mCDBMonitorData;
+}
+//====================================
 // add data dict to CDB (temporarly)
 //------------------------------------
 void SaXManipulateDesktop::setCDBMonitorData (
