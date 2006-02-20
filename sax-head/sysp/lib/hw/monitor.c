@@ -74,7 +74,8 @@ MsgDetect* MonitorGetData (void) {
 		sprintf(display->model,hd->model);
 		sprintf(display->vendor,vend_id2str(hd->vendor.id));
 		if (strcmp (display->vendor,"0000") == 0) {
-			sprintf(display->vendor,"Generic");
+			sprintf(display->model ,hd->device.name);
+			sprintf(display->vendor,hd->vendor.name);
 		}
 		//===================================
 		// Save Monitor DisplayType ...
@@ -89,10 +90,10 @@ MsgDetect* MonitorGetData (void) {
 		// Save Monitor Hsync/Vsync best Res
 		//-----------------------------------
 		di0 = hd->driver_info;
+		display->hsync_max = 0;
+		display->vsync_max = 0;
 		for(di = di0, i = 0; di; di = di->next, i++) {
 		if (di->any.type == di_display) {
-			display->hsync_max = 0;
-			display->vsync_max = 0;
 			if (di->display.max_hsync) {
 				display->hsync_max = (int)di->display.max_hsync;
 			}

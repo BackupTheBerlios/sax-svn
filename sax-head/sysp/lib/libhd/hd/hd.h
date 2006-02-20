@@ -437,21 +437,19 @@ typedef struct vbe_mode_info_s {
 
 
 typedef struct {
-  unsigned ok:1;			/* data are valid */
-  unsigned version;			/* vbe version */
+  unsigned ok:1;		/* data are valid */
+  unsigned version;		/* vbe version */
   unsigned oem_version;		/* oem version info */
-  unsigned memory;			/* in bytes */
+  unsigned memory;		/* in bytes */
   unsigned fb_start;		/* != 0 if framebuffer is supported */
-  char *oem_name;			/* oem name */
+  char *oem_name;		/* oem name */
   char *vendor_name;		/* vendor name */
   char *product_name;		/* product name */
   char *product_revision;	/* product revision */
-  unsigned modes;			/* number of supported video modes */
-  vbe_mode_info_t *mode;    /* video mode list */
+  unsigned modes;		/* number of supported video modes */
+  vbe_mode_info_t *mode;	/* video mode list */
   unsigned current_mode;	/* current video mode */
-  unsigned char ddc[0x80];	/* ddc monitor info */
-  unsigned char ddc_port[4][0x80]; /* ddc monitor info per port */
-  unsigned port;			/* monitor port */
+  unsigned char ddc_port[4][0x80];	/* ddc monitor info per port */
 } vbe_info_t;
 
 

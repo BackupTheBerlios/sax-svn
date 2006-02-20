@@ -80,7 +80,7 @@ void hd_scan_monitor(hd_data_t *hd_data)
   ) {
     int pid = 0;
     int got_ddc_data = 0;
-    for (pid=0;pid<4;pid++) {
+    for(pid = 0; pid < sizeof bt->vbe.ddc_port / sizeof *bt->vbe.ddc_port; pid++) {
       if(chk_edid_info(hd_data, bt->vbe.ddc_port[pid])) {
         hd = add_hd_entry(hd_data, __LINE__, 0);
         hd->base_class.id = bc_monitor;
@@ -94,7 +94,7 @@ void hd_scan_monitor(hd_data_t *hd_data)
         got_ddc_data = 1;
       }
     }
-    if (got_ddc_data) {
+    if(got_ddc_data) {
       return;
     }
   }

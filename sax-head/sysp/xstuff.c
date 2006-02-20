@@ -289,32 +289,44 @@ void ScanXStuff::Scan (void) {
 		if (vbios) {
 			stuff[i].vbios = vbios;
 		}
-		//======================================
-		// Save model and vendor from parse
-		//--------------------------------------
-		stuff[i].model[0]  = "<undefined>";
-		stuff[i].vendor[0] = "<undefined>";
-		if (parse[mapnr].model != "") {
-			stuff[i].model[0] = parse[mapnr].model;
+		for (int p=0;p<4;p++) {
+			//======================================
+			// Save model and vendor from parse
+			//--------------------------------------
+			stuff[i].model[p]  = "<undefined>";
+			stuff[i].vendor[p] = "<undefined>";
+			if (parse[mapnr].model != "") {
+				stuff[i].model[p] = parse[mapnr].model;
+			}
+			if (parse[mapnr].vendor != "") {
+				stuff[i].vendor[p] = parse[mapnr].vendor;
+			}
+			//======================================
+			// Save DisplayType and DDCID from parse
+			//--------------------------------------
+			stuff[i].dtype[p]  = parse[mapnr].dtype;
+			stuff[i].ddc[p]    = parse[mapnr].ddc;
+			//======================================
+			// Save hsync/vsync ranges from parse
+			//--------------------------------------
+			stuff[i].hsync[p]  = parse[mapnr].hsmax;
+			stuff[i].vsync[p]  = parse[mapnr].vsmax;
+			//======================================
+			// Save DisplaySize from parse
+			//--------------------------------------
+			stuff[i].dpix[p]   = parse[mapnr].dpix;
+			stuff[i].dpiy[p]   = parse[mapnr].dpiy;
+			//======================================
+			// Save modes from parse
+			//--------------------------------------
+			if (parse[mapnr].modecount) {
+				//======================================
+				// Found vesa modes -> use it
+				//--------------------------------------
+				stuff[i].vesacount[p] = parse[mapnr].modecount;
+				stuff[i].vesa[p]      = parse[mapnr].modes;
+			}
 		}
-		if (parse[mapnr].vendor != "") {
-			stuff[i].vendor[0] = parse[mapnr].vendor;
-		}
-		//======================================
-		// Save DisplayType and DDCID from parse
-		//--------------------------------------
-		stuff[i].dtype[0]  = parse[mapnr].dtype;
-		stuff[i].ddc[0]    = parse[mapnr].ddc;
-		//======================================
-		// Save hsync/vsync ranges from parse
-		//--------------------------------------
-		stuff[i].hsync[0]  = parse[mapnr].hsmax;
-		stuff[i].vsync[0]  = parse[mapnr].vsmax;
-		//======================================
-		// Save DisplaySize from parse
-		//--------------------------------------
-		stuff[i].dpix[0]   = parse[mapnr].dpix;
-		stuff[i].dpiy[0]   = parse[mapnr].dpiy;
 		//======================================
 		// Save standard values from parse
 		//--------------------------------------
@@ -338,16 +350,6 @@ void ScanXStuff::Scan (void) {
 			stuff[i].extension += ",v4l";
 		}
 		}
-		//======================================
-		// Save modes from parse
-		//--------------------------------------
-		if (parse[mapnr].modecount) {
-			//======================================
-			// Found vesa modes -> use it
-			//--------------------------------------
-			stuff[i].vesacount[0] = parse[mapnr].modecount;
-			stuff[i].vesa[0]      = parse[mapnr].modes;
-		}
 	}
 	// .../
 	// set the VBE DDC probed values from libhd
@@ -363,9 +365,11 @@ void ScanXStuff::Scan (void) {
 		//======================================
 		// Save DDC id and Type per port
 		//--------------------------------------
-		if ((string(dpy->ddc) != "")&&(string(dpy->ddc) != "00000000")) {
+		if ((string(dpy->ddc) != "") && (string(dpy->ddc) != "00000000")) {
 			stuff[0].ddc[p]   = dpy->ddc;
 			stuff[0].dtype[p] = dpy->displaytype;
+		} else {
+			strcpy (dpy->ddc,"<undefined>");
 		}
 		//======================================
 		// Save DisplaySize per port
@@ -381,10 +385,10 @@ void ScanXStuff::Scan (void) {
 		//======================================
 		// Save hsync/vsync ranges per port
 		//--------------------------------------
-		if (dpy->hsync_max > 0) { 
+		if (dpy->hsync_max) { 
 			stuff[0].hsync[p] = dpy->hsync_max;
 		}
-		if (dpy->vsync_max > 0) { 
+		if (dpy->vsync_max) {
 			stuff[0].vsync[p] = dpy->vsync_max;
 		}
 		//======================================
@@ -458,6 +462,20 @@ void ScanXStuff::Scan (void) {
 				stuff[0].vesa[p][vesaCount] = mode;
 				vesaCount++;
 				stuff[0].vesacount[p] = vesaCount;
+			}
+			}
+			//======================================
+			// Sort vesa resolutions
+			//--------------------------------------
+			for (int n=0;n<vesaCount;n++) {
+			for (int l=n;l<vesaCount;l++) {
+				XMode mode_n = stuff[0].vesa[p][n];
+				XMode mode_l = stuff[0].vesa[p][l];
+				if (mode_n.x > mode_l.x) {
+					XMode save = mode_n;
+					stuff[0].vesa[p][n] = mode_l;
+					stuff[0].vesa[p][l] = save;
+				}
 			}
 			}
 			//======================================
