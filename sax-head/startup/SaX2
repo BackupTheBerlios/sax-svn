@@ -18,13 +18,23 @@ function signal {
 	killall dots.pl 2>/dev/null >/dev/null
 	test -n "$TMPFILE" && rm -f $TMPFILE
 }
-
+function isTTY () {
+	case `tty` in
+		/dev/tty*)
+			return 0
+		;;
+		*)
+			return 1
+		;;
+    esac
+}
 #========================================
 # Init
 #----------------------------------------
 ERR="/var/log/SaX.log"
 SHC="/bin/sh"
 SUX="/usr/X11R6/bin/sux"
+REI=""
 
 #========================================
 # Main
@@ -44,8 +54,17 @@ for param;do
 	fi
 done
 
-# lookup temp file for language information...
-# ----------------------------------------------
+#========================================
+# Check console mode
+#----------------------------------------
+if isTTY;then
+	# echo "SaX: running in console mode, re-init cache"
+	REI="-r"
+fi
+
+#========================================
+# lookup tmp file for language info...
+#----------------------------------------
 if [ ! "$UID" = 0 ];then
 	TMPFILE=`mktemp -q /tmp/sax_lenv.XXXXXX`
 	if [ $? -ne 0 ]; then
@@ -54,11 +73,13 @@ if [ ! "$UID" = 0 ];then
 	fi 
 fi
 
+#========================================
 # test for root privileges...
-# ---------------------------
+#----------------------------------------
 if [ ! "$UID" = 0 ];then
+	#========================================
 	# export LANG user environment...
-	# ---------------------------------
+	#----------------------------------------
 	echo $LANG >> $TMPFILE
 
 	echo -n "SaX: root "
@@ -83,6 +104,7 @@ if [ ! "$UID" = 0 ];then
 	exit 0
 fi
 
+#========================================
 # run the main sax start script...
-# ---------------------------------
-/usr/sbin/sax.sh $*
+#----------------------------------------
+/usr/sbin/sax.sh $* $REI

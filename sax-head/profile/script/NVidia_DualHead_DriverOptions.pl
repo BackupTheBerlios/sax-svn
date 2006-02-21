@@ -7,6 +7,11 @@ use strict;
 use Profile;
 
 #====================================
+# Profile name...
+#------------------------------------
+my $name = "NVidia_DualHead_DriverOptions";
+
+#====================================
 # DualHead check
 #------------------------------------
 if ($ARGV[0] eq "check") {
@@ -24,7 +29,7 @@ my $profile = ProfileInitScript();
 #------------------------------------
 if (ProfileIsXOrgVendor ("nvidia")) {
 	open (FD,">",$profile) ||
-		die "NVidia_DualHead_DriverOptions: Can't open $profile: $!";
+		die "$name: Can't open $profile: $!";
 	print FD "Desktop -> [X] -> CalcModelines = yes\n";
 	print FD "Monitor -> [X] -> CalcAlgorithm = CheckDesktopGeometry\n";
 	close FD;
@@ -37,9 +42,11 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 	my ($x,$y) = ProfileGetDualDisplaySize();
 	if (ProfileIsNoteBookHardware()) {
 		open (FD,">",$profile) ||
-			die "NVidia_DualHead_DriverOptions: Can't open $profile: $!";
-		my $dx = "Device->[X]->Raw";
-		print FD "\$Modes=Screen->[X]->Depth->16->Modes\n";
+			die "$name: Can't open $profile: $!";
+		my $id = 11;
+        my $dt = '"Device->[X]->Raw->".$id++."->Option"';
+        my $dx = eval $dt;
+		print FD "\$MS=Screen->[X]->Depth->16->Modes\n";
 		print FD "Monitor->[X]->DisplaySize=$x $y\n";
 		print FD "SaXMeta->[X]->SAX_NO_CDB_CHECK=1\n";
 		print FD "Desktop->[X]->CalcModelines=no\n";
@@ -47,24 +54,95 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		print FD "Device->[X]->Driver=nvidia\n";
 		print FD "Device->[X]->Screen=0\n";
 		print FD "Device->[X]->Option = TwinView,SaXDualHead\n";
-		print FD "$dx->11->Option=\"SecondMonitorHorizSync\" \"31-48\"\n";
-		print FD "$dx->12->Option=\"SecondMonitorVertRefresh\" \"50-60\"\n";
-		print FD "$dx->13->Option=\"MetaModes\" \"$CA:\${Modes[0]},$CB:1024x768;$CA:1024x768,$CB:1024x768\"\n";
-		print FD "$dx->14->Option=\"TwinViewOrientation\" \"Clone\"\n";
-		print FD "$dx->15->Option=\"ConnectedMonitor\" \"$mlayout\"\n";
-		print FD "$dx->16->Option=\"SaXDualOrientation\" \"RightOf\"\n";
-		print FD "$dx->17->Option=\"SaXDualHSync\" \"31-48\"\n";
-		print FD "$dx->18->Option=\"SaXDualVSync\" \"50-60\"\n";
-		print FD "$dx->19->Option=\"SaXDualResolution\" \"1024x768\"\n";
-		print FD "$dx->20->Option=\"SaXDualMode\" \"Clone\"\n";
-		print FD "$dx->21->Option=\"SaXDualMonitorVendor\" \"__VESA__\"\n";
-		print FD "$dx->22->Option=\"SaXDualMonitorModel\" \"1024X768@60HZ\"\n";
+		print FD "$dx=\"TwinViewOrientation\" \"Clone\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"ConnectedMonitor\" \"$mlayout\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualOrientation\" \"RightOf\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMode\" \"Clone\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SecondMonitorHorizSync\" \"31-48\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SecondMonitorVertRefresh\" \"50-60\"\n";
+		$dx = eval $dt;
+		my $MMValue = "$CA:\${MS[0]},$CB:1024x768;$CA:1024x768,$CB:1024x768";
+		print FD "$dx\"MetaModes\" \"$MMValue\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualHSync\" \"31-48\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualVSync\" \"50-60\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualResolution\" \"1024x768\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMonitorVendor\" \"__VESA__\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMonitorModel\" \"1024X768@60HZ\"\n";
 		close FD;
 	} else {
+		#====================================
+		# check secondary DDC data
+		#------------------------------------
 		open (FD,">>",$profile) ||
-			die "NVidia_DualHead_DriverOptions: Can't open $profile: $!";
+			die "$name: Can't open $profile: $!";
+		my %data   = ProfileGetDDC2Data();
+		my $id = 11;
+		my $dt = '"Device->[X]->Raw->".$id++."->Option"';
+		my $dx = eval $dt;
 		print FD "Monitor->[X]->DisplaySize=$x $y\n";
-		print FD "Device->[X]->Raw->22->Option=\"MetaModes\" \"$CA:\${Modes[0]},$CB:\${Modes[0]}\"\n";
+		print FD "$dx=\"TwinViewOrientation\" \"Clone\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"ConnectedMonitor\" \"$mlayout\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualOrientation\" \"RightOf\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMode\" \"Clone\"\n";
+		$dx = eval $dt;
+		foreach my $key (keys %data) {
+			my $val = $data{$key};
+			SWITCH: for ($key) {
+				/^Model/      && do {
+					$id = 22;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualMonitorModel\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Vendor/     && do {
+					$id = 21;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualMonitorVendor\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Resolution/ && do {
+					$id = 17;
+					$dx = eval $dt;
+					my $key = "MetaModes";
+					print FD "$dx=\"$key\" \"$CA:\${Modes[0]},$CB:$val\"\n";
+					$id = 20;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualResolution\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Hsync/      && do {
+					$id = 15;
+					$dx = eval $dt;
+					print FD "$dx=\"SecondMonitorHorizSync\" \"$val\"\n";
+					$id = 18;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualHSync\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Vsync/      && do {
+					$id = 16;
+					$dx = eval $dt;
+					print FD "$dx=\"SecondMonitorVertRefresh\" \"$val\"\n";
+					$id = 19;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualVSync\" \"$val\"\n";
+					last SWITCH;
+				};
+			}
+		}
 		close FD;
 	}
 }

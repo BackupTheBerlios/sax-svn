@@ -344,7 +344,7 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	);
 	if (currentMode.isEmpty()) {
 		log (L_INFO,
-			"XFineWindow::No mode information for screen: %d",mScreen
+			"XFineWindow::No mode information for screen: %d\n",mScreen
 		);
 		exit (0);
 	}

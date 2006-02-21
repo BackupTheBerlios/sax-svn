@@ -1,14 +1,18 @@
 -------------------------------------------------------------------
-Fri Feb 17 19:40:31 CET 2006 - ms@suse.de
+Mon Feb 20 12:59:07 CET 2006 - ms@suse.de
 
-- fixed monitor detection for Vision Master 451 (#149038)
+- fixed monitor detection for IVM 451 (#149038)
+- added bios data for LifeBook S 7020 display (#151867)
+- added bios data for Samsung SX 20 S display (#151867)
+- reinitialize cache if called in tty console mode
 - adapt Xinerama profiles to make use of the DDC[2] data
+- adapt MergedFB profiles to make use of the DDC[2] data
 - added support for DDC[2] dual head information
 
 -------------------------------------------------------------------
 Thu Feb 16 16:43:34 CET 2006 - ms@suse.de
 
-- added support for Philips 200W 1680x1050 widescreen TFT
+- added support for Philips 200W 1680x1050 widescreen TFT (#152466)
 
 -------------------------------------------------------------------
 Tue Feb 14 14:21:46 CET 2006 - ms@suse.de

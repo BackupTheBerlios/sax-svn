@@ -427,7 +427,11 @@ echo -ne "\r"
 if [ $IN_TRIGGER = 1 ];then
 	echo "SaX: initializing please wait..."
 	if [ -f /etc/X11/xorg.conf ];then
-		echo "SaX: your current configuration will not be read in"
+		if [ "$SYS_CONFIG" = "-s" ];then
+			echo "SaX: will use current configuration"
+		else
+			echo "SaX: your current configuration will not be read in"
+		fi
 		echo
 	fi
 	$INIT $IN_OPT --quiet no

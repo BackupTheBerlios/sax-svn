@@ -6,6 +6,11 @@ use strict;
 use Profile;
 
 #====================================
+# Profile name...
+#------------------------------------
+my $name = "Radeon_DualHead_DriverOptions";
+
+#====================================
 # Init profile script
 #------------------------------------
 my $profile = ProfileInitScript();
@@ -13,14 +18,14 @@ my $profile = ProfileInitScript();
 #====================================
 # Do the profile adaptions...
 #------------------------------------
-if (glob("/usr/X11R6/lib/modules/drivers/fglrx_drv*")) {
+if (! ProfileIsXOrgVendor ("fglrx")) {
 	#====================================
 	# Call fglrx dual profile
 	#------------------------------------
 	my $used = "/usr/share/sax/profile/FGLRX_DualHead_DriverOptions";
-	print STDERR "Radeon_DualHead_DriverOptions: selected profile: $used\n";
+	print STDERR "$name: selected profile: $used\n";
 	if ( -f "$used.pl" ) {
-		print STDERR "Radeon_DualHead_DriverOptions: calling profile script: $used.pl\n";
+		print STDERR "$name: calling profile script: $used.pl\n";
 		qx ($used.pl);
 		$used="$used.tmp";
 	}
@@ -31,24 +36,107 @@ if (glob("/usr/X11R6/lib/modules/drivers/fglrx_drv*")) {
 	#------------------------------------
 	if (ProfileIsNoteBookHardware()) {
 		open (FD,">",$profile) ||
-			die "Radeon_DualHead_DriverOptions: Can't open $profile: $!";
-		my $dx = "Device->[X]";
+			die "$name: Can't open $profile: $!";
+		my ($x,$y) = ProfileGetDualDisplaySize();
+		my $id = 20;
+		my $dt = '"Device->[X]->Raw->".$id++."->Option"';
+		my $dx = eval $dt;
 		print FD "SaXMeta->[X]->SAX_NO_CDB_CHECK=1\n";
-		print FD "\$Modes=Screen->[X]->Depth->16->Modes\n";
-		print FD "$dx->Raw->20->Option=\"MergedFB\" \"yes\"\n";
-		print FD "$dx->Raw->21->Option=\"CRT2HSync\" \"31-48\"\n";
-		print FD "$dx->Raw->22->Option=\"CRT2VRefresh\" \"50-60\"\n";
-		print FD "$dx->Raw->23->Option=\"IgnoreEDID\" \"yes\"\n";
-		print FD "$dx->Raw->24->Option=\"MetaModes\" \"\${Modes[0]},1024x768;1024x768,1024x768\"\n";
-		print FD "$dx->Raw->25->Option=\"CRT2Position\" \"Clone\"\n";
-		print FD "$dx->Option=SaXDualHead\n";
-		print FD "$dx->Raw->26->Option=\"SaXDualOrientation\" \"LeftOf\"\n";
-		print FD "$dx->Raw->27->Option=\"SaXDualHSync\" \"31-48\"\n";
-		print FD "$dx->Raw->28->Option=\"SaXDualVSync\" \"50-60\"\n";
-		print FD "$dx->Raw->29->Option=\"SaXDualResolution\" \"1024x768\"\n";
-		print FD "$dx->Raw->30->Option=\"SaXDualMode\" \"Clone\"\n";
-		print FD "$dx->Raw->31->Option=\"SaXDualMonitorVendor\" \"__VESA__\"\n";
-		print FD "$dx->Raw->32->Option=\"SaXDualMonitorModel\" \"1024X768@60HZ\"\n";
+		print FD "\$MS=Screen->[X]->Depth->16->Modes\n";
+		print FD "Device->[X]->Option=SaXDualHead\n";
+		print FD "Monitor->[X]->DisplaySize=$x $y\n";
+		print FD "$dx=\"MergedFB\" \"yes\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"IgnoreEDID\" \"yes\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"CRT2Position\" \"Clone\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualOrientation\" \"LeftOf\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMode\" \"Clone\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMonitorVendor\" \"__VESA__\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMonitorModel\" \"1024X768@60HZ\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"CRT2HSync\" \"31-48\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"CRT2VRefresh\" \"50-60\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"MetaModes\" \"\${MS[0]},1024x768;1024x768,1024x768\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualHSync\" \"31-48\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualVSync\" \"50-60\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualResolution\" \"1024x768\"\n";
+		close FD;
+	} else {
+		#====================================
+		# check secondary DDC data
+		#------------------------------------
+		open (FD,">>",$profile) ||
+			die "$name: Can't open $profile: $!";
+		my ($x,$y) = ProfileGetDualDisplaySize();
+		my %data   = ProfileGetDDC2Data();
+		my $id = 20;
+		my $dt = '"Device->[X]->Raw->".$id++."->Option"';
+		my $dx = eval $dt;
+		print FD "Monitor->[X]->DisplaySize=$x $y\n";
+		print FD "$dx=\"MergedFB\" \"yes\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"IgnoreEDID\" \"yes\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"CRT2Position\" \"Clone\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualOrientation\" \"LeftOf\"\n";
+		$dx = eval $dt;
+		print FD "$dx=\"SaXDualMode\" \"Clone\"\n";
+		$dx = eval $dt;
+		foreach my $key (keys %data) {
+			my $val = $data{$key};
+			SWITCH: for ($key) {
+				/^Model/      && do {
+					$id = 26;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualMonitorModel\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Vendor/     && do {
+					$id = 25;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualMonitorVendor\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Resolution/ && do {
+					$id = 30;
+					$dx = eval $dt;
+					print FD "$dx=\"MetaModes\" \"\${Modes[0]},$val\"\n";
+					$id = 33;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualResolution\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Hsync/      && do {
+					$id = 28;
+					$dx = eval $dt;
+					print FD "$dx=\"CRT2HSync\" \"$val\"\n";
+					$id = 31;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualHSync\" \"$val\"\n";
+					last SWITCH;
+				};
+				/^Vsync/      && do {
+					$id = 29;
+					$dx = eval $dt;
+					print FD "$dx=\"CRT2VRefresh\" \"$val\"\n";
+					$id = 32;
+					$dx = eval $dt;
+					print FD "$dx=\"SaXDualVSync\" \"$val\"\n";
+					last SWITCH;
+				};
+			}
+		}
 		close FD;
 	}
 }
