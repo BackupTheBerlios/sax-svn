@@ -412,10 +412,12 @@ bool SCCMonitor::exportData ( void ) {
 				fixBrokenCards (saxCard,false);
 				#endif
 				//====================================
-				// delete special modelines
+				// init special modelines
 				//------------------------------------
-				mSection["Desktop"] -> removeEntry ("SpecialModeline");
-
+				//mSection["Desktop"] -> removeEntry ("SpecialModeline");
+				saxDesktop.setExtraModelineString (
+					monitorData->getExtraModeline()
+				);
 				//====================================
 				// setup profile data
 				//------------------------------------

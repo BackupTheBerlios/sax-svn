@@ -1408,6 +1408,22 @@ QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
 	return *data.first();
 }
 //====================================
+// setExtraModelineString
+//------------------------------------
+void SaXManipulateDesktop::setExtraModelineString (
+	const QString & mode
+) {
+	// .../
+	//! This method includes one modeline specified by mode
+	//! without checking if it fits into the current range.
+	// This method should be used carefully
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return;
+	}
+	mDesktop -> setItem ( "SpecialModeline",mode );
+}
+//====================================
 // setExtraModeline
 //------------------------------------
 void SaXManipulateDesktop::setExtraModeline (

@@ -84,6 +84,7 @@ class SCCMonitorModel : public SCCDialog {
 	QDict<QString> mCDBMonitorData;
 	QList<QString> mTraversalList;
 	QList<QString> mAspectList;
+	QString        mExtraModeline;
 
 	private:
 	SaXManipulateDesktop* mSaxDesktop;
@@ -134,6 +135,7 @@ class SCCMonitorModel : public SCCDialog {
 	bool isDPMSEnabled ( void );
 	QString getVendorName ( void );
 	QString getModelName  ( void );
+	QString getExtraModeline ( void );
 	void setTitle ( const QString& );
 	int getSizeX ( void );
 	int getSizeY ( void );

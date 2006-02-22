@@ -419,6 +419,12 @@ int SCCMonitorModel::getVSmax ( void ) {
 	return mVsyncMax;
 }
 //=====================================
+// getExtraModeline
+//-------------------------------------
+QString SCCMonitorModel::getExtraModeline ( void ) {
+	return mExtraModeline;
+}
+//=====================================
 // setTitle
 //-------------------------------------
 void SCCMonitorModel::setTitle ( const QString & title ) {
@@ -623,6 +629,7 @@ void SCCMonitorModel::slotName ( QListBoxItem* item ) {
 	mHSpinMax  -> setValue   ( 50 );
 	mVSpinMin  -> setValue   ( 50 );
 	mVSpinMax  -> setValue   ( 60 );
+	mExtraModeline = "";
 	QDictIterator<QString> it (mCDBMonitorData);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
@@ -658,6 +665,9 @@ void SCCMonitorModel::slotName ( QListBoxItem* item ) {
 			QTextOStream (&infoRatio)
 				<< ratio.x() << "/" << ratio.y();
 			mAspect -> setCurrentText (infoRatio);
+		}
+		if (key == "SpecialModeline") {
+			mExtraModeline = val;
 		}
 	}
 }

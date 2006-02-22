@@ -54,6 +54,7 @@ namespace SaX {
 class SaXManipulateDesktopIF : public SaXException {
 	public:
 	virtual void calculateModelines ( bool ) = 0;
+	virtual void setExtraModelineString ( const QString& ) = 0;
 	virtual void setExtraModeline ( int,int,int,int ) = 0;
 	virtual void addExtraModeline ( int,int,int,int ) = 0;
 	virtual void removeExtraModeline ( int,int ) = 0;
@@ -189,6 +190,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 
 	public:
 	void calculateModelines ( bool );
+	void setExtraModelineString ( const QString& );
 	void setExtraModeline ( int,int,int,int );
     void addExtraModeline ( int,int,int,int );
     void removeExtraModeline ( int,int );

@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 22 14:24:38 2006
+# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 22 15:15:41 2006
 #
 # Template for monitor data
 # --------------------------
@@ -33275,9 +33275,11 @@ SCOTT:[VSHOP]18,1" ANALOG LCD PROFESSIONAL LINE  {
 SGI:1600SW FLATPANEL  {
  DDC=SGX0640
  Option=DPMS
- Hsync=67-72
+ Hsync=31-72
+ Modeline="1600x1024" 106.9 1600 1632 1656 1672 1024 1027 1030 1067
  Profile=SGX0640
- Vsync=50-60
+ Resolution=1600x1024
+ Vsync=30-60
 }
 
 #==============================================
