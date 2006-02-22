@@ -438,8 +438,9 @@ void ScanXStuff::Scan (void) {
 				mode.vsync = dpy->vmodes[n].vsync;
 				// ...
 				// if mode has more than 100 Hz skip it
+				// if mode is <= 0 Hz skip it
 				// ---
-				if (mode.vsync > 100) {
+				if ((mode.vsync > 100) || (mode.vsync <= 0)) {
 					continue;
 				}
 				// ...
