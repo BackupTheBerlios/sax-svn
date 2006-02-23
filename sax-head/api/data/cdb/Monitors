@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 22 15:15:41 2006
+# Author: Marcus Schaefer <sax@suse.de>, Thu Feb 23 11:35:06 2006
 #
 # Template for monitor data
 # --------------------------
@@ -18576,6 +18576,16 @@ HYUNDAI:HT7682  {
 HYUNDAI:HT7870  {
  Hsync=30-70
  Vsync=50-150
+}
+
+#==============================================
+# L50S
+#----------------------------------------------
+HYUNDAI:L50S  {
+ DDC=IQT0503
+ Hsync=31-55
+ Resolution=1024x768
+ Vsync=56-72
 }
 
 #==============================================

@@ -408,7 +408,7 @@ void ShowCards(void) {
 	for (int i = server.Count(); i > 0; i--) {
 		ServerData data = server.Pop();
 		string name = data.vendor + " " + data.device;
-		printf("Chip: %-2d is -> %-32s",chip,name.c_str()); 
+		printf("Chip: %-2d is -> %-32s ",chip,name.c_str()); 
 		printf("%02d:%02d:%01d ",data.bus,data.slot,data.func);
 		printf("0x%04x 0x%04x ",data.vid,data.did);
 		printf("%3s %s\n",data.bustype.c_str(),data.module.c_str());
