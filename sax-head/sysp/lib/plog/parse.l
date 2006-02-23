@@ -37,6 +37,8 @@ R {F}[ \t]*-[ \t]*{F}
 "kB of"                       {strcpy(yylval.string,yytext);return(MEMORY);    }
 "VESA VBE Total Mem:"         {strcpy(yylval.string,yytext);return(MEMORY);    }
 "vram:  "                     {strcpy(yylval.string,yytext);return(MEMORY);    }
+"kBytes"                      {strcpy(yylval.string,yytext);return(UNIT);      }
+"mBytes"                      {strcpy(yylval.string,yytext);return(UNIT);      }
 "Chipset"[ \t]*:              {strcpy(yylval.string,yytext);return(CHIPSET);   }
 "VESA Video Modes"[ \t]*:     {strcpy(yylval.string,yytext);return(VESA);      }
 {F}[xX]{F}@{F}Hz              {strcpy(yylval.string,yytext);return(VESAMODE);  }

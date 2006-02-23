@@ -64,9 +64,12 @@ void ScanXStuff::Reset (void) {
 int ScanXStuff::
 FindParseData (map<int,ParseData> m,int bus,int slot,int func) {
 	for (int i=0;i<(int)m.size();i++) {
-	if ((m[i].pbus == bus) && (m[i].pslot == slot) && (m[i].pfunc == func)) {
-		return(i);
-	}
+		if ((m[i].pbus==bus) && (m[i].pslot==slot) && (m[i].pfunc==func)) {
+			return(i);
+		}
+		if ((m[i].bus==bus) && (m[i].slot==slot) && (m[i].func==func)) {
+			return(i);
+		}
 	}
 	return(-1); 
 }
