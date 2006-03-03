@@ -191,7 +191,7 @@ string XF86ConfigFile::DoDeviceSection (void) {
 	// create the section...
 	// -----------------------
 	section = "Section \"Device\"\n";
-	if (busid != "") {
+	if (driver != "vmware") {
 		section = section + " BusID \""  + busid  + "\"\n";
 	}
 	section = section + " Driver \"" + driver + "\"\n";
@@ -380,6 +380,8 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 
 		Push(plog);
 	}
+	} else {
+		// no parse information...
 	}
 }
 

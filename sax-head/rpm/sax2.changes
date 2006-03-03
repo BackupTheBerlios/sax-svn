@@ -1,4 +1,19 @@
 -------------------------------------------------------------------
+Mon Feb 27 16:44:18 CET 2006 - ms@suse.de
+
+- fixed libhd bug detecting mice on older 2.6 kernels
+- removed check-build.sh, no longer used
+
+-------------------------------------------------------------------
+Mon Feb 27 10:21:34 CET 2006 - ms@suse.de
+
+- fixed vmware X11 configuration setup (#148271)
+- removed Modelines from being used with nvidia driver (#153596)
+- fixed CDB entry for monitor HighScreen MS 1795P (#153596)
+- fixed libsax / ParseConfig.pm MetaModes option handling
+- update translations fi,hu,nb from Dublin
+
+-------------------------------------------------------------------
 Thu Feb 23 11:35:38 CET 2006 - ms@suse.de
 
 - fixed setup for Hyundai L50S monitor (#152336)

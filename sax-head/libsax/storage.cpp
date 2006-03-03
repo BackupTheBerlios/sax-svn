@@ -56,7 +56,7 @@ void SaXStorage::addItem ( const QString & key, const QString & val ) {
 	//! will happen
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
-	if (currentValue) {
+	if ((currentValue) && (! currentValue->isEmpty())) {
 		QString newValue;
 		QTextOStream(&newValue) << *currentValue << "," << val;
 		newValue.replace (QRegExp("^,"),"");
@@ -161,7 +161,7 @@ void SaXStorage::addRawItem (
 	//! a space each. This method will add such a value pair
 	// ----
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
-	if (currentValue) {
+	if ((currentValue) && (! currentValue->isEmpty())) {
 		QString newValue;
 		QString newOptVal (optname+" "+optval);
 		QTextOStream(&newValue) << *currentValue << "," << newOptVal;
@@ -207,7 +207,11 @@ void SaXStorage::removeRawItem (
 		if (rx.search (newValue) == -1) {
 			newValue = "Option" + newValue;
 		}
-		setItem (key,newValue);
+		if (newValue == "Option") {
+			setItem (key,"");
+		} else {
+			setItem (key,newValue);
+		}
 	}
 }
 

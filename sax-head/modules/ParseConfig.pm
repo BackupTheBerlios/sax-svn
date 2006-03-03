@@ -28,6 +28,10 @@ sub CheckThisSplit {
 			$list[$count].=",$list[$i]";
 			delete $list[$i];
 			next;
+		} elsif ($list[$i] =~ /^MetaModes/) {
+			$list[$i]=$list[$i].",".$list[$i+1];
+			delete $list[$i+1];
+			next;
 		}
 		$count++;
 	}
@@ -603,8 +607,14 @@ sub ParseDeviceSection {
 				@list = split(/,/,$value[1]);
 				@list = CheckThisSplit (@list);
 				foreach $l (@list) {
-					@option = split(/:/,$l);
-					$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+					if ($l =~ /^MetaModes/) {
+						$l =~ s/MetaModes://;
+						$parse{Device}{$count}{Option}{MetaModes} = $l;
+					} else {
+						$l =~ s/,$//;
+						@option = split(/:/,$l);
+						$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+					}
 				}
 				last SWITCH; 
 			};

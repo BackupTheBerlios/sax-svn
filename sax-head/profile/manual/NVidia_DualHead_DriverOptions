@@ -10,6 +10,8 @@ Monitor -> [X] ->  CalcAlgorithm    = XServerPool
 Device  -> [X] ->  Driver           = nvidia
 Device  -> [X] ->  Screen           = 0
 
+!remove Monitor -> [X] -> Modeline
+
 #================================
 # setup twinview options
 #--------------------------------
