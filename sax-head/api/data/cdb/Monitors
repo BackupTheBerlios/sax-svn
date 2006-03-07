@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Feb 27 10:50:56 2006
+# Author: Marcus Schaefer <sax@suse.de>, Tue Mar  7 11:15:42 2006
 #
 # Template for monitor data
 # --------------------------
@@ -18576,6 +18576,17 @@ HYUNDAI:HT7682  {
 HYUNDAI:HT7870  {
  Hsync=30-70
  Vsync=50-150
+}
+
+#==============================================
+# IQ17 (Digital)
+#----------------------------------------------
+HYUNDAI:IQ17 (DIGITAL)  {
+ DDC=IQT217D
+ Option=DPMS
+ Hsync=31-63
+ Resolution=1280x1024
+ Vsync=50-60
 }
 
 #==============================================

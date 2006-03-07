@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Mon Mar  6 10:59:07 CET 2006 - ms@suse.de
+
+- fixed sysp detection if /dev/fb0 doesn't exist (#154101)
+- fixed display size detection on Toshiba Satellite M30X (#155096)
+- fixed sysp detection if no max h/vsync's provided by DDC (#155317)
+- fixed sysp detection on vmware workstation v5.5 (#154775)
+- update Identity maps for all architectures (#154101)
+- update translations fi,ja,km from Dublin
+
+-------------------------------------------------------------------
 Mon Feb 27 16:44:18 CET 2006 - ms@suse.de
 
 - fixed libhd bug detecting mice on older 2.6 kernels

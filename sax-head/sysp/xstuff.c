@@ -145,9 +145,15 @@ void ScanXStuff::Scan (void) {
 		//======================================
 		// use libhd data to setup parse
 		//--------------------------------------
-		parse[0].dtype  = display->displaytype;
-		parse[0].model  = display->model;
-		parse[0].vendor = display->vendor;
+		if (display) {
+			parse[0].dtype  = display->displaytype;
+		}
+		if (display) {
+			parse[0].model  = display->model;
+		}
+		if (display) {
+			parse[0].vendor = display->vendor;
+		}
 		parse[0].bus    = graphics[0].bus;
 		parse[0].slot   = graphics[0].slot;
 		parse[0].func   = graphics[0].func;
@@ -479,6 +485,13 @@ void ScanXStuff::Scan (void) {
 					stuff[0].vesa[p][l] = save;
 				}
 			}
+			}
+			//======================================
+			// set basic hsync/vsync if not set
+			//--------------------------------------
+			if ((! dpy->hsync_max) || (! dpy->vsync_max)) {
+				stuff[0].hsync[p] = stuff[0].vesa[p][vesaCount-1].hsync;
+				stuff[0].vsync[p] = stuff[0].vesa[p][vesaCount-1].vsync;
 			}
 			//======================================
 			// Save Vendor and Model name per port
