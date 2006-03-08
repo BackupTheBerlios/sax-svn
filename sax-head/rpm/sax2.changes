@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Mar  8 16:02:53 CET 2006 - ms@suse.de
+
+- update Identity maps for all architectures (#156015)
+- fixed parsing of MetaModes/ConnectedMonitor in ParseConfig.pm
+- fixed 855resolution requirement, for ix86 and x86_64 only
+
+-------------------------------------------------------------------
 Mon Mar  6 10:59:07 CET 2006 - ms@suse.de
 
 - fixed sysp detection if /dev/fb0 doesn't exist (#154101)

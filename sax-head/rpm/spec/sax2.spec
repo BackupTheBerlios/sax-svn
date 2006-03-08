@@ -118,7 +118,10 @@ Authors:
 %package -n sax2-libsax
 Version:      7.1
 Release:      70
-Requires:     sax2-tools qt3 fvwm2 sax2 855resolution
+Requires:     sax2-tools qt3 fvwm2 sax2
+%ifarch       %ix86 x86_64
+Requires:     855resolution
+%endif
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
 Provides:     sax2:/usr/%{_lib}/libsax.so

@@ -12,37 +12,6 @@
 #
 use XFree;
 
-#---[ CheckThisSplit ]----#
-sub CheckThisSplit {
-#------------------------------------------------------
-# check if a splitted list with seperator [,] was
-# splitted in a correct way. This function will check
-# for the number ["] signs and make sure there was
-# no split between optionslist which mustn't splitted
-#
-	my @list   = @_;
-	my @result = ();
-	my $count  = -1;
-	for (my $i=0;$i<@list;$i++) {
-		if ($list[$i] !~ /:/) {
-			$list[$count].=",$list[$i]";
-			delete $list[$i];
-			next;
-		} elsif ($list[$i] =~ /^MetaModes/) {
-			$list[$i]=$list[$i].",".$list[$i+1];
-			delete $list[$i+1];
-			next;
-		}
-		$count++;
-	}
-	foreach (@list) {
-	if (defined $_) {
-		push (@result,$_);
-	}
-	}
-	return @result;
-}
-
 #----[ ReadConfig (file) ]----#
 sub ReadConfig {
 #----------------------------------------------
@@ -603,9 +572,24 @@ sub ParseDeviceSection {
   			#========================================
 			# Option...
 			#----------------------------------------
-			/^option/      && do { 
+			/^option/      && do {
+				my $MetaModes;
+				my $ConnectedMonitor;
+				if ($value[1] =~ /MetaModes:(.*),SaXDualOrientation/) {
+					$MetaModes = $1;
+					$value[1] =~ s/MetaModes:$MetaModes,//;
+				}
+				if ($value[1] =~ /ConnectedMonitor:(.*),SaXDualMode/) {
+					$ConnectedMonitor = $1;
+					$value[1] =~ s/ConnectedMonitor:$ConnectedMonitor,//;
+				}
 				@list = split(/,/,$value[1]);
-				@list = CheckThisSplit (@list);
+				if (defined $MetaModes) {
+					push (@list,"MetaModes:$MetaModes");
+				}
+				if (defined $ConnectedMonitor) {
+					push (@list,"ConnectedMonitor:$ConnectedMonitor");
+				}
 				foreach $l (@list) {
 					if ($l =~ /^MetaModes/) {
 						$l =~ s/MetaModes://;
