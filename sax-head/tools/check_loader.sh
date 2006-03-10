@@ -8,8 +8,4 @@
 # --------
 # Status: Up-to-date
 
-if [ -f "/usr/X11R6/bin/Xorg" ];then
-	echo -DXORG_LOADER
-else
-	echo -DXFree86_LOADER
-fi
+echo -DXORG_LOADER

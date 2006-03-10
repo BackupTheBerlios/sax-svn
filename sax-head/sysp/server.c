@@ -765,11 +765,8 @@ void ScanServer::Scan(void) {
 		cfg.CallXF86Loader(file);
 		cfg.SetFile(SERVER_STUFF_DATA);
 		ParseData parse;
-
-		try {
+		if (cfg.Count() > 0) {
 			parse = cfg.Pop();
-		} catch (...) {
-			// ...
 		}
 		unlink(file);
 
@@ -804,8 +801,8 @@ void ScanServer::Scan(void) {
 				graphics.clear();
 				graphics = save;
 			}
+			cfg.Save();
 		}
-		cfg.Save();
 	}
 	// ...
 	// save the result to the object data
