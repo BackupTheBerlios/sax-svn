@@ -170,7 +170,7 @@ sub AutoDetectResolution {
 		# ---
 		# if (@res > 1) { shift (@res); }
 		# ---
-		foreach $bpp (8,15,16,24,32) { 
+		foreach $bpp (8,15,16,24) { 
 		if ($var{Device}{$i}{Driver} eq "fbdev") {
 			$var{Screen}{$i}{Depth}{$bpp}{Modes} = "default";
 		} else {
@@ -296,7 +296,6 @@ sub SetVGADefaultScreen {
 	$var{Screen}{$i}{Depth}{15}{Modes}      = "";
 	$var{Screen}{$i}{Depth}{16}{Modes}      = "";
 	$var{Screen}{$i}{Depth}{24}{Modes}      = "";
-	$var{Screen}{$i}{Depth}{32}{Modes}      = "";
 	$var{Device}{$i}{Videoram}              = "";
 	$var{Device}{$i}{Chipset}               = "generic";
 
@@ -342,7 +341,6 @@ sub SetFbdevDefaultScreen {
 	$var{Screen}{$i}{Depth}{16}{Modes}      = "";
 	$var{Screen}{$i}{Depth}{15}{Modes}      = "";
 	$var{Screen}{$i}{Depth}{24}{Modes}      = "";
-	$var{Screen}{$i}{Depth}{32}{Modes}      = "";
 	$var{Screen}{$i}{Depth}{$depth}{Modes}  = "default";
 	return(%var);
 }
@@ -361,7 +359,6 @@ sub SetDefaultScreen {
 	$var{Screen}{$i}{Depth}{16}{Modes}      = "800x600";
 	$var{Screen}{$i}{Depth}{15}{Modes}      = "800x600";
 	$var{Screen}{$i}{Depth}{24}{Modes}      = "800x600";
-	$var{Screen}{$i}{Depth}{32}{Modes}      = "800x600";
 
 	# special case for PPC... need 15bit colordepth
 	# -----------------------------------------------

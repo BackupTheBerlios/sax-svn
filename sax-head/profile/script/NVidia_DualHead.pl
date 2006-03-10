@@ -49,7 +49,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 				last SWITCH;
 			};
 			/^Resolution/ && do {
-				foreach my $depth (8,15,16,24,32) {
+				foreach my $depth (8,15,16,24) {
 					print FD "Screen -> [X] -> Depth->$depth->Modes = $val\n";
 				}
 				last SWITCH;

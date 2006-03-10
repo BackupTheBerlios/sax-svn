@@ -166,7 +166,7 @@ sub AutoDetectSyncRanges {
 		$var{Monitor}{$i}{HorizSync}   = "$record[2]-$record[3]";
 		$var{Monitor}{$i}{VertRefresh} = "$record[4]-$record[5]";
 		if ($record[8] ne "") {
-		foreach my $bpp (8,15,16,24,32) {
+		foreach my $bpp (8,15,16,24) {
 			$var{Screen}{$i}{Depth}{$bpp}{Modes}  = $record[8];
 			$resolutionSet = 1;
 		}

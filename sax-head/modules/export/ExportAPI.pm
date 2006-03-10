@@ -825,7 +825,7 @@ sub DesktopGetDesktop {
 			if ($dialog{Device}{$id}{Driver} eq "vmware") {
 				$defaultd = $dialog{Screen}{$id}{DefaultDepth};
 				$selected = $dialog{Screen}{$id}{Depth}{$defaultd}{Modes};
-				foreach $d (8,15,16,24,32) {
+				foreach $d (8,15,16,24) {
 					$dialog{Screen}{$id}{Depth}{$d}{Modes} = $selected;
 				}
 			} else {

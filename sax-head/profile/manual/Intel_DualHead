@@ -34,7 +34,6 @@ Screen  -> [X+1] ->  Depth->8->Modes  = ${Modes}
 Screen  -> [X+1] ->  Depth->15->Modes = ${Modes}
 Screen  -> [X+1] ->  Depth->16->Modes = ${Modes}
 Screen  -> [X+1] ->  Depth->24->Modes = ${Modes}
-Screen  -> [X+1] ->  Depth->32->Modes = ${Modes}
 Monitor -> [X+1] ->  VertRefresh      = ${Vsync}
 Monitor -> [X+1] ->  ModelName        = ${Mmodel}
 Monitor -> [X+1] ->  HorizSync        = ${Hsync}

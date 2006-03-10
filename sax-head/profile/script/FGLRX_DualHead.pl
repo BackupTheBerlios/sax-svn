@@ -39,7 +39,7 @@ foreach my $key (keys %data) {
 			last SWITCH;
 		};
 		/^Resolution/ && do {
-			foreach my $depth (8,15,16,24,32) {
+			foreach my $depth (8,15,16,24) {
 				print FD "Screen -> [X+1] -> Depth->$depth->Modes = $val\n";
 			}
 			last SWITCH;

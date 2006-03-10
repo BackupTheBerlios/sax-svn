@@ -21,8 +21,12 @@ my $profile = ProfileInitScript();
 #====================================
 # Do the profile adaptions...
 #------------------------------------
+my $mlayout = ProfileIntelSetupMonitorLayout ($profile);
+
 open (FD,">>",$profile) ||
 	die "Intel_DualHead: Can't open $profile: $!";
+print FD "Device->[X]->Raw->20->Option=\"MonitorLayout\" \"$mlayout\"\n";
+print FD "Device->[X+1]->Raw->20->Option=\"MonitorLayout\" \"$mlayout\"\n";
 #====================================
 # check secondary DDC data
 #------------------------------------
@@ -39,7 +43,7 @@ foreach my $key (keys %data) {
 			last SWITCH;
 		};
 		/^Resolution/ && do {
-			foreach my $depth (8,15,16,24,32) {
+			foreach my $depth (8,15,16,24) {
 				print FD "Screen -> [X+1] -> Depth->$depth->Modes = $val\n";
 			}
 			last SWITCH;

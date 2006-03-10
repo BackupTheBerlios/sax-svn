@@ -262,7 +262,7 @@ sub init {
 	$var{Screen}{0}{Device}                     = $var{Device}{0}{Identifier};
 	$var{Screen}{0}{Monitor}                    = $var{Monitor}{0}{Identifier};
 	$var{Screen}{0}{DefaultDepth}               = "8";
-	foreach $depth (8,16,24,32) {
+	foreach $depth (8,16,24) {
 		$var{Screen}{0}{Depth}{$depth}{Modes}      = "640x480";
 		$var{Screen}{0}{Depth}{$depth}{ViewPort}   = "";
 		$var{Screen}{0}{Depth}{$depth}{Virtual}    = "";
@@ -354,7 +354,7 @@ sub init {
 	# Handle option -u | --automode
 	#------------------------------------------
 	if (defined $AutoMode) {
-		foreach $depth (4,8,15,16,24,32) {
+		foreach $depth (4,8,15,16,24) {
 		foreach $scr (keys %{$var{Screen}}) {
 		if ($scr !~ /HASH/i) {
 			$var{Screen}{$scr}{Depth}{$depth}{Modes} = "Auto";
@@ -465,7 +465,6 @@ sub init {
 			addProfileData ("Screen->$id->Depth->16->Modes=$res");
 			addProfileData ("Screen->$id->Depth->15->Modes=$res");
 			addProfileData ("Screen->$id->Depth->24->Modes=$res");
-			addProfileData ("Screen->$id->Depth->32->Modes=$res");
 			%var = includeProfile (\%var);
 			clearProfile();
 		}
