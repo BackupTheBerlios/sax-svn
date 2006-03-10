@@ -4,6 +4,8 @@ Thu Mar  9 17:17:18 CET 2006 - ms@suse.de
 - removed 32 bit from being used in Screen sections (#136363)
 - fixed Intel_DualHead Xinerama based setup. Intel Xinerama based
   setups needs including the MonitorLayout too (#136363)
+- remove remaining perror()s so we don't write to stderr (#155132)
+- don't map video bios ram; not really neccessary (#155132)
 
 -------------------------------------------------------------------
 Wed Mar  8 16:02:53 CET 2006 - ms@suse.de

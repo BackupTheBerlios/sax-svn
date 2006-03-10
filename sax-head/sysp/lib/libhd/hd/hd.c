@@ -243,7 +243,8 @@ static struct s_pr_flags {
   { pr_bios_fb,       pr_bios_vesa,       0, "bios.fb"       },
   { pr_bios_mode,     pr_bios_vesa,       0, "bios.mode"     },
   { pr_bios_vbe,      pr_bios_mode,       0, "bios.vbe"      }, // just an alias
-  { pr_bios_crc,      0,                  0, "bios.crc"      },
+  { pr_bios_crc,      0,                  0, "bios.crc"      }, // require bios crc check to succeed
+  { pr_bios_vram,     0,                  0, "bios.vram"     }, // map video bios ram
   { pr_cpu,           0,            8|4|2|1, "cpu"           },
   { pr_monitor,       0,            8|4|2|1, "monitor"       },
   { pr_serial,        0,              4|2|1, "serial"        },
@@ -443,6 +444,10 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
   hd_set_probe_feature(hd_data, pr_int);
 //  hd_set_probe_feature(hd_data, pr_manual);
 
+/*
+ * note: pr_serial needs pr_pci
+ */
+
   switch(item) {
     case hw_cdrom:
       hd_set_probe_feature(hd_data, pr_pci);
@@ -540,6 +545,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       hd_set_probe_feature(hd_data, pr_bios);
       hd_set_probe_feature(hd_data, pr_mouse);
       hd_set_probe_feature(hd_data, pr_input);
+      hd_set_probe_feature(hd_data, pr_pci);
       break;
 
     case hw_joystick:
@@ -554,6 +560,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       }
       hd_set_probe_feature(hd_data, pr_usb);
       hd_set_probe_feature(hd_data, pr_mouse);		/* we need the pnp code */
+      hd_set_probe_feature(hd_data, pr_pci);
       break;
 
     case hw_camera:
@@ -569,6 +576,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       hd_set_probe_feature(hd_data, pr_input);
 #ifdef __PPC__
       hd_set_probe_feature(hd_data, pr_serial);
+      hd_set_probe_feature(hd_data, pr_pci);
 #endif
       break;
 
@@ -667,6 +675,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       hd_set_probe_feature(hd_data, pr_braille_ht);
       hd_set_probe_feature(hd_data, pr_braille_baum);
       hd_set_probe_feature(hd_data, pr_usb);
+      hd_set_probe_feature(hd_data, pr_pci);
       break;
 
     case hw_sys:
@@ -1690,9 +1699,13 @@ void hd_scan(hd_data_t *hd_data)
   }
 #endif
 
-  /* log the debug & probe flags */
-  if(hd_data->debug && !hd_data->flags.internal) {
-    ADD2LOG("libhd version %s%s (%s)\n", HD_VERSION_STRING, getuid() ? "u" : "", HD_ARCH);
+  if(!hd_data->flags.internal) {
+  /* log debug & probe flags */
+    if(hd_data->debug) {
+      ADD2LOG("libhd version %s%s (%s)\n", HD_VERSION_STRING, getuid() ? "u" : "", HD_ARCH);
+    }
+
+    ADD2LOG("using %s\n", hd_get_hddb_dir());
   }
 
   get_kernel_version(hd_data);
@@ -1732,6 +1745,7 @@ void hd_scan(hd_data_t *hd_data)
     if(hd_probe_feature(hd_data, pr_cpuemu)) hd_data->flags.cpuemu = 1;
     if(hd_probe_feature(hd_data, pr_udev)) hd_data->flags.udev = 1;
     if(!hd_probe_feature(hd_data, pr_bios_crc)) hd_data->flags.nobioscrc = 1;
+    if(hd_probe_feature(hd_data, pr_bios_vram)) hd_data->flags.biosvram = 1;
   }
 
   /* get shm segment, if we didn't do it already */
@@ -1920,6 +1934,7 @@ void hd_scan_no_hal(hd_data_t *hd_data)
   /* after pci & isa */
   hd_scan_pcmcia(hd_data);
 
+  /* after pci */
   hd_scan_serial(hd_data);
 
   /* merge basic system info & the easy stuff */
@@ -3505,12 +3520,12 @@ str_list_t *read_kmods(hd_data_t *hd_data)
 str_list_t *get_cmdline(hd_data_t *hd_data, char *key)
 {
   str_list_t *sl0, *sl1, *cmd = NULL;
-  char *s, *t, *t0;
+  char *s, *t, *t0, *lib_cmdline;
   int i, l = strlen(key);
 
   if(!hd_data->cmd_line) {
     sl0 = read_file(PROC_CMDLINE, 0, 1);
-    sl1 = read_file(LIB_CMDLINE, 0, 1);
+    sl1 = read_file((lib_cmdline = hd_get_hddb_path("cmdline")), 0, 1);
 
     if(sl0) {
       i = strlen(sl0->str);
@@ -3527,9 +3542,9 @@ str_list_t *get_cmdline(hd_data_t *hd_data, char *key)
       if(i && sl1->str[i - 1] == '\n') sl1->str[i - 1] = 0;
       str_printf(&hd_data->cmd_line, -1, " %s", sl1->str);
       if(hd_data->debug) {
-        ADD2LOG("----- " LIB_CMDLINE " -----\n");
+        ADD2LOG("----- %s -----\n", lib_cmdline);
         ADD2LOG("  %s\n", sl1->str);
-        ADD2LOG("----- " LIB_CMDLINE " end -----\n");
+        ADD2LOG("----- %s end -----\n", lib_cmdline);
       }
     }
 
@@ -5741,6 +5756,7 @@ int hd_read_mmap(hd_data_t *hd_data, char *name, unsigned char *buf, off_t start
   return 1;
 }
 
+
 /*
  * Get hardware data base dir (default: /var/lib/hardware).
  */
@@ -5763,4 +5779,5 @@ char *hd_get_hddb_path(char *sub)
 
   return dir;
 }
+
 
