@@ -294,7 +294,7 @@ void SCCMonitorModel::import ( void ) {
 			mDisplaySizeX = displaySize.at(0)->toInt();
 			mDisplaySizeY = displaySize.at(1)->toInt();
 		} else {
-			mDisplaySizeX = 300;
+			mDisplaySizeX = 305;
 			mDisplaySizeY = 230;
 		}
 
@@ -734,15 +734,18 @@ QPoint SCCMonitorModel::getRatio (int x,int y) {
 	//! the length of x and y
 	// ----
 	QPoint result;
-	result.setX (5);
-	result.setY (4);
+	result.setX (4);
+	result.setY (3);
 	double ar = (double)x / (double)y;
-	if ( ar > 1.5 ) {
+	if ( ar > 1.4 ) {
 		result.setX (16);
 		result.setY (10);
-	} else if ( ar >= 1.33 ) {
+	} else if (( ar <= 1.4 ) && ( ar > 1.3 )) {
 		result.setX (4);
 		result.setY (3);
+	} else if ( ar <= 1.3 ) {
+		result.setX (5);
+		result.setY (4);
 	}
 	return result;
 }

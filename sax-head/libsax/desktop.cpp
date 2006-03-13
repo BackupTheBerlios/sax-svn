@@ -1027,8 +1027,8 @@ QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
 		return QList<QString>();
 	}
-	QString* setX = new QString ("5");
-	QString* setY = new QString ("4");
+	QString* setX = new QString ("4");
+	QString* setY = new QString ("3");
 	QList<QString> result;
 	QList<QString> size = getDisplaySize();
 	if (size.isEmpty()) {
@@ -1037,12 +1037,15 @@ QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
 	int x = size.at(0)->toInt();
 	int y = size.at(1)->toInt();
 	double ar = (double)x / (double)y;
-	if ( ar > 1.5 ) {
+	if ( ar > 1.4 ) {
 		*setX = "16";
 		*setY = "10";
-	} else if ( ar >= 1.33 ) {
+	} else if (( ar <= 1.4 ) && ( ar > 1.3 )) {
 		*setX = "4";
 		*setY = "3";
+	} else if ( ar <= 1.3 ) {
+		*setX = "5";
+		*setY = "4";
 	}
 	result.append (setX);
 	result.append (setY);
