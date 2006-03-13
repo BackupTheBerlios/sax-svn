@@ -575,12 +575,14 @@ sub ParseDeviceSection {
 			/^option/      && do {
 				my $MetaModes;
 				my $ConnectedMonitor;
-				if ($value[1] =~ /MetaModes:(.*),SaXDualOrientation/) {
-					$MetaModes = $1;
+				if ($value[1] =~ /MetaModes:(.*)/) {
+					my @tlist = split (/,SaX/,$1);
+					$MetaModes = $tlist[0];
 					$value[1] =~ s/MetaModes:$MetaModes,//;
 				}
-				if ($value[1] =~ /ConnectedMonitor:(.*),SaXDualMode/) {
-					$ConnectedMonitor = $1;
+				if ($value[1] =~ /ConnectedMonitor:(.*)/) {
+					my @tlist = split (/,SaX/,$1);
+					$ConnectedMonitor = $tlist[0];
 					$value[1] =~ s/ConnectedMonitor:$ConnectedMonitor,//;
 				}
 				@list = split(/,/,$value[1]);

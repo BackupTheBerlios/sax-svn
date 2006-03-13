@@ -336,11 +336,6 @@ bool SCCMonitor::exportData ( void ) {
 			}
 		}
 		//====================================
-		// save color depth
-		//------------------------------------
-		saxDesktop.setColorDepth ( display->getColorDepth() );
-
-		//====================================
 		// save monitor settings
 		//------------------------------------
 		SCCMonitorModel* monitorData = display->getMonitorData();
@@ -556,7 +551,7 @@ bool SCCMonitor::exportData ( void ) {
 								channelA = cs.first() + ":";
 								channelB = cs.last()  + ":";
 							}
-							if ((channelA == "AUTO:") || (channelB == "AUTO:")) {
+							if ((channelA=="AUTO:") || (channelB=="AUTO:")) {
 								channelA = "";
 								channelB = "";
 							}
@@ -970,6 +965,19 @@ bool SCCMonitor::exportData ( void ) {
 	saxDesktop.disable3D();
 	if (mCheck3D->isChecked()) {
 		saxDesktop.enable3D();
+	}
+	//====================================
+	// save default color depth
+	//------------------------------------
+	it.toFirst(); card = 0;
+	for (; it.current() ; ++it) {
+		SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
+		SaXManipulateDesktop saxDesktop (
+			mSection["Desktop"],mSection["Card"],mSection["Path"]
+		);
+		saxDesktop.selectDesktop ( card );
+		saxDesktop.setColorDepth ( display->getColorDepth() );
+		card++;
 	}
 	return true;
 }
