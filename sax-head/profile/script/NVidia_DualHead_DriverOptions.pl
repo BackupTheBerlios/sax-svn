@@ -67,7 +67,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		print FD "$dx=\"SecondMonitorVertRefresh\" \"50-60\"\n";
 		$dx = eval $dt;
 		my $MMValue = "$CA:\${MS[0]},$CB:1024x768;$CA:1024x768,$CB:1024x768";
-		print FD "$dx\"MetaModes\" \"$MMValue\"\n";
+		print FD "$dx=\"MetaModes\" \"$MMValue\"\n";
 		$dx = eval $dt;
 		print FD "$dx=\"SaXDualHSync\" \"31-48\"\n";
 		$dx = eval $dt;
