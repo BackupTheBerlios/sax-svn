@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Mar  7 11:15:42 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Mar 13 16:26:45 2006
 #
 # Template for monitor data
 # --------------------------
@@ -28845,6 +28845,19 @@ PHILIPS:200T (20 ZOLL/CM0700)  {
 }
 
 #==============================================
+# 200W (Digital)
+#----------------------------------------------
+PHILIPS:200W (DIGITAL)  {
+ DDC=PHL0832
+ Option=DPMS
+ Hsync=30-93
+ Modeline="1680x1050" 147.14 1680 1784 1968 2256 1050 1051 1054 1087 -hsync -vsync
+ Profile=PHL0832
+ Resolution=1680x1050
+ Vsync=56-85
+}
+
+#==============================================
 # 201B (201B1)
 #----------------------------------------------
 PHILIPS:201B (201B1)  {
@@ -29453,19 +29466,6 @@ PHILIPS:PD5029S MONITOR/TV  {
  DDC=PHLA513
  Hsync=31-35
  Vsync=50-70
-}
-
-#==============================================
-# Philips 200W
-#----------------------------------------------
-PHILIPS:PHILIPS 200W  {
- DDC=PHL0832
- Option=DPMS
- Hsync=30-93
- Modeline="1680x1050" 147.14 1680 1784 1968 2256 1050 1051 1054 1087 -hsync -vsync
- Profile=PHL0832
- Resolution=1680x1050
- Vsync=56-85
 }
 
 #==============================================
