@@ -111,7 +111,7 @@ sub init {
 	# check for the GUI and run shell if needed
 	#------------------------------------------
 	my $api = "/usr/sbin/xapi";
-	if ( ! -f $api ) {
+	if ( (! -f $api) && (! defined $ENV{IGNORE_GUI_CHECK}) ) {
 		print "SaX: GUI is missing, starting commandline interface\n";
 		$StartBatchMode = "";
 	}

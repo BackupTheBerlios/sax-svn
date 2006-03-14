@@ -407,6 +407,7 @@ if [ ! -z "$IN_OPT" ];then
 	IN_TRIGGER=1
 fi
 if [ ! -f $API ];then
+	SYS_CONFIG=""
 	IN_TRIGGER=1
 fi
 if [ $IN_TRIGGER = 0 ];then
@@ -416,6 +417,13 @@ if [ $IN_TRIGGER = 0 ];then
 	fi
 fi
 export HW_UPDATE=$IN_TRIGGER
+
+#==================================
+# check for auto config
+#----------------------------------
+if [ "$AUTO_CONF" = "-a" ];then
+	export IGNORE_GUI_CHECK=1
+fi
 
 #==================================
 # call init now...
