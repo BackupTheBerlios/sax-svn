@@ -69,7 +69,7 @@ static struct {
   { 285, 215, 1024,  768, "FUJITSU SIEMENS", "LIFEBOOK S7020", NULL },
   { 305, 230, 1400, 1050, "Samsung Electronics", "SX20S", "Revision PR" },
   { 290, 200, 1280,  800, "TOSHIBA", "Satellite M30X", "PSA72E-00J020GR" },
-  { 305, 230, 1400, 1050, "ASUSTeK Computer Inc.", "M6V", "1.0" }
+  { 305, 230, 1400, 1050, "ASUSTeK Computer Inc.", "M6V", "1.0" },
 };
 
 #define BIOS_TEST

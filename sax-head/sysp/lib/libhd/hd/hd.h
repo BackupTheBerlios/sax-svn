@@ -450,7 +450,7 @@ typedef struct {
   unsigned modes;		/* number of supported video modes */
   vbe_mode_info_t *mode;	/* video mode list */
   unsigned current_mode;	/* current video mode */
-  unsigned char ddc_port[4][0x80];	/* ddc monitor info per port */
+  unsigned char ddc_port[2][0x80];	/* ddc monitor info per port */
 } vbe_info_t;
 
 
@@ -2194,10 +2194,15 @@ typedef struct s_hd_t {
     unsigned cdrw:1;		/* CD-RW */
     unsigned dvd:1;		/* DVD */
     unsigned dvdr:1;		/* DVD-R */
-    unsigned dvdram:1;		/* DVD-RAM */
+    unsigned dvdrw:1;		/* DVD-RW */
+    unsigned dvdpr:1;		/* DVD+R */
+    unsigned dvdprw:1;		/* DVD+RW */
+    unsigned dvdprdl:1;		/* DVD+RDL */
+    unsigned dvdram:1;		/* DVDRAM */
     unsigned pppoe:1;		/* PPPOE modem connected */
     unsigned wlan:1;		/* WLAN card */
     unsigned with_acpi:1;	/* acpi works fine */
+    unsigned hotpluggable:1;	/* hotpluggable storage device */
   } is;
 
   struct tag_s {		/* this struct is for internal purposes only */

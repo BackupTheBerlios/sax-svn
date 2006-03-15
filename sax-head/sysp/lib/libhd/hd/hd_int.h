@@ -51,9 +51,6 @@
 #define KLOG_BOOT		"/var/log/boot.msg"
 #define ISAPNP_CONF		"/etc/isapnp.conf"
 
-#define ID_LIST			HARDWARE_DIR "/hd.ids"
-#define LIB_CMDLINE		HARDWARE_DIR "/cmdline"
-
 #define KERNEL_22		0x020200
 #define KERNEL_24		0x020400
 #define KERNEL_26		0x020600
@@ -237,6 +234,7 @@ char *hd_hal_print_prop(hal_prop_t *prop);
 void hal_invalidate(hal_prop_t *prop);
 void hal_invalidate_all(hal_prop_t *prop, const char *key);
 hal_prop_t *hal_get_any(hal_prop_t *prop, const char *key);
+hal_prop_t *hal_get_bool(hal_prop_t *prop, const char *key);
 hal_prop_t *hal_get_int32(hal_prop_t *prop, const char *key);
 hal_prop_t *hal_get_str(hal_prop_t *prop, const char *key);
 hal_prop_t *hal_get_list(hal_prop_t *prop, const char *key);

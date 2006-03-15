@@ -7,12 +7,7 @@
 #include <linux/types.h>                /* for "caddr_t" et al          */
 #include <linux/socket.h>               /* for "struct sockaddr" et al  */
 #include <linux/if.h>                   /* for IFNAMSIZ and co... */
-
-#ifndef __user
-#define __user     __attribute__((noderef, address_space(1)))
-#endif
-
-#include <wireless.h>
+#include <linux/wireless.h>
 #include <net/ethernet.h>
 
 #include "hd.h"

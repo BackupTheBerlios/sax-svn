@@ -81,8 +81,10 @@ sub AutoDetectOptions {
 			$va = $elements[1];
 			if ($rawdef_list[$i] =~ /#Option $el $va/) {
 				$var{Device}{$i}{Raw}{$count}{Option} = "#$el $va";
-			} else {
+			} elsif ($rawdef_list[$i] =~ /Option $el $va/) {
 				$var{Device}{$i}{Raw}{$count}{Option} = "$el $va";
+			} else {
+				$var{Device}{$i}{Raw}{$count}{$el} = $va;
 			}
 			$count++;
 		}
