@@ -25,8 +25,9 @@
 	$result = SWIG_csharp_string_callback($1.data());
 }
 %typemap(csin) QString "$csinput"
-%typemap(csout) QString {
-	return $imcall;
+%typemap(csout, excode=SWIGEXCODE) QString {
+	string ret = $imcall;$excode
+	return ret;
 }
 %typemap(typecheck) QString = char*;
 
@@ -36,17 +37,19 @@
 %typemap(ctype)  QString& "char*"
 %typemap(imtype) QString& "string"
 %typemap(cstype) QString& "string"
-%typemap(in) QString&,QString& {
+%typemap(in, canthrow=1) QString&,QString& {
 	if (! $input) {
-		SWIG_CSharpThrowException (
+		SWIG_CSharpSetPendingException (
 			SWIG_CSharpNullReferenceException, "null string"
 		);
+		return $null;
 	}
 	$1 = new QString ($input);
 }
 %typemap(csin) QString& "$csinput"
-%typemap(csout) QString& {
-	return $imcall;
+%typemap(csout, excode=SWIGEXCODE) QString& {
+	string ret = $imcall;$excode
+	return ret;
 }
 %typemap(typecheck) QString& = char*;
 
@@ -67,11 +70,11 @@ class SaXException {
 	int   errorCode          ( void );
 	bool  havePrivileges     ( void );
 	void  errorReset         ( void );
-
+    
 	public:
 	QString errorString  ( void );
 	QString errorValue   ( void );
-
+    
 	public:
 	void setDebug ( bool = true );
 };

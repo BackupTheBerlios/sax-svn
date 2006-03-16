@@ -41,11 +41,6 @@ Obsoletes:    sax xfine
 Requires:     sax2_sbus
 %endif
 ExcludeArch:  s390
-%if %{suse_version} > 1000
-%define sub_package 0
-%else
-%define sub_package 1
-%endif
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -208,7 +203,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %endif
-%if%sub_package
 %ifnarch ppc64
 %package -n sax2-libsax-csharp
 Version:      7.1
@@ -227,7 +221,6 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%endif
 %endif
 %prep
 %setup -n sax
@@ -485,7 +478,6 @@ fi
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
-%if%sub_package
 %ifnarch ppc64
 
 %files -n sax2-libsax-csharp
@@ -495,5 +487,4 @@ fi
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
-%endif
 %endif

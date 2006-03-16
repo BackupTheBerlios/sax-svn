@@ -41,11 +41,6 @@ Obsoletes:    sax xfine
 Requires:     sax2_sbus
 %endif
 ExcludeArch:  s390
-%if %{suse_version} > 1000
-%define sub_package 0
-%else
-%define sub_package 1
-%endif
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -207,27 +202,6 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%endif
-%if%sub_package
-%ifnarch ppc64
-%package -n sax2-libsax-csharp
-Version:      7.1
-Release:      70
-Requires:     sax2-libsax mono
-Summary:      Language binding to use libsax with C#
-Group:        Development/Libraries/X11
-
-%description -n sax2-libsax-csharp
-This package provides a wrapper to be able to use libsax in C# written
-programs
-
-
-
-Authors:
---------
-    Marcus Schäfer <ms@suse.de>
-
-%endif
 %endif
 %prep
 %setup -n sax
@@ -481,19 +455,4 @@ fi
 %dir /usr/%{_lib}/sax/plugins
 /usr/share/java/SaX.jar
 /usr/%{_lib}/sax/plugins/SaX.so
-%endif
-#=================================================
-# SaX-libsax-csharp file list...  
-# ------------------------------------------------
-%if%sub_package
-%ifnarch ppc64
-
-%files -n sax2-libsax-csharp
-%defattr(-,root,root)
-%dir /usr/%{_lib}/mono
-%dir /usr/%{_lib}/mono/gac
-%dir /usr/%{_lib}/mono/gac/SaX
-/usr/%{_lib}/mono/gac/SaX/*
-/usr/%{_lib}/libSaX.so
-%endif
 %endif
