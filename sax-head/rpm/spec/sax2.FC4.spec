@@ -49,7 +49,7 @@ Version:      2.7
 Release:      18
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
-Requires:     sax2-ident coreutils
+Requires:     coreutils
 Provides:     saxtools
 Obsoletes:    saxtools
 
