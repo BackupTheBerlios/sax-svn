@@ -49,7 +49,7 @@ MouseData* MouseGetData(void) {
 		strcpy(data->vid,buf);
 		strcpy(data->name,hd->model);
 		strcpy(data->device,"/dev/mouse");
-		strcpy(data->realdev,"null");
+		strcpy(data->realdev,"<undefined>");
 		strcpy(data->protocol,"Auto");
 		data->buttons = -1;
 		data->wheel   = 1;
