@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Mar 13 16:26:45 2006
+# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 22 10:37:37 2006
 #
 # Template for monitor data
 # --------------------------
@@ -2982,6 +2982,18 @@ APPLE:BASIC COLOR (M1595LL/A)  {
  Hsync=31-31
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=50-59
+}
+
+#==============================================
+# Cinema Display 20" Widescreen (DIGITAL)
+#----------------------------------------------
+APPLE:CINEMA DISPLAY 20" WIDESCREEN (DIGITAL)  {
+ DDC=APP921D
+ Option=DPMS
+ Hsync=30-66
+ Modeline="1680x1050" 147.14 1680 1784 1968 2256 1050 1051 1054 1087
+ Resolution=1680x1050
+ Vsync=30-61
 }
 
 #==============================================
