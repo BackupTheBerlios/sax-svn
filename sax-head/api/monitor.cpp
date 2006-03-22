@@ -404,7 +404,7 @@ bool SCCMonitor::exportData ( void ) {
 				//====================================               
 				// fix broken cards                                     
 				//------------------------------------
-				fixBrokenCards (saxCard,false);
+				fixBrokenCards (saxCard);
 				#endif
 				//====================================
 				// init special modelines
@@ -733,11 +733,6 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "MergedFB") {
 							saxCard.addCardOption ( key,0 );
 						}
-						#if 1 // to be removed as soon as possible
-						if ((key== "MonitorLayout") && (driver == "radeon")) {
-							fixBrokenCards (saxCard,true);
-						}
-						#endif
 						if (key == "CRT2HSync") {
 							QString hsync;
 							int hsmax = dualModel->getHSmax();
@@ -1016,23 +1011,25 @@ void SCCMonitor::setCommonButtonWidth ( void ) {
 //====================================
 // fixBrokenCards
 //------------------------------------
-void SCCMonitor::fixBrokenCards ( SaXManipulateCard& saxCard, bool enable ) {
-	SaXImportSysp* card = new SaXImportSysp (SYSP_CARD);
-	card->doImport();
-	QString vid  (card->getItem("VID"));
-	QString did  (card->getItem("DID"));
-	QString svid (card->getItem("SUB-VID"));       
-	QString sdid (card->getItem("SUB-DID"));
-	if (
-		(vid  =="0x1002") && (did  =="0x5653") &&
-		(svid =="0x1025") && (sdid =="0x007e")
-	) {
-		// Special case for Ferrari F-4000 X700 card
-		saxCard.removeCardOption ("MonitorLayout");
-		if (enable) {
-			saxCard.addCardOption ("MonitorLayout","LVDS,CRT");
-		} else {
-			saxCard.addCardOption ("MonitorLayout","LVDS");
+void SCCMonitor::fixBrokenCards ( SaXManipulateCard& saxCard ) {
+	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
+	desktop->doImport();
+	QString rawDefinition (desktop->getItem("RawDef"));
+	if ((rawDefinition) && (rawDefinition != "None")) {
+		QRegExp itemExp ("\"MonitorLayout\" \"(.*)\"");
+		int pos = itemExp.search (rawDefinition);
+		if (pos >= 0) {
+			QString mLayout = itemExp.cap(1);
+			QStringList tokens = QStringList::split ( ",",mLayout );
+			QString layoutA = tokens.first();
+			QString layoutB = tokens.last();
+			log (L_INFO,"Using RawDef MonitorLayout: %s,%s\n",
+				layoutA.ascii(),layoutB.ascii()
+			);
+			saxCard.removeCardOption ("MonitorLayout");
+			saxCard.addCardOption ("MonitorLayout",
+				layoutA+","+layoutB
+			);
 		}
 	}
 }

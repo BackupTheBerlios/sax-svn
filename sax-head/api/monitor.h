@@ -83,7 +83,7 @@ class SCCMonitor : public SCCDialog {
 
 	private:
 	int compareResolution ( const QString&,const QString& );
-	void fixBrokenCards ( SaXManipulateCard&, bool );
+	void fixBrokenCards ( SaXManipulateCard& );
 
 	public:
 	SCCMonitor (
