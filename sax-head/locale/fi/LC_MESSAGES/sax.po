@@ -6,12 +6,11 @@
 #
 # Jyri Palokangas <jmp@netti.fi>, 2005, 2006.
 # Ilkka Pirskanen <ilkka.pirskanen@kolumbus.fi>, 2006.
-# Joonas Niilola <juippis@roskakori.org>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-02-28 10:21+0200\n"
+"PO-Revision-Date: 2006-02-25 14:57+0200\n"
 "Last-Translator: Jyri Palokangas <jmp@netti.fi>\n"
 "Language-Team:  <yast-trans-fi@kotoistaminen.novell.fi>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +43,7 @@ msgstr "Tietoja..."
 
 #. Caption text for the main window
 msgid "SaX2: X11 Configuration"
-msgstr "SaX2: X11-määritys"
+msgstr "SaX2: X11 määritys"
 
 #. Title text on the left side
 msgid "SaX Control Center"
@@ -306,7 +305,7 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Kaikkia näyttöjä ei voida poistaa käytöstä</b><hr> <nobr>Ainakin yhden "
+"<b>Kaikkien näyttöjä ei voida poistaa käytöstä</b><hr> <nobr>Ainakin yhden "
 "näytön tulee olla käytössä.</nobr>"
 
 #. Info label for dual head checkbox
@@ -436,7 +435,7 @@ msgstr "Toinen monitori:"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr "Toisen monitorin resoluutio"
+msgstr "Toisen monitorin resoluurio"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
@@ -957,7 +956,7 @@ msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>VNC-salasanat eivät täsmää</b><hr>Ensimmäisen ja toisen salasanan versiot "
+"<b>VNC-salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan versio "
 "eivät täsmää."
 
 #. VNC message box appearing if password is too short
@@ -966,7 +965,7 @@ msgid ""
 "password is too short. Enter a password with at least six characters."
 msgstr ""
 "<b>VNC-salasanavirhe</b><hr>Salasanakenttä on jätetty tyhjäksi tai salasana "
-"on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä pitkä."
+"on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä."
 
 #. Install missing packages box
 msgid ""
@@ -1011,9 +1010,8 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
-"<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja löytyy "
-"tiedostosta <tt>/var/log/Xorg.99.log</tt>. Seuraava raportti luotiin "
-"kutsuvasta ilmentymästä:"
+"<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja tiedostosta <tt>/"
+"var/log/Xorg.99.log</tt>. Seuraava raportti luotiin kutsuvasta ilmentymästä:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1021,13 +1019,13 @@ msgid ""
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
-"<b>VNC-määritystietoja</b><hr>VNC-palvelu vaatii, että TCP-portti 5900 ja "
+"<b>VNC-määritystietoja</b><hr>VNC-palvelu vaatii, että TCP portti 5900 ja "
 "HTTP-portti (oletuksena 5800) ovat auki palomuurissa. Voit määrittää tämän "
 "YaSTilla."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr "Sekalaisia yhteensopivuusvalintoja"
+msgstr "Sekalaisia yhteensopivuus valintoja"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
