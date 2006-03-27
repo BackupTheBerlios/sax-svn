@@ -38,8 +38,8 @@ namespace SaX {
 //------------------------------------
 #define SAX_NEW         20
 #define SAX_MERGE       21
-#define SAX_CREATE_API  "/var/lib/sax/createAPI.pl"
-#define SAX_TEST_CONFIG "/var/lib/sax/createTST.pl"
+#define SAX_CREATE_API  "/usr/share/sax/libsax/createAPI.pl"
+#define SAX_TEST_CONFIG "/usr/share/sax/libsax/createTST.pl"
 #define SAX_API_FILE    "/var/lib/sax/apidata"
 #define SAX_API_CONFIG  "/var/lib/sax/xorg.conf"
 #define SAX_API_MD5     "/var/lib/sax/xorg.conf.md5"

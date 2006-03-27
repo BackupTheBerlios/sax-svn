@@ -35,7 +35,7 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define SAX_CREATE_VNC_PWD  "/var/lib/sax/createVNC.sh"
+#define SAX_CREATE_VNC_PWD  "/usr/share/sax/libsax/createVNC.sh"
 #define SAX_VNC_MOUSE       0
 #define SAX_VNC_KEYBOARD    1
 

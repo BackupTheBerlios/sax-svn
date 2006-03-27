@@ -814,7 +814,7 @@ void Print3DData (Scan3D d) {
 // usage...
 //--------------------------------------------
 void usage (void) {
-	cout << "Linux System Profiler Version 7.1 (2005-03-08)"        << endl;
+	cout << "Linux System Profiler Version 8.1 (2005-03-08)"        << endl;
 	cout << "(C) Copyright 2001 SuSE GmbH"                          << endl;
 	cout << endl;
 	cout << "usage: sysp [ options ]"                               << endl;

@@ -66,5 +66,5 @@ fi
 #======================================
 # display image
 #--------------------------------------
-DISPLAY=$disp /usr/X11R6/bin/fvwm-root $image.scaled.png
+DISPLAY=$disp fvwm-root $image.scaled.png
 rm -f $image.scaled.png

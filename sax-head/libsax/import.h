@@ -358,7 +358,7 @@ class SaXImportProfileIF : public SaXProcess {
 * The SaXImportProfile class provides an abstraction for the ISaX interface
 * layer concerning the profiles to become applied. The class inherits from
 * SaXProcess which itself inherits from SaXStorage. the data is obtained from
-* a /var/lib/sax/createPRO.pl script call which is able to read the given
+* a /usr/share/sax/libsax/createPRO.pl script call which is able to read the given
 * profile file and import the data into the automatic configuration suggestion.
 * After this it will export the changes made by the profile and this data is
 * stored into the protected area of a storage object. Because of the fact

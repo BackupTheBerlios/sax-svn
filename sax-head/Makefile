@@ -5,7 +5,7 @@
 # Makefile for SaX2
 # X-Server configuration program
 #
-# Version 7.1
+# Version 8.1
 # Status: Up-to-date
 #
 # Build init
@@ -60,9 +60,8 @@ LOCALEVZ       = ${usr_prefix}/share/locale
 XFINEBINVZ     = ${xfi_prefix}
 XFINEPIXMAPS   = ${xfi_prefix}/figures
 LIBDOCDIR      = ${doc_prefix}/libsax
-LIBTOOLDIR     = ${buildroot}/var/lib/sax
+LIBTOOLDIR     = ${sax_prefix}/libsax
 WMVZ           = ${usr_prefix}/X11R6/share/fvwm
-X11BINDIR      = ${usr_prefix}/X11R6/bin
 
 #============================================
 # Helpers
@@ -255,9 +254,7 @@ install:install-docs
 	#============================================
 	# create startup links...
 	#--------------------------------------------
-	install -d -m 755 ${X11BINDIR}
 	( rm -f ${SBINVZ}/sax2 && cd ${SBINVZ} && ln -s SaX2 sax2 )
-	( rm -f ${X11BINDIR}/sax2 && cd ${X11BINDIR} && ln -s /usr/sbin/SaX2 sax2 )
 
 	#=============================================
 	# install desktop icon...

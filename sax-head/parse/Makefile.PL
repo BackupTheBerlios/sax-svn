@@ -1,4 +1,4 @@
-$FLAG=qx(./check_exts.sh);
+$FLAG="HAVE_EXTENSIONS_SECTION";
 
 use ExtUtils::MakeMaker;
 WriteMakefile(

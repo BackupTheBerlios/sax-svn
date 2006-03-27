@@ -15,6 +15,19 @@ DESCRIPTION   : provide functions to obtain mouse
 STATUS        : development
 **************/
 #include "hwdata.h"
+#include <X11/Intrinsic.h>
+#include <X11/Shell.h>
+#include <X11/StringDefs.h>
+#include <X11/Xatom.h>
+#include <X11/Xmd.h>
+#include <X11/extensions/xf86misc.h>
+
+//===================================
+// Prototypes...
+//-----------------------------------
+int  catchErrors  (Display*, XErrorEvent*);
+void enableMouse  (Display*);
+void disableMouse (Display*);
 
 //===================================
 // GetMouseData...
@@ -27,9 +40,22 @@ MouseData* MouseGetData(void) {
 	MouseData* last    = NULL;
 	hd_t *hd           = NULL;
 	hd_t *first_dev    = NULL;
+	Display* dpy       = NULL;
+	int haveDisplay    = 0;
 	char buf[256]      = "";
 
-
+	//===================================
+	// Open X11 display
+	//-----------------------------------
+	if ((dpy = XOpenDisplay (getenv("DISPLAY")))) {
+		haveDisplay = 1;
+	}
+	//===================================
+	// Disable mouse
+	//-----------------------------------
+	if (haveDisplay) {
+		disableMouse (dpy);
+	}
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	//hd_data->flags.fast = 1;
 	hd = hd_list(hd_data, hw_mouse, 1, NULL);
@@ -102,5 +128,50 @@ MouseData* MouseGetData(void) {
 		}
 		last = data;
 	}
+	//===================================
+	// Enable mouse
+	//-----------------------------------
+	if (haveDisplay) {
+		enableMouse (dpy);
+	}
+	if (haveDisplay) {
+		XCloseDisplay (dpy);
+	}
 	return(first);
+}
+
+//===================================
+// enableMouse...
+//-----------------------------------
+void enableMouse (Display* dpy) {
+	XF86MiscMouseSettings mseinfo;
+	if (!XF86MiscGetMouseSettings(dpy, &mseinfo)) {
+		return;
+	}
+	mseinfo.flags |= MF_REOPEN;
+	XSetErrorHandler (catchErrors);
+	XF86MiscSetMouseSettings(dpy, &mseinfo);
+	XSync(dpy, False);
+}
+
+//===================================
+// disableMouse...
+//-----------------------------------
+void disableMouse (Display* dpy) {
+	XF86MiscMouseSettings mseinfo;
+	if (!XF86MiscGetMouseSettings(dpy, &mseinfo)) {
+		return;
+	}
+	mseinfo.flags |= MF_REOPEN;
+	mseinfo.device = "/dev/unused";
+	XSetErrorHandler (catchErrors);
+	XF86MiscSetMouseSettings(dpy, &mseinfo);
+	XSync(dpy, False);
+}
+
+//===================================
+// catchErrors (X11)...
+//-----------------------------------
+int catchErrors (Display *dpy, XErrorEvent *ev) {
+	return 0;
 }

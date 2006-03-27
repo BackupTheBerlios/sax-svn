@@ -50,7 +50,7 @@ STATUS        : Status: Up-to-date
 //------------------------------
 #define KILLALL         "/usr/bin/killall"
 #define XQUERY          "/usr/sbin/xquery"
-#define XSETROOT        "/usr/X11R6/bin/xsetroot"
+#define XSETROOT        "xsetroot"
 
 //==============================
 // QX paramters...

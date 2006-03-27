@@ -14,7 +14,7 @@ xw_LDFLAGS = \
 
 xw_CFLAGS = `/usr/X11R6/bin/xft-config --cflags`
 xw_CFLAGS += $(WARN_CFLAGS)
-xw_CFLAGS += `../check_loader.sh`
+xw_CFLAGS += -DXORG_LOADER
 
 
 xw_LDADD = -lXinerama

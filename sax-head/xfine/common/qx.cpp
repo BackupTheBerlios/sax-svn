@@ -41,6 +41,7 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 	int n=1;
 	long size=0;
 	int child;
+	int items;
 
 	signal( SIGCHLD , handlesigchld );
 	sprintf(data,"%s-%d",data,getpid());
@@ -65,7 +66,7 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 	//---------------------------------
 	case 0:
 		// ... /
-		// prepare arguments for execv...
+		// prepare arguments for execvp...
 		// ---
 		arg[0] = (char*)malloc(sizeof(char)*MAX_PROGRAM_SIZE);
 		strcpy(arg[0],basename (command));
@@ -89,7 +90,7 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 		if (channel == 1) {
 			new_channel = freopen(data,"w",stderr);
 		}
-		execv (command,arg);
+		execvp (command,arg);
 		// ... /
 		// the following code shouldn't be reached
 		// ---
@@ -126,7 +127,7 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 			return(NULL);
 		}
 		result = (char*)malloc(sizeof(char)*size + 1);
-		fread(result,size,1,fd);
+		items = fread(result,size,1,fd);
 		result[size] = '\0';
 		fclose(fd);
 		unlink(data);

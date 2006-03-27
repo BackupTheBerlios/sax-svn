@@ -481,7 +481,7 @@ sub init {
 	if (defined $StartBatchMode) {
 		if ($StartBatchMode eq "") {
 			print "\n";
-			print "Linux SaX Version 7.1 startup level (init)\n";
+			print "Linux SaX Version 8.1 startup level (init)\n";
 			print "(C) Copyright 2005 - SUSE LINUX Products GmbH\n";
 			print "\n";
 		} else {
@@ -876,7 +876,7 @@ sub usage {
 	# ...
 	# usage message for calling init.pl
 	# ---
-	print "Linux SaX Version 7.1 level (init) (2005-09-26)\n";
+	print "Linux SaX Version 8.1 level (init) (2005-09-26)\n";
 	print "(C) Copyright 2005 - SUSE LINUX Products GmbH\n";
 	print "\n";
 

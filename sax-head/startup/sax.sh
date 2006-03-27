@@ -84,24 +84,33 @@ function StopGPM() {
 function version() {
 	ID='$Id: sax.sh,v 1.49 2003/03/17 13:39:51 ms Exp $'
 	ID=`echo $ID | cut -f3-4 -d" "`
-	echo "SaX2 version 7.1 - SVN Release: $ID" 
+	echo "SaX2 version 8.1 - SVN Release: $ID" 
 }
 function needHardwareUpdate() {
 	if [ ! -f "/var/cache/sax/files/config" ];then
 		return 1
 	fi
+	LA="lib"
+	AC=`uname -i`
+	if [ $AC = "x86_64" ] || [ $AC = "ia64" ];then
+		LA="lib64";
+	fi
 	CF="/etc/X11/xorg.conf"
+	MD="/usr/X11R6/$LA/modules/drivers";
+	if [ ! -d $MD ];then
+		MD="/usr/$LA/xorg/modules/drivers";
+	fi
 	for i in `/usr/sbin/isax -l Card | grep Driver | cut -f3 -d:`;do
 		echo "SaX: Checking update status for $i driver"
 		case $i in
 			nvidia)
-			if [ "/usr/X11R6/lib/modules/drivers/${i}_drv.so" -nt $CF ];then
+			if [ "$MD/${i}_drv.so" -nt $CF ];then
 				echo "SaX: NVidia driver is newer than config -> calling reinit"
 				return 1
 			fi
 			;;
 			radeon)
-			if [ "/usr/X11R6/lib/modules/drivers/fglrx_drv.so" -nt $CF ];then
+			if [ "$MD/fglrx_drv.so" -nt $CF ];then
 				echo "SaX: FireGL driver is newer than config -> calling reinit"
 				return 1
 			fi
@@ -113,7 +122,7 @@ function needHardwareUpdate() {
 function usage() {
 	killProc $DOTS
 	# ...
-	echo "Linux SaX Version 7.1 (2005-03-22)"
+	echo "Linux SaX Version 8.1 (2005-03-22)"
 	echo "(C) Copyright 2002 - SuSE GmbH <Marcus Schaefer sax@suse.de>"
 	echo 
 	echo "usage: SaX [ options ]"

@@ -1,5 +1,5 @@
 #
-# spec file for package sax2 (Version 7.1)
+# spec file for package sax2 (Version 8.1)
 #
 # Copyright (c) 2006 SUSE LINUX Products GmbH, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
@@ -26,7 +26,7 @@ Requires:     XFree86-server
 Requires:     xloader
 %endif
 Summary:      SuSE advanced X Window System-configuration
-Version:      7.1
+Version:      8.1
 Release:      70
 Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
@@ -52,7 +52,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-tools
-Version:      2.7
+Version:      8.1
 Release:      70
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
@@ -71,7 +71,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-ident
-Version:      1.7
+Version:      8.1
 Release:      70
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
@@ -94,7 +94,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-gui
-Version:      1.7
+Version:      8.1
 Release:      70
 Requires:     netpbm sax2-tools qt3 fvwm2 sax2
 Summary:      SuSE advanced X Window System-configuration GUI
@@ -111,7 +111,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax
-Version:      7.1
+Version:      8.1
 Release:      70
 Requires:     sax2-tools qt3 fvwm2 sax2
 %ifarch       %ix86 x86_64
@@ -131,7 +131,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-devel
-Version:      7.1
+Version:      8.1
 Release:      70
 Requires:     sax2-libsax
 Summary:      SaX management library header files for X Window System-configuration development
@@ -148,7 +148,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-perl
-Version:      7.1
+Version:      8.1
 Release:      70
 Requires:     sax2-libsax
 Summary:      Language binding to use libsax with perl
@@ -165,7 +165,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-python
-Version:      7.1 
+Version:      8.1 
 Release:      70
 Requires:     sax2-libsax
 %{py_requires}
@@ -185,7 +185,7 @@ Authors:
 
 %ifnarch ppc64 s390x
 %package -n sax2-libsax-java
-Version:      7.1
+Version:      8.1
 Release:      70
 Requires:     sax2-libsax jre1.2.x
 Summary:      Language binding to use libsax with java
@@ -204,7 +204,7 @@ Authors:
 
 %endif
 %package -n sax2-libsax-csharp
-Version:      7.1
+Version:      8.1
 Release:      70
 Requires:     sax2-libsax mono
 Summary:      Language binding to use libsax with C#
@@ -281,7 +281,6 @@ fi
 %dir /usr/share/sax/api
 %dir /usr/share/sax/api/data
 %dir %{_defaultdocdir}/sax2
-%dir /usr/X11R6/share/fvwm
 %dir /usr/share/sax
 %dir /usr/share/sax/sysp/script
 %dir /usr/share/sax/sysp
@@ -290,8 +289,9 @@ fi
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-/usr/share/pixmaps/sax2.png
+%dir /usr/X11R6/share/fvwm
 /usr/X11R6/share/fvwm/fvwmrc.sax
+/usr/share/pixmaps/sax2.png
 /usr/share/sax/svnbuild
 /usr/share/sax/init.pl
 /usr/share/sax/xc.pl
@@ -300,7 +300,6 @@ fi
 /usr/sbin/sax.sh
 /usr/sbin/sax2-vesa
 /usr/sbin/SaX2
-/usr/X11R6/bin/sax2
 /usr/sbin/sax2
 /usr/sbin/sysp
 /usr/sbin/xcmd
@@ -390,7 +389,6 @@ fi
 %defattr(-,root,root)
 %doc %{_mandir}/man1/sax2.1.gz
 %doc %{_mandir}/man1/xkbctrl.1.gz
-%doc %{_mandir}/man1/xkbset.1.gz
 %doc %{_mandir}/man1/xmode.1.gz
 %doc %{_mandir}/man1/xquery.1.gz
 /usr/sbin/corner
@@ -432,10 +430,11 @@ fi
 
 %files -n sax2-libsax
 %defattr(-,root,root)
+%dir /usr/share/sax/libsax
 %dir %{_defaultdocdir}/libsax
 %doc %{_defaultdocdir}/libsax/html
 /usr/%{_lib}/libsax.so*
-/var/lib/sax
+/usr/share/sax/libsax/*
 #=================================================
 # SaX-libsax-devel file list...  
 # ------------------------------------------------

@@ -53,8 +53,7 @@ XF86ConfigFile::XF86ConfigFile (void) {
 string XF86ConfigFile::DoFilesSection (void) {
 	string section;
 	section = "Section \"Files\"\n";
-	section = section + " FontPath \"/usr/X11R6/lib/X11/fonts/misc\"\n";
-	section = section + " RgbPath  \"/usr/X11R6/lib/X11/rgb\"\n";
+	section = section + " FontPath \"/usr/lib/X11/fonts/misc\"\n";
 	section = section + "EndSection\n";
 	return(section);
 }

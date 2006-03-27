@@ -13,7 +13,6 @@ no strict "refs";
 no strict "subs";
 
 use lib '/usr/share/sax/modules';
-use lib '/usr/X11R6/lib/';
 
 use Env;
 use XFree;

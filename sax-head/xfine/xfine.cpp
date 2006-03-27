@@ -342,7 +342,7 @@ bool hasDirectRendering (int screen) {
 // usage...
 //-------------------------------------
 void usage (void) {
-	printf ("Linux XFine2 Version 7.1 - (C) Copyright 2002 SuSE GmbH\n");
+	printf ("Linux XFine2 Version 8.1 - (C) Copyright 2002 SuSE GmbH\n");
 	printf ("usage: xfine [ options ]\n");
 	printf ("options:\n");
 	printf ("[ -h | --help ]\n");

@@ -120,7 +120,7 @@ typedef void* (*Factory) ();
 *
 * \code
 * g++ loader.cpp -o loader \
-*     -Wall -O2 -I$QTDIR/include -I/usr/X11R6/include \
+*     -Wall -O2 -I$QTDIR/include -I/usr/X11/include \
 *     -L$QTDIR/lib/ -ldl -lqt-mt
 * \endcode
 */

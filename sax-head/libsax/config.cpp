@@ -331,15 +331,22 @@ void SaXConfig::commitConfiguration (void) {
 	//====================================
 	// create symbolic loader links
 	//------------------------------------
-	unlink  ("/usr/X11R6/bin/X");
-	unlink  ("/var/X11R6/bin/X");
-	if ((symlink ("/var/X11R6/bin/X","/usr/X11R6/bin/X")) != 0) {
-		excFileOpenFailed ( errno );
-		qError (errorString(),EXC_FILEOPENFAILED);
-	}
-	if ((symlink (SAX_X11_LOADER    ,"/var/X11R6/bin/X")) != 0) {
-		excFileOpenFailed ( errno );
-		qError (errorString(),EXC_FILEOPENFAILED);
+	// The links are only created if the
+	// /usr/X11/bin/Xorg server exists, for xorg v7 the server
+	// is located in /usr/bin and doesn't need to be linked
+	// ----
+	QFile loader (SAX_X11_LOADER);
+	if (loader.exists()) {
+		unlink  ("/usr/X11R6/bin/X");
+		unlink  ("/var/X11R6/bin/X");
+		if ((symlink ("/var/X11R6/bin/X","/usr/X11R6/bin/X")) != 0) {
+			excFileOpenFailed ( errno );
+			qError (errorString(),EXC_FILEOPENFAILED);
+		}
+		if ((symlink (SAX_X11_LOADER    ,"/var/X11R6/bin/X")) != 0) {
+			excFileOpenFailed ( errno );
+			qError (errorString(),EXC_FILEOPENFAILED);
+		}
 	}
 }
 

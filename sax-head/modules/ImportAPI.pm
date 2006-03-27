@@ -11,7 +11,6 @@
 # Status: Up-to-date
 #
 use lib '/usr/share/sax/modules/detect';
-use lib '/usr/X11R6/lib/xfine/modules';
 use lib '/usr/share/sax/modules';
 
 use strict;

@@ -36,7 +36,7 @@ namespace SaX {
 //------------------------------------
 #define XMODE             "/usr/sbin/xmode"
 #define XQUERY            "/usr/sbin/xquery"
-#define SAX_PROFILE_CHECK "/var/lib/sax/createCHK.sh"
+#define SAX_PROFILE_CHECK "/usr/share/sax/libsax/createCHK.sh"
 #define PROFILE_DIR       "/usr/share/sax/profile/"
 #define MAP_DIR           "/usr/share/sax/sysp/maps/"
 #define SYSP_VENDOR       "/usr/share/sax/sysp/script/vendor.pl"

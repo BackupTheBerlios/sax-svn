@@ -29,14 +29,14 @@ STATUS        : Status: Up-to-date
 //======================================
 // Defines
 //--------------------------------------
-#define TWM       "/usr/X11R6/bin/twm"
-#define MWM       "/usr/X11R6/bin/mwm"
-#define FVWM      "/usr/X11R6/bin/fvwm2"
+#define TWM       "twm"
+#define MWM       "mwm"
+#define FVWM      "fvwm2"
 #define MIN_X     800
 #define MIN_Y     600
 #define MIN_DEPTH 15
 
-#define FVWMRC    "/usr/X11R6/share/fvwm/fvwmrc.yast2"
+#define FVWMRC    "fvwmrc.yast2"
 
 //======================================
 // Globals

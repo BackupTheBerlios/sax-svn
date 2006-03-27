@@ -293,7 +293,7 @@ sub main {
 	# Apply log message about server status
 	#------------------------------------------
 	if ($haveServer == 0) {
-		my $glxinfo = qx (/usr/X11R6/bin/glxinfo -display $disp);
+		my $glxinfo = qx (glxinfo -display $disp);
 		Logger ($spec{Xmsg},$logHandle);
 		Logger ("GLX Info:\n$glxinfo",$logHandle);
 		unlink ($spec{Xmsg});
@@ -624,7 +624,9 @@ sub LinkConfiguration {
 	# ...
 	# this function is called to copy the temporary config
 	# file to /etc/X11/xorg.conf and create the symbolic 
-	# X links
+	# X links. The links are only created if one of the
+	# /usr/X11/bin/X* server exists, for xorg v7 the server
+	# is located in /usr/bin and doesn't need to be linked
 	# --- 
 	my $final  = "/etc/X11/xorg.conf";
 	my $save   = "/etc/X11/xorg.conf.saxsave";
@@ -823,7 +825,7 @@ sub usage {
 	# ...
 	# usage message for calling xc.pl
 	# ---
-	print "Linux SaX Version 7.1 level (xc) (2005-09-26)\n";
+	print "Linux SaX Version 8.1 level (xc) (2005-09-26)\n";
 	print "(C) Copyright 2005 - SUSE LINUX Products GmbH\n";
 	print "\n";
 

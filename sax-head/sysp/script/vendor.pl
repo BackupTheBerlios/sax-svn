@@ -32,7 +32,10 @@ sub vendorName {
 	if (($arch eq "x86_64") || ($arch eq "ia64")) {
 		$lib = "lib64";
 	}
-	my $drvfile = "/usr/X11R6/$lib/modules/drivers/".$driver."_drv.*";
+	my $drvfile = "/usr/X11/$lib/modules/drivers/".$driver."_drv.*";
+	if (-d "/usr/$lib/xorg/modules/drivers") {
+		my $drvfile = "/usr/$lib/xorg/modules/drivers/".$driver."_drv.*";
+	}
 	my $objdump = qx (/usr/bin/strings $drvfile 2>/dev/null);
 	foreach my $vname (@vendor) {
 	if ($objdump =~ /$vname/) {

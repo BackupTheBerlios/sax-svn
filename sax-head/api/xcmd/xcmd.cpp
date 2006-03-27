@@ -175,7 +175,7 @@ void usage (int code) {
 	// .../
 	// usage information for options to call the xcmd tool
 	// ----
-	printf ("Linux SaX2 Version 7.1 command level (xcmd)\n");
+	printf ("Linux SaX2 Version 8.1 command level (xcmd)\n");
 	printf ("(C) Copyright 2005 SuSE GmbH\n");
 	printf ("\n");
 	printf ("usage: xcmd [ options ]\n");

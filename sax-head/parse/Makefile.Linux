@@ -6,10 +6,10 @@
 # --
 # XFree.pm
 # 
-# Version 7.1
+# Version 8.1
 # Status: Up-to-date
 #
-EXTSEC = `./check_exts.sh`
+EXTSEC = HAVE_EXTENSIONS_SECTION
 
 all:
 	swig -D${EXTSEC} -perl5 XFree.i

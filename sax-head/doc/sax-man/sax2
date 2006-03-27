@@ -1,4 +1,4 @@
-.TH sax2 1 "March 15, 2005" "Version 7.1" "Utils for X-Window"
+.TH sax2 1 "March 15, 2005" "Version 8.1" "Utils for X-Window"
 .UC 1
 
 .SH NAME
@@ -77,7 +77,7 @@ and for PS/2 devices use /dev/psaux.
 -t \fItype\fP
 Set protocol type to use for the core pointer. If you are not sure
 about the protocol your mouse understand please have a look at:
-.I /usr/X11R6/lib/X11/doc/README.mouse
+.I /usr/lib/X11/doc/README.mouse
 .TP
 -g
 Use gpm as repeater of mouse events.

@@ -241,7 +241,7 @@ void usage (int code) {
 	// .../
 	// usage information for options to call the SCC GUI
 	// ----
-	printf ("Linux SaX2 Version 7.1 startup level (xapi)\n");
+	printf ("Linux SaX2 Version 8.1 startup level (xapi)\n");
 	printf ("(C) Copyright 2005 SuSE GmbH\n");
 	printf ("\n");
 	printf ("usage: xapi [ options ]\n");

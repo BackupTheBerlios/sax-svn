@@ -26,23 +26,22 @@ STATUS        : Status: Up-to-date
 // Defines...
 //---------------------------
 #define  XFTFONT     "serif-30"
+#define  XBanner     "xbanner"
+#define  FVWMRC      "fvwmrc.sax"
 #define  XBannerFile "/usr/sbin/demo"
 #define  XScreenFile "/usr/sbin/screen"
-#define  XBanner     "/usr/X11R6/bin/xbanner"
 #define  XLook       "/usr/sbin/xlook"
-#define  TWM         "/usr/X11R6/bin/twm"
 #define  FVWM        "/usr/sbin/wmstart"
 #define  XIDLE       "/usr/sbin/xapi"
 #define  DISPLAY     "/usr/sbin/ximage"
-#define  FVWMRC      "/usr/X11R6/share/fvwm/fvwmrc.sax"
 #define  TDOMAIN     "/usr/share/locale"
 #define  BACKGROUND  "/usr/share/sax/api/figures/BlueWaves.png"
 #define  DISPSIZE    255
 
 #ifdef XORG_LOADER
-#define  XLOADER     "/usr/X11R6/bin/Xorg"
+#define  XLOADER     "Xorg"
 #else
-#define  XLOADER     "/usr/X11R6/bin/XFree86"
+#define  XLOADER     "XFree86"
 #endif
 
 struct mirror {

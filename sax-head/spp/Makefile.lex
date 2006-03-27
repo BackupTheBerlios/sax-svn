@@ -31,7 +31,7 @@ spp.tab.cc: spp.yc
 	test -f spp.tab.cc.new && mv spp.tab.cc.new spp.tab.cc || true
 
 lex.yy.c: spp.l spp.tab.cc
-	flex -i spp.l
+	flex --nounput -i spp.l
 
 clean:
 	rm -f lex.yy.c

@@ -30,7 +30,7 @@ SaXKeyRules::SaXKeyRules (QString rule): mLayouts(80) {
 	//! library to be able to know about the possible XKB
 	//! map settings
 	// ----
-	mX11Dir = "/usr/X11R6/lib/X11/";
+	mX11Dir = "/usr/lib/X11/";
 	loadRules (mX11Dir + QString("xkb/rules/%1").arg(rule));
 }
 

@@ -108,7 +108,7 @@ int main(int argc,char *argv[]) {
 
 	//=========================================
 	// save the rest of the parameters for the
-	// execv call to the X-Server
+	// execvp call to the X-Server
 	//-----------------------------------------
 	displayname = (char*)malloc(DISPSIZE);
 	strcpy(displayname,":0");
@@ -170,7 +170,7 @@ int main(int argc,char *argv[]) {
 			data = freopen (logfile,"w",stderr );
 			setvbuf ( data,(char*)NULL,_IONBF,0 );
 		}
-		execv (XLOADER,args);
+		execvp (XLOADER,args);
 	break;
 	default:
 		// ...

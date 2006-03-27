@@ -14,4 +14,4 @@ tmplang=${LANGUAGE-${LC_ALL-${LC_MESSAGES-${LANG-en_US}}}}
 #   for the language
 # ---
 export LC_ALL=`echo ${tmplang} |sed -e 's/[.@:].*//'`.UTF-8
-exec /usr/X11R6/bin/fvwm2 "$@"
+exec fvwm2 "$@"

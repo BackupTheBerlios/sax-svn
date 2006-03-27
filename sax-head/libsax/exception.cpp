@@ -379,7 +379,7 @@ void SaXException::excLayoutImportBindFailed (int id) {
 	emit saxLayoutImportBindFailed (id);
 }
 
-//! the /usr/X11R6/lib/X11/xkb/rules/(rule) file couldn't be opened
+//! the /usr/lib/X11/xkb/rules/(rule) file couldn't be opened
 void SaXException::excXKBLoadRulesFailed (void) {
 	setErrorCode (ENOENT);
 	emit saxGlobalException (EXC_XKBLOADRULESFAILED);

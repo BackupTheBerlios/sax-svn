@@ -27,81 +27,92 @@ STATUS        : development
 // Functions...
 //---------------------------------
 char* qx(char*command,int channel,int anz,char* format,...) {
- char data[30] = "/tmp/data";
- char *result  = NULL;
- char *arg[anz+2];
- va_list ap;
- FILE *fd;
- int n=1;
- long size=0;
+	char data[30] = "/tmp/data";
+	char *result  = NULL;
+	char *arg[anz+2];
+	va_list ap;
+	FILE *fd;
+	int n=1;
+	long size=0;
+	int items=0;
 
- // prepare arguments for execv...
- // -------------------------------
- arg[0] = (char*)malloc(sizeof(char)*MAX_PROGRAM_SIZE);
- strcpy(arg[0],command);
- arg[anz+1] = NULL;
+	//=================================
+	// prepare arguments for execvp...
+	//---------------------------------
+	arg[0] = (char*)malloc(sizeof(char)*MAX_PROGRAM_SIZE);
+	strcpy(arg[0],command);
+	arg[anz+1] = NULL;
 
- // prepare data file...
- // ---------------------
- sprintf(data,"%s-%d",data,getpid());
+	//=================================
+	// prepare data file...
+	//---------------------------------
+	sprintf(data,"%s-%d",data,getpid());
 
- // get arguments...
- // ----------------- 
- if (format != NULL) {
-  va_start(ap, format);
-  while (*format) {
-   switch(*format++) {
-    case 's':
-    arg[n] = va_arg(ap, char*);
-    n++;
-    break;
-   }
-  }
-  va_end(ap);
- }
+	//=================================
+	// get arguments...
+	//---------------------------------
+	if (format != NULL) {
+		va_start(ap, format);
+		while (*format) {
+			switch(*format++) {
+				case 's':
+					arg[n] = va_arg(ap, char*);
+					n++;
+				break;
+				default:
+					// nothing to do for other formats
+				break;
+			}
+		}
+		va_end(ap);
+	}
 
- // call the program...
- // --------------------
- switch(fork()) {
-  case -1:
-  perror("fork");
-  exit(1);
+	//=================================
+	// call the program...
+	//---------------------------------
+	switch(fork()) {
+		case -1:
+			perror ("fork");
+			exit (1);
+		break;
 
-  case 0:
-  // child process...
-  // -----------------
-  if (channel == 0) {
-   freopen(data,"w",stdout);
-  }
-  if (channel == 1) {
-   freopen(data,"w",stderr);
-  }
-  execv(command,arg);
+		case 0:
+			//=================================
+			// child process...
+			//---------------------------------
+			if (channel == 0) {
+				freopen(data,"w",stdout);
+			}
+			if (channel == 1) {
+				freopen(data,"w",stderr);
+			}
+			execvp (command,arg);
+		break;
 
-  default:
-  // parent process...
-  // ------------------
-  wait(NULL);
+		default:
+			//=================================
+			// parent process...
+			//---------------------------------
+			wait (NULL);
 
-  if ((channel == 0) || (channel == 1)) {
-   fd = fopen(data,"r");
-   if (fd == NULL) {
-    return(NULL);
-   }
-   fseek(fd,0L,SEEK_END);
-   size = ftell(fd) - 1;
-   rewind(fd);
-   if (size <= 0) {
-    fclose(fd); return(NULL);
-   }
-   result = (char*)malloc(sizeof(char)*size + 1);
-   fread(result,size,1,fd);
-   result[size] = '\0';
-   fclose(fd);
-   unlink(data);
-  }
-  return(result);
- }
+			if ((channel == 0) || (channel == 1)) {
+				fd = fopen(data,"r");
+				if (fd == NULL) {
+					return NULL;
+				}
+				fseek(fd,0L,SEEK_END);
+				size = ftell(fd) - 1;
+				rewind(fd);
+				if (size <= 0) {
+					fclose(fd); return NULL;
+				}
+				result = (char*)malloc(sizeof(char)*size + 1);
+				items = fread(result,size,1,fd);
+				result[size] = '\0';
+				fclose(fd);
+				unlink(data);
+			}
+		break;
+	}
+	return result;
 }
-
-
