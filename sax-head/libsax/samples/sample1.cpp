@@ -30,7 +30,7 @@ int main (void) {
 	);
 	if (mDesktop.selectDesktop (0)) {
 		mDesktop.addResolution (24,1600,1200);
-		mDesktop.setExtraModeline (1800,2000,90);
+		mDesktop.setExtraModeline (1800,2000,90,50);
 	}
 	// test what happens if we intentionally add an error...
 	// section["Desktop"]->removeEntry("Identifier");

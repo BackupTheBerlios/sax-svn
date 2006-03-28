@@ -44,3 +44,5 @@ QMAKE_CXXFLAGS += -rdynamic -DPIC
 CONFIG    += qt warn_on release
 unix:LIBS += -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lxkbfile -lxf86config
 unix:INCLUDEPATH += /usr/X11R6/include
+unix:INCLUDEPATH += /usr/include/X11
+unix:INCLUDEPATH += /usr/include/xorg

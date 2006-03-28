@@ -5,4 +5,6 @@ SOURCES   += testlib.cpp
 CONFIG    += qt warn_on release
 TARGET    = testlib.bin
 unix:LIBS += -L.. -lsax
-unix:INCLUDEPATH += -I/usr/include/X11
+unix:INCLUDEPATH += /usr/X11R6/include
+unix:INCLUDEPATH += /usr/include/X11
+unix:INCLUDEPATH += /usr/include/xorg

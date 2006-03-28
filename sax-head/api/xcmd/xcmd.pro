@@ -14,4 +14,6 @@ TARGET    = xcmd
 
 QMAKE_CXXFLAGS = -fno-strict-aliasing
 unix:INCLUDEPATH += /usr/X11R6/include
+unix:INCLUDEPATH += /usr/include/X11
+unix:INCLUDEPATH += /usr/include/xorg
 unix:LIBS += -L/usr/X11R6/lib -L../../libsax -lsax
