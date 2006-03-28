@@ -185,17 +185,6 @@
 &device.id		pci 0xa400
 +driver.module.modprobe	eata
 
-# scsi/dpti.c
- baseclass.id           0x00e
-&subclass.id            0x00
-&vendor.id		pci 0x1044
-&device.id		pci 0xa501
-|baseclass.id           0x00e
-&subclass.id            0x00
-&vendor.id		pci 0x1044
-&device.id		pci 0xa511
-+driver.module.modprobe	dpt_i2o
-
 # scsi/BusLogic.c
  vendor.id		pci 0x104b
 &device.id		pci 0x0140
@@ -205,39 +194,10 @@
 &device.id		pci 0x8130
 +driver.module.modprobe	BusLogic
 
-# scsi/qla1280.c
- vendor.id		pci 0x1077
-&device.id		pci 0x1016
-|vendor.id		pci 0x1077
-&device.id		pci 0x1080
-|vendor.id		pci 0x1077
-&device.id		pci 0x1216
-|vendor.id		pci 0x1077
-&device.id		pci 0x1240
-|vendor.id		pci 0x1077
-&device.id		pci 0x1280
-+driver.module.modprobe	qla1280
-
 # scsi/qlogicisp.c
  vendor.id		pci 0x1077
 &device.id		pci 0x1020
 +driver.module.modprobe	qlogicisp
-
-# scsi/qlogicfc.c
- vendor.id		pci 0x1077
-&device.id		pci 0x2100
-+driver.module.modprobe	qlogicfc
-
- vendor.id		pci 0x1077
-&device.id		pci 0x2200
-+driver.module.modprobe	qla2200
-+driver.module.modprobe	qlogicfc
-
- vendor.id		pci 0x1077
-&device.id		pci 0x2300
-|vendor.id		pci 0x1077
-&device.id		pci 0x2312
-+driver.module.modprobe	qla2300
 
 # scsi/inia100.c
  vendor.id		pci 0x1101
@@ -493,9 +453,15 @@
 &device.id		special 0x0040
 +driver.module.modprobe	swim3
 
+# modalias, #129301
  baseclass.id		0x00e
-&subclass.id		0x00+2
-+driver.module.insmod	i2o_pci|i2o_core|i2o_config|i2o_block
+&subclass.id		0x00
+|vendor.id		pci 0x1044
+&device.id		pci 0xa511
+|vendor.id		pci 0x8086
+&device.id		pci 0x1962
+&subvendor.id		pci 0x105a
++driver.module.modprobe	i2o_block
 
 # scsi/aacraid/linit.c
  vendor.id		pci 0x1028
@@ -643,6 +609,67 @@
 &device.id		pci 0x100a
 +driver.module.modprobe	sgiioc4
 +baseclass.id		0x001
+
+# module.alias qla*
+ vendor.id		pci 0x1077
+&device.id		pci 0x1016
+|vendor.id		pci 0x1077
+&device.id		pci 0x1020
+|vendor.id		pci 0x1077
+&device.id		pci 0x1080
+|vendor.id		pci 0x1077
+&device.id		pci 0x1216
+|vendor.id		pci 0x1077
+&device.id		pci 0x1240
+|vendor.id		pci 0x1077
+&device.id		pci 0x1280
++driver.module.modprobe	qla1280
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2100
++driver.module.modprobe	qla2100
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2200
++driver.module.modprobe	qla2200
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2300
+|vendor.id		pci 0x1077
+&device.id		pci 0x2312
++driver.module.modprobe	qla2300
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2322
++driver.module.modprobe	qla2322
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2422
+|vendor.id		pci 0x1077
+&device.id		pci 0x2432
++driver.module.modprobe	qla2400
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x6312
+|vendor.id		pci 0x1077
+&device.id		pci 0x6322
++driver.module.modprobe	qla6312
++requires		qlogic-firmware
+
+# module.alias, #141069
+ vendor.id		pci 0x1077
+&device.id		pci 0x4010
+|vendor.id		pci 0x1077
+&device.id		pci 0x4022
++hwclass		storage
++driver.module.modprobe	qla4xxx
++requires		qlogic-firmware
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
