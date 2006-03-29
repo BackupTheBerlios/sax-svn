@@ -25,7 +25,6 @@ STATUS        : Status: Up-to-date
 #include <X11/extensions/XKBgeom.h>
 #include <X11/extensions/XKM.h>
 #include <X11/extensions/XKBfile.h>
-#include <X11/extensions/XKBui.h>
 #include <X11/extensions/XKBrules.h>
 #include <X11/Xproto.h>
 #include <X11/Xfuncs.h>
