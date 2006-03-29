@@ -7,8 +7,8 @@ MODDIR  = ${PACKDIR}/SaX
 export LD_LIBRARY_PATH=../../
 
 all:
-	g++ -c -I/usr/X11R6/include \
-		-I${QTDIR}/include -I/usr/include/python \
+	g++ -c -I/usr/X11R6/include -I/usr/include/xorg \
+		-I${QTDIR}/include -I/usr/include/python${PYVER} \
 		-O2 -fPIC -fno-strict-aliasing -pipe SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o _SaX.so \
 		-L/usr/X11R6/${BINDLIB} -L${QTDIR}/${BINDLIB} \

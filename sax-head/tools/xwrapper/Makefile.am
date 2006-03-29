@@ -12,7 +12,7 @@ xw_LDFLAGS = \
 	-L/usr/X11R6/lib -L/usr/X11R6/lib64 \
 	-lX11 -lXext -lXmu -lm -lXft
 
-xw_CFLAGS = `/usr/X11R6/bin/xft-config --cflags`
+xw_CFLAGS = `pkg-config --cflags xft`
 xw_CFLAGS += $(WARN_CFLAGS)
 xw_CFLAGS += -DXORG_LOADER
 

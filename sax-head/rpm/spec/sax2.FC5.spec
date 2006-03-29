@@ -9,7 +9,7 @@
 # http://developer.berlios.de/projects/sax
 #
 
-BuildRequires: acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib diffutils e2fsprogs file filesystem findutils flex gawk gdbm-devel glibc glibc-devel grep groff gzip info less libacl libattr libgcc libselinux libstdc++ m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools openssl pam patch popt procps psmisc rcs readline sed strace tar texinfo unzip util-linux zlib zlib-devel autoconf automake binutils doxygen expat fontconfig fontconfig-devel freeglut gcc gcc-c++ gdbm gettext glib2 graphviz hal jpackage-utils libjpeg libjpeg-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl python python-devel rpm swig sysfsutils udev wireless-tools hal-devel qt qt-devel sysfsutils-devel xorg-x11-server-sdk
+BuildRequires: acl attr bash bind-utils bison bzip2 coreutils cpio cpp cracklib diffutils e2fsprogs file filesystem findutils flex gawk gdbm-devel glibc glibc-devel grep groff gzip info less libacl libattr libgcc libselinux libstdc++ m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools openssl pam patch popt procps psmisc rcs readline sed strace tar texinfo unzip util-linux zlib zlib-devel autoconf automake binutils doxygen expat fontconfig fontconfig-devel freeglut gcc gcc-c++ gdbm gettext glib2 graphviz hal jpackage-utils libjpeg libjpeg-devel libmng libmng-devel libpng libpng-devel libstdc++-devel libtool perl python python-devel rpm swig sysfsutils udev wireless-tools hal-devel qt qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel
 
 #=================================================
 # Description sax2
@@ -249,6 +249,7 @@ Authors:
 %build
 test -e /.buildenv && . /.buildenv
 test -z $QTDIR && export QTDIR=/usr/lib/qt-3.3
+test -z $JAVA_BINDIR && export JAVA_BINDIR=/usr/lib/jvm/jre/bin
 #=================================================
 # add version to sax.sh script...
 #-------------------------------------------------

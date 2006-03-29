@@ -10,6 +10,7 @@ all:
 	fi
 	g++ -c \
 		-I/usr/X11R6/include \
+		-I/usr/include/xorg \
 		-I${QTDIR}/include \
 		-I/usr/lib/jvm/java/include \
 		-I/usr/lib/jvm/java/include/linux\
