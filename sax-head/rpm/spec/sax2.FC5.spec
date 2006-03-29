@@ -18,7 +18,7 @@ Name:         sax2
 Requires:     perl readline ncurses hal dbus binutils
 Requires:     sax2-ident sax2-tools
 PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
-Requires:     xorg-x11-server
+Requires:     xorg-x11-server-Xorg
 Summary:      SuSE advanced X Window System-configuration
 Version:      8.1
 Release:      18
