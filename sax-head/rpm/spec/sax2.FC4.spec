@@ -19,7 +19,7 @@ Requires:     perl readline ncurses hal dbus binutils
 Requires:     sax2-ident sax2-tools
 PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
 Requires:     xorg-x11
-Summary:      SuSE advanced X Window System-configuration
+Summary:      X Window System-configuration
 Version:      8.1
 Release:      18
 Group:        System/X11/Utilities
@@ -33,7 +33,7 @@ ExcludeArch:  s390
 
 
 %description
-This package contains the SuSE Advanced X-Configuration
+This package contains the SaX2 Advanced X-Configuration
 
 
 
@@ -96,12 +96,12 @@ Authors:
 Version:      8.1
 Release:      18
 Requires:     netpbm sax2-tools qt sax2
-Summary:      SuSE advanced X Window System-configuration GUI
+Summary:      X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/sbin/xapi
 
 %description -n sax2-gui
-This package contains the GUI for the SuSE Advanced X-Configuration
+This package contains the GUI for the SaX2 Advanced X-Configuration
 
 
 
@@ -246,6 +246,7 @@ Authors:
 %build
 test -e /.buildenv && . /.buildenv
 test -z $QTDIR && export QTDIR=/usr/lib/qt3
+test -z $BUILD_DISTRIBUTION_NAME && export BUILD_DISTRIBUTION_NAME=FC4
 #=================================================
 # add version to sax.sh script...
 #-------------------------------------------------
