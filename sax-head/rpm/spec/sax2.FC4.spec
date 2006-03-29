@@ -116,9 +116,6 @@ Authors:
 Version:      8.1
 Release:      18
 Requires:     sax2-tools qt sax2
-%ifarch       %ix86 x86_64
-Requires:     855resolution
-%endif
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
 Provides:     sax2:/usr/%{_lib}/libsax.so
