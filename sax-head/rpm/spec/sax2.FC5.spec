@@ -18,7 +18,7 @@ Name:         sax2
 Requires:     perl readline ncurses hal dbus binutils
 Requires:     sax2-ident sax2-tools
 PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
-Requires:     xorg-x11
+Requires:     xorg-x11-server
 Summary:      SuSE advanced X Window System-configuration
 Version:      8.1
 Release:      18
@@ -95,7 +95,7 @@ Authors:
 %package -n sax2-gui
 Version:      8.1
 Release:      18
-Requires:     netpbm sax2-tools qt fvwm2 sax2
+Requires:     netpbm sax2-tools qt sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
 Provides:     sax2:/usr/sbin/xapi
@@ -115,7 +115,7 @@ Authors:
 %package -n sax2-libsax
 Version:      8.1
 Release:      18
-Requires:     sax2-tools qt fvwm2 sax2
+Requires:     sax2-tools qt sax2
 %ifarch       %ix86 x86_64
 Requires:     855resolution
 %endif
@@ -303,8 +303,6 @@ fi
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-%dir /usr/X11R6/share/fvwm
-/usr/X11R6/share/fvwm/fvwmrc.sax
 /usr/share/pixmaps/sax2.png
 /usr/share/sax/svnbuild
 /usr/share/sax/init.pl
@@ -317,6 +315,8 @@ fi
 /usr/sbin/sax2
 /usr/sbin/sysp
 /usr/sbin/xcmd
+/usr/share/sax/api/data/fvwmrc.sax
+/usr/share/sax/api/data/twmrc.sax
 /usr/share/sax/api/data/CardModules
 /usr/share/sax/api/data/LangCodes
 /usr/share/sax/api/data/PointerDevice

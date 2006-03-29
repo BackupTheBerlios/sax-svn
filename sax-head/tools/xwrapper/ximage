@@ -66,5 +66,10 @@ fi
 #======================================
 # display image
 #--------------------------------------
-DISPLAY=$disp fvwm-root $image.scaled.png
+which fvwm-root >/dev/null 2>&1
+if [ $? = 0 ];then
+	DISPLAY=$disp fvwm-root $image.scaled.png
+else
+	DISPLAY=$disp display -window root $image.scaled.png
+fi
 rm -f $image.scaled.png

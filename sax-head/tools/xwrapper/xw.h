@@ -27,7 +27,6 @@ STATUS        : Status: Up-to-date
 //---------------------------
 #define  XFTFONT     "serif-30"
 #define  XBanner     "xbanner"
-#define  FVWMRC      "fvwmrc.sax"
 #define  XBannerFile "/usr/sbin/demo"
 #define  XScreenFile "/usr/sbin/screen"
 #define  XLook       "/usr/sbin/xlook"

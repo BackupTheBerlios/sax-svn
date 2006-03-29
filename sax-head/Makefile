@@ -61,7 +61,6 @@ XFINEBINVZ     = ${xfi_prefix}
 XFINEPIXMAPS   = ${xfi_prefix}/figures
 LIBDOCDIR      = ${doc_prefix}/libsax
 LIBTOOLDIR     = ${sax_prefix}/libsax
-WMVZ           = ${usr_prefix}/X11R6/share/fvwm
 
 #============================================
 # Helpers
@@ -129,7 +128,7 @@ install:install-docs
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
 	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
-	install -d -m 755 ${LIBDOCDIR} ${WMVZ} ${LIBTOOLDIR}
+	install -d -m 755 ${LIBDOCDIR} ${LIBTOOLDIR}
 
 	#============================================
 	# install X11 parser...
@@ -206,7 +205,6 @@ install:install-docs
 	install -m 644 ./sysp/maps/Input.map                    ${MAPVZ}
 	install -m 644 ./sysp/maps/Driver.map                   ${MAPVZ}
 	install -m 755 ./sysp/script/*                          ${SCRIPTVZ}
-	install -m 644 ./api/data/fvwmrc.sax                    ${WMVZ}
 
 	#============================================
 	# install architecture dependant Identity
@@ -233,8 +231,7 @@ install:install-docs
 	# install API data files...
 	#--------------------------------------------
 	for i in `find ./api/data -maxdepth 1 -name "*"`; do \
-	if [ -f $$i ] && \
-		[ ! $$i = "./api/data/fvwmrc.sax" ];then \
+	if [ -f $$i ];then \
 		install -m 644 $$i  ${APIDATAVZ} ;\
 	fi \
 	done

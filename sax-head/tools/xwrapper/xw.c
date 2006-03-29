@@ -248,7 +248,7 @@ void prepare (void) {
 		perror("fork"); exit(1);
 	break;
 	case 0:
-		execl(FVWM,"fvwm2","-f",FVWMRC,NULL);
+		execl(FVWM,"saxwm",NULL);
 	break;
 	default:
 	waitpid (

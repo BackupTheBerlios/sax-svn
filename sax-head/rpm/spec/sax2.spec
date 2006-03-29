@@ -289,8 +289,6 @@ fi
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-%dir /usr/X11R6/share/fvwm
-/usr/X11R6/share/fvwm/fvwmrc.sax
 /usr/share/pixmaps/sax2.png
 /usr/share/sax/svnbuild
 /usr/share/sax/init.pl
@@ -303,6 +301,8 @@ fi
 /usr/sbin/sax2
 /usr/sbin/sysp
 /usr/sbin/xcmd
+/usr/share/sax/api/data/fvwmrc.sax
+/usr/share/sax/api/data/twmrc.sax
 /usr/share/sax/api/data/CardModules
 /usr/share/sax/api/data/LangCodes
 /usr/share/sax/api/data/PointerDevice
