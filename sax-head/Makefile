@@ -36,6 +36,7 @@ man_prefix     = ${buildroot}/usr/share/man
 MANVZ          = ${man_prefix}/man1
 PACKDOCVZ      = ${doc_prefix}/sax2
 SBINVZ         = ${buildroot}/usr/sbin
+LIBSAXVZ       = ${buildroot}/var/lib/sax
 SAXBINVZ       = ${sax_prefix}
 APIVZ          = ${sax_prefix}/api
 APIDATAVZ      = ${sax_prefix}/api/data
@@ -128,7 +129,7 @@ install:install-docs
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
 	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
-	install -d -m 755 ${LIBDOCDIR} ${LIBTOOLDIR}
+	install -d -m 755 ${LIBDOCDIR} ${LIBTOOLDIR} ${LIBSAXVZ}
 
 	#============================================
 	# install X11 parser...

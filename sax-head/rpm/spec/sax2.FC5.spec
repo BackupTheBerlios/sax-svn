@@ -441,6 +441,7 @@ fi
 %files -n sax2-libsax
 %defattr(-,root,root)
 %dir /usr/share/sax/libsax
+%dir /var/lib/sax
 %dir %{_defaultdocdir}/libsax
 %doc %{_defaultdocdir}/libsax/html
 /usr/%{_lib}/libsax.so*
