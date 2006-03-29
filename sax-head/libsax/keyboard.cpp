@@ -31,6 +31,9 @@ SaXKeyRules::SaXKeyRules (QString rule): mLayouts(80) {
 	//! map settings
 	// ----
 	mX11Dir = "/usr/lib/X11/";
+	if (! access ("/usr/share/X11/xkb",R_OK|X_OK)) {
+		mX11Dir = "/usr/share/X11/";
+	}
 	loadRules (mX11Dir + QString("xkb/rules/%1").arg(rule));
 }
 

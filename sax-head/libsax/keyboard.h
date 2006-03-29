@@ -37,7 +37,7 @@ namespace SaX {
 //====================================
 // Defines...
 //------------------------------------
-#define SAX_DEFAULT_RULE   "xfree86"
+#define SAX_DEFAULT_RULE   "xorg"
 #define XKB_LEFT_ALT       "LeftAlt"
 #define XKB_RIGHT_ALT      "RightAlt"
 #define XKB_SCROLL_LOCK    "ScrollLock"
