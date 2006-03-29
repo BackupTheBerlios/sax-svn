@@ -59,7 +59,13 @@ sub AutoDetectServer {
 		$slot = hex($slot_list[$i]);
 		$func = hex($func_list[$i]);
 		$dom  = hex($dom_list[$i]);
-		$busid = "PCI:$bus\@$dom:$slot:$func";
+		$arch = qx(/bin/arch);
+		chomp $arch;
+		if ($arch eq "ia64") {
+			$busid = "PCI:$bus\@$dom:$slot:$func";
+		} else {
+			$busid = "$bus:$slot:$func";
+		}
 		$var{Device}{$i}{BusID} = $busid;
 	} else {
 		$var{Device}{$i}{BusID} = "";
