@@ -4,6 +4,13 @@ Thu Mar 30 11:34:36 CEST 2006 - ms@suse.de
 - new version sax2 v8 for xorg v7 (X11R7)
 - enhancement: disable mouse device before probing (#157415)
 - enhancement: moved libsax scripts (#157475)
+- enhancement: added support for prefixed Identifiers usable within
+  the sections Device, Modes, Monitor and Screen. If an Identifier
+  contains a prefix like "prefix-name[id]" this section is
+  preferred compared to the non prefixed "name[id]" section.
+  SaX2 itself will not make use of prefixed Identifiers but
+  other config tools which are changing the existing config
+  file can include their own section with a prefixed Identifier.
 - include libhd fixes: (#115845, #117639)
 
 -------------------------------------------------------------------

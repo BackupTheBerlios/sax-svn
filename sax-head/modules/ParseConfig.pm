@@ -24,6 +24,34 @@ sub ReadConfig {
 	return($ptr);
 }
 
+#----[ CleanParse ]----#
+sub CleanParse {
+#----------------------------------------------
+# this function looks up duplicate Identifier
+# entries and removes them
+#
+	my %parse   = %{$_[0]};
+	my $section = $_[1];
+	my $count   = $_[2];
+	if ($count == 1) {
+		return %parse;
+	}
+	my $idx = $parse{$section}{$count-1}{Identifier};
+	foreach my $n (keys %{$parse{$section}}) {
+		my $idn = $parse{$section}{$n}{Identifier};
+		if (($n ne $count-1) && ($idn == $idx)) {
+			delete $parse{$section}{$n};
+		}
+	}
+	$count = 0;
+	foreach my $n (keys %{$parse{$section}}) {
+		$parse{$section}{$count} = $parse{$section}{$n};
+		delete $parse{$section}{$n};
+		$count++;
+	}
+	return %parse;
+}
+
 #----[ ParseFileSection (ptr) ]----#
 sub ParseFileSection {
 #---------------------------------------------
@@ -337,6 +365,12 @@ sub ParseServerLayoutSection {
 			$ip  = $3;
 			$id  =~ s/ +//g;
 
+			if ($id =~ /.*-(.*)/) {
+				$id = $1;
+			}
+			if ($scr =~ /.*-(.*\]),(.*)/) {
+				$scr = "$1,$2";
+			}
 			$parse{Layout}{$count}{Identifier} = $id;
 
 			#========================================
@@ -433,7 +467,10 @@ sub ParseDeviceSection {
 			#========================================
 			# Identifier...
 			#----------------------------------------
-			/^id/          && do { 
+			/^id/          && do {
+			if ($value[1] =~ /.*-(.*)/) {
+				$value[1] = $1;
+			}
 			$parse{Device}{$count}{Identifier} = $value[1]; 
 			last SWITCH; 
 			};
@@ -610,6 +647,7 @@ sub ParseDeviceSection {
 		$count++;
 		}
 	}
+	%parse = CleanParse (\%parse,"Device",$count);
 	return(%parse);
 }
 
@@ -661,6 +699,9 @@ sub ParseModesSection {
 			# Identifier...
 			#----------------------------------------
 			/^id/          && do {
+				if ($value[1] =~ /.*-(.*)/) {
+					$value[1] = $1;
+				}
 				$parse{Modes}{$count}{Identifier} = $value[1];
 				last SWITCH;
 			};
@@ -682,6 +723,7 @@ sub ParseModesSection {
 		$count++;
 		}
 	}
+	%parse = CleanParse (\%parse,"Modes",$count);
 	return(%parse);
 }
 
@@ -733,6 +775,9 @@ sub ParseMonitorSection {
 			# Identifier...
 			#----------------------------------------
 			/^id/          && do {
+				if ($value[1] =~ /.*-(.*)/) {
+					$value[1] = $1;
+				}
 				$parse{Monitor}{$count}{Identifier} = $value[1];
 				last SWITCH;
 			};
@@ -826,6 +871,7 @@ sub ParseMonitorSection {
 		$count++;
 		}
 	}
+	%parse = CleanParse (\%parse,"Monitor",$count);
 	return(%parse);
 }
 
@@ -873,6 +919,9 @@ sub ParseScreenSection {
 				# Identifier...
 				#----------------------------------------
 				/^id/            && do {
+					if ($value[1] =~ /.*-(.*)/) {
+						$value[1] = $1;
+					}
 					$parse{Screen}{$count}{Identifier} = $value[1];
 					last SWITCH;
 				};
@@ -901,6 +950,9 @@ sub ParseScreenSection {
 				# Device...
 				#----------------------------------------
 				/^device/ && do {
+					if ($value[1] =~ /.*-(.*)/) {
+						$value[1] = $1;
+					}
 					$parse{Screen}{$count}{Device} = $value[1];
 					last SWITCH;
 				};
@@ -908,6 +960,9 @@ sub ParseScreenSection {
 				# Monitor...
 				#----------------------------------------
 				/^monitor/ && do {
+					if ($value[1] =~ /.*-(.*)/) {
+						$value[1] = $1;
+					}
 					$parse{Screen}{$count}{Monitor} = $value[1];
 					last SWITCH;
 				};
@@ -1054,6 +1109,7 @@ sub ParseScreenSection {
 		$count++;
 		}
 	}
+	%parse = CleanParse (\%parse,"Screen",$count);
 	return(%parse);
 }
 
