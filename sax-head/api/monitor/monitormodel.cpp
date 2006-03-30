@@ -431,6 +431,15 @@ void SCCMonitorModel::setTitle ( const QString & title ) {
 	mModelDialog -> changeTab ( mModelTab,title );
 }
 //=====================================
+// setDisplaySize
+//-------------------------------------
+void SCCMonitorModel::setDisplaySize ( QList<QString> size ) {
+	mDisplaySizeX = size.at(0)->toInt();
+	mDisplaySizeY = size.at(1)->toInt();
+	mSizeX -> setValue ( mDisplaySizeX );
+	mSizeY -> setValue ( mDisplaySizeY );
+}
+//=====================================
 // slotOk
 //-------------------------------------
 void SCCMonitorModel::slotOk ( void ) {

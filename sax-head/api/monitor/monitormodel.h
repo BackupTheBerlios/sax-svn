@@ -137,6 +137,7 @@ class SCCMonitorModel : public SCCDialog {
 	QString getModelName  ( void );
 	QString getExtraModeline ( void );
 	void setTitle ( const QString& );
+	void setDisplaySize ( QList<QString> );
 	int getSizeX ( void );
 	int getSizeY ( void );
 	int getHSmin ( void );

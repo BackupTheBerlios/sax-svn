@@ -19,6 +19,11 @@ STATUS        : Status: Development
 **************/
 #include "monitordisplay.h"
 
+//====================================
+// Globals
+//------------------------------------
+extern SaXGUI::SCCWidgetProfile* SaXWidgetProfile;
+
 namespace SaXGUI {
 //====================================
 // Constructor
@@ -568,10 +573,12 @@ void SCCMonitorDisplay::slotActivateDualHead ( void ) {
 		mDualHeadEnabled = true;
 		mDualHeadInfoLabel -> setDisabled (false);
 		mConfigureDualHead -> setDisabled (false);
+		setCombinedDisplaySize (true);
 	} else {
 		mDualHeadEnabled = false;
 		mDualHeadInfoLabel -> setDisabled (true);
 		mConfigureDualHead -> setDisabled (true);
+		setCombinedDisplaySize (false);
 	}
 	emit sigDualModeChanged ( this );
 }
@@ -664,6 +671,35 @@ void SCCMonitorDisplay::setCommonButtonWidth ( void ) {
 	}
 	for (int i=0;i<3;i++) {
 		thisButtonWidgets[i]->setFixedWidth (fixedWidth);
+	}
+}
+//====================================
+// setCombinedDisplaySize
+//------------------------------------
+void SCCMonitorDisplay::setCombinedDisplaySize ( bool fromProfile ) {
+	SaXManipulateDesktop saxDesktop (
+		mSection["Desktop"],mSection["Card"],mSection["Path"]
+	);
+	if (! fromProfile) {
+		QList<QString> displaySize = saxDesktop.getDisplaySize();
+		if (! displaySize.isEmpty()) {
+			getMonitorData() -> setDisplaySize ( displaySize );
+		}
+		return;
+	}
+	QString profile = saxDesktop.getDualHeadProfile();
+	if ((! profile.isEmpty()) && (! saxDesktop.isXineramaMode())) {
+		SaXImportProfile* pProfile = SaXWidgetProfile->getProfile ( profile );
+		SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
+		SaXImport* mDesktop = pProfile -> getImport ( SAX_DESKTOP );
+		SaXImport* mPath = new SaXImport ( SAX_PATH );
+		if ((mDesktop) && (mImport)) {
+			SaXManipulateDesktop saxProfileDesktop ( mDesktop,mImport,mPath );
+			QList<QString> displaySize = saxProfileDesktop.getDisplaySize();
+			if (! displaySize.isEmpty()) {
+				getMonitorData() -> setDisplaySize ( displaySize );
+			}
+		}
 	}
 }
 } // end namespace
