@@ -33,23 +33,25 @@ sub CleanParse {
 	my %parse   = %{$_[0]};
 	my $section = $_[1];
 	my $count   = $_[2];
+	my %result  = ();
 	if ($count == 1) {
 		return %parse;
 	}
 	my $idx = $parse{$section}{$count-1}{Identifier};
 	foreach my $n (keys %{$parse{$section}}) {
 		my $idn = $parse{$section}{$n}{Identifier};
-		if (($n ne $count-1) && ($idn == $idx)) {
+		if (($n ne $count-1) && ($idn eq $idx)) {
 			delete $parse{$section}{$n};
 		}
 	}
-	$count = 0;
 	foreach my $n (keys %{$parse{$section}}) {
-		$parse{$section}{$count} = $parse{$section}{$n};
-		delete $parse{$section}{$n};
-		$count++;
+		my $index = $parse{$section}{$n}{Identifier};
+		if ($index =~ /\[(\d+)\]/) {
+			$result{$section}{$1} = $parse{$section}{$n};
+			delete $parse{$section}{$n};
+		}
 	}
-	return %parse;
+	return %result;
 }
 
 #----[ ParseFileSection (ptr) ]----#
