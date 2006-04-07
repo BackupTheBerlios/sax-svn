@@ -218,6 +218,9 @@ sub handleAction {
 	if ($action =~ /__VESA__/) {
 		$action =~ s/__VESA__/--> VESA/g;
 	}
+	if ($action =~ /__EQUALS__/) {
+		$action =~ s/__EQUALS__/=/g;
+	}
 	#==========================================
 	# want to set a value
 	#------------------------------------------

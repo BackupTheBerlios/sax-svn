@@ -46,28 +46,43 @@ sub GetDisplay {
 	foreach my $pid (@pids) {
 	my $file = "/proc/$pid/fd/0";
 	if (-l $file) {
-	my $log = readlink("/proc/$pid/fd/0");
-	if (-f $log) {
-		# /.../
-		# X11 R6 v4.x will hold the display number
-		# in the log file name
-		# ---
-		if ($log =~ /[XFree86|Xorg]\.(.*)\.log/) {
-			my @list = split(/\./,$1);
-			$list[0] =~ s/://;
-			push (@display,$list[0]);
+		my $log = readlink("/proc/$pid/fd/0");
+		if (-f $log) {
+			# /.../
+			# descriptor 0 is a link pointing to the log file
+			# check for the display number in the log file
+			# name first
+			# ---
+			if ($log =~ /[XFree86|Xorg]\.(.*)\.log/) {
+				my @list = split(/\./,$1);
+				$list[0] =~ s/://;
+				push (@display,$list[0]);
+			}
+		} else {
+			# /.../
+			# descriptor 0 is not a file so we are checking
+			# the socket number for the server. socket - 6000
+			# results in the display number used for this
+			# connection
+			# ---
+			my $log = qx(socklist | grep $pid | tail -n 1);
+			my @solist  = split (/ +/,$log);
+			if (defined $solist[1]) {
+				push (@display,$solist[1] - 6000);
+			} else {
+				# /.../
+				# We couldn't find a TCP socket associated with
+				# the given pid. Assuming descriptor 0 is a socket but
+				# not a TCP socket... trying to check cmdline string
+				# ---
+				if (open (FD,"</proc/$pid/cmdline")) {
+					my $cmdline = <FD>; close FD;
+					if ($cmdline =~ /:(\d+)/) {
+						push (@display,$1);
+					}
+				}
+			}
 		}
-	} else {
-		# /.../
-		# X11 R6 v3.3.x will hold the display number
-		# int the socket number above 6000
-		# ---
-		my $log = qx(socklist | grep $pid | tail -n 1);
-		my @solist  = split (/ +/,$log);
-		if (defined $solist[1]) {
-			push (@display,$solist[1] - 6000);
-		}
-	}
 	}
 	}
 	# /.../
@@ -125,7 +140,7 @@ sub GetPids {
 	my $file = "/proc/$_/exe";
 	if (-l $file) {
 		my $link = readlink ($file);
-		if (($link =~ /XFree86|Xorg/) || ($link =~ /XF.*_/)) {
+		if (($link =~ /XFree86|Xorg|Xgl/) || ($link =~ /XF.*_/)) {
 			push(@pids,$_);
 		}
 	}

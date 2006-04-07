@@ -144,32 +144,27 @@ ServerLayout  ->  all  -> Screen            ->  0                -> right
 
 
 \section{Interactive Mode}
-The interactive mode provides the user with the following commands:
+The interactive mode provides the user with the following basic grammar:
+
+\begin{Command}{12cm}
+\begin{verbatim}
+key -> key ->...-> key [ = ( value | ${variable} ) ]
+$variable = ( string | <key sequence> )
+\end{verbatim}
+\end{Command}
+
 \begin{itemize}
-\item  \textbf{list}\\
-       The \textit{list} command lists all settings of the current registry.
+\item  \textbf{!help}\\
+       The \textit{!help} command prints a small help text.
 
-\item  \textbf{see}\\
-       The \textit{see} command allows a certain setting to be displayed. For
-       example, to see the modules used: 
-       \verb+see Module->0->Load+.
-
-\item  \textbf{calc}\\
-       The \textit{calc} command lets you calculate modeline timings. For
-       example:\\
-       \verb+calc 1024x768->70+ calculates a modeline for the mode
-       1024x768 at 70 Herz.
-
-\item  \textbf{abort}\\
-       Ends interactive mode and discards all changes.
+\item  \textbf{!remove <sequence>}\\
+       The \textit{!remove} command removes the given sequence
+       which is a key path to a specific value or subtree. In case of
+       a subtree the tree will be removed. In case of a value the value
+       is set to an empty string
 
 \item  \textbf{exit}\\
        Ends interactive mode and saves all changes.
-
-\item  \textbf{Setting variables}\\
-       Setting variables is done by setting the full variable path, by
-       including a value allocation. For example:\\
-       \verb+Module->0->Load = glx,dri+.
 \end{itemize}
 
 \section{Profile Mode and Creating Profile Files}
@@ -185,10 +180,32 @@ which starts with PROFILE=... then the profile for this card is
 integrated. The profile files essentially consist of variable values, as the
 following example illustrates:
 \begin{verbatim}
-Screen ->[X]->DefaultDepth         = 24
-Monitor->[X]->Modeline->0->640x480 = 36.00 640 680 760 768 480 490 497 520
-Monitor->[X]->Modeline->1->800x600 = 49.50 800 856 992 1000 600 612 619 651
+# /.../
+# set some fixed values
+# ----
+Device  -> [X] ->  Driver = fglrx
+Desktop -> [X] ->  CalcModelines = no
+Monitor -> [X] ->  CalcAlgorithm = XServerPool
+
+# /.../
+# save the 16bit Modes into a variable
+$Modes  = Screen  -> [X] -> Depth -> 16 -> Modes
+
+# /.../
+# save first 16bit mode as 24bit mode
+# ----
+Screen  -> [X] -> Depth -> 24 -> Modes = ${Modes[0]}
+
+# /.../
+# copy 16bit modes to 8bit modes
+# ----
+Screen  -> [X] -> Depth -> 8 -> Modes  = ${Modes}
+
+# /.../
+# remove all Modelines from the Monitor section
+# ----
+!remove Monitor -> [X] -> Modeline
 \end{verbatim}
 Since it is never known in advance for which monitor, screen or device the new
 setting is to be made, it is possible to set a place holder in the form of an  
-\textbf{[X]} mark, otherwise a number must be entered at this point. 
+\textbf{[X]} mark, otherwise a number must be entered at this point.
