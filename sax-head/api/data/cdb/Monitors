@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Mar 22 15:17:55 2006
+# Author: Marcus Schaefer <sax@suse.de>, Wed Apr  5 12:31:31 2006
 #
 # Template for monitor data
 # --------------------------
@@ -11203,6 +11203,17 @@ EIZO:F930  {
 EIZO:F980  {
  Hsync=30-137
  Vsync=50-160
+}
+
+#==============================================
+# Flexiscan L795
+#----------------------------------------------
+EIZO:FLEXISCAN L795  {
+ DDC=ENC1709
+ Option=DPMS
+ Hsync=33-57
+ Resolution=1024x768
+ Vsync=60-75
 }
 
 #==============================================
