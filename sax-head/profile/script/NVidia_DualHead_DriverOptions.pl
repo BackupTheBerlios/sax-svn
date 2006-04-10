@@ -77,7 +77,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		$dx = eval $dt;
 		print FD "$dx=\"SaXDualMonitorVendor\" \"__VESA__\"\n";
 		$dx = eval $dt;
-		print FD "$dx=\"SaXDualMonitorModel\" \"1024X768@60HZ\"\n";
+		print FD "$dx=\"SaXDualMonitorModel\" \"1024X768\@60HZ\"\n";
 		close FD;
 	} else {
 		#====================================
