@@ -144,12 +144,12 @@ MouseData* MouseGetData(void) {
 // enableMouse...
 //-----------------------------------
 void enableMouse (Display* dpy) {
+	XSetErrorHandler (catchErrors);
 	XF86MiscMouseSettings mseinfo;
 	if (!XF86MiscGetMouseSettings(dpy, &mseinfo)) {
 		return;
 	}
 	mseinfo.flags |= MF_REOPEN;
-	XSetErrorHandler (catchErrors);
 	XF86MiscSetMouseSettings(dpy, &mseinfo);
 	XSync(dpy, False);
 }
@@ -158,13 +158,13 @@ void enableMouse (Display* dpy) {
 // disableMouse...
 //-----------------------------------
 void disableMouse (Display* dpy) {
+	XSetErrorHandler (catchErrors);
 	XF86MiscMouseSettings mseinfo;
 	if (!XF86MiscGetMouseSettings(dpy, &mseinfo)) {
 		return;
 	}
 	mseinfo.flags |= MF_REOPEN;
 	mseinfo.device = "/dev/unused";
-	XSetErrorHandler (catchErrors);
 	XF86MiscSetMouseSettings(dpy, &mseinfo);
 	XSync(dpy, False);
 }
