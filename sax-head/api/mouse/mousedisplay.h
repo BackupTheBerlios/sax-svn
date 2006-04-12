@@ -70,6 +70,7 @@ class SCCMouseDisplay : public SCCDialog {
 	QLabel*          mLabelMouseName;
 	QPushButton*     mChangeMouse;
 	QButtonGroup*    mMouseOptionGroup;
+	QButtonGroup*    mSynapOptionGroup;
 	QCheckBox*       mCheck3BtnEmulation;
 	QCheckBox*       mCheckMouseWheel;
 	QCheckBox*       mCheckEmulateWheel;
@@ -77,6 +78,7 @@ class SCCMouseDisplay : public SCCDialog {
 	QCheckBox*       mCheckInvertYAxis;
 	QSpinBox*        mEmulateWheelButton;
 	QButtonGroup*    mMouseTestGroup;
+	QButtonGroup*    mSynapTestGroup;
 	SCCMouseTest*    mTestField;
 	SCCMouseModel*   mChangeMouseModelDialog;
 	QWidgetStack*    mOptionStack;

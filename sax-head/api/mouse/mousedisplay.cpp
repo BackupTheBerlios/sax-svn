@@ -50,12 +50,12 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mLabelMouseName = new QLabel ( mText["Mouse"],mouseBox );
 	mChangeMouse    = new QPushButton ( mText["Change"],mouseBox);
 	mouseBox -> setStretchFactor ( mLabelMouseName, 20 );
-	// second group with mouse options
-	QHBox* splitBox = new QHBox ( this );
 	// create stack widget for different mouse option dialogs
-	mOptionStack = new QWidgetStack ( splitBox );
+	mOptionStack    = new QWidgetStack ( this );
+	// second group with mouse options
+	QHBox* splitMouseBox = new QHBox ( mOptionStack );
 	// insert standard mouse option dialog
-	QVBox* leftMouseBox  = new QVBox ( mOptionStack );
+	QVBox* leftMouseBox  = new QVBox ( splitMouseBox );
 	mMouseOptionGroup = new QButtonGroup (
 		1,Horizontal,mText["MouseOptions"],leftMouseBox
 	);
@@ -77,24 +77,39 @@ SCCMouseDisplay::SCCMouseDisplay (
 	);
 	wheelBox -> setSpacing ( 10 );
 	mEmulateWheelButton = new QSpinBox ( 1,10,1,wheelBox );
-	// insert standard synaptics option dialog
-	QVBox* leftSynapticsBox  = new QVBox ( mOptionStack );
-	// TODO
-	// add code for synaptics options dialog here
-	// ...
-	// add stacked widgets...
-	mMouseOptID = mOptionStack -> addWidget ( leftMouseBox );
-	mSynapOptID = mOptionStack -> addWidget ( leftSynapticsBox );
 	// third group with mouse test field
-	splitBox -> setSpacing ( 15 );
-	QVBox* rightBox = new QVBox ( splitBox );
+	splitMouseBox -> setSpacing ( 15 );
+	QVBox* rightMouseBox = new QVBox ( splitMouseBox );
 	mMouseTestGroup = new QButtonGroup (
-		1,Horizontal,mText["MouseTest"],rightBox
+		1,Horizontal,mText["MouseTest"],rightMouseBox
 	);
 	mTestField = new SCCMouseTest (
 		mTextPtr,mMouseTestGroup
 	);
-	splitBox -> setStretchFactor ( mOptionStack, 20 );
+	splitMouseBox -> setStretchFactor ( leftMouseBox, 20 );
+	// second group with synaptics options
+	QHBox* splitSynapBox = new QHBox ( mOptionStack );
+	// insert standard synaptics option dialog
+	QVBox* leftSynapticsBox  = new QVBox ( splitSynapBox );
+	mSynapOptionGroup = new QButtonGroup (
+		1,Horizontal,mText["MouseOptions"],leftSynapticsBox
+	);
+	// TODO
+	// add code for synaptics options dialog here
+	// ...
+	// third group with synaptics test field
+	splitSynapBox -> setSpacing ( 15 );
+	QVBox* rightSynapBox = new QVBox ( splitSynapBox );
+	mSynapTestGroup = new QButtonGroup (
+		1,Horizontal,mText["MouseTest"],rightSynapBox
+	);
+	// TODO
+	// add code for synaptics field dialog here
+	// ...
+	splitSynapBox -> setStretchFactor ( leftSynapticsBox, 20 );
+	// add stacked widgets...
+	mMouseOptID = mOptionStack -> addWidget ( splitMouseBox );
+	mSynapOptID = mOptionStack -> addWidget ( splitSynapBox );
 
 	//=====================================
 	// create toplevel dialogs
@@ -132,7 +147,8 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mMainLayout -> addSpacing ( 15 );
 	mMainLayout -> addWidget  ( mMouseNameGroup );
 	mMainLayout -> addSpacing ( 15 );
-	mMainLayout -> addWidget  ( splitBox );
+	mMainLayout -> addWidget  ( mOptionStack );
+	mMainLayout -> setStretchFactor ( mOptionStack,20 );
 
 	//=====================================       
 	// Show standard mouse options
