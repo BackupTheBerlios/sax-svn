@@ -1,5 +1,5 @@
 -------------------------------------------------------------------
-Wed Apr 12 12:49:17 CEST 2006 - ms@suse.de
+Mon Apr 26 11:40:30 CEST 2006 - ms@suse.de
 
 - new version sax2 v8 for xorg v7 (X11R7)
 - enhancement: add wacom rotate option to be configured (#151448)
@@ -13,9 +13,17 @@ Wed Apr 12 12:49:17 CEST 2006 - ms@suse.de
   are changing the existing config file can include their own section
   with a prefixed Identifier (#164793)
 - enhancement: added combined DisplaySize check
+- enhancement: added xfs FontPath for default setup (#166113)
+- enhancement: added support for translated xkb country names (#145477)
 - moved XSetErrorHandler() to be active on first misc extensions
   call XF86MiscGetMouseSettings() in hw/mouse.c
 - include libhd fixes: (#115845, #117639, #162209, #155357)
+
+-------------------------------------------------------------------
+Mon Apr 24 11:40:30 CEST 2006 - ms@suse.de
+
+- fixed Khmer keyboard layout setup (#164381)
+- fixed DEL7002 monitor setup (#164901)
 
 -------------------------------------------------------------------
 Wed Apr 12 12:47:14 CEST 2006 - ms@suse.de

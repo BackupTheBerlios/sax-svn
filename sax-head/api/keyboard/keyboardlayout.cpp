@@ -128,6 +128,11 @@ SCCKeyboardLayout::SCCKeyboardLayout (
 // init
 //------------------------------------
 void SCCKeyboardLayout::init ( void ) {
+	//=====================================
+	// get translation pointer
+	//-------------------------------------
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+
 	//====================================
 	// query XKB file extension
 	//------------------------------------
@@ -141,11 +146,18 @@ void SCCKeyboardLayout::init ( void ) {
 	QListBox* layoutList = new QListBox();
 	QDictIterator<QString> itLayout (mLayoutDict);
 	for (; itLayout.current(); ++itLayout) {
-		layoutList -> insertItem ( *itLayout.current() );
+		QString val = mText[*itLayout.current()];
+		if (val.isEmpty()) {
+			log (L_WARN,
+				"SCCKeyboardLayout::Warning: unknown XKB key: %s\n",
+				itLayout.current()->ascii()
+			);
+		}
+		layoutList -> insertItem ( val );
 		QCheckListItem* item = new QCheckListItem (
 			mAddLayout,"",QCheckListItem::CheckBox
 		);
-		item->setText ( 1, *itLayout.current() );
+		item->setText ( 1, val );
 		item->setText ( 2, itLayout.currentKey() );
 	}
 	layoutList -> sort ( true );
@@ -172,6 +184,11 @@ void SCCKeyboardLayout::init ( void ) {
 // import
 //------------------------------------
 void SCCKeyboardLayout::import ( void ) {
+	//=====================================
+	// get translation pointer
+	//-------------------------------------
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+
 	//====================================
 	// create needed manipulators
 	//------------------------------------
@@ -214,9 +231,16 @@ void SCCKeyboardLayout::import ( void ) {
 	// 1) primary layout...
 	QDictIterator<QString> itLayout (mLayoutDict);
 	for (; itLayout.current(); ++itLayout) {
-	if (itLayout.currentKey() == baseLayout) {
-		mLayoutBox -> setCurrentText ( *itLayout.current() );
-	}
+		if (itLayout.currentKey() == baseLayout) {
+			QString val = mText[*itLayout.current()];
+			if (val.isEmpty()) {
+				log (L_WARN,
+					"SCCKeyboardLayout::Warning: unknown XKB key: %s\n",
+					itLayout.current()->ascii()
+				);
+			}
+			mLayoutBox -> setCurrentText ( val );
+		}
 	}
 	// 2) secondary layout and variants...
 	QListIterator<QString> it (XKBLayouts);
@@ -265,12 +289,27 @@ QString SCCKeyboardLayout::getType ( void ) {
 // getLayout
 //------------------------------------
 QString SCCKeyboardLayout::getLayout ( void ) {
+	//=====================================
+	// get translation pointer
+	//-------------------------------------
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+
+	//=====================================
+	// build full qualified layout string
+	//-------------------------------------
 	mXKBLayout = "";
 	QDictIterator<QString> itLayout (mLayoutDict);
 	for (; itLayout.current(); ++itLayout) {
-	if (*itLayout.current() == mLayoutBox->currentText()) {
-		mXKBLayout = itLayout.currentKey();
-	}
+		QString val = mText[*itLayout.current()];
+		if (val.isEmpty()) {
+			log (L_WARN,
+				"SCCKeyboardLayout::Warning: unknown XKB key: %s\n",
+				itLayout.current()->ascii()
+			);
+		}
+		if (val == mLayoutBox->currentText()) {
+			mXKBLayout = itLayout.currentKey();
+		}
 	}
 	QListViewItemIterator itAdd (mAddLayout);
 	for ( ; itAdd.current(); ++itAdd ) {
@@ -369,6 +408,11 @@ void SCCKeyboardLayout::updateVariants ( void ) {
 	//! combobox. Currently active variants will be resetted
 	//! after the list update
 	// ----
+	//=====================================
+	// get translation pointer
+	//-------------------------------------
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+
 	//====================================
 	// 1) Additional Variants...
 	//------------------------------------
@@ -396,16 +440,23 @@ void SCCKeyboardLayout::updateVariants ( void ) {
 	QDictIterator<QString> it (mLayoutDict);
 	bool emptyVariantList = true;
 	for (; it.current(); ++it) {
-	if (*it.current() == mLayoutBox->currentText()) {
-		QList<QString> list = XKBFile.getVariants (it.currentKey());
-		if (! list.isEmpty() && (list.count() > 1)) {
-			mVariantBox -> insertStringList (translateList (list));
-			emptyVariantList = false;
-		} else {
-			mVariantBox -> insertItem ("basic");
+		QString val = mText[*it.current()];
+		if (val.isEmpty()) {
+			log (L_WARN,
+				"SCCKeyboardLayout::Warning: unknown XKB key: %s\n",
+				it.current()->ascii()
+			);
 		}
-		break;
-	}
+		if (val == mLayoutBox->currentText()) {
+			QList<QString> list = XKBFile.getVariants (it.currentKey());
+			if (! list.isEmpty() && (list.count() > 1)) {
+				mVariantBox -> insertStringList (translateList (list));
+				emptyVariantList = false;
+			} else {
+				mVariantBox -> insertItem ("basic");
+			}
+			break;
+		}
 	}
 	mVariantBox->setCurrentText ("basic");
 	if (! emptyVariantList) {

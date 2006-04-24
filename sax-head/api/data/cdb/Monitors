@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Wed Apr  5 12:31:31 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Apr 24 12:58:04 2006
 #
 # Template for monitor data
 # --------------------------
@@ -10000,7 +10000,9 @@ DELL:E771P  {
  DDC=DEL7002
  Option=DPMS
  Hsync=30-70
- Vsync=50-160
+ Modeline="1024x768" 78.8 1024 1040 1136 1312 768 769 772 800
+ Resolution=1024x768
+ Vsync=50-80
 }
 
 #==============================================

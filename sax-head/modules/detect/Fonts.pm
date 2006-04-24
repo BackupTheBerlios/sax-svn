@@ -27,16 +27,15 @@ sub AutoDetectFontPath {
 	$arch = qx(/bin/arch);
 	%stat = ReadTable($spec{StaticFontPathList});
 	SWITCH: for ($arch) {
-		# Sparc FontPath definitions...
-		# -------------------------------
-		/sparc|sparc64/    && do {
-		$var{Files}{0}{FontPath} = $stat{sparc};
-		last SWITCH;
-		};
+		# Arch specififc FontPath definitions...
+		# --------------------------------------
+		# /<architecture>/    && do {
+		#	$var{Files}{0}{FontPath} = $stat{<architecture>};
+		#	last SWITCH;
+		# };
 		# default definition 
-		# for Intel and PPC
 		# -------------------
-		$var{Files}{0}{FontPath} = $stat{intel};
+		$var{Files}{0}{FontPath} = $stat{default};
 	}
  
 	# read language specific tables and Fonts
