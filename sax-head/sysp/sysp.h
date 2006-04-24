@@ -158,7 +158,7 @@ struct ParseData {
 	int vsmax;
 	int modecount;
 	map <int,XMode> modes;
-	int dacspeed;
+	unsigned dacspeed;
 	long videoram;
 	int bus;
 	int slot;
@@ -180,7 +180,7 @@ struct ParseData_S {
 	str chipset;
 	int hsmax;
 	int vsmax;
-	int dacspeed;
+	unsigned dacspeed;
 	long videoram;
 	int modecount;
 	int bus;
@@ -203,7 +203,7 @@ struct StuffData {
 	int vsync[4];
 	int vesacount[4];
 	map <int,XMode> vesa[4];
-	int dacspeed;
+	unsigned dacspeed[4];
 	long videoram; 
 	string current;
 	string raw;
@@ -228,7 +228,7 @@ struct StuffData_S {
 	int hsync[4];
 	int vsync[4];
 	int vesacount[4];
-	int dacspeed;
+	unsigned dacspeed[4];
 	long videoram;
 	str current;
 	str raw;

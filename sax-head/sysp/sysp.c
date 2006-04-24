@@ -745,7 +745,10 @@ void PrintStuffData(ScanXStuff s) {
 			printf("Card%d     =>  FbTiming   : %s\n",card,
 			data.fbtiming.c_str()); 
 		} 
-		printf ("Card%d     =>  Dacspeed   : %d\n",card,data.dacspeed);
+		printf ("Card%d     =>  Dacspeed   : %d\n",card,data.dacspeed[0]);
+		if (data.port > 1) {
+		printf ("Card%d     =>  Dacspeed[2]: %d\n",card,data.dacspeed[1]);
+		}
 		printf ("Card%d     =>  Memory     : %ld\n",card,data.videoram);
 		printf ("Card%d     =>  Current    : %s\n",card,data.current.c_str());
 		printf ("Card%d     =>  RawDef     : %s\n",card,data.raw.c_str());

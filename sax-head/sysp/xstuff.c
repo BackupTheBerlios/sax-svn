@@ -154,6 +154,13 @@ void ScanXStuff::Scan (void) {
 		if (display) {
 			parse[0].vendor = display->vendor;
 		}
+		if (display) {
+		if (display->bandwidth) {
+			parse[0].dacspeed  = display->bandwidth;
+		} else {
+			parse[0].dacspeed  = 220;
+		}
+		}
 		parse[0].bus    = graphics[0].bus;
 		parse[0].slot   = graphics[0].slot;
 		parse[0].func   = graphics[0].func;
@@ -172,7 +179,6 @@ void ScanXStuff::Scan (void) {
 		// defaults for this values
 		// ----
 		parse[0].modecount = 0;
-		parse[0].dacspeed  = 220;
 		parse[0].hsmax     = 40;
 		parse[0].vsmax     = 75;
 		parse[0].chipset   = "<undefined>";
@@ -319,6 +325,10 @@ void ScanXStuff::Scan (void) {
 			stuff[i].hsync[p]  = parse[mapnr].hsmax;
 			stuff[i].vsync[p]  = parse[mapnr].vsmax;
 			//======================================
+			// Save monitor clock from parse
+			//--------------------------------------
+			stuff[i].dacspeed[p] = parse[mapnr].dacspeed;
+			//======================================
 			// Save DisplaySize from parse
 			//--------------------------------------
 			stuff[i].dpix[p]   = parse[mapnr].dpix;
@@ -339,7 +349,6 @@ void ScanXStuff::Scan (void) {
 		//--------------------------------------
 		stuff[i].vmdepth   = parse[mapnr].vmdepth;
 		stuff[i].chipset   = parse[mapnr].chipset;
-		stuff[i].dacspeed  = parse[mapnr].dacspeed;
 		stuff[i].videoram  = parse[mapnr].videoram;
 		stuff[i].raw       = graphics[i].raw;
 		stuff[i].option    = graphics[i].option;
@@ -397,6 +406,12 @@ void ScanXStuff::Scan (void) {
 		}
 		if (dpy->vsync_max) {
 			stuff[0].vsync[p] = dpy->vsync_max;
+		}
+		//======================================
+		// Save monitor clock per port
+		//--------------------------------------
+		if (dpy->bandwidth) {
+			stuff[0].dacspeed[p] = dpy->bandwidth;
 		}
 		//======================================
 		// Save vesa modes per port
@@ -581,6 +596,7 @@ int ScanXStuff::Save (void) {
 			part1.vesacount[n]   = data.vesacount[n];
 			part1.dpix[n]        = data.dpix[n];
 			part1.dpiy[n]        = data.dpiy[n];
+			part1.dacspeed[n]    = data.dacspeed[n];
 		}
 		strcpy(part1.primary   , data.primary.c_str());
 		strcpy(part1.chipset   , data.chipset.c_str());
@@ -593,7 +609,6 @@ int ScanXStuff::Save (void) {
 		strcpy(part1.vbios     , data.vbios.c_str());
 		part1.port             = data.port;
 		part1.vmdepth          = data.vmdepth;
-		part1.dacspeed         = data.dacspeed;
 		part1.videoram         = data.videoram;
 		handle.write((char*)&part1,sizeof(part1));
 		// ...
@@ -645,11 +660,11 @@ int ScanXStuff::Read (void) {
 			data.dpiy[n]      = part1.dpiy[n];
 			data.model[n]     = part1.model[n];
 			data.vendor[n]    = part1.vendor[n];
+			data.dacspeed[n]  = part1.dacspeed[n];
 		}
 		data.vbios     = part1.vbios;
 		data.primary   = part1.primary;
 		data.chipset   = part1.chipset;
-		data.dacspeed  = part1.dacspeed;
 		data.videoram  = part1.videoram;
 		data.current   = part1.current;
 		data.raw       = part1.raw;
