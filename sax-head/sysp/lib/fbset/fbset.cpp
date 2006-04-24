@@ -106,7 +106,7 @@ FbData* FbGetData(void) {
 	GetVarScreenInfo(fh, &var);
 	ConvertToVideoMode(&var, &vmode);
 
-	#if 1
+	#if 0
 	// .../
 	// limit the framebuffer to a 60Hz mode
 	// ...

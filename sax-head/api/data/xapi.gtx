@@ -22,7 +22,7 @@ TitleLeft=SaX Control Center
 Help=&Help
 
 # Ok Button text
-Ok=&OK
+Ok=O&K
 
 # Yes Button text
 Yes=&Yes
@@ -700,6 +700,9 @@ PWDMismatch=<b>VNC Password Mismatch</b><hr>The first and the second version of 
 
 # VNC message box appearing if password is too short 
 PWDTooShort=<b>VNC Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters.
+
+# VNC message box appearing if password is too long
+PWDTooLong=<b>VNC Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters.
 
 # Install missing packages box
 InstallPackage=<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?

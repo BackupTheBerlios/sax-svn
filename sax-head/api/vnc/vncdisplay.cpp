@@ -236,6 +236,20 @@ bool SCCVNCDisplay::checkPassword ( void ) {
 				mPWD2->setDisabled ( true );
 				mPWD1->setFocus();
 				return false;
+			} else if (mPWD1->text().length() > 8) {
+				SCCMessage* mMessageBox = new SCCMessage (
+					qApp->mainWidget(), mTextPtr, SaXMessage::OK, "PWDTooLong",
+					"MessageCaption", SaXMessage::Critical
+				);
+				mMessageBox -> showMessage();
+				mPWD = mText["NewPassword"];
+				mPWD1->clear(); 
+				mPWD2->clear();
+				mPWD1 -> setText ( mPWD );
+				mPWD1 -> setEchoMode ( QLineEdit::Normal );
+				mPWD2->setDisabled ( true );
+				mPWD1->setFocus();
+				return false;
 			} else {
 				return true;
 			}
