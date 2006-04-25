@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Apr 24 12:58:04 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Apr 24 17:05:58 2006
 #
 # Template for monitor data
 # --------------------------
@@ -32809,6 +32809,50 @@ SAMSUNG:SYNCMASTER 955SL(T)  {
  Option=DPMS
  Hsync=30-85
  Vsync=50-160
+}
+
+#==============================================
+# SyncMaster Magic CX710P (Analog)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER MAGIC CX710P (ANALOG)  {
+ DDC=SAM00D3
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster Magic CX710P (Digital)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER MAGIC CX710P (DIGITAL)  {
+ DDC=SAM00E2
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster Magic CX910P (Analog)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER MAGIC CX910P (ANALOG)  {
+ DDC=SAM00EC
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster Magic CX910P (Digital)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER MAGIC CX910P (DIGITAL)  {
+ DDC=SAM00ED
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
 }
 
 #==============================================
