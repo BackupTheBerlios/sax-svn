@@ -102,7 +102,7 @@ Wacom:PenabledTabletPC  {
 FUJITSU:P-SERIES LIFEBOOK TOUCHSCREEN {
  Driver               = fujitsu
  Device               = /dev/ttyS0
- RawOption            = "SwapX" "false","ButtonlessDevice" "On","Emulate3Timeout" "50","TapTimer" "90","LongTouchTimer" "160","OneandahalfTimer" "150","MoveLimit" "180","Calibrate" "1"
+ RawOption            = "SwapX" "false","ButtonlessDevice" "On","Emulate3Timeout" "50","TapTimer" "90","LongTouchTimer" "160","OneandahalfTimer" "150","MoveLimit" "180"
  ReportingMode        = Raw
  SendCoreEvents       = on
  MinX                 = 82
