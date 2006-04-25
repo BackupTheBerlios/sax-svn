@@ -16,6 +16,13 @@ STATUS        : development
 **************/
 #include "hwdata.h"
 
+#include <sys/types.h>
+#include <sys/ioctl.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <unistd.h>
+#include <linux/vt.h>
+#include <linux/kd.h>
 #include <stdarg.h>
 #include <dirent.h>
 #include <math.h>
@@ -31,6 +38,11 @@ STATUS        : development
 void toUpper  (char*);
 bool isNoteBook (void);
 char *dumpHID (hd_id_t*, char*, int);
+int  open_a_console (const char*);
+int  is_a_console (int);
+int  chvt (int);
+int  getfd (void);
+int  getvt (void);
 
 //===================================
 // MonitorGetData...
@@ -50,7 +62,9 @@ MsgDetect* MonitorGetData (void) {
 	unsigned portID    = 0;
 	unsigned i         = 0;
 	char buf[256]      = "";
+	int  vt_orig       = getvt();
 
+	chvt (1);
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	hd = hd_list(hd_data, hw_monitor, 1, NULL);
 	first_dev = hd;
@@ -184,6 +198,7 @@ MsgDetect* MonitorGetData (void) {
 		last = display;
 		portID++;
 	}
+	chvt (vt_orig);
 	return (first);
 }
 
@@ -244,4 +259,88 @@ char* dumpHID (hd_id_t *hid, char *buf, int buf_size) {
 		snprintf(s, buf_size - 1, "%s", hid->name);
 	}
 	return buf;
+}
+
+//=====================================
+// Change virtual terminal
+//-------------------------------------
+int chvt (int num) {
+	int fd = getfd();
+	if (fd < 0) {
+		return 0;
+	}
+	if (ioctl(fd,VT_ACTIVATE,num)) {
+		return 0;
+	}
+	if (ioctl(fd,VT_WAITACTIVE,num)) {
+		return 0;
+	}
+	return 1;
+}
+
+//=====================================
+// Get current virtual terminal
+//-------------------------------------
+int getvt (void) {
+	int fd  = getfd();
+	struct vt_stat status;
+	if (fd < 0) {
+		return 0;
+	}
+	if (ioctl(fd,VT_GETSTATE,&status)) {
+		return -1;
+	}
+	return status.v_active;
+}
+
+//=====================================
+// Get console file descriptor
+//-------------------------------------
+int is_a_console (int fd) {
+	char arg = 0;
+	return (
+		ioctl(fd, KDGKBTYPE, &arg) == 0 && ((arg == KB_101) || (arg == KB_84))
+	);
+}
+int open_a_console (const char *fnam) {
+	int fd = open(fnam, O_RDWR);
+	if (fd < 0 && errno == EACCES) {
+		fd = open(fnam, O_WRONLY);
+	}
+	if (fd < 0 && errno == EACCES) {
+		fd = open(fnam, O_RDONLY);
+	}
+	if (fd < 0) {
+		return -1;
+	}
+	if (!is_a_console(fd)) {
+		close(fd);
+		return -1;
+	}
+	return fd;
+}
+int getfd (void) {
+	int fd;
+	fd = open_a_console("/dev/tty");
+	if (fd >= 0) {
+		return fd;
+	}
+	fd = open_a_console("/dev/tty0");
+	if (fd >= 0) {
+		return fd;
+	}
+	fd = open_a_console("/dev/vc/0");
+	if (fd >= 0) {
+		return fd;
+	}
+	fd = open_a_console("/dev/console");
+	if (fd >= 0) {
+		return fd;
+	}
+	for (fd = 0; fd < 3; fd++) {
+		if (is_a_console(fd)) {
+			return fd;
+		}
+	}
+	return -1;
 }
