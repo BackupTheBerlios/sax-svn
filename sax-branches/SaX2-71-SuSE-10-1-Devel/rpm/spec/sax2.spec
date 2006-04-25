@@ -59,6 +59,13 @@ Group:        System/X11/Utilities
 Requires:     coreutils
 Provides:     saxtools
 Obsoletes:    saxtools
+%ifarch s390x
+Obsoletes:    sax2
+Obsoletes:    sax2-gui
+Obsoletes:    sax2-libsax
+Obsoletes:    sax2-libsax-perl
+Obsoletes:    sax2-ident
+%endif
 
 %description -n sax2-tools
 Some small X Window System tools to handle input devices, for example,
