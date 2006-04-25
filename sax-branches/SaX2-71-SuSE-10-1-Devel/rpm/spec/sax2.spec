@@ -60,10 +60,15 @@ Requires:     coreutils
 Provides:     saxtools
 Obsoletes:    saxtools
 %ifarch s390x
+Provides:     sax2
 Obsoletes:    sax2
+Provides:     sax2-gui
 Obsoletes:    sax2-gui
+Provides:     sax2-libsax
 Obsoletes:    sax2-libsax
+Provides:     sax2-libsax-perl
 Obsoletes:    sax2-libsax-perl
+Provides:     sax2-ident
 Obsoletes:    sax2-ident
 %endif
 
