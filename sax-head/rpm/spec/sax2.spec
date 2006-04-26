@@ -7,23 +7,34 @@
 #
 # Please submit bugfixes or comments via http://bugs.opensuse.org
 #
-
+%if %{?suse_version:1}0
+# SuSE Build Requires...
+BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
+%else
+# FC5 Build Requires...
+BuildRequires: doxygen qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel python-devel hal-devel swig sysfsutils graphviz readline java-gcj-compat-devel
+%define __perl_requires %{nil}
+%define py_sitedir /usr/%{_lib}/python2.4/site-packages
+%endif
 
 Name:         sax2
-BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages libdrm-devel libjpeg-devel mono-basic mono-data-sqlite mono-devel python-devel qt3-devel readline-devel swig sysfsutils udev update-desktop-files wireless-tools xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi
+%if %{?suse_version:1}0
+# SuSE Requires...
 Requires:     perl readline ncurses hal dbus-1 binutils
 Requires:     sax2-ident sax2-tools
-%if %{suse_version} >= 810
-PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
-%endif
-%if %{suse_version} > 810
-%if %{suse_version} > 910
 Requires:     xorg-x11-server
 %else
-Requires:     XFree86-server
+# FC5 Requires...
+Requires:     perl readline ncurses hal dbus binutils
+Requires:     sax2-ident sax2-tools
+Requires:     xorg-x11-server-Xorg
 %endif
+%if %{?suse_version:1}0
+# SuSE pre Requires...
+PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %else
-Requires:     xloader
+# FC5 pre Requires...
+PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
 %endif
 Summary:      SuSE advanced X Window System-configuration
 Version:      8.1
@@ -31,21 +42,15 @@ Release:      70
 Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
+%if %{?suse_version:1}0
+# SuSE Source...
 Source1:      sax2.desktop
+%endif
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
-%if %{suse_version} > 820
-Provides:     sax xfine
-Obsoletes:    sax xfine
-%endif
-%ifarch sparc sparc64
-Requires:     sax2_sbus
-%endif
 ExcludeArch:  s390
 
 %description
 This package contains the SuSE Advanced X-Configuration
-
-
 
 Authors:
 --------
@@ -57,14 +62,22 @@ Release:      70
 Summary:      X Window System tools for SaX2
 Group:        System/X11/Utilities
 Requires:     coreutils
-Provides:     saxtools
-Obsoletes:    saxtools
+%ifarch s390x 
+Provides:     sax2
+Obsoletes:    sax2
+Provides:     sax2-gui
+Obsoletes:    sax2-gui
+Provides:     sax2-libsax
+Obsoletes:    sax2-libsax
+Provides:     sax2-libsax-perl
+Obsoletes:    sax2-libsax-perl
+Provides:     sax2-ident
+Obsoletes:    sax2-ident
+%endif
 
 %description -n sax2-tools
 Some small X Window System tools to handle input devices, for example,
 mouse and keyboard.
-
-
 
 Authors:
 --------
@@ -76,18 +89,12 @@ Release:      70
 Summary:      SaX2 identity and profile information
 Group:        System/X11/Utilities
 Requires:     sax2-libsax-perl
-Provides:     sax2:/usr/share/sax/sysp/maps/Identity.map
-Provides:     sax2-tools:/usr/share/sax/sysp/maps/Identity.map
-Provides:     saxident
-Obsoletes:    saxident
 
 %description -n sax2-ident
 This package contains information about the supported graphics hardware
 and its special parameters. For some graphics cards a profile is needed
 to describe configuration parameters outside the ordinary way of
 setting up the card with SaX2.
-
-
 
 Authors:
 --------
@@ -96,15 +103,18 @@ Authors:
 %package -n sax2-gui
 Version:      8.1
 Release:      70
+%if %{?suse_version:1}0
+# SuSE Requires...
 Requires:     netpbm sax2-tools qt3 fvwm2 sax2
+%else
+# FC5 Requires...
+Requires:     netpbm sax2-tools qt sax2
+%endif
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
-Provides:     sax2:/usr/sbin/xapi
 
 %description -n sax2-gui
 This package contains the GUI for the SuSE Advanced X-Configuration
-
-
 
 Authors:
 --------
@@ -113,9 +123,15 @@ Authors:
 %package -n sax2-libsax
 Version:      8.1
 Release:      70
+%if %{?suse_version:1}0
+# SuSE Requires...
 Requires:     sax2-tools qt3 fvwm2 sax2
 %ifarch       %ix86 x86_64
 Requires:     855resolution
+%endif
+%else
+# FC5 Requires...
+Requires:     sax2-tools qt sax2
 %endif
 Summary:      SaX management library for X Window System-configuration
 Group:        Development/Libraries/X11
@@ -123,8 +139,6 @@ Provides:     sax2:/usr/%{_lib}/libsax.so
 
 %description -n sax2-libsax
 libsax provides a C++ written library to manage X11 configurations
-
-
 
 Authors:
 --------
@@ -141,8 +155,6 @@ Group:        Development/Libraries/X11
 The devel package of libsax provides all header files needed to use
 libsax in your own development environment
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
@@ -158,8 +170,6 @@ Group:        Development/Libraries/X11
 This package provides a wrapper to be able to use libsax in perl
 written programs
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
@@ -168,7 +178,10 @@ Authors:
 Version:      8.1 
 Release:      70
 Requires:     sax2-libsax
+%if %{?suse_version:1}0
+# SuSE Requires...
 %{py_requires}
+%endif
 Summary:      Language binding to use libsax with python
 Group:        Development/Libraries/X11
     
@@ -176,8 +189,6 @@ Group:        Development/Libraries/X11
 %description -n sax2-libsax-python
 This package provides a wrapper to be able to use libsax in python
 written programs
-
-
 
 Authors:
 --------
@@ -196,29 +207,10 @@ Group:        Development/Libraries/X11
 This package provides a wrapper to be able to use libsax in java
 written programs
 
-
-
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
-
 %endif
-%package -n sax2-libsax-csharp
-Version:      8.1
-Release:      70
-Requires:     sax2-libsax mono
-Summary:      Language binding to use libsax with C#
-Group:        Development/Libraries/X11
-
-%description -n sax2-libsax-csharp
-This package provides a wrapper to be able to use libsax in C# written
-programs
-
-
-
-Authors:
---------
-    Marcus Schäfer <ms@suse.de>
 
 %prep
 %setup -n sax
@@ -226,7 +218,9 @@ Authors:
 
 %build
 test -e /.buildenv && . /.buildenv
-test -z $QTDIR && export QTDIR=/usr/lib/qt3
+test -z $QTDIR && export QTDIR=/usr/lib/qt-3.3
+test -z $JAVA_BINDIR && export JAVA_BINDIR=/usr/bin
+test -z $BUILD_DISTRIBUTION_NAME && export BUILD_DISTRIBUTION_NAME=OTHER
 #=================================================
 # add SuSE version to sax.sh script...
 #-------------------------------------------------
@@ -241,7 +235,6 @@ make bindlib=%{_lib} buildroot=$RPM_BUILD_ROOT
 #=================================================
 # install sources
 #-------------------------------------------------
-
 %install
 rm -rf $RPM_BUILD_ROOT
 make buildroot=$RPM_BUILD_ROOT \
@@ -250,32 +243,40 @@ make buildroot=$RPM_BUILD_ROOT \
 	 doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
 	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} \
 	 install
-# SuSE specific build instructions...
-#=================================================
-# check perl .packlist...
-#-------------------------------------------------
-%perl_process_packlist
-#=================================================
-# remove unpacked sources...
-#-------------------------------------------------
-rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
-#=================================================
-# update desktop file 
-#-------------------------------------------------
-%suse_update_desktop_file -i %name System SystemSetup
+%if %{?suse_version:1}0
+	# SuSE specific build instructions...
+	#=================================================
+	# check perl .packlist...
+	#-------------------------------------------------
+	%perl_process_packlist
+	#=================================================
+	# remove unpacked sources... 
+	#-------------------------------------------------
+	rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
+	#=================================================
+	# update desktop file 
+	#-------------------------------------------------
+	%suse_update_desktop_file -i %name System SystemSetup
+%else
+	# FC5 specific build instructions...
+	#=================================================
+	# remove unpacked sources... 
+	#-------------------------------------------------
+	rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
+	rm -f $RPM_BUILD_ROOT/%{perl_archlib}/perllocal.pod
+%endif
 #=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
-
 %preun
 chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
 	mkdir -p /var/cache/xfine
 fi
+
 #=================================================
 # SaX files...      
 #-------------------------------------------------
-
 %files
 %defattr(-,root,root)
 %dir /usr/share/sax/api
@@ -330,14 +331,17 @@ fi
 %{perl_vendorarch}/auto/SPP
 %{perl_vendorarch}/FBSet.pm
 %{perl_vendorarch}/auto/FBSet
+%if %{?suse_version:1}0
+# SuSE files...
 /var/adm/perl-modules/sax2
+%endif
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.pdf
+
 #=================================================
 # SaX-GUI file list...  
 # ------------------------------------------------
-
 %files -n sax2-gui
 %defattr(-,root,root)
 %dir /usr/share/sax/api
@@ -378,13 +382,14 @@ fi
 /usr/share/locale/km/LC_MESSAGES/sax.mo
 /usr/sbin/xapi
 /usr/sbin/xfine
-%if %{suse_version} > 820
+%if %{?suse_version:1}0
+# SuSE files...
 /usr/share/applications/sax2.desktop
 %endif
+
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------
-
 %files -n sax2-tools
 %defattr(-,root,root)
 %doc %{_mandir}/man1/sax2.1.gz
@@ -405,10 +410,10 @@ fi
 /usr/sbin/xquery
 /usr/sbin/vncp
 /usr/sbin/xw
+
 #=================================================
 # SaX-Ident file list...  
 # ------------------------------------------------
-
 %files -n sax2-ident
 %defattr(-,root,root)
 %dir /usr/share/sax
@@ -424,10 +429,10 @@ fi
 /usr/share/sax/sysp/maps/Driver.map
 /usr/share/sax/api/data/cdb/*
 /usr/share/sax/profile
+
 #=================================================
 # SaX-libsax file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax
 %defattr(-,root,root)
 %dir /usr/share/sax/libsax
@@ -436,36 +441,36 @@ fi
 %doc %{_defaultdocdir}/libsax/html
 /usr/%{_lib}/libsax.so*
 /usr/share/sax/libsax/*
+
 #=================================================
 # SaX-libsax-devel file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-devel
 %defattr(-,root,root)
 %dir /usr/include/sax
 /usr/include/sax/*
+
 #=================================================
 # SaX-libsax-perl file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-perl
 %defattr(-,root,root)
 %{perl_vendorarch}/SaX.pm
 %{perl_vendorarch}/auto/SaX
+
 #=================================================
 # SaX-libsax-python file list...  
 # ------------------------------------------------
-
 %files -n sax2-libsax-python
 %defattr(-,root,root)
 %dir %{py_sitedir}/SaX
 %{py_sitedir}/SaX.pth
 %{py_sitedir}/SaX/*
+
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
 %ifnarch ppc64 s390x
-
 %files -n sax2-libsax-java
 %defattr(-,root,root)
 %dir /usr/%{_lib}/sax
@@ -473,14 +478,3 @@ fi
 /usr/share/java/SaX.jar
 /usr/%{_lib}/sax/plugins/SaX.so
 %endif
-#=================================================
-# SaX-libsax-csharp file list...  
-# ------------------------------------------------
-
-%files -n sax2-libsax-csharp
-%defattr(-,root,root)
-%dir /usr/%{_lib}/mono
-%dir /usr/%{_lib}/mono/gac
-%dir /usr/%{_lib}/mono/gac/SaX
-/usr/%{_lib}/mono/gac/SaX/*
-/usr/%{_lib}/libSaX.so

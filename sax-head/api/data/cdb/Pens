@@ -32,6 +32,54 @@
 # }
 
 #-----------------------#
+# Wacom TabletPC Eraser #
+#-----------------------#
+WACOM:TABLET PC Eraser (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-----------------------#
+# Wacom TabletPC Stylus #
+#-----------------------#
+WACOM:TABLET PC Stylus (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------#
+# IBM X41 TabletPC Eraser #
+#-------------------------#
+IBM:X41 TABLET PC Eraser (SERIAL) {
+ Device              = /dev/ttyS2
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------#
+# IBM X41 TabletPC Stylus #
+#-------------------------#
+IBM:X41 TABLET PC Stylus (SERIAL) {
+ Device              = /dev/ttyS2
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-----------------------#
 # Wacom Intuos Eraser   #
 #-----------------------#
 WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {

@@ -26,6 +26,34 @@
 # }
 
 #--------------------------#
+# Wacom Tablet PC          #
+#--------------------------#
+WACOM:TABLET PC (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = TABLET PC Stylus (SERIAL)
+ EraserLink       = TABLET PC Eraser (SERIAL)
+}
+
+#--------------------------#
+# IBM X41 Tablet PC        #
+#--------------------------#
+IBM:X41 TABLET PC (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS2
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = X41 TABLET PC Stylus (SERIAL)
+ EraserLink       = X41 TABLET PC Eraser (SERIAL)
+}
+
+#--------------------------#
 # Wacom Intuos tablet      #
 #--------------------------#
 WACOM:GRAPHIRE / INTUOS (SERIAL) {
