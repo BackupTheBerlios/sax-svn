@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Apr 24 17:05:58 2006
+# Author: Marcus Schaefer <sax@suse.de>, Tue May  2 10:20:48 2006
 #
 # Template for monitor data
 # --------------------------
@@ -36564,8 +36564,10 @@ TARGA:TM3866-1  {
 # TM3867-1
 #----------------------------------------------
 TARGA:TM3867-1  {
+ DDC=ACT0F1B
  Option=DPMS
- Hsync=31-69
+ Hsync=30-69
+ Resolution=1024x768
  Vsync=50-120
 }
 
