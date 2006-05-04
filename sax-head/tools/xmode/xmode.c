@@ -383,12 +383,12 @@ int XmodeInit (int argc,char *argv[],struct xmode *data) {
 
 	case 'r':
 		vsyncdef = TRUE;
-		data->vsync = atof(optarg) - 2;
+		data->vsync = atof(optarg);
 	break;
 
 	case 's':
 		hsyncdef = TRUE; 
-		data->hsync = atof(optarg) - 1;
+		data->hsync = atof(optarg);
 	break;
 
 	case 'x':

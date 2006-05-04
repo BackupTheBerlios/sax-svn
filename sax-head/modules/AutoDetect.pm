@@ -12,6 +12,10 @@
 #
 use lib '/usr/share/sax/modules/detect';
 
+use strict;
+
+our $QueryStatus;
+
 use FBSet;
 use Card;
 use Fonts;
@@ -54,7 +58,7 @@ sub GetQuery {
 	@elements = ();
 	@erg      = ();
 	$old      = "";
-	foreach $n (@list) {
+	foreach my $n (@list) {
 		@line = split(/=/,$n);
 		if (! defined $line[0]) { 
 			next; 
@@ -68,7 +72,7 @@ sub GetQuery {
 		push (@elements,$id);
 	}
 
-	foreach $n (sort @elements) {
+	foreach my $n (sort @elements) {
 	foreach $i (@list) {
 		@line = split(/=/,$i);
 		if (! defined $line[0]) { 

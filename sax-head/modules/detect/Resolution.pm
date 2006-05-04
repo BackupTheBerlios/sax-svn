@@ -1,7 +1,8 @@
 #==========================
-# define flag list...
+# Globals...
 #--------------------------
 @flag_list = ();
+$ldnr = 0;
 
 #----[ AutoDetectResolution ]----------#
 sub AutoDetectResolution {
@@ -16,7 +17,6 @@ sub AutoDetectResolution {
 	my @dac_list;          # dac values
 	my @mem_list;          # memory list
 	my @vesa_list;         # vesa mode list
-	my @clock_list;        # clocks list
 	my @dpi_list;          # display size list
 	my @fbt_list;          # framebuffer timing list
 	my @vm_list;           # vmware color depth list
@@ -27,17 +27,19 @@ sub AutoDetectResolution {
 	my $i;                 # loop counter;
 	my $detectvesa;        # detect VESA flag
 	my $detectfb;          # detect FbTiming flag
- 
+
+ 	# ...
 	# get the vendor id list as basic list...
-	# -----------------------------------------
+	# ---------------------------------------
 	@idquery = GetQuery("server",\%spec);
 	for ($i=6;$i<@idquery;$i+=15) {
 		push (@flag_list,$idquery[$i+5]); # get 3D flags
 		push (@vid_list,$idquery[$i]);    # get Vendor ID`s
 	}
 
-	# hot query on xstuff...
-	# ------------------------
+	# ...
+	# get sysp data: hot query on xstuff...
+	# -------------------------------------
 	%query = GetHotQuery("xstuff",\%spec);
 	$size  = 0;
 	foreach $card (sort numbers keys %query) {
@@ -48,14 +50,8 @@ sub AutoDetectResolution {
 		SWITCH: for ($i) {
 			# Ram DAC speeds...
 			# ------------------
-			/^Dacspeed/      && do {
+			/^Dacspeed$/     && do {
 			push(@dac_list,$query{$card}{$i});
-			last SWITCH;
-			};
-			# Fixed clock values...
-			# ----------------------
-			/^Clock/         && do {
-			push (@clock_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# Memory detection...
@@ -102,6 +98,7 @@ sub AutoDetectResolution {
 	}
 	}
 
+	# ...
 	# create default screen sections
 	# -------------------------------
 	my $IsStandardCase = 1;
@@ -136,6 +133,7 @@ sub AutoDetectResolution {
 		}
 	}
 
+	# ...
 	# lookup for the resolution list
 	# -------------------------------
 	$mres = {};
@@ -160,8 +158,8 @@ sub AutoDetectResolution {
 			$old = $mode;
 		}
 		# ...
-		# sort the resolution list and remove the highest
-		# one if the list contain more than one entry
+		# sort the resolution list and create a unique
+		# list of resolutions
 		# ---
 		@res = sortres(@res);
 		# ...
@@ -183,6 +181,7 @@ sub AutoDetectResolution {
 	}
 	}
 
+	# ...
 	# calculate the Modelines needed for the resolutions
 	# ---------------------------------------------------
 	if ($IsStandardCase) {
@@ -191,24 +190,27 @@ sub AutoDetectResolution {
 		$vsmax = $sync[1];
 		@sync  = split(/-/,$var{Monitor}{$i}{HorizSync});
 		$hsmax = $sync[1];
-		$dac   = $dac_list[$i];
-		$dac   = $dac * 1e6;
-		$clock = $clock_list[$i];
-
 		# ...
-		# sort the resolution list and remove the highest
-		# one if the list contain more than one entry
+		# sort the resolution list and create a unique
+		# list of resolutions
 		# ---
 		my @res = sortres(keys %{$mres{$i}}); 
+		# ...
+		# calculate Modelines now. Modelines will be calculated
+		# within a range of 60 to vsmax Hz where vsmax must not
+		# be bigger than 90 Hz. The Modeline is checked whether
+		# it fits into the range and the max pixel clock
+		# ---
 		foreach (@res) {
 			@xy  = split(/x/,$_);
 			%var = GenerateModeline (
-			\%spec,\%var,$vsmax,$hsmax,$xy[0],$xy[1],$i,"PClock"
+				\%spec,\%var,$vsmax,$hsmax,$xy[0],$xy[1],$i,$dac_list[$i]
 			);
 		}
 	}
 	}
 
+	# ...
 	# set the FbTiming if it exist. We will delete the
 	# calculated modelines and set the given timing 
 	# ----------------------------------------------
@@ -232,6 +234,7 @@ sub AutoDetectResolution {
 		}
 	}
 
+	# ...
 	# set display size information if defined...
 	# -------------------------------------------
 	if (defined $dpi_list[$i]) {
@@ -417,8 +420,10 @@ sub CheckResolution {
 #----[ GenerateModeline ]-----#
 sub GenerateModeline {
 #-----------------------------------------------------
-# calculate modelines in a range between 70 and 
-# vsmax Hz and save the result to the var hash
+# calculate modelines in a range between 60 and 
+# vsmax Hz. Check range and clock after modeline has
+# been calculated. The result will be saved in the
+# var hash
 #
 	my (%spec)    = %{$_[0]};
 	my (%var)     = %{$_[1]};
@@ -427,73 +432,55 @@ sub GenerateModeline {
 	my $x         = $_[4];
 	my $y         = $_[5];
 	my $card      = $_[6];
-	my $clock     = $_[7];
-	my $clockline = $_[8];
-
-	my $v;        # loop counter
-	my $ml;       # raw modeline result
-	my $oldtim;   # old timing
-	my $tim;      # current timing
-	my $res;      # modeline resolution string
-	my @mode;     # modeline result as list
-	my @clocks;   # clockline splitted
-	my $clk;      # single clock in Hz
-
-	$oldtim       = "";
-
-	# if the vertical sync maximum is over 140 Hz we
-	# will reduce the refresh rate to a maximum of 140 Hz
-	# ----------------------------------------------------
-	if ($vsmax > 140) {
-		$vsmax = 140;
+	my $dac       = $_[7];
+	# ...
+	# if the vertical sync maximum exceeds 90 Hz we
+	# will reduce the refresh rate to a maximum of 90 Hz
+	# ---
+	if ($vsmax > 90) {
+		$vsmax = 90;
 	}
-	# programmable clocks requested
-	# -------------------------------
-	if ($clock eq "PClock") {
-	for ($v=$vsmax;$v>=70;$v-=10)  {
-		$ml = qx($spec{Xmode} -x $x -y $y -r $v -s $hsmax);
-		@mode  = split(/\n/,$ml);
-		$hsync = $mode[0];
-		$vsync = $mode[1];
-		$ml    = $mode[2];
-		$ml    =~ /Modeline \"(.*)\" (.*)/;
-		$res   = $1;
-		$tim   = $2;
-		if (($tim ne "") && ($tim ne $oldtim)) {
-			$var{Monitor}{$card}{Modeline}{$ldnr}{$res} = $tim;
-			$ldnr++;
-		}
-		$oldtim = $tim;
+	# ...
+	# first step find a modeline which fits the max vsync/hsync
+	# and dot clock requirements. If a mode has been found
+	# the vsmax value will be adapted to that mode
+	# ---
+	my $line = qx($spec{Xmode} -x $x -y $y -d $dac -r $vsmax -s $hsmax);
+	my @mode = split(/\n/,$line);
+	if ($mode[2] =~ /Modeline \"(.*)\" (.*)/) {
+		my $resolu = $1;
+		my $timing = $2;
+		my @tdatas = split (/ +/,$timing);
+		$dac = $tdatas[0];
+		$hsmax = $mode[0];
+		$vsmax = $mode[1];
+		$var{Monitor}{$card}{Modeline}{$ldnr}{$resolu} = $timing;
 	}
-	} else {
-	# fixed clocks requested
-	# ------------------------
-	if ((defined $clockline) && ($clockline ne "")) {
-		@clocks    = split(/ +/,$clockline);
-		foreach (@clocks) {
-		if ($_ eq "") { 
-			next; 
-		}
-		$clk = $_ * 1e6;
-		for ($v=$vsmax;$v>=70;$v-=10)  {
-			$ml = qx($spec{Xmode} -x $x -y $y -r $v -n -d $clk -s $hsmax);
-			@mode  = split(/\n/,$ml);
-			$hsync = $mode[0];
-			$vsync = $mode[1];
-			$ml    = $mode[2];
-			$ml    =~ /Modeline \"(.*)\" (.*)/;
-			$res   = $1;
-			$tim   = $2;
-			if (($tim ne "") && ($tim ne $oldtim)) {
-				$var{Monitor}{$card}{Modeline}{$ldnr}{$res} = $tim;
+	# ...
+	# next step calculate modelines from the base mode calculated
+	# in the first step up to a 60Hz minimal mode. The step size
+	# is vsmax - 60 / 3 ( max 3 modelines per resolution )
+	# ---
+	my $old_timing = "undef";
+	my $step = ($vsmax - 60) / 3.0;
+	if ($step < 5) {
+		# a step less than 5 Hz doesn't make much sense...
+		$ldnr++; return %var;
+	}
+	for (my $v=$vsmax; $v>=60; $v-=$step)  {
+		my $line = qx($spec{Xmode} -x $x -y $y -r $v);
+		my @mode = split(/\n/,$line);
+		if ($mode[2] =~ /Modeline \"(.*)\" (.*)/) {
+			my $resolu = $1;
+			my $timing = $2;
+			if (($timing ne "") && ($timing ne $old_timing)) {
+				$var{Monitor}{$card}{Modeline}{$ldnr}{$resolu} = $timing;
 				$ldnr++;
 			}
-			$oldtim = $tim;
-		}
+			$old_timing = $timing;
 		}
 	}
-	}
-	return(%var);  
+	return %var;  
 }
 
 1;

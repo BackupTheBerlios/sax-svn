@@ -1216,224 +1216,220 @@ sub GetModelines {
 	my $vsync      = $_[2];     # vertical sync range
 	my $readline   = $_[3];     # eventually read modelines
 	my $specialline= $_[4];     # special lines from a monitor selection
-	my $modus      = $_[5];     # calculation modus secure | normal
+	my $modus      = $_[5];     # calculation modus secure | normal | fbdev
 	my $calc       = $_[6];     # calculate Modelines or not 
 	my $card       = $_[7];     # card number
-
-	my (@modeline,@res,@l,@param,@clocklist,@data);
-	my ($x,$y,$hs,$vs,$i,$line,$calctool,$chs,$cvs,$oldline,$r,$vesafb,$fbtime);
-	my ($zf,$rr,$hfl,$vfl,$dcf,$clocks,$clk,$hsmax,$mode,$found);
-	my %fbmodes;
-	my %query;
-
-	# decide for a tool to calculate
-	# -------------------------------
-	if ($modus eq "secure") {
-		$calctool = "$import{Xmode}";
-	} else {
-		$calctool = "$import{Xmode} -n";
-	}
-
-	# get the sync freq for calculation (max vsync is 140 Hz)
-	# -------------------------------------------------------
+	my @modeline   = ();        # result list
+	# ...
+	# setup the max sync values from the given range
+	# if the vertical sync maximum exceeds 90 Hz we
+	# will reduce the refresh rate to a maximum of 90 Hz
+	# ---
 	if ($hsync =~ /(.*)-(.*)/) {
-		$hs = $2; 
-		$hs =~ s/ +//g;
-		$hs = $hs * 1e3;
+		$hsync = $2; 
+		$hsync =~ s/ +//g;
+	} else {
+		# should not happen...
+		print STDERR "GetModelines::invalid HSync format...";
+		return;
 	}
 	if ($vsync =~ /(.*)-(.*)/) {
-		$vs = $2; 
-		$vs =~ s/ +//g;
-		if ($vs > 140) {
-		$vs = 140;
+		$vsync = $2; 
+		$vsync =~ s/ +//g;
+		if ($vsync > 90) {
+			$vsync = 90;
 		}
-		# /.../
-		# if IteratePrecisely is used ad a 3Hz span to
-		# enable xmode to calculate exact modelines
-		# ---
-		if ($modus eq "normal") {
-			$vs += 3;
-		}
+	} else {
+		# should not happen...
+		print STDERR "GetModelines::invalid VSync format...";
+		return;
 	}
-
+	# ...
+	# create helper functions to sort the modelines
+	# which will be imported from the config file
+	# ---
 	sub number  { $a <=> $b; }
 	sub sortline {
-		my @list = @_;
 		my %tmp;
-		my @param;
-		my $d;
-		my $count;
 		my @erg;
-		$count = 0;
-		foreach (@list) {
-			@param = split(/ +/,$_);
+		my $count = 0;
+		foreach (@_) {
+			my @param = split(/ +/,$_);
 			$tmp{$param[1]}{$count} = $_;
 			$count++;
 		}
 		foreach (sort number keys %tmp) {
-		foreach $d (keys %{$tmp{$_}}) {
-			push(@erg,$tmp{$_}{$d});
+		foreach my $d (keys %{$tmp{$_}}) {
+			push (@erg,$tmp{$_}{$d});
 		}
 		}
-		return(@erg);
+		return @erg;
 	}
-
+	# ...
+	# check the status of the $readline and $calc variables.
+	# We have to decided whether we need to calculate modelines
+	# or not and what to do with the eventually imported Modelines
+	# from the config file
+	# ---
 	if (($readline ne "") && ($calc eq "no")) {
-		# /.../
-		# use the modelines from the config file...
-		# -------------------------------------------
-		@l   = split(/,/,$readline);
-		@l   = sortline(@l);
-		@res = split(/,/,$modes);
-		foreach $r (@res) { 
-		foreach (@l) {
-			$_ =~ s/Modeline//;
-			$_ =~ s/^ +//; $_ =~ s/ +$//;
-			@param = split(/ +/,$_);
+		# ...
+		# use the modelines from the config file:
+		# if there are imported modelines and the $calc flag
+		# has been set to "no" we will sort and include the
+		# imported modelines again
+		# ---
+		my $oldline = "undef";
+		my @mline = split(/,/,$readline);
+		my @resos = split(/,/,$modes);
+		@mline = sortline(@mline);
+		foreach my $r (@resos) {
+		foreach my $m (@mline) {
+			$m =~ s/Modeline//;
+			$m =~ s/^ +//; $m =~ s/ +$//;
+			my @param = split(/ +/,$m);
 			$param[0] =~ s/\"//g;
 			if ($param[0] =~ /$r/i) {
-				$dcf = $param[1]; $dcf = $dcf * 1e6;
-				$hfl = $param[5]; 
-				$vfl = $param[9];
-
-				$zf = int ($dcf/$hfl); 
-				$rr = int ($zf/$vfl);
-				$zf = int ($zf / 1e3) * 1e3;
-
-				if ($oldline ne $_) {
-				if (($zf <= $hs) && ($rr <= $vs)) {
-					push(@modeline,"Modeline $_");
+				my $dcf = $param[1]; $dcf = $dcf * 1e6;
+				my $hfl = $param[5]; 
+				my $vfl = $param[9];
+				my $zf = int ($dcf/$hfl); 
+				my $rr = int ($zf/$vfl);
+				my $zf = int ($zf / 1e3) * 1e3;
+				if ($oldline ne $m) {
+				if (($zf <= $hsync) && ($rr <= $vsync)) {
+					push (@modeline,"Modeline $m");
 				}
 				}
-				$oldline = $_;
+				$oldline = $m;
 			}
 		}
 		}
 	} elsif ($calc ne "no") {
-		# /.../
-		# Calculate Modelines...
-		# look up fixed clocks ask sysp...
-		# ----------------------------------
+		# ...
+		# Calculate Modelines:
+		# If the calc flag has been set to something different
+		# from "no" we will calculate modelines according to
+		# the modus
+		# ---
 		if ($modus eq "fbdev") {
-			# UseFrameBufferTiming is active...
-			# -----------------------------------
-			$vesafb = GetFramebufferResolution();
-			$fbtime = GetFramebufferTimings();
-			@data   = split(/ /,$vesafb);
-			$line   = "Modeline \"$data[0]x$data[1]\" $fbtime";
-			push(@modeline,$line);
-
-			%fbmodes = ReadFbModes();
-			$mode    = $data[0]."x".$data[1];
+			# ...
+			# UseFrameBufferTiming has been set:
+			# No Modelines will be calculated but the framebuffer
+			# timings are used in combination with /etc/fb.modes
+			# ---
+			my $vesafb = GetFramebufferResolution();
+			my $fbtime = GetFramebufferTimings();
+			my @data   = split(/ /,$vesafb);
+			my $line   = "Modeline \"$data[0]x$data[1]\" $fbtime";
+			# ...
+			# Insert currently used timing obtained directly from
+			# the kernel framebuffer console (/dev/fb0)
+			# ---
+			push (@modeline,$line);
+			# ...
+			# Insert additional modes with the same name as the
+			# current mode. The modes are listed in /etc/fb.modes
+			# ---
+			my %fbmodes = ReadFbModes();
+			my $mode = $data[0]."x".$data[1];
 			foreach (keys %{$fbmodes{$mode}}) {
-			if ($_ < $vs) {
-				push(@modeline,$fbmodes{$mode}{$_});
+			if ($_ < $vsync) {
+				push (@modeline,$fbmodes{$mode}{$_});
 			}
 			}
-
 		} else {
-			# IteratePrecisely or CheckDesktopGeometry is active...
-			# ------------------------------------------------------
-			%query = GetHotQuery("xstuff");
-			foreach $i (sort keys %{$query{$card}}) {
-			if ($i =~ /Clock/) {
-				$clocks = $query{$card}{$i};
-				@clocklist = split(/ +/,$clocks);
-			}
-			}
-			# got fixed clocks...
-			# --------------------
-			if ($clocks ne "") {
-			@res = split(/,/,$modes);
-			foreach $i (@clocklist) {
-			if ($i eq "") { next; }
-			$clk = $i * 1e6;
-			foreach (@res) {
-				if ($_ =~ /(.*)x(.*)/i) {
-				$x = $1;
-				$y = $2;
-				$hsmax = $hs / 1e3;
-				for ($i=$vs;$i>=60;$i-=10) {
-					$line = qx (
-						$calctool -x $x -y $y -r $i -n -d $clk -s $hsmax
-					);
-					@l = split(/\n/,$line);
-					$chs  = $l[0] * 1e3;
-					$cvs  = $l[1];
-					$line = $l[2];
-					$found = 0;
-					foreach (@modeline) {
-					if ($_ eq $line) { 
-						$found = 1; last; 
-					}
-					}
-					if ($found == 0) {
-					if (($chs <= $hs) && ($cvs <= $vs)) {
-						push(@modeline,$line);
-					}
-					}
+			# ...
+			# IteratePrecisely or CheckDesktopGeometry is set:
+			# in former times there was a difference in calculating
+			# modelines for IteratePrecisely or CheckDesktopGeometry
+			# but today only one tool is used.
+			# ---
+			my $dac = 220;
+			my %query = GetHotQuery("xstuff");
+			if (defined $query{$card}) {
+				foreach my $i (sort keys %{$query{$card}}) {
+				if ($i =~ /^Dacspeed$/) {
+					$dac = $query{$card}{$i};
+				}
+				}
+			} else {
+				# ...
+				# We want to address an entry which doesn't exist
+				# in sysp -q xstuff. This means a profile has added
+				# additional virtual device sections. According to
+				# this we are checking for the enhanced EDID info
+				# block on card 0
+				# ---
+				foreach my $i (sort keys %{$query{0}}) {
+				if ($i =~ /^Dacspeed\[2\]$/) {
+					$dac = $query{0}{$i};
 				}
 				}
 			}
-			}
-			}	
-			# calculate standard modelines...
-			# ---------------------------------
-			@res = split(/,/,$modes);
-			foreach (@res) {
-			if ($_ =~ /(.*)x(.*)/i) {
-				$x = $1;
-				$y = $2;
-				$hsmax = $hs / 1e3;
-				my $mcount = 0;
-				for ($i=$vs;$i>=60;$i--) {
-				if ($modus eq "secure") {
-					# CheckDesktopGeometry...
-					# ------------------------
-					$line = qx($calctool -x $x -y $y -r $i -s $hsmax);
-				} else {
-					# IteratePrecisely...
-					# Note: this algorithm will calculate the modeline 
-					# according to the vertical sync specification. The
-					# horizontal sync range which depends on the vertical
-					# sync range my be out of the range specified by the 
-					# user. In this case the modeline will be deleted
-					# from the X-Server with 
-					# (hsync out of range)...
-					# ------------------------
-					$line = qx($calctool -x $x -y $y -r $i -n);
-				}
-				@l = split(/\n/,$line);
-				$chs  = $l[0] * 1e3;
-				$cvs  = $l[1];
-				$line = $l[2];
-				$found = 0; 
+			# ...
+			# Calculate Modelines now. We will setup a bunch of
+			# modelines per resolution which fits the needs of
+			# hsync/vsync and dac speed
+			# ---
+			my $xmode = $import{Xmode};
+			my @resos = split(/,/,$modes);
+			foreach my $resolution (@resos) {
+			if ($resolution =~ /(.*)x(.*)/i) {
+				# ...
+				# first step find a modeline which fits the max vsync/hsync
+				# and dot clock requirements. If a mode has been found
+				# the vsmax value will be set referring that mode
+				# ---
+				my $x = $1;
+				my $y = $2;
+				my $mline = qx($xmode -x $x -y $y -d $dac -r $vsync -s $hsync);
+				my @mmode = split(/\n/,$mline);
+				my $hsmax = $mmode[0];
+				my $vsmax = $mmode[1];
+				my $found = 0;
 				foreach (@modeline) {
-					if ($_ eq $line) { $found = 1; last; }
+					if ($_ eq $mmode[2]) { $found = 1; last; }
 				}
 				if ($found == 0) {
-				if (($chs <= $hs) && ($cvs <= $vs)) {
-					if ($mcount < 3) {
-						push(@modeline,$line);
-						$mcount++;
-					}
+					push (@modeline,$mmode[2]);
 				}
-				} 
+				# ...
+				# next step calculate modelines from the base mode calculated
+				# in the first step up to a 60Hz minimal mode. The step size
+				# is vsmax - 60 / 3 ( max 3 modelines per resolution )
+				# ---
+				my $old_timing = "undef";
+				my $step = ($vsmax - 60) / 3.0;
+				if ($step < 5) {
+					# a step less than 5 Hz doesn't make much sense...
+					next;
+				}
+				$vsmax = $vsmax - $step;
+				for (my $v=$vsmax; $v>=60; $v-=$step)  {
+					my $mline = qx($xmode -x $x -y $y -r $v);
+					my @mmode = split(/\n/,$mline);
+					if ($mmode[2] =~ /Modeline \"(.*)\" (.*)/) {
+						my $timing = $2;
+						if (($timing ne "") && ($timing ne $old_timing)) {
+							push (@modeline,$mmode[2]);
+						}
+						$old_timing = $timing;
+					}
 				}
 			}
 			}
 		}
 	}
-	# /.../
+	# ...
 	# add the special lines if exist
-	# ------------------------------
+	# ---
 	if ($specialline ne "") {
-	@l = split(/,/,$specialline);
-	foreach (@l) {
-		push(@modeline,"Modeline $_");
+		my @mline = split(/,/,$specialline);
+		foreach (@mline) {
+			push (@modeline,"Modeline $_");
+		}
 	}
-	}
-	return(@modeline);
+	return @modeline;
 }
 
 #----[ GetFramebufferResolution ]-----#
