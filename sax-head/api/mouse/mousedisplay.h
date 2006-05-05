@@ -53,6 +53,7 @@ class SCCMouseDisplay : public SCCDialog {
 	//====================================
 	// private dialog data for exporting
 	//------------------------------------
+	int              mPointerID;
 	int              mDisplay;
 	bool             mEnabled;
 

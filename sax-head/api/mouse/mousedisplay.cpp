@@ -158,6 +158,7 @@ SCCMouseDisplay::SCCMouseDisplay (
 	//=====================================
 	// save display number
 	//-------------------------------------
+	mPointerID= SAX_CORE_POINTER;
 	mDisplay  = display;
 	mSaxMouse = 0;
 }
@@ -174,11 +175,16 @@ void SCCMouseDisplay::init ( void ) {
 	//====================================
 	// obtain device count
 	//------------------------------------
-	int usedDevices = 0;
+	int usedDevices  = 0;
+	int pointerCount = SAX_CORE_POINTER;
 	mSaxMouse -> selectPointer (SAX_CORE_POINTER);
 	for (int i=SAX_CORE_POINTER;i<mSection["Pointers"]->getCount();i+=2) {
 		if (mSaxMouse -> selectPointer (i)) {
 		if (mSaxMouse -> isMouse()) {
+			if (pointerCount == mDisplay) {
+				mPointerID = i;
+			}
+			pointerCount+=2;
 			usedDevices++;
 		}
 		}
@@ -186,7 +192,7 @@ void SCCMouseDisplay::init ( void ) {
 	//====================================
 	// select pointer device
 	//------------------------------------
-	mSaxMouse -> selectPointer ( mDisplay );
+	mSaxMouse -> selectPointer ( mPointerID );
 
 	//====================================
 	// check activate box
@@ -228,7 +234,7 @@ void SCCMouseDisplay::import ( void ) {
 	//====================================
 	// select pointer device
 	//------------------------------------
-	mSaxMouse -> selectPointer ( mDisplay );
+	mSaxMouse -> selectPointer ( mPointerID );
 
 	//====================================
 	// handle mouse name
@@ -308,7 +314,7 @@ void SCCMouseDisplay::slotActivateDisplay ( void ) {
 	//====================================
 	// check mouse driver from config
 	//------------------------------------
-	mSaxMouse -> selectPointer ( mDisplay );
+	mSaxMouse -> selectPointer ( mPointerID );
 	if (mSaxMouse -> getDriver() == "synaptics") {
 		mMouseOptionGroup->setDisabled ( true );
 	} else {

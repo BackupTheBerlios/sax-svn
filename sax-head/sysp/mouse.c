@@ -73,16 +73,6 @@ void ScanMouse::Scan (void) {
 	Input input;
 
 	for (MouseData* lp=mp; lp; lp=lp->next) {
-		if (
-			(strstr(lp->name,"Tablet") != NULL) ||
-			(strstr(lp->name,"tablet") != NULL) ||
-			(strstr(lp->name,"Intuos") != NULL) ||
-			(strstr(lp->name,"Wacom")  != NULL)
-		) {
-			// TODO...
-			// Tablet detected shouldn't be handled as mouse
-			continue;
-		}
 		strcpy (lp->profile,"<undefined>");
 		for (int i = rcinput.Count(); i > 0; i--) {
 			input = rcinput.Pop();

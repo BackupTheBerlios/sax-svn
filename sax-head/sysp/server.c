@@ -384,6 +384,28 @@ void ScanServer::Scan(void) {
 	// on several points up to this point
 	// -----------------------------------
 	SPReadFile<Identity> configI;
+	// import update Identity files if there are any
+	struct dirent* entry = 0;
+	DIR* updateDir = 0;
+	updateDir = opendir (IDENTITY_UPDATED);
+	if (updateDir) {
+		while (1) {
+			entry = readdir (updateDir);
+			if (! entry) {
+				break;
+			}
+			if (
+				(strstr(entry->d_name,"Identity.map")) &&
+				(entry->d_type != DT_DIR)
+			) {
+				string mapFile = IDENTITY_UPDATED;
+				mapFile += entry->d_name;
+				configI.SetFile ((char*)mapFile.c_str());
+				configI.ImportIdentity();
+			}
+		}
+	}
+	// import the base Identity map
 	configI.SetFile(IDENTITY);
 	configI.ImportIdentity();
 	for (int i = configI.Count(); i > 0; i--) {

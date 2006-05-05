@@ -55,7 +55,7 @@ sub prepareProfile {
 	print "SPP: prepare device [$card] profile: $basename";
 	if (-f "$profile.pl") {
 		print "SPP: calling device [$card] profile script: $basename";
-		qx ($profile.pl);
+		qx ($profile.pl $card);
 		$profile = "$profile.tmp";
 	}
 	open (FD,$profile) ||
@@ -220,6 +220,12 @@ sub handleAction {
 	}
 	if ($action =~ /__EQUALS__/) {
 		$action =~ s/__EQUALS__/=/g;
+	}
+	if ($action =~ /__OB__/) {
+		$action =~ s/__OB__/(/g;
+	}
+	if ($action =~ /__CB__/) {
+		$action =~ s/__CB__/)/g;
 	}
 	#==========================================
 	# want to set a value

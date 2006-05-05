@@ -516,6 +516,9 @@ void PrintMouseData(ScanMouse m) {
 			if (strcmp(data.profile,"alps") == 0) {
 				devices[i] = 1;
 			}
+			if (strcmp(data.profile,"wacom") == 0) {
+				devices[i] = 1;
+			}
 			}
 		}
 		m.Reset();
@@ -555,8 +558,9 @@ void PrintMouseData(ScanMouse m) {
 		if (
 			(strcmp(data.device,"/dev/input/mice") == 0) && (
 				(strcmp(data.profile,"<undefined>") == 0) || (
-					(strcmp(data.profile,"alps") != 0) &&
-					(strcmp(data.profile,"synaptics") != 0)
+					(strcmp(data.profile,"alps") != 0)      &&
+					(strcmp(data.profile,"synaptics") != 0) &&
+					(strcmp(data.profile,"wacom") != 0)
 				)
 			)
 		) {

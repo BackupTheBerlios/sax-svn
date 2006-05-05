@@ -79,8 +79,17 @@ sub HMoveBranch {
 			next;
 		}
 		if ($branch >= $oldbranch) {
-		if (($main eq "Device")||($main eq "Screen")||($main eq "Monitor")) {
-			$newbranch = $branch + 1;
+		if (
+			($main eq "Device")      || 
+			($main eq "Screen")      ||
+			($main eq "Monitor")     ||
+			($main eq "InputDevice")
+		) {
+			if ($main eq "InputDevice") {
+				$newbranch = $branch + 2;
+			} else {
+				$newbranch = $branch + 1;
+			}
 			$var{$main}{$newbranch} = $var{$main}{$branch};
     
 			# adapt Identifier,Device,Monitor 
@@ -100,7 +109,15 @@ sub HMoveBranch {
 				$value =~ s/\[.*\]/\[$newbranch\]/;
 				$var{$main}{$newbranch}{Monitor}    = $value;
 			}
-    
+			if ($main eq "InputDevice") {
+				$value = $var{ServerLayout}{all}{$main}{$branch}{id};
+				$value =~ s/\[.*\]/\[$newbranch\]/;
+				$var{ServerLayout}{all}{$main}{$newbranch}{id} = $value;
+				$value = $var{ServerLayout}{all}{$main}{$branch}{usage};
+				$var{ServerLayout}{all}{$main}{$newbranch}{usage} = $value;
+				delete $var{ServerLayout}{all}{$main}{$branch};
+			}
+
 			# delete old branch...
 			# ---------------------
 			if ($branch == $oldbranch) {

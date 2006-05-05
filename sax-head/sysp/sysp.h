@@ -449,7 +449,7 @@ void SPReadFile<T>::ImportIdentity(void) {
 		line  = (char*)malloc(sizeof(char)*MAX_LINE_SIZE);
 		handle.getline(line,MAX_LINE_SIZE);
 		Identity id;
-		token = strtok(line,"§");
+		token = strtok(line,"&");
 
 		id.svid = "0x0000";
 		id.sdid = "0x0000";
@@ -463,7 +463,7 @@ void SPReadFile<T>::ImportIdentity(void) {
 			}
 		}
 		while (token) {
-		token = strtok(NULL,"§");
+		token = strtok(NULL,"&");
 		if (token != NULL) {
 			key  = strsep(&token,"=");
 			trim(key);

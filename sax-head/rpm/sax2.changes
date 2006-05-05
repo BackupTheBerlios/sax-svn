@@ -3,7 +3,14 @@ Thu May 12 10:39:32 CEST 2006 - ms@suse.de
 
 - new version sax2 v8 for xorg v7 (X11R7)
 - added chvt support to monitor.c, change before calling int10
+- added support for automatic tablet detection. Currently only one
+  wacom device has been tested (Input.map -> 0x056a:0x0013).
+  this is related to bug: (#163785)
 - added cn-latin1 mapping for French Canadian Keyboard (#158951)
+- enhancement: added update directory for Identity.map files. A user
+  can put a file named *Identity.map* file into the directory
+  /usr/share/sax/sysp/maps/update. The map there is searched for
+  graphics cards first (#163803)
 - enhancement: add wacom rotate option to be configured (#151448)
 - enhancement: disable mouse device before probing (#157415)
 - enhancement: moved libsax scripts (#157475)

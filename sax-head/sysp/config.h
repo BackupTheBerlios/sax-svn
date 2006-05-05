@@ -32,6 +32,7 @@ STATUS        : Status: Up-to-date
 #define KBD_MAP           "/usr/share/sax/sysp/maps/Keyboard.map"
 #define VENDOR_MAP        "/usr/share/sax/sysp/maps/Vendor.map"
 #define IDENTITY          "/usr/share/sax/sysp/maps/Identity.map"
+#define IDENTITY_UPDATED  "/usr/share/sax/sysp/maps/update/"
 #define PROFILEDIR        "/usr/share/sax/profile/"
 
 //==============================
