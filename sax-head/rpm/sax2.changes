@@ -7,10 +7,6 @@ Thu May 12 10:39:32 CEST 2006 - ms@suse.de
   wacom device has been tested (Input.map -> 0x056a:0x0013).
   this is related to bug: (#163785)
 - added cn-latin1 mapping for French Canadian Keyboard (#158951)
-- enhancement: added update directory for Identity.map files. A user
-  can put a file named *Identity.map* file into the directory
-  /usr/share/sax/sysp/maps/update. The map there is searched for
-  graphics cards first (#163803)
 - enhancement: add wacom rotate option to be configured (#151448)
 - enhancement: disable mouse device before probing (#157415)
 - enhancement: moved libsax scripts (#157475)
@@ -33,6 +29,15 @@ Thu May 12 10:39:32 CEST 2006 - ms@suse.de
 - deactivate code to limit framebuffer mode to 60Hz (#167305)
 - fixed mnemonic key for OK button (#168784)
 - fixed Targa 3867-1 monitor data  (#170896)
+
+-------------------------------------------------------------------
+Mon May  8 10:02:21 CEST 2006 - ms@suse.de
+
+- enhancement: added update directory for Identity.map files. A user
+  can put a file named *Identity.map* file into the directory
+  /usr/share/sax/sysp/maps/update. The map there is searched for
+  graphics cards first. It is possible to add support for new
+  cards or overwrite an old entry with this file (#163803)
 
 -------------------------------------------------------------------
 Tue May  2 08:25:26 CEST 2006 - ms@suse.de
