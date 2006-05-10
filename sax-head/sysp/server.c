@@ -405,6 +405,7 @@ void ScanServer::Scan(void) {
 			}
 		}
 	}
+	closedir (updateDir);
 	// import the base Identity map
 	configI.SetFile(IDENTITY);
 	configI.ImportIdentity();
