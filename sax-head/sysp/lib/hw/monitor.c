@@ -144,14 +144,14 @@ MsgDetect* MonitorGetData (void) {
 			display->dpiy = 0;
 			if (res->size.unit == size_unit_mm) {
 				if ((res->size.val1) && (res->size.val2)) {
-					display->dpix = (int)(round (res->size.val1 / 10.0));
-					display->dpiy = (int)(round (res->size.val2 / 10.0));
+					display->dpix = (int)res->size.val1;
+					display->dpiy = (int)res->size.val2;
 				}
 			}
 			if (res->size.unit == size_unit_cm) {
 				if ((res->size.val1) && (res->size.val2)) {
-					display->dpix = (int)res->size.val1;
-					display->dpiy = (int)res->size.val2;
+					display->dpix = (int)(res->size.val1 * 10);
+					display->dpiy = (int)(res->size.val2 * 10);
 				}
 			}
 			break;

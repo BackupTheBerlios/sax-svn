@@ -391,8 +391,8 @@ void ScanXStuff::Scan (void) {
 		// Save DisplaySize per port
 		//--------------------------------------
 		if (
-			((dpy->dpix > 0) && (dpy->dpix < 100)) &&
-			((dpy->dpiy > 0) && (dpy->dpiy < 100))
+			((dpy->dpix > 0) && (dpy->dpix < 1000)) &&
+			((dpy->dpiy > 0) && (dpy->dpiy < 1000))
 		) {
 			stuff[0].dpix[p]  = dpy->dpix;
 			stuff[0].dpiy[p]  = dpy->dpiy;

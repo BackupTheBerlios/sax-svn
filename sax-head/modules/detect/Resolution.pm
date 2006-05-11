@@ -239,8 +239,8 @@ sub AutoDetectResolution {
 	# -------------------------------------------
 	if (defined $dpi_list[$i]) {
 		@dpi  = split(/x/,$dpi_list[$i]);
-		$dpix = $dpi[0] * 10;
-		$dpiy = $dpi[1] * 10;
+		$dpix = $dpi[0];
+		$dpiy = $dpi[1];
 		$var{Monitor}{$i}{DisplaySize} = "$dpix $dpiy";
 	} else {
 		# /.../
