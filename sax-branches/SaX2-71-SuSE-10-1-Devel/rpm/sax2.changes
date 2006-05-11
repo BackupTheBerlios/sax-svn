@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Mon May  8 10:02:21 CEST 2006 - ms@suse.de
+
+- enhancement: added update directory for Identity.map files. A user
+  can put a file named *Identity.map* file into the directory
+  /usr/share/sax/sysp/maps/update. The map there is searched for
+  graphics cards first. It is possible to add support for new 
+  cards or overwrite an old entry with this file (#163803)
+
+-------------------------------------------------------------------
 Tue May  2 08:25:26 CEST 2006 - ms@suse.de
 
 - added support for Radeon XPRESS 200M (1002:5955) (#171118)

@@ -62,14 +62,14 @@ sub IdentityToCard {
 	# are used if they exist
 	# ----------------------
 	foreach my $line (@ident) {
-	if ($line =~ /.*§FLAG=DEFAULT/) {
+	if ($line =~ /.*&FLAG=DEFAULT/) {
 
-		$line  =~ /.*§VID=(.*)§DID=(.*)§SERVER.*/;
+		$line  =~ /.*&VID=(.*)&DID=(.*)&SERVER.*/;
 		my $vid   = $1;
 		my $did   = $2;
 		my $svid  = "";
 		my $sdid  = "";
-		if ($line =~ /.*§SUBVENDOR=(.*)§SUBDEVICE=(.*)/) {
+		if ($line =~ /.*&SUBVENDOR=(.*)&SUBDEVICE=(.*)/) {
 			$svid  = $1;
 			$sdid  = $2;
 		}
@@ -77,13 +77,13 @@ sub IdentityToCard {
 		my $D3Line = "";
 
 		foreach my $line (@ident) {
-		if ($line =~ /.*§FLAG=3D/) {
-			$line =~ /.*§VID=(.*)§DID=(.*)§SERVER.*/;
+		if ($line =~ /.*&FLAG=3D/) {
+			$line =~ /.*&VID=(.*)&DID=(.*)&SERVER.*/;
 			my $idv  = $1;
 			my $idd  = $2;
 			my $idsv = "";
 			my $idsd = "";
-			if ($line =~ /.*§SUBVENDOR=(.*)§SUBDEVICE=(.*)/) {
+			if ($line =~ /.*&SUBVENDOR=(.*)&SUBDEVICE=(.*)/) {
 				$idsv = $1;
 				$idsd = $2;
 			}
@@ -118,7 +118,7 @@ sub IdentityToCard {
 	# get the needed fields...
 	# ---------------------------
 	foreach my $line (@use) {
-	if ($line =~ /NAME=(.*)§DEVICE=(.*)§VID.*/) {
+	if ($line =~ /NAME=(.*)&DEVICE=(.*)&VID.*/) {
 		push(@result,"$1:$2 {\n");
 		my @parts = split(/\n/,$line);
 		if (defined ($parts[1])) {
@@ -129,7 +129,7 @@ sub IdentityToCard {
 		SWITCH: for ($parts[0]) {
 		# which module to use...
 		# -----------------------
-		/SERVER=(.*)§EXT/    && do {
+		/SERVER=(.*)&EXT/    && do {
 		if ($1 ne "") {
 			push(@result," Driver    = $1\n");
 		}
@@ -137,7 +137,7 @@ sub IdentityToCard {
 
 		# which device options...
 		# ------------------------
-		/OPT=(.*)§RAW/       && do {
+		/OPT=(.*)&RAW/       && do {
 		if ($1 ne "") {
 			push(@result," Option    = $1\n");
 		}
@@ -145,7 +145,7 @@ sub IdentityToCard {
 
 		# which profile is defined...
 		# ---------------------------
-		/PROFILE=(.*)§SCR/   && do {
+		/PROFILE=(.*)&SCR/   && do {
 		if ($1 ne "") {
 			push(@result," Profile   = $1\n");
 		}
@@ -153,7 +153,7 @@ sub IdentityToCard {
 
 		# raw information for device section...
 		# --------------------------------------
-		/RAW=(.*)§PROFILE/  && do {
+		/RAW=(.*)&PROFILE/  && do {
 		if ($1 ne "") {
 			push(@result," RawData   = $1\n");
 		}
@@ -162,14 +162,14 @@ sub IdentityToCard {
 		# raw information for device section (end of line)...
 		# -----------------------------------------------------
 		/RAW=(.*)/  && do {
-		if (($1 ne "") && ($1 !~ /.*§PROFILE.*/)) {
+		if (($1 ne "") && ($1 !~ /.*&PROFILE.*/)) {
 			push(@result," RawData =   $1\n");
 		}
 		};
 		if (defined $parts[1]) {
 		SWITCH: for ($parts[1]) {
 		# which 3D server to use...
-		/SERVER=(.*)§EXT/    && do {
+		/SERVER=(.*)&EXT/    && do {
 		if ($1 ne "") {
 			push(@result," 3DDriver  = $1\n");
 		}
@@ -177,7 +177,7 @@ sub IdentityToCard {
 
 		# which script to run...
 		# ----------------------
-		/SCRIPT3D=(.*)§PAC/  && do {
+		/SCRIPT3D=(.*)&PAC/  && do {
 		if ($1 ne "") {
 			push(@result," Script3D  = $1\n");
 		}
@@ -185,7 +185,7 @@ sub IdentityToCard {
 
 		# which package to install...
 		# ---------------------------
-		/PACKAGE3D=(.*)§FL/  && do {
+		/PACKAGE3D=(.*)&FL/  && do {
 		if ($1 ne "") {
 			push(@result," Package3D = $1\n");
 		}
@@ -193,7 +193,7 @@ sub IdentityToCard {
 
 		# which device options...
 		# ------------------------
-		/OPT=(.*)§RAW/       && do {
+		/OPT=(.*)&RAW/       && do {
 		if ($1 ne "") {
 			push(@result," 3DOption  = $1\n");
 		}
@@ -201,7 +201,7 @@ sub IdentityToCard {
 
 		# raw information for device section...
 		# --------------------------------------
-		/RAW=(.*)§PROFILE/  && do {
+		/RAW=(.*)&PROFILE/  && do {
 		if ($1 ne "") {
 			push(@result," 3DRawData = $1\n");
 		}
@@ -210,14 +210,14 @@ sub IdentityToCard {
 		# raw information for device section (end of line)...
 		# -----------------------------------------------------
 		/RAW=(.*)/  && do {
-		if (($1 ne "") && ($1 !~ /.*§PROFILE.*/)) {
+		if (($1 ne "") && ($1 !~ /.*&PROFILE.*/)) {
 			push(@result," 3DRawData = $1\n");
 		}
 		};
 
 		# which extensions to use...
 		# --------------------------
-		/EXT=(.*)§OPT/       && do {
+		/EXT=(.*)&OPT/       && do {
 		if ($1 ne "") {
 			push(@result," Extension = $1\n");
 		}
@@ -225,7 +225,7 @@ sub IdentityToCard {
 
 		# which profile is defined...
 		# ---------------------------
-		/PROFILE=(.*)§SCR/   && do {
+		/PROFILE=(.*)&SCR/   && do {
 		if ($1 ne "") {
 			push(@result," 3DProfile = $1\n");
 		}
@@ -233,7 +233,7 @@ sub IdentityToCard {
 
 		# which Vendor/Device ID's...
 		# ---------------------------
-		/.*§VID=(.*)§DID=(.*)§SERVER.*/ && do {
+		/.*&VID=(.*)&DID=(.*)&SERVER.*/ && do {
 			if (defined $Complete) {
 				push(@result," VendorID  = $1\n");
 				push(@result," DeviceID  = $2\n");
@@ -242,7 +242,7 @@ sub IdentityToCard {
 
 		# which SUB Vendor/Device ID's...
 		# -------------------------------
-		/.*§SUBVENDOR=(.*)§SUBDEVICE=(.*)/  && do {
+		/.*&SUBVENDOR=(.*)&SUBDEVICE=(.*)/  && do {
 			if (defined $Complete) {
 				push(@result," SVendorID = $1\n");
 				push(@result," SDeviceID = $2\n");

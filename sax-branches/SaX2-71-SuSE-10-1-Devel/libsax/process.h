@@ -26,6 +26,8 @@ STATUS        : Status: Development
 //------------------------------------
 #include <qregexp.h>
 #include <qfile.h>
+#include <sys/types.h>
+#include <dirent.h>
 
 #include "storage.h"
 #include "exception.h"
@@ -37,8 +39,8 @@ namespace SaX {
 //------------------------------------
 #define ISAX               "/usr/sbin/isax"
 #define SYSP               "/usr/sbin/sysp"
-#define PROF               "/var/lib/sax/createPRO.pl"
-#define META               "/var/lib/sax/createMTA.pl"
+#define PROF               "/usr/share/sax/libsax/createPRO.pl"
+#define META               "/usr/share/sax/libsax/createMTA.pl"
 
 #define CDBDIR             "/usr/share/sax/api/data/cdb/"
 #define DATADIR            "/usr/share/sax/api/data/"

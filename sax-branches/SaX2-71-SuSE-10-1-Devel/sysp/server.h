@@ -27,6 +27,8 @@ STATUS        : Status: Up-to-date
 #include <stdio.h>
 #include <algorithm>
 #include <list>
+#include <stdarg.h>
+#include <dirent.h>
 
 using namespace std;
 
