@@ -145,63 +145,98 @@ void SaXProcess::storeDataCDB (int fileID) {
 			qError (errorString(),EXC_CDBFILEFAILED);
 		break;
 	}
-	QFile* handle = new QFile (file);
-	if (! handle -> open(IO_ReadOnly)) {
+	//====================================
+	// search all entries for file
+	//------------------------------------
+	DIR* CDBDir = 0;
+	struct dirent* entry = 0;
+	CDBDir = opendir (CDBDIR);
+	QList<QString> fileList;
+	if (! CDBDir) {
 		excFileOpenFailed ( errno );
 		qError (errorString(),EXC_FILEOPENFAILED);
 		return;
 	}
-	QString line;
-	QString group,key,val;
-	while ((handle->readLine (line,MAX_LINE_LENGTH)) != 0) {
-		line.truncate(line.length()-1);
-		if ((line[0] == '#') || (line.isEmpty())) {
+	while (1) {
+		entry = readdir (CDBDir);
+		if (! entry) {
+			break;
+		}
+		QString* updateFile = new QString();
+		QTextOStream (updateFile) << CDBDIR << entry->d_name;
+		if (*updateFile == file) {
+			continue;
+		}
+		if ((updateFile->contains(file)) && (entry->d_type != DT_DIR)) {
+			fileList.append (updateFile);
+		}
+	}
+	closedir (CDBDir);
+	fileList.append (&file);
+	QListIterator<QString> it (fileList);
+
+	//====================================
+	// read in file list
+	//------------------------------------
+	for (; it.current(); ++it) {
+		QFile* handle = new QFile (it.current()->ascii());
+		if (! handle -> open(IO_ReadOnly)) {
+			excFileOpenFailed ( errno );
+			qError (errorString(),EXC_FILEOPENFAILED);
+			return;
+		}
+		QString line;
+		QString group,key,val;
+		while ((handle->readLine (line,MAX_LINE_LENGTH)) != 0) {
+			line.truncate(line.length()-1);
+			if ((line[0] == '#') || (line.isEmpty())) {
+				if (handle->atEnd()) {
+					break;
+				}
+				continue;
+			}
+			int bp = line.find('{');
+			if (bp >= 0) {
+				QStringList tokens = QStringList::split ( ":", line );
+				QString vendor = tokens.first();
+				QString name   = tokens.last();
+				name.truncate(
+					name.find('{')
+				);
+				name   = name.stripWhiteSpace();
+				vendor = vendor.stripWhiteSpace();
+				group = vendor+":"+name;
+			} else {
+				bp = line.find('}');
+				if (bp >= 0) {
+					continue;
+				}
+				QStringList tokens = QStringList::split ( "=", line );
+				key = tokens.first();
+				val = tokens.last();
+				val = val.stripWhiteSpace();
+				key = key.stripWhiteSpace();
+				// ... /
+				// CDB keys and ISAX keys are not the same,
+				// check this and adapt to ISAX keys
+				// ---
+				if (key == "Hsync") {
+					key = "HorizSync";
+				}
+				if (key == "Vsync") {
+					key = "VertRefresh";
+				}
+				if (key == "Modeline") {
+					key = "SpecialModeline";
+				}
+				addGroup (group,key,val);
+			}
 			if (handle->atEnd()) {
 				break;
 			}
-			continue;
 		}
-		int bp = line.find('{');
-		if (bp >= 0) {
-			QStringList tokens = QStringList::split ( ":", line );
-			QString vendor = tokens.first();
-			QString name   = tokens.last();
-			name.truncate(
-				name.find('{')
-			);
-			name   = name.stripWhiteSpace();
-			vendor = vendor.stripWhiteSpace();
-			group = vendor+":"+name;
-		} else {
-			bp = line.find('}');
-			if (bp >= 0) {
-				continue;
-			}
-			QStringList tokens = QStringList::split ( "=", line );
-			key = tokens.first();
-			val = tokens.last();
-			val = val.stripWhiteSpace();
-			key = key.stripWhiteSpace();
-			// ... /
-			// CDB keys and ISAX keys are not the same,
-			// check this and adapt to ISAX keys
-			// ---
-			if (key == "Hsync") {
-				key = "HorizSync";
-			}
-			if (key == "Vsync") {
-				key = "VertRefresh";
-			}
-			if (key == "Modeline") {
-				key = "SpecialModeline";
-			}
-			addGroup (group,key,val);
-		}
-		if (handle->atEnd()) {
-			break;
-		}
+		handle -> close();
 	}
-	handle -> close();
 }
 
 //====================================

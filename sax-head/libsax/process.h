@@ -26,6 +26,8 @@ STATUS        : Status: Development
 //------------------------------------
 #include <qregexp.h>
 #include <qfile.h>
+#include <sys/types.h>
+#include <dirent.h>
 
 #include "storage.h"
 #include "exception.h"
