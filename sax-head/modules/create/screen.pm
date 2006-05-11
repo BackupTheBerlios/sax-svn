@@ -212,7 +212,7 @@ sub CreateScreenSection {
 			#===========================================
 			# DefaultDepth setting...
 			#-------------------------------------------
-			/^DefaultDepth/    && do {
+			/^DefaultDepth|DefaultFbBpp/    && do {
 				foreach $n (@list) {
 				if ($n ne "") {
 					push(@result,PrintLine($i,$n));

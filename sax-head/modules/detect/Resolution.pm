@@ -336,10 +336,12 @@ sub SetFbdevDefaultScreen {
 	my $i = $_[2];
 	my $data  = FBSet::FbGetData();
 	my $depth = $data->swig_depth_get();
+	my $fbppp = $depth;
 	if ($depth == 32) {
 		$depth = 24;
 	}
 	$var{Screen}{$i}{DefaultDepth}          = $depth;
+	$var{Screen}{$i}{DefaultFbBpp}          = $fbppp;
 	$var{Screen}{$i}{Depth}{8}{Modes}       = "";
 	$var{Screen}{$i}{Depth}{16}{Modes}      = "";
 	$var{Screen}{$i}{Depth}{15}{Modes}      = "";
