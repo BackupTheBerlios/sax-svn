@@ -111,6 +111,7 @@ Release:      70
 Requires:     netpbm sax2-tools qt3 fvwm2 sax2
 Summary:      SuSE advanced X Window System-configuration GUI
 Group:        System/X11/Utilities
+Provides:     sax2:/usr/X11R6/lib/sax/xapi
 Provides:     sax2:/usr/sbin/xapi
 
 %description -n sax2-gui
