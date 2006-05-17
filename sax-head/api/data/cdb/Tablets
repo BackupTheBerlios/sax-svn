@@ -97,6 +97,18 @@ WACOM:GRAPHIRE-3 CLASSIC (USB) {
 }
 
 #--------------------------#
+# Wacom Penabled TabletPC  #
+#--------------------------#
+WACOM:PENABLED TABLET-PC  {
+ Driver               = wacom
+ Device               = /dev/ttyS0
+ SendCoreEvents       = on
+ TouchType            = stylus
+ TabletMode           = Absolute
+ RawOption            = "ForceDevice" "ISDV4"
+}
+
+#--------------------------#
 # Tevion/Aiptek Tablet     #
 #--------------------------#
 TEVION / AIPTEK:ALDI Tablet (SERIAL) {

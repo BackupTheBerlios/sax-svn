@@ -70,6 +70,17 @@ sub CreateFilesSection {
 			last SWITCH;
 			};
 
+			# InputDevices setting...
+			# -----------------------
+			/^InputDevices/   && do {
+			foreach $n (@list) {
+			if ($n ne "") {
+				push(@result,PrintLine($i,"\"$n\""));
+			}
+			}
+			last SWITCH;
+			};
+
 			# RgbPath setting...
 			# -------------------
 			/^RgbPath/    && do { 

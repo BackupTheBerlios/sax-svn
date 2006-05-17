@@ -54,7 +54,7 @@ sub AutoDetectMouse {
 		$var{InputDevice}{$index}{Option}{Name}     = $name_list[$i];
 		$var{InputDevice}{$index}{Option}{Protocol} = $prot_list[$i];
 		if ($prot_list[$i] =~ /AUTO/i) {
-			$var{InputDevice}{$index}{Option}{Option}  = "AutoSoft";
+			$var{InputDevice}{$index}{Option}{AutoSoft}  = "on";
 		}
 		# this enables Emulate3Buttons per default...
 		# --------------------------------------------

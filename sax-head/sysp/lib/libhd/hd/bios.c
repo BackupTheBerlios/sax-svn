@@ -70,6 +70,7 @@ static struct {
   { 305, 230, 1400, 1050, "Samsung Electronics", "SX20S", "Revision PR" },
   { 290, 200, 1280,  800, "TOSHIBA", "Satellite M30X", "PSA72E-00J020GR" },
   { 305, 230, 1400, 1050, "ASUSTeK Computer Inc.", "M6V", "1.0" },
+  { 246, 185, 1024,  768, "FUJITSU SIEMENS", "LifeBook T Series", NULL },
 };
 
 #define BIOS_TEST
@@ -807,7 +808,7 @@ void add_panel_info(hd_data_t *hd_data, bios_info_t *bt)
   hd_smbios_t *sm;
   unsigned u;
 
-  if(bt->lcd.width || !hd_data->smbios) return;
+  if(!hd_data->smbios) return;
 
   vendor = name = version = NULL;
   width = height = 0;
