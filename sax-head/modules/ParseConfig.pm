@@ -460,6 +460,29 @@ sub ParseDeviceSection {
 			my @option = split(/:/,$model);
 			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
 		}
+		if ($i =~ s/(KernelModuleParm:.+=.+?,)//) {
+			my $special = $1;
+			$special =~ s/,$//;
+			my @option = split(/:/,$special);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
+		if ($i =~s/(DesktopSetup:(?:Horizontal,Reverse|Vertical,Reverse))//){
+			my $special = $1;
+			$special =~ s/,$//;
+			my @option = split(/:/,$special);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		} elsif ($i =~s/(DesktopSetup:(?:Horizontal|Vertical))//) {
+			my $special = $1;
+			$special =~ s/,$//;
+			my @option = split(/:/,$special);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
+		if ($i =~ s/(ForceMonitors:.+?,.+?,)//) {
+			my $special = $1;
+			$special =~ s/,$//;
+			my @option = split(/:/,$special);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
 
 		@line = split(/ /,$i);
 		foreach $n (@line) {
@@ -612,12 +635,18 @@ sub ParseDeviceSection {
 			# Option...
 			#----------------------------------------
 			/^option/      && do {
+				my $Mode2;
 				my $MetaModes;
 				my $ConnectedMonitor;
 				if ($value[1] =~ /MetaModes:(.*)/) {
 					my @tlist = split (/,SaX/,$1);
 					$MetaModes = $tlist[0];
 					$value[1] =~ s/MetaModes:$MetaModes,//;
+				}
+				if ($value[1] =~ /Mode2:(.*)/) {
+					my @tlist = split (/,FSA/,$1);
+					$Mode2 = $tlist[0];
+					$value[1] =~ s/Mode2:$Mode2,//;
 				}
 				if ($value[1] =~ /ConnectedMonitor:(.*)/) {
 					my @tlist = split (/,SaX/,$1);
@@ -627,6 +656,9 @@ sub ParseDeviceSection {
 				@list = split(/,/,$value[1]);
 				if (defined $MetaModes) {
 					push (@list,"MetaModes:$MetaModes");
+				}
+				if (defined $Mode2) {
+					push (@list,"Mode2:$Mode2");
 				}
 				if (defined $ConnectedMonitor) {
 					push (@list,"ConnectedMonitor:$ConnectedMonitor");
@@ -638,7 +670,9 @@ sub ParseDeviceSection {
 					} else {
 						$l =~ s/,$//;
 						@option = split(/:/,$l);
-						$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+						if (defined $option[0]) {
+							$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+						}
 					}
 				}
 				last SWITCH; 

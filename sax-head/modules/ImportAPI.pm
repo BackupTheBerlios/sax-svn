@@ -83,7 +83,7 @@ sub ApiRead {
 		# ---
 		$name   = $1;
 		$name   =~ s/^ +//g; $name   =~ s/ +$//g;
-	} elsif ($line =~ /(.*)=(.*)/) {
+	} elsif ($line =~ /(.*?)=(.*)/) {
 		# /.../
 		# get the values behind this topic...
 		# ---
