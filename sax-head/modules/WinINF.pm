@@ -62,11 +62,11 @@ sub readDisk {
 #
 	my @data = ();
 	my @files = mountMedia("CD");
-	if (! defined @files) {
+	if (! @files) {
 		umountMedia();
 		@files = mountMedia();
 	}
-	if (! defined @files) {
+	if (! @files) {
 		umountMedia();
 		return (@data);
 	}
