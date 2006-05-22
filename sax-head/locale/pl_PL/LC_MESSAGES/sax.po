@@ -1,6 +1,7 @@
 # translation of sax.pl_PL.po to 
 # translation of sax.pl_PL.po to
 # translation of sax.pl_PL.po to
+# translation of sax.pl_PL.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Wojciech Kapusta, 2006.
 # Wojciech Kapusta, 2006.
@@ -14,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.pl_PL\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-03-23 18:00+0100\n"
+"PO-Revision-Date: 2006-04-07 20:33+0200\n"
 "Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +59,8 @@ msgid "&Help"
 msgstr "Pomo&c"
 
 #. Ok Button text
-msgid "&OK"
+#, fuzzy
+msgid "O&K"
 msgstr "&OK"
 
 #. Yes Button text
@@ -148,7 +150,7 @@ msgstr "Włącz ten ekran"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr "Włącz ten wskaĽnik"
+msgstr "Włącz ten wskaźnik"
 
 #. Graphics Card name label
 msgid "Card"
@@ -338,7 +340,7 @@ msgid ""
 "Build one big display out of all screens"
 msgstr ""
 "Tryb wieloekranowy - Xinerama:\n"
-"Utwórz jeden duży ekran ze wszystkich monitorów"
+"Utworzenie jednego dużego ekranu ze wszystkich monitorów"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -483,8 +485,8 @@ msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>CD/dyskietka</b><hr>Proszę włożyć CD albo dyskietkę z narzędziami od "
-"producenta monitora."
+"<b>CD/dyskietka</b><hr>Proszę umieścić w napędzie płytę CD albo dyskietkę z "
+"narzędziami od producenta monitora."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
@@ -492,7 +494,7 @@ msgid ""
 "damaged medium or incorrectly formatted information files."
 msgstr ""
 "<b>Błąd odczytu</b><hr>Nie można odczytać płyty CD albo dyskietki. Może to "
-"oznaczać uszkodzenie nośnika albo niepoprawny format plików."
+"oznaczać uszkodzenie nośnika albo nieprawidłowy format plików."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -533,7 +535,7 @@ msgstr "Status"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr "Tablica klawiszy"
+msgstr "Układy klawiatury"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
@@ -550,7 +552,7 @@ msgstr "Pozycja klawisza do szybkiego uruchamiania aplikacji"
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Pozycja klawisza Control"
+msgstr "Pozycja klawisza Ctrl"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -660,7 +662,7 @@ msgstr "Dioda ScrollLock pokazuje alternatywną grupę"
 
 #. XKBFile extension text
 msgid "Control key at left of -A-"
-msgstr "Klawisz Control po lewej stronie"
+msgstr "Klawisz Ctrl po lewej stronie"
 
 #. XKBFile extension text
 msgid "Third level choosers"
@@ -683,7 +685,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
-msgstr "Klawisz CapsLock jako dodatkowy Control"
+msgstr "Klawisz CapsLock jako dodatkowy Ctrl"
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
@@ -727,7 +729,7 @@ msgstr "Klawisz Caps Lock zmienia grupę"
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr "Zamień klawisze Control i CapsLock"
+msgstr "Zamień klawisze Ctrl i CapsLock"
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
@@ -771,7 +773,7 @@ msgstr "Klawisze Alt i Meta na klawiszach Alt (domyślne)"
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "Proszę nacisnąć prawy klawisz Control, aby wybrać trzeci poziom"
+msgstr "Proszę nacisnąć prawy klawisz Ctrl, aby wybrać trzeci poziom"
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
@@ -779,7 +781,7 @@ msgstr "Klawisze Alt+Shift zmieniają grupę"
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr "Klawisze Control+Shift zmieniają grupę"
+msgstr "Klawisze Ctrl+Shift zmieniają grupę"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
@@ -815,7 +817,7 @@ msgstr "Klawisz Menu zmienia grupę"
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr "Klawisze Alt+Control zmieniają grupę"
+msgstr "Klawisze Alt+Ctrl zmieniają grupę"
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
@@ -911,7 +913,7 @@ msgstr ""
 "<b>Etapy końcowe:</b><hr>Ostatnim etapem jest zapisanie nowej konfiguracji. "
 "Zaleca się przetestowanie nowej konfiguracji przed jej zapisaniem. Jeśli w "
 "czasie testów wystąpiłyby problemy z wyświetlaniem obrazu, proszę nacisnąć "
-"<b>[ Ctrl+Alt+Backspace ]</b> aby zabić proces testowania."
+"<b>[ Ctrl+Alt+Backspace ]</b> aby przerwać proces testowania."
 
 #. Tab title: VNC Server configuration
 msgid "VNC Server"
@@ -943,7 +945,7 @@ msgstr "<Zmień hasło>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr "<PotwierdĽ hasło>"
+msgstr "<Potwierdź hasło>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
@@ -962,15 +964,24 @@ msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>Niezgodne hasło VNC</b><hr>Pierwsza wersja hasła różni się od drugiej!"
+"<b>Niezgodne hasło VNC</b><hr>Pierwsza wersja hasła różni się od drugiej."
 
 #. VNC message box appearing if password is too short
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>Błąd hasła</b><hr>Pole hasła zostało pozostawione puste albo hasło jest "
-"za krótkie. Proszę podać hasło co najmniej sześcioznakowe!"
+"<b>Błąd hasła VNC</b><hr>Pole hasła zostało pozostawione puste albo hasło "
+"jest za krótkie. Proszę podać hasło co najmniej sześcioznakowe!"
+
+#. VNC message box appearing if password is too long
+#, fuzzy
+msgid ""
+"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
+"a maximum of eight characters."
+msgstr ""
+"<b>Błąd hasła VNC</b><hr>Pole hasła zostało pozostawione puste albo hasło "
+"jest za krótkie. Proszę podać hasło co najmniej sześcioznakowe!"
 
 #. Install missing packages box
 msgid ""
@@ -1025,8 +1036,8 @@ msgid ""
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
-"<b>Informacje o konfiguracji VNC</b><hr>Usługa VNC wymaga otwarcia na "
-"firewallu portu 5900 TCP oraz portu dla HTTP (domyślnie 5800). Można to "
+"<b>Informacje o konfiguracji VNC</b><hr>Usługa VNC wymaga otwarcia w zaporze "
+"sieciowej portu 5900 TCP oraz portu dla HTTP (domyślnie 5800). Można to "
 "skonfigurować używając programu YaST."
 
 #. XKBFile extension text
@@ -1051,19 +1062,19 @@ msgstr "Dodawanie znaku Euro do klawiszy"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr "Klawisz Caps Lock do szybkiego uruchamiania aplikacji"
+msgstr "Klawisz CapsLock do szybkiego uruchamiania aplikacji"
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
-msgstr "Prawy klawisz Control jak prawy Alt"
+msgstr "Prawy klawisz Ctrl jak prawy Alt"
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
-msgstr "Klawisz Control u dołu po lewej"
+msgstr "Klawisz Ctrl u dołu po lewej"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr "Klawisz Control po lewej stronie"
+msgstr "Klawisz Ctrl po lewej stronie"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
@@ -1109,6 +1120,311 @@ msgstr "Klawisze Alt+Ctrl zmieniają grupę"
 msgid "Group Shift/Lock behavior"
 msgstr "Działanie grupy Shift/Lock"
 
+#. XKBFile extension text
+msgid "Arabic"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Estonia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Myanmar"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Norway"
+msgstr "Normalny"
+
+#. XKBFile extension text
+msgid "Germany"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Mongolia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bhutan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bangladesh"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Latin American"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Belgium"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Finland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Israel"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Sweden"
+msgstr "Ekran"
+
+#. XKBFile extension text
+msgid "Russia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Portugal"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Korean"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Maori"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Uzbekistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bulgaria"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Thailand"
+msgstr ""
+
+#. XKBFile extension text
+msgid "India"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bengali"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Switzerland"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Laos"
+msgstr "Układ"
+
+#. XKBFile extension text
+msgid "Japan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Syria"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Czechia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Belarus"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Tajikistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Denmark"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Slovenia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Malta"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Azerbaijan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Lithuania"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Vietnam"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Faroe Islands"
+msgstr ""
+
+#. XKBFile extension text
+msgid "South Africa"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Farsi"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Slovakia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Maldives"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Iceland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Croatia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Latvia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Albania"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Italy"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Greece"
+msgstr ""
+
+#. XKBFile extension text
+msgid "United Kingdom"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "France"
+msgstr "&Anuluj"
+
+#. XKBFile extension text
+msgid "Armenia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Pakistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Poland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Kyrgyzstan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Ireland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Hungary"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Cambodia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Spain"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Ukraine"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Romania"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Kazakhstan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Georgia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "U.S. English"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Turkish"
+msgstr ""
+
+#. XKBFile extension text
+msgid "PC-98xx Series"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Netherlands"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Macedonia"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Canada"
+msgstr "Karta"
+
+#. XKBFile extension text
+msgid "Sri Lanka"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Serbia and Montenegro"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Brazil"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Ghana"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Andorra"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Afghanistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Esperanto"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Turkey"
+msgstr ""
+
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #. This file contains the gettext keys used within a gettext call in the
@@ -1132,7 +1448,7 @@ msgstr "Duży"
 
 #. Maximum length: 40  characters
 msgid "Huge"
-msgstr "Ogromny"
+msgstr "Wielki"
 
 #. Maximum length: 40  characters
 msgid "&Next Screen"

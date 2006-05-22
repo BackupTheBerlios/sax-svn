@@ -11,17 +11,18 @@
 # Papp Zsolt <zpapp@novell.com>, 2006.
 # Keresztes Ákos <xsak@c2.hu>, 2006.
 # Kalman Kemenczy <kkemenczy@novell.com>, 2006.
+# Kéménczy Kálmán <kkemenczy@novell.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-03-18 22:26+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <hu@li.org>\n"
+"PO-Revision-Date: 2006-04-25 15:00+0200\n"
+"Last-Translator: Kéménczy Kálmán <kkemenczy@novell.com>\n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -62,7 +63,8 @@ msgstr "&Segítség"
 
 # /tmp/intro:62 /tmp/xapi:65
 #. Ok Button text
-msgid "&OK"
+#, fuzzy
+msgid "O&K"
 msgstr "&OK"
 
 # /tmp/xapi:61
@@ -246,7 +248,7 @@ msgstr "&Mentés"
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr "Elrendezése"
+msgstr "Elrendezés"
 
 # /tmp/xapi:219
 #. Status line of mouse test field: ready
@@ -445,7 +447,7 @@ msgstr "Monitor: Gyártó/név kiválasztása"
 # /tmp/xapi:301
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Egér: Gyártó/név kiválasztása"
+msgstr "Egér: Gyártó/tipus kiválasztása"
 
 # /tmp/xapi:355
 #. Group box title for the manual sync frequency set up
@@ -1024,7 +1026,7 @@ msgstr "<Jelszó módosítása>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr "<Jelszó ellenőrzése>"
+msgstr "Jelszó ellenőrzése0"
 
 # /tmp/xapi:235
 #. Activate HTTP access checkbox
@@ -1051,6 +1053,15 @@ msgstr ""
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
+msgstr ""
+"<b>VNC-jelszóhiba</b><hr>A jelszómező üresen maradt, vagy a jelszó túl "
+"rövid. Adjon meg egy legalább hatkarakteres jelszót."
+
+#. VNC message box appearing if password is too long
+#, fuzzy
+msgid ""
+"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
+"a maximum of eight characters."
 msgstr ""
 "<b>VNC-jelszóhiba</b><hr>A jelszómező üresen maradt, vagy a jelszó túl "
 "rövid. Adjon meg egy legalább hatkarakteres jelszót."
@@ -1193,6 +1204,313 @@ msgstr "Az Alt+Ctrl vált csoportot."
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
 msgstr "Shift/CapsLock csoport viselkedése"
+
+#. XKBFile extension text
+msgid "Arabic"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Estonia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Myanmar"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Norway"
+msgstr "Szokványos"
+
+#. XKBFile extension text
+msgid "Germany"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Mongolia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bhutan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bangladesh"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Latin American"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Belgium"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Finland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Israel"
+msgstr ""
+
+# /tmp/intro:67 /tmp/xapi:379
+#. XKBFile extension text
+#, fuzzy
+msgid "Sweden"
+msgstr "Képernyő"
+
+#. XKBFile extension text
+msgid "Russia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Portugal"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Korean"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Maori"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Uzbekistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bulgaria"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Thailand"
+msgstr ""
+
+#. XKBFile extension text
+msgid "India"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bengali"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Switzerland"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Laos"
+msgstr "Elrendezés"
+
+#. XKBFile extension text
+msgid "Japan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Syria"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Czechia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Belarus"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Tajikistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Denmark"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Slovenia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Malta"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Azerbaijan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Lithuania"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Vietnam"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Faroe Islands"
+msgstr ""
+
+#. XKBFile extension text
+msgid "South Africa"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Farsi"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Slovakia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Maldives"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Iceland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Croatia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Latvia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Albania"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Italy"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Greece"
+msgstr ""
+
+#. XKBFile extension text
+msgid "United Kingdom"
+msgstr ""
+
+# /tmp/xapi:17 /tmp/xapi:25 /tmp/xapi:83
+#. XKBFile extension text
+#, fuzzy
+msgid "France"
+msgstr "&Mégsem"
+
+#. XKBFile extension text
+msgid "Armenia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Pakistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Poland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Kyrgyzstan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Ireland"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Hungary"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Cambodia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Spain"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Ukraine"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Romania"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Kazakhstan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Georgia"
+msgstr ""
+
+#. XKBFile extension text
+msgid "U.S. English"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Turkish"
+msgstr ""
+
+#. XKBFile extension text
+msgid "PC-98xx Series"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Netherlands"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Macedonia"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Canada"
+msgstr "Kártya"
+
+#. XKBFile extension text
+msgid "Sri Lanka"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Serbia and Montenegro"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Brazil"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Ghana"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Andorra"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Afghanistan"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Esperanto"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Turkey"
+msgstr ""
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
