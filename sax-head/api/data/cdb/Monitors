@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue May  2 10:20:48 2006
+# Author: Marcus Schaefer <sax@suse.de>, Tue May 23 10:46:16 2006
 #
 # Template for monitor data
 # --------------------------
@@ -23765,6 +23765,17 @@ MAXTECH:XT-9882  {
  Option=DPMS
  Hsync=30-96
  Vsync=50-150
+}
+
+#==============================================
+# e-Tron 998
+#----------------------------------------------
+MBO:E-TRON 998  {
+ DDC=MBOE998
+ Option=DPMS
+ Hsync=30-98
+ Resolution=1280x1024
+ Vsync=50-160
 }
 
 #==============================================
