@@ -1378,7 +1378,7 @@ sub GetModelines {
 				# ...
 				# first step find a modeline which fits the max vsync/hsync
 				# and dot clock requirements. If a mode has been found
-				# the vsmax value will be set referring that mode
+				# the vsmax/hsmax values will be set referring that mode
 				# ---
 				my $x = $1;
 				my $y = $2;

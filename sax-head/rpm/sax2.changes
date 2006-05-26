@@ -1,6 +1,11 @@
 -------------------------------------------------------------------
 Tue May 23 10:47:04 CEST 2006 - ms@suse.de
 
+- added missing display size values (#176328)
+- added CVT modeline calculation module (#159071)
+- reverted patch for French-Canadian keyboard support. This was done
+  because the related and needed patch for Xorg will not become
+  applied, so it makes no sense to still have it in sax (#158951)
 - added MBO e-Tron 998 monitor into the CDB
 
 -------------------------------------------------------------------

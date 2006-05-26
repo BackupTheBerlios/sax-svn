@@ -114,7 +114,7 @@ sub CreateModesSection {
 						# not sorted by ramdac speed. This is because 
 						# we don't asume somebody will configure a vga
 						# server, but if autodetection fails the order
-						# the given Modelines should not be changed
+						# of the given Modelines should not be changed
 						# ---  
 						push(@result,@tmp);
 					}

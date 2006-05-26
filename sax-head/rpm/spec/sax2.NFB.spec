@@ -271,6 +271,8 @@ fi
 %{perl_vendorarch}/auto/SPP
 %{perl_vendorarch}/FBSet.pm
 %{perl_vendorarch}/auto/FBSet
+%{perl_vendorarch}/CVT.pm
+%{perl_vendorarch}/auto/CVT
 /var/adm/perl-modules/sax2
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README

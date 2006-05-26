@@ -331,6 +331,8 @@ fi
 %{perl_vendorarch}/auto/SPP
 %{perl_vendorarch}/FBSet.pm
 %{perl_vendorarch}/auto/FBSet
+%{perl_vendorarch}/CVT.pm
+%{perl_vendorarch}/auto/CVT
 %if %{?suse_version:1}0
 # SuSE files...
 /var/adm/perl-modules/sax2

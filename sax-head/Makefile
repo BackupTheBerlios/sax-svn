@@ -87,6 +87,12 @@ all:
 	${MAKE} -C ./sysp/lib/fbset all
 
 	#============================================
+	# building CVT modeline module
+	#--------------------------------------------
+	${MAKE} -C ./sysp/lib/cvt -f Makefile.swig
+	${MAKE} -C ./sysp/lib/cvt all
+
+	#============================================
 	# building libsax and bindings...
 	#--------------------------------------------
 	( test -f /usr/lib/graphviz/libgvplugin_dot_layout.so && dot -c || true )
@@ -145,6 +151,11 @@ install:install-docs
 	# install SaX Framebuffer info module...
 	#--------------------------------------------
 	( cd sysp/lib/fbset && make DESTDIR=${buildroot} install_vendor )
+
+	#============================================
+	# install SaX CVT modeline module...
+	#--------------------------------------------
+	( cd sysp/lib/cvt && make DESTDIR=${buildroot} install_vendor )
 
 	#============================================
 	# install language bindings...
