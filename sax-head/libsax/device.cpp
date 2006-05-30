@@ -295,7 +295,7 @@ int SaXManipulateDevices::removeInputDevice (int id) {
 	//====================================
 	// don't allow removing the core entry   
 	//------------------------------------
-	if (id <= 1) {
+	if ((id <= 1) && (mInput->getCount() <= 2)) {
 		excInvalidArgument (id);
 		qError (errorString(),EXC_INVALIDARGUMENT);
 		return -1;
