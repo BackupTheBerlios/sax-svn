@@ -39,8 +39,8 @@ namespace SaX {
 //------------------------------------
 #define ISAX               "/usr/sbin/isax"
 #define SYSP               "/usr/sbin/sysp"
-#define PROF               "/usr/share/sax/libsax/createPRO.pl"
-#define META               "/usr/share/sax/libsax/createMTA.pl"
+#define PROF               "/var/lib/sax/createPRO.pl"
+#define META               "/var/lib/sax/createMTA.pl"
 
 #define CDBDIR             "/usr/share/sax/api/data/cdb/"
 #define DATADIR            "/usr/share/sax/api/data/"
