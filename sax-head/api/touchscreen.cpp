@@ -97,7 +97,7 @@ bool SCCTouchScreen::exportData ( void ) {
 		mSection["Pointers"],mSection["Layout"]
 	);
 	//====================================
-	// search and remove toucherpanel(s)
+	// search and remove touchpanel(s)
 	//------------------------------------
 	int inputCount = mSection["Pointers"]->getCount();
 	for (int i=inputCount;i>=0;i--) {
