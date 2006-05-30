@@ -20,11 +20,11 @@ sub ProfileGetDualDisplaySize {
 	my $s1 = qx ($sysp -q xstuff | grep Size | head -n 1 | cut -f2 -d:);
 	my $s2 = qx ($sysp -q xstuff | grep Size | tail -n 1 | cut -f2 -d:);
 	if ($s1 =~ /(\d+)x(\d+)/) {
-		$x1 = $1 * 10;
-		$y  = $2 * 10;
+		$x1 = $1;
+		$y  = $2;
 	}
 	if ($s2 =~ /(\d+)x(\d+)/) {
-		$x2 = $1  * 10;
+		$x2 = $1;
 	} else {
 		$x2 = $x1;
 	}
