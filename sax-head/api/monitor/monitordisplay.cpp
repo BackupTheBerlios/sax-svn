@@ -284,6 +284,18 @@ void SCCMonitorDisplay::init ( void ) {
 		QString key; QTextOStream (&key) << colKey[n];
 		mColors -> insertItem ( *mColorDict[key] );
 	}
+	//====================================
+	// check availability of res/colors
+	//------------------------------------
+	if (saxCard.getCardDriver() == "fbdev") {
+		mPropertyGroup -> setDisabled (true);
+		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, mTextPtr, SaXMessage::OK,
+			mText["FBWarning"],"MessageCaption",SaXMessage::Warning
+		);
+		mMessageBox -> showMessage();
+	}
 }
 //====================================
 // import
