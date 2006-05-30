@@ -32,10 +32,18 @@ sub vendorName {
 	if (($arch eq "x86_64") || ($arch eq "ia64")) {
 		$lib = "lib64";
 	}
+	# Initial driver location Xorg v6
 	my $drvfile = "/usr/X11/$lib/modules/drivers/".$driver."_drv.*";
-	if (-d "/usr/$lib/xorg/modules/drivers") {
-		my $drvfile = "/usr/$lib/xorg/modules/drivers/".$driver."_drv.*";
-	}
+	if (glob("/usr/X11/$lib/modules/updates/drivers/".$driver."_drv.*")) {
+		# There is an update dir for Xorg v6... preferred
+		$drvfile = "/usr/X11/$lib/modules/updates/drivers/".$driver."_drv.*";
+	} elsif (glob("/usr/$lib/xorg/modules/updates/drivers/".$driver."_drv.*")) {
+		# There is an update dir for Xorg v7... preferred
+		$drvfile = "/usr/$lib/xorg/modules/updates/drivers/".$driver."_drv.*";
+	} elsif (glob("/usr/$lib/xorg/modules/drivers/".$driver."_drv.*")) {
+		# There is a  driver dir for Xorg v7... preferred
+		$drvfile = "/usr/$lib/xorg/modules/drivers/".$driver."_drv.*";
+	} 
 	my $objdump = qx (/usr/bin/strings $drvfile 2>/dev/null);
 	foreach my $vname (@vendor) {
 	if ($objdump =~ /$vname/) {
