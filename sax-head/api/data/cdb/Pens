@@ -31,10 +31,10 @@
 #  Option               = string,string
 # }
 
-#-----------------------#
-# Wacom TabletPC Eraser #
-#-----------------------#
-WACOM:TABLET PC Eraser (SERIAL) {
+#-------------------------------#
+# Wacom ISDV4 TabletPC Eraser   #
+#-------------------------------#
+WACOM:ISDV4 TABLET PC Stylus (SERIAL) {
  Device              = /dev/ttyS0
  TabletMode          = Absolute
  Driver              = wacom
@@ -43,16 +43,116 @@ WACOM:TABLET PC Eraser (SERIAL) {
  RawOption           = "ForceDevice" "ISDV4"
 }
 
-#-----------------------#
-# Wacom TabletPC Stylus #
-#-----------------------#
-WACOM:TABLET PC Stylus (SERIAL) {
+#-------------------------------#
+# Wacom ISDV4 TabletPC Stylus   #
+#-------------------------------#
+WACOM:ISDV4 TABLET PC Eraser (SERIAL) {
  Device              = /dev/ttyS0
  TabletMode          = Absolute
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
  RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------------#
+# Wacom Intuos Eraser           #
+#-------------------------------#
+WACOM:INTUOS v1,2 Eraser (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+}
+
+#-------------------------------#
+# Wacom Intuos Stylus           #
+#-------------------------------#
+WACOM:INTUOS v1,2 Stylus (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+}
+
+#-------------------------------#
+# Wacom Graphire Eraser         #
+#-------------------------------#
+WACOM:GRAPHIRE v1,2 Eraser (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+}
+
+#-------------------------------#
+# Wacom Graphire Stylus         #
+#-------------------------------#
+WACOM:GRAPHIRE v1,2 Stylus (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+}
+
+#-------------------------------#
+# Wacom Intuos Eraser USB       #
+#-------------------------------#
+WACOM:INTUOS v1,2,3 Eraser (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ Option              = USB,Tilt
+ SendCoreEvents      = on
+ ButtonThreshold     = 5
+}
+
+#-------------------------------#
+# Wacom Intuos Stylus USB       #
+#-------------------------------#
+WACOM:INTUOS v1,2,3 Stylus (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ Option              = USB,Tilt
+ ButtonThreshold     = 5
+ SendCoreEvents      = on
+}
+
+#-------------------------------#
+# Wacom Graphire Eraser USB     #
+#-------------------------------#
+WACOM:GRAPHIRE v1,2,3,4 Eraser (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ Option              = USB,Tilt
+ SendCoreEvents      = on
+ ButtonThreshold     = 5
+}
+
+#-------------------------------#
+# Wacom Graphire Stylus USB     #
+#-------------------------------#
+WACOM:GRAPHIRE v1,2,3,4 Stylus (USB) {
+ Device              = /dev/input/event0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ Option              = USB,Tilt
+ ButtonThreshold     = 5
+ SendCoreEvents      = on
 }
 
 #-------------------------#
@@ -77,82 +177,4 @@ IBM:X41 TABLET PC Stylus (SERIAL) {
  Protocol            = Auto
  TabletType          = stylus
  RawOption           = "ForceDevice" "ISDV4"
-}
-
-#-----------------------#
-# Wacom Intuos Eraser   #
-#-----------------------#
-WACOM:GRAPHIRE / INTUOS Eraser (SERIAL) {
- Device              = /dev/ttyS0
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = eraser
-}
-
-#-----------------------#
-# Wacom Intuos Stylus   #
-#-----------------------#
-WACOM:GRAPHIRE / INTUOS Stylus (SERIAL) {
- Device              = /dev/ttyS0
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = stylus
-}
-
-#-----------------------#
-# Wacom Intuos Eraser   #
-#-----------------------#
-WACOM:GRAPHIRE / INTUOS Eraser (USB) {
- Device              = /dev/input/event0
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = eraser
- Option              = USB,Tilt
- SendCoreEvents      = on
- ButtonThreshold     = 5
-}
-
-#-----------------------#
-# Wacom Intuos Stylus   #
-#-----------------------#
-WACOM:GRAPHIRE / INTUOS Stylus (USB) {
- Device              = /dev/input/event0
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = stylus
- Option              = USB,Tilt
- ButtonThreshold     = 5
- SendCoreEvents      = on
-}
-
-#-----------------------#
-# Wacom Graphire Eraser #
-#-----------------------#
-WACOM:GRAPHIRE-3 CLASSIC Eraser (USB) {
- Device              = /dev/input/event0
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = eraser
- Option              = USB,Tilt
- SendCoreEvents      = on
- ButtonThreshold     = 5
-}
-
-#-----------------------#
-# Wacom Graphire Stylus #
-#-----------------------#
-WACOM:GRAPHIRE-3 CLASSIC Stylus (USB) {
- Device              = /dev/input/event0
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = stylus
- Option              = USB,Tilt
- ButtonThreshold     = 5
- SendCoreEvents      = on
 }
