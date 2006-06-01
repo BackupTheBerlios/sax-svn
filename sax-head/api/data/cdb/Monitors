@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Jun  1 11:47:50 2006
+# Author: Marcus Schaefer <sax@suse.de>, Thu Jun  1 12:20:10 2006
 #
 # Template for monitor data
 # --------------------------
@@ -21197,6 +21197,18 @@ IQ AUTOMATION:Q17  {
  Hsync=31-64
  Resolution=1280x1024
  Vsync=50-60
+}
+
+#==============================================
+# L70S
+#----------------------------------------------
+IQT:L70S  {
+ DDC=IQT0703
+ Option=DPMS
+ Hsync=29-78
+ Modeline="1280x1024" 108 1280 1328 1440 1688 1024 1025 1028 1066
+ Resolution=1280x1024
+ Vsync=50-75
 }
 
 #==============================================
