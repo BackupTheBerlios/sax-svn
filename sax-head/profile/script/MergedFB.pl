@@ -35,6 +35,9 @@ sub getProfile {
 		/^mga/       && do {
 			return "$dir/Matrox_DualHead_DriverOptions";
 		};
+		/^sis/       && do {
+			return "$dir/SiS_DualHead_DriverOptions";
+		};
 		die "MergedFB: no DualHead profile available";
 	}
 }

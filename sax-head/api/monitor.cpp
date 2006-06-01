@@ -633,8 +633,58 @@ bool SCCMonitor::exportData ( void ) {
 							}
 						}
 						//====================================
-                        // setup profile Matrox data
-                        //------------------------------------
+						// setup profile SiS data
+						//------------------------------------
+						if (key == "MergedFBAuto") {
+							saxCard.addCardOption ( key,0 );
+						}
+						if (key == "MergedXineramaScreen0") {
+							saxCard.addCardOption ( key,val );
+						}
+						if (key == "MergedNonRectangular") {
+							saxCard.addCardOption ( key,val );
+						}
+						if ((key== "MetaModes") && (driver == "sis")) {
+							QList<QString> rList1=display->getResolution();
+							QString resolution1 = *rList1.at(0);
+							QList<QString> rList2=dualData->getResolutionList();
+							QString resolution2 = *rList2.at(0);
+							//====================================
+							// add primary meta mode
+							//------------------------------------
+							QString metaItem;
+							QString resolution;
+							QTextOStream (&metaItem) <<
+								resolution1 << "-" << resolution2;
+							resolution.append (";"+metaItem);
+							//====================================
+							// add secondary meta modes
+							//------------------------------------
+							bool startMeta = false;
+							QListIterator<QString> ir (rList1);
+							for (; ir.current(); ++ir) {
+								if (! startMeta) {
+									startMeta = true; continue;
+								}
+								QString metaItem;
+								int cmpr = compareResolution (
+									*ir.current(),resolution2
+								);
+								if (cmpr >= 0) {
+									QTextOStream (&metaItem) <<
+										*ir.current() << "-" << resolution2;
+								} else {
+									QTextOStream (&metaItem) <<
+										*ir.current() << "-" << *ir.current();
+								}
+								resolution.append (";"+metaItem);
+							}
+							resolution.replace(QRegExp("^;"),"");
+							saxCard.addCardOption ( key,resolution );
+						}
+						//====================================
+						// setup profile Matrox data
+						//------------------------------------
 						if ((key == "MergedFB") && (driver == "mga")) {
 							saxCard.addCardOption ( key,0 );
 						}

@@ -1560,6 +1560,10 @@ QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 		QTextOStream (&result)
 			<< PROFILE_DIR << "Matrox_DualHead_DriverOptions";
 	}
+	if (driver == "sis") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "SiS_DualHead_DriverOptions";
+	}
 	return result;
 }
 //====================================

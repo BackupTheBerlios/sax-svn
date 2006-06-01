@@ -618,6 +618,16 @@ int SaXManipulateCard::getHeads ( void ) {
 					realCount += 2;
 					continue;
 				}
+				if (mProfile == "SiS_DualHead_DriverOptions") {
+					headCount += 2;
+					realCount += 1;
+					continue;
+				}
+				if (mProfile == "SiS_DualHead") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
 			}
 		}
 		realCount++;

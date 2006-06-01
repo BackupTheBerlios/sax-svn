@@ -35,6 +35,9 @@ sub getProfile {
 		/^mga/       && do {
 			return "$dir/Matrox_DualHead";
 		};
+		/^sis/       && do {
+			return "$dir/SiS_DualHead";
+		};
 		die "Xinerama: no DualHead profile available";
 	}
 }
