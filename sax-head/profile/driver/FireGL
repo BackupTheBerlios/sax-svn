@@ -6,6 +6,8 @@ Device  -> [X] ->  Driver = fglrx
 Desktop -> [X] ->  CalcModelines = no
 Monitor -> [X] ->  CalcAlgorithm = XServerPool
 
+Extensions -> 0 -> DAMAGE = false
+
 !remove Monitor -> [X] -> Modeline
 
 Screen->[X]->DefaultDepth    = 24
