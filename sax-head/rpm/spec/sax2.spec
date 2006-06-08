@@ -12,7 +12,7 @@
 BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
 %else
 # FC5 Build Requires...
-BuildRequires: doxygen qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel python-devel hal-devel swig sysfsutils graphviz readline readline-devel java-gcj-compat-devel
+BuildRequires: doxygen qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel python-devel hal-devel swig sysfsutils graphviz readline readline-devel java-gcj-compat-devel gcc-c++
 %define __perl_requires %{nil}
 %define py_sitedir /usr/%{_lib}/python2.4/site-packages
 %endif
@@ -443,7 +443,7 @@ fi
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
-%ifnarch ppc64 s390x
+%ifnarch ppc64 s390x x86_64
 %files -n sax2-libsax-java
 %defattr(-,root,root)
 %dir %{_prefix}/%{_lib}/sax

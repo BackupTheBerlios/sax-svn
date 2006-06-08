@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Jun  1 12:20:10 2006
+# Author: Marcus Schaefer <sax@suse.de>, Thu Jun  8 14:45:03 2006
 #
 # Template for monitor data
 # --------------------------
@@ -38990,6 +38990,16 @@ VIEWSONIC:14ES  {
 }
 
 #==============================================
+# 15
+#----------------------------------------------
+VIEWSONIC:15  {
+ Option=DPMS
+ Hsync=30-64
+ Vsync=50-90
+ DPI=260x195
+}
+
+#==============================================
 # 15ES-2
 #----------------------------------------------
 VIEWSONIC:15ES-2  {
@@ -39023,6 +39033,16 @@ VIEWSONIC:15GS-3  {
  DDC=VSC3145
  Hsync=30-69
  Vsync=50-120
+}
+
+#==============================================
+# 17
+#----------------------------------------------
+VIEWSONIC:17  {
+ Option=DPMS
+ Hsync=30-65
+ Vsync=50-110
+ DPI=310x230
 }
 
 #==============================================
