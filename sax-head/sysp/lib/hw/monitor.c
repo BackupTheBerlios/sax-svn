@@ -64,7 +64,8 @@ MsgDetect* MonitorGetData (void) {
 	char buf[256]      = "";
 	int  vt_orig       = getvt();
 
-	chvt (1);
+	chvt  (1);
+	sleep (1);
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	hd = hd_list(hd_data, hw_monitor, 1, NULL);
 	first_dev = hd;
@@ -107,6 +108,7 @@ MsgDetect* MonitorGetData (void) {
 		display->hsync_max = 0;
 		display->vsync_max = 0;
 		display->bandwidth = 0;
+		strcpy (display->modeline,"<undefined>");
 		for(di = di0, i = 0; di; di = di->next, i++) {
 		if (di->any.type == di_display) {
 			if (di->display.bandwidth) {
@@ -121,6 +123,31 @@ MsgDetect* MonitorGetData (void) {
 			if (di->display.width) {
 				bestX = di->display.width;
 				bestY = di->display.height;
+			}
+			if (di->display.hdisp) {
+				sprintf (display->modeline,
+				"%4u %4u %4u %4u %4u %4u %4u %4u %c/%c",
+					di->display.hdisp,
+					di->display.hsyncstart,
+					di->display.hsyncend,
+					di->display.htotal,
+					di->display.vdisp,
+					di->display.vsyncstart,
+					di->display.vsyncend,
+					di->display.vtotal,
+					di->display.hflag,
+					di->display.vflag
+				);
+				// ...
+				// try to check for displaytype again. If the modeline
+				// timings produces a 60 - 65 Hz timing we assume this
+				// is a LCD/TFT panel
+				// ----
+				double clock = display->bandwidth * 1e6;
+				double vsync = clock / di->display.htotal / di->display.vtotal;
+				if ((vsync >= 50) && (vsync <= 65)) {
+					sprintf (display->displaytype,"LCD/TFT");
+				}
 			}
 			break;
 		}

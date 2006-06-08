@@ -746,12 +746,20 @@ void PrintStuffData(ScanXStuff s) {
 			printf ("Card%d     =>  Vesa       : 768 576 36 60\n",card);
 		}
 		if (data.fbtiming != "") {
-			printf("Card%d     =>  FbTiming   : %s\n",card,
+			printf ("Card%d     =>  FbTiming   : %s\n",card,
 			data.fbtiming.c_str()); 
 		} 
 		printf ("Card%d     =>  Dacspeed   : %d\n",card,data.dacspeed[0]);
 		if (data.port > 1) {
 		printf ("Card%d     =>  Dacspeed[2]: %d\n",card,data.dacspeed[1]);
+		}
+		printf ("Card%d     =>  Modeline   : %s\n",
+			card,data.modeline[0].c_str()
+		);
+		if (data.port > 1) {
+		printf ("Card%d     =>  Modeline[2]: %s\n",
+			card,data.modeline[1].c_str()
+		);
 		}
 		printf ("Card%d     =>  Memory     : %ld\n",card,data.videoram);
 		printf ("Card%d     =>  Current    : %s\n",card,data.current.c_str());

@@ -54,6 +54,7 @@ typedef struct MsgDetect_t {
  int vesacount;
  mode vmodes[MAXVESA];
  unsigned bandwidth;
+ str modeline;
  int hsync_max;
  int vsync_max;
  str chipset;

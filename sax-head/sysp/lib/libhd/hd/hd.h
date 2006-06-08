@@ -1239,6 +1239,9 @@ typedef struct {
   unsigned clock;			/* pixel clock in kHz */
   unsigned width, height;		/* display size */
   unsigned width_mm, height_mm;		/* dto, in mm */
+  unsigned hdisp, hsyncstart, hsyncend, htotal; /* h_timings */
+  unsigned vdisp, vsyncstart, vsyncend, vtotal; /* v_timings */
+  char hflag,vflag; /* h/v flags */
   char *vendor;
   char *name;
   char *serial;
@@ -1699,6 +1702,9 @@ typedef struct {
   unsigned min_vsync, max_vsync;	/* vsync range */
   unsigned min_hsync, max_hsync;	/* hsync range */
   unsigned bandwidth;			/* max. pixel clock */
+  unsigned hdisp, hsyncstart, hsyncend, htotal; /* h_timings */
+  unsigned vdisp, vsyncstart, vsyncend, vtotal; /* v_timings */
+  char hflag,vflag; /* h/v flags */
 } driver_info_display_t;
 
 /* module info */
@@ -2341,6 +2347,7 @@ typedef struct {
     unsigned keep_kmods:2;	/**< internal: don't reread kmods */
     unsigned nobioscrc:1;	/**< internal: don't check VBIOS crc */
     unsigned biosvram:1;	/**< internal: map Video BIOS RAM (128k at 0xa0000) */
+    unsigned nowpa:1;           /**< do not probe WPA capabilities */
   } flags;
 
 

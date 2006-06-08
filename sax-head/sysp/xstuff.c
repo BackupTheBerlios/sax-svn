@@ -179,8 +179,8 @@ void ScanXStuff::Scan (void) {
 		// defaults for this values
 		// ----
 		parse[0].modecount = 0;
-		parse[0].hsmax     = 40;
-		parse[0].vsmax     = 75;
+		parse[0].hsmax     = 50;
+		parse[0].vsmax     = 60;
 		parse[0].chipset   = "<undefined>";
 		parse[0].dpix      = 0;
 		parse[0].dpiy      = 0;
@@ -414,6 +414,10 @@ void ScanXStuff::Scan (void) {
 			stuff[0].dacspeed[p] = dpy->bandwidth;
 		}
 		//======================================
+		// Save monitor modeline per port
+		//--------------------------------------
+		stuff[0].modeline[p] = dpy->modeline;
+		//======================================
 		// Save vesa modes per port
 		//--------------------------------------
 		if ((dpy->vesacount) && (string(dpy->vendor) != "Generic")) {
@@ -587,10 +591,11 @@ int ScanXStuff::Save (void) {
 		// save the base data...
 		// ----------------------
 		for (int n=0;n<data.port;n++) {
-			strcpy(part1.ddc[n]   , data.ddc[n].c_str());
-			strcpy(part1.dtype[n] , data.dtype[n].c_str());
-			strcpy(part1.model[n] , data.model[n].c_str());
-			strcpy(part1.vendor[n], data.vendor[n].c_str());
+			strcpy(part1.ddc[n]      , data.ddc[n].c_str());
+			strcpy(part1.dtype[n]    , data.dtype[n].c_str());
+			strcpy(part1.model[n]    , data.model[n].c_str());
+			strcpy(part1.vendor[n]   , data.vendor[n].c_str());
+			strcpy(part1.modeline[n] , data.modeline[n].c_str());
 			part1.hsync[n]       = data.hsync[n];
 			part1.vsync[n]       = data.vsync[n];
 			part1.vesacount[n]   = data.vesacount[n];
@@ -660,6 +665,7 @@ int ScanXStuff::Read (void) {
 			data.dpiy[n]      = part1.dpiy[n];
 			data.model[n]     = part1.model[n];
 			data.vendor[n]    = part1.vendor[n];
+			data.modeline[n]  = part1.modeline[n];
 			data.dacspeed[n]  = part1.dacspeed[n];
 		}
 		data.vbios     = part1.vbios;

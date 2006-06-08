@@ -204,6 +204,7 @@ struct StuffData {
 	int vesacount[4];
 	map <int,XMode> vesa[4];
 	unsigned dacspeed[4];
+	string modeline[4];
 	long videoram; 
 	string current;
 	string raw;
@@ -229,6 +230,7 @@ struct StuffData_S {
 	int vsync[4];
 	int vesacount[4];
 	unsigned dacspeed[4];
+	str modeline[4];
 	long videoram;
 	str current;
 	str raw;
