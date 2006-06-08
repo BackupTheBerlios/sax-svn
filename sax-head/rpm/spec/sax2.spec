@@ -12,7 +12,7 @@
 BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
 %else
 # FC5 Build Requires...
-BuildRequires: doxygen qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel python-devel hal-devel swig sysfsutils graphviz readline java-gcj-compat-devel
+BuildRequires: doxygen qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel python-devel hal-devel swig sysfsutils graphviz readline readline-devel java-gcj-compat-devel
 %define __perl_requires %{nil}
 %define py_sitedir /usr/%{_lib}/python2.4/site-packages
 %endif
@@ -34,9 +34,8 @@ Requires:     xorg-x11-server-Xorg
 PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %else
 # FC5 pre Requires...
-PreReq:       /bin/rm /bin/mkdir /usr/sbin/chroot
 %endif
-Summary:      SuSE advanced X Window System-configuration
+Summary:      X Window System-configuration
 Version:      8.1
 Release:      70
 Group:        System/X11/Utilities
@@ -50,7 +49,7 @@ BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 ExcludeArch:  s390
 
 %description
-This package contains the SuSE Advanced X-Configuration
+This package contains the sax X-Configuration tool
 
 Authors:
 --------
@@ -110,11 +109,11 @@ Requires:     netpbm sax2-tools qt3 fvwm2 sax2
 # FC5 Requires...
 Requires:     netpbm sax2-tools qt sax2
 %endif
-Summary:      SuSE advanced X Window System-configuration GUI
+Summary:      X Window System-configuration GUI
 Group:        System/X11/Utilities
 
 %description -n sax2-gui
-This package contains the GUI for the SuSE Advanced X-Configuration
+This package contains the GUI for the X-Configuration
 
 Authors:
 --------
@@ -243,6 +242,7 @@ make buildroot=$RPM_BUILD_ROOT \
 	 doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
 	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} \
 	 install
+%find_lang sax
 %if %{?suse_version:1}0
 	# SuSE specific build instructions...
 	#=================================================
@@ -279,50 +279,50 @@ fi
 #-------------------------------------------------
 %files
 %defattr(-,root,root)
-%dir /usr/share/sax/api
-%dir /usr/share/sax/api/data
+%dir %{_datadir}/sax/api
+%dir %{_datadir}/sax/api/data
 %dir %{_defaultdocdir}/sax2
-%dir /usr/share/sax
-%dir /usr/share/sax/sysp/script
-%dir /usr/share/sax/sysp
+%dir %{_datadir}/sax
+%dir %{_datadir}/sax/sysp/script
+%dir %{_datadir}/sax/sysp
 %dir /var/cache/sax/sysp
 %dir /var/cache/sax/sysp/rdbms
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-/usr/share/pixmaps/sax2.png
-/usr/share/sax/svnbuild
-/usr/share/sax/init.pl
-/usr/share/sax/xc.pl
-/usr/share/sax/pci.pl
-/usr/share/sax/modules
-/usr/sbin/sax.sh
-/usr/sbin/sax2-vesa
-/usr/sbin/SaX2
-/usr/sbin/sax2
-/usr/sbin/sysp
-/usr/sbin/xcmd
-/usr/share/sax/api/data/fvwmrc.sax
-/usr/share/sax/api/data/twmrc.sax
-/usr/share/sax/api/data/CardModules
-/usr/share/sax/api/data/LangCodes
-/usr/share/sax/api/data/PointerDevice
-/usr/share/sax/api/data/LangFirstPath
-/usr/share/sax/api/data/StaticFontPathList
-/usr/share/sax/api/data/MonitorColors
-/usr/share/sax/api/data/TabletModules
-/usr/share/sax/api/data/MonitorRatio
-/usr/share/sax/api/data/MonitorResolution
-/usr/share/sax/api/data/MonitorTraversal
-/usr/share/sax/sysp/script/installed.pl
-/usr/share/sax/sysp/script/killdot.pl
-/usr/share/sax/sysp/script/machine.pl
-/usr/share/sax/sysp/script/preparelog.pl
-/usr/share/sax/sysp/script/checkmap.pl
-/usr/share/sax/sysp/script/profilecount.pl
-/usr/share/sax/sysp/script/psection.pl
-/usr/share/sax/sysp/script/profiledriver.pl
-/usr/share/sax/sysp/script/vendor.pl
+%{_datadir}/pixmaps/sax2.png
+%{_datadir}/sax/svnbuild
+%{_datadir}/sax/init.pl
+%{_datadir}/sax/xc.pl
+%{_datadir}/sax/pci.pl
+%{_datadir}/sax/modules
+%{_sbindir}/sax.sh
+%{_sbindir}/sax2-vesa
+%{_sbindir}/SaX2
+%{_sbindir}/sax2
+%{_sbindir}/sysp
+%{_sbindir}/xcmd
+%{_datadir}/sax/api/data/fvwmrc.sax
+%{_datadir}/sax/api/data/twmrc.sax
+%{_datadir}/sax/api/data/CardModules
+%{_datadir}/sax/api/data/LangCodes
+%{_datadir}/sax/api/data/PointerDevice
+%{_datadir}/sax/api/data/LangFirstPath
+%{_datadir}/sax/api/data/StaticFontPathList
+%{_datadir}/sax/api/data/MonitorColors
+%{_datadir}/sax/api/data/TabletModules
+%{_datadir}/sax/api/data/MonitorRatio
+%{_datadir}/sax/api/data/MonitorResolution
+%{_datadir}/sax/api/data/MonitorTraversal
+%{_datadir}/sax/sysp/script/installed.pl
+%{_datadir}/sax/sysp/script/killdot.pl
+%{_datadir}/sax/sysp/script/machine.pl
+%{_datadir}/sax/sysp/script/preparelog.pl
+%{_datadir}/sax/sysp/script/checkmap.pl
+%{_datadir}/sax/sysp/script/profilecount.pl
+%{_datadir}/sax/sysp/script/psection.pl
+%{_datadir}/sax/sysp/script/profiledriver.pl
+%{_datadir}/sax/sysp/script/vendor.pl
 %{perl_vendorarch}/XFree.pm
 %{perl_vendorarch}/auto/XFree
 %{perl_vendorarch}/PLog.pm
@@ -344,49 +344,20 @@ fi
 #=================================================
 # SaX-GUI file list...  
 # ------------------------------------------------
-%files -n sax2-gui
+%files -n sax2-gui -f sax.lang
 %defattr(-,root,root)
-%dir /usr/share/sax/api
-%dir /usr/share/xfine
-/usr/share/sax/api/macros
-/usr/share/sax/api/figures
-/usr/share/xfine/figures
-/usr/share/xfine/xfine.gtx
-/usr/share/sax/api/data/xapi.gtx
-/usr/share/locale/de/LC_MESSAGES/sax.mo
-/usr/share/locale/en_US/LC_MESSAGES/sax.mo
-/usr/share/locale/en_GB/LC_MESSAGES/sax.mo
-/usr/share/locale/lt/LC_MESSAGES/sax.mo
-/usr/share/locale/hu/LC_MESSAGES/sax.mo
-/usr/share/locale/da/LC_MESSAGES/sax.mo
-/usr/share/locale/fr/LC_MESSAGES/sax.mo
-/usr/share/locale/es/LC_MESSAGES/sax.mo
-/usr/share/locale/ca/LC_MESSAGES/sax.mo
-/usr/share/locale/pt/LC_MESSAGES/sax.mo
-/usr/share/locale/cs/LC_MESSAGES/sax.mo
-/usr/share/locale/it/LC_MESSAGES/sax.mo
-/usr/share/locale/sk/LC_MESSAGES/sax.mo
-/usr/share/locale/nl/LC_MESSAGES/sax.mo
-/usr/share/locale/nb/LC_MESSAGES/sax.mo
-/usr/share/locale/ru/LC_MESSAGES/sax.mo
-/usr/share/locale/el_GR/LC_MESSAGES/sax.mo
-/usr/share/locale/sl_SI/LC_MESSAGES/sax.mo
-/usr/share/locale/sv/LC_MESSAGES/sax.mo
-/usr/share/locale/ja/LC_MESSAGES/sax.mo
-/usr/share/locale/bg/LC_MESSAGES/sax.mo
-/usr/share/locale/pt_BR/LC_MESSAGES/sax.mo
-/usr/share/locale/pl_PL/LC_MESSAGES/sax.mo
-/usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
-/usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
-/usr/share/locale/uk/LC_MESSAGES/sax.mo
-/usr/share/locale/fi/LC_MESSAGES/sax.mo
-/usr/share/locale/pa/LC_MESSAGES/sax.mo
-/usr/share/locale/km/LC_MESSAGES/sax.mo
-/usr/sbin/xapi
-/usr/sbin/xfine
+%dir %{_datadir}/sax/api
+%dir %{_datadir}/xfine
+%{_datadir}/sax/api/macros
+%{_datadir}/sax/api/figures
+%{_datadir}/xfine/figures
+%{_datadir}/xfine/xfine.gtx
+%{_datadir}/sax/api/data/xapi.gtx
+%{_sbindir}/xapi
+%{_sbindir}/xfine
 %if %{?suse_version:1}0
 # SuSE files...
-/usr/share/applications/sax2.desktop
+%{_datadir}/applications/sax2.desktop
 %endif
 
 #=================================================
@@ -398,59 +369,59 @@ fi
 %doc %{_mandir}/man1/xkbctrl.1.gz
 %doc %{_mandir}/man1/xmode.1.gz
 %doc %{_mandir}/man1/xquery.1.gz
-/usr/sbin/corner
-/usr/sbin/dots
-/usr/sbin/isax
-/usr/sbin/testX
-/usr/sbin/whereiam
-/usr/sbin/wmstart
-/usr/sbin/ximage
-/usr/sbin/xidle
-/usr/sbin/xkbctrl
-/usr/sbin/xlook
-/usr/sbin/xmode
-/usr/sbin/xquery
-/usr/sbin/vncp
-/usr/sbin/xw
+%{_sbindir}/corner
+%{_sbindir}/dots
+%{_sbindir}/isax
+%{_sbindir}/testX
+%{_sbindir}/whereiam
+%{_sbindir}/wmstart
+%{_sbindir}/ximage
+%{_sbindir}/xidle
+%{_sbindir}/xkbctrl
+%{_sbindir}/xlook
+%{_sbindir}/xmode
+%{_sbindir}/xquery
+%{_sbindir}/vncp
+%{_sbindir}/xw
 
 #=================================================
 # SaX-Ident file list...  
 # ------------------------------------------------
 %files -n sax2-ident
 %defattr(-,root,root)
-%dir /usr/share/sax
-%dir /usr/share/sax/api
-%dir /usr/share/sax/api/data/cdb
-%dir /usr/share/sax/api/data
-%dir /usr/share/sax/sysp/maps
-%dir /usr/share/sax/sysp
-/usr/share/sax/sysp/maps/Identity.map
-/usr/share/sax/sysp/maps/Keyboard.map
-/usr/share/sax/sysp/maps/Vendor.map
-/usr/share/sax/sysp/maps/Input.map
-/usr/share/sax/sysp/maps/Driver.map
-/usr/share/sax/api/data/cdb/*
-/usr/share/sax/profile
+%dir %{_datadir}/sax
+%dir %{_datadir}/sax/api
+%dir %{_datadir}/sax/api/data/cdb
+%dir %{_datadir}/sax/api/data
+%dir %{_datadir}/sax/sysp/maps
+%dir %{_datadir}/sax/sysp
+%{_datadir}/sax/sysp/maps/Identity.map
+%{_datadir}/sax/sysp/maps/Keyboard.map
+%{_datadir}/sax/sysp/maps/Vendor.map
+%{_datadir}/sax/sysp/maps/Input.map
+%{_datadir}/sax/sysp/maps/Driver.map
+%{_datadir}/sax/api/data/cdb/*
+%{_datadir}/sax/profile
 
 #=================================================
 # SaX-libsax file list...  
 # ------------------------------------------------
 %files -n sax2-libsax
 %defattr(-,root,root)
-%dir /usr/share/sax/libsax
-%dir /var/lib/sax
+%dir %{_datadir}/sax/libsax
+%dir %{_var}/lib/sax
 %dir %{_defaultdocdir}/libsax
 %doc %{_defaultdocdir}/libsax/html
-/usr/%{_lib}/libsax.so*
-/usr/share/sax/libsax/*
+%{_prefix}/%{_lib}/libsax.so*
+%{_datadir}/sax/libsax/*
 
 #=================================================
 # SaX-libsax-devel file list...  
 # ------------------------------------------------
 %files -n sax2-libsax-devel
 %defattr(-,root,root)
-%dir /usr/include/sax
-/usr/include/sax/*
+%dir %{_includedir}/sax
+%{_includedir}/sax/*
 
 #=================================================
 # SaX-libsax-perl file list...  
@@ -475,8 +446,8 @@ fi
 %ifnarch ppc64 s390x
 %files -n sax2-libsax-java
 %defattr(-,root,root)
-%dir /usr/%{_lib}/sax
-%dir /usr/%{_lib}/sax/plugins
-/usr/share/java/SaX.jar
-/usr/%{_lib}/sax/plugins/SaX.so
+%dir %{_prefix}/%{_lib}/sax
+%dir %{_prefix}/%{_lib}/sax/plugins
+%{_datadir}/java/SaX.jar
+%{_prefix}/%{_lib}/sax/plugins/SaX.so
 %endif
