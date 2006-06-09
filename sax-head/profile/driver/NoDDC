@@ -3,4 +3,5 @@
 # detected DDC information. Sometimes usefull especially for
 # i810 based graphics devices
 # ---- 
-Device->[X]->Option = NoDDC
+$opts = Device->[X]->Option
+Device->[X]->Option = ${opts},NoDDC

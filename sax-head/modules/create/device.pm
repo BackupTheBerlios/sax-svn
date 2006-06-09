@@ -41,6 +41,7 @@ sub CreateDeviceSection {
 		if ($i !~ /^VendorName|BoardName/) {
 			@list = split(/,/,$setting);
 		} else {
+			@list = ();
 			$list[0] = $setting;
 		}
 		$size = @list;
@@ -110,7 +111,7 @@ sub CreateDeviceSection {
 			} 
 			last SWITCH;
 		};
-	    #============================================================
+		#============================================================
 		# Special setting ( options which need on/off statement)...
 		#------------------------------------------------------------
 		/^Special/                  && do { 
