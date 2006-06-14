@@ -17,6 +17,7 @@ use strict;
 use XFineControl;
 use FBSet;
 use Fonts;
+use CVT;
 
 #========================================
 # Globals...
@@ -1221,6 +1222,32 @@ sub GetModelines {
 	my $card       = $_[7];     # card number
 	my @modeline   = ();        # result list
 	# ...
+	# get display type for this card. This can be either
+	# a CRT or a LCD/TFT value
+	# ---
+	my $type  = "CRT";
+	my %query = GetHotQuery("xstuff");
+	if (defined $query{$card}) {
+		foreach my $i (sort keys %{$query{$card}}) {
+		if ($i =~ /^Display$/) {
+			$type = $query{$card}{$i};
+		}
+		}
+	} else {
+		# ...
+		# We want to address an entry which doesn't exist
+		# in sysp -q xstuff. This means a profile has added
+		# additional virtual device sections. According to
+		# this we are checking for the enhanced EDID info
+		# block on card 0
+		# ---
+		foreach my $i (sort keys %{$query{0}}) {
+		if ($i =~ /^Display\[2\]$/) {
+			$type = $query{0}{$i};
+		}
+		}
+	}
+	# ...
 	# setup the max sync values from the given range
 	# if the vertical sync maximum exceeds 90 Hz we
 	# will reduce the refresh rate to a maximum of 90 Hz
@@ -1345,7 +1372,6 @@ sub GetModelines {
 			# but today only one tool is used.
 			# ---
 			my $dac = 220;
-			my %query = GetHotQuery("xstuff");
 			if (defined $query{$card}) {
 				foreach my $i (sort keys %{$query{$card}}) {
 				if ($i =~ /^Dacspeed$/) {
@@ -1391,6 +1417,14 @@ sub GetModelines {
 					if ($_ eq $mmode[2]) { $found = 1; last; }
 				}
 				if ($found == 0) {
+					push (@modeline,$mmode[2]);
+				}
+				if ($type eq "LCD/TFT") {
+					# ...
+					# calculate a reduced timing for this mode. The reduced
+					# mode will have 1 Hz less than the base mode
+					# ---
+					my @mmode = ReducedMode ($x,$y,$vsmax-1);
 					push (@modeline,$mmode[2]);
 				}
 				# ...
@@ -1810,6 +1844,16 @@ sub countDoubleQuote {
 		}
 	}
 	return $cnt;
+}
+
+#----[ ReducedMode ]-----#
+sub ReducedMode {
+#-----------------------------------------------------
+# use cvt to calculate a reduced timing modeline
+#
+	my $mode = CVT::vert_refresh ($_[0],$_[1],$_[2],0,1,0);
+	my @data = split(/\n/,CVT::print_sax_mode ($mode));
+	return @data;
 }
 
 1;

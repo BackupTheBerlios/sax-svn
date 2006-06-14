@@ -4,6 +4,8 @@
 @flag_list = ();
 $ldnr = 0;
 
+use CVT;
+
 #----[ AutoDetectResolution ]----------#
 sub AutoDetectResolution {
 #----------------------------------------------------
@@ -15,6 +17,7 @@ sub AutoDetectResolution {
 	my (%var)  = %{$_[1]}; # config hash
 	my %query;             # the query hash
 	my @dac_list;          # dac values
+	my @type_list;         # monitor type values
 	my @mem_list;          # memory list
 	my @vesa_list;         # vesa mode list
 	my @dpi_list;          # display size list
@@ -52,6 +55,12 @@ sub AutoDetectResolution {
 			# ------------------
 			/^Dacspeed$/     && do {
 			push(@dac_list,$query{$card}{$i});
+			last SWITCH;
+			};
+			# Modeline Timings...
+			# ------------------
+			/^Display$/     && do {
+			push(@type_list,$query{$card}{$i});
 			last SWITCH;
 			};
 			# Memory detection...
@@ -204,7 +213,8 @@ sub AutoDetectResolution {
 		foreach (@res) {
 			@xy  = split(/x/,$_);
 			%var = GenerateModeline (
-				\%spec,\%var,$vsmax,$hsmax,$xy[0],$xy[1],$i,$dac_list[$i]
+				\%spec,\%var,$vsmax,$hsmax,$xy[0],$xy[1],$i,
+				$dac_list[$i],$type_list[$i]
 			);
 		}
 	}
@@ -435,6 +445,7 @@ sub GenerateModeline {
 	my $y         = $_[5];
 	my $card      = $_[6];
 	my $dac       = $_[7];
+	my $type      = $_[8];
 	# ...
 	# if the vertical sync maximum exceeds 90 Hz we
 	# will reduce the refresh rate to a maximum of 90 Hz
@@ -445,7 +456,7 @@ sub GenerateModeline {
 	# ...
 	# first step find a modeline which fits the max vsync/hsync
 	# and dot clock requirements. If a mode has been found
-	# the vsmax value will be adapted to that mode
+	# the vsmax/hsmax value will be adapted to that mode
 	# ---
 	my $line = qx($spec{Xmode} -x $x -y $y -d $dac -r $vsmax -s $hsmax);
 	my @mode = split(/\n/,$line);
@@ -457,6 +468,18 @@ sub GenerateModeline {
 		$hsmax = $mode[0];
 		$vsmax = $mode[1];
 		$var{Monitor}{$card}{Modeline}{$ldnr}{$resolu} = $timing;
+		if ($type eq "LCD/TFT") {
+			# ...
+			# calculate a reduced timing for this mode. The reduced
+			# mode will have 1 Hz less than the base mode
+			# ---
+			my @mode = ReducedMode ($x,$y,$vsmax-1);
+			if ($mode[2] =~ /Modeline \"(.*)\" (.*)/) {
+				$ldnr++;
+				$var{Monitor}{$card}{Modeline}{$ldnr}{$1} = $2;
+				$ldnr++;
+			}
+		}
 	}
 	# ...
 	# next step calculate modelines from the base mode calculated
@@ -483,6 +506,16 @@ sub GenerateModeline {
 		}
 	}
 	return %var;  
+}
+
+#----[ ReducedMode ]-----#
+sub ReducedMode {
+#-----------------------------------------------------
+# use cvt to calculate a reduced timing modeline
+#
+	my $mode = CVT::vert_refresh ($_[0],$_[1],$_[2],0,1,0);
+	my @data = split(/\n/,CVT::print_sax_mode ($mode));
+	return @data;
 }
 
 1;
