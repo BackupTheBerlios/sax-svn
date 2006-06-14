@@ -1,4 +1,17 @@
 -------------------------------------------------------------------
+Sun Jun 11 10:32:32 CEST 2006 - sndirsch@suse.de
+
+- using multix variant for multilinugual canadian keyboard mapping
+  by now; problems with non-existing ISO_Level5_* characters has
+  been resolved in xorg-x11/xkeyboard-config (Bug #158951,
+  X.Org Bug #4411)
+
+-------------------------------------------------------------------
+Fri Jun  9 18:11:19 CEST 2006 - sndirsch@suse.de
+
+- added multilinugual canadian keyboard mapping (Bug #158951)
+
+-------------------------------------------------------------------
 Tue May 30 18:39:03 CEST 2006 - ms@suse.de
 
 - fixed nvidia binary check (#179934)
