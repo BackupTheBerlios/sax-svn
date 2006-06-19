@@ -1792,10 +1792,10 @@ sub ImportXFineCache {
 #---[ CheckSplit ]----#
 sub CheckSplit {
 #------------------------------------------------------
-# check if a splitted list with seperator [,] was
-# splitted in a correct way. This function will check
-# for the number ["] signs and make sure there was
-# no split between optionslist which mustn't splitted
+# check a [,] splitted list whether there are
+# irregular split items or not. This function will check
+# for the number of ["] signs and make sure that all
+# options are valid
 #
 	my @list   = @_;
 	my @result = ();
@@ -1803,12 +1803,32 @@ sub CheckSplit {
 	my $joined;
 	for (my $i=0;$i<@list;$i++) {
 		my $signs = countDoubleQuote ($list[$i]);
-		if ( ($signs == 0) || ($signs % 2 != 0) ) {
+		if (($signs == 0) || ($signs % 2 != 0)) {
+			if (($joined ne "") && ($list[$i] =~ /^Option/)) {
+				# /.../
+				# new option detected but old joined option
+				# value not yet saved
+				# ----
+				$joined =~ s/^,//;
+				$result[$count] = $joined;
+				$joined = "";
+				$count++;
+			}
+			# /.../
+			# Option has zero or odd quotation, join it
+			# ----
 			$joined.=",$list[$i]";
 		} else {
+			# /.../
+			# option has correct quotation, save it
+			# ----
 			$result[$count] = $list[$i];
 			$count++;
 			if ($joined ne "") {
+				# /.../
+				# There is a joined option, save it and
+				# clear for next joined value
+				# ----
 				$joined =~ s/^,//;
 				$result[$count] = $joined;
 				$joined = "";
@@ -1816,10 +1836,16 @@ sub CheckSplit {
 			}
 		}
 	}
+	# /.../
+	# loop done, check if there is a joined option not saved
+	# ----
 	if ($joined ne "") {
 		$joined =~ s/^,//;
 		push (@result,$joined);
 	}
+	# /.../
+	# create result list with defined values only
+	# ----
 	@list   = @result;
 	@result = ();
 	foreach (@list) {
