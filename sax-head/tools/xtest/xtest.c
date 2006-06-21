@@ -195,9 +195,9 @@ int RunWindowManager (void) {
 		return (0);
 	break;
 	case 0:
-		execl(FVWM,"fvwm2","-f",FVWMRC,NULL);
-		execl(MWM,"mwm",NULL);
-		execl(TWM,"twm",NULL);
+		execlp(FVWM,"fvwm2","-f",FVWMRC,NULL);
+		execlp(MWM,"mwm",NULL);
+		execlp(TWM,"twm",NULL);
 		fprintf (stderr,
 			"testX: could not run any windowmanager"
 		);
