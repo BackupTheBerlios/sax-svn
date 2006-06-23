@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Jun  8 14:45:03 2006
+# Author: Marcus Schaefer <sax@suse.de>, Fri Jun 23 09:27:55 2006
 #
 # Template for monitor data
 # --------------------------
@@ -541,9 +541,9 @@
 # 800X600@75HZ
 #----------------------------------------------
 --> VESA:800X600@75HZ  {
- Hsync=31-46
+ Hsync=31-47
  Modeline="800x600" 49.5 800 816 896 1056 600 601 604 625 +hsync +vsync
- Vsync=50-75
+ Vsync=50-76
 }
 
 #==============================================
