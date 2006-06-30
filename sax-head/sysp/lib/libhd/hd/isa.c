@@ -6,10 +6,12 @@
 #include "hd_int.h"
 #include "isa.h"
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- * isa cards
+/**
+ * @defgroup ISAint ISA
+ * @ingroup libhdBUSint
+ * @brief ISA bus scan functions
  *
- * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ * @{
  */
 
 #if defined(__i386__)
@@ -26,4 +28,6 @@ void hd_scan_isa(hd_data_t *hd_data)
 }
 
 #endif /* defined(__i386__) */
+
+/** @} */
 

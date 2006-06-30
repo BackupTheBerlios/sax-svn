@@ -14,6 +14,14 @@
 #include "hd_int.h"
 #include "wlan.h"
 
+/**
+ * @defgroup WLANint WLAN devices
+ * @ingroup libhdDEVint
+ * @brief WLAN device functions
+ *
+ * @{
+ */
+
 #ifndef LIBHD_TINY
 
 #define AUTH_ALG_OPEN_SYSTEM    0x01
@@ -195,7 +203,7 @@ void hd_scan_wlan(hd_data_t *hd_data)
 	}
 
 	/* detect WPA capabilities */
-	if (hd->drivers) {
+	if (!hd_data->flags.nowpa && hd->drivers) {
 	  if (search_str_list(hd->drivers, "ath_pci"))
 	    wpa_drv = &wpa_driver_madwifi_ops;
 	  else if (strncmp(hd->drivers->str, "at76", 4)==0)
@@ -1054,11 +1062,9 @@ static int wpa_driver_wext_set_wpa(const char *ifname, int enabled)
 	s = socket(PF_INET, SOCK_DGRAM, 0);
 	if (s < 0) return -1;
 	
-	#ifdef SIOCSIWAUTH	
 	if ((ret=ioctl(s, SIOCSIWAUTH, &iwr)) < 0) {
 		ret = -1;
 	}
-	#endif
 	close(s);
 	return ret;
 }
@@ -1070,7 +1076,6 @@ static int wpa_driver_wext_set_auth_alg(const char *ifname, int auth_alg)
 	int ret = 0;
 	int s;
 	
-	#ifdef IW_AUTH_ALG_OPEN_SYSTEM
 	if (auth_alg & AUTH_ALG_OPEN_SYSTEM)
 		algs |= IW_AUTH_ALG_OPEN_SYSTEM;
 	if (auth_alg & AUTH_ALG_SHARED_KEY)
@@ -1081,23 +1086,18 @@ static int wpa_driver_wext_set_auth_alg(const char *ifname, int auth_alg)
 		 /* at least one algorithm should be set */
 		algs = IW_AUTH_ALG_OPEN_SYSTEM;
 	}
-	#endif
 	
 	memset(&iwr, 0, sizeof(iwr));
 	strncpy(iwr.ifr_name, ifname, IFNAMSIZ);
-	#ifdef IW_AUTH_80211_AUTH_ALG
 	iwr.u.param.flags = IW_AUTH_80211_AUTH_ALG & IW_AUTH_INDEX;
-	#endif
 	iwr.u.param.value = algs;
 
 	s = socket(PF_INET, SOCK_DGRAM, 0);
 	if (s < 0) return -1;
 
-	#ifdef SIOCSIWAUTH
 	if (ioctl(s, SIOCSIWAUTH, &iwr) < 0) {
 		ret = -1;
 	}
-	#endif
 	close(s);
 	return ret;
 }
@@ -1106,7 +1106,6 @@ static int wpa_driver_wext_set_key(const char *ifname, wpa_alg alg, u8 *addr,
 																	 int key_idx, int set_tx, u8 *seq, size_t seq_len,
                                    u8 *key, size_t key_len)
 {
-	#ifdef IW_ENCODE_SEQ_MAX_SIZE
 	struct iwreq iwr;
 	struct iw_encode_ext *ext;
 	int ret = 0;
@@ -1175,9 +1174,6 @@ static int wpa_driver_wext_set_key(const char *ifname, wpa_alg alg, u8 *addr,
 	close(s);
 	free(ext);
 	return ret;
-	#else
-		return -1;
-	#endif
 }
 
 struct wpa_driver_ops wpa_driver_wext_ops = {
@@ -1189,4 +1185,6 @@ struct wpa_driver_ops wpa_driver_wext_ops = {
 /* end wext */
 
 #endif		/* !defined(LIBHD_TINY) */
+
+/** @} */
 
