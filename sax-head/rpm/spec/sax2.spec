@@ -447,7 +447,7 @@ fi
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
-%ifnarch ppc64 s390x x86_64
+%ifnarch ppc64 s390x x86_64 %ix86
 %files -n sax2-libsax-java
 %defattr(-,root,root)
 %dir %{_prefix}/%{_lib}/sax

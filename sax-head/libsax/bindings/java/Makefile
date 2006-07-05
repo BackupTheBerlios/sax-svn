@@ -4,7 +4,10 @@ PLUGSDIR=${DESTDIR}/usr/${BINDLIB}/sax/plugins
 SHAREDIR=${DESTDIR}/usr/share/java
 JAVAC=${JAVA_BINDIR}/javac
 
-all:
+disabled:
+	exit 0
+
+all:disabled
 	if [ ! -f ${JAVAC} ];then \
 		exit 1 ;\
 	fi
