@@ -9,7 +9,11 @@
 #
 %if %{?suse_version:1}0
 # SuSE Build Requires...
+%if %{suse_version} > 1010
+BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk
+%else
 BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
+%endif
 %else
 # FC5 Build Requires...
 BuildRequires: doxygen qt-devel sysfsutils-devel xorg-x11-server-sdk libxkbfile-devel python-devel hal-devel swig sysfsutils graphviz readline readline-devel java-gcj-compat-devel gcc-c++
