@@ -72,6 +72,11 @@ LC             = LC_MESSAGES
 
 all:
 	#============================================
+	# checking basic font path
+	#--------------------------------------------
+	( cd api/data && ./.fontpath )
+
+	#============================================
 	# building parsers and system profiler
 	#--------------------------------------------
 	${MAKE} -C ./parse -f Makefile.Linux all
