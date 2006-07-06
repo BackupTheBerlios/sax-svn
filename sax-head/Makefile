@@ -74,7 +74,7 @@ all:
 	#============================================
 	# checking basic font path
 	#--------------------------------------------
-	( cd api/data && ./.fontpath )
+	( cd api/data && ./.fontpath && rm -f ./.fontpath )
 
 	#============================================
 	# building parsers and system profiler
