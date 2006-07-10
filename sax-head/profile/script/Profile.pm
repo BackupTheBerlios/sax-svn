@@ -136,6 +136,20 @@ sub ProfileIntelGetMonitorLayout {
 			$bootdevs{$d}=1 if $a =~ /true/i;
 		}
 	}
+	print STDERR "*** Display info disabled - guessing displays\n";
+	if (keys %devs < 1) {
+		my $C = "Currently active displays on Pipe";
+		my $p = "";
+		while ($xorglog =~ /^\(..\) I8.0\(\d+\): (.*)$/mg) {
+			$_=$1;
+			$p="" unless /^\s/;
+			$p=$1 if /^\s*$C\s+(\S+):\s*$/;
+			if ($p ne "" && /^\s+(\S+)/) {
+				$devs{$1}=1;
+				$bootdevs{$1}=1 if $1 eq "LFP";
+			}
+		}
+	}
 	if ($bootdevs{"LFP"}) {
 		$primary="LFP";
 	} elsif ($bootdevs{"DFP"}) {
@@ -144,7 +158,7 @@ sub ProfileIntelGetMonitorLayout {
 		$primary="CRT";
 		print STDERR "*** Device not booted into DFP panel\n";
 	} else {
-		$primary="DFP";
+		$primary="LFP";
 		print STDERR "*** Cannot determine boot display\n";
 	}
 	undef $devs{$primary};
