@@ -1,26 +1,25 @@
 # translation of sax.po to
 # translation of sax.po to cs_CZ
-# translation of sax.cs.po to Czech
 # domain "sax.mo"
 # Czech message file for SaX 2.
 # Copyright (C) 2000 SuSE GmbH.
+#
 # Petr Pavlik <pp@suse.cz>, 2000, 2001.
 # Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003.
 # Klara Cihlarova <koty@seznam.cz>, 2003, 2004, 2005, 2006.
 # Klára Cihlářová <cihlarov@suse.cz>, 2004.
 # Jakub Friedl <jfriedl@suse.cz>, 2005, 2006.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-05-23 20:25+0200\n"
-"Last-Translator: Jakub Friedl <jfriedl@suse.cz>\n"
-"Language-Team:  <cs@li.org>\n"
+"PO-Revision-Date: 2006-07-10 13:36+0200\n"
+"Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
+"Language-Team: cs_CZ <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.2\n"
 "Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. /.../
@@ -391,6 +390,8 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<p>Pozor:</b><hr>Nastavení je založeno na <i>framebufferu</i> a váš systém "
+"proto nepodporuje změnu rozlišení a/nebo barevné hloubky."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -720,7 +721,7 @@ msgstr "Menu je Compose."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr "Oba Shifty mění skupinu."
+msgstr "Oba Alty mění skupinu."
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
