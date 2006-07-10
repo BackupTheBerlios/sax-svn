@@ -1,3 +1,4 @@
+# translation of sax.po to
 # translation of sax.po to cs_CZ
 # translation of sax.cs.po to Czech
 # domain "sax.mo"
@@ -7,21 +8,20 @@
 # Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003.
 # Klara Cihlarova <koty@seznam.cz>, 2003, 2004, 2005, 2006.
 # Klára Cihlářová <cihlarov@suse.cz>, 2004.
-# Jakub Friedl <jfriedl@suse.cz>, 2005.
+# Jakub Friedl <jfriedl@suse.cz>, 2005, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-02-08 13:53+0100\n"
-"Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
-"Language-Team: cs_CZ <cs@li.org>\n"
+"PO-Revision-Date: 2006-05-23 20:25+0200\n"
+"Last-Translator: Jakub Friedl <jfriedl@suse.cz>\n"
+"Language-Team:  <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -59,7 +59,6 @@ msgid "&Help"
 msgstr "&Nápověda"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
 msgstr "&OK"
 
@@ -386,6 +385,12 @@ msgstr "Doleva"
 #. Radiobutton rotate to the right side
 msgid "To the Right"
 msgstr "Doprava"
+
+#. Popup message to inform the user about fbdev restrictions
+msgid ""
+"<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+"your system does not support changes for resolution and/or color settings."
+msgstr ""
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -968,13 +973,12 @@ msgstr ""
 "musí obsahovat alespoň 6 znaků."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
 "a maximum of eight characters."
 msgstr ""
-"<b>Chybné VNC heslo</b><hr>Heslo je příliš krátké nebo nebylo zadáno. Heslo "
-"musí obsahovat alespoň 6 znaků."
+"<b>Chybné VNC heslo</b><hr>Heslo je příliš dlouhé. Zadejte heslo dlouhé "
+"maximálně osm znaků."
 
 #. Install missing packages box
 msgid ""
@@ -1114,308 +1118,303 @@ msgstr "Chování skupiny Shift/Lock"
 
 #. XKBFile extension text
 msgid "Arabic"
-msgstr ""
+msgstr "Arabština"
 
 #. XKBFile extension text
 msgid "Estonia"
-msgstr ""
+msgstr "Estonsko"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr ""
+msgstr "Myanmar"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Norway"
-msgstr "Běžná"
+msgstr "Norsko"
 
 #. XKBFile extension text
 msgid "Germany"
-msgstr ""
+msgstr "Německo"
 
 #. XKBFile extension text
 msgid "Mongolia"
-msgstr ""
+msgstr "Mongolsko"
 
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr ""
+msgstr "Bhútán"
 
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr ""
+msgstr "Bangladéš"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Latinskoamerický"
 
 #. XKBFile extension text
 msgid "Belgium"
-msgstr ""
+msgstr "Belgie"
 
 #. XKBFile extension text
 msgid "Finland"
-msgstr ""
+msgstr "Finsko"
 
 #. XKBFile extension text
 msgid "Israel"
-msgstr ""
+msgstr "Izrael"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Sweden"
-msgstr "Obrazovka"
+msgstr "Švédsko"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Rusko"
 
 #. XKBFile extension text
 msgid "Portugal"
-msgstr ""
+msgstr "Portugalsko"
 
 #. XKBFile extension text
 msgid "Korean"
-msgstr ""
+msgstr "Korejština"
 
 #. XKBFile extension text
 msgid "Maori"
-msgstr ""
+msgstr "Maorština"
 
 #. XKBFile extension text
 msgid "Uzbekistan"
-msgstr ""
+msgstr "Uzbekistán"
 
 #. XKBFile extension text
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulharsko"
 
 #. XKBFile extension text
 msgid "Thailand"
-msgstr ""
+msgstr "Thajsko"
 
 #. XKBFile extension text
 msgid "India"
-msgstr ""
+msgstr "Indie"
 
 #. XKBFile extension text
 msgid "Bengali"
-msgstr ""
+msgstr "Bengálština"
 
 #. XKBFile extension text
 msgid "Switzerland"
-msgstr ""
+msgstr "Švýcarsko"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Laos"
-msgstr "Rozložení"
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
-msgstr ""
+msgstr "Japonsko"
 
 #. XKBFile extension text
 msgid "Syria"
-msgstr ""
+msgstr "Sýrie"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Česko"
 
 #. XKBFile extension text
 msgid "Belarus"
-msgstr ""
+msgstr "Bělorusko"
 
 #. XKBFile extension text
 msgid "Tajikistan"
-msgstr ""
+msgstr "Tádžikistán"
 
 #. XKBFile extension text
 msgid "Denmark"
-msgstr ""
+msgstr "Dánsko"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr ""
+msgstr "Slovinsko"
 
 #. XKBFile extension text
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr ""
+msgstr "Ázerbájdžán"
 
 #. XKBFile extension text
 msgid "Lithuania"
-msgstr ""
+msgstr "Litva"
 
 #. XKBFile extension text
 msgid "Vietnam"
-msgstr ""
+msgstr "Vietnam"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr ""
+msgstr "Faerské ostrovy"
 
 #. XKBFile extension text
 msgid "South Africa"
-msgstr ""
+msgstr "Jižní Afrika"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "Perština"
 
 #. XKBFile extension text
 msgid "Slovakia"
-msgstr ""
+msgstr "Slovensko"
 
 #. XKBFile extension text
 msgid "Maldives"
-msgstr ""
+msgstr "Maledivy"
 
 #. XKBFile extension text
 msgid "Iceland"
-msgstr ""
+msgstr "Island"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr ""
+msgstr "Chorvatsko"
 
 #. XKBFile extension text
 msgid "Latvia"
-msgstr ""
+msgstr "Lotyšsko"
 
 #. XKBFile extension text
 msgid "Albania"
-msgstr ""
+msgstr "Albánie"
 
 #. XKBFile extension text
 msgid "Italy"
-msgstr ""
+msgstr "Itálie"
 
 #. XKBFile extension text
 msgid "Greece"
-msgstr ""
+msgstr "Řecko"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr ""
+msgstr "Spojené království"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "France"
-msgstr "&Zrušit"
+msgstr "Francie"
 
 #. XKBFile extension text
 msgid "Armenia"
-msgstr ""
+msgstr "Arménie"
 
 #. XKBFile extension text
 msgid "Pakistan"
-msgstr ""
+msgstr "Pákistán"
 
 #. XKBFile extension text
 msgid "Poland"
-msgstr ""
+msgstr "Polsko"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "Kyrgyzstán"
 
 #. XKBFile extension text
 msgid "Ireland"
-msgstr ""
+msgstr "Irsko"
 
 #. XKBFile extension text
 msgid "Hungary"
-msgstr ""
+msgstr "Maďarsko"
 
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr ""
+msgstr "Kambodža"
 
 #. XKBFile extension text
 msgid "Spain"
-msgstr ""
+msgstr "Španělsko"
 
 #. XKBFile extension text
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukrajina"
 
 #. XKBFile extension text
 msgid "Romania"
-msgstr ""
+msgstr "Rumunsko"
 
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr ""
+msgstr "Kazachstán"
 
 #. XKBFile extension text
 msgid "Georgia"
-msgstr ""
+msgstr "Gruzie"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "Americká angličtina"
 
 #. XKBFile extension text
 msgid "Turkish"
-msgstr ""
+msgstr "Turečtina"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx series"
 
 #. XKBFile extension text
 msgid "Netherlands"
-msgstr ""
+msgstr "Nizozemí"
 
 #. XKBFile extension text
 msgid "Macedonia"
-msgstr ""
+msgstr "Makedonie"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Canada"
-msgstr "Karta"
+msgstr "Kanada"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr ""
+msgstr "Šrí Lanka"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosna a Hercegovina"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr ""
+msgstr "Srbsko a Černá Hora"
 
 #. XKBFile extension text
 msgid "Brazil"
-msgstr ""
+msgstr "Brazílie"
 
 #. XKBFile extension text
 msgid "Ghana"
-msgstr ""
+msgstr "Ghana"
 
 #. XKBFile extension text
 msgid "Andorra"
-msgstr ""
+msgstr "Andorra"
 
 #. XKBFile extension text
 msgid "Afghanistan"
-msgstr ""
+msgstr "Afghánistán"
 
 #. XKBFile extension text
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #. XKBFile extension text
 msgid "Turkey"
-msgstr ""
+msgstr "Turecko"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

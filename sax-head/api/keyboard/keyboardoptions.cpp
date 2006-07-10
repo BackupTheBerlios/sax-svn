@@ -199,6 +199,7 @@ void SCCKeyboardOptions::import ( void ) {
 			if (item->text() == XKBOptionTranslation) {
 				item->setOn   ( true );
 				slotXKBOption ( item );
+				break;
 			}
 		}
 	}
@@ -298,6 +299,27 @@ QString SCCKeyboardOptions::findOption ( const QString& option ) {
 	QString* result = new QString("");
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
+		if (key == "caps") {
+			continue;
+		}
+		if (key == "altwin") {
+			continue;
+		}
+		if (key == "lv3") {
+			continue;
+		}
+		if (key == "ctrl") {
+			continue;
+		}
+		if (key == "compose") {
+			continue;
+		}
+		if (key == "grp_led") {
+			continue;
+		}
+		if (key == "grp") {
+			continue;
+		}
 		QString val = mText[*it.current()];
 		if (val == option) {
 			QTextOStream (result) << key;

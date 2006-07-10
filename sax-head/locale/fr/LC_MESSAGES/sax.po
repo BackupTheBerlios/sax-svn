@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2005-03-06 18:20+0100\n"
+"PO-Revision-Date: 2006-06-01 08:45\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -57,9 +57,8 @@ msgid "&Help"
 msgstr "&Aide"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
-msgstr "&OK"
+msgstr "&Valider"
 
 #. Yes Button text
 msgid "&Yes"
@@ -384,6 +383,12 @@ msgstr "Vers la gauche"
 #. Radiobutton rotate to the right side
 msgid "To the Right"
 msgstr "Vers la droite"
+
+#. Popup message to inform the user about fbdev restrictions
+msgid ""
+"<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+"your system does not support changes for resolution and/or color settings."
+msgstr ""
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -979,14 +984,12 @@ msgstr ""
 "moins."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
 "a maximum of eight characters."
 msgstr ""
-"<b>Erreur de mot de passe VNC</b><hr>Le champ mot de passe est vide ou le "
-"mot de passe est trop court. Entrez un mot de passe de six caractères au "
-"moins."
+"<b>Erreur de mot de passe VNC</b><hr>Le mot de passe est trop long. Entrez "
+"un mot de passe ne dépassant pas huit caractères."
 
 #. Install missing packages box
 msgid ""
@@ -1129,308 +1132,303 @@ msgstr "Comportement du groupe Maj/Verr"
 
 #. XKBFile extension text
 msgid "Arabic"
-msgstr ""
+msgstr "Arabe"
 
 #. XKBFile extension text
 msgid "Estonia"
-msgstr ""
+msgstr "Estonie"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr ""
+msgstr "Myanmar"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Norway"
-msgstr "Normal"
+msgstr "Norvège"
 
 #. XKBFile extension text
 msgid "Germany"
-msgstr ""
+msgstr "Allemagne"
 
 #. XKBFile extension text
 msgid "Mongolia"
-msgstr ""
+msgstr "Mongolie"
 
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr ""
+msgstr "Bhoutan"
 
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr ""
+msgstr "Bangladesh"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Amérique latine"
 
 #. XKBFile extension text
 msgid "Belgium"
-msgstr ""
+msgstr "Belgique"
 
 #. XKBFile extension text
 msgid "Finland"
-msgstr ""
+msgstr "Finlande"
 
 #. XKBFile extension text
 msgid "Israel"
-msgstr ""
+msgstr "Israël"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Sweden"
-msgstr "Écran"
+msgstr "Suède"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Russie"
 
 #. XKBFile extension text
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 #. XKBFile extension text
 msgid "Korean"
-msgstr ""
+msgstr "Coréen"
 
 #. XKBFile extension text
 msgid "Maori"
-msgstr ""
+msgstr "Maori"
 
 #. XKBFile extension text
 msgid "Uzbekistan"
-msgstr ""
+msgstr "Ouzbékistan"
 
 #. XKBFile extension text
 msgid "Bulgaria"
-msgstr ""
+msgstr "Bulgarie"
 
 #. XKBFile extension text
 msgid "Thailand"
-msgstr ""
+msgstr "Thaïlande"
 
 #. XKBFile extension text
 msgid "India"
-msgstr ""
+msgstr "Inde"
 
 #. XKBFile extension text
 msgid "Bengali"
-msgstr ""
+msgstr "Bengali"
 
 #. XKBFile extension text
 msgid "Switzerland"
-msgstr ""
+msgstr "Suisse"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Laos"
-msgstr "Disposition"
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
-msgstr ""
+msgstr "Japon"
 
 #. XKBFile extension text
 msgid "Syria"
-msgstr ""
+msgstr "Syrie"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Tchéquie"
 
 #. XKBFile extension text
 msgid "Belarus"
-msgstr ""
+msgstr "Biélorussie"
 
 #. XKBFile extension text
 msgid "Tajikistan"
-msgstr ""
+msgstr "Tadjikistan"
 
 #. XKBFile extension text
 msgid "Denmark"
-msgstr ""
+msgstr "Danemark"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr ""
+msgstr "Slovénie"
 
 #. XKBFile extension text
 msgid "Malta"
-msgstr ""
+msgstr "Malte"
 
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr ""
+msgstr "Azerbaïdjan"
 
 #. XKBFile extension text
 msgid "Lithuania"
-msgstr ""
+msgstr "Lituanie"
 
 #. XKBFile extension text
 msgid "Vietnam"
-msgstr ""
+msgstr "Viêt Nam"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr ""
+msgstr "Îles Feroe"
 
 #. XKBFile extension text
 msgid "South Africa"
-msgstr ""
+msgstr "Afrique du Sud"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #. XKBFile extension text
 msgid "Slovakia"
-msgstr ""
+msgstr "Slovaquie"
 
 #. XKBFile extension text
 msgid "Maldives"
-msgstr ""
+msgstr "Maldives"
 
 #. XKBFile extension text
 msgid "Iceland"
-msgstr ""
+msgstr "Islande"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr ""
+msgstr "Croatie"
 
 #. XKBFile extension text
 msgid "Latvia"
-msgstr ""
+msgstr "Lettonie"
 
 #. XKBFile extension text
 msgid "Albania"
-msgstr ""
+msgstr "Albanie"
 
 #. XKBFile extension text
 msgid "Italy"
-msgstr ""
+msgstr "Italie"
 
 #. XKBFile extension text
 msgid "Greece"
-msgstr ""
+msgstr "Grèce"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr ""
+msgstr "Royaume-Uni"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "France"
-msgstr "&Annuler"
+msgstr "France"
 
 #. XKBFile extension text
 msgid "Armenia"
-msgstr ""
+msgstr "Arménie"
 
 #. XKBFile extension text
 msgid "Pakistan"
-msgstr ""
+msgstr "Pakistan"
 
 #. XKBFile extension text
 msgid "Poland"
-msgstr ""
+msgstr "Pologne"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "Kyrgyzstan"
 
 #. XKBFile extension text
 msgid "Ireland"
-msgstr ""
+msgstr "Irlande"
 
 #. XKBFile extension text
 msgid "Hungary"
-msgstr ""
+msgstr "Hongrie"
 
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr ""
+msgstr "Cambodge"
 
 #. XKBFile extension text
 msgid "Spain"
-msgstr ""
+msgstr "Espagne"
 
 #. XKBFile extension text
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraine"
 
 #. XKBFile extension text
 msgid "Romania"
-msgstr ""
+msgstr "Roumanie"
 
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr ""
+msgstr "Kazakhstan"
 
 #. XKBFile extension text
 msgid "Georgia"
-msgstr ""
+msgstr "Géorgie"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "Anglais américain"
 
 #. XKBFile extension text
 msgid "Turkish"
-msgstr ""
+msgstr "Turc"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "Série PC-98xx"
 
 #. XKBFile extension text
 msgid "Netherlands"
-msgstr ""
+msgstr "Pays-Bas"
 
 #. XKBFile extension text
 msgid "Macedonia"
-msgstr ""
+msgstr "Macédoine"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Canada"
-msgstr "Carte"
+msgstr "Canada"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr ""
+msgstr "Sri Lanka"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "Bosnie-Herzégovine"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr ""
+msgstr "Serbie et Monténégro"
 
 #. XKBFile extension text
 msgid "Brazil"
-msgstr ""
+msgstr "Brésil"
 
 #. XKBFile extension text
 msgid "Ghana"
-msgstr ""
+msgstr "Ghana"
 
 #. XKBFile extension text
 msgid "Andorra"
-msgstr ""
+msgstr "Andorre"
 
 #. XKBFile extension text
 msgid "Afghanistan"
-msgstr ""
+msgstr "Afghanistan"
 
 #. XKBFile extension text
 msgid "Esperanto"
-msgstr ""
+msgstr "Espéranto"
 
 #. XKBFile extension text
 msgid "Turkey"
-msgstr ""
+msgstr "Turquie"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
