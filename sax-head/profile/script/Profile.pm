@@ -436,10 +436,12 @@ sub ProfileGetDDC2Data {
 		# Found monitor in the CDB
 		#-------------------------------------
 		if (defined $data{Name}) {
-		if ($data{Name} =~ /(.*):(.*)/) {
-			$result{Model}  = $2;
-			$result{Vendor} = $1;
-		}
+			$data{Name} =~ s/\(/__OB__/g;
+			$data{Name} =~ s/\)/__CB__/g;
+			if ($data{Name} =~ /(.*):(.*)/) {
+				$result{Model}  = $2;
+				$result{Vendor} = $1;
+			}
 		}
 		if (defined $data{Resolution}) {
 			$result{Resolution} = $data{Resolution};
