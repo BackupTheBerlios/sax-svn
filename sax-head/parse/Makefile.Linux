@@ -17,7 +17,7 @@ all:
 
 test:
 	gcc -O2 parse.c -o parse -L/usr/X11R6/lib -L/usr/X11R6/lib64 \
-		-I/usr/X11R6/include -I/usr/include/xorg \
+		-I/usr/X11R6/include \
 		-DX_BYTE_ORDER=X_LITTLE_ENDIAN \
 		-DNEW_INPUT -DNDEBUG -D${EXTSEC} \
 		-lxf86config -lm
