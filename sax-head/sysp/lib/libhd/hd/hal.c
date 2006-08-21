@@ -217,7 +217,7 @@ void read_hal(hd_data_t *hd_data)
 
   libhal_ctx_free(hal_ctx);
 
-  dbus_connection_disconnect(conn);
+  dbus_connection_close(conn);
   dbus_connection_unref(conn);
 
   dbus_error_free(&error);
@@ -746,6 +746,18 @@ void find_udi(hd_data_t *hd_data, hd_t *hd, int match)
     dev->prop = NULL;
   }
 
+}
+
+const char* get_sysfs_attr(const char* bus, const char* device, const char* attr)
+{
+  static char buf[256];
+  FILE* fp;
+  sprintf(buf, "/sys/bus/%s/devices/%s/%s", bus, device, attr);
+  fp = fopen(buf, "r");
+  if(!fp) return NULL;
+  fgets(buf, 127, fp);
+  fclose(fp);
+  return buf;
 }
 
 /** @} */

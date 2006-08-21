@@ -2,6 +2,28 @@
 Sun Aug 20 18:28:29 CEST 2006 - ms@suse.de
 
 - update CDB entries for Xorg v7
+- fixed fontpath changes between Xorg v6 and v7 (.fontpath)
+- update to hwinfo head branch code, took care for new dbus
+  interface
+
+-------------------------------------------------------------------
+Thu Aug 17 13:23:13 CEST 2006 - olh@suse.de
+
+- quote variable with unpredictable content in build section
+- build as unprivileged user
+- disable sax2-libsax-java for everyone to fix build
+
+-------------------------------------------------------------------
+Sat Aug 12 11:51:27 CEST 2006 - thoenig@suse.de
+
+- Add patch sax2-dbus-api-fix-thoenig-01.patch: Use
+  dbus_connection_close, not dbus_connection_disconnect
+
+-------------------------------------------------------------------
+Fri Aug 11 18:32:12 CEST 2006 - sndirsch@suse.de
+
+- sax2-xorg-fontpath.patch:
+  * fixes wrong fontpath (Bug #198653)
 
 -------------------------------------------------------------------
 Wed Aug  9 09:26:22 CEST 2006 - ms@suse.de

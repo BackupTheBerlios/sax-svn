@@ -140,7 +140,6 @@ sub checkout {
 	my $pacdir = svnup (@_);
 	chdir $pacdir;
 	qx( mv sax/rpm/* . );
-	qx( mv spec/sax2.spec ./sax2.spec && rm -rf spec );
 	if (defined $Build) {
 		qx( mv sax/.build . );
 	}
