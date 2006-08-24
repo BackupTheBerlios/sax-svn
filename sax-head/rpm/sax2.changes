@@ -1,10 +1,21 @@
 -------------------------------------------------------------------
-Sun Aug 20 18:28:29 CEST 2006 - ms@suse.de
+Sun Aug 27 18:28:29 CEST 2006 - ms@suse.de
 
-- update CDB entries for Xorg v7
+- update CDB entries for Xorg v7 (#176265)
 - fixed fontpath changes between Xorg v6 and v7 (.fontpath)
 - update to hwinfo head branch code, took care for new dbus
   interface
+
+-------------------------------------------------------------------
+Thu Aug 24 02:54:44 CEST 2006 - thoenig@suse.de
+
+- revert duplication of dbus_connection_unref as libdbus is now
+  fixed
+
+-------------------------------------------------------------------
+Wed Aug 23 12:18:59 CEST 2006 - ro@suse.de
+
+- work around dbus breakage
 
 -------------------------------------------------------------------
 Thu Aug 17 13:23:13 CEST 2006 - olh@suse.de
