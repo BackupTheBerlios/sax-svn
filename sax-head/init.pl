@@ -616,7 +616,9 @@ sub scan {
 	Logger ( $subject."\n".$result,$logHandle );
 	my $xstuffLines = split("\n",$result);
 	if ($xstuffLines < 3) {
-		die $result;
+		print "$result\n";
+		print "SaX: call sax2 -p and select a single device\n";
+		die "abort\n";
 	}
 	Debug ( $result );
 
