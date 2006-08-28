@@ -49,7 +49,7 @@ if (ProfileIsNoteBookHardware()) {
 	$dx = eval $dt;
 	print FD "$dx=\"SaXDualMonitorModel\" \"1024X768\@60HZ\"\n";
 	$dx = eval $dt;
-	print FD "$dx=\"CloneRefresh\" \"50-60\"\n";
+	print FD "$dx=\"CloneRefresh\" \"60\"\n";
 	$dx = eval $dt;
 	print FD "$dx=\"SaXDualVSync\" \"50-60\"\n";
 	close FD;

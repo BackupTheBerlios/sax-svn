@@ -873,8 +873,7 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "CloneRefresh") {
 							QString vsync;
 							int vsmax = dualModel->getVSmax();
-							int vsmin = dualModel->getVSmin();
-							QTextOStream (&vsync) << vsmin << "-" << vsmax;
+							QTextOStream (&vsync) << vsmax;
 							saxCard.addCardOption ( key,vsync );
 						}
 						//====================================
