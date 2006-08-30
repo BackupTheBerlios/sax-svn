@@ -1284,6 +1284,7 @@ hd_t *free_hd_entry(hd_t *hd)
   free_mem(hd->block0);
   free_mem(hd->driver);
   free_str_list(hd->drivers);
+  free_str_list(hd->driver_modules);
   free_mem(hd->old_unique_id);
   free_mem(hd->unique_id1);
   free_mem(hd->usb_guid);
@@ -2391,6 +2392,23 @@ str_list_t *free_str_list(str_list_t *list)
 }
 
 
+/** \relates s_str_list_t
+ * Reverse string list.
+ */
+str_list_t *reverse_str_list(str_list_t *list)
+{
+  str_list_t *sl, *sl_new = NULL, *next;
+
+  for(sl = list; sl; sl = next) {
+    next = sl->next;
+    sl->next = sl_new;
+    sl_new = sl;
+  }
+
+  return sl_new;
+}
+
+
 /*
  * Read a file; return a linked list of lines.
  *
@@ -2522,10 +2540,46 @@ char *hd_read_symlink(char *link_name)
   static char buf[256];
   int i;
 
+  if(!link_name) {
+    *buf = 0;
+
+    return buf;
+  }
+
   i = readlink(link_name, buf, sizeof buf);
   buf[sizeof buf - 1] = 0;
   if(i >= 0 && (unsigned) i < sizeof buf) buf[i] = 0;
   if(i < 0) *buf = 0;
+
+  return buf;
+}
+
+
+char *hd_read_sysfs_link(char *base_dir, char *link_name)
+{
+  char *s = NULL, *l, *t;
+  static char *buf = NULL;
+
+  if(!base_dir || !link_name) return NULL;
+
+  str_printf(&s, 0, "%s/%s", base_dir, link_name);
+  l = hd_read_symlink(s);
+  if(!*l) return NULL;
+
+  free_mem(buf);
+
+  buf = new_mem(strlen(base_dir) + strlen(l) + 2);
+
+  s[strlen(base_dir)] = 0;
+
+  while(!strncmp(l, "../", 3)) {
+    if((t = strrchr(s, '/'))) *t = 0;
+    l += 3;
+  }
+
+  sprintf(buf, "%s/%s", s, l);
+
+  free_mem(s);
 
   return buf;
 }
@@ -5612,6 +5666,7 @@ hd_sysfsdrv_t *hd_free_sysfsdrv(hd_sysfsdrv_t *sf)
 
     free_mem(sf->driver);
     free_mem(sf->device);
+    free_mem(sf->module);
 
     free_mem(sf);
   }
@@ -5622,19 +5677,11 @@ hd_sysfsdrv_t *hd_free_sysfsdrv(hd_sysfsdrv_t *sf)
 
 void hd_sysfs_driver_list(hd_data_t *hd_data)
 {
-  char *bus;
   hd_sysfsdrv_t **sfp, *sf;
   str_list_t *sl, *sl0;
   uint64_t id = 0;
-
-  struct sysfs_bus *sf_bus;
-  struct sysfs_driver *sf_drv;
-  struct sysfs_device *sf_dev;
-
-  struct dlist *sf_subsys;
-  struct dlist *sf_drv_list;
-  struct dlist *sf_dev_list;
-
+  char *drv_dir = NULL, *drv = NULL, *module;
+  str_list_t *sf_bus, *sf_bus_e, *sf_drv, *sf_drv_e, *sf_drv2, *sf_drv2_e;
 
   for(sl = sl0 = read_file(PROC_MODULES, 0, 0); sl; sl = sl->next) {
     crc64(&id, sl->str, strlen(sl->str) + 1);
@@ -5653,29 +5700,49 @@ void hd_sysfs_driver_list(hd_data_t *hd_data)
 
   ADD2LOG("----- sysfs driver list (id 0x%016"PRIx64") -----\n", id);
 
-  sf_subsys = sysfs_open_subsystem_list("bus");
+  sf_bus = read_dir("/sys/bus", 'd');
 
-  if(sf_subsys) dlist_for_each_data(sf_subsys, bus, char) {
-    sf_bus = sysfs_open_bus(bus);
+  for(sf_bus_e = sf_bus; sf_bus_e; sf_bus_e = sf_bus_e->next) {
+    str_printf(&drv_dir, 0, "/sys/bus/%s/drivers", sf_bus_e->str);
+    sf_drv = read_dir(drv_dir, 'd');
 
-    if(sf_bus) {
-      sf_drv_list = sysfs_get_bus_drivers(sf_bus);
-      if(sf_drv_list) dlist_for_each_data(sf_drv_list, sf_drv, struct sysfs_driver) {
-        sf_dev_list = sysfs_get_driver_devices(sf_drv);
-        if(sf_dev_list) dlist_for_each_data(sf_dev_list, sf_dev, struct sysfs_device) {
+    for(sf_drv_e = sf_drv; sf_drv_e; sf_drv_e = sf_drv_e->next) {
+      str_printf(&drv, 0, "/sys/bus/%s/drivers/%s", sf_bus_e->str, sf_drv_e->str);
+
+      sf_drv2 = read_dir(drv, 'l');
+
+      for(sf_drv2_e = sf_drv2; sf_drv2_e; sf_drv2_e = sf_drv2_e->next) {
+        if(!strcmp(sf_drv2_e->str, "module")) {
+          module = strrchr(hd_read_sysfs_link(drv, sf_drv2_e->str), '/');
+          if(module) {
+            sf = *sfp = new_mem(sizeof **sfp);
+            sfp = &(*sfp)->next;
+            sf->driver = new_str(sf_drv_e->str);
+            sf->module = new_str(module + 1);
+            ADD2LOG("%16s: module = %s\n", sf->driver, sf->module);
+          }
+        }
+        else {
           sf = *sfp = new_mem(sizeof **sfp);
           sfp = &(*sfp)->next;
-          sf->driver = new_str(sf_drv->name);
-          sf->device = new_str(hd_sysfs_id(sf_dev->path));
+          sf->driver = new_str(sf_drv_e->str);
+          sf->device = new_str(hd_sysfs_id(hd_read_sysfs_link(drv, sf_drv2_e->str)));
           ADD2LOG("%16s: %s\n", sf->driver, sf->device);
         }
       }
 
-      sysfs_close_bus(sf_bus);
+      free_str_list(sf_drv2);
+
     }
+
+    free_str_list(sf_drv);
+
   }
 
-  sysfs_close_list(sf_subsys);
+  free_str_list(sf_bus);
+
+  drv = free_mem(drv);
+  drv_dir = free_mem(drv_dir);
 
   ADD2LOG("----- sysfs driver list end -----\n");
 }
@@ -5806,6 +5873,132 @@ char *hd_get_hddb_path(char *sub)
 
   return dir;
 }
+
+
+/*
+ * Parse attribute and return integer value.
+ */
+int hd_attr_uint(char* attr, uint64_t* u, int base)
+{
+  char *s;
+  uint64_t u2;
+  int ok;
+  
+  if(!(s = attr)) return 0;
+  u2 = strtoull(s, &s, base);
+  ok = !*s || isspace(*s) ? 1 : 0;
+  
+  if(ok && u) *u = u2;
+  
+  return ok;
+}
+
+/*
+ * Return attribute as string list.
+ */
+str_list_t *hd_attr_list(char *str)
+{
+  static str_list_t *sl = NULL;
+
+  free_str_list(sl);
+
+  return sl = hd_split('\n', str);
+}
+
+
+/*
+ * Remove leading "/sys" from path.
+ */
+char *hd_sysfs_id(char *path)
+{
+  if(!path || !*path) return NULL;
+
+  return strchr(path + 1, '/');
+}
+
+
+/*
+ * Convert '!' to '/'.
+ */
+char *hd_sysfs_name2_dev(char *str)
+{
+  static char *s = NULL;
+
+  if(!str) return NULL;
+
+  free_mem(s);
+  s = str = new_str(str);
+
+  while(*str) {
+    if(*str == '!') *str = '/';
+    str++;
+  }
+
+  return s;
+}
+
+
+/*
+ * Convert '/' to '!'.
+ */
+char *hd_sysfs_dev2_name(char *str)
+{
+  static char *s = NULL;
+
+  if(!str) return NULL;
+
+  free_mem(s);
+  s = str = new_str(str);
+
+  while(*str) {
+    if(*str == '/') *str = '!';
+    str++;
+  }
+
+  return s;
+}
+
+
+char* get_sysfs_attr(const char* bus, const char* device, const char* attr)
+{
+  static char buf[256];
+  FILE* fp;
+  sprintf(buf, "/sys/bus/%s/devices/%s/%s", bus, device, attr);
+  fp = fopen(buf, "r");
+  if(!fp) return NULL;
+  fgets(buf, 127, fp);
+  fclose(fp);
+  return buf;
+}
+
+
+/*
+ * must be able to read more than one line
+ */
+char *get_sysfs_attr_by_path(const char* path, const char* attr)
+{
+  static char buf[1024];
+  int i, fd;
+
+  sprintf(buf, "%s/%s", path, attr);
+  fd = open(buf, O_RDONLY);
+  if(fd >= 0) {
+    i = read(fd, buf, sizeof buf - 1);
+    close(fd);
+    if(i >= 0) {
+      buf[i] = 0;
+    }
+    else {
+      return NULL;
+    }
+  }
+  else {
+    return NULL;
+  }
+
+  return buf;
+}  
+
 
 /** @} */
 

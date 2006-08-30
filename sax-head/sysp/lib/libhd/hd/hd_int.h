@@ -1,6 +1,3 @@
-#include <sysfs/dlist.h>
-#include <sysfs/libsysfs.h>
-
 #define PROC_CMDLINE		"/proc/cmdline"
 #define PROC_PCI_DEVICES	"/proc/bus/pci/devices"
 #define PROC_PCI_BUS		"/proc/bus/pci"
@@ -138,9 +135,11 @@ void hexdump(char **buf, int with_ascii, unsigned data_len, unsigned char *data)
 str_list_t *search_str_list(str_list_t *sl, char *str);
 str_list_t *add_str_list(str_list_t **sl, char *str);
 str_list_t *free_str_list(str_list_t *list);
+str_list_t *reverse_str_list(str_list_t *list);
 str_list_t *read_file(char *file_name, unsigned start_line, unsigned lines);
 str_list_t *read_dir(char *dir_name, int type);
 char *hd_read_symlink(char *link_name);
+char *hd_read_sysfs_link(char *base_dir, char *link_name);
 void progress(hd_data_t *hd_data, unsigned pos, unsigned count, char *msg);
 
 void remove_hd_entries(hd_data_t *hd_data);
@@ -213,9 +212,8 @@ void hd_move_to_shm(hd_data_t *hd_data);
 void read_udevinfo(hd_data_t *hd_data);
 
 hd_t *hd_find_sysfs_id(hd_data_t *hd_data, char *id);
-int hd_attr_uint(struct sysfs_attribute *attr, uint64_t *u, int base);
-char *hd_attr_str(struct sysfs_attribute *attr);
-str_list_t *hd_attr_list(struct sysfs_attribute *attr);
+int hd_attr_uint(char* attr, uint64_t* u, int base);
+str_list_t *hd_attr_list(char *str);
 char *hd_sysfs_id(char *path);
 char *hd_sysfs_name2_dev(char *str);
 char *hd_sysfs_dev2_name(char *str);
@@ -223,6 +221,9 @@ void hd_sysfs_driver_list(hd_data_t *hd_data);
 char *hd_sysfs_find_driver(hd_data_t *hd_data, char *sysfs_id, int exact);
 int hd_report_this(hd_data_t *hd_data, hd_t *hd);
 str_list_t *hd_module_list(hd_data_t *hd_data, unsigned id);
+
+char* get_sysfs_attr(const char* bus, const char* device, const char* attr);
+char* get_sysfs_attr_by_path(const char* path, const char* attr);
 
 int hd_is_iseries(hd_data_t *hd_data);
 hal_device_t *hd_free_hal_devices(hal_device_t *dev);

@@ -1,5 +1,5 @@
 CC  = g++ -Wall -L/usr/X11R6/lib -L/usr/X11R6/lib64 -DXORG_LOADER
-LIB = ./lib/libsysp.a ./lib/libhd/libhd.a -lfl -lstdc++ -lX11 -lhal -lsysfs -lXxf86misc
+LIB = ./lib/libsysp.a ./lib/libhd/libhd.a -lfl -lstdc++ -lX11 -lhal -lXxf86misc
 
 OBJ = sysp.o mouse.o keyboard.o server.o cfg.o xstuff.o d3.o
 SYS = ./lib
