@@ -121,8 +121,9 @@ msgid "Touchscreen Properties"
 msgstr "触摸屏属性"
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "远程访问属性"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -164,6 +165,7 @@ msgstr "双传感头方式"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 msgid "Options"
 msgstr "选项"
 
@@ -898,16 +900,12 @@ msgstr ""
 "试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ] 键</b>停止服务器。"
 
 #. Tab title: VNC Server configuration
-msgid "VNC Server"
-msgstr "VNC 服务器"
+msgid "X Server Remote Control"
+msgstr ""
 
 #. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "允许使用 VNC 协议访问显示"
-
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "VNC 选项"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -934,7 +932,8 @@ msgid "Activate HTTP Access"
 msgstr "激活 HTTP 访问"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+#, fuzzy
+msgid "Allow Multiple Connections"
 msgstr "允许多个 VNC 连接"
 
 #. SpinBox label to setup the HTTP port number
@@ -942,23 +941,27 @@ msgid "HTTP Port"
 msgstr "HTTP 端口"
 
 #. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr "<b>VNC 口令不匹配</b><hr>两次输入的口令不相同。"
 
 #. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>VNC 口令错误</b><hr>口令字段保留为空或口令过短。输入长度不小于 6 个字符的"
 "口令。"
 
 #. VNC message box appearing if password is too long
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr "<b>VNC 口令错误</b><hr>口令太长。请输入最多为 8 个字符的口令。"
 
 #. Install missing packages box
@@ -1006,10 +1009,11 @@ msgstr ""
 "tt>。根据调用的实例创建了下列报告："
 
 #. Message box text: if VNC has been enabled the firewall should be checked
+#, fuzzy
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>VNC 配置信息</b><hr>VNC 服务需要在防火墙中打开 TCP 端口 5900 和一个 HTTP "
 "端口（默认为 5800）。可以使用 YaST 进行配置。"
@@ -1448,3 +1452,15 @@ msgstr "显示器配置"
 
 msgid "Idle timer..."
 msgstr "空闲计时器..."
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "VNC Server"
+#~ msgstr "VNC 服务器"
+
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "允许使用 VNC 协议访问显示"
+
+#~ msgid "VNC Options"
+#~ msgstr "VNC 选项"

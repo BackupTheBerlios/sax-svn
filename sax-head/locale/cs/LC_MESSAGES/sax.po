@@ -131,8 +131,9 @@ msgid "Touchscreen Properties"
 msgstr "Vlastnosti dotykového displeje"
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "Vlastnosti vzdáleného přístupu"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -174,6 +175,7 @@ msgstr "Režim dualhead"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 msgid "Options"
 msgstr "Volby"
 
@@ -916,16 +918,12 @@ msgstr ""
 "server. "
 
 #. Tab title: VNC Server configuration
-msgid "VNC Server"
-msgstr "VNC server"
+msgid "X Server Remote Control"
+msgstr ""
 
 #. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Povolit přístup k obrazovce přes VNC protokol"
-
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "VNC volby"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -952,7 +950,8 @@ msgid "Activate HTTP Access"
 msgstr "Povolit HTTP přístup"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+#, fuzzy
+msgid "Allow Multiple Connections"
 msgstr "Povolit vícečetná VNC spojení"
 
 #. SpinBox label to setup the HTTP port number
@@ -960,23 +959,27 @@ msgid "HTTP Port"
 msgstr "HTTP port"
 
 #. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr "<b>Chybné VNC heslo</b><hr>První a druhá verze hesla nesouhlasí."
 
 #. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>Chybné VNC heslo</b><hr>Heslo je příliš krátké nebo nebylo zadáno. Heslo "
 "musí obsahovat alespoň 6 znaků."
 
 #. VNC message box appearing if password is too long
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 "<b>Chybné VNC heslo</b><hr>Heslo je příliš dlouhé. Zadejte heslo dlouhé "
 "maximálně osm znaků."
@@ -1029,10 +1032,11 @@ msgstr ""
 "var/log/Xorg.99.log</tt>. Následující výstup byl vytvořen voláním instance:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
+#, fuzzy
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>Informace o konfiguraci VNC</b><hr>VNC služba vyžaduje otevřené TCP porty "
 "5900 a 5800. Otevřít je můžete v nastavení firewallu v programu YaST."
@@ -1471,3 +1475,15 @@ msgstr "Konfigurace na obrazovce"
 
 msgid "Idle timer..."
 msgstr "Čekání..."
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "VNC Server"
+#~ msgstr "VNC server"
+
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "Povolit přístup k obrazovce přes VNC protokol"
+
+#~ msgid "VNC Options"
+#~ msgstr "VNC volby"

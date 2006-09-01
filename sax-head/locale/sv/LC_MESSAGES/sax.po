@@ -131,8 +131,9 @@ msgid "Touchscreen Properties"
 msgstr "Pekskärmsegenskaper"
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "Egenskaper för fjärråtkomst"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -174,6 +175,7 @@ msgstr "Flerhuvudläge"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 msgid "Options"
 msgstr "Alternativ"
 
@@ -920,16 +922,12 @@ msgstr ""
 "b> för att stoppa servern."
 
 #. Tab title: VNC Server configuration
-msgid "VNC Server"
-msgstr "VNC-server"
+msgid "X Server Remote Control"
+msgstr ""
 
 #. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Tillåt åtkomst till skärm med VNC-protokollet"
-
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "VNC-alternativ"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -956,7 +954,8 @@ msgid "Activate HTTP Access"
 msgstr "Aktivera HTTP-åtkomst"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+#, fuzzy
+msgid "Allow Multiple Connections"
 msgstr "Tillåt flera VNC-anslutningar"
 
 #. SpinBox label to setup the HTTP port number
@@ -964,17 +963,20 @@ msgid "HTTP Port"
 msgstr "HTTP-port"
 
 #. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 "<b>VNC-lösenord överensstämmer inte</b><hr>Det första och andra lösenordet "
 "överensstämmer inte."
 
 #. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>Fel på VNC-lösenord</b><hr>Lösenordsfältet har lämnats tomt eller så är "
 "lösenordet för kort. Ange ett lösenord med minst sex tecken."
@@ -982,8 +984,8 @@ msgstr ""
 #. VNC message box appearing if password is too long
 #, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 "<b>Fel på VNC-lösenord</b><hr>Lösenordsfältet har lämnats tomt eller så är "
 "lösenordet för kort. Ange ett lösenord med minst sex tecken."
@@ -1038,10 +1040,11 @@ msgstr ""
 "anropande instans:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
+#, fuzzy
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>Information om VNC-inställningar</b><hr>VNC-tjänsten kräver att TCP-port "
 "5900 och HTTP-port (5800 som standard) öppnas i brandväggen. Du kan ställa "
@@ -1500,3 +1503,15 @@ msgstr "Inställningar på skärmen"
 
 msgid "Idle timer..."
 msgstr "Inaktivitetstidur..."
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "VNC Server"
+#~ msgstr "VNC-server"
+
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "Tillåt åtkomst till skärm med VNC-protokollet"
+
+#~ msgid "VNC Options"
+#~ msgstr "VNC-alternativ"

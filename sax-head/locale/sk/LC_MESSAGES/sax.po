@@ -143,10 +143,10 @@ msgstr "Dotyková obrazovka"
 msgid "Touchscreen Properties"
 msgstr "Nastavenie vlastností monitoru..."
 
-#  Maximum length: 20  characters
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "Nastavenie vlastností monitoru..."
 
 #. title of module dialog
 #, fuzzy
@@ -194,6 +194,7 @@ msgstr "Režim viacerých obrazoviek"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 #, fuzzy
 msgid "Options"
 msgstr "&Možnosti"
@@ -1061,20 +1062,12 @@ msgstr ""
 "ukončíte."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
-msgid "VNC Server"
-msgstr "Systém X11"
+msgid "X Server Remote Control"
+msgstr ""
 
-#  Maximum length: 60  characters
 #. Activate VNC server checkbox
-#, fuzzy
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Povoliť prístup k obrazovke pomocou VNC protokolu"
-
-#  Maximum length: 20  characters
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "Možnosti VNC"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #  Maximum length: 60  characters
 #. Activate VNC password protection checkbox
@@ -1114,7 +1107,7 @@ msgstr "Povoliť HTTP prístup"
 #  Maximum length: 40  characters
 #. Activate multiple VNC connection checkbox
 #, fuzzy
-msgid "Allow Multiple VNC Connections"
+msgid "Allow Multiple Connections"
 msgstr "Povoliť viacero VNC pripojení"
 
 #  Maximum length: 40  characters
@@ -1126,8 +1119,8 @@ msgstr "HTTP Port"
 #. VNC message box appearing if password strings doesn't match
 #, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 "<b>Heslá sa nezhodujú</b><hr>Prvá a druhá verzia hesla sa nezhodujú! Prosím, "
 "skúste znovu."
@@ -1136,8 +1129,9 @@ msgstr ""
 #. VNC message box appearing if password is too short
 #, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>Chyba hesla</b><hr>Vstup pre heslo je prázdny, alebo je heslo prikrátke. "
 "Prosím, zadajte heslo s aspoň šiestimi znakmi !."
@@ -1146,8 +1140,8 @@ msgstr ""
 #. VNC message box appearing if password is too long
 #, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 "<b>Chyba hesla</b><hr>Vstup pre heslo je prázdny, alebo je heslo prikrátke. "
 "Prosím, zadajte heslo s aspoň šiestimi znakmi !."
@@ -1202,9 +1196,9 @@ msgstr ""
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 
 #. XKBFile extension text
@@ -1681,3 +1675,20 @@ msgstr "Konfigurácia obrazovky"
 
 msgid "Idle timer..."
 msgstr "Čakanie..."
+
+#  Maximum length: 20  characters
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#, fuzzy
+#~ msgid "VNC Server"
+#~ msgstr "Systém X11"
+
+#  Maximum length: 60  characters
+#, fuzzy
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "Povoliť prístup k obrazovke pomocou VNC protokolu"
+
+#  Maximum length: 20  characters
+#~ msgid "VNC Options"
+#~ msgstr "Možnosti VNC"

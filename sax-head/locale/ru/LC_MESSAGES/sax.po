@@ -138,8 +138,9 @@ msgid "Touchscreen Properties"
 msgstr "Установка свойств монитора ..."
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr ""
+#, fuzzy
+msgid "Remote Access"
+msgstr "Установка свойств монитора ..."
 
 #. title of module dialog
 #, fuzzy
@@ -184,6 +185,7 @@ msgstr "Мультиголовный Режим"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 #, fuzzy
 msgid "Options"
 msgstr "&Параметры"
@@ -1051,18 +1053,12 @@ msgstr ""
 "+Backspace]</b> для прекращения работы сервера."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
-msgid "VNC Server"
-msgstr "Система X11"
-
-#. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
+msgid "X Server Remote Control"
 msgstr ""
 
-#. Group box title for the VNC options
-#, fuzzy
-msgid "VNC Options"
-msgstr "&Параметры"
+#. Activate VNC server checkbox
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1091,7 +1087,7 @@ msgid "Activate HTTP Access"
 msgstr "Отключают AccessX"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+msgid "Allow Multiple Connections"
 msgstr ""
 
 #. SpinBox label to setup the HTTP port number
@@ -1100,20 +1096,21 @@ msgstr ""
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 
 #. VNC message box appearing if password is too short
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 
 #. VNC message box appearing if password is too long
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 
 #. Install missing packages box
@@ -1166,9 +1163,9 @@ msgstr ""
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 
 #. XKBFile extension text
@@ -1645,3 +1642,11 @@ msgstr "Конфигурация на экране"
 
 msgid "Idle timer..."
 msgstr "Неактивный таймер ... "
+
+#, fuzzy
+#~ msgid "VNC Server"
+#~ msgstr "Система X11"
+
+#, fuzzy
+#~ msgid "VNC Options"
+#~ msgstr "&Параметры"

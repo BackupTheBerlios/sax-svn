@@ -127,8 +127,9 @@ msgid "Touchscreen Properties"
 msgstr "Propiedades de la pantalla táctil"
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "Propiedades de acceso remoto"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -170,6 +171,7 @@ msgstr "Modo de encabezado dual"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 msgid "Options"
 msgstr "Opciones"
 
@@ -927,16 +929,12 @@ msgstr ""
 "+Retroceso]</b> para finalizar el servidor."
 
 #. Tab title: VNC Server configuration
-msgid "VNC Server"
-msgstr "Servidor VNC"
+msgid "X Server Remote Control"
+msgstr ""
 
 #. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Permitir acceso a la pantalla utilizando el protocolo VNC"
-
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "Opciones VNC"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -963,7 +961,8 @@ msgid "Activate HTTP Access"
 msgstr "Activar acceso HTTP"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+#, fuzzy
+msgid "Allow Multiple Connections"
 msgstr "Permitir múltiples conexiones VNC"
 
 #. SpinBox label to setup the HTTP port number
@@ -971,26 +970,30 @@ msgid "HTTP Port"
 msgstr "Puerto HTTP"
 
 #. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 "<b>Las contraseñas VNC no coinciden</b><hr>La primera y la segunda versión "
 "de la contraseña no coinciden."
 
 #. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>Error de contraseña VNC</b><hr>El campo de contraseña se ha dejado en "
 "blanco o la contraseña es demasiado corta. Introduzca una contraseña con al "
 "menos seis caracteres."
 
 #. VNC message box appearing if password is too long
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 "<b>Error de contraseña VNC</b><hr>La contraseña es demasiado larga. "
 "Introduzca una contraseña con un máximo de ocho caracteres."
@@ -1045,10 +1048,11 @@ msgstr ""
 "ha generado a partir de la instancia que ha llamado al proceso:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
+#, fuzzy
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>Información de configuración de VNC</b><hr>El servicio VNC requiere que "
 "el puerto TCP 5900 y un puerto HTTP (por defecto el 5800) estén abiertos en "
@@ -1488,3 +1492,15 @@ msgstr "Mostrar configuración"
 
 msgid "Idle timer..."
 msgstr "Temporizador inactivo..."
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "VNC Server"
+#~ msgstr "Servidor VNC"
+
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "Permitir acceso a la pantalla utilizando el protocolo VNC"
+
+#~ msgid "VNC Options"
+#~ msgstr "Opciones VNC"

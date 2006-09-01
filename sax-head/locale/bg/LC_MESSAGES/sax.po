@@ -125,8 +125,9 @@ msgid "Touchscreen Properties"
 msgstr "Свойства на touchscreen-а"
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "Свойства на отдалечения достъп"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -168,6 +169,7 @@ msgstr "Dual Head режим"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 msgid "Options"
 msgstr "Параметри"
 
@@ -918,16 +920,12 @@ msgstr ""
 "за да прекъснете сървъра."
 
 #. Tab title: VNC Server configuration
-msgid "VNC Server"
-msgstr "VNC сървър"
+msgid "X Server Remote Control"
+msgstr ""
 
 #. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "Разрешаване на достъп до дисплея чрез VNC протокол"
-
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "Параметри на VNC"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -954,7 +952,8 @@ msgid "Activate HTTP Access"
 msgstr "Активиране на достъп чрез HTTP"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+#, fuzzy
+msgid "Allow Multiple Connections"
 msgstr "Разрешаване на множество VNC връзки"
 
 #. SpinBox label to setup the HTTP port number
@@ -962,17 +961,20 @@ msgid "HTTP Port"
 msgstr "HTTP порт"
 
 #. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 "<b>Несъответствие в паролите</b><hr>Първата и втората версия на паролата не "
 "съответстват! Моля, опитайте отново."
 
 #. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>Грешка с паролата</b><hr>Полето за паролата е оставено празно или "
 "паролата е твърде къса. Моля, въведете парола дълга поне 6 символа!"
@@ -980,8 +982,8 @@ msgstr ""
 #. VNC message box appearing if password is too long
 #, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 "<b>Грешка с паролата</b><hr>Полето за паролата е оставено празно или "
 "паролата е твърде къса. Моля, въведете парола дълга поне 6 символа!"
@@ -1035,10 +1037,11 @@ msgstr ""
 "прегледайте файла  <tt>/var/log/Xorg.99.log</tt>. Следният отчет бе създаден:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
+#, fuzzy
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>Информация за настройката на VNC</b><hr>VNC услугата изисква в защитната "
 "стена да бъдат отворени TCP порт 5900 и HTTP порт (5800 по подразбиране). "
@@ -1498,3 +1501,15 @@ msgstr "Настройка на екрана"
 
 msgid "Idle timer..."
 msgstr "Време на бездействие..."
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "VNC Server"
+#~ msgstr "VNC сървър"
+
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "Разрешаване на достъп до дисплея чрез VNC протокол"
+
+#~ msgid "VNC Options"
+#~ msgstr "Параметри на VNC"

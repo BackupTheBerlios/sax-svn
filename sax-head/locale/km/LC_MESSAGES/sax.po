@@ -122,8 +122,9 @@ msgid "Touchscreen Properties"
 msgstr "លក្ខណៈ​សម្បត្តិ​ឧបករណ៍​ប៉ះអេក្រង់"
 
 #. Short description of the VNC module
-msgid "VNC"
-msgstr "VNC"
+#, fuzzy
+msgid "Remote Access"
+msgstr "លក្ខណៈ​សម្បត្តិ​ការ​ចូលដំណើរការ​ពី​ចម្ងាយ"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -165,6 +166,7 @@ msgstr "របៀប​ក្បាល​ពីរ"
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
+#. Group box title for the VNC options
 msgid "Options"
 msgstr "ជម្រើស"
 
@@ -902,16 +904,12 @@ msgstr ""
 "ចុច <b>[ បញ្ជា+ជំនួស+លុប​ថយក្រោយ ]</b> ដើម្បី​បញ្ឈប់​ម៉ាស៊ីន​បម្រើ ។"
 
 #. Tab title: VNC Server configuration
-msgid "VNC Server"
-msgstr "ម៉ាស៊ីន​បម្រើ VNC"
+msgid "X Server Remote Control"
+msgstr ""
 
 #. Activate VNC server checkbox
-msgid "Allow Access to Display Using VNC Protocol"
-msgstr "អនុញ្ញាត​ការ​ចូលដំណើរការ​ទៅ​កាន់​ការ​បង្ហាញ ដោយ​ប្រើ​ពិធីការ VNC"
-
-#. Group box title for the VNC options
-msgid "VNC Options"
-msgstr "ជម្រើស VNC"
+msgid "Allow access to display and keyboard/mouse of your X Server"
+msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -938,7 +936,8 @@ msgid "Activate HTTP Access"
 msgstr "ធ្វើ​ឲ្យ​ការ​ចូលដំណើរការ HTTP សកម្ម"
 
 #. Activate multiple VNC connection checkbox
-msgid "Allow Multiple VNC Connections"
+#, fuzzy
+msgid "Allow Multiple Connections"
 msgstr "អនុញ្ញាត​ការ​តភ្ជាប់ VNC ច្រើន"
 
 #. SpinBox label to setup the HTTP port number
@@ -946,16 +945,19 @@ msgid "HTTP Port"
 msgstr "ច្រក HTTP"
 
 #. VNC message box appearing if password strings doesn't match
+#, fuzzy
 msgid ""
-"<b>VNC Password Mismatch</b><hr>The first and the second version of the "
-"password do not match."
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 "<b>ពាក្យសម្ងាត់​របស់ VNC មិន​ដូច​គ្នា​ឡើយ</b><hr>កំណែ​ទីមួយ និង ទីពីរ​របស់​ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង​គ្នា ។"
 
 #. VNC message box appearing if password is too short
+#, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password field has been left empty or the "
-"password is too short. Enter a password with at least six characters."
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 "<b>ពាក្យសម្ងាត់​របស់ VNC មាន​កំហុស</b><hr>វាល​ពាក្យសម្ងាត់​ត្រូវ​បាន​ទុក​ឲ្យ​នៅ​ទទេ ឬ ពាក្យ​សម្ងាត់​មាន​"
 "ប្រវែង​ខ្លី​ពេក ។ ចូរ​បញ្ចូល​ពាក្យសម្ងាត់​មួយ​ដែល​មាន​ប្រវែង​យ៉ាង​តិច ៦ តួអក្សរ ។"
@@ -963,8 +965,8 @@ msgstr ""
 #. VNC message box appearing if password is too long
 #, fuzzy
 msgid ""
-"<b>VNC Password Fault</b><hr>The password is too long. Enter a password with "
-"a maximum of eight characters."
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 "<b>ពាក្យសម្ងាត់​របស់ VNC មាន​កំហុស</b><hr>វាល​ពាក្យសម្ងាត់​ត្រូវ​បាន​ទុក​ឲ្យ​នៅ​ទទេ ឬ ពាក្យ​សម្ងាត់​មាន​"
 "ប្រវែង​ខ្លី​ពេក ។ ចូរ​បញ្ចូល​ពាក្យសម្ងាត់​មួយ​ដែល​មាន​ប្រវែង​យ៉ាង​តិច ៦ តួអក្សរ ។"
@@ -1015,10 +1017,11 @@ msgstr ""
 "<tt>/var/log/Xorg.99.log</tt> ។ របាយការណ៍​ខាង​ក្រោម ត្រូវ​បាន​បង្កើត​ពី​វត្ថុ​ដែល​បាន​ហៅ ៖"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
+#, fuzzy
 msgid ""
-"<b>VNC configuration information</b><hr>The VNC service requires that the "
-"TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
-"You can configure this with YaST."
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>ព័ត៌មាន​ការ​កំណត់​រចនាសម្ព័ន្ធ VNC</b><hr>សេវា VNC ទាមទារ​ឲ្យ​អ្នក​បើក​ច្រក TCP (5900) និង "
 "ច្រក HTTP (លំនាំដើម​គឺ 5800) ក្នុង​ជញ្ជាំងភ្លើង ។ អ្នក​អាច​កំណត់​រចនាសម្ព័ន្ធ​វា​ដោយ​ប្រើ YaST ។"
@@ -1477,3 +1480,15 @@ msgstr "ការ​កំណត់​រចនាសម្ព័ន្ធ​ល
 
 msgid "Idle timer..."
 msgstr "ពេល​ទំនេរ..."
+
+#~ msgid "VNC"
+#~ msgstr "VNC"
+
+#~ msgid "VNC Server"
+#~ msgstr "ម៉ាស៊ីន​បម្រើ VNC"
+
+#~ msgid "Allow Access to Display Using VNC Protocol"
+#~ msgstr "អនុញ្ញាត​ការ​ចូលដំណើរការ​ទៅ​កាន់​ការ​បង្ហាញ ដោយ​ប្រើ​ពិធីការ VNC"
+
+#~ msgid "VNC Options"
+#~ msgstr "ជម្រើស VNC"

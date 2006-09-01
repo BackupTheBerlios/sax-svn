@@ -73,7 +73,7 @@ ToucherModule=Touchscreen
 ToucherModuleTopic=Touchscreen Properties
 
 # Short description of the VNC module
-VNCModule=VNC
+VNCModule=Remote Access
 
 # title of module dialog
 VNCModuleTopic=Remote Access Properties
@@ -666,13 +666,13 @@ TouchSelection=Touchscreen: Vendor and Name Selection
 FinalSaX=<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to kill the server.
 
 # Tab title: VNC Server configuration
-VNC=VNC Server
+VNC=X Server Remote Control
 
 # Activate VNC server checkbox
-EnableVNC=Allow Access to Display Using VNC Protocol
+EnableVNC=Allow access to display and keyboard/mouse of your X Server
 
 # Group box title for the VNC options
-VNCOptions=VNC Options
+VNCOptions=Options
 
 # Activate VNC password protection checkbox
 PWDProtect=Activate Password Protection
@@ -693,19 +693,19 @@ PasswordVerify=<Verify password>
 VNCHTTP=Activate HTTP Access
 
 # Activate multiple VNC connection checkbox
-VNCShared=Allow Multiple VNC Connections
+VNCShared=Allow Multiple Connections
 
 # SpinBox label to setup the HTTP port number
 HTTPPort=HTTP Port
 
 # VNC message box appearing if password strings doesn't match
-PWDMismatch=<b>VNC Password Mismatch</b><hr>The first and the second version of the password do not match.
+PWDMismatch=<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match.
 
 # VNC message box appearing if password is too short 
-PWDTooShort=<b>VNC Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters.
+PWDTooShort=<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters.
 
 # VNC message box appearing if password is too long
-PWDTooLong=<b>VNC Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters.
+PWDTooLong=<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters.
 
 # Install missing packages box
 InstallPackage=<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?
@@ -732,7 +732,7 @@ SavingDone=<b>Configuration Saved</b><hr>Your modifications will take effect the
 TestingFailed=<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:
 
 # Message box text: if VNC has been enabled the firewall should be checked
-InfoVNC=<b>VNC configuration information</b><hr>The VNC service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST.
+InfoVNC=<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST.
 
 # XKBFile extension text
 Miscellaneous compatibility options=Miscellaneous compatibility options
