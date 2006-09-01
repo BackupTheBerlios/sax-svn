@@ -99,7 +99,6 @@ Version:        8.1
 Release:        9
 Summary:        SaX2 identity and profile information
 Group:          System/X11/Utilities
-Requires:       sax2-libsax-perl
 
 %description -n sax2-ident
 This package contains information about the supported graphics hardware
