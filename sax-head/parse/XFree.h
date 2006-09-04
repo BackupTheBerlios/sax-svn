@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <ctype.h>
-#include <xf86Parser.h>
+#include "xf86Parser.h"
 
 extern XF86ConfigPtr ReadConfigFile (char *filename);
 

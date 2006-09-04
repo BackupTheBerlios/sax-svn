@@ -18,7 +18,7 @@ STATUS        : Status: Up-to-date
 #include <stdlib.h>
 #include <stdarg.h>
 #include <ctype.h>
-#include <xf86Parser.h>
+#include "xf86Parser.h"
 #include <string.h>
 
 #define XF86CONF_PHSYNC    0x0001

@@ -27,7 +27,7 @@ STATUS        : Status: Development
 #include <stdarg.h>
 #include <dirent.h>
 extern "C" {
-#include <xf86Parser.h>
+#include "xf86Parser.h"
 }
 
 #include "export.h"

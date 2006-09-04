@@ -5,7 +5,9 @@ $QTDIR=$ENV{QTDIR};
 
 $INCPATH="-I$QTDIR/include";
 if (-f "/usr/X11R6/include/xf86Parser.h") {
-	$INCPATH=$INCPATH." -I/usr/X11R6/include";
+	$INCPATH=$INCPATH." -iquote /usr/X11R6/include -I.";
+} else {
+	$INCPATH=$INCPATH." -iquote /usr/include/xorg -I.";
 }
 
 WriteMakefile(
