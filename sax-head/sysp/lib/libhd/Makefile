@@ -1,23 +1,24 @@
-TOPDIR      = $(CURDIR)
-SUBDIRS		= hd ids
-TARGETS		= touch $(LIBHD)
-CLEANFILES	= $(LIBHD) $(LIBHD_D) *.a
+TOPDIR		= $(CURDIR)
+SUBDIRS		= hd ids x86emu int10
+TARGETS		= hwinfo.pc
+CLEANFILES	= hwinfo.pc libhd.a
+LIBDIR		= /usr/lib
+ULIBDIR		= $(LIBDIR)
+LIBS		= -lhd
+SLIBS		= -lhd -ldbus-1 -lhal
+TLIBS		= -lhd_tiny -ldbus-1 -lhal
+SO_LIBS		= -ldbus-1 -lhal
+TSO_LIBS	= -ldbus-1 -lhal
 
-.PHONY: touch
+export SO_LIBS
 
-include $(TOPDIR)/Makefile.common
+include Makefile.common
 
-ifneq "$(findstring $(ARCH), i386 x86_64 ia64)" ""
-ifneq ($(LIBHD_BASE), libhd_tiny)
-SUBDIRS	+= x86emu int10
-endif
-endif
+SHARED_FLAGS	=
+OBJS_NO_TINY	= names.o parallel.o modem.o
 
-$(LIBHD): $(OBJS)
-	ar r $@ $?
-	@rm -f $(LIBHD_D)
+.PHONY:	fullstatic static shared tiny doc diet tinydiet uc tinyuc
 
-subdirs: touch
-
-touch:
-	@touch -r $(LIBHD) $(LIBHD_D) 2>/dev/null || true
+hwinfo.pc: hwinfo.pc.in
+	VERSION=`cat VERSION`; \
+	sed -e "s,@VERSION@,$${VERSION},g" -e 's,@LIBDIR@,$(ULIBDIR),g;s,@LIBS@,$(LIBS),g' $< > $@.tmp && mv $@.tmp $@
