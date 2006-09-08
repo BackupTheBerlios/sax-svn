@@ -185,6 +185,7 @@ bool SCCMouse::exportData ( void ) {
 		SCCMouseModel* modelData = display->getModelData();
 		QString vendor = modelData -> getVendorName(); 
 		QString model  = modelData -> getModelName();
+		QString zmap;
 		if (! model.isEmpty() ) {
 			QDict<QString> mData = mSection["Pointers"]->getCurrentTable();
 			QDictIterator<QString> it (mData);
@@ -193,6 +194,9 @@ bool SCCMouse::exportData ( void ) {
 				QString val = *it.current();
 				if (key == "Identifier") {
 					continue;
+				}
+				if (key == "ZAxisMapping") {
+					zmap = val;
 				}
 				mSection["Pointers"]->removeEntry ( key );
 			}
@@ -210,7 +214,14 @@ bool SCCMouse::exportData ( void ) {
 		//------------------------------------
 		saxMouse.disableWheel();
 		if (display->isWheelEnabled()) {
-			saxMouse.enableWheel();
+			if (! zmap.isEmpty()) {
+				QStringList tokens = QStringList::split ( " ",zmap );
+				int b1 = tokens.first().toInt();
+				int b2 = tokens.last().toInt();
+				saxMouse.enableWheelOn (b1,b2);
+			} else {
+				saxMouse.enableWheel();
+			}
 		}
 		//====================================
 		// save mouse X axis invertation data

@@ -122,8 +122,9 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 	virtual void disableWheelEmulation   ( void ) = 0;
 	virtual void enable3ButtonEmulation  ( void ) = 0;
 	virtual void disable3ButtonEmulation ( void ) = 0;
-	virtual void enableWheel  ( void ) = 0;
-	virtual void disableWheel ( void ) = 0;
+	virtual void enableWheel   ( void ) = 0;
+	virtual void enableWheelOn ( int,int ) = 0;
+	virtual void disableWheel  ( void ) = 0;
 	virtual void enableXAxisInvertation  ( void ) = 0;
 	virtual void enableYAxisInvertation  ( void ) = 0;
 	virtual void disableXAxisInvertation ( void ) = 0;
@@ -210,8 +211,9 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	void disableWheelEmulation   ( void );
 	void enable3ButtonEmulation  ( void );
 	void disable3ButtonEmulation ( void );
-	void enableWheel  ( void );
-	void disableWheel ( void );
+	void enableWheel   ( void );
+	void enableWheelOn ( int,int );
+	void disableWheel  ( void );
 	void enableXAxisInvertation  ( void );
 	void enableYAxisInvertation  ( void );
 	void disableXAxisInvertation ( void );

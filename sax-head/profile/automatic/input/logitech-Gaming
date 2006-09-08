@@ -1,0 +1,9 @@
+InputDevice -> [X] -> Identifier = Mouse[[X]]
+InputDevice -> [X] -> Driver     = evdev
+InputDevice -> [X] -> Option -> Protocol             = event
+InputDevice -> [X] -> Option -> InputFashion         = Mouse
+InputDevice -> [X] -> Option -> Name                 = Logitech;USB Gaming Mouse
+InputDevice -> [X] -> Option -> Device               = /dev/input/by-id/usb-Logitech_USB_Gaming_Mouse-event-mouse
+InputDevice -> [X] -> Option -> SendCoreEvents       = on
+InputDevice -> [X] -> Option -> ZAxisMapping         = 7 8
+InputDevice -> [X] -> Option -> Buttons              = 8

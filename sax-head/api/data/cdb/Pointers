@@ -428,6 +428,15 @@ Logitech:MX 900 Bluetooth {
  Buttons      = 8 
 }
 
+Logitech:USB Gaming Mouse {
+ Driver         = evdev
+ Protocol       = event
+ SendCoreEvents = on
+ Device         = /dev/input/by-id/usb-Logitech_USB_Gaming_Mouse-event-mouse
+ ZAxisMapping   = 7 8
+ Buttons        = 8
+}
+
 Logitech:MediaPlay {
  Driver       = mouse
  Protocol     = ExplorerPS/2

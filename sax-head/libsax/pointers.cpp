@@ -396,6 +396,22 @@ void SaXManipulateMice::enableWheel  (void) {
 }
 
 //====================================
+// enableWheel
+//------------------------------------
+void SaXManipulateMice::enableWheelOn  (int b1, int b2) {
+	// .../
+	//! enable the mouse wheel. This function uses b1 and b2
+	//! as buttons to map the wheel on
+	// ----
+	if (! mImport) {
+		return;
+	}
+	QString val;
+	QTextOStream (&val) << b1 << " " << b2;
+	mImport -> setItem ("ZAxisMapping",val);
+}
+
+//====================================
 // enableXAxisInvertation
 //------------------------------------
 void SaXManipulateMice::enableXAxisInvertation (void) {
@@ -480,7 +496,7 @@ bool SaXManipulateMice::isMouse (void) {
 	}
 	QString driver = getDriver();
 	QString fashion = mImport -> getItem ("InputFashion");
-	if (driver == "mouse") {
+	if ((driver == "mouse") || (driver == "evdev")) {
 		if (fashion != "MultiSeat") {
 			return true;
 		}
