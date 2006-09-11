@@ -3,8 +3,12 @@ BINDLIB = lib
 PLUGSDIR=${DESTDIR}/usr/${BINDLIB}
 MONODLLD=${DESTDIR}/usr/${BINDLIB}/mono/gac/SaX
 
+RPM_OPT_FLAGS ?= -O2
+CFLAGS = $(RPM_OPT_FLAGS)
+
 all:/usr/bin/mcs
-	g++ -c -I/usr/X11R6/include -I/usr/include/xorg -I${QTDIR}/include \
+	g++ -c $(CFLAGS) -I/usr/X11R6/include \
+		-I/usr/include/xorg -I${QTDIR}/include \
 		-fno-strict-aliasing -pipe -fPIC SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o libSaX.so \
 		-L/usr/X11R6/${BINDLIB} -L${QTDIR}/${BINDLIB} \

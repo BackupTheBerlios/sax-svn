@@ -7,8 +7,10 @@
 # used for creating the SaX2 hardware registry
 #
 
+RPM_OPT_FLAGS ?= -O2
+
 CC       = g++
-CFLAGS   = -O2 -fpic -Wall
+CFLAGS   = $(RPM_OPT_FLAGS) -O2 -fpic -Wall
 LIBS     = -lfl
 
 SRC      = plog/plog.c plog/parse.c
@@ -22,8 +24,8 @@ HW       = ./hw
 COMMON   = ./common
 LIBHD    = ./libhd
 
-# build...
-# ---------
+export CFLAGS
+
 all:${AIM}
 
 libsysp.a:

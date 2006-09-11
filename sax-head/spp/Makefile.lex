@@ -4,25 +4,28 @@
 # Author: Marcus Schaefer <ms@suse.de>, 2000
 # Generate plog objects used for libsysp
 #
+RPM_OPT_FLAGS ?= -O2
+CFLAGS = $(RPM_OPT_FLAGS)
+
 all:spp
 
 swig:spp.o spp.tab.o lex.yy.o
 
 spp:spp.tab.o lex.yy.o spp.o example.o
-	g++ -Wall -O2 -o example example.o spp.o spp.tab.o lex.yy.o \
+	g++ -Wall -O2 $(CFLAGS) -o example example.o spp.o spp.tab.o lex.yy.o \
 		-L${QTDIR}/lib -I${QTDIR}/include -lfl -lreadline -lqt-mt -lncurses
 
 example.o:example.cpp
-	g++ -Wall -O2 -fpic -c example.cpp -I. -I${QTDIR}/include
+	g++ -Wall -O2 -fpic $(CFLAGS) -c example.cpp -I. -I${QTDIR}/include
 
 spp.o:spp.cpp spp.h
-	g++ -Wall -O2 -fpic -c spp.cpp -I. -I${QTDIR}/include
+	g++ -Wall -O2 -fpic $(CFLAGS) -c spp.cpp -I. -I${QTDIR}/include
 
 spp.tab.o: spp.tab.cc lex.yy.c
-	g++ -Wall -O2 -fpic -c spp.tab.cc -I. -I${QTDIR}/include
+	g++ -Wall -O2 -fpic $(CFLAGS) -c spp.tab.cc -I. -I${QTDIR}/include
 
 lex.yy.o: lex.yy.c
-	g++ -Wall -O2 -fpic -c lex.yy.c -I. -I${QTDIR}/include
+	g++ -Wall -O2 -fpic $(CFLAGS) -c lex.yy.c -I. -I${QTDIR}/include
 
 spp.tab.cc: spp.yc
 	bison -d spp.yc

@@ -8,27 +8,26 @@
 #
 CC     = g++ -Wall -fpic -O2
 OBJ    = mouse.o tv.o keyboard.o monitor.o memory.o vbios.o
-CFLAGS = -Wall -O2
 
 all: ${OBJ}
 
 mouse.o:mouse.c hwdata.h
-	${CC} ${CFLAGS} -c mouse.c
+	${CC} -c ${CFLAGS} mouse.c
 
 keyboard.o:keyboard.c hwdata.h
-	${CC} ${CFLAGS} -c keyboard.c
+	${CC} -c ${CFLAGS} keyboard.c
 
 monitor.o:monitor.c hwdata.h
-	${CC} ${CFLAGS} -c monitor.c
+	${CC} -c ${CFLAGS} monitor.c
 
 memory.o:memory.c hwdata.h
-	${CC} ${CFLAGS} -c memory.c
+	${CC} -c ${CFLAGS} memory.c
 
 tv.o:tv.c hwdata.h
-	${CC} ${CFLAGS} -c tv.c
+	${CC} -c ${CFLAGS} tv.c
 
 vbios.o:vbios.c hwdata.h
-	${CC} ${CFLAGS} -c vbios.c
+	${CC} -c ${CFLAGS} vbios.c
 
 clean:
 	rm -f *.o

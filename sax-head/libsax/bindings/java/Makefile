@@ -4,6 +4,9 @@ PLUGSDIR=${DESTDIR}/usr/${BINDLIB}/sax/plugins
 SHAREDIR=${DESTDIR}/usr/share/java
 JAVAC=${JAVA_BINDIR}/javac
 
+RPM_OPT_FLAGS ?= -O2
+CFLAGS = $(RPM_OPT_FLAGS)
+
 disabled:
 	exit 0
 
@@ -11,7 +14,7 @@ all:disabled
 	if [ ! -f ${JAVAC} ];then \
 		exit 1 ;\
 	fi
-	g++ -c \
+	g++ -c $(CFLAGS) \
 		-I/usr/X11R6/include \
 		-I/usr/include/xorg \
 		-I${QTDIR}/include \

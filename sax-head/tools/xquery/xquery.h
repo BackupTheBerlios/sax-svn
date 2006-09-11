@@ -126,8 +126,4 @@ int PrepareModeline (
     int h1,int h2,int h3,int h4,int v1,int v2,int v3,int v4
 );
 Bool IsXinerama (Display *dpy);
-#if 1
-char* strncat (char *,const char*, size_t);
-#endif
-
 #endif

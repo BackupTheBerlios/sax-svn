@@ -6,7 +6,6 @@
 #
 
 CC       = g++
-CFLAGS   = -O2 -Wall -fpic
 LIBS     = -lfl
 YACC     = bison
 FLEX     = flex -i
@@ -22,7 +21,7 @@ parse.cc:
 	@echo "parse.cc is not a target for me... skip"
 
 parse.tab.o: parse.tab.cc lex.yy.c
-	${CC} -O2 -fpic -c parse.tab.cc -I.
+	${CC} -c ${CFLAGS} parse.tab.cc -I.
 
 parse.tab.cc: parse.yc
 	$(YACC) -d parse.yc
@@ -32,10 +31,10 @@ lex.yy.c: parse.l
 	$(FLEX) parse.l
 
 plog.o:plog.cc ../syslib.h
-	${CC} ${CFLAGS} -c plog.cc
+	${CC} -c ${CFLAGS} plog.cc
 
 parse.o:parse.cc ../syslib.h
-	${CC} ${CFLAGS} -c parse.cc
+	${CC} -c ${CFLAGS} parse.cc
 
 plog_test:
 	${CC} plog_test.cc ${CFLAGS} -o plog_test ${OBJ} -lfl

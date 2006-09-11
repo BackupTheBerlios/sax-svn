@@ -16,6 +16,9 @@ HEADERS   += common/log.h
 HEADERS   += common/qx.h
 HEADERS   += common/xlock.h
 
+RPM_OPT_FLAGS ?= -O2
+
+QMAKE_CXXFLAGS = $(RPM_OPT_FLAGS)
 CONFIG    += thread warn_on release
 unix:LIBS += -lm -lXss -lXinerama -lGL -lXxf86vm
 TARGET    += xfine

@@ -2,6 +2,8 @@ use ExtUtils::MakeMaker;
 use Env;
 
 $QTDIR=$ENV{QTDIR};
+$CFLAGS = $ENV{RPM_OPT_FLAGS};
+$CFLAGS =~ s/-Wall//;
 
 $INCPATH="-I$QTDIR/include";
 if (-f "/usr/X11R6/include/xf86Parser.h") {
@@ -16,6 +18,6 @@ WriteMakefile(
   'dynamic_lib' => { 'OTHERLDFLAGS' => '-L../.. -lsax' },
   'OBJECT'   => 'SaX_wrap.o',
   'INC'      => $INCPATH,
-  'OPTIMIZE' => '-O2'
+  'OPTIMIZE' => "-O2 $CFLAGS"
 );
 

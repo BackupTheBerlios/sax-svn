@@ -4,6 +4,11 @@ LIB = ./lib/libsysp.a ./lib/libhd/libhd.a -lfl -lstdc++ -lX11 -lhal -lXxf86misc
 OBJ = sysp.o mouse.o keyboard.o server.o cfg.o xstuff.o d3.o
 SYS = ./lib
 
+RPM_OPT_FLAGS ?= -O2
+CFLAGS  = $(RPM_OPT_FLAGS)
+
+export CFLAGS
+
 all: sysp
 
 sysp: ${OBJ}
@@ -13,25 +18,25 @@ sysp: ${OBJ}
 		${LIB}
 
 d3.o: d3.c d3.h
-	${CC} -c d3.c
+	${CC} -c $(CFLAGS) d3.c
 
 xstuff.o: xstuff.c xstuff.h sysp.h
-	${CC} -c xstuff.c
+	${CC} -c $(CFLAGS) xstuff.c
 
 cfg.o: cfg.c cfg.h sysp.h
-	${CC} -c cfg.c
+	${CC} -c $(CFLAGS) cfg.c
 
 server.o: server.c server.h sysp.h
-	${CC} -c server.c
+	${CC} -c $(CFLAGS) server.c
 
 keyboard.o: keyboard.c keyboard.h sysp.h
-	${CC} -c keyboard.c
+	${CC} -c $(CFLAGS) keyboard.c
 
 sysp.o: sysp.c sysp.h
-	${CC} -c sysp.c
+	${CC} -c $(CFLAGS) sysp.c
 
 mouse.o: mouse.c mouse.h sysp.h
-	${CC} -c mouse.c
+	${CC} -c $(CFLAGS) mouse.c
 
 clean:
 	rm -f *.o

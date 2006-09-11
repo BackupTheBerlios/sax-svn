@@ -39,8 +39,9 @@ HEADERS   += file.h
 HEADERS   += interface.h
 HEADERS   += processcall.h
 
+RPM_OPT_FLAGS ?= -O2
 
-QMAKE_CXXFLAGS += -rdynamic -DPIC
+QMAKE_CXXFLAGS += $(RPM_OPT_FLAGS) -rdynamic -DPIC
 CONFIG    += qt warn_on release
 unix:LIBS += -L/usr/X11R6/lib64 -L/usr/X11R6/lib -lxkbfile -lxf86config
 unix:INCLUDEPATH += -iquote /usr/X11R6/include -iquote /usr/include/xorg -I.

@@ -1,4 +1,4 @@
-CC = g++ -Wall -fpic -O2
+CC = g++ -Wall -fpic -O2 $(CFLAGS)
 
 all: qx.o xtest.o string.o
 

@@ -4,10 +4,13 @@ PYVER   = `python -c "import sys; v=sys.version_info[:2]; print '%d.%d'%v"`
 PACKDIR = ${DESTDIR}/usr/${BINDLIB}/python${PYVER}/site-packages
 MODDIR  = ${PACKDIR}/SaX
 
+RPM_OPT_FLAGS ?= -O2
+CFLAGS = $(RPM_OPT_FLAGS)
+
 export LD_LIBRARY_PATH=../../
 
 all:
-	g++ -c -I/usr/X11R6/include -I/usr/include/xorg \
+	g++ -c $(CFLAGS) -I/usr/X11R6/include -I/usr/include/xorg \
 		-I${QTDIR}/include -I/usr/include/python${PYVER} \
 		-O2 -fPIC -fno-strict-aliasing -pipe SaX_wrap.cxx
 	g++ -shared SaX_wrap.o -o _SaX.so \

@@ -15,6 +15,9 @@ AC_SUBST(sbindir)
 perldir=${prefix}/usr/sbin
 AC_SUBST(perldir)
 
+CFLAGS+=" $RPM_OPT_FLAGS"
+AC_SUBST(CFLAGS)
+
 WARN_CFLAGS="-Wall"
 AC_SUBST(WARN_CFLAGS)
 

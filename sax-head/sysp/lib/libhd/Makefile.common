@@ -14,14 +14,15 @@ ifeq "$(ARCH)" "parisc"
 EXTRA_FLAGS := -fPIC $(EXTRA_FLAGS)
 endif
 
-LIBHD_WARN          := $(shell $(TOPDIR)/check-warnlevel.sh)
 LIBHD_VERSION		:= $(shell cat $(TOPDIR)/VERSION)
 LIBHD_MINOR_VERSION	:= $(shell cut -d . -f 2 $(TOPDIR)/VERSION)
 LIBHD_MAJOR_VERSION	:= $(shell cut -d . -f 1 $(TOPDIR)/VERSION)
 
+RPM_OPT_FLAGS	?= -O2
+
 CC	= gcc
 LD	= ld
-CFLAGS	= -Wall ${LIBHD_WARN} -O2 -pipe -g $(SHARED_FLAGS) $(EXTRA_FLAGS) -I$(TOPDIR)/hd
+CFLAGS	= $(RPM_OPT_FLAGS) -Wall -O2 -Wno-pointer-sign -pipe -g $(SHARED_FLAGS) $(EXTRA_FLAGS) -I$(TOPDIR)/hd
 SHARED_FLAGS	= -fPIC
 
 LDFLAGS	= -L.

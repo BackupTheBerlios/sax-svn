@@ -74,7 +74,9 @@ CONFIG    += thread warn_on release
 unix:LIBS += -lm -lXss -lxkbfile -lcrypt
 TARGET    += xapi
 
-QMAKE_CXXFLAGS = -fno-strict-aliasing
+RPM_OPT_FLAGS ?= -O2
+
+QMAKE_CXXFLAGS = $(RPM_OPT_FLAGS) -fno-strict-aliasing
 unix:INCLUDEPATH += /usr/X11R6/include
 unix:INCLUDEPATH += /usr/include/X11
 unix:INCLUDEPATH += /usr/include/xorg
