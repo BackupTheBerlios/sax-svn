@@ -617,7 +617,8 @@ sub scan {
 	my $xstuffLines = split("\n",$result);
 	if ($xstuffLines < 3) {
 		print "$result\n";
-		print "SaX: call sax2 -p and select a single device\n";
+		print "SaX: something went wrong while X was called with -probeonly\n";
+		print "SaX: try to call 'sax2 -p' and select a single device ?\n";
 		die "abort\n";
 	}
 	Debug ( $result );
