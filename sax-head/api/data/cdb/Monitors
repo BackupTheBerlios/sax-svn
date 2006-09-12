@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Thu Aug 31 12:05:17 2006
+# Author: Marcus Schaefer <sax@suse.de>, Tue Sep 12 16:43:27 2006
 #
 # Template for monitor data
 # --------------------------
@@ -9846,6 +9846,7 @@ DELL:D828L  {
 DELL:DRAC5  {
  DDC=DEL1000
  Hsync=30-70
+ Profile=DEL1000
  Resolution=1024x768
  Vsync=60-75
 }
