@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Sep 21 13:42:15 CEST 2006 - ms@suse.de
+
+- added support for patching bios using a white list of
+  devices. The IntelPatch.map contains the command and 
+  the parameters to patch the bios (#201338) 
+
+-------------------------------------------------------------------
 Tue Sep 12 16:45:02 CEST 2006 - ms@suse.de
 
 - added DEL1000 monitor profile (#199011)

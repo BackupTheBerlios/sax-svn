@@ -1,0 +1,6 @@
+# /.../
+# Mapping table for Intel devices to patch the bios 
+# =====================================================
+# code | Arguments | Program
+# -----------------------------------------------------
+0xFFFFFFFFFFFFFFFF : 3c %x %y : /usr/sbin/855resolution
