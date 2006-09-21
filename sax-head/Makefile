@@ -221,6 +221,7 @@ install:install-docs
 	install -m 644 ./sysp/maps/Vendor.map                   ${MAPVZ}
 	install -m 644 ./sysp/maps/Input.map                    ${MAPVZ}
 	install -m 644 ./sysp/maps/Driver.map                   ${MAPVZ}
+	install -m 644 ./sysp/maps/IntelPatch.map               ${MAPVZ}
 	install -m 755 ./sysp/script/*                          ${SCRIPTVZ}
 
 	#============================================
