@@ -426,6 +426,7 @@ fi
 %{_datadir}/sax/sysp/maps/Vendor.map
 %{_datadir}/sax/sysp/maps/Input.map
 %{_datadir}/sax/sysp/maps/Driver.map
+%{_datadir}/sax/sysp/maps/IntelPatch.map
 %{_datadir}/sax/api/data/cdb/*
 %{_datadir}/sax/profile
 #=================================================
