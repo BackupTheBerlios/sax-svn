@@ -9,6 +9,7 @@
 use strict;
 use Env;
 use FileHandle;
+use SaX;
 
 #=====================================
 # Globals 
@@ -144,26 +145,27 @@ sub getIntelPatchMap {
 # getIntelPatchCode
 #-------------------------------------
 sub getIntelPatchCode {
-	my @data = qx (/usr/sbin/sysp -q server);
-	my $subvendor = 0;
-	my $subdevice = 0;
-	my $vendor    = 0;
-	my $device    = 0;
-	foreach my $item (@data) {
-		if ($item =~ /VID.*: 0x(.*)/) {
-			$vendor = $1;
-		}
-		if ($item =~ /DID.*: 0x(.*)/) {
-			$device = $1;
-		}
-		if ($item =~ /SUB-VID.*: 0x(.*)/) {
-			$subvendor = $1;
-		}
-		if ($item =~ /SUB-DID.*: 0x(.*)/) {
-			$subdevice = $1;
-		}
+	my @result = ();
+	my $xstuff = new SaX::SaXImportSysp ($SaX::SYSP_DESKTOP);
+	my $server = new SaX::SaXImportSysp ($SaX::SYSP_CARD);
+	$xstuff -> doImport();
+	$server -> doImport();
+	for (my $i=0;$i<$server -> getCount();$i++) {
+		my $code = "0x0";
+		$xstuff -> setID ($i);
+		$server -> setID ($i);
+		my $ddc = $xstuff -> getItem ("DDC");
+		my $vid = $server -> getItem ("VID");
+		my $did = $server -> getItem ("DID");
+		my $svd = $server -> getItem ("SUB-VID");
+		my $sdd = $server -> getItem ("SUB-DID");
+
+		$code = "$vid$did$svd$sdd$ddc";
+		$code =~ s/0x//g;
+		$code = "0x".$code;
+		push (@result,$code);
 	}
-	return "0x$vendor$device$subvendor$subdevice";
+	return @result;
 }
 
 #=====================================
@@ -177,7 +179,8 @@ if ($patchBIOS ne "ok") {
 	#-------------------------------------
 	my @xy = split (/x/,$patchBIOS);
 	my %patch = getIntelPatchMap  ($xy[0],$xy[1]);
-	my $icode = getIntelPatchCode ();
+	my @pcode = getIntelPatchCode ();
+	foreach my $icode (@pcode) {
 	foreach my $code (keys %patch) {
 		if ($code ne $icode) {
 			next
@@ -198,5 +201,6 @@ if ($patchBIOS ne "ok") {
 			}
 		}
 		}
+	}
 	}
 }

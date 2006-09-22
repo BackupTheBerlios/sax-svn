@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Sep 22 11:07:11 CEST 2006 - ms@suse.de
+
+- use libsax to check for IntelPatch.map (#201338)
+- fixed security issue which allows a user to call
+  any command from within a password entry field (#206669)
+- fixed password setup in vnc setup (#206669)
+
+-------------------------------------------------------------------
 Thu Sep 21 13:42:15 CEST 2006 - ms@suse.de
 
 - added support for patching bios using a white list of

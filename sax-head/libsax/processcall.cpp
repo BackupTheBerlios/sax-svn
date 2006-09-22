@@ -32,7 +32,9 @@ SaXProcessCall::SaXProcessCall ( void ) {
 // addArgument
 //------------------------------------
 void SaXProcessCall::addArgument ( const QString& arg ) {
-	mArguments.append ( new QString(arg) );
+	QString* argument = new QString;
+	QTextOStream (argument) << "'" << arg << "'";
+	mArguments.append ( argument );
 }
 
 //====================================
