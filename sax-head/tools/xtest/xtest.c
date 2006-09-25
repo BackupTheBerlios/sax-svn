@@ -103,7 +103,7 @@ int main (int argc, char **argv) {
 	//============================================
 	// set watch cursor
 	//--------------------------------------------
-	cursor = CreateCursorFromName(display,"watch");
+	cursor = CreateCursorFromName(display,"top_left_arrow");
 	if (cursor) {
 		XDefineCursor (display, root, cursor);
 		XFreeCursor (display, cursor);

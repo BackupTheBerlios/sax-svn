@@ -7,7 +7,7 @@ CFLAGS=$(RPM_OPT_FLAGS) $(OPT) -Wall -W -Wno-parentheses
 VERSION=2.1.99-test9
 DATE=2005-08-23
 
-PREFIX=/usr/local
+PREFIX=/usr
 SBINDIR=$(PREFIX)/sbin
 SHAREDIR=$(PREFIX)/share
 IDSDIR=$(SHAREDIR)
