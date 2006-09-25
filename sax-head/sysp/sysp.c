@@ -50,9 +50,10 @@ using namespace std;
 //============================================
 // Defines...
 //--------------------------------------------
-#define SCANNER    0
-#define PROFILE    1
-#define QUERIES    2
+#define SCANNER      0
+#define PROFILE      1
+#define QUERIES      2
+#define MEDIADEVICES 3
 
 //============================================
 // Globals...
@@ -78,6 +79,7 @@ void RemoveRegistry(void);
 void QueryModule(str name);
 void ShowCards(void);
 void ShowProfile(void);
+void ShowMediaDevices(void);
 void CheckRoot(void);
 void PrintMouseData(ScanMouse m);
 void PrintKeyboardData(ScanKeyboard k);
@@ -121,7 +123,7 @@ int main(int argc,char *argv[]) {
 		};
 
 		c = getopt_long (
-			argc, argv, "s:q:cC:M:A:prihxnPf",long_options, &option_index
+			argc, argv, "s:q:cC:M:A:prihxnPfD",long_options, &option_index
 		);
 		if (c == -1)
 		break;
@@ -192,6 +194,10 @@ int main(int argc,char *argv[]) {
 			task = PROFILE;                 // may cause a server probing
 		break;
 
+		case 'D':                           // show media devices CD / DVD
+			task = MEDIADEVICES;            // using libhd to obtain that
+		break;
+
 		default:
 			usage();
 		}
@@ -213,6 +219,10 @@ int main(int argc,char *argv[]) {
 	case PROFILE :
 		CheckRoot();
 		ShowProfile();
+	break;
+
+	case MEDIADEVICES :
+		ShowMediaDevices();
 	break;
 	} 
 	return(0);
@@ -413,6 +423,15 @@ void ShowCards(void) {
 		printf("0x%04x 0x%04x ",data.vid,data.did);
 		printf("%3s %s\n",data.bustype.c_str(),data.module.c_str());
 		chip++;
+	}
+}
+
+//============================================
+// show the detected CD / DVD devices...
+//--------------------------------------------
+void ShowMediaDevices (void) {
+	if (char* media = mediaDevices()) {
+		printf ("%s\n",media);
 	}
 }
 

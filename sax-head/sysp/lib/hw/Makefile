@@ -7,7 +7,7 @@
 # Status: Up-to-date
 #
 CC     = g++ -Wall -fpic -O2
-OBJ    = mouse.o tv.o keyboard.o monitor.o memory.o vbios.o
+OBJ    = mouse.o tv.o keyboard.o monitor.o memory.o vbios.o cdrom.o
 
 all: ${OBJ}
 
@@ -28,6 +28,9 @@ tv.o:tv.c hwdata.h
 
 vbios.o:vbios.c hwdata.h
 	${CC} -c ${CFLAGS} vbios.c
+
+cdrom.o:cdrom.c hwdata.h
+	${CC} -c ${CFLAGS} cdrom.c
 
 clean:
 	rm -f *.o

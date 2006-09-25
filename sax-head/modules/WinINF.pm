@@ -18,27 +18,31 @@ sub mountMedia {
 #
 	my $media  = $_[0];
 
-	my @result = ();
-	my $device = "/dev/fd0";
+	my @result  = ();
+	my @devlist = "/dev/fd0";
 	my $mountpoint = "/tmp/mymedia.$$";
 	if (! -d $mountpoint) {
 		mkdir ($mountpoint,0500);
 	}
 	if ($media eq "CD") {
-		$device = "/dev/cdrom";
+		my $devs = qx (/usr/sbin/sysp -D); chomp $devs;
+		@devlist = split (/,/,$devs);
 	}
-	qx (mount $device $mountpoint >/dev/null 2>&1);
-	my $error = $? >> 8;
-	if ($error) {
-		rmdir  ($mountpoint);
-		return;
-	}
-	open (FD,"find $mountpoint -name '*.inf'|");
-	while (my $file = <FD>) {
-		chomp $file; push (@result,$file);
-	}
-	if (@result > 0) {
-		return (@result);
+	foreach my $device (@devlist) {
+		my $data  = qx (mount $device $mountpoint 2>&1);
+		my $error = $? >> 8;
+		if ($error) {
+			next;
+		}
+		open (FD,"find $mountpoint -name '*.inf'|");
+		while (my $file = <FD>) {
+			chomp $file; push (@result,$file);
+		}
+		close FD;
+		qx (umount $device 2>&1);
+		if (@result > 0) {
+			return (@result);
+		}
 	}
 	return;
 }
@@ -50,7 +54,7 @@ sub umountMedia {
 # directory
 #
 	my $mountpoint = "/tmp/mymedia.$$";
-	qx (umount -l $mountpoint >/dev/null 2>&1);
+	my $data = qx (umount -l $mountpoint 2>&1);
 	rmdir ($mountpoint);
 }
 

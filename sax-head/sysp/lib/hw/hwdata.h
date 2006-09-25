@@ -38,6 +38,7 @@ KbdData* KeyboardGetData (void);
 MouseData* MouseGetData (void);
 int TvSupport (void);
 char* vesaBIOS (void);
+char* mediaDevices (void);
 MsgDetect* MonitorGetData (void);
 unsigned long MemorySize (void);
 

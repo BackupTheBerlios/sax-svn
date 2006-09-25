@@ -132,6 +132,7 @@ extern MsgDetect* MonitorGetData(void);
 extern unsigned long MemorySize (void);
 extern int TvSupport (void);
 extern char* vesaBIOS (void);
+extern char* mediaDevices (void);
 extern void trim(char *message);
 extern char* qx(char*command,int channel,int anz=0,char* format=NULL,...);
 extern int GetDisplay (void);
