@@ -64,9 +64,9 @@ void ScanXStuff::Reset (void) {
 int ScanXStuff::
 FindParseData (map<int,ParseData> m,int bus,int slot,int func) {
 	for (int i=0;i<(int)m.size();i++) {
-		if ((m[i].pbus==bus) && (m[i].pslot==slot) && (m[i].pfunc==func)) {
-			return(i);
-		}
+		//if ((m[i].pbus==bus) && (m[i].pslot==slot) && (m[i].pfunc==func)) {
+		//	return(i);
+		//}
 		if ((m[i].bus==bus) && (m[i].slot==slot) && (m[i].func==func)) {
 			return(i);
 		}
@@ -306,8 +306,9 @@ void ScanXStuff::Scan (void) {
 			//======================================
 			// Save model and vendor from parse
 			//--------------------------------------
-			stuff[i].model[p]  = "<undefined>";
-			stuff[i].vendor[p] = "<undefined>";
+			stuff[i].model[p]    = "<undefined>";
+			stuff[i].vendor[p]   = "<undefined>";
+			stuff[i].modeline[p] = "<undefined>";
 			if (parse[mapnr].model != "") {
 				stuff[i].model[p] = parse[mapnr].model;
 			}
@@ -416,7 +417,9 @@ void ScanXStuff::Scan (void) {
 		//======================================
 		// Save monitor modeline per port
 		//--------------------------------------
-		stuff[0].modeline[p] = dpy->modeline;
+		if (dpy->modeline) {
+			stuff[0].modeline[p] = dpy->modeline;
+		}
 		//======================================
 		// Save vesa modes per port
 		//--------------------------------------

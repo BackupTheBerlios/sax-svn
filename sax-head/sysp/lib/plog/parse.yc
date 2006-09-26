@@ -87,40 +87,39 @@ void clk(str clk) {
 
 %%
 
-zeile    : ausdruck         { }     /* realize line itteration */
-         | zeile ausdruck   { } 
+zeile   : ausdruck         { }     /* realize line itteration */
+	| zeile ausdruck   { } 
+        ;
+
+ausdruck: error 			{ yyerrok;yyclearin; }
+	| Section 			{ }
+        ;
+
+Section : PROBED     ID  { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
+	| DEFAULT    ID  { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
+	| INFO       ID  { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
+	| FROMCONFIG ID  { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
+	| INFO       PDEV BUSID { sprintf(pdev,"%s",$3); }
+	| INFO       ID  { strcpy(ActId,$2); } DPIX    FLOAT  { logs("DPX",$5); } DPIY FLOAT { logs("DPY",$8); }
+	| PROBED     ID  { strcpy(ActId,$2); } FLOAT   MEMORY { logs("MEM",$4); }
+	| PROBED     ID  { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
+	| DEFAULT    ID  { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
+	| INFO       ID  { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
+	| PROBED     ID  { strcpy(ActId,$2); } VMWARE  FLOAT  { logs("VMW",$5); }
+	| PROBED     ID  { strcpy(ActId,$2); } CHIPSET STRING { logs("CHIP",$5); printf ("## %s\n",$5); }
+	| PROBED     ID  { strcpy(ActId,$2); } CLOCKS  Clocks { }
+	| PROBED     ID  { strcpy(ActId,$2); } PANEL   RESO   { logs("PAN",$5); }
+	| INFO       ID  { strcpy(ActId,$2); } PANEL   RESO   { logs("PAN",$5); }
+	| PROBED     ID  { strcpy(ActId,$2); } RESO    PANEL  { logs("PAN",$4); }
+	| REFRESH    INT { logs("REFRESH",$2); }
+	| INFO       ID  { strcpy(ActId,$2); } VESAMODE       { logs("VESA",$4);}
+	| VESAMODE       { logs("VESA",$1);   }
+	| INFO       ID  { strcpy(ActId,$2); } DDC            { logs("DDS",$4); } FLOAT { logs("DDC",$6); }
          ;
 
-ausdruck : error 			{ yyerrok;yyclearin; }
-         | Section 			{ }
-         ;
-
-Section  : PROBED     ID { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
-         | DEFAULT    ID { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
-         | INFO       ID { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
-         | FROMCONFIG ID { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",toKb($5,$6)); }
-         | INFO       PDEV BUSID { sprintf(pdev,"%s",$3); }
-         | INFO       ID { strcpy(ActId,$2); } DPIX    FLOAT  { logs("DPX",$5); } DPIY FLOAT { logs("DPY",$8); }
-         | PROBED     ID { strcpy(ActId,$2); } FLOAT   MEMORY { logs("MEM",$4); }
-         | PROBED     ID { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
-         | DEFAULT    ID { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
-         | INFO       ID { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
-         | PROBED     ID { strcpy(ActId,$2); } VMWARE  FLOAT  { logs("VMW",$5); }
-		 | PROBED     ID { strcpy(ActId,$2); } CHIPSET STRING { logs("CHIP",$5);}
-         | DEFAULT    ID { strcpy(ActId,$2); } CHIPSET STRING { logs("CHIP",$5);}
-		 | PROBED     ID { strcpy(ActId,$2); } CLOCKS  Clocks { }
-         | PROBED     ID { strcpy(ActId,$2); } PANEL   RESO   { logs("PAN",$5); }
-         | INFO       ID { strcpy(ActId,$2); } PANEL   RESO   { logs("PAN",$5); }
-         | PROBED     ID { strcpy(ActId,$2); } RESO    PANEL  { logs("PAN",$4); }
-		 | REFRESH    INT { logs("REFRESH",$2); }
-         | INFO       ID { strcpy(ActId,$2); } VESAMODE       { logs("VESA",$4);}
-		 | VESAMODE      { logs("VESA",$1);   }
-         | INFO       ID { strcpy(ActId,$2); } DDC            { logs("DDS",$4); }                                               FLOAT          { logs("DDC",$6); }
-         ;
-
-Clocks   : FLOAT          { clk($1); }
-		 | Clocks FLOAT   { clk($2); }
-		 ;
+Clocks  : FLOAT          { clk($1); }
+	| Clocks FLOAT   { clk($2); }
+	;
 
 %%
 

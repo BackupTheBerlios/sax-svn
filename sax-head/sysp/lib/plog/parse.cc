@@ -123,6 +123,9 @@ void parsemsg(MsgDetect *msg) {
 			strcpy(value,detect[i].value);
 			trim(value);
 
+			if (pdev && strcmp(pdev,"") != 0) {
+				strcpy(msg[n].primary,pdev);
+			}
 			if (strcmp(key,"DDC") == 0) {
 			if (strcmp(value,"") != 0) {
 				strcpy(msg[n].ddc,value);
@@ -140,15 +143,15 @@ void parsemsg(MsgDetect *msg) {
 			}
 			}
 			if (strcmp(key,"DPX") == 0) {
-				msg[n].dpix = atoi(value);
-				if ((msg[n].dpix < 0) && (msg[n].dpix > 100)) {
+				msg[n].dpix = atoi(value) * 10;
+				if ((msg[n].dpix < 0) || (msg[n].dpix > 1000)) {
 					msg[n].dpix = 0;
 					msg[n].dpiy = 0;
 				}
 			}
 			if (strcmp(key,"DPY") == 0) {
-				msg[n].dpiy = atoi(value);
-				if ((msg[n].dpiy < 0) && (msg[n].dpiy > 100)) {
+				msg[n].dpiy = atoi(value) * 10;
+				if ((msg[n].dpiy < 0) || (msg[n].dpiy > 1000)) {
 					msg[n].dpix = 0;
 					msg[n].dpiy = 0;
 				}
@@ -162,7 +165,6 @@ void parsemsg(MsgDetect *msg) {
 				msg[n].vmdepth = atoi(value);
 			}
 			if (strcmp(key,"MEM")  == 0) {
-				strcpy(msg[n].primary,pdev);
 				msg[n].memory = atol(value);
 			}
 			if (strcmp(key,"DAC")  == 0) {
