@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Wed Sep 27 20:32:11 CEST 2006 - ms@suse.de
+
+- include libhd fixes:
+  - revert TIOCGDEV removal accidentally introduced in v13.0 (#201741)
+  - remove adb code (#206648)
+  - provide bogo mips value (#206649)
+  - no edd unless x86 or x86_64 (#206654)
+  - always use cpu emulation for BIOS calls (#207112)
+  - on dell notebooks, scan 3 ports for monitor data (#162973)
+  - include ACPI dump in log (#143090)
+
+-------------------------------------------------------------------
 Tue Sep 26 21:04:38 CEST 2006 - ms@suse.de
 
 - fixed server detection in case of multiple devices.
