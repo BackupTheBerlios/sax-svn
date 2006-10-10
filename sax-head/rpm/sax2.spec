@@ -141,7 +141,7 @@ Release:        9
 # SuSE Requires...
 Requires:       sax2-tools qt3 fvwm2 sax2
 %ifarch       %ix86 x86_64
-Requires:       855resolution
+Requires:       915resolution
 %endif
 %else
 # FC5 Requires...
