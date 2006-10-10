@@ -424,7 +424,7 @@ sub init {
 	#------------------------------------------
 	if (! defined $UseDbmNew) {
 	if (! defined $IgnoreProfile) {
-		my @autoList = ("driver","card","monitor","mouse");
+		my @autoList = ("driver","card","monitor","mouse","keyboard");
 		my $include  = 0;
 		foreach my $item (@autoList) {
 			my %autoProfile = getAutoProfile ( $item );
@@ -779,6 +779,17 @@ sub getAutoProfile {
 		foreach (keys %{$idp{MouseProfile}}) {
 		if ($idp{MouseProfile}{$_} ne "<undefined>") {
 			$data{$_} = $idp{MouseProfile}{$_};
+		}
+		}
+		return %data;
+	}
+	#==========================================
+	# Handle keyboard profiles
+	#------------------------------------------
+	if ($division eq "keyboard") {
+		foreach (keys %{$idp{KeyboardProfile}}) {
+		if ($idp{KeyboardProfile}{$_} ne "<undefined>") {
+			$data{$_} = $idp{KeyboardProfile}{$_};
 		}
 		}
 		return %data;

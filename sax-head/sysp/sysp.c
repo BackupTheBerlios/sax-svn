@@ -664,6 +664,9 @@ void PrintKeyboardData(ScanKeyboard k) {
 		printf("Keyboard%d =>  RightCtl   : %s\n",kbd,data.rightctl.c_str());
 		}
 		printf("Keyboard%d =>  Name       : %s\n",kbd,data.name.c_str());
+		printf("Keyboard%d =>  VendorID   : %s\n",kbd,data.vid.c_str());
+		printf("Keyboard%d =>  DeviceID   : %s\n",kbd,data.did.c_str());
+		printf("Keyboard%d =>  Profile    : %s\n",kbd,data.profile.c_str());
 		printf("Keyboard%d =>  RealDevice : %s\n",kbd,data.device.c_str());
 		kbd++;
 	}

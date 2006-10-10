@@ -57,6 +57,9 @@ sub AutoDetectKeyboard {
 		if ($i =~ /RightCtl/)    {
 			$var{InputDevice}{0}{Option}{RightCtl}    = $value;
 		}
+		if ($i =~ /Profile/)     {
+			$idp{KeyboardProfile}{0} = $value;
+		}
 	}
 	return(%var);
 }

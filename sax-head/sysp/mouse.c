@@ -72,6 +72,9 @@ void ScanMouse::Scan (void) {
 	rcinput.ImportInputMap();
 	Input input;
 
+	// ...
+	// assign profile to input device using Input.map
+	// ---
 	for (MouseData* lp=mp; lp; lp=lp->next) {
 		strcpy (lp->profile,"<undefined>");
 		for (int i = rcinput.Count(); i > 0; i--) {

@@ -57,6 +57,9 @@ struct Keymap {
 	string rightctl;
 	string name;
 	string device;
+	string vid;
+	string did;
+	string profile;
 };
 
 struct Input {
@@ -83,6 +86,9 @@ struct Keymap_S {
 	str rightctl;
 	str name;
 	str device;
+	str vid;
+	str did;
+	str profile;
 };
 
 struct ServerData {

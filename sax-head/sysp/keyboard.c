@@ -69,11 +69,29 @@ void ScanKeyboard::Reset (void) {
 //--------------------------------------
 void ScanKeyboard::Scan (void) {
 	KbdData* pKBD = KeyboardGetData();
+	SPReadFile<Input>  rcinput;
 	SPReadFile<RcData> rcdata;
 	SPReadFile<Keymap> rckeymap;
 	RcData config;
 	Keymap keymap;
+	Input  input;
 
+	// ...
+	// assign profile to keyboard device using Input.map
+	// ---
+	rcinput.SetFile(INPUT_MAP);
+	rcinput.ImportInputMap();
+	for (KbdData* kbd=pKBD; kbd; kbd=kbd->next) {
+		strcpy (kbd->profile,"<undefined>");
+		for (int i = rcinput.Count(); i > 0; i--) {
+			input = rcinput.Pop();
+			if ((input.did == kbd->did) && (input.vid == kbd->vid)) {
+				strcpy (kbd->profile,input.profile.c_str());
+				break;
+			}
+		}
+		rcinput.Reset();
+	}
 	// ...
 	// setup console config files...
 	// ----------------------------- 
@@ -105,6 +123,9 @@ void ScanKeyboard::Scan (void) {
 		kp.variant = "";
 		kp.device = kbd->device;              
 		kp.name   = kbd->name;
+		kp.did    = kbd->did;
+		kp.vid    = kbd->vid;
+		kp.profile= kbd->profile;
 		if (strstr((char*)arch.c_str(), ARCH_SPARC) != NULL) {
 			kp.model  = kbd->model;
 			kp.layout = kbd->layout;
@@ -178,7 +199,10 @@ int ScanKeyboard::Save (void) {
 		strcpy(save.scrollock   , kp.scrollock.c_str());
 		strcpy(save.rightctl    , kp.rightctl.c_str());
 		strcpy(save.device      , kp.device.c_str());
-		strcpy(save.name        , kp.name.c_str()); 
+		strcpy(save.name        , kp.name.c_str());
+		strcpy(save.did         , kp.did.c_str());
+		strcpy(save.vid         , kp.vid.c_str());
+		strcpy(save.profile     , kp.profile.c_str());
 
 		handle.write((char*)&save,sizeof(save));
 	}
@@ -219,6 +243,9 @@ int ScanKeyboard::Read (void) {
 		kp.rightctl    = input.rightctl;
 		kp.name        = input.name;
 		kp.device      = input.device;
+		kp.did         = input.did;
+		kp.vid         = input.vid;
+		kp.profile     = input.profile;
 
 		if (handle.eof()) {
 			break;                                   

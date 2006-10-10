@@ -117,6 +117,9 @@ typedef struct KbdData_t {
  str layout;
  str name;
  str device;
+ str did;
+ str vid;
+ str profile;
  struct KbdData_t* next;
 } KbdData;
 

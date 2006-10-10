@@ -22,11 +22,12 @@ STATUS        : development
 KbdData* KeyboardGetData(void) {
 	hd_data_t *hd_data;
 	driver_info_t *di;
-	KbdData* data  = NULL;
-	KbdData* first = NULL;
-	KbdData* last  = NULL;
-	hd_t *hd;
-	hd_t *first_dev;
+	KbdData* data   = NULL;
+	KbdData* first  = NULL;
+	KbdData* last   = NULL;
+	hd_t *hd        = NULL;
+	hd_t *first_dev = NULL;
+	char buf[256]   = "";
 
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	hd = hd_list(hd_data, hw_keyboard, 1, NULL);
@@ -36,6 +37,10 @@ KbdData* KeyboardGetData(void) {
 		// create new element and defaults...
 		// -----------------------------------
 		data = (KbdData*)malloc(sizeof(KbdData));
+		sprintf (buf,"0x%04x",ID_VALUE(hd->device.id));
+		strcpy(data->did,buf);
+		sprintf (buf,"0x%04x",ID_VALUE(hd->vendor.id));
+		strcpy(data->vid,buf);
 		strcpy(data->rules,"undef");
 		strcpy(data->model,"undef");
 		strcpy(data->layout,"undef");
