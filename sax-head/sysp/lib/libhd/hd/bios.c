@@ -156,8 +156,6 @@ void hd_scan_bios(hd_data_t *hd_data)
   vbe_mode_info_t *mi;
   hd_res_t *res;
   str_list_t *sl, *sl0;
-  hd_smbios_t *sm;
-  unsigned is_dell_nb;
 #endif
 
   if(!hd_probe_feature(hd_data, pr_bios)) return;
@@ -432,34 +430,6 @@ void hd_scan_bios(hd_data_t *hd_data)
       }
     }
 
-    /* scan only 2 ports for monitor data, some BIOSes crash when you try more */
-    vbe->ddc_ports = 2;
-
-    is_dell_nb = 0;
-
-    for(sm = hd_data->smbios; sm; sm = sm->next) {
-      if(
-        sm->any.type == sm_sysinfo &&
-        sm->sysinfo.manuf &&
-        !strncasecmp(sm->sysinfo.manuf, "dell ", 5)
-      ) {
-        is_dell_nb |= 1;
-      }
-
-      if(
-        sm->any.type == sm_chassis &&
-        (
-         (sm->chassis.ch_type.id >= 8 && sm->chassis.ch_type.id <= 11) ||
-          sm->chassis.ch_type.id == 14
-        )
-      ) {
-        is_dell_nb |= 2;
-      }
-    }
-
-    /* for Dell notebooks, go for 3 */
-    if(is_dell_nb == 3) vbe->ddc_ports = 3;
-
     get_vbe_info(hd_data, vbe);
 
     if(vbe->ok) {
@@ -559,7 +529,7 @@ void hd_scan_bios(hd_data_t *hd_data)
   if(hd_probe_feature(hd_data, pr_bios_acpi)) {
     PROGRESS(6, 0, "acpi");
 
-    if((sl0 = read_file("|/usr/sbin/acpidump", 0, 0))) {
+    if((sl0 = read_file("|/usr/sbin/acpidump 2>/dev/null", 0, 0))) {
       ADD2LOG("----- %s -----\n", "ACPI dump");
       for(sl = sl0; sl; sl = sl->next) {
         ADD2LOG("%s", sl->str);

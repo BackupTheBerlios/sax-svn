@@ -262,6 +262,10 @@ static struct s_pr_flags {
   { pr_bios,          0,            8|4|2|1, "bios"          },
   { pr_bios_vesa,     pr_bios,        4|2|1, "bios.vesa"     },
   { pr_bios_ddc,      pr_bios_vesa,       0, "bios.ddc"      },
+  { pr_bios_ddc_ports_1,  pr_bios_ddc,        0, "bios.ddc.ports=1"  }, // probe 1 ddc port
+  { pr_bios_ddc_ports_2,  pr_bios_ddc,        0, "bios.ddc.ports=2"  }, // probe 2 ddc ports
+  { pr_bios_ddc_ports_3,  pr_bios_ddc,        0, "bios.ddc.ports=3"  }, // probe 3 ddc ports
+  { pr_bios_ddc_ports_4,  pr_bios_ddc,        0, "bios.ddc.ports=4"  }, // probe 4 ddc ports
   { pr_bios_fb,       pr_bios_vesa,       0, "bios.fb"       },
   { pr_bios_mode,     pr_bios_vesa,       0, "bios.mode"     },
   { pr_bios_vbe,      pr_bios_mode,       0, "bios.vbe"      }, // just an alias
@@ -328,7 +332,8 @@ static struct s_pr_flags {
   { pr_edd_mod,       pr_edd,       8|4|2|1, "edd.mod"       },
   { pr_input,         0,            8|4|2|1, "input"         },
   { pr_wlan,          0,            8|4|2|1, "wlan"          },
-  { pr_hal,           0,                  0, "hal"           }
+  { pr_hal,           0,                  0, "hal"           },
+  { pr_modules_pata,  0,                  0, "modules.pata"  }
 };
 
 struct s_pr_flags *get_pr_flags(enum probe_feature feature)
@@ -543,6 +548,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       hd_set_probe_feature(hd_data, pr_prom);
       hd_set_probe_feature(hd_data, pr_pci);
       hd_set_probe_feature(hd_data, pr_bios_ddc);
+      hd_set_probe_feature(hd_data, pr_bios_fb);
       hd_set_probe_feature(hd_data, pr_fb);
       hd_set_probe_feature(hd_data, pr_monitor);
       break;
@@ -1772,6 +1778,7 @@ void hd_scan(hd_data_t *hd_data)
     if(!hd_probe_feature(hd_data, pr_bios_crc)) hd_data->flags.nobioscrc = 1;
     if(hd_probe_feature(hd_data, pr_bios_vram)) hd_data->flags.biosvram = 1;
     hd_set_probe_feature(hd_data, pr_bios_acpi);
+    if(hd_probe_feature(hd_data, pr_modules_pata)) hd_data->flags.pata = 1;
   }
 
   /* get shm segment, if we didn't do it already */
@@ -1848,8 +1855,20 @@ void hd_scan(hd_data_t *hd_data)
 
   /* for compatibility */
   for(hd = hd_data->hd; hd; hd = hd->next) {
+    hd_sysfsdrv_t *sf;
+
     hd->driver = free_mem(hd->driver);
-    if(hd->drivers && hd->drivers->str) hd->driver = new_str(hd->drivers->str);
+    hd->driver_module = free_mem(hd->driver_module);
+
+    if(hd->drivers && hd->drivers->str) {
+      hd->driver = new_str(hd->drivers->str);
+
+      for(sf = hd_data->sysfsdrv; sf; sf = sf->next) {
+        if(sf->module && !strcmp(sf->driver, hd->driver)) {
+          hd->driver_module = new_str(sf->module);
+        }
+      }
+    }
   }
 
   hd_data->module = mod_none;
