@@ -1,19 +1,21 @@
+# translation of sax.po to
 # domain "sax.mo"
 # sax danish texts
-# Copyright (C) 2000 Free Software Foundation, Inc.
+# Copyright (C) 2000, 2006 Free Software Foundation, Inc.
 # Keld Simonsen <keld@dkuug.dk> 2000.
 #
+# Martin Schlander <suse@linuxin.dk>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax VERSION\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2001-02-22 00:20+GMT+1\n"
-"Last-Translator: Casper Madsen <cmadsen@hotmail.com>\n"
-"Language-Team: danish <de@li.org>\n"
+"PO-Revision-Date: 2006-10-03 19:22+0200\n"
+"Last-Translator: Martin Schlander <suse@linuxin.dk>\n"
+"Language-Team:  <opensuse-translation@opensuse.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.7\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -21,85 +23,72 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>SaX2 forslag:</b><hr>Det nuværende grafik system er baseret på et forslag "
+"<b>SaX2-forslag:</b><hr>Det nuværende grafik system er baseret på et forslag "
 "lavet via SaX2. Hvis du kan lide denne konfiguration skal du bare klikke "
 "<b>Ok</b> ellers kan du frit ændre den nuværende konfiguration."
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
-msgstr "Automatisk grafik system setup"
+msgstr "Automatisk opsætning af grafisk system"
 
 #. Caption text for informing the user
-#, fuzzy
 msgid "Information..."
-msgstr "Dialog information..."
+msgstr "Information..."
 
 #. Caption text for the main window
-#, fuzzy
 msgid "SaX2: X11 Configuration"
-msgstr "Ændre konfiguration"
+msgstr "SaX2: Konfiguration af X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "SaX kontrolcenter"
 
 #. Help Button text
-#, fuzzy
 msgid "&Help"
-msgstr "Hjælp..."
+msgstr "&Hjælp"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
-msgstr "Ok"
+msgstr "O&k"
 
 #. Yes Button text
-#, fuzzy
 msgid "&Yes"
-msgstr "Ja"
+msgstr "&Ja"
 
 #. No Button text
-#, fuzzy
 msgid "&No"
-msgstr "Nej"
+msgstr "&Nej"
 
 #. Cancel Button text
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "&Cancel"
-msgstr "Afbryd"
+msgstr "Annu&ller"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
 msgstr "<b>Afslut SaX2:</b><hr>Vil du afslutte SaX2 nu?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "Besked"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "Ændre konfiguration"
+msgstr "Ændre &konfiguration"
 
 #. Short description of the Monitor module
 #. Monitor name label
-#, fuzzy
 msgid "Monitor"
 msgstr "Skærm"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "Konfigurer skærmen..."
+msgstr "Egenskaber for skærm og kort"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -107,19 +96,16 @@ msgid "Mouse"
 msgstr "Mus"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "Egenskaber"
+msgstr "Egenskaber for mus"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "Tastaturmodel"
+msgstr "Tastatur"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "Konfigurer skærmen..."
+msgstr "Egenskaber for tastatur"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -127,9 +113,8 @@ msgid "Tablet"
 msgstr "Tavle"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "Egenskaber"
+msgstr "Egenskaber for tablet"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -137,19 +122,16 @@ msgid "Touchscreen"
 msgstr "Touchscreen"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "Konfigurer skærmen..."
+msgstr "Egenskaber for touchscreen"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Konfigurer skærmen..."
+msgstr "Fjernadgang"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "Konfigurer skærmen..."
+msgstr "Egenskaber for fjernadgang"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -157,87 +139,76 @@ msgstr "Skærm"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Aktiver denne skærm"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "Aktiver denne musemarkør"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "Kort"
 
 #. Change data
 msgid "&Change..."
-msgstr ""
+msgstr "Æ&ndre..."
 
 #. Set options for some kind of data
-#, fuzzy
 msgid "&Options..."
-msgstr "Valgmuligheder"
+msgstr "In&dstillinger..."
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "Konfigurer tastatur..."
+msgstr "Kon&figurer..."
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
-msgstr "Multihead-tilstand"
+msgstr "Dual-head tilstand"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
 #. Group box title for the VNC options
-#, fuzzy
 msgid "Options"
-msgstr "Valgmuligheder"
+msgstr "Indstillinger"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
-msgstr "Aktiver Muse-Hjul"
+msgstr "Aktiver musehjul"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "Omvendt X-akse"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "Omvendt Y-akse"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
-msgstr "Aktiver 3 knap emulation"
+msgstr "Aktiver emulation af 3 knapper"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Emulere hjul på en af Musens knapper"
+msgstr "Emulere hjul på en af musens knapper"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
 msgstr "Rotere skærmbillede"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "Test..."
+msgstr "Test"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "Test..."
+msgstr "&Test"
 
 #. Button text in final step message box for saving the configuration
-#, fuzzy
 msgid "&Save"
-msgstr "Gem"
+msgstr "Ge&m"
 
 #. Tab text for a layout tab of the keyboard dialog
 #. Label text for the primary keyboard layout
@@ -246,116 +217,100 @@ msgid "Layout"
 msgstr "Udlæg"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "Test felt"
+msgstr "Test klar"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
-msgstr "Aktiver 3 knap emulation"
+msgstr "Enkeltklik: Færdig"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
-msgstr "Aktiver 3 knap emulation"
+msgstr "Dobbeltklik: Færdig"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "ScrollLock binding"
+msgstr "Scrolling"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "Knap følsomhed"
+msgstr "Knap trykket"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "Knap følsomhed"
+msgstr "Knap sluppet"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
-msgstr "Muse-hjul understøttelse"
+msgstr "Stoppet: Færdig"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
 msgstr "Egenskaber"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Multihead-tilstand"
+msgstr "Aktiver dual-head-tilstand"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Opløsning Y"
+msgstr "Opløsning"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
 msgstr "Farver"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "3D-Accelerator"
+msgstr "Aktiver 3D-acceleration"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "Skærm"
+msgstr "Skærm til kort"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "Skærm"
+msgstr "Anden skærm til kort"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "Frekvenser"
+msgstr "Sync-frekvenser"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
-msgstr "Skærm størrelse"
+msgstr "Skærmstørrelse"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "Arrangement"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "Aktiveret i %1-tilstand med %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "Aktiveret i driverens standardtilstand"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
-msgstr "Konfigurer tastatur..."
+msgstr "Ukonfigureret"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>Kan ikke deaktivere all skærme</b><hr><nobr>Mindst en skærm skal være "
+"aktiv.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Konfiguration gemt"
+msgstr "Ingen tilgængelig konfiguration"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -382,58 +337,47 @@ msgstr ""
 "Lav et stort skærmbillede ud af alle skærmene"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
 msgstr "Multihead-tilstand"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "Forbundet til:"
+msgstr "Forbundet til"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Skærm"
+msgstr "Ukendt skærm:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "Primær Modeline:"
+msgstr "Primær skærm:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "Farve-valg..."
+msgstr "Skærmindstillinger"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "X11 System"
+msgstr "Indstillinger for mus"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "Grafikkort"
+msgstr "Indstillinger for grafikkort"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Multihead-tilstand"
+msgstr "Indstillinger for dual-head"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
 msgstr "Ikke roteret"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
 msgstr "Til venstre"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
 msgstr "Til højre"
 
@@ -442,72 +386,71 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>Bemærk venligst:</b><hr>Konfigurationen er <i>Framebuffer</i>-baseret og "
+"dit system understøtter ikke ændringer af opløsning og/eller "
+"farveindstillinger."
 
 #. Popup message to ask the user for an option value
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
+"<p>Indstillingen kræver en værdi</b><hr><nobr>Sæt en værdi for indstillingen "
+"%1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Model: Producent / Navne valg"
+msgstr "Skærm: Valg af producent og navn"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Model: Producent / Navne valg"
+msgstr "Mus: Valg af producent og navn"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "Manuel sync frekvens opsætning"
+msgstr "Manuel opsætning af sync-frekvens"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "Diagonal og aspect ratio"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
 msgstr "Skærm størrelse i [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>Note:</b><hr>Forkert sync områder kan skade din skærm.  Vær venlig at "
-"tjekke din skærms maunel for følgende "
+"<b>Bemærk:</b><hr>Forkerte sync-intervaller kan skade din skærm. Se din "
+"skærmmanual for at finde indstillingerne.<b><br>Hvis du ønsker at din "
+"monitor ikke skal anvende dens højeste værdi, kan du sænke sync-"
+"intervallerne."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "Aktiver DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
 msgstr "Værktøjsdiskette"
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "Horisontal sync område"
+msgstr "Horisontal"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "Vælg Opløsning(er)"
+msgstr "Anden skærm:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "Vælg Opløsning(er)"
+msgstr "Opløsning for anden skærm"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "Vertical"
+msgstr "Vertikal"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -519,69 +462,63 @@ msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Aspect ratio"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "Horisontal sync område"
+msgstr "Diagonal"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "X-akse [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Y-akse [mm]"
 
 #. Something is not configured
 msgid "Not configured"
-msgstr ""
+msgstr "Ikke konfigureret"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "tommer"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Isæt diskette</b><hr>Isæt disketten som du har fået fra din skærm-"
-"producent"
+"<b>Indsæt CD eller diskette</b><hr>Indsæt CD eller diskette med "
+"skærmredskaber fra skærmproducenten."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
-"<b>Læsefejl</b><hr> Diskette ulæselig. Muligvis ikke formateret korrekt "
-"eller beskadiget. [ xxx.inf ] fil på diskette"
+"<b>Læsefejl</b><hr>Kunne ikke læse fra CD eller diskette. Dette kan skyldes "
+"et skadet medie eller ukorrekt formaterede informationsfiler."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "Almindelig-tilstand aktiv"
+msgstr "Traditionel"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "Klon"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "Mus"
+msgstr "Musmodel"
 
 #. Group box title for the primary keyboard setup
-#, fuzzy
 msgid "Primary Setup"
-msgstr "Primær enhed"
+msgstr "Primær opsætning"
 
 #. Label text for the primary keyboard type
 msgid "Type"
@@ -590,11 +527,11 @@ msgstr "Type"
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
 msgid "Variant"
-msgstr ""
+msgstr "Variant"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr ""
+msgstr "Yderligere layouts"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -602,38 +539,36 @@ msgstr "Status"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr ""
+msgstr "Tastetabel"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr ""
+msgstr "Grupper Shift-/Lockadfærd"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr ""
+msgstr "Anvend tastaturets LED til at vise alternativ gruppe"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "Skift position"
+msgstr "Komponer tasteposition"
 
 #. List View root item text
 #. XKBFile extension text
-#, fuzzy
 msgid "Control Key Position"
-msgstr "Skift position"
+msgstr "Kontroller tasteposition"
 
 #. List View root item text
 msgid "Third Level Chooser"
-msgstr ""
+msgstr "Vælger af tredje niveau"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr ""
+msgstr "Adfærd for Alt/Win-taster"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr ""
+msgstr "Adfærd for Caps Lock-tasten"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -641,314 +576,290 @@ msgstr "Ingen"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr ""
+msgstr "Venstre Alt-tast skifter gruppe når den aktiveres"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "Shift/Lock gruppe"
+msgstr "Begge Ctrl-taster samtidig skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Højre Shift-tast skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Venstre Win-tast skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Venstre Alt-tast skifter gruppe."
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr ""
+msgstr "Begge Win-taster skifter gruppe når de aktiveres."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr ""
+msgstr "Højre Ctrl-tast skifter gruppe når den aktiveres."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 msgstr ""
+"Caps Lock anvender store bogstaver internt. Shift annullerer ikke Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "Caps Lock låser blot ændringstasten Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
+msgstr "Caps Lock skifter til normale store bogstaver for alfabetiske tegn."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "Caps Lock aktiverer Shift således at alle taster er omfattet."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key is Compose."
-msgstr "Højre Alt binding"
+msgstr "Højre Win-tast er Komponer."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Shift+Caps Lock skifter gruppe."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr ""
+msgstr "R-Alt skifter gruppe når den aktiveres."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "Højre Ctrl-tast fungerer som højre Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
-msgstr ""
+msgstr "Ctrl-tast nederst til venstre"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr ""
+msgstr "Tryk på en Win-key for at vælge tredje niveau."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr ""
+msgstr "Tryk højre Alt-tast for at vælge tredje niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Højre Ctrl-tast skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "Højre Alt binding"
+msgstr "Højre Alt er Komponer."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "Højre Alt binding"
+msgstr "Højre Ctrl er Komponer."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
-msgstr ""
+msgstr "Scroll Lock LED viser alternativ gruppe."
 
 #. XKBFile extension text
 msgid "Control key at left of -A-"
-msgstr ""
+msgstr "Ctrl-tast til venstre for -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
-msgstr ""
+msgstr "Vælgere for tredje niveau"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "Shift/Lock gruppe"
+msgstr "Begge Shift-taster samtidig skifter gruppe."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 msgstr ""
+"Caps Lock fungerer som Shift med låsning. Shift annullerer ikke Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 msgstr ""
+"Caps Lock anvender store bogstaver internt. Shift annullerer Caps Lock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
-msgstr ""
+msgstr "Gør Caps Lock til en yderligere Ctrl."
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
-msgstr ""
+msgstr "Tryk venstre Win-tast for at vælge tredje niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Højre Win-tast skifter gruppe."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "Meta kortlægges til venstre Win-tast."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
-msgstr ""
+msgstr "Caps Lock LED viser alternativ gruppe."
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative group."
-msgstr ""
+msgstr "Num Lock LED viser alternativ gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Venstre Shift-tast ændrer gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "Shift/Lock gruppe"
+msgstr "Venstre Win-tast skifter gruppe når den aktiveres."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "Højre Alt binding"
+msgstr "Menu er Komponer."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "Shift/Lock gruppe"
+msgstr "Begge Alt-taster samtidig skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Caps Lock-tasten skifter gruppe."
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr ""
+msgstr "Byt om på Ctrl og Caps Lock"
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr ""
+msgstr "Tryk på en Alt-tast for at vælge tredje niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Højre Alt-tast skifter gruppe."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
+msgstr "Shift med nummertasturet fungerer som i MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "Særlige taster (Ctrl+Alt+<key>) håndteret i en server."
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "Hyper er kortlagt til Win-tasterne."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr ""
+msgstr "Alt er kortlagt til højre Win-tast og Super til Menu."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "Super er kortlagt til Win-tasterne (standard)."
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "Alt og Meta på Alt-tasterne (standard)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Tilføj standardopførsel til Menu-tasten."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr ""
+msgstr "Alt og Meta er på Alt-tasterne (standard)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr ""
+msgstr "Tryk højre Ctrl for at vælge tredje niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Alt+Shift skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Ctrl+Shift skifter gruppe."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr ""
+msgstr "Caps Lock opfører sig som Shift med lås. Shift annullerer Caps Lock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr ""
+msgstr "Anvend tastaturets LED til at vise alternativ gruppe."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr ""
+msgstr "Tryk højre Win-tast for at vælge tredje niveau."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr ""
+msgstr "Tryk venstre Alt-tast for at vælge tredje niveau."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
+msgstr "Meta er kortlagt til Win-tasterne."
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr ""
+msgstr "Tryk Menu for at vælge tredje niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Venstre Ctrl-tast skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Menu-tast skifter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Alt+Ctrl skifter gruppe."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr ""
+msgstr "Højre Win-tast skifter gruppe når den aktiveres."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "Port og tilstand"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Elektroniske penne"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3D-Accelerator"
+msgstr "Aktiver denne tablet"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Model: Producent / Navne valg"
+msgstr "Tablet: Valg af producent og navn"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "Forbundet til:"
+msgstr "Port for forbindelse"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Primær enhed"
+msgstr "Primær tablettilstand"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Pen- eller viskelædertilstand"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
-msgstr ""
+msgstr "Relativ"
 
 #. Radiobutton for absolute tablet mode
-#, fuzzy
 msgid "Absolute"
-msgstr "Afslut"
+msgstr "Absolut"
 
 #. Combobox item text for tablet port: USB
 msgid "USB"
@@ -956,11 +867,11 @@ msgstr "USB"
 
 #. Combobox item text for tablet port: ttyS0
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Combobox item text for tablet port: ttyS1
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -976,51 +887,47 @@ msgstr "Fjern"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "Indstillinger for pen eller viskelæder"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Egenskaber"
+msgstr "Egenskaber for pen"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Egenskaber for mus"
+msgstr "Egenskaber for viskelæder"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Tildel en touchscreen to skærm nummer %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Model: Producent / Navne valg"
+msgstr "Touchscreen: Valg af producent og navn"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"<b>Server opstart:</b><hr>Det er brugbart at teste nye indstillingerDu må "
-"vælge mellem at teste serveren eller at gemme ændringer med det samme. Hvis "
-"testen viser et korrupt billede, så tryk: [ Ctrl-Alt-Backspace ]For at "
-"afslutte serveren..."
+"<b>Sidste trin</b><hr>Det sidste trin er at gemme den ny konfiguration. Det "
+"anbefales at teste den ny konfiguration før den gemmes. Hvis testserveren "
+"viser et forvansket skrivebord tryk <b>[ Ctrl+Alt+Backspace ]</b> for at "
+"dræbe serveren."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "Fjernbetjening til X-server"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "Tillad adgang til din X-servers skærm samt tastatur/mus"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr ""
+msgstr "Aktiver adgangskodebeskyttelse"
 
 # password dialog title
 #. LineEdit label: enter password
@@ -1029,34 +936,35 @@ msgstr "Adgangskode"
 
 #. LineEdit contents: enter new password
 msgid "<Enter new password>"
-msgstr ""
+msgstr "<Indtast ny adgangskode>"
 
 #. LineEdit contents: change password
 msgid "<Change password>"
-msgstr ""
+msgstr "<Skift adgangskode>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr ""
+msgstr "<Verificer adgangskode>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
-msgstr "Aktiver AccessX"
+msgstr "Aktiver HTTP-adgang"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
-msgstr ""
+msgstr "Tillad flere forbindelser"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP-port"
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
+"<b>Adgangskode til fjernadgang passede ikke sammen</b><hr>Første og anden "
+"version af adgangskoden stemmer ikke overens."
 
 #. VNC message box appearing if password is too short
 msgid ""
@@ -1064,53 +972,56 @@ msgid ""
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
+"<b>Fejl i adgangskode til fjernadgang</b><hr>Adgangskodefeltet blev "
+"efterladt tomt eller adgangskoden er for kort. Indtast en adgangskode på "
+"mindst seks tegn."
 
 #. VNC message box appearing if password is too long
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
+"<b>Fejl i adgangskode til fjernadgang</b><hr>Adgangskoden er for lang. "
+"Indtast en adgangskode på højst otte tegn."
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>Program installation:</b><hr>Der mangler pakker. Vil du installere dem "
-"der mangler nu? "
+"<b>Installation af software:</b><hr>Der mangler nogle pakker. Vil du "
+"installere dem der mangler nu?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "Pakkeinstallation"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "SaX2 afslut program... "
+msgstr "Importerer modul"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "SaX2 afslut program... "
+msgstr "SaX2: Importerer data..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "Initialiser cache..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr ""
+"<b>Gemning af konfiguration fejlede</b><hr>Følgende rapport er blevet "
+"oprettet:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Konfigurationen er blevet gemt:</b><hr>Ændringerne vil først have effekt "
-"næste gang det grafiske system bliver genstartet."
+"<b>Konfigurationen er gemt:</b><hr>Ændringerne vil først have effekt næste "
+"gang det grafiske system bliver genstartet. Afslut SaX2 nu?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1118,6 +1029,9 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>Test af konfiguration fejlede</b><hr>For yderligere information, se filen "
+"<tt>/var/log/Xorg.99.log</tt>. Følgende rapport er blevet oprettet af den "
+"kaldende instans:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1125,93 +1039,89 @@ msgid ""
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
+"<b>Information om konfiguration af fjernadgang</b><hr>Tjenesten for "
+"fjernadgang kræver at TCP-porten 5900 og en HTTP-port (5800 som standard) er "
+"åbne i firewallen. Du kan konfigurere dette med YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Diverse kompatibilitetsindstillinger"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Tilføj Euro-tegn til 5-tasten."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key behavior"
-msgstr "Shift/Lock gruppe"
+msgstr "Opførsel for Caps Lock-tasten"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Opførsel for Alt/Win-tast"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Tilføjer Euro-tegn til visse taster"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Højre Alt binding"
+msgstr "Caps Lock er Komponer."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key works as Right Alt."
-msgstr "Shift/Lock gruppe"
+msgstr "Højre Ctrl-tast fungerer som højre Alt."
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
-msgstr ""
+msgstr "Ctrl-tast nederst til venstre"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr ""
+msgstr "Ctrl-tast til venstre for 'A'"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
-msgstr ""
+msgstr "Gør Caps Lock til en yderligere Ctrl."
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr ""
+msgstr "Byt om på Ctrl og Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key position"
-msgstr "Skift position"
+msgstr "Position for Ctrl-tast"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr ""
+msgstr "Specialtaster (Ctrl+Alt+&lt;key&gt;) håndteret i en server."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr ""
+msgstr "Tryk på højre Ctrl for at vælge tredje niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Ctrl+Shift skifter gruppe."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Tilføj Euro-tegn til E-tasten."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Tilføj Euro-tegn til 2-tasten."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
-msgstr "Skift position"
+msgstr "Position for Komponer-tast"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl changes group."
-msgstr "Shift/Lock gruppe"
+msgstr "Alt+Ctrl skifter gruppe."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Grupper Shift/Lock-opførsel"
 
 #. XKBFile extension text
 msgid "Arabic"
@@ -1227,9 +1137,8 @@ msgid "Myanmar"
 msgstr "Myanmar"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Norway"
-msgstr "Normal"
+msgstr "Norge"
 
 #. XKBFile extension text
 msgid "Germany"
@@ -1251,7 +1160,7 @@ msgstr "Bangladesh"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Latinamerikansk"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1266,13 +1175,12 @@ msgid "Israel"
 msgstr "Israel"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Sweden"
-msgstr "Skærm"
+msgstr "Sverige"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Rusland"
 
 #. XKBFile extension text
 msgid "Portugal"
@@ -1312,9 +1220,8 @@ msgid "Switzerland"
 msgstr "Schweiz"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Laos"
-msgstr "Udlæg"
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1328,7 +1235,7 @@ msgstr "Surinam"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Tjekkiet"
 
 #. XKBFile extension text
 msgid "Belarus"
@@ -1375,7 +1282,7 @@ msgstr "Sydafrika"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1416,9 +1323,8 @@ msgid "United Kingdom"
 msgstr "Storbritanien"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "France"
-msgstr "Afbryd"
+msgstr "Frankrig"
 
 # AM
 #. XKBFile extension text
@@ -1462,7 +1368,7 @@ msgstr "Ukraine"
 
 #. XKBFile extension text
 msgid "Romania"
-msgstr "RumÃ¦nien"
+msgstr "Rumænien"
 
 # KZ
 # fuzzy
@@ -1476,7 +1382,7 @@ msgstr "Georgien"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "Engelsk (Amerikansk)"
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1484,11 +1390,11 @@ msgstr "Tyrkisk"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx-serien"
 
 #. XKBFile extension text
 msgid "Netherlands"
-msgstr "NederlÃ¦nderna"
+msgstr "Holland"
 
 #. XKBFile extension text
 msgid "Macedonia"
@@ -1547,9 +1453,8 @@ msgstr "Tyrkiet"
 #. application code for XFine2
 #.
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "&Step size"
-msgstr "Trin-størrelse"
+msgstr "Trin-&størrelse"
 
 #. Maximum length: 40  characters
 msgid "Small"
@@ -1568,85 +1473,31 @@ msgid "Huge"
 msgstr "Kæmpestor"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "&Next Screen"
-msgstr "Næste Skærm"
+msgstr "&Næste Skærm"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "S&ave"
-msgstr "Gem"
+msgstr "G&em"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "Change &Position"
-msgstr "Skift position"
+msgstr "Skift &position"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "C&hange Size"
-msgstr "Ændre størrelse"
+msgstr "Ski&ft størrelse"
 
 #. Maximum length: 40  characters
 msgid "Screen"
 msgstr "Skærm"
 
 #. Maximum length: 60  characters
-#, fuzzy
 msgid "No video mode tuning available"
-msgstr ""
-":UBSkrivebord opsætninger\n"
-"\n"
-"På denne side giver SaX mulighed for at arbejde med\n"
-"de følgende skrivebord opsætninger:\n"
-"\n"
-"° Monitor indstillinger\n"
-"° Farvedybde\n"
-"° Opløsninger per farvedybde\n"
-"° Expert indstillinger\n"
-"\n"
-"Kombinationen af monitor, farvedybde og opløsning kaldes\n"
-"skrivebord. Alle grafikkort er tildelt et enkelt skrivebord.\n"
-"For at ændre egenskaberne af et skrivebord, skal du gøre\n"
-"følgende: Brug venstre museknap til at vælge et element du\n"
-"vil arbejde med. Det betyder ikke noget om du vælger elementet\n"
-"på ikonen eller på en enkelt indstilling. Tryk nu på\n"
-"[Egenskaber] knappen. En ny dialogboks kommer frem og du kan\n"
-"vælge hvilken indstilling du vil ændre:\n"
-"\n"
-":UBFarver:\n"
-"Her skal du først vælge hvilken farvedybe og derefter den opløsning\n"
-"du vil bruge den sammen med. Vær opmærksom på sætte flere end en\n"
-"opløsning for en farvedybde. Rækkefølgen er vigtig. Den første værdi\n"
-"i listen er den primære brugte opløsning.\n"
-"\n"
-":UBMonitor:\n"
-"Her skal du vælge en monitor model fra SaX monitor liste eller\n"
-"bruge en driver på en diskette fra producenten af monitoren.\n"
-"\n"
-":UBFrekvenser:\n"
-"Hvis din monitor ikke er vist i SaX monitor listen og du ikke\n"
-"har en diskette fra din monitor producent, så er det nødvendigt\n"
-"selv at manuel indstille det horizontale og vertikale sync område.\n"
-"Det anbefales absolut ikke at vælge et sync område som du ikke\n"
-"mener virker ordenligt sammen med din monitor.\n"
-"\n"
-":UBExpert:\n"
-"Her er der nogen specielle indstillinger. Vær forsigtig her selv\n"
-"hvis du har kendskab til X11. Det kan ikke anbefales at ændre\n"
-"noget her hvis du ikke hvad de forskellige ting gør. Mere\n"
-"informationer kan be fundet i konfigurationsmanualen."
+msgstr "Ingen tuning af videotilstand til rådighed"
 
 msgid "Configuration on display"
 msgstr "Konfiguration på skærmen"
 
 msgid "Idle timer..."
-msgstr ""
-
-#, fuzzy
-#~ msgid "VNC Server"
-#~ msgstr "X11 System"
-
-#, fuzzy
-#~ msgid "VNC Options"
-#~ msgstr "Valgmuligheder"
+msgstr "Inaktivitetstimer..."

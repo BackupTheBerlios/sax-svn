@@ -1,3 +1,4 @@
+# translation of sax.hu.po to Hungarian
 # translation of sax.hu.po to
 # Hungarian message file for SaX.
 # Copyright (C) SuSE GmbH, 2000.
@@ -16,13 +17,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-07-11 14:52+0200\n"
+"PO-Revision-Date: 2006-09-05 16:57+0200\n"
 "Last-Translator: \n"
-"Language-Team:  <hu@li.org>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -151,9 +152,8 @@ msgstr "Érintőképernyő tulajdonságai"
 
 # /tmp/xapi:115
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Távoli hozzáférés tulajdonságai"
+msgstr "Távoli hozzáférés"
 
 # /tmp/xapi:115
 #. title of module dialog
@@ -1007,11 +1007,11 @@ msgstr ""
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "X-kiszolgáló távoli elérése"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "X-kiszolgáló képernyő-, billentyűzet- és egerelérésének engedélyezése"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1039,41 +1039,38 @@ msgid "Activate HTTP Access"
 msgstr "HTTP-hozzáférés bekapcsolása"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "Több VNC-kapcsolat engedélyezése"
+msgstr "Több kapcsolat engedélyezése"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP port"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>A VNC-jelszavak nem egyeznek</b><hr>A jelszó első és második változata "
-"nem egyezik."
+"<b>A távoli elérés jelszavai nem egyeznek</b><hr>A jelszó első és második "
+"változata nem egyezik meg egymással."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>VNC-jelszóhiba</b><hr>A jelszómező üresen maradt, vagy a jelszó túl "
-"rövid. Adjon meg egy legalább hatkarakteres jelszót."
+"<b>A jelszó nem megfelelő a távoli eléréshez</b><hr>A jelszómező üresen "
+"maradt, vagy a jelszó túl rövid. Adjon meg egy legalább hatkarakteres "
+"jelszót."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>VNC-jelszóhiba</b><hr>A jelszó túl hosszú. Adjon meg egy legfeljebb "
-"nyolckarakteres jelszót."
+"<b>A jelszó nem megfelelő a távoli eléréshez</b><hr>A jelszó túl hosszú. "
+"Adjon meg egy legfeljebb nyolckarakteres jelszót."
 
 #. Install missing packages box
 msgid ""
@@ -1125,15 +1122,15 @@ msgstr ""
 "el:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>VNC beállítási információk</b><hr>A VNC szolgáltatásnak szüksége van "
-"arra, hogy az 5900-as TCP és egy HTTP port (alapértelmezetten az 5800-as) "
-"nyitott legyen a tűzfalon. Ezt a YaST segítségével be lehet állítani."
+"<b>Távoli elérés beállítási információk</b><hr>A távoli elérés "
+"szolgáltatásnak szüksége van arra, hogy az 5900-as TCP és egy HTTP port "
+"(alapértelmezetten az 5800-as) nyitott legyen a tűzfalon. Ez a YaST "
+"segítségével beállítható."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1577,16 +1574,3 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenség időzítő..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC kiszolgáló"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Hozzáférés engedélyezése a képernyőhöz a VNC protokoll segítségével"
-
-# /tmp/xapi:327
-#~ msgid "VNC Options"
-#~ msgstr "VNC beállítások"

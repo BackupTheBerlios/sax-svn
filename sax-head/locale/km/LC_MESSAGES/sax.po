@@ -1,16 +1,21 @@
-# translation of sax.po to Khmer
+# translation of sax.km.po to khmer
 # Leang Chumsoben <soben@khmeros.info>, 2005, 2006.
 # Hok Kakada <hokkakada@khmeros.info>, 2006.
+# sokun <sokunpoch@khmeros.info>, 2006.
+# Eng Vannak <evannak@khmeros.info>, 2006.
+# Poch Sokun <sokunpoch@khmeros.info>, 2006.
+# auk piseth <piseth_dv@khmeros.info>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.km\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-03-22 11:35+0700\n"
-"Last-Translator: Leang Chumsoben <soben@khmeros.info>\n"
-"Language-Team: Khmer <support@khmeros.info>\n"
+"PO-Revision-Date: 2006-10-12 16:56+0700\n"
+"Last-Translator: auk piseth <piseth_dv@khmeros.info>\n"
+"Language-Team: khmer <support@khmeros.info>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -48,7 +53,6 @@ msgid "&Help"
 msgstr "ជំនួយ"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
 msgstr "យល់ព្រម"
 
@@ -106,11 +110,11 @@ msgstr "លក្ខណៈ​សម្បត្តិ​ក្ដារចុច
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
 msgid "Tablet"
-msgstr "ធែប្លីត"
+msgstr "បន្ទះ"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr "លក្ខណៈ​សម្បត្តិ​ធែប្លីត"
+msgstr "លក្ខណៈ​សម្បត្តិ​បន្ទះ"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -122,9 +126,8 @@ msgid "Touchscreen Properties"
 msgstr "លក្ខណៈ​សម្បត្តិ​ឧបករណ៍​ប៉ះអេក្រង់"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "លក្ខណៈ​សម្បត្តិ​ការ​ចូលដំណើរការ​ពី​ចម្ងាយ"
+msgstr "ចូល​ដំណើរការ​ពី​ចម្ងាយ​"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -132,7 +135,7 @@ msgstr "លក្ខណៈ​សម្បត្តិ​ការ​ចូលដ
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
-msgstr "ការ​បង្ហាញ"
+msgstr "បង្ហាញ"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -379,10 +382,13 @@ msgid "To the Right"
 msgstr "ទៅ​ស្ដាំ"
 
 #. Popup message to inform the user about fbdev restrictions
+#, fuzzy
 msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>សូម​ចំណាំថា  ៖ </b><hr>ការកំណត់​រចនាសម្ព័ន្ធ​  <i>Framebuffer</i> ​ជា​មូលដ្ឋាន​ប្រព័ន្ធ​របស់​អ្នក​"
+"ដែល​មិន​គាំទ្រ​ការផ្លាស់ប្តូរ​គុណភាព​បង្ហាញ​និង​ឬ ការកំណត់​ពណ៌ ។​"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -904,12 +910,14 @@ msgstr ""
 "ចុច <b>[ បញ្ជា+ជំនួស+លុប​ថយក្រោយ ]</b> ដើម្បី​បញ្ឈប់​ម៉ាស៊ីន​បម្រើ ។"
 
 #. Tab title: VNC Server configuration
+#, fuzzy
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "ពិនិត្យ​ម៉ាស៊ីន​បម្រើ​ X ពី​ចម្ងាយ​"
 
 #. Activate VNC server checkbox
+#, fuzzy
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "អនុញ្ញាត​ឲ្យ​ចូល​ដំណើរការ​ដើម្បី​​បង្ហាញ​ក្តារចុច​ឬ កណ្តុរ​នៃ​ម៉ាស៊ីន​បម្រើ​ X របស់​អ្នក​"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -938,7 +946,7 @@ msgstr "ធ្វើ​ឲ្យ​ការ​ចូលដំណើរការ
 #. Activate multiple VNC connection checkbox
 #, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "អនុញ្ញាត​ការ​តភ្ជាប់ VNC ច្រើន"
+msgstr "អនុញ្ញាត​ឲ្យ​មានការតភ្ជាប់​ច្រើន​"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
@@ -950,7 +958,8 @@ msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>ពាក្យសម្ងាត់​របស់ VNC មិន​ដូច​គ្នា​ឡើយ</b><hr>កំណែ​ទីមួយ និង ទីពីរ​របស់​ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង​គ្នា ។"
+"<b>ការចូល​ដំណើរការ​ពី​ចម្ងាយ​ខុសពាក្យសម្ងាត់​ </b><hr> កំណែ​ទីមួយ​និង ទីពីរ​នៃ​ពាក្យ​សម្ងាត់​មិនទាន់​"
+"បានផ្គូផ្គង​ នូវ​ឡើយ​ ។​"
 
 #. VNC message box appearing if password is too short
 #, fuzzy
@@ -959,8 +968,8 @@ msgid ""
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>ពាក្យសម្ងាត់​របស់ VNC មាន​កំហុស</b><hr>វាល​ពាក្យសម្ងាត់​ត្រូវ​បាន​ទុក​ឲ្យ​នៅ​ទទេ ឬ ពាក្យ​សម្ងាត់​មាន​"
-"ប្រវែង​ខ្លី​ពេក ។ ចូរ​បញ្ចូល​ពាក្យសម្ងាត់​មួយ​ដែល​មាន​ប្រវែង​យ៉ាង​តិច ៦ តួអក្សរ ។"
+"<b>កំហុស​ចូល​ដំណើរការ​ពាក្យ​សម្ងាត់​ពី​ចម្ងាយ​</b><hr>វាល​ពាក្យ​សម្ងាត់​ទទេ​ឬ ពាក្យ​សម្ងាត់​ខ្លីពេក​ ។  បញ្ចូល​"
+"ពាក្យ​សម្ងាត់​ដែល​មាន​តួអក្សរ​ ៦​យ៉ាងតិច​ ។​"
 
 #. VNC message box appearing if password is too long
 #, fuzzy
@@ -968,8 +977,8 @@ msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>ពាក្យសម្ងាត់​របស់ VNC មាន​កំហុស</b><hr>វាល​ពាក្យសម្ងាត់​ត្រូវ​បាន​ទុក​ឲ្យ​នៅ​ទទេ ឬ ពាក្យ​សម្ងាត់​មាន​"
-"ប្រវែង​ខ្លី​ពេក ។ ចូរ​បញ្ចូល​ពាក្យសម្ងាត់​មួយ​ដែល​មាន​ប្រវែង​យ៉ាង​តិច ៦ តួអក្សរ ។"
+"<b>កំហុស​ចូល​ដំណើរការ​ពាក្យ​សម្ងាត់​ពី​ចម្ងាយ​</b><hr>ពាក្យ​សម្ងាត់​វែង​ពេក​ ។ បញ្ចូល​ពាក្យ​សម្ងាត់អតិបរមា​៨ "
+"តួអក្សរ​​​។​"
 
 #. Install missing packages box
 msgid ""
@@ -1023,16 +1032,18 @@ msgid ""
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>ព័ត៌មាន​ការ​កំណត់​រចនាសម្ព័ន្ធ VNC</b><hr>សេវា VNC ទាមទារ​ឲ្យ​អ្នក​បើក​ច្រក TCP (5900) និង "
-"ច្រក HTTP (លំនាំដើម​គឺ 5800) ក្នុង​ជញ្ជាំងភ្លើង ។ អ្នក​អាច​កំណត់​រចនាសម្ព័ន្ធ​វា​ដោយ​ប្រើ YaST ។"
+"<b>ចូល​ដំណើរការ​ពី​ចម្ងាយ​ការកំណត់រចនាសម្ព័ន្ធ​ព័ត៌មាន​</b><hr>សេវា​ចូល​ដំណើរការពីចម្ងាយ​ត្រូវ​ការ​ច្រក​ "
+"TCP  ៥៩០០​និង ច្រក​ HTTP  (៥៨០០ តាម​លំនាំដើម​) ដើម្បី​បើក​ជញ្ជាំងភ្លើង​។  អ្នក​អាចកំណត់រចនាសម្ព័ន្ធ​"
+"នេះ​ជា​មួយ​ YaST បាន​ ។​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "ជម្រើស​ភាព​ឆប​គ្នា​ច្រើន​"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "បន្ថែម​ EuroSign ទៅ​ជា​៥​គ្រាប់ចុច​ ។​"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1045,13 +1056,14 @@ msgid "Alt/Win key behavior"
 msgstr "ឥរិយាបថ​គ្រាប់ចុច ជំនួស/Win"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "កំពុង​បន្ថែម​ EuroSign ទៅជា​គ្រាប់ចុច​ពិត​"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "គ្រាប់ចុច​ម៉ឺនុយ គឺ​ជា​គ្រាប់ចុច​តែង ។"
+msgstr "ប្ដូរ​ជា​គឺ​ជា​គ្រាប់​ចុច​តែង ។"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1066,7 +1078,7 @@ msgstr "គ្រាប់ចុច​បញ្ជា នៅ​ខាង​ក�
 #. XKBFile extension text
 #, fuzzy
 msgid "Ctrl key at left of 'A'"
-msgstr "គ្រាប់ចុច​បញ្ជា នៅ​ខាង​ឆ្វេង​នៃ -A-"
+msgstr "គ្រាប់ចុច​បញ្ជា នៅ​ខាង​ឆ្វេង​នៃ 'A'"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1086,7 +1098,7 @@ msgstr "ទីតាំង​គ្រាប់ចុច​បញ្ជា"
 #. XKBFile extension text
 #, fuzzy
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "គ្រាប់ចុច​ពិសេស (បញ្ជា+ជំនួស+<គ្រាប់ចុច>) ដែល​ត្រូវ​បាន​ប្រើ​ក្នុង​ម៉ាស៊ីន​ប្រើ​មួយ ។"
+msgstr "គ្រាប់​ចុច​ពិសេស (ឆ្លាស់​+ជំនួស​+&lt;គ្រាប់ចុច&gt;) ត្រូវ​បាន​ប្រើក្នុង​ម៉ាស៊ីន​បម្រើ​ ។​"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1099,12 +1111,14 @@ msgid "Ctrl+Shift changes group."
 msgstr "បញ្ជា+ប្ដូរ ផ្លាស់ប្ដូរ​ក្រុម ។"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "បន្ថែម​ EuroSign ទៅ​ជា​គ្រាប់ចុច  E "
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "បន្ថែម​ EuroSign ទៅ​ជា​គ្រាប់ចុច​ ២​ ។​"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1122,309 +1136,374 @@ msgid "Group Shift/Lock behavior"
 msgstr "ដាក់​ឥរិយាបថ​ប្ដូរ/ការ​ចាក់​សោ ជា​ក្រុម"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Arabic"
-msgstr ""
+msgstr "ភាសា​អារ៉ាប់​"
 
 #. XKBFile extension text
 msgid "Estonia"
-msgstr ""
+msgstr "អេស្តូនី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Myanmar"
-msgstr ""
+msgstr "ម៉ីយ៉ានម៉ា​"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Norway"
-msgstr "ធម្មតា"
+msgstr "ន័រវ៉េ"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Germany"
-msgstr ""
+msgstr "អាឡឺម៉ង់​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Mongolia"
-msgstr ""
+msgstr "ម៉ូហ្គូលីយ៉ា​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Bhutan"
-msgstr ""
+msgstr "ប៊ូតង់​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Bangladesh"
-msgstr ""
+msgstr "បង់ក្លាដេស"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Latin American"
-msgstr ""
+msgstr "អាមេរិក​ឡាទិន​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Belgium"
-msgstr ""
+msgstr "បែល​ហ្ស៊ិក"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Finland"
-msgstr ""
+msgstr "ហ្វាំងឡង់​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Israel"
-msgstr ""
+msgstr "អ៊ីស្ត្រាអែល​"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Sweden"
-msgstr "អេក្រង់"
+msgstr "ស៊ុយអែត"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Russia"
-msgstr ""
+msgstr "រុស្សី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Portugal"
-msgstr ""
+msgstr "ព័ទុហ្គ័ល"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Korean"
-msgstr ""
+msgstr "កូរ៉េ​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Maori"
-msgstr ""
+msgstr "ម៉ាអូរី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Uzbekistan"
-msgstr ""
+msgstr "អ៊ូហ្សបេគីស្តង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Bulgaria"
-msgstr ""
+msgstr "ប៊ុលហ្គារី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Thailand"
-msgstr ""
+msgstr "ថៃ​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "India"
-msgstr ""
+msgstr "ឥណ្ឌា​"
 
 #. XKBFile extension text
 msgid "Bengali"
-msgstr ""
+msgstr "ប៊ុលហ្គារី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Switzerland"
-msgstr ""
+msgstr "ស្វ៊ីស"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Laos"
-msgstr "ប្លង់"
+msgstr "ឡាវ​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Japan"
-msgstr ""
+msgstr "ជប៉ុន​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Syria"
-msgstr ""
+msgstr "ស៊ីរីយ៉ា​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Czechia"
-msgstr ""
+msgstr "ឆេក"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Belarus"
-msgstr ""
+msgstr "បេឡារុស្ស"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Tajikistan"
-msgstr ""
+msgstr "តាហ្ស៊ីគីស្តង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Denmark"
-msgstr ""
+msgstr "ដាណាម៉ាក​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Slovenia"
-msgstr ""
+msgstr "ស្លូវ៉ានី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Malta"
-msgstr ""
+msgstr "ម៉ាល់តា"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Azerbaijan"
-msgstr ""
+msgstr "អាហ្ស៊ែរបែហ្សង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Lithuania"
-msgstr ""
+msgstr "លីទុយអានី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Vietnam"
-msgstr ""
+msgstr "វៀតណាម​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Faroe Islands"
-msgstr ""
+msgstr "កោះ​ហ្វារ៉ូ"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "South Africa"
-msgstr ""
+msgstr "អាហ្វ្រិក​ខាងត្បូង​​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Farsi"
-msgstr ""
+msgstr "ហ្វាស្សី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Slovakia"
-msgstr ""
+msgstr "ស្លូវ៉ាគី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Maldives"
-msgstr ""
+msgstr "ម៉ាល់ឌីវ"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Iceland"
-msgstr ""
+msgstr "អ៊ីស្លង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Croatia"
-msgstr ""
+msgstr "ក្រូអាត"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Latvia"
-msgstr ""
+msgstr "ឡាតវីយ៉ា"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Albania"
-msgstr ""
+msgstr "អាល់បានី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Italy"
-msgstr ""
+msgstr "អ៊ីតាលី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Greece"
-msgstr ""
+msgstr "ក្រិក"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "United Kingdom"
-msgstr ""
+msgstr "ចក្រភព​អង់គ្លេស"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "France"
-msgstr "បោះបង់"
+msgstr "បារាំង​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Armenia"
-msgstr ""
+msgstr "អាមេនី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Pakistan"
-msgstr ""
+msgstr "ប៉ាហ្គីស្ថាន​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Poland"
-msgstr ""
+msgstr "ប៉ូឡូញ​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "គៀរហ្គីស្តង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Ireland"
-msgstr ""
+msgstr "អៀរឡង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Hungary"
-msgstr ""
+msgstr "ហុងគ្រី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Cambodia"
-msgstr ""
+msgstr "កម្ពុជា​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Spain"
-msgstr ""
+msgstr "អេស្ប៉ាញ"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Ukraine"
-msgstr ""
+msgstr "អ៊ុយក្រែន"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Romania"
-msgstr ""
+msgstr "រ៉ូម៉ានៀ​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Kazakhstan"
-msgstr ""
+msgstr "កាហ្សាក់ស្តង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Georgia"
-msgstr ""
+msgstr "ហ្សកហ្ស៊ី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "U.S. English"
-msgstr ""
+msgstr "សហរដ្ឋអាមេរិច អង់គ្លេស​"
 
 #. XKBFile extension text
 msgid "Turkish"
-msgstr ""
+msgstr "ទួរគី"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx ស៊េរី​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Netherlands"
-msgstr ""
+msgstr "​ហូល្លង់"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Macedonia"
-msgstr ""
+msgstr "ម៉ាសេដូនី​"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Canada"
-msgstr "កាត"
+msgstr "កាណាដា​"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Sri Lanka"
-msgstr ""
+msgstr "ស្រីលង្កា"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "បូស្ន៊ី និង ​ហឺហ្ស៊េហ្គោវីណា"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Serbia and Montenegro"
-msgstr ""
+msgstr "ស៊ែរប៊ី​និង​ម៉ុងតេណេក្រូ"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Brazil"
-msgstr ""
+msgstr "ប្រេស៊ីល"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Ghana"
-msgstr ""
+msgstr "ហ្គាណា"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Andorra"
-msgstr ""
+msgstr "អង់ដូរ៉ា"
 
 #. XKBFile extension text
 msgid "Afghanistan"
-msgstr ""
+msgstr "អាហ្គានីស្ថាន"
 
 #. XKBFile extension text
 msgid "Esperanto"
-msgstr ""
+msgstr "អេស្ពេរ៉ាន់តូ"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Turkey"
-msgstr ""
+msgstr "ទួរគី"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1432,6 +1511,7 @@ msgstr ""
 #. application code for XFine2
 #.
 #. Maximum length: 40  characters
+#, fuzzy
 msgid "&Step size"
 msgstr "ទំហំ​ជំហាន"
 
@@ -1480,15 +1560,3 @@ msgstr "ការ​កំណត់​រចនាសម្ព័ន្ធ​ល
 
 msgid "Idle timer..."
 msgstr "ពេល​ទំនេរ..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "ម៉ាស៊ីន​បម្រើ VNC"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "អនុញ្ញាត​ការ​ចូលដំណើរការ​ទៅ​កាន់​ការ​បង្ហាញ ដោយ​ប្រើ​ពិធីការ VNC"
-
-#~ msgid "VNC Options"
-#~ msgstr "ជម្រើស VNC"

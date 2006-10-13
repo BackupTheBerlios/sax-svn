@@ -1,6 +1,6 @@
 # translation of sax.nl.po to Dutch
 # Arthur & Ettie Kerkmeester <a.s.kerkmeester@hccnet.nl>, 2000-2003, 2004, 2005.
-# Daniël Huisman <d.d.huisman@gmail.com>, 2005.
+# Daniël Huisman <d.d.huisman@gmail.com>, 2005, 2006.
 # Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006.
 # domain "sax.mo"
 # Dutch message file for Sax.
@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.nl\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-01-28 12:16+0100\n"
+"PO-Revision-Date: 2006-09-10 20:01+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
@@ -54,9 +54,8 @@ msgid "&Help"
 msgstr "&Help"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
-msgstr "&OK"
+msgstr "O&K"
 
 #. Yes Button text
 msgid "&Yes"
@@ -128,9 +127,8 @@ msgid "Touchscreen Properties"
 msgstr "Eigenschappen aanraakscherm"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Eigenschappen 'toegang op afstand'"
+msgstr "Toegang op afstand'"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -389,6 +387,8 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>Let op</b><hr>Deze configuratie is gebaseerd op <i>Framebuffer</i> en uw "
+"systeem ondersteunt geen veranderingen aan de resolutie en/of kleur."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -604,9 +604,9 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Rechter Win-toets wisselt de groep wanneer ingedrukt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock."
+msgstr ""
+"CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock niet."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -677,11 +677,10 @@ msgid "Both Shift keys together change group."
 msgstr "Beide Shift-toetsen samen wijzigen de groep."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 msgstr ""
 "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock "
-"annuleren."
+"niet annuleren."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
@@ -923,11 +922,11 @@ msgstr ""
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "X-server-instellingen"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "Toegang tot beeldscherm en toetsenbord/muis van uw X-server toestaan"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -954,43 +953,38 @@ msgid "Activate HTTP Access"
 msgstr "HTTP-toegang activeren"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "Meerdere VNC-verbindingen toestaan"
+msgstr "Meerdere verbindingen toestaan"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP-poort"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
 "<b>Wachtwoorden komt niet overeen</b><hr>De eerste en de tweede versie van "
-"het wachtwoord komen niet overeen! Probeer het nog eens."
+"het wachtwoord komen niet overeen."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>VNC-wachtwoord fout</b><hr>Het wachtwoordveld is leeg gelaten of het "
-"wachtwoord is te kort. Geef een wachtwoord op dat minstens zes lettertekens "
+"<b>Wachtwoordfout</b><hr>Het wachtwoordveld is leeg gelaten of het "
+"wachtwoord is te kort. Geef een wachtwoord op dat tenminste zes lettertekens "
 "lang is."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>VNC-wachtwoord fout</b><hr>Het wachtwoordveld is leeg gelaten of het "
-"wachtwoord is te kort. Geef een wachtwoord op dat minstens zes lettertekens "
-"lang is."
+"<b>Wachtwoordfout</b><hr>Het wachtwoord is te lang. Voer een wachtwoord in "
+"van maximaal acht lettertekens."
 
 #. Install missing packages box
 msgid ""
@@ -1002,7 +996,7 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr "Pakketinstalatie"
+msgstr "Pakketinstallatie"
 
 #. Progress bar title text
 msgid "Importing module"
@@ -1042,7 +1036,6 @@ msgstr ""
 "tijdens het proces:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
@@ -1050,100 +1043,85 @@ msgid ""
 msgstr ""
 "<b>Informatie over VNC-configuratie</b><hr>De VNC-service vereist dat de TCP-"
 "poort 5900 en een HTTP-poort (standaard 5800) in de firewall worden geopend. "
-"U kunt dit met YaSt instellen."
+"U kunt dit met YaST instellen."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Diverse compatibiliteitsopties"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Voeg het Euroteken toe aan de 5."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key behavior"
 msgstr "Gedrag van CapsLock-toets"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt/Win key behavior"
 msgstr "Gedrag van Alt/Win-toets"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Euroteken aan bepaalde toetsen toevoegen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Menu is samenstellen."
+msgstr "Caps Lock is samenstellen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key works as Right Alt."
 msgstr "Rechter Control-toets werkt als rechter Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at bottom left"
 msgstr "Control-toets linksonder"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at left of 'A'"
 msgstr "Control-toets links van 'A'"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Ctrl."
 msgstr "CapsLock veranderen in extra Control."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Ctrl and CapsLock."
 msgstr "Control en CapsLock verwisselen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key position"
 msgstr "Positie Control-toets"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "Speciale toetsen (Ctrl+Alt+<key>) verwerkt in een server."
+msgstr "Speciale toetsen (Ctrl+Alt+&lt;key&gt;) verwerkt in een server."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Ctrl to choose 3rd level."
 msgstr "Rechter Control-toets selecteert 3de niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift changes group."
 msgstr "Control+Shift wijzigt de groep."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Euroteken aan E toevoegen."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Euroteken aan de 2 toevoegen"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
 msgstr "Positie samensteltoets "
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl changes group."
 msgstr "Alt+Control wijzigen de groep."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Group Shift/Lock behavior"
 msgstr "Gedrag van groep Shift/Lock"
 
@@ -1160,9 +1138,8 @@ msgid "Myanmar"
 msgstr "Myanmar"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Norway"
-msgstr "Normaal"
+msgstr "Noorwegen"
 
 #. XKBFile extension text
 msgid "Germany"
@@ -1170,7 +1147,7 @@ msgstr "Duitsland"
 
 #. XKBFile extension text
 msgid "Mongolia"
-msgstr "MongoliÃ«"
+msgstr "Mongolië"
 
 #. XKBFile extension text
 msgid "Bhutan"
@@ -1182,11 +1159,11 @@ msgstr "Bangladesh"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Latijns Amerika"
 
 #. XKBFile extension text
 msgid "Belgium"
-msgstr "BelgiÃ«"
+msgstr "België"
 
 #. XKBFile extension text
 msgid "Finland"
@@ -1194,16 +1171,15 @@ msgstr "Finland"
 
 #. XKBFile extension text
 msgid "Israel"
-msgstr "IsraÃ«l"
+msgstr "Israël"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Sweden"
-msgstr "Scherm"
+msgstr "Zweden"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Rusland"
 
 #. XKBFile extension text
 msgid "Portugal"
@@ -1242,9 +1218,8 @@ msgid "Switzerland"
 msgstr "Zwitserland"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Laos"
-msgstr "Indeling"
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1252,11 +1227,11 @@ msgstr "Japan"
 
 #. XKBFile extension text
 msgid "Syria"
-msgstr "SyriÃ«"
+msgstr "Syrië"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Tsjechië"
 
 #. XKBFile extension text
 msgid "Belarus"
@@ -1272,7 +1247,7 @@ msgstr "Denemarken"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr "SloveniÃ«"
+msgstr "Slovenië"
 
 #. XKBFile extension text
 msgid "Malta"
@@ -1280,7 +1255,7 @@ msgstr "Malta"
 
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr "Azerbeidzjaan"
+msgstr "Azerbeidzjan"
 
 #. XKBFile extension text
 msgid "Lithuania"
@@ -1288,7 +1263,7 @@ msgstr "Litouwen"
 
 #. XKBFile extension text
 msgid "Vietnam"
-msgstr "Vietnam"
+msgstr "Viëtnam"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
@@ -1300,7 +1275,7 @@ msgstr "Zuid-Afrika"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "Perzisch"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1316,7 +1291,7 @@ msgstr "IJsland"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr "KroatiÃ«"
+msgstr "Kroatië"
 
 #. XKBFile extension text
 msgid "Latvia"
@@ -1324,11 +1299,11 @@ msgstr "Letland"
 
 #. XKBFile extension text
 msgid "Albania"
-msgstr "AlbaniÃ«"
+msgstr "Albanië"
 
 #. XKBFile extension text
 msgid "Italy"
-msgstr "ItaliÃ«"
+msgstr "Italië"
 
 #. XKBFile extension text
 msgid "Greece"
@@ -1336,16 +1311,15 @@ msgstr "Griekenland"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr "United Kingdom"
+msgstr "Verenigd Koninkrijk"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "France"
-msgstr "&Annuleren"
+msgstr "Frankrijk"
 
 #. XKBFile extension text
 msgid "Armenia"
-msgstr "Armenia"
+msgstr "Armenië"
 
 #. XKBFile extension text
 msgid "Pakistan"
@@ -1357,7 +1331,7 @@ msgstr "Polen"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "KirgiziÃ«"
+msgstr "Kirgizië"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1377,11 +1351,11 @@ msgstr "Spanje"
 
 #. XKBFile extension text
 msgid "Ukraine"
-msgstr "OekraÃ¯ne"
+msgstr "Oekraïne"
 
 #. XKBFile extension text
 msgid "Romania"
-msgstr "RoemeniÃ«"
+msgstr "Roemenië"
 
 #. XKBFile extension text
 msgid "Kazakhstan"
@@ -1389,11 +1363,11 @@ msgstr "Kazachstan"
 
 #. XKBFile extension text
 msgid "Georgia"
-msgstr "Georgia"
+msgstr "Georgië"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "Amerikaans Engels"
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1401,7 +1375,7 @@ msgstr "Turks"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC 98xx-serie"
 
 #. XKBFile extension text
 msgid "Netherlands"
@@ -1409,12 +1383,11 @@ msgstr "Nederland"
 
 #. XKBFile extension text
 msgid "Macedonia"
-msgstr "MacedoniÃ«"
+msgstr "Macedonië"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Canada"
-msgstr "Kaart"
+msgstr "Canada"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
@@ -1422,15 +1395,15 @@ msgstr "Sri Lanka"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr "BosniÃ« en Herzegowina"
+msgstr "Bosnië en Herzegowina"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr "ServiÃ« en Montenegro"
+msgstr "Servië en Montenegro"
 
 #. XKBFile extension text
 msgid "Brazil"
-msgstr "BraziliÃ«"
+msgstr "Brazilië"
 
 #. XKBFile extension text
 msgid "Ghana"
@@ -1506,15 +1479,3 @@ msgstr "Configuratie op beeldscherm"
 
 msgid "Idle timer..."
 msgstr "Idle timer..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC-server"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Toegang via het VNC-protocol toestaan"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC-opties"

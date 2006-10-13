@@ -1,3 +1,4 @@
+# translation of sax.fi.po to Suomi
 # translation of UUSIsax.po to
 # translation of sax.po to
 # translation of sax.fi.po to
@@ -10,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-08-21 12:48+0300\n"
+"PO-Revision-Date: 2006-09-18 14:16+0300\n"
 "Last-Translator: Jyri Palokangas <jmp@netti.fi>\n"
-"Language-Team:  <yast-trans-fi@kotoistaminen.novell.fi>\n"
+"Language-Team: Suomi <yast-trans-fi>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -127,9 +128,8 @@ msgid "Touchscreen Properties"
 msgstr "Kosketusnäytön ominaisuudet"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Etäyhteyden ominaisuudet"
+msgstr "Etäkäyttö"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -919,11 +919,11 @@ msgstr ""
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "X-palvelimen etäohjaus"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "Salli pääsy X-palvelimesi näyttöön ja näppäimistöön/hiireen"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -950,41 +950,37 @@ msgid "Activate HTTP Access"
 msgstr "Ota HTTP-yhteys käyttöön"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "Salli monta VNC-yhteyttä"
+msgstr "Salli monta yhtäaikaista yhteyttä"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP-portti"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>VNC-salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan versio "
-"eivät täsmää."
+"<b>Etäyhteyden salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan "
+"versio eivät täsmää."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>VNC-salasanavirhe</b><hr>Salasanakenttä on jätetty tyhjäksi tai salasana "
-"on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä."
+"<b>Etäyhteyden salasanavirhe</b><hr>Salasanakenttä on jätetty tyhjäksi tai "
+"salasana on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>VNC-salasanavirhe</b><hr>Salasana on liian pitkä. Anna salasana joka on "
-"enintään kahdeksan merkkiä pitkä."
+"<b>Etäyhteyden salasanavirhe</b><hr>Salasana on liian pitkä. Anna salasana "
+"joka on enintään kahdeksan merkkiä pitkä."
 
 #. Install missing packages box
 msgid ""
@@ -1033,15 +1029,14 @@ msgstr ""
 "var/log/Xorg.99.log</tt>. Seuraava raportti luotiin kutsuvasta ilmentymästä:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>VNC-määritystietoja</b><hr>VNC-palvelu vaatii, että TCP portti 5900 ja "
-"HTTP-portti (oletuksena 5800) ovat auki palomuurissa. Voit määrittää tämän "
-"YaSTilla."
+"<b>Etäyhteyden määritystietoja</b><hr>Etäyhteys-palvelu vaatii, että TCP "
+"portti 5900 ja HTTP-portti (oletuksena 5800) ovat auki palomuurissa. Voit "
+"määrittää tämän YaST:lla."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1538,15 +1533,3 @@ msgstr "Näytön määritys"
 
 msgid "Idle timer..."
 msgstr "Aikalaskuri..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC-palvelin"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Salli pääsy näyttöön käyttäen VNC-yhteyskäytäntöä"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC-valinnat"
