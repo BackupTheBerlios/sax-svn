@@ -145,7 +145,7 @@ sub getIntelPatchMap {
 # getIntelPatchCode
 #-------------------------------------
 sub getIntelPatchCode {
-	my @result = ();
+	my %result = ();
 	my $xstuff = new SaX::SaXImportSysp ($SaX::SYSP_DESKTOP);
 	my $server = new SaX::SaXImportSysp ($SaX::SYSP_CARD);
 	$xstuff -> doImport();
@@ -163,9 +163,13 @@ sub getIntelPatchCode {
 		$code = "$vid$did$svd$sdd$ddc";
 		$code =~ s/0x//g;
 		$code = "0x".$code;
-		push (@result,$code);
+		$result{$code}{ddc} = $ddc;
+		$result{$code}{vid} = $vid;
+		$result{$code}{did} = $did;
+		$result{$code}{svd} = $svd;
+		$result{$code}{sdd} = $sdd;
 	}
-	return @result;
+	return %result;
 }
 
 #=====================================
@@ -179,9 +183,36 @@ if ($patchBIOS ne "ok") {
 	#-------------------------------------
 	my @xy = split (/x/,$patchBIOS);
 	my %patch = getIntelPatchMap  ($xy[0],$xy[1]);
-	my @pcode = getIntelPatchCode ();
-	foreach my $icode (@pcode) {
+	my %pcode = getIntelPatchCode ();
+	foreach my $icode (keys %pcode) {
 	foreach my $code (keys %patch) {
+		if ($code !~ /0x(....)(....)(....)(.......)/) {
+			print "SaX: Invalid Intel patch code: $code\n";
+			next;
+		}
+		my $vid = $1;
+		my $did = $2;
+		my $svd = $3;
+		my $sdd = $4;
+		my $ddc = $5;
+		if ($ddc eq "****") {
+			$ddc = $pcode{$code}{ddc};
+		}
+		if ($vid eq "****") {
+			$vid = $pcode{$code}{vid};
+		}
+		if ($did eq "****") {
+			$did = $pcode{$code}{did};
+		}
+		if ($svd eq "****") {
+			$svd = $pcode{$code}{svd};
+		}
+		if ($sdd eq "****") {
+			$sdd = $pcode{$code}{sdd};
+		}
+		$code = "$vid$did$svd$sdd$ddc";
+		$code =~ s/0x//g;
+		$code = "0x".$code;
 		if ($code ne $icode) {
 			next
 		}
