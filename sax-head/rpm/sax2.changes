@@ -6,6 +6,12 @@ Mon Oct 16 14:01:35 CEST 2006 - ms@suse.de
 - use libsax for creating automatic configuration
 
 -------------------------------------------------------------------
+Mon Oct 16 10:28:06 CEST 2006 - thoenig@suse.de
+
+- add patch sax2-do-not-close-shared-connection-thoenig-01.patch:
+  Do not close shared connection to the D-Bus system bus.
+
+-------------------------------------------------------------------
 Fri Oct 13 16:46:14 CEST 2006 - ms@suse.de
 
 - update language translations
