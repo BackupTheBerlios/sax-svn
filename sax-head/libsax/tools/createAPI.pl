@@ -186,7 +186,7 @@ if ($patchBIOS ne "ok") {
 	my %pcode = getIntelPatchCode ();
 	foreach my $icode (keys %pcode) {
 	foreach my $code (keys %patch) {
-		if ($code !~ /0x(....)(....)(....)(.......)/) {
+		if ($code !~ /0x(....)(....)(....)(....)(.......)/) {
 			print "SaX: Invalid Intel patch code: $code\n";
 			next;
 		}
@@ -195,19 +195,19 @@ if ($patchBIOS ne "ok") {
 		my $svd = $3;
 		my $sdd = $4;
 		my $ddc = $5;
-		if ($ddc eq "****") {
+		if ($ddc eq '*******') {
 			$ddc = $pcode{$code}{ddc};
 		}
-		if ($vid eq "****") {
+		if ($vid eq '****') {
 			$vid = $pcode{$code}{vid};
 		}
-		if ($did eq "****") {
+		if ($did eq '****') {
 			$did = $pcode{$code}{did};
 		}
-		if ($svd eq "****") {
+		if ($svd eq '****') {
 			$svd = $pcode{$code}{svd};
 		}
-		if ($sdd eq "****") {
+		if ($sdd eq '****') {
 			$sdd = $pcode{$code}{sdd};
 		}
 		$code = "$vid$did$svd$sdd$ddc";
@@ -219,6 +219,7 @@ if ($patchBIOS ne "ok") {
 		foreach my $prog (keys %{$patch{$code}}) {
 		if (-f $prog) {
 			my $args = $patch{$code}{$prog};
+			print "SaX: Patching BIOS: $prog $args\n";
 			my $result = qx ($prog $args 2>&1);
 			my $key  = "VIDEOBIOS_PARAMETERS";
 			my $file = "/etc/sysconfig/videobios";

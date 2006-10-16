@@ -19,6 +19,7 @@ use ParseConfig;
 use Getopt::Long;
 use Storable;
 use XFree; 
+use SaX;
 
 #==========================================
 # Globals
@@ -130,6 +131,28 @@ sub main {
 		# Auto configuration is enabled. This will save the auto
 		# detected configuration file as final config file
 		# ---
+		my %section;
+		my $import;
+		my @importID = (
+			$SaX::SAX_CARD,
+			$SaX::SAX_DESKTOP,
+			$SaX::SAX_POINTERS,
+			$SaX::SAX_KEYBOARD,
+			$SaX::SAX_LAYOUT,
+			$SaX::SAX_PATH,
+			$SaX::SAX_EXTENSIONS
+		);
+		my $config = new SaX::SaXConfig;
+		foreach my $id (@importID) {
+			$import = new SaX::SaXImport ( $id );
+			$import->setSource ( $SaX::SAX_AUTO_PROBE );
+			$import->doImport();
+			$config->addImport ( $import );
+			$section{$import->getSectionName()} = $import;
+		}
+		$config->setMode ($SaX::SAX_NEW);
+		$config->createConfiguration();
+		$config->commitConfiguration();
 		my $final = LinkConfiguration();
 		print "SaX: Automatic configuration is done\n";
 		print "SaX: The file $final has been written\n";
