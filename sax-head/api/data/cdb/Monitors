@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Sep 12 16:43:27 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Oct 16 17:01:48 2006
 #
 # Template for monitor data
 # --------------------------
@@ -2999,6 +2999,18 @@ APPLE:COLOR 14 DISPLAY  {
  Hsync=31-35
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=50-66
+}
+
+#==============================================
+# COLOR DISPLAY (9C5E)
+#----------------------------------------------
+APPLE:COLOR DISPLAY (9C5E)  {
+ DDC=APP9C5E
+ Option=DPMS
+ Hsync=30-52
+ Resolution=1280x800
+ Vsync=50-60
+ DPI=268x178
 }
 
 #==============================================
@@ -28921,6 +28933,7 @@ PHILIPS:200W (DIGITAL)  {
  Profile=PHL0832
  Resolution=1680x1050
  Vsync=56-85
+ DPI=433x271
 }
 
 #==============================================

@@ -19,6 +19,8 @@ STATUS        : Status: Development
 **************/
 #include "monitormodel.h"
 
+#define UNIT_SIZE 128
+
 namespace SaXGUI {
 //====================================
 // Constructor
@@ -341,7 +343,10 @@ void SCCMonitorModel::import ( void ) {
 	mSizeX -> setValue ( mDisplaySizeX );
 	mSizeY -> setValue ( mDisplaySizeY );
 	if ((mDisplaySizeX > 0) && (mDisplaySizeY > 0)) {
-		double traversal = round (getTraversal (mDisplaySizeX,mDisplaySizeY));
+		char traversal[UNIT_SIZE];
+		snprintf (traversal,UNIT_SIZE,
+			"%.1f",getTraversal (mDisplaySizeX,mDisplaySizeY)
+		);
 		QPoint ratio = getRatio (mDisplaySizeX,mDisplaySizeY);
 		QString infoTraversal;
 		QString infoRatio;
@@ -664,7 +669,10 @@ void SCCMonitorModel::slotName ( QListBoxItem* item ) {
 			int y = tokens.last().toInt();
 			mSizeX -> setValue ( x );
 			mSizeY -> setValue ( y );
-			double traversal = round (getTraversal (x,y));
+			char traversal[UNIT_SIZE];
+			snprintf (traversal,UNIT_SIZE,
+				"%.1f",getTraversal (mDisplaySizeX,mDisplaySizeY)
+			);
 			QPoint ratio = getRatio (x,y);
 			QString infoTraversal;
 			QString infoRatio;
