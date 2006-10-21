@@ -263,7 +263,7 @@ sub init {
 	$var{Screen}{0}{Monitor}                    = $var{Monitor}{0}{Identifier};
 	$var{Screen}{0}{DefaultDepth}               = "8";
 	foreach $depth (8,16,24) {
-		$var{Screen}{0}{Depth}{$depth}{Modes}      = "640x480";
+		$var{Screen}{0}{Depth}{$depth}{Modes}      = "800x600";
 		$var{Screen}{0}{Depth}{$depth}{ViewPort}   = "";
 		$var{Screen}{0}{Depth}{$depth}{Virtual}    = "";
 		$var{Screen}{0}{Depth}{$depth}{Visual}     = "";
@@ -446,7 +446,7 @@ sub init {
 	# Handle option -v | --virtual
 	#------------------------------------------
 	if (defined $Virtual) {
-		$CreateVESAProfile = '0:640x480@60';
+		$CreateVESAProfile = '0:800x600@60';
 	}
 	#==========================================
 	# Handle option --vesa
@@ -902,7 +902,7 @@ sub usage {
 	print "   the profile data\n";
 	print "\n";
 	print "[ -v | --virtual ]\n";
-	print "   This option enable the 640x480 virtual mode\n";  
+	print "   This option enable the 800x600 virtual mode\n";  
 	print "   You should prefere this mode if you don`t want\n"; 
 	print "   to use DDC\n";
 	print "\n";

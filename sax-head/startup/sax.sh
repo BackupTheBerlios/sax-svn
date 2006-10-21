@@ -140,7 +140,7 @@ function usage() {
 	echo "  enable automatic configuration." 
 	echo
 	echo "[ -l | --lowres ]"
-	echo "  use only 800x600@75 Hz standard mode."
+	echo "  use only 800x600@60 Hz standard mode."
 	echo "  DDC detection is switched off in this case"
 	echo
 	echo "[ -V | --vesa ]"
