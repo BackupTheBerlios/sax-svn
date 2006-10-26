@@ -51,12 +51,12 @@ sub prepareProfile {
 	if (! defined $card) {
 		$card = 0;
 	}
-	my $basename = qx (basename $profile);
-	print "SPP: prepare device [$card] profile: $basename";
+	my $basename = qx (basename $profile); chomp $basename;
+	print "SPP: prepare device [$card] profile: $basename\n";
 	if (-f "$profile.pl") {
-		print "SPP: calling device [$card] profile script: $basename";
+		print "SPP: calling device [$card] profile script: $basename\n";
 		qx ($profile.pl $card);
-		$profile = "$profile.tmp";
+		$profile = "/var/lib/sax/$basename.tmp";
 	}
 	open (FD,$profile) ||
 		die "SPP: could not open file: $profile";

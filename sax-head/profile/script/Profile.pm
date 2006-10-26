@@ -61,12 +61,13 @@ sub ProfileName {
 sub ProfileInitScript {
 	my $profile = ProfileName();
 	my $stdname = $profile;
+	my $newfile = "/var/lib/sax/$profile.tmp";
 	$profile = "/usr/share/sax/profile/$profile";
 	if (( ! -f $profile ) || ( $< != 0 )) {
 		die "*** $stdname: no such file or permission denied";
 	}
-	qx (cp $profile $profile.tmp);
-	return $profile.".tmp";
+	qx (cp $profile $newfile);
+	return $newfile;
 }
 
 #=====================================
