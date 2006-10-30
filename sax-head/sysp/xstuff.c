@@ -154,12 +154,10 @@ void ScanXStuff::Scan (void) {
 		if (display) {
 			parse[0].vendor = display->vendor;
 		}
-		if (display) {
-		if (display->bandwidth) {
+		if ((display) && (display->bandwidth)) {
 			parse[0].dacspeed  = display->bandwidth;
 		} else {
 			parse[0].dacspeed  = 220;
-		}
 		}
 		parse[0].bus    = graphics[0].bus;
 		parse[0].slot   = graphics[0].slot;

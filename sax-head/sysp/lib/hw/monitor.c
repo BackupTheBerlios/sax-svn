@@ -112,7 +112,9 @@ MsgDetect* MonitorGetData (void) {
 		for(di = di0, i = 0; di; di = di->next, i++) {
 		if (di->any.type == di_display) {
 			if (di->display.bandwidth) {
+			if (di->display.bandwidth >= 100) {
 				display->bandwidth = di->display.bandwidth;
+			}
 			}
 			if (di->display.max_hsync) {
 				display->hsync_max = (int)di->display.max_hsync;
@@ -124,7 +126,7 @@ MsgDetect* MonitorGetData (void) {
 				bestX = di->display.width;
 				bestY = di->display.height;
 			}
-			if (di->display.hdisp) {
+			if ((di->display.hdisp) && (display->bandwidth)) {
 				sprintf (display->modeline,
 				"%4u %4u %4u %4u %4u %4u %4u %4u %c/%c",
 					di->display.hdisp,
