@@ -1,23 +1,16 @@
-# translation of sax.po to 
-# translation of sax.po to German
-# translation of sax.de.po to
-# translation of sax.de.po to German
-# domain "sax.mo"
-# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
-# Antje Faber <afaber@suse.de>, 2003, 2004, 2005.
-# Jana Jaeger <jjaeger@suse.de>, 2003.
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 11:56\n"
+"PO-Revision-Date: 2006-10-26 16:37\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -69,7 +62,7 @@ msgstr "&Nein"
 #. Cancel Button text
 #. Maximum length: 40  characters
 msgid "&Cancel"
-msgstr "A&bbrechen"
+msgstr "&Abbrechen"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
@@ -77,7 +70,7 @@ msgstr "<b>SaX2 beenden</b><hr>SaX2 jetzt beenden?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr "Meldung"
+msgstr "Nachricht"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
@@ -128,9 +121,8 @@ msgid "Touchscreen Properties"
 msgstr "Touchscreen-Eigenschaften"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Eigenschaften für den entfernten Zugriff"
+msgstr "Entfernter Zugriff"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -138,7 +130,7 @@ msgstr "Eigenschaften für den entfernten Zugriff"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
-msgstr "Bildschirm"
+msgstr "Anzeigen"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -389,6 +381,8 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>Hinweis:</b><hr>Die Konfiguration basiert auf <i>Framebuffer</i>, und Ihr "
+"System unterstützt keine Änderung der Auflösung bzw. der Farbeinstellungen."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -574,7 +568,7 @@ msgstr "Belegung der Feststelltaste"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr "Ohne"
+msgstr "Keine"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -931,15 +925,13 @@ msgstr ""
 "ordnungsgemäß angezeigt wird, drücken Sie <b>[Strg+Alt+Rücktaste]</b>, um "
 "einen Server zwangsweise zu beenden."
 
-# 52914 AttribValues/label
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "X Server Remote Control"
-msgstr "X11 Display Fernsteuerung"
+msgstr "X Server-Fernsteuerung"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "Zugriff auf die Anzeige und die Tastatur/Maus Ihres X Server zulassen"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -966,42 +958,38 @@ msgid "Activate HTTP Access"
 msgstr "HTTP-Zugriff aktivieren"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "Mehrere VNC-Verbindungen zulassen"
+msgstr "Mehrere Verbindungen zulassen"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP-Port"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>Fehlende Übereinstimmung bei VNC-Passwort</b><hr>Die erste Version des "
-"Passworts stimmt nicht mit der zweiten überein."
+"<b>Fehlende Übereinstimmung bei Passwort für entfernten Zugriff</b><hr>Die "
+"erste Version des Passworts stimmt nicht mit der zweiten überein."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>Fehler bei VNC-Passwort</b><hr>Das Passwortfeld wurde leer gelassen oder "
-"das Passwort ist zu kurz. Geben Sie ein Passwort mit mindestens sechs "
-"Zeichen ein."
+"<b>Fehler bei Passwort für entfernten Zugriff</b><hr>Das Passwortfeld wurde "
+"leer gelassen oder das Passwort ist zu kurz. Geben Sie ein Passwort mit "
+"mindestens sechs Zeichen ein."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>VNC-Kennwortfehler</b><hr>Das Kennwort ist zu lang. Geben Sie ein "
-"Kennwort mit höchstens acht Zeichen ein."
+"<b>Fehler bei Passwort für entfernten Zugriff</b><hr>Das Passwort ist zu "
+"lang. Geben Sie ein Passwort mit maximal acht Zeichen ein."
 
 #. Install missing packages box
 msgid ""
@@ -1053,15 +1041,14 @@ msgstr ""
 "von der aufrufenden Instanz erstellt:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>Konfigurationsinformationen VNC</b><hr>Für den VNC-Dienst müssen der TCP-"
-"Port 5900 und ein ein HTTP-Port (standardmäßig 5800) in der Firewall "
-"geöffnet sein. Dies kann mit Yast konfiguriert werden."
+"<b>Konfigurationsinformationen für entfernten Zugriff</b><hr>Für den "
+"Fernzugriffsdienst müssen der TCP-Port 5900 und ein HTTP-Port (standardmäßig "
+"5800) in der Firewall geöffnet sein. Dies kann mit YaST konfiguriert werden."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1498,15 +1485,3 @@ msgstr "Konfiguration auf Bildschirm"
 
 msgid "Idle timer..."
 msgstr "Verbleibend..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC-Server"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Zugriff auf die Anzeige über das VNC-Protokoll zulassen"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC Optionen"
