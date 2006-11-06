@@ -71,6 +71,8 @@ Release:        9
 Summary:        X Window System tools for SaX2
 Group:          System/X11/Utilities
 Requires:       coreutils
+Provides:       saxtools 
+Obsoletes:      saxtools
 %ifarch s390x 
 Provides:       sax2
 Obsoletes:      sax2
@@ -99,6 +101,10 @@ Version:        8.1
 Release:        9
 Summary:        SaX2 identity and profile information
 Group:          System/X11/Utilities
+Provides:       sax2:/usr/share/sax/sysp/maps/Identity.map
+Provides:       sax2-tools:/usr/share/sax/sysp/maps/Identity.map
+Provides:       saxident
+Obsoletes:      saxident
 
 %description -n sax2-ident
 This package contains information about the supported graphics hardware
@@ -124,6 +130,7 @@ Requires:       netpbm sax2-tools qt sax2
 %endif
 Summary:        SuSE advanced X Window System-configuration GUI
 Group:          System/X11/Utilities
+Provides:       sax2:/usr/sbin/xapi
 
 %description -n sax2-gui
 This package contains the GUI for the SuSE Advanced X-Configuration
