@@ -62,10 +62,10 @@ MsgDetect* MonitorGetData (void) {
 	unsigned portID    = 0;
 	unsigned i         = 0;
 	char buf[256]      = "";
-	int  vt_orig       = getvt();
+	//int  vt_orig       = getvt();
 
-	chvt  (1);
-	sleep (1);
+	//chvt  (1);
+	//sleep (1);
 	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
 	hd = hd_list(hd_data, hw_monitor, 1, NULL);
 	first_dev = hd;
@@ -227,7 +227,7 @@ MsgDetect* MonitorGetData (void) {
 		last = display;
 		portID++;
 	}
-	chvt (vt_orig);
+	//chvt (vt_orig);
 	return (first);
 }
 
