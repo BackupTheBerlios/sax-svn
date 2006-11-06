@@ -349,6 +349,7 @@ fi
 %{_datadir}/sax/api/data/MonitorTraversal
 %{_datadir}/sax/sysp/script/installed.pl
 %{_datadir}/sax/sysp/script/killdot.pl
+%{_datadir}/sax/sysp/script/memory.pl
 %{_datadir}/sax/sysp/script/machine.pl
 %{_datadir}/sax/sysp/script/preparelog.pl
 %{_datadir}/sax/sysp/script/checkmap.pl

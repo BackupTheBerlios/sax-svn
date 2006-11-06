@@ -141,6 +141,8 @@ extern char* qx(char*command,int channel,int anz=0,char* format=NULL,...);
 extern int GetDisplay (void);
 extern void GetBusFormat(char *idstr,int *bus,int* slot,int *func);
 extern int GetDValue(char *hex);
+extern int chvt (int);
+extern int getvt (void);
 
 #endif
 

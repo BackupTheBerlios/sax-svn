@@ -20,28 +20,10 @@ STATUS        : development
 // MonitorSize...
 //-----------------------------------
 unsigned long MemorySize (void) {
-	hd_data_t* hd_data;
-	hd_res_t* res;
-	hd_t* hd;
-	unsigned long mem = 0;
-
-	hd_data = (hd_data_t*)calloc(1, sizeof *hd_data);
-	hd = hd_list(hd_data, hw_framebuffer, 1, NULL);
-
-	if (! hd) {
-		return (mem);
+	char* video = qx ( GETMEMORY,STDOUT );
+	if (video) {
+		return (atol (video));
+	} else {
+		return (0L);
 	}
-	for (res = hd->res; res; res = res->next) {
-	switch(res->any.type) {
-		case res_phys_mem:
-			mem = res->phys_mem.range / 1024;
-			return (mem);
-		break;
-		default:
-			// nothing to do for default...
-		break;
-	}	
-	}
-	hd = hd_free_hd_list (hd);
-	return (mem);
 }

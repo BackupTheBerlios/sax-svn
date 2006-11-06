@@ -89,12 +89,15 @@ void ScanXStuff::Scan (void) {
 	int mapnr    = 0;
 	int precard  = 0;
 	int card     = 0;
+	int vt_orig  = getvt(); 
 
 	//======================================
 	// Prepare Xstuff Scan
 	//-------------------------------------- 
+	chvt (1); sleep (1);
 	display = MonitorGetData();
 	VBEmem  = MemorySize();
+	chvt (vt_orig);
 	srvmsg.SetFile(SERVER_STUFF_DATA);
 	server.SetFile(SERVER_DATA);
 

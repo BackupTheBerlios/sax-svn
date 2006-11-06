@@ -23,6 +23,7 @@ STATUS        : development
 
 #include "../libhd/hd/hd.h"
 #include "../syslib.h"
+#include "../../config.h"
 
 //===================================
 // Defines...

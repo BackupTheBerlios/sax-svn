@@ -1,9 +1,12 @@
 -------------------------------------------------------------------
 Mon Nov  6 10:32:52 CET 2006 - ms@suse.de
 
-- removed vt-switch in case of monitor probing. I thought
-  this may help to overcome the problem of libhd not to be
-  able to detect the monitor but it doesn't help
+- added patch map for Intel Mac Mini's internal display (#218352)
+- exchanged libhd framebuffer check to determine the videoram
+  with a X11 probeonly call for the following reasons:
+  1) framebuffer size != videoram
+  2) framebuffer check could cause broken X11 screen which
+     needs a repaint by chvt(1) -> chvt(7)
 
 -------------------------------------------------------------------
 Mon Nov  6 09:47:54 CET 2006 - ms@suse.de
