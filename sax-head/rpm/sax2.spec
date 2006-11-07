@@ -16,7 +16,7 @@ URL:            http://sax.berlios.de
 %if %{?suse_version:1}0
 # SuSE Build Requires...
 %if %{suse_version} > 1010
-BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk
+BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk antlr
 %else
 BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
 %endif
