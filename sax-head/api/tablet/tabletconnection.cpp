@@ -96,6 +96,8 @@ void SCCTabletConnection::init ( void ) {
 	mPortBox -> insertItem ( mText["USB"] );
 	mPortBox -> insertItem ( mText["Serial1"] );
 	mPortBox -> insertItem ( mText["Serial2"] );
+	mPortBox -> insertItem ( mText["Serial3"] );
+	mPortBox -> insertItem ( mText["Serial4"] );
 
 	//=====================================
 	// set default tablet mode to relative
@@ -172,6 +174,12 @@ void SCCTabletConnection::setPort ( const QString& device ) {
 	}
 	if (device == "/dev/ttyS1") {
 		mPortBox -> setCurrentItem ( 2 );
+	}
+	if (device == "/dev/ttyS2") {
+		mPortBox -> setCurrentItem ( 2 );
+	}
+	if (device == "/dev/ttyS3") {
+		mPortBox -> setCurrentItem ( 3 );
 	}
 }
 //====================================
@@ -322,6 +330,12 @@ void SCCTabletConnection::slotTablet (
 		}
 		if (device == "/dev/ttyS1") {
 			mPortBox -> setCurrentItem ( 2 );
+		}
+		if (device == "/dev/ttyS2") {
+			mPortBox -> setCurrentItem ( 2 );
+		}
+		if (device == "/dev/ttyS3") {
+			mPortBox -> setCurrentItem ( 3 );
 		}
 	}
 	//====================================

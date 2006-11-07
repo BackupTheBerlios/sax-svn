@@ -218,6 +218,12 @@ bool SCCTablet::exportData ( void ) {
 				if (port.contains ("ttyS1")) {
 					saxTablet.setDevice ( "/dev/ttyS1" );
 				}
+				if (port.contains ("ttyS2")) {
+					saxTablet.setDevice ( "/dev/ttyS2" );
+				}
+				if (port.contains ("ttyS3")) {
+					saxTablet.setDevice ( "/dev/ttyS3" );
+				}
 				if (port.contains ("USB")) {
 					QProcess* proc = new QProcess ();
 					proc -> addArgument ( USB_PORT );

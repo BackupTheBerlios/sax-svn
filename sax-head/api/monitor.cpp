@@ -867,14 +867,66 @@ bool SCCMonitor::exportData ( void ) {
 						if ((key== "MonitorLayout") && (driver == "i810")) {
 							saxCard.addCardOption ( key,val );
 						}
-						if (key == "Clone") {
-							saxCard.addCardOption ( key,0 );
+						if ((key== "MetaModes") && (driver == "i810")) {
+							QList<QString> rList1=display->getResolution();
+							QString resolution1 = *rList1.at(0);
+							QList<QString> rList2=dualData->getResolutionList();
+							QString resolution2 = *rList2.at(0);
+							//====================================
+							// add primary meta mode
+							//------------------------------------
+							QString metaItem;
+							QString resolution;
+							QTextOStream (&metaItem) <<
+								resolution1 << "-" << resolution2;
+							resolution.append (";"+metaItem);
+							//====================================
+							// add secondary meta modes
+							//------------------------------------
+							bool startMeta = false;
+							QListIterator<QString> ir (rList1);
+							for (; ir.current(); ++ir) {
+								if (! startMeta) {
+									startMeta = true; continue;
+								}
+								QString metaItem;
+								int cmpr = compareResolution (
+									*ir.current(),resolution2
+								);
+								if (cmpr >= 0) {
+									QTextOStream (&metaItem) <<
+										*ir.current() << "-" << resolution2;
+								} else {
+									QTextOStream (&metaItem) <<
+										*ir.current() << "-" << *ir.current();
+								}
+								resolution.append (";"+metaItem);
+							}
+							resolution.replace(QRegExp("^;"),"");
+							saxCard.addCardOption ( key,resolution );
 						}
-						if (key == "CloneRefresh") {
-							QString vsync;
-							int vsmax = dualModel->getVSmax();
-							QTextOStream (&vsync) << vsmax;
-							saxCard.addCardOption ( key,vsync );
+						if (key == "SecondPosition") {
+							int orientation  = dualData->getLayout();
+							QString position = DUAL_LEFTOF_KEY;
+							switch (orientation) {
+								case DUAL_ABOVEOF:
+									position = DUAL_ABOVEOF_KEY;
+								break;
+								case DUAL_RIGHTOF:
+									position = DUAL_RIGHTOF_KEY;
+								break;
+								case DUAL_BELOWOF:
+									position = DUAL_BELOWOF_KEY;
+								break;
+								default:
+								break;
+							}
+							saxCard.addCardOption ( key,position );
+							int mode = dualData->getMode();
+							if ( mode == DUAL_CLONE ) {
+								saxCard.removeCardOption (key);
+								saxCard.addCardOption (key,DUAL_CLONE_KEY);
+							}
 						}
 						//====================================
 						// setup profile FGLRX data

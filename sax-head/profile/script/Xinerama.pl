@@ -55,6 +55,8 @@ print STDERR "Xinerama: selected profile: $used\n";
 if ( -f "$used.pl" ) {
 	print STDERR "Xinerama: calling profile script: $used.pl\n";
 	qx ($used.pl);
-	$used="$used.tmp";
+	my $base = qx (basename $used);
+	chomp $base;
+	$used="/var/lib/sax/$base.tmp";
 }
 qx (cp $used $profile);

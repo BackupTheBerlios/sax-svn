@@ -27,7 +27,9 @@ if (! ProfileIsXOrgVendor ("fglrx")) {
 	if ( -f "$used.pl" ) {
 		print STDERR "$name: calling profile script: $used.pl\n";
 		qx ($used.pl);
-		$used="$used.tmp";
+		my $base = qx (basename $used);
+		chomp $base;
+		$used="/var/lib/sax/$base.tmp";
 	}
 	qx (cp $used $profile);
 } else {
