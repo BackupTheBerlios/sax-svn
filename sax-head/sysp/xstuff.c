@@ -75,6 +75,76 @@ FindParseData (map<int,ParseData> m,int bus,int slot,int func) {
 }
 
 //======================================
+// ScanXStuff: create a probing config
+//--------------------------------------
+char* ScanXStuff::createProbeonlyConfig (
+	XF86ConfigFile srvmsg,int card,map<int,ServerData> graphics
+) {
+	char* config = (char*)malloc(sizeof(char)*128);
+	sprintf(config,"%s-%d",TMP_CONFIG,getpid());
+	map<int,string> section;
+	ScanMouse mouse;
+	ofstream handle(config);
+	//======================================
+	// open startup config...
+	//--------------------------------------
+	if (! handle) {
+		cout << "ScanXStuff: could not create file: ";
+		cout << TMP_CONFIG << endl;
+		return 0;
+	}
+ 	//======================================
+	// scan the mouse...
+	//--------------------------------------
+	mouse.Scan(); MouseData mdata = mouse.Pop();
+	srvmsg.SetMouseProperties(mdata.protocol,mdata.device);
+	//======================================
+	// create base sections...
+	//--------------------------------------
+	section[0] = srvmsg.DoFilesSection();
+	section[1] = srvmsg.DoModuleSection();
+	section[2] = srvmsg.DoInputDeviceSection();
+
+	srvmsg.SetSectionID(card);
+	section[3] = srvmsg.DoServerLayoutSection();
+	//======================================
+	// create dynamic sections...
+	//--------------------------------------
+	for (int n=0;n<card;n++) {
+		srvmsg.SetSectionID(n);
+		if ((srvmsg.SetDriver(graphics[n].module)) == 1) {
+			cout << "SaX: sorry could not open /dev/fb0... abort\n";
+			exit(1);
+		}
+		srvmsg.SetBus (
+			graphics[n].domain,graphics[n].bus,
+			graphics[n].slot,graphics[n].func
+		);
+		srvmsg.SetDeviceOption (graphics[n].option);
+		section[4] = section[4] + "\n" + srvmsg.DoMonitorSection();
+		section[5] = section[5] + "\n" + srvmsg.DoScreenSection();
+		section[6] = section[6] + "\n" + srvmsg.DoDeviceSection();
+		section[7] = section[7] + "\n" + srvmsg.DoServerFlagsSection();
+	}
+	//======================================
+	// write sections to file...
+	//--------------------------------------
+	handle << section[0] << endl;
+	handle << section[1] << endl;
+	handle << section[7] << endl;
+	handle << section[2] << endl;
+	handle << section[4] << endl;
+	handle << section[5] << endl;
+	handle << section[6] << endl;
+	handle << section[3] << endl;
+	//======================================
+	// Call server creating a log file
+	//--------------------------------------
+	handle.close();
+	return config;
+}
+
+//======================================
 // ScanXStuff: hw scan of StuffData
 //--------------------------------------
 void ScanXStuff::Scan (void) {
@@ -92,12 +162,14 @@ void ScanXStuff::Scan (void) {
 	int vt_orig  = getvt(); 
 
 	//======================================
+	// Change VT to console 1
+	//--------------------------------------
+	chvt (1); sleep (1);
+
+	//======================================
 	// Prepare Xstuff Scan
 	//-------------------------------------- 
-	chvt (1); sleep (1);
 	display = MonitorGetData();
-	VBEmem  = MemorySize();
-	chvt (vt_orig);
 	srvmsg.SetFile(SERVER_STUFF_DATA);
 	server.SetFile(SERVER_DATA);
 
@@ -136,6 +208,16 @@ void ScanXStuff::Scan (void) {
 		card++;
 	}
 	precard = card;
+
+	//======================================
+	// create probing config file
+	//--------------------------------------
+	char* config = createProbeonlyConfig (srvmsg,card,graphics);
+
+	//======================================
+	// try to detect memory size
+	//--------------------------------------
+	VBEmem  = MemorySize(config);
 
 	// .../
 	// it is not sure to get any server message data this depend on
@@ -191,71 +273,19 @@ void ScanXStuff::Scan (void) {
 		// call a server to setup parse
 		//--------------------------------------
 		if (srvmsg.Read() < 0) {
-			str config;
-			sprintf(config,"%s-%d",TMP_CONFIG,getpid());
-			map<int,string> section;
-			ScanMouse mouse;
-			ofstream handle(config);
-			//======================================
-			// open startup config...
-			//--------------------------------------
-			if (! handle) {
-				cout << "ScanXStuff: could not create file: ";
-				cout << TMP_CONFIG << endl;
-				return;
-			}
- 			//======================================
-			// scan the mouse...
-			//--------------------------------------
-			mouse.Scan(); MouseData mdata = mouse.Pop();
-			srvmsg.SetMouseProperties(mdata.protocol,mdata.device);
-			//======================================
-			// create base sections...
-			//--------------------------------------
-			section[0] = srvmsg.DoFilesSection();
-			section[1] = srvmsg.DoModuleSection();
-			section[2] = srvmsg.DoInputDeviceSection();
-
-			srvmsg.SetSectionID(card);
-			section[3] = srvmsg.DoServerLayoutSection();
-			//======================================
-			// create dynamic sections...
-			//--------------------------------------
-			for (int n=0;n<card;n++) {
-				srvmsg.SetSectionID(n);
-				if ((srvmsg.SetDriver(graphics[n].module)) == 1) {
-					cout << "SaX: sorry could not open /dev/fb0... abort\n";
-					exit(1);
-				}
-				srvmsg.SetBus (
-					graphics[n].domain,graphics[n].bus,
-					graphics[n].slot,graphics[n].func
-				);
-				srvmsg.SetDeviceOption (graphics[n].option);
-				section[4] = section[4] + "\n" + srvmsg.DoMonitorSection();
-				section[5] = section[5] + "\n" + srvmsg.DoScreenSection();
-				section[6] = section[6] + "\n" + srvmsg.DoDeviceSection();
-				section[7] = section[7] + "\n" + srvmsg.DoServerFlagsSection();
-			}
-			//======================================
-			// write sections to file...
-			//--------------------------------------
-			handle << section[0] << endl;
-			handle << section[1] << endl;
-			handle << section[7] << endl;
-			handle << section[2] << endl;
-			handle << section[4] << endl;
-			handle << section[5] << endl;
-			handle << section[6] << endl;
-			handle << section[3] << endl;
-			//======================================
-			// Call server creating a log file
-			//--------------------------------------
-			handle.close();
 			srvmsg.CallXF86Loader(config); 
-			unlink(config);
 		}
 	}
+	//======================================
+	// remove probing config file
+	//--------------------------------------
+	unlink(config);
+
+	//======================================
+	// Reset VT to original terminal
+	//--------------------------------------
+	chvt (vt_orig);
+
 	//======================================
 	// parse data from the X11 log -> parse
 	//--------------------------------------

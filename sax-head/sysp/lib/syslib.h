@@ -132,7 +132,7 @@ extern FbData* FbGetData(void);
 extern MouseData* MouseGetData(void);
 extern KbdData* KeyboardGetData(void); 
 extern MsgDetect* MonitorGetData(void);
-extern unsigned long MemorySize (void);
+extern unsigned long MemorySize (char*);
 extern int TvSupport (void);
 extern char* vesaBIOS (void);
 extern char* mediaDevices (void);

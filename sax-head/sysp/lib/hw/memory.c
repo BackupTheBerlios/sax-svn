@@ -19,8 +19,8 @@ STATUS        : development
 //===================================
 // MonitorSize...
 //-----------------------------------
-unsigned long MemorySize (void) {
-	char* video = qx ( GETMEMORY,STDOUT );
+unsigned long MemorySize (char* config) {
+	char* video = qx ( GETMEMORY,STDOUT,1,"%s",config );
 	if (video) {
 		return (atol (video));
 	} else {

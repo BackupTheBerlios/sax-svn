@@ -61,6 +61,7 @@ class ScanXStuff {
 
 	private:
 	int FindParseData (map<int,ParseData> m,int bus,int slot,int func);
+	char* createProbeonlyConfig (XF86ConfigFile,int,map<int,ServerData>);
   
 	public:
 	class ReadLastElement : public::exception {

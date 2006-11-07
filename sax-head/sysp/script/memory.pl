@@ -14,7 +14,8 @@
 use strict;
 use Env;
 
-my $video = qx (X -probeonly -verbose :98 2>&1 | grep -i videoram);
+my $param = "-probeonly -logverbose 255 -verbose -xf86config $ARGV[0]";
+my $video = qx (X $param :99 2>&1 | grep -i videoram);
 if ($video =~ /(\d+) kByte/) {
 	print "$1\n";
 } else {

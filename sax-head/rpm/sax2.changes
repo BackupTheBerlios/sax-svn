@@ -2,6 +2,11 @@
 Tue Nov  7 11:32:58 CET 2006 - ms@suse.de
 
 - update translations
+- fixed sysp memory detection. sysp needs to create a temporary
+  config file to be able to call X with probeonly. This was done
+  for multiple cards only but it is now as well needed for a device
+  count of 1. Additionally vt swtich is done for the complete
+  duration of detection
 
 -------------------------------------------------------------------
 Mon Nov  6 10:32:52 CET 2006 - ms@suse.de
