@@ -96,6 +96,22 @@ sub main {
 		$tagsID,$treeID,$PatchList,$SourceList,$LocalSource
 	);
 	#==============================================
+	# Add %changelog
+	#----------------------------------------------
+	my $bin = "/suse/ms/bin/convert_changes_to_rpm_changelog";
+	if (open (FD,">>$pacdir/sax2.spec")) {
+		print FD "\n";
+		print FD '%changelog -n sax2';
+		print FD "\n";
+		if (open (LG,"$bin $pacdir/sax2.changes|")) {
+			while (<LG>) {
+				print FD $_;
+			}
+		}
+		close FD;
+		close LG;
+	}
+	#==============================================
 	# Creating Patches...
 	#----------------------------------------------
 	my @patches = ();
