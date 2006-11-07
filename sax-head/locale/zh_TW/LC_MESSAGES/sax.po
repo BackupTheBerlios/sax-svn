@@ -1,12 +1,11 @@
-# SaX Translations.
-# Craig Jeffares cjeffares@novell.com
-# 
-# 
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Sax\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 11:29\n"
+"PO-Revision-Date: 2006-11-02 14:23\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +69,7 @@ msgstr "<b>結束 SaX2</b><hr>現在結束 SaX2？"
 
 #. Message box default caption text
 msgid "Message"
-msgstr "訊息"
+msgstr "郵件"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
@@ -121,9 +120,8 @@ msgid "Touchscreen Properties"
 msgstr "觸控式螢幕內容"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "遠端存取內容"
+msgstr "遠端存取"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -131,7 +129,7 @@ msgstr "遠端存取內容"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
-msgstr "顯示器"
+msgstr "顯示"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -380,6 +378,8 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>請注意：</b><hr>組態為 <i>Framebuffer</i> 式，您的系統不支援變更解析度和/"
+"或顏色設定。"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -487,7 +487,7 @@ msgstr ""
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
-msgstr "傳統的"
+msgstr "正體"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
@@ -520,7 +520,7 @@ msgstr "傳統的配置"
 
 #. Table topic text describing the status column
 msgid "Status"
-msgstr "狀態"
+msgstr "狀況"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
@@ -899,13 +899,12 @@ msgstr ""
 "器。"
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "X Server Remote Control"
-msgstr "X 伺服器設定"
+msgstr "X Server 遠端控制"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "允許存取您 X Server 的顯示器和鍵盤/滑鼠  "
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -932,36 +931,33 @@ msgid "Activate HTTP Access"
 msgstr "啟用 HTTP 存取"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "允許多重 VNC 連線"
+msgstr "允許多條連結"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP 埠"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
-msgstr "<b>VNC 密碼不相符</b><hr>第一個和第二個密碼版本不相符。"
+msgstr "<b>遠端存取密碼不相符</b><hr>第一版和第二版密碼不相符。"
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>密碼錯誤</b><hr>密碼欄位為空白或者密碼太短。請輸入至少 6 個字元的密碼。"
+"<b>遠端存取密碼錯誤</b><hr>密碼欄位保留為空白，或密碼過短。請輸入最少為 6 個"
+"字元的密碼。"
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
-msgstr "<b>VNC 密碼錯誤</b><hr>密碼太長。請輸入最多為 8 個字元長度的密碼。"
+msgstr "<b>遠端存取密碼錯誤</b><hr>密碼過長。請輸入最多為  8 個字元的密碼。"
 
 #. Install missing packages box
 msgid ""
@@ -1008,14 +1004,13 @@ msgstr ""
 "案。下列報告已經透過呼叫實例建立："
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>VNC 組態資訊</b><hr>VNC 服務要求防火牆中必須開啟 TCP 埠 5900 和一個 HTTP "
-"埠 (預設為 5800)。您可以使用 YaST 設定這一項。"
+"<b>遠端存取組態資訊</b><hr>遠端存取服務需要開啟防火牆中的 TCP 埠 5900 和 "
+"HTTP 埠 (預設值為 5800)。您可以使用 YaST 來設定。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1107,7 +1102,7 @@ msgstr "愛沙尼亞"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr "緬甸文"
+msgstr "緬甸"
 
 #. XKBFile extension text
 msgid "Norway"
@@ -1127,7 +1122,7 @@ msgstr "不丹"
 
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr "孟加拉共和國"
+msgstr "孟加拉"
 
 #. XKBFile extension text
 msgid "Latin American"
@@ -1159,7 +1154,7 @@ msgstr "葡萄牙"
 
 #. XKBFile extension text
 msgid "Korean"
-msgstr "韓語"
+msgstr "韓文"
 
 #. XKBFile extension text
 msgid "Maori"
@@ -1191,7 +1186,7 @@ msgstr "瑞士"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr "寮語"
+msgstr "寮國"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1219,7 +1214,7 @@ msgstr "丹麥"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr "斯洛維尼亞共和國"
+msgstr "斯洛凡尼亞"
 
 #. XKBFile extension text
 msgid "Malta"
@@ -1227,7 +1222,7 @@ msgstr "馬爾他"
 
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr "亞塞拜然"
+msgstr "亞賽拜然"
 
 #. XKBFile extension text
 msgid "Lithuania"
@@ -1263,7 +1258,7 @@ msgstr "冰島"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr "克羅埃西亞共和國"
+msgstr "克羅埃西亞"
 
 #. XKBFile extension text
 msgid "Latvia"
@@ -1315,7 +1310,7 @@ msgstr "匈牙利"
 
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr "柬埔寨"
+msgstr "柬埔寨王國"
 
 #. XKBFile extension text
 msgid "Spain"
@@ -1371,7 +1366,7 @@ msgstr "波士尼亞及亞塞哥維那"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr "塞爾維亞和芒特尼格羅共和國"
+msgstr "塞爾維亞和黑山"
 
 #. XKBFile extension text
 msgid "Brazil"
@@ -1383,7 +1378,7 @@ msgstr "迦納"
 
 #. XKBFile extension text
 msgid "Andorra"
-msgstr "安道爾共和國"
+msgstr "安道爾"
 
 #. XKBFile extension text
 msgid "Afghanistan"
@@ -1412,7 +1407,7 @@ msgstr "小"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "一般"
+msgstr "正常"
 
 #. Maximum length: 40  characters
 msgid "Big"
@@ -1451,15 +1446,3 @@ msgstr "顯示器組態"
 
 msgid "Idle timer..."
 msgstr "閒置計時器..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC 伺服器"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "允許使用 VNC 協定存取顯示器"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC 選項"

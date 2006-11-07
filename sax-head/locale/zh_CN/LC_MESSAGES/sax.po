@@ -1,12 +1,11 @@
-# SaX Translations.
-# Craig Jeffares cjeffares@novell.com
-# 
-# 
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Sax\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 10:24\n"
+"PO-Revision-Date: 2006-11-02 14:21\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +69,7 @@ msgstr "<b>退出 SaX2</b><hr>是否立即退出 SaX2？"
 
 #. Message box default caption text
 msgid "Message"
-msgstr "讯息"
+msgstr "信件"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
@@ -79,7 +78,7 @@ msgstr "更改配置(&H)"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "监视器"
+msgstr "显视器"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
@@ -121,9 +120,8 @@ msgid "Touchscreen Properties"
 msgstr "触摸屏属性"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "远程访问属性"
+msgstr "远程访问"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -381,6 +379,8 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>请注意：</b><hr>该配置是基于 <i>Framebuffer</i> 的，系统不支持对分辨率和/"
+"或颜色设置的更改。"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -489,7 +489,7 @@ msgstr ""
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
-msgstr "典型"
+msgstr "繁体"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
@@ -900,13 +900,12 @@ msgstr ""
 "试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ] 键</b>停止服务器。"
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "X Server Remote Control"
-msgstr "X 服务器设置"
+msgstr "X Server 远程控制"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "允许访问 X Server 的显示器和键盘/鼠标"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -914,7 +913,7 @@ msgstr "激活口令保护"
 
 #. LineEdit label: enter password
 msgid "Password"
-msgstr "口令"
+msgstr "密码"
 
 #. LineEdit contents: enter new password
 msgid "<Enter new password>"
@@ -933,37 +932,33 @@ msgid "Activate HTTP Access"
 msgstr "激活 HTTP 访问"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "允许多个 VNC 连接"
+msgstr "允许多个连接"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP 端口"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
-msgstr "<b>VNC 口令不匹配</b><hr>两次输入的口令不相同。"
+msgstr "<b>远程访问口令不匹配</b><hr>口令的第一个和第二个版本不匹配。"
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>VNC 口令错误</b><hr>口令字段保留为空或口令过短。输入长度不小于 6 个字符的"
+"<b>远程访问口令错误</b><hr>口令字段被留空或口令太短。请输入至少有 6 个字符的"
 "口令。"
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
-msgstr "<b>VNC 口令错误</b><hr>口令太长。请输入最多为 8 个字符的口令。"
+msgstr "<b>远程访问口令错误</b><hr>口令太长。请输入至多有 8 个字符的口令。"
 
 #. Install missing packages box
 msgid ""
@@ -1010,14 +1005,13 @@ msgstr ""
 "tt>。根据调用的实例创建了下列报告："
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>VNC 配置信息</b><hr>VNC 服务需要在防火墙中打开 TCP 端口 5900 和一个 HTTP "
-"端口（默认为 5800）。可以使用 YaST 进行配置。"
+"<b>远程访问配置信息</b><hr>远程访问服务需要防火墙上的 TCP 端口 5900 和 HTTP "
+"端口（默认情况下为 5800）打开。可以使用 YaST 配置它。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1414,7 +1408,7 @@ msgstr "小"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "常规"
+msgstr "中"
 
 #. Maximum length: 40  characters
 msgid "Big"
@@ -1453,15 +1447,3 @@ msgstr "显示器配置"
 
 msgid "Idle timer..."
 msgstr "空闲计时器..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC 服务器"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "允许使用 VNC 协议访问显示"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC 选项"

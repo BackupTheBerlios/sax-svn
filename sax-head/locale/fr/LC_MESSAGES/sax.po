@@ -1,25 +1,16 @@
-# translation of sax.po to 
-# translation of sax.po to français
-# translation of sax.fr.po to Français
-# domain "sax.mo"
-# French message file for SaX.
-# Copyright (C)  SuSE GmbH, 2000..2001
-# Francoise Lermen <flermen@suse.de>, 2000..2001.
-# Patricia Vaz <Patricia.Vaz@suse.de>, 2003,2004.
-# Patricia Vaz <patricia.vaz@suse.com>, 2004.
-# Patricia Vaz <patricia@suse.de>, 2005.
-# 
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 08:45\n"
+"PO-Revision-Date: 2006-11-02 14:16\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -62,7 +53,7 @@ msgstr "&Valider"
 
 #. Yes Button text
 msgid "&Yes"
-msgstr "&Oui"
+msgstr "O&ui"
 
 #. No Button text
 msgid "&No"
@@ -79,7 +70,7 @@ msgstr "<b>Quitter SaX2</b><hr>Quitter SaX2 maintenant ?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr "Message"
+msgstr "message"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
@@ -88,7 +79,7 @@ msgstr "C&hanger la configuration"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "Écran"
+msgstr "Moniteur"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
@@ -130,9 +121,8 @@ msgid "Touchscreen Properties"
 msgstr "Propriétés de l'écran tactile"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Propriétés d'accès à distance"
+msgstr "Accès à distance"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -140,7 +130,7 @@ msgstr "Propriétés d'accès à distance"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
-msgstr "Afficher"
+msgstr "Affichage"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -391,6 +381,9 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>Remarque :</b><hr>La configuration est basée sur <i>Framebuffer</i> et "
+"votre système ne prend pas en charge la modification des paramètres de "
+"résolution et/ou de couleur."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -748,7 +741,9 @@ msgstr "La touche Alt droite change de groupe."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr "Maj avec les touches du pavé numérique fonctionne comme sous Windows."
+msgstr ""
+"Maj avec les touches du pavé numérique fonctionne comme sous Microsoft "
+"Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -925,13 +920,13 @@ msgstr ""
 "sur <b>[ Ctrl+Alt+Retour arrière ]</b> pour supprimer (kill) le serveur."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "X Server Remote Control"
-msgstr "Paramètres du serveur X"
+msgstr "Contrôle à distance du serveur X"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
 msgstr ""
+"Autoriser l'accès à l'écran et au clavier/à la souris de votre serveur X"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -958,42 +953,38 @@ msgid "Activate HTTP Access"
 msgstr "Activer l'accès HTTP"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "Autoriser plusieurs connexions VNC"
+msgstr "Autoriser plusieurs connexions"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "Port HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>Non concordance de mot de passe VNC</b><hr>La première et la seconde "
-"version du mot de passe ne correspondent pas."
+"<b>Mots de passe d'accès à distance différents</b><hr>Les deux versions du "
+"mot de passe ne correspondent pas."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>Erreur de mot de passe VNC</b><hr>Le champ mot de passe est vide ou le "
-"mot de passe est trop court. Entrez un mot de passe de six caractères au "
-"moins."
+"<b>Erreur de mot de passe d'accès à distance</b><hr>Le mot de passe n'a pas "
+"été renseigné ou il est trop court. Le mot de passe doit comporter au moins "
+"six caractères."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>Erreur de mot de passe VNC</b><hr>Le mot de passe est trop long. Entrez "
-"un mot de passe ne dépassant pas huit caractères."
+"<b>Erreur de mot de passe d'accès à distance</b><hr>Le mot de passe est trop "
+"long. Le mot de passe doit comporter au plus huit caractères."
 
 #. Install missing packages box
 msgid ""
@@ -1045,15 +1036,15 @@ msgstr ""
 "créé par l'instance appelante :"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>Informations de configuration VNC</b><hr>Le service VNC requiert que le "
-"port TCP 5900 et qu'un port HTTP (5800 par défaut) soient ouverts dans le "
-"pare-feu.  Utilisez YaST pour configurer ces éléments."
+"<b>Erreur de configuration de l'accès à distance</b><hr>Le service d'accès à "
+"distance nécessite que le port TCP 5900 et qu'un port HTTP (par défaut, le "
+"port 5800) soient ouverts sur le pare-feu. Cette option peut être configurée "
+"dans YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1277,7 +1268,7 @@ msgstr "Viêt Nam"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr "Îles Feroe"
+msgstr "Îles Féroé"
 
 #. XKBFile extension text
 msgid "South Africa"
@@ -1341,7 +1332,7 @@ msgstr "Pologne"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "Kyrgyzstan"
+msgstr "Kirghizistan"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1450,7 +1441,7 @@ msgstr "Petit"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "Normal"
+msgstr "Normale"
 
 #. Maximum length: 40  characters
 msgid "Big"
@@ -1489,15 +1480,3 @@ msgstr "Configuration sur le display"
 
 msgid "Idle timer..."
 msgstr "Délai d'inactivité..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "Serveur VNC"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Autoriser l'accès à l'écran en utilisant le protocole VNC"
-
-#~ msgid "VNC Options"
-#~ msgstr "Options VNC"

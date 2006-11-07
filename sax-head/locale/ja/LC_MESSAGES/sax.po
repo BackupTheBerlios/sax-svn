@@ -1,12 +1,11 @@
-# Japanese message file for SaX  -*- coding: utf-8 -*-
-# Copyright (C) SuSE Linux AG, 2002
-# Mike Fabian <mfabian@suse.de>, 2002
-# 
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: SaX\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-16 14:06\n"
+"PO-Revision-Date: 2006-11-03 13:52\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +45,7 @@ msgstr "SaXコントロールセンター"
 
 #. Help Button text
 msgid "&Help"
-msgstr "ヘルプ (&H)"
+msgstr "ヘルプ(&H)"
 
 #. Ok Button text
 msgid "O&K"
@@ -54,16 +53,16 @@ msgstr "OK(&K)"
 
 #. Yes Button text
 msgid "&Yes"
-msgstr "はい (&Y)"
+msgstr "はい(&Y)"
 
 #. No Button text
 msgid "&No"
-msgstr "いいえ (&N)"
+msgstr "いいえ(&N)"
 
 #. Cancel Button text
 #. Maximum length: 40  characters
 msgid "&Cancel"
-msgstr "キャンセル (&C)"
+msgstr "キャンセル(&C)"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
@@ -80,7 +79,7 @@ msgstr "環境設定の変更(&h)"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "モニター"
+msgstr "モニタ"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
@@ -122,9 +121,8 @@ msgid "Touchscreen Properties"
 msgstr "タッチスクリーンのプロパティ"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "リモートアクセスのプロパティ"
+msgstr "リモートアクセス"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -132,7 +130,7 @@ msgstr "リモートアクセスのプロパティ"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
-msgstr "画面"
+msgstr "表示"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -168,7 +166,7 @@ msgstr "デュアルヘッドモード"
 #. Group box title for tablet options
 #. Group box title for the VNC options
 msgid "Options"
-msgstr "オプション(O)"
+msgstr "オプション"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
@@ -197,7 +195,7 @@ msgstr "画面の回転"
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr "テスト(T)"
+msgstr "テスト"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
@@ -383,6 +381,9 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>注意:</b><hr>設定は<i>フレームバッファ</i>ベースです。解像度と色の設定の変"
+"更またはどちらかを変更することは、お使いのシステムではサポートされていませ"
+"ん。"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -496,7 +497,7 @@ msgstr ""
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
-msgstr "伝統的"
+msgstr "繁体字中国語"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
@@ -516,7 +517,7 @@ msgstr "基本の設定"
 
 #. Label text for the primary keyboard type
 msgid "Type"
-msgstr "タイプ"
+msgstr "種類"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
@@ -919,13 +920,12 @@ msgstr ""
 "い。"
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "X Server Remote Control"
-msgstr "X Server設定"
+msgstr "Xサーバーのリモートコントロール"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "お使いのXサーバのディスプレイとキーボード/マウスへのアクセスを許可する"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -952,40 +952,38 @@ msgid "Activate HTTP Access"
 msgstr "HTTPアクセスを有効にする"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "複数のVNC接続を許可する"
+msgstr "複数の接続を許可する"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP ポート"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"VNCパスワードの不一致<hr>パスワードの最初と2番目のバージョンが一致しません。"
+"<b>リモートアクセスパスワードの不一致</b><hr>パスワードの最初と2番目のバー"
+"ジョンが一致しません。"
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"VNCパスワードの誤り<hr>パスワードフィールドが空白のままになっているか、パス"
-"ワードが短すぎます。 6文字以上でパスワードを入力してください。"
+"<b>リモートアクセスパスワードの誤り</b><hr>パスワードフィールドが空白のままに"
+"なっているか、パスワードが短すぎます。6文字以上でパスワードを入力してくださ"
+"い。"
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>VNCパスワードの誤り</b><hr>パスワードが長すぎます。パスワードは8文字以内で"
-"指定してください。"
+"<b>リモートアクセスパスワードの誤り</b><hr>パスワードが長すぎます。パスワード"
+"は8文字以内で指定してください。"
 
 #. Install missing packages box
 msgid ""
@@ -1035,15 +1033,14 @@ msgstr ""
 "成されています:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>VNC設定情報</b><hr>VNC サービスではTCPポート5900およびHTTPポート(デフォル"
-"トでは5800)がファイアウォールで開いていることが要求されます。  YaSTでこれを設"
-"定できます。"
+"<b>リモートアクセス設定情報</b><hr>リモートアクセスサービスではTCPポート5900"
+"およびHTTPポート(デフォルトでは5800)がファイアウォールで開いていることが要求"
+"されます。YaSTでこれを設定できます。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1151,11 +1148,11 @@ msgstr "モンゴル"
 
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr "ブータン"
+msgstr "ブタン"
 
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr "バングラデシュ"
+msgstr "バングラデッシュ"
 
 #. XKBFile extension text
 msgid "Latin American"
@@ -1247,7 +1244,7 @@ msgstr "デンマーク"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr "スロヴェニア"
+msgstr "スロベニア"
 
 #. XKBFile extension text
 msgid "Malta"
@@ -1259,7 +1256,7 @@ msgstr "アゼルバイジャン"
 
 #. XKBFile extension text
 msgid "Lithuania"
-msgstr "リトアニア"
+msgstr "リスアニア"
 
 #. XKBFile extension text
 msgid "Vietnam"
@@ -1279,11 +1276,11 @@ msgstr "ペルシア語"
 
 #. XKBFile extension text
 msgid "Slovakia"
-msgstr "スロヴァキア"
+msgstr "スロバキア"
 
 #. XKBFile extension text
 msgid "Maldives"
-msgstr "モルディヴ"
+msgstr "モルジブ"
 
 #. XKBFile extension text
 msgid "Iceland"
@@ -1291,7 +1288,7 @@ msgstr "アイスランド"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr "クロアティア"
+msgstr "クロアチア"
 
 #. XKBFile extension text
 msgid "Latvia"
@@ -1315,7 +1312,7 @@ msgstr "英国"
 
 #. XKBFile extension text
 msgid "France"
-msgstr "フランス"
+msgstr "仏国"
 
 #. XKBFile extension text
 msgid "Armenia"
@@ -1331,7 +1328,7 @@ msgstr "ポーランド"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "キルギスタン"
+msgstr "キリジスタン"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1359,7 +1356,7 @@ msgstr "ルーマニア"
 
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr "カザフスタン"
+msgstr "カザフタン"
 
 #. XKBFile extension text
 msgid "Georgia"
@@ -1399,7 +1396,7 @@ msgstr "ボスニア-ヘルツェゴヴィナ"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr "セルビアモンテネグロ"
+msgstr "セルビア・モンテネグロ"
 
 #. XKBFile extension text
 msgid "Brazil"
@@ -1440,7 +1437,7 @@ msgstr "小さい"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "通常"
+msgstr "普通"
 
 #. Maximum length: 40  characters
 msgid "Big"
@@ -1479,15 +1476,3 @@ msgstr "画面の設定:"
 
 msgid "Idle timer..."
 msgstr "アイドルタイマ ..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNCサーバ"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "VNCプロトコルを使用してディスプレイへのアクセスを許可"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC オプション"
