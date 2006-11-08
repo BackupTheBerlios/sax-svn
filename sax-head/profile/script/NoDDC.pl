@@ -14,7 +14,7 @@ my $profile = ProfileInitScript();
 # get current bool options
 #------------------------------------
 my $import = new SaX::SaXImport ( $SaX::SAX_CARD );
-#$import->setSource ( $SaX::SAX_AUTO_PROBE );
+$import->setSource ( $SaX::SAX_AUTO_PROBE );
 $import->doImport();
 my $saxCard = new SaX::SaXManipulateCard ( $import );
 my %options = %{$saxCard -> getOptions()};
