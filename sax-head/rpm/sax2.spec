@@ -66,8 +66,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-tools
-Version:        8.1
-Release:        9
 Summary:        X Window System tools for SaX2
 Group:          System/X11/Utilities
 Requires:       coreutils
@@ -97,8 +95,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-ident
-Version:        8.1
-Release:        9
 Summary:        SaX2 identity and profile information
 Group:          System/X11/Utilities
 Provides:       sax2:/usr/share/sax/sysp/maps/Identity.map
@@ -119,8 +115,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-gui
-Version:        8.1
-Release:        9
 %if %{?suse_version:1}0
 # SuSE Requires...
 Requires:       netpbm sax2-tools qt3 fvwm2 sax2
@@ -142,8 +136,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax
-Version:        8.1
-Release:        9
 %if %{?suse_version:1}0
 # SuSE Requires...
 Requires:       sax2-tools qt3 fvwm2 sax2
@@ -168,8 +160,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-devel
-Version:        8.1
-Release:        9
 Requires:       sax2-libsax
 Summary:        SaX management library header files for X Window System-configuration development
 Group:          Development/Libraries/X11
@@ -185,8 +175,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-perl
-Version:        8.1
-Release:        9
 Requires:       sax2-libsax
 Summary:        Language binding to use libsax with perl
 Group:          Development/Libraries/X11
@@ -202,8 +190,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-python
-Version:        8.1 
-Release:        9
 Requires:       sax2-libsax
 %if %{?suse_version:1}0
 # SuSE Requires...
@@ -225,8 +211,6 @@ Authors:
 
 %if %{build_java}
 %package -n sax2-libsax-java
-Version:        8.1
-Release:        9
 Requires:       sax2-libsax jre1.2.x
 Summary:        Language binding to use libsax with java
 Group:          Development/Libraries/X11

@@ -635,6 +635,9 @@ bool SCCMonitor::exportData ( void ) {
 						//====================================
 						// setup profile SiS data
 						//------------------------------------
+						if ((key == "MergedFB") && (driver == "sis")) {
+							saxCard.addCardOption ( key,0 );
+						}
 						if (key == "MergedFBAuto") {
 							saxCard.addCardOption ( key,0 );
 						}
@@ -780,7 +783,7 @@ bool SCCMonitor::exportData ( void ) {
 						//====================================
 						// setup profile Radeon data
 						//------------------------------------
-						if (key == "MergedFB") {
+						if ((key == "MergedFB") && (driver == "radeon")) {
 							saxCard.addCardOption ( key,0 );
 						}
 						if (key == "CRT2HSync") {
@@ -905,7 +908,7 @@ bool SCCMonitor::exportData ( void ) {
 							resolution.replace(QRegExp("^;"),"");
 							saxCard.addCardOption ( key,resolution );
 						}
-						if (key == "SecondPosition") {
+						if (key == "Clone") {
 							int orientation  = dualData->getLayout();
 							QString position = DUAL_LEFTOF_KEY;
 							switch (orientation) {
@@ -921,11 +924,16 @@ bool SCCMonitor::exportData ( void ) {
 								default:
 								break;
 							}
-							saxCard.addCardOption ( key,position );
+							saxCard.removeCardOption (key);
+							saxCard.removeCardOption ("MergedFB");
 							int mode = dualData->getMode();
 							if ( mode == DUAL_CLONE ) {
-								saxCard.removeCardOption (key);
-								saxCard.addCardOption (key,DUAL_CLONE_KEY);
+								saxCard.addCardOption ("Clone","yes");
+							} else {
+								saxCard.addCardOption ("MergedFB","yes");
+								saxCard.addCardOption (
+									"SecondPosition",position
+								);
 							}
 						}
 						//====================================

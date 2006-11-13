@@ -39,7 +39,6 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 	#------------------------------------
 	my $mlayout = ProfileNVidiaSetupMonitorLayout ($profile);
 	my ($CA,$CB) = split (/,/,$mlayout);
-	my ($x,$y) = ProfileGetDualDisplaySize();
 	if (ProfileIsNoteBookHardware()) {
 		open (FD,">",$profile) ||
 			die "$name: Can't open $profile: $!";
@@ -47,7 +46,6 @@ if (ProfileIsXOrgVendor ("nvidia")) {
         my $dt = '"Device->[X]->Raw->".$id++."->Option"';
         my $dx = eval $dt;
 		print FD "\$MS=Screen->[X]->Depth->16->Modes\n";
-		print FD "Monitor->[X]->DisplaySize=$x $y\n";
 		print FD "SaXMeta->[X]->SAX_NO_CDB_CHECK=1\n";
 		print FD "Desktop->[X]->CalcModelines=no\n";
 		print FD "Monitor->[X]->CalcAlgorithm=XServerPool\n";
@@ -89,7 +87,6 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		my $id = 11;
 		my $dt = '"Device->[X]->Raw->".$id++."->Option"';
 		my $dx = eval $dt;
-		print FD "Monitor->[X]->DisplaySize=$x $y\n";
 		print FD "$dx=\"TwinViewOrientation\" \"Clone\"\n";
 		$dx = eval $dt;
 		print FD "$dx=\"ConnectedMonitor\" \"$mlayout\"\n";

@@ -39,14 +39,12 @@ if (! ProfileIsXOrgVendor ("fglrx")) {
 	if (ProfileIsNoteBookHardware()) {
 		open (FD,">",$profile) ||
 			die "$name: Can't open $profile: $!";
-		my ($x,$y) = ProfileGetDualDisplaySize();
 		my $id = 20;
 		my $dt = '"Device->[X]->Raw->".$id++."->Option"';
 		my $dx = eval $dt;
 		print FD "SaXMeta->[X]->SAX_NO_CDB_CHECK=1\n";
 		print FD "\$MS=Screen->[X]->Depth->16->Modes\n";
 		print FD "Device->[X]->Option=SaXDualHead\n";
-		print FD "Monitor->[X]->DisplaySize=$x $y\n";
 		print FD "$dx=\"MergedFB\" \"yes\"\n";
 		$dx = eval $dt;
 		print FD "$dx=\"IgnoreEDID\" \"yes\"\n";
@@ -79,12 +77,10 @@ if (! ProfileIsXOrgVendor ("fglrx")) {
 		#------------------------------------
 		open (FD,">>",$profile) ||
 			die "$name: Can't open $profile: $!";
-		my ($x,$y) = ProfileGetDualDisplaySize();
 		my %data   = ProfileGetDDC2Data();
 		my $id = 20;
 		my $dt = '"Device->[X]->Raw->".$id++."->Option"';
 		my $dx = eval $dt;
-		print FD "Monitor->[X]->DisplaySize=$x $y\n";
 		print FD "$dx=\"MergedFB\" \"yes\"\n";
 		$dx = eval $dt;
 		print FD "$dx=\"IgnoreEDID\" \"yes\"\n";

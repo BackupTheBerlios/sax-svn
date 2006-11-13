@@ -1,4 +1,21 @@
 -------------------------------------------------------------------
+Mon Nov 13 09:45:03 CET 2006 - ms@suse.de
+
+- changed xkb layout from microsoft to microsoftpro (#210881)
+- removed dual head display size magic. It's wrong under certain
+  circumstances like clone config or vertical layout (#219468)
+- removed evdev driver support, driver is broken (#220237)
+- added sanity check for the display size in sysp (#219801)
+- fixed Intel (i810) clone setup (#219772)
+- fixed X11 setup on ThinkPad T60p (#220171)
+
+-------------------------------------------------------------------
+Sat Nov 11 20:18:47 CET 2006 - ms@suse.de
+
+- remove Release/Version tag from subpackages
+- fixed build on powerPC this fixes bugs: (#219400,#219405)
+
+-------------------------------------------------------------------
 Wed Nov  8 10:20:01 CET 2006 - ms@suse.de
 
 - fixed 3D support for Radeon R300 cards (#213029)

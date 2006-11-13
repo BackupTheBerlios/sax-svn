@@ -1,5 +1,5 @@
 TOPDIR		= $(CURDIR)
-SUBDIRS		= hd ids x86emu int10
+SUBDIRS		= hd ids
 TARGETS		= hwinfo.pc
 CLEANFILES	= hwinfo.pc libhd.a
 LIBDIR		= /usr/lib
@@ -13,6 +13,10 @@ TSO_LIBS	= -ldbus-1 -lhal
 export SO_LIBS
 
 include Makefile.common
+
+ifneq "$(findstring $(ARCH), i386 x86_64 ia64)" ""
+SUBDIRS += x86emu int10
+endif
 
 SHARED_FLAGS	=
 OBJS_NO_TINY	= names.o parallel.o modem.o

@@ -23,12 +23,10 @@ my $profile = ProfileInitScript();
 #------------------------------------
 open (FD,">>",$profile) ||
 	die "$name: Can't open $profile: $!";
-my ($x,$y) = ProfileGetDualDisplaySize();
 my %data   = ProfileGetDDC2Data();
 my $id = 20;
 my $dt = '"Device->[X]->Raw->".$id++."->Option"';
 my $dx = eval $dt;
-print FD "Monitor->[X]->DisplaySize=$x $y\n";
 print FD "$dx=\"MergedFB\" \"yes\"\n";
 $dx = eval $dt;
 print FD "$dx=\"Monitor2Position\" \"Clone\"\n";
