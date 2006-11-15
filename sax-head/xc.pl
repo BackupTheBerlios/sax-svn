@@ -153,9 +153,7 @@ sub main {
 		$config->setMode ($SaX::SAX_NEW);
 		$config->createConfiguration();
 		$config->commitConfiguration();
-		my $final = LinkConfiguration();
 		print "SaX: Automatic configuration is done\n";
-		print "SaX: The file $final has been written\n";
 		CleanTmp();
 		Exit(0);
 	}

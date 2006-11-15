@@ -159,7 +159,9 @@ sub getIntelPatchCode {
 		my $did = $server -> getItem ("DID");
 		my $svd = $server -> getItem ("SUB-VID");
 		my $sdd = $server -> getItem ("SUB-DID");
-
+		if ($ddc eq "<undefined>") {
+			$ddc = "*******";
+		}
 		$code = "$vid$did$svd$sdd$ddc";
 		$code =~ s/0x//g;
 		$code = "0x".$code;
