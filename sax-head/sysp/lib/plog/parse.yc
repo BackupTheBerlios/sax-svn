@@ -45,6 +45,9 @@ char* toKb (str value,str unit) {
 	if (strcmp(unit,"kBytes") == 0) {
 		// KB value ok...
 	} else
+	if (strcmp(unit,"kByte") == 0) {
+		// KB value ok...
+	} else
 	if (strcmp(unit,"mBytes") == 0) {
 		// MB -> to KB...
 		mem = mem * 1024;
@@ -106,7 +109,7 @@ Section : PROBED     ID  { strcpy(ActId,$2); } MEMORY  FLOAT  UNIT { logs("MEM",
 	| DEFAULT    ID  { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
 	| INFO       ID  { strcpy(ActId,$2); } DAC     FLOAT  { logs("DAC",$5); }
 	| PROBED     ID  { strcpy(ActId,$2); } VMWARE  FLOAT  { logs("VMW",$5); }
-	| PROBED     ID  { strcpy(ActId,$2); } CHIPSET STRING { logs("CHIP",$5); printf ("## %s\n",$5); }
+	| PROBED     ID  { strcpy(ActId,$2); } CHIPSET STRING { logs("CHIP",$5);}
 	| PROBED     ID  { strcpy(ActId,$2); } CLOCKS  Clocks { }
 	| PROBED     ID  { strcpy(ActId,$2); } PANEL   RESO   { logs("PAN",$5); }
 	| INFO       ID  { strcpy(ActId,$2); } PANEL   RESO   { logs("PAN",$5); }

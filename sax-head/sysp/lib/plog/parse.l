@@ -31,6 +31,7 @@ R {F}[ \t]*-[ \t]*{F}
 "PCI ".*                      {strcpy(yylval.string,yytext);return(BUSID);     }
 "Primary Device is: "         {strcpy(yylval.string,yytext);return(PDEV);      }
 "VideoRAM"[ \t]*:             {strcpy(yylval.string,yytext);return(MEMORY);    }
+"Mapped VideoRAM"[ \t]*:      {strcpy(yylval.string,yytext);return(MEMORY);    }
 "probed videoram:"            {strcpy(yylval.string,yytext);return(MEMORY);    }
 "hardware:".*"(vidmem:"       {strcpy(yylval.string,yytext);return(MEMORY);    }
 "Will alloc AGP framebuffer:" {strcpy(yylval.string,yytext);return(MEMORY);    }
@@ -38,6 +39,7 @@ R {F}[ \t]*-[ \t]*{F}
 "VESA VBE Total Mem:"         {strcpy(yylval.string,yytext);return(MEMORY);    }
 "vram:  "                     {strcpy(yylval.string,yytext);return(MEMORY);    }
 "kBytes"                      {strcpy(yylval.string,yytext);return(UNIT);      }
+"kByte"                       {strcpy(yylval.string,yytext);return(UNIT);      }
 "mBytes"                      {strcpy(yylval.string,yytext);return(UNIT);      }
 "Chipset"[ \t]*:              {strcpy(yylval.string,yytext);return(CHIPSET);   }
 "VESA Video Modes"[ \t]*:     {strcpy(yylval.string,yytext);return(VESA);      }

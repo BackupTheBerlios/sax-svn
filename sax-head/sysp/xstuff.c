@@ -149,7 +149,7 @@ char* ScanXStuff::createProbeonlyConfig (
 //--------------------------------------
 void ScanXStuff::Scan (void) {
 	MsgDetect* display;
-	unsigned VBEmem;
+	unsigned VBEmem = 0;
 	ScanServer server(question,withx,card,cardopt);
 	XF86ConfigFile srvmsg;
 	map<int,ParseData>  parse;
@@ -217,8 +217,9 @@ void ScanXStuff::Scan (void) {
 	//======================================
 	// try to detect memory size
 	//--------------------------------------
-	VBEmem  = MemorySize(config);
-
+	if (graphics.size() == 1) {
+		VBEmem  = MemorySize(config);
+	}
 	// .../
 	// it is not sure to get any server message data this depend on
 	// some items which you can see in the server.c code. If no server
