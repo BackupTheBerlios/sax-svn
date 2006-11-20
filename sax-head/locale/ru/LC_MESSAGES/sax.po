@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-11-03 23:48+0200\n"
+"PO-Revision-Date: 2006-11-16 09:05+0200\n"
 "Last-Translator: Aleksey Osipov <aliks-os@yandex.ru>\n"
 "Language-Team: Russian <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
@@ -163,7 +163,7 @@ msgstr "Конфигурирование..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr ""
+msgstr "Режим двух мониторов"
 
 #. Group box title for card options
 #. Group box title for mouse options
@@ -249,9 +249,8 @@ msgid "Properties"
 msgstr "Свойства"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Мультиголовный Режим"
+msgstr "Активировать режим двух мониторов"
 
 #. Set display resolution
 msgid "Resolution"
@@ -314,36 +313,32 @@ msgid "No configuration available"
 msgstr "Конфигурация не доступна"
 
 #. Radiobutton for traditional multihead mode
-#, fuzzy
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"Обычная Multihead:\n"
-"Каждый экран - независимый дисплей"
+"Традиционный режим нескольких мониторов:\n"
+"Каждый экран это независимый дисплей"
 
 #. Radiobutton for cloned multihead mode
-#, fuzzy
 msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
-"Имитируемый Multihead:\n"
-"Каждый экран - аналог первичного дисплея"
+"Клонируемый режим нескольких мониторов:\n"
+"Каждый экран это клон главного дисплея"
 
 #. Radiobutton for xinerama multihead mode
-#, fuzzy
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
-"Xinerama Multihead:\n"
-"Построен один большой дисплей из всех экранов"
+"Режим нескольких мониторов Xinerama:\n"
+"Состовляет один большой дисплей из всех экранов"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
-msgstr "Мультиголовный Режим"
+msgstr "Режим нескольких мониторов"
 
 #. Monitor X - connected to - CardY
 msgid "Connected To"
@@ -371,9 +366,8 @@ msgid "Graphics Card Settings"
 msgstr "Настройки графической карты"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Мультиголовный Режим"
+msgstr "Настройки режима двух мониторов"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -392,6 +386,8 @@ msgid ""
 "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
 "your system does not support changes for resolution and/or color settings."
 msgstr ""
+"<b>Пожалуйста отметьте:</b><hr>Конфигурация основана на <i>Видеобуфере</i> и "
+"ваша система не поддерживает изменение разрешения и/или настройки цветов."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -569,12 +565,10 @@ msgid "Third Level Chooser"
 msgstr "Третий уровень выбора"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
 msgstr "Поведение клавиши Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
 msgstr "Поведение клавиши CapsLock"
 
@@ -609,6 +603,104 @@ msgstr "Обе Win клавиши переключает группу при н�
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
 msgstr "Правая клавиша Ctrlпереключает группу при нажатии."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Alt is swapped with left Win-key."
+msgstr "Мета отображен на левую клавишуWin."
+
+#. XKBFile extension text
+msgid "Default numpad keys."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Adding the nobreakspace keysym to space key"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Use keypad with unicode additions (arrows and math operators)"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Force standard legacy keypad"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
+msgstr ""
+"Использует внутреннее преобразование букв в прописные. Shift отменяет "
+"заглавные буквы."
+
+#. XKBFile extension text
+msgid "Keypad layout selection"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt+CapsLock changes group."
+msgstr "Shift+CapsLock изменяет группу."
+
+#. XKBFile extension text
+msgid "Space key output nobreakspace at second level."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
+msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift "
+msgstr ""
+"Использует внутреннее преобразование букв в прописные. Shift отменяет "
+"заглавные буквы."
+
+#. XKBFile extension text
+msgid "Space key output nobreakspace at third level."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Numpad keys work as with Mac."
+msgstr "Shift с клавишами цифр работает такэе как в MS Windows."
+
+#. XKBFile extension text
+msgid "Kana Lock key is locking"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Space key output nobreakspace at fourth level."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Win-key is Compose."
+msgstr "Правая-Win клавиши составляют"
+
+#. XKBFile extension text
+#, fuzzy
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Нажмите Правую Alt клавишу, чтобы выбрать 3-ий уровень."
+
+#. XKBFile extension text
+msgid "Space key output space at any level."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Japanese Keyboard Options"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift "
+msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
 
 #. XKBFile extension text
 #, fuzzy
@@ -701,9 +793,8 @@ msgstr ""
 "заглавные буквы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "Делает CapsLock дополнительным управлением"
+msgstr "Сделаеть CapsLock дополнительным Control."
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
@@ -747,7 +838,6 @@ msgid "CapsLock key changes group."
 msgstr "Клавиша Caps Lock изменяет группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
 msgstr "Поменять местами Control и Caps Lock "
 
@@ -899,6 +989,16 @@ msgstr "COM-1 [/dev/ttyS0 ] "
 #. Combobox item text for tablet port: ttyS1
 msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [/dev/ttyS1 ] "
+
+#. Combobox item text for tablet port: ttyS2
+#, fuzzy
+msgid "COM-3 [ /dev/ttyS2 ]"
+msgstr "COM-1 [/dev/ttyS0 ] "
+
+#. Combobox item text for tablet port: ttyS3
+#, fuzzy
+msgid "COM-4 [ /dev/ttyS3 ]"
+msgstr "COM-1 [/dev/ttyS0 ] "
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1105,14 +1205,12 @@ msgid "Ctrl key at left of 'A'"
 msgstr "Клавиша Ctrl слева от 'A'"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Ctrl."
-msgstr "Делает CapsLock дополнительным управлением"
+msgstr "Сделать CapsLock дополнительным Ctrl."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Ctrl and CapsLock."
-msgstr "Поменять местами Control и Caps Lock "
+msgstr "Поменять местами Ctrl и Caps Lock."
 
 #. XKBFile extension text
 msgid "Ctrl key position"

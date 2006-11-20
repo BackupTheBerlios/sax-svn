@@ -1,4 +1,4 @@
-# translation of sax.hu.po to Hungarian
+# translation of sax.po to
 # Steve Varadi <svaradi@usa.com>, 2000.
 # Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Peter Breuer <comp@suselinux.hu>, 2003.
@@ -15,11 +15,11 @@
 # Rev. 8.1: 2002.07.23 Marcel Hilzinger <hili@suselinux.hu>
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.hu\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-11-06 17:03+0100\n"
-"Last-Translator: Kalman Kemenczy <kkemenczy@novell.com>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"PO-Revision-Date: 2006-11-16 17:35+0100\n"
+"Last-Translator: \n"
+"Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -446,8 +446,8 @@ msgstr ""
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Kérem, adjon egy "
-"értéket a(z) %1 opcióhoz.</nobr>"
+"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Adjon egy értéket a"
+"(z) %1 opcióhoz.</nobr>"
 
 # /tmp/xapi:301
 #. Group box title for the monitor vendor and name selection
@@ -481,9 +481,8 @@ msgid ""
 "maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Figyelem:</b> <hr>A rossz szinkronbeállítás tönkreteheti a képernyőjét! "
-"Kérem olvassa el a képernyő kézikönyvét az alábbi beállításokhoz.<br><br>Ha "
-"nem akarja a képernyőből a maximumot kihozni, csökkentse a "
-"szinkrontartományokat."
+"Olvassa el a képernyő kézikönyvét az alábbi beállításokhoz.<br><br>Ha nem "
+"akarja a képernyőből a maximumot kihozni, csökkentse a szinkrontartományokat."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -671,6 +670,109 @@ msgstr "Mindkét Win együttes megnyomása vált csoportot."
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
 msgstr "A jobboldali Ctrl billentyű megnyomása vált csoportot."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Alt is swapped with left Win-key."
+msgstr "A baloldali Win billentyű látja el a Meta funkciót."
+
+#. XKBFile extension text
+msgid "Default numpad keys."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Adding the nobreakspace keysym to space key"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Use keypad with unicode additions (arrows and math operators)"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Force standard legacy keypad"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift nem oldja fel a nagybetűs "
+"módot."
+
+#. XKBFile extension text
+msgid "Keypad layout selection"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Alt+CapsLock changes group."
+msgstr "A Shift+CapsLock billentyű vált csoportot."
+
+#. XKBFile extension text
+msgid "Space key output nobreakspace at second level."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
+msgstr ""
+"A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift nem oldja fel a "
+"nagybetűs módot."
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift "
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift feloldja a nagybetűs módot."
+
+#. XKBFile extension text
+msgid "Space key output nobreakspace at third level."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Numpad keys work as with Mac."
+msgstr ""
+"A Shift és a számbillentyűzet gombjai ugyanúgy működnek, mint MS Windows "
+"alatt."
+
+#. XKBFile extension text
+msgid "Kana Lock key is locking"
+msgstr ""
+
+#. XKBFile extension text
+msgid "Space key output nobreakspace at fourth level."
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "Left Win-key is Compose."
+msgstr "A jobb Win billentyű a Compose"
+
+#. XKBFile extension text
+#, fuzzy
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "A jobboldali Alt gomb megnyomásával érhetők el a 3. szintű funkciók."
+
+#. XKBFile extension text
+msgid "Space key output space at any level."
+msgstr ""
+
+#. XKBFile extension text
+msgid "Japanese Keyboard Options"
+msgstr ""
+
+#. XKBFile extension text
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift "
+msgstr ""
+"A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift feloldja a "
+"CapsLock módot."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -956,6 +1058,16 @@ msgstr "COM-1 [ /dev/ttyS0 ]"
 #. Combobox item text for tablet port: ttyS1
 msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
+
+#. Combobox item text for tablet port: ttyS2
+#, fuzzy
+msgid "COM-3 [ /dev/ttyS2 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
+
+#. Combobox item text for tablet port: ttyS3
+#, fuzzy
+msgid "COM-4 [ /dev/ttyS3 ]"
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
