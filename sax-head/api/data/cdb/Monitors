@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 20 11:24:12 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 20 14:08:52 2006
 #
 # Template for monitor data
 # --------------------------
@@ -10400,6 +10400,7 @@ DELL:P990  {
  DDC=DEL50DD
  Hsync=30-96
  Vsync=48-120
+ DPI=366x274
 }
 
 #==============================================
@@ -10410,6 +10411,7 @@ DELL:P991  {
  Option=DPMS
  Hsync=30-107
  Vsync=48-120
+ DPI=366x274
 }
 
 #==============================================
@@ -10420,6 +10422,7 @@ DELL:P992  {
  Option=DPMS
  Hsync=30-107
  Vsync=48-170
+ DPI=366x274
 }
 
 #==============================================
