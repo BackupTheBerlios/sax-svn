@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Nov 20 14:08:52 2006
+# Author: Marcus Schaefer <sax@suse.de>, Wed Nov 22 18:37:31 2006
 #
 # Template for monitor data
 # --------------------------
@@ -30327,6 +30327,18 @@ PROVIEW:860  {
  DDC=PTS035C
  Hsync=30-54
  Vsync=50-150
+}
+
+#==============================================
+# PL713S
+#----------------------------------------------
+PROVIEW:PL713S  {
+ DDC=PTS2117
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-76
+ DPI=338x270
 }
 
 #==============================================
