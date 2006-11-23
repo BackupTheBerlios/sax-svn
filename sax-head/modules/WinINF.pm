@@ -34,7 +34,7 @@ sub mountMedia {
 		if ($error) {
 			next;
 		}
-		open (FD,"find $mountpoint -name '*.inf'|");
+		open (FD,"find $mountpoint -iname '*.inf'|");
 		while (my $file = <FD>) {
 			chomp $file; push (@result,$file);
 		}
