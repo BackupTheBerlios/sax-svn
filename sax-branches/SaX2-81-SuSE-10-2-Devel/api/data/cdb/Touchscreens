@@ -1,0 +1,112 @@
+# /.../
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+# Author: Marcus Schaefer <sax@suse.de>, 2001
+#
+# Template for touchscreen data
+# ------------------------------
+# <VENDOR NAME>:<DEVICE NAME>  {
+#  Driver               = driver...
+#  Protocol             = protocol...
+#  Device               = device name...
+#  SampleRate           = sample rate...
+#  Emulate3Buttons      = <on> or <off>
+#  Emulate3Timeout      = timeout val...
+#  ChordMiddle          = <on> or <off>
+#  MinX                 = area border...
+#  MaxX                 = area border...
+#  MinY                 = area border...
+#  MaxY                 = area border...
+#  Rotation             = 0 | 90 | 270
+#  ScreenNumber         = integer...
+#  ReportingMode        = mode...
+#  ButtonThreshold      = integer...
+#  ButtonNumber         = integer...
+#  SendCoreEvents       = <on> or <off>
+#  ClearRTS             = <on> or <off>
+#  ClearDTR             = <on> or <off>
+#  ZAxisMapping         = [ N M ] or X or Y 
+#  TouchType            = string
+#  Mode                 = string
+#  Load                 = string
+#  Option               = string,string
+#  RawOption            = quotedoptionstring quotedvaluestring,...
+# }
+
+#----------------------#
+# Mutouch Touchpad     #
+#----------------------#
+MUTOUCH:TOUCHSCREEN  {
+ Driver               = mutouch
+ Device               = /dev/ttyS1
+ MinX                 = 0
+ MaxX                 = 16350
+ MinY                 = 0
+ MaxY                 = 16350
+ ScreenNumber         = 0
+ ReportingMode        = Scaled
+ TouchType            = Finger
+ SendCoreEvents       = on
+}
+
+#----------------------#
+# Microtouch Touchpad  #
+#----------------------#
+MICROTOUCH:TOUCHSCREEN {
+ Driver               = microtouch
+ ButtonNumber         = 1
+ Device               = /dev/ttyS0
+ MaxX                 = 16383
+ MinY                 = 16383
+ MaxY                 = 0
+ MinX                 = 0
+ Mode                 = Absolute
+ TouchType            = Cursor
+ Protocol             = Auto
+ SendCoreEvents       = on
+ BaudRate             = 9600
+ RawOption            = "DataBits" "8","StopBits" "1","Parity" "None"
+}
+
+#---------------#
+# Elo Touchpad  #
+#---------------#
+ELO:2300-TOUCHSCREEN  {
+ Driver               = elographics
+ Device               = /dev/ttyS0
+ MinX                 = 231
+ MaxX                 = 3868
+ MinY                 = 3858
+ MaxY                 = 272
+ ScreenNumber         = 0
+ ReportingMode        = Scaled
+ ButtonThreshold      = 17
+ ButtonNumber         = 1
+ SendCoreEvents       = on
+}
+
+#--------------------------#
+# Wacom Penabled TabletPC  #
+#--------------------------#
+WACOM:PENABLED TABLET-PC  {
+ Driver               = wacom
+ Device               = /dev/ttyS0
+ SendCoreEvents       = on
+ TouchType            = stylus
+ Mode                 = Absolute
+ RawOption            = "ForceDevice" "ISDV4"
+}
+
+#--------------------------#
+# P-SERIES LIFEBOOK TOUCH  #
+#--------------------------#
+FUJITSU:P-SERIES LIFEBOOK TOUCHSCREEN {
+ Driver               = fujitsu
+ Device               = /dev/ttyS0
+ RawOption            = "SwapX" "false","ButtonlessDevice" "On","Emulate3Timeout" "50","TapTimer" "90","LongTouchTimer" "160","OneandahalfTimer" "150","MoveLimit" "180"
+ ReportingMode        = Raw
+ SendCoreEvents       = on
+ MinX                 = 82
+ MaxX                 = 4036
+ MinY                 = 146
+ MaxY                 = 3999
+}

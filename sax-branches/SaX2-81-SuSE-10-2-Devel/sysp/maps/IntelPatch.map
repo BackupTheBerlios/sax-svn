@@ -1,0 +1,15 @@
+# /.../
+# Mapping table for Intel devices to patch the bios 
+# =====================================================
+# code | Arguments | Program
+# -----------------------------------------------------
+# Mac Mini on PHL0832
+0x808627a280867270PHL0832 : 3c %x %y : /sbin/915resolution
+# Mac Mini on Internal display
+0x808627a280867270APP9C5E : 3x %x %y : /sbin/915resolution
+# Fujitsu Siemens Lifebook E8110
+0x808627a210cf137a******* : 3c %x %y : /sbin/915resolution
+# Thinkpad R52
+0x8086259210140582******* : 3c %x %y : /sbin/915resolution
+# Gateway MX6923b
+0x808627a2107b0366******* : 3c %x %y : /sbin/915resolution
