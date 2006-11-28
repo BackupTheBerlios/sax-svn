@@ -305,6 +305,7 @@ void SaXProcess::storeDataSysp (void) {
 	//! Store data which has been written to STDOUT after
 	//! a previous sysp process call
 	// ----
+	QString vesa,vesa2;
 	QList<QString> data = mProc->readStdout();
 	QListIterator<QString> in (data);
 	for (; in.current(); ++in) {
@@ -324,9 +325,25 @@ void SaXProcess::storeDataSysp (void) {
 		addID (id);
 		val = val.stripWhiteSpace();
 		key = key.stripWhiteSpace();
+		if (key == "Vesa") {
+			vesa.append (val);
+			vesa.append (",");
+		} else
+		if (key == "Vesa[2]") {
+			vesa2.append (val);
+			vesa2.append (",");
+		} else
 		if ((! key.isEmpty()) && (! val.isEmpty())) {
 			setItem (key,val);
 		}
+	}
+	if (! vesa.isEmpty()) {
+		vesa.replace (QRegExp(",$"),"");
+		setItem ("Vesa",vesa);
+	}
+	if (! vesa2.isEmpty()) {
+		vesa2.replace (QRegExp(",$"),"");
+		setItem ("Vesa[2]",vesa2);
 	}
 }
 

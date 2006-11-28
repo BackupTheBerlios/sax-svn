@@ -91,6 +91,8 @@ class SaXManipulateDesktopIF : public SaXException {
 	public:
 	virtual QList<QString> getResolutions ( int  ) = 0;
 	virtual QList<QString> getResolutionFromServer ( void ) = 0;
+	virtual QList<QString> getResolutionsFromDDC1  ( void ) = 0;
+	virtual QList<QString> getResolutionsFromDDC2  ( void ) = 0;
 	virtual QList<QString> getDisplaySize ( void ) = 0;
 	virtual QList<QString> getDisplayRatio( void ) = 0;
 	virtual QString getDisplayTraversal   ( void ) = 0;
@@ -187,6 +189,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	QString calculateModeline  ( int,int,int,int );
 	QString getDriverOptionsDualHeadProfile ( const QString& );
 	QDict<QString> getMetaData ( void );
+	QList<QString> getResolutionsFromDDC ( const QString& );
 
 	public:
 	void calculateModelines ( bool );
@@ -223,6 +226,8 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	public:
 	QList<QString> getResolutions ( int  );
 	QList<QString> getResolutionFromServer ( void );
+	QList<QString> getResolutionsFromDDC1 ( void );
+	QList<QString> getResolutionsFromDDC2 ( void );
 	QList<QString> getDisplaySize ( void );
 	QList<QString> getDisplayRatio( void );
 	QString getDisplayTraversal   ( void );

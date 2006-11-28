@@ -972,6 +972,53 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 }
 
 //====================================
+// getResolutionsFromDDC
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) {
+	QList<QString> result;
+	QDict<QString> hashed;
+	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
+	desktop -> setID    ( mDesktopID );
+	desktop -> doImport ();
+	if (! desktop->getItem(key)) {
+		return QList<QString>();
+	}
+	QString val = desktop->getItem(key);
+	QStringList items = QStringList::split ( ",", val );
+	for (
+		QStringList::Iterator it=items.begin();
+		it != items.end(); ++it
+	) {
+		QString* data = new QString();
+		QString mode (*it);
+		QStringList resolution = QStringList::split ( " ", mode );
+		QTextOStream (data) << *resolution.at(0) << "x" << *resolution.at(1);
+		if (! hashed[*data]) {
+			hashed.insert (*data,data);
+		}
+	}
+	QDictIterator<QString> ir (hashed);
+	for (; ir.current(); ++ir) {
+		result.append (ir.current());
+	}
+	return result;
+}
+
+//====================================
+// getResolutionsFromDDC1
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getResolutionsFromDDC1 (void) {
+	return getResolutionsFromDDC ("Vesa");
+}
+
+//====================================
+// getResolutionsFromDDC2
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getResolutionsFromDDC2 (void) {
+	return getResolutionsFromDDC ("Vesa[2]");
+}
+
+//====================================
 // getDisplaySize
 //------------------------------------
 QList<QString> SaXManipulateDesktop::getDisplaySize (void) {

@@ -398,7 +398,7 @@ sub ProfileGetDDC2Data {
 	}
 	}
 	if (defined $xstuff->getItem("Vesa[2]")) {
-	if ($xstuff->getItem("Vesa[2]") =~ /(.*) (.*) .* .*/)	{
+	if ($xstuff->getItem("Vesa[2]") =~ /.*,(.*?) (.*) .* .*$/)	{
 		$result{Resolution} = "$1x$2";
 	}
 	}
