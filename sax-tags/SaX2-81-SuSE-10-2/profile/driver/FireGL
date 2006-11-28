@@ -1,0 +1,51 @@
+# /.../
+# FireGL profile applied as driver profile to the fglrx
+# driver to setup all available options of this driver
+# -------------------------------------------------------
+Device  -> [X] ->  Driver = fglrx
+Desktop -> [X] ->  CalcModelines = no
+Monitor -> [X] ->  CalcAlgorithm = XServerPool
+
+Extensions -> 0 -> DAMAGE = false
+ServerFlags-> 0 -> IgnoreABI = on
+
+!remove Monitor -> [X] -> Modeline
+
+Screen->[X]->DefaultDepth    = 24
+Module->[X]->Load            = dbe,type1,freetype,extmod,glx,v4l,dri
+Device->[X]->Raw->11->Option = "#NoDDC"
+Device->[X]->Raw->12->Option = "UseInternalAGPGART" "no"
+Device->[X]->Raw->13->Option = "no_accel" "no"
+Device->[X]->Raw->14->Option = "no_dri" "no"
+Device->[X]->Raw->15->Option = "mtrr" "off"
+Device->[X]->Raw->16->Option = "ScreenOverlap" "0"
+Device->[X]->Raw->17->Option = "GammaCorrectionI" "0x00000000"
+Device->[X]->Raw->18->Option = "GammaCorrectionII" "0x00000000"
+Device->[X]->Raw->19->Option = "Capabilities" "0x00000000"
+Device->[X]->Raw->20->Option = "CapabilitiesEx" "0x00000000"
+Device->[X]->Raw->21->Option = "VideoOverlay" "on"
+Device->[X]->Raw->22->Option = "OpenGLOverlay" "off"
+Device->[X]->Raw->23->Option = "CenterMode" "off"
+Device->[X]->Raw->24->Option = "PseudoColorVisuals" "off"
+Device->[X]->Raw->25->Option = "Stereo" "off"
+Device->[X]->Raw->26->Option = "StereoSyncEnable" "1"
+Device->[X]->Raw->27->Option = "FSAAEnable" "no"
+Device->[X]->Raw->28->Option = "FSAAScale" "1"
+Device->[X]->Raw->29->Option = "FSAADisableGamma" "no"
+Device->[X]->Raw->30->Option = "FSAACustomizeMSPos" "no"
+Device->[X]->Raw->31->Option = "FSAAMSPosX0" "0.000000"
+Device->[X]->Raw->32->Option = "FSAAMSPosY0" "0.000000"
+Device->[X]->Raw->33->Option = "FSAAMSPosX1" "0.000000"
+Device->[X]->Raw->34->Option = "FSAAMSPosY1" "0.000000"
+Device->[X]->Raw->35->Option = "FSAAMSPosX2" "0.000000"
+Device->[X]->Raw->36->Option = "FSAAMSPosY2" "0.000000"
+Device->[X]->Raw->37->Option = "FSAAMSPosX3" "0.000000"
+Device->[X]->Raw->38->Option = "FSAAMSPosY3" "0.000000"
+Device->[X]->Raw->39->Option = "FSAAMSPosX4" "0.000000"
+Device->[X]->Raw->40->Option = "FSAAMSPosY4" "0.000000"
+Device->[X]->Raw->41->Option = "FSAAMSPosX5" "0.000000"
+Device->[X]->Raw->42->Option = "FSAAMSPosY5" "0.000000"
+Device->[X]->Raw->43->Option = "UseFastTLS" "0"
+Device->[X]->Raw->44->Option = "BlockSignalsOnLock" "on"
+Device->[X]->Raw->45->Option = "ForceGenericCPU" "no"
+Device->[X]->Raw->46->Option = "KernelModuleParm" "locked-userpages__EQUALS__0"

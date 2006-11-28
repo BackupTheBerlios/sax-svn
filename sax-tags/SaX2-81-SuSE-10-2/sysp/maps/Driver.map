@@ -1,0 +1,13 @@
+# /.../
+# Mapping table for X11 driver to profile 
+# =====================================================
+# Driver Name | Profile
+# -----------------------------------------------------
+nv       : Depth24,NVidia
+nvidia   : Depth24,NVidia
+radeon   : Depth24,Radeon
+i810     : Depth24,NoDDC
+sis      : SiS,Depth24
+fglrx    : FireGL
+tseng    : VideoRAM
+i810beta : Depth24
