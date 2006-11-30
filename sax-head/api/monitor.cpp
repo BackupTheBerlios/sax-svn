@@ -75,7 +75,11 @@ SCCMonitor::SCCMonitor (
 	//-------------------------------------
 	for ( int n=0;n<mCard;n++) {
 		QString displayName;
-		QTextOStream (&displayName) << mText["Display"] << " " << (n + 1);
+		QString tabNumber;
+		QString translation = mText["Display"];
+		QTextOStream (&tabNumber) << (n + 1);
+		translation.replace ( QRegExp("\%1"), tabNumber);
+		QTextOStream (&displayName) << translation;
 		SCCMonitorDisplay* display = new SCCMonitorDisplay (
 			text,section,n,this
 		);
