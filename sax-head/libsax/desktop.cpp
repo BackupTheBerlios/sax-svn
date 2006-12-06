@@ -997,6 +997,10 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) 
 			hashed.insert (*data,data);
 		}
 	}
+	QString* default1 = new QString ("800x600");
+	QString* default2 = new QString ("1024x768");
+	hashed.insert (*default1,default1);
+	hashed.insert (*default2,default2);
 	QDictIterator<QString> ir (hashed);
 	for (; ir.current(); ++ir) {
 		result.append (ir.current());

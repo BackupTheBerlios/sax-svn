@@ -322,8 +322,8 @@ bool SCCMonitor::exportData ( void ) {
 		//====================================
 		// save resolution list
 		//------------------------------------
-		int colorDepths[4] = {8,15,16,24};
-		for (int n=0;n<4;n++) {
+		int colorDepths[5] = {8,15,16,24,32};
+		for (int n=0;n<5;n++) {
 			int color = colorDepths[n];
 			QString modesKey;
 			QTextOStream (&modesKey) << "Modes:" << color;

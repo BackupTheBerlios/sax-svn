@@ -1,4 +1,17 @@
 -------------------------------------------------------------------
+Wed Dec  6 15:42:10 CET 2006 - ms@suse.de
+
+- added BIOS patch for Dell D620 device (#223745)
+
+-------------------------------------------------------------------
+Tue Dec  5 15:48:07 CET 2006 - ms@suse.de
+
+- Added DisplaySize setup for horizontal and vertical layout (#219468)
+- If DDC data available show only DDC available resolutions plus two
+  default resolutions which are 1024x768 and 800x600 (#223651)
+- added BIOS patch for HP nc2400/nc6400/nx7400 (#226023)
+
+-------------------------------------------------------------------
 Thu Nov 30 13:57:00 CET 2006 - ms@suse.de
 
 - fixed internationalization of display tab naming (#218433)

@@ -225,7 +225,37 @@ void SCCMonitorDisplay::init ( void ) {
 	// insert available resolutions
 	//------------------------------------
 	SCCFile resHandle ( RES_FILE );
+	QList<QString> ddc = saxDesktop.getResolutionsFromDDC1();
 	mResolutionDict = resHandle.readDict();
+	//====================================
+	// don't handle resolutions not in DDC
+	//------------------------------------
+	QList<QString> toBeRemoved;
+	if (! ddc.isEmpty()) {
+		mResolutionDict.setAutoDelete(true);
+		QDictIterator<QString> ir (mResolutionDict);
+		for (; ir.current(); ++ir) {
+			bool foundInDDC = false;
+			QListIterator<QString> dd (ddc);
+			for (; dd.current(); ++dd) {
+				if (*dd.current() == ir.currentKey()) {
+					foundInDDC = true;
+					break;
+				}
+			}
+			if (foundInDDC) {
+				continue;
+			}
+			toBeRemoved.append (new QString(ir.currentKey()));
+		}
+	}
+	QListIterator<QString> il (toBeRemoved);
+	for (; il.current(); ++il) {
+		mResolutionDict.remove(*il.current());
+	}
+	//====================================
+	// insert remaining resolutions
+	//------------------------------------
 	QDict<QString> metaResolution;
 	long sortResolution[mResolutionDict.count()];
 	QDictIterator<QString> ir (mResolutionDict);
@@ -688,30 +718,60 @@ void SCCMonitorDisplay::setCommonButtonWidth ( void ) {
 //====================================
 // setCombinedDisplaySize
 //------------------------------------
-void SCCMonitorDisplay::setCombinedDisplaySize ( bool fromProfile ) {
-	SaXManipulateDesktop saxDesktop (
-		mSection["Desktop"],mSection["Card"],mSection["Path"]
-	);
-	if (! fromProfile) {
-		QList<QString> displaySize = saxDesktop.getDisplaySize();
-		if (! displaySize.isEmpty()) {
-			getMonitorData() -> setDisplaySize ( displaySize );
-		}
+void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
+	QList<QString> combined;
+	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
+	QString* xs = new QString();
+	QString* ys = new QString();
+	desktop -> setID (mDisplay);
+	desktop -> doImport();
+	if (! desktop->getItem("Size")) {
 		return;
 	}
-	QString profile = saxDesktop.getDualHeadProfile();
-	if ((! profile.isEmpty()) && (! saxDesktop.isXineramaMode())) {
-		SaXImportProfile* pProfile = SaXWidgetProfile->getProfile ( profile );
-		SaXImport* mImport = pProfile -> getImport ( SAX_CARD );
-		SaXImport* mDesktop = pProfile -> getImport ( SAX_DESKTOP );
-		SaXImport* mPath = new SaXImport ( SAX_PATH );
-		if ((mDesktop) && (mImport)) {
-			SaXManipulateDesktop saxProfileDesktop ( mDesktop,mImport,mPath );
-			QList<QString> displaySize = saxProfileDesktop.getDisplaySize();
-			if (! displaySize.isEmpty()) {
-				getMonitorData() -> setDisplaySize ( displaySize );
-			}
+	QString displaySize1 = desktop->getItem("Size");
+	QStringList tokens1 = QStringList::split ( "x", displaySize1 );
+	int x = tokens1.first().toInt();
+	int y = tokens1.last().toInt();
+	QTextOStream (xs) << x; combined.append (xs);
+	QTextOStream (ys) << y; combined.append (ys);
+	if (! combinedSize) {
+		getMonitorData() -> setDisplaySize ( combined );
+	} else {
+		if (! desktop->getItem("Size[2]")) {
+			log (L_WARN,"SCCMonitorDisplay::No DDC2 size info available\n");
+			return;
 		}
+		QString displaySize2 = desktop->getItem("Size[2]");
+		QStringList tokens2 = QStringList::split ( "x", displaySize2 );
+		int x2 = tokens2.first().toInt();
+		int y2 = tokens2.last().toInt();
+		SCCMonitorDual* dualData = getDualData();
+		switch (dualData->getLayout()) {
+			case DUAL_LEFTOF:
+				x = x + x2;
+			break;
+			case DUAL_RIGHTOF:
+				x = x + x2;
+			break;
+			case DUAL_ABOVEOF:
+				y = y + y2;
+			break;
+			case DUAL_BELOWOF:
+				y = y + y2;
+			break;
+			default:
+			break;
+		}
+		combined.clear();
+		QTextOStream (xs) << x; combined.append (xs);
+		QTextOStream (ys) << y; combined.append (ys);
+		getMonitorData() -> setDisplaySize ( combined );
 	}
+	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCMessage* mMessageBox = new SCCMessage (
+		this, mTextPtr, SaXMessage::OK,
+		mText["DisplaySizeInfo"],"MessageCaption",SaXMessage::Information
+	);
+	mMessageBox -> showMessage();
 }
 } // end namespace
