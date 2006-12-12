@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Dec  8 13:57:03 2006
+# Author: Marcus Schaefer <sax@suse.de>, Tue Dec 12 10:40:11 2006
 #
 # Template for monitor data
 # --------------------------
@@ -36536,6 +36536,18 @@ Sun:SUN (18.1) FLAT PANEL  {
 Sun:X7121A  {
  Hsync=30-96
  Vsync=48-160
+}
+
+#==============================================
+# LCD Multi-Media Display
+#----------------------------------------------
+SYNTAX OLEVIA:LCD MULTI-MEDIA DISPLAY  {
+ DDC=DMI0000
+ Option=DPMS
+ Hsync=50-63
+ Resolution=1280x1024
+ DPI=578x324
+ Vsync=55-60
 }
 
 #==============================================
