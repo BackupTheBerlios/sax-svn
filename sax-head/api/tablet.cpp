@@ -114,6 +114,7 @@ void SCCTablet::import ( void ) {
 	}
 	if ( tabletID == 0 ) {
 		mTabletSelection -> setEnabled ( false );
+		needImportData = false;
 		return;
 	}
 	//====================================
@@ -162,7 +163,6 @@ void SCCTablet::enablePens ( bool state ) {
 void SCCTablet::slotActivate ( bool state ) {
 	mTabletTab -> setTabEnabled ( mTabletConnection, state );
 	mTabletTab -> setTabEnabled ( mTabletPens, state );
-	mTabletTab -> setFocus();
 }
 //====================================
 // exportData
