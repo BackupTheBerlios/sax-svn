@@ -77,7 +77,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		$dx = eval $dt;
 		print FD "$dx=\"SaXDualMonitorModel\" \"1024X768\@60HZ\"\n";
 		$dx = eval $dt;
-		print FD "$dx=\"TwinViewXineramaInfoOrder\" \"DFP,CRT\"\n";
+		print FD "$dx=\"TwinViewXineramaInfoOrder\" \"$mlayout\"\n";
 		close FD;
 	} else {
 		#====================================
@@ -97,7 +97,7 @@ if (ProfileIsXOrgVendor ("nvidia")) {
 		$dx = eval $dt;
 		print FD "$dx=\"SaXDualMode\" \"Clone\"\n";
 		$dx = eval $dt;
-		print FD "$dx=\"TwinViewXineramaInfoOrder\" \"DFP,CRT\"\n";
+		print FD "$dx=\"TwinViewXineramaInfoOrder\" \"$mlayout\"\n";
 		$dx = eval $dt;
 		foreach my $key (keys %data) {
 			my $val = $data{$key};

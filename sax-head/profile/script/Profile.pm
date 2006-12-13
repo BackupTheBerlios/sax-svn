@@ -294,7 +294,7 @@ sub ProfileNVidiaSetupMonitorLayout {
 		die "*** $stdname: Can't open $profile: $!";
 	my $profileData = <FD>;
 	my $monitorLayout = ProfileNVidiaGetMonitorLayout();
-	$profileData =~ s/\[MONITORLAYOUT\]/$monitorLayout/;
+	$profileData =~ s/\[MONITORLAYOUT\]/$monitorLayout/g;
 	close FD;
 	open (FD,">",$profile) ||
 		die "*** $stdname: Can't open $profile: $!";

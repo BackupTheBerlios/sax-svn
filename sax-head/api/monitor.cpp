@@ -535,7 +535,10 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "TwinView") {
 							saxCard.addCardOption ( key,0 );
 						}
-						if (key == "ConnectedMonitor") {
+						if (
+							(key == "ConnectedMonitor") ||
+							(key == "TwinViewXineramaInfoOrder")
+						) {
 							QStringList cs = QStringList::split (",",val);
 							QString channelA = cs.first();
 							QString channelB = cs.last();
@@ -544,9 +547,6 @@ bool SCCMonitor::exportData ( void ) {
 							} else {
 								saxCard.addCardOption ( key,val );
 							}
-						}
-						if (key == "TwinViewXineramaInfoOrder") {
-							saxCard.addCardOption ( key,"DFP,CRT" );
 						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
 							QString channelA = "AUTO:";
