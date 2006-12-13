@@ -36,7 +36,10 @@ sub mountMedia {
 		}
 		open (FD,"find $mountpoint -iname '*.inf'|");
 		while (my $file = <FD>) {
-			chomp $file; push (@result,$file);
+			chomp $file;
+			if ($file !~ /AUTORUN/i) {
+				push (@result,$file);
+			}
 		}
 		close FD;
 		qx (umount $device 2>&1);
