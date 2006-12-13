@@ -167,6 +167,11 @@ SCCMonitorDisplay::SCCMonitorDisplay (
 	mMainLayout -> addStretch ( 10 );
 
 	//=====================================
+	// Show display size message y/n
+	//-------------------------------------
+	mShowDisplaySizeMessage = true;
+
+	//=====================================
 	// save display number
 	//-------------------------------------
 	mDisplay = display;
@@ -767,11 +772,14 @@ void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
 		QTextOStream (ys) << y; combined.append (ys);
 		getMonitorData() -> setDisplaySize ( combined );
 	}
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
-	SCCMessage* mMessageBox = new SCCMessage (
-		this, mTextPtr, SaXMessage::OK,
-		mText["DisplaySizeInfo"],"MessageCaption",SaXMessage::Information
-	);
-	mMessageBox -> showMessage();
+	if (mShowDisplaySizeMessage) {
+		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+		SCCMessage* mMessageBox = new SCCMessage (
+			this, mTextPtr, SaXMessage::OK,
+			mText["DisplaySizeInfo"],"MessageCaption",SaXMessage::Information
+		);
+		mMessageBox -> showMessage();
+		mShowDisplaySizeMessage = false;
+	}
 }
 } // end namespace

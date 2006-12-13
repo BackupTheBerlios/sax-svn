@@ -67,6 +67,7 @@ class SCCMonitorDisplay : public SCCDialog {
 	int              mDisplay;
 	bool             mEnabled;
 	bool             mDualHeadEnabled;
+	bool             mShowDisplaySizeMessage;
 	QList<QString>   mSelectedResolution;
 	int              mSelectedColor;
 	QString          mCardModel;

@@ -545,6 +545,9 @@ bool SCCMonitor::exportData ( void ) {
 								saxCard.addCardOption ( key,val );
 							}
 						}
+						if (key == "TwinViewXineramaInfoOrder") {
+							saxCard.addCardOption ( key,"DFP,CRT" );
+						}
 						if ((key== "MetaModes") && (driver == "nvidia")) {
 							QString channelA = "AUTO:";
 							QString channelB = "AUTO:";
