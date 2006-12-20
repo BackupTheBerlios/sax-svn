@@ -215,7 +215,7 @@ if ($patchBIOS ne "ok") {
 		$code = "$vid$did$svd$sdd$ddc";
 		$code =~ s/0x//g;
 		$code = "0x".$code;
-		if ($code ne $icode) {
+		if ($code eq $icode) {
 			next
 		}
 		foreach my $prog (keys %{$patch{$code}}) {

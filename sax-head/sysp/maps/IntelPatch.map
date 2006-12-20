@@ -1,33 +1,8 @@
 # /.../
-# Mapping table for Intel devices to patch the bios 
+# Mapping table for Intel devices __NOT__ to patch
 # =====================================================
 # code | Arguments | Program
 # -----------------------------------------------------
-# Mac Mini on PHL0832
-0x808627a280867270PHL0832 : 3c %x %y : /sbin/915resolution
-# Mac Mini on Internal display
-0x808627a280867270APP9C5E : 3x %x %y : /sbin/915resolution
-# Fujitsu Siemens Lifebook E8110
-0x808627a210cf137a******* : 3c %x %y : /sbin/915resolution
-# Thinkpad R52
-0x8086259210140582******* : 3c %x %y : /sbin/915resolution
-# Gateway MX6923b
-0x808627a2107b0366******* : 3c %x %y : /sbin/915resolution
-# Dell D820
-0x808627a2102801cc******* : 3c %x %y : /sbin/915resolution
-# HP nc2400
-0x808627a2103c30a1LCD58E1 : 3c %x %y : /sbin/915resolution
-# HP nx7400
-0x808627a2103c30a2LPL1279 : 3c %x %y : /sbin/915resolution
-# HP nc6400
-0x808627a2103c30adQDS0053 : 3c %x %y : /sbin/915resolution
-# Dell D620
-0x808627a2102801c2AUO1047 : 3c %x %y : /sbin/915resolution
-# Samung sx20
-0x80862592144dc01a******* : 3c %x %y : /sbin/915resolution
-# Dell Inspiron 510m
-0x8086358210280164SEC4750 : 3c %x %y : /sbin/915resolution
-# Dell Inspiron 640m
-0x808627a2102801d8QDS0047 : 3c %x %y : /sbin/915resolution
-# Intel 865 G / BenQ FP91GX
-0x8086257280864c43BNQ76BD : 3c %x %y : /sbin/915resolution
+# Micro-Star International 945 GM (#201338)
+0x808627a214620341SEC3345 : 3c %x %y : /sbin/915resolution
+0x808627a614620341SEC3345 : 3c %x %y : /sbin/915resolution
