@@ -59,6 +59,11 @@ SCCTabletPens::SCCTabletPens (
 		mText["Properties"],mEraserBox
 	);
 	mEraserBox -> setStretchFactor ( mCheckEraser,10 );
+	mPadBox    = new QHBox ( mToolGroup );
+	mCheckPad = new QCheckBox (
+		mText["AddPad"],mPadBox
+	);
+	mPadBox -> setStretchFactor ( mCheckPad,10 );
 
 	//=====================================
 	// create toplevel dialogs 
@@ -68,6 +73,9 @@ SCCTabletPens::SCCTabletPens (
 	);
 	mEraserPropertyDialog = new SCCTabletPenProperty (
 		text,section,mText["EraserProperties"],0,this
+	);
+	mPadPropertyDialog = new SCCTabletPadProperty (
+		text,section,mText["PadProperties"],0,this
 	);
 	//=====================================
 	// connect widgets
@@ -110,6 +118,7 @@ void SCCTabletPens::init ( void ) {
 	//-------------------------------------
 	int penID    = 0;
 	int eraserID = 0;
+	int padID    = 0;
 	for (int i=SAX_CORE_POINTER;i<mSection["Pointers"]->getCount();i+=2) {
 		if (mSaxTablet->selectPointer (i)) {
 		if (mSaxTablet->isPen()) {
@@ -117,6 +126,9 @@ void SCCTabletPens::init ( void ) {
 		}
 		if (mSaxTablet->isEraser()) {
 			eraserID = i;
+		}
+		if (mSaxTablet->isPad()) {
+			padID = i;
 		}
 		}
 	}
@@ -127,6 +139,7 @@ void SCCTabletPens::init ( void ) {
 	mPenPropertyDialog    -> init();
 	mEraserPropertyDialog -> setID ( eraserID );
 	mEraserPropertyDialog -> init();
+	mPadPropertyDialog    -> setID ( padID );
 
 	//====================================
 	// setup default pen/eraser buttons
@@ -183,7 +196,7 @@ void SCCTabletPens::import ( void ) {
 		mSaxTablet->getMode()
 	);
 	//=====================================
-	// setup availability of pen/eraser
+	// setup availability of pen/eraser/pad
 	//-------------------------------------
 	if (mPenPropertyDialog -> getID() > 0) {
 		mCheckPen -> setChecked ( true );
@@ -193,6 +206,9 @@ void SCCTabletPens::import ( void ) {
 		mCheckEraser -> setChecked ( true );
 		slotActivateEraser();
 	} 
+	if (mPadPropertyDialog -> getID() > 0) {
+		mCheckPad -> setChecked ( true );
+	}
 	//=====================================
 	// call pen/eraser import() methods
 	//-------------------------------------
@@ -214,6 +230,12 @@ bool SCCTabletPens::hasPen ( void ) {
 //------------------------------------
 bool SCCTabletPens::hasEraser ( void ) {
 	return mCheckEraser->isChecked();
+}
+//====================================
+// hasPad
+//------------------------------------
+bool SCCTabletPens::hasPad ( void ) {
+	return mCheckPad->isChecked();
 }
 //====================================
 // slotTablet
@@ -249,6 +271,16 @@ void SCCTabletPens::slotTablet (
 		mCheckEraser -> setChecked ( false );
 		slotActivateEraser();
 		hasEraser = true;
+	}
+	//====================================
+	// check for pad support
+	//------------------------------------
+	bool hasPad = false;
+	mPadBox -> setDisabled ( true );
+	if (tabletDict["PadLink"]) {
+		mPadBox -> setDisabled ( false );
+		mCheckPad -> setChecked ( false );
+		hasPad = true;
 	}
 	//====================================
 	// setup state of Pen tab

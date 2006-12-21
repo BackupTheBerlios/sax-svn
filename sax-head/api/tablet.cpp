@@ -276,6 +276,14 @@ bool SCCTablet::exportData ( void ) {
 				sticks[1] = saxTablet.addPen ( vendor,eraserLink );
 			}
 			//====================================
+			// handle Tablet Pad
+			//------------------------------------
+			if (mTabletPens->hasPad()) {
+				printf ("ADDING PAD\n");
+				QString padLink = *tabletDict["PadLink"];
+				saxTablet.addPad ( vendor,padLink );
+			}
+			//====================================
 			// save pen/eraser data
 			//------------------------------------
 			for (int n=0;n<2;n++) {

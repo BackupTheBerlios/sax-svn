@@ -48,6 +48,7 @@ namespace SaX {
 #define CDBMONITORS        CDBDIR "Monitors"
 #define CDBPOINTERS        CDBDIR "Pointers"
 #define CDBPENS            CDBDIR "Pens"
+#define CDBPADS            CDBDIR "Pads"
 #define CDBTABLETS         CDBDIR "Tablets"
 #define CDBTOUCHERS        CDBDIR "Touchscreens"
 #define CDBCARDMODULES     DATADIR "CardModules"
@@ -74,6 +75,7 @@ namespace SaX {
 #define CDB_TOUCHERS       21
 #define CDB_CARDMODULES    22
 #define CDB_TABLETMODULES  23
+#define CDB_PADS           24
 
 #define SYSP_MOUSE         30
 #define SYSP_KEYBOARD      31

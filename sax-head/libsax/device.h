@@ -33,6 +33,7 @@ namespace SaX {
 #define SAX_INPUT_TOUCHPANEL  "Touchpanel"
 #define SAX_INPUT_TABLET      "Tablet"
 #define SAX_INPUT_PEN         "Pen"
+#define SAX_INPUT_PAD         "Pad"
 #define SAX_INPUT_ERASER      "Eraser"
 #define SAX_INPUT_MOUSE       "Mouse"
 #define SAX_INPUT_VNC         "VNC"

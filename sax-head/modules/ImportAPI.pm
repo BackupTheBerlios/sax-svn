@@ -1118,6 +1118,7 @@ sub ApiImportLayout {
 			}
 			my $driver = $api{Mouse}{"$count Driver"};
 			my $device = $api{Mouse}{"$count Device"};
+			my $inputf = $api{Mouse}{"$count InputFashion"};
 			if (
 				(! defined $entity{$driver}{$device}) ||
 				($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/)
@@ -1125,6 +1126,9 @@ sub ApiImportLayout {
 				my $l = "ServerLayout";
 				$var{$l}{all}{InputDevice}{$count}{id}    = $list[$i];
 				$var{$l}{all}{InputDevice}{$count}{usage} = "SendCoreEvents";
+			}
+			if ($inputf eq "Pad") {
+				$var{ServerLayout}{all}{InputDevice}{$count}{usage} = "none";
 			}
 			$entity{$driver}{$device} = $count;
 		}

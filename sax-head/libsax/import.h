@@ -292,6 +292,12 @@ class SaXImportCDBIF : public SaXProcess {
 *   configure the pen. The information is usefull in combination with an
 *   ISAX imported SaXImport(SAX_POINTERS) object
 *
+* - CDB_PADS\n
+*   Provides information about supported tablet pads refering to the
+*   file cdb/Pads. Each data record contains the various options to
+*   configure the pad. The information is usefull in combination with an
+*   ISAX imported SaXImport(SAX_POINTERS) object
+*
 * - CDB_POINTERS\n
 *   Provides information about the supported mice refering to the file
 *   cdb/Pointers. Each data record contains at least information about

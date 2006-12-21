@@ -159,7 +159,11 @@ sub CreateServerLayoutSection {
 				my $input_use = $var{ServerLayout}{$lid}{$i}{$devnr}{usage};
 	  
 				if ($input_id ne "") {
+				if ($input_use ne "none") {
 					push(@result,PrintLine($i,"\"$input_id\" \"$input_use\""));
+				} else {
+					push(@result,PrintLine($i,"\"$input_id\""));
+				}
 				}
 			}
 			last SWITCH;

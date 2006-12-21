@@ -42,33 +42,33 @@ WACOM:ISDV4 TABLET PC (SERIAL) {
 #-------------------------------#
 # Wacom Intuos tablet           #
 #-------------------------------#
-WACOM:INTUOS v1,2 (SERIAL) {
+WACOM:INTUOS v1+2 (SERIAL) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
  Device           = /dev/ttyS0
  SendCoreEvents   = on
- StylusLink       = INTUOS v1,2 Stylus (SERIAL)
- EraserLink       = INTUOS v1,2 Eraser (SERIAL)
+ StylusLink       = INTUOS v1+2 Stylus (SERIAL)
+ EraserLink       = INTUOS v1+2 Eraser (SERIAL)
 }
 
 #-------------------------------#
 # Wacom Graphire tablet         #
 #-------------------------------#
-WACOM:GRAPHIRE v1,2 (SERIAL) {
+WACOM:GRAPHIRE v1+2 (SERIAL) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
  Device           = /dev/ttyS0
  SendCoreEvents   = on
- StylusLink       = GRAPHIRE v1,2 Stylus (SERIAL)
- EraserLink       = GRAPHIRE v1,2 Eraser (SERIAL)
+ StylusLink       = GRAPHIRE v1+2 Stylus (SERIAL)
+ EraserLink       = GRAPHIRE v1+2 Eraser (SERIAL)
 }
 
 #-------------------------------#
 # Wacom Intuos tablet USB       #
 #-------------------------------#
-WACOM:INTUOS v1,2,3 (USB) {
+WACOM:INTUOS v1-3 (USB) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
@@ -76,23 +76,24 @@ WACOM:INTUOS v1,2,3 (USB) {
  Option           = Tilt,USB
  SendCoreEvents   = on
  KernelLoad       = wacom
- StylusLink       = INTUOS v1,2,3 Stylus (USB)
- EraserLink       = INTUOS v1,2,3 Eraser (USB)
+ StylusLink       = INTUOS v1-3 Stylus (USB)
+ EraserLink       = INTUOS v1-3 Eraser (USB)
 }
 
 #-------------------------------#
 # Wacom Graphire tablet USB     #
 #-------------------------------#
-WACOM:GRAPHIRE v1,2,3,4 (USB) {
+WACOM:GRAPHIRE v1-4 (USB) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
  Device           = /dev/input/event0
- Option           = Tilt,USB
+ Option           = USB
  SendCoreEvents   = on
  KernelLoad       = wacom
- StylusLink       = GRAPHIRE v1,2,3,4 Stylus (USB)
- EraserLink       = GRAPHIRE v1,2,3,4 Eraser (USB)
+ StylusLink       = GRAPHIRE v1-4 Stylus (USB)
+ EraserLink       = GRAPHIRE v1-4 Eraser (USB)
+ PadLink          = GRAPHIRE v1-4 Pad (USB)
 }
 
 #-------------------------------#

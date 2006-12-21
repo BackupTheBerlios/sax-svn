@@ -267,7 +267,10 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	virtual void setMode   ( const QString& ) = 0;
 	virtual int  addPen    ( const QString& ) = 0;
 	virtual int  addPen    ( const QString&,const QString& ) = 0;
+	virtual int  addPad    ( const QString& ) = 0;
+	virtual int  addPad    ( const QString&,const QString& ) = 0;
 	virtual int  removePen ( int ) = 0;
+	virtual int  removePad ( int ) = 0;
 
 	public:
 	virtual QString getName   ( void ) = 0;
@@ -277,6 +280,7 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	virtual bool isTablet     ( void ) = 0;
 	virtual bool isPen        ( void ) = 0;
 	virtual bool isEraser     ( void ) = 0;
+	virtual bool isPad        ( void ) = 0;
 
 	public:
 	virtual ~SaXManipulateTabletsIF ( void ) { }
@@ -361,6 +365,7 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	QList<QString> mCDBTabletList;
 	QDict<QString> mCDBTabletData;
 	SaXProcess*    mCDBPens;
+	SaXProcess*    mCDBPads;
 	QList<QString> mCDBPenList;
 	QList<QString> mCDBTabletDrivers;
 	QDict<QString> mCDBTabletOptions;
@@ -385,7 +390,10 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	void setMode   ( const QString& );
 	int  addPen    ( const QString& );
 	int  addPen    ( const QString&,const QString& );
+	int  addPad    ( const QString& );
+	int  addPad    ( const QString&,const QString& );
 	int  removePen ( int );
+	int  removePad ( int );
 
 	public:
 	QString getName   ( void );
@@ -395,6 +403,7 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	bool isTablet     ( void );
 	bool isPen        ( void );
 	bool isEraser     ( void );
+	bool isPad        ( void );
 
 	public:
 	SaXManipulateTablets ( SaXImport*, SaXImport* , int = 1 );

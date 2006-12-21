@@ -34,6 +34,7 @@ STATUS        : Status: Development
 #include "dialog.h"
 #include "tablet.h"
 #include "tabletpenproperty.h"
+#include "tabletpadproperty.h"
 
 namespace SaXGUI {
 //====================================
@@ -61,17 +62,21 @@ class SCCTabletPens : public SCCDialog {
 	private:
 	QHBox*                mPenBox;
 	QHBox*                mEraserBox;
+	QHBox*                mPadBox;
 	QButtonGroup*         mToolGroup;
 	QCheckBox*            mCheckPen;
 	QCheckBox*            mCheckEraser;
+	QCheckBox*            mCheckPad;
 	QPushButton*          mPenProperties;
 	QPushButton*          mEraserProperties;
 	SCCTabletPenProperty* mPenPropertyDialog;
 	SCCTabletPenProperty* mEraserPropertyDialog;
+	SCCTabletPadProperty* mPadPropertyDialog;
 
 	public:
 	bool hasPen    ( void );
 	bool hasEraser ( void );
+	bool hasPad    ( void );
 	SCCTabletPenProperty* getPenPropertyData    ( void );
 	SCCTabletPenProperty* getEraserPropertyData ( void );
 

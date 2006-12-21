@@ -805,6 +805,7 @@ SaXManipulateTablets::SaXManipulateTablets (
 	mCDBTabletModules = 0;
 	mCDBTablets = 0;
 	mCDBPens = 0;
+	mCDBPads = 0;
 }
 
 //====================================
@@ -885,6 +886,24 @@ bool SaXManipulateTablets::isEraser (void) {
 	}
 	QString fashion = mImport -> getItem ("InputFashion");
 	if (fashion == "Eraser") {
+		return true;
+	}
+	return false;
+}
+
+//====================================
+// isPad
+//------------------------------------
+bool SaXManipulateTablets::isPad (void) {
+	// .../
+	//! check if the current device is a tablet pad. This is
+	//! done by checking the InputFashion parameter.
+	// ----
+	if (! mImport) {
+		return false;
+	}
+	QString fashion = mImport -> getItem ("InputFashion");
+	if (fashion == "Pad") {
 		return true;
 	}
 	return false;
@@ -1221,6 +1240,91 @@ void SaXManipulateTablets::setTablet (
 }
 
 //====================================
+// addPad
+//------------------------------------
+int SaXManipulateTablets::addPad (const QString& group) {
+	// .../
+	//! add a new Pad associated with the given group name to
+	//! the current pointer data. The group name consists of the
+	//! vendor and model name separated by a colon. The contents of the
+	//! data record will set the InputFashion type for this addon
+	//! pointer device
+	// ----
+	if ( ! mCDBPads ) {
+		mCDBPads = new SaXProcess ();
+		mCDBPads -> start (CDB_PADS);
+	}
+	QList< QDict<QString> > data;
+	data = mCDBPads -> getTablePointerCDB_DATA (
+		group
+	);
+	if (data.isEmpty()) {
+		excCDBRecordNotFound (group);
+		qError (errorString(),EXC_CDBRECORDNOTFOUND);
+		return -1;
+	}
+	// .../
+	// set input fashion type for the selected pad
+	// ----
+	QDict<QString> penData = *data.at(0);
+	QString* type = penData["TabletType"];
+	if (! type) {
+		excPointerFashionTypeFailed ("undefined");
+		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
+		return -1;
+	}
+	if (*type != "pad") {
+		excPointerFashionTypeFailed (*type);
+		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
+		return -1;
+	}
+	QString fashion (SAX_INPUT_PAD);
+	// .../
+	// create new input device for the pad and make
+	// it the current pointer device
+	// ----
+	int newPad = mManipInputDevices->addInputDevice (fashion);
+	if ( ! selectPointer (newPad)) {
+		return -1;
+	}
+	// .../
+	// move the data record to the correct position
+	// refering to the section ID -> mPointer
+	// ----
+	QDict<QString>* record = data.take(0);
+	for (int n=0;n < mPointer;n++) {
+		data.append(new QDict<QString>());
+	}
+	data.append ( record );
+	// .../
+	// merge the pad data now into the current section
+	// ----
+	mImport -> merge ( data );
+	// .../
+	// set vendor and name tag
+	// ----
+	QStringList nameList = QStringList::split ( ":", group );
+	mImport -> setItem ( "Vendor", nameList.first() );
+	mImport -> setItem ( "Name"  , nameList.last()  );
+	return newPad;
+}
+//====================================
+// addPad
+//------------------------------------
+int SaXManipulateTablets::addPad (
+	const QString& vendor, const QString& model
+) {
+	// .../
+	//! add a new Pad associated with the given group name to
+	//! the current pointer data. The group name consists of the
+	//! vendor and model name separated by a colon. The contents of the
+	//! data record will set the InputFashion type for this addon
+	//! pointer device
+	// ----
+	return addPad (vendor+":"+model);
+}   
+
+//====================================
 // addPen
 //------------------------------------
 int SaXManipulateTablets::addPen (const QString& group) {
@@ -1327,6 +1431,30 @@ int SaXManipulateTablets::removePen ( int id ) {
 		(fashion != QString(SAX_INPUT_PEN ))   &&
 		(fashion != QString(SAX_INPUT_ERASER))
 	) {
+		excPointerFashionTypeFailed (fashion);
+		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
+		return -1;
+	}
+	return mManipInputDevices->removeInputDevice (id);
+}
+
+//====================================
+// removePad
+//------------------------------------
+int SaXManipulateTablets::removePad ( int id ) {
+	// .../
+	//! remove the Pad located at section ID (id)
+	//! If the InputFashion type is a valid SAX_INPUT_PAD
+	//! the method will remove the pointer device and return
+	//! the new current ID
+	// ----
+	if (! selectPointer ( id )) {
+		return -1;
+	}
+	QString fashion (
+		mImport->getItem("InputFashion")
+	);
+	if (fashion != QString(SAX_INPUT_PAD)) {
 		excPointerFashionTypeFailed (fashion);
 		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
 		return -1;

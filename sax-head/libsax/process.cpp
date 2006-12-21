@@ -131,6 +131,9 @@ void SaXProcess::storeDataCDB (int fileID) {
 		case CDB_PENS:
 			file = CDBPENS;
 		break;
+		case CDB_PADS:
+			file = CDBPADS;
+		break;
 		case CDB_POINTERS:
 			file = CDBPOINTERS;
 		break;
