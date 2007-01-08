@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Dec 12 10:40:11 2006
+# Author: Marcus Schaefer <sax@suse.de>, Mon Jan  8 09:20:59 2007
 #
 # Template for monitor data
 # --------------------------
@@ -5559,6 +5559,16 @@ BERMON:2082-LR  {
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
  Modeline="640x480" 55.00 640 672 732 864 480 488 494 530
+ Vsync=50-90
+}
+
+#==============================================
+# BM10A
+#----------------------------------------------
+BRIDGE:BM10A  {
+ DDC=BRG0064
+ Hsync=30-50
+ Resolution=1024x768
  Vsync=50-90
 }
 
