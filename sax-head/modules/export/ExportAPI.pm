@@ -99,6 +99,7 @@ sub MergeParseResult {
 	$InputOptions{ClearDTR}           = 1;
 	$InputOptions{ClearRTS}           = 1;
 	$InputOptions{ZAxisMapping}       = 1;
+	$InputOptions{ButtonMapping}      = 1;
 	$InputOptions{InvX}               = 1;
 	$InputOptions{InvY}               = 1;
 	$InputOptions{MinX}               = 1;

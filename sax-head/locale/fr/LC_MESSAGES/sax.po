@@ -43,6 +43,12 @@ msgstr "SaX2 : configuration de X11"
 msgid "SaX Control Center"
 msgstr "Centre de contrôle SaX"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 #. Help Button text
 msgid "&Help"
 msgstr "&Aide"
@@ -180,6 +186,11 @@ msgstr "Inverser l'axe des X"
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr "Inverser l'axe des Y"
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "Activer l'émulation 3 boutons"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -996,12 +1007,22 @@ msgstr "Ajouter crayon"
 msgid "Add Eraser"
 msgstr "Ajouter gomme"
 
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "Ajouter crayon"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "Paramètres stylo ou gomme"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "Propriétés du stylo"
+
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "Propriétés du stylo"
 
 #. Tab title: Eraser properties

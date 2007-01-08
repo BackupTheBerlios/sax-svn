@@ -42,6 +42,12 @@ msgstr "SaX2： X11 配置"
 msgid "SaX Control Center"
 msgstr "SaX 控制中心"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 #. Help Button text
 msgid "&Help"
 msgstr "帮助(&H)"
@@ -179,6 +185,11 @@ msgstr "翻转 X 轴"
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr "翻转 Y 轴"
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "激活 3 键仿真"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -974,12 +985,22 @@ msgstr "添加笔"
 msgid "Add Eraser"
 msgstr "添加橡皮"
 
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "添加笔"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "笔或橡皮设置"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "笔属性"
+
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "笔属性"
 
 #. Tab title: Eraser properties

@@ -71,6 +71,9 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mCheckInvertYAxis   = new QCheckBox (
 		mText["InvertYAxis"],mMouseOptionGroup
 	);
+	mCheckLeftHand      = new QCheckBox (
+		mText["LeftHand"],mMouseOptionGroup
+	);
 	QHBox* wheelBox = new QHBox ( mMouseOptionGroup );
 	mCheckEmulateWheel = new QCheckBox (
 		mText["EmulateWheel"],wheelBox
@@ -138,6 +141,10 @@ SCCMouseDisplay::SCCMouseDisplay (
 	QObject::connect (
 		mCheckEmulateWheel , SIGNAL (clicked            ( void )),
 		this               , SLOT   (slotWheelEmulation ( void ))
+	);
+	QObject::connect (
+		mCheckLeftHand     , SIGNAL (clicked      ( void )),
+		this               , SLOT   (slotLeftHand ( void ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -286,6 +293,12 @@ void SCCMouseDisplay::import ( void ) {
 		mEmulateWheelButton -> setDisabled ( false );
 		mEmulateWheelButton -> setValue ( mSaxMouse->getWheelEmulatedButton() );
 	}
+	//====================================
+	// handle left hand mapping
+	//------------------------------------
+	if (mSaxMouse -> isLeftHandEnabled()) {
+		mCheckLeftHand -> setChecked ( true );
+	}
 }
 //====================================
 // slotChangeMouse
@@ -344,6 +357,28 @@ void SCCMouseDisplay::slotWheelEmulation ( void ) {
 	}
 }
 //====================================
+// slotLeftHand
+//------------------------------------
+void SCCMouseDisplay::slotLeftHand ( void ) {
+	qApp->setOverrideCursor ( Qt::forbiddenCursor );
+	QProcess* proc = new QProcess ();
+	proc -> addArgument ("xmodmap");
+	proc -> addArgument ("-e");
+	if (mCheckLeftHand -> isChecked()) {
+		proc -> addArgument ("pointer = 3 2 1");
+	} else {
+		proc -> addArgument ("pointer = 1 2 3");
+	}
+	if ( ! proc -> start() ) {
+		qApp->restoreOverrideCursor();
+		return;
+	}
+	while (proc->isRunning()) {
+		usleep (1000);
+	}
+	qApp->restoreOverrideCursor();
+}
+//====================================
 // isEnabled
 //------------------------------------
 bool SCCMouseDisplay::isEnabled  ( void ) {
@@ -398,6 +433,12 @@ bool SCCMouseDisplay::isXInverted ( void ) {
 //------------------------------------
 bool SCCMouseDisplay::isYInverted ( void ) {
 	return mCheckInvertYAxis->isChecked();
+}
+//====================================
+// isLeftHanded
+//------------------------------------
+bool SCCMouseDisplay::isLeftHanded ( void ) {
+	return mCheckLeftHand->isChecked();
 }
 //====================================
 // getWheelButton

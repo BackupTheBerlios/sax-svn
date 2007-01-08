@@ -482,6 +482,34 @@ void SaXManipulateMice::disableYAxisInvertation (void) {
 }
 
 //====================================
+// enableLeftHandMapping
+//------------------------------------
+void SaXManipulateMice::enableLeftHandMapping  ( void ) {
+	// .../
+	//! Activate the left hand button mapping for the core pointer
+	//! This is done by adding the option ButtonMapping
+	// ----
+	if (! mImport) {
+		return;
+	}
+	mImport -> setItem ("ButtonMapping","3 2 1");
+}
+
+//====================================
+// disableLeftHandMapping
+//------------------------------------
+void SaXManipulateMice::disableLeftHandMapping ( void ) {
+	// .../
+	//! Deactivate the left hand button mapping for the core pointer
+	//! This is done by removing the ButtonMapping option
+	// ----
+	if (! mImport) {
+		return;
+	}
+	mImport -> setItem ("ButtonMapping","");
+}
+
+//====================================
 // isMouse
 //------------------------------------
 bool SaXManipulateMice::isMouse (void) {
@@ -527,6 +555,24 @@ bool SaXManipulateMice::isWheelEnabled (void) {
 	}
 	QString zaxis = mImport -> getItem ("ZAxisMapping");
 	if (! zaxis.isEmpty()) {
+		return true;
+	}
+	return false;
+}
+
+//====================================
+// isLeftHandEnabled
+//------------------------------------
+bool SaXManipulateMice::isLeftHandEnabled (void) {
+	// .../
+	//! check if the left hand mapping is active. This is done
+	//! by checking the ButtonMapping keyword
+	// ----
+	if (! mImport) {
+		return false;
+	}
+	QString mapping = mImport -> getItem ("ButtonMapping");
+	if (mapping.contains("3 2 1")) {
 		return true;
 	}
 	return false;

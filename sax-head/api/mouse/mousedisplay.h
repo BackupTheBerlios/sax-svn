@@ -77,6 +77,7 @@ class SCCMouseDisplay : public SCCDialog {
 	QCheckBox*       mCheckEmulateWheel;
 	QCheckBox*       mCheckInvertXAxis;
 	QCheckBox*       mCheckInvertYAxis;
+	QCheckBox*       mCheckLeftHand;
 	QSpinBox*        mEmulateWheelButton;
 	QButtonGroup*    mMouseTestGroup;
 	QButtonGroup*    mSynapTestGroup;
@@ -93,6 +94,7 @@ class SCCMouseDisplay : public SCCDialog {
 	bool isWheelEnabled ( void );
 	bool isXInverted    ( void );
 	bool isYInverted    ( void );
+	bool isLeftHanded   ( void );
 	int  getWheelButton ( void );
 	void setButtonEmulationEnabled ( bool );
 	void setWheelEmulationEnabled  ( bool );
@@ -110,6 +112,7 @@ class SCCMouseDisplay : public SCCDialog {
 	void slotChangeMouse ( void );
 	void slotActivateDisplay ( void );
 	void slotWheelEmulation  ( void );
+	void slotLeftHand ( void );
 
 	signals:
 	void sigActivate ( void );

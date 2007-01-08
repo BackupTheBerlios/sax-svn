@@ -54,6 +54,12 @@ msgstr "SaX2: SUSE napredna prilagoditev X11"
 msgid "SaX Control Center"
 msgstr "SaX Nadzorna plošča"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 #. Help Button text
 msgid "&Help"
 msgstr "&Pomoč"
@@ -193,6 +199,11 @@ msgstr ""
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr ""
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "Aktiviraj posnemanje 3 gumbov"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -1012,12 +1023,22 @@ msgstr "Dodaj pero"
 msgid "Add Eraser"
 msgstr "Dodaj radirko"
 
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "Dodaj pero"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "Nastavitve peresa ali radirke"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "Lastnosti peresa"
+
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "Lastnosti peresa"
 
 #. Tab title: Eraser properties

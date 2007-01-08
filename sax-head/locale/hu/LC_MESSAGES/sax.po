@@ -57,6 +57,12 @@ msgstr "SaX2: SUSE szakértői X11-beállítások"
 msgid "SaX Control Center"
 msgstr "SaX vezérlőközpont"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 # /tmp/xapi:11
 #. Help Button text
 msgid "&Help"
@@ -217,6 +223,11 @@ msgstr "X tengely megfordítása"
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr "Y tengely megfordítása"
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "Harmadik gomb emulációjának bekapcsolása"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -1083,6 +1094,12 @@ msgstr "Toll hozzáadása"
 msgid "Add Eraser"
 msgstr "Radír hozzáadása"
 
+# /tmp/xapi:105
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "Toll hozzáadása"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "Toll vagy radír beállítások"
@@ -1090,6 +1107,12 @@ msgstr "Toll vagy radír beállítások"
 # /tmp/xapi:111
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "Toll tulajdonságai"
+
+# /tmp/xapi:111
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "Toll tulajdonságai"
 
 # /tmp/xapi:115

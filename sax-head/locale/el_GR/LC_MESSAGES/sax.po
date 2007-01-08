@@ -58,6 +58,12 @@ msgstr "SaX2: SUSE Advanced X11 Configuration"
 msgid "SaX Control Center"
 msgstr "Κέντρο Ελέγχου SaX"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 #. Help Button text
 msgid "&Help"
 msgstr "&Βοήθεια"
@@ -197,6 +203,11 @@ msgstr ""
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr ""
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "Ενεργοποίηση εξομοίωσης 3-κουμπιών"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -1053,12 +1064,22 @@ msgstr "Προσθήκη πένας"
 msgid "Add Eraser"
 msgstr "Προσθήκη σβήστρας"
 
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "Προσθήκη πένας"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "Ρυθμίσεις πένας ή σβήστρας"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "Ιδιότητες πένας"
+
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "Ιδιότητες πένας"
 
 #. Tab title: Eraser properties

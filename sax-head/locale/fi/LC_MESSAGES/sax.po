@@ -50,6 +50,12 @@ msgstr "SaX2: X11 määritys"
 msgid "SaX Control Center"
 msgstr "SaX Ohjauskeskus"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 #. Help Button text
 msgid "&Help"
 msgstr "O&hje"
@@ -187,6 +193,11 @@ msgstr "Käänteinen X-akseli"
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr "Käänteinen Y-akseli"
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "Ota käyttöön 3. painikkeen emulointi"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -993,12 +1004,22 @@ msgstr "Lisää kynä"
 msgid "Add Eraser"
 msgstr "Lisää pyyhekumi"
 
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "Lisää kynä"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "Kynän tai pyyhekumin asetukset"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "Kynän ominaisuudet"
+
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "Kynän ominaisuudet"
 
 #. Tab title: Eraser properties

@@ -46,6 +46,12 @@ msgstr "SaX2: Настройка на Х11"
 msgid "SaX Control Center"
 msgstr "SaX център за управление"
 
+#. Info message about display size changes
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+
 #. Help Button text
 msgid "&Help"
 msgstr "&Помощ"
@@ -183,6 +189,11 @@ msgstr "Обръщане на X осите"
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
 msgstr "Обръщане на Y осите"
+
+#. CheckBox label to activate left hand mouse
+#, fuzzy
+msgid "Activate Left-Hand Button Mapping"
+msgstr "Активиране емулация на 3 бутона"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -995,12 +1006,22 @@ msgstr "Добавяне на писалка"
 msgid "Add Eraser"
 msgstr "Добавяне на гума"
 
+#. Add Pad Checkbox
+#, fuzzy
+msgid "Add Pad"
+msgstr "Добавяне на писалка"
+
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
 msgstr "Настройки на писалката или гумата"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
+msgstr "Свойства на писалката"
+
+#. Tab title: Pad properties
+#, fuzzy
+msgid "Pad Properties"
 msgstr "Свойства на писалката"
 
 #. Tab title: Eraser properties

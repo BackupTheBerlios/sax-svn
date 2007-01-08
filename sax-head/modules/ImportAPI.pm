@@ -670,6 +670,13 @@ sub ApiImportMouse {
 		last SWITCH;
 		};
 
+		/^ButtonMapping/            && do {
+		if (($value !~ /off/i) && ($value !~ /none/i)) {
+			$var{InputDevice}{$card}{Option}{ButtonMapping} = $value;
+		}
+		last SWITCH;
+		};
+
 		/^InvX/                     && do {
 		if (($value !~ /off/i) && ($value !~ /none/i)) {
 			$var{InputDevice}{$card}{Option}{InvX} = $value;

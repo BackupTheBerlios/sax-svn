@@ -245,6 +245,13 @@ bool SCCMouse::exportData ( void ) {
 			saxMouse.enableWheelEmulation (display->getWheelButton());
 		}
 		//====================================
+		// save mouse left hand mapping data
+		//------------------------------------
+		saxMouse.disableLeftHandMapping();
+		if (display->isLeftHanded()) {
+			saxMouse.enableLeftHandMapping();
+		}
+		//====================================
 		// save input layout
 		//------------------------------------
 		saxLayout.removeInputLayout (mouseID);
