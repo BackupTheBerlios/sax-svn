@@ -772,7 +772,7 @@ void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
 		QTextOStream (ys) << y; combined.append (ys);
 		getMonitorData() -> setDisplaySize ( combined );
 	}
-	if (mShowDisplaySizeMessage) {
+	if ((mShowDisplaySizeMessage) && (isVisible())) {
 		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
 		SCCMessage* mMessageBox = new SCCMessage (
 			this, mTextPtr, SaXMessage::OK,
