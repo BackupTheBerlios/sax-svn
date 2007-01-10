@@ -90,7 +90,9 @@ HW detection data.
 --vesa
 This option will set a given resolution and vertical sync
 value (in Hz) as VESA standard resolution for a specific
-card. The format is the following:
+card. Please note if you set a resolution smaller than 800x600
+the graphics user interface won't fit the screen dimensions.
+The format is the following:
 .I Card:XxY@VSync
 Example: 0:1024x768@85
 .TP
