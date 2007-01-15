@@ -11,11 +11,12 @@
 # Papp Zsolt <zpapp@novell.com>, 2006.
 # Keresztes Ákos <xsak@c2.hu>, 2006.
 # Kalman Kemenczy <kkemenczy@novell.com>, 2006.
+# Kéménczy Kálmán <kkemenczy@novell.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-03-18 22:26+0100\n"
+"PO-Revision-Date: 2006-07-11 14:52+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -62,8 +63,9 @@ msgstr "&Segítség"
 
 # /tmp/intro:62 /tmp/xapi:65
 #. Ok Button text
+#, fuzzy
 msgid "&OK"
-msgstr "&OK"
+msgstr "O&K"
 
 # /tmp/xapi:61
 #. Yes Button text
@@ -246,7 +248,7 @@ msgstr "&Mentés"
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr "Elrendezése"
+msgstr "Elrendezés"
 
 # /tmp/xapi:219
 #. Status line of mouse test field: ready
@@ -445,7 +447,7 @@ msgstr "Monitor: Gyártó/név kiválasztása"
 # /tmp/xapi:301
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Egér: Gyártó/név kiválasztása"
+msgstr "Egér: Gyártó/tipus kiválasztása"
 
 # /tmp/xapi:355
 #. Group box title for the manual sync frequency set up
@@ -1024,7 +1026,7 @@ msgstr "<Jelszó módosítása>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr "<Jelszó ellenőrzése>"
+msgstr "Jelszó ellenőrzése0"
 
 # /tmp/xapi:235
 #. Activate HTTP access checkbox
@@ -1254,3 +1256,245 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenség időzítő..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<b>Megjegyzés:</b><hr>A beállítás <i>Framebuffer</i>-alapú és a "
+#~ "rendszernem támogatja a felbontás és/vagy a színbeállítás "
+#~ "megváltoztatását."
+
+#~ msgid ""
+#~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
+#~ "with a maximum of eight characters."
+#~ msgstr ""
+#~ "<b>VNC-jelszóhiba</b><hr>A jelszó túl hosszú. Adjon meg egy legfeljebb "
+#~ "nyolckarakteres jelszót."
+
+#~ msgid "Arabic"
+#~ msgstr "Arab"
+
+#~ msgid "Estonia"
+#~ msgstr "Észtország"
+
+#~ msgid "Myanmar"
+#~ msgstr "Burma"
+
+#~ msgid "Norway"
+#~ msgstr "Norvégia"
+
+#~ msgid "Germany"
+#~ msgstr "Németország"
+
+#~ msgid "Mongolia"
+#~ msgstr "Mongólia"
+
+#~ msgid "Bhutan"
+#~ msgstr "Bután"
+
+#~ msgid "Bangladesh"
+#~ msgstr "Banglades"
+
+#~ msgid "Latin American"
+#~ msgstr "Latin-Amerika"
+
+#~ msgid "Belgium"
+#~ msgstr "Belgium"
+
+#~ msgid "Finland"
+#~ msgstr "Finnország"
+
+#~ msgid "Israel"
+#~ msgstr "Izrael"
+
+# /tmp/intro:67 /tmp/xapi:379
+#~ msgid "Sweden"
+#~ msgstr "Svédország"
+
+#~ msgid "Russia"
+#~ msgstr "Oroszország"
+
+#~ msgid "Portugal"
+#~ msgstr "Portugália"
+
+#~ msgid "Korean"
+#~ msgstr "Korea"
+
+#~ msgid "Maori"
+#~ msgstr "Maori"
+
+#~ msgid "Uzbekistan"
+#~ msgstr "Üzbegisztán"
+
+#~ msgid "Bulgaria"
+#~ msgstr "Bulgária"
+
+#~ msgid "Thailand"
+#~ msgstr "Thaiföld"
+
+#~ msgid "India"
+#~ msgstr "India"
+
+#~ msgid "Bengali"
+#~ msgstr "bengáli"
+
+#~ msgid "Switzerland"
+#~ msgstr "Svájc"
+
+#~ msgid "Laos"
+#~ msgstr "Laosz"
+
+#~ msgid "Japan"
+#~ msgstr "Japán"
+
+#~ msgid "Syria"
+#~ msgstr "Szíria"
+
+#~ msgid "Czechia"
+#~ msgstr "Csehország"
+
+#~ msgid "Belarus"
+#~ msgstr "Fehéroroszország"
+
+#~ msgid "Tajikistan"
+#~ msgstr "Tádzsikisztán"
+
+#~ msgid "Denmark"
+#~ msgstr "Dánia"
+
+#~ msgid "Slovenia"
+#~ msgstr "Szlovénia"
+
+#~ msgid "Malta"
+#~ msgstr "Málta"
+
+#~ msgid "Azerbaijan"
+#~ msgstr "Azerbajdzsán"
+
+#~ msgid "Lithuania"
+#~ msgstr "Litvánia"
+
+#~ msgid "Vietnam"
+#~ msgstr "Vietnam"
+
+#~ msgid "Faroe Islands"
+#~ msgstr "Feröer-szigetek"
+
+#~ msgid "South Africa"
+#~ msgstr "Dél-Afrika"
+
+#~ msgid "Farsi"
+#~ msgstr "farszi"
+
+#~ msgid "Slovakia"
+#~ msgstr "Szlovákia"
+
+#~ msgid "Maldives"
+#~ msgstr "Maldív-szigetek"
+
+#~ msgid "Iceland"
+#~ msgstr "Izland"
+
+#~ msgid "Croatia"
+#~ msgstr "Horvátország"
+
+#~ msgid "Latvia"
+#~ msgstr "Lettország"
+
+#~ msgid "Albania"
+#~ msgstr "Albánia"
+
+#~ msgid "Italy"
+#~ msgstr "Olaszország"
+
+#~ msgid "Greece"
+#~ msgstr "Görögország"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Egyesült Királyság"
+
+# /tmp/xapi:17 /tmp/xapi:25 /tmp/xapi:83
+#~ msgid "France"
+#~ msgstr "Franciaország"
+
+#~ msgid "Armenia"
+#~ msgstr "Örményország"
+
+#~ msgid "Pakistan"
+#~ msgstr "Pakisztán"
+
+#~ msgid "Poland"
+#~ msgstr "Lengyelország"
+
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Kirgizisztán"
+
+#~ msgid "Ireland"
+#~ msgstr "Írország"
+
+#~ msgid "Hungary"
+#~ msgstr "Magyarország"
+
+#~ msgid "Cambodia"
+#~ msgstr "Kambodzsa"
+
+#~ msgid "Spain"
+#~ msgstr "Spanyolország"
+
+#~ msgid "Ukraine"
+#~ msgstr "Ukrajna"
+
+#~ msgid "Romania"
+#~ msgstr "Románia"
+
+#~ msgid "Kazakhstan"
+#~ msgstr "Kazahsztán"
+
+#~ msgid "Georgia"
+#~ msgstr "Grúzia"
+
+#~ msgid "U.S. English"
+#~ msgstr "amerikai angol"
+
+#~ msgid "Turkish"
+#~ msgstr "török"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx sorozat"
+
+#~ msgid "Netherlands"
+#~ msgstr "Hollandia"
+
+#~ msgid "Macedonia"
+#~ msgstr "Macedónia"
+
+#~ msgid "Canada"
+#~ msgstr "Kanada"
+
+#~ msgid "Sri Lanka"
+#~ msgstr "Sri Lanka"
+
+#~ msgid "Bosnia and Herzegovina"
+#~ msgstr "Bosznia-Hercegovina"
+
+#~ msgid "Serbia and Montenegro"
+#~ msgstr "Szerbia-Montenegro"
+
+#~ msgid "Brazil"
+#~ msgstr "Brazília"
+
+#~ msgid "Ghana"
+#~ msgstr "Ghána"
+
+#~ msgid "Andorra"
+#~ msgstr "Andorra"
+
+#~ msgid "Afghanistan"
+#~ msgstr "Afganisztán"
+
+#~ msgid "Esperanto"
+#~ msgstr "eszperantó"
+
+#~ msgid "Turkey"
+#~ msgstr "Törökország"

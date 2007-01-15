@@ -1,6 +1,6 @@
 # translation of sax.nl.po to Dutch
 # Arthur & Ettie Kerkmeester <a.s.kerkmeester@hccnet.nl>, 2000-2003, 2004, 2005.
-# Dani�l Huisman <d.d.huisman@gmail.com>, 2005.
+# Daniël Huisman <d.d.huisman@gmail.com>, 2005, 2006.
 # Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006.
 # domain "sax.mo"
 # Dutch message file for Sax.
@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.nl\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-01-28 12:16+0100\n"
+"PO-Revision-Date: 2006-12-12 10:56:44+CET\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
@@ -54,8 +54,9 @@ msgid "&Help"
 msgstr "&Help"
 
 #. Ok Button text
+#, fuzzy
 msgid "&OK"
-msgstr "&OK"
+msgstr "O&K"
 
 #. Yes Button text
 msgid "&Yes"
@@ -305,7 +306,7 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Kan niet alle schermen uitschakelen</b><hr><nobr>Er moet minimaal ��n "
+"<b>Kan niet alle schermen uitschakelen</b><hr><nobr>Er moet minimaal één "
 "scherm actief zijn</nobr>"
 
 #. Info label for dual head checkbox
@@ -334,7 +335,7 @@ msgid ""
 "Build one big display out of all screens"
 msgstr ""
 "Xinerama Multihead:\n"
-"Van alle schermen ��n groot beeldscherm maken"
+"Van alle schermen één groot beeldscherm maken"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -595,9 +596,9 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Rechter Win-toets wisselt de groep wanneer ingedrukt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock."
+msgstr ""
+"CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock niet."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -609,7 +610,7 @@ msgstr "CapsLock wisselt normale kapitalisatie van alfabetische lettertekens."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "CapsLock zet Shift aan/uit zodat alle toetsen be�nvloed worden."
+msgstr "CapsLock zet Shift aan/uit zodat alle toetsen beïnvloed worden."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -668,11 +669,10 @@ msgid "Both Shift keys together change group."
 msgstr "Beide Shift-toetsen samen wijzigen de groep."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 msgstr ""
 "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock "
-"annuleren."
+"niet annuleren."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
@@ -983,7 +983,7 @@ msgstr ""
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr "Pakketinstalatie"
+msgstr "Pakketinstallatie"
 
 #. Progress bar title text
 msgid "Importing module"
@@ -991,11 +991,11 @@ msgstr "Module importeren"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr "SaX2: Gegevens worden ge�mporteerd..."
+msgstr "SaX2: Gegevens worden geïmporteerd..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr "Cache wordt ge�nitialiseerd..."
+msgstr "Cache wordt geïnitialiseerd..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
@@ -1034,96 +1034,81 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Diverse compatibiliteitsopties"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Voeg het Euroteken toe aan de 5."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key behavior"
 msgstr "Gedrag van CapsLock-toets"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt/Win key behavior"
 msgstr "Gedrag van Alt/Win-toets"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Euroteken aan bepaalde toetsen toevoegen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Menu is samenstellen."
+msgstr "Caps Lock is samenstellen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key works as Right Alt."
 msgstr "Rechter Control-toets werkt als rechter Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at bottom left"
 msgstr "Control-toets linksonder"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at left of 'A'"
 msgstr "Control-toets links van 'A'"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Ctrl."
 msgstr "CapsLock veranderen in extra Control."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Ctrl and CapsLock."
 msgstr "Control en CapsLock verwisselen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key position"
 msgstr "Positie Control-toets"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "Speciale toetsen (Ctrl+Alt+<key>) verwerkt in een server."
+msgstr "Speciale toetsen (Ctrl+Alt+&lt;key&gt;) verwerkt in een server."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Ctrl to choose 3rd level."
 msgstr "Rechter Control-toets selecteert 3de niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift changes group."
 msgstr "Control+Shift wijzigt de groep."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Euroteken aan E toevoegen."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Euroteken aan de 2 toevoegen"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
 msgstr "Positie samensteltoets "
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl changes group."
 msgstr "Alt+Control wijzigen de groep."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Group Shift/Lock behavior"
 msgstr "Gedrag van groep Shift/Lock"
 
@@ -1181,3 +1166,281 @@ msgstr "Configuratie op beeldscherm"
 
 msgid "Idle timer..."
 msgstr "Idle timer..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<b>Let op</b><hr>Deze configuratie is gebaseerd op <i>Framebuffer</i> en "
+#~ "uw systeem ondersteunt geen veranderingen aan de resolutie en/of kleur."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
+#~ "with a maximum of eight characters."
+#~ msgstr ""
+#~ "<b>Wachtwoordfout</b><hr>Het wachtwoord is te lang. Voer een wachtwoord "
+#~ "in van maximaal acht lettertekens."
+
+#~ msgid "Arabic"
+#~ msgstr "Arabisch"
+
+#~ msgid "Estonia"
+#~ msgstr "Estland"
+
+#~ msgid "Myanmar"
+#~ msgstr "Myanmar"
+
+#~ msgid "Norway"
+#~ msgstr "Noorwegen"
+
+#~ msgid "Germany"
+#~ msgstr "Duitsland"
+
+#~ msgid "Mongolia"
+#~ msgstr "Mongolië"
+
+#~ msgid "Bhutan"
+#~ msgstr "Bhoetan"
+
+#~ msgid "Bangladesh"
+#~ msgstr "Bangladesh"
+
+#~ msgid "Latin American"
+#~ msgstr "Latijns Amerika"
+
+#~ msgid "Belgium"
+#~ msgstr "België"
+
+#~ msgid "Finland"
+#~ msgstr "Finland"
+
+#~ msgid "Israel"
+#~ msgstr "Israël"
+
+#~ msgid "Sweden"
+#~ msgstr "Zweden"
+
+#~ msgid "Russia"
+#~ msgstr "Rusland"
+
+#~ msgid "Portugal"
+#~ msgstr "Portugal"
+
+#~ msgid "Korean"
+#~ msgstr "Koreaans"
+
+#~ msgid "Maori"
+#~ msgstr "Maori"
+
+#~ msgid "Uzbekistan"
+#~ msgstr "Oezbekistan"
+
+#~ msgid "Bulgaria"
+#~ msgstr "Bulgarije"
+
+#~ msgid "Thailand"
+#~ msgstr "Thailand"
+
+#~ msgid "India"
+#~ msgstr "India"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengaals"
+
+#~ msgid "Switzerland"
+#~ msgstr "Zwitserland"
+
+#~ msgid "Laos"
+#~ msgstr "Laos"
+
+#~ msgid "Japan"
+#~ msgstr "Japan"
+
+#~ msgid "Syria"
+#~ msgstr "Syrië"
+
+#~ msgid "Czechia"
+#~ msgstr "Tsjechië"
+
+#~ msgid "Belarus"
+#~ msgstr "Belarus"
+
+#~ msgid "Tajikistan"
+#~ msgstr "Tajikistan"
+
+#~ msgid "Denmark"
+#~ msgstr "Denemarken"
+
+#~ msgid "Slovenia"
+#~ msgstr "Slovenië"
+
+#~ msgid "Malta"
+#~ msgstr "Malta"
+
+#~ msgid "Azerbaijan"
+#~ msgstr "Azerbeidzjan"
+
+#~ msgid "Lithuania"
+#~ msgstr "Litouwen"
+
+#~ msgid "Vietnam"
+#~ msgstr "Viëtnam"
+
+#~ msgid "Faroe Islands"
+#~ msgstr "Faroe Eilanden"
+
+#~ msgid "South Africa"
+#~ msgstr "Zuid-Afrika"
+
+#~ msgid "Farsi"
+#~ msgstr "Perzisch"
+
+#~ msgid "Slovakia"
+#~ msgstr "Slowakije"
+
+#~ msgid "Maldives"
+#~ msgstr "Malediven"
+
+#~ msgid "Iceland"
+#~ msgstr "IJsland"
+
+#~ msgid "Croatia"
+#~ msgstr "Kroatië"
+
+#~ msgid "Latvia"
+#~ msgstr "Letland"
+
+#~ msgid "Albania"
+#~ msgstr "Albanië"
+
+#~ msgid "Italy"
+#~ msgstr "Italië"
+
+#~ msgid "Greece"
+#~ msgstr "Griekenland"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Verenigd Koninkrijk"
+
+#~ msgid "France"
+#~ msgstr "Frankrijk"
+
+#~ msgid "Armenia"
+#~ msgstr "Armenië"
+
+#~ msgid "Pakistan"
+#~ msgstr "Pakistan"
+
+#~ msgid "Poland"
+#~ msgstr "Polen"
+
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Kirgizië"
+
+#~ msgid "Ireland"
+#~ msgstr "Ierland"
+
+#~ msgid "Hungary"
+#~ msgstr "Hongarije"
+
+#~ msgid "Cambodia"
+#~ msgstr "Cambodja"
+
+#~ msgid "Spain"
+#~ msgstr "Spanje"
+
+#~ msgid "Ukraine"
+#~ msgstr "Oekraïne"
+
+#~ msgid "Romania"
+#~ msgstr "Roemenië"
+
+#~ msgid "Kazakhstan"
+#~ msgstr "Kazachstan"
+
+#~ msgid "Georgia"
+#~ msgstr "Georgië"
+
+#~ msgid "U.S. English"
+#~ msgstr "Amerikaans Engels"
+
+#~ msgid "Turkish"
+#~ msgstr "Turks"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC 98xx-serie"
+
+#~ msgid "Netherlands"
+#~ msgstr "Nederland"
+
+#~ msgid "Macedonia"
+#~ msgstr "Macedonië"
+
+#~ msgid "Canada"
+#~ msgstr "Canada"
+
+#~ msgid "Sri Lanka"
+#~ msgstr "Sri Lanka"
+
+#~ msgid "Bosnia and Herzegovina"
+#~ msgstr "Bosnië en Herzegowina"
+
+#~ msgid "Serbia and Montenegro"
+#~ msgstr "Servië en Montenegro"
+
+#~ msgid "Brazil"
+#~ msgstr "Brazilië"
+
+#~ msgid "Ghana"
+#~ msgstr "Ghana"
+
+#~ msgid "Andorra"
+#~ msgstr "Andorra"
+
+#~ msgid "Afghanistan"
+#~ msgstr "Afghanistan"
+
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
+
+#~ msgid "Turkey"
+#~ msgstr "Turkije"
+
+#~ msgid "Remote Access"
+#~ msgstr "Toegang op afstand'"
+
+#~ msgid "X Server Remote Control"
+#~ msgstr "X-server-instellingen"
+
+#~ msgid "Allow access to display and keyboard/mouse of your X Server"
+#~ msgstr ""
+#~ "Toegang tot beeldscherm en toetsenbord/muis van uw X-server toestaan"
+
+#~ msgid "Allow Multiple Connections"
+#~ msgstr "Meerdere verbindingen toestaan"
+
+#~ msgid ""
+#~ "<b>Remote Access Password Mismatch</b><hr>The first and the second "
+#~ "version of the password do not match."
+#~ msgstr ""
+#~ "<b>Wachtwoorden komt niet overeen</b><hr>De eerste en de tweede versie "
+#~ "van het wachtwoord komen niet overeen."
+
+#~ msgid ""
+#~ "<b>Remote Access Password Fault</b><hr>The password field has been left "
+#~ "empty or the password is too short. Enter a password with at least six "
+#~ "characters."
+#~ msgstr ""
+#~ "<b>Wachtwoordfout</b><hr>Het wachtwoordveld is leeg gelaten of het "
+#~ "wachtwoord is te kort. Geef een wachtwoord op dat tenminste zes "
+#~ "lettertekens lang is."
+
+#~ msgid ""
+#~ "<b>Remote Access configuration information</b><hr>The Remote Access "
+#~ "service requires that the TCP port 5900 and an HTTP port (5800 by "
+#~ "default) be open in the firewall. You can configure this with YaST."
+#~ msgstr ""
+#~ "<b>Informatie over VNC-configuratie</b><hr>De VNC-service vereist dat de "
+#~ "TCP-poort 5900 en een HTTP-poort (standaard 5800) in de firewall worden "
+#~ "geopend. U kunt dit met YaST instellen."

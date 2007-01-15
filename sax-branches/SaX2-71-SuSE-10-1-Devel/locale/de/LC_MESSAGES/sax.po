@@ -1,23 +1,20 @@
-# translation of sax.po to 
-# translation of sax.po to German
-# translation of sax.de.po to
-# translation of sax.de.po to German
-# domain "sax.mo"
-# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
-# Antje Faber <afaber@suse.de>, 2003, 2004, 2005.
-# Jana Jaeger <jjaeger@suse.de>, 2003.
+# @TITLE@
+# Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# This file is distributed under the same license as @PACKAGE@ package. FIRST
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2005-03-04 14:10+0100\n"
+"PO-Revision-Date: 2005-03-09 13:54+0100\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -55,8 +52,9 @@ msgid "&Help"
 msgstr "&Hilfe"
 
 #. Ok Button text
+#, fuzzy
 msgid "&OK"
-msgstr "&OK"
+msgstr "O&K"
 
 #. Yes Button text
 msgid "&Yes"
@@ -69,7 +67,7 @@ msgstr "&Nein"
 #. Cancel Button text
 #. Maximum length: 40  characters
 msgid "&Cancel"
-msgstr "A&bbrechen"
+msgstr "&Abbrechen"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
@@ -77,7 +75,7 @@ msgstr "<b>SaX2 beenden</b><hr>SaX2 jetzt beenden?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr "Meldung"
+msgstr "Nachricht"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
@@ -566,7 +564,7 @@ msgstr "Belegung der Feststelltaste"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr "Ohne"
+msgstr "Keine"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -1178,3 +1176,243 @@ msgstr "Konfiguration auf Bildschirm"
 
 msgid "Idle timer..."
 msgstr "Verbleibend..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<b>Hinweis:</b><hr>Die Konfiguration basiert auf <i>Framebuffer</i>, und "
+#~ "Ihr System unterstützt keine Änderung der Auflösung bzw. der "
+#~ "Farbeinstellungen."
+
+#~ msgid ""
+#~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
+#~ "with a maximum of eight characters."
+#~ msgstr ""
+#~ "<b>VNC-Kennwortfehler</b><hr>Das Kennwort ist zu lang. Geben Sie ein "
+#~ "Kennwort mit höchstens acht Zeichen ein."
+
+#~ msgid "Arabic"
+#~ msgstr "Arabisch"
+
+#~ msgid "Estonia"
+#~ msgstr "Estland"
+
+#~ msgid "Myanmar"
+#~ msgstr "Myanmar"
+
+#~ msgid "Norway"
+#~ msgstr "Norwegen"
+
+#~ msgid "Germany"
+#~ msgstr "Deutschland"
+
+#~ msgid "Mongolia"
+#~ msgstr "Mongolei"
+
+#~ msgid "Bhutan"
+#~ msgstr "Bhutan"
+
+#~ msgid "Bangladesh"
+#~ msgstr "Bangladesch"
+
+#~ msgid "Latin American"
+#~ msgstr "Lateinamerika"
+
+#~ msgid "Belgium"
+#~ msgstr "Belgien"
+
+#~ msgid "Finland"
+#~ msgstr "Finnland"
+
+#~ msgid "Israel"
+#~ msgstr "Israel"
+
+#~ msgid "Sweden"
+#~ msgstr "Schweden"
+
+#~ msgid "Russia"
+#~ msgstr "Russland"
+
+#~ msgid "Portugal"
+#~ msgstr "Portugal"
+
+#~ msgid "Korean"
+#~ msgstr "Koreanisch"
+
+#~ msgid "Maori"
+#~ msgstr "Maori-Sprache"
+
+#~ msgid "Uzbekistan"
+#~ msgstr "Usbekistan"
+
+#~ msgid "Bulgaria"
+#~ msgstr "Bulgarien"
+
+#~ msgid "Thailand"
+#~ msgstr "Thailand"
+
+#~ msgid "India"
+#~ msgstr "Indien"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengali"
+
+#~ msgid "Switzerland"
+#~ msgstr "Schweiz"
+
+#~ msgid "Laos"
+#~ msgstr "Laos"
+
+#~ msgid "Japan"
+#~ msgstr "Japan"
+
+#~ msgid "Syria"
+#~ msgstr "Syrien"
+
+#~ msgid "Czechia"
+#~ msgstr "Tschechien"
+
+#~ msgid "Belarus"
+#~ msgstr "Weißrussland"
+
+#~ msgid "Tajikistan"
+#~ msgstr "Tadschikistan"
+
+#~ msgid "Denmark"
+#~ msgstr "Dänemark"
+
+#~ msgid "Slovenia"
+#~ msgstr "Slowenien"
+
+#~ msgid "Malta"
+#~ msgstr "Malta"
+
+#~ msgid "Azerbaijan"
+#~ msgstr "Aserbaidschan"
+
+#~ msgid "Lithuania"
+#~ msgstr "Litauen"
+
+#~ msgid "Vietnam"
+#~ msgstr "Vietnam"
+
+#~ msgid "Faroe Islands"
+#~ msgstr "Färöer-Inseln"
+
+#~ msgid "South Africa"
+#~ msgstr "Südafrika"
+
+#~ msgid "Farsi"
+#~ msgstr "Farsi"
+
+#~ msgid "Slovakia"
+#~ msgstr "Slowakei"
+
+#~ msgid "Maldives"
+#~ msgstr "Malediven"
+
+#~ msgid "Iceland"
+#~ msgstr "Island"
+
+#~ msgid "Croatia"
+#~ msgstr "Kroatien"
+
+#~ msgid "Latvia"
+#~ msgstr "Lettland"
+
+#~ msgid "Albania"
+#~ msgstr "Albanien"
+
+#~ msgid "Italy"
+#~ msgstr "Italien"
+
+#~ msgid "Greece"
+#~ msgstr "Griechenland"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Vereinigtes Königreich"
+
+#~ msgid "France"
+#~ msgstr "Frankreich"
+
+#~ msgid "Armenia"
+#~ msgstr "Armenien"
+
+#~ msgid "Pakistan"
+#~ msgstr "Pakistan"
+
+#~ msgid "Poland"
+#~ msgstr "Polen"
+
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Kirgisistan"
+
+#~ msgid "Ireland"
+#~ msgstr "Irland"
+
+#~ msgid "Hungary"
+#~ msgstr "Ungarn"
+
+#~ msgid "Cambodia"
+#~ msgstr "Kambodscha"
+
+#~ msgid "Spain"
+#~ msgstr "Spanien"
+
+#~ msgid "Ukraine"
+#~ msgstr "Ukraine"
+
+#~ msgid "Romania"
+#~ msgstr "Rumänien"
+
+#~ msgid "Kazakhstan"
+#~ msgstr "Kasachstan"
+
+#~ msgid "Georgia"
+#~ msgstr "Georgien"
+
+#~ msgid "U.S. English"
+#~ msgstr "US-Englisch"
+
+#~ msgid "Turkish"
+#~ msgstr "Türkisch"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx Serie"
+
+#~ msgid "Netherlands"
+#~ msgstr "Niederlande"
+
+#~ msgid "Macedonia"
+#~ msgstr "Mazedonien"
+
+#~ msgid "Canada"
+#~ msgstr "Kanada"
+
+#~ msgid "Sri Lanka"
+#~ msgstr "Sri Lanka"
+
+#~ msgid "Bosnia and Herzegovina"
+#~ msgstr "Bosnien-Herzegowina"
+
+#~ msgid "Serbia and Montenegro"
+#~ msgstr "Serbien und Montenegro"
+
+#~ msgid "Brazil"
+#~ msgstr "Brasilien"
+
+#~ msgid "Ghana"
+#~ msgstr "Ghana"
+
+#~ msgid "Andorra"
+#~ msgstr "Andorra"
+
+#~ msgid "Afghanistan"
+#~ msgstr "Afghanistan"
+
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
+
+#~ msgid "Turkey"
+#~ msgstr "Türkei"

@@ -1,27 +1,26 @@
+# translation of sax.po to
 # translation of sax.po to cs_CZ
-# translation of sax.cs.po to Czech
 # domain "sax.mo"
 # Czech message file for SaX 2.
 # Copyright (C) 2000 SuSE GmbH.
+#
 # Petr Pavlik <pp@suse.cz>, 2000, 2001.
 # Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003.
 # Klara Cihlarova <koty@seznam.cz>, 2003, 2004, 2005, 2006.
 # Klára Cihlářová <cihlarov@suse.cz>, 2004.
-# Jakub Friedl <jfriedl@suse.cz>, 2005.
-#
+# Jakub Friedl <jfriedl@suse.cz>, 2005, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-02-08 13:53+0100\n"
+"PO-Revision-Date: 2006-07-10 13:36+0200\n"
 "Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
 "Language-Team: cs_CZ <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -59,6 +58,7 @@ msgid "&Help"
 msgstr "&Nápověda"
 
 #. Ok Button text
+#, fuzzy
 msgid "&OK"
 msgstr "&OK"
 
@@ -714,7 +714,7 @@ msgstr "Menu je Compose."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr "Oba Shifty mění skupinu."
+msgstr "Oba Alty mění skupinu."
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
@@ -1156,3 +1156,242 @@ msgstr "Konfigurace na obrazovce"
 
 msgid "Idle timer..."
 msgstr "Čekání..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<p>Pozor:</b><hr>Nastavení je založeno na <i>framebufferu</i> a váš "
+#~ "systém proto nepodporuje změnu rozlišení a/nebo barevné hloubky."
+
+#~ msgid ""
+#~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
+#~ "with a maximum of eight characters."
+#~ msgstr ""
+#~ "<b>Chybné VNC heslo</b><hr>Heslo je příliš dlouhé. Zadejte heslo dlouhé "
+#~ "maximálně osm znaků."
+
+#~ msgid "Arabic"
+#~ msgstr "Arabština"
+
+#~ msgid "Estonia"
+#~ msgstr "Estonsko"
+
+#~ msgid "Myanmar"
+#~ msgstr "Myanmar"
+
+#~ msgid "Norway"
+#~ msgstr "Norsko"
+
+#~ msgid "Germany"
+#~ msgstr "Německo"
+
+#~ msgid "Mongolia"
+#~ msgstr "Mongolsko"
+
+#~ msgid "Bhutan"
+#~ msgstr "Bhútán"
+
+#~ msgid "Bangladesh"
+#~ msgstr "Bangladéš"
+
+#~ msgid "Latin American"
+#~ msgstr "Latinskoamerický"
+
+#~ msgid "Belgium"
+#~ msgstr "Belgie"
+
+#~ msgid "Finland"
+#~ msgstr "Finsko"
+
+#~ msgid "Israel"
+#~ msgstr "Izrael"
+
+#~ msgid "Sweden"
+#~ msgstr "Švédsko"
+
+#~ msgid "Russia"
+#~ msgstr "Rusko"
+
+#~ msgid "Portugal"
+#~ msgstr "Portugalsko"
+
+#~ msgid "Korean"
+#~ msgstr "Korejština"
+
+#~ msgid "Maori"
+#~ msgstr "Maorština"
+
+#~ msgid "Uzbekistan"
+#~ msgstr "Uzbekistán"
+
+#~ msgid "Bulgaria"
+#~ msgstr "Bulharsko"
+
+#~ msgid "Thailand"
+#~ msgstr "Thajsko"
+
+#~ msgid "India"
+#~ msgstr "Indie"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengálština"
+
+#~ msgid "Switzerland"
+#~ msgstr "Švýcarsko"
+
+#~ msgid "Laos"
+#~ msgstr "Laos"
+
+#~ msgid "Japan"
+#~ msgstr "Japonsko"
+
+#~ msgid "Syria"
+#~ msgstr "Sýrie"
+
+#~ msgid "Czechia"
+#~ msgstr "Česko"
+
+#~ msgid "Belarus"
+#~ msgstr "Bělorusko"
+
+#~ msgid "Tajikistan"
+#~ msgstr "Tádžikistán"
+
+#~ msgid "Denmark"
+#~ msgstr "Dánsko"
+
+#~ msgid "Slovenia"
+#~ msgstr "Slovinsko"
+
+#~ msgid "Malta"
+#~ msgstr "Malta"
+
+#~ msgid "Azerbaijan"
+#~ msgstr "Ázerbájdžán"
+
+#~ msgid "Lithuania"
+#~ msgstr "Litva"
+
+#~ msgid "Vietnam"
+#~ msgstr "Vietnam"
+
+#~ msgid "Faroe Islands"
+#~ msgstr "Faerské ostrovy"
+
+#~ msgid "South Africa"
+#~ msgstr "Jižní Afrika"
+
+#~ msgid "Farsi"
+#~ msgstr "Perština"
+
+#~ msgid "Slovakia"
+#~ msgstr "Slovensko"
+
+#~ msgid "Maldives"
+#~ msgstr "Maledivy"
+
+#~ msgid "Iceland"
+#~ msgstr "Island"
+
+#~ msgid "Croatia"
+#~ msgstr "Chorvatsko"
+
+#~ msgid "Latvia"
+#~ msgstr "Lotyšsko"
+
+#~ msgid "Albania"
+#~ msgstr "Albánie"
+
+#~ msgid "Italy"
+#~ msgstr "Itálie"
+
+#~ msgid "Greece"
+#~ msgstr "Řecko"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Spojené království"
+
+#~ msgid "France"
+#~ msgstr "Francie"
+
+#~ msgid "Armenia"
+#~ msgstr "Arménie"
+
+#~ msgid "Pakistan"
+#~ msgstr "Pákistán"
+
+#~ msgid "Poland"
+#~ msgstr "Polsko"
+
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Kyrgyzstán"
+
+#~ msgid "Ireland"
+#~ msgstr "Irsko"
+
+#~ msgid "Hungary"
+#~ msgstr "Maďarsko"
+
+#~ msgid "Cambodia"
+#~ msgstr "Kambodža"
+
+#~ msgid "Spain"
+#~ msgstr "Španělsko"
+
+#~ msgid "Ukraine"
+#~ msgstr "Ukrajina"
+
+#~ msgid "Romania"
+#~ msgstr "Rumunsko"
+
+#~ msgid "Kazakhstan"
+#~ msgstr "Kazachstán"
+
+#~ msgid "Georgia"
+#~ msgstr "Gruzie"
+
+#~ msgid "U.S. English"
+#~ msgstr "Americká angličtina"
+
+#~ msgid "Turkish"
+#~ msgstr "Turečtina"
+
+#~ msgid "PC-98xx Series"
+#~ msgstr "PC-98xx series"
+
+#~ msgid "Netherlands"
+#~ msgstr "Nizozemí"
+
+#~ msgid "Macedonia"
+#~ msgstr "Makedonie"
+
+#~ msgid "Canada"
+#~ msgstr "Kanada"
+
+#~ msgid "Sri Lanka"
+#~ msgstr "Šrí Lanka"
+
+#~ msgid "Bosnia and Herzegovina"
+#~ msgstr "Bosna a Hercegovina"
+
+#~ msgid "Serbia and Montenegro"
+#~ msgstr "Srbsko a Černá Hora"
+
+#~ msgid "Brazil"
+#~ msgstr "Brazílie"
+
+#~ msgid "Ghana"
+#~ msgstr "Ghana"
+
+#~ msgid "Andorra"
+#~ msgstr "Andorra"
+
+#~ msgid "Afghanistan"
+#~ msgstr "Afghánistán"
+
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
+
+#~ msgid "Turkey"
+#~ msgstr "Turecko"
