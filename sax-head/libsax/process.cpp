@@ -308,7 +308,7 @@ void SaXProcess::storeDataSysp (void) {
 	//! Store data which has been written to STDOUT after
 	//! a previous sysp process call
 	// ----
-	QString vesa,vesa2;
+	QString vesa,vesa2,fbboot;
 	QList<QString> data = mProc->readStdout();
 	QListIterator<QString> in (data);
 	for (; in.current(); ++in) {
@@ -336,6 +336,10 @@ void SaXProcess::storeDataSysp (void) {
 			vesa2.append (val);
 			vesa2.append (",");
 		} else
+		if (key == "FBBoot") {
+			fbboot.append (val);
+			fbboot.append (",");
+		} else
 		if ((! key.isEmpty()) && (! val.isEmpty())) {
 			setItem (key,val);
 		}
@@ -347,6 +351,10 @@ void SaXProcess::storeDataSysp (void) {
 	if (! vesa2.isEmpty()) {
 		vesa2.replace (QRegExp(",$"),"");
 		setItem ("Vesa[2]",vesa2);
+	}
+	if (! fbboot.isEmpty()) {
+		fbboot.replace (QRegExp(",$"),"");
+		setItem ("FBBoot",fbboot);
 	}
 }
 

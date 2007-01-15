@@ -41,6 +41,7 @@ int TvSupport (void);
 char* vesaBIOS (void);
 char* mediaDevices (void);
 MsgDetect* MonitorGetData (void);
+FbBootData* FrameBufferGetData (void);
 unsigned long MemorySize (void);
 
 #endif

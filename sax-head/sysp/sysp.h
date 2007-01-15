@@ -148,6 +148,13 @@ struct XMode {
 	int vsync;
 };
 
+struct FBMode {
+	int x;
+	int y;
+	int mode;
+	int depth;
+};
+
 struct ParseData {
 	string id;
 	string clock;
@@ -208,7 +215,9 @@ struct StuffData {
 	int hsync[4];
 	int vsync[4];
 	int vesacount[4];
+	int fbmodecount;
 	map <int,XMode> vesa[4];
+	map <int,FBMode> boot;
 	unsigned dacspeed[4];
 	string modeline[4];
 	long videoram; 
@@ -235,6 +244,7 @@ struct StuffData_S {
 	int hsync[4];
 	int vsync[4];
 	int vesacount[4];
+	int fbmodecount;
 	unsigned dacspeed[4];
 	str modeline[4];
 	long videoram;

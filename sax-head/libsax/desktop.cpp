@@ -972,6 +972,35 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 }
 
 //====================================
+// getFBKernelMode
+//------------------------------------
+int SaXManipulateDesktop::getFBKernelMode (const QString& res,int depth) {
+	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
+	desktop -> setID    ( mDesktopID );
+	desktop -> doImport ();
+	if (! desktop->getItem("FBBoot")) {
+		return 0;
+	}
+	QString val = desktop->getItem("FBBoot");
+	QStringList items = QStringList::split ( ",", val );
+	for (
+		QStringList::Iterator it=items.begin();
+		it != items.end(); ++it
+	) {
+		QString* resolution = new QString();
+		QString mode (*it);
+		QStringList record = QStringList::split ( " ", mode );
+		QTextOStream (resolution) << *record.at(0) << "x" << *record.at(1);
+		QString color = *record.at(2);
+		if ((*resolution == res) && (color.toInt() == depth)) {
+			QString mode = *record.at(3);
+			return mode.toInt();
+		}
+	}
+	return 0;
+}
+
+//====================================
 // getResolutionsFromDDC
 //------------------------------------
 QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) {
@@ -1020,6 +1049,13 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC1 (void) {
 //------------------------------------
 QList<QString> SaXManipulateDesktop::getResolutionsFromDDC2 (void) {
 	return getResolutionsFromDDC ("Vesa[2]");
+}
+
+//====================================
+// getResolutionsFromFrameBuffer
+//------------------------------------
+QList<QString> SaXManipulateDesktop::getResolutionsFromFrameBuffer (void) {
+	return getResolutionsFromDDC ("FBBoot");
 }
 
 //====================================

@@ -20,6 +20,8 @@ STATUS        : Status: Up-to-date
 #include "mouse.h"
 #include "xstuff.h"
 
+#define VESA_LIST 20
+
 //======================================
 // ScanXStuff: constructor...
 //--------------------------------------
@@ -149,6 +151,7 @@ char* ScanXStuff::createProbeonlyConfig (
 //--------------------------------------
 void ScanXStuff::Scan (void) {
 	MsgDetect* display;
+	FbBootData* bootDisplay;
 	unsigned VBEmem = 0;
 	ScanServer server(question,withx,card,cardopt);
 	XF86ConfigFile srvmsg;
@@ -170,6 +173,7 @@ void ScanXStuff::Scan (void) {
 	// Prepare Xstuff Scan
 	//-------------------------------------- 
 	display = MonitorGetData();
+	bootDisplay = FrameBufferGetData();
 	srvmsg.SetFile(SERVER_STUFF_DATA);
 	server.SetFile(SERVER_DATA);
 
@@ -177,6 +181,33 @@ void ScanXStuff::Scan (void) {
 	// retrieve VESA BIOS version
 	//--------------------------------------
 	char* vbios = vesaBIOS();
+
+	//======================================
+	// Allow following resolutions
+	//--------------------------------------
+	XMode vesaStandard[VESA_LIST];
+	vesaStandard[0].x  = 800;  vesaStandard[0].y  = 600;
+	vesaStandard[1].x  = 1024; vesaStandard[1].y  = 768;
+	vesaStandard[2].x  = 1152; vesaStandard[2].y  = 864;
+	vesaStandard[3].x  = 1280; vesaStandard[3].y  = 768;
+	vesaStandard[4].x  = 1280; vesaStandard[4].y  = 800;
+	vesaStandard[5].x  = 1280; vesaStandard[5].y  = 960;
+	vesaStandard[6].x  = 1280; vesaStandard[6].y  = 1024;
+	vesaStandard[7].x  = 1440; vesaStandard[7].y  = 900;
+	vesaStandard[8].x  = 1400; vesaStandard[8].y  = 1050;
+	vesaStandard[9].x  = 1600; vesaStandard[9].y  = 1000;
+	vesaStandard[10].x = 1600; vesaStandard[10].y = 1024;
+	vesaStandard[11].x = 1600; vesaStandard[11].y = 1200;
+	vesaStandard[12].x = 1680; vesaStandard[12].y = 1050;
+	vesaStandard[13].x = 1900; vesaStandard[13].y = 1200;
+	vesaStandard[14].x = 1920; vesaStandard[14].y = 1200;
+	vesaStandard[15].x = 1920; vesaStandard[15].y = 1440;
+	vesaStandard[16].x = 2048; vesaStandard[16].y = 1536;
+	vesaStandard[17].x = 2560; vesaStandard[17].y = 1600;
+	vesaStandard[18].x = 2560; vesaStandard[18].y = 2048;
+	vesaStandard[19].x = 2800; vesaStandard[19].y = 2100;
+	vesaStandard[20].x = 3200; vesaStandard[20].y = 2400;
+	vesaStandard[21].x = 1024; vesaStandard[21].y = 600;
 
 	//======================================
 	// lookup framebuffer timing
@@ -465,28 +496,10 @@ void ScanXStuff::Scan (void) {
 				mode.y = dpy->vmodes[n].y;
 				// ...
 				// check if the detected resolutions are part
-				// of the following list
+				// of the vesaStandard list
 				// ---
-				XMode vesaStandard[16];
-				vesaStandard[0].x  = 800;  vesaStandard[0].y  = 600;
-				vesaStandard[1].x  = 1024; vesaStandard[1].y  = 768;
-				vesaStandard[2].x  = 1152; vesaStandard[2].y  = 864;
-				vesaStandard[3].x  = 1280; vesaStandard[3].y  = 768;
-				vesaStandard[4].x  = 1280; vesaStandard[4].y  = 800;
-				vesaStandard[5].x  = 1280; vesaStandard[5].y  = 960;
-				vesaStandard[6].x  = 1280; vesaStandard[6].y  = 1024;
-				vesaStandard[7].x  = 1440; vesaStandard[7].y  = 900;
-				vesaStandard[8].x  = 1400; vesaStandard[8].y  = 1050;
-				vesaStandard[9].x  = 1600; vesaStandard[9].y  = 1000;
-				vesaStandard[10].x = 1600; vesaStandard[10].y = 1024;
-				vesaStandard[11].x = 1600; vesaStandard[11].y = 1200;
-				vesaStandard[12].x = 1680; vesaStandard[12].y = 1050;
-				vesaStandard[13].x = 1900; vesaStandard[13].y = 1200;
-				vesaStandard[14].x = 1920; vesaStandard[14].y = 1200;
-				vesaStandard[15].x = 1024; vesaStandard[15].y = 600;
-			
 				int isStandard = false;
-				for (int i=0;i<16;i++) {
+				for (int i=0;i<VESA_LIST;i++) {
 				if ((mode.x==vesaStandard[i].x)&&(mode.y==vesaStandard[i].y)) {
 					isStandard = true;
 					break;
@@ -581,6 +594,48 @@ void ScanXStuff::Scan (void) {
 		}
 	}
 	//======================================
+	// Include framebuffer modi
+	//--------------------------------------
+	int fbcount = 0;
+	for (FbBootEntry* entry=bootDisplay->entry; entry; entry=entry->next) {
+		FBMode mode;
+		mode.x = entry -> x;
+		mode.y = entry -> y;
+		// ...
+		// check if the detected resolutions are part
+		// of the vesaStandard list
+		// ---
+		int isStandard = false;
+		for (int i=0;i<VESA_LIST;i++) {
+			if ((mode.x==vesaStandard[i].x)&&(mode.y==vesaStandard[i].y)) {
+				isStandard = true;
+				break;
+			}
+		}
+		if (! isStandard) {
+			continue;
+		}
+		mode.mode  = entry -> mode;
+		mode.depth = entry -> depth;
+		stuff[0].boot[fbcount] = mode;
+		stuff[0].fbmodecount = fbcount;
+		fbcount++;
+	}
+	//======================================
+	// Sort framebuffer modi
+	//--------------------------------------
+	for (int n=0;n<fbcount;n++) {
+	for (int l=n;l<fbcount;l++) {
+		FBMode mode_n = stuff[0].boot[n];
+		FBMode mode_l = stuff[0].boot[l];
+		if (mode_n.x > mode_l.x) {
+			FBMode save = mode_n;
+			stuff[0].boot[n] = mode_l;
+			stuff[0].boot[l] = save;
+		}
+	}
+	}
+	//======================================
 	// save the stuff result...
 	//--------------------------------------
 	for (int i=0;i<card;i++) {
@@ -634,6 +689,7 @@ int ScanXStuff::Save (void) {
 			part1.hsync[n]       = data.hsync[n];
 			part1.vsync[n]       = data.vsync[n];
 			part1.vesacount[n]   = data.vesacount[n];
+			part1.fbmodecount    = data.fbmodecount;
 			part1.dpix[n]        = data.dpix[n];
 			part1.dpiy[n]        = data.dpiy[n];
 			part1.dacspeed[n]    = data.dacspeed[n];
@@ -663,6 +719,14 @@ int ScanXStuff::Save (void) {
 				part2.vsync = data.vesa[n][i].vsync;
 				handle.write((char*)&part2,sizeof(part2));
 			}
+		}
+		for (int i=0;i<data.fbmodecount;i++) {
+			FBMode part3;
+			part3.x     = data.boot[i].x;
+			part3.y     = data.boot[i].y;
+			part3.mode  = data.boot[i].mode;
+			part3.depth = data.boot[i].depth;
+			handle.write((char*)&part3,sizeof(part3));
 		}
 	}
 	handle.close();
@@ -696,6 +760,7 @@ int ScanXStuff::Read (void) {
 			data.hsync[n]     = part1.hsync[n];
 			data.vsync[n]     = part1.vsync[n];
 			data.vesacount[n] = part1.vesacount[n];
+			data.fbmodecount  = part1.fbmodecount;
 			data.dpix[n]      = part1.dpix[n];
 			data.dpiy[n]      = part1.dpiy[n];
 			data.model[n]     = part1.model[n];
@@ -724,6 +789,11 @@ int ScanXStuff::Read (void) {
 				handle.read((char*)&part2,sizeof(part2));
 				data.vesa[n][i] = part2;
 			}
+		}
+		for (int i=0;i<part1.fbmodecount;i++) {
+			FBMode part3;
+			handle.read((char*)&part3,sizeof(part3));
+			data.boot[i] = part3;
 		}
 		if (handle.eof()) {
 			break;

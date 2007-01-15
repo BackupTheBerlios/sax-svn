@@ -97,6 +97,20 @@ typedef struct {
  str flags;
 } FbData;
 
+typedef struct FbBootEntry_t {
+ int mode;
+ int depth;
+ int x;
+ int y;
+ struct FbBootEntry_t* next;
+} FbBootEntry;
+
+typedef struct FbBootData_t {
+ int fbcount;
+ FbBootEntry* entry;
+ struct FbBootData_t* next;
+} FbBootData;
+
 typedef struct MouseData_t {
  str name;
  str protocol;
@@ -132,6 +146,7 @@ extern FbData* FbGetData(void);
 extern MouseData* MouseGetData(void);
 extern KbdData* KeyboardGetData(void); 
 extern MsgDetect* MonitorGetData(void);
+extern FbBootData* FrameBufferGetData(void);
 extern unsigned long MemorySize (char*);
 extern int TvSupport (void);
 extern char* vesaBIOS (void);

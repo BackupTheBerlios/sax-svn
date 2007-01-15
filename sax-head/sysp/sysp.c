@@ -825,6 +825,15 @@ void PrintStuffData(ScanXStuff s) {
 		);
 		}
 		printf ("Card%d     =>  VesaBios   : %s\n",card,data.vbios.c_str());
+		if (data.fbmodecount > 0) {
+		for (int n=0;n<data.fbmodecount;n++) {
+			if (data.boot[n].x > 0) {
+				printf ("Card%d     =>  FBBoot     : %d %d %d %d\n",card,
+				data.boot[n].x,data.boot[n].y,
+				data.boot[n].depth,data.boot[n].mode);
+			}
+		}
+		}
 		card++;
 	}
 	fflush(stdout);

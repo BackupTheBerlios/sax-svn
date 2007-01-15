@@ -90,6 +90,7 @@ class SaXManipulateDesktopIF : public SaXException {
 
 	public:
 	virtual QList<QString> getResolutions ( int  ) = 0;
+	virtual QList<QString> getResolutionsFromFrameBuffer (void) = 0;
 	virtual QList<QString> getResolutionFromServer ( void ) = 0;
 	virtual QList<QString> getResolutionsFromDDC1  ( void ) = 0;
 	virtual QList<QString> getResolutionsFromDDC2  ( void ) = 0;
@@ -103,6 +104,7 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual bool isDualHeadCard ( void ) = 0;
 	virtual bool isXineramaMode ( void ) = 0;
 	virtual bool DPMSEnabled    ( void ) = 0;
+	virtual int getFBKernelMode ( const QString&,int ) = 0;
 	virtual QString getMonitorVendor ( void ) = 0;
 	virtual QString getMonitorName   ( void ) = 0;
 	virtual QString getColorDepth    ( void ) = 0;
@@ -225,6 +227,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 
 	public:
 	QList<QString> getResolutions ( int  );
+	QList<QString> getResolutionsFromFrameBuffer (void);
 	QList<QString> getResolutionFromServer ( void );
 	QList<QString> getResolutionsFromDDC1 ( void );
 	QList<QString> getResolutionsFromDDC2 ( void );
@@ -238,6 +241,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	bool isDualHeadCard ( void );
 	bool isXineramaMode ( void );
 	bool DPMSEnabled    ( void );
+	int getFBKernelMode ( const QString&,int );
 	QString getMonitorVendor ( void );
 	QString getMonitorName   ( void );
 	QString getColorDepth    ( void );
