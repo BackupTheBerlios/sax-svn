@@ -285,7 +285,7 @@ void SCCMonitor::slotActivate3D ( void ) {
 // exportData
 //------------------------------------
 bool SCCMonitor::exportData ( void ) {
-	int card = 0;
+	int  card = 0;
 	//====================================
 	// save particular monitor data
 	//------------------------------------
@@ -319,6 +319,18 @@ bool SCCMonitor::exportData ( void ) {
 		saxDesktop.selectDesktop ( card );
 		saxCard.selectCard ( card );
 
+		//====================================
+		// check for framebuffer driver
+		//------------------------------------
+		if (saxCard.getCardDriver() == "fbdev") {
+			// TODO
+			int color = display->getColorDepth();
+			QString* resolution = display->getResolution().at(0);
+			int mode = saxDesktop.getFBKernelMode (
+				*resolution,color
+			);
+			printf ("++++++ %d:%s:%d\n",color,resolution->ascii(),mode);
+		}
 		//====================================
 		// save resolution list
 		//------------------------------------

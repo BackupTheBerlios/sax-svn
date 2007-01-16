@@ -183,22 +183,22 @@ void SCCMonitorDisplay::init ( void ) {
 	//====================================
 	// create card a. desktop manipulators
 	//------------------------------------
-	SaXManipulateCard saxCard (
+	mSaxCard = new SaXManipulateCard (
 		mSection["Card"]
 	);
-	SaXManipulateDesktop saxDesktop (
+	mSaxDesktop = new SaXManipulateDesktop (
 		mSection["Desktop"],mSection["Card"],mSection["Path"]
 	);
 	//====================================
 	// select card and desktop
 	//------------------------------------
-	saxDesktop.selectDesktop ( mDisplay );
-	saxCard.selectCard ( mDisplay );
+	mSaxDesktop -> selectDesktop ( mDisplay );
+	mSaxCard -> selectCard ( mDisplay );
 
 	//====================================
 	// get virtual card count
 	//------------------------------------
-	int usedDevices = saxCard.getDevices();
+	int usedDevices = mSaxCard->getDevices();
 
 	//====================================
 	// check activate box
@@ -214,41 +214,51 @@ void SCCMonitorDisplay::init ( void ) {
 	//====================================
 	// check multihead group
 	//------------------------------------
-	if (! saxCard.isNoteBook()) {
-		if (! saxDesktop.isDualHeadCard()) {
+	if (! mSaxCard->isNoteBook()) {
+		if (! mSaxDesktop->isDualHeadCard()) {
 			mDualHeadGroup -> hide();
 		}
 	} else {
-		if (saxDesktop.getDualHeadProfile().isEmpty()) {
+		if (mSaxDesktop->getDualHeadProfile().isEmpty()) {
 			mDualHeadGroup -> setDisabled ( true );
 		}
 	}
-	if (saxDesktop.isXineramaMode()) {
+	if (mSaxDesktop->isXineramaMode()) {
 		mDualHeadGroup -> hide();
 	}
 	//====================================
 	// insert available resolutions
 	//------------------------------------
 	SCCFile resHandle ( RES_FILE );
-	QList<QString> ddc = saxDesktop.getResolutionsFromDDC1();
 	mResolutionDict = resHandle.readDict();
 	//====================================
-	// don't handle resolutions not in DDC
+	// Create reference list for DDC or FB
+	//------------------------------------
+	QList<QString> reference;
+	if (mSaxCard->getCardDriver() == "fbdev") {
+		reference = mSaxDesktop->getResolutionsFromFrameBuffer();
+		mIsFbdevBased = true;
+	} else {
+		reference = mSaxDesktop->getResolutionsFromDDC1();
+		mIsFbdevBased = false;
+	}
+	//====================================
+	// check reference list
 	//------------------------------------
 	QList<QString> toBeRemoved;
-	if (! ddc.isEmpty()) {
+	if (! reference.isEmpty()) {
 		mResolutionDict.setAutoDelete(true);
 		QDictIterator<QString> ir (mResolutionDict);
 		for (; ir.current(); ++ir) {
-			bool foundInDDC = false;
-			QListIterator<QString> dd (ddc);
+			bool foundInReference = false;
+			QListIterator<QString> dd (reference);
 			for (; dd.current(); ++dd) {
 				if (*dd.current() == ir.currentKey()) {
-					foundInDDC = true;
+					foundInReference = true;
 					break;
 				}
 			}
-			if (foundInDDC) {
+			if (foundInReference) {
 				continue;
 			}
 			toBeRemoved.append (new QString(ir.currentKey()));
@@ -318,18 +328,6 @@ void SCCMonitorDisplay::init ( void ) {
 	for (unsigned int n=0;n<mColorDict.count();n++) {
 		QString key; QTextOStream (&key) << colKey[n];
 		mColors -> insertItem ( *mColorDict[key] );
-	}
-	//====================================
-	// check availability of res/colors
-	//------------------------------------
-	if (saxCard.getCardDriver() == "fbdev") {
-		mPropertyGroup -> setDisabled (true);
-		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
-		SCCMessage* mMessageBox = new SCCMessage (
-			this, mTextPtr, SaXMessage::OK,
-			mText["FBWarning"],"MessageCaption",SaXMessage::Warning
-		);
-		mMessageBox -> showMessage();
 	}
 }
 //====================================
@@ -634,9 +632,38 @@ void SCCMonitorDisplay::slotActivateDualHead ( void ) {
 //------------------------------------
 void SCCMonitorDisplay::slotResolution ( int index ) {
 	//====================================
-	// find first startup resolution
+	// Check Framebuffer combination
 	//------------------------------------
 	QString selected = mResolution->text(index);
+	if (mIsFbdevBased) {
+		QDictIterator<QString> it (mResolutionDict);
+		QString* baseResolution = 0;
+		for (; it.current(); ++it) {
+		if (*it.current() == selected) {
+			baseResolution = new QString (it.currentKey());
+		}
+		}
+		if (baseResolution) {
+			int mode = mSaxDesktop->getFBKernelMode (
+				*baseResolution,mSelectedColor
+			);
+			if (! mode > 0) {
+				SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+				SCCMessage* mMessageBox = new SCCMessage (
+					this, mTextPtr, SaXMessage::OK,
+					mText["FBWarning"],"MessageCaption",SaXMessage::Warning
+				);
+				mMessageBox -> showMessage();
+				mResolution->setCurrentText(
+					*mResolutionDict.find(*mSelectedResolution.at(0))
+				);
+				return;
+			}
+		}
+	}
+	//====================================
+	// find first startup resolution
+	//------------------------------------
 	QDictIterator<QString> it (mResolutionDict);
 	long basePixels  = 0;
 	int  basePixelsX = 0;
@@ -694,7 +721,41 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 // slotColors
 //------------------------------------
 void SCCMonitorDisplay::slotColors ( int index ) {
+	//====================================
+	// Check Framebuffer combination
+	//------------------------------------
 	QString selected = mColors->text(index);
+	if (mIsFbdevBased) {
+		QDictIterator<QString> it (mColorDict);
+		int color = 0;
+		for (; it.current(); ++it) {
+		if (*it.current() == selected) {
+			color = it.currentKey().toInt();
+		}
+		}
+		if (color) {
+			int mode = mSaxDesktop->getFBKernelMode (
+				*mSelectedResolution.at(0),color
+			);
+			if (! mode > 0) {
+				SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+				SCCMessage* mMessageBox = new SCCMessage (
+					this, mTextPtr, SaXMessage::OK,
+					mText["FBWarning"],"MessageCaption",SaXMessage::Warning
+				);
+				mMessageBox -> showMessage();
+				QString* color = new QString();
+				QTextOStream (color) << mSelectedColor;
+				mColors->setCurrentText (
+					*mColorDict.find (*color)
+				);
+				return;
+			}
+		}
+	}
+	//====================================
+	// Set color depth
+	//------------------------------------
 	QDictIterator<QString> it (mColorDict);
 	for (; it.current(); ++it) {
 		if (*it.current() == selected) {

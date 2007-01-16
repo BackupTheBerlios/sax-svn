@@ -181,6 +181,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	SaXImport*     mDesktop;
 	SaXImport*     mCard;
 	SaXImport*     mPath;
+	SaXImportSysp* mSyspDesktop;
 	SaXProcess*    mCDBMonitors;
 	QList<QString> mCDBMonitorList;
 	QDict<QString> mCDBMonitorData;

@@ -59,6 +59,7 @@ SaXManipulateDesktop::SaXManipulateDesktop (
 	mCard    -> setID ( mDesktopID );
 	mPath    -> setID ( 0 );
 	mCDBMonitors = 0;
+	mSyspDesktop = 0;
 }
 
 //====================================
@@ -975,13 +976,15 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 // getFBKernelMode
 //------------------------------------
 int SaXManipulateDesktop::getFBKernelMode (const QString& res,int depth) {
-	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
-	desktop -> setID    ( mDesktopID );
-	desktop -> doImport ();
-	if (! desktop->getItem("FBBoot")) {
+	if (! mSyspDesktop) {
+		mSyspDesktop = new SaXImportSysp (SYSP_DESKTOP);
+	}
+	mSyspDesktop -> setID    ( mDesktopID );
+	mSyspDesktop -> doImport ();
+	if (! mSyspDesktop->getItem("FBBoot")) {
 		return 0;
 	}
-	QString val = desktop->getItem("FBBoot");
+	QString val = mSyspDesktop->getItem("FBBoot");
 	QStringList items = QStringList::split ( ",", val );
 	for (
 		QStringList::Iterator it=items.begin();

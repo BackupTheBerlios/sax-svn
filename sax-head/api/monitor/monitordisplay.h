@@ -68,6 +68,7 @@ class SCCMonitorDisplay : public SCCDialog {
 	bool             mEnabled;
 	bool             mDualHeadEnabled;
 	bool             mShowDisplaySizeMessage;
+	bool             mIsFbdevBased;
 	QList<QString>   mSelectedResolution;
 	int              mSelectedColor;
 	QString          mCardModel;
@@ -75,6 +76,8 @@ class SCCMonitorDisplay : public SCCDialog {
 	QString          mMonitorModel;
 	QString          mMonitorVendor;
 	QString          mDualInfo;
+	SaXManipulateCard*    mSaxCard;
+	SaXManipulateDesktop* mSaxDesktop;
 
 	private:
 	//====================================
