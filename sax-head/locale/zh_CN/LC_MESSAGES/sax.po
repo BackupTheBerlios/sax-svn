@@ -388,11 +388,10 @@ msgstr "向右"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
-"<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-"your system does not support changes for resolution and/or color settings."
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
-"<b>请注意：</b><hr>该配置是基于 <i>Framebuffer</i> 的，系统不支持对分辨率和/"
-"或颜色设置的更改。"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -1605,3 +1604,10 @@ msgstr "显示器配置"
 
 msgid "Idle timer..."
 msgstr "空闲计时器..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<b>请注意：</b><hr>该配置是基于 <i>Framebuffer</i> 的，系统不支持对分辨率"
+#~ "和/或颜色设置的更改。"

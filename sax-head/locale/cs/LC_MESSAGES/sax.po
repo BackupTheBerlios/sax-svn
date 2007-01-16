@@ -400,11 +400,10 @@ msgstr "Doprava"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
-"<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-"your system does not support changes for resolution and/or color settings."
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
-"<p>Pozor:</b><hr>Nastavení je založeno na <i>framebufferu</i> a váš systém "
-"proto nepodporuje změnu rozlišení a/nebo barevné hloubky."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -1624,3 +1623,10 @@ msgstr "Konfigurace na obrazovce"
 
 msgid "Idle timer..."
 msgstr "Čekání..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<p>Pozor:</b><hr>Nastavení je založeno na <i>framebufferu</i> a váš "
+#~ "systém proto nepodporuje změnu rozlišení a/nebo barevné hloubky."

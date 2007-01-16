@@ -398,11 +398,10 @@ msgstr "Mot høyre"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
-"<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-"your system does not support changes for resolution and/or color settings."
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
-"<b>Husk:</b><hr>Konfigurasjonen er <i>Framebuffer</i>-basert, og systemet "
-"støtter ikke endring av oppløsning og/eller fargeinnstillinger."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -1656,3 +1655,10 @@ msgstr "Konfigurasjon av skjermbilde"
 
 msgid "Idle timer..."
 msgstr "Tidsur for inaktivitet..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<b>Husk:</b><hr>Konfigurasjonen er <i>Framebuffer</i>-basert, og systemet "
+#~ "støtter ikke endring av oppløsning og/eller fargeinnstillinger."

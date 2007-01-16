@@ -390,11 +390,10 @@ msgstr "Para a Direita"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
-"<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-"your system does not support changes for resolution and/or color settings."
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
-"<b>Observação:</b><hr>A configuração é baseada em <i>Framebuffer</i> e seu "
-"sistema não suporta mudanças de resolução e/ou de configurações de cores."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -1623,3 +1622,11 @@ msgstr "Configuração no vídeo"
 
 msgid "Idle timer..."
 msgstr "Temporizador ocioso..."
+
+#~ msgid ""
+#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
+#~ "your system does not support changes for resolution and/or color settings."
+#~ msgstr ""
+#~ "<b>Observação:</b><hr>A configuração é baseada em <i>Framebuffer</i> e "
+#~ "seu sistema não suporta mudanças de resolução e/ou de configurações de "
+#~ "cores."
