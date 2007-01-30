@@ -970,8 +970,14 @@ bool SCCMonitor::exportData ( void ) {
 		SaXManipulateDesktop saxDesktop (
 			mSection["Desktop"],mSection["Card"],mSection["Path"]
 		);
+		SaXManipulateCard saxCard (
+			mSection["Card"]
+		);
 		saxDesktop.selectDesktop ( card );
-		saxDesktop.setColorDepth ( display->getColorDepth() );
+		saxCard.selectCard ( card );
+		if (saxCard.getCardDriver() != "fbdev") {
+			saxDesktop.setColorDepth ( display->getColorDepth() );
+		}
 		card++;
 	}
 	return true;

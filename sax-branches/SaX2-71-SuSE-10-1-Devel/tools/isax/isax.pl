@@ -968,8 +968,11 @@ sub CheckFramebufferModes {
 	if (($keylist[1] eq "Driver") && ($import{Card}{$_} eq "fbdev")) {
 		my $resolution = GetFbResolution();
 		my $colordepth = GetFbColor();
+		if ($colordepth == 32) {
+			$colordepth = 24;
+		}
 		$import{Desktop}{"$keylist[0] Modes:$colordepth"} = $resolution;
-		$import{Desktop}{"$keylist[0] ColorDepth"} = $colordepth;
+		#$import{Desktop}{"$keylist[0] ColorDepth"} = $colordepth;
 	}
 	}
 	return (%import);

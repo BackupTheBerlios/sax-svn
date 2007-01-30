@@ -261,7 +261,6 @@ sub init {
 	$var{Screen}{0}{Identifier}                 = "Screen[0]";
 	$var{Screen}{0}{Device}                     = $var{Device}{0}{Identifier};
 	$var{Screen}{0}{Monitor}                    = $var{Monitor}{0}{Identifier};
-	$var{Screen}{0}{DefaultDepth}               = "8";
 	foreach $depth (8,16,24) {
 		$var{Screen}{0}{Depth}{$depth}{Modes}      = "640x480";
 		$var{Screen}{0}{Depth}{$depth}{ViewPort}   = "";
