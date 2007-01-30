@@ -375,6 +375,12 @@ void SCCMonitorDisplay::import ( void ) {
 	// handle color depth
 	//------------------------------------
 	mSelectedColor = saxDesktop.getColorDepth().toInt();
+	if ((mSelectedColor == 0) || (mSelectedColor == 32)) {
+		log (L_WARN,
+			"SCCMonitorDisplay::No colordepth set using 16bit default\n"
+		);
+		mSelectedColor = 16;
+	}
 
 	//====================================
 	// handle resolution list

@@ -54,7 +54,7 @@ sub AutoDetectServer {
 	# set detected busid strings...
 	# ------------------------------- 
 	for($i=0;$i<@bus_list;$i++) {
-	if ($bus_list[$i] !~ /unknown/i) {
+	if (($bus_list[$i] !~ /unknown/i) && ($module_list[$i] ne "fbdev")) {
 		$bus  = hex($bus_list[$i]); 
 		$slot = hex($slot_list[$i]);
 		$func = hex($func_list[$i]);

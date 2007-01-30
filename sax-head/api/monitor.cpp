@@ -334,8 +334,8 @@ bool SCCMonitor::exportData ( void ) {
 		//====================================
 		// save resolution list
 		//------------------------------------
-		int colorDepths[5] = {8,15,16,24,32};
-		for (int n=0;n<5;n++) {
+		int colorDepths[4] = {8,15,16,24};
+		for (int n=0;n<4;n++) {
 			int color = colorDepths[n];
 			QString modesKey;
 			QTextOStream (&modesKey) << "Modes:" << color;
@@ -1098,8 +1098,14 @@ bool SCCMonitor::exportData ( void ) {
 		SaXManipulateDesktop saxDesktop (
 			mSection["Desktop"],mSection["Card"],mSection["Path"]
 		);
+		SaXManipulateCard saxCard (
+			mSection["Card"]
+		);
 		saxDesktop.selectDesktop ( card );
-		saxDesktop.setColorDepth ( display->getColorDepth() );
+		saxCard.selectCard ( card );
+		if (saxCard.getCardDriver() != "fbdev") {
+			saxDesktop.setColorDepth ( display->getColorDepth() );
+		}
 		card++;
 	}
 	return true;
