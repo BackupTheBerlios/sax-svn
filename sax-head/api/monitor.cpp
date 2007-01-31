@@ -323,13 +323,18 @@ bool SCCMonitor::exportData ( void ) {
 		// check for framebuffer driver
 		//------------------------------------
 		if (saxCard.getCardDriver() == "fbdev") {
-			// TODO
 			int color = display->getColorDepth();
 			QString* resolution = display->getResolution().at(0);
 			int mode = saxDesktop.getFBKernelMode (
 				*resolution,color
 			);
-			printf ("++++++ %d:%s:%d\n",color,resolution->ascii(),mode);
+			log (L_INFO,"SCCMonitor::Bootloader setup for fbdev: %dbit %s %d",
+				color,resolution->ascii(),mode
+			);
+			// TODO
+			// use yast2 bootloader to change vga value
+			// see Bug: #234142 for details
+			// ---
 		}
 		//====================================
 		// save resolution list
