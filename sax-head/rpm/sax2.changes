@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Jan 31 12:36:13 CET 2007 - ms@suse.de
+
+- prevent domain busid on probeonly call in sysp for ppc
+  and don't set busid in case of fbdev
+
+-------------------------------------------------------------------
 Wed Jan 31 10:11:39 CET 2007 - ms@suse.de
 
 - ask X-Server if colordepth value is unknown, related to (#236670)

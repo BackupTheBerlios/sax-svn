@@ -190,7 +190,7 @@ string XF86ConfigFile::DoDeviceSection (void) {
 	// create the section...
 	// -----------------------
 	section = "Section \"Device\"\n";
-	if (driver != "vmware") {
+	if ((driver != "vmware") && (driver != "fbdev")) {
 		section = section + " BusID \""  + busid  + "\"\n";
 	}
 	section = section + " Driver \"" + driver + "\"\n";
@@ -257,7 +257,11 @@ void XF86ConfigFile::SetDeviceOption (string opt) {
 //-----------------------------------------
 void XF86ConfigFile::SetBus (int d,int b,int s,int f) {
 	str busid_str;
-	sprintf(busid_str,"PCI:%d@%d:%d:%d",b,d,s,f);
+	#if __powerpc__
+		sprintf(busid_str,"%d:%d:%d",b,s,f);
+	#else
+		sprintf(busid_str,"PCI:%d@%d:%d:%d",b,d,s,f);
+	#endif
 	busid = busid_str;
 	bus[idc]  = b;
 	slot[idc] = s; 
