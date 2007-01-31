@@ -105,6 +105,7 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual bool isXineramaMode ( void ) = 0;
 	virtual bool DPMSEnabled    ( void ) = 0;
 	virtual int getFBKernelMode ( const QString&,int ) = 0;
+	virtual int getColorDepthFromServer ( void ) = 0;
 	virtual QString getMonitorVendor ( void ) = 0;
 	virtual QString getMonitorName   ( void ) = 0;
 	virtual QString getColorDepth    ( void ) = 0;
@@ -243,6 +244,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	bool isXineramaMode ( void );
 	bool DPMSEnabled    ( void );
 	int getFBKernelMode ( const QString&,int );
+	int getColorDepthFromServer ( void );
 	QString getMonitorVendor ( void );
 	QString getMonitorName   ( void );
 	QString getColorDepth    ( void );

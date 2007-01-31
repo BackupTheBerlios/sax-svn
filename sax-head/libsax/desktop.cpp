@@ -19,6 +19,8 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "desktop.h"
+#include <X11/Xcms.h>
+#include <X11/extensions/scrnsaver.h>
 
 namespace SaX {
 //====================================
@@ -970,6 +972,14 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 		}
 	}
 	return defaultList;
+}
+
+//====================================
+// getColorDepthFromServer
+//------------------------------------
+int SaXManipulateDesktop::getColorDepthFromServer (void) {
+	Display* dpy = XOpenDisplay (0);
+	return DisplayPlanes( dpy,0 );
 }
 
 //====================================
