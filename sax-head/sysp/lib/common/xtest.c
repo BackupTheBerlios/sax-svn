@@ -24,36 +24,34 @@ STATUS        : development
 // GetDisplay: get next unused dpy
 //-----------------------------------
 int GetDisplay (void) {
- Display *dpy;
- char displayname[80] = "";
- char data[20] = "/tmp/disp";
- FILE *fd;
- int size;
- int i;
+	Display *dpy;
+	char displayname[80] = "";
+	char data[20] = "/tmp/disp";
+	FILE *fd;
+	int size;
+	int i;
 
- sprintf(data,"%s-%d",data,getpid());
+	sprintf (data,"%s-%d",data,getpid());
 
- for (i=0;i<=10;i++) {
-  fd = freopen(data,"w",stderr);
+	for (i=0;i<=10;i++) {
+		fd = freopen(data,"w",stderr);
+		sprintf(displayname,":%d.0",i);
+		dpy = XOpenDisplay (displayname);
 
-  sprintf(displayname,":%d.0",i);
-  dpy = XOpenDisplay (displayname);
+		fseek (fd,0L,SEEK_END);
+		size = ftell(fd) - 1;
 
-  fseek(fd,0L,SEEK_END);
-  size = ftell(fd) - 1;
+		printf("size: %d -> %d\n",i,size);
 
-  //printf("size: %d -> %d\n",i,size);
-
-  if (!dpy) {
-   if (size <= 0) {
-    unlink(data); return(i);
-   }
-  } else {
-   XCloseDisplay(dpy);
-   continue;
-  }
- }
- unlink(data);
- return(-1);
+		if (!dpy) {
+			if (size <= 0) {
+				unlink(data); return(i);
+			}
+		} else {
+			XCloseDisplay(dpy);
+			continue;
+		}
+	}
+	unlink (data);
+	return -1;
 }
-

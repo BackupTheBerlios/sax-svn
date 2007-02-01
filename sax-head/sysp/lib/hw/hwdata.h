@@ -20,6 +20,7 @@ STATUS        : development
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 #include "../libhd/hd/hd.h"
 #include "../syslib.h"

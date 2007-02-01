@@ -47,7 +47,12 @@ MouseData* MouseGetData(void) {
 	//===================================
 	// Open X11 display
 	//-----------------------------------
+	int old_stderr = dup (2);
+	freopen("/dev/null","w",stderr);
 	if ((dpy = XOpenDisplay (getenv("DISPLAY")))) {
+		fflush (stderr);
+		dup2 (old_stderr,2);
+		setlinebuf (stderr);
 		haveDisplay = 1;
 	}
 	//===================================
