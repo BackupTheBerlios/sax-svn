@@ -486,7 +486,7 @@ void SPReadFile<T>::ImportIdentity(void) {
 			key  = strsep(&token,"=");
 			trim(key);
 			data = token;
-			if (token == "") {
+			if (strcmp(token,"") == 0) {
 				continue;
 			}
 			data = key;
