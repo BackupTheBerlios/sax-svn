@@ -80,7 +80,7 @@ FindParseData (map<int,ParseData> m,int bus,int slot,int func) {
 // ScanXStuff: create a probing config
 //--------------------------------------
 char* ScanXStuff::createProbeonlyConfig (
-	XF86ConfigFile srvmsg,int card,map<int,ServerData> graphics
+	XF86ConfigFile* srvmsg,int card,map<int,ServerData> graphics
 ) {
 	char* config = (char*)malloc(sizeof(char)*128);
 	sprintf(config,"%s-%d",TMP_CONFIG,getpid());
@@ -99,34 +99,34 @@ char* ScanXStuff::createProbeonlyConfig (
 	// scan the mouse...
 	//--------------------------------------
 	mouse.Scan(); MouseData mdata = mouse.Pop();
-	srvmsg.SetMouseProperties(mdata.protocol,mdata.device);
+	srvmsg->SetMouseProperties(mdata.protocol,mdata.device);
 	//======================================
 	// create base sections...
 	//--------------------------------------
-	section[0] = srvmsg.DoFilesSection();
-	section[1] = srvmsg.DoModuleSection();
-	section[2] = srvmsg.DoInputDeviceSection();
+	section[0] = srvmsg->DoFilesSection();
+	section[1] = srvmsg->DoModuleSection();
+	section[2] = srvmsg->DoInputDeviceSection();
 
-	srvmsg.SetSectionID(card);
-	section[3] = srvmsg.DoServerLayoutSection();
+	srvmsg->SetSectionID(card);
+	section[3] = srvmsg->DoServerLayoutSection();
 	//======================================
 	// create dynamic sections...
 	//--------------------------------------
 	for (int n=0;n<card;n++) {
-		srvmsg.SetSectionID(n);
-		if ((srvmsg.SetDriver(graphics[n].module)) == 1) {
+		srvmsg->SetSectionID(n);
+		if ((srvmsg->SetDriver(graphics[n].module)) == 1) {
 			cout << "SaX: sorry could not open /dev/fb0... abort\n";
 			exit(1);
 		}
-		srvmsg.SetBus (
+		srvmsg->SetBus (
 			graphics[n].domain,graphics[n].bus,
 			graphics[n].slot,graphics[n].func
 		);
-		srvmsg.SetDeviceOption (graphics[n].option);
-		section[4] = section[4] + "\n" + srvmsg.DoMonitorSection();
-		section[5] = section[5] + "\n" + srvmsg.DoScreenSection();
-		section[6] = section[6] + "\n" + srvmsg.DoDeviceSection();
-		section[7] = section[7] + "\n" + srvmsg.DoServerFlagsSection();
+		srvmsg->SetDeviceOption (graphics[n].option);
+		section[4] = section[4] + "\n" + srvmsg->DoMonitorSection();
+		section[5] = section[5] + "\n" + srvmsg->DoScreenSection();
+		section[6] = section[6] + "\n" + srvmsg->DoDeviceSection();
+		section[7] = section[7] + "\n" + srvmsg->DoServerFlagsSection();
 	}
 	//======================================
 	// write sections to file...
@@ -154,7 +154,7 @@ void ScanXStuff::Scan (void) {
 	FbBootData* bootDisplay;
 	unsigned VBEmem = 0;
 	ScanServer server(question,withx,card,cardopt);
-	XF86ConfigFile srvmsg;
+	XF86ConfigFile* srvmsg = new XF86ConfigFile();
 	map<int,ParseData>  parse;
 	map<int,ServerData> graphics;
 	map<int,StuffData>  stuff;
@@ -174,7 +174,7 @@ void ScanXStuff::Scan (void) {
 	//-------------------------------------- 
 	display = MonitorGetData();
 	bootDisplay = FrameBufferGetData();
-	srvmsg.SetFile(SERVER_STUFF_DATA);
+	srvmsg->SetFile(SERVER_STUFF_DATA);
 	server.SetFile(SERVER_DATA);
 
 	//======================================
@@ -304,8 +304,8 @@ void ScanXStuff::Scan (void) {
 		//======================================
 		// call a server to setup parse
 		//--------------------------------------
-		if (srvmsg.Read() < 0) {
-			srvmsg.CallXF86Loader(config); 
+		if (srvmsg->Read() < 0) {
+			srvmsg->CallXF86Loader(config); 
 		}
 	}
 	//======================================
@@ -323,8 +323,8 @@ void ScanXStuff::Scan (void) {
 	//--------------------------------------
 	if ((graphics.size() > 1) || (graphics[0].module == "vmware")) {
 		card = 0;
-		for (int i = srvmsg.Count(); i > 0; i--) {
-			parse[card] = srvmsg.Pop();
+		for (int i = srvmsg->Count(); i > 0; i--) {
+			parse[card] = srvmsg->Pop();
 			card++;
 		}
 	}
