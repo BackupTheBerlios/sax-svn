@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Jan  8 09:20:59 2007
+# Author: Marcus Schaefer <sax@suse.de>, Thu Feb  8 11:43:10 2007
 #
 # Template for monitor data
 # --------------------------
@@ -14326,8 +14326,10 @@ FUJITSU SIEMENS:21P3  {
 # 21P4
 #----------------------------------------------
 FUJITSU SIEMENS:21P4  {
+ DDC=FUS0436
  Option=DPMS
  Hsync=30-113
+ Resolution=1280x1024
  Vsync=50-160
 }
 
