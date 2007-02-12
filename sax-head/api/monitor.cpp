@@ -44,6 +44,11 @@ SCCMonitor::SCCMonitor (
 	mCard = saxCard.getDevices();
 
 	//=====================================
+	// Initialize 3D warning state
+	//-------------------------------------
+	mShow3DMessage = true;
+
+	//=====================================
 	// create monitor dialog
 	//-------------------------------------
 	mMonitorTab = new QTabWidget ( mDialogFrame );
@@ -187,6 +192,19 @@ void SCCMonitor::init ( void ) {
 	if ( (! has3DCapabilities) || (isMultiheaded) ) {
 		mCheck3D -> setDisabled ( true  );
 		mCheck3D -> setChecked  ( false );
+		if (mShow3DMessage) {
+			SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+			QString message = mText["3DInfo"];
+			if (isMultiheaded) {
+				message = mText["XineramaInfo"];
+			}
+			SCCMessage* mMessageBox = new SCCMessage (
+				qApp->mainWidget(), mTextPtr, SaXMessage::OK,
+				message, "MessageCaption", SaXMessage::Warning
+			);
+			mMessageBox -> showMessage();
+			mShow3DMessage = false;
+		}
 	}
 	//====================================
 	// check monitor arrangement

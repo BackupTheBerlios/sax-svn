@@ -6,6 +6,12 @@
 # RTF text: Startup information for the user
 Suggestion=<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration.
 
+# RTF text: 3D acceleration not supported with this card
+3DInfo=<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D
+
+# RTF text: 3D acceleration not supported with Xinerama
+XineramaInfo=<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads
+
 # Caption text for the startup information window
 SuggestionCaption=Automatic Graphics System Setup
 

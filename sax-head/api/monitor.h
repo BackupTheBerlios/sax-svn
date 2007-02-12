@@ -62,6 +62,7 @@ class SCCMonitor : public SCCDialog {
 	//------------------------------------
 	int  mCard;
 	bool m3DEnabled;
+	bool mShow3DMessage;
 
 	private:
 	QList<SCCMonitorDisplay>  mMonitorDisplay;
