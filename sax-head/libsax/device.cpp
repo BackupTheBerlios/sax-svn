@@ -190,14 +190,14 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 	//------------------------------------
 	QString baseID ("Mouse");
 	QString baseDriver ("mouse");
-	if (fashion == SAX_INPUT_VNC) {
+	if (fashion == (char*)SAX_INPUT_VNC) {
 		baseDriver = "rfbmouse";
 	}
 	QDict<QString>* data = mInput->getTablePointer (0);
 	int newID = mInput->getCount (true) * 2 + 1;
 	if ((data) && (! data->isEmpty())) {
 		baseDriver ="kbd";
-		if (fashion == SAX_INPUT_VNC) {
+		if (fashion == (char*)SAX_INPUT_VNC) {
 			baseDriver = "rfbkeyb";
 		}
 		baseID = "Keyboard";
