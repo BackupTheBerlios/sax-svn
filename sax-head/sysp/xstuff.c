@@ -597,6 +597,7 @@ void ScanXStuff::Scan (void) {
 	// Include framebuffer modi
 	//--------------------------------------
 	int fbcount = 0;
+	if (bootDisplay) {
 	for (FbBootEntry* entry=bootDisplay->entry; entry; entry=entry->next) {
 		FBMode mode;
 		mode.x = entry -> x;
@@ -620,6 +621,7 @@ void ScanXStuff::Scan (void) {
 		stuff[0].boot[fbcount] = mode;
 		stuff[0].fbmodecount = fbcount;
 		fbcount++;
+	}
 	}
 	//======================================
 	// Sort framebuffer modi
