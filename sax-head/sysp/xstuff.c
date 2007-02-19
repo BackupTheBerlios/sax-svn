@@ -20,7 +20,7 @@ STATUS        : Status: Up-to-date
 #include "mouse.h"
 #include "xstuff.h"
 
-#define VESA_LIST 20
+#define VESA_LIST 22
 
 //======================================
 // ScanXStuff: constructor...
