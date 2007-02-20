@@ -444,7 +444,17 @@ QDict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 		qError (errorString(),EXC_CDBRECORDNOTFOUND);
 		return QDict<QString>();
 	}
+	QList< QDict<QString> > xaaopts;
+	xaaopts = mCDBCardModules -> getTablePointerCDB_DATA (
+		"xaa"
+	);
 	mCDBCardOptions = *opts.at(0);
+	if (!xaaopts.isEmpty()) {
+		QDictIterator<QString> it (*xaaopts.at(0));
+		for (; it.current(); ++it) {
+			mCDBCardOptions.insert (it.currentKey(),it.current());
+		}
+	}
 	return mCDBCardOptions;
 }
 
