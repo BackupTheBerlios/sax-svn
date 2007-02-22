@@ -1,4 +1,4 @@
-# translation of sax.po to
+# translation of sax.hu.po to Hungarian
 # Steve Varadi <svaradi@usa.com>, 2000.
 # Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Peter Breuer <comp@suselinux.hu>, 2003.
@@ -6,8 +6,10 @@
 # Szabolcs Varga <shirokuma@shirokuma.hu>, 2004, 2005.
 # Papp Zsolt <zpapp@novell.com>, 2006.
 # Keresztes Ákos <xsak@c2.hu>, 2006.
-# Kalman Kemenczy <kkemenczy@novell.com>, 2006.
+# Kalman Kemenczy <kkemenczy@novell.com>, 2006, 2007.
 # Kéménczy Kálmán <kkemenczy@novell.com>, 2006.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2007.
+# translation of sax.po to
 # translation of sax.hu.po to
 # Hungarian message file for SaX.
 # Copyright (C) SuSE GmbH, 2000.
@@ -17,13 +19,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-12-12 13:49+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <hu@li.org>\n"
+"PO-Revision-Date: 2007-01-29 01:54+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
+"Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -37,9 +40,9 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>Ez a SaX2 javaslata</b><hr>A most látható grafikus felület a SaX2 "
-"javaslata az automatikus beállításhoz. Ha tetszik ez a beállítás, egyszerűen "
-"kattintson az <b>OK</b> gombra. Ha nem megfelelő a beállítás, "
-"megváltoztathatja a konfigurációt."
+"javaslata az automatikus beállításhoz. Ha elfogadja ezt a beállítás, "
+"egyszerűen kattintson az <b>OK</b> gombra, amennyiben nem megfelelő "
+"változtassa meg a beállítást."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
@@ -76,6 +79,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>A képernyő felbontása megváltozott</b><hr>Az képernyő mérete az új "
+"elrendezéshez igazodik."
 
 # /tmp/xapi:11
 #. Help Button text
@@ -182,9 +187,8 @@ msgstr "Távoli hozzáférés tulajdonságai"
 
 # /tmp/xapi:281
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Képernyő"
+msgstr "%1. képernyő"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -239,9 +243,8 @@ msgid "Invert Y-Axis"
 msgstr "Y tengely megfordítása"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Harmadik gomb emulációjának bekapcsolása"
+msgstr "Balkezes gombkiosztás bekapcsolása"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -466,6 +469,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Érvénytelen szín- és felbontás kombináció:</b><hr><nobr>A kijelölt "
+"felbontás- és /vagy színbeállításokat</nobr> nem támogatja a grafikus "
+"kártyák framebuffere."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -697,111 +703,100 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "A jobb oldali Ctrl billentyű megnyomása vált csoportot."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "A bal oldali Win billentyű látja el a Meta funkciót."
+msgstr "A bal oldali Alt billentyű és a bal oldali Win billentyű felcserélése."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Az alapértelmezett átjáró rendben."
+msgstr "Alapértelmezett numerikus billentyűk."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Nem törhető szóköz szimbólum hozzáadása a szóköz billentyűhöz"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"A numerikus billentyűk használata unicode kiegészítésekkel (nyilak és "
+"matematikai operátorok)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Szabványos hagyományos billentyűzet kényszerítése"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
 "A CapsLock belső nagybetűsítést használ. A Shift nem oldja fel a nagybetűs "
 "módot."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Nyelv és billentyűzet kiválasztása"
+msgstr "Billentyűzetkiosztás kiválasztása"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "A Shift+CapsLock billentyű vált csoportot."
+msgstr "Az Alt+CapsLock billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "A szóköz nem törhető szóközt ad a második szinten."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr ""
-"A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift nem oldja fel a "
-"nagybetűs módot."
+"A CapsLock Shiftként működik zárolással. A Shift nem befolyásolja a "
+"nagybetűsítést."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
-"A CapsLock belső nagybetűsítést használ. A Shift feloldja a nagybetűs módot."
+msgstr "A CapsLock belső nagybetűsítést használ. A Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "A szóköz nem törhető szóközt ad a harmadik szinten."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Két billentyű kódjának felcserélése, ha a kernel rosszul észleli a Mac "
+"billentyűzetet."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr ""
-"A Shift és a számbillentyűzet gombjai ugyanúgy működnek, mint MS Windows "
-"alatt."
+msgstr "A numerikus billentyűk úgy működjenek, mint Macen."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "A Kana zárolás billentyű zárol"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "A szóköz nem törhető szóközt ad a negyedik szinten."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "A jobb Win billentyű a Compose"
+msgstr "A bal Win billentyű a kombináló (Compose)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "A jobb oldali Alt gomb megnyomásával érhetők el a 3. szintű funkciók."
+msgstr ""
+"A jobb Alt billentyűvel lehet a harmadik szintet választani, a Shift+jobb "
+"Alt a Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "A szóköz nem törhető szóközt ad bármely szinten."
 
 # 53992 AttribValues/label
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese Keyboard Options"
-msgstr "X billentyűzet kiterjesztés"
+msgstr "Japán billentyűzet beállításai"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr ""
-"A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift feloldja a "
-"CapsLock módot."
+msgstr "A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1089,14 +1084,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1113,9 +1106,8 @@ msgstr "Radír hozzáadása"
 
 # /tmp/xapi:105
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Toll hozzáadása"
+msgstr "Tábla hozzáadása"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1128,9 +1120,8 @@ msgstr "Toll tulajdonságai"
 
 # /tmp/xapi:111
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Toll tulajdonságai"
+msgstr "Tábla tulajdonságai"
 
 # /tmp/xapi:115
 #. Tab title: Eraser properties
@@ -1377,14 +1368,12 @@ msgstr "Nepál"
 # CD
 # fuzzy
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Lao Népi Demokratikus Népköztársaság"
+msgstr "Congoi Demokratikus Köztársaság"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Cseh Köztársaság"
+msgstr "Koreai Köztársaság"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1396,9 +1385,8 @@ msgid "Nigeria"
 msgstr "Nigéria"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx sorozat"
+msgstr "Japán (PC-98xx sorozat)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1762,11 +1750,3 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenség időzítő..."
-
-#~ msgid ""
-#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-#~ "your system does not support changes for resolution and/or color settings."
-#~ msgstr ""
-#~ "<b>Megjegyzés:</b><hr>A beállítás <i>Framebuffer</i>-alapú és a "
-#~ "rendszernem támogatja a felbontás és/vagy a színbeállítás "
-#~ "megváltoztatását."

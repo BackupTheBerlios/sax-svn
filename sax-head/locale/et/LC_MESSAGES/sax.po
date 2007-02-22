@@ -3,14 +3,14 @@
 # Copyright (C) 2006 SUSE Linux Products GmbH.
 # Estonian message file for YaST2 (@memory@).
 #
-# Ain Vagula <avagula@gmail.com>, 2006.
+# Ain Vagula <avagula@gmail.com>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.et\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-10-05 22:55+0300\n"
+"PO-Revision-Date: 2007-01-26 12:31+0200\n"
 "Last-Translator: Ain Vagula <avagula@gmail.com>\n"
-"Language-Team: Estonian <et@li.org>\n"
+"Language-Team: Estonian <linux-ee@lists.eenet.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,19 +45,19 @@ msgstr ""
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
-msgstr ""
+msgstr "Graafilise süsteemi automaatne häälestamine"
 
 #. Caption text for informing the user
 msgid "Information..."
-msgstr ""
+msgstr "Teave..."
 
 #. Caption text for the main window
 msgid "SaX2: X11 Configuration"
-msgstr ""
+msgstr "SaX2: X11 häälestamine"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "SaX-i juhtimiskeskus"
 
 #. Info message about display size changes
 msgid ""
@@ -88,7 +88,7 @@ msgstr "&Loobu"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr ""
+msgstr "<b>SaX2 sulgemine</b><hr>Kas sulgeda SaX2?"
 
 #. Message box default caption text
 msgid "Message"
@@ -96,7 +96,7 @@ msgstr "Teade"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
-msgstr ""
+msgstr "Muuda &häälestust"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -105,7 +105,7 @@ msgstr "Monitor"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr ""
+msgstr "Graafikakaardi ja monitori omadused"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -114,7 +114,7 @@ msgstr "Hiir"
 
 #. title of module dialog
 msgid "Mouse Properties"
-msgstr ""
+msgstr "Hiire omadused"
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
@@ -122,7 +122,7 @@ msgstr "Klaviatuur"
 
 #. title of module dialog
 msgid "Keyboard Properties"
-msgstr ""
+msgstr "Klaviatuuri oamdused"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -131,16 +131,16 @@ msgstr "Graafikalaud"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr ""
+msgstr "Graafikalaua omadused"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
-msgstr ""
+msgstr "Puutetundlik ekraan"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr ""
+msgstr "Puutetundliku ekraani omadused"
 
 #. Short description of the VNC module
 msgid "Remote Access"
@@ -148,16 +148,15 @@ msgstr "Kaugligipääs"
 
 #. title of module dialog
 msgid "Remote Access Properties"
-msgstr ""
+msgstr "Kaugligipääsu omadused"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Kuva"
+msgstr "Kuva %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Selle kuva aktiveerimine"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
@@ -605,18 +604,16 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta tähendus kantakse vasakule Win-klahvile."
+msgstr "Vasaku Alt-klahvi ja vasaku Win-klahvi tähendused vahetatakse."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Vaikeruuting korras."
+msgstr "Numbriklaviatuuri vaikeklahvid."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Sisetühiku tähenduse lisamine tühikuklahvile"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
@@ -631,13 +628,12 @@ msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Keele ja klaviatuuri paigutuse valimine"
+msgstr "Klaviatuuri paigutuse valimine"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
-msgstr ""
+msgstr "Alt+CapsLock muudab rühma."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
@@ -660,9 +656,8 @@ msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift koos numbriklaviatuuri klahvidega töötavad nagu MS Windowsis."
+msgstr "Numbriklaviatuuri klahvid töötavad nagu Macil."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -687,7 +682,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Jaapani klaviatuuri sätted"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift "
@@ -715,7 +710,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr ""
+msgstr "Shift+CapsLock muudab rühma."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
@@ -962,14 +957,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -984,9 +977,8 @@ msgid "Add Eraser"
 msgstr "Kustutuskummi lisamine"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Pliiatsi lisamine"
+msgstr ""
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -997,9 +989,8 @@ msgid "Pen Properties"
 msgstr "Pliiatsi omadused"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Pliiatsi omadused"
+msgstr ""
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1216,14 +1207,12 @@ msgid "Nepal"
 msgstr "Nepal"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Laos"
+msgstr "Kongo Demokraatlik Vabariik"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Tšehhi"
+msgstr "Korea Vabariik"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1234,9 +1223,8 @@ msgid "Nigeria"
 msgstr "Nigeeria"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx seeria"
+msgstr "Japan (PC-98xx seeria)"
 
 #. XKBFile extension text
 msgid "Estonia"
