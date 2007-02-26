@@ -412,6 +412,11 @@ fi
 /usr/share/locale/ko/LC_MESSAGES/sax.mo
 /usr/share/locale/cy/LC_MESSAGES/sax.mo
 /usr/share/locale/sl/LC_MESSAGES/sax.mo
+/usr/share/locale/zu/LC_MESSAGES/sax.mo
+/usr/share/locale/gu/LC_MESSAGES/sax.mo
+/usr/share/locale/xh/LC_MESSAGES/sax.mo
+/usr/share/locale/af/LC_MESSAGES/sax.mo
+/usr/share/locale/mr/LC_MESSAGES/sax.mo
 /usr/sbin/xapi
 /usr/sbin/xfine
 %if %{suse_version} > 820

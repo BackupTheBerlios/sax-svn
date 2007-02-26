@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2006-10-19 13:56+0200\n"
-"Last-Translator: Martin Schlander <suse@linuxin.dk>\n"
-"Language-Team:  <opensuse-translation@opensuse.org>\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -129,7 +129,7 @@ msgstr "Egenskaber for touchscreen"
 
 #. Short description of the VNC module
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -910,18 +910,16 @@ msgstr ""
 "dræbe serveren."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "Navneserver"
+msgstr "VNC-server"
 
 #. Activate VNC server checkbox
 msgid "Allow Access to Display Using VNC Protocol"
-msgstr ""
+msgstr "Tillad adgang til skærm ved hjælp af VNC-protokol"
 
 #. Group box title for the VNC options
-#, fuzzy
 msgid "VNC Options"
-msgstr "Indstillinger"
+msgstr "VNC-indstillinger"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -949,32 +947,28 @@ msgid "Activate HTTP Access"
 msgstr "Aktivér HTTP-adgang"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple VNC Connections"
-msgstr "Tillad flere forbindelser"
+msgstr "Tillad flere VNC-forbindelser"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "HTTP-port"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>Adgangskode til fjernadgang passede ikke sammen</b><hr>Første og anden "
-"version af adgangskoden stemmer ikke overens."
+"<b>Uoverensstemmelse ved VNC-adgangskode</b><hr>Første og anden version af "
+"adgangskoden passer ikke sammen."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>Fejl i adgangskode til fjernadgang</b><hr>Adgangskodefeltet blev "
-"efterladt tomt eller adgangskoden er for kort. Indtast en adgangskode på "
-"mindst seks tegn."
+"<b>Fejl ved VNC-adgangskode</b><hr>Adgangskodefeltet er ikke udfyldt, eller "
+"adgangskoden er for kort. Indtast en adgangskode på mindst seks tegn."
 
 #. Install missing packages box
 msgid ""
@@ -1026,15 +1020,14 @@ msgstr ""
 "kaldende instans:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>VNC configuration information</b><hr>The VNC service requires that the "
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
-"<b>Information om konfiguration af fjernadgang</b><hr>Tjenesten for "
-"fjernadgang kræver at TCP-porten 5900 og en HTTP-port (5800 som standard) er "
-"åbne i firewallen. Du kan konfigurere dette med YaST."
+"<b>Oplysninger om VNC-konfiguration</b><hr>VNC-tjenesten kræver, at TCP-port "
+"5900 og en HTTP-port (5800 som standard) skal være åben i firewall'en.  Du "
+"kan konfigurere dette med YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1179,13 +1172,12 @@ msgstr "Inaktivitetstimer..."
 #~ "og dit system understøtter ikke ændringer af opløsning og/eller "
 #~ "farveindstillinger."
 
-#, fuzzy
 #~ msgid ""
 #~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
 #~ "with a maximum of eight characters."
 #~ msgstr ""
-#~ "<b>Fejl i adgangskode til fjernadgang</b><hr>Adgangskoden er for lang. "
-#~ "Indtast en adgangskode på højst otte tegn."
+#~ "<b>Fejl ved VNC-adgangskode</b><hr>Adgangskoden er for lang. Indtast en "
+#~ "adgangskode på højst otte tegn."
 
 #~ msgid "Arabic"
 #~ msgstr "Arabisk"
