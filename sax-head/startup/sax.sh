@@ -47,6 +47,7 @@ IGNORE_PROFILE=""
 DIALOG=""
 REINIT=0
 FULLSCREEN=""
+NOINTELMAGIC=""
 
 #==================================
 # Functions...
@@ -204,7 +205,7 @@ function usage() {
 #==================================
 # get options
 #----------------------------------
-TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:ifC:H --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog:,fullscreen,cmdline:,cmdhelp \
+TEMP=`getopt -o gb::alhxm:uc:pn:t:vsrV:dO:ifC:HI --long gpm,batchmode::,auto,lowres,help,xmode,modules:,automode,chip:,pci,node:,type:,version,sysconfig,reinit,vesa:,dbmnew,ignoreprofile,dialog:,fullscreen,cmdline:,cmdhelp,nointelmagic \
 -n 'SaX' -- "$@"`
 
 if [ $? != 0 ] ; then usage ; exit 1 ; fi
@@ -226,6 +227,10 @@ while true ; do
 
 	-r|--reinit)                # remove /var/cache/sax/files to reinit
 		REINIT=1                # hardware database
+	shift ;;
+
+	-I|--nointelmagic)          # don't check for Intel card
+		NOINTELMAGIC="--nointelmagic"
 	shift ;;
 
 	-f|--fullscreen)            # start in fullscreen mode
@@ -404,7 +409,7 @@ rm -f "/var/cache/sax/files/hardware.chg"
 # set option strings...
 #----------------------------------
 XC_OPT="$XMODE $AUTO_CONF $SYS_CONFIG $DIALOG $FULLSCREEN"
-IN_OPT="$LOW_RES $BATCH_MODE $MODLIST $AUTOMODE $CHIP"
+IN_OPT="$LOW_RES $BATCH_MODE $MODLIST $AUTOMODE $CHIP $NOINTELMAGIC"
 IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $IGNORE_PROFILE"
 
 #==================================

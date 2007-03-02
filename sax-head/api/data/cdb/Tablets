@@ -169,3 +169,15 @@ ACECAD:ACECAT FLAIR {
   TabletMode         = Absolute
   RawOption          = "Model" "Flair","ReportSpeed" "85"
 }
+
+#-------------------------------#
+# FinePoint Tablet              #
+#-------------------------------#
+FINEPOINT:GATEWAY (FPI2004) {
+  Driver             = fpit
+  Device             = /dev/ttyS0
+  Option             = AlwaysCore,InvertY
+  SendCoreEvents     = on
+  BaudRate           = 19200
+  RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400"
+}

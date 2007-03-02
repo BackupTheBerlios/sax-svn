@@ -34,12 +34,13 @@ my $ModuleList;         # option variable: module(s) to use
 my $AutoMode;           # option variable: auto modeline
 my $UseDbmNew;          # use the DbmNew file instead of DbmFile
 my $CardNumber;         # option variable: card to use
+my $NoIntelMagic;       # don't check for Intel graphics
 my $UseGPM;             # option variable: use gpm as repeater
 my $MouseDevice;        # option variable: core pointer device
 my $MouseProtocol;      # option variable: core pointer protocol
 my $HWScanNeeded = 1;   # indicate if scan(),detect() call is needed
 my $logHandle;          # log handler
-my $D3Answer = "no";    # answer to the 3D question
+my $D3Answer = "yes";   # answer to the 3D question
 my $Quiet = $D3Answer;  # answer questions with [yes|no] [3D...]
 my $haveServer;         # Is there a server for later access
 my $dpy      = ":0.0";  # display to use
@@ -79,7 +80,8 @@ sub init {
 	#------------------------------------------
 	my $result = GetOptions(
 		"module|m=s"        => \$ModuleList,
-		"chip|c=s"          => \$CardNumber,             
+		"chip|c=s"          => \$CardNumber,
+		"nointelmagic"      => \$NoIntelMagic,
 		"batch|b:s"         => \$StartBatchMode,
 		"vesa=s"            => \$CreateVESAProfile,
 		"ignoreprofile|i"   => \$IgnoreProfile,
@@ -543,6 +545,39 @@ sub init {
 }
 
 #==========================================
+# checkForIntelBoard
+#------------------------------------------
+sub checkForIntelBoard {
+	# ...
+	# This function is more or less a hack for Intel onboard
+	# graphics. In case of exactly two card devices it checks
+	# for a device with the intel driver (i810) assigned. If
+	# such a device is found the other card of the two is used
+	# exclusively and the Intel device will be disabled. This
+	# is done because we assume a user who plugged in another
+	# graphics card in a machine with Intel onboard graphics
+	# wants to use this card and doesn't want to make use of
+	# the onboard graphics at all. It might be possible that
+	# this assumption is wrong. Therefore the check can be
+	# disabled by the option "--nointelmagic"
+	# ---
+	my @data = qx (/usr/sbin/sysp -c);
+	my $size = @data;
+	my $chip = -1;
+	if ($size == 2) {
+		foreach my $line (@data) {
+			$chip++;
+			if ($line =~ /i810/) {
+				$chip = $chip ^ 1;
+			}
+		}
+	}
+	if ($chip >= 0) {
+		$CardNumber = $chip;
+	}
+}
+
+#==========================================
 # scan
 #------------------------------------------
 sub scan {
@@ -560,6 +595,10 @@ sub scan {
 	my $used;      # real used number of cards
 	my $querystr;  # module name for sysp
 	my $subject;   # topic line for log
+
+	if (! defined $NoIntelMagic) {
+		checkForIntelBoard();
+	}
 
 	if (! defined $CardNumber) { $CardNumber = "all"; }
 	if (! defined $ModuleList) { $ModuleList = "none"; }
