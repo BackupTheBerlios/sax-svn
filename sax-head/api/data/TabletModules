@@ -2,3 +2,4 @@ wacom=USB:bool Tilt:bool KeepShape:bool AlwaysCore:bool TopX:any TopY:any Bottom
 hyperpen=AlwaysCore:bool XSize:any YSize:any Cursor:string%Stylus,Pen
 summa=Compatible:bool AlwaysCore:bool Cursor:string%Stylus,Pen
 acecad=Model:any ReportSpeed:any
+fpit=AlwaysCore:bool BaudRate:string%38400,19200,9600 InvertY:bool MaximumXPosition:integer MaximumYPosition:integer MinimumXPosition:integer MinimumYPosition:integer InvertX:bool SwapXY:bool Rotate:string%NONE,CW,CCW DeviceName:any AlwaysCore:bool DebugLevel:integer Passive:bool

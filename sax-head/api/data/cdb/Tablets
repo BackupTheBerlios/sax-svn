@@ -118,8 +118,7 @@ TEVION / AIPTEK:ALDI Tablet (SERIAL) {
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
- BaudRate            = 19200
- RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus"
+ RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus","BaudRate" "19200"
  Load                = HyperPen
 }
 
@@ -131,8 +130,7 @@ TEVION / AIPTEK:HyperPen 6000 (SERIAL) {
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
- BaudRate            = 19200
- RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus"
+ RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus","BaudRate" "19200"
  Load                = HyperPen
 }
 
@@ -144,8 +142,7 @@ SUMMAGRAPHICS:SUMMASKETCH {
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
- BaudRate            = 19200
- RawOption           = "Cursor" "Stylus"
+ RawOption           = "Cursor" "Stylus","BaudRate" "19200"
 }
 
 #-------------------------------#
@@ -156,8 +153,7 @@ NUMONICS:GRIDMASTER {
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore,Compatible
- BaudRate            = 19200
- RawOption           = "Cursor" "Stylus"
+ RawOption           = "Cursor" "Stylus","BaudRate" "19200"
 }
 
 #-------------------------------#
@@ -178,6 +174,5 @@ FINEPOINT:GATEWAY (FPI2004) {
   Device             = /dev/ttyS0
   Option             = AlwaysCore,InvertY
   SendCoreEvents     = on
-  BaudRate           = 19200
-  RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400"
+  RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400","BaudRate" "19200"
 }

@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Fri Mar  2 14:23:42 CET 2007 - ms@suse.de
+
+- removed the PenabledTabletPC entry from the touchscreen
+  section. This is in fact a tablet represented by the entry
+  ISDV4 Tablet PC (Serial) within the Tablet section (#250587)
+- fixed segfault when clicking in empty options box (#250564)
+- added options for the fpit driver (#250564)
+
+-------------------------------------------------------------------
 Fri Mar  2 09:43:05 CET 2007 - ms@suse.de
 
 - include hwinfo changes v13.27

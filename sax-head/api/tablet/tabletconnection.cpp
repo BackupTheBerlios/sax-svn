@@ -212,7 +212,13 @@ void SCCTabletConnection::setOptions ( const QDict<QString>& options ) {
 //====================================
 // slotOption
 //------------------------------------
-void SCCTabletConnection::slotOption ( QListBoxItem*  ) {
+void SCCTabletConnection::slotOption ( QListBoxItem* item ) {
+	//=====================================
+	// check item address
+	//-------------------------------------
+	if (! item) {
+		return;
+	}
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
