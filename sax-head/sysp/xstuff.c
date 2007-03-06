@@ -420,16 +420,19 @@ void ScanXStuff::Scan (void) {
 		stuff[i].driver    = graphics[i].module;
 		stuff[i].primary   = primary;
 		stuff[i].current   = current;
+		#if 0
+		// Disabled: For reasons see Bug: 229228
 		//======================================
 		// Save v4l extension if TV card exists
 		//--------------------------------------
 		if (TvSupport()) {
-		if (stuff[i].extension == "") {
-			stuff[i].extension = "v4l";
-		} else {
-			stuff[i].extension += ",v4l";
+			if (stuff[i].extension == "") {
+				stuff[i].extension = "v4l";
+			} else {
+				stuff[i].extension += ",v4l";
+			}
 		}
-		}
+		#endif
 	}
 	// .../
 	// set the VBE DDC probed values from libhd

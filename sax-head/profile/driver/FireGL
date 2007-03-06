@@ -12,7 +12,7 @@ ServerFlags-> 0 -> IgnoreABI = on
 !remove Monitor -> [X] -> Modeline
 
 Screen->[X]->DefaultDepth    = 24
-Module->[X]->Load            = dbe,type1,freetype,extmod,glx,v4l,dri
+Module->[X]->Load            = dbe,type1,freetype,extmod,glx,dri
 Device->[X]->Raw->11->Option = "#NoDDC"
 Device->[X]->Raw->12->Option = "UseInternalAGPGART" "no"
 Device->[X]->Raw->13->Option = "no_accel" "no"
