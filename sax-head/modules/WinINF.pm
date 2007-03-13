@@ -42,7 +42,6 @@ sub mountMedia {
 			}
 		}
 		close FD;
-		qx (umount $device 2>&1);
 		if (@result > 0) {
 			return (@result);
 		}
