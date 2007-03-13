@@ -32,7 +32,7 @@ WACOM:ISDV4 TABLET PC (SERIAL) {
  Driver               = wacom
  Device               = /dev/ttyS0
  SendCoreEvents       = on
- TabletType           = stylus
+ TabletType           = cursor
  TabletMode           = Absolute
  RawOption            = "ForceDevice" "ISDV4"
  StylusLink           = ISDV4 TABLET PC Stylus (SERIAL)
