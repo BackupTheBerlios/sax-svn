@@ -60,6 +60,8 @@ class SCCKeyboardOptions : public SCCDialog {
 	QCheckListItem*  mIDControl;
 	QCheckListItem*  mIDThirdLevel;
 	QCheckListItem*  mIDAltWinKey;
+	QCheckListItem*  mIDEuroSign;
+	QCheckListItem*  mIDEuroSignNone;
 	QCheckListItem*  mIDCapsLock;
 	QCheckListItem*  mIDCapsLockNone;
 	QCheckListItem*	 mIDAltWinKeyNone;

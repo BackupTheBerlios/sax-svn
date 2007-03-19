@@ -47,6 +47,15 @@ SCCKeyboardOptions::SCCKeyboardOptions (
 	mXKBOptionView -> setSorting ( -1 );
 
 	//=====================================
+	// add eurosign: tagged options
+	//-------------------------------------
+	mIDEuroSign = new QCheckListItem (
+		mXKBOptionView,mText["XKBEuroSign"]
+	);
+	mIDEuroSignNone = new QCheckListItem (
+		mIDEuroSign,mText["XKBNone"],QCheckListItem::RadioButton
+	);
+	//=====================================
 	// add caps: tagged options
 	//-------------------------------------
 	mIDCapsLock = new QCheckListItem (
@@ -107,6 +116,7 @@ SCCKeyboardOptions::SCCKeyboardOptions (
 	mIDThirdLevel     -> setOpen ( true );
 	mIDAltWinKey      -> setOpen ( true );
 	mIDCapsLock       -> setOpen ( true );
+	mIDEuroSign       -> setOpen ( true );
 
 	//=====================================
 	// connect widgets
@@ -148,6 +158,9 @@ void SCCKeyboardOptions::init ( void ) {
 				"SCCKeyboardOptions::Warning: unknown XKB key: %s\n",
 				it.current()->ascii()
 			);
+		}
+		if (key.contains("eurosign:")) {
+			new QCheckListItem (mIDEuroSign,val,QCheckListItem::RadioButton);
 		}
 		if (key.contains("caps:")) {
 			new QCheckListItem (mIDCapsLock,val,QCheckListItem::RadioButton);
