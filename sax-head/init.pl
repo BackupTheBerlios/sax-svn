@@ -567,7 +567,7 @@ sub checkForIntelBoard {
 	if ($size == 2) {
 		foreach my $line (@data) {
 			$chip++;
-			if ($line =~ /i810/) {
+			if ($line =~ /i810|intel/) {
 				$chip = $chip ^ 1;
 			}
 		}
