@@ -559,8 +559,10 @@ QPixmap SCCMonitorDisplay::getDualPixmap ( void ) {
 // setMonitorResolution
 //------------------------------------ 
 void SCCMonitorDisplay::setMonitorResolution ( const QString& res ) {
-	mResolution -> setCurrentText (*mResolutionDict[res]);
-	slotResolution ( mResolution->currentItem() );
+	if (mResolutionDict[res]) {
+		mResolution -> setCurrentText (*mResolutionDict[res]);
+		slotResolution ( mResolution->currentItem() );
+	}
 }
 //====================================
 // setMonitorName
