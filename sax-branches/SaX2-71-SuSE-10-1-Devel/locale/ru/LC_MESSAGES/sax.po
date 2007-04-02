@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: sax-ru\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2004-03-22 18:27+0300\n"
-"Last-Translator: Andrew Bogatov<bert@bert2.crec.mipt.ru>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,30 +22,26 @@ msgstr ""
 #. application code for the SaX2 and XFine GUI
 #.
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>SaX2 предлагает</b> <hr>В-настоящее-время-работающая графическая система "
-"базируется на предложении, сделанном SaX2. Если это приемлемо, нажмите<b>OK</"
-"b>. Иначе, изменените конфигурацию."
+"<b>Предложение SaX2</b><hr>Запущенная на данный момент графическая система "
+"основана на предложении, сделанном SaX2. Если это приемлемо, нажмите кнопку "
+"<b>ОК</b>.  В противном случае измените конфигурацию."
 
 #. Caption text for the startup information window
-#, fuzzy
 msgid "Automatic Graphics System Setup"
 msgstr "Автоматическая установка графической системы"
 
 #. Caption text for informing the user
-#, fuzzy
 msgid "Information..."
-msgstr " Диалоговая информация ..."
+msgstr "Информация…"
 
 #. Caption text for the main window
-#, fuzzy
 msgid "SaX2: X11 Configuration"
-msgstr "&Изменить конфигурацию"
+msgstr "SaX2: конфигурация X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
@@ -58,7 +54,7 @@ msgstr "&Помощь"
 #. Ok Button text
 #, fuzzy
 msgid "&OK"
-msgstr "&Порядок"
+msgstr "O&К"
 
 #. Yes Button text
 msgid "&Yes"
@@ -74,18 +70,16 @@ msgid "&Cancel"
 msgstr "&Отменить"
 
 #. RTF text: exit SaX message
-#, fuzzy
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr " <b>Выйти из SaX2:</b><hr>Выйти из SaX2 сейчас?"
+msgstr "Выход из SaX2</b><hr>Выйти из SaX2?"
 
 #. Message box default caption text
 msgid "Message"
 msgstr "Сообщение"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "&Изменить конфигурацию"
+msgstr "И&зменить конфигурацию"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -93,9 +87,8 @@ msgid "Monitor"
 msgstr "Монитор"
 
 #. title of module dialog
-#, fuzzy
 msgid "Card and Monitor Properties"
-msgstr "Установка свойств монитора ..."
+msgstr "Свойства видеоадаптера и монитора"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -103,19 +96,16 @@ msgid "Mouse"
 msgstr "Мышь"
 
 #. title of module dialog
-#, fuzzy
 msgid "Mouse Properties"
-msgstr "Свойства ..."
+msgstr "Свойства мыши"
 
 #. Short description of the Keyboard module
-#, fuzzy
 msgid "Keyboard"
-msgstr "Модель Клавиатуры"
+msgstr "Клавиатура"
 
 #. title of module dialog
-#, fuzzy
 msgid "Keyboard Properties"
-msgstr "Установка свойств монитора ..."
+msgstr "Свойства клавиатуры"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -123,28 +113,25 @@ msgid "Tablet"
 msgstr "Планшет"
 
 #. title of module dialog
-#, fuzzy
 msgid "Tablet Properties"
-msgstr "Свойства ..."
+msgstr "Свойства планшета"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
-msgstr "Touchscreen"
+msgstr "Сенсорный экран"
 
 #. title of module dialog
-#, fuzzy
 msgid "Touchscreen Properties"
-msgstr "Установка свойств монитора ..."
+msgstr "Свойства сенсорного экрана"
 
 #. Short description of the VNC module
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "Установка свойств монитора ..."
+msgstr "Свойства удаленного доступа"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display"
@@ -171,25 +158,21 @@ msgid "&Options..."
 msgstr "&Параметры..."
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "Конфигурирование клавиатуры..."
+msgstr "Нас&троить…"
 
 #. Group box title for dual head setup
-#, fuzzy
 msgid "Dual Head Mode"
-msgstr "Мультиголовный Режим"
+msgstr "Режим двух мониторов"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
-#, fuzzy
 msgid "Options"
-msgstr "&Параметры"
+msgstr "Настройки"
 
 #. CheckBox label to activate the mouse wheel
-#, fuzzy
 msgid "Activate Mouse Wheel"
 msgstr "Включить колесо мыши"
 
@@ -202,30 +185,25 @@ msgid "Invert Y-Axis"
 msgstr "Инвертировать ось Y"
 
 #. CheckBox label to activate the 3 Button emulation
-#, fuzzy
 msgid "Activate 3-Button Emulation"
-msgstr "Включить эмуляцию с 3 кнопками"
+msgstr "Включить эмуляцию 3-й кнопки"
 
 #. CheckBox label to activate the wheel emulation
-#, fuzzy
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Эмулировать колесо кнопкой мыши: "
+msgstr "Эмулировать колесо мыши как кнопку"
 
 #. Group box title for card rotation
-#, fuzzy
 msgid "Rotate Screen"
-msgstr "Вращать Экран"
+msgstr "Повернуть экран"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
-#, fuzzy
 msgid "Test"
-msgstr "&Тест ..."
+msgstr "Тест"
 
 #. Button text in final step message box for testing the configuration
-#, fuzzy
 msgid "&Test"
-msgstr "&Тест ..."
+msgstr "&Тест"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -238,84 +216,68 @@ msgid "Layout"
 msgstr "Раскладка"
 
 #. Status line of mouse test field: ready
-#, fuzzy
 msgid "Test ready"
-msgstr "Тестовое поле"
+msgstr "Тест готов"
 
 #. Status line of mouse test field: single button click
-#, fuzzy
 msgid "Single Click: Done"
-msgstr "Однократный щелчок кнопки: Сделано"
+msgstr "Один щелчок: готово"
 
 #. Status line of mouse test field: double button click
-#, fuzzy
 msgid "Double Click: Done"
-msgstr "Двойной щелчок кнопки : Сделано"
+msgstr "Двойной щелчок: готово"
 
 #. Status line of mouse test field: wheel moved
-#, fuzzy
 msgid "Scrolling"
-msgstr "ScrollLock раскладка"
+msgstr "Прокрутка"
 
 #. Status line of mouse test field: button pressed
-#, fuzzy
 msgid "Button pressed"
-msgstr "Кнопка нажата ... "
+msgstr "Кнопка нажата"
 
 #. Status line of mouse test field: button released
-#, fuzzy
 msgid "Button released"
-msgstr "Кнопка отжата ... "
+msgstr "Кнопка отпущена"
 
 #. Status line of mouse test field: wheel stopped
-#, fuzzy
 msgid "Stopped: Done"
-msgstr "Колесо остановлено: Сделано"
+msgstr "Остановлена: готово"
 
 #. Group box title for properties
-#, fuzzy
 msgid "Properties"
-msgstr "Свойства ..."
+msgstr "Свойства"
 
 #. Activate dual head mode checkbox
-#, fuzzy
 msgid "Activate Dual Head Mode"
-msgstr "Мультиголовный Режим"
+msgstr "Включить режим двух мониторов"
 
 #. Set display resolution
-#, fuzzy
 msgid "Resolution"
-msgstr "Разрешающая способность Y"
+msgstr "Разрешение"
 
 #. Set display colors
-#, fuzzy
 msgid "Colors"
-msgstr "&Цвета"
+msgstr "Цвета"
 
 #. Activate 3D checkboc
-#, fuzzy
 msgid "Activate 3D Acceleration"
-msgstr "3D-ускорение"
+msgstr "Включить 3D ускорение"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "Модель монитора"
+msgstr "Монитор для платы"
 
 #. Tab title: Setup monitor for second channel on card X
-#, fuzzy
 msgid "Second Monitor for Card"
-msgstr "Модель монитора"
+msgstr "Второй монитор для платы"
 
 #. Tab title: Setup sync frequencies
-#, fuzzy
 msgid "Sync Frequencies"
-msgstr "&Частоты"
+msgstr "Частоты синхронизации"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
-msgstr "Размеры дисплея"
+msgstr "Размер экрана"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
@@ -334,9 +296,8 @@ msgstr "Активирован в режиме драйвера по умолч�
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
-msgstr "Не конфигурированный"
+msgstr "Не настроено"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
@@ -347,115 +308,96 @@ msgstr ""
 "быть активным.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Конфигурация сохранена ... "
+msgstr "Нет доступных конфигураций"
 
 #. Radiobutton for traditional multihead mode
-#, fuzzy
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"Обычная Multihead:\n"
-"Каждый экран - независимый дисплей"
+"Традиционный режим:\n"
+"каждый экран является независимым"
 
 #. Radiobutton for cloned multihead mode
-#, fuzzy
 msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
-"Имитируемый Multihead:\n"
-"Каждый экран - аналог первичного дисплея"
+"Режим клонирования:\n"
+"каждый экран является копией основного экрана"
 
 #. Radiobutton for xinerama multihead mode
-#, fuzzy
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
-"Xinerama Multihead:\n"
-"Построен один большой дисплей из всех экранов"
+"Режим Xinerama:\n"
+"все экраны образуют один большой экран"
 
 #. Title for multihead modi
-#, fuzzy
 msgid "Multihead Mode"
-msgstr "Мультиголовный Режим"
+msgstr "Режим работы с несколькими мониторами"
 
 #. Monitor X - connected to - CardY
-#, fuzzy
 msgid "Connected To"
-msgstr "Связанный с: "
+msgstr "Подключен к"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Неизвестный монитор ..."
+msgstr "Неизвестный монитор:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "Первичная Modeline:"
+msgstr "Основной монитор:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "Выбор цвета..."
+msgstr "Настройки монитора"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "Система X11"
+msgstr "Настройки мыши"
 
 #. Windowanager title for the card options dialog
-#, fuzzy
 msgid "Graphics Card Settings"
-msgstr "Графическая карта"
+msgstr "Настройки платы видеоадаптера"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "Мультиголовный Режим"
+msgstr "Настройки режима двух мониторов"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
-msgstr "Не вращаемый"
+msgstr "Не повернут"
 
 #. Radiobutton rotate to the left side
-#, fuzzy
 msgid "To the Left"
-msgstr "Налево"
+msgstr "Влево"
 
 #. Radiobutton rotate to the right side
-#, fuzzy
 msgid "To the Right"
-msgstr "Направо"
+msgstr "Вправо"
 
 #. Popup message to ask the user for an option value
-#, fuzzy
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-" <b> Опция %1 нуждается в значении </b> <hr> Пожалуйста установите значение "
-"для этой опции."
+"<b>Параметр должен иметь значение</b><hr><nobr>Задайте значение для "
+"параметра %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
-#, fuzzy
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Модель: выбор Продавеца и Названия..."
+msgstr "Монитор: выбор производителя и названия"
 
 #. Group box title for the mouse vendor and name selection
-#, fuzzy
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Модель: выбор Продавеца и Названия..."
+msgstr "Мышь: выбор производителя и названия"
 
 #. Group box title for the manual sync frequency set up
-#, fuzzy
 msgid "Manual Sync Frequency Setup"
-msgstr "Ручная установка синхронизирующая частоты ..."
+msgstr "Ручная настройка частоты синхронизации"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
@@ -466,15 +408,15 @@ msgid "Display Size in [ mm ]"
 msgstr "Размер Дисплея в [мм] "
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b> Примечание:</b><hr> Неправильные диапазоны синхронизации, могут "
-"повредить ваш монитор. Проконсультируйтесь с руководством по монитору для "
-"следующих параметров настройки."
+"<b>Примечание.</b>Неверные диапазоны синхронизации могут повредить монитор. "
+"Допустимые значения см. в руководстве по эксплуатации монитора.<br><br>Если "
+"использование максимальных частот нежелательно, уменьшите диапазоны "
+"синхронизации."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -485,24 +427,20 @@ msgid "Utility Disk..."
 msgstr "Сервисный Диск ..."
 
 #. Label text for horizontal sync frequency
-#, fuzzy
 msgid "Horizontal"
-msgstr "Горизонтальный: "
+msgstr "Горизонтальная"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "Выберите разрешение"
+msgstr "Второй монитор:"
 
 #. Label text for second monitor resolution
-#, fuzzy
 msgid "Second Monitor Resolution"
-msgstr "Выберите разрешение"
+msgstr "Разрешение второго монитора"
 
 #. Label text for vertical sync frequency
-#, fuzzy
 msgid "Vertical"
-msgstr "Вертикальный: "
+msgstr "Вертикальная"
 
 #. Label text for hsync unit
 msgid "KHz"
@@ -517,9 +455,8 @@ msgid "Aspect Ratio"
 msgstr "Соотношение"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "Горизонтальный: "
+msgstr "Диагональ"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
@@ -538,28 +475,25 @@ msgid "inches"
 msgstr "дюймы"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-#, fuzzy
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b> Вставьте компакт-диск или дискету</b><hr>Вставьте компакт-диск утилиты "
-"или дискету от продавца дисплея ."
+"<b>Вставьте CD или диск</b><hr>Вставьте CD или диск с утилитой к монитору, "
+"поставляемый производителем."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-#, fuzzy
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
-"<b> Ошибка чтения </b> <hr> Не cмог cчитать компакт-диск или дискету. Это "
-"может указывать на поврежденную поверхность или неправильно отформатированые "
-"файлы информации на носителе."
+"<b>Ошибка чтения</b><hr>Невозможно прочитать с CD или диска. Это может "
+"произойти, потому что поврежден носитель или файлы сведений имеют неверный "
+"формат."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "Традиционный режим Активен"
+msgstr "Традиционный"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
@@ -570,18 +504,16 @@ msgid "Xinerama"
 msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "Мышь"
+msgstr "Модель мыши"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
 msgstr "Начальная установка"
 
 #. Label text for the primary keyboard type
-#, fuzzy
 msgid "Type"
-msgstr "Печатать"
+msgstr "Тип"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
@@ -589,9 +521,8 @@ msgid "Variant"
 msgstr "Вариант"
 
 #. Group box title for the additional keyboard setup
-#, fuzzy
 msgid "Additional Layouts"
-msgstr "Дополнительная раскладка(и) "
+msgstr "Дополнительные раскладки"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -602,19 +533,17 @@ msgid "Keytable"
 msgstr "Клавиатура "
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
-msgstr "Поведение группы Shift/Lock"
+msgstr "Изменение и переключение групп"
 
 #. List View root item text
-#, fuzzy
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Использовать клавиатурный LED, чтобы показать альтернативную группу"
+msgstr ""
+"Использовать индикаторы клавиатуры, чтобы показать альтернативную группу"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "Позиция Клавиши CTRL"
+msgstr "Расположение клавиш последовательности"
 
 #. List View root item text
 #. XKBFile extension text
@@ -622,17 +551,14 @@ msgid "Control Key Position"
 msgstr "Позиция Клавиши CTRL"
 
 #. List View root item text
-#, fuzzy
 msgid "Third Level Chooser"
-msgstr "Третий уровень выбора"
+msgstr "Выбор третьего уровня"
 
 #. List View root item text
-#, fuzzy
 msgid "Alt/Win Key Behavior"
-msgstr "Поведение клавиши Alt/Win"
+msgstr "Поведение клавиш Alt и Win"
 
 #. List View root item text
-#, fuzzy
 msgid "CapsLock Key Behavior"
 msgstr "Поведение клавиши CapsLock"
 
@@ -641,73 +567,64 @@ msgid "None"
 msgstr "Никакой"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed."
-msgstr "Левая клавиша Win переключает группу пока нажата"
+msgstr "Alt слева - переключение группы на время нажатия."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "Обе клавиши Ctrl вместе изменяют группу"
+msgstr "Обе клавиши Ctrl одновременно - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "Правая клавиша SHIFT изменяет группу"
+msgstr "Shift справа - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "Левая-Win клавиша изменяет группу"
+msgstr "Win слева - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "Клавиша Left Alt изменяет группу"
+msgstr "Alt слева - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed."
-msgstr "Обе клавиши Win-Keys переключает группу пока нажаты"
+msgstr "Обе клавиши Win одновременно - переключение группы на время нажатия."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches group while pressed."
-msgstr "Правая клавиша Win переключает группу пока нажата"
+msgstr "Ctrl справа - переключение группы на время нажатия."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 msgstr ""
-"Использует внутреннее преобразование букв в прописные. Shift отменяет "
-"заглавные буквы."
+"CapsLock использует внутреннее преобразование прописных букв. Shift не "
+"отменяет CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "Клавиша CapsLock просто блокирует действие клавиши Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
 msgstr ""
+"Клавиша CapsLock переключает режим обычного преобразования алфавитных "
+"символов в прописные."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "Клавиша CapsLock переключает действие клавиши Shift для всех клавиш."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key is Compose."
-msgstr "Правая-Win клавиши составляют"
+msgstr "Win справа - начало последовательности."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes group."
-msgstr "Клавиша Caps Lock изменяет группу"
+msgstr "Shift+CapsLock - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches group while pressed."
-msgstr "R-Alt переключает группу пока нажат"
+msgstr "Alt справа - переключение группы на время нажатия."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
@@ -718,130 +635,108 @@ msgid "Control key at bottom left"
 msgstr "Клавиша CTRL внизу слева"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Нажмите одну из Win-клавиш чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня нажатием любой из клавиш Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Нажмите Right Win клавишу, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня нажатием клавиши Alt справа."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes group."
-msgstr "Клавиша Right Ctrl изменяет группу"
+msgstr "Ctrl справа - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "Right Alt композитный"
+msgstr "Alt справа - начало последовательности."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "Right Alt композитный"
+msgstr "Ctrl справа - начало последовательности."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative group."
-msgstr "Scroll_Lock LED показывает альтернативную группу "
+msgstr "Индикатор ScrollLock показывает альтернативную группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Клавиша CTRL слева от A"
+msgstr "Клавиша Control слева от -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
 msgstr "Третий уровень выбора"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "Обе клавиши SHIFT вместе изменяют группу"
+msgstr "Обе клавиши Shift одновременно - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+msgstr ""
+"Клавиша CapsLock действует как клавиша Shift с блокировкой. Клавиша Shift не "
+"отменяет действия клавиши CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 msgstr ""
-"Использует внутреннее преобразование букв в прописные. Shift отменяет "
-"заглавные буквы."
+"CapsLock использует внутреннее преобразование прописных букв. Shift отменяет "
+"действие CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "Делает CapsLock дополнительным управлением"
+msgstr "Использовать клавишу CapsLock как дополнительную клавишу Ctrl."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Нажмите левую клавишу Win, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня нажатием клавиши Win слева."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "Правая клавиша Win изменяет группу"
+msgstr "Клавиша Win справа - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
-msgstr "Мета отображен на левую клавишуWin."
+msgstr "Сопоставить Meta с клавишей Win слева."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative group."
-msgstr "Caps_Lock LED показывает альтернативную группу"
+msgstr "Индикатор CapsLock показывает альтернативную группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative group."
-msgstr "Num_Lock LED показывает альтернативную группу"
+msgstr "Индикатор NumLock показывает альтернативную группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "Левая клавиша Shift изменяет группу"
+msgstr "Shift слева - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "Левая клавиша Win переключает группу пока нажата"
+msgstr "Win слева - переключение группы на время нажатия."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "Меню составлено"
+msgstr "Menu - начало последовательности."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "Обе клавиши Alt вместе изменяет группу"
+msgstr "Обе клавиши Alt одновременно - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "Клавиша Caps Lock изменяет группу"
+msgstr "CapsLock - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
-msgstr "Поменять местами Control и Caps Lock "
+msgstr "Поменять местами функции клавиш Ctrl и CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Нажмите одну из Win-клавиш чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня любой из клавиш Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "Клавиша Right Alt изменяет группу"
+msgstr "Alt справа - изменение группы."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
@@ -852,99 +747,83 @@ msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
 msgstr "Специальные клавиши (Ctrl+Alt+<key>) обслуживаются сервером."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper отображен на клавиши Win."
+msgstr "Сопоставить Hyper с клавишами Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Мета отображен на левую клавишуWin."
+msgstr "Сопоставить Alt с клавишей Win справа, а Super - с клавишей Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)."
-msgstr "Super отображен на клавиши Win (значение по умолчанию)."
+msgstr "Сопоставить Super с клавишами Win (по умолчанию)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Alt и Мета на клавишах Alt (значение по умолчанию)."
+msgstr "Alt и Meta на клавишах Alt (по умолчанию)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
-msgstr "Добавить стандартное поведение к клавише Menu."
+msgstr "Добавить стандартное поведение клавише Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Alt и Мета на клавишах Alt (значение по умолчанию)."
+msgstr "Alt и Meta на клавишах Alt (по умолчанию)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Control to choose 3rd level."
-msgstr "Нажмите Ctrl Right, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня клавишей Ctrl справа."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Alt+Shift изменяет группу"
+msgstr "Alt+Shift - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "Control+Shift изменяет группу"
+msgstr "Ctrl+Shift - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+msgstr ""
+"Клавиша CapsLock действует как клавиша Shift с блокировкой. Shift отменяет "
+"действие CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative group."
-msgstr "Использовать клавиатурный LED, чтобы показать альтернативную группу"
+msgstr ""
+"Использовать индикаторы клавиатуры, чтобы показать альтернативную группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Нажмите Right Win клавишу, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня клавишей Win справа."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Нажмите левую клавишу Win, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня клавишей Alt слева."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys."
-msgstr "Мета отображен на клавиши Win."
+msgstr "Сопоставить Meta с клавишами Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Menu key to choose 3rd level."
-msgstr "Нажмите Menu клавишу, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня клавишей Meta."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "Клавиша Left Ctrl изменяет группу"
+msgstr "Ctrl слева - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "Клавиша Menu изменяет группу"
+msgstr "Клавиша Menu - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Alt+Control изменяет группу"
+msgstr "Alt+Control - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches group while pressed."
-msgstr "Правая клавиша Win переключает группу пока нажата"
+msgstr "Win справа - переключение группы на время нажатия."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -955,24 +834,20 @@ msgid "Electronic Pens"
 msgstr "Электронные перья"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3D-ускорение"
+msgstr "Активировать этот планшет"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Модель: выбор Продавеца и Названия..."
+msgstr "Планшет: выбор производителя и названия"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "Связанный с: "
+msgstr "Порт подключения"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Начальная установка"
+msgstr "Режим основного планшета"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
@@ -1015,50 +890,44 @@ msgid "Pen or Eraser Settings"
 msgstr "Настройки пера или резинки"
 
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Свойства ..."
+msgstr "Свойства пера"
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Специальные свойства мыши ..."
+msgstr "Свойства резинки"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "Присвоить Сенсорный экран Монитору номе %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Модель: выбор Продавеца и Названия..."
+msgstr "Сенсорный экран: выбор производителя и названия"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"<b>Заключительные шаги: </b><hr>Последний шаг сохранит вашу новую "
-"конфигурацию. Рекомендуется проверить новую конфигурацию перед сохранением. "
-"Если тест сервера показывает разрушенный рабочий стол, нажмите <b>[Ctrl+Alt"
-"+Backspace]</b> для прекращения работы сервера."
+"<b>Заключительные шаги</b><hr>Последним шагом является сохранение новой "
+"конфигурации. Рекомендуется протестировать новую конфигурацию перед "
+"сохранением. Если сервер проверки показывает поврежденный рабочий стол, "
+"нажмите клавиши <b>Ctrl+Alt+Backspace<b>, чтобы отключить сервер проверки."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "VNC Server"
-msgstr "Система X11"
+msgstr "VNC-сервер"
 
 #. Activate VNC server checkbox
 msgid "Allow Access to Display Using VNC Protocol"
-msgstr ""
+msgstr "Разрешить доступ к экрану с помощью протокола VNC"
 
 #. Group box title for the VNC options
-#, fuzzy
 msgid "VNC Options"
-msgstr "&Параметры"
+msgstr "Параметры VNC"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1082,13 +951,12 @@ msgid "<Verify password>"
 msgstr "<Проверить пароль>"
 
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
-msgstr "Отключают AccessX"
+msgstr "Активировать HTTP-доступ"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple VNC Connections"
-msgstr ""
+msgstr "Разрешить несколько VNC-соединений"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
@@ -1099,35 +967,36 @@ msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
+"<b>Несовпадение паролей VNC</b><hr>Первая и вторая версии пароля не "
+"совпадают."
 
 #. VNC message box appearing if password is too short
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
+"<b>Ошибка пароля VNC</b><hr>Поле пароля оставлено пустым или введен слишком "
+"короткий пароль. Введите пароль, состоящий не менее чем из шести символов."
 
 #. Install missing packages box
-#, fuzzy
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"<b>Инсталляция программ:</b><hr>Некоторые пакеты отсутствуют. Установить "
-"отсутствующие пакеты сейчас?"
+"<b>Установка программного обеспечения:</b><hr>некоторые пакеты отсутствуют. "
+"Установить отсутствующие пакеты сейчас?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
 msgstr "Установка пакета"
 
 #. Progress bar title text
-#, fuzzy
 msgid "Importing module"
-msgstr "SaX2 выход из программы ... "
+msgstr "Импорт модуля"
 
 #. Progress window caption text
-#, fuzzy
 msgid "SaX2: Importing data..."
-msgstr "SaX2 выход из программы ... "
+msgstr "SaX2: импорт данных..."
 
 #. Progress window label text
 msgid "Initialize cache..."
@@ -1139,13 +1008,12 @@ msgid ""
 msgstr "<b>Не удалось сохранить конфигурацию</b><hr>Создан следующий отчет:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b> Конфигурация была сохранена: </b> <час> Ваши модификации вступят в силу "
-"в следующий раз, когда графическая система будет перезапущена."
+"<b>Конфигурация сохранена</b><hr>Изменения вступят в силу после перезагрузки "
+"графической системы. Выйти из SaX2?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1163,6 +1031,9 @@ msgid ""
 "TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. "
 "You can configure this with YaST."
 msgstr ""
+"<b>Сведения о конфигурации VNC</b><hr>Служба VNC требует, чтобы TCP-порт "
+"5900 и HTTP-порт (по умолчанию 5800) были отрыты в брандмауэре.  Это можно "
+"настроить с помощью YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1170,93 +1041,80 @@ msgstr "Различные параметры совместимости"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Добавить знак евро к клавише \"5\"."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key behavior"
 msgstr "Поведение клавиши CapsLock"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt/Win key behavior"
-msgstr "Поведение клавиши Alt/Win"
+msgstr "Поведение клавиш Alt и Win"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Добавить знак евро к определенным клавишам"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Меню составлено"
+msgstr "Caps Lock - начало последовательности."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key works as Right Alt."
-msgstr "Клавиша Right Ctrl изменяет группу"
+msgstr "Ctrl справа работает как Alt справа."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at bottom left"
-msgstr "Клавиша CTRL внизу слева"
+msgstr "Клавиша Ctrl слева внизу"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at left of 'A'"
-msgstr "Клавиша CTRL слева от A"
+msgstr "Клавиша Ctrl слева от клавиши 'A'"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Ctrl."
-msgstr "Делает CapsLock дополнительным управлением"
+msgstr "Сделать клавишу CapsLock дополнительной клавишей Ctrl."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Ctrl and CapsLock."
-msgstr "Поменять местами Control и Caps Lock "
+msgstr "Обмен Ctrl на CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key position"
-msgstr "Позиция Клавиши CTRL"
+msgstr "Позиция клавиши Ctrl"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
 msgstr ""
+"Специальные клавиши (Ctrl+Alt+&lt;клавиша&gt;), обрабатываемые сервером."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Нажмите Ctrl Right, чтобы выбрать 3-ий уровень"
+msgstr "Выбор 3-го уровня нажатием Ctrl справа."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift changes group."
-msgstr "Control+Shift изменяет группу"
+msgstr "Ctrl+Shift - изменение группы."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Добавить знак евро к клавише \"E\"."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Добавить знак евро к клавише \"2\"."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
-msgstr "Позиция Клавиши CTRL"
+msgstr "клавиша последовательности позиция клавиши"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl changes group."
-msgstr "Alt+Control изменяет группу"
+msgstr "Alt+Ctrl - изменение группы."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Group Shift/Lock behavior"
-msgstr "Поведение группы Shift/Lock"
+msgstr "Изменение и переключение групп"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1321,6 +1179,13 @@ msgstr "Неактивный таймер ... "
 #~ "i> и ваша система не поддерживает изменение разрешения и/или настройки "
 #~ "цветов."
 
+#~ msgid ""
+#~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
+#~ "with a maximum of eight characters."
+#~ msgstr ""
+#~ "<b>Ошибка пароля VNC</b><hr>Пароль слишком длинный. Введите пароль, "
+#~ "состоящий не более чем из восьми символов."
+
 #~ msgid "Arabic"
 #~ msgstr "Арабский"
 
@@ -1332,9 +1197,8 @@ msgstr "Неактивный таймер ... "
 #~ msgid "Myanmar"
 #~ msgstr "Панама"
 
-#, fuzzy
 #~ msgid "Norway"
-#~ msgstr "Нормальный"
+#~ msgstr "Норвегия"
 
 #~ msgid "Germany"
 #~ msgstr "Германия"
@@ -1362,9 +1226,8 @@ msgstr "Неактивный таймер ... "
 #~ msgid "Israel"
 #~ msgstr "Израиль"
 
-#, fuzzy
 #~ msgid "Sweden"
-#~ msgstr "Экран"
+#~ msgstr "Швеция"
 
 #~ msgid "Russia"
 #~ msgstr "Россия"
@@ -1398,9 +1261,8 @@ msgstr "Неактивный таймер ... "
 #~ msgid "Switzerland"
 #~ msgstr "Швейцария"
 
-#, fuzzy
 #~ msgid "Laos"
-#~ msgstr "Раскладка"
+#~ msgstr "Лаос"
 
 #~ msgid "Japan"
 #~ msgstr "Япония"
@@ -1478,9 +1340,8 @@ msgstr "Неактивный таймер ... "
 #~ msgid "United Kingdom"
 #~ msgstr "Великобритания"
 
-#, fuzzy
 #~ msgid "France"
-#~ msgstr "&Отменить"
+#~ msgstr "Франция"
 
 # AM
 # fuzzy
