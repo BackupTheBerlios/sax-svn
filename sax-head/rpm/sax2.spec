@@ -1,7 +1,7 @@
 #
 # spec file for package sax2 (Version 8.1)
 #
-# Copyright (c) 2006 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# Copyright (c) 2007 SUSE LINUX Products GmbH, Nuernberg, Germany.
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 #
@@ -16,7 +16,7 @@ URL:            http://sax.berlios.de
 %if %{?suse_version:1}0
 # SuSE Build Requires...
 %if %{suse_version} > 1010
-BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk antlr gettext-devel
+BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk
 %else
 BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
 %endif
@@ -45,9 +45,9 @@ PreReq:         /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prere
 %endif
 Summary:        SuSE advanced X Window System-configuration
 Version:        8.1
-Release:        9
+Release:        126
 Group:          System/X11/Utilities
-License:        Other License(s), see package, GPL
+License:        GNU General Public License (GPL)
 Source:         sax2.tar.bz2
 %if %{?suse_version:1}0
 # SuSE Source...
