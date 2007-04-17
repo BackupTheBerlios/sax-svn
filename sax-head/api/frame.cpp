@@ -327,6 +327,7 @@ SCCFrame::SCCFrame (
 
 	// disabled until SuSE's help strategy is clear
 	mHelper -> setDisabled ( true );
+	mHelper -> hide ();
 }
 
 //=====================================
