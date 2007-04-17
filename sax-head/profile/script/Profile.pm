@@ -226,6 +226,58 @@ sub ProfileIntelSetupMonitorLayout {
 }
 
 #=====================================
+# ProfileRadeonGetMonitorLayout
+#-------------------------------------
+sub ProfileRadeonGetMonitorLayout {
+	my $xorglog  = ProfileReadXLogFile();
+	my %devs = ();
+	my $secondary = "AUTO";
+	$_ = $xorglog;
+	while (/^\(..\) RADEON\(\d+\): Port(\d):\n Monitor\s.*\n Connector\s*--\s*(\S+)\s*$/mg) {
+		my $p=$1;
+		my $c=$2;
+		$devs{$p}=$c;
+	}
+	if (! defined $devs{2}) {
+		if (! defined $devs{1}) {
+			print STDERR "*** No output configuration found\n";
+		} else {
+			print STDERR "*** No secondary output found\n";
+		}
+	} elsif ($devs{2} eq "VGA" || $devs{2} eq "DVI-A") {
+		$secondary = "CRT";
+	} elsif ($devs{1} eq "LVDS" && $devs{2} eq "DVI-I") {
+		$secondary = "CRT";
+	} elsif ($devs{2} eq "DVI-D") {
+		$secondary = "TMDS";
+	} else {
+		print STDERR "*** Nontrivial output configuration $devs{1},$devs{2} found\n";
+	}
+	print STDERR "*** Selecting AUTOCRT,$secondary as monitor configuration.\n";
+	return "AUTOCRT,$secondary";
+}
+
+#=====================================
+# ProfileRadeonSetupMonitorLayout
+#-------------------------------------
+sub ProfileRadeonSetupMonitorLayout {
+	my $profile = $_[0];
+	my $stdname = ProfileName();
+	local $/;
+	open (FD,"<",$profile) ||
+		die "*** $stdname: Can't open $profile: $!";
+	my $profileData = <FD>;
+	my $monitorLayout = ProfileRadeonGetMonitorLayout();
+	$profileData =~ s/\[MONITORLAYOUT\]/$monitorLayout/;
+	close FD;
+	open (FD,">",$profile) ||
+		die "*** $stdname: Can't open $profile: $!";
+	print FD $profileData;
+	close FD;
+	return $monitorLayout;
+}
+
+#=====================================
 # ProfileNVidiaGetMonitorLayout
 #-------------------------------------
 sub ProfileNVidiaGetMonitorLayout {
