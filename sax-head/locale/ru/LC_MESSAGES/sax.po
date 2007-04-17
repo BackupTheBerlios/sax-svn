@@ -5,11 +5,12 @@
 #
 # Andrew Bogatov<bert@bert2.crec.mipt.ru>, 2004.
 # Aleksey Osipov <aliks-os@yandex.ru>, 2005, 2006, 2007.
+# Evgeniy Zatsepin <dizzy7@list.ru>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-02-13 12:05+0200\n"
+"PO-Revision-Date: 2007-03-22 13:05+0200\n"
 "Last-Translator: Aleksey Osipov <aliks-os@yandex.ru>\n"
 "Language-Team: Russian <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +38,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D ускорение не поддерживается</b><hr>SaX2 не может включить 3D систему, "
+"так как ваша графическая карта/драйвер не поддерживает 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -45,6 +48,9 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D ускорение не поддерживается</b><hr>SaX2 не может включить 3D систему "
+"так как Xinerama используется режим двух мониторов. Xorg Xinerama дополнение "
+"для комбинации графических экранов не поддерживает 3D на всех монитора"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -67,6 +73,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>Размер дисплея изменен</b><hr>Размер дисплея адаптирован к новой "
+"раскладке."
 
 #. Help Button text
 msgid "&Help"
@@ -154,9 +162,8 @@ msgid "Remote Access Properties"
 msgstr "Свойства удаленного доступа"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Дисплей"
+msgstr "Дисплей %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -207,9 +214,8 @@ msgid "Invert Y-Axis"
 msgstr "Инвертировать ось Y"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Включить эмуляцию 3 кнопки"
+msgstr "Включить режим для левшей"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -413,6 +419,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Неверная кобинация Цвет/Разрешение:</b><hr><nobr>Выбранные настройки "
+"разрешения и/или цвета</nobr> не поддерживаются фреймбуфером графических "
+"карт."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -566,7 +575,6 @@ msgid "Keytable"
 msgstr "Клавиатура "
 
 #. List View root item text
-#, fuzzy
 msgid "Group Shift/Lock Behavior"
 msgstr "Поведение группы Shift/Lock"
 
@@ -635,14 +643,12 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Правая клавиша Ctrlпереключает группу при нажатии."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Мета отображен на левую клавишуWin."
+msgstr "Поменять местами левый Alt и левую Win-клавишу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Маршрут по умолчанию OK."
+msgstr "Цифровые клавиши по умолчанию."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
@@ -651,35 +657,34 @@ msgstr ""
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"Использовать цифровую клавиатуру с расширения Unicode(стрелки и "
+"математические операции)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
-"Использует внутреннее преобразование букв в прописные. Shift отменяет "
-"заглавные буквы."
+"CapsLock использует внутреннее преобразование букв в прописные. Shift не "
+"отменяет CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
 msgstr "Выбор раскладки клавиатуры"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Shift+CapsLock изменяет группу."
+msgstr "Alt+CapsLock изменяет группу."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+msgstr "Действует как Shift с блокировкой. Shift не влияет на CapsLock."
 
 #. XKBFile extension text
 #, fuzzy
@@ -697,9 +702,8 @@ msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift с клавишами цифр работает такэе как в MS Windows."
+msgstr "Цифровая клавиатура работает как на Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -718,11 +722,12 @@ msgstr "Правая-Win клавиши составляют"
 #, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Нажмите Правую Alt клавишу, чтобы выбрать 3-ий уровень."
+msgstr ""
+"Нажмите Правую Alt клавишу, чтобы выбрать 3-ий уровень, Shift+Правый Alt."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Клавиша Space выдает пробел на любом уровне."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
@@ -742,7 +747,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "CapsLock только блокирует Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
@@ -750,7 +755,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "CapsLock включает Shift для всех клавиш."
 
 #. XKBFile extension text
 #, fuzzy
@@ -812,9 +817,9 @@ msgid "Both Shift keys together change group."
 msgstr "Вместе две клавиши Shift изменяют группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+msgstr ""
+"CapsLock действует как Shift с блокировкой. Shift не отменяет CapsLock."
 
 #. XKBFile extension text
 #, fuzzy
@@ -836,9 +841,8 @@ msgid "Right Win-key changes group."
 msgstr "Правая Win клавиша изменяет группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
-msgstr "Мета отображен на левую клавишуWin."
+msgstr "Мета назначен на левую Win-клавишу."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
@@ -889,14 +893,12 @@ msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
 msgstr "Специальные клавиши (Ctrl+Alt+<key>) обслуживаются сервером."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper отображен на клавиши Win."
+msgstr "Hyper назначен на  Win-клавиши."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Мета отображен на левую клавишуWin."
+msgstr "Alt назначен на левую Win-клавишу и Super назначен на клавишу Menu."
 
 #. XKBFile extension text
 #, fuzzy
@@ -904,12 +906,10 @@ msgid "Super is mapped to the Win-keys (default)."
 msgstr "Super отображен на клавиши Win (значение по умолчанию)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
 msgstr "Alt и Мета на клавишах Alt (значение по умолчанию)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
 msgstr "Добавить стандартное поведение к клавише Menu."
 
@@ -931,9 +931,8 @@ msgid "Control+Shift changes group."
 msgstr "Control+Shift изменяет группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+msgstr "CapsLock действует как Shift с блокировкой. Shift отменяет CapsLock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1042,9 +1041,8 @@ msgid "Add Eraser"
 msgstr "Добавить Резинку"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Добавить перо"
+msgstr "Добавить планшет"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1055,9 +1053,8 @@ msgid "Pen Properties"
 msgstr "Свойства пера"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Свойства пера"
+msgstr "Свойства планшета"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1257,7 +1254,7 @@ msgstr "Позиция Клавиши Ctrl"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr ""
+msgstr "Специальные комбинации (Ctrl+Alt+&lt;key&gt;) обрабатываются сервером."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
@@ -1285,7 +1282,6 @@ msgid "Alt+Ctrl changes group."
 msgstr "Alt+Ctrl изменяет группу."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Group Shift/Lock behavior"
 msgstr "Поведение группы Shift/Lock"
 
@@ -1298,29 +1294,25 @@ msgid "Nepal"
 msgstr "Непал"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Лаосская Народная Демократическая республика"
+msgstr "Конго, Демократическая республика"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Чехия"
+msgstr "Корея"
 
 #. XKBFile extension text
 msgid "Iraq"
 msgstr "Ирак"
 
 # NG
-# fuzzy
 #. XKBFile extension text
 msgid "Nigeria"
-msgstr "Сербия"
+msgstr "Нигерия"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "ПК серии 98xx"
+msgstr "Япония (PC-98xx серия)"
 
 #. XKBFile extension text
 msgid "Estonia"

@@ -1,4 +1,4 @@
-# translation of sax.fi.po to Suomi
+# translation of sax.po to Suomi
 # translation of UUSIsax.po to
 # translation of sax.po to
 # translation of sax.fi.po to
@@ -9,9 +9,9 @@
 # Ilkka Pirskanen <ilkka.pirskanen@kolumbus.fi>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.fi\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-02-11 22:46+0200\n"
+"PO-Revision-Date: 2007-04-02 18:44+0300\n"
 "Last-Translator: Jyri Palokangas <jmp@netti.fi>\n"
 "Language-Team: Suomi <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,6 +39,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D-kiihdytys ei ole tuettu</b><hr>SaX2 ei voi tarjota 3D-alijärjestelmän "
+"käyttöönottoa koska näytönohjaimesi tai ajuri ei tue 3D:tä"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -47,6 +49,9 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D-kiihdytys ei ole tuettu</b><hr>SaX2 ei voi tarjota 3D-alijärjestelmän "
+"käyttöönottoa koska Xinerama-pohjainen moninäyttötila on käytössä. Xorg "
+"Xinerama laajennus näyttöjen yhdistämiseen ei tue 3D:tä kaikilla näytöillä"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -69,6 +74,7 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>Näyttökoko vaihdettiin</b><hr>Näytön koko mukautettiin uuteen asetteluun."
 
 #. Help Button text
 msgid "&Help"
@@ -413,8 +419,8 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
-"<b>Epäkelpo väri/kuvakoko yhdistelmä:</b><hr><nobr>Valittu kuvakoko ja/tai "
-"väriasetukset</nobr> eivät ole näytönohjaimen framebufferissa tukemia."
+"<b>Virheellinen väri/kuvakoko yhdistelmä:</b><hr><nobr>Valittu kuvakoko ja/"
+"tai väriasetukset</nobr> eivät ole näytönohjaimen framebufferissa tukemia."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -591,9 +597,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Alt/Win-näppäimen toiminta"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Ctrl-näppäimen sijainti"
+msgstr "Euro-näppäimen sijainti"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -632,14 +637,12 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Oikea Ctrl-näppäin vaihtaa ryhmää painettuna."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta on määritelty vasempaan Win-näppäimeen."
+msgstr "Vasen Alt vaihdettiin vasempaan Win-näppäimeen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Oletusreitti ok."
+msgstr "Oletus numeronäppäimistön näppäimet."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
@@ -654,35 +657,29 @@ msgid "Force standard legacy keypad"
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
 "CapsLock käyttää sisäistä kapitalisointia. Shift ei ota CapsLockia pois."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Kieli ja näppäimistökartta valinnat"
+msgstr "Näppäimistökartta valinnat"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Shift+CapsLock vaihtaa ryhmää."
+msgstr "Alt+CapsLock vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock toimi kuten Shift lukituksella. Shift ei poista CapsLockia."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
-"CapsLock käyttää sisäistä kapitalisointia. Shift ottaa CapsLock:in pois."
+msgstr "CapsLock käyttää sisäistä kapitalisointia. Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -693,10 +690,8 @@ msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr ""
-"Numeronäppäimistön painikkeet ja vaihtonäppäin toimivat kuten MS Windowsissa."
+msgstr "Numeronäppäimistön painikkeet toimivat kuten Macissä."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -707,26 +702,25 @@ msgid "Space key output nobreakspace at fourth level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
 msgstr "Oikea Win-näppäin on Kirjoita uusi."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Paina oikeaa Alt-näppäintä siirtyäksesi 3. tasolle."
+msgstr ""
+"Paina oikeaa Alt-näppäintä siirtyäksesi 3. tasolle, Shift ja oikea Alt-"
+"näppäin on Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Välilyönti tulostaa välin millä tasolla tahansa"
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Japanilaisen näppäimistön valinnat"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
 msgstr "CapsLock toimi kuten Shift lukituksella. Shift poistaa CapsLock:in."
 
@@ -1003,14 +997,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1025,9 +1017,8 @@ msgid "Add Eraser"
 msgstr "Lisää pyyhekumi"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Lisää kynä"
+msgstr "Lisää alusta"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1038,9 +1029,8 @@ msgid "Pen Properties"
 msgstr "Kynän ominaisuudet"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Kynän ominaisuudet"
+msgstr "Alustan ominaisuudet"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1276,16 +1266,14 @@ msgid "Nepal"
 msgstr "Nepal"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Laos"
+msgstr "Kongon demokraattinen tasavalta"
 
 # CZ
 # fuzzy
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Tšekki"
+msgstr "Korean kansantasavalta"
 
 # IQ
 # fuzzy
@@ -1300,9 +1288,8 @@ msgid "Nigeria"
 msgstr "Nigeria"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx sarja"
+msgstr "Japani (PC-98xx sarja)"
 
 # EE
 #. XKBFile extension text
