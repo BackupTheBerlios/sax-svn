@@ -75,9 +75,7 @@ the port number of the serial device, for USB devices use /dev/input/mice
 and for PS/2 devices use /dev/psaux.
 .TP
 -t \fItype\fP
-Set protocol type to use for the core pointer. If you are not sure
-about the protocol your mouse understand please have a look at:
-.I /usr/lib/X11/doc/README.mouse
+Set protocol type to use for the core pointer.
 .TP
 -g
 Use gpm as repeater of mouse events.
