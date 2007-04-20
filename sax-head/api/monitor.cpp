@@ -825,6 +825,9 @@ bool SCCMonitor::exportData ( void ) {
 						//====================================
 						// setup profile Radeon data
 						//------------------------------------
+						if ((key== "MonitorLayout") && (driver == "radeon")) {
+							saxCard.addCardOption ( key,val );
+						}
 						if ((key == "MergedFB") && (driver == "radeon")) {
 							saxCard.addCardOption ( key,0 );
 						}
