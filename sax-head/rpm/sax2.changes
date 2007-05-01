@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue May  1 10:46:22 CEST 2007 - ms@suse.de
+
+- added opendir patch by Dieter Jäger <dieter@linuxjaeger.de>
+  libsax bug which causes an endless loop if there is no xfine
+  cache directory
+
+-------------------------------------------------------------------
 Thu Apr 26 10:11:26 CEST 2007 - ms@suse.de
 
 - disabled modeline calculation for nv driver (#230961)

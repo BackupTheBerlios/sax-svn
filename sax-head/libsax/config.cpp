@@ -516,7 +516,7 @@ void SaXConfig::removeXFineCache (void) {
 	struct dirent* entry = NULL;
 	DIR* cacheDir = NULL;
 	cacheDir = opendir (SAX_XFINE_CACHE);
-	while (1) {
+	while ( cacheDir ) {
 		entry = readdir (cacheDir);
 		if (! entry) {
 			break;
