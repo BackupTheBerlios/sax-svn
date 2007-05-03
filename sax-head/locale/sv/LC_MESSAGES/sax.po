@@ -3,21 +3,21 @@
 # Översättning av sax.sv.po till Svenska
 # Swedish language file for SaX2.
 # Copyright (C) SuSE AG.
-#
 # Gudmund Areskoug <fta@algonet.se>, 2001.
 # Mattias Newzella <newzella@linux.nu>, 2002,2003, 2004.
-# Mattias Newzella <newzella@linux.se>, 2005, 2006.
+# Mattias Newzella <newzella@linux.se>, 2005.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-10-07 12:40+0200\n"
-"Last-Translator: Mattias Newzella <newzella@linux.se>\n"
-"Language-Team: Swedish <sv@li.org>\n"
-"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2005-09-18 18:43+0200\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
+"MIME-Version: 1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.10.1\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
@@ -36,7 +36,7 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>SaX2-förslag</b><hr>Det nu startade grafiksystemet bygger på ett förslag "
-"från SaX2. Om du accepterar det, klicka på <b>OK</b>. Om inte, ändra "
+"från SaX2. Om du accepterar det klickar du på <b>OK</b>. Om inte, ändra "
 "inställningarna."
 
 #. RTF text: 3D acceleration not supported with this card
@@ -63,7 +63,7 @@ msgstr "Information..."
 
 #. Caption text for the main window
 msgid "SaX2: X11 Configuration"
-msgstr "SaX2: X11-inställningar"
+msgstr "SaX2: Ställ in X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
@@ -449,14 +449,15 @@ msgid "Display Size in [ mm ]"
 msgstr "Skärmstorlek i mm"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-#, fuzzy
 msgid ""
 "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>Observera:</b><hr>Felinställda frekvenser kan skada bildskärmen. "
-"Kontrollera bildskärmshandboken för följande inställningar."
+"<b>Obs!</b> Ett felaktigt synkroniseringsintervall kan skada skärmen. "
+"Kontrollera vilka inställningar som kan göras i handboken till skärmen."
+"<br><br>Om du inte vill att skärmen ska använda den maximala prestandan ska "
+"du minska synkroniseringsintervallen."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -580,9 +581,8 @@ msgid "Use Keyboard LED to Show Alternate Group"
 msgstr "Använd tangentbordets LED för att visa alternativ grupp"
 
 #. List View root item text
-#, fuzzy
 msgid "Compose Key Position"
-msgstr "Position för Ctrl-tangenten"
+msgstr "Position för komponeringstangenten"
 
 #. List View root item text
 #. XKBFile extension text
@@ -740,19 +740,19 @@ msgstr "Caps Lock fungerar som Skift med låsning. Skift upphäver Caps Lock."
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 msgstr ""
-"Caps Lock använder internationellt skiftläge. Skift upphäver inte Caps Lock."
+"Caps Lock använder ett internt skiftläge. Skift upphäver inte Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "Caps Lock låser Skift-väljaren."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
+msgstr "Caps Lock växlar mellan normalt skiftläge för bokstäver."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "Caps Lock växlar Skift-tangenten så att alla tangenter påverkas."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -882,7 +882,7 @@ msgstr "Skift med numeriska tangenter fungerar som i MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "Speciella tangenter (Ctrl+Alt+<key>) hanteras i en server."
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
@@ -1198,11 +1198,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Diverse kompabilitetsalternativ"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Lägg till Euro-tecknet till tangenten 5."
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
@@ -1214,12 +1214,11 @@ msgstr "Alt/win-tangenternas beteende"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Euro-tecknet läggs till vissa tangenter"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Meny är komponera."
+msgstr "Caps Lock är komponeringstangent."
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
@@ -1227,19 +1226,19 @@ msgstr "Höger Ctrl-tangent fungerar som höger Alt."
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
-msgstr "Ctrl-tangent längst ner till vänster"
+msgstr "Ctrl-tangenten längst ner till vänster"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr "Ctrl-tangent till vänster om \"A\""
+msgstr "Ctrl-tangenten till vänster om A"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
-msgstr "Gör Caps Lock till en ytterligare Ctrl."
+msgstr "Gör Caps Lock till ytterligare en Ctrl-tangent."
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr "Växla Ctrl och Caps Lock."
+msgstr "Byt position för Ctrl och Caps Lock."
 
 #. XKBFile extension text
 msgid "Ctrl key position"
@@ -1247,28 +1246,27 @@ msgstr "Position för Ctrl-tangenten"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr ""
+msgstr "Speciella tangenter (Ctrl+Alt+&lt;key&gt;) hanteras i en server."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Tryck på höger Ctrl-tangent för att välja tredje nivån."
+msgstr "Tryck på höger Ctrl-tangent om du vill välja den tredje nivån."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
-msgstr "Ctrl+skift byter grupp."
+msgstr "Ctrl+Skift byter grupp."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Lägg till Euro-tecknet till E-tangenten."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Lägg till Euro-tecknet till tangenten 2."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
-msgstr "Position för Ctrl-tangenten"
+msgstr "Position för komponeringstangenten"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
@@ -1682,15 +1680,3 @@ msgstr "Inställningar på skärmen"
 
 msgid "Idle timer..."
 msgstr "Inaktivitetstidur..."
-
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#~ msgid "VNC Server"
-#~ msgstr "VNC-server"
-
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Tillåt åtkomst till skärm med VNC-protokollet"
-
-#~ msgid "VNC Options"
-#~ msgstr "VNC-alternativ"

@@ -1,16 +1,25 @@
-# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
-# This file is distributed under the same license as the package.
-#
+# translation of sax.po to 
+# translation of sax.po to français
+# translation of sax.fr.po to Français
+# domain "sax.mo"
+# French message file for SaX.
+# Copyright (C)  SuSE GmbH, 2000..2001
+# Francoise Lermen <flermen@suse.de>, 2000..2001.
+# Patricia Vaz <Patricia.Vaz@suse.de>, 2003,2004.
+# Patricia Vaz <patricia.vaz@suse.com>, 2004.
+# Patricia Vaz <patricia@suse.de>, 2005.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-11-02 14:16\n"
+"PO-Revision-Date: 2006-06-01 08:45\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -77,7 +86,7 @@ msgstr "&Valider"
 
 #. Yes Button text
 msgid "&Yes"
-msgstr "O&ui"
+msgstr "&Oui"
 
 #. No Button text
 msgid "&No"
@@ -94,7 +103,7 @@ msgstr "<b>Quitter SaX2</b><hr>Quitter SaX2 maintenant ?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr "message"
+msgstr "Message"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
@@ -103,7 +112,7 @@ msgstr "C&hanger la configuration"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "Moniteur"
+msgstr "Écran"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
@@ -875,9 +884,7 @@ msgstr "La touche Alt droite change de groupe."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
-"Maj avec les touches du pavé numérique fonctionne comme sous Microsoft "
-"Windows."
+msgstr "Maj avec les touches du pavé numérique fonctionne comme sous Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1449,7 +1456,7 @@ msgstr "Viêt Nam"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr "Îles Féroé"
+msgstr "Îles Feroe"
 
 #. XKBFile extension text
 msgid "South Africa"
@@ -1513,7 +1520,7 @@ msgstr "Pologne"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "Kirghizistan"
+msgstr "Kyrgyzstan"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1622,7 +1629,7 @@ msgstr "Petit"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "Normale"
+msgstr "Normal"
 
 #. Maximum length: 40  characters
 msgid "Big"
@@ -1657,18 +1664,10 @@ msgid "No video mode tuning available"
 msgstr "Réglage du mode vidéo non disponible"
 
 msgid "Display"
-msgstr "Affichage"
+msgstr "Afficher"
 
 msgid "Configuration on display"
 msgstr "Configuration sur le display"
 
 msgid "Idle timer..."
 msgstr "Délai d'inactivité..."
-
-#~ msgid ""
-#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-#~ "your system does not support changes for resolution and/or color settings."
-#~ msgstr ""
-#~ "<b>Remarque :</b><hr>La configuration est basée sur <i>Framebuffer</i> et "
-#~ "votre système ne prend pas en charge la modification des paramètres de "
-#~ "résolution et/ou de couleur."

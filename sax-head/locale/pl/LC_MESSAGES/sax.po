@@ -1,4 +1,4 @@
-# translation of sax.po to Polish
+# translation of sax.po to
 # translation of sax.pl_PL.po to
 # translation of sax.pl_PL.po to
 # translation of sax.pl_PL.po to
@@ -8,20 +8,18 @@
 #
 # Wojciech Kapusta, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
-# Łukasz Suchenek <drottnar@oaza.pl>, 2006.
+# Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-10-13 18:36+0200\n"
-"Last-Translator: Łukasz Suchenek <drottnar@oaza.pl>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"PO-Revision-Date: 2007-03-14 19:55+0100\n"
+"Last-Translator: Wojciech Kapusta <wkapusta@aviary.pl>\n"
+"Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -38,9 +36,9 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"<b>Sugestia SaX2</b><hr>Aktualnie uruchomiony system graficzny oparty jest "
-"na sugestii programu SaX2. Proszę nacisnąć <b>OK</b>, aby zaakceptować "
-"ustawienia. W przeciwnym razie proszę zmienić konfigurację."
+"<b>Sugestia SaX2</b><hr>Aktualnie uruchomiony system graficzny jest oparty "
+"na sugestii programu SaX2. Proszę nacisnąć przycisk <b>OK</b>, aby "
+"zaakceptować ustawienia. W przeciwnym razie proszę zmienić konfigurację."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
@@ -1076,7 +1074,7 @@ msgstr ""
 "<b>Etapy końcowe:</b><hr>Ostatnim etapem jest zapisanie nowej konfiguracji. "
 "Zaleca się przetestowanie nowej konfiguracji przed jej zapisaniem. Jeśli w "
 "czasie testów wystąpiłyby problemy z wyświetlaniem obrazu, proszę nacisnąć "
-"<b>[ Ctrl+Alt+Backspace ]</b> aby przerwać proces testowania."
+"klawisze <b>[ Ctrl+Alt+Backspace ]</b> aby przerwać proces testowania."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1255,7 +1253,7 @@ msgstr "Klawisze specjalne (Ctrl+Alt+&lt;key&gt;) obsługiwane przez serwer"
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Proszę nacisnąć prawy Ctrl, aby wybrać trzeci poziom"
+msgstr "Proszę nacisnąć prawy klawisz Ctrl, aby wybrać trzeci poziom"
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
@@ -1678,11 +1676,3 @@ msgstr "Konfiguracja na wyświetlaczu"
 
 msgid "Idle timer..."
 msgstr "Licznik bezczynności..."
-
-#~ msgid ""
-#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-#~ "your system does not support changes for resolution and/or color settings."
-#~ msgstr ""
-#~ "<b>Proszę zwrócić uwagę:</b><hr>Konfiguracja oparta jest na "
-#~ "<i>Framebufferze</i>, a system nie obsługuje zmian rozdzielczości lub "
-#~ "ustawień kolorów."

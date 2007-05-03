@@ -7,8 +7,6 @@
 # Papp Zsolt <zpapp@novell.com>, 2006.
 # Keresztes Ákos <xsak@c2.hu>, 2006.
 # Kalman Kemenczy <kkemenczy@novell.com>, 2006, 2007.
-# Kéménczy Kálmán <kkemenczy@novell.com>, 2006.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2007.
 # translation of sax.hu.po to
 # Hungarian message file for SaX.
 # Copyright (C) SuSE GmbH, 2000.
@@ -16,9 +14,9 @@
 # Rev. 8.1: 2002.07.23 Marcel Hilzinger <hili@suselinux.hu>
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.hu\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-03-23 13:31+0100\n"
+"PO-Revision-Date: 2007-02-20 15:35+0100\n"
 "Last-Translator: Kalman Kemenczy <kkemenczy@novell.com>\n"
 "Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,9 +41,9 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>Ez a SaX2 javaslata</b><hr>A most látható grafikus felület a SaX2 "
-"javaslata az automatikus beállításhoz. Ha elfogadja ezt a beállítás, "
-"egyszerűen kattintson az <b>OK</b> gombra, amennyiben nem megfelelő "
-"változtassa meg a beállítást."
+"javaslata az automatikus beállításhoz. Ha tetszik ez a beállítás, egyszerűen "
+"kattintson az <b>OK</b> gombra. Ha nem megfelelő a beállítás, "
+"megváltoztathatja a konfigurációt."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
@@ -140,7 +138,7 @@ msgstr "Monitor"
 # /tmp/xapi:115
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "Kártya- és képernyőtulajdonságok"
+msgstr "Kártya- és képernyő-tulajdonságok"
 
 # /tmp/xapi:113
 #. Short description of the Mouse module
@@ -391,7 +389,7 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Az összes kijelző nem kapcsolható le</b><hr><nobr>Legalább egy kijelzőnek "
+"<b>Az összes kijelző nem deaktiválható</b><hr><nobr>Legalább egy kijelzőnek "
 "aktívnak kell maradnia.</nobr>"
 
 # /tmp/xapi:49
@@ -486,8 +484,8 @@ msgstr ""
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Adjon egy értéket a"
-"(z) %1 opcióhoz.</nobr>"
+"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Kérem, adjon egy "
+"értéket a(z) %1 opcióhoz.</nobr>"
 
 # /tmp/xapi:301
 #. Group box title for the monitor vendor and name selection
@@ -497,7 +495,7 @@ msgstr "Monitor: Gyártó/név kiválasztása"
 # /tmp/xapi:301
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Egér: Gyártó/tipus kiválasztása"
+msgstr "Egér: Gyártó/típus kiválasztása"
 
 # /tmp/xapi:355
 #. Group box title for the manual sync frequency set up
@@ -521,8 +519,9 @@ msgid ""
 "maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Figyelem:</b> <hr>A rossz szinkronbeállítás tönkreteheti a képernyőjét! "
-"Olvassa el a képernyő kézikönyvét az alábbi beállításokhoz.<br><br>Ha nem "
-"akarja a képernyőből a maximumot kihozni, csökkentse a szinkrontartományokat."
+"Kérem olvassa el a képernyő kézikönyvét az alábbi beállításokhoz.<br><br>Ha "
+"nem akarja a képernyőből a maximumot kihozni, csökkentse a "
+"szinkrontartományokat."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -665,7 +664,7 @@ msgstr "Vezérlőbillentyűk elhelyezése"
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Control billentyű elhelyezése"
+msgstr "Vezérlőbillentyűk elhelyezése"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -689,7 +688,7 @@ msgstr "Egyik sem"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "A bal oldali Alt billentyű megnyomása csoportváltást eredményez."
+msgstr "A baloldali Alt billentyű megnyomása csoportváltást eredményez."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
@@ -697,7 +696,7 @@ msgstr "A két Ctrl billentyű együtt változtatja a csoportot."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr "A jobb oldali Shift billentyű vált csoportot."
+msgstr "A jobboldali Shift billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
@@ -713,7 +712,7 @@ msgstr "Mindkét Win együttes megnyomása vált csoportot."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr "A jobb oldali Ctrl billentyű megnyomása vált csoportot."
+msgstr "A jobboldali Ctrl billentyű megnyomása vált csoportot."
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
@@ -839,7 +838,7 @@ msgstr "A Shift+CapsLock billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr "Jobb oldali Alt billentyű megnyomása vált csoportot."
+msgstr "Jobboldali Alt billentyű megnyomása vált csoportot."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
@@ -855,7 +854,7 @@ msgstr "Bármely Win billentyű megnyomásával érhetők el a 3. szintű funkci
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "A jobb oldali Alt gomb megnyomásával érhetők el a 3. szintű funkciók."
+msgstr "A jobboldali Alt gomb megnyomásával érhetők el a 3. szintű funkciók."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
@@ -905,15 +904,15 @@ msgstr "A CapsLock is vezérlőbillentyű."
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
 msgstr ""
-"A bal oldali Win billentyű megnyomásával érhetők el a 3. szintű funkciók."
+"A baloldali Win billentyű megnyomásával érhetők el a 3. szintű funkciók."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr "A jobb oldali Win billentyű vált csoportot."
+msgstr "A jobboldali Win billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
-msgstr "A bal oldali Win billentyű látja el a Meta funkciót."
+msgstr "A baloldali Win billentyű látja el a Meta funkciót."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
@@ -925,11 +924,11 @@ msgstr "A NumLock LED jelzi az alternatív csoportokat."
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
-msgstr "A bal oldali Shift billentyű vált csoportot."
+msgstr "A baloldali Shift billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
-msgstr "A bal oldali Win billentyű megnyomása vált csoportot."
+msgstr "A baloldali Win billentyű megnyomása vált csoportot."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
@@ -953,7 +952,7 @@ msgstr "Bármely Alt billentyű megnyomásával érhetők el a 3. szintű funkci
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
-msgstr "A jobb oldali Alt billentyű vált csoportot."
+msgstr "A jobboldali Alt billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
@@ -1015,12 +1014,12 @@ msgstr "A billentyűzet LED-ek jelzik az alternatív csoportokat."
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
 msgstr ""
-"A jobb oldali Win billentyű megnyomásával érhetők el a 3. szintű funkciók."
+"A jobboldali Win billentyű megnyomásával érhetők el a 3. szintű funkciók."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
 msgstr ""
-"A bal oldali Alt billentyű megnyomásával érhetők el a 3. szintű funkciók."
+"A baloldali Alt billentyű megnyomásával érhetők el a 3. szintű funkciók."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
@@ -1032,7 +1031,7 @@ msgstr "A Menü gomb megnyomásával érhetők el a 3. szintű funkciók."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
-msgstr "A bal oldali Ctrl billentyű vált csoportot."
+msgstr "A baloldali Ctrl billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Menu key changes group."
@@ -1044,7 +1043,7 @@ msgstr "Az Alt+Ctrl vált csoportot."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr "A jobb oldali Win billentyű változtatja a csoportokat."
+msgstr "A jobboldali Win billentyű változtatja a csoportokat."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1168,7 +1167,7 @@ msgstr "X-kiszolgáló távoli elérése"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr "X-kiszolgáló képernyő, billentyűzet és egér elérésének engedélyezése"
+msgstr "X-kiszolgáló képernyő-, billentyűzet- és egerelérésének engedélyezése"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1188,7 +1187,7 @@ msgstr "<Jelszó módosítása>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr "Jelszó ellenőrzése"
+msgstr "<Jelszó ellenőrzése>"
 
 # /tmp/xapi:235
 #. Activate HTTP access checkbox
@@ -1548,7 +1547,7 @@ msgstr "Dél-Afrika"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr "perzsa"
+msgstr "farszi"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1673,7 +1672,7 @@ msgstr "Bosznia-Hercegovina"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr "Szerbia-Montenegro"
+msgstr "Szerbia-Montenegró"
 
 #. XKBFile extension text
 msgid "Brazil"
@@ -1736,12 +1735,12 @@ msgstr "&Mentés"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
-msgstr "&Pozíció megváltoztatása"
+msgstr "&Pozíció változtatása"
 
 # /tmp/xapi:17 /tmp/xapi:25 /tmp/xapi:83
 #. Maximum length: 40  characters
 msgid "C&hange Size"
-msgstr "&Méret megváltoztatása"
+msgstr "&Méretének változtatása"
 
 # /tmp/intro:67 /tmp/xapi:379
 #. Maximum length: 40  characters
