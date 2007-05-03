@@ -43,7 +43,12 @@ SCCFrame::SCCFrame (
 	mTextPtr  = new QDict<QString>;
 	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
 	loadText();
-
+	//=====================================
+	// check text orientation
+	//-------------------------------------
+	if (mText["I18N"] == "RTL") {
+		qApp->setReverseLayout( true );
+	}
 	//=====================================
 	// show information box if set
 	//-------------------------------------

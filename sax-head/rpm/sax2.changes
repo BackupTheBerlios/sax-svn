@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu May  3 14:37:41 CEST 2007 - ms@suse.de
+
+- added support for reverse layout (right-to-left languages).
+  The sax translation file offers a key named "I18N" which could
+  be translated as "RTL". In this case the application will use
+  the reverse layout for displaying the data (#268608)
+
+-------------------------------------------------------------------
 Thu May  3 13:43:56 CEST 2007 - ms@suse.de
 
 - fixed info messages not to be showed if specific dialog is
