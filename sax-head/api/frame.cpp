@@ -30,7 +30,8 @@ namespace SaXGUI {
 //-------------------------------------
 SCCFrame::SCCFrame (
 	bool fullscreen, int mode, bool setinfo, bool checkpacs,
-	bool yastmode , bool xidle, QString* xidlePID, bool middle, WFlags wflags
+	bool yastmode , bool xidle, QString* xidlePID, bool middle,
+	QString* requestedDialog, WFlags wflags
 ) : QWidget ( 0,0, wflags ) {
 	// .../
 	// create main frame for the complete application. This
@@ -316,6 +317,11 @@ SCCFrame::SCCFrame (
 	mGUIMode = mode;
 
 	//=====================================
+	// save dialog request if any
+	//-------------------------------------
+	mRequestedDialog = requestedDialog;
+
+	//=====================================
 	// setup modules
 	//-------------------------------------
 	setupModules();
@@ -470,7 +476,8 @@ void SCCFrame::runDialog ( QListBoxItem* item ) {
 	if (selection == mText["MonitorModule"]) {
 		mDialogStack -> raiseWidget ( mMonitor -> getDialogID() );
 		if ( mMonitor -> needInit() ) {
-			mMonitor -> init();
+			mMonitor -> setRequestedDialog ( mRequestedDialog );
+			mMonitor -> init ();
 		}
 		if ( mMonitor -> needImport() ) {
 			mMonitor -> import();

@@ -108,6 +108,7 @@ class SCCFrame : public QWidget {
 	QDict<QString>* mTextPtr;
 
 	private:
+	QString*         mRequestedDialog;
 	QDict<SaXImport> mSection;
 	SaXConfig*       mConfig;
 	bool mYaSTMode;
@@ -176,7 +177,7 @@ class SCCFrame : public QWidget {
 	public:
 	SCCFrame (
 		bool, int, bool, bool,
-		bool, bool, QString*, bool, WFlags=WType_TopLevel
+		bool, bool, QString*, bool, QString*, WFlags=WType_TopLevel
 	);
 };
 } // end namespace

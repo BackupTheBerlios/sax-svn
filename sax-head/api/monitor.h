@@ -63,6 +63,7 @@ class SCCMonitor : public SCCDialog {
 	int  mCard;
 	bool m3DEnabled;
 	bool mShow3DMessage;
+	QString* mRequestedDialog;
 
 	private:
 	QList<SCCMonitorDisplay>  mMonitorDisplay;
@@ -74,6 +75,7 @@ class SCCMonitor : public SCCDialog {
 
 	public:
 	void setCommonButtonWidth ( void );
+	void setRequestedDialog ( QString* );
 	bool exportData ( void );
 	void init   ( void );
 	void import ( void );

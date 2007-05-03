@@ -1167,6 +1167,15 @@ void SCCMonitor::setCommonButtonWidth ( void ) {
 		display->setCommonButtonWidth();
 	}
 }
+//====================================
+// setRequestedDialog
+//------------------------------------
+void SCCMonitor::setRequestedDialog ( QString* dialog ) {
+	mRequestedDialog = dialog;
+	if (mRequestedDialog) {
+		mShow3DMessage = false;
+	}
+}
 #if 1 // to be removed as soon as possible
 //====================================
 // fixBrokenCards

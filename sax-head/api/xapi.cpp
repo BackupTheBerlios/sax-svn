@@ -197,7 +197,7 @@ int main (int argc,char*argv[]) {
 	}
 	sccGUI = new SaXGUI::SCCFrame (
 		mFullScreen, mGUIMode, mSetInfo, mCheckPacs,
-		mYaSTMode, mSetXIdle, mIdlePID, mMiddle, wflags
+		mYaSTMode, mSetXIdle, mIdlePID, mMiddle, mRequestedDialog, wflags
 	);
 
 	//=====================================
