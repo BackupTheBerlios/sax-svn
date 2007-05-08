@@ -622,10 +622,10 @@ void ScanXStuff::Scan (void) {
 		mode.mode  = entry -> mode;
 		mode.depth = entry -> depth;
 		stuff[0].boot[fbcount] = mode;
-		stuff[0].fbmodecount = fbcount;
 		fbcount++;
 	}
 	}
+	stuff[0].fbmodecount = fbcount;
 	//======================================
 	// Sort framebuffer modi
 	//--------------------------------------
