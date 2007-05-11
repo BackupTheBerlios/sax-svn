@@ -126,7 +126,7 @@ PS/2-Mouse:IMPS/2 {
 
 PS/2-Mouse:MouseManPlusPS/2 {
  Driver       = mouse
- Protocol     = MouseManPlusPS/2
+ Protocol     = ExplorerPS/2
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }
@@ -187,7 +187,7 @@ USB-Mouse:IMPS/2 on USB {
 
 USB-Mouse:MouseManPlusPS/2 on USB {
  Driver       = mouse
- Protocol     = MouseManPlusPS/2
+ Protocol     = ExplorerPS/2
  ZAxisMapping = 4 5
  Device       = /dev/input/mice
 }

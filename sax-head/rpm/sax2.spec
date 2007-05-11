@@ -28,12 +28,12 @@ BuildRequires:  doxygen gcc-c++ graphviz hal-devel java-gcj-compat-devel libxkbf
 %endif
 %if %{?suse_version:1}0
 # SuSE Requires...
-Requires:       perl readline ncurses hal dbus-1 binutils
+Requires:       perl readline ncurses hal dbus-1
 Requires:       sax2-ident sax2-tools
 Requires:       xorg-x11-server
 %else
 # FC5 Requires...
-Requires:       perl readline ncurses hal dbus binutils
+Requires:       perl readline ncurses hal dbus
 Requires:       sax2-ident sax2-tools
 Requires:       xorg-x11-server-Xorg
 %endif

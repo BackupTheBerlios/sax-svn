@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri May 11 13:56:37 CEST 2007 - ms@suse.de
+
+- don't use MouseManPlusPS/2 protocol (#271256)
+- removed strings usage, replaced by grep -a and therefore
+  removed binutils requirement (#273595)
+
+-------------------------------------------------------------------
 Fri May 11 08:13:08 CEST 2007 - ms@suse.de
 
 - update Identity maps for all architectures (#271741)

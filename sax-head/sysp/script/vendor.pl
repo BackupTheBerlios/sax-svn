@@ -44,11 +44,11 @@ sub vendorName {
 		# There is a  driver dir for Xorg v7... preferred
 		$drvfile = "/usr/$lib/xorg/modules/drivers/".$driver."_drv.*";
 	} 
-	my $objdump = qx (/usr/bin/strings $drvfile 2>/dev/null);
 	foreach my $vname (@vendor) {
-	if ($objdump =~ /$vname/) {
-		return $vname;
-	}
+		my $code = system ( "grep -q -a \"$vname\" $drvfile 2>/dev/null" );
+		if ($code == 0) {
+			return $vname;
+		}
 	}
 	return ($vendor[0]);
 }
