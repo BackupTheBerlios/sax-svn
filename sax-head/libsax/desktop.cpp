@@ -1014,6 +1014,26 @@ int SaXManipulateDesktop::getFBKernelMode (const QString& res,int depth) {
 }
 
 //====================================
+// setFBKernelMode
+//------------------------------------
+int SaXManipulateDesktop::setFBKernelMode (int mode) {
+	QString* modeString = new QString();
+	QTextOStream (modeString) << mode;
+	SaXProcessCall* proc = new SaXProcessCall ();
+	proc -> addArgument ( SAX_GRUB_UPDATE );
+	proc -> addArgument ( *modeString );
+	if ( ! proc -> start() ) {
+		excProcessFailed();
+		qError (errorString(),EXC_PROCESSFAILED);
+		return false;
+	}
+	if (proc->exitStatus() == 0) {
+		return true;
+	}
+	return false;
+}
+
+//====================================
 // getResolutionsFromDDC
 //------------------------------------
 QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) {

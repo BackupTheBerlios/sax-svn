@@ -346,13 +346,12 @@ bool SCCMonitor::exportData ( void ) {
 			int mode = saxDesktop.getFBKernelMode (
 				*resolution,color
 			);
-			log (L_INFO,"SCCMonitor::Bootloader setup for fbdev: %dbit %s %d",
+			log (L_INFO,"SCCMonitor::Bootloader setup for fbdev: %dbit %s %d\n",
 				color,resolution->ascii(),mode
 			);
-			// TODO
-			// use yast2 bootloader to change vga value
-			// see Bug: #234142 for details
-			// ---
+			if (! saxDesktop.setFBKernelMode ( mode )) {
+				log (L_ERROR,"SCCMonitor::Bootloader update failed\n");
+			}
 		}
 		//====================================
 		// save resolution list

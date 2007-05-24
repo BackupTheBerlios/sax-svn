@@ -37,6 +37,7 @@ namespace SaX {
 #define XMODE             "/usr/sbin/xmode"
 #define XQUERY            "/usr/sbin/xquery"
 #define SAX_PROFILE_CHECK "/usr/share/sax/libsax/createCHK.sh"
+#define SAX_GRUB_UPDATE   "/usr/share/sax/libsax/createGRB.pl"
 #define PROFILE_DIR       "/usr/share/sax/profile/"
 #define MAP_DIR           "/usr/share/sax/sysp/maps/"
 #define SYSP_VENDOR       "/usr/share/sax/sysp/script/vendor.pl"
@@ -105,6 +106,7 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual bool isXineramaMode ( void ) = 0;
 	virtual bool DPMSEnabled    ( void ) = 0;
 	virtual int getFBKernelMode ( const QString&,int ) = 0;
+	virtual int setFBKernelMode ( int ) = 0;
 	virtual int getColorDepthFromServer ( void ) = 0;
 	virtual QString getMonitorVendor ( void ) = 0;
 	virtual QString getMonitorName   ( void ) = 0;
@@ -244,6 +246,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	bool isXineramaMode ( void );
 	bool DPMSEnabled    ( void );
 	int getFBKernelMode ( const QString&,int );
+	int setFBKernelMode ( int );
 	int getColorDepthFromServer ( void );
 	QString getMonitorVendor ( void );
 	QString getMonitorName   ( void );
