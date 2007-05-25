@@ -75,6 +75,8 @@ int main (int argc, char **argv) {
 		XCloseDisplay(display);
 		exit (0);
 	}
+	#if 0
+	// disabled: for details see bug: #273147
 	//============================================
 	// check the resolution
 	//--------------------------------------------
@@ -84,6 +86,7 @@ int main (int argc, char **argv) {
 		);
 		exit (2);
 	}
+	#endif
 	//============================================
 	// install color map for background pixels
 	//--------------------------------------------
