@@ -296,6 +296,7 @@ fi
 
 %files
 %defattr(-,root,root)
+%ghost %config(noreplace) /var/log/SaX.log
 %dir %{_datadir}/sax/api
 %dir %{_datadir}/sax/api/data
 %dir %{_defaultdocdir}/sax2
