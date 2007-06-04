@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon May 21 10:55:43 2007
+# Author: Marcus Schaefer <sax@suse.de>, Mon Jun  4 16:24:59 2007
 #
 # Template for monitor data
 # --------------------------
@@ -3028,7 +3028,6 @@ APPLE:COLOR DISPLAY (9C5E)  {
  Hsync=30-52
  Resolution=1280x800
  Vsync=50-60
- DPI=268x178
 }
 
 #==============================================
@@ -10439,7 +10438,6 @@ DELL:P990  {
  DDC=DEL50DD
  Hsync=30-96
  Vsync=48-120
- DPI=366x274
 }
 
 #==============================================
@@ -10450,7 +10448,6 @@ DELL:P991  {
  Option=DPMS
  Hsync=30-107
  Vsync=48-120
- DPI=366x274
 }
 
 #==============================================
@@ -10461,7 +10458,6 @@ DELL:P992  {
  Option=DPMS
  Hsync=30-107
  Vsync=48-170
- DPI=366x274
 }
 
 #==============================================
@@ -14383,6 +14379,17 @@ FUJITSU SIEMENS:463V-FA  {
  Hsync=30-83
  Modeline="1280x1024" 108.00 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync
  Vsync=50-85
+}
+
+#==============================================
+# AMILO Pro V3205
+#----------------------------------------------
+FUJITSU SIEMENS:AMILO PRO V3205  {
+ DDC=CMO1210
+ Option=DPMS
+ Hsync=30-52
+ Resolution=1280x800
+ Vsync=50-60
 }
 
 #==============================================
@@ -29012,7 +29019,6 @@ PHILIPS:200W (DIGITAL)  {
  Profile=PHL0832
  Resolution=1680x1050
  Vsync=56-85
- DPI=433x271
 }
 
 #==============================================
@@ -30379,7 +30385,6 @@ PROVIEW:PL713S  {
  Hsync=30-81
  Resolution=1280x1024
  Vsync=56-76
- DPI=338x270
 }
 
 #==============================================
@@ -36609,7 +36614,6 @@ SYNTAX OLEVIA:LCD MULTI-MEDIA DISPLAY  {
  Option=DPMS
  Hsync=50-63
  Resolution=1280x1024
- DPI=578x324
  Vsync=55-60
 }
 
@@ -39176,7 +39180,6 @@ VIEWSONIC:15  {
  Option=DPMS
  Hsync=30-64
  Vsync=50-90
- DPI=260x195
 }
 
 #==============================================
@@ -39222,7 +39225,6 @@ VIEWSONIC:17  {
  Option=DPMS
  Hsync=30-65
  Vsync=50-110
- DPI=310x230
 }
 
 #==============================================
