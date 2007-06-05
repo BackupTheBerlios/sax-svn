@@ -252,6 +252,8 @@ make bindlib=%{_lib} buildroot=$RPM_BUILD_ROOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT/var/log
+touch $RPM_BUILD_ROOT/var/log/SaX.log
 make buildroot=$RPM_BUILD_ROOT \
 	 bindlib=%{_lib} \
 	 lib_prefix=$RPM_BUILD_ROOT/usr/%{_lib} \

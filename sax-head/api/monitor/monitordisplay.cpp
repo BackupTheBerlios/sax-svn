@@ -236,9 +236,11 @@ void SCCMonitorDisplay::init ( void ) {
 	//------------------------------------
 	QList<QString> reference;
 	if (mSaxCard->getCardDriver() == "fbdev") {
+		log (L_INFO,"SCCMonitorDisplay::using FBDEV reference resolutions\n");
 		reference = mSaxDesktop->getResolutionsFromFrameBuffer();
 		mIsFbdevBased = true;
 	} else {
+		log (L_INFO,"SCCMonitorDisplay::using DDC reference resolutions\n");
 		reference = mSaxDesktop->getResolutionsFromDDC1();
 		mIsFbdevBased = false;
 	}
@@ -259,8 +261,14 @@ void SCCMonitorDisplay::init ( void ) {
 				}
 			}
 			if (foundInReference) {
+				log (L_INFO,"SCCMonitorDisplay::resolution %s:\tYES\n",
+					ir.currentKey().ascii()
+				);
 				continue;
 			}
+			log (L_INFO,"SCCMonitorDisplay::resolution %s:\tNO\n",
+				ir.currentKey().ascii()
+			);
 			toBeRemoved.append (new QString(ir.currentKey()));
 		}
 	}
@@ -474,7 +482,7 @@ void SCCMonitorDisplay::import ( void ) {
 		log (L_WARN,
 			"SCCMonitorDisplay::Warning: reset to default 640x480 key\n"
 		);
-		resolutionKey="640x480";
+		resolutionKey="800x600";
 	}
 	mResolution -> setCurrentText (*mResolutionDict[resolutionKey]);
 	slotResolution ( mResolution->currentItem() );
