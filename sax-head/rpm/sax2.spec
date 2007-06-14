@@ -139,8 +139,10 @@ Authors:
 %if %{?suse_version:1}0
 # SuSE Requires...
 Requires:       sax2-tools qt3 fvwm2 sax2
+%if %{suse_version} <= 1020
 %ifarch       %ix86 x86_64
 Requires:       915resolution
+%endif
 %endif
 %else
 # FC5 Requires...
