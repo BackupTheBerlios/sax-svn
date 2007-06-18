@@ -19,7 +19,7 @@ sub setupBootLoaderVGA {
 	my $menu  = "/boot/grub/menu.lst";
 	my $next  = "$menu.sax";
 	my $deflt = 0;
-	my $count = 0;
+	my $count = -1;
 	my @data  = ();
 	my $stream;
 	my $perm;
@@ -41,12 +41,12 @@ sub setupBootLoaderVGA {
 	}
 	foreach my $line (@data) {
 		next if ($line =~ /^[\s\t]*#/);
-		if ($line =~ /vga=0x.*/) {
-			if ($count == $deflt) {
-				$line =~ s/vga=0x.{3}/vga=0x$mode/;
-				last;
-			}
+		if ($line =~ /^\s*title\s/i) {
 			$count++;
+		}
+		if ($line=~ /^\s*kernel\s/i && $count == $deflt) {
+			$line=~s/\bvga=(normal|ask|0x[0-9a-f]{1,4}|\d{1,5})\b/vga=0x$mode/i;
+			last;
 		}
 	}
 	$stream = join ("",@data);
