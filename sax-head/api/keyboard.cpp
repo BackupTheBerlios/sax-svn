@@ -103,7 +103,9 @@ void SCCKeyboard::apply ( void ) {
 		qApp->setOverrideCursor ( Qt::forbiddenCursor );
 		QString layoutApply = mKeyboardLayout  -> getApplyString();
 		QString optionApply = mKeyboardOptions -> getApplyString();
-		QString complete = "setxkbmap " + layoutApply + " " + optionApply;
+		QString optionReset = "-option \"\"";
+		QString complete = "setxkbmap " +
+			layoutApply + " " + optionReset + " " + optionApply;
 		QProcess* proc = new QProcess ();
 		proc -> setArguments ( QStringList::split( " ",complete) );
 		if ( ! proc -> start() ) {
