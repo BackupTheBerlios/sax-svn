@@ -24,7 +24,6 @@ install_vendor:
 	install -m 755 _SaX.so ${MODDIR}
 	install -m 644 SaX.py  ${MODDIR}
 	install -m 644 SaX.pyc ${MODDIR}
-	install -m 644 SaX.pyo ${MODDIR}
 	install -m 644 SaX.pth ${PACKDIR}
 
 clean:

@@ -31,7 +31,7 @@ STATUS        : development
 //=================================
 // Functions...
 //---------------------------------
-char* qx(char*command,int channel,int anz,char* format,...) {
+char* qx(const char*command,int channel,int anz,const char* format,...) {
 	char data[30] = "/tmp/data";
 	char *result  = NULL;
 	char *arg[anz+2];

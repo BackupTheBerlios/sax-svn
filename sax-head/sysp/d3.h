@@ -50,7 +50,7 @@ class Scan3D {
 	public:
 	Scan3D (void);
 	Scan3D (int ask,int xavailable,str cardnr,str copt);
-	void SetFile  (str name);
+	void SetFile  (const str name);
 	void SetCheck (int);
 	void Scan  (void);
 	int  Save  (void);

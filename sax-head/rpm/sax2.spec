@@ -148,7 +148,7 @@ Requires:       915resolution
 # FC5 Requires...
 Requires:       sax2-tools qt sax2
 %endif
-Summary:        SaX management library for X Window System-configuration
+Summary:        SaX library
 Group:          Development/Libraries/X11
 Provides:       sax2:/usr/%{_lib}/libsax.so
 
@@ -262,6 +262,7 @@ make buildroot=$RPM_BUILD_ROOT \
 	 doc_prefix=$RPM_BUILD_ROOT/%{_defaultdocdir} \
 	 man_prefix=$RPM_BUILD_ROOT/%{_mandir} \
 	 install
+find $RPM_BUILD_ROOT -name "*.bs" | xargs rm -f
 %find_lang sax
 %if %{?suse_version:1}0
 	# SuSE specific build instructions...
@@ -294,6 +295,13 @@ chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
 	mkdir -p /var/cache/xfine
 fi
+
+%post -n sax2-libsax
+%run_ldconfig
+
+%postun -n sax2-libsax
+%run_ldconfig
+
 #=================================================
 # SaX files...      
 #-------------------------------------------------
@@ -307,11 +315,16 @@ fi
 %dir %{_datadir}/sax
 %dir %{_datadir}/sax/sysp/script
 %dir %{_datadir}/sax/sysp
+%dir %{_datadir}/sax/libsax
+%dir %{_var}/lib/sax
 %dir /var/cache/sax/sysp
 %dir /var/cache/sax/sysp/rdbms
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
+%dir %{_defaultdocdir}/libsax
+%doc %{_defaultdocdir}/libsax/html
+%{_datadir}/sax/libsax/*
 %{_datadir}/pixmaps/sax2.png
 %{_datadir}/sax/svnbuild
 %{_datadir}/sax/init.pl
@@ -432,12 +445,7 @@ fi
 
 %files -n sax2-libsax
 %defattr(-,root,root)
-%dir %{_datadir}/sax/libsax
-%dir %{_var}/lib/sax
-%dir %{_defaultdocdir}/libsax
-%doc %{_defaultdocdir}/libsax/html
-%{_prefix}/%{_lib}/libsax.so*
-%{_datadir}/sax/libsax/*
+%{_prefix}/%{_lib}/libsax.so.*
 #=================================================
 # SaX-libsax-devel file list...  
 # ------------------------------------------------
@@ -445,6 +453,7 @@ fi
 %files -n sax2-libsax-devel
 %defattr(-,root,root)
 %dir %{_includedir}/sax
+%{_prefix}/%{_lib}/libsax.so
 %{_includedir}/sax/*
 #=================================================
 # SaX-libsax-perl file list...  

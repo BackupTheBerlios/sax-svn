@@ -28,6 +28,9 @@ SCCTabletPadProperty::SCCTabletPadProperty (
 	const QString& penname, int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	// ...
+	log (L_INFO,"*** not yet handled: %s on display %d\n",
+		penname.ascii(),display
+	);
 }
 //====================================
 // getID

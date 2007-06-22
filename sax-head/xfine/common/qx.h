@@ -24,7 +24,7 @@ STATUS        : Status: Up-to-date
 //=================================
 // Functions...
 //---------------------------------
-char* qx (char*command,int channel,int anz=0,char* format=NULL,...);
+char* qx (const char*command,int channel,int anz=0,const char* format=NULL,...);
 void handlesigchld (int);
 
 #endif

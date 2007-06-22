@@ -152,7 +152,7 @@ extern int TvSupport (void);
 extern char* vesaBIOS (void);
 extern char* mediaDevices (void);
 extern void trim(char *message);
-extern char* qx(char*command,int channel,int anz=0,char* format=NULL,...);
+extern char* qx(const char*command,int channel,int anz=0,const char* format=NULL,...);
 extern int GetDisplay (void);
 extern void GetBusFormat(char *idstr,int *bus,int* slot,int *func);
 extern int GetDValue(char *hex);

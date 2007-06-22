@@ -31,11 +31,12 @@ STATUS        : development
 //=================================
 // Functions...
 //---------------------------------
-char* qx (char*command,int channel,int anz,char* format,...) {
+char* qx (const char* command,int channel,int anz,const char* format,...) {
 	char data[30] = "/tmp/data";
 	char *result  = NULL;
 	FILE* new_channel = NULL;
 	char *arg[anz+2];
+	char *cmdstr = NULL;
 	va_list ap;
 	FILE *fd;
 	int n=1;
@@ -69,7 +70,9 @@ char* qx (char*command,int channel,int anz,char* format,...) {
 		// prepare arguments for execvp...
 		// ---
 		arg[0] = (char*)malloc(sizeof(char)*MAX_PROGRAM_SIZE);
-		strcpy(arg[0],basename (command));
+		cmdstr = (char*)malloc(sizeof(char)*strlen(command));
+		strcpy (cmdstr,command);
+		strcpy(arg[0],basename (cmdstr));
 		arg[anz+1] = NULL;
 		if (format != NULL) {
 			va_start(ap, format);

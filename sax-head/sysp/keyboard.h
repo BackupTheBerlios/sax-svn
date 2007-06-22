@@ -43,7 +43,7 @@ class ScanKeyboard {
 	int current;
  
 	public:
-	void SetFile (str name);
+	void SetFile (const str name);
 	void Push (Keymap e);
 	void Reset (void);
 	void Scan (void);

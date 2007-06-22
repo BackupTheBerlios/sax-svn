@@ -212,7 +212,7 @@ install:install-docs
 	install -m 644 ./modules/export/*                       ${MODULEVZ}
 	install -m 644 ./parse/XFree.pm                         ${MODULEVZ}
 	install -m 644 ./api/data/cdb/*                         ${CDBVZ}
-	install -m 644 ./api/figures/*                          ${PIXVZ}
+	cp -l ./api/figures/*                                   ${PIXVZ}
 	install -m 755 ./startup/sax.sh                         ${SBINVZ}
 	install -m 755 ./startup/sax2-vesa                      ${SBINVZ}
 	install -m 755 ./startup/SaX2                           ${SBINVZ}

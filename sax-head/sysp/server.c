@@ -150,7 +150,7 @@ void ScanServer::SetCardModule(str copt) {
 //======================================
 // ScanServer: set file for saving
 //--------------------------------------
-void ScanServer::SetFile(str name) {
+void ScanServer::SetFile(const str name) {
 	file = name;
 }
 

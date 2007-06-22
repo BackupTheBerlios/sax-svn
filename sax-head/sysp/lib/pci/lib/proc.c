@@ -29,7 +29,7 @@ proc_config(struct pci_access *a)
 static int
 proc_detect(struct pci_access *a)
 {
-  char *name = a->method_params[PCI_ACCESS_PROC_BUS_PCI];
+  const char *name = a->method_params[PCI_ACCESS_PROC_BUS_PCI];
 
   if (access(name, R_OK))
     {

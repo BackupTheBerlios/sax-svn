@@ -15,7 +15,7 @@
 
 #define PCIUTILS_VERSION PCILIB_VERSION
 
-void die(char *msg, ...) NONRET;
+void die(const char *msg, ...) NONRET;
 void *xmalloc(unsigned int howmuch);
 void *xrealloc(void *ptr, unsigned int howmuch);
 int parse_generic_option(int i, struct pci_access *pacc, char *optarg);

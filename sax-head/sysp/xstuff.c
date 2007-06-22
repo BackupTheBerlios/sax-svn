@@ -49,7 +49,7 @@ ScanXStuff::ScanXStuff (int ask,int xavailable,str cardnr,str copt) {
 //======================================
 // ScanXStuff: set file name for save
 //--------------------------------------
-void ScanXStuff::SetFile (str name) {
+void ScanXStuff::SetFile (const str name) {
 	file = name;
 }
 

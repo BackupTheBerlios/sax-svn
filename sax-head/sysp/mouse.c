@@ -31,7 +31,7 @@ ScanMouse::ScanMouse(void) {
 //======================================
 // ScanMouse: set file name to save
 //--------------------------------------
-void ScanMouse::SetFile(str name) {
+void ScanMouse::SetFile(const str name) {
 	file = name;
 }
 

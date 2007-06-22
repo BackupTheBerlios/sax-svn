@@ -15,7 +15,7 @@
 #include "pciutils.h"
 
 void NONRET
-die(char *msg, ...)
+die(const char *msg, ...)
 {
   va_list args;
 

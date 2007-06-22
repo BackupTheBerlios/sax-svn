@@ -205,12 +205,12 @@ int main(int argc,char*argv[]) {
 		// ---
 		char* pArgv [15];
 		int count = 0;
-		char* sty = "-style";
-		char* dpy = "-display";
-		char* scr = "--screen";
-		char* xm  = "--xmiddle";
-		char* ym  = "--ymiddle";
-		char* win = "-w";
+		char sty[] = "-style";
+		char dpy[] = "-display";
+		char scr[] = "--screen";
+		char xm[]  = "--xmiddle";
+		char ym[]  = "--ymiddle";
+		char win[] = "-w";
 		char* nr  = NULL;
 		QString display (
 			DisplayString (QApplication::desktop()->x11Display())

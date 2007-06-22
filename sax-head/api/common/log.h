@@ -46,8 +46,8 @@ STATUS        : Status: Up-to-date
 // Structs...
 //---------------------------------
 struct logsequence {
-	char	code;
-	char *text;
+	char code;
+	const char *text;
 };
 
 //=================================
@@ -56,9 +56,9 @@ struct logsequence {
 extern int	 logInit(void);
 extern void	 logExit(void);
 extern void	 logDebuglevel(long);
-extern void	 logChar(long, char);
-extern void	 logCode(long, char *);
-extern void	 logText(long, char *, ...);
-extern void	 logLine(long, char *, ...);
+extern void	 logChar(long, const char);
+extern void	 logCode(long, const char *);
+extern void	 logText(long, const char *, ...);
+extern void	 logLine(long, const char *, ...);
 
 #endif

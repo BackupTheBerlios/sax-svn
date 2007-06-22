@@ -37,17 +37,17 @@ enum pci_access_type {
 struct pci_access {
   /* Options you can change: */
   unsigned int method;			/* Access method */
-  char *method_params[PCI_ACCESS_MAX];	/* Parameters for the methods */
+  const char *method_params[PCI_ACCESS_MAX];	/* Parameters for the methods */
   int writeable;			/* Open in read/write mode */
   int buscentric;			/* Bus-centric view of the world */
-  char *id_file_name;			/* Name of ID list file */
+  const char *id_file_name;			/* Name of ID list file */
   int numeric_ids;			/* Don't resolve device IDs to names */
   int debugging;			/* Turn on debugging messages */
 
   /* Functions you can override: */
-  void (*error)(char *msg, ...);	/* Write error message and quit */
-  void (*warning)(char *msg, ...);	/* Write a warning message */
-  void (*debug)(char *msg, ...);	/* Write a debugging message */
+  void (*error)(const char *msg, ...);	/* Write error message and quit */
+  void (*warning)(const char *msg, ...);	/* Write a warning message */
+  void (*debug)(const char *msg, ...);	/* Write a debugging message */
 
   struct pci_dev *devices;		/* Devices found on this bus */
 
@@ -131,15 +131,15 @@ struct pci_filter {
 };
 
 void pci_filter_init(struct pci_access *, struct pci_filter *);
-char *pci_filter_parse_slot(struct pci_filter *, char *);
-char *pci_filter_parse_id(struct pci_filter *, char *);
+const char *pci_filter_parse_slot(struct pci_filter *, char *);
+const char *pci_filter_parse_id(struct pci_filter *, char *);
 int pci_filter_match(struct pci_filter *, struct pci_dev *);
 
 /*
  *	Device names
  */
 
-char *pci_lookup_name(struct pci_access *a, char *buf, int size, int flags, u32 arg1, u32 arg2, u32 arg3, u32 arg4);
+const char *pci_lookup_name(struct pci_access *a, char *buf, int size, int flags, u32 arg1, u32 arg2, u32 arg3, u32 arg4);
 void pci_free_name_list(struct pci_access *a);
 
 #define PCI_LOOKUP_VENDOR 1

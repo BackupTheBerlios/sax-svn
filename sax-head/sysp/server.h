@@ -54,7 +54,7 @@ class ScanServer {
 	int checkPCIVendor;
 
 	public:
-	void SetFile (str name);
+	void SetFile (const str name);
 	void Push (ServerData e);
 	void Reset (void);
 	void Scan (void);

@@ -77,7 +77,7 @@ static int nl_add(struct pci_access *a, int cat, int id1, int id2, int id3, int 
 }
 
 static void
-err_name_list(struct pci_access *a, char *msg)
+err_name_list(struct pci_access *a, const char *msg)
 {
   a->error("%s: %s: %s\n", a->id_file_name, msg, strerror(errno));
 }
@@ -222,7 +222,7 @@ pci_free_name_list(struct pci_access *a)
   a->nl_hash = NULL;
 }
 
-char *
+const char *
 pci_lookup_name(struct pci_access *a, char *buf, int size, int flags, u32 arg1, u32 arg2, u32 arg3, u32 arg4)
 {
   int num = a->numeric_ids;

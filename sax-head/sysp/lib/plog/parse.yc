@@ -30,7 +30,7 @@ struct CLKSTRUCT clocks[200];
 
 /*----FUNCTIONS-----------*/
 int yylex (void);
-void yyerror ( char *s)
+void yyerror ( const char *s)
 {
  /*
  ParseError = -1;
@@ -59,7 +59,7 @@ char* toKb (str value,str unit) {
 	return result;
 }
 
-void logs(str key,str value)  {
+void logs(const str key,const str value)  {
  strcpy(detect[detectindex].key,key);
  strcpy(detect[detectindex].value,value);
  strcpy(detect[detectindex].id,ActId);

@@ -86,7 +86,7 @@ pci_mfree(void *x)
 }
 
 static void
-pci_generic_error(char *msg, ...)
+pci_generic_error(const char *msg, ...)
 {
   va_list args;
 
@@ -98,7 +98,7 @@ pci_generic_error(char *msg, ...)
 }
 
 static void
-pci_generic_warn(char *msg, ...)
+pci_generic_warn(const char *msg, ...)
 {
   va_list args;
 
@@ -109,7 +109,7 @@ pci_generic_warn(char *msg, ...)
 }
 
 static void
-pci_generic_debug(char *msg, ...)
+pci_generic_debug(const char *msg, ...)
 {
   va_list args;
 
@@ -119,7 +119,7 @@ pci_generic_debug(char *msg, ...)
 }
 
 static void
-pci_null_debug(char *msg UNUSED, ...)
+pci_null_debug(const char *msg UNUSED, ...)
 {
 }
 

@@ -169,7 +169,7 @@ void disableMouse (Display* dpy) {
 		return;
 	}
 	mseinfo.flags |= MF_REOPEN;
-	mseinfo.device = "/dev/unused";
+	strcpy(mseinfo.device,"/dev/unused");
 	XF86MiscSetMouseSettings(dpy, &mseinfo);
 	XSync(dpy, False);
 }

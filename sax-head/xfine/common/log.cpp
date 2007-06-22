@@ -24,7 +24,6 @@ STATUS        : Status: Up-to-date
 #include <libintl.h>
                      
 #include "log.h"
-#include "../config.h"
 
 //====================================
 // Global variables...
@@ -90,7 +89,7 @@ void logDebuglevel(long level) {
 //====================================
 // logLine...
 //------------------------------------
-void logLine (long level, char *fmt, ...) {
+void logLine (long level, const char *fmt, ...) {
 	struct tm   *timel;
 	time_t       timec;
 	va_list      arg;
@@ -160,7 +159,7 @@ void logLine (long level, char *fmt, ...) {
 //====================================
 // logChar...
 //------------------------------------
-void logChar(long level, char c) {
+void logChar(long level, const char c) {
 	int i;
 	if ((logdbg & level) || (level == L_FATAL) || (level == L_STDERR)) {
 	if (!isprint(c)) {
@@ -182,7 +181,7 @@ void logChar(long level, char c) {
 //====================================
 // logText...
 //------------------------------------
-void logText(long level, char *fmt, ...) {
+void logText(long level, const char *fmt, ...) {
 	FILE *useio;
 	va_list arg;
 
@@ -205,7 +204,7 @@ void logText(long level, char *fmt, ...) {
 //====================================
 // logCode...
 //------------------------------------
-void logCode(long level, char *sequence) {
+void logCode(long level, const char *sequence) {
 	int i;
 
 	if ((logdbg & level) || (level == L_FATAL) || (level == L_STDERR)) {

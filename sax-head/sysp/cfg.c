@@ -418,7 +418,7 @@ void XF86ConfigFile::Push (ParseData e) {
 //======================================
 // XF86ConfigFile: set file for saving
 //--------------------------------------
-void XF86ConfigFile::SetFile(str name) {
+void XF86ConfigFile::SetFile(const str name) {
 	file = name;
 }
 

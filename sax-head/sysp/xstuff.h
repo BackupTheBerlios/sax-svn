@@ -48,7 +48,7 @@ class ScanXStuff {
 	str cardopt;
 
 	public:
-	void SetFile (str name);
+	void SetFile (const str name);
 	void Push (StuffData e);
 	void Reset (void);
 	void Scan (void);

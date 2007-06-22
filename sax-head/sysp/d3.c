@@ -49,7 +49,7 @@ void Scan3D::SetCheck (int status) {
 //======================================
 // Scan3D: set file name to save
 //--------------------------------------
-void Scan3D::SetFile(str name) {
+void Scan3D::SetFile(const str name) {
 	file = name;
 }
 

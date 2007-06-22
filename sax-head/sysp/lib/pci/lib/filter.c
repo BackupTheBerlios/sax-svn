@@ -20,7 +20,7 @@ pci_filter_init(struct pci_access *a UNUSED, struct pci_filter *f)
 
 /* Slot filter syntax: [[[domain]:][bus]:][slot][.[func]] */
 
-char *
+const char *
 pci_filter_parse_slot(struct pci_filter *f, char *str)
 {
   char *colon = strrchr(str, ':');
@@ -76,7 +76,7 @@ pci_filter_parse_slot(struct pci_filter *f, char *str)
 
 /* ID filter syntax: [vendor]:[device] */
 
-char *
+const char *
 pci_filter_parse_id(struct pci_filter *f, char *str)
 {
   char *s, *e;

@@ -69,7 +69,7 @@ int yylex (void);
 //====================================
 // yyerror
 //------------------------------------
-void yyerror ( char* s) {
+void yyerror ( const char* s) {
 	if (strcmp(s,"syntax error") == 0) {
 		return;
 	}

@@ -30,7 +30,7 @@ sysfs_config(struct pci_access *a)
   a->method_params[PCI_ACCESS_SYS_BUS_PCI] = PCI_PATH_SYS_BUS_PCI;
 }
 
-static inline char *
+static inline const char *
 sysfs_name(struct pci_access *a)
 {
   return a->method_params[PCI_ACCESS_SYS_BUS_PCI];
@@ -66,7 +66,7 @@ sysfs_cleanup(struct pci_access *a)
 
 #define OBJNAMELEN 1024
 static void
-sysfs_obj_name(struct pci_dev *d, char *object, char *buf)
+sysfs_obj_name(struct pci_dev *d, const char *object, char *buf)
 {
   int n = snprintf(buf, OBJNAMELEN, "%s/devices/%04x:%02x:%02x.%d/%s",
 		   sysfs_name(d->access), d->domain, d->bus, d->dev, d->func, object);
@@ -75,7 +75,7 @@ sysfs_obj_name(struct pci_dev *d, char *object, char *buf)
 }
 
 static int
-sysfs_get_value(struct pci_dev *d, char *object)
+sysfs_get_value(struct pci_dev *d, const char *object)
 {
   struct pci_access *a = d->access;
   int fd, n;

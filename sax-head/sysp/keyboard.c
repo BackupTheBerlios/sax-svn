@@ -33,7 +33,7 @@ ScanKeyboard::ScanKeyboard(void) {
 //======================================
 // ScanKeyboard: set file for saving
 //--------------------------------------
-void ScanKeyboard::SetFile(str name) {
+void ScanKeyboard::SetFile(const str name) {
 	file = name;
 }
 

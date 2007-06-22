@@ -37,7 +37,7 @@ dump_alloc_data(struct pci_dev *dev, int len)
 static void
 dump_init(struct pci_access *a)
 {
-  char *name = a->method_params[PCI_ACCESS_DUMP];
+  const char *name = a->method_params[PCI_ACCESS_DUMP];
   FILE *f;
   char buf[256];
   struct pci_dev *dev = NULL;

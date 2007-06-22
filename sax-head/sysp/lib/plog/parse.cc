@@ -123,7 +123,7 @@ void parsemsg(MsgDetect *msg) {
 			strcpy(value,detect[i].value);
 			trim(value);
 
-			if (pdev && strcmp(pdev,"") != 0) {
+			if (strcmp(pdev,"") != 0) {
 				strcpy(msg[n].primary,pdev);
 			}
 			if (strcmp(key,"DDC") == 0) {

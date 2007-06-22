@@ -74,7 +74,7 @@ class XF86ConfigFile {
 	void Reset (void);
 	int  Count (void) { return elements; }
 	void SetSectionID (int nr);
-	void SetFile (str name);
+	void SetFile (const str name);
 	void SetDeviceOption (string opt);
 	int  Save (void);
 	int  Read (void);

@@ -300,8 +300,8 @@ class SPReadFile {
 	void ImportDriverMap (void);
 	RcData ImportRcConfig (void);
 	RcData ImportVendorMap (void);
-	void SetFile (str name);
-	bool SetFile (str sysdir, str name);
+	void SetFile (const str name);
+	bool SetFile (const str sysdir, const str name);
 	void Reset (void);
 	SPReadFile(void);
 	SPReadFile(str name);
@@ -342,7 +342,7 @@ SPReadFile<T>::SPReadFile(str name) {
 // SPReadFile: set file name to read
 //-----------------------------------
 template <class T>
-void SPReadFile<T>::SetFile(str name) {
+void SPReadFile<T>::SetFile(const str name) {
 	file = name;
 }
 
@@ -350,7 +350,7 @@ void SPReadFile<T>::SetFile(str name) {
 // SPReadFile: set file name to read
 //-----------------------------------
 template <class T>
-bool SPReadFile<T>::SetFile(str sysdir,str name) {
+bool SPReadFile<T>::SetFile(const str sysdir,const str name) {
 	string directory (sysdir);
 	string filename  (name);
 	string sysconfigName = directory + filename;
