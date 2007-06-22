@@ -1045,6 +1045,9 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) 
 	if (! desktop->getItem(key)) {
 		return QList<QString>();
 	}
+	if (desktop->getItem("DDC") == "<undefined>") {
+		return QList<QString>();
+	}
 	QString val = desktop->getItem(key);
 	QStringList items = QStringList::split ( ",", val );
 	for (
