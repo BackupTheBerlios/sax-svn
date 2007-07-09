@@ -1,5 +1,5 @@
-# translation of sax.po to Czech
 # translation of sax.po to
+# translation of sax.po to cs_CZ
 # domain "sax.mo"
 # Czech message file for SaX 2.
 # Copyright (C) 2000 SuSE GmbH.
@@ -8,18 +8,18 @@
 # Lukáš Tinkl <lukas.tinkl@suse.cz>, 2003.
 # Klara Cihlarova <koty@seznam.cz>, 2003, 2004, 2005, 2006.
 # Klára Cihlářová <cihlarov@suse.cz>, 2004.
-# Jakub Friedl <jfriedl@suse.cz>, 2005, 2006, 2007.
+# Jakub Friedl <jfriedl@suse.cz>, 2005, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-01-24 14:47+0100\n"
-"Last-Translator: Jakub Friedl <jfriedl@suse.cz>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2006-07-10 13:36+0200\n"
+"Last-Translator: Klara Cihlarova <koty@seznam.cz>\n"
+"Language-Team: cs_CZ <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.11.2\n"
 "Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. /.../
@@ -29,7 +29,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -46,6 +46,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D akcelerace není podporována</b><hr>SaX2 nemůže umožnit aktivaci 3D "
+"podpory, protože vaše karta/ovladač nemá 3D podporu."
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -54,6 +56,9 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D akcelerace není podporována</b><hr>SaX2 nemůže umožnit aktivaci 3D "
+"podpory, protože je použit dualhead režim. Xorg rozšíření Xinerama "
+"nepodporuje 3D na všech monitorech."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -456,7 +461,7 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>Poznámka:</b><hr>Chybné nastavení synchronizace může poškodit monitor. "
+"<b>Poznámka:</b> Chybné nastavení synchronizace může poškodit monitor. "
 "Ověřte si prosím následující nastavení v příručce monitoru.<br><br>Pokud "
 "nechcete používat maximální nastavení monitoru, snižte hodnoty sync. "
 "frekvencí."
@@ -600,9 +605,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Chivání klávesy Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Změna umístění kláves"
+msgstr "Umístění klávesy Euro"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"

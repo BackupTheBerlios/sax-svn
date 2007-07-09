@@ -3,12 +3,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Ivan Petrouchtchak <iip@telus.net>, 2005.
-# Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>, 2005, 2006.
+# Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>, 2005, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.uk\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-10-12 23:15-0700\n"
+"PO-Revision-Date: 2007-07-05 22:28-0700\n"
 "Last-Translator: Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "Інтернаціоналізація"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -42,6 +42,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>Акселерація 3D не підтримується</b><hr>SaX2 не може увімкнути тривимірну "
+"підсистему, бо ваша графічна плата або драйвер не підтримує 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -50,6 +52,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>Акселерація 3D не підтримується</b><hr>SaX2 не може увімкнути тривимірну "
+"підсистему, бо вживається мультимоніторний режим на основі Xinerama. "
+"Розширення Xorg Xinerama для поєднання графічних екранів не підтримує 3D на "
+"всіх моніторах."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -72,6 +78,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>Змінено розмір екрана</b><hr>Розмір екрана було адаптовано до нового "
+"росположення."
 
 #. Help Button text
 msgid "&Help"
@@ -159,9 +167,8 @@ msgid "Remote Access Properties"
 msgstr "Властивості віддаленого доступу"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Дисплей"
+msgstr "Дисплей %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -212,9 +219,8 @@ msgid "Invert Y-Axis"
 msgstr "Обернути вісь Y"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Активувати емуляцію 3-кнопок"
+msgstr "Активувати призначення кнопок для лівої руки"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -336,8 +342,8 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Неможливо деактивувати всі дисплеї</b><hr><nobr>Принаймні один дисплей "
-"мусить бути активним.</nobr>"
+"<b>Неможливо вимкнути всі дисплеї</b><hr><nobr>Принаймні один дисплей мусить "
+"бути активним.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -597,9 +603,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Поведінка клавіш Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Розташування клавіші Control"
+msgstr "Розташування клавіші знака євро"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -638,14 +643,12 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Права клавіша Ctrl перемикає групу при натисканні."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta приписана на ліву клавішу Win."
+msgstr "Ліву клавішу Alt поміняно місцями з лівою клавішею Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Типовий маршрут в порядку."
+msgstr "Типові клавіші цифрової клавіатури."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
@@ -660,36 +663,30 @@ msgid "Force standard legacy keypad"
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
-"CapsLock вживає внутрішній механізм великих літер. Shift не скасовує "
+"CapsLock вживає внутрішній механізм великих літер. Shift не впливає на "
 "CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Вибір мови та розкладки клавіатури"
+msgstr "Вибір розкладки цифрової клавіатури"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Зміна групи - клавіші Shift+CapsLock."
+msgstr "Зміна групи - клавіші Alt+CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "CapsLock діє, як Shift з фіксацією. Shift не скасовує CapsLock."
+msgstr "CapsLock діє, як Shift з фіксацією. Shift не впливає на CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
-"CapsLock вживає внутрішній механізм великих літер. Shift скасовує CapsLock."
+msgstr "CapsLock вживає внутрішній механізм великих літер. Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -700,9 +697,8 @@ msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift з номерною клавіатурою працює як в Microsoft Windows."
+msgstr "Номерна клавіатура працює як в Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -713,15 +709,15 @@ msgid "Space key output nobreakspace at fourth level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
 msgstr "Права клавіша Win як Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Натисніть праву клавішу Alt, щоб вибрати 3-й рівень."
+msgstr ""
+"Натисніть праву клавішу Alt, щоб вибрати 3-й рівень, Shift+права клавіша Alt "
+"- Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -729,7 +725,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Параметри японської клавіатури"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1008,14 +1004,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1030,9 +1024,8 @@ msgid "Add Eraser"
 msgstr "Додати гумку"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Додати ручку"
+msgstr ""
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1043,9 +1036,8 @@ msgid "Pen Properties"
 msgstr "Властивості ручки"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Властивості ручки"
+msgstr ""
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1283,14 +1275,12 @@ msgid "Nepal"
 msgstr "Непал"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Лаоська Народно-Демократична Республіка"
+msgstr "Конго, Народно-Демократична Республіка"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Чехія"
+msgstr "Корея, Республіка"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1303,9 +1293,8 @@ msgid "Nigeria"
 msgstr "Нігерія"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "Серія PC-98xx"
+msgstr "Японія (серія PC-98xx)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1419,7 +1408,7 @@ msgstr "Чехія"
 
 #. XKBFile extension text
 msgid "Belarus"
-msgstr "Білорусія"
+msgstr "Білорусь"
 
 #. XKBFile extension text
 msgid "Tajikistan"
@@ -1454,7 +1443,7 @@ msgstr "В'єтнамська"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr "Фароські острови"
+msgstr "Фарерські острови"
 
 #. XKBFile extension text
 msgid "South Africa"
@@ -1592,7 +1581,7 @@ msgstr "Шрі Ланка"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr "Боснія і Герцеґовина"
+msgstr "Боснія і Герцеговина"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
@@ -1682,11 +1671,3 @@ msgstr "Конфігурація на дисплеї"
 
 msgid "Idle timer..."
 msgstr "Бездіяльний таймер..."
-
-#~ msgid ""
-#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-#~ "your system does not support changes for resolution and/or color settings."
-#~ msgstr ""
-#~ "<b>Примітка:</b><hr>Налаштування основане на <i>Framebuffer</i>, отже у "
-#~ "вашій системі не підтримується зміна параметрів роздільної здатності або/"
-#~ "і кольору."

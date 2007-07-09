@@ -1,4 +1,4 @@
-# translation of sax.po to Slovak
+# translation of sax.sk.po to Slovak
 # domain "sax.mo"
 # Slovak message file for SaX 2.
 # Copyright (C) 2000 SuSE GmbH.
@@ -6,19 +6,19 @@
 # Stanislav Visnovsky <visnovsky@kde.org>, 2003.
 # Stanislav Visnovsky <visnov@suse.cz>, 2003.
 # Andrej Kacian <andrej@kacian.sk>, 2004, 2005.
-#
+# Ladislav Michnovic <lmichnovic@suse.cz>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2005-03-08 20:52+0100\n"
-"Last-Translator: Andrej Kacian <andrej@kacian.sk>\n"
+"PO-Revision-Date: 2007-02-22 15:55+0100\n"
+"Last-Translator: Ladislav Michnovič <lmichnovic@suse.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10\n"
-"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -30,7 +30,6 @@ msgid "I18N"
 msgstr ""
 
 #. RTF text: Startup information for the user
-#, fuzzy
 msgid ""
 "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
@@ -68,7 +67,7 @@ msgstr "SaX2: Konfigurácia X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr "Sax Kontrolné centrum"
+msgstr "Sax ovládacie centrum"
 
 #. Info message about display size changes
 msgid ""
@@ -107,7 +106,7 @@ msgstr "Správa"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
-msgstr "&Upraviť konfiguráciu"
+msgstr "&Upraviť nastavenie"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -130,7 +129,7 @@ msgstr "Vlastnosti myši"
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
-msgstr "Model klávesnice"
+msgstr "Klávesnica"
 
 #. title of module dialog
 msgid "Keyboard Properties"
@@ -170,7 +169,7 @@ msgstr "Obrazovka"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr "Aktivovať tento displej"
+msgstr "Aktivovať túto obrazovku"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
@@ -183,7 +182,7 @@ msgstr "Karta"
 #  Maximum length: 60  characters
 #. Change data
 msgid "&Change..."
-msgstr "&Zmeniť...>"
+msgstr "&Zmeniť..."
 
 #. Set options for some kind of data
 msgid "&Options..."
@@ -191,7 +190,7 @@ msgstr "&Možnosti..."
 
 #. Configure some data
 msgid "Con&figure..."
-msgstr "Nastav&iť..."
+msgstr "Nasta&viť..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
@@ -204,7 +203,7 @@ msgstr "Režim viacerých obrazoviek"
 #. Group box title for tablet options
 #. Group box title for the VNC options
 msgid "Options"
-msgstr "Možnosti"
+msgstr "Voľby"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
@@ -212,11 +211,11 @@ msgstr "Povoliť koliesko myši"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr "Invertovať x-ovú os"
+msgstr "Invertovať x-ovú osu"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr "Invertovať y-ovú os"
+msgstr "Invertovať y-ovú osu"
 
 #. CheckBox label to activate left hand mouse
 #, fuzzy
@@ -229,7 +228,7 @@ msgstr "Povoliť emuláciu 3. tlačidla"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr "Emulovať koliesko tlačidlom myši"
+msgstr "Imitovať koliesko tlačidlom myši"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
@@ -238,7 +237,7 @@ msgstr "Otočiť obrazovku"
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr "O&testovať."
+msgstr "Test"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
@@ -252,11 +251,11 @@ msgstr "&Uložiť"
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr "Klávesnica"
+msgstr "Rozloženie kláves"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
-msgstr "Testovacie je pripravené"
+msgstr "Test je pripravený"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
@@ -272,11 +271,11 @@ msgstr "Rolovanie"
 
 #. Status line of mouse test field: button pressed
 msgid "Button pressed"
-msgstr "Tlačidlo stlačené"
+msgstr "Tlačidlo bolo stlačené"
 
 #. Status line of mouse test field: button released
 msgid "Button released"
-msgstr "Tlačidlo pustené"
+msgstr "Tlačidlo bolo pustené"
 
 #. Status line of mouse test field: wheel stopped
 msgid "Stopped: Done"
@@ -330,21 +329,21 @@ msgstr "Aktivované v móde %1 s %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr "Aktivované v predvolenom móde ovládača"
+msgstr "Aktivované v štandardnom móde ovládača"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
 msgid "Unconfigured"
-msgstr "Nekonfigurované"
+msgstr "Nenastavené"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Nemôžem deaktivovať všetky obrazovky</b><hr><nobr>Aspo'jedna obrazovka "
+"<b>Nemôžem deaktivovať všetky obrazovky</b><hr><nobr>Aspoň jedna obrazovka "
 "musí ostať aktívna.</nobr>"
 
 #. Info label for dual head checkbox
@@ -356,7 +355,7 @@ msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"Tradičný režim viacnásobných obrazoviek:\n"
+"Tradičný režim viacerých obrazoviek:\n"
 "Každá obrazovka je nezávislá"
 
 #. Radiobutton for cloned multihead mode
@@ -364,7 +363,7 @@ msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
-"Klonované viacnásobné obrazovky:\n"
+"Klonované viaceré obrazovky:\n"
 "Každá obrazovka je klon primárnej"
 
 #. Radiobutton for xinerama multihead mode
@@ -372,7 +371,7 @@ msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
-"Viacnásobné obrazovky Xinerama:\n"
+"Viaceré obrazovky Xinerama:\n"
 "Vytvoriť jednu veľkú obrazovku z viacerých"
 
 #. Title for multihead modi
@@ -402,11 +401,11 @@ msgstr "Nastavenia myši"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
-msgstr "Nstavenia grafickej karty"
+msgstr "Nastavenia grafickej karty"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr "Nstavenia režimu viacerých obrazoviek"
+msgstr "Nastavenie režimu viacerých obrazoviek"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -431,8 +430,8 @@ msgstr ""
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Voľba vyžaduje hodnotu</b><hr><nobr>Prosím, nastavte hodnotu pre voľbu %1."
-"</nobr>"
+"<b>Voľba vyžaduje nejakú hodnotu</b><hr><nobr>Prosím, nastavte hodnotu pre "
+"voľbu %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -448,11 +447,11 @@ msgstr "Ručné nastavenie synchronizačných frekvencií"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr "Diagonála a pomer strán"
+msgstr "Uhlopriečka a pomer strán"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
-msgstr "Veľkosť obrazu v mm"
+msgstr "Veľkosť obrazovky v mm"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
@@ -462,7 +461,7 @@ msgid ""
 msgstr ""
 "<b>Poznámka:</b>Nesprávne nastavenie synchronizácie môže poškodiť váš "
 "monitor. Pre nasledujúce nastavenie konzultujte návod k vášmu monitoru."
-"<br><br>Ak nechcete, aby váš monitor išiel nadoraz, znížte hodnoty."
+"<br><br>Ak nechcete, aby váš monitor išiel na doraz, znížte hodnoty."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -502,23 +501,23 @@ msgstr "Pomer strán"
 
 #. Label text for the diagonal length combo box
 msgid "Diagonal"
-msgstr "Diagonálne"
+msgstr "Uhlopriečka"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr "X-ová ods [mm]"
+msgstr "X-ová osa [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr "Y-ová os [mm]"
+msgstr "Y-ová osa [mm]"
 
 #. Something is not configured
 msgid "Not configured"
-msgstr "Nekonfigurované"
+msgstr "Nenastavené"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr "inchov"
+msgstr "palcov"
 
 #  RTF text: no limit
 #. Message box of type Ok, telling to user to insert a CD or disk
@@ -569,7 +568,7 @@ msgstr "Variant"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr "Ďalšie rozloženia klávesnice"
+msgstr "Ďalšie rozloženia kláves"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -585,7 +584,7 @@ msgstr "Chovanie prepínania Shift/Lock"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Použiť LED klávesnice pre zobrazenie prepínania klávesnice"
+msgstr "Použiť LED na klávesnici pre zobrazenie prepínania rozloženia kláves"
 
 #. List View root item text
 msgid "Compose Key Position"
@@ -618,39 +617,32 @@ msgid "None"
 msgstr "Žiadna"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches group while pressed."
-msgstr "Ľavý Win-kláves prepína skupinu pri stlačení"
+msgstr "Ľavý Alt prepína rozloženie počas stlačenia."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change group."
-msgstr "Oba klávesy Shift menia skupinu"
+msgstr "Oba klávesy Ctrl menia rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes group."
-msgstr "Pravý Win-kláves mení skupinu"
+msgstr "Pravý Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win key changes group."
-msgstr "Ľavý Win-kláves mení skupinu"
+msgstr "Ľavý Win-kláves mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes group."
-msgstr "Oba klávesy Shift menia skupinu"
+msgstr "Ľavý Alt mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win keys switch group while pressed."
-msgstr "Oba Win-klávesy prepínajú skupinu pri stlačení"
+msgstr "Oba Win-klávesy prepínajú rozloženie počas stlačenia."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches group while pressed."
-msgstr "Pravý Win-kláves prepína skupinu pri stlačení"
+msgstr "Pravý Ctrl prepína rozloženie počas stlačenia."
 
 #. XKBFile extension text
 #, fuzzy
@@ -748,21 +740,20 @@ msgid "CapsLock acts as Shift with locking. Shift "
 msgstr "funguje ako Shift so zámkom. Shift ruší Caps."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "používa vnútorné veľké písmená. Shift ruší Caps."
+msgstr "Caps Lock zapína veľké písmená. Shift neruší Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr "Caps Lock iba uzamkne zmeny Shiftu"
+msgstr "Caps Lock iba uzamkne menenie klávesom Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr "Caps Lock mení písanie veľkých písmen."
+msgstr "Caps Lock prepína písanie veľkých písmen."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "Caps Lock mení Shift, takže všetky klávesy sú zmenené "
+msgstr "Caps Lock prepína Shift, takže všetky klávesy sú zmenené."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -770,15 +761,15 @@ msgstr "Pravý Win-kláves je Compose."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr "Shift+Caps Lock mení klávesnicu."
+msgstr "Shift+Caps Lock mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr "Pravý Alt prepína klávesnicu pokiaľ je stlačený."
+msgstr "Pravý Alt prepína rozloženie počas stlačenia."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr "Pravý kláves Ctrl nahradí pravý Alt."
+msgstr "Pravý kláves Ctrl bude pravý Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -790,255 +781,212 @@ msgstr "Stlačenie niektorého Win-klávesu volí 3. úroveň."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Stlačenie pravého Win-klávesu volí 3. úroveň."
+msgstr "Stlačenie pravého klávesu Alt volí 3. úroveň."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
-msgstr "Pravý Ctrl mení klávesnicu."
+msgstr "Pravý Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt is Compose."
-msgstr "Pravý Alt je Compose"
+msgstr "Pravý Alt je Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl is Compose."
-msgstr "Pravý Alt je Compose"
+msgstr "Pravý Ctrl je Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative group."
-msgstr "Scroll_Lock LED zobrazuje alternatívnu skupinu"
+msgstr "Scroll Lock LED zobrazuje alternatívne rozloženie."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control key at left of -A-"
-msgstr "Control naľavo od 'A'"
+msgstr "Kláves Ctrl naľavo od 'A'"
 
 #. XKBFile extension text
 msgid "Third level choosers"
 msgstr "Výber tretej úrovne"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change group."
-msgstr "Spoločné stlačenie oboch Shift mení skupinu"
+msgstr "Spoločné stlačenie oboch kláves Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "funguje ako Shift so zámkom. Shift ruší Caps."
+msgstr "Caps Lock funguje ako Shift so zámkom. Shift neruší Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "používa vnútorné veľké písmená. Shift ruší Caps."
+msgstr "Caps Lock používa veľké písmená. Shift ruší Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Make CapsLock an additional Control."
-msgstr "CapsLock ako ďalší Control"
+msgstr "Caps Lock bude ako ďalší kláves Control."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Stlačenie ľavého Win-klávesu vyberá 3. úroveň"
+msgstr "Stlačenie ľavého Win klávesu volí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes group."
-msgstr "Pravý Win-kláves mení skupinu"
+msgstr "Pravý Win-kláves mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the left Win-key."
 msgstr "Meta je mapovaný na ľavý Win-kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative group."
-msgstr "Caps_Lock LED zobrazuje alternatívnu skupinu"
+msgstr "Caps Lock LED zobrazuje alternatívne rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative group."
-msgstr "Num_Lock LED zobrazuje alternatívnu skupinu"
+msgstr "Num Lock LED zobrazuje alternatívne rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes group."
-msgstr "Ľavý Shift mení skupinu"
+msgstr "Ľavý Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches group while pressed."
-msgstr "Ľavý Win-kláves prepína skupinu pri stlačení"
+msgstr "Ľavý Win-kláves prepína rozloženie počas stlačenia."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu is Compose."
-msgstr "Menu je Compose"
+msgstr "Menu je Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change group."
-msgstr "Oba klávesy Alt menia skupinu"
+msgstr "Oba klávesy Alt stlačené naraz menia rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes group."
-msgstr "Caps Lock mení skupinu"
+msgstr "Kláves Caps Lock mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap Control and CapsLock."
-msgstr "Prehodiť Control a Caps Lock"
+msgstr "Prehodiť Control a Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Stlačenie niektorého Win-klávesu vyberá 3. úroveň"
+msgstr "Stlačenie niektorého z Alt kláves volí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes group."
-msgstr "Pravý Alt mení skupinu"
+msgstr "Pravý Alt mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
+msgstr "Shift s numerickými klávesmi funguje ako v MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "Špeciálne klávesy (Ctrl+Alt+<kláves>) ovládané serverom."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Hyper is mapped to the Win-keys."
 msgstr "Hyper je mapovaný na Win-klávesy."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Meta je mapovaný na ľavý Win-kláves."
+msgstr "Alt je mapovaný na pravý Win-kláves a Super na Menu-kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys (default)."
 msgstr "Super je mapovaný na Win-klávesy (štandardné)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta on the Alt keys (default)."
 msgstr "Alt a Meta na klávesy Alt (štandardné)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the standard behavior to Menu key."
-msgstr "Pridať štandardné chovanie klávesu Meta."
+msgstr "Pridať štandardné chovanie klávesu Menu."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Alt a Meta na klávesy Alt (štandardné)."
+msgstr "Alt a Meta sú na klávesoch Alt (štandardné)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Control to choose 3rd level."
-msgstr "Stlačenie pravého Control vyberá 3. úroveň"
+msgstr "Stlačenie pravého Control volí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift changes group."
-msgstr "Alt+Shift mení skupinu"
+msgstr "Alt+Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control+Shift changes group."
-msgstr "Control+Shift mení skupinu"
+msgstr "Control+Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "funguje ako Shift so zámkom. Shift ruší Caps."
+msgstr "Caps Lock funguje ako Shift so zámkom. Shift ruší Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative group."
-msgstr "Použiť LED klávesnice pre zobrazenie alternatívnej skupiny"
+msgstr ""
+"Použiť LED na klávesnici pre zobrazenie alternatívneho rozloženia kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Stlačenie pravého Win-klávesu vyberá 3. úroveň"
+msgstr "Stlačenie pravého Win-klávesu volí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Stlačenie ľavého Win-klávesu vyberá 3. úroveň"
+msgstr "Stlačenie ľavého Alt-klávesu volí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Meta is mapped to the Win-keys."
 msgstr "Meta je mapovaný na Win-klávesy."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Menu key to choose 3rd level."
-msgstr "Stlačenie klávesu Menu vyberá 3. úroveň"
+msgstr "Stlačenie klávesu Menu volí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes group."
-msgstr "Ľavý Ctrl mení skupinu"
+msgstr "Ľavý Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes group."
-msgstr "Kláves Menu mení skupinu"
+msgstr "Kláves Menu mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Control changes group."
-msgstr "Alt+Control mení skupinu"
+msgstr "Alt+Control mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches group while pressed."
-msgstr "Pravý Win-kláves prepína skupinu pri stlačení"
+msgstr "Pravý Win-kláves prepína rozloženie počas stlačenia."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "Port a mód"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Elektronické perá"
 
 #. Activate tablet checkbox
-#, fuzzy
 msgid "Activate This Tablet"
-msgstr "3D akcelerácia"
+msgstr "Povoliť tento tablet"
 
 #. Group box title for the tablet vendor and name selection
-#, fuzzy
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Model: výber výrobcu a mena..."
+msgstr "Tablet: výber výrobcu a mena"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "Pripojený k:"
+msgstr "Pripojený k portu"
 
 #. Group box title for tablet mode
-#, fuzzy
 msgid "Primary Tablet Mode"
-msgstr "Primárne nastavenie"
+msgstr "Mód primárneho tabletu"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Mód pera alebo gumy"
 
 #  Maximum length: 20  characters
 #. Radiobutton for relative tablet mode
@@ -1048,7 +996,7 @@ msgstr "Relatívny"
 #  Maximum length: 20  characters
 #. Radiobutton for absolute tablet mode
 msgid "Absolute"
-msgstr "Absolútne"
+msgstr "Absolútny"
 
 #  Maximum length: 20  characters
 #. Combobox item text for tablet port: USB
@@ -1096,13 +1044,12 @@ msgstr "Pridať pero"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "Nastavenia pera a gumy"
 
 #  Maximum length: 40  characters
 #. Tab title: Pen properties
-#, fuzzy
 msgid "Pen Properties"
-msgstr "Vlastnosti..."
+msgstr "Vlastnosti pera"
 
 #  Maximum length: 40  characters
 #. Tab title: Pad properties
@@ -1111,21 +1058,18 @@ msgid "Pad Properties"
 msgstr "Vlastnosti..."
 
 #. Tab title: Eraser properties
-#, fuzzy
 msgid "Eraser Properties"
-msgstr "Špeciálne vlastnosti myši..."
+msgstr "Vlastnosti gumy"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Priradiť dotykovú obrazovku na obrazovku č. %1"
 
 #. Group box title for the touchscreen vendor and name selection
-#, fuzzy
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Model: výber výrobcu a mena..."
+msgstr "Dotyková obrazovka: výber výrobcu a mena"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
@@ -1133,9 +1077,8 @@ msgid ""
 "kill the server."
 msgstr ""
 "<b>Záverečné kroky</b><hr>Posledný krok je uloženie nového nastavenia. Pred "
-"uložením sa doporučuje otestovať nové nastavenie. Ak bude testovací server "
-"zobrazovať poškodenú plochu, stlačte <b>[ Ctrl+Alt+Backspace ]</b>, čím ho "
-"ukončíte."
+"uložením doporučujeme otestovať nové nastavenie. Ak testovací server zobrazí "
+"poškodenú plochu, stlačte <b>[ Ctrl+Alt+Backspace ]</b>, čím ho ukončíte."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1147,7 +1090,6 @@ msgstr ""
 
 #  Maximum length: 60  characters
 #. Activate VNC password protection checkbox
-#, fuzzy
 msgid "Activate Password Protection"
 msgstr "Zapnúť ochranu heslom"
 
@@ -1158,25 +1100,21 @@ msgstr "Heslo"
 
 #  Maximum length: 60  characters
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "<Zadajte nové heslo...>"
+msgstr "<Zadajte nové heslo>"
 
 #  Maximum length: 60  characters
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "<Zadajte nové heslo...>"
+msgstr "<Zmeniť heslo>"
 
 #  Maximum length: 40  characters
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "Overte heslo"
+msgstr "<Overenie hesla>"
 
 #  Maximum length: 40  characters
 #. Activate HTTP access checkbox
-#, fuzzy
 msgid "Activate HTTP Access"
 msgstr "Povoliť HTTP prístup"
 
@@ -1189,7 +1127,7 @@ msgstr "Povoliť viacero VNC pripojení"
 #  Maximum length: 40  characters
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
-msgstr "HTTP Port"
+msgstr "HTTP port"
 
 #  RTF text: no limit
 #. VNC message box appearing if password strings doesn't match
@@ -1244,21 +1182,20 @@ msgstr "SaX2: Importujem dáta..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr "Inicializujem vyrovnávaciu pamäť"
+msgstr "Inicializujem vyrovnávaciu pamäť..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
+msgstr "<b>Zlyhalo ukladanie nastavenia</b><hr>Bol vytvorený tento záznam:"
 
 #. Message box test: configuration has been saved
-#, fuzzy
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Nastavenie bolo uložené:</b><hr>Vaše zmeny sa prejavia pri budúcom štarte "
-"grafického systému."
+"<b>Nastavenie bolo uložené</b><hr>Vaše zmeny sa prejavia pri budúcom štarte "
+"grafického systému. Želáte si ukončiť SaX2?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1266,6 +1203,9 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>Zlyhalo otestovanie nastavenia</b><hr>Ďalšie informácie nájdete v "
+"súbore<tt>/var/log/Xorg.99.log</tt>. Nasledujúci záznam bol vytvorený "
+"volaním:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1276,11 +1216,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Rozličné voľby pre kompatibilitu"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr "Priradiť znak Euro na kláves 5"
+msgstr "Priradiť znak Euro na kláves 5."
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
@@ -1288,11 +1228,11 @@ msgstr "Chovanie klávesu Caps Lock"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr "Chovanie kláves Alt/Win"
+msgstr "Chovanie klávesu Alt/Win"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr "Priradenie znaku pre Euro určitým klávesám"
+msgstr "Priradenie znaku pre Euro určitým klávesom"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
@@ -1320,20 +1260,19 @@ msgstr "Prehodiť Ctrl a Caps Lock"
 
 #. XKBFile extension text
 msgid "Ctrl key position"
-msgstr "Pozícia klávesu Control"
+msgstr "Pozícia klávesu Ctrl"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr ""
+msgstr "Špeciálne klávesy (Ctrl+Alt+&lt;kláves&gt;) ovládané serverom."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Stlačenie pravého Control vyberá 3. úroveň"
+msgstr "Stlačenie pravého Ctrl volí 3. úroveň."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
-msgstr "Ctrl+Shift mení klávesnicu."
+msgstr "Ctrl+Shift mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
@@ -1344,23 +1283,20 @@ msgid "Add the EuroSign to the 2 key."
 msgstr "Priradiť znak Euro na kláves 2."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
-msgstr "Pozícia klávesu Control"
+msgstr "-kláves pozícia klávesu Compose"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl changes group."
-msgstr "Alt+Control mení skupinu"
+msgstr "Alt+Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Group Shift/Lock behavior"
-msgstr "Zoskupiť chovanie Shift/Lock"
+msgstr "Chovanie Shift/Lock pri menení rozloženia kláves"
 
 #. XKBFile extension text
 msgid "Arabic"
-msgstr "Arabský"
+msgstr "Arabské"
 
 # NP
 #. XKBFile extension text
@@ -1395,155 +1331,155 @@ msgstr "Séria PC-98xx"
 
 #. XKBFile extension text
 msgid "Estonia"
-msgstr "Estónsko"
+msgstr "Estónske"
 
 # MM
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr "Myanmar"
+msgstr "Myanmarské"
 
 #. XKBFile extension text
 msgid "Norway"
-msgstr "Nórsko"
+msgstr "Nórske"
 
 #. XKBFile extension text
 msgid "Germany"
-msgstr "Nemecko"
+msgstr "Nemecké"
 
 # MN
 #. XKBFile extension text
 msgid "Mongolia"
-msgstr "Mongolsko"
+msgstr "Mongolské"
 
 # BT
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr "Bhutan"
+msgstr "Bhutanské"
 
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr "Bangladéš"
+msgstr "Bangladéšske"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr "Latiská Amerika"
+msgstr "Latinsko-americké"
 
 #. XKBFile extension text
 msgid "Belgium"
-msgstr "Belgicko"
+msgstr "Belgické"
 
 #. XKBFile extension text
 msgid "Finland"
-msgstr "Fínsko"
+msgstr "Fínske"
 
 #. XKBFile extension text
 msgid "Israel"
-msgstr "Izrael"
+msgstr "Izraelské"
 
 #. XKBFile extension text
 msgid "Sweden"
-msgstr "Švédsko"
+msgstr "Švédske"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr "Rusko"
+msgstr "Ruské"
 
 #. XKBFile extension text
 msgid "Portugal"
-msgstr "Portugalsko"
+msgstr "Portugalské"
 
 #. XKBFile extension text
 msgid "Korean"
-msgstr "Kórejský"
+msgstr "Kórejské"
 
 #. XKBFile extension text
 msgid "Maori"
-msgstr "Maori"
+msgstr "Maorské"
 
 #. XKBFile extension text
 msgid "Uzbekistan"
-msgstr "Uzbekistan"
+msgstr "Uzbekistanské"
 
 #. XKBFile extension text
 msgid "Bulgaria"
-msgstr "Bulharsko"
+msgstr "Bulharské"
 
 #. XKBFile extension text
 msgid "Thailand"
-msgstr "Thajsko"
+msgstr "Thajské"
 
 #. XKBFile extension text
 msgid "India"
-msgstr "India"
+msgstr "Indické"
 
 #. XKBFile extension text
 msgid "Bengali"
-msgstr "Bengálsky"
+msgstr "Bengálske"
 
 #. XKBFile extension text
 msgid "Switzerland"
-msgstr "Švajčiarsko"
+msgstr "Švajčiarske"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr "Laos"
+msgstr "Laoské"
 
 #. XKBFile extension text
 msgid "Japan"
-msgstr "Japonsko"
+msgstr "Japonské"
 
 # SY
 # fuzzy
 #. XKBFile extension text
 msgid "Syria"
-msgstr "Surinam"
+msgstr "Sýrske"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr "Česko"
+msgstr "České"
 
 #. XKBFile extension text
 msgid "Belarus"
-msgstr "Bielorusko"
+msgstr "Bieloruské"
 
 #. XKBFile extension text
 msgid "Tajikistan"
-msgstr "Tadžikistan"
+msgstr "Tadžikistánske"
 
 #. XKBFile extension text
 msgid "Denmark"
-msgstr "Dánsko"
+msgstr "Dánske"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr "Slovinsko"
+msgstr "Slovinské"
 
 #. XKBFile extension text
 msgid "Malta"
-msgstr "Malta"
+msgstr "Maltské"
 
 # AZ
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr "Azerbajdžan"
+msgstr "Azerbajdžánske"
 
 #. XKBFile extension text
 msgid "Lithuania"
-msgstr "Lotyšsko"
+msgstr "Litevské"
 
 # VN
 # fuzzy
 #. XKBFile extension text
 msgid "Vietnam"
-msgstr "Vietnam"
+msgstr "Vietnamské"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr "Faerské ostrovy"
+msgstr "Fajerské ostrovy"
 
 #. XKBFile extension text
 msgid "South Africa"
-msgstr "Južná Afrika"
+msgstr "Juhoafrické"
 
 #. XKBFile extension text
 msgid "Farsi"
@@ -1551,99 +1487,99 @@ msgstr "Farsi"
 
 #. XKBFile extension text
 msgid "Slovakia"
-msgstr "Slovensko"
+msgstr "Slovenské"
 
 # MV
 # fuzzy
 #. XKBFile extension text
 msgid "Maldives"
-msgstr "Mali"
+msgstr "Maledivské"
 
 #. XKBFile extension text
 msgid "Iceland"
-msgstr "Island"
+msgstr "Islandské"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr "Chorvátsko"
+msgstr "Chorvátske"
 
 #. XKBFile extension text
 msgid "Latvia"
-msgstr "Litva"
+msgstr "Lotyšské"
 
 #. XKBFile extension text
 msgid "Albania"
-msgstr "Albánsko"
+msgstr "Albánske"
 
 #. XKBFile extension text
 msgid "Italy"
-msgstr "Taliansko"
+msgstr "Talianske"
 
 #. XKBFile extension text
 msgid "Greece"
-msgstr "Grécko"
+msgstr "Grécke"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr "Spojené kráľovstvo"
+msgstr "Britské"
 
 #. XKBFile extension text
 msgid "France"
-msgstr "Francúzsko"
+msgstr "Francúzske"
 
 # AM
 #. XKBFile extension text
 msgid "Armenia"
-msgstr "Arménsko"
+msgstr "Arménske"
 
 #. XKBFile extension text
 msgid "Pakistan"
-msgstr "Pakistan"
+msgstr "Pakistanské"
 
 #. XKBFile extension text
 msgid "Poland"
-msgstr "Poľsko"
+msgstr "Poľské"
 
 # KG
 # fuzzy
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "Kirgistan"
+msgstr "Kirgistanské"
 
 #. XKBFile extension text
 msgid "Ireland"
-msgstr "Írsko"
+msgstr "Írske"
 
 #. XKBFile extension text
 msgid "Hungary"
-msgstr "Maďarsko"
+msgstr "Maďarské"
 
 # KH
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr "Kambodža"
+msgstr "Kambodžské"
 
 #. XKBFile extension text
 msgid "Spain"
-msgstr "Španielsko"
+msgstr "Španielske"
 
 #. XKBFile extension text
 msgid "Ukraine"
-msgstr "Ukrajina"
+msgstr "Ukrajinské"
 
 #. XKBFile extension text
 msgid "Romania"
-msgstr "Rumunsko"
+msgstr "Rumunské"
 
 # KZ
 # fuzzy
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr "Kazachstan"
+msgstr "Kazachstanské"
 
 #. XKBFile extension text
 msgid "Georgia"
-msgstr "Gruzínsko"
+msgstr "Gruzínske"
 
 #. XKBFile extension text
 msgid "U.S. English"
@@ -1651,7 +1587,7 @@ msgstr "Americká angličtina"
 
 #. XKBFile extension text
 msgid "Turkish"
-msgstr "Turecko"
+msgstr "Turecké"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
@@ -1659,15 +1595,15 @@ msgstr "Séria PC-98xx"
 
 #. XKBFile extension text
 msgid "Netherlands"
-msgstr "Holandsko"
+msgstr "Holandské"
 
 #. XKBFile extension text
 msgid "Macedonia"
-msgstr "Macedónsko"
+msgstr "Macedónske"
 
 #. XKBFile extension text
 msgid "Canada"
-msgstr "Kanada"
+msgstr "Kanadské"
 
 # LK
 #. XKBFile extension text
@@ -1686,22 +1622,22 @@ msgstr "Srbsko a Čierna hora"
 # BR
 #. XKBFile extension text
 msgid "Brazil"
-msgstr "Brazília"
+msgstr "Brazílske"
 
 # GH
 #. XKBFile extension text
 msgid "Ghana"
-msgstr "Ghana"
+msgstr "Ghanské"
 
 # AD
 #. XKBFile extension text
 msgid "Andorra"
-msgstr "Andora"
+msgstr "Andorské"
 
 # AF
 #. XKBFile extension text
 msgid "Afghanistan"
-msgstr "Afganistan"
+msgstr "Afganistanské"
 
 #. XKBFile extension text
 msgid "Esperanto"
@@ -1709,7 +1645,7 @@ msgstr "Esperanto"
 
 #. XKBFile extension text
 msgid "Turkey"
-msgstr "Turecko"
+msgstr "Turecké"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1764,31 +1700,7 @@ msgid "Display"
 msgstr "Obrazovka"
 
 msgid "Configuration on display"
-msgstr "Konfigurácia obrazovky"
+msgstr "Nastavenie na obrazovke"
 
 msgid "Idle timer..."
 msgstr "Čakanie..."
-
-#~ msgid ""
-#~ "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and "
-#~ "your system does not support changes for resolution and/or color settings."
-#~ msgstr ""
-#~ "<b>Prosím pamätajte:</b><hr>Nastavenie je založené na <i>framebuffer-u</"
-#~ "i> a Váš systém nepodporuje zmenu rozlíšenia ani farebnej hĺbky."
-
-#  Maximum length: 20  characters
-#~ msgid "VNC"
-#~ msgstr "VNC"
-
-#, fuzzy
-#~ msgid "VNC Server"
-#~ msgstr "Systém X11"
-
-#  Maximum length: 60  characters
-#, fuzzy
-#~ msgid "Allow Access to Display Using VNC Protocol"
-#~ msgstr "Povoliť prístup k obrazovke pomocou VNC protokolu"
-
-#  Maximum length: 20  characters
-#~ msgid "VNC Options"
-#~ msgstr "Možnosti VNC"

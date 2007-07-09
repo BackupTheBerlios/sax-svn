@@ -1,6 +1,6 @@
-# translation of sax.el.po to Ελληνικά
+# translation of sax.el.po to Greek
 # Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-#
+# 
 # Filippos Papadopoulos-csst9923@cs.uoi.gr    <Bill Giannakopoulos - billyg@acn.gr>, 2003.
 # Filippos Papadopoulos-csst9923@cs.uoi.gr    <Bill Giannakopoulos - BillG@remalia.com>, 2003, 2005.
 # Hellenic SuSE Translators Group <hstg@billg.gr>, 2004.
@@ -8,13 +8,14 @@
 # Hellenic SuSE Translators Group <filip@cs.uoi.gr>, 2005.
 # Hellenic SuSE Translation Team <hstg@billg.gr>, 2005.
 # Vasileios Giannakopoulos <billg@hellug.gr>, 2007.
+# Kostas Boukouvalas <quantis@hellug.gr>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.el\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-01-29 20:48+0000\n"
-"Last-Translator: Vasileios Giannakopoulos <billg@hellug.gr>\n"
-"Language-Team: Ελληνικά\n"
+"PO-Revision-Date: 2007-04-02 18:29+0300\n"
+"Last-Translator: Kostas Boukouvalas <quantis@hellug.gr>\n"
+"Language-Team: Greek <i18ngr@lists.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,6 +46,9 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>Η επιτάχυνση 3D δεν υποστήριζεται</b><hr>Το SaX2 δεν είναι σε θέση να "
+"προσφέρει ενεργοποίηση του υποσυστήματος 3D επειδή η κάρτα γραφικών σας δεν "
+"υποστηρίζει 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -53,6 +57,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>Η επιτάχυνση 3D δεν υποστηρίζεται</b><hr>Το SaX2 δεν είναι σε θέση να "
+"προσφέρει ενεργοποίηση του υποσυστήματος 3D επειδή το Xinerama βασίζεται σε "
+"λειτουργία διπλής κεφαλής. Η επέκταση Xorg Xinerama για το συνδυασμό "
+"γραφικών οθονών δεν υποστηρίζει 3D σε όλες τις κεφαλές"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -60,11 +68,11 @@ msgstr "Αυτόματη ρύθμιση συστήματος γραφικών"
 
 #. Caption text for informing the user
 msgid "Information..."
-msgstr ""
+msgstr "Πληροφορίες..."
 
 #. Caption text for the main window
 msgid "SaX2: X11 Configuration"
-msgstr ""
+msgstr "SaX2: Ρύθμιση Χ11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
@@ -75,6 +83,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>Η ανάλυση οθόνης άλλαξε</b><hr>Η ανάλυση οθόνης έχει υιοθετήσει τη νεα "
+"εμφάνιση."
 
 #. Help Button text
 msgid "&Help"
@@ -82,7 +92,7 @@ msgstr "&Βοήθεια"
 
 #. Ok Button text
 msgid "O&K"
-msgstr ""
+msgstr "Ο&Κ"
 
 #. Yes Button text
 msgid "&Yes"
@@ -155,7 +165,7 @@ msgstr "Ιδιότητες οθόνης επαφής"
 
 #. Short description of the VNC module
 msgid "Remote Access"
-msgstr ""
+msgstr "Απομακρυσμένη Πρόσβαση"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -163,7 +173,7 @@ msgstr "Ιδιότητες απομακρυσμένης πρόσβασης"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
-msgstr ""
+msgstr "Προβολή %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -207,15 +217,15 @@ msgstr "Ενεργοποίηση ροδέλας ποντικιού"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "Αντιστροφή Άξονα Χ"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "Αντιστροφή Άξονα Υ"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr ""
+msgstr "Ενεργοποίηση Λειτουργίας Κουμπιου Αριστερόχειρα"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -422,6 +432,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Λανθασμένος συνδυασμός Χρώματος/Ανάλυσης:</b><hr><nobr>Η επιλεγμένη "
+"ανάλυση και/ή ρυθμίσεις χρωμάτων</nobr> δεν υποστηρίζονται από το "
+"framebuffer των καρτών γραφικών."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -601,9 +614,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Συμπεριφορά πλήκτρου Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Θέση του Control Key"
+msgstr "Θέση του Ευρώ"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -615,79 +627,85 @@ msgstr "Κανένα"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr ""
+msgstr "Το Αριστερό Alt πλήκτρο αλλάζει ομάδα κατα το πάτημα του."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr ""
+msgstr "Τα δυο Ctrl πλήκτρα μαζί αλλάζουν ομάδα."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr ""
+msgstr "Το Δεξί Shift πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
-msgstr ""
+msgstr "Το Αριστερό Win πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr ""
+msgstr "Το Αριστερό Alt πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr ""
+msgstr "Τα δυο Win πλήκτρα μαζί αλλάζουν ομάδα."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr ""
+msgstr "Το Δεξί Ctrl πλήκτρο αλλάζει ομάδα κατα το πάτημα του."
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
-msgstr ""
+msgstr "Το Αριστερό Left πλήκτρο εναλλάσεται με το Αριστερό Win πλήκτρο."
 
 #. XKBFile extension text
 msgid "Default numpad keys."
-msgstr ""
+msgstr "Προκαθορισμένα πλήκτρα αριθμών."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Προσθήκη του nobreakspace keysym στο πλήκτρο space"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"Χρησιμοποίηση του keypad με προσθήκες unicode (βέλη και μαθηματικούς "
+"συντελεστές)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Εξαναγκασμός standard legacy keypad"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
+"Το CapsLock χρησιμοποιεί εσωτερική κεφαλαιοποίηση. Το Shift δεν επηρεάζει το "
+"CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
-msgstr ""
+msgstr "Επιλογή εμφάνισης keypad"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
-msgstr ""
+msgstr "Alt+CapsLock αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Το πλήκτρο space εμφανίζει nobreakspace σε δεύτερο επίπεδο."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr ""
+"Το CapsLock συμπεριφέρεται ως Shift με το κλείδωμα. ΤοShift δεν επηράζει το "
+"CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
+msgstr "Το CapsLock χρησιμοποιεί εσωτερική κεφαλαιοποίηση. Shift"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Το πλήκτρο space εμφανίζει nobreakspace σε τρίτο επίπεδο."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
@@ -748,7 +766,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr ""
+msgstr "Το Shift+CapsLock αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
@@ -756,7 +774,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "Το Δεξί Control πλήκτρο δουλεύει όπως το Αριστερό Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -764,15 +782,15 @@ msgstr "Το πλήκτρο Ctrl κάτω αριστερά"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr ""
+msgstr "Πάτημα οποιποιουδήποτε Win πλήκτρου επιλέγει 3ο επίπεδο."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr ""
+msgstr "Το Αριστερό Alt πλήκτρο επιλέγει 3ο επίπεδο."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
-msgstr ""
+msgstr "Το Δεξία Ctrl πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
@@ -816,7 +834,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr ""
+msgstr "Το Δεξί Win πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
@@ -832,7 +850,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
-msgstr ""
+msgstr "Το Αριστερό Shift πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
@@ -844,11 +862,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr ""
+msgstr "Τα δύο πλήκτρα Alt μαζί αλλάζουν ομάδα."
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
-msgstr ""
+msgstr "Το πλήκτρο CapsLock αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
@@ -856,7 +874,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr ""
+msgstr "Πατήστε οποιοδήποτε από τα πλήκτρα Alt για την επιλογή 3ου επιπέδου."
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
@@ -896,31 +914,31 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr ""
+msgstr "Πατήστε Δεξί Control για την επιλογή 3ου επιπέδου."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
-msgstr ""
+msgstr "Το Alt+Shift αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr ""
+msgstr "Το Control+Shift αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr ""
+msgstr "Το CapsLock συμπεριφέρεται όπως και το Shift με το κλείδωμα. "
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr "Χρήση."
+msgstr "Χρησιμοποίηση του LED πληκτρολογίου για την προβολή άλλης ομάδας."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "3ος."
+msgstr "Πατήστε το Δεξί Win πλήκτρο για την επιλογή 3ου επιπέδου."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr ""
+msgstr "Πατήστε το Αριστερό Alt πλήκτρο για να επιλέξετε 3ο επίπεδο."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
@@ -928,19 +946,19 @@ msgstr "Το Meta αντιστοιχίζεται στα πλήκτρα-Win."
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr ""
+msgstr "Πατήστε το πλήκτρο Menu για να επιλέξετε 3ο επίπεδο."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
-msgstr ""
+msgstr "Το Αριστερό Ctrl πλήκτρο αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr ""
+msgstr "Το πλήκτρο Menu αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr ""
+msgstr "Το Alt+Control αλλάζουν group."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
@@ -996,11 +1014,11 @@ msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr ""
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr ""
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1016,7 +1034,7 @@ msgstr "Προσθήκη σβήστρας"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
-msgstr ""
+msgstr "Προσθήκη Γραφίδας"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1028,7 +1046,7 @@ msgstr "Ιδιότητες πένας"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
-msgstr ""
+msgstr "Ιδιότητες Γραφίδας"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1056,11 +1074,12 @@ msgstr ""
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "Απομακρυσμένος Χειρισμός Διακομιστή Χ"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
 msgstr ""
+"Επίτρεψη πρόσβασης στην οθόνη και το πληκτρολόγιο/ποντίκι του X Server σας"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1088,7 +1107,7 @@ msgstr "Ενεργοποίηση πρόσβασης HTTP"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
-msgstr ""
+msgstr "Επίτρεψε Πολλαπλές Συνδέσεις"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
@@ -1099,6 +1118,8 @@ msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
+"<b>Αναντιστοιχία Συνθηματικού Απομακρυσμένης Χρήσης</b><hr>Η πρώτη και η "
+"δεύτερη έκδοση του συνθηματικού δεν ταιριάζουν."
 
 #. VNC message box appearing if password is too short
 msgid ""
@@ -1171,23 +1192,23 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Διάφορες επιλογές συμβατότητας"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Προσθήκη του πλήκτρου του Ευρώ στο πλήκτρο 5."
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "Συμπεριφορά πλήκτρου CapsLock"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Συμπεριφορά πλήκτρου Alt/Win"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Προσθήκη του συμβόλου τουΕυρώ σε συγκεκριμένα πλήκτρα"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
@@ -1215,7 +1236,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Ctrl key position"
-msgstr ""
+msgstr "Θέση κλειδιού Ctrl"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
@@ -1223,19 +1244,19 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr ""
+msgstr "Πατήστε το Δεξί Ctrl για την επιλογή 3ου επιπέδου."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
-msgstr ""
+msgstr "Ctrl+Shift αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Προσθήκη του συμβόλου του Ευρώ στο πλήκτρο Ε."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Προσθήκη του συμβόλου Ευρώ στο πλήκτρο 2."
 
 #. XKBFile extension text
 msgid "key Compose key position"
@@ -1243,11 +1264,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
-msgstr ""
+msgstr "Alt+Ctrl αλλάζει ομάδα."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Συμπεριφορά Ομάδας Shift/Lock"
 
 #. XKBFile extension text
 msgid "Arabic"
@@ -1259,11 +1280,11 @@ msgstr "Νεπάλ"
 
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
-msgstr ""
+msgstr "Λαϊκή Δημοκρατία του Κονγκό"
 
 #. XKBFile extension text
 msgid "Korea, Republic of"
-msgstr ""
+msgstr "Δημοκρατία της Κορέας"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1275,7 +1296,7 @@ msgstr "Νιγηρία"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr ""
+msgstr "Ιαπωνία (Σειρές PC-98xx)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1287,7 +1308,7 @@ msgstr "Μιανμάρ"
 
 #. XKBFile extension text
 msgid "Norway"
-msgstr ""
+msgstr "Νορβηγία"
 
 #. XKBFile extension text
 msgid "Germany"
@@ -1307,7 +1328,7 @@ msgstr "Μπανγκλαντες"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Λατινικής Αμερικής"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1323,11 +1344,11 @@ msgstr "Ισραήλ"
 
 #. XKBFile extension text
 msgid "Sweden"
-msgstr ""
+msgstr "Σουηδία"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Ρωσσία"
 
 #. XKBFile extension text
 msgid "Portugal"
@@ -1367,7 +1388,7 @@ msgstr "Ελβετία"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr ""
+msgstr "Λάος"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1379,7 +1400,7 @@ msgstr "Συρία"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Τσεχία"
 
 #. XKBFile extension text
 msgid "Belarus"
@@ -1409,7 +1430,7 @@ msgstr "Αζερμπαϊτζάν"
 msgid "Lithuania"
 msgstr "Λιθουανία"
 
-#
+# 
 #. XKBFile extension text
 msgid "Vietnam"
 msgstr "Βιετνάμ"
@@ -1424,7 +1445,7 @@ msgstr "Νότια Αφρική"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "Φαρσί"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1464,7 +1485,7 @@ msgstr "Ηνωμένο Βασίλειο"
 
 #. XKBFile extension text
 msgid "France"
-msgstr ""
+msgstr "Γαλλία"
 
 #. XKBFile extension text
 msgid "Armenia"
@@ -1516,7 +1537,7 @@ msgstr "Γεωργία"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "Αγγλικά Η.Π.Α."
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1524,7 +1545,7 @@ msgstr "Τούρκικα"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "Σειρές PC-98xx"
 
 #. XKBFile extension text
 msgid "Netherlands"
@@ -1536,7 +1557,7 @@ msgstr "Π.Γ.Δ.Μ."
 
 #. XKBFile extension text
 msgid "Canada"
-msgstr ""
+msgstr "Καναδάς"
 
 #. XKBFile extension text
 msgid "Sri Lanka"

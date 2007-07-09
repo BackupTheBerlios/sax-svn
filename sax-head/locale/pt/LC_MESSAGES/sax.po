@@ -1,21 +1,21 @@
-# translation of sax.pt.po to portuguese
+# translation of sax.pt.po to pt
 # domain "sax.mo"
-# Copyright (C) 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2007 Free Software Foundation, Inc.
+#
 # Pedro Corte-Real, 2005.
 # Javier Moreno<Javier.moreno@alufis35.uv.es>, 2000.
-# Antonio Cardoso Martins <digiplan@netvisao.pt>, 2005, 2006.
-#
+# Antonio Cardoso Martins <digiplan@netvisao.pt>, 2005, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.pt\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-03-13 23:31+0000\n"
+"PO-Revision-Date: 2007-06-17 12:46+0100\n"
 "Last-Translator: Antonio Cardoso Martins <digiplan@netvisao.pt>\n"
-"Language-Team: portuguese\n"
+"Language-Team: pt <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -24,7 +24,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -41,6 +41,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>Aceleração 3D não é suportada</b><hr>O SaX2 não pode oferecer a activação "
+"do subsistema 3D porque a sua placa gráfica ou driver não suportam 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -49,6 +51,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>Aceleração 3D não suportada</b><hr>O SaX2 não pode oferecer a activação "
+"do subsistema 3D porque o modo Xinerama de duas cabeças está a ser "
+"utilizado. A extensão Xorg Xinerama para combinar monitores gráficos não "
+"suporta 3D em todas as cabeças"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -71,15 +77,16 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>A dimensão do monitor foi alterada</b><hr>A dimensão do monitor foi "
+"adaptada para o novo layout."
 
 #. Help Button text
 msgid "&Help"
 msgstr "&Ajuda"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
-msgstr "&OK"
+msgstr "O&K"
 
 #. Yes Button text
 msgid "&Yes"
@@ -151,18 +158,16 @@ msgid "Touchscreen Properties"
 msgstr "Propriedades do Ecrã sensitivo"
 
 #. Short description of the VNC module
-#, fuzzy
 msgid "Remote Access"
-msgstr "Propriedades do Acesso Remoto"
+msgstr "Acesso Remoto"
 
 #. title of module dialog
 msgid "Remote Access Properties"
 msgstr "Propriedades do Acesso Remoto"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Ecrã"
+msgstr "Monitor %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -213,9 +218,8 @@ msgid "Invert Y-Axis"
 msgstr "Inverter Eixo do Y"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Activar Emulação de 3 Botões"
+msgstr "Activar Mapeamento de Botão para Esquerdino"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -419,6 +423,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Combinação inválida de Cor/Resolução</b><hr><nobr>As definições "
+"escolhidas de resolução e/ou cor</nobr> não são suportadas pelo framebuffer "
+"das placas gráficas."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -598,9 +605,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Comportamento da Tecla Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Posição da Tecla Control"
+msgstr "Posição da Tecla Euro"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -639,99 +645,95 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Tecla Ctrl direita muda o grupo enquanto premida."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta é associada à tecla Win esquerda."
+msgstr "Alt Esquerdo é trocado por tecla Win esquerda"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Rota padrão OK."
+msgstr "Teclas numéricas pré-definidas."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "A adicionar o keysym nobreakspace à tecla de espaço"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"Utilizar o teclado numérico com adições unicode (setas e operadores "
+"matemáticos)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Forçar teclado numérico clássico standard"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "CapsLock utiliza capitulação interna. Shift não cancela CapsLock."
+msgstr "CapsLock utiliza capitulação interna. Shift não afecta o CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
-msgstr ""
+msgstr "Selecção do layout do teclado numérico"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Shift+CapsLock muda o grupo."
+msgstr "Alt+CapsLock muda o grupo."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Tecla espaço retorna nobreakspace no segundo nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "CapsLock funciona como Shift com bloqueio. Shift não cancela CapsLock."
+msgstr "CapsLock funciona como Shift com bloqueio. Shift não afecta CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock utiliza capitulação interna. Shift cancela CapsLock."
+msgstr "CapsLock utiliza capitulação interna. Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Tecla espaço retorna nobreakspace no terceiro nível."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Trocar keycodes de duas teclas quando os teclados Mac são erradamente "
+"detectados pelo kernel."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift com o teclado numérico funciona como no MS Windows."
+msgstr "Teclas numéricas funcionam como com Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "A tecla de bloqueio Kana está a trancar"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Tecla espaço retorna nobreakspace no quarto nível."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "Tecla Win direita é o Compose."
+msgstr "Tecla Win esquerda é o Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Pressione a tecla Alt direita para escolher o 3º nível."
+msgstr ""
+"Prima a tecla Alt Direita para escolher o 3º nível, Shift+Alt Direita é "
+"Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Tecla de espaço retorna um espaço em qualquer nível."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Opções de Teclado Japonês"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock funciona como Shift com bloqueio. Shift cancela CapsLock."
+msgstr "CapsLock actua como Shift com bloqueio. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1002,14 +1004,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1024,22 +1024,20 @@ msgid "Add Eraser"
 msgstr "Adicionar Borracha"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Adicionar Caneta"
+msgstr "Adicionar Almofada"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr "Parametros da Caneta ou Borracha"
+msgstr "Parâmetros da Caneta ou Borracha"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
 msgstr "Propriedades da Caneta"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Propriedades da Caneta"
+msgstr "Propriedades da Almofada"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1066,13 +1064,12 @@ msgstr ""
 "para terminar o servidor."
 
 #. Tab title: VNC Server configuration
-#, fuzzy
 msgid "X Server Remote Control"
-msgstr "Configurações do Servidor X"
+msgstr "Controlo Remoto do Servidor X"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "Permitir acesso ao monitor e teclado/rato do seu Servidor X"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1099,43 +1096,38 @@ msgid "Activate HTTP Access"
 msgstr "Activar Acesso por HTTP"
 
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
-msgstr "Permitir Múltiplas Ligações VNC"
+msgstr "Permitir Múltiplas Ligações"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "Porto HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>Palavra passe do VNC Não Coincide</b><hr>A primeira e a segunda versão da "
-"palavra passe não coincidem."
+"<b>Palavra passe de Acesso Remoto não Coincide</b><hr>A primeira e a segunda "
+"versão da palavra passe não coincidem."
 
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>Falha na Palavra passe do VNC</b><hr>O campo da palavra passe está vazio "
-"ou a palavra passe é demasiado pequena. Digite uma palavra passe com pelo "
-"menos seis caracteres."
+"<b>Falha na Palavra passe de Acesso Remoto</b><hr>O campo da palavra passe "
+"está vazio ou a palavra passe é demasiado curta. Digite uma palavra passe "
+"com pelo menos seis caracteres."
 
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>Falha na Palavra passe do VNC</b><hr>O campo da palavra passe está vazio "
-"ou a palavra passe é demasiado pequena. Digite uma palavra passe com pelo "
-"menos seis caracteres."
+"<b>Falha na Palavra passe de Acesso Remoto</b><hr>A palavra passe é "
+"demasiado longa. Digite uma palavra passe com o máximo de oito caracteres."
 
 #. Install missing packages box
 msgid ""
@@ -1186,15 +1178,14 @@ msgstr ""
 "partir da instância chamada:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-#, fuzzy
 msgid ""
 "<b>Remote Access configuration information</b><hr>The Remote Access service "
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>Informação de configuração VNC</b><hr>O serviço VNC requer que o porto "
-"5900 e o porto HTTP (5800 por pré-definição) estejam abertos na firewall. "
-"Poder fazer esta configuração no YaST."
+"<b>Informação de configuração de Acesso Remoto</b><hr>O serviço de Acesso "
+"Remoto requer que o porto 5900 e o porto HTTP (5800 por pré-definição) "
+"estejam abertos na firewall. Poder fazer esta configuração no YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1287,14 +1278,12 @@ msgstr "Nepal"
 
 # name for LAO
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "República Democrática Popular do Laos"
+msgstr "Congo, República Democrática do"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "República Checa"
+msgstr "Coreia, República da"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1307,7 +1296,7 @@ msgstr "Nigéria"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr ""
+msgstr "Japão (Séries PC-98xx)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1319,9 +1308,8 @@ msgid "Myanmar"
 msgstr "Mianmar"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Norway"
-msgstr "Normal"
+msgstr "Noruega"
 
 #. XKBFile extension text
 msgid "Germany"
@@ -1343,7 +1331,7 @@ msgstr "Bangladesh"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "América Latina"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1358,13 +1346,12 @@ msgid "Israel"
 msgstr "Israel"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Sweden"
-msgstr "Ecrã"
+msgstr "Suécia"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Rússia"
 
 #. XKBFile extension text
 msgid "Portugal"
@@ -1404,9 +1391,8 @@ msgid "Switzerland"
 msgstr "Suíça"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Laos"
-msgstr "Disposição"
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1418,7 +1404,7 @@ msgstr "Síria"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Czechia"
 
 #. XKBFile extension text
 msgid "Belarus"
@@ -1463,7 +1449,7 @@ msgstr "África do Sul"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1504,9 +1490,8 @@ msgid "United Kingdom"
 msgstr "Reino Unido"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "France"
-msgstr "&Cancelar"
+msgstr "França"
 
 # name for ARM
 #. XKBFile extension text
@@ -1562,7 +1547,7 @@ msgstr "Georgia"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "Inglês Americano"
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1570,7 +1555,7 @@ msgstr "Turco"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "Séries PC-98xx"
 
 #. XKBFile extension text
 msgid "Netherlands"
@@ -1581,9 +1566,8 @@ msgid "Macedonia"
 msgstr "Macedónia"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Canada"
-msgstr "Placa"
+msgstr "Canadá"
 
 # name for LKA
 #. XKBFile extension text

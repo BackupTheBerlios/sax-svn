@@ -1,20 +1,16 @@
-# Hindi message file for YaST2 (@memory@).
-# Copyright (C) 2005 SUSE Linux Products GmbH.
-# Prasanth Kurian <prasanth.kurian@agreeya.com>
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: YaST (@memory@)\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2005-07-29 15:37+0530\n"
-"Last-Translator: Prasanth Kurian <prasanth.kurian@agreeya.com>\n"
-"Language-Team: Hindi <i18n@suse.de>\n"
+"PO-Revision-Date: 2006-11-03 12:03\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"\n"
-"\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -31,6 +27,9 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
+"<b>Ukusikisela Kwe-SaX2</b><hr>Isistimu yezithombe esanda kuqalwa manje "
+"isekelwe ekusikiseleni okwenziwe yi-SaX2. Uma lokhu kwamukeleka, chofoza u-"
+"<b>OK</b>.  Ngale kwalokho, shintsha ukuhlela."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
@@ -48,20 +47,19 @@ msgstr ""
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
-msgstr ""
+msgstr "Ukuhelwa Kwesistimu Yezithombe Ngokuzenzakalelayo"
 
 #. Caption text for informing the user
 msgid "Information..."
-msgstr ""
+msgstr "Ukwaziswa..."
 
 #. Caption text for the main window
-#, fuzzy
 msgid "SaX2: X11 Configuration"
-msgstr "सोमनुरूपण"
+msgstr "SaX2: Ukuhlelwa kwe-X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr ""
+msgstr "Isikhungo Sokulawulwa Kwe-SaX"
 
 #. Info message about display size changes
 msgid ""
@@ -70,146 +68,143 @@ msgid ""
 msgstr ""
 
 #. Help Button text
-#, fuzzy
 msgid "&Help"
-msgstr "मदद"
+msgstr "&Usizo"
 
 #. Ok Button text
 msgid "O&K"
-msgstr ""
+msgstr "O&K"
 
 #. Yes Button text
 msgid "&Yes"
-msgstr "&Yes"
+msgstr "&Yebo"
 
 #. No Button text
-#, fuzzy
 msgid "&No"
-msgstr "नहीं"
+msgstr "&Cha"
 
 #. Cancel Button text
 #. Maximum length: 40  characters
 msgid "&Cancel"
-msgstr "&निरस्त"
+msgstr "&Khansela"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr ""
+msgstr "<b>Phuma Kwi-SaX2</b><hr>Phuma Kwi-SaX2 manje?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "Umyalezo"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "सोमनुरूपण"
+msgstr "S&hintsha Ukuhlela"
 
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "मॉनीटर"
+msgstr "Imonitha"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr ""
+msgstr "Ama-property Ekhadi Nemonitha"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
 msgid "Mouse"
-msgstr "माउस"
+msgstr "Igundane"
 
 #. title of module dialog
 msgid "Mouse Properties"
-msgstr ""
+msgstr "Ama-property Egundane"
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
-msgstr "कीबोर्ड"
+msgstr "Ikhibhodi"
 
 #. title of module dialog
 msgid "Keyboard Properties"
-msgstr ""
+msgstr "Ama-property Ekhibhodi"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
 msgid "Tablet"
-msgstr ""
+msgstr "I-Tablet"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr ""
+msgstr "Ama-property E-Tablet"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
-msgstr ""
+msgstr "Isibuko Esithintwayo"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr ""
+msgstr "Ama-property Esibuko Esithintwayo"
 
 #. Short description of the VNC module
+#, fuzzy
 msgid "Remote Access"
-msgstr ""
+msgstr "I-MySOL Remote Aceess"
 
 #. title of module dialog
 msgid "Remote Access Properties"
-msgstr ""
+msgstr "Ama-property Okungena Kude"
 
 #. Tab text for a display tab of the monitor dialog
+#, fuzzy
 msgid "Display %1"
-msgstr ""
+msgstr "Isibuko"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "Vula Lesi Sibuko"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "Vula Le Nkomba"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "Ikhadi"
 
 #. Change data
 msgid "&Change..."
-msgstr ""
+msgstr "&Shintsha..."
 
 #. Set options for some kind of data
-#, fuzzy
 msgid "&Options..."
-msgstr "विक्लप "
+msgstr "&Ongakhetha kukho..."
 
 #. Configure some data
 msgid "Con&figure..."
-msgstr ""
+msgstr "Hl&ela..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr ""
+msgstr "Imodi Ye-Dual Head"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
 #. Group box title for the VNC options
-#, fuzzy
 msgid "Options"
-msgstr "विक्लप "
+msgstr "Ongakhetha kukho"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
-msgstr ""
+msgstr "Vula Isondo Legundane"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "Guqula i-X-Axis"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "Guqula i-Y-Axis"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
@@ -217,193 +212,199 @@ msgstr ""
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr ""
+msgstr "Vula Isilingisi se-3-Button"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr ""
+msgstr "Lingisa Isondo Elinenkinobho Yegundane"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
-msgstr ""
+msgstr "Jikelezisa Isibuko"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr ""
+msgstr "Hlola"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
-msgstr ""
+msgstr "&Hlola"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
-msgstr ""
+msgstr "&Gcina"
 
 #. Tab text for a layout tab of the keyboard dialog
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr ""
+msgstr "Ukuhlelwa"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
-msgstr ""
+msgstr "Ukuhlola kulindile"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr ""
+msgstr "Ukuchofoza Kanye: Kwenziwe"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr ""
+msgstr "Ukuchofoza Kabili: Kwenziwe"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
-msgstr ""
+msgstr "Iyapheqa"
 
 #. Status line of mouse test field: button pressed
 msgid "Button pressed"
-msgstr ""
+msgstr "Inkinobho icindezelwe"
 
 #. Status line of mouse test field: button released
 msgid "Button released"
-msgstr ""
+msgstr "Inkinobho idedelwe"
 
 #. Status line of mouse test field: wheel stopped
 msgid "Stopped: Done"
-msgstr ""
+msgstr "Imisiwe: Kwenziwe"
 
 #. Group box title for properties
 msgid "Properties"
-msgstr ""
+msgstr "Ama-property"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr ""
+msgstr "Vula Imodi Ye-Dual Head"
 
 #. Set display resolution
 msgid "Resolution"
-msgstr ""
+msgstr "Ukugqama"
 
 #. Set display colors
 msgid "Colors"
-msgstr ""
+msgstr "Imibala"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr ""
+msgstr "Vula Isisheshisi Se-3D"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
-msgstr ""
+msgstr "Imonitha Yekhadi"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr ""
+msgstr "Imonitha Yesibili Yekhadi"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
-msgstr ""
+msgstr "Amafrikhwensi Okuvumelanisa"
 
 #. Tab title: Setup display size
 msgid "Display Size"
-msgstr ""
+msgstr "Usayizi Wesibuko"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "Ukuhlela"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "Ivulwe kwimodi %1 nge-%2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "Ivulwe kwimodi ye-default ye-driver"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
 msgid "Unconfigured"
-msgstr ""
+msgstr "Akuhlelwanga"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>Ayikwazi Ukucisha Zonke Izibuko</b><hr><nobr>Okungenani isibuko esisodwa "
+"kumelwe sisebenze.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "सोमनुरूपण"
+msgstr "Akukho ukuhlela okutholakalayo"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
+"Esidabuke Simakhandakhanda:\n"
+"Isibonisi (screen) ngasinye sinesibuko esizimele."
 
 #. Radiobutton for cloned multihead mode
 msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
+"Esimakhandakhanda Esikopishiwe:\n"
+"Isibuko ngasinye sikopishwe esibukweni esiyinhloko"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
+"I-Xinerama Emakhandakhanda:\n"
+"Yakha isibuko esisodwa esikhulu kuzo zonke izibonisi (screens)"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
-msgstr ""
+msgstr "Isimo Sokuba Makhandakhanda"
 
 #. Monitor X - connected to - CardY
 msgid "Connected To"
-msgstr ""
+msgstr "Ixhunywe Ku-"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "अनंजान"
+msgstr "Imonitha Engaziwa:"
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
-msgstr ""
+msgstr "Imonitha Eyinhloko:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
 msgid "Monitor Settings"
-msgstr ""
+msgstr "Amasethingi Emonitha"
 
 #. Windowanager title for the mouse mode setup
 msgid "Mouse Settings"
-msgstr ""
+msgstr "Amasethingi Egundane"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
-msgstr ""
+msgstr "Amasethingi Ekhadi Lezithombe"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr ""
+msgstr "Amasethingi E-Dual Head"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
-msgstr ""
+msgstr "Ayijikeleziswanga"
 
 #. Radiobutton rotate to the left side
 msgid "To the Left"
-msgstr ""
+msgstr "Kwesobunxele"
 
 #. Radiobutton rotate to the right side
 msgid "To the Right"
-msgstr ""
+msgstr "Kwesokudla"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
@@ -416,26 +417,28 @@ msgstr ""
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
+"<b>Okukhethwa kukho kudinga i-value</b><hr><nobr>Setha i-value ngalokhu "
+"okukhethwa kukho %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr ""
+msgstr "Imonitha: Ukukhethwa Komthengisi Negama"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr ""
+msgstr "Igundane: Ukukhethwa Komthengisi Negama"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr ""
+msgstr "Ukuhlelwa Kwefrikhwensi Yokuzivumelanisela Mathupha"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "Isilinganiso Senhlanganisamachopho Nesobude Nobubanzi Besibonisi"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
-msgstr ""
+msgstr "Usayizi Wesibuko ngama- [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
@@ -443,182 +446,190 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
+"<b> Phawula:</b> Amazinga okuvumelanisa anganembile angase alimaze imonitha "
+"yakho. Xhumana nencwadi yeziqondiso yemonitha ukuze uthole amasethingi."
+"<br><br>Uma ufuna ukuba imonitha yakho ingasebenzisi isilinganiso sayo "
+"sokugcina, yehliza amazinga okuvumelanisa."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "Vula i-DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr ""
+msgstr "Idiski Yokusetshenziswa..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
-msgstr ""
+msgstr "Vundlile"
 
 #. Label text for second monitor name
 msgid "Second Monitor:"
-msgstr ""
+msgstr "Imonitha Yesibili"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr ""
+msgstr "Ukugqama Kwemonitha Yesibili"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
-msgstr ""
+msgstr "Qonde ngqü"
 
 #. Label text for hsync unit
 msgid "KHz"
-msgstr ""
+msgstr "KHz"
 
 #. Label text for vsync unit
 msgid "Hz"
-msgstr ""
+msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "Isilinganiso Sobude Nobubanzi Bekhompuyutha:"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "विक्लप "
+msgstr "Inhlanganisamachopho"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "X Axis [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Y Axis [mm]"
 
 #. Something is not configured
 msgid "Not configured"
-msgstr ""
+msgstr "Ayihleliwe"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "ama-intshi"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
+"<b>Faka i-CD noma Idiski</b><hr>Faka i-CD noma idiski yokusetshenziswa "
+"oyithole kumthengisi wemonitha."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
+"<b>Iphutha Lokufunda</b><hr>Ayikwazanga ukufunda kwi-CD noma kwidiski. Lokhu "
+"kungase kubonise ukuthi kunendawo elimele noma amafayela okwaziswa angazange "
+"afomathwe kahle."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "विक्लप "
+msgstr "Yendabuko"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "Kopisha"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "I-Xinerama"
 
 #. Tab text for the mouse model dialog
 msgid "Mouse Model"
-msgstr ""
+msgstr "Imodeli Yegundane"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
-msgstr ""
+msgstr "Ukuhlela okuyinhloko"
 
 #. Label text for the primary keyboard type
 msgid "Type"
-msgstr "प्रकार"
+msgstr "Uhlobo"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
 msgid "Variant"
-msgstr ""
+msgstr "I-variant"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr ""
+msgstr "Okunye Ukuhlelwa"
 
 #. Table topic text describing the status column
 msgid "Status"
-msgstr "स्थिती"
+msgstr "Isimo"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr ""
+msgstr "Ithebula lesikhiye"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr ""
+msgstr "Shintsha Iqembu/I-Lock Behavior"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr ""
+msgstr "Sebenzisa i-LED yeKhibhodi ukuze ubonise Elinye Iqembu"
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr ""
+msgstr "Indawo Ye-Compose Key"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr ""
+msgstr "Indawo Ye-Control Key"
 
 #. List View root item text
 msgid "Third Level Chooser"
-msgstr ""
+msgstr "Isikhethi Sezinga Lesi-3"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr ""
+msgstr "Indlela i-Alt/Win Key Eyenza Ngayo"
 
 #. List View root item text
+#, fuzzy
 msgid "EuroSign Key Position"
-msgstr ""
+msgstr "Indawo Yokuhluthulela Iphaneli"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr ""
+msgstr "Indlela I-CapsLock Key Eyenza Ngayo"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr "कुछ नहीं"
+msgstr "Akukho lutho"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr ""
+msgstr "I-Alt key yangakwesobunxele ishintsha iqembu ngesikhathi icindezeliwe."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr ""
+msgstr "Womabili ama-Ctrl key kanye kanye ashintsha iqembu."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr ""
+msgstr "I-Shift key yesokudla ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
-msgstr ""
+msgstr "I-Win key yesobunxele ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr ""
+msgstr "I-Alt key yesobunxele ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr ""
+msgstr "Womabili ama-Win key ashintsha iqembu lapho ecindezelwe."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr ""
+msgstr "I-Ctrl key yangakwesokudla ishintsha iqembu ngesikhathi icindezeliwe."
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
@@ -645,8 +656,9 @@ msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Keypad layout selection"
-msgstr ""
+msgstr "I-Layout Yekhibhodi"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
@@ -698,8 +710,9 @@ msgid "Space key output space at any level."
 msgstr ""
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Ongakukhetha Kwekhibhodi"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift "
@@ -708,271 +721,281 @@ msgstr ""
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 msgstr ""
+"I-CapsLock isebenzisa ukufakwa konobumbakazi bangaphakathi. I-Shift "
+"ayiyikhanseli i-CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "I-CapsLock imane nje ihluthulele isilungisi sika-Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
 msgstr ""
+"I-CapsLock ishintshanisa ukufakwa konobumbakazi bezinhlamvu zama-alfabhethi "
+"ezivamile."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
 msgstr ""
+"I-CapsLock ishintshanisa i-Shift ngakho zonke izinkinobho ziyathinteka."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr ""
+msgstr "I-Win-key yesokudla iyi-Compose."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr ""
+msgstr "I-Shift+CapsLock ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr ""
+msgstr "I-R-Alt ishintsha iqembu ngesikhathi icindezeliwe."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "Inkinobho i-Control Yesokudla isebenza njenge-Alt Yesokudla."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
-msgstr ""
+msgstr "I-Control key phansi kwesobunxele"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr ""
+msgstr "Cindezela noma iyiphi kuma-Win Key ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr ""
+msgstr "Cindezela i-Alt key yesokudla ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
-msgstr ""
+msgstr "I-Ctrl key yesokudla ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
-msgstr ""
+msgstr "I-Alt yesokudla iyi-Compose."
 
 #. XKBFile extension text
 msgid "Right Ctrl is Compose."
-msgstr ""
+msgstr "I-Ctrl yesokudla iyi-Compose."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
-msgstr ""
+msgstr "I-LED ye-ScrollLock ibonisa elinye iqembu."
 
 #. XKBFile extension text
 msgid "Control key at left of -A-"
-msgstr ""
+msgstr "I-Control key kwesobunxele sika –A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
-msgstr ""
+msgstr "Izikhethi Zezinga Lesi-3"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
-msgstr ""
+msgstr "Womabili ama-Shift key kanye kanye ashintsha iqembu."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 msgstr ""
+"I-CapsLock isebenza njenge-Shift ehluthulelayo. I-Shift ayiyikhanseli i-"
+"CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 msgstr ""
+"I-CapsLock isebenzisa ukufakwa konobumbakazi bangaphakathi. I-Shift "
+"ikhansela i-CapsLock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
-msgstr ""
+msgstr "Yenza i-CapsLock ibe yi-Control eyenezelwe."
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
-msgstr ""
+msgstr "Cindezela i-Win-key yesobunxele ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr ""
+msgstr "I-Win-key yesokudla ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "I-Meta iboniswe kwi-Win-key yesobunxele."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
-msgstr ""
+msgstr "I-LED ye-CapsLock ibonisa elinye iqembu."
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative group."
-msgstr ""
+msgstr "I-LED ye-NumLock ibonisa elinye iqembu."
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
-msgstr ""
+msgstr "I-Shift key yesobunxele ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
-msgstr ""
+msgstr "I-Win-key yesobunxele ishintsha iqembu ngesikhathi icindezeliwe."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
-msgstr ""
+msgstr "Imenu iyi-Compose."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr ""
+msgstr "Womabili ama-Alt key kanye kanye ashintsha iqembu."
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
-msgstr ""
+msgstr "I-CapsLock key ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr ""
+msgstr "Shintshanisa i-Control ne-CapsLock."
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr ""
+msgstr "Cindezela noma iyiphi kuma-Alt key ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
-msgstr ""
+msgstr "I-Alt  key yesokudla ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
+msgstr "Izinkinobho u-shift no-numpad asebenza kwi-MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
 msgstr ""
+"Izinkinobho ezikhethekile (Ctrl+Alt+<key>) zisingathwa esiphakelalwazini."
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "I-hyper iboniswe kwi-Win-key."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr ""
+msgstr "I-Alt iboniswe kwi-Win-key ne-Super kwi-Menu."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "I-Super iboniswe kuma-Win-key (default)."
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "I-Alt ne-Meta kuma-Alt key (default)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "Nezela indlela yokwenza evamile enkinobhweni ye-Menu."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr ""
+msgstr "I-Alt ne-Meta akuma-Alt key (default)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr ""
+msgstr "Cindezela i-Control Yesokudla ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
-msgstr ""
+msgstr "I-Alt+Shift ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr ""
+msgstr "I-Control+Shift ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
 msgstr ""
+"I-CapsLock isebenza njenge-Shift ehluthulelayo. I-Shift ikhansela i-CapsLock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr ""
+msgstr "Sebenzisa i-LED yeKhibhodi ukuze ubonise elinye iqembu."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr ""
+msgstr "Cindezela i-Left Win-key ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr ""
+msgstr "Cindezela i-Right Alt key ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
+msgstr "I-Meta iboniswe kuma-Win-key."
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr ""
+msgstr "Cindezela inkinobho ye-Menu ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
-msgstr ""
+msgstr "Inkinobho i-Ctrl yesobunxele ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr ""
+msgstr "Inkinobho ye-Menu ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr ""
+msgstr "I-Alt+Control ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr ""
+msgstr "I Win-key yesokudla ishintsha iqembu ngesikhathi icindezeliwe."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "I-Port neModi"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "Amapeni Asebenza Ngogesi"
 
 #. Activate tablet checkbox
 msgid "Activate This Tablet"
-msgstr ""
+msgstr "Vula Le Tablet"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
-msgstr ""
+msgstr "I-Tablet: Ukukhethwa Komthengisi Negama"
 
 #. Group box title for tablet port combobox
 msgid "Connection Port"
-msgstr ""
+msgstr "I-Port Yokuxhumana"
 
 #. Group box title for tablet mode
 msgid "Primary Tablet Mode"
-msgstr ""
+msgstr "Isimo Se-Tablet Eyinhloko"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "Imodi Yepeni Nerabha"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
-msgstr ""
+msgstr "Engaphelele"
 
 #. Radiobutton for absolute tablet mode
-#, fuzzy
 msgid "Absolute"
-msgstr "Obsoletes:"
+msgstr "Ephelele"
 
 #. Combobox item text for tablet port: USB
 msgid "USB"
-msgstr "यूएसबी"
+msgstr "I-USB"
 
 #. Combobox item text for tablet port: ttyS0
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Combobox item text for tablet port: ttyS1
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS0 ]"
 
 #. Combobox item text for tablet port: ttyS2
 msgid "COM-3 [ /dev/ttyS2 ]"
@@ -984,15 +1007,15 @@ msgstr ""
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
-msgstr ""
+msgstr "Amathuluzi"
 
 #. Add Pen Checkbox
 msgid "Add Pen"
-msgstr ""
+msgstr "Nezela Ipeni"
 
 #. Add Eraser Checkbox
 msgid "Add Eraser"
-msgstr ""
+msgstr "Nezela Irabha"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1000,27 +1023,28 @@ msgstr ""
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "AmaYepeni Nerabha"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
-msgstr ""
+msgstr "Ama-property Epeni"
 
 #. Tab title: Pad properties
+#, fuzzy
 msgid "Pad Properties"
-msgstr ""
+msgstr "_Ama-property..."
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
-msgstr ""
+msgstr "Ama-property Erabha"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "Yaba Isibuko Esithintwayo ukuze Uveze Inombolo %1"
 
 #. Group box title for the touchscreen vendor and name selection
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr ""
+msgstr "Isibuko Esithintwayo: Ukukhethwa Komthengisi Negama"
 
 #. Finish configuration message box
 msgid ""
@@ -1029,10 +1053,15 @@ msgid ""
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
+"<b>Izinyathelo Zokugcina</b><hr>Isinyathelo sokugcina ukulondoloza ukuhlela "
+"kwakho okusha. Kuyancomeka ukuba uhlole ukuhlela okusha ngaphambi kokuba "
+"ukugcine. Uma isiphakelalwazi sokuhlola sibonisa isendlalelo esonakele, "
+"cindezela <b>[ Ctrl+Alt+Backspace ]</b>  ukuze ubulale isiphakelalwazi."
 
 #. Tab title: VNC Server configuration
+#, fuzzy
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "Iyakuqonda Ukulawulwa Kude Kwe_Netscape"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
@@ -1040,27 +1069,27 @@ msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr ""
+msgstr "Yenza Ukuvikeleka Kwephasiwedi Kusebenze"
 
 #. LineEdit label: enter password
 msgid "Password"
-msgstr "कूट शब्द"
+msgstr "Iphasiwedi"
 
 #. LineEdit contents: enter new password
 msgid "<Enter new password>"
-msgstr ""
+msgstr "<Faka iphasiwedi entsha>"
 
 #. LineEdit contents: change password
 msgid "<Change password>"
-msgstr ""
+msgstr "<Shintsha iphasiwedi>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr ""
+msgstr "<Qinisekisa iphasiwedi>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
-msgstr ""
+msgstr "Yenza Ukungena Kwi-HTTP Kusebenze"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
@@ -1068,7 +1097,7 @@ msgstr ""
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
-msgstr ""
+msgstr "I-Port Ye-HTTP"
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
@@ -1094,33 +1123,37 @@ msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
+"<b>Ukufakwa Kwe-software:</b><hr>Amanye amaphakheji alahlekile. Faka "
+"amaphakheji alahlekile manje?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "Ukufakwa Kwamaphakheji"
 
 #. Progress bar title text
 msgid "Importing module"
-msgstr ""
+msgstr "Ukulanda imoduli"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr ""
+msgstr "SaX2: Idlulisa ukwaziswa..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "Lungiselela ukuqalisa ingobolwazi yesikhashana..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
+msgstr "<b>Ukugcina Ukuhlela Kuhlulekile</b><hr>Umbiko olandelayo wakhiwe:"
 
 #. Message box test: configuration has been saved
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
+"<b>Ukuhlela Kugciniwe</b><hr>Ukulungisa kwakho kuzokwenzeka ngesikhathi "
+"esilandelayo isistimu yezithombe iqaliswa kabusha. Phuma kwi-SaX2 manje?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1128,6 +1161,9 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>Ukuhlola Ukuhlela Akuphumelelanga</b><hr>Ukuze uthole ukwaziswa "
+"okwengeziwe, yiya kwifayili ethi <tt>/var/log/Xorg.99.log</tt>. Umbiko "
+"olandelayo wakhiwe ngesikhathi kushaywa ucingo:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1138,107 +1174,111 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "Izinto eziyingxube ongakhetha kuzo ezisebenzelanayo"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "Nezela i-EuroSign kwinkinobho u-5."
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "Indlela I-CapsLock Key Eyenza Ngayo"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Indlela i-Alt/Win Key Eyenza Ngayo"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "Ukunezela i-EuroSign kwezinye izinkinobho"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr ""
+msgstr "I-Caps Lock iyi-Compose."
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
-msgstr ""
+msgstr "Inkinobho i-Control Yesokudla isebenza njenge-Alt Yesokudla."
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
-msgstr ""
+msgstr "I-Control key phansi kwesobunxele"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr ""
+msgstr "I-Control key kwesobunxele sika-‘A’"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
-msgstr ""
+msgstr "Yenza i-CapsLock ibe yi-Ctrl eyenezelwe."
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr ""
+msgstr "Shintshanisa i-Control ne-CapsLock."
 
 #. XKBFile extension text
 msgid "Ctrl key position"
-msgstr ""
+msgstr "Indawo yenkinobho i-Ctrl"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
 msgstr ""
+"Izinkinobho ezikhethekile (Ctrl+Alt+&lt;key&gt;) zisingathwa "
+"esiphakelalwazini."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr ""
+msgstr "Cindezela i-Control Yesokudla ukuze ukhethe izinga lesi-3."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
-msgstr ""
+msgstr "I-Ctrl+Shift ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "Nezela i-EuroSign kwinkinobho u-E."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "Nezela i-EuroSign kwinkinobho u-2."
 
 #. XKBFile extension text
 msgid "key Compose key position"
-msgstr ""
+msgstr "indawo yenkinobho ye-key Compose"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
-msgstr ""
+msgstr "I-Alt+Ctr ishintsha iqembu."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "Indlela i-Group Shift/Lock eyenza ngayo"
 
 #. XKBFile extension text
 msgid "Arabic"
-msgstr "अरबी"
+msgstr "Isi-Arabhu"
 
 #. XKBFile extension text
 msgid "Nepal"
-msgstr "नेपाल"
+msgstr "Nepal"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr ""
+msgstr "Lao People's Democratic Republic"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Korea, Republic of"
-msgstr ""
+msgstr "Czech Republic"
 
 #. XKBFile extension text
 msgid "Iraq"
-msgstr "इराक"
+msgstr "Iraq"
 
 #. XKBFile extension text
 msgid "Nigeria"
-msgstr "नाइजीरिया"
+msgstr "Nigeria"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
@@ -1246,299 +1286,299 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Estonia"
-msgstr "एस्तोनिया"
+msgstr "Estonia"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr "म्यांमार"
+msgstr "Myanmar"
 
 #. XKBFile extension text
 msgid "Norway"
-msgstr "नॉर्वे"
+msgstr "Norway"
 
 #. XKBFile extension text
 msgid "Germany"
-msgstr "जर्मनी"
+msgstr "Germany"
 
 #. XKBFile extension text
 msgid "Mongolia"
-msgstr "मंगोलिया"
+msgstr "Mongolia"
 
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr "भूटान"
+msgstr "Bhutan"
 
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr "बांग्लादेश"
+msgstr "Bangladesh"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Latin American"
 
 #. XKBFile extension text
 msgid "Belgium"
-msgstr "बेल्ज़ियम"
+msgstr "Belgium"
 
 #. XKBFile extension text
 msgid "Finland"
-msgstr "फिनलैंड"
+msgstr "Finland"
 
 #. XKBFile extension text
 msgid "Israel"
-msgstr "इज़रायल"
+msgstr "Israel"
 
 #. XKBFile extension text
 msgid "Sweden"
-msgstr "स्वीडेन"
+msgstr "Sweden"
 
 #. XKBFile extension text
 msgid "Russia"
-msgstr ""
+msgstr "Russia"
 
 #. XKBFile extension text
 msgid "Portugal"
-msgstr "पुर्तगाल"
+msgstr "Portugal"
 
 #. XKBFile extension text
 msgid "Korean"
-msgstr "कोरियाई"
+msgstr "IsiKorea"
 
 #. XKBFile extension text
 msgid "Maori"
-msgstr "माओरी"
+msgstr "IsiMaori"
 
 #. XKBFile extension text
 msgid "Uzbekistan"
-msgstr "उज़बेकिस्तान"
+msgstr "Uzbekistan"
 
 #. XKBFile extension text
 msgid "Bulgaria"
-msgstr "बुल्गारिया"
+msgstr "Bulgaria"
 
 #. XKBFile extension text
 msgid "Thailand"
-msgstr "थाईलैंड"
+msgstr "Thailand"
 
 #. XKBFile extension text
 msgid "India"
-msgstr "भारत"
+msgstr "India"
 
 #. XKBFile extension text
 msgid "Bengali"
-msgstr "बंगाली"
+msgstr "Bengali"
 
 #. XKBFile extension text
 msgid "Switzerland"
-msgstr "स्विट्ज़रलैंड"
+msgstr "Switzerland"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr ""
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
-msgstr "जापान"
+msgstr "Japan"
 
 #. XKBFile extension text
 msgid "Syria"
-msgstr "सीरिया"
+msgstr "Syria"
 
 #. XKBFile extension text
 msgid "Czechia"
-msgstr ""
+msgstr "Czechia"
 
 #. XKBFile extension text
 msgid "Belarus"
-msgstr "बेलारूस"
+msgstr "Belarus"
 
 #. XKBFile extension text
 msgid "Tajikistan"
-msgstr "तजाकिस्तान"
+msgstr "Tajikistan"
 
 #. XKBFile extension text
 msgid "Denmark"
-msgstr "डेनमार्क"
+msgstr "Denmark"
 
 #. XKBFile extension text
 msgid "Slovenia"
-msgstr "स्लोविनिया"
+msgstr "Slovenia"
 
 #. XKBFile extension text
 msgid "Malta"
-msgstr "माल्टा"
+msgstr "Malta"
 
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr "अज़रबैजान"
+msgstr "Azerbaijan"
 
 #. XKBFile extension text
 msgid "Lithuania"
-msgstr "लिथुआनिया"
+msgstr "Lithuania"
 
 #. XKBFile extension text
 msgid "Vietnam"
-msgstr "वियतनाम"
+msgstr "Vietnam"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr "फरोए आइलैंड्स"
+msgstr "Faroe Islands"
 
 #. XKBFile extension text
 msgid "South Africa"
-msgstr "दक्षिण अफ्रीका"
+msgstr "Ningizimu Afrika"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "IsiFarsi"
 
 #. XKBFile extension text
 msgid "Slovakia"
-msgstr "स्लोवाकिया"
+msgstr "Slovakia"
 
 #. XKBFile extension text
 msgid "Maldives"
-msgstr "मालदीव"
+msgstr "Maldives"
 
 #. XKBFile extension text
 msgid "Iceland"
-msgstr "आइसलैंड"
+msgstr "Iceland"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr "क्रोएशिया"
+msgstr "Croatia"
 
 #. XKBFile extension text
 msgid "Latvia"
-msgstr "लटाविया"
+msgstr "Latvia"
 
 #. XKBFile extension text
 msgid "Albania"
-msgstr "अल्बानिया"
+msgstr "Albania"
 
 #. XKBFile extension text
 msgid "Italy"
-msgstr "इटली"
+msgstr "Italy"
 
 #. XKBFile extension text
 msgid "Greece"
-msgstr "ग्रीस"
+msgstr "Greece"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr "यूनाइटेड किंगडम"
+msgstr "United Kingdom"
 
 #. XKBFile extension text
 msgid "France"
-msgstr "फ्रांस"
+msgstr "France"
 
 #. XKBFile extension text
 msgid "Armenia"
-msgstr "अर्मेनिया"
+msgstr "Armenia"
 
 #. XKBFile extension text
 msgid "Pakistan"
-msgstr "पाकिस्तान"
+msgstr "Pakistan"
 
 #. XKBFile extension text
 msgid "Poland"
-msgstr "पोलैंड"
+msgstr "Poland"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "किर्गिज़तान"
+msgstr "Kyrgyzstan"
 
 #. XKBFile extension text
 msgid "Ireland"
-msgstr "आयरलैंड"
+msgstr "Ireland"
 
 #. XKBFile extension text
 msgid "Hungary"
-msgstr "हंगरी"
+msgstr "Hungary"
 
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr "कंबोडिया"
+msgstr "Cambodia"
 
 #. XKBFile extension text
 msgid "Spain"
-msgstr "स्पेन"
+msgstr "Spain"
 
 #. XKBFile extension text
 msgid "Ukraine"
-msgstr "उक्रेन"
+msgstr "Ukraine"
 
 #. XKBFile extension text
 msgid "Romania"
-msgstr "रोमानिया"
+msgstr "Romania"
 
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr "कज़ाकिस्तान"
+msgstr "Kazakhstan"
 
 #. XKBFile extension text
 msgid "Georgia"
-msgstr "जार्जिया"
+msgstr "Georgia"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr ""
+msgstr "IsiNgisi Sase-U.S."
 
 #. XKBFile extension text
 msgid "Turkish"
-msgstr "तुर्कीश"
+msgstr "IsiTurkey"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx Series"
 
 #. XKBFile extension text
 msgid "Netherlands"
-msgstr "नीदरलैंड्स"
+msgstr "Netherlands"
 
 #. XKBFile extension text
 msgid "Macedonia"
-msgstr "मकदूनिया"
+msgstr "Macedonia"
 
 #. XKBFile extension text
 msgid "Canada"
-msgstr "कनाडा"
+msgstr "Canada"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr "श्रीलंका"
+msgstr "Sri Lanka"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr "बोस्निया और हर्जेगोविना"
+msgstr "Bosnia ne-Herzegowina"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr "सर्बिया और मोंटेनेग्रो"
+msgstr "Serbia ne-Montenegro"
 
 #. XKBFile extension text
 msgid "Brazil"
-msgstr "ब्राज़ील"
+msgstr "Brazil"
 
 #. XKBFile extension text
 msgid "Ghana"
-msgstr "घाना"
+msgstr "Ghana"
 
 #. XKBFile extension text
 msgid "Andorra"
-msgstr "अंदोर्रा"
+msgstr "Andorra"
 
 #. XKBFile extension text
 msgid "Afghanistan"
-msgstr "अफगानिस्तान"
+msgstr "Afghanistan"
 
 #. XKBFile extension text
 msgid "Esperanto"
-msgstr "एस्परांतो"
+msgstr "Isi-Esperanto"
 
 #. XKBFile extension text
 msgid "Turkey"
-msgstr "टर्की"
+msgstr "Turkey"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1547,54 +1587,53 @@ msgstr "टर्की"
 #.
 #. Maximum length: 40  characters
 msgid "&Step size"
-msgstr ""
+msgstr "&Usayizi wesinyathelo"
 
 #. Maximum length: 40  characters
 msgid "Small"
-msgstr ""
+msgstr "Okuncane"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr "सामान्य आकार (_N)"
+msgstr "Okuvamile"
 
 #. Maximum length: 40  characters
 msgid "Big"
-msgstr ""
+msgstr "Okukhulu"
 
 #. Maximum length: 40  characters
 msgid "Huge"
-msgstr ""
+msgstr "Okukhulukazi"
 
 #. Maximum length: 40  characters
 msgid "&Next Screen"
-msgstr ""
+msgstr "&Isibonisi Esilandelayo"
 
 #. Maximum length: 40  characters
 msgid "S&ave"
-msgstr ""
+msgstr "G&cina"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
-msgstr ""
+msgstr "Shintsha &Indawo"
 
 #. Maximum length: 40  characters
 msgid "C&hange Size"
-msgstr ""
+msgstr "S&hintsha Usayizi"
 
 #. Maximum length: 40  characters
 msgid "Screen"
-msgstr ""
+msgstr "Isibonisi"
 
 #. Maximum length: 60  characters
 msgid "No video mode tuning available"
-msgstr ""
+msgstr "Akukho ukushunwa kwesimo sevidiyo okutholakalayo"
 
 msgid "Display"
-msgstr "डिस्प्ले"
+msgstr "Veza"
 
-#, fuzzy
 msgid "Configuration on display"
-msgstr "सोमनुरूपण"
+msgstr "Ukuhlelwa esibukweni"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Iwashi lokubala isikhathi kungenziwa lutho..."

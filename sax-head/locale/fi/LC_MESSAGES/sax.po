@@ -1,22 +1,24 @@
+# translation of sax.fi.po to Suomi
 # translation of UUSIsax.po to
 # translation of sax.po to
 # translation of sax.fi.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
-# Jyri Palokangas <jmp@netti.fi>, 2005, 2006.
+# Jyri Palokangas <jmp@netti.fi>, 2005, 2006, 2007.
 # Ilkka Pirskanen <ilkka.pirskanen@kolumbus.fi>, 2006.
+# Jyri Palokangas <jmp@opensuse.fi>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-02-25 14:57+0200\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2007-05-30 10:08+0300\n"
+"Last-Translator: Jyri Palokangas <jmp@opensuse.fi>\n"
+"Language-Team: Suomi <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -25,7 +27,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -102,7 +104,7 @@ msgstr "&Peruuta"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr "<b>Lopeta SaX2</b><hr>Lopetaanko SaX2 nyt?"
+msgstr "<b>Lopeta SaX2</b><hr>Lopetetaanko SaX2 nyt?"
 
 #. Message box default caption text
 msgid "Message"
@@ -423,7 +425,7 @@ msgid ""
 "cards framebuffer."
 msgstr ""
 "<b>Virheellinen väri/kuvakoko yhdistelmä:</b><hr><nobr>Valittu kuvakoko ja/"
-"tai väriasetukset</nobr> eivät ole näytönohjaimen framebufferissa tukemia."
+"tai väriasetukset</nobr> eivät ole näytönohjaimen kuvapuskurin tukemia."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -479,7 +481,7 @@ msgstr "Toinen monitori:"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr "Toisen monitorin resoluurio"
+msgstr "Toisen monitorin resoluutio"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
@@ -649,15 +651,16 @@ msgstr "Oletus numeronäppäimistön näppäimet."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Asetetaan välilyönti käyttämään sitovan välin näppäinsymbolia"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"Käytä näppäimistöä unicode-lisäyksillä (nuolet ja matemaattiset operaattorit)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Pakota oletusnäppäinasettelu"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
@@ -674,7 +677,7 @@ msgstr "Alt+CapsLock vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Toisella tasolla välilyönti on sitova"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
@@ -686,11 +689,13 @@ msgstr "CapsLock käyttää sisäistä kapitalisointia. Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Kolmannella tasolla välilyönti on sitova"
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Vaihda kahden näppäimen näppäinkoodeja, kun ydin tunnistaa Mac-näppäimistön "
+"väärin."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -698,11 +703,11 @@ msgstr "Numeronäppäimistön painikkeet toimivat kuten Macissä."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "Kana-lukkonäppäin on lukitseva"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Neljännellä tasolla välilyönti on sitova."
 
 #. XKBFile extension text
 msgid "Left Win-key is Compose."

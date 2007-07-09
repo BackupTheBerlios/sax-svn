@@ -1,20 +1,21 @@
-# translation of sax-ru.po to Russian
-# translation of SAX.po to Russian
+# translation of sax.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Andrew Bogatov<bert@bert2.crec.mipt.ru>, 2004.
 #
+# Andrew Bogatov<bert@bert2.crec.mipt.ru>, 2004.
+# Aleksey Osipov<aliks-os@yandex.ru>, 2005, 2006, 2007.
+# Nikolay Derkach <nderkach@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax-ru\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2004-03-22 18:27+0300\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2007-06-12 12:24+0400\n"
+"Last-Translator: Nikolay Derkach <nderkach@gmail.com>\n"
+"Language-Team:  <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -23,7 +24,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -33,7 +34,7 @@ msgid ""
 msgstr ""
 "<b>Предложение SaX2</b><hr>Запущенная на данный момент графическая система "
 "основана на предложении, сделанном SaX2. Если это приемлемо, нажмите кнопку "
-"<b>ОК</b>.  В противном случае измените конфигурацию."
+"<b>ОК</b>. В противном случае измените конфигурацию."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
@@ -52,7 +53,7 @@ msgid ""
 msgstr ""
 "<b>3D ускорение не поддерживается</b><hr>SaX2 не может включить 3D систему "
 "так как Xinerama используется режим двух мониторов. Xorg Xinerama дополнение "
-"для комбинации графических экранов не поддерживает 3D на всех монитора"
+"для комбинации графических экранов не поддерживает 3D на всех мониторах"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -101,7 +102,7 @@ msgstr "&Отменить"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr "Выход из SaX2</b><hr>Выйти из SaX2?"
+msgstr "<b>Выход из SaX2</b><hr>Выйти из SaX2?"
 
 #. Message box default caption text
 msgid "Message"
@@ -209,7 +210,7 @@ msgstr "Включить колесо мыши"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr "Инвертировать ось x"
+msgstr "Инвертировать ось X"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
@@ -234,11 +235,11 @@ msgstr "Повернуть экран"
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr "Тест"
+msgstr "Проверка"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
-msgstr "&Тест"
+msgstr "&Проверка"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -252,15 +253,15 @@ msgstr "Раскладка"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
-msgstr "Тест готов"
+msgstr "Проверка готова"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr "Один щелчок: готово"
+msgstr "Один щелчок"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr "Двойной щелчок: готово"
+msgstr "Двойной щелчок"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
@@ -446,7 +447,7 @@ msgstr "Ручная настройка частоты синхронизаци�
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr "Диагональ и соотношение"
+msgstr "Диагональ и соотношение сторон"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
@@ -459,9 +460,9 @@ msgid ""
 "maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Примечание.</b>Неверные диапазоны синхронизации могут повредить монитор. "
-"Допустимые значения см. в руководстве по эксплуатации монитора.<br><br>Если "
-"использование максимальных частот нежелательно, уменьшите диапазоны "
-"синхронизации."
+"Допустимые значения смотрите в руководстве по эксплуатации монитора."
+"<br><br>Если использование максимальных частот нежелательно, уменьшите "
+"диапазоны синхронизации."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -469,7 +470,7 @@ msgstr "Включить DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr "Сервисный Диск ..."
+msgstr "Сервисный диск ..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
@@ -489,7 +490,7 @@ msgstr "Вертикальная"
 
 #. Label text for hsync unit
 msgid "KHz"
-msgstr "КГЦ"
+msgstr "кГц"
 
 #. Label text for vsync unit
 msgid "Hz"
@@ -497,7 +498,7 @@ msgstr "Гц"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr "Соотношение"
+msgstr "Соотношение сторон"
 
 #. Label text for the diagonal length combo box
 msgid "Diagonal"
@@ -513,7 +514,7 @@ msgstr "Ось Y [мм]"
 
 #. Something is not configured
 msgid "Not configured"
-msgstr "Не конфигурированный"
+msgstr "Не сконфигурировано"
 
 #. Unit name for inches in german zoll
 msgid "inches"
@@ -575,7 +576,7 @@ msgstr "Статус"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr "Клавиатура "
+msgstr "Клавиатура"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
@@ -588,25 +589,24 @@ msgstr ""
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Расположение клавиш последовательности"
+msgstr "Расположение клавиши последовательности"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Позиция Клавиши CTRL"
+msgstr "Расположение клавиши Control"
 
 #. List View root item text
 msgid "Third Level Chooser"
-msgstr "Выбор третьего уровня"
+msgstr "Клавиша выбора третьего уровня"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
 msgstr "Поведение клавиш Alt и Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Позиция Клавиши CTRL"
+msgstr "Расположение клавиши со знаком евро"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -614,7 +614,7 @@ msgstr "Поведение клавиши CapsLock"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
-msgstr "Никакой"
+msgstr "Нет"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -654,7 +654,7 @@ msgstr "Цифровые клавиши по умолчанию."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Добавление символа nobreakspace к клавише пробела"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
@@ -664,7 +664,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Принудительно использовать устаревшую цифровую клавиатуру"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
@@ -682,26 +682,26 @@ msgstr "Alt+CapsLock изменяет группу."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Клавиша пробела выводит nobreakspace на втором уровне."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "Действует как Shift с блокировкой. Shift не влияет на CapsLock."
+msgstr ""
+"CapsLock действует как Shift с блокировкой. Shift не влияет на CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
-"Использует внутреннее преобразование букв в прописные. Shift отменяет "
-"заглавные буквы."
+msgstr "CapsLock использует внутреннее преобразование букв в прописные. Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Клавиша пробела выводит nobreakspace на третьем уровне."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Поменять местами скан-коды двух клавиш, когда Mac-клавиатура не определяется "
+"ядром."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -709,23 +709,22 @@ msgstr "Цифровая клавиатура работает как на Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "Используется клавиша блокировки Кана"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Клавиша пробела выводит nobreakspace на четвертом уровне."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "Правая-Win клавиши составляют"
+msgstr "Клавиша Win слева - начало последовательности."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr ""
-"Нажмите Правую Alt клавишу, чтобы выбрать 3-ий уровень, Shift+Правый Alt."
+"Нажмите правую Alt клавишу, чтобы выбрать 3-ий уровень, Shift+правый Alt - "
+"Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -736,9 +735,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Параметры японской клавиатуры"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Действует как Shift с блокировкой. Shift отменяет заглавные буквы."
+msgstr "CapsLock действует как Shift с блокировкой. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -762,7 +760,7 @@ msgstr "Клавиша CapsLock переключает действие клав
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr "Win справа - начало последовательности."
+msgstr "Клавиша Win справа - начало последовательности."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
@@ -774,7 +772,7 @@ msgstr "Alt справа - переключение группы на время
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr "Правый Control работает как Левый Alt."
+msgstr "Правый Control работает как левый Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -810,7 +808,7 @@ msgstr "Клавиша Control слева от -A-"
 
 #. XKBFile extension text
 msgid "Third level choosers"
-msgstr "Третий уровень выбора"
+msgstr "Клавиши выбора Третьего уровеня"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
@@ -1037,7 +1035,7 @@ msgstr "Добавить перо"
 
 #. Add Eraser Checkbox
 msgid "Add Eraser"
-msgstr "Добавить Резинку"
+msgstr "Добавить резинку"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1081,7 +1079,7 @@ msgstr ""
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr "Дистанционное управление X сервера"
+msgstr "Дистанционное управление X сервером"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
@@ -1244,7 +1242,7 @@ msgstr "Сделать клавишу CapsLock дополнительной кл
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr "Обмен Ctrl на CapsLock."
+msgstr "Поменять местами функции клавиш Ctrl и CapsLock."
 
 #. XKBFile extension text
 msgid "Ctrl key position"
@@ -1293,11 +1291,11 @@ msgstr "Непал"
 
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
-msgstr "Конго, Демократическая республика"
+msgstr "Демократическая республика Конго"
 
 #. XKBFile extension text
 msgid "Korea, Republic of"
-msgstr "Корея"
+msgstr "Республика Корея"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1307,11 +1305,11 @@ msgstr "Ирак"
 # fuzzy
 #. XKBFile extension text
 msgid "Nigeria"
-msgstr "Сербия"
+msgstr "Нигерия"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr "Япония (PC-98xx серия)"
+msgstr "Япония (ПК серии 98xx)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1321,7 +1319,7 @@ msgstr "Эстония"
 # fuzzy
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr "Панама"
+msgstr "Мьянма"
 
 #. XKBFile extension text
 msgid "Norway"
@@ -1337,17 +1335,17 @@ msgstr "Монголия"
 
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr "Бхутан"
+msgstr "Бутан"
 
 # BD
 # fuzzy
 #. XKBFile extension text
 msgid "Bangladesh"
-msgstr "Английский"
+msgstr "Бангладеш"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr "Латинская Америка"
+msgstr "Латино-американская"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1375,7 +1373,7 @@ msgstr "Португалия"
 
 #. XKBFile extension text
 msgid "Korean"
-msgstr "Корейский"
+msgstr "Корейская"
 
 #. XKBFile extension text
 msgid "Maori"
@@ -1401,7 +1399,7 @@ msgstr "Индия"
 # fuzzy
 #. XKBFile extension text
 msgid "Bengali"
-msgstr "Бенгальский"
+msgstr "Бенгальская"
 
 #. XKBFile extension text
 msgid "Switzerland"
@@ -1419,7 +1417,7 @@ msgstr "Япония"
 # fuzzy
 #. XKBFile extension text
 msgid "Syria"
-msgstr "Сербия"
+msgstr "Сирия"
 
 #. XKBFile extension text
 msgid "Czechia"
@@ -1435,7 +1433,7 @@ msgstr "Таджикистан"
 
 #. XKBFile extension text
 msgid "Denmark"
-msgstr "Голандия"
+msgstr "Дания"
 
 #. XKBFile extension text
 msgid "Slovenia"
@@ -1448,7 +1446,7 @@ msgstr "Мальта"
 # AZ
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr "Азербайджанский"
+msgstr "Азербайджан"
 
 #. XKBFile extension text
 msgid "Lithuania"
@@ -1458,11 +1456,11 @@ msgstr "Литва"
 # fuzzy
 #. XKBFile extension text
 msgid "Vietnam"
-msgstr "Вьетнамский"
+msgstr "Вьетнам"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
-msgstr "Фароские Острова"
+msgstr "Фарерские Острова"
 
 #. XKBFile extension text
 msgid "South Africa"
@@ -1480,7 +1478,7 @@ msgstr "Словакия"
 # fuzzy
 #. XKBFile extension text
 msgid "Maldives"
-msgstr "Мальта"
+msgstr "Мальдивы"
 
 #. XKBFile extension text
 msgid "Iceland"
@@ -1518,7 +1516,7 @@ msgstr "Франция"
 # fuzzy
 #. XKBFile extension text
 msgid "Armenia"
-msgstr "Аргентина"
+msgstr "Армения"
 
 #. XKBFile extension text
 msgid "Pakistan"
@@ -1530,7 +1528,7 @@ msgstr "Польша"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "Киргизтан"
+msgstr "Киргизстан"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1544,7 +1542,7 @@ msgstr "Венгрия"
 # fuzzy
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr "Колумбия"
+msgstr "Камбоджа"
 
 #. XKBFile extension text
 msgid "Spain"
@@ -1562,7 +1560,7 @@ msgstr "Румыния"
 # fuzzy
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr "Тайвань"
+msgstr "Казахстан"
 
 #. XKBFile extension text
 msgid "Georgia"
@@ -1570,11 +1568,11 @@ msgstr "Грузия"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr "Американский Английский"
+msgstr "Английская американская"
 
 #. XKBFile extension text
 msgid "Turkish"
-msgstr "Турецкий"
+msgstr "Турецкая"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
@@ -1598,11 +1596,11 @@ msgstr "Шри Ланка"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr "Босня и Герцоговина"
+msgstr "Босния и Герцоговина"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr "Сербия и Монтенегро"
+msgstr "Сербия и Черногория"
 
 # BR
 #. XKBFile extension text
@@ -1613,7 +1611,7 @@ msgstr "Бразилия"
 # fuzzy
 #. XKBFile extension text
 msgid "Ghana"
-msgstr "Китай"
+msgstr "Гана"
 
 #. XKBFile extension text
 msgid "Andorra"
@@ -1687,4 +1685,4 @@ msgid "Configuration on display"
 msgstr "Конфигурация на экране"
 
 msgid "Idle timer..."
-msgstr "Неактивный таймер ... "
+msgstr "Неактивный таймер... "
