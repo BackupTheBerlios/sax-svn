@@ -31,6 +31,7 @@ sub setupBootLoaderVGA {
 		print "*** failed open file: $menu: $!\n";
 		return undef;
 	}
+	$mode = sprintf ("%0x%s",$mode);
 	$perm = (stat FD)[2] & 07777;
 	@data = <FD>; close FD;
 	foreach my $line (@data) {
