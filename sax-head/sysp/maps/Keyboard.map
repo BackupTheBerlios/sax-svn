@@ -12,8 +12,8 @@ atari-se        : pc101 : se           : x            : xfree86 : x : x : x : x 
 atari-uk-falcon : pc101 : gb           : x            : xfree86 : x : x : x : x : x
 atari-us        : pc101 : us           : x            : xfree86 : x : x : x : x : x
 azerty          : pc101 : us           : x            : xfree86 : x : x : x : x : x
-be-latin1       : microsoftpro : be           : x            : xfree86 : x : x : x : x : x
-be2-latin1      : microsoftpro : be           : x            : xfree86 : x : x : x : x : x
+be-latin1       : microsoftpro : be           : x            : xfree86 : x : x : x : x : caps:shiftlock
+be2-latin1      : microsoftpro : be           : x            : xfree86 : x : x : x : x : caps:shiftlock
 bg              : pc101 : bg           : x            : xfree86 : x : x : x : x : x
 cf              : microsoftpro : ca           : fr           : xfree86 : x : x : x : x : x
 croat           : microsoftpro : hr           : x            : xfree86 : x : x : x : x : x
@@ -38,9 +38,9 @@ emacs2          : pc102 : us           : x            : xfree86 : x : x : x : x 
 es              : pc102 : es           : x            : xfree86 : x : x : x : x : x
 fi-latin1       : pc102 : fi           : x            : xfree86 : x : x : x : x : x
 fi              : pc102 : fi           : x            : xfree86 : x : x : x : x : x
-fr-latin1       : pc102 : fr           : x            : xfree86 : x : x : x : x : x
-fr-pc           : pc102 : fr           : x            : xfree86 : x : x : x : x : x
-fr              : pc102 : fr           : x            : xfree86 : x : x : x : x : x
+fr-latin1       : pc102 : fr           : x            : xfree86 : x : x : x : x : caps:shiftlock
+fr-pc           : pc102 : fr           : x            : xfree86 : x : x : x : x : caps:shiftlock
+fr              : pc102 : fr           : x            : xfree86 : x : x : x : x : caps:shiftlock
 fr_CH-latin1    : pc102 : ch           : fr           : xfree86 : x : x : x : x : x
 fr_CH           : pc102 : ch           : fr           : xfree86 : x : x : x : x : x
 gr-pc           : microsoftpro : us,gr        : ,extended    : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
