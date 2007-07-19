@@ -322,8 +322,6 @@ fi
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
-%dir %{_defaultdocdir}/libsax
-%doc %{_defaultdocdir}/libsax/html
 %{_datadir}/sax/libsax/*
 %{_datadir}/pixmaps/sax2.png
 %{_datadir}/sax/svnbuild
@@ -375,7 +373,6 @@ fi
 %endif
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
-%doc %{_defaultdocdir}/sax2/sax.pdf
 #=================================================
 # SaX-GUI file list...  
 # ------------------------------------------------
@@ -453,6 +450,9 @@ fi
 %files -n sax2-libsax-devel
 %defattr(-,root,root)
 %dir %{_includedir}/sax
+%dir %{_defaultdocdir}/libsax
+%doc %{_defaultdocdir}/libsax/html
+%doc %{_defaultdocdir}/sax2/sax.pdf
 %{_prefix}/%{_lib}/libsax.so
 %{_includedir}/sax/*
 #=================================================
