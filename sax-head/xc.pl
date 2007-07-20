@@ -302,7 +302,7 @@ sub main {
 	# Check for package check flag
 	#--------------------------------------- 
 	if (! defined $NoCheckPacs) {
-		system ("$spec{Xapi} $apiopt --checkpacs -display $disp");
+		system ("DISPLAY=$disp $spec{Xapi} $apiopt --checkpacs");
 	}
 	#=======================================
 	# Check for fullscreen mode
@@ -334,7 +334,7 @@ sub main {
 			#=======================================
 			# Call intro and save exit code
 			#---------------------------------------
-			system ("$spec{Xapi} $apiopt --info -display $disp");
+			system ("DISPLAY=$disp $spec{Xapi} $apiopt --info");
 			$exit = $? >> 8;
 			#=======================================
 			# Get information about our own server
@@ -374,18 +374,18 @@ sub main {
 		if ($haveServer == 0) {
 			if ((defined $StartWithSystemConfig) && (HeaderOK())) {
 				print "SaX: importing current configuration...\n";
-				system ("$spec{Xapi} $apiopt -display $disp");
+				system ("DISPLAY=$disp $spec{Xapi} $apiopt");
 			} else {
 				print "SaX: using cache data...\n";
-				system ("$spec{Xapi} $apiopt --mode auto -display $disp");
+				system ("DISPLAY=$disp $spec{Xapi} $apiopt --mode auto");
 			}
 		} else {
 			if ((-f $spec{HWFlag}) || (! HeaderOK())) {
 				print "SaX: using cache data...\n";
-				system ("$spec{Xapi} $apiopt --mode auto -display $disp");
+				system ("DISPLAY=$disp $spec{Xapi} $apiopt --mode auto");
 			} else {
 				print "SaX: importing current configuration...\n";
-				system ("$spec{Xapi} $apiopt -display $disp");
+				system ("DISPLAY=$disp $spec{Xapi} $apiopt");
 			}
 		}
 		$exitCode = $? >> 8;
