@@ -16,7 +16,7 @@ URL:            http://sax.berlios.de
 %if %{?suse_version:1}0
 # SuSE Build Requires...
 %if %{suse_version} > 1010
-BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk
+BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk hwinfo-devel
 %else
 BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt3-devel readline-devel swig sysfsutils update-desktop-files
 %endif
@@ -55,6 +55,9 @@ Source1:        sax2.desktop
 %endif
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 ExcludeArch:  s390
+%if %{suse_version} > 1020
+Patch:          sax2.dif
+%endif
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -231,6 +234,9 @@ Authors:
 %endif
 %prep
 %setup -n sax
+%if %{suse_version} > 1020
+%patch
+%endif
 
 %build
 test -e /.buildenv && . /.buildenv
