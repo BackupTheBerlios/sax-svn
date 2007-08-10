@@ -107,7 +107,7 @@ MsgDetect* MonitorGetData (void) {
 		for(di = di0, i = 0; di; di = di->next, i++) {
 		if (di->any.type == di_display) {
 			if (di->display.bandwidth) {
-			if (di->display.bandwidth >= 100) {
+			if (di->display.bandwidth >= 70) {
 				display->bandwidth = di->display.bandwidth;
 			}
 			}
