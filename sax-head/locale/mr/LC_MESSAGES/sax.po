@@ -1,18 +1,14 @@
-# Marathi message file for YaST2 (@memory@).
-# Copyright (C) 2006 SUSE Linux Products GmbH.
-# "( अमेय पाळंदे ) Ameya Palande" <2ameya@gmail.com>
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: YaST (@memory@)\n"
+"Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2005-07-29 15:37+0530\n"
-"Last-Translator: \"( अमेय पाळंदे ) Ameya Palande\" <2ameya@gmail.com>\n"
-"Language-Team: Marathi <i18n@suse.de>\n"
+"PO-Revision-Date: 2004-08-09 10:24+0200\n"
+"Last-Translator: Priyavert Sharma<priyavert.sharma@agreeya.com>\n"
+"Language-Team: AgreeYa Solutions <linux_team@agreeya.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -29,6 +25,8 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
+"<b>एसएएक्स२ सूचना</b>,hr> सध्या चालू केलेली ग्राफिक सिस्टीमएसएएक्स२ ने केलेल्या सुचनेवर "
+"आधारित आहे.ती जर स्वीकारार्ह असेलतर क्लिक  <b>ओके</b> . अन्यथा, आकृतीबंध बदला."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
@@ -46,22 +44,19 @@ msgstr ""
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
-msgstr ""
+msgstr "ऑटोमॅटिक ग्राफिक सिस्टीम सेटअप"
 
 #. Caption text for informing the user
-#, fuzzy
 msgid "Information..."
-msgstr "उत्पादवस्तू माहिती संग्रहीत करत आहे..."
+msgstr " माहिती..."
 
 #. Caption text for the main window
-#, fuzzy
 msgid "SaX2: X11 Configuration"
-msgstr "संरचना संचित करा"
+msgstr "SaX2: X11 आकृतीबंध"
 
 #. Title text on the left side
-#, fuzzy
 msgid "SaX Control Center"
-msgstr "यास्ट2 नियंत्रण केंद्र"
+msgstr "SaX नियंत्रण केंद्र"
 
 #. Info message about display size changes
 msgid ""
@@ -74,7 +69,6 @@ msgid "&Help"
 msgstr "&मदत"
 
 #. Ok Button text
-#, fuzzy
 msgid "O&K"
 msgstr "&ठीक आहे"
 
@@ -93,26 +87,24 @@ msgstr "&रद्द करा"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr ""
+msgstr "<b>एसएएक्स२</b><hr> मधून बाहेर पडा आता एसएक्स२ मधून बाहेर पडा?"
 
 #. Message box default caption text
-#, fuzzy
 msgid "Message"
-msgstr "निरोप"
+msgstr "संदेश"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "संरचना संचित करा"
+msgstr " आकृतीबंध बदला"
 
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr ""
+msgstr "मॉनिटर"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr ""
+msgstr "कार्ड आणि मॉनिटर प्रॉपर्टीज"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -121,33 +113,33 @@ msgstr "माऊस"
 
 #. title of module dialog
 msgid "Mouse Properties"
-msgstr ""
+msgstr "माउस प्रॉपर्टीज"
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
-msgstr ""
+msgstr "की बोर्ड"
 
 #. title of module dialog
 msgid "Keyboard Properties"
-msgstr ""
+msgstr "की बोर्ड प्रॉपर्टीज"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
 msgid "Tablet"
-msgstr ""
+msgstr "टॅब्लेट"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr ""
+msgstr "टॅब्लेट प्रॉपर्टीज"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
-msgstr ""
+msgstr "टचस्क्रीन"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr ""
+msgstr "टचस्क्रीन प्रॉपर्टीज"
 
 #. Short description of the VNC module
 #, fuzzy
@@ -155,9 +147,8 @@ msgid "Remote Access"
 msgstr "MySQL दुरस्थ संपर्क"
 
 #. title of module dialog
-#, fuzzy
 msgid "Remote Access Properties"
-msgstr "दर्शक व्यवस्थापकाकरता दुरस्थ संपर्क"
+msgstr " दुरस्थ संपर्क गुणधर्म"
 
 #. Tab text for a display tab of the monitor dialog
 #, fuzzy
@@ -166,54 +157,51 @@ msgstr "चूक दाखवा: %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "हा डिस्प्ले सक्रिय करा"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "हा पॉइंटर सक्रिय करा"
 
 #. Graphics Card name label
 msgid "Card"
-msgstr ""
+msgstr "कार्ड"
 
 #. Change data
 msgid "&Change..."
 msgstr "&बदला..."
 
 #. Set options for some kind of data
-#, fuzzy
 msgid "&Options..."
 msgstr "पर्याय"
 
 #. Configure some data
-#, fuzzy
 msgid "Con&figure..."
-msgstr "&संरचित करा..."
+msgstr "आकृतीबंध..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr ""
+msgstr "ड्युअल हेड मोड"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
 #. Group box title for the VNC options
-#, fuzzy
 msgid "Options"
 msgstr "पर्याय"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
-msgstr ""
+msgstr "माउस व्हील सक्रिय करा"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "एक्स-एक्सिस उलटा करा"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "वाय-एक्सिस उलटा करा"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
@@ -221,24 +209,24 @@ msgstr ""
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr ""
+msgstr "३-बटन एम्युलेशन सक्रिय करा"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr ""
+msgstr "माउस बटनने व्हील एम्यूलेट करा"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
-msgstr ""
+msgstr "स्क्रीन फिरवा"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr ""
+msgstr "चाचणी"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
-msgstr ""
+msgstr "आणि चाचणी"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -248,171 +236,172 @@ msgstr "जतन करा"
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr ""
+msgstr "लेआऊट"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
-msgstr ""
+msgstr "चाचणी तयार"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr ""
+msgstr "एकदा क्लिक कराः झाले"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr ""
+msgstr "दोनदा क्लिक कराः झाले"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
-msgstr ""
+msgstr "स्क्रॉलिंग"
 
 #. Status line of mouse test field: button pressed
 msgid "Button pressed"
-msgstr ""
+msgstr "बटन दाबले"
 
 #. Status line of mouse test field: button released
 msgid "Button released"
-msgstr ""
+msgstr "बटन सोडून दिले"
 
 #. Status line of mouse test field: wheel stopped
 msgid "Stopped: Done"
-msgstr ""
+msgstr "थांबविलेः झाले"
 
 #. Group box title for properties
 msgid "Properties"
-msgstr ""
+msgstr "प्रॉपर्टीज"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr ""
+msgstr "ड्युअल हेड मोड सक्रिय करा"
 
 #. Set display resolution
 msgid "Resolution"
-msgstr ""
+msgstr "रिझोल्यूशन"
 
 #. Set display colors
 msgid "Colors"
-msgstr ""
+msgstr "रंग"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr ""
+msgstr "३डी एक्सिलरेशन सक्रिय करा"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
-msgstr ""
+msgstr "कार्डसाठी मॉनिटर"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr ""
+msgstr "कार्डसाठी दुसरा मॉनिटर"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
-msgstr ""
+msgstr "सिंक फ्रिक्वेंन्सीज"
 
 #. Tab title: Setup display size
 msgid "Display Size"
-msgstr ""
+msgstr "डिस्प्ले आकार"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "व्यवस्था"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "%२ बरोबर %१ मध्ये सक्रिय केला"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "ड्रायव्हर डिफॉल्ट मोडमध्ये सक्रिय केला"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
-#, fuzzy
 msgid "Unconfigured"
-msgstr "अजून संरचित केले नाही."
+msgstr "अजून आकृतीबंध केले नाही."
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>सर्व डिस्प्लेज निष्क्रीय करू शकत नाही</b><hr><nobr>किमान एक डिस्प्लेतरी सक्रीय असला "
+"पाहिजे.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "माऊस कॉन्फिग्यूरेशन"
+msgstr " कोणताही आकृतीबंध उपलब्ध नाही"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
+"पारंपरिक मल्टीहेडः\n"
+"प्रत्येक स्क्रीन स्वतेत्र डिस्प्ले आहे"
 
 #. Radiobutton for cloned multihead mode
 msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
+"क्लोनड मल्टीहेडः\n"
+"प्रत्येक डिस्प्ले प्राथमिक डिस्प्लेचा क्लोन आहे"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
+"झिनेरामा मल्टीहेडः\n"
+"सर्व स्क्रीनमधून एक मोठा स्क्रीन उभा करतो"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
-msgstr ""
+msgstr "मल्टीबेड मोड"
 
 #. Monitor X - connected to - CardY
 msgid "Connected To"
-msgstr ""
+msgstr "शी जोडला"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "अनोळखी भाग"
+msgstr "अनोळखी मॉनिटरः"
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
-msgstr ""
+msgstr "प्राथमिक मॉनिटर"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "रचना संस्थापन"
+msgstr " मॉनिटर संस्थापन"
 
 #. Windowanager title for the mouse mode setup
-#, fuzzy
 msgid "Mouse Settings"
-msgstr "बायोस सेटींग्ज"
+msgstr " माऊस सेटींग्ज"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
-msgstr ""
+msgstr "ग्राफिक्स कार्ड सेटिंग्स"
 
 #. Windowanager title for the dual head setup
-#, fuzzy
 msgid "Dual Head Settings"
-msgstr "रचना संस्थापन"
+msgstr " दुहेरी हेड संस्थापन"
 
 #. Radiobutton don't rotate
-#, fuzzy
 msgid "Not Rotated"
-msgstr "सापडले नाही."
+msgstr " फिरवले नाही."
 
 #. Radiobutton rotate to the left side
 msgid "To the Left"
-msgstr ""
+msgstr "डावीकडे"
 
 #. Radiobutton rotate to the right side
 msgid "To the Right"
-msgstr ""
+msgstr "उजवीकडे"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
@@ -425,26 +414,27 @@ msgstr ""
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
+"<b>पर्यायाला व्हॅल्यूजची गरज</b><hr><nobr> पर्याय %१ साठी व्हॅल्यूज सेट करा</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr ""
+msgstr "मॉनिटरः व्हेंडर आणि नावाची निवड"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr ""
+msgstr "माउसः व्हेंडर आणि नावाची निवड"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr ""
+msgstr "मॅन्युअल सिंक फ्रिक्वेंसी सेटअप"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "डायगोनल आणि आस्पेक्ट प्रमाण"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
-msgstr ""
+msgstr "डिस्प्ले आकार [एमएम]  मध्ये"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
@@ -452,97 +442,100 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
+"<b>टीप:,/b>चुकीच्या सिंक रेंजेस तुमच्या मॉनिटरचे नुकसान करील. सेटिंग्ससाठी मॉनिटरमॅन्युअलचा "
+"सल्ला घ्या. <br><br>तुम्हाला तुमच्या मॉनिटरने त्याचे कमाल रेटिंग वापरू नयेअसे वाटत असेल, तर "
+"सिंक रेंजेस कमी करा. "
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "डिपीएमएस सक्रिय करा"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr ""
+msgstr "बहुउद्देशीय डिस्क..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
-msgstr ""
+msgstr "आडवा"
 
 #. Label text for second monitor name
 msgid "Second Monitor:"
-msgstr ""
+msgstr "दुसरा मॉनिटरः"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr ""
+msgstr "दुसरा मॉनिटर रिझोल्यूशन"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
-msgstr ""
+msgstr "उभा"
 
 #. Label text for hsync unit
 msgid "KHz"
-msgstr ""
+msgstr "केएचझेड"
 
 #. Label text for vsync unit
 msgid "Hz"
-msgstr ""
+msgstr "एचझेड"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "आस्पेक्ट प्रमाण"
 
 #. Label text for the diagonal length combo box
 msgid "Diagonal"
-msgstr ""
+msgstr "कर्णरेषा"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "एक्स एक्सिस [एमएम]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "वाय एक्सिस एमएम"
 
 #. Something is not configured
-#, fuzzy
 msgid "Not configured"
 msgstr "अजून संरचित केले नाही."
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "इंच"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
+"<b>सीडी किंवा डिस्क टाका</b><hr> मॉनिटर व्हेंडरमधून बहुउद्देशीयसीडी किंवा डिस्क टाका."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
+"<b>चूक वाचा</b><hr> सीडी किंवा डिस्कवरून वाचू शकत नाही. हे नादुरुस्त माध्यमकिंवा चुकीच्या "
+"पध्दतीने फॉर्मॅट केलेली फाइल दाखविते"
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "पारंपारिक चायनीज"
+msgstr "पारंपारिक "
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "क्लोन"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "झिनेरामा"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "माऊस"
+msgstr "माऊस मॉडेल"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
-msgstr ""
+msgstr "प्राथमिक सेटअप"
 
 #. Label text for the primary keyboard type
 msgid "Type"
@@ -550,46 +543,45 @@ msgstr "प्रकार"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
-#, fuzzy
 msgid "Variant"
 msgstr "विविध"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr ""
+msgstr "अतिरिक्त लेआऊटस"
 
 #. Table topic text describing the status column
 msgid "Status"
-msgstr ""
+msgstr "स्थिती"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr ""
+msgstr "कीटेबल"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr ""
+msgstr "ग्रूप शिफ्ट लॉक बिहेवियर"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr ""
+msgstr "पर्यायी ग्रूप दाखविण्यासाठी कीबोर्ड एलइडी वापरा "
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr ""
+msgstr "की स्थिती कंपोज करा"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr ""
+msgstr "की स्थिती नियंत्रित करा"
 
 #. List View root item text
 msgid "Third Level Chooser"
-msgstr ""
+msgstr "थर्ड लेव्हल चूजर"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr ""
+msgstr "अल्ट/ विन की बिहेवियर"
 
 #. List View root item text
 msgid "EuroSign Key Position"
@@ -597,7 +589,7 @@ msgstr ""
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr ""
+msgstr "कॅप्सलॉक की बिहेवियर"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -605,7 +597,7 @@ msgstr "कोणी नाही"
 
 #. XKBFile extension text
 msgid "Morocco"
-msgstr ""
+msgstr "मोरोक्को"
 
 #. XKBFile extension text
 msgid "Braille"
@@ -807,31 +799,31 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr ""
+msgstr "डावी अल्ट की दाबलेली असताना ग्रूप्सची अदलाबदल करते"
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr ""
+msgstr "दोन्ही कंट्रोल कीज एकत्रितपणे ग्रूप बदलतात."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr ""
+msgstr "उजवी शिफ्ट की ग्रूप बदलते"
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
-msgstr ""
+msgstr "डावी शिफ्ट की ग्रूप बदलते"
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr ""
+msgstr "डावी अल्ट की ग्रूप बदलते"
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr ""
+msgstr "दोन्ही विन कीज दाबलेल्या असताना ग्रूपची अदलाबदल करतात."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr ""
+msgstr "उजवी कंट्रोल की दाबलेली असताना ग्रूपची अदलाबदल करते"
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
@@ -921,273 +913,271 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
+msgstr "कॅप्सलॉक इंटर्नल कॅपिटलाझेशनचा उपयोग करते. शिफ्टने कॅप्सलॉक रद्द होत नाही"
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr ""
+msgstr "कॅप्सलॉक केवळ शिफ्ट मोडीफायर लॉक करतो"
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
+msgstr "कॅप्सलॉक अक्षरी चिन्हांचे सामान्य कॅपिटलायझेशन टॉगल करतो."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
+msgstr "कॅप्सलॉक शिप्ट टॉगल करतो म्हणून सर्व कीजवर परिणाम होतो"
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr ""
+msgstr "उजवी विन की म्हणजे कंपोज आहे."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr ""
+msgstr "शिफ्ट कॅप्सलॉक ग्रूप बदलतो."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr ""
+msgstr "आर-अल्ट दाबलेली असताना ग्रूपची अदलाबदल करते."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr ""
+msgstr "उजवी कंट्रोल की उजवी अल्ट म्हणून काम करते"
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
-msgstr ""
+msgstr "खाली डावीकडे कंट्रोल की"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी कोणतीहि विन की दाबा."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी उजवी अस्ट की दाबा."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
-msgstr ""
+msgstr "उजवी कंट्रोल की ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
-msgstr ""
+msgstr "उजवी अल्ट कंपोज आहे."
 
 #. XKBFile extension text
 msgid "Right Ctrl is Compose."
-msgstr ""
+msgstr "उजवी कंट्रोल कंपोज आहे."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
-msgstr ""
+msgstr "स्र्कॉललॉक एलइडी पर्यायी ग्रूप दाखवितात."
 
 #. XKBFile extension text
 msgid "Control key at left of -A-"
-msgstr ""
+msgstr "-ए- च्या डाव्या बाजूला कंट्रोल की"
 
 #. XKBFile extension text
 msgid "Third level choosers"
-msgstr ""
+msgstr "थर्ड लेव्हल चूजर्स"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
-msgstr ""
+msgstr "दोन्ही शिफ्ट की एकत्रितपणे ग्रूप बदलतात."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr ""
+msgstr "कॅप्सलॉक लॉकिंगसह शिफ्ट म्हणून काम करतो. शिफ्ट कॅप्सलॉक रद्द् करीत नाही."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr ""
+msgstr "कॅप्सलॉक इंटर्नल कॅपिटलायझेशनचा उपयोग करतो. शिफ्ट कॅप्सलॉक रद्द् करतो."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
-msgstr ""
+msgstr "कॅप्सलॉक एक अतिरिक्त कंट्रोल बनवा."
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निव़डण्यासाठी डावी विन की दाबा."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr ""
+msgstr "उजवी विन की ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
-msgstr ""
+msgstr "मेटा डाव्या विनकीला मॅप केलेला आहे."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
-msgstr ""
+msgstr "कॅप्सलॉक एलइडी पर्यायी ग्रूप दाखवितो."
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative group."
-msgstr ""
+msgstr "नमलॉक एलइडी पर्यायी ग्रूप दाखवितो."
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
-msgstr ""
+msgstr "डावी शिफ्ट की ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
-msgstr ""
+msgstr "डावी विन की दाबलेली असताना ग्रूपची अदलाबदल करते."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
-msgstr ""
+msgstr "मेनू कंपोज आहे."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr ""
+msgstr "दोन्ही अल्ट कीज एकत्रितपणे ग्रूप बदलतात."
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
-msgstr ""
+msgstr "कॅप्सलॉक की ग्रूप बदलते"
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr ""
+msgstr "कंट्रोल आणि कॅप्सलॉकची अदलाबदल करा."
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी कोणतीहि अल्ट की दाबा."
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
-msgstr ""
+msgstr "उजवी अल्ट की ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
+msgstr "नमपॅड कीज शिफ्ट केल्यावर त्या एमएस विंडोज प्रमाणे काम करतात."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr ""
+msgstr "सर्व्हरमध्ये हाताळल्या जाणा-या, स्पेशल कीज(Ctrl+Alt+<key>)."
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
-msgstr ""
+msgstr "हायपर विन-कीजशी मॅप केला आहे"
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr ""
+msgstr "अल्ट उजव्या विन-कीशी आणि सुपर मेनूशी मॅप केला आहे."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
-msgstr ""
+msgstr "सुपर विन-कीजशी मॅप केला आहे (डिफॉल्ट)."
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr ""
+msgstr "अल्ट आणि मेटा अल्ट कीजवर (डिफॉल्ट)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr ""
+msgstr "मेनू कीमध्ये स्टँडर्ड बिहेवियर वाढवा."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr ""
+msgstr "अल्ट आणि मेटा अल्ट कीजवर आहेत (डिफॉल्ट)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी उजवा कंट्रोल दाबा."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
-msgstr ""
+msgstr "अल्ट+शिफ्ट ग्रूप बदलतात."
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr ""
+msgstr "कंट्रोल+ शिफ्ट ग्रूप बदलतात."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr ""
+msgstr "कॅप्सलॉक लॉकिंगसह शिफ्ट म्हणून काम करतो. शिफ्ट कॅप्सलॉक रद्द् करीत नाही."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr ""
+msgstr "पर्यायी ग्रूप दाखविण्यासाठी कीबोर्ड एलउडी वापरा."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी उजवी विन-की दाबा."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी डावी अल्ट की दाबा."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
-msgstr ""
+msgstr "मेटा विन-कीजना मॅप केला आहे."
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी मेनू की दाबा."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
-msgstr ""
+msgstr "डावी कंट्रोल की ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr ""
+msgstr "मेनू की ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr ""
+msgstr "अल्ट कंट्रोल ग्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr ""
+msgstr "उजवी विन-की दाबलेली असताना ग्रूपची अदलाबदल करते."
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "पोर्ट आणि मोड"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "इलेक्ट्रॉनिक पेन्स"
 
 #. Activate tablet checkbox
 msgid "Activate This Tablet"
-msgstr ""
+msgstr "ही टॅब्लेट सक्रिय करा."
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
-msgstr ""
+msgstr "टॅब्लेटः वेंडर आणि नावाची निवड"
 
 #. Group box title for tablet port combobox
-#, fuzzy
 msgid "Connection Port"
-msgstr "संपर्क आणि शिष्टाचार:"
+msgstr " कनेक्शन पोर्ट"
 
 #. Group box title for tablet mode
 msgid "Primary Tablet Mode"
-msgstr ""
+msgstr "प्राथमिक टॅब्लेट मोड"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "पेन किंवा इरेजर मोड"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
-msgstr ""
+msgstr "संबंधित"
 
 #. Radiobutton for absolute tablet mode
 msgid "Absolute"
-msgstr ""
+msgstr "संपूर्ण"
 
 #. Combobox item text for tablet port: USB
-#, fuzzy
 msgid "USB"
-msgstr "अमेरीका"
+msgstr "USB"
 
 #. Combobox item text for tablet port: ttyS0
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "सीओएम-१ [ /dev/ttyS0 ]"
 
 #. Combobox item text for tablet port: ttyS1
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "सीओएम-२ [ /dev/ttyS1]"
 
 #. Combobox item text for tablet port: ttyS2
 msgid "COM-3 [ /dev/ttyS2 ]"
@@ -1199,15 +1189,15 @@ msgstr ""
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
-msgstr ""
+msgstr "टूल्स"
 
 #. Add Pen Checkbox
 msgid "Add Pen"
-msgstr ""
+msgstr "पेन वाढवा"
 
 #. Add Eraser Checkbox
 msgid "Add Eraser"
-msgstr ""
+msgstr "इरेजर वाढवा"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1215,11 +1205,11 @@ msgstr ""
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "पेन किंवा इरेजर सेटिंग्स"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
-msgstr ""
+msgstr "पेन प्रॉपर्टीज"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
@@ -1227,15 +1217,15 @@ msgstr ""
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
-msgstr ""
+msgstr "इरेजर प्रॉपर्टीज"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "डिस्प्ले क्र.  %१ ला टचस्र्कीन ठरवून द्या."
 
 #. Group box title for the touchscreen vendor and name selection
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr ""
+msgstr "टचस्र्कीनः वेंडर आणि नावाची निवड"
 
 #. Finish configuration message box
 msgid ""
@@ -1244,6 +1234,9 @@ msgid ""
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
+"<b>अंतिम पाय-या</b><hr> तुमचा आकृतीबंध सुरक्षित करणे ही शेवटची पायरी आहे.सुरक्षित "
+"करण्यापूर्वी नवीन आकृतीबंधाची चाचणी घेण्याची शिफारस करण्यात येत आहे.चाचणी सर्व्हरने जर "
+"करप्टेड डेस्कटॉप दाखविला तर सर्व्हर नष्ट कण्यासाठी<b>[ कंट्रोल अल्ट बॅकस्पेस]</b> दाबा."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1255,31 +1248,27 @@ msgstr ""
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr ""
+msgstr "पासवर्ड संरक्षण सक्रिय करा."
 
 #. LineEdit label: enter password
-#, fuzzy
 msgid "Password"
-msgstr "&परवली शब्द"
+msgstr "पासवर्ड"
 
 #. LineEdit contents: enter new password
-#, fuzzy
 msgid "<Enter new password>"
-msgstr "&परवली शब्द टाका:"
+msgstr "<नवीन पासवर्ड प्रविष्ट करा>"
 
 #. LineEdit contents: change password
-#, fuzzy
 msgid "<Change password>"
-msgstr "&परवली शब्द टाका:"
+msgstr "<पासवर्ड पडताळून पहा>"
 
 #. LineEdit contents: verify password
-#, fuzzy
 msgid "<Verify password>"
-msgstr "&परवली शब्द टाका:"
+msgstr "<पासवर्ड पडताळून पहा>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
-msgstr ""
+msgstr "एचटीटीपी एक्सेस सक्रिय करा"
 
 #. Activate multiple VNC connection checkbox
 #, fuzzy
@@ -1287,9 +1276,8 @@ msgid "Allow Multiple Connections"
 msgstr "कार्यान्वयिन जोडणी नाही!"
 
 #. SpinBox label to setup the HTTP port number
-#, fuzzy
 msgid "HTTP Port"
-msgstr "HTTP सेवा संगणक"
+msgstr "HTTP पोर्ट"
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
@@ -1314,36 +1302,36 @@ msgstr ""
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
-msgstr ""
+msgstr "<b>सॉफ्टवेअर स्थापना:</b><hr>काही पॅकेजेस गहाळ आहेत. आता गहाळ पॅकेजेसस्थापित करा."
 
 #. Caption text for the missing package info window
-#, fuzzy
 msgid "Package Installation"
-msgstr "नविन भाषांचे इनस्टॉलेशन"
+msgstr "पॅवोजचे इनस्टॉलेशन"
 
 #. Progress bar title text
 msgid "Importing module"
-msgstr ""
+msgstr "मोड्यूल आयात करीत आहे."
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr ""
+msgstr "एसएएक्स२: डेटा आयात करीत आहे...."
 
 #. Progress window label text
-#, fuzzy
 msgid "Initialize cache..."
-msgstr "सुरूवात करणे..."
+msgstr "कॅशे सुरु करा..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
+msgstr "<b>आकृतीबंध सुरक्षित करणे असफल</b><hr> खालील अहवाल तयार करण्यातआला आहेः"
 
 #. Message box test: configuration has been saved
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
+"<b>आकृतीबंध सुरक्षित केला</b><hr>तुम्ही केलेले बदल पुढच्या वेळी तुम्ही ग्राफिक्ससिस्टीम "
+"रिस्टार्ट कराला तेव्हा प्रभावी होतील. आता एसएएक्स मधून बाहेर पडा?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1351,6 +1339,8 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>आकृतीबंधाची चाचणी असफल</b><hr>अधिक माहितीसाठी,<tt>/var/log/Xorg.99.log</"
+"tt>फाइलचा संदर्भ घ्या. कॉलिंग इंस्टंन्सवरूनखालील अहवाल तयार करण्यात आला आहे."
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1361,83 +1351,83 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "मिळतेजुळतेपणाचे संकीर्ण पर्याय"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "की ५ मध्ये युरोसाइन वाढवा."
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "की बिहेवियर कॅप्सलॉक करा"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "अल्ट/विन की बिहेवियर"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr ""
+msgstr "काही कीजमध्ये युरोसाइन वाढवीत आहे"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr ""
+msgstr "कॅप्स लॉक हे कंपोज आहे."
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
-msgstr ""
+msgstr "उजवी कंट्रोल की उजवी अल्ट म्हणून काम करते."
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
-msgstr ""
+msgstr "खाली  डावीकडे कंट्रोल की"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr ""
+msgstr "ए च्या डावीकडे कंट्रोल की"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
-msgstr ""
+msgstr "कॅप्सलॉकला अतिरिक्त कंट्रोल बनवा."
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr ""
+msgstr "कंट्रोल आणि कॅप्सलॉकची अदलाबदल करा."
 
 #. XKBFile extension text
 msgid "Ctrl key position"
-msgstr ""
+msgstr "कंट्रोल की स्थिती"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr ""
+msgstr "सर्व्हरमध्ये हाताळल्या जाणा-या स्पेशल कीज(Ctrl+Alt+&lt;key&gt)."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr ""
+msgstr "थर्ड लेव्हल निवडण्यासाठी उजवा कंट्रोल दाबा."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
-msgstr ""
+msgstr "कंट्रोल शिफ्ट ग्रूप बदलतात."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "इ कीमध्ये युरोसाइन वाढवा."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "२ की मध्ये युरोसाइन वाढवा."
 
 #. XKBFile extension text
 msgid "key Compose key position"
-msgstr ""
+msgstr "की कंपोज की स्थिती"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
-msgstr ""
+msgstr "अल्ट कंट्रोल द्रूप बदलते."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr ""
+msgstr "ग्रूप शिफ्ट/लॉक बिहेवियर"
 
 #. XKBFile extension text
 msgid "Arabic"
@@ -1476,7 +1466,7 @@ msgstr "इस्टोनिया"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr ""
+msgstr "म्यानमार"
 
 #. XKBFile extension text
 msgid "Norway"
@@ -1487,22 +1477,20 @@ msgid "Germany"
 msgstr "जर्मनी"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Mongolia"
-msgstr "ॕंगॲल०ॖनॴ"
+msgstr "मंगोलिया"
 
 #. XKBFile extension text
 msgid "Bhutan"
-msgstr ""
+msgstr "भूतान"
 
 #. XKBFile extension text
 msgid "Bangladesh"
 msgstr "बांग्लादेश"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Latin American"
-msgstr "स्पॅनिश (लॅटिन अमेरिका)"
+msgstr " लॅटिन अमेरिका"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1562,7 +1550,7 @@ msgstr "स्विर्झलॅन्ड"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr ""
+msgstr "लाओस"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1570,12 +1558,11 @@ msgstr "जपान"
 
 #. XKBFile extension text
 msgid "Syria"
-msgstr ""
+msgstr "सिरीया"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Czechia"
-msgstr "ृॣेक"
+msgstr "चेकिया"
 
 #. XKBFile extension text
 msgid "Belarus"
@@ -1598,18 +1585,16 @@ msgid "Malta"
 msgstr "माल्टा"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Azerbaijan"
-msgstr "अृॣर॓॥इृ॥नी"
+msgstr "अझरबैजान"
 
 #. XKBFile extension text
 msgid "Lithuania"
 msgstr "लिथुआनिया"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Vietnam"
-msgstr "व०ॖतॴन॥ॕीृॣ"
+msgstr "व्हिएटनाम"
 
 #. XKBFile extension text
 msgid "Faroe Islands"
@@ -1621,7 +1606,7 @@ msgstr "साऊथ आफ्रिका"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "फारसी"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1629,7 +1614,7 @@ msgstr "स्लोवाकीया"
 
 #. XKBFile extension text
 msgid "Maldives"
-msgstr ""
+msgstr "मालदिवज"
 
 #. XKBFile extension text
 msgid "Iceland"
@@ -1657,16 +1642,15 @@ msgstr "ग्रीस"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr ""
+msgstr "युनायटेड किंग्डम"
 
 #. XKBFile extension text
 msgid "France"
 msgstr "फ्रान्स"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Armenia"
-msgstr "आरॴॕीन०ॖनॴ"
+msgstr "आर्मेनिया"
 
 #. XKBFile extension text
 msgid "Pakistan"
@@ -1678,7 +1662,7 @@ msgstr "पोलंड"
 
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "किर्गिझस्तान"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1690,7 +1674,7 @@ msgstr "हंगेरी"
 
 #. XKBFile extension text
 msgid "Cambodia"
-msgstr ""
+msgstr "कंबोडिया"
 
 #. XKBFile extension text
 msgid "Spain"
@@ -1705,18 +1689,16 @@ msgid "Romania"
 msgstr "रोमाीनिया"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Kazakhstan"
-msgstr "कृॣक"
+msgstr "कझाकिस्तान"
 
 #. XKBFile extension text
 msgid "Georgia"
 msgstr "जॉर्जिया"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "U.S. English"
-msgstr "इंगॴरेृी"
+msgstr "अमेरिकी इंग्रजी"
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1724,7 +1706,7 @@ msgstr "तुरॴक०ष"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "पीसी-९८एक्सएक्स सिरीज"
 
 #. XKBFile extension text
 msgid "Netherlands"
@@ -1740,33 +1722,31 @@ msgstr "कॅनडा"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr ""
+msgstr "श्री लंका"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Bosnia and Herzegovina"
 msgstr "बोस्निया आणि हर्जेगोविना"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr ""
+msgstr "सर्बिया आणि माँटेनेग्रो"
 
 #. XKBFile extension text
 msgid "Brazil"
-msgstr ""
+msgstr "ब्राझील"
 
 #. XKBFile extension text
 msgid "Ghana"
-msgstr ""
+msgstr "घाना"
 
 #. XKBFile extension text
 msgid "Andorra"
-msgstr ""
+msgstr "अंडोरा"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Afghanistan"
-msgstr "पाकिस्तान"
+msgstr "अफगाणिस्तान"
 
 #. XKBFile extension text
 msgid "Esperanto"
@@ -1783,55 +1763,53 @@ msgstr "टर्की"
 #.
 #. Maximum length: 40  characters
 msgid "&Step size"
-msgstr ""
+msgstr "स्टेप साइज"
 
 #. Maximum length: 40  characters
 msgid "Small"
-msgstr ""
+msgstr "लहान"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr ""
+msgstr "सामान्य"
 
 #. Maximum length: 40  characters
 msgid "Big"
-msgstr ""
+msgstr "मोठा"
 
 #. Maximum length: 40  characters
 msgid "Huge"
-msgstr ""
+msgstr "विशाल"
 
 #. Maximum length: 40  characters
 msgid "&Next Screen"
-msgstr ""
+msgstr "पुढचा स्र्कीन"
 
 #. Maximum length: 40  characters
 msgid "S&ave"
-msgstr ""
+msgstr "सुरक्षित करा"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
-msgstr ""
+msgstr "स्थिती बदला"
 
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "C&hange Size"
-msgstr "बदला..."
+msgstr "आकार बदला..."
 
 #. Maximum length: 40  characters
 msgid "Screen"
-msgstr ""
+msgstr "स्र्कीन"
 
 #. Maximum length: 60  characters
 msgid "No video mode tuning available"
-msgstr ""
+msgstr "व्हिडीओ मोड ट्यूनिंग उपलब्ध नाही"
 
 msgid "Display"
-msgstr ""
+msgstr "डिस्प्ले"
 
-#, fuzzy
 msgid "Configuration on display"
-msgstr "यास्ट पृथकरण %1\n"
+msgstr "डिस्प्लेवरील आकृतीबंध"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "आयडल टायमर..."

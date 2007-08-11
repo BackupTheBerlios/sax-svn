@@ -1,13 +1,13 @@
 # SaX Translations.
 # Craig Jeffares cjeffares@novell.com
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 10:24\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2007-08-03 11:42+0800\n"
+"Last-Translator: Thruth Wang <gubotruth@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +36,7 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为您的图形卡/驱动不支持 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -44,6 +45,8 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为基于 Xinerama 的双头输出"
+"模式被使用。Xorg Xinerama 扩展复合屏幕不在所有 Head 上支持 3D 。"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -65,7 +68,7 @@ msgstr "SaX 控制中心"
 msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
-msgstr ""
+msgstr "<b>显示大小改变</b><hr>显示大小在调整适应新输出。"
 
 #. Help Button text
 msgid "&Help"
@@ -153,9 +156,8 @@ msgid "Remote Access Properties"
 msgstr "远程访问属性"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "显示"
+msgstr "显示 %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -206,9 +208,8 @@ msgid "Invert Y-Axis"
 msgstr "翻转 Y 轴"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "激活 3 键仿真"
+msgstr "激活左手按钮映射"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -411,6 +412,8 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>无效颜色／分辨率组合：</b><hr><nobr>选定的分辨率和／或颜色设置</nobr>不被"
+"图形卡 framebuffer 支持。"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -584,9 +587,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Alt/Win 键行为"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Ctrl 键的位置"
+msgstr "欧元键的位置"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -598,21 +600,19 @@ msgstr "无"
 
 #. XKBFile extension text
 msgid "Morocco"
-msgstr ""
+msgstr "摩洛哥"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "巴西"
+msgstr "盲文"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ethiopia"
-msgstr "爱沙尼亚"
+msgstr "埃塞俄比亚"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "NICOLA-F 风格退格键"
 
 #. XKBFile extension text
 #, fuzzy
@@ -626,7 +626,7 @@ msgstr "按下左 Alt 键后切换组。"
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "空格键无输出"
 
 #. XKBFile extension text
 #, fuzzy
@@ -640,7 +640,7 @@ msgstr "两个 Ctrl 键一起更改组。"
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "使用空格键输入不可断空格字符"
 
 #. XKBFile extension text
 #, fuzzy
@@ -674,7 +674,7 @@ msgstr "按下右 Ctrl 键后切换组。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "空格键输出不可断空格字符"
 
 #. XKBFile extension text
 #, fuzzy
@@ -804,7 +804,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Japanese keyboard options"
-msgstr ""
+msgstr "日本键盘选项"
 
 #. XKBFile extension text
 #, fuzzy
@@ -833,7 +833,7 @@ msgstr "按下右 Win 键后切换组。"
 
 #. XKBFile extension text
 msgid "Layout switching"
-msgstr ""
+msgstr "输出切换"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -883,7 +883,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "强制标准传统小键盘"
 
 #. XKBFile extension text
 #, fuzzy
@@ -896,7 +896,6 @@ msgid "Keypad layout selection"
 msgstr "语言和键盘布局选择"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
 msgstr "Shift＋CapsLock 转换组。"
 
@@ -929,16 +928,15 @@ msgstr "Shift 和 numpad 键的作用和在 MS Windows 中的一样。"
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "假名 Lock 键被锁定"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "右 Win 键是 Compose 键。"
+msgstr "左 Win 键是 Compose 键。"
 
 #. XKBFile extension text
 #, fuzzy
@@ -952,7 +950,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "日本键盘选项"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1228,14 +1226,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1250,9 +1246,8 @@ msgid "Add Eraser"
 msgstr "添加橡皮"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "添加笔"
+msgstr "添加 Pad"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1263,9 +1258,8 @@ msgid "Pen Properties"
 msgstr "笔属性"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "笔属性"
+msgstr "Pad 属性"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1492,14 +1486,12 @@ msgid "Nepal"
 msgstr "尼泊尔"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "老挝人民民主共和国"
+msgstr "刚果（金）"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "捷克共和国"
+msgstr "韩国"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1510,9 +1502,8 @@ msgid "Nigeria"
 msgstr "尼日利亚"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx 系列"
+msgstr "日本 (PC-98xx 系列)"
 
 #. XKBFile extension text
 msgid "Estonia"

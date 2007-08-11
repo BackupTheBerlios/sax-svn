@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-06-12 12:24+0400\n"
-"Last-Translator: Nikolay Derkach <nderkach@gmail.com>\n"
+"PO-Revision-Date: 2007-07-23 10:24+0400\n"
+"Last-Translator: Aleksey Osipov<aliks-os@yandex.ru>\n"
 "Language-Team:  <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,7 +77,7 @@ msgid ""
 "layout."
 msgstr ""
 "<b>Размер дисплея изменен</b><hr>Размер дисплея адаптирован к новой "
-"раскладке."
+"раскладке клавиатуры."
 
 #. Help Button text
 msgid "&Help"
@@ -249,7 +249,7 @@ msgstr "&Сохранить"
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr "Раскладка"
+msgstr "Раскладка клавиатуры"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -568,7 +568,7 @@ msgstr "Вариант"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr "Дополнительные раскладки"
+msgstr "Дополнительные раскладки клавиатуры"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -618,252 +618,211 @@ msgstr "Нет"
 
 #. XKBFile extension text
 msgid "Morocco"
-msgstr ""
+msgstr "Морокко"
 
 # BR
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "Бразилия"
+msgstr "Брайлевская печать"
 
+# ET
+# fuzzy
 #. XKBFile extension text
-#, fuzzy
 msgid "Ethiopia"
 msgstr "Эстония"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "Backspace в стиле NICOLA-F"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "Выбор 3-го уровня нажатием клавиши Alt справа."
+msgstr "Alt справа никогда не выбирает 3-й уровень."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "Alt слева - переключение группы на время нажатия."
+msgstr "Alt слева переключает при нажатии раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non"
-msgstr "Клавиша Space выдает пробел на любом уровне."
+msgstr "Клавиша Space ничего не выводит"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numeric keypad keys."
 msgstr "Цифровые клавиши по умолчанию."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "Обе клавиши Ctrl одновременно - изменение группы."
+msgstr ""
+"Нажатие обеих клавиши Ctrl одновременно переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Using space key to input non-breakable space character"
-msgstr "Клавиша пробела выводит nobreakspace на четвертом уровне."
+msgstr "Клавиша пробела выводит не прерывный знак пробела"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "Shift справа - изменение группы."
+msgstr "Shift справа переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "Win слева - изменение группы."
+msgstr "Win слева переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Shift - изменение группы."
+msgstr "Ctrl+Shift переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "Alt слева - изменение группы."
+msgstr "Alt слева переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "Обе клавиши Win одновременно - переключение группы на время нажатия."
+msgstr "Обе клавиши Win переключают раскладку клавиатуры при нажатии."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Ctrl справа - переключение группы на время нажатия."
+msgstr "Ctrl справа переключает раскладку клавиатуры при нажатии."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character"
-msgstr "Клавиша пробела выводит nobreakspace на четвертом уровне."
+msgstr "Клавиша пробела выводит не прерывный знак пробела"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift+CapsLock - изменение группы."
+msgstr "Shift+CapsLock изменяеи раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
-msgstr "Alt справа - переключение группы на время нажатия."
+msgstr "Alt справа переключает раскладку клавиатуры при нажатии."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "Выбор раскладки клавиатуры"
+msgstr "Выбор цифровой раскладки клавиатуры"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "Ctrl справа - изменение группы."
+msgstr "Ctrl справа переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Alt+CapsLock изменяет группу."
+msgstr "Alt+CapsLock переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "Сопоставить Hyper с клавишами Win."
+msgstr "Сопоставить Super с клавишами Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "Индикатор ScrollLock показывает альтернативную группу."
+msgstr "Индикатор ScrollLock показывает альтернативную раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "Обе клавиши Shift одновременно - изменение группы."
+msgstr ""
+"Нажатие обеих клавиш Shift одновременно переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at second level."
-msgstr "Клавиша пробела выводит nobreakspace на втором уровне."
+msgstr "Клавиша пробела выводит не прерывный знак пробела на втором уровне."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "Клавиша Win справа - изменение группы."
+msgstr "Win справа переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at third level."
-msgstr "Клавиша пробела выводит nobreakspace на третьем уровне."
+msgstr "Клавиша пробела выводит не прерывный знак пробела третьем уровне."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Цифровая клавиатура работает как на Mac."
+msgstr "Цифровая клавиатура работает как с Mac."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "Индикатор CapsLock показывает альтернативную группу."
+msgstr "Индикатор CapsLock показывает альтернативную раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "Индикатор NumLock показывает альтернативную группу."
+msgstr "Индикатор NumLock показывает альтернативную раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "Shift слева - изменение группы."
+msgstr "Shift слева переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "Win слева - переключение группы на время нажатия."
+msgstr "Win слева переключает раскладку клавиатуры при нажатии."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr "Клавиша пробела выводит nobreakspace на четвертом уровне."
+msgstr "Клавиша пробела выводит не прерывный знак пробела на четвертом уровне."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "Обе клавиши Alt одновременно - изменение группы."
+msgstr ""
+"Нажатие обеих клавиши Alt одновременно переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "CapsLock - изменение группы."
+msgstr "Клавиша CapsLock переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Сопоставить Super с клавишами Win (по умолчанию)."
+msgstr "Сопоставить Control с клавишами Win (и как обычно с клавишами Ctrl)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
-msgstr "Alt справа - изменение группы."
+msgstr "Alt справа переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "Shift с клавишами цифр работает такэе как в MS Windows."
+msgstr "Shift с клавишами цифр работает как в MS Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt и Meta на клавишах Alt (по умолчанию)."
+msgstr "Alt и Meta на клавишах Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt+Shift - изменение группы."
+msgstr "Alt+Shift переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Shift - изменение группы."
+msgstr "Ctrl+Shift переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs usual space at any level."
 msgstr "Клавиша Space выдает пробел на любом уровне."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
 msgstr "Параметры японской клавиатуры"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
 msgstr ""
-"Использовать индикаторы клавиатуры, чтобы показать альтернативную группу."
+"Использовать индикаторы клавиатуры, чтобы показать альтернативную раскладку "
+"клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "Ctrl слева - изменение группы."
+msgstr "Ctrl слева переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "Клавиша Menu - изменение группы."
+msgstr "Клавиша Menu переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl - изменение группы."
+msgstr "Alt+Ctrl переключает раскладку клавиатуры."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "Win справа - переключение группы на время нажатия."
+msgstr "Win справа переключает раскладку клавиатуры при нажатии."
 
 #. XKBFile extension text
 msgid "Layout switching"
-msgstr ""
+msgstr "Переключение раскадки клавиатуры"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -927,7 +886,7 @@ msgstr "Выбор раскладки клавиатуры"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
-msgstr "Alt+CapsLock изменяет группу."
+msgstr "Alt+CapsLock переключает группу."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."

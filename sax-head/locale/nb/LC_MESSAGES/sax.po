@@ -1,8 +1,11 @@
-# translation of sax.po to
+# translation of sax.po to Norwegian
 # Gudmund Areskoug <fta@algonet.se>, 2001.
 # Mattias Newzella <newzella@linux.nu>, 2002,2003.
 # Olav Pettershagen <olav.pettershagen@trysil.online.no>, 2004.
 # Olav Pettershagen <olav.pet@online.no>, 2005, 2006.
+# Sveinung Marvik <sveinung.marvik@ntnu.no>, 2007.
+# Rune Nordbøe Skillingstad <rune@skillingstad.no>, 2007.
+# translation of sax.po to
 # translation of sax.nb.po to
 # translation of sax.nb.po to
 # Oversetting av sax.nb.po till norsk
@@ -12,13 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-02-21 23:26+0100\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2007-08-08 08:48+0200\n"
+"Last-Translator: Rune Nordbøe Skillingstad <rune@skillingstad.no>\n"
+"Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -27,7 +31,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -44,6 +48,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D-akselerasjon er ikke støttet</b><hr>SaX2 kan ikke tilby aktivering av "
+"3D-subsystemet fordi grafikk-kortet eller driveren ikke støtter 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -52,6 +58,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D-akselerasjon er ikke støttet</b><hr>SaX2 kan ikke tilby aktivering av "
+"3D-subsystemet fordi Xineramabasert toskjermsmodus er i bruk. Xorg Xinerama-"
+"utvidelsen som brukes for sammenslåing av skjermer støtter ikke 3D på alle "
+"skjermer"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -74,6 +84,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>Skjermstørrelse endret</b><hr>Skjermstørrelsen har blitt tilpasset nytt "
+"sideoppsett."
 
 #. Help Button text
 msgid "&Help"
@@ -161,9 +173,8 @@ msgid "Remote Access Properties"
 msgstr "Innstillinger for ekstern tilgang"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Skjermbilde"
+msgstr "Skjermbilde %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -214,9 +225,8 @@ msgid "Invert Y-Axis"
 msgstr "Inverter Y-akse"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Aktiver emulering av 3 knapper"
+msgstr "Aktiver knapprekkefølge for venstrehendte"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -350,8 +360,8 @@ msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"Tradisjonell flerskjermsmodus:\n"
-"Hver skjerm er en separat enhet."
+"Tradisjonelt flerskjermsmodus:\n"
+"Hver skjerm er en separat enhet"
 
 #. Radiobutton for cloned multihead mode
 msgid ""
@@ -359,7 +369,7 @@ msgid ""
 "Each display is a clone of the primary display"
 msgstr ""
 "Klonet flerskjermsmodus:\n"
-"Alle skjermene er kloner av den primære skjermen."
+"Alle skjermene er kloner av den primære skjermen"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
@@ -420,6 +430,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Ugyldig farge-/oppløsningskombinasjon:</b><hr><nobr>Den valgte "
+"oppløsningen og/eller fargeoppsettet</nobr>støttes ikke av skjermkortets "
+"framebuffer."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -598,9 +611,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Innstillinger for Alt/Win-taster"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Plassering av Ctrl-tast"
+msgstr "Plassering av Eurosymboltast"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -612,247 +624,210 @@ msgstr "Ingen"
 
 #. XKBFile extension text
 msgid "Morocco"
-msgstr ""
+msgstr "Marokko"
 
 # BR
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "Brasil"
+msgstr "Blindeskrift"
 
+# ET
+# fuzzy
 #. XKBFile extension text
-#, fuzzy
 msgid "Ethiopia"
-msgstr "Estland"
+msgstr "Etiopia"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "NICOLA-F-type rettetast"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "Trykk på høyre Alt-tast for å velge 3. nivå."
+msgstr "Høyre Alt-tast skal aldre velge tredjenivå."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "Venstre Alt-tast bytter gruppe."
+msgstr "Nedtrykket venstre Alt-tast skifter oppsett."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "Mellomromstast skriver ut ikke-"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numeric keypad keys."
-msgstr "Standardrute OK."
+msgstr "Forvalgt talltastatur."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "Begge Ctrl-tastene sammen bytter gruppe."
+msgstr "Begge Ctrl-tastene sammen bytter oppsett."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "Bruker mellomromstasten for å skrive hardt mellomrom"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "Høyre Shift-tast bytter gruppe."
+msgstr "Høyre Shift-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "Venstre Win-tast bytter gruppe."
+msgstr "Venstre Win-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Shift bytter gruppe."
+msgstr "Venstre Ctrl+Venstre Shift bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "Venstre Alt-tast bytter gruppe."
+msgstr "Venstre Alt-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "Begge Win-tastene bytter gruppe."
+msgstr "Begge Win-tastene nedtrykket bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Høyre Ctrl-tast bytter gruppe."
+msgstr "Nedtrykket høyre Ctrl-tast bytter oppsett."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "Mellomromstasten gir hardt mellomrom-tegn"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift+Caps Lock bytter gruppe."
+msgstr "Shift+Caps Lock bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
-msgstr "Høyre Alt-tast bytter gruppe."
+msgstr "Nedtrykket høyre Alt-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "Valg av språk og tastaturoppsett"
+msgstr "Oppsettsvalg for talltastatur"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "Høyre Ctrl-tast bytter gruppe."
+msgstr "Høyre Ctrl-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Shift+Caps Lock bytter gruppe."
+msgstr "Shift+Caps Lock bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "Hyper på Win-tastene."
+msgstr "Super er tilordnet Win-tastene."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "Scroll_Lock-lys viser alternativ gruppe."
+msgstr "ScrollLock-lys viser alternativt oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "Begge Shift-tastene sammen bytter gruppe."
+msgstr "Begge Shift-tastene sammen bytter oppsett."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
+msgstr "Mellomromstasten skriver hardt mellomrom på andrenivå."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "Høyre Win-tast bytter gruppe."
+msgstr "Høyre Win-tast bytter oppsett."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
+msgstr "Mellomromstasten skriver hardt mellomrom på tredjenivå."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Shift sammen med talltastaturet fungerer som i MS Windows."
+msgstr "Talltastatur fungerer som på Mac."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "CapsLock-lys viser alternativ gruppe."
+msgstr "CapsLock-lys viser alternativt oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "NumLock-lys viser alternativ gruppe."
+msgstr "NumLock-lys viser alternativt oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "Venstre Shift-tast bytter gruppe."
+msgstr "Venstre Shift-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "Venstre Win-tast bytter gruppe."
+msgstr "Nedtrykket venstre Win-tast bytter oppsett."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
+msgstr "Mellomromstasten skriver hardt mellomrom på fjerdenivå."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "Begge Alt-tastene sammen bytter gruppe."
+msgstr "Begge Alt-tastene sammen bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "CapsLock-tast bytter gruppe."
+msgstr "CapsLock-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Super på Win-tastene (standard)."
+msgstr "Control er tilordnet Win-tastene (og de normale Ctrl-tastene)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
-msgstr "Høyre Alt-tast bytter gruppe."
+msgstr "Høyre Alt-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
 msgstr "Shift sammen med talltastaturet fungerer som i MS Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt og Meta på Alt-tastene (standard)."
+msgstr "Alt og Meta på Alt-tastene."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt+Shift bytter gruppe."
+msgstr "Alt+Shift bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Shift bytter gruppe."
+msgstr "Ctrl+Shift bytter oppsett."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr ""
+msgstr "Mellomromstasten skriver vanlig mellomrom på alle nivå."
 
 #. XKBFile extension text
 msgid "Japanese keyboard options"
-msgstr ""
+msgstr "Japanske tastaturvalg"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
-msgstr "Bruk tastaturlys for å vise alternativ gruppe."
+msgstr "Bruk tastaturlys for å vise alternativt oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "Venstre Ctrl-tast bytter gruppe."
+msgstr "Venstre Ctrl-tast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "Menytast bytter gruppe."
+msgstr "Menytast bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl bytter gruppe."
+msgstr "Alt+Ctrl bytter oppsett."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "Høyre Win-tast bytter gruppe."
+msgstr "Nedtrykket høyre Win-tast bytter oppsett."
 
 #. XKBFile extension text
 msgid "Layout switching"
-msgstr ""
+msgstr "Bytting av oppsett"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "Venstre Alt-tast bytter gruppe."
+msgstr "Nedtrykket venstre Alt-tast bytter gruppe."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
@@ -872,109 +847,101 @@ msgstr "Venstre Alt-tast bytter gruppe."
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr "Begge Win-tastene bytter gruppe."
+msgstr "Begge Win-tastene nedtrykket bytter gruppe."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
 msgstr "Høyre Ctrl-tast bytter gruppe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta på venstre Win-tast."
+msgstr "Venstre Alt er byttet om med venstre Win-tast."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Standardrute OK."
+msgstr "Forvelg talltastatur."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Legge til hardt mellomrom på mellomromstasten"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"Bruk talltastatur med unicode-tillegg (piler og matematiske operatorer)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Påtvinge tastatur i kompatibilitetsmodus"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
 "CapsLock bruker store bokstaver internt. Shift annullerer ikke CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Valg av språk og tastaturoppsett"
+msgstr "Valg av tastaturoppsett"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
 msgstr "Shift+Caps Lock bytter gruppe."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Mellomromstast skriver ut hardt mellomrom på andrenivå."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock fungerer som Shift med låsing. Shift annullerer ikke CapsLock."
+msgstr "CapsLock fungerer som Shift med låsing. Shift påvirker ikke CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock bruker store bokstaver internt. Shift annullerer CapsLock."
+msgstr "CapsLock bruker store bokstaver internt. Shift påvirker ikke CapsLock"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Mellomromstasten skriver hardt mellomrom på tredje nivå."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Bytt tastekoder for to taster når Mac-tastatur blir oppdaget feil av kjernen."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift sammen med talltastaturet fungerer som i MS Windows."
+msgstr "Taster på talltastaturet fungerer som med Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "Kana låstast låser"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Mellomromstasten skriver hardt mellomrom på fjerde nivå."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "Høyre Win-tast for kombinasjon."
+msgstr "Venstre Win-tast er kombinasjonstast."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Trykk på høyre Alt-tast for å velge 3. nivå."
+msgstr ""
+"Trykk høyre Alt-tast for å velge tredje nivå, Shift+Høyre Alt-tast er "
+"Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Mellomromstast skriver mellomrom på alle nivå."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Japanske tastaturvalg"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock fungerer som Shift med låsing. Shift annullerer CapsLock."
+msgstr "CapsLock fungerer som Shift med låsing. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1120,7 +1087,7 @@ msgstr "Shift sammen med talltastaturet fungerer som i MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr "Spesialtaster (Ctrl+Alt+<tast>) i servergrensesnitt."
+msgstr "Spesialtaster (Ctrl+Alt+<tast>) i tjenergrensesnitt."
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
@@ -1247,14 +1214,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1269,9 +1234,8 @@ msgid "Add Eraser"
 msgstr "Legg til viskelær"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Legg til penn"
+msgstr "Legg til pad"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1282,9 +1246,8 @@ msgid "Pen Properties"
 msgstr "Penninnstillinger"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Penninnstillinger"
+msgstr "Egenskaper for pad"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1308,15 +1271,15 @@ msgstr ""
 "<b>Avsluttende trinn:</b><hr>Det siste trinnet er å lagre den nye "
 "konfigurasjonen. Vi anbefaler at du tester den nye konfigurasjonen før du "
 "lagrer den. Hvis testen viser et uleselig skrivebord, kan du trykke <b>[ Ctrl"
-"+Alt+Backspace ]</b> for å drepe serveren."
+"+Alt+Backspace ]</b> for å drepe tjeneren."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr "Ekstern styring av X-server"
+msgstr "Ekstern styring av X-tjener"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr "Tillat ekstern tilgang til skjerm, tastatur og mus på din X-server"
+msgstr "Tillat ekstern tilgang til skjerm, tastatur og mus på din X-tjener"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1482,7 +1445,7 @@ msgstr "Plassering av Ctrl-tast"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "Spesialtaster (Ctrl+Alt+&lt;key&gt;) i servergrensesnitt."
+msgstr "Spesialtaster (Ctrl+Alt+&lt;key&gt;) i tjenergrensesnitt."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
@@ -1521,14 +1484,12 @@ msgid "Nepal"
 msgstr "Nepal"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Laos"
+msgstr "Kongo, Den demokratiske republikken"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Tsjekkia"
+msgstr "Korea, Republikken"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1541,9 +1502,8 @@ msgid "Nigeria"
 msgstr "Nigeria"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx-serien"
+msgstr "Japan (PC-98xx-serien)"
 
 #. XKBFile extension text
 msgid "Estonia"
