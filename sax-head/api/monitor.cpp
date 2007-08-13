@@ -435,7 +435,15 @@ bool SCCMonitor::exportData ( void ) {
 				//====================================
 				// delete profile data keys
 				//------------------------------------
+				QString externalDisplaySize = "";
 				for (; it.current(); ++it) {
+					if (it.currentKey() == "SaXExternal") {
+						QRegExp sizeExp ("DisplaySize&([0-9]+ [0-9]+)");
+						int pos = sizeExp.search (*it.current());
+						if (pos >= 0) {
+							externalDisplaySize = sizeExp.cap(1);
+						}
+					}
 					saxCard.removeCardOption (it.currentKey());
 				}
 				#if 1 // to be removed as soon as possible
@@ -468,6 +476,23 @@ bool SCCMonitor::exportData ( void ) {
 					// setup dualhead options
 					//------------------------------------
 					saxCard.addCardOption ("SaXDualHead",0);
+
+					//====================================
+					// Add external monitor section
+					//------------------------------------
+					bool haveExternal = false;
+					for (; it.current(); ++it) {
+						QString key = it.currentKey();
+						QString val = *it.current();
+						if (key == "SaXExternal") {
+							saxCard.addCardExternal ("EXT");
+							saxCard.addCardExternalOption (
+								"DisplaySize",externalDisplaySize
+							);
+							haveExternal = true;
+						}
+					}
+					it.toFirst();
 					for (; it.current(); ++it) {
 						QString key = it.currentKey();
 						QString val = *it.current();
@@ -484,14 +509,25 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "SaXDualMonitorVendor") {
 							QString vendor = dualModel ->getVendorName();
 							saxCard.addCardOption ( key,vendor );
+							if (haveExternal) {
+								saxCard.addCardExternalOption ("VendorName",vendor);
+							}
 						}
 						if (key == "SaXDualMonitorModel") {
 							QString model = dualModel ->getModelName();
 							saxCard.addCardOption ( key,model );
+							if (haveExternal) {
+								saxCard.addCardExternalOption ("ModelName",model);
+							}
 						}
 						if (key == "SaXDualResolution") {
 							QString resolution = dualData->getResolution();
 							saxCard.addCardOption ( key,resolution );
+							if (haveExternal) {
+								saxCard.addCardExternalOption (
+									"PreferredMode",resolution
+								);
+							}
 						}
 						if (key == "SaXDualOrientation") {
 							int orientation  = dualData->getLayout();
@@ -510,6 +546,11 @@ bool SCCMonitor::exportData ( void ) {
 								break;
 							}
 							saxCard.addCardOption ( key,position );
+							if ((haveExternal) && (dualData->getMode()!=DUAL_CLONE)) {
+								saxCard.addCardExternalOption (
+									"Position",position
+								);
+							}
 						}
 						if (key == "SaXDualMode") {
 							int mode = dualData->getMode();
@@ -531,7 +572,10 @@ bool SCCMonitor::exportData ( void ) {
 							int hsmax = dualModel->getHSmax();
 							int hsmin = dualModel->getHSmin();
 							QTextOStream (&hsync) << hsmin << "-" << hsmax;
-							saxCard.addCardOption ( key,hsync );	
+							saxCard.addCardOption ( key,hsync );
+							if (haveExternal) {
+								saxCard.addCardExternalOption ("HorizSync",hsync);
+							}
 						}
 						if (key == "SaXDualVSync") {
 							QString vsync;
@@ -540,6 +584,9 @@ bool SCCMonitor::exportData ( void ) {
 							int vsmin = dualModel->getVSmin();
 							QTextOStream (&vsync) << vsmin << "-" << vsmax;
 							saxCard.addCardOption ( key,vsync );
+							if (haveExternal) {
+								saxCard.addCardExternalOption ("VertRefresh",vsync);
+							}
 							//====================================
 							// calculate one modeline for each res
 							//------------------------------------
@@ -561,6 +608,17 @@ bool SCCMonitor::exportData ( void ) {
 										x,y,vsmax,hsmax
 									);
 								}
+							}
+						}
+						//====================================
+						// setup profile IntelNext
+						//------------------------------------
+						if (driver == "intel") {
+							// search monitor-* outputs and re-add them
+							QRegExp itemExp ("monitor-(.*)");
+							int pos = itemExp.search (key);
+							if (pos >= 0) {
+								saxCard.addCardOption ( key,val );
 							}
 						}
 						//====================================

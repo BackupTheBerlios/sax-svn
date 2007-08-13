@@ -586,9 +586,10 @@ sub CreateConfigFile {
 	my @part7;   # Modes
 	my @part8;   # Screen
 	my @part9;   # Device
-	my @part10;  # ServerLayout
-	my @part11;  # DRI
-	my @part12;  # Extensions
+	my @part10;  # Monitor
+	my @part11;  # ServerLayout
+	my @part12;  # DRI
+	my @part13;  # Extensions
 	my %config;  # section hash
 
 	# Files,ServerFlags,Module...
@@ -625,16 +626,17 @@ sub CreateConfigFile {
 	%config = ApiImportCard(\%input);
 	%store  = HashMerge(\%store,\%config);
 	@part9  = CreateDeviceSection(\%config);
+	@part10 = CreateMonitorSection(\%config,"yes");
 
 	# ServerLayout...
 	# ----------------
 	%config = ApiImportLayout(\%input);
 	%store  = HashMerge(\%store,\%config);
-	@part10 = CreateServerLayoutSection(\%config);
-	@part11 = CreateDRISection(\%config);
+	@part11 = CreateServerLayoutSection(\%config);
+	@part12 = CreateDRISection(\%config);
 
 	%config = ApiImportExtensions(\%input);
-	@part12 = CreateExtensionsSection(\%config);
+	@part13 = CreateExtensionsSection(\%config);
 
 	# /.../
 	# save new configuration as storable file
@@ -659,6 +661,7 @@ sub CreateConfigFile {
 	print HANDLE @part10; print HANDLE "\n";
 	print HANDLE @part11; print HANDLE "\n";
 	print HANDLE @part12; print HANDLE "\n";
+	print HANDLE @part13; print HANDLE "\n"; 
 	close(HANDLE);
 
 	if (ImportXFineCache() eq "yes") {

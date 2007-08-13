@@ -153,6 +153,7 @@ void ScanXStuff::Scan (void) {
 	MsgDetect* display;
 	FbBootData* bootDisplay;
 	unsigned VBEmem = 0;
+	string rroutput = "";
 	ScanServer server(question,withx,card,cardopt);
 	XF86ConfigFile* srvmsg = new XF86ConfigFile();
 	map<int,ParseData>  parse;
@@ -251,6 +252,12 @@ void ScanXStuff::Scan (void) {
 	if (graphics.size() == 1) {
 		VBEmem  = MemorySize(config);
 	}
+	//======================================
+	// try to detect the output plugin
+	//--------------------------------------
+	if (graphics[0].module == "intel") {
+		rroutput = srvmsg->CallRandR(config);
+	}
 	// .../
 	// it is not sure to get any server message data this depend on
 	// some items which you can see in the server.c code. If no server
@@ -287,6 +294,11 @@ void ScanXStuff::Scan (void) {
 			parse[0].videoram = VBEmem;
 		} else {
 			parse[0].videoram = 4096;
+		}
+		if (! rroutput.empty()) {
+			parse[0].rroutput = rroutput; 
+		} else {
+			parse[0].rroutput = "<undefined>";
 		}
 		// .../
 		// the following values could not be detected via libhd
@@ -414,6 +426,7 @@ void ScanXStuff::Scan (void) {
 		stuff[i].vmdepth   = parse[mapnr].vmdepth;
 		stuff[i].chipset   = parse[mapnr].chipset;
 		stuff[i].videoram  = parse[mapnr].videoram;
+		stuff[i].rroutput  = parse[mapnr].rroutput;
 		stuff[i].raw       = graphics[i].raw;
 		stuff[i].option    = graphics[i].option;
 		stuff[i].extension = graphics[i].extension;
@@ -708,6 +721,7 @@ int ScanXStuff::Save (void) {
 		strcpy(part1.driver    , data.driver.c_str());
 		strcpy(part1.fbtiming  , data.fbtiming.c_str());
 		strcpy(part1.vbios     , data.vbios.c_str());
+		strcpy(part1.rroutput  , data.rroutput.c_str());
 		part1.port             = data.port;
 		part1.vmdepth          = data.vmdepth;
 		part1.videoram         = data.videoram;
@@ -777,6 +791,7 @@ int ScanXStuff::Read (void) {
 		data.primary   = part1.primary;
 		data.chipset   = part1.chipset;
 		data.videoram  = part1.videoram;
+		data.rroutput  = part1.rroutput;
 		data.current   = part1.current;
 		data.raw       = part1.raw;
 		data.option    = part1.option;

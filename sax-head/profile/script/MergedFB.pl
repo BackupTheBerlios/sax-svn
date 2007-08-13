@@ -23,6 +23,9 @@ sub getProfile {
 		/^i810|i915/ && do {
 			return "$dir/Intel_DualHead_DriverOptions";
 		};
+		/^intel/     && do {
+			return "$dir/IntelNext_DualHead_DriverOptions";
+		};
 		/^nvidia/    && do {
 			return "$dir/NVidia_DualHead_DriverOptions";
 		};

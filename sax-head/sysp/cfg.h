@@ -68,6 +68,8 @@ class XF86ConfigFile {
 	int  SetDriver (string module);
 	void SetVideoRam (int mem);
 	void CallXF86Loader (str file="/etc/X11/xorg.conf");
+	void ShutdownServer (int spid, int disp);
+	string CallRandR (str file="/etc/X11/xorg.conf");
 	ParseData Pop (void);
 	void Push (ParseData e);
 	XF86ConfigFile (void);

@@ -41,7 +41,7 @@ int GetDisplay (void) {
 		fseek (fd,0L,SEEK_END);
 		size = ftell(fd) - 1;
 
-		printf("size: %d -> %d\n",i,size);
+		//printf("size: %d -> %d\n",i,size);
 
 		if (!dpy) {
 			if (size <= 0) {

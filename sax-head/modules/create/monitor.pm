@@ -45,7 +45,8 @@ sub CreateMonitorSection {
 		if ($setting ne "") {
 			$setting =~ s/^ +//g;  # remove first blanks
 			$setting =~ s/\t+//g;  # remove tabs
-			$setting =~ s/\"//g;   # remove " signs
+			$setting =~ s/^\"//g;  # remove " signs
+			$setting =~ s/\"$//g;  # remove " signs
 			$setting =~ s/^ +//g;  # remove rest blanks
 			$setting =~ s/\n//g;   # remove returns
 
@@ -108,6 +109,8 @@ sub CreateMonitorSection {
 			#------------------------------------------- 
 			foreach $n (@list) {
 			if ($n ne "") {
+				$n =~ s/^\"//g;
+				$n =~ s/\"$//g;
 				push(@result,PrintLine($i,"\"$n\""));
 			}
 			}

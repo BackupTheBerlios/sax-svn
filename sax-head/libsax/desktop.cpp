@@ -1674,6 +1674,10 @@ QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 		QTextOStream (&result)
 			<< PROFILE_DIR << "Intel_DualHead_DriverOptions";
 	}
+	if (driver == "intel") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "IntelNext_DualHead_DriverOptions";
+	}
 	if (driver == "nvidia") {
 		QTextOStream (&result)
 			<< PROFILE_DIR << "NVidia_DualHead_DriverOptions";

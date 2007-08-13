@@ -14,6 +14,7 @@ DESCRIPTION   : XF86ConfigFile class methods to create
               :
 STATUS        : Status: Up-to-date
 **************/
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -23,6 +24,8 @@ STATUS        : Status: Up-to-date
 #include <X11/StringDefs.h>
 #include <X11/Xatom.h>
 #include <X11/Xmd.h>
+#include <X11/Xlib.h>
+#include <X11/extensions/Xrandr.h>
 
 #include "cfg.h"
 #include "config.h"
@@ -299,34 +302,16 @@ void XF86ConfigFile::SetSectionID (int nr) {
 }
 
 //=========================================
-// XF86ConfigFile: call XF86 loader...
+// XF86ConfigFile: kill running server
 //-----------------------------------------
-void XF86ConfigFile::CallXF86Loader (str file) {
-	int dpy  = GetDisplay();
-	str scr  ; sprintf(scr,":%d",dpy);
-	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,dpy);
-	str lock ; sprintf(lock,"/tmp/.X%d-lock",dpy);
-	MsgDetect *parse = NULL;
-	Display   *disp  = NULL;
-	int spid  = 0;
+void XF86ConfigFile::ShutdownServer (int spid, int disp) {
+	str lock ; sprintf(lock,"/tmp/.X%d-lock",disp);
 	int count = 0;
-	int vmd   = 0;
-
-	unlink(log);
-	string proc = qx(
-		XWRAPPER,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
-	);
-	disp = XOpenDisplay (scr);
-	if (disp) {
-		vmd = DisplayPlanes (disp, DefaultScreen(disp));
-		XCloseDisplay (disp);
-	}
-	spid  = atoi(proc.c_str());
 	kill(spid,15);
 	while(1) {
 		ifstream handle(lock);
-		if (! handle) { 
-			break; 
+		if (! handle) {
+			break;
 		}
 		handle.close();
 		sleep(1);
@@ -337,6 +322,158 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 		}
 	}
 	sleep(2);
+}
+
+//=========================================
+// XF86ConfigFile: check randr data...
+//-----------------------------------------
+string XF86ConfigFile::CallRandR (str file) {
+	//=======================================
+	// Call a server and open the display
+	//---------------------------------------
+	int disp = GetDisplay();
+	str scr  ; sprintf(scr,":%d",disp);
+	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,disp);
+	Display   *dpy  = NULL;
+	int spid    = 0;
+	int hasRR12 = False;
+	int major, minor;
+	string result = "";
+	string proc = qx(
+		XWRAPPER,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
+	);
+	spid = atoi(proc.c_str());
+	dpy = XOpenDisplay (scr);
+	if (! dpy) {
+		ShutdownServer (spid,disp);
+		return result;
+	}
+	//=======================================
+	// check randr extension
+	//---------------------------------------
+	if (! XRRQueryVersion (dpy, &major, &minor)) {
+		//printf ("RandR extension missing\n");
+		XCloseDisplay (dpy);
+		ShutdownServer (spid,disp);
+		return result;
+	}
+	if (major > 1 || (major == 1 && minor >= 2)) {
+		hasRR12 = True;
+	}
+	if (! hasRR12) {
+		//printf ("RandR version 1.2 required, got: %d.%d\n",major,minor);
+		XCloseDisplay (dpy);
+		ShutdownServer (spid,disp);
+		return result;
+	}
+	//=======================================
+	// get output information
+	//---------------------------------------
+	#if RANDR_MINOR >= 2
+	int screen = DefaultScreen (dpy);
+	int root   = RootWindow    (dpy, screen);
+	XRRScreenResources* res = XRRGetScreenResources (dpy, root);
+	if (! res) {
+		//printf ("Couldn't get screen resources");
+		XCloseDisplay (dpy);
+		ShutdownServer (spid,disp);
+		return result;
+	}
+	int o = 0; for (o = 0; o < res->noutput; o++) {
+		XRROutputInfo* output = XRRGetOutputInfo (dpy, res, res->outputs[o]);
+		if (! output) {
+			printf ("Couldn't get output 0x%x data",
+				(unsigned int)res->outputs[o]
+			);
+			XCloseDisplay (dpy);
+			ShutdownServer (spid,disp);
+			return result;
+		}
+		static const char *connect_state[3] = {
+			"connected", "disconnected", "unknown"
+		};
+		char pref[20];
+		sprintf(pref,"%d",output->npreferred);
+		result = string(output->name)
+			+ " " + string(connect_state[output->connection])
+			+ " " + string(pref)
+			+ " ";
+		//printf ("%s:%s:%d:",
+		//	output->name, connect_state[output->connection], output->npreferred
+		//);
+		//int c; for (c = 0; c < output->ncrtc; c++) {
+		//	XRRCrtcInfo *crtc = XRRGetCrtcInfo (dpy, res, output->crtc[c]);
+		//}
+		int m; for (m = 0; m < output->nmode; m++) {
+			XRRModeInfo *mode = NULL;
+			int n; for (n = 0; n < res->nmode; n++)
+			if (res->modes[n].id == output->modes[m]) {
+				mode = &res->modes[n];
+			}
+			float rate;
+			if (mode->hTotal && mode->vTotal) {
+			rate = ((float) mode->dotClock / 
+				((float) mode->hTotal * (float) mode->vTotal));
+			} else {
+				rate = 0;
+			}
+			if (mode) {
+				char width[20];
+				char height[20];
+				char srate[20];
+				sprintf (width,"%d",mode->width);
+				sprintf (height,"%d",mode->height);
+				sprintf (srate,"%.0f",rate);
+				result = result
+					+ string(mode->name) + "="
+					+ string(width) + "x" + string(height)
+					+ "@" + string(srate);
+				//printf (" %s=%dx%d@%f",
+				//	mode->name, mode->width, mode->height, rate
+				//);
+			}
+			if (m < output->nmode -1) {
+				result = result + ",";
+			}
+		}
+		if (o < res->noutput - 1) {
+			//printf ("\n");
+			result = result + "%";
+		}
+	}
+	#endif
+	//=======================================
+	// clean up
+	//---------------------------------------
+	XCloseDisplay (dpy);
+	ShutdownServer (spid,disp);
+	return result;
+}
+
+//=========================================
+// XF86ConfigFile: call XF86 loader...
+//-----------------------------------------
+void XF86ConfigFile::CallXF86Loader (str file) {
+	int dpy  = GetDisplay();
+	str scr  ; sprintf(scr,":%d",dpy);
+	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,dpy);
+	MsgDetect *parse = NULL;
+	Display   *disp  = NULL;
+	int spid  = 0;
+	int vmd   = 0;
+
+	if (access(log,R_OK) != 0) {
+		string proc = qx(
+			XWRAPPER,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
+		);
+		disp = XOpenDisplay (scr);
+		if (disp) {
+			vmd = DisplayPlanes (disp, DefaultScreen(disp));
+			XCloseDisplay (disp);
+		}
+		spid = atoi(proc.c_str());
+		ShutdownServer (spid,dpy);
+	}
 	parse = PLogGetData(log);
 	unlink(log);
  

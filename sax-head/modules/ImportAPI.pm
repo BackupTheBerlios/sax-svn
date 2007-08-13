@@ -722,9 +722,12 @@ sub ApiImportCard {
 	my %api = %{$_[0]};
 	my (@list,@opt,@pair,@elements);
 	my ($value,$key,$card,$va,$el,$count);
+	my ($next,$dummy);
 	my %var;
-
-	foreach (keys %{$api{Card}}) {
+	foreach (keys %{$api{Desktop}}) {
+		($next,$dummy) = split(/ /,$_);
+	}
+	foreach (reverse keys %{$api{Card}}) {
 	$value = $api{Card}{$_};
 	@pair = split(/ /,$_);
 	$card = $pair[0];
@@ -821,6 +824,60 @@ sub ApiImportCard {
 			$va = $_; $va =~ s/$el//;
 			$var{Device}{$card}{Raw}{$count}{$el} = $va;
 			$count++;
+			if ($va =~ /SaXExternal/) {
+				$va =~ s/ \"SaXExternal\" //;
+				$va =~ s/\"//g;
+				my @items  = split (/\+/,$va);
+				foreach my $item (@items) {
+					my ($key,$val) = split (/\&/,$item);
+					SWITCH: for ($key) {
+						/^Identifier/         && do {
+							$next++;
+							$var{Monitor}{$next}{Identifier} = $val;
+							last SWITCH;
+						};
+						/^VertRefresh/        && do {
+							$var{Monitor}{$next}{VertRefresh} = $val;
+							last SWITCH;
+						};
+						/^HorizSync/          && do {
+							$var{Monitor}{$next}{HorizSync} = $val;
+							last SWITCH;
+						};
+						/^PreferredMode/      && do {
+							my $v = "\"PreferredMode\" \"$val\"";
+							if (defined $var{Monitor}{$next}{Option}) {
+								$var{Monitor}{$next}{Option} .= ",$v";
+							} else {
+								$var{Monitor}{$next}{Option} = $v;
+							}
+							last SWITCH;
+						};
+						/^VendorName/         && do {
+							$var{Monitor}{$next}{VendorName} = $val;
+							last SWITCH;
+						};
+						/^ModelName/          && do {
+							$var{Monitor}{$next}{ModelName} = $val;
+							last SWITCH;
+						};
+						/^DisplaySize/        && do {
+							$var{Monitor}{$next}{DisplaySize} = $val;
+							last SWITCH;
+						};
+						/^Position/           && do {
+							my $v = "\"Position\" \"$val\"";
+							if (defined $var{Monitor}{$next}{Option}) {
+								$var{Monitor}{$next}{Option} .= ",$v";
+							} else {
+								$var{Monitor}{$next}{Option} = $v;
+							}
+							last SWITCH;
+						};
+						#TODO... more options to handle in SaXExternal
+					}
+				}
+			}
 		}
 		last SWITCH;
 		};

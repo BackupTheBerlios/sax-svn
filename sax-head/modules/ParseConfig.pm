@@ -460,6 +460,18 @@ sub ParseDeviceSection {
 			my @option = split(/:/,$model);
 			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
 		}
+		if ($i =~ s/(SaXExternal:.*?,)//) {
+			my $external = $1;
+			$external =~ s/,$//;
+			my @option = split(/:/,$external);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
+		if ($i =~ s/(MonitorLayout:.+?,.+?,)//) {
+			my $layout = $1;
+			$layout =~ s/,$//;
+			my @option = split(/:/,$layout);
+			$parse{Device}{$count}{Option}{$option[0]} = $option[1];
+		}
 		if ($i =~ s/(KernelModuleParm:.+=.+?,)//) {
 			my $special = $1;
 			$special =~ s/,$//;

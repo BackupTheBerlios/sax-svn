@@ -227,6 +227,12 @@ sub handleAction {
 	if ($action =~ /__CB__/) {
 		$action =~ s/__CB__/)/g;
 	}
+	if ($action =~ /__AND__/) {
+		$action =~ s/__AND__/&/g;
+	}
+	if ($action =~ /__PLUS__/) {
+		$action =~ s/__PLUS__/\+/g;
+	}
 	#==========================================
 	# want to set a value
 	#------------------------------------------

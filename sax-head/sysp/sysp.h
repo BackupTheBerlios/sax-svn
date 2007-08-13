@@ -173,6 +173,7 @@ struct ParseData {
 	map <int,XMode> modes;
 	unsigned dacspeed;
 	long videoram;
+	string rroutput;
 	int bus;
 	int slot;
 	int func;
@@ -195,6 +196,7 @@ struct ParseData_S {
 	int vsmax;
 	unsigned dacspeed;
 	long videoram;
+	str rroutput;
 	int modecount;
 	int bus;
 	int slot;
@@ -221,6 +223,7 @@ struct StuffData {
 	unsigned dacspeed[4];
 	string modeline[4];
 	long videoram; 
+	string rroutput;
 	string current;
 	string raw;
 	string option;
@@ -248,6 +251,7 @@ struct StuffData_S {
 	unsigned dacspeed[4];
 	str modeline[4];
 	long videoram;
+	str rroutput;
 	str current;
 	str raw;
 	str option;

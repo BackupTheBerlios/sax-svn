@@ -79,6 +79,53 @@ void SaXManipulateCard::setCardDriver (const QString& driver ) {
 }
 
 //====================================
+// addCardExternal
+//------------------------------------
+void SaXManipulateCard::addCardExternal ( const QString& ident ) {
+	// .../
+	//! add raw option value for SaXExternal which cause the
+	//! system to add a Monitor section with the given identifier
+	// ----
+	if (! mImport) {
+		return;
+	}
+	QString val;
+	QDict<QString> options = getOptions();
+	if ( options["SaXExternal"] ) {
+		val = *options["SaXExternal"]+"+"+"Identifier&"+ident;
+	} else {
+		val = "Identifier&"+ident;
+	}
+	mImport->removeRawItem ("RawData","Option \"SaXExternal\"");
+	mImport->addRawItem ("RawData","Option \"SaXExternal\"","\""+val+"\"");
+}
+
+//====================================
+// addCardExternalOption
+//------------------------------------
+void SaXManipulateCard::addCardExternalOption (
+	const QString& keyword, const QString& value
+) {
+	// .../
+	//! add raw option for SaXExternal value. This includes
+	//! the given key/value pair as option to the appropriate
+	//! Monitor section
+	// ----
+	if (! mImport) {
+		return;
+	}
+	QString val;
+	QDict<QString> options = getOptions();
+	if ( options["SaXExternal"] ) {
+		val = *options["SaXExternal"]+"+"+keyword+"&"+value;
+	} else {
+		val = keyword+"&"+value;
+	}
+	mImport->removeRawItem ("RawData","Option \"SaXExternal\"");
+	mImport->addRawItem ("RawData","Option \"SaXExternal\"","\""+val+"\"");
+}
+
+//====================================
 // setCardOption
 //------------------------------------
 void SaXManipulateCard::setCardOption (
@@ -618,6 +665,16 @@ int SaXManipulateCard::getHeads ( void ) {
 					realCount += 2;
 					continue;
 				}
+				if (mProfile == "IntelNext_DualHead") {
+					headCount += 2;
+					realCount += 2;
+					continue;
+				}
+				if (mProfile == "IntelNext_DualHead_DriverOptions") {
+					headCount += 2;
+					realCount += 1;
+					continue;
+				}	
 				if (mProfile == "Matrox_DualHead_DriverOptions") {
 					headCount += 2;
 					realCount += 1;

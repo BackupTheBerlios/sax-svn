@@ -32,6 +32,9 @@ sub getProfile {
 		/^i810|i915/ && do {
 			return "$dir/Intel_DualHead";
 		};
+		/^intel/     && do {
+			return "$dir/IntelNext_DualHead";
+		}
 		/^mga/       && do {
 			return "$dir/Matrox_DualHead";
 		};

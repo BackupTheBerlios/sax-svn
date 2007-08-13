@@ -784,6 +784,7 @@ void PrintStuffData(ScanXStuff s) {
 		);
 		}
 		printf ("Card%d     =>  Memory     : %ld\n",card,data.videoram);
+		printf ("Card%d     =>  RandR      : %s\n",card,data.rroutput.c_str());
 		printf ("Card%d     =>  Current    : %s\n",card,data.current.c_str());
 		printf ("Card%d     =>  RawDef     : %s\n",card,data.raw.c_str());
 		printf ("Card%d     =>  Option     : %s\n",card,data.option.c_str());

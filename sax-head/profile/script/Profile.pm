@@ -462,9 +462,7 @@ sub ProfileGetDDC2Data {
 	}
 	if (defined $xstuff->getItem("Size[2]")) {
 	if ($xstuff->getItem("Size[2]") =~ /(.*)x(.*)/) {
-		my $x = $1 * 10;
-		my $y = $2 * 10;
-		$result{Size} = "$x $y";
+		$result{Size} = "$1 $2";
 	}
 	}
 	#=====================================
