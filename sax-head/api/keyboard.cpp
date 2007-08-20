@@ -106,6 +106,7 @@ void SCCKeyboard::apply ( void ) {
 		QString optionReset = "-option \"\"";
 		QString complete = "setxkbmap " +
 			layoutApply + " " + optionReset + " " + optionApply;
+		log (L_INFO,"Apply keyboard: %s\n",complete.ascii());
 		QProcess* proc = new QProcess ();
 		proc -> setArguments ( QStringList::split( " ",complete) );
 		if ( ! proc -> start() ) {
