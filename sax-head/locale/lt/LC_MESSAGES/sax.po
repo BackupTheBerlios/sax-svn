@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.lt\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-02-01 23:22+0300\n"
+"PO-Revision-Date: 2007-08-14 11:12+0300\n"
 "Last-Translator: Andrius Štikonas <stikonas@gmail.com>\n"
 "Language-Team: Lietuvių <komp_lt@konf.lt>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -40,6 +40,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D spartinimas nepalaikomas</b><hr>SaX2 negali aktyvuoti 3D posistemio, "
+"nes jūsų vaizdo plokštė/tvarkyklė nepalaiko 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -174,7 +176,7 @@ msgstr "Plokštė"
 
 #. Change data
 msgid "&Change..."
-msgstr "&Pakeisti..."
+msgstr "&Keisti..."
 
 #. Set options for some kind of data
 msgid "&Options..."
@@ -214,7 +216,7 @@ msgstr "Aktyvuoti kairiarankių mygtukų išdėstymą"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr "Įjungti 3 mygtuko emuliaciją"
+msgstr "Aktyvuoti 3 mygtuko emuliavimą"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
@@ -241,7 +243,7 @@ msgstr "&Išsaugoti"
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr "Planas"
+msgstr "Išdėstymas"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -645,9 +647,8 @@ msgid "Default numeric keypad keys."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "Abu Ctrl klavišai kartu keičia grupę."
+msgstr "Abu Ctrl klavišai kartu keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -655,24 +656,20 @@ msgid "Using space key to input non-breakable space character"
 msgstr "Tarpo klavišas išveda neperkeliamą tarpą ketvirtame lygyje."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "Dešinys Shift klavišas keičia grupę."
+msgstr "Dešinysis Shift klavišas keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "Kairys Win klavišas keičia grupę."
+msgstr "Kairys Win klavišas keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Shift keičia grupę."
+msgstr "Kairieji Ctrl+Shift keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "Kairys Alt klavišas keičia grupę."
+msgstr "Kairysis Alt klavišas keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -690,9 +687,8 @@ msgid "Space key outputs non-breakable space character"
 msgstr "Tarpo klavišas išveda neperkeliamą tarpą ketvirtame lygyje."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift+CapsLock keičia grupę."
+msgstr "Shift+CapsLock keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -705,14 +701,12 @@ msgid "Numeric keypad layout selection"
 msgstr "Kalbos ir klaviatūros išdėstymo pasirinkimas"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "Dešinys Ctrl klavišas keičia grupę."
+msgstr "Dešinysis Ctrl klavišas keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Alt+CapsLock keičia grupę."
+msgstr "Alt+CapsLock keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -725,9 +719,8 @@ msgid "ScrollLock LED shows alternative layout."
 msgstr "Scroll_Lock LED rodo alternatyvią grupę"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "Abu Shift klavišai kartu keičia grupę."
+msgstr "Abu Shift klavišai kartu keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -735,9 +728,8 @@ msgid "Space key outputs non-breakable space character at second level."
 msgstr "Tarpo klavišas išveda neperkeliamą tarpą ketvirtame lygyje."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "Dešinys Win klavišas keičia grupę."
+msgstr "Dešinys Win klavišas keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -760,9 +752,8 @@ msgid "NumLock LED shows alternative layout."
 msgstr "NumLock LED rodo alternatyvią grupę."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "Kairys Shift klavišas keičia grupę."
+msgstr "Kairysis Shift klavišas keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -775,14 +766,12 @@ msgid "Space key outputs non-breakable space character at fourth level."
 msgstr "Tarpo klavišas išveda neperkeliamą tarpą ketvirtame lygyje."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "Abu Alt klavišai kartu keičia grupę."
+msgstr "Abu Alt klavišai kartu keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "CapsLock klavišas keičia grupę."
+msgstr "CapsLock klavišas keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -790,9 +779,8 @@ msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
 msgstr "Super susietas su Win klavišu (įprasta)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
-msgstr "Dešinys Alt klavišas keičia grupę."
+msgstr "Dešinysis Alt klavišas keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -805,14 +793,12 @@ msgid "Alt and Meta are on the Alt keys."
 msgstr "Alt ir Meta Alt klavišams (įprasta)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt+Shift keičia grupę."
+msgstr "Alt+Shift keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Shift keičia grupę."
+msgstr "Ctrl+Shift keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -820,9 +806,8 @@ msgid "Space key outputs usual space at any level."
 msgstr "Tarpo klavišas išveda tarpą bet kokiame lygyje."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
-msgstr "Japoniškis klaviatūros parinktys"
+msgstr "Japonų klaviatūros nustatymai"
 
 #. XKBFile extension text
 #, fuzzy
@@ -830,19 +815,16 @@ msgid "Use keyboard LED to show alternative layout."
 msgstr "Naudoti klaviatūros LED alternatyvios grupės rodymui."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "Kairys Ctrl klavišas keičia grupę."
+msgstr "Kairysis Ctrl klavišas keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "Meniu klavišas keičia grupę."
+msgstr "Meniu klavišas keičia išdėstymą."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl keičia grupę."
+msgstr "Alt+Ctrl keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy

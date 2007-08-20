@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.pa\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-08-02 22:40+0530\n"
+"PO-Revision-Date: 2007-08-16 22:41+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Panjabi <punjabi-l10n@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -40,6 +40,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D ਐਕਸਲੇਸ਼ਨ ਸਹਿਯੋਗੀ ਨਹੀਂ</b><hr>SaX2 3D ਸਬ-ਸਿਸਟਠ ਲਈ ਐਕਟਿਵੇਸ਼ਨ ਉਪਲੱਬਧ ਨਹੀਂ "
+"ਕਰਵਾਉਦਾ, ਕਿਉਂਕਿ ਤੁਹਾਡਾ ਗਰਾਫਿਕਸ ਕਾਰਡ/ਡਰਾਇਵਰ 3D ਲਈ ਸਹਿਯੋਗੀ ਨਹੀਂ ਹੈ।"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -48,6 +50,9 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D ਐਕਸਰਲੇਸ਼ਨ ਸਹਿਯੋਗੀ ਨਹੀਂ</b><hr>SaX2 3D ਸਬ-ਸਿਸਟਮ ਲਈ ਐਕਟਿਵੇਸ਼ਨ ਉਪਲੱਬਧ ਨਹੀਂ "
+"ਕਰਵਾਉਦਾ ਹੈ, ਕਿਉਂਕਿ Xinerama ਅਧਾਰਿਤ ਡਿਊਲ ਹੈੱਡ ਮੋਡ ਵਰਤਿਆ ਹੈ। ਗਰਾਫਿਕਸ ਸਕਰੀਨਾਂ ਨੂੰ ਜੋੜਨ "
+"ਵਾਸਤੇ Xorg Xinerama ਐਕਸਟੇਸ਼ਨ ਸਭ ਹੈੱਡਾਂ ਵਾਸਤੇ ਸਹਿਯੋਗੀ ਨਹੀਂ ਹੈ।"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -63,7 +68,7 @@ msgstr "SaX2: X11 ਸੰਰਚਨਾ"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr "SaX ਕੰਟਰੋਲ ਕੇਂਦਰ"
+msgstr "SaX ਕੰਟਰੋਲ ਸੈਂਟਰ"
 
 #. Info message about display size changes
 msgid ""
@@ -102,7 +107,7 @@ msgstr "ਸੁਨੇਹਾ"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
-msgstr "ਸੰਰਚਨਾ ਬਦਲੀ(&h)"
+msgstr "ਸੰਰਚਨਾ ਬਦਲੋ(&h)"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -150,11 +155,11 @@ msgstr "ਟੱਚ-ਸਕਰੀਨ ਵਿਸ਼ੇਸ਼ਤਾ"
 
 #. Short description of the VNC module
 msgid "Remote Access"
-msgstr "ਰਿਮੋਟ ਪਹੁੰਚ"
+msgstr "ਰਿਮੋਟ ਅਸੈੱਸ"
 
 #. title of module dialog
 msgid "Remote Access Properties"
-msgstr "ਰਿਮੋਟ ਪਹੁੰਚ ਵਿਸ਼ੇਸ਼ਤਾ"
+msgstr "ਰਿਮੋਟ ਅਸੈੱਸ ਵਿਸ਼ੇਸ਼ਤਾ"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
@@ -162,11 +167,11 @@ msgstr "%1 ਡਿਸਪਲੇਅ"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr "ਇਹ ਡਿਸਪਲੇਅ ਸਰਗਰਮ"
+msgstr "ਇਹ ਡਿਸਪਲੇਅ ਐਕਟਿਵੇਟ"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr "ਇਹ ਪੁਆਇੰਟਰ ਸਰਗਰਮ"
+msgstr "ਇਹ ਪੁਆਇੰਟਰ ਐਕਟਿਵੇਟ"
 
 #. Graphics Card name label
 msgid "Card"
@@ -186,7 +191,7 @@ msgstr "ਸੰਰਚਨਾ(&f)..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr "ਦੋਹਰਾ ਹੈਂਡਰ ਢੰਗ"
+msgstr "ਡਿਊਲ ਹੈਂਡ ਮੋਡ"
 
 #. Group box title for card options
 #. Group box title for mouse options
@@ -198,7 +203,7 @@ msgstr "ਚੋਣ"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
-msgstr "ਮਾਊਸ ਪਹੀਆ ਸਰਗਰਮ"
+msgstr "ਮਾਊਸ ਵੀਲ ਐਕਟਿਵੇਟ"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
@@ -210,15 +215,15 @@ msgstr "ਉਲਟ Y-ਧੁਰਾ"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr "ਸਰਗਰਮ ਖੱਬੇ-ਹੱਥ ਬਟਨ ਮੈਪਿੰਗ"
+msgstr "ਖੱਬੇ-ਹੱਥ ਬਟਨ ਮੈਪਿੰਗ ਐਕਟਿਵੇਟ"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr "3-ਬਟਨ ਸਮਰੂਪ ਸਰਗਰਮ"
+msgstr "3-ਬਟਨ ਈਮੂਲੇਸ਼ਨ ਐਕਟਿਵੇਟ"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr "ਪਹੀਏ ਨੂੰ ਮਾਊਸ ਬਟਨ ਵਾਂਗ ਮੰਨੋ"
+msgstr "ਵੀਲ ਨੂੰ ਮਾਊਸ ਬਟਨ ਵਾਂਗ ਈਮੂਲੇਟ"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
@@ -249,11 +254,11 @@ msgstr "ਟੈਸਟ ਤਿਆਰ"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr "ਇੱਕ ਵਾਰ ਦਬਾਉਣ: ਮੁਕੰਮਲ"
+msgstr "ਇੱਕ ਵਾਰ ਕਲਿੱਕ: ਮੁਕੰਮਲ"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr "ਦੋ ਵਾਰ ਦਬਾਉਣ: ਮੁਕੰਮਲ"
+msgstr "ਦੋ ਵਾਰ ਕਲਿੱਕ: ਮੁਕੰਮਲ"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
@@ -277,7 +282,7 @@ msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr "ਦੋਹਰਾ ਹੈਂਡ ਢੰਗ ਸਰਗਰਮ"
+msgstr "ਡਿਊਲ ਹੈੱਡ ਮੋਡ ਐਕਟਿਵੇਟ"
 
 #. Set display resolution
 msgid "Resolution"
@@ -289,7 +294,7 @@ msgstr "ਰੰਗ"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr "3D ਐਕਸਰਲੇਸ਼ਨ ਸਰਗਰਮ"
+msgstr "3D ਐਕਸਰਲੇਸ਼ਨ ਐਕਟਿਵੇਟ"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
@@ -314,11 +319,11 @@ msgstr "ਪਰਬੰਧ"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr "%1 ਢੰਗ ਨੂੰ %2 ਨਾਲ ਸਰਗਰਮ ਕੀਤਾ"
+msgstr "%1 ਮੋਡ ਨੂੰ %2 ਨਾਲ ਐਕਟਿਵੇਟ ਕੀਤਾ"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr "ਡਰਾਇਵਰ ਮੂਲ ਢੰਗ ਸਰਗਰਮ"
+msgstr "ਡਰਾਇਵਰ ਡਿਫਾਲਟ ਮੋਡ ਐਕਟਿਵੇਟ"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
@@ -332,8 +337,8 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>ਸਭ ਡਿਸਪਲੇਆਂ ਨੂੰ ਨਾ-ਸਰਗਰਮ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ</b><hr><nobr>ਘੱਟੋ-ਘੱਟ ਇੱਕ ਡਿਸਪਲੇਅ ਤਾਂ "
-"ਸਰਗਰਮ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।</nobr>"
+"<b>ਸਭ ਡਿਸਪਲੇਆਂ ਨੂੰ ਡਿ-ਐਕਟਿਵੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ</b><hr><nobr>ਘੱਟੋ-ਘੱਟ ਇੱਕ ਡਿਸਪਲੇਅ ਤਾਂ "
+"ਐਕਟਿਵੇਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -344,7 +349,7 @@ msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"ਪੁਰਾਣਾ ਬਹੁ-ਹੈਂਡ:\n"
+"ਪੁਰਾਣਾ ਮਲਟੀ-ਹੈੱਡ:\n"
 "ਹਰ ਸਕਰੀਨ ਇੱਕ ਸਵੈ-ਨਿਰਭਰ ਡਿਸਪਲੇਅ ਹੈ"
 
 #. Radiobutton for cloned multihead mode
@@ -352,24 +357,24 @@ msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
-"ਸਮਰੂਪ ਬਹੁ-ਹੈੱਡ:\n"
-"ਹਰ ਮੁੱਖ ਪ੍ਰਾਇਮਰੀ ਡਿਸਪਲੇਅ ਦਾ ਸਮਰੂਪ ਹੀ ਹੈ"
+"ਕਲੋਨ ਮਲਟੀ-ਹੈੱਡ:\n"
+"ਹਰ ਮੁੱਖ ਪ੍ਰਾਇਮਰੀ ਡਿਸਪਲੇਅ ਦਾ ਕਲੋਨ ਹੀ ਹੈ"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
-"Xinerama ਬਹੁ-ਹੈੱਡ:\n"
+"Xinerama ਮਲਟੀ-ਹੈੱਡ:\n"
 "ਸਭ ਸਕਰੀਨਾਂ ਉੱਤੇ ਇੱਕ ਵੱਡਾ ਡਿਸਪਲੇਅ ਬਣਾਓ"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
-msgstr "ਬਹੁ-ਹੈੱਡ ਢੰਗ"
+msgstr "ਮਲਟੀ-ਹੈੱਡ ਮੋਡ"
 
 #. Monitor X - connected to - CardY
 msgid "Connected To"
-msgstr "ਇਸ ਨਾਲ ਜੁੜਿਆ"
+msgstr "ਇਸ ਨਾਲ ਕੁਨੈਕਟਡ"
 
 #. Tooltip text if monitor is unknown
 msgid "Unknown Monitor:"
@@ -394,7 +399,7 @@ msgstr "ਗਰਾਫਿਕਸ ਕਾਰਡ ਸੈਟਿੰਗ"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr "ਦੋਹਰਾ ਹੈੱਡ ਸੈਟਿੰਗ"
+msgstr "ਡਿਊਲ ਹੈੱਡ ਸੈਟਿੰਗ"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -414,11 +419,13 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>ਗਲਤ ਰੰਗ/ਰੈਜ਼ੋਲੇਸ਼ਨ ਕੰਬੀਨੇਸ਼ਨ:</b><hr><nobr>ਚੁਣਿਆ ਰੈਜ਼ੋਲੇਸ਼ਨ ਅਤੇ/ਜਾਂ ਰੰਗ ਸੈਟਿੰਗ</nobr> ਗਰਾਫਿਕਸ "
+"ਕਾਰਡ ਫਰੇਮ-ਬਫ਼ਰ ਰਾਹੀਂ ਸਹਿਯੋਗੀ ਨਹੀਂ ਹੈ।"
 
 #. Popup message to ask the user for an option value
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>ਚੋਣ ਲਈ ਇੱਕ ਮੁੱਲ ਦੀ ਲੋੜ ਹੈ</b><hr><nobr>%1 ਚੋਣ ਲਈ ਇੱਕ ਮੁੱਲ ਦੇਣ ਦੀ ਲੋੜ ਹੈ</nobr>"
+msgstr "<b>ਚੋਣ ਲਈ ਇੱਕ ਮੁੱਲ ਦੀ ਲੋੜ ਹੈ</b><hr><nobr>%1 ਚੋਣ ਲਈ ਇੱਕ ਮੁੱਲ ਸੈੱਟ ਅੱਪ</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -434,7 +441,7 @@ msgstr "ਦਸਤੀ ਸਮਕਾਲੀ ਫਰੀਕਿਊਂਨਸੀ ਸੈੱ
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr "ਵਿਕਰਨ ਅਤੇ ਅਕਾਰ ਅਨੁਪਾਤ"
+msgstr "ਡੈਗਨਲ ਅਤੇ ਅਕਾਰ ਅਨੁਪਾਤ"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
@@ -446,10 +453,13 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
+"<b>ਨੋਟ:</b> ਗਲਤ ਸੈਕਰੋ (sync) ਰੇਜ਼ ਨਾਲ ਤੁਹਾਡਾ ਮਾਨੀਟਰ ਵਿਗੜ ਸਕਦਾ ਹੈ। ਸੈਟਿੰਗ ਲਈ ਆਪਣੇ "
+"ਮਾਨੀਟਰ ਮੈਨੂਅਲ ਵੇਖੋ।<br><br>ਜੇ ਤੁਸੀਂ ਆਪਣੀ ਮਾਨੀਟਰ ਲਈ ਵੱਧੋ-ਵੱਧ ਰੇਟਿੰਗ ਨਹੀਂ ਵਰਤਣੀ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ "
+"sync ਰੇਜ਼ ਘੱਟ ਕਰੋ।"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr "ਸਰਗਰਮ DPMS"
+msgstr "ਐਕਟਿਵੇਟ DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
@@ -485,7 +495,7 @@ msgstr "ਅਕਾਰ ਅਨੁਪਾਤ"
 
 #. Label text for the diagonal length combo box
 msgid "Diagonal"
-msgstr "ਵਿਕਰਣ"
+msgstr "ਡੈਗਨਲ"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
@@ -568,20 +578,20 @@ msgstr "ਬਦਲਵਾਂ ਗਰੁੱਪ ਵੇਖਾਉਣ ਲਈ ਕੀਬ�
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "ਸੰਯੁਕਤ ਸਵਿੱਚ ਟਿਕਾਣਾ"
+msgstr "ਸੰਯੁਕਤ ਸਵਿੱਚ ਸਥਿਤੀ"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Control ਸਵਿੱਚ ਟਿਕਾਣਾ"
+msgstr "Control ਸਵਿੱਚ ਸਥਿਤੀ"
 
 #. List View root item text
 msgid "Third Level Chooser"
-msgstr "ਤੀਜਾ ਪੱਧਰ ਚੋਣਕਾਰ"
+msgstr "ਤੀਜਾ ਲੈਵਲ ਚੋਣਕਾਰ"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr "Alt/Win ਕੁੰਜੀ ਰਵੱਈਆ"
+msgstr "Alt/Win ਸਵਿੱਚ ਰਵੱਈਆ"
 
 #. List View root item text
 msgid "EuroSign Key Position"
@@ -589,7 +599,7 @@ msgstr "EuroSign ਸਵਿੱਚ ਸਥਿਤੀ"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr "CapsLock ਕੁੰਜੀ ਰਵੱਈਆ"
+msgstr "CapsLock ਸਵਿੱਚ ਰਵੱਈਆ"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -625,7 +635,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Default numeric keypad keys."
-msgstr "ਮੂਲ ਨੰਬਰੀ ਕੀ-ਪੈਡ ਸਵਿੱਚਾਂ ਹਨ।"
+msgstr "ਡਿਫਾਲਟ ਨੁਮੈਰਿਕ ਕੀ-ਪੈਡ ਸਵਿੱਚਾਂ ਹਨ।"
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change layout."
@@ -644,9 +654,8 @@ msgid "Left Win-key changes layout."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "LCtrl+LShift ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Left Alt key changes layout."
@@ -665,9 +674,8 @@ msgid "Space key outputs non-breakable space character"
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Shift+CapsLock ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "R-Alt switches layout while pressed."
@@ -678,19 +686,16 @@ msgid "Numeric keypad layout selection"
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "ਸੱਜੇ Ctrl ਸਵਿੱਚ ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Alt+CapsLock ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "Hyper ਨੂੰ Win-keys ਤੇ ਮੈਪ ਕੀਤਾ ਹੈ।"
+msgstr "Super ਨੂੰ Win-ਸਵਿੱਚਾਂ ਨਾਲ ਮੈਪ ਕਰੋ।"
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative layout."
@@ -713,9 +718,8 @@ msgid "Space key outputs non-breakable space character at third level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Shift ਅੰਕੀ ਹਿੱਸੇ ਵਿੱਚ MS Windows ਵਿੱਚ ਕੰਮ ਕਰਦੀ ਹੈ।"
+msgstr "ਨਿਊਮੈਰਿਕ ਕੀ-ਪੈਂਡ ਸਵਿੱਚਾਂ Mac ਵਾਂਗ ਕੰਮ ਕਰਦੀਆਂ ਹਨ।"
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative layout."
@@ -726,9 +730,8 @@ msgid "NumLock LED shows alternative layout."
 msgstr "NumLock LED ਬਦਲਵਾਂ ਲੇਆਉਟ ਵੇਖਾਉਦਾ ਹੈ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "ਖੱਬੀ Shift ਸਵਿੱਚ ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Left Win-key switches layout while pressed."
@@ -743,38 +746,32 @@ msgid "Both Alt keys together change layout."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "CapsLock ਸਵਿੱਚ ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Super ਨੂੰ Win-ਕੀ ਨਾਲ ਮੈਪ ਕਰੋ(ਮੂਲ)"
-
-#. XKBFile extension text
-msgid "Right Alt key changes layout."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
+msgid "Right Alt key changes layout."
+msgstr "ਸੱਜੀ Alt  ਸਵਿੱਚ ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
+
+#. XKBFile extension text
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "Shift ਅੰਕੀ ਹਿੱਸੇ ਵਿੱਚ MS Windows ਵਿੱਚ ਕੰਮ ਕਰਦੀ ਹੈ।"
+msgstr "Shift ਨਾਲ ਨਿਊਮਰਿਕ ਕੀ-ਪੈਂਡ ਸਵਿੱਚਾਂ MS Windows ਵਾਂਗ ਕੰਮ ਕਰਦੀਆਂ ਹਨ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt ਅਤੇ Meta , Alt ਕੀਆਂ ਵੱਲ(ਮੂਲ)"
+msgstr "Alt ਅਤੇ Meta Alt ਸਵਿੱਚਾਂ ਉੱਤੇ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Alt+Shift ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Ctrl+Shift ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
@@ -789,18 +786,16 @@ msgid "Use keyboard LED to show alternative layout."
 msgstr "ਬਦਲਵਾਂ ਲੇਆਉਟ ਵੇਖਾਉਣ ਲਈ ਕੀਬੋਰਡ LED ਵਰਤੋਂ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "ਖੱਬੀ Ctrl ਸਵਿੱਚ ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Menu key changes layout."
-msgstr ""
+msgstr "ਮੇਨੂ ਸਵਿੱਚ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Alt+Ctrl ਨਾਲ ਲੇਆਉਟ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Right Win-key switches layout while pressed."
@@ -808,7 +803,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Layout switching"
-msgstr ""
+msgstr "ਲੇਆਉਟ ਬਦਲਣਾ"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -820,33 +815,31 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr ""
+msgstr "ਸੱਜੀ Shift ਸਵਿੱਚ ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ"
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
-msgstr ""
+msgstr "ਖੱਬੀ Win ਸਵਿੱਚ ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr ""
+msgstr "ਖੱਬੀ Alt ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr ""
+msgstr "ਦੋਵੇਂ Win ਸਵਿੱਚ ਨੂੰ ਦਬਾਉਣ ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta ਨੂੰ ਖੱਬੀ Win-ਕੀ ਨਾਲ ਮੈਪ ਕਰੋ"
+msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "ਮੂਲ ਰੂਟ ਠੀਕ ਹੈ।"
+msgstr "ਡਿਫਾਲਟ ਨਮ-ਪੈਡ ਸਵਿੱਚਾਂ।"
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
@@ -869,9 +862,8 @@ msgid "Keypad layout selection"
 msgstr "ਕੀਪੈਂਡ ਲੇਆਉਟ ਚੋਣ"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Alt+Control ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
@@ -894,13 +886,12 @@ msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift ਅੰਕੀ ਹਿੱਸੇ ਵਿੱਚ MS Windows ਵਿੱਚ ਕੰਮ ਕਰਦੀ ਹੈ।"
+msgstr "ਨਮ-ਪੈਂਡ ਸਵਿੱਚਾਂ Mac ਵਾਂਗ ਕੰਮ ਕਰਦੀਆਂ ਹਨ।"
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "ਕਾਨਾ ਲਾਕ ਸਵਿੱਚ ਲਾਕ ਹੈ।"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
@@ -993,7 +984,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Third level choosers"
-msgstr "ਤੀਜੇ ਪੱਧਰ ਤੇ ਚੋਣਕਾਰ"
+msgstr "ਤੀਜਾ ਲੈਵਲ ਚੋਣਕਾਰ"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
@@ -1081,15 +1072,15 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
-msgstr "Super ਨੂੰ Win-ਕੀ ਨਾਲ ਮੈਪ ਕਰੋ(ਮੂਲ)"
+msgstr "Super ਨੂੰ Win-ਸਵਿੱਚ ਨਾਲ ਮੈਪ ਕਰੋ (ਡਿਫਾਲਟ)।"
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Alt ਅਤੇ Meta , Alt ਕੀਆਂ ਵੱਲ(ਮੂਲ)"
+msgstr "Alt ਅਤੇ Meta , Alt ਸਵਿੱਚ ਉੱਤੇ (ਡਿਫਾਲਟ)।"
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr "ਮੇਨੂ(Menu) ਕੀ ਦੇ ਮਿਆਰੀ ਵਿਵਹਾਰ ਜੋੜੋ"
+msgstr "Menu ਸਵਿੱਚ ਦੇ ਸਟੈਂਡਰਡ ਰਵੱਈਆ ਸ਼ਾਮਲ"
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
@@ -1101,11 +1092,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
-msgstr ""
+msgstr "Alt+Shift ਨਾਲ ਗਰੁੱਪ ਬਦਲਣਾ।"
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr ""
+msgstr "Control+Shift ਗਰੁੱਪ ਬਦਲਣਾ।"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
@@ -1125,7 +1116,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
-msgstr "Meta ਨੂੰ Win-ਕੀ ਤੇ ਮੈਪ ਕਰੋ।"
+msgstr "Meta ਨੂੰ Win-ਸਵਿੱਚ ਉੱਤੇ ਮੈਪ ਕਰੋ।"
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
@@ -1137,11 +1128,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr "ਮੇਨੂ ਸਵਿੱਚ ਗਰੁੱਪ ਬਦਲਿਆ।"
+msgstr "ਮੇਨੂ ਸਵਿੱਚ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Alt+Control ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
@@ -1149,7 +1140,7 @@ msgstr ""
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr "ਪੋਰਟ ਅਤੇ ਢੰਗ"
+msgstr "ਪੋਰਟ ਅਤੇ ਮੋਡ"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
@@ -1157,7 +1148,7 @@ msgstr "ਇਲੈਕਟਰੋਨਿਕ ਪੈਨ"
 
 #. Activate tablet checkbox
 msgid "Activate This Tablet"
-msgstr "ਇਹ ਟੇਬਲਟ ਸਰਗਰਮ"
+msgstr "ਇਹ ਟੇਬਲਟ ਐਕਟਿਵੇਟ"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
@@ -1169,11 +1160,11 @@ msgstr "ਕੁਨੈਕਸ਼ਨ ਪੋਰਟ"
 
 #. Group box title for tablet mode
 msgid "Primary Tablet Mode"
-msgstr "ਪ੍ਰਾਇਮਰੀ ਟੇਬਲਟ ਢੰਗ"
+msgstr "ਪ੍ਰਾਇਮਰੀ ਟੇਬਲਟ ਮੋਡ"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr "ਪੈਨ ਜਾਂ ਰਬੜ ਢੰਗ"
+msgstr "ਪੈਨ ਜਾਂ ਰਬੜ ਮੋਡ"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
@@ -1225,7 +1216,7 @@ msgstr "ਪੈਨ ਜਾਂ ਰਬੜ ਸੈਟਿੰਗ"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
-msgstr "ਪੈੱਨ ਵਿਸ਼ੇਸਤਾ"
+msgstr "ਪੈੱਨ ਵਿਸ਼ੇਸ਼ਤਾ"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
@@ -1264,27 +1255,27 @@ msgstr "ਆਪਣੇ X ਸਰਵਰ ਲਈ ਡਿਸਪਲੇਅ ਅਤੇ ਕ�
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr "ਗੁਪਤ-ਕੋਡ ਸੁਰੱਖਿਆ ਸਰਗਰਮ"
+msgstr "ਪਾਸਵਰਡ ਸੁਰੱਖਿਆ ਐਕਟਿਵੇਟ"
 
 #. LineEdit label: enter password
 msgid "Password"
-msgstr "ਗੁਪਤ-ਕੋਡ"
+msgstr "ਪਾਸਵਰਡ"
 
 #. LineEdit contents: enter new password
 msgid "<Enter new password>"
-msgstr "<ਨਵਾਂ ਗੁਪਤ-ਕੋਡ ਦਿਓ>"
+msgstr "<ਨਵਾਂ ਪਾਸਵਰਡ ਦਿਓ>"
 
 #. LineEdit contents: change password
 msgid "<Change password>"
-msgstr "<ਗੁਪਤ-ਕੋਡ ਬਦਲੋ>"
+msgstr "<ਪਾਸਵਰਡ ਬਦਲੋ>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr "<ਗੁਪਤ-ਕੋਡ ਪੁਸ਼ਟੀ>"
+msgstr "<ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
-msgstr "HTTP ਪਹੁੰਚ ਸਰਗਰਮ"
+msgstr "HTTP ਪਹੁੰਚ ਐਕਟਿਵੇਟ"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
@@ -1299,7 +1290,7 @@ msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>ਰਿਮੋਟ ਪਹੁੰਚ ਗੁਪਤ-ਕੋਡ ਮਿਲਦਾ ਨਹੀਂ</b><hr>ਗੁਪਤ-ਕੋਡ ਦਾ ਪਹਿਲਾਂ ਅਤੇ ਦੂਜਾ ਵਰਜਨ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ "
+"<b>ਰਿਮੋਟ ਪਹੁੰਚ ਪਾਸਵਰਡ ਮਿਲਦਾ ਨਹੀਂ</b><hr>ਪਾਸਵਰਡ ਦਾ ਪਹਿਲਾਂ ਅਤੇ ਦੂਜਾ ਵਰਜਨ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ "
 "ਹੈ।"
 
 #. VNC message box appearing if password is too short
@@ -1308,15 +1299,15 @@ msgid ""
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>ਰਿਮੋਟ ਪਹੁੰਚ ਗੁਪਤ-ਕੋਡ ਨਿਕੰਮਾ</b><hr>ਗੁਪਤ-ਕੋਡ ਖੇਤਰ ਖਾਲੀ ਛੱਡਿਆ ਗਿਆ ਜਾਂ ਗੁਪਤ-ਕੋਡ ਬਹੁਤ ਛੋਟਾ "
-"ਹੈ। ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰਾਂ ਵਾਲਾ ਗੁਪਤ-ਕੋਡ ਦਿਓ ਜੀ।"
+"<b>ਰਿਮੋਟ ਅਸੈੱਸ ਪਾਸਵਰਡ ਖਰਾਬ</b><hr>ਪਾਸਵਰਡ ਖੇਤਰ ਖਾਲੀ ਛੱਡਿਆ ਗਿਆ ਜਾਂ ਪਾਸਵਰਡ ਬਹੁਤ ਛੋਟਾ ਹੈ। "
+"ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰਾਂ ਵਾਲਾ ਪਾਸਵਰਡ ਦਿਓ ਜੀ।"
 
 #. VNC message box appearing if password is too long
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>ਰਿਮੋਟ ਪਹੁੰਚ ਗੁਪਤ-ਕੋਡ ਨਿਕੰਮਾ</b><hr>ਗੁਪਤ-ਕੋਡ ਬਹੁਤ ਲੰਮਾ ਹੈ। ਗੁਪਤ-ਕੋਡ ਵੱਧੋ-ਵੱਧ 8 ਅੱਖਰਾਂ ਦਾ ਦਿਓ।"
+"<b>ਰਿਮੋਟ ਅਸੈੱਸ ਪਾਸਵਰਡ ਖਰਾਬ</b><hr>ਪਾਸਵਰਡ ਬਹੁਤ ਲੰਮਾ ਹੈ। ਪਾਸਵਰਡ ਵੱਧੋ-ਵੱਧ 8 ਅੱਖਰਾਂ ਦਾ ਦਿਓ।"
 
 #. Install missing packages box
 msgid ""
@@ -1330,11 +1321,11 @@ msgstr "ਪੈਕੇਜ ਇੰਸਟਾਲੇਸ਼ਨ"
 
 #. Progress bar title text
 msgid "Importing module"
-msgstr "ਮੋਡੀਊਲ ਆਯਾਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+msgstr "ਮੋਡੀਊਲ ਇੰਪੋਰਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr "SaX2: ਡਾਟਾ ਅਯਾਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+msgstr "SaX2: ਡਾਟਾ ਇੰਪੋਰਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
 
 #. Progress window label text
 msgid "Initialize cache..."
@@ -1398,14 +1389,12 @@ msgid "Right Ctrl key works as Right Alt."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at bottom left"
-msgstr "Control ਸਵਿੱਚ ਬਟਨ ਖੱਬੇ"
+msgstr "Ctrl ਸਵਿੱਚ ਤਲ ਖੱਬੇ"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key at left of 'A'"
-msgstr "Control ਸਵਿੱਚ ਬਟਨ ਖੱਬੇ"
+msgstr "Ctrl ਸਵਿੱਚ 'A' ਦੇ ਖੱਬੇ"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
@@ -1416,23 +1405,20 @@ msgid "Swap Ctrl and CapsLock."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl key position"
-msgstr "Control ਸਵਿੱਚ ਟਿਕਾਣਾ"
+msgstr "Ctrl ਸਵਿੱਚ ਸਥਿਤੀ"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "ਸਰਵਰ ਵਿੱਚ ਖਾਸ ਸਵਿੱਚਾਂ (Ctrl+Alt+<key>) ਸੰਭਾਲਣ ਲਈ"
+msgstr "ਸਰਵਰ ਵਿੱਚ ਖਾਸ ਸਵਿੱਚਾਂ (Ctrl+Alt+&lt;key&gt;) ਸੰਭਾਲਣ ਲਈ"
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift changes group."
-msgstr "Alt+Control ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ ਹੈ।"
+msgstr "Ctrl+Shift ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
@@ -1443,13 +1429,12 @@ msgid "Add the EuroSign to the 2 key."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "key Compose key position"
-msgstr "ਸੰਯੁਕਤ ਸਵਿੱਚ ਟਿਕਾਣਾ"
+msgstr ""
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
-msgstr "Alt+Ctrl ਨੇ ਗਰੁੱਪ ਬਦਲਿਆ।"
+msgstr "Alt+Ctrl ਨਾਲ ਗਰੁੱਪ ਬਦਲੋ।"
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
@@ -1481,7 +1466,7 @@ msgstr "ਨਜੀਰੀਆ"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr "ਜਾਪਾਨ (PC-98xx Series)"
+msgstr "ਜਾਪਾਨ (PC-98xx ਸੀਰਿਜ਼)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1835,4 +1820,4 @@ msgid "Configuration on display"
 msgstr "ਡਿਸਪਲੇਅ ਉੱਤੇ ਸੰਰਚਨਾ"
 
 msgid "Idle timer..."
-msgstr "ਵੇਹਲਾ ਟਾਈਮਰ..."
+msgstr "ਆਈਡਲ ਟਾਈਮਰ..."

@@ -20,7 +20,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -36,6 +36,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>不支援 3D 加速</b><hr>SaX2 無法啟動 3D 次系統，因為您的顯示卡/驅動程式不支"
+"援 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -44,6 +46,9 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>不支援 3D 加速</b><hr>SaX2 無法啟動 3D 次系統，因為您使用 Xinerama 為基礎"
+"的雙顯示模式。Xorg 用來組成多螢幕圖形的 Xinerama 擴充功能無法在所有螢幕上支"
+"援 3D"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -65,7 +70,7 @@ msgstr "SaX 控制中心"
 msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
-msgstr ""
+msgstr "<b>顯示尺寸已變更</b><hr>顯示尺寸已被調整為新的配置。"
 
 #. Help Button text
 msgid "&Help"
@@ -153,9 +158,8 @@ msgid "Remote Access Properties"
 msgstr "遠端存取內容"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "顯示"
+msgstr "顯示器 %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -183,7 +187,7 @@ msgstr "設定(&F)..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr "雙頭模式"
+msgstr "雙顯示模式"
 
 #. Group box title for card options
 #. Group box title for mouse options
@@ -206,9 +210,8 @@ msgid "Invert Y-Axis"
 msgstr "翻轉 Y 軸"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "啟用三鍵式模擬功能"
+msgstr "啟用左手按鍵映射"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -275,7 +278,7 @@ msgstr "內容"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr "啟用雙頭模式"
+msgstr "啟用雙顯示模式"
 
 #. Set display resolution
 msgid "Resolution"
@@ -287,7 +290,7 @@ msgstr "色彩"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr "使用 3D 加速"
+msgstr "啟用 3D 加速"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
@@ -386,11 +389,11 @@ msgstr "滑鼠設定"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
-msgstr "圖形配接卡設定"
+msgstr "顯示卡設定"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr "雙頭設定"
+msgstr "雙顯示設定"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -410,6 +413,8 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>不適用的色彩/解析度組合：</b><hr><nobr>所選擇的解析度和/或色彩設定</nobr>"
+"不被顯示卡的 framebuffer 所支援。"
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -554,7 +559,7 @@ msgstr "狀態"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr "可以輸入"
+msgstr "鍵盤對應表"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
@@ -582,9 +587,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Alt/Win 鍵行為"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Control 鍵位置"
+msgstr "EuroSign 鍵位置"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -599,9 +603,8 @@ msgid "Morocco"
 msgstr "摩洛哥"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "巴西"
+msgstr "布拉耶點字"
 
 #. XKBFile extension text
 msgid "Ethiopia"
@@ -609,230 +612,191 @@ msgstr "衣索比亞"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "NICOLA-F 樣式倒退鍵"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "按右方 Alt 鍵選擇第三層。"
+msgstr "按右方 Alt 鍵不選擇第三層。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "按下左方 Alt 鍵切換群組。"
+msgstr "按下左方 Alt 鍵切換配置。"
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "空白鍵不輸出"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numeric keypad keys."
-msgstr "預設路由沒有問題。"
+msgstr "預設數字鍵按鍵。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "兩個 Ctrl 鍵變更群組。"
+msgstr "左右兩個 Ctrl 鍵同時按變更配置。"
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "使用空白鍵輸入不斷行的空白字元"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "右方 Shift 鍵變更群組。"
+msgstr "右方 Shift 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "左方 Win鍵變更群組。"
+msgstr "左方 Win鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Shift 變更群組。"
+msgstr "左方Ctrl+左方Shift 變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "左方 Alt 鍵變更群組。"
+msgstr "左方 Alt 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "按下時兩個 Win 鍵切換群組。"
+msgstr "按下左右 Win 鍵均可切換配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "按下右方 Ctrl 鍵切換群組。"
+msgstr "按下右方 Ctrl 鍵切換配置。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "空白鍵輸出不斷行的空白字元"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift+CapsLock 變更群組。"
+msgstr "Shift+CapsLock 變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
-msgstr "按下右方 Alt 鍵切換群組。"
+msgstr "按下右方 Alt 鍵切換配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "語言和鍵盤配置選項"
+msgstr "數字鍵盤配置選擇"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "右方 Ctrl 鍵變更群組。"
+msgstr "右方 Ctrl 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Shift+CapsLock 變更群組。"
+msgstr "Alt+CapsLock 變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "Hyper 對應至 Win 鍵。"
+msgstr "Super 對應至 Win 鍵。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "ScrollLock 指示燈顯示替代群組。"
+msgstr "ScrollLock 指示燈顯示不同配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "兩個 Shift 鍵變更群組。"
+msgstr "兩個 Shift 鍵同時按變更配置。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
+msgstr "空白鍵輸出不斷行的空白字元在第二級。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "右方 Win鍵變更群組。"
+msgstr "右方 Win 鍵變更配置。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
+msgstr "空白鍵輸出不斷行的空白字元在第三級。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Shift 鍵與數字鍵執行 MS Windows 鍵的功能。"
+msgstr "數字鍵如 Mac 上的運作。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "CapsLock 指示燈顯示替代群組。"
+msgstr "CapsLock 指示燈顯示不同配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "NumLock 指示燈顯示替代群組。"
+msgstr "NumLock 指示燈顯示不同配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "左方 Shift 鍵變更群組。"
+msgstr "左方 Shift 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "按下左方 Win 鍵切換群組。"
+msgstr "按下左方 Win 鍵切換配置。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
+msgstr "空白鍵輸出不斷行的空白字元在第四級。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "兩個 Alt 鍵變更群組。"
+msgstr "兩個 Alt 鍵同時按變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "CapsLock 鍵變更群組。"
+msgstr "CapsLock 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Super 對應至 Win 鍵 (預設值)。"
+msgstr "Control 對應至 Win 鍵 (以及一般的 Ctrl 鍵)。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
-msgstr "右方 Alt 鍵變更群組。"
+msgstr "右方 Alt 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "Shift 鍵與數字鍵執行 MS Windows 鍵的功能。"
+msgstr "Shift 鍵加數字鍵盤如 MS Windows 運作。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt 和 Meta 在 Alt 鍵之上(預設值)。"
+msgstr "Alt 和 Meta 在 Alt 鍵上。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt+Shift 變更群組。"
+msgstr "Alt+Shift 變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Shift 變更群組。"
+msgstr "Ctrl+Shift 變更配置。"
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr ""
+msgstr "空白鍵輸出一般空白在任何級。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
-msgstr "鍵盤選項"
+msgstr "日本鍵盤選項"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
-msgstr "使用鍵盤指示燈來顯示替代群組。"
+msgstr "使用鍵盤指示燈來顯示不同配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "左方 Ctrl 鍵變更群組。"
+msgstr "左方 Ctrl 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "Menu 鍵變更群組。"
+msgstr "Menu 鍵變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl 變更群組。."
+msgstr "Alt+Ctrl 變更配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "按下右方 Win 鍵切換群組。"
+msgstr "按下右方 Win 鍵切換配置。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Layout switching"
-msgstr "允許使用者切換"
+msgstr "切換配置"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -840,7 +804,7 @@ msgstr "按下左方 Alt 鍵切換群組。"
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr "兩個 Ctrl 鍵變更群組。"
+msgstr "兩個 Ctrl 鍵同時按變更群組。"
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
@@ -863,100 +827,89 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "按下右方 Ctrl 鍵切換群組。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta 對應至左方 Win 鍵。"
+msgstr "左方 Alt 鍵和左方 Win 鍵交換。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "預設路由沒有問題。"
+msgstr "預設數字鍵盤。"
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "新增不斷行空白按鍵系統到空白鍵"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "使用附加統一碼的小鍵盤 (箭號和數學運算符號)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "強制標準遺產小鍵盤"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "CapsLock 使用內容大寫。 Shift 不會取消 CapsLock。"
+msgstr "CapsLock 使用內容大寫。 Shift 不會影響 CapsLock。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "語言和鍵盤配置選項"
+msgstr "鍵盤配置選項"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Shift+CapsLock 變更群組。"
+msgstr "Alt+CapsLock 變更群組。"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "空白鍵輸出不斷行空白在第二級。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "CapsLock 當成 Shift 鎖定。 Shift 不會取消 CapsLock。"
+msgstr "CapsLock 當成 Shift 鎖定。 Shift 不會影響 CapsLock。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock 使用內容大寫。Shift 會取消 CapsLock。"
+msgstr "CapsLock 使用內容大寫。Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "空白鍵輸出不斷行空白在第三級。"
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
+msgstr "當核心錯誤偵測 Mac 鍵盤時交換兩鍵的內碼"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift 鍵與數字鍵執行 MS Windows 鍵的功能。"
+msgstr "數字鍵盤如在 Mac 工作。"
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "Kana 鎖定鍵鎖住"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "空白鍵輸出不斷行空白在第四級。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "右方 Win 鍵是撰寫。"
+msgstr "左方 Win 鍵為 Compose。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "按右方 Alt 鍵選擇第三層。"
+msgstr "按右方 Alt 鍵選擇第三層，Shift+右方 Alt 鍵為 Multi_Key。"
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "空白鍵在任何級均輸出空白。"
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "日本鍵盤選項"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock 當成 Shift 鎖定。Shift 會取消 CapsLock。"
+msgstr "CapsLock 當成 Shift 鎖定。Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1227,14 +1180,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1249,9 +1200,8 @@ msgid "Add Eraser"
 msgstr "新增橡皮擦"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "新增筆"
+msgstr "新增繪圖版"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1262,9 +1212,8 @@ msgid "Pen Properties"
 msgstr "筆內容"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "筆內容"
+msgstr "繪圖版內容"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1492,14 +1441,12 @@ msgid "Nepal"
 msgstr "尼泊爾"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "寮人民民主共和國"
+msgstr "剛果民主共和國"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "捷克共和國"
+msgstr "韓國"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1510,9 +1457,8 @@ msgid "Nigeria"
 msgstr "奈及利亞"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx 系列"
+msgstr "日本 (PC-98xx 系列)"
 
 #. XKBFile extension text
 msgid "Estonia"
