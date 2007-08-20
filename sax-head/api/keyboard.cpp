@@ -108,7 +108,9 @@ void SCCKeyboard::apply ( void ) {
 			layoutApply + " " + optionReset + " " + optionApply;
 		log (L_INFO,"Apply keyboard: %s\n",complete.ascii());
 		QProcess* proc = new QProcess ();
-		proc -> setArguments ( QStringList::split( " ",complete) );
+		proc -> addArgument ("/bin/bash");
+		proc -> addArgument ("-c");
+		proc -> addArgument (complete);
 		if ( ! proc -> start() ) {
 			qApp->restoreOverrideCursor();
 			return;
