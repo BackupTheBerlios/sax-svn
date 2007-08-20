@@ -394,7 +394,7 @@ string XF86ConfigFile::CallRandR (str file) {
 		};
 		char pref[20];
 		sprintf(pref,"%d",output->npreferred);
-		result = string(output->name)
+		result = result + string(output->name)
 			+ " " + string(connect_state[output->connection])
 			+ " " + string(pref)
 			+ " ";
