@@ -554,7 +554,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 		if ((profile3D) && (! profile3D->contains("DualHead"))) {
 			profiles += *profile3D;
 		}
-		if (driver2D != driver3D) {
+		if (*driver2D != *driver3D) {
 			SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
 			QDict<QString> driverMap = mapHandle.readDict();
 			QString driver = cardInfo.getCardDriver();
@@ -705,7 +705,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 		if ((profile3D) && (! profile3D->contains("DualHead"))) {
 			profiles += *profile3D;
 		}
-		if (driver2D != driver3D) {
+		if (*driver2D != *driver3D) {
 			SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
 			QDict<QString> driverMap = mapHandle.readDict();
 			if ((driver3D) && (driverMap[*driver3D])) {

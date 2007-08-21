@@ -77,20 +77,12 @@ if (ProfileIsNoteBookHardware()) {
 		#=====================================
 		# setup randr plugin data
 		#-------------------------------------
-		my @channels = split ("%",$rroutput);
-		foreach my $channel (@channels) {
-			my @data = split (" ",$channel);
-			my $outputName  = $data[0];
-			my $outputState = $data[1];
-			# /.../
-			# activate all output channels except the
-			# the internal channel named VGA
-			# ----
-			if ($outputName eq "VGA") {
-				next;
+		my @sortedChannels = ProfileSortRandrData ($rroutput);
+		foreach my $outputName (@sortedChannels) {
+			if ((defined $outputName) && ($outputName ne "")) {
+				$dx = eval $dt;
+				print FD "$dx=\"monitor-$outputName\" \"EXT\"\n";
 			}
-			$dx = eval $dt;
-			print FD "$dx=\"monitor-$outputName\" \"EXT\"\n";
 		}
 	}
 	close FD;
@@ -165,20 +157,12 @@ if (ProfileIsNoteBookHardware()) {
 		#=====================================
 		# setup randr plugin data
 		#-------------------------------------
-		my @channels = split ("%",$rroutput);
-		foreach my $channel (@channels) {
-			my @data = split (" ",$channel);
-			my $outputName  = $data[0];
-			my $outputState = $data[1];
-			# /.../
-			# activate all output channels except the
-			# the internal channel named VGA
-			# ----
-			if ($outputName eq "VGA") {
-				next;
+		my @sortedChannels = ProfileSortRandrData ($rroutput);
+		foreach my $outputName (@sortedChannels) {
+			if ((defined $outputName) && ($outputName ne "")) {
+				$dx = eval $dt;
+				print FD "$dx=\"monitor-$outputName\" \"EXT\"\n";
 			}
-			$dx = eval $dt;
-			print FD "$dx=\"monitor-$outputName\" \"EXT\"\n";
 		}
 	}
 	close FD;

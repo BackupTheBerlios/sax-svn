@@ -507,4 +507,63 @@ sub ProfileGetDDC2Data {
 	return %result;
 }
 
+#=====================================
+# ProfileSortRandrData
+#-------------------------------------
+sub ProfileSortRandrData {
+	my $rroutput = shift;
+	my @channels = split ("%",$rroutput);
+	my @sortedChannels = ();
+	my $index = 9;
+	foreach my $channel (@channels) {
+		my @data = split (" ",$channel);
+		my $outputName  = $data[0];
+		my $outputState = $data[1];
+		# /.../
+		# activate all connected output channels
+		# in a specific order
+		# ----
+		if ($outputState ne "connected") {
+			next;
+		}
+		# /.../
+		# assume first channel is internal display
+		# skip the internal display
+		# ----
+		next;
+		# ----
+		if ($outputName eq "LVDS") {
+			$sortedChannels[0] = $outputName;
+		}
+		elsif ($outputName =~ /^LVDS-.*/) {
+			$sortedChannels[1] = $outputName;
+		}
+		elsif ($outputName eq "DVI") {
+			$sortedChannels[2] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-.*/) {
+			$sortedChannels[3] = $outputName;
+		}
+		elsif ($outputName eq "TMDS") {
+			$sortedChannels[4] = $outputName;
+		}
+		elsif ($outputName =~ /^TMDS-.*/) {
+			$sortedChannels[5] = $outputName;
+		}
+		elsif ($outputName eq "VGA") {
+			$sortedChannels[6] = $outputName;
+		}
+		elsif ($outputName =~ /^VGA-.*/) {
+			$sortedChannels[7] = $outputName;
+		}
+		elsif ($outputName eq "TV") {
+			$sortedChannels[8] = $outputName;
+		} else {
+			$sortedChannels[$index] = $outputName;
+			$index++;
+		}
+	}
+	return @sortedChannels;
+}
+
 1;
