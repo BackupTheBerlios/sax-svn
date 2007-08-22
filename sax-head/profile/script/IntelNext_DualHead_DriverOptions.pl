@@ -45,7 +45,7 @@ if ((! defined $rroutput) || ($rroutput eq "<undefined>")) {
 if (ProfileIsNoteBookHardware()) {
 	open (FD,">",$profile) ||
 		die "$name: Can't open $profile: $!";
-	my $id = 20;
+	my $id = 21;
 	my $dt = '"Device->[X]->Raw->".$id++."->Option"';
 	my $dx = eval $dt;
 	print FD "SaXMeta->[X]->SAX_NO_CDB_CHECK=1\n";
@@ -93,7 +93,7 @@ if (ProfileIsNoteBookHardware()) {
 	open (FD,">>",$profile) ||
 		die "$name: Can't open $profile: $!";
 	my %data   = ProfileGetDDC2Data();
-	my $id = 20;
+	my $id = 21;
 	my $dt = '"Device->[X]->Raw->".$id++."->Option"';
 	my $dx = eval $dt;
 	print FD "$dx=\"SaXDualMode\" \"Clone\"\n";
