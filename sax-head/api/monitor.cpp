@@ -548,7 +548,7 @@ bool SCCMonitor::exportData ( void ) {
 							saxCard.addCardOption ( key,position );
 							if ((haveExternal) && (dualData->getMode()!=DUAL_CLONE)) {
 								saxCard.addCardExternalOption (
-									"Position",position
+									position,"EXT"
 								);
 							}
 						}

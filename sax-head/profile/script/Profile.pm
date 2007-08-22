@@ -514,7 +514,20 @@ sub ProfileSortRandrData {
 	my $rroutput = shift;
 	my @channels = split ("%",$rroutput);
 	my @sortedChannels = ();
-	my $index = 9;
+	my $index = -1;
+	# /.../
+	# assume first channel is internal display
+	# skip the internal display
+	# ----
+	foreach my $channel (@channels) {
+		my @data = split (" ",$channel); $index++;
+		if ( $data[1] ne "connected") {
+			next;
+		}
+		delete $channels[$index];
+		last;
+	}
+	$index = 9;
 	foreach my $channel (@channels) {
 		my @data = split (" ",$channel);
 		my $outputName  = $data[0];
@@ -526,12 +539,6 @@ sub ProfileSortRandrData {
 		if ($outputState ne "connected") {
 			next;
 		}
-		# /.../
-		# assume first channel is internal display
-		# skip the internal display
-		# ----
-		next;
-		# ----
 		if ($outputName eq "LVDS") {
 			$sortedChannels[0] = $outputName;
 		}

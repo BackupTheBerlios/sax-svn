@@ -865,8 +865,8 @@ sub ApiImportCard {
 							$var{Monitor}{$next}{DisplaySize} = $val;
 							last SWITCH;
 						};
-						/^Position/           && do {
-							my $v = "\"Position\" \"$val\"";
+						/^(LeftOf|RightOf|Below|Above)/  && do {
+							my $v = "\"$key\" \"$val\"";
 							if (defined $var{Monitor}{$next}{Option}) {
 								$var{Monitor}{$next}{Option} .= ",$v";
 							} else {
