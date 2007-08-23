@@ -66,9 +66,12 @@ void SaXKeyRules::loadRules(QString file) {
 	}
 	int i;
 	for (i = 0; i < rules->models.num_desc; ++i) {
+		QString* item = new QString (qstrdup( rules->models.desc[i].desc));
+		if ( item->length() > 50 ) {
+			item->truncate ( 50 ); item->append ("...");
+		}
 		mModels.replace (
-			rules->models.desc[i].name,
-			new QString (qstrdup( rules->models.desc[i].desc))
+			rules->models.desc[i].name,item
 		);
 	}
 	for (i = 0; i < rules->layouts.num_desc; ++i) {

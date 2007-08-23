@@ -170,10 +170,6 @@ void SCCKeyboardLayout::init ( void ) {
 	QDictIterator<QString> itModel (mModelDict);
 	for (; itModel.current(); ++itModel) {
 		QString item = *itModel.current();
-		if ( item.length() > 50 ) {
-			item.truncate ( 50 );
-			item.append ("...");
-		}
 		typeBox -> insertItem ( item );
 	}
 	typeBox  -> sort ( true );
@@ -280,10 +276,6 @@ QString SCCKeyboardLayout::getType ( void ) {
 	QDictIterator<QString> itModel (mModelDict);
 	for (; itModel.current(); ++itModel) {
 		QString item = *itModel.current();
-		if ( item.length() > 50 ) {
-			item.truncate ( 50 );
-			item.append ("...");
-		}
 		if (item == mTypeBox->currentText()) {
 			mXKBModel = itModel.currentKey();
 		}
