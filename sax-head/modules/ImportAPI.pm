@@ -1531,6 +1531,30 @@ sub GetModelines {
 			push (@modeline,"Modeline $_");
 		}
 	}
+	# ...
+	# add the EDID modeline if exist
+	# ---
+	my $dac;
+	my $mod;
+	my @res;
+	foreach my $i (sort keys %{$query{$card}}) {
+		if ($i =~ /^Dacspeed$/) {
+			$dac = $query{$card}{$i};
+		}
+		if ($i =~ /^Modeline$/) {
+			$mod = $query{$card}{$i};
+		}
+	}
+	if ((defined $mod) && (defined $dac)) {
+		$mod =~ s/\s{2,}/ /g;
+		@res = split (/ /,$mod);
+		$mod =~ s/\+\//\+hsync /;
+		$mod =~ s/\+$/\+vsync/;
+		$mod =~ s/\-\//\-hsync /;
+		$mod =~ s/\-$/\-vsync/;
+		$mod = "Modeline \"$res[0]x$res[4]\" $dac $mod";
+		push (@modeline,$mod);
+	}
 	return @modeline;
 }
 
