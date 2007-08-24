@@ -88,6 +88,23 @@ MsgDetect* MonitorGetData (void) {
 			sprintf(display->vendor,hd->vendor.name);
 		}
 		//===================================
+		// Remove bad letters from model
+		//-----------------------------------
+		if (strstr (display->model,"\"")) {
+			char* nname = (char*)malloc(sizeof(char)*strlen(display->model)+1);
+			char* token = strtok (display->model,"\"");
+			memset (nname,'\0',strlen(display->model)+1);
+			while (token) {
+				if (strlen(nname)) {
+					sprintf (nname,"%s %s",nname,token);
+				} else {
+					sprintf (nname,token);
+				}
+				token = strtok (NULL,"\"");
+			}
+			sprintf (display->model,nname);
+		}
+		//===================================
 		// Save Monitor DisplayType ...
 		//-----------------------------------
 		sprintf(display->displaytype,"CRT");
