@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Jun 22 11:06:50 2007
+# Author: Marcus Schaefer <sax@suse.de>, Fri Aug 24 11:00:50 2007
 #
 # Template for monitor data
 # --------------------------
@@ -2900,7 +2900,7 @@ APOLLO:8398  {
 #==============================================
 # 12" Color Display (M1299)
 #----------------------------------------------
-APPLE:12" COLOR DISPLAY (M1299)  {
+APPLE:12 COLOR DISPLAY (M1299)  {
  Hsync=31-24
  Vsync=50-60
 }
@@ -2908,7 +2908,7 @@ APPLE:12" COLOR DISPLAY (M1299)  {
 #==============================================
 # 12" Monochrome (M0298LL/A)
 #----------------------------------------------
-APPLE:12" MONOCHROME (M0298LL/A)  {
+APPLE:12 MONOCHROME (M0298LL/A)  {
  Hsync=31-35
  Vsync=50-66
 }
@@ -2916,7 +2916,7 @@ APPLE:12" MONOCHROME (M0298LL/A)  {
 #==============================================
 # 15" TFT STUDIO-DISPLAY
 #----------------------------------------------
-APPLE:15" TFT STUDIO-DISPLAY  {
+APPLE:15 TFT STUDIO-DISPLAY  {
  Hsync=30-33
  Vsync=40-70
 }
@@ -2924,7 +2924,7 @@ APPLE:15" TFT STUDIO-DISPLAY  {
 #==============================================
 # 16" Color Display (M1298)
 #----------------------------------------------
-APPLE:16" COLOR DISPLAY (M1298)  {
+APPLE:16 COLOR DISPLAY (M1298)  {
  Hsync=31-50
  Vsync=50-75
 }
@@ -2932,7 +2932,7 @@ APPLE:16" COLOR DISPLAY (M1298)  {
 #==============================================
 # 17" DIGITAL STUDIO-DISPLAY
 #----------------------------------------------
-APPLE:17" DIGITAL STUDIO-DISPLAY  {
+APPLE:17 DIGITAL STUDIO-DISPLAY  {
  Hsync=30-80
  Vsync=60-160
 }
@@ -2948,7 +2948,7 @@ APPLE:1710AV  {
 #==============================================
 # 21" Color Display, (M3502)
 #----------------------------------------------
-APPLE:21" COLOR DISPLAY, (M3502)  {
+APPLE:21 COLOR DISPLAY, (M3502)  {
  Hsync=31-68
  Vsync=50-75
 }
@@ -2956,7 +2956,7 @@ APPLE:21" COLOR DISPLAY, (M3502)  {
 #==============================================
 # 22" CINEMA
 #----------------------------------------------
-APPLE:22" CINEMA  {
+APPLE:22 CINEMA  {
  Hsync=30-70
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=30-75
@@ -2983,7 +2983,7 @@ APPLE:APPLEVISION 1710AV  {
 #==============================================
 # AudioVision 14" Display
 #----------------------------------------------
-APPLE:AUDIOVISION 14" DISPLAY  {
+APPLE:AUDIOVISION 14 DISPLAY  {
  Hsync=31-35
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=50-66
@@ -3001,7 +3001,7 @@ APPLE:BASIC COLOR (M1595LL/A)  {
 #==============================================
 # Cinema Display 20" Widescreen (DIGITAL)
 #----------------------------------------------
-APPLE:CINEMA DISPLAY 20" WIDESCREEN (DIGITAL)  {
+APPLE:CINEMA DISPLAY 20 WIDESCREEN (DIGITAL)  {
  DDC=APP921D
  Option=DPMS
  Hsync=30-66
@@ -3072,7 +3072,7 @@ APPLE:COLOR PLUS 14 (M1787)  {
 #==============================================
 # COLORSYNC 17"
 #----------------------------------------------
-APPLE:COLORSYNC 17"  {
+APPLE:COLORSYNC 17  {
  Hsync=40-80
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=40-120
@@ -3081,7 +3081,7 @@ APPLE:COLORSYNC 17"  {
 #==============================================
 # COLORSYNC 20"
 #----------------------------------------------
-APPLE:COLORSYNC 20"  {
+APPLE:COLORSYNC 20  {
  Hsync=30-94
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=48-120
@@ -3122,7 +3122,7 @@ APPLE:MULTIPLE SCAN 14 (M4222)  {
 #==============================================
 # Multiple Scan 15" (M3089LL/A)
 #----------------------------------------------
-APPLE:MULTIPLE SCAN 15" (M3089LL/A)  {
+APPLE:MULTIPLE SCAN 15 (M3089LL/A)  {
  Hsync=31-57
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3133,7 +3133,7 @@ APPLE:MULTIPLE SCAN 15" (M3089LL/A)  {
 #==============================================
 # Multiple Scan 15"AV (M4681)
 #----------------------------------------------
-APPLE:MULTIPLE SCAN 15"AV (M4681)  {
+APPLE:MULTIPLE SCAN 15AV (M4681)  {
  Hsync=31-57
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3156,7 +3156,7 @@ APPLE:MULTIPLE SCAN 17  {
 #==============================================
 # MULTIPLE SCAN 17"
 #----------------------------------------------
-APPLE:MULTIPLE SCAN 17"  {
+APPLE:MULTIPLE SCAN 17  {
  Option=DPMS
  Hsync=31-60
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
@@ -3251,7 +3251,7 @@ APPLE:POWERBOOK-1024X768  {
 #==============================================
 # STD9745" (M2943)
 #----------------------------------------------
-APPLE:STD9745" (M2943)  {
+APPLE:STD9745 (M2943)  {
  Hsync=31-68
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3262,7 +3262,7 @@ APPLE:STD9745" (M2943)  {
 #==============================================
 # Studio Display 17" (M6221LL/A)
 #----------------------------------------------
-APPLE:STUDIO DISPLAY 17" (M6221LL/A)  {
+APPLE:STUDIO DISPLAY 17 (M6221LL/A)  {
  Hsync=30-85
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3273,7 +3273,7 @@ APPLE:STUDIO DISPLAY 17" (M6221LL/A)  {
 #==============================================
 # Studio Display 21" (M6204LL/A)
 #----------------------------------------------
-APPLE:STUDIO DISPLAY 21" (M6204LL/A)  {
+APPLE:STUDIO DISPLAY 21 (M6204LL/A)  {
  Hsync=31-107
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5649,7 +5649,7 @@ BTM:17 TOUCH SCREEN  {
 #==============================================
 # 19" Enlarging Monitor
 #----------------------------------------------
-BTM:19" ENLARGING MONITOR  {
+BTM:19 ENLARGING MONITOR  {
  Hsync=31-31
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5669,7 +5669,7 @@ BUS COMPUTER SYSTEMS:COMPUTER SYSTEMS BUS_VGA  {
 #==============================================
 # 21" ChromaVision
 #----------------------------------------------
-CALCOMP:21" CHROMAVISION  {
+CALCOMP:21 CHROMAVISION  {
  Hsync=31-68
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5680,7 +5680,7 @@ CALCOMP:21" CHROMAVISION  {
 #==============================================
 # 21" GrayVision
 #----------------------------------------------
-CALCOMP:21" GRAYVISION  {
+CALCOMP:21 GRAYVISION  {
  Hsync=32-49
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5691,7 +5691,7 @@ CALCOMP:21" GRAYVISION  {
 #==============================================
 # [vshop]21" CHROMAVISION
 #----------------------------------------------
-CALCOMP:[VSHOP]21" CHROMAVISION  {
+CALCOMP:[VSHOP]21 CHROMAVISION  {
  Hsync=31-68
  Vsync=50-75
 }
@@ -5699,7 +5699,7 @@ CALCOMP:[VSHOP]21" CHROMAVISION  {
 #==============================================
 # [vshop]21" GRAYVISION
 #----------------------------------------------
-CALCOMP:[VSHOP]21" GRAYVISION  {
+CALCOMP:[VSHOP]21 GRAYVISION  {
  Hsync=32-49
  Vsync=45-100
 }
@@ -6808,7 +6808,7 @@ COMPUTER_2000:PC-2000F 1785T  {
 #==============================================
 # COLORLINE 15"
 #----------------------------------------------
-COMTECH:COLORLINE 15"  {
+COMTECH:COLORLINE 15  {
  Hsync=31-70
  Vsync=50-112
 }
@@ -16431,7 +16431,7 @@ HP:ERGO 1600/D 2845  {
 #==============================================
 # HP D2838 M700 17"
 #----------------------------------------------
-HP:HP D2838 M700 17"  {
+HP:HP D2838 M700 17  {
  DDC=HWP0B16
  Hsync=30-86
  Vsync=50-160
@@ -33452,7 +33452,7 @@ SCHWEMBERGER:FTP1503A  {
 #==============================================
 # 15" ANALOG LCD PROFESSIONAL LI
 #----------------------------------------------
-SCOTT:15" ANALOG LCD PROFESSIONAL LI  {
+SCOTT:15 ANALOG LCD PROFESSIONAL LI  {
  Hsync=31-60
  Vsync=56-85
 }
@@ -33460,7 +33460,7 @@ SCOTT:15" ANALOG LCD PROFESSIONAL LI  {
 #==============================================
 # 15" Analog LCD Professional Line
 #----------------------------------------------
-SCOTT:15" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:15 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-60
  Vsync=56-85
 }
@@ -33476,7 +33476,7 @@ SCOTT:1769 BUSINESS LINE  {
 #==============================================
 # 18,1" ANALOG LCD PROFESSIONAL
 #----------------------------------------------
-SCOTT:18,1" ANALOG LCD PROFESSIONAL  {
+SCOTT:18,1 ANALOG LCD PROFESSIONAL  {
  Hsync=31-80
  Vsync=56-85
 }
@@ -33484,7 +33484,7 @@ SCOTT:18,1" ANALOG LCD PROFESSIONAL  {
 #==============================================
 # 18,1" Analog LCD Professional Line
 #----------------------------------------------
-SCOTT:18,1" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:18,1 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-80
  Vsync=56-85
 }
@@ -33556,7 +33556,7 @@ SCOTT:995 PROFESSIONAL LINE  {
 #==============================================
 # [vshop]15" ANALOG LCD PROFESSIONAL LINE
 #----------------------------------------------
-SCOTT:[VSHOP]15" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:[VSHOP]15 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-60
  Vsync=56-85
 }
@@ -33564,7 +33564,7 @@ SCOTT:[VSHOP]15" ANALOG LCD PROFESSIONAL LINE  {
 #==============================================
 # [vshop]18,1" ANALOG LCD PROFESSIONAL LINE
 #----------------------------------------------
-SCOTT:[VSHOP]18,1" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:[VSHOP]18,1 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-80
  Vsync=56-85
 }
@@ -36706,7 +36706,7 @@ TARGA:CM1420  {
 #==============================================
 # SMILE 9"
 #----------------------------------------------
-TARGA:SMILE 9"  {
+TARGA:SMILE 9  {
  Option=DPMS
  Hsync=31-31
  Vsync=50-70
@@ -40974,7 +40974,7 @@ YAKUMO:PS1564  {
 #==============================================
 # V500 (12")
 #----------------------------------------------
-Z-AXIS:V500 (12")  {
+Z-AXIS:V500 (12)  {
  Hsync=15-35
  Vsync=50-90
 }
@@ -40982,7 +40982,7 @@ Z-AXIS:V500 (12")  {
 #==============================================
 # V500 (14")
 #----------------------------------------------
-Z-AXIS:V500 (14")  {
+Z-AXIS:V500 (14)  {
  Hsync=15-35
  Vsync=50-90
 }
@@ -40990,7 +40990,7 @@ Z-AXIS:V500 (14")  {
 #==============================================
 # V500 (27")
 #----------------------------------------------
-Z-AXIS:V500 (27")  {
+Z-AXIS:V500 (27)  {
  Hsync=15-35
  Vsync=50-90
 }
