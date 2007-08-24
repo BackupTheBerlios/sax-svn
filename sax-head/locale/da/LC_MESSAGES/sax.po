@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-08-04 21:52+0200\n"
-"Last-Translator: Ib Larsen <i.la@tele2adsl.dk>\n"
+"PO-Revision-Date: 2007-08-23 20:54+0200\n"
+"Last-Translator: Martin Schlander <suse@linuxin.dk>\n"
 "Language-Team:  <opensuse-translation@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -176,7 +176,7 @@ msgstr "Aktivér denne skærm"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr "Aktivér denne musemarkør"
+msgstr "Aktivér denne markør"
 
 #. Graphics Card name label
 msgid "Card"
@@ -188,7 +188,7 @@ msgstr "Æ&ndr..."
 
 #. Set options for some kind of data
 msgid "&Options..."
-msgstr "In&dstillinger..."
+msgstr "&Valgmuligheder..."
 
 #. Configure some data
 msgid "Con&figure..."
@@ -196,7 +196,7 @@ msgstr "Kon&figurér..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr "Dual-head-tilstand"
+msgstr "Dualhead-tilstand"
 
 #. Group box title for card options
 #. Group box title for mouse options
@@ -204,7 +204,7 @@ msgstr "Dual-head-tilstand"
 #. Group box title for tablet options
 #. Group box title for the VNC options
 msgid "Options"
-msgstr "Indstillinger"
+msgstr "Valgmuligheder"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
@@ -220,7 +220,7 @@ msgstr "Omvendt Y-akse"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Aktivér venstrehånds udlægning af knapper"
+msgstr "Aktivér venstrehåndsudlægning af knapper"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -267,7 +267,7 @@ msgstr "Dobbeltklik: Færdig"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
-msgstr "Ruller"
+msgstr "Rulning"
 
 #. Status line of mouse test field: button pressed
 msgid "Button pressed"
@@ -287,7 +287,7 @@ msgstr "Egenskaber"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr "Aktivér dual-head-tilstand"
+msgstr "Aktivér dualhead-tilstand"
 
 #. Set display resolution
 msgid "Resolution"
@@ -354,7 +354,7 @@ msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"Traditionel Multihead:\n"
+"Traditionel multihead:\n"
 "Hver skærm er en uafhængig-skærm"
 
 #. Radiobutton for cloned multihead mode
@@ -404,7 +404,7 @@ msgstr "Indstillinger for grafikkort"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr "Indstillinger for dual-head"
+msgstr "Indstillinger for dualhead"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -453,7 +453,7 @@ msgstr "Diagonal og aspektforhold"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
-msgstr "Skærm størrelse i [ mm ]"
+msgstr "Skærmstørrelse i [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
@@ -528,7 +528,7 @@ msgid ""
 "monitor vendor."
 msgstr ""
 "<b>Indsæt CD eller diskette</b><hr>Indsæt CD eller diskette med "
-"skærmværtkøjer fra skærmproducenten."
+"skærmværktøjer fra skærmproducenten."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
@@ -589,12 +589,12 @@ msgstr "Anvend tastaturets LED til at vise alternativ gruppe"
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Komponér tasteposition"
+msgstr "Position for komponér-tast"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Kontrollér tasteposition"
+msgstr "Position for Control-tast"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -668,7 +668,7 @@ msgstr "Venstre Win-tast skifter layout."
 
 #. XKBFile extension text
 msgid "LCtrl+LShift change layout."
-msgstr "Venstre Ctrl+ venstre Shift skifter layout."
+msgstr "Venstre Ctrl+venstre Shift skifter layout."
 
 #. XKBFile extension text
 msgid "Left Alt key changes layout."
@@ -712,7 +712,7 @@ msgstr "Super er kortlagt til Win-tasterne."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative layout."
-msgstr "Scroll Lock LED viser alternativt layout."
+msgstr "ScrollLock LED viser alternativt layout."
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
@@ -728,7 +728,8 @@ msgstr "Højre Win-tast skifter layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr "Mellemrumstasten producerer mellemum uden linjeskift på tredje niveau."
+msgstr ""
+"Mellemrumstasten producerer mellemrum uden linjeskift på tredje niveau."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -740,7 +741,7 @@ msgstr "Caps Lock LED viser alternativt layout."
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative layout."
-msgstr "Num Lock LED viser alternativt layout."
+msgstr "NumLock LED viser alternativt layout."
 
 #. XKBFile extension text
 msgid "Left Shift key changes layout."
@@ -1358,7 +1359,7 @@ msgstr "SaX2: Importerer data..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr "Initialiser cache..."
+msgstr "Initialisér cache..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
@@ -1372,7 +1373,7 @@ msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"<b>Konfigurationen er gemt:</b><hr>Ændringerne vil først have effekt n�te "
+"<b>Konfigurationen er gemt:</b><hr>Ændringerne vil først have effekt næste "
 "gang det grafiske system bliver genstartet. Afslut SaX2 nu?"
 
 #. Message box text: testing the configuration has failed
@@ -1700,7 +1701,7 @@ msgstr "Grækenland"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr "Storbritanien"
+msgstr "Storbritannien"
 
 #. XKBFile extension text
 msgid "France"

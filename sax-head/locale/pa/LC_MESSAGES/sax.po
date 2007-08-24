@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.pa\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-08-16 22:41+0530\n"
+"PO-Revision-Date: 2007-08-21 07:18+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Panjabi <punjabi-l10n@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
@@ -1104,7 +1104,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr ""
+msgstr "ਬਦਲਵਾਂ ਗਰੁੱਪ ਵੇਖਾਉਣ ਲਈ ਕੀਬੋਰਡ LED ਵਰਤੋਂ।"
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
@@ -1241,8 +1241,8 @@ msgid ""
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"<b>ਅੰਤਮ ਪਗ਼</b><hr>ਆਖਰੀ ਪਗ਼ ਤੁਹਾਡੀ ਸੰਰਚਨਾ ਨੂੰ ਸੰਭਾਲਣਾ ਹੈ। ਇਹ ਸਿਫ਼ਾਰਸ ਕੀਤੀ ਜਾਦੀ ਹੈ ਕਿ ਇਸ "
-"ਨੂੰ ਸੰਭਾਲਣ ਤੋਂ ਪਹਿਲਾਂ ਨਵੀਂ ਸੰਰਚਨਾ ਦੀ ਜਾਂਚ ਕਰ ਲਵੋ। ਜੇਕਰ ਜਾਂਚ ਸਰਵਰ ਨੇ ਇੱਕ ਨਿਕਾਰਾ ਡੈਸਕਟਾਪ "
+"<b>ਅੰਤਮ ਸਟੈਂਪ</b><hr>ਆਖਰੀ ਸਟੈਂਪ ਤੁਹਾਡੀ ਸੰਰਚਨਾ ਨੂੰ ਸੰਭਾਲਣਾ ਹੈ। ਇਹ ਸਿਫ਼ਾਰਸ ਕੀਤੀ ਜਾਦੀ ਹੈ ਕਿ "
+"ਇਸ ਨੂੰ ਸੰਭਾਲਣ ਤੋਂ ਪਹਿਲਾਂ ਨਵੀਂ ਸੰਰਚਨਾ ਟੈਸਟ ਕਰ ਲਵੋ। ਜੇਕਰ ਟੈਸਟ ਸਰਵਰ ਨੇ ਇੱਕ ਨਿਕਾਰਾ ਡੈਸਕਟਾਪ "
 "ਵਿਖਾਇਆ ਤਾਂ ਸਰਵਰ ਨੂੰ ਬੰਦ ਕਰਨ ਲਈ <b>[ Ctrl+Alt+Backspace ]</b> ਦਬਾਓ।"
 
 #. Tab title: VNC Server configuration
@@ -1334,7 +1334,7 @@ msgstr "ਕੈਂਚੇ ਸ਼ੁਰੂ..."
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "<b>ਸੰਰਚਨਾ ਨੂੰ ਸੰਭਾਲਣ ਅਸਫ਼ਲ</b><hr> ਹੇਠ ਦਿੱਤੀ ਰਿਪੋਰਟ ਬਣਾਈ ਗਈ ਹੈ:"
+msgstr "<b>ਸੰਰਚਨਾ ਸੰਭਾਲਣੀ ਫੇਲ੍ਹ</b><hr> ਹੇਠ ਦਿੱਤੀ ਰਿਪੋਰਟ ਬਣਾਈ ਗਈ ਹੈ:"
 
 #. Message box test: configuration has been saved
 msgid ""
@@ -1350,7 +1350,7 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
-"<b>ਸੰਰਚਨਾ ਜਾਂਚ ਅਸਫ਼ਲ ਰਹੀ ਹੈ</b><hr>ਹੋਰ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ, ਫਾਇਲ <tt>/var/log/Xorg.99."
+"<b>ਸੰਰਚਨਾ ਟੈਸਟਿੰਗ ਫੇਲ੍ਹ ਹੋਈ</b><hr>ਹੋਰ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ, ਫਾਇਲ <tt>/var/log/Xorg.99."
 "log</tt> ਨੂੰ ਵੇਖੋ। ਹੇਠ ਦਿੱਤੀ ਰਿਪੋਰਟ ਨੂੰ ਮੌਕੇ ਤੋਂ ਬਣਾਇਆ ਗਿਆ ਹੈ:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
@@ -1359,6 +1359,8 @@ msgid ""
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
+"<b>ਰਿਮੋਟ ਅਸੈੱਸ ਸੰਰਚਨਾ ਜਾਣਕਾਰੀ</b><hr> ਰਿਮੋਟ ਅਸੈੱਸ ਸਰਵਿਸ ਲਈ ਫਾਇਰਵਾਲ ਵਿੱਚ TCP ਪੋਰਟ 5900 "
+"ਅਤੇ HTTP ਪੋਰਟ (5800 ਡਿਫਾਲਟ) ਖੁੱਲ੍ਹੀ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ। ਤੁਸੀਂ ਇਹ YaST ਨਾਲ ਕਰ ਸਕਦੇ ਹੋ।"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"

@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-02-22 15:55+0100\n"
-"Last-Translator: Ladislav Michnovič <lmichnovic@suse.cz>\n"
+"PO-Revision-Date: 2007-08-19 14:47+0100\n"
+"Last-Translator: Ladislav Michnovic <lmichnovic@suse.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "LTR"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -44,6 +44,9 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D akcelerácia nie je podporovaná</b><hr>SaX2 vám nemúže ponúknut "
+"aktiváciu 3D podpory, pretože to nepodporuje vaša grafická karta, reps. jej "
+"ovládač."
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -52,6 +55,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D akcelerácia nie je podporovaná</b><hr>SaX2 vám nemúže ponúknuť "
+"aktivovanie 3D akcelerácie, pretože sa používa Xinerama rozšírenie módu "
+"dvoch výstupov. Rozšírenie Xorg o Xineramu pre kombinovanie grafických "
+"výstupov nepodporuje 3D akceleráciu na oboch výstupoch."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -74,6 +81,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>Zmenila sa veľkosť obrazovky</b><hr>Veľkosť obrazovky bola zmenená, aby "
+"zodpovedala novému rozloženiu."
 
 #. Help Button text
 msgid "&Help"
@@ -163,9 +172,8 @@ msgid "Remote Access Properties"
 msgstr "Vlastnosti vzdialeného prístupu"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Obrazovka"
+msgstr "Obrazovka %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -218,9 +226,8 @@ msgid "Invert Y-Axis"
 msgstr "Invertovať y-ovú osu"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Povoliť emuláciu 3. tlačidla"
+msgstr "Povoliť mapovanie kláves pre ľavákov"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -425,6 +432,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Neplatná kombinácia farebnej hĺbky a rozlíšenia:</b><hr><nobr>Zvolené "
+"rozlíšenie a farebná hĺbka</nobr> nie je podporovaná grafickou kartou pre "
+"framebuffer."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -604,9 +614,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Chovanie klávesu Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Pozícia klávesu Control"
+msgstr "Pozícia klávesu znak Euro"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -622,9 +631,8 @@ msgstr "Maroko"
 
 # BR
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "Brazílske"
+msgstr "Braílove"
 
 # ET
 #. XKBFile extension text
@@ -633,230 +641,193 @@ msgstr "Etiópia"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "NICOLA-F štýl pre Backspace"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "Stlačenie pravého klávesu Alt volí 3. úroveň."
+msgstr "Stlačenie pravého klávesu Alt nikdy nevolí 3. úroveň."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "Ľavý Alt prepína rozloženie počas stlačenia."
+msgstr "Ľavý Alt prepína rozloženie dokiaľ je stlačený."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "Medzerník generuje nedelitelnú medzeru"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numeric keypad keys."
-msgstr "Štandardné smerovanie je v poriadku."
+msgstr "Štandardné numerické klávesy."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "Oba klávesy Ctrl menia rozloženie kláves."
+msgstr "Stlačenie oboch kláves Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "Používať medzerník pre zadávanie nedelitelnej medzery."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
 msgstr "Pravý Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
 msgstr "Ľavý Win-kláves mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Shift mení rozloženie kláves."
+msgstr "Ľavý Ctrl + ľavy Shift menia rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
 msgstr "Ľavý Alt mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "Oba Win-klávesy prepínajú rozloženie počas stlačenia."
+msgstr "Oba Win-klávesy prepínajú rozloženie dokiaľ sú stlačené."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Pravý Ctrl prepína rozloženie počas stlačenia."
+msgstr "Pravý Ctrl mení rozloženie, dokiaľ je stlačený."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "Medzerník generuje znak nedeliteľnej medzery."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
 msgstr "Shift+Caps Lock mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
 msgstr "Pravý Alt prepína rozloženie počas stlačenia."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "Voľba jazyka a klávesnice"
+msgstr "Výber rozloženia numerických kláves"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
 msgstr "Pravý Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Shift+Caps Lock mení klávesnicu."
+msgstr "Alt+Caps Lock mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "Hyper je mapovaný na Win-klávesy."
+msgstr "Super je mapovaný na Win-klávesy."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "Scroll Lock LED zobrazuje alternatívne rozloženie."
+msgstr "Scroll Lock LED indikuje alternatívne rozloženie."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
 msgstr "Spoločné stlačenie oboch kláves Shift mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
+msgstr "Medzerník generuje nedeliteľnú medzeru v druhej úrovni."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
 msgstr "Pravý Win-kláves mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
+msgstr "Medzerník generuje nedeliteľnú medzeru v tretej úrovni."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
-msgstr ""
+msgstr "Numerické klávesy fungujú ako na Mac-u."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "Caps Lock LED zobrazuje alternatívne rozloženie kláves."
+msgstr "Caps Lock LED indikuje alternatívne rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "Num Lock LED zobrazuje alternatívne rozloženie kláves."
+msgstr "Num Lock LED indikuje alternatívne rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
 msgstr "Ľavý Shift mení rozloženie kláves."
 
+# m
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "Ľavý Win-kláves prepína rozloženie počas stlačenia."
+msgstr "Ľavý Win-kláves prepína rozloženie dokiaľ je stlačený."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
+msgstr "Medzerník generuje nedeliteľnú medzeru vo štvrtej úrovni."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
 msgstr "Oba klávesy Alt stlačené naraz menia rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
 msgstr "Kláves Caps Lock mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Super je mapovaný na Win-klávesy (štandardné)."
+msgstr "Control je mapovaný na Win-klávesy (a štandardné Ctrl klávesy)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
 msgstr "Pravý Alt mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
 msgstr "Shift s numerickými klávesmi funguje ako v MS Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt a Meta sú na klávesoch Alt (štandardné)."
+msgstr "Alt a Meta sú na klávesoch Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
 msgstr "Alt+Shift mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
 msgstr "Ctrl+Shift mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr ""
+msgstr "Medzerník generuje obyčajnú medzeru v každej úrovni."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
-msgstr "Vložiť voľby poslania"
+msgstr "Voľby japonského rozloženia kláves"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
 msgstr ""
 "Použiť LED na klávesnici pre zobrazenie alternatívneho rozloženia kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
 msgstr "Ľavý Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
 msgstr "Kláves Menu mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
 msgstr "Alt+Ctrl mení rozloženie kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "Pravý Win-kláves prepína rozloženie počas stlačenia."
+msgstr "Pravý Win-kláves prepína rozloženie dokiaľ je stlačený."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Layout switching"
-msgstr "Povoliť prepínanie užívateľov"
+msgstr "Prepínanie rozloženia kláves"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -887,99 +858,93 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Pravý Ctrl prepína rozloženie počas stlačenia."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta je mapovaný na ľavý Win-kláves."
+msgstr "Ľavý Alt je mapovaný na ľavý Win-kláves."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Štandardné smerovanie je v poriadku."
+msgstr "Štandardné numerické klávesy."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Priradenie nedeliteľnej medzery na medzerník"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
 msgstr ""
+"Používať klávesnicu s rozšíreniami unikódu (šipky a matematické operátory)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Vnútiť štandardnú podložku numerických kláves"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "používa vnútorné veľké písmená. Shift ruší Caps."
+msgstr "Caps Lock generuje vnútorne veľké písmená. Shift neruší Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Voľba jazyka a klávesnice"
+msgstr "Výber rozloženia klávesnice"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Shift+Caps Lock mení klávesnicu."
+msgstr "Alt+Caps Lock mení rozloženie kláves."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Medzerník generuje nedeliteľnú medzeru v druhej úrovni."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "funguje ako Shift so zámkom. Shift ruší Caps."
+msgstr "Caps Lock funguje ako Shift so zámkom. Shift neruší Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr "používa vnútorné veľké písmená. Shift ruší Caps."
+msgstr "Caps Lock používa vnútorné veľké písmená. Shift ruší Caps."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Medzerník generuje nedeliteľnú medzeru v tretej úrovni."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Zameniť kódy dvoch kláves, ak jadro chybne deteguje Mac-ovskú klávesnicu."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
-msgstr ""
+msgstr "Numerické klávesy budú ako na Mac-u."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "Kláves Kana Lock zamyká."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Medzerník generuje nedeliteľnú medzeru vo štvrtej úrovni."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "Pravý Win-kláves je Compose."
+msgstr "Ľavý Win-kláves je Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Stlačenie pravého Win-klávesu volí 3. úroveň."
+msgstr ""
+"Stlačenie pravého Alt-klávesu volí 3. úroveň, Shift + pravý Alt je kláves "
+"Multi."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Medzerník generuje medzeru v každej úrovni."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Možnosti japonského rozloženia kláves"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "funguje ako Shift so zámkom. Shift ruší Caps."
+msgstr "CapsLock funguje ako Shift so zámkom. Shift ruší Caps."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1257,15 +1222,13 @@ msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #  Maximum length: 20  characters
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #  Maximum length: 20  characters
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1280,9 +1243,8 @@ msgid "Add Eraser"
 msgstr "Pridať gumu"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Pridať pero"
+msgstr "Pridať podložku"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1295,9 +1257,8 @@ msgstr "Vlastnosti pera"
 
 #  Maximum length: 40  characters
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Vlastnosti..."
+msgstr "Vlastnosti podložky"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1324,11 +1285,12 @@ msgstr ""
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "Vzdialená správa X serveru"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
 msgstr ""
+"Povoliť vzdialený prístup k obrazovke, klávesnici a myši vášho X servera"
 
 #  Maximum length: 60  characters
 #. Activate VNC password protection checkbox
@@ -1362,7 +1324,6 @@ msgstr "Povoliť HTTP prístup"
 
 #  Maximum length: 40  characters
 #. Activate multiple VNC connection checkbox
-#, fuzzy
 msgid "Allow Multiple Connections"
 msgstr "Povoliť viacero VNC pripojení"
 
@@ -1373,34 +1334,31 @@ msgstr "HTTP port"
 
 #  RTF text: no limit
 #. VNC message box appearing if password strings doesn't match
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>Heslá sa nezhodujú</b><hr>Prvá a druhá verzia hesla sa nezhodujú! Prosím, "
-"skúste znovu."
+"<b>Heslá pre vzdialené pripojenie sa nezhodujú</b><hr>Prvá a druhá verzia "
+"hesla sa nezhodujú!"
 
 #  RTF text: no limit
 #. VNC message box appearing if password is too short
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password field has been left "
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>Chyba hesla</b><hr>Vstup pre heslo je prázdny, alebo je heslo prikrátke. "
-"Prosím, zadajte heslo s aspoň šiestimi znakmi !."
+"<b>Chybné heslo pre vzdialený prístup</b><hr>Pole pre heslo ostalo prázdne, "
+"alebo je heslo prikrátke. Prosím, zadajte heslo s aspoň šiestimi znakmi."
 
 #  RTF text: no limit
 #. VNC message box appearing if password is too long
-#, fuzzy
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>Chyba hesla</b><hr>Vstup pre heslo je prázdny, alebo je heslo prikrátke. "
-"Prosím, zadajte heslo s aspoň šiestimi znakmi !."
+"<b>Chybné heslo pre vzdialené pripojenie</b><hr>Heslo je príliš dlhé. "
+"Prosím, zadajte heslo s maximálne ôsmimi znakmi."
 
 #. Install missing packages box
 msgid ""
@@ -1455,6 +1413,9 @@ msgid ""
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
+"<b>Informácia nastavenia vzdialeného prístupu</b><hr>Služba vvzdialeného "
+"prístupu vyžaduje, aby boli TCP port 5900 a HTTP port (štandardne 5800) "
+"otvorené vo nastavení firewallu. Zatiaľ to nejde nastaviť pomocou YaSTu."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1548,14 +1509,12 @@ msgstr "Nepal"
 # CD
 # fuzzy
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "Ľudová Demoratická Republika Laos"
+msgstr "Konžské"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Česká Republika"
+msgstr "Juhokórejské"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1567,9 +1526,8 @@ msgid "Nigeria"
 msgstr "Nigéria"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "Séria PC-98xx"
+msgstr "Japonské (séria PC-98xx)"
 
 #. XKBFile extension text
 msgid "Estonia"
