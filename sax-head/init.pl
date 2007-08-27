@@ -596,7 +596,7 @@ sub scan {
 	my $querystr;  # module name for sysp
 	my $subject;   # topic line for log
 
-	if (! defined $NoIntelMagic) {
+	if ((! defined $NoIntelMagic) && (! defined $CardNumber)) {
 		checkForIntelBoard();
 	}
 
