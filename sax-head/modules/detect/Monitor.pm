@@ -315,7 +315,7 @@ sub GetDDCRecord {
 	#=========================================
 	# If ID wasn't found but detected, add it
 	#-----------------------------------------
-	if ($id ne "<undefined>") {
+	if (($id ne "<undefined>") && ($hsync > 30) && ($vsync > 43)) {
 		if (! open (FD,">>$CDBFile")) {
 			return;
 		}
