@@ -34,7 +34,7 @@ sub getProfile {
 		};
 		/^intel/     && do {
 			return "$dir/IntelNext_DualHead";
-		}
+		};
 		/^mga/       && do {
 			return "$dir/Matrox_DualHead";
 		};
