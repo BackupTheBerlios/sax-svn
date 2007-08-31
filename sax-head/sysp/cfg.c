@@ -397,7 +397,7 @@ string XF86ConfigFile::CallRandR (str file) {
 		//char pref[20];
 		//sprintf(pref,"%d",output->npreferred);
 		result = result + string(output->name)
-			+ " " + string(connect_state[output->connection])
+			+ " " + string(connect_state[output->connection]);
 			//+ " " + string(pref)
 			//+ " ";
 		for (m = 0; m < output->nmode; m++) {
