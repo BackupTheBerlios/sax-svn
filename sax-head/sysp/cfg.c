@@ -372,6 +372,8 @@ string XF86ConfigFile::CallRandR (str file) {
 	#if RANDR_MINOR >= 2
 	int screen = DefaultScreen (dpy);
 	int root   = RootWindow    (dpy, screen);
+	int m = 0;
+	int o = 0;
 	XRRScreenResources* res = XRRGetScreenResources (dpy, root);
 	if (! res) {
 		//printf ("Couldn't get screen resources");
@@ -379,7 +381,7 @@ string XF86ConfigFile::CallRandR (str file) {
 		ShutdownServer (spid,disp);
 		return result;
 	}
-	int o = 0; for (o = 0; o < res->noutput; o++) {
+	for (o = 0; o < res->noutput; o++) {
 		XRROutputInfo* output = XRRGetOutputInfo (dpy, res, res->outputs[o]);
 		if (! output) {
 			//printf ("Couldn't get output 0x%x data",
@@ -398,7 +400,7 @@ string XF86ConfigFile::CallRandR (str file) {
 			+ " " + string(connect_state[output->connection])
 			//+ " " + string(pref)
 			//+ " ";
-		int m; for (m = 0; m < output->nmode; m++) {
+		for (m = 0; m < output->nmode; m++) {
 			XRRModeInfo *mode = NULL;
 			int n; for (n = 0; n < res->nmode; n++)
 			if (res->modes[n].id == output->modes[m]) {
