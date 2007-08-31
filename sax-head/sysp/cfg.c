@@ -382,9 +382,9 @@ string XF86ConfigFile::CallRandR (str file) {
 	int o = 0; for (o = 0; o < res->noutput; o++) {
 		XRROutputInfo* output = XRRGetOutputInfo (dpy, res, res->outputs[o]);
 		if (! output) {
-			printf ("Couldn't get output 0x%x data",
-				(unsigned int)res->outputs[o]
-			);
+			//printf ("Couldn't get output 0x%x data",
+			//	(unsigned int)res->outputs[o]
+			//);
 			XCloseDisplay (dpy);
 			ShutdownServer (spid,disp);
 			return result;
@@ -392,18 +392,12 @@ string XF86ConfigFile::CallRandR (str file) {
 		static const char *connect_state[3] = {
 			"connected", "disconnected", "unknown"
 		};
-		char pref[20];
-		sprintf(pref,"%d",output->npreferred);
+		//char pref[20];
+		//sprintf(pref,"%d",output->npreferred);
 		result = result + string(output->name)
 			+ " " + string(connect_state[output->connection])
-			+ " " + string(pref)
-			+ " ";
-		//printf ("%s:%s:%d:",
-		//	output->name, connect_state[output->connection], output->npreferred
-		//);
-		//int c; for (c = 0; c < output->ncrtc; c++) {
-		//	XRRCrtcInfo *crtc = XRRGetCrtcInfo (dpy, res, output->crtc[c]);
-		//}
+			//+ " " + string(pref)
+			//+ " ";
 		int m; for (m = 0; m < output->nmode; m++) {
 			XRRModeInfo *mode = NULL;
 			int n; for (n = 0; n < res->nmode; n++)
@@ -424,20 +418,16 @@ string XF86ConfigFile::CallRandR (str file) {
 				sprintf (width,"%d",mode->width);
 				sprintf (height,"%d",mode->height);
 				sprintf (srate,"%.0f",rate);
-				result = result
-					+ string(mode->name) + "="
-					+ string(width) + "x" + string(height)
-					+ "@" + string(srate);
-				//printf (" %s=%dx%d@%f",
-				//	mode->name, mode->width, mode->height, rate
-				//);
+				//result = result
+				//	+ string(mode->name) + "="
+				//	+ string(width) + "x" + string(height)
+				//	+ "@" + string(srate);
 			}
 			if (m < output->nmode -1) {
-				result = result + ",";
+				//result = result + ",";
 			}
 		}
 		if (o < res->noutput - 1) {
-			//printf ("\n");
 			result = result + "%";
 		}
 	}

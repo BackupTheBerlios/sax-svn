@@ -1545,7 +1545,7 @@ sub GetModelines {
 			$mod = $query{$card}{$i};
 		}
 	}
-	if ((defined $mod) && (defined $dac)) {
+	if ((defined $mod) && (defined $dac) && ($mod ne "<undefined>")) {
 		$mod =~ s/\s{2,}/ /g;
 		@res = split (/ /,$mod);
 		$mod =~ s/\+\//\+hsync /;
