@@ -28,12 +28,12 @@ BuildRequires:  doxygen gcc-c++ graphviz hal-devel java-gcj-compat-devel libxkbf
 %endif
 %if %{?suse_version:1}0
 # SuSE Requires...
-Requires:       perl readline ncurses hal dbus-1
+Requires:       perl readline ncurses hal dbus-1 sax2-libsax
 Requires:       sax2-ident sax2-tools
 Requires:       xorg-x11-server
 %else
 # FC5 Requires...
-Requires:       perl readline ncurses hal dbus
+Requires:       perl readline ncurses hal dbus sax2-libsax
 Requires:       sax2-ident sax2-tools
 Requires:       xorg-x11-server-Xorg
 %endif
@@ -141,7 +141,7 @@ Authors:
 %package -n sax2-libsax
 %if %{?suse_version:1}0
 # SuSE Requires...
-Requires:       sax2-tools qt3 fvwm2 sax2
+Requires:       sax2-tools sax2-libsax-perl qt3 fvwm2
 %if %{suse_version} <= 1020
 %ifarch       %ix86 x86_64
 Requires:       915resolution
@@ -180,7 +180,6 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-perl
-Requires:       sax2-libsax
 Summary:        Language binding to use libsax with perl
 Group:          Development/Libraries/X11
 
