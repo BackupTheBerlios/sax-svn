@@ -1,10 +1,11 @@
+!remove InputDevice -> [X] -> Option -> Name
 !remove InputDevice -> [X] -> Option -> Device
+!remove InputDevice -> [X] -> Option -> Protocol
 
 InputDevice -> [X] -> Identifier = Mouse[[X]]
 InputDevice -> [X] -> Driver     = evdev
-InputDevice -> [X] -> Option -> Protocol             = event
-InputDevice -> [X] -> Option -> InputFashion         = Mouse
-InputDevice -> [X] -> Option -> Name                 = Logitech Bluetooth Mouse
 InputDevice -> [X] -> Option -> SendCoreEvents       = on
 InputDevice -> [X] -> Option -> ZAxisMapping         = 4 5
 InputDevice -> [X] -> Option -> Buttons              = 20
+InputDevice -> [X] -> Option -> Vendor               = 0x0210
+InputDevice -> [X] -> Option -> Product              = 0x0028
