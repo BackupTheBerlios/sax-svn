@@ -32,6 +32,10 @@ sub setupBootLoaderVGA {
 		return undef;
 	}
 	$mode = sprintf ("%0x%s",$mode);
+	if ($mode == 0) {
+		print "*** invalid mode, value equals zero\n";
+		return undef;
+	}
 	$perm = (stat FD)[2] & 07777;
 	@data = <FD>; close FD;
 	foreach my $line (@data) {
