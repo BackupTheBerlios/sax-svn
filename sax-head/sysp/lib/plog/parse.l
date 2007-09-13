@@ -65,7 +65,7 @@ R {F}[ \t]*-[ \t]*{F}
 "Max H-Image Size [cm]: horiz.:"  {strcpy(yylval.string,yytext);return(DPIX);  }
 "vert.:"                      {strcpy(yylval.string,yytext);return(DPIY);      }
 
-{S}                           {strcpy(yylval.string,yytext);return(STRING);    }
+{S}                           {strncpy(yylval.string,yytext,255);yylval.string[255]='\0';return(STRING);    }
 {F}                           {strcpy(yylval.string,yytext);return(FLOAT);     }
 .                             {strcpy(yylval.string,yytext);return(TRASH);     }
 

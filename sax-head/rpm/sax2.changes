@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Sep 13 13:37:21 CEST 2007 - ms@suse.de
+
+- added patch from Michal Kubeček <bh-novell@mk-sys.cz>
+  fixing a buffer overflow in parse.yc,parse.l (#309009)
+
+-------------------------------------------------------------------
 Thu Sep 13 10:34:15 CEST 2007 - ms@suse.de
 
 - added a check for the mode string of the bootloader update (#310115)
