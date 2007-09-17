@@ -17,14 +17,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-07-25 15:45+0200\n"
+"PO-Revision-Date: 2007-09-01 16:04+0200\n"
 "Last-Translator: Kalman Kemenczy <kkemenczy@novell.com>\n"
 "Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -485,8 +485,8 @@ msgstr ""
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Kérem, adjon egy "
-"értéket a(z) %1 opcióhoz.</nobr>"
+"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Adjon meg egy értéket "
+"a(z) %1 opcióhoz.</nobr>"
 
 # /tmp/xapi:301
 #. Group box title for the monitor vendor and name selection
@@ -520,9 +520,9 @@ msgid ""
 "maximum rating, decrease the sync ranges."
 msgstr ""
 "<b>Figyelem:</b> <hr>A nem megfelelő szinkronbeállítás tönkreteheti a "
-"képernyőjét! Kérem olvassa el a képernyő kézikönyvét az alábbi "
-"beállításokhoz.<br><br>Ha nem akarja a képernyőből a maximumot kihozni, "
-"csökkentse a szinkrontartományokat."
+"képernyőjét! Olvassa el a képernyő kézikönyvét az alábbi beállításokhoz."
+"<br><br>Ha nem akarja a képernyőből a maximumot kihozni, csökkentse a "
+"szinkrontartományokat."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -1370,8 +1370,7 @@ msgstr "X-kiszolgáló távoli elérése"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
-"X-kiszolgáló a képernyő, a billentyűzet és az egér elérésének engedélyezése"
+msgstr "A képernyő, a billentyűzet és az egér elérésének engedélyezése"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1945,7 +1944,7 @@ msgstr "&Pozíció változtatása"
 # /tmp/xapi:17 /tmp/xapi:25 /tmp/xapi:83
 #. Maximum length: 40  characters
 msgid "C&hange Size"
-msgstr "&Méretének változtatása"
+msgstr "&Méret változtatása"
 
 # /tmp/intro:67 /tmp/xapi:379
 #. Maximum length: 40  characters
@@ -1966,4 +1965,4 @@ msgid "Configuration on display"
 msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
-msgstr "Tétlenség időzítő..."
+msgstr "Tétlenségi időzítő..."
