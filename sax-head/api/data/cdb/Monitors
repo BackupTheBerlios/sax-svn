@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Aug 24 11:00:50 2007
+# Author: Marcus Schaefer <sax@suse.de>, Mon Sep 24 15:38:31 2007
 #
 # Template for monitor data
 # --------------------------
@@ -33720,6 +33720,17 @@ SGI:FLATPANEL-1600SW  {
  Hsync=31-64
  Modeline="1600x1024" 106.9 1600 1632 1656 1672 1024 1027 1030 1067
  Vsync=30-60
+}
+
+#==============================================
+# GDM-5411
+#----------------------------------------------
+SGI:GDM-5411  {
+ DDC=SGX0200
+ Option=DPMS
+ Hsync=37-115
+ Resolution=1600x1200
+ Vsync=60-160
 }
 
 #==============================================
