@@ -233,6 +233,9 @@ sub handleAction {
 	if ($action =~ /__PLUS__/) {
 		$action =~ s/__PLUS__/\+/g;
 	}
+	if ($action =~ /__GLOB__/) {
+		$action =~ s/__GLOB__/\*/g;
+	}
 	#==========================================
 	# want to set a value
 	#------------------------------------------
