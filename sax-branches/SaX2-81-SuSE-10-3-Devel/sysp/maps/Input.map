@@ -1,0 +1,28 @@
+# /.../
+# Mapping table for X11 input devices
+# =====================================================
+# Vendor ID | Device ID | Profile
+# -----------------------------------------------------
+# Mice
+0x0212 : 0x0002 : alps
+0x0212 : 0x0001 : synaptics
+0x046d : 0xc705 : logitech-MX900
+0x046d : 0xc50e : logitech-MediaPlay
+0x046d : 0xc508 : logitech-TrackManOptical
+0x046d : 0xc01b : logitech-MX310
+0x046d : 0xc041 : logitech-Gaming
+0x0210 : 0x0028 : logitech-mxlaser
+0x0210 : 0x0003 : ibm-trackpoint
+0x056a : 0x0013 : wacom
+0x05ac : 0x030b : alps
+0x1943 : 0x5000 : fujitsu
+# Keyboards
+# Microsoft Natural Ergonomic Keyboard 4000
+# ---> is profile: microsoft-natural
+0x045e : 0x00db : microsoft-natural
+# Chicony Electronics USB Wireless HID Receiver
+# ---> is profile: no information yet
+0x04f2 : 0x0200 : <undefined>
+# Cherry Mikroschalter Keyboard
+# ---> is profile: no information yet
+0x046a : 0x0023 : <undefined>
