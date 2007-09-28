@@ -3,7 +3,7 @@
 # =====================================================
 # Driver Name | Profile
 # -----------------------------------------------------
-nv       : Depth24,NVidia
+nv       : Depth24,NVidia,NoModelines
 nvidia   : Depth24,NVidia
 radeon   : Depth24,Radeon
 i810     : Depth24,NoDDC,LinearAlloc
@@ -11,5 +11,4 @@ sis      : SiS,Depth24
 fglrx    : FireGL
 tseng    : VideoRAM
 intel    : Depth24,Intel
-nv       : NoModelines
 fbdev    : NoModelines

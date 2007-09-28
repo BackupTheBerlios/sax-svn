@@ -396,9 +396,11 @@ bool SCCMonitor::exportData ( void ) {
 		if (monitorData->isDPMSEnabled()) {
 			saxDesktop.enableDPMS();
 		}
-		QString algorithm = saxDesktop.getModelineAlgorithm();
-		if (algorithm != "XServerPool") {
-			saxDesktop.calculateModelines ( true );
+		if (saxDesktop.willCalculateModelines()) {
+			QString algorithm = saxDesktop.getModelineAlgorithm();
+			if (algorithm != "XServerPool") {
+				saxDesktop.calculateModelines ( true );
+			}
 		}
 		//====================================
 		// save card options
@@ -455,10 +457,12 @@ bool SCCMonitor::exportData ( void ) {
 				//====================================
 				// init special modelines
 				//------------------------------------
-				//mSection["Desktop"] -> removeEntry ("SpecialModeline");
-				saxDesktop.setExtraModelineString (
-					monitorData->getExtraModeline()
-				);
+				if (saxDesktop.willCalculateModelines()) {
+					//mSection["Desktop"] -> removeEntry ("SpecialModeline");
+					saxDesktop.setExtraModelineString (
+						monitorData->getExtraModeline()
+					);
+				}
 				//====================================
 				// setup profile data
 				//------------------------------------
@@ -590,23 +594,25 @@ bool SCCMonitor::exportData ( void ) {
 							//====================================
 							// calculate one modeline for each res
 							//------------------------------------
-							QString algorithm=saxDesktop.getModelineAlgorithm();
-							if (algorithm != "XServerPool") {
-								QList<QString> rList;
-								rList=dualData->getResolutionList();
-								QListIterator<QString> ir (rList);
-								for (; ir.current(); ++ir) {
-									QStringList xy = QStringList::split (
-										"x",*ir.current()
-									);
-									int x = xy.first().toInt();
-									int y = xy.last().toInt();
-									log (L_INFO,
-										"Add special mode: %dx%d@%d\n",x,y,vsmax
-									);
-									saxDesktop.addExtraModeline (
-										x,y,vsmax,hsmax
-									);
+							if (saxDesktop.willCalculateModelines()) {
+								QString algorithm=saxDesktop.getModelineAlgorithm();
+								if (algorithm != "XServerPool") {
+									QList<QString> rList;
+									rList=dualData->getResolutionList();
+									QListIterator<QString> ir (rList);
+									for (; ir.current(); ++ir) {
+										QStringList xy = QStringList::split (
+											"x",*ir.current()
+										);
+										int x = xy.first().toInt();
+										int y = xy.last().toInt();
+										log (L_INFO,
+											"Add special mode: %dx%d@%d\n",x,y,vsmax
+										);
+										saxDesktop.addExtraModeline (
+											x,y,vsmax,hsmax
+										);
+									}
 								}
 							}
 						}
