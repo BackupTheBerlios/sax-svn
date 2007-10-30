@@ -99,6 +99,10 @@ sub CreateInputDeviceSection {
 					$setting =~ s/^ +//g; # remove rest blanks
 					$setting =~ s/\n//g;  # remove returns
 
+					if ($n eq "XkbVariant") {
+						$setting =~ s/xfree86/basic/g;
+					}
+
 					if (
 						($n ne "XkbLayout")  && ($n ne "XkbVariant") &&
 						($n ne "XkbOptions")
