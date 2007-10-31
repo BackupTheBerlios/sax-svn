@@ -325,14 +325,14 @@ QString SCCKeyboardLayout::getLayout ( void ) {
 //------------------------------------
 QString SCCKeyboardLayout::getVariant ( void ) {
 	mXKBVariant = "";
-	if ((mVariantBox->currentText()) && (mVariantBox->currentText()!="basic")) {
+	if (mVariantBox->currentText()) {
 		mXKBVariant = mVariantBox->currentText();
 	}
 	QListViewItemIterator itAdd (mAddLayout);
 	for ( ; itAdd.current(); ++itAdd ) {
 		QCheckListItem* item = (QCheckListItem*)itAdd.current();
 		if (item->isOn()) {
-			QString variant = "!";
+			QString variant = "basic";
 			if (itAdd.current()->text(3)) {
 				variant = itAdd.current()->text(3);
 			}
