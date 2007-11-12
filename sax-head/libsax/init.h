@@ -24,6 +24,7 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
+#include <stdlib.h>
 #include <qfileinfo.h>
 
 #include "processcall.h"
