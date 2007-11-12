@@ -27,6 +27,7 @@ STATUS        : Status: Development
 #include <qdict.h>
 #include <qstringlist.h>
 #include <errno.h>
+#include <stdlib.h>
 
 //====================================
 // Includes
