@@ -25,6 +25,7 @@ STATUS        : Status: Up-to-date
 #include <qstatusbar.h>
 #include <qvbox.h>
 #include <qlist.h>
+#include <stdlib.h>
 
 #include "xfine.h"
 #include "file.h"
