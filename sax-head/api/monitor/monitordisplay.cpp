@@ -235,7 +235,9 @@ void SCCMonitorDisplay::init ( void ) {
 	// Create reference list for DDC or FB
 	//------------------------------------
 	QList<QString> reference;
-	if (mSaxCard->getCardDriver() == "fbdev") {
+	if ((mSaxCard->getCardDriver() == "fbdev") ||
+		(mSaxCard->getCardDriver() == "vesa")
+	) {
 		log (L_INFO,"SCCMonitorDisplay::using FBDEV reference resolutions\n");
 		reference = mSaxDesktop->getResolutionsFromFrameBuffer();
 		mIsFbdevBased = true;

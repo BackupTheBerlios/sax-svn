@@ -1045,7 +1045,7 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) 
 	if (! desktop->getItem(key)) {
 		return QList<QString>();
 	}
-	if (desktop->getItem("DDC") == "<undefined>") {
+	if ((key != "FBBoot") && (desktop->getItem("DDC") == "<undefined>")) {
 		return QList<QString>();
 	}
 	QString val = desktop->getItem(key);
