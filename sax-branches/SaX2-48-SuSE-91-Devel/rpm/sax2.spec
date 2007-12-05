@@ -318,12 +318,9 @@ rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xlook
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/wmstart
 rm -f $RPM_BUILD_ROOT/usr/X11R6/bin/xmirror
 rm -f $RPM_BUILD_ROOT/usr/X11R6/%{_lib}/sax/api/data/.testgtx
+
 rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*/*-linux-thread-multi/perllocal.pod
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/XS.pm,v
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm,v
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/XS.pm.orig
-rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/Gnu/euc_jp.pm.orig
+rm -rf $RPM_BUILD_ROOT/usr/lib/perl5
 %suse_update_desktop_file -i %name System SystemSetup
 
 %post
@@ -339,13 +336,6 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 %defattr(-,root,root)
 %dir /usr/share/doc/packages/sax2
 %dir /usr/X11R6/share/fvwm
-%dir /usr/lib/perl5/*_perl/*/*/Term
-%dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine
-%dir /usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu
-%dir /usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS
 %dir /usr/X11R6/%{_lib}/sax
 %dir /usr/X11R6/%{_lib}/sax/api
 %dir /usr/X11R6/%{_lib}/sax/api/lang
@@ -425,19 +415,12 @@ rm -f $RPM_BUILD_ROOT/usr/lib/perl5/*_perl/*/*-linux-thread-multi/Term/ReadLine/
 /usr/share/locale/zh_CN/LC_MESSAGES/sax.mo
 /usr/share/locale/zh_TW/LC_MESSAGES/sax.mo
 /usr/share/locale/pt_BR/LC_MESSAGES/sax.mo
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/.packlist
-/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu.pm
-/usr/lib/perl5/*_perl/*/*/Term/ReadLine/Gnu/XS.pm
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.bs
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/Gnu.so
-/usr/lib/perl5/*_perl/*/*/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %doc %{_defaultdocdir}/sax2/LICENCE
 %doc %{_defaultdocdir}/sax2/README
 %doc %{_defaultdocdir}/sax2/sax.en.ps
 %doc %{_defaultdocdir}/sax2/sax.en.dvi
 %doc %{_defaultdocdir}/sax2/sax.de.ps
 %doc %{_defaultdocdir}/sax2/sax.de.dvi
-%doc %{_mandir}/man3/Term::ReadLine::Gnu.3pm.gz
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------

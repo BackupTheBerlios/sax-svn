@@ -70,9 +70,9 @@ all:
 
 	# building perl stuff...
 	# ----------------------
-	for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
-		( cd perl && pkgmake extract $$i && cd $$i && perl Makefile.PL ) ;\
-	done
+	#for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
+	#	( cd perl && pkgmake extract $$i && cd $$i && perl Makefile.PL ) ;\
+	#done
 
 	
 install:
@@ -85,20 +85,20 @@ install:
 
 	# install perl stuff...
 	# ---------------------
-	for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
-		if [ "${PVERSION}" -ge 581 ];then \
-		( \
-        cd ./perl/$$i && make DESTDIR=${buildroot} install_vendor \
-        ) ;\
-		else \
-		( \
-		cd ./perl/$$i && make PREFIX=${buildroot}/usr \
-		BUILDROOTPREFIX=${buildroot} \
-		INSTALLMAN1DIR=${buildroot}/${mandir}/man1 \
-		INSTALLMAN3DIR=${buildroot}/${mandir}/man3 install \
-		) ;\
-		fi \
-	done
+	#for i in `ls -1 ./perl | grep "tar.gz" | sed -e s@.tar.gz@@`; do \
+	#	if [ "${PVERSION}" -ge 581 ];then \
+	#	( \
+    #    cd ./perl/$$i && make DESTDIR=${buildroot} install_vendor \
+    #    ) ;\
+	#	else \
+	#	( \
+	#	cd ./perl/$$i && make PREFIX=${buildroot}/usr \
+	#	BUILDROOTPREFIX=${buildroot} \
+	#	INSTALLMAN1DIR=${buildroot}/${mandir}/man1 \
+	#	INSTALLMAN3DIR=${buildroot}/${mandir}/man3 install \
+	#	) ;\
+	#	fi \
+	#done
 
 	# install NLS support...
 	# -----------------------
