@@ -684,7 +684,7 @@ sub ApiImportMouse {
 		last SWITCH;
 		};
 
-		/^InvX/                     && do {
+		/^InvY/                     && do {
 		if (($value !~ /off/i) && ($value !~ /none/i)) {
 			$var{InputDevice}{$card}{Option}{InvY} = $value;
 		}
