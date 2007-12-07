@@ -130,7 +130,7 @@ sub GetPids {
 # We will look at FD [0] of the descriptor list
 # to decide if this is an X11 server or not
 #
-	my $table = qx(ps axh | cut -c0-6);
+	my $table = qx(ps axh | cut -c1-6);
 	$table =~ s/ +//g;
 	my @procs = split(/\n/,$table);
 	@procs = reverse(@procs);
