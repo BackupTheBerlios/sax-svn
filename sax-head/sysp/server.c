@@ -438,7 +438,7 @@ void ScanServer::Scan(void) {
 			string mapFile = IDENTITY_UPDATED;
 			mapFile += a[i];
 			configI.SetFile ((char*)mapFile.c_str());
-			printf("Reading %s\n", a[i]);
+			//printf("Reading %s\n", a[i]);
 			configI.ImportIdentity();
 			free (a[i]);
 		}
