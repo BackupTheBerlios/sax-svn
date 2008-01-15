@@ -335,6 +335,16 @@ IdentifyDevice (
 	return(i);
 }
 
+static int
+cmpstringp(const void *p1, const void *p2)
+{
+    /* The actual arguments to this function are "pointers to
+       pointers to char", but strcmp(3) arguments are "pointers
+       to char", hence the following cast plus dereference */
+    
+    return strcmp(* (char * const *) p1, * (char * const *) p2);
+}
+
 //======================================
 // ScanServer: PCI/AGP hardware scan
 //--------------------------------------
@@ -387,6 +397,8 @@ void ScanServer::Scan(void) {
 	// import update Identity files if there are any
 	struct dirent* entry = 0;
 	DIR* updateDir = 0;
+	int i, fcount = 0;
+	char **a = 0;
 	updateDir = opendir (IDENTITY_UPDATED);
 	if (updateDir) {
 		while (1) {
@@ -397,16 +409,42 @@ void ScanServer::Scan(void) {
 			if (
 				(strstr(entry->d_name,"Identity.map")) &&
 				(entry->d_type != DT_DIR)
+			)
+			fcount++;
+		}
+		rewinddir(updateDir);
+		a = (char **) malloc(fcount * sizeof (char*));
+		i = 0;
+		while(1) {
+			entry = readdir (updateDir);
+			if (! entry) {
+				break;
+			}
+			if (
+				(strstr(entry->d_name,"Identity.map")) &&
+				(entry->d_type != DT_DIR)
 			) {
-				string mapFile = IDENTITY_UPDATED;
-				mapFile += entry->d_name;
-				configI.SetFile ((char*)mapFile.c_str());
-				configI.ImportIdentity();
+				//printf("%s\n", entry->d_name);
+				a[i] = (char*) malloc(strlen(entry->d_name)+1);
+				strcpy(a[i], entry->d_name);
+				i++;
 			}
 		}
 	}
 	closedir (updateDir);
+	qsort(a, fcount, sizeof(char*), cmpstringp);
+	if (a) {
+		for (i = 0; i < fcount ; i++) {
+			string mapFile = IDENTITY_UPDATED;
+			mapFile += a[i];
+			configI.SetFile ((char*)mapFile.c_str());
+			printf("Reading %s\n", a[i]);
+			configI.ImportIdentity();
+			free (a[i]);
+		}
+	}
 	// import the base Identity map
+	free (a);
 	configI.SetFile(IDENTITY);
 	configI.ImportIdentity();
 	for (int i = configI.Count(); i > 0; i--) {
