@@ -321,7 +321,7 @@ void SCCVNCDisplay::slotInput1Changed (const QString& data) {
 			mPWD2 -> setDisabled (false);
 		}
 		QChar start;
-		for (unsigned int i=0;i< data.length();i++) {
+		for (unsigned int i=0;i< (unsigned int)data.length();i++) {
 		if (data.at(i) != mPWD.at(i)) {
 			start = data.at(i);
 			break;
