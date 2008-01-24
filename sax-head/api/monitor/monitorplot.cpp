@@ -423,7 +423,7 @@ void SCCPlot::setLayout ( int startRow, int startCol ) {
 	// currently added to the layout. just iterate the function 
 	// until all widgets are added
 	// ---
-	if (widgetCount < mWidgetStack.count()) {
+	if (widgetCount < (unsigned int)mWidgetStack.count()) {
 		setLayout(startRow,startCol);
 		return;
 	}
