@@ -8,6 +8,11 @@
 # --------
 # Status: Up-to-date
 #
-xport QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
-`which qmake` -makefile -unix -o Makefile xcmd.pro
+if [ -d /usr/share/qt/mkspecs/linux-g++ ];then
+	export QMAKESPEC=/usr/share/qt/mkspecs/linux-g++/
+	`which qmake` -makefile -unix -o Makefile xcmd.pro
+else
+	export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
+	`which qmake` -makefile -unix -o Makefile xcmd.pro
+fi
 

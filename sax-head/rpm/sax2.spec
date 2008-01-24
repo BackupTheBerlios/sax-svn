@@ -18,7 +18,7 @@ URL:            http://sax.berlios.de
 %if %{suse_version} > 1010
 BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel libqt4 libqt4-qt3support libqt4-devel libqt4-x11 readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk hwinfo-devel
 %else
-BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt qt-devel qt-x11 qt-qt3support readline-devel swig sysfsutils update-desktop-files gcc-c++ libpng-devel freetype2-devel qt3-devel
+BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt qt-devel qt-x11 qt-qt3support readline-devel swig sysfsutils update-desktop-files gcc-c++ libpng-devel freetype2-devel
 %endif
 %else
 # FC5 Build Requires...

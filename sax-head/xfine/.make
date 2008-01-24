@@ -8,6 +8,11 @@
 # --------
 # Status: Up-to-date
 #
-export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
-`which qmake` -makefile -unix -o Makefile xfine.pro
+if [ -d /usr/share/qt/mkspecs/linux-g++ ];then
+	export QMAKESPEC=/usr/share/qt/mkspecs/linux-g++/
+	`which qmake` -makefile -unix -o Makefile xfine.pro
+else
+	export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
+	`which qmake` -makefile -unix -o Makefile xfine.pro
+fi
 

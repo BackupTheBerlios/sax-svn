@@ -8,5 +8,10 @@
 # --------
 # Status: Up-to-date
 #
-export QMAKESPEC=$QTDIR/mkspecs/linux-g++/
-$QTDIR/bin/qmake -makefile -unix -o Makefile testlib.pro
+if [ -d /usr/share/qt/mkspecs/linux-g++ ];then
+	export QMAKESPEC=/usr/share/qt/mkspecs/linux-g++/
+	$QTDIR/bin/qmake -makefile -unix -o Makefile testlib.pro
+else
+	export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
+	$QTDIR/bin/qmake -makefile -unix -o Makefile testlib.pro
+fi

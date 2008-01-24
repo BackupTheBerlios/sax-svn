@@ -8,5 +8,10 @@
 # --------
 # Status: Up-to-date
 #
-export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
-`which qmake` -makefile -unix -o Makefile sax.pro
+if [ -d /usr/share/qt/mkspecs/linux-g++ ];then
+	export QMAKESPEC=/usr/share/qt/mkspecs/linux-g++/
+	`which qmake` -makefile -unix -o Makefile sax.pro
+else
+	export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
+	`which qmake` -makefile -unix -o Makefile sax.pro
+fi
