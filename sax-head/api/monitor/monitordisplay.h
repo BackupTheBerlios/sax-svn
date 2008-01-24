@@ -24,14 +24,16 @@ STATUS        : Status: Development
 // Includes
 //-------------------------------------
 #include <qpushbutton.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
 #include <qspinbox.h>
+//Added by qt3to4:
+#include <QPixmap>
 
 //=====================================
 // Includes
@@ -83,27 +85,27 @@ class SCCMonitorDisplay : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString>   mResolutionDict;
-	QDict<QString>   mColorDict;
+	Q3Dict<QString>   mResolutionDict;
+	Q3Dict<QString>   mColorDict;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 
 	private:
 	QCheckBox*       mCheckEnable;
-	QButtonGroup*    mCardMonitorGroup;
+	Q3ButtonGroup*    mCardMonitorGroup;
 	QLabel*          mLabelCardName;
 	QLabel*          mLabelMonitorName;
 	QLabel*          mLabelCardText;
 	QLabel*          mLabelMonitorText;
 	QPushButton*     mCardOptions;
 	QPushButton*     mChangeMonitor;
-	QButtonGroup*    mPropertyGroup;
+	Q3ButtonGroup*    mPropertyGroup;
 	QLabel*          mLabelResolution;
 	QLabel*          mLabelColors;
 	QComboBox*       mResolution;
 	QComboBox*       mColors;
-	QButtonGroup*    mDualHeadGroup;
+	Q3ButtonGroup*    mDualHeadGroup;
 	QCheckBox*       mCheckDualHead;
 	QPushButton*     mConfigureDualHead;
 	QLabel*          mDualHeadInfoLabel;
@@ -150,7 +152,7 @@ class SCCMonitorDisplay : public SCCDialog {
 
 	public:
 	SCCMonitorDisplay (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

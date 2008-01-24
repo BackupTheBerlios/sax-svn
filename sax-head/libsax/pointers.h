@@ -58,7 +58,7 @@ class SaXManipulatePointersIF : public SaXException {
 	virtual QString getDevice ( void ) = 0;
 	virtual QString getDriver ( void ) = 0;
 	virtual QString getProtocol ( void ) = 0;
-	virtual QDict<QString> getOptions ( void ) = 0;
+	virtual Q3Dict<QString> getOptions ( void ) = 0;
 	
 	public:
 	virtual bool selectPointer ( int ) = 0;
@@ -95,7 +95,7 @@ class SaXManipulatePointers : public SaXManipulatePointersIF {
 	QString getDevice ( void );
 	QString getDriver ( void );
 	QString getProtocol ( void );
-	QDict<QString> getOptions ( void );
+	Q3Dict<QString> getOptions ( void );
 	
 	public:
 	bool selectPointer ( int );
@@ -136,8 +136,8 @@ class SaXManipulateMiceIF : public SaXManipulatePointers {
 	virtual QList<QString> getMouseList       ( void ) = 0;
 	virtual QList<QString> getMouseVendorList ( void ) = 0;
 	virtual QList<QString> getMouseModelList  ( const QString& ) = 0;
-	virtual QDict<QString> getMouseData ( const QString& ) = 0;
-	virtual QDict<QString> getMouseData ( const QString&,const QString& ) = 0;
+	virtual Q3Dict<QString> getMouseData ( const QString& ) = 0;
+	virtual Q3Dict<QString> getMouseData ( const QString&,const QString& ) = 0;
 	virtual int getWheelEmulatedButton  ( void ) = 0;
 
 	public:
@@ -205,7 +205,7 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	private:
 	SaXProcess*    mCDBMice;
 	QList<QString> mCDBMouseList;
-	QDict<QString> mCDBMouseData;
+	Q3Dict<QString> mCDBMouseData;
 
 	public:
 	void setMouse ( const QString& );
@@ -228,8 +228,8 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 	QList<QString> getMouseList       ( void );
 	QList<QString> getMouseVendorList ( void );
 	QList<QString> getMouseModelList  ( const QString& );
-	QDict<QString> getMouseData ( const QString& );
-	QDict<QString> getMouseData ( const QString&,const QString& );
+	Q3Dict<QString> getMouseData ( const QString& );
+	Q3Dict<QString> getMouseData ( const QString&,const QString& );
 	int getWheelEmulatedButton  ( void );
 
 	public:
@@ -257,16 +257,16 @@ class SaXManipulateMice : public SaXManipulateMiceIF {
 */
 class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	public:
-	virtual QDict<QString> getTabletData ( const QString& ) = 0;
-	virtual QDict<QString> getTabletData ( const QString&,const QString& ) = 0;
-	virtual QDict<QString> getPenData ( const QString& ) = 0;
-	virtual QDict<QString> getPenData ( const QString&,const QString& ) = 0;
+	virtual Q3Dict<QString> getTabletData ( const QString& ) = 0;
+	virtual Q3Dict<QString> getTabletData ( const QString&,const QString& ) = 0;
+	virtual Q3Dict<QString> getPenData ( const QString& ) = 0;
+	virtual Q3Dict<QString> getPenData ( const QString&,const QString& ) = 0;
 	virtual QList<QString> getTabletVendorList ( void ) = 0;
 	virtual QList<QString> getTabletModelList  ( const QString& ) = 0;
 	virtual QList<QString> getTabletList ( void ) = 0;
 	virtual QList<QString> getPenList    ( void ) = 0;
 	virtual QList<QString> getTabletDrivers ( void ) = 0;
-	virtual QDict<QString> getTabletOptions ( const QString& ) = 0;
+	virtual Q3Dict<QString> getTabletOptions ( const QString& ) = 0;
 	virtual void setTablet ( const QString&,const QString& ) = 0;
 	virtual void setTablet ( const QString& ) = 0;
 	virtual void setType   ( const QString& ) = 0;
@@ -369,27 +369,27 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	SaXProcess*    mCDBTablets;
 	SaXProcess*    mCDBTabletModules;
 	QList<QString> mCDBTabletList;
-	QDict<QString> mCDBTabletData;
+	Q3Dict<QString> mCDBTabletData;
 	SaXProcess*    mCDBPens;
 	SaXProcess*    mCDBPads;
 	QList<QString> mCDBPenList;
 	QList<QString> mCDBTabletDrivers;
-	QDict<QString> mCDBTabletOptions;
+	Q3Dict<QString> mCDBTabletOptions;
 
 	private:
 	SaXManipulateDevices* mManipInputDevices;
 
 	public:
-	QDict<QString> getTabletData ( const QString& );
-	QDict<QString> getTabletData ( const QString&,const QString& );
-	QDict<QString> getPenData ( const QString& );
-	QDict<QString> getPenData ( const QString&,const QString& );
+	Q3Dict<QString> getTabletData ( const QString& );
+	Q3Dict<QString> getTabletData ( const QString&,const QString& );
+	Q3Dict<QString> getPenData ( const QString& );
+	Q3Dict<QString> getPenData ( const QString&,const QString& );
 	QList<QString> getTabletVendorList ( void );
 	QList<QString> getTabletModelList  ( const QString& ); 
 	QList<QString> getTabletList ( void );
 	QList<QString> getPenList    ( void );
 	QList<QString> getTabletDrivers ( void );
-	QDict<QString> getTabletOptions ( const QString& );
+	Q3Dict<QString> getTabletOptions ( const QString& );
 	void setTablet ( const QString&,const QString& );
 	void setTablet ( const QString& );
 	void setType   ( const QString& );
@@ -430,8 +430,8 @@ class SaXManipulateTouchscreensIF : public SaXManipulatePointers {
 	virtual QList<QString> getPanelList ( void ) = 0;
 	virtual QList<QString> getPanelVendorList ( void ) = 0;
 	virtual QList<QString> getPanelModelList  ( const QString& ) = 0;
-	virtual QDict<QString> getPanelData ( const QString& ) = 0;
-	virtual QDict<QString> getPanelData ( const QString&,const QString& ) = 0;
+	virtual Q3Dict<QString> getPanelData ( const QString& ) = 0;
+	virtual Q3Dict<QString> getPanelData ( const QString&,const QString& ) = 0;
 	virtual void setTouchPanel ( const QString&,const QString& ) = 0;
 	virtual void setTouchPanel ( const QString& ) = 0;
 
@@ -514,14 +514,14 @@ class SaXManipulateTouchscreens : public SaXManipulateTouchscreensIF {
 	private:
 	SaXProcess*    mCDBPanels;
 	QList<QString> mCDBPanelList;
-	QDict<QString> mCDBPanelData;
+	Q3Dict<QString> mCDBPanelData;
 
 	public:
 	QList<QString> getPanelList ( void );
 	QList<QString> getPanelVendorList ( void );
 	QList<QString> getPanelModelList  ( const QString& );
-	QDict<QString> getPanelData ( const QString& );
-	QDict<QString> getPanelData ( const QString&,const QString& );
+	Q3Dict<QString> getPanelData ( const QString& );
+	Q3Dict<QString> getPanelData ( const QString&,const QString& );
 	void setTouchPanel ( const QString&,const QString& );
 	void setTouchPanel ( const QString& );
 

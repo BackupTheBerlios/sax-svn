@@ -72,8 +72,8 @@ class SCCTablet : public SCCDialog {
 
 	public:
 	SCCTablet (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget*
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

@@ -141,7 +141,7 @@ class SaXConfigIF : public SaXException {
 */
 class SaXConfig : public SaXConfigIF {
 	private:
-	QList <SaXImport> mImportList;
+	QList <SaXImport*> mImportList;
 	SaXImport* mDesktop;
 	int configMode;
 

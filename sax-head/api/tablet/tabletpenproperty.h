@@ -23,12 +23,12 @@ STATUS        : Status: Development
 //=====================================
 // Includes
 //-------------------------------------
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qradiobutton.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qpushbutton.h>
-#include <qtabdialog.h>
-#include <qvbox.h>
+#include <q3tabdialog.h>
+#include <q3vbox.h>
 
 //=====================================
 // Includes
@@ -46,7 +46,7 @@ class SCCTabletPenProperty : public SCCDialog {
 	//====================================
 	// private dialog data for exporting
 	//------------------------------------
-	QDict<QString> mSelectedOptions;
+	Q3Dict<QString> mSelectedOptions;
 	int            mPenMode;
 	bool           mNeedImport;
 	int            mDisplay;
@@ -55,28 +55,28 @@ class SCCTabletPenProperty : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString> mOptionDict;
+	Q3Dict<QString> mOptionDict;
 
 	private:
 	SaXManipulateTablets* mSaxTablet;
 
 	private:
-	QVBox*         mTabletPenTab;
+	Q3VBox*         mTabletPenTab;
 
 	private:
-	QTabDialog*    mTabletPenDialog;
-	QButtonGroup*  mModeGroup;
+	Q3TabDialog*    mTabletPenDialog;
+	Q3ButtonGroup*  mModeGroup;
 	QRadioButton*  mRelative;
 	QRadioButton*  mAbsolute;
-	QButtonGroup*  mOptionGroup;
-	QListBox*      mOptionList;
+	Q3ButtonGroup*  mOptionGroup;
+	Q3ListBox*      mOptionList;
 
 	public:
 	void show ( void );
 	
 	public:
 	int getPenMode ( void );
-	QDict<QString> getPenOptions ( void );
+	Q3Dict<QString> getPenOptions ( void );
 	void setupPen ( const QString&,const QString& );
 	void setID ( int );
 	int getID ( void );
@@ -87,11 +87,11 @@ class SCCTabletPenProperty : public SCCDialog {
 
 	public slots:
 	void slotOk     ( void );
-	void slotOption ( QListBoxItem* );
+	void slotOption ( Q3ListBoxItem* );
 
 	public:
 	SCCTabletPenProperty (
-		QDict<QString>*,QDict<SaXImport>,
+		Q3Dict<QString>*,Q3Dict<SaXImport>,
 		const QString&,int,QWidget*
 	);
 };

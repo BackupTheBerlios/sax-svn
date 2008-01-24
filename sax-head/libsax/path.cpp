@@ -264,7 +264,7 @@ QList<QString> SaXManipulatePath::createList ( const QString& data) {
 	QList<QString> result; 
 	QStringList dataList = QStringList::split ( ",", data );
 	for (QStringList::Iterator it=dataList.begin(); it!=dataList.end();++ it) {
-		QString* item = new QString (*it);
+		QString item(*it);
 		result.append (item);
 	}
 	return result;

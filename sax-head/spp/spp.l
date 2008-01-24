@@ -19,7 +19,7 @@ STATUS        : Status: Development
 #include <readline/readline.h>
 #include <readline/history.h>
 #include <qlist.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstring.h>
 
 #include "spp.tab.hc"
@@ -43,8 +43,8 @@ char* yyline   = 0;
 //===================================
 // Global Variables
 //-----------------------------------
-QDict<QString> keyHash;
-QDict<QString> varHash;
+Q3Dict<QString> keyHash;
+Q3Dict<QString> varHash;
 
 //===================================
 // Functions

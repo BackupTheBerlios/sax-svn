@@ -18,6 +18,17 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "message.h"
+//Added by qt3to4:
+#include <Q3HBoxLayout>
+#include <QCloseEvent>
+#include <QShowEvent>
+#include <Q3GridLayout>
+#include <Q3Frame>
+#include <QPixmap>
+#include <QLabel>
+#include <QKeyEvent>
+#include <QEvent>
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //============================================
@@ -165,17 +176,17 @@ void SCCButton::slotClicked (void) {
 // Constructor
 //-------------------------------------
 SCCMessage::SCCMessage (
-	QWidget* parent, QDict<QString>* textPtr, SaXMessage::Type type,
+	QWidget* parent, Q3Dict<QString>* textPtr, SaXMessage::Type type,
 	const QString& message, const QString& caption, SaXMessage::Icon icon,
 	bool modal, const char* name
 ) : QDialog (
 	parent,name,modal,
-	WStyle_Customize | WStyle_DialogBorder | WStyle_Title | WStyle_SysMenu
+	Qt::WStyle_Customize | Qt::WStyle_DialogBorder | Qt::WStyle_Title | Qt::WStyle_SysMenu
 ) {
 	//=====================================
 	// save translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (textPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (textPtr);
 	if ( mText[message].isEmpty() ) {
 		mMessage = message;
 	} else {
@@ -201,8 +212,8 @@ SCCMessage::SCCMessage (
 	//=====================================
 	// create layout
 	//-------------------------------------
-	QGridLayout* baseLayout = new QGridLayout ( this,1,1 );
-	mMainFrame = new QFrame ( this );
+	Q3GridLayout* baseLayout = new Q3GridLayout ( this,1,1 );
+	mMainFrame = new Q3Frame ( this );
 	baseLayout -> addWidget ( mMainFrame,0,0 );
 
 	//=====================================
@@ -257,16 +268,16 @@ SCCMessage::SCCMessage (
 // addMainLayout
 //-------------------------------------
 void SCCMessage::addMainLayout ( void ) {
-	mMainLayout  = new QHBoxLayout ( mMainFrame );
+	mMainLayout  = new Q3HBoxLayout ( mMainFrame );
 	mMainLayout -> setMargin  (10);
-	mIconLayout  = new QVBoxLayout ( mMainLayout );
+	mIconLayout  = new Q3VBoxLayout ( mMainLayout );
 	mMainLayout -> addSpacing (10);
-	mWorkLayout  = new QVBoxLayout ( mMainLayout );
-	mTitleLayout = new QHBoxLayout ( mWorkLayout );
+	mWorkLayout  = new Q3VBoxLayout ( mMainLayout );
+	mTitleLayout = new Q3HBoxLayout ( mWorkLayout );
 	mTitleLayout -> addSpacing (10);
 	mWorkLayout  -> addSpacing (15);
 	mWorkLayout  -> addStretch (10);
-	mDoneLayout  = new QHBoxLayout ( mWorkLayout );
+	mDoneLayout  = new Q3HBoxLayout ( mWorkLayout );
 	mMainLayout -> setStretchFactor ( mWorkLayout, 20 );
 }
 
@@ -274,16 +285,16 @@ void SCCMessage::addMainLayout ( void ) {
 // addSpecialLayout
 //-------------------------------------
 void SCCMessage::addSpecialLayout ( void ) {
-	mMainLayout  = new QHBoxLayout ( mMainFrame );
+	mMainLayout  = new Q3HBoxLayout ( mMainFrame );
 	mMainLayout -> setMargin  (10);
-	mIconLayout  = new QVBoxLayout ( mMainLayout );
+	mIconLayout  = new Q3VBoxLayout ( mMainLayout );
 	mMainLayout -> addSpacing (10);
-	mWorkLayout  = new QVBoxLayout ( mMainLayout );
-	mTitleLayout = new QVBoxLayout ( mWorkLayout );
+	mWorkLayout  = new Q3VBoxLayout ( mMainLayout );
+	mTitleLayout = new Q3VBoxLayout ( mWorkLayout );
 	mTitleLayout -> addSpacing (10);
 	mWorkLayout  -> addSpacing (15);
 	mWorkLayout  -> addStretch (10);
-	mDoneLayout  = new QHBoxLayout ( mWorkLayout );
+	mDoneLayout  = new Q3HBoxLayout ( mWorkLayout );
 	mMainLayout -> setStretchFactor ( mWorkLayout, 20 );
 }
 
@@ -340,7 +351,7 @@ void SCCMessage::createOkBox ( void ) {
 	//=====================================
 	// create Ok button
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 8 );
 	SCCButton* mButton = new SCCButton (mText["Ok"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButton );
@@ -370,7 +381,7 @@ void SCCMessage::createYesNoBox ( void ) {
 	//=====================================
 	// create Yes/No buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonYes = new SCCButton (mText["Yes"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonYes );
@@ -407,7 +418,7 @@ void SCCMessage::createOkCancelBox ( void ) {
 	//=====================================
 	// create Ok/Cancel buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonOk = new SCCButton (mText["Ok"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonOk );
@@ -444,7 +455,7 @@ void SCCMessage::createIntroBox ( void ) {
 	//=====================================
 	// create Yes/No buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonOk = new SCCButton (mText["Start"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonOk );
@@ -488,7 +499,7 @@ void SCCMessage::createFinishBox ( void ) {
 	//=====================================
 	// create Test,Save,Cancel buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonTest = new SCCButton   (mText["FinalTest"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonTest );
@@ -539,7 +550,7 @@ void SCCMessage::createOptionStringBox ( void ) {
 	//=====================================
 	// create Ok/Cancel buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonOk = new SCCButton (mText["Ok"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonOk );
@@ -583,7 +594,7 @@ void SCCMessage::createOptionIntBox ( void ) {
 	//=====================================
 	// create Ok/Cancel buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonOk = new SCCButton (mText["Ok"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonOk );
@@ -627,7 +638,7 @@ void SCCMessage::createOptionAnyBox ( void ) {
 	//=====================================
 	// create Ok/Cancel buttons
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
 	SCCButton* mButtonOk = new SCCButton (mText["Ok"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonOk );
@@ -719,7 +730,7 @@ void SCCMessage::slotButton ( QPushButton* btn ) {
 // Close event from WM
 //--------------------------------------------
 void SCCMessage::closeEvent ( QCloseEvent* ) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mClickedText = mText["Cancel"];
 	hide();
 }
@@ -738,7 +749,7 @@ bool SCCMessage::eventFilter ( QObject* obj, QEvent* event ) {
 		// handle press event
 		//--------------------------------------
 		case 6:
-		if (((QKeyEvent*)event)->key() == Key_Return) {
+		if (((QKeyEvent*)event)->key() == Qt::Key_Return) {
 			QKeyEvent spacePress ( (QEvent::Type)6, Qt::Key_Space, 32 ,0 );
 			QApplication::sendEvent ( (QObject*)btn,&spacePress );
 			return (true);
@@ -748,7 +759,7 @@ bool SCCMessage::eventFilter ( QObject* obj, QEvent* event ) {
 		// handle release event
 		//--------------------------------------
 		case 7:
-		if (((QKeyEvent*)event)->key() == Key_Return) {
+		if (((QKeyEvent*)event)->key() == Qt::Key_Return) {
 			QKeyEvent spaceRelease ( (QEvent::Type)7, Qt::Key_Space, 32 ,0 );
 			QApplication::sendEvent ( (QObject*)btn,&spaceRelease );
 			return (true);

@@ -18,6 +18,9 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "monitordualmodel.h"
+//Added by qt3to4:
+#include <Q3Frame>
+#include <QLabel>
 
 //====================================
 // Globals
@@ -29,24 +32,24 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMonitorDualModel::SCCMonitorDualModel (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	const QString& cardname, const QString& sync, int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mModelTab = new QVBox ( this );
-	mSyncTab  = new QVBox ( this );
+	mModelTab = new Q3VBox ( this );
+	mSyncTab  = new Q3VBox ( this );
 
 	//=====================================
 	// prepare tabed dialog
 	//-------------------------------------
-	mDualModelDialog = new QTabDialog ( this,0,true );
+	mDualModelDialog = new Q3TabDialog ( this,0,true );
 	mDualModelDialog -> setCaption  ( mText["DualModelCaption"] );
 	mDualModelDialog -> setOkButton ( mText["Ok"] );
 	mDualModelDialog -> setCancelButton ( mText["Cancel"] );
@@ -64,35 +67,35 @@ SCCMonitorDualModel::SCCMonitorDualModel (
 	// create macro widgets [Model]
 	//-------------------------------------
 	mModelTab -> setMargin ( 20 );
-	mModelVendorGroup = new QButtonGroup (
-		1,Vertical,mText["MonitorSelection"],mModelTab
+	mModelVendorGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["MonitorSelection"],mModelTab
 	);
-	mVendorList = new QListBox ( mModelVendorGroup );
-	mModelList  = new QListBox ( mModelVendorGroup );
+	mVendorList = new Q3ListBox ( mModelVendorGroup );
+	mModelList  = new Q3ListBox ( mModelVendorGroup );
 
 	//=====================================
 	// create macro widgets [Sync]
 	//-------------------------------------
 	mSyncTab -> setMargin ( 20 );
-	mSyncGroup = new QButtonGroup (
-		1,Vertical,mText["SyncSelection"],mSyncTab
+	mSyncGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["SyncSelection"],mSyncTab
 	);
-	QVBox* textBox = new QVBox ( mSyncGroup );
+	Q3VBox* textBox = new Q3VBox ( mSyncGroup );
 	mLabelWarning  = new QLabel ( mText["FrqNote"],textBox );
 	mLabelWarning -> setFixedWidth ( 200 );
 	QLabel* latent1 = new QLabel ( textBox );
 	textBox -> setStretchFactor ( latent1,10 );
 
-	QVBox* seperatorBox = new QVBox ( mSyncGroup );
-	QFrame* seperator   = new QFrame ( seperatorBox );
+	Q3VBox* seperatorBox = new Q3VBox ( mSyncGroup );
+	Q3Frame* seperator   = new Q3Frame ( seperatorBox );
 	seperator -> setFixedWidth (2);
 	seperator -> setFrameStyle (
-		QFrame::VLine | QFrame::Raised
+		Q3Frame::VLine | Q3Frame::Raised
 	);
 	seperatorBox -> setStretchFactor ( seperator,10 );
 
-	mSyncBox = new QVBox ( mSyncGroup );
-	QHBox* mHSyncBox = new QHBox ( mSyncBox );
+	mSyncBox = new Q3VBox ( mSyncGroup );
+	Q3HBox* mHSyncBox = new Q3HBox ( mSyncBox );
 	mLabelHorizontal  = new QLabel ( mText["Horizontal"],mHSyncBox );
 	mHSyncBox -> setSpacing  ( 10 );
 	mHSpinMin = new QSpinBox ( 30,300,1,mHSyncBox );
@@ -108,7 +111,7 @@ SCCMonitorDualModel::SCCMonitorDualModel (
 	mHSyncBox -> setStretchFactor ( mHSpinMax,10 );
 
 	mSyncBox -> setSpacing ( 15 );
-	QHBox* mVSyncBox = new QHBox ( mSyncBox );
+	Q3HBox* mVSyncBox = new Q3HBox ( mSyncBox );
 	mLabelVertical  = new QLabel ( mText["Vertical"],mVSyncBox );
 	mVSyncBox -> setSpacing  ( 10 );
 	mVSpinMin = new QSpinBox ( 50,300,1,mVSyncBox );
@@ -144,12 +147,12 @@ SCCMonitorDualModel::SCCMonitorDualModel (
 		this            , SLOT   (slotOk ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (selectionChanged (QListBoxItem *)),
-		this         , SLOT   (slotVendor       (QListBoxItem *))
+		mVendorList  , SIGNAL (selectionChanged (Q3ListBoxItem *)),
+		this         , SLOT   (slotVendor       (Q3ListBoxItem *))
 	);
 	QObject::connect (
-		mModelList   , SIGNAL (selectionChanged (QListBoxItem *)),
-		this         , SLOT   (slotName         (QListBoxItem *))
+		mModelList   , SIGNAL (selectionChanged (Q3ListBoxItem *)),
+		this         , SLOT   (slotName         (Q3ListBoxItem *))
 	);
 }
 //=====================================
@@ -195,9 +198,9 @@ void SCCMonitorDualModel::init ( void ) {
 	// insert CDB monitors
 	//------------------------------------
 	mCDBMonitorVendors = mSaxDesktop->getCDBMonitorVendorList();
-	QListIterator<QString> it (mCDBMonitorVendors);
-	for (; it.current(); ++it) {
-		mVendorList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBMonitorVendors) {
+		mVendorList -> insertItem (it);
 	}
 	mVendorList -> sort();
 }
@@ -220,7 +223,7 @@ void SCCMonitorDualModel::import ( void ) {
 		//====================================
 		// get options defined for the card
 		//------------------------------------
-		QDict<QString> mOptions = saxCard.getOptions();
+		Q3Dict<QString> mOptions = saxCard.getOptions();
 
 		//====================================
 		// handle monitor vendor/model name
@@ -278,11 +281,11 @@ void SCCMonitorDualModel::import ( void ) {
 	//====================================
 	// setup vendor name listboxes
 	//------------------------------------
-	QListBoxItem* vendor = mVendorList -> findItem ( mSelectedMonitorVendor );
+	Q3ListBoxItem* vendor = mVendorList -> findItem ( mSelectedMonitorVendor );
 	if ( vendor ) {
 		mVendorList -> setSelected ( vendor, true );
 		slotVendor ( vendor );
-		QListBoxItem* name = mModelList -> findItem ( mSelectedMonitorName );
+		Q3ListBoxItem* name = mModelList -> findItem ( mSelectedMonitorName );
 		if ( name ) {
 			mModelList -> setSelected ( name, true );
 			slotName ( name );
@@ -390,16 +393,14 @@ void SCCMonitorDualModel::slotOk ( void ) {
 			break;
 		}
 		}
-		QString* substr = new QString (
-			res.mid (rpos,npos)
-		);
-		pDual -> setResolution ( *substr );
+		QString substr(res.mid(rpos,npos));
+		pDual -> setResolution ( substr );
 	}
 }
 //=====================================
 // slotName
 //-------------------------------------
-void SCCMonitorDualModel::slotName ( QListBoxItem* item ) {
+void SCCMonitorDualModel::slotName ( Q3ListBoxItem* item ) {
 	//=====================================
 	// check manipulator access
 	//-------------------------------------
@@ -416,7 +417,7 @@ void SCCMonitorDualModel::slotName ( QListBoxItem* item ) {
 	mHSpinMax  -> setValue   ( 50 );
 	mVSpinMin  -> setValue   ( 50 );
 	mVSpinMax  -> setValue   ( 60 );
-	QDictIterator<QString> it (mCDBMonitorData);
+	Q3DictIterator<QString> it (mCDBMonitorData);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString val = *it.current();
@@ -435,7 +436,7 @@ void SCCMonitorDualModel::slotName ( QListBoxItem* item ) {
 //=====================================
 // slotVendor
 //-------------------------------------
-void SCCMonitorDualModel::slotVendor ( QListBoxItem* item ) {
+void SCCMonitorDualModel::slotVendor ( Q3ListBoxItem* item ) {
 	if (! mSaxDesktop ) {
 		return;
 	}
@@ -443,9 +444,9 @@ void SCCMonitorDualModel::slotVendor ( QListBoxItem* item ) {
 	mCDBMonitorModels = mSaxDesktop->getCDBMonitorModelList (
 		item->text()
 	);
-	QListIterator<QString> it (mCDBMonitorModels);
-	for (; it.current(); ++it) {
-		mModelList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBMonitorModels) {
+		mModelList -> insertItem (it);
 	}
 	mModelList -> sort();
 }

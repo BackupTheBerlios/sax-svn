@@ -21,9 +21,9 @@ int main (void) {
 	#if 1
 	p.parseLine("Device->0->DDD=22");
 	QList<QString> action = p.getAction();
-	if (action.at(0)) {
+	if (!(action.at(0).isNull())) {
 		printf ("Action: %s : %s\n",
-			action.at(0)->ascii(),action.at(1)->ascii()
+			action.at(0).toAscii(),action.at(1).toAscii()
 		);
 	} else {
 		printf ("no action\n");

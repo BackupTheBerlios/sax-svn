@@ -20,13 +20,13 @@ STATUS        : Status: Development
 #ifndef CAPICOLOR
 #define CAPICOLOR 1
 
-#include <qdict.h>
+#include <q3dict.h>
 
 #include "xcmd.h"
 
 //=====================================
 // Functions...
 //-------------------------------------
-bool setDefaultColorDepth ( QDict<SaXImport>,int,int );
+bool setDefaultColorDepth ( Q3Dict<SaXImport>,int,int );
 
 #endif

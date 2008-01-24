@@ -18,6 +18,10 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "mouseevent.h"
+//Added by qt3to4:
+#include <QMouseEvent>
+#include <QEvent>
+#include <QWheelEvent>
 
 namespace SaXGUI {
 //====================================

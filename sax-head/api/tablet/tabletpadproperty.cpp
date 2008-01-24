@@ -24,7 +24,7 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCTabletPadProperty::SCCTabletPadProperty (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	const QString& penname, int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	// ...

@@ -31,7 +31,7 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include <qdict.h>
+#include <q3dict.h>
 #include <qlist.h>
 #include <errno.h>
 
@@ -206,7 +206,7 @@ class saxPluglib {
 	virtual std::string STLstring ( const QString& ) = 0;
 	virtual std::deque<std::string> STLdeque ( const QList<QString>& ) = 0;
 	virtual std::map<std::string,std::string> STLmap (
-		const QDict<QString>&
+		const Q3Dict<QString>&
 	) = 0;
 
 	public:
@@ -278,7 +278,7 @@ class SaXPluglib : public saxPluglib {
 	public:
 	std::string STLstring ( const QString& );
 	std::deque<std::string> STLdeque ( const QList<QString>& );
-	std::map<std::string,std::string> STLmap ( const QDict<QString>& );
+	std::map<std::string,std::string> STLmap ( const Q3Dict<QString>& );
 
 	public:
 	void setDebug  ( bool=true );

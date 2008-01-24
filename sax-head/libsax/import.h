@@ -125,7 +125,7 @@ class SaXImportIF : public SaXProcess {
 */
 class SaXImport : public SaXImportIF {
 	private:
-	QList<char> mOptions;
+	QList<const char*> mOptions;
 	QString mSectionName;
 	int mSection;
 
@@ -219,7 +219,7 @@ class SaXImportSyspIF : public SaXProcess {
 */
 class SaXImportSysp : public SaXImportSyspIF {
 	private:
-	QList<char> mOptions;
+	QList<const char*> mOptions;
 	QString mSectionName;
 	int mSection;
 
@@ -375,7 +375,7 @@ class SaXImportProfileIF : public SaXProcess {
 */
 class SaXImportProfile : public SaXImportProfileIF {
 	private:
-	QList<char> mOptions;
+	QList<const char*> mOptions;
 	SaXImport*  mLayout;
 	SaXImport*  mDesktop;
 	SaXImport*  mCard;

@@ -29,13 +29,13 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMonitor::SCCMonitor (
-	QWidgetStack* stack, QDict<QString>* text,
-	QDict<SaXImport> section, QWidget* parent
+	Q3WidgetStack* stack, Q3Dict<QString>* text,
+	Q3Dict<SaXImport> section, QWidget* parent
 ) : SCCDialog ( stack,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// check for graphics cards
@@ -178,9 +178,9 @@ void SCCMonitor::init ( void ) {
 		}
 	}
 	int count = 0;
-	QListIterator<SCCMonitorDisplay> it (mMonitorDisplay);
-	for (; it.current(); ++it) {
-		if (it.current()->isEnabled()) {
+	SCCMonitorDisplay* it;
+	foreach (it,mMonitorDisplay) {
+		if (it->isEnabled()) {
 			count++;
 		}
 		if (count > 1) {
@@ -193,7 +193,7 @@ void SCCMonitor::init ( void ) {
 		mCheck3D -> setDisabled ( true  );
 		mCheck3D -> setChecked  ( false );
 		if (mShow3DMessage) {
-			SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+			SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 			QString message = mText["3DInfo"];
 			if (isMultiheaded) {
 				message = mText["XineramaInfo"];
@@ -269,9 +269,9 @@ void SCCMonitor::import ( void ) {
 //------------------------------------
 void SCCMonitor::slotActivate ( void ) {
 	int count = 0;
-	QListIterator<SCCMonitorDisplay> it (mMonitorDisplay);
-	for (; it.current(); ++it) {
-	if (it.current()->isEnabled()) {
+	SCCMonitorDisplay* it;
+	foreach (it,mMonitorDisplay) {
+	if (it->isEnabled()) {
 		count++;
 	}
 	}
@@ -307,8 +307,8 @@ bool SCCMonitor::exportData ( void ) {
 	//====================================
 	// save particular monitor data
 	//------------------------------------
-	QListIterator<SCCMonitorDisplay> it (mMonitorDisplay);
-	for (; it.current() ; ++it) {
+	SCCMonitorDisplay* display;
+	foreach (display, mMonitorDisplay) {
 		//====================================
 		// remove current layout
 		//------------------------------------
@@ -320,7 +320,7 @@ bool SCCMonitor::exportData ( void ) {
 		//====================================
 		// check for monitor display's
 		//------------------------------------
-		SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
+//		SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
 		//if (display->isEnabled()) {
 		//====================================
 		// create manipulators...
@@ -342,12 +342,10 @@ bool SCCMonitor::exportData ( void ) {
 		//------------------------------------
 		if (saxCard.getCardDriver() == "fbdev") {
 			int color = display->getColorDepth();
-			QString* resolution = display->getResolution().at(0);
-			int mode = saxDesktop.getFBKernelMode (
-				*resolution,color
-			);
+			QString resolution = display->getResolution().at(0);
+			int mode = saxDesktop.getFBKernelMode (resolution,color);
 			log (L_INFO,"SCCMonitor::Bootloader setup for fbdev: %dbit %s %d\n",
-				color,resolution->ascii(),mode
+				color,resolution.ascii(),mode
 			);
 			if (! saxDesktop.setFBKernelMode ( mode )) {
 				log (L_ERROR,"SCCMonitor::Bootloader update failed\n");
@@ -363,9 +361,9 @@ bool SCCMonitor::exportData ( void ) {
 			QTextOStream (&modesKey) << "Modes:" << color;
 			mSection["Desktop"] -> removeEntry ( modesKey );
 			QList<QString> resList = display->getResolution();
-			QListIterator<QString> it ( resList );
-			for (; it.current(); ++it) {
-				QStringList tokens = QStringList::split ( "x",*it.current() );
+			QString it;
+			foreach (it,resList) {
+				QStringList tokens = QStringList::split ( "x",it );
 				int xaxis = tokens.first().toInt();
 				int yaxis = tokens.last().toInt();
 				saxDesktop.addResolution (
@@ -406,10 +404,10 @@ bool SCCMonitor::exportData ( void ) {
 		// save card options
 		//------------------------------------
 		SCCMonitorCard* cardData = display->getCardData();
-		QDict<QString> optList = cardData->getOptions();
+		Q3Dict<QString> optList = cardData->getOptions();
 		mSection["Card"] -> removeEntry ("Option");
 		mSection["Card"] -> removeEntry ("RawData");
-		QDictIterator<QString> io (optList);
+		Q3DictIterator<QString> io (optList);
 		for (; io.current(); ++io) {
 			saxCard.addCardOption ( io.currentKey(),*io.current());
 		}
@@ -429,10 +427,10 @@ bool SCCMonitor::exportData ( void ) {
 				// pick up card profile data
 				//------------------------------------
 				QString driver = saxCard.getCardDriver();
-				QDict<QString> profileDriverOptions;
+				Q3Dict<QString> profileDriverOptions;
 				SaXManipulateCard saxProfileCard ( mImport );
 				profileDriverOptions = saxProfileCard.getOptions();
-				QDictIterator<QString> it ( profileDriverOptions );
+				Q3DictIterator<QString> it ( profileDriverOptions );
 
 				//====================================
 				// delete profile data keys
@@ -599,11 +597,9 @@ bool SCCMonitor::exportData ( void ) {
 								if (algorithm != "XServerPool") {
 									QList<QString> rList;
 									rList=dualData->getResolutionList();
-									QListIterator<QString> ir (rList);
-									for (; ir.current(); ++ir) {
-										QStringList xy = QStringList::split (
-											"x",*ir.current()
-										);
+									QString ir;
+									foreach (ir,rList) {
+										QStringList xy = QStringList::split ("x",ir);
 										int x = xy.first().toInt();
 										int y = xy.last().toInt();
 										log (L_INFO,
@@ -661,9 +657,9 @@ bool SCCMonitor::exportData ( void ) {
 								channelB = "";
 							}
 							QList<QString> rList1=display->getResolution();
-							QString resolution1 = *rList1.at(0);
+							QString resolution1 = rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QString resolution2 = *rList2.at(0);
+							QString resolution2 = rList2.at(0);
 							//====================================
 							// add primary meta mode
 							//------------------------------------
@@ -677,23 +673,21 @@ bool SCCMonitor::exportData ( void ) {
 							// add secondary meta modes
 							//------------------------------------
 							bool startMeta = false;
-							QListIterator<QString> ir (rList1);
-							for (; ir.current(); ++ir) {
+							QString ir;
+							foreach (ir,rList1) {
 								if (! startMeta) {
 									startMeta = true; continue;
 								}
 								QString metaItem;
-								int cmpr = compareResolution (
-									*ir.current(),resolution2
-								);
+								int cmpr = compareResolution (ir,resolution2);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										channelA << *ir.current() << "," <<
+										channelA << ir << "," <<
 										channelB << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										channelA << *ir.current() << "," <<
-										channelB << *ir.current();
+										channelA << ir << "," <<
+										channelB << ir;
 								}
 								resolution.append (";"+metaItem);
 							}
@@ -754,9 +748,9 @@ bool SCCMonitor::exportData ( void ) {
 						}
 						if ((key== "MetaModes") && (driver == "sis")) {
 							QList<QString> rList1=display->getResolution();
-							QString resolution1 = *rList1.at(0);
+							QString resolution1 = rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QString resolution2 = *rList2.at(0);
+							QString resolution2 = rList2.at(0);
 							//====================================
 							// add primary meta mode
 							//------------------------------------
@@ -769,21 +763,19 @@ bool SCCMonitor::exportData ( void ) {
 							// add secondary meta modes
 							//------------------------------------
 							bool startMeta = false;
-							QListIterator<QString> ir (rList1);
-							for (; ir.current(); ++ir) {
+							QString ir;
+							foreach (ir,rList1) {
 								if (! startMeta) {
 									startMeta = true; continue;
 								}
 								QString metaItem;
-								int cmpr = compareResolution (
-									*ir.current(),resolution2
-								);
+								int cmpr = compareResolution (ir,resolution2);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "-" << resolution2;
+										ir << "-" << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "-" << *ir.current();
+										ir << "-" << ir;
 								}
 								resolution.append (";"+metaItem);
 							}
@@ -812,9 +804,9 @@ bool SCCMonitor::exportData ( void ) {
 						}
 						if ((key== "MetaModes") && (driver == "mga")) {
 							QList<QString> rList1=display->getResolution();
-							QString resolution1 = *rList1.at(0);
+							QString resolution1 = rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QString resolution2 = *rList2.at(0);
+							QString resolution2 = rList2.at(0);
 							//====================================
 							// add primary meta mode
 							//------------------------------------
@@ -913,9 +905,9 @@ bool SCCMonitor::exportData ( void ) {
 						}
 						if ((key== "MetaModes") && (driver == "radeon")) {
 							QList<QString> rList1=display->getResolution();
-							QString resolution1 = *rList1.at(0);
+							QString resolution1 = rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QString resolution2 = *rList2.at(0);
+							QString resolution2 = rList2.at(0);
 							//====================================
 							// add primary meta mode
 							//------------------------------------
@@ -928,21 +920,19 @@ bool SCCMonitor::exportData ( void ) {
 							// add secondary meta modes
 							//------------------------------------
 							bool startMeta = false;
-							QListIterator<QString> ir (rList1);
-							for (; ir.current(); ++ir) {
+							QString ir;
+							foreach (ir,rList1) {
 								if (! startMeta) {
 									startMeta = true; continue;
 								}
 								QString metaItem;
-								int cmpr = compareResolution (
-									*ir.current(),resolution2
-								);
+								int cmpr = compareResolution (ir,resolution2);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "," << resolution2;
+										ir << "," << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "," << *ir.current();
+										ir << "," << ir;
 								}
 								resolution.append (";"+metaItem);
 							}
@@ -980,9 +970,9 @@ bool SCCMonitor::exportData ( void ) {
 						}
 						if ((key== "MetaModes") && (driver == "i810")) {
 							QList<QString> rList1=display->getResolution();
-							QString resolution1 = *rList1.at(0);
+							QString resolution1 = rList1.at(0);
 							QList<QString> rList2=dualData->getResolutionList();
-							QString resolution2 = *rList2.at(0);
+							QString resolution2 = rList2.at(0);
 							//====================================
 							// add primary meta mode
 							//------------------------------------
@@ -995,21 +985,19 @@ bool SCCMonitor::exportData ( void ) {
 							// add secondary meta modes
 							//------------------------------------
 							bool startMeta = false;
-							QListIterator<QString> ir (rList1);
-							for (; ir.current(); ++ir) {
+							QString ir;
+							foreach (ir,rList1) {
 								if (! startMeta) {
 									startMeta = true; continue;
 								}
 								QString metaItem;
-								int cmpr = compareResolution (
-									*ir.current(),resolution2
-								);
+								int cmpr = compareResolution (ir,resolution2);
 								if (cmpr >= 0) {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "-" << resolution2;
+										ir << "-" << resolution2;
 								} else {
 									QTextOStream (&metaItem) <<
-										*ir.current() << "-" << *ir.current();
+										ir << "-" << ir;
 								}
 								resolution.append (";"+metaItem);
 							}
@@ -1090,9 +1078,9 @@ bool SCCMonitor::exportData ( void ) {
 						if (key == "Mode2") {
 							QString resolution;
 							QList<QString> rList2=dualData->getResolutionList();
-							QListIterator<QString> ir (rList2);
-							for (; ir.current(); ++ir) {
-								resolution.append(","+*ir.current());
+							QString ir;
+							foreach(ir,rList2) {
+								resolution.append(","+ir);
 							}
 							resolution.replace(QRegExp("^,"),"");
 							saxCard.addCardOption ( key,resolution );
@@ -1134,8 +1122,8 @@ bool SCCMonitor::exportData ( void ) {
 		//====================================
 		// save XOrg layout
 		//------------------------------------
-		QDict<QString> arrangeDict = mMonitorArrange->getArrangement();
-		QDictIterator<QString> it (arrangeDict);
+		Q3Dict<QString> arrangeDict = mMonitorArrange->getArrangement();
+		Q3DictIterator<QString> it (arrangeDict);
 		for (; it.current(); ++it) {
 			QString item (it.currentKey());
 			item.replace (QRegExp("Screen:Screen\\["),"");
@@ -1181,7 +1169,12 @@ bool SCCMonitor::exportData ( void ) {
 	//====================================
 	// save default color depth
 	//------------------------------------
-	it.toFirst(); card = 0;
+
+	Q3Dict<QString> arrangeDict = mMonitorArrange->getArrangement();
+	Q3DictIterator<QString> it (arrangeDict);
+
+//	it.toFirst(); 
+	card = 0;
 	for (; it.current() ; ++it) {
 		SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
 		SaXManipulateDesktop saxDesktop (
@@ -1224,9 +1217,9 @@ int SCCMonitor::compareResolution ( const QString& r1,const QString& r2 ) {
 // setCommonButtonWidth
 //------------------------------------
 void SCCMonitor::setCommonButtonWidth ( void ) {
-	QListIterator<SCCMonitorDisplay> it (mMonitorDisplay);
-	for (; it.current(); ++it) {
-		SCCMonitorDisplay* display = it.current();
+	SCCMonitorDisplay* display;
+	foreach (display,mMonitorDisplay) {
+//		SCCMonitorDisplay* display = it;
 		display->setCommonButtonWidth();
 	}
 }
@@ -1247,7 +1240,7 @@ void SCCMonitor::fixBrokenCards ( SaXManipulateCard& saxCard ) {
 	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
 	desktop->doImport();
 	QString rawDefinition (desktop->getItem("RawDef"));
-	if ((rawDefinition) && (rawDefinition != "None")) {
+	if ((!rawDefinition.isNull()) && (rawDefinition != "None")) {
 		QRegExp itemExp ("\"MonitorLayout\" \"(.*)\"");
 		int pos = itemExp.search (rawDefinition);
 		if (pos >= 0) {

@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qradiobutton.h>
 #include <qlabel.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qcombobox.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 
 //=====================================
 // Includes
@@ -45,26 +45,26 @@ class SCCTabletConnection : public SCCDialog {
 	//====================================
 	// private dialog data for exporting
 	//------------------------------------
-	QDict<QString>   mSelectedOptions;
+	Q3Dict<QString>   mSelectedOptions;
 
 	private:
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString>   mOptionDict;
+	Q3Dict<QString>   mOptionDict;
 
 	private:
 	SaXManipulateTablets* mSaxTablet;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 
 	private:
-	QButtonGroup*    mPortGroup;
+	Q3ButtonGroup*    mPortGroup;
 	QComboBox*       mPortBox;
-	QButtonGroup*    mOptionGroup;
-	QListBox*        mOptionList;
-	QButtonGroup*    mModeGroup;
+	Q3ButtonGroup*    mOptionGroup;
+	Q3ListBox*        mOptionList;
+	Q3ButtonGroup*    mModeGroup;
 	QRadioButton*    mRelative;
 	QRadioButton*    mAbsolute;
 
@@ -72,12 +72,12 @@ class SCCTabletConnection : public SCCDialog {
 	QString getPortName ( void );
 	bool isAutoPort     ( void );
 	int getTabletMode   ( void );
-	QDict<QString> getOptions ( void );
+	Q3Dict<QString> getOptions ( void );
 
 	public:
 	void setMode ( const QString& );
 	void setPort ( const QString& );
-	void setOptions ( const QDict<QString>& );
+	void setOptions ( const Q3Dict<QString>& );
 
 	public:
 	void init   ( void );
@@ -85,11 +85,11 @@ class SCCTabletConnection : public SCCDialog {
 
 	public slots:
 	void slotTablet ( const QString&,const QString& );
-	void slotOption ( QListBoxItem* );
+	void slotOption ( Q3ListBoxItem* );
 
 	public:
 	SCCTabletConnection (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

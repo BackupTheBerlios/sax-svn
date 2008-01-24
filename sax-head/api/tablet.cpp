@@ -24,13 +24,13 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCTablet::SCCTablet (
-	QWidgetStack* stack,QDict<QString>* text,
-	QDict<SaXImport> section, QWidget* parent
+	Q3WidgetStack* stack,Q3Dict<QString>* text,
+	Q3Dict<SaXImport> section, QWidget* parent
 ) : SCCDialog ( stack,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create tablet dialog
@@ -121,10 +121,10 @@ void SCCTablet::import ( void ) {
 	// handle tablet's state
 	//------------------------------------  
 	QList<QString> inputLayout = saxLayout.getInputLayout();
-	QListIterator<QString> it (inputLayout);
+	QString it;
 	bool foundID = false;
-	for (; it.current();++it) {
-		if (tabletID == it.current()->toInt()) {
+	foreach (it,inputLayout) {
+		if (tabletID == it.toInt()) {
 			foundID = true;
 			break;
 		}
@@ -204,7 +204,7 @@ bool SCCTablet::exportData ( void ) {
 			int tabletID = saxDevice.addInputDevice (SAX_INPUT_TABLET);
 			saxTablet.selectPointer ( tabletID );
 			saxTablet.setTablet ( vendor,model );
-			QDict<QString> tabletDict = saxTablet.getTabletData (
+			Q3Dict<QString> tabletDict = saxTablet.getTabletData (
 				vendor,model
 			);
 			//====================================
@@ -225,7 +225,7 @@ bool SCCTablet::exportData ( void ) {
 					saxTablet.setDevice ( "/dev/ttyS3" );
 				}
 				if (port.contains ("USB")) {
-					QProcess* proc = new QProcess ();
+					Q3Process* proc = new Q3Process ();
 					proc -> addArgument ( USB_PORT );
 					if (proc -> start()) {
 						while (proc->isRunning()) {
@@ -241,13 +241,13 @@ bool SCCTablet::exportData ( void ) {
 			// save tablet options
 			//------------------------------------
 			QString driver = saxTablet.getDriver();
-			QDict<QString> allOptions = saxTablet.getTabletOptions ( driver );
-			QDictIterator<QString> it (allOptions);
+			Q3Dict<QString> allOptions = saxTablet.getTabletOptions ( driver );
+			Q3DictIterator<QString> it (allOptions);
 			for (; it.current(); ++it) {
 				saxTablet.removeOption (it.currentKey());
 			}
-			QDict<QString> tabletOptions = mTabletConnection->getOptions();
-			QDictIterator<QString> io (tabletOptions);
+			Q3Dict<QString> tabletOptions = mTabletConnection->getOptions();
+			Q3DictIterator<QString> io (tabletOptions);
 			for (; io.current(); ++io) {
 				saxTablet.addOption (io.currentKey(),*io.current());
 			}
@@ -313,13 +313,13 @@ bool SCCTablet::exportData ( void ) {
 				// save pen's options
 				//------------------------------------
 				QString driver = saxTablet.getDriver();
-				QDict<QString> allOptions = saxTablet.getTabletOptions (driver);
-				QDictIterator<QString> it (allOptions);
+				Q3Dict<QString> allOptions = saxTablet.getTabletOptions (driver);
+				Q3DictIterator<QString> it (allOptions);
 				for (; it.current(); ++it) {
 					saxPen.removeOption (it.currentKey());
 				}
-				QDict<QString> penOptions = pen->getPenOptions();
-				QDictIterator<QString> io (penOptions);
+				Q3Dict<QString> penOptions = pen->getPenOptions();
+				Q3DictIterator<QString> io (penOptions);
 				for (; io.current(); ++io) {
 					saxPen.addOption (io.currentKey(),*io.current());
 				}

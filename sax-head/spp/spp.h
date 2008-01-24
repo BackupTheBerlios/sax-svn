@@ -17,7 +17,7 @@ STATUS        : development
 #include <stdlib.h>
 #include <string.h>
 #include <readline/history.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qlist.h>
 #include <qstring.h>
 #include <sys/types.h>
@@ -38,8 +38,8 @@ extern int yylineno;
 extern int yyletter;
 extern char* yyline;
 
-extern QDict<QString> keyHash;
-extern QDict<QString> varHash;
+extern Q3Dict<QString> keyHash;
+extern Q3Dict<QString> varHash;
 
 //==============================
 // Defines

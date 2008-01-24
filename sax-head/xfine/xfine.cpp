@@ -19,7 +19,8 @@ STATUS        : Status: Up-to-date
 #include <sys/types.h>
 #include <getopt.h>
 #include <qapplication.h>
-#include <qmainwindow.h>
+#include <q3mainwindow.h>
+#include <QDesktopWidget>
 #include <qregexp.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -187,7 +188,7 @@ int main(int argc,char*argv[]) {
 	QString* data = screen.run();
 	XStringList screenData (*data);
 	screenData.setSeperator ("\n");
-	QList<char> screenList = screenData.getList();
+	QList<const char*> screenList = screenData.getList();
 	childCount = screenList.count();
 	child = (int*)malloc (sizeof(int) * childCount);
 	for (int n=0;n < (int)screenList.count();n++) {
@@ -197,7 +198,7 @@ int main(int argc,char*argv[]) {
 		);
 		XStringList resData (resolution);
 		resData.setSeperator (":");
-		QList<char> resList = resData.getList();
+		QList<const char*> resList = resData.getList();
 
 		// ...
 		// add aditional options needed for the
@@ -238,11 +239,11 @@ int main(int argc,char*argv[]) {
 		count++;
 		pArgv[count] = xm;
 		count++;
-		pArgv[count] = resList.at(0); 
+		pArgv[count] = (char*)resList.at(0); 
 		count++;
 		pArgv[count] = ym;
 		count++;
-		pArgv[count] = resList.at(1);
+		pArgv[count] = (char*)resList.at(1);
 		count++;
 		pArgv[count] = win;
 		count++;

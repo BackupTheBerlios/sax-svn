@@ -21,10 +21,12 @@ STATUS        : Status: Development
 #define SCCDIALOG_H 1
 
 #include <qwidget.h>
-#include <qwidgetstack.h>
+#include <q3widgetstack.h>
 #include <qlayout.h>
-#include <qdict.h>
-#include <qprocess.h>
+#include <q3dict.h>
+#include <q3process.h>
+//Added by qt3to4:
+#include <Q3Frame>
 
 #include "../libsax/sax.h"
 
@@ -42,15 +44,15 @@ class SCCDialog : public QWidget {
 	Q_OBJECT
 
 	private:
-	QWidgetStack* mDialogStack;
+	Q3WidgetStack* mDialogStack;
 	int mDialogID;
 
 	protected:
 	QWidget*         mParent;
-	QDict<QString>*  mTextPtr;
-	QDict<SaXImport> mSection;
-	QBoxLayout*      mDialogLayout;
-	QFrame*          mDialogFrame;
+	Q3Dict<QString>*  mTextPtr;
+	Q3Dict<SaXImport> mSection;
+	Q3BoxLayout*      mDialogLayout;
+	Q3Frame*          mDialogFrame;
 
 	protected:
 	int  mGUIMode;
@@ -69,8 +71,8 @@ class SCCDialog : public QWidget {
 
 	public:
 	SCCDialog (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget* = 0
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget* = 0
 	);
 };
 } // end namespace

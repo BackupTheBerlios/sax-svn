@@ -19,6 +19,8 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "storage.h"
+//Added by qt3to4:
+#include <Q3PtrList>
 
 namespace SaX {
 //====================================
@@ -31,7 +33,8 @@ SaXStorage::SaXStorage (void) {
 	//! ISAX,SYSP,CDB,PROFILE
 	// ----
 	mCurrentID = 0;
-	mData.insert (mCurrentID, new QDict<QString>);
+
+	mData.insert (mCurrentID, new Q3Dict<QString>);
 }
 
 //====================================
@@ -218,15 +221,15 @@ void SaXStorage::removeRawItem (
 //====================================
 // merge data into object...
 //------------------------------------
-void SaXStorage::merge (QList< QDict<QString> > data) {
+void SaXStorage::merge (Q3PtrList< Q3Dict<QString> > data) {
 	// .../
 	//! merge the data records from the list (data) into
 	//! the corresponding data records of the object. If
 	//! a record does not exist it will be created 
 	// ----
 	for (unsigned int n=0;n<data.count();n++) {
-		QDict<QString>* table = data.at(n);
-		QDictIterator<QString> it (*table);
+		Q3Dict<QString>* table = data.at(n);
+		Q3DictIterator<QString> it (*table);
 		if (! table) {
 			continue;
 		}
@@ -249,7 +252,7 @@ bool SaXStorage::addID ( int id ) {
 	// ----
 	if (! mData.at (id)) {
 		while (mCurrentID < id) {
-			mData.append ( new QDict<QString>);
+			mData.append ( new Q3Dict<QString>);
 			mCurrentID = mData.at();
 		}
 		return true;
@@ -281,10 +284,10 @@ bool SaXStorage::delID ( int id ) {
 		step = 2;
 	}
 	int index = -1;
-	QListIterator < QDict<QString> > in (mData);
-	for (; in.current(); ++in) {
+	Q3Dict<QString>*  data;
+	foreach (data,mData) {
 		index++;
-		QDict<QString>* data = in.current();
+//		Q3Dict<QString>* data = in;
 		QString* ident = data->find ("Identifier");
 		if (! ident) {
 			continue;
@@ -308,7 +311,7 @@ bool SaXStorage::delID ( int id ) {
 		QString deviceIDstr   ("Device["  + oIDstr +"]");
 		QString monitorIDstr  ("Monitor[" + oIDstr +"]");
 		QString screenIDstr   ("Screen["  + oIDstr +"]");
-		QDictIterator<QString> it (*data);
+		Q3DictIterator<QString> it (*data);
 		for (; it.current(); ++it) {
 			QString val = *it.current();
 			QString key = it.currentKey();
@@ -376,21 +379,21 @@ int SaXStorage::getCurrentID ( void ) {
 //====================================
 // Get dict for section ID X...
 //------------------------------------
-QDict<QString> SaXStorage::getTable ( int id ) {
+Q3Dict<QString> SaXStorage::getTable ( int id ) {
 	// .../
 	//! return a copy of the data dictionary for the given ID (id)
 	// ----
 	if (mData.at (id)) {
 		return *mData.at (id);
 	} else {
-		return QDict<QString>();
+		return Q3Dict<QString>();
 	}
 }
 
 //====================================
 // Get dict for current section ID...
 //------------------------------------
-QDict<QString> SaXStorage::getCurrentTable ( void ) {
+Q3Dict<QString> SaXStorage::getCurrentTable ( void ) {
 	// .../
 	//! return a copy of the data dictionary for the current ID
 	// ----
@@ -400,7 +403,7 @@ QDict<QString> SaXStorage::getCurrentTable ( void ) {
 //====================================
 // Get dict ptr for section ID X...
 //------------------------------------
-QDict<QString>* SaXStorage::getTablePointer ( int id ) {
+Q3Dict<QString>* SaXStorage::getTablePointer ( int id ) {
 	// .../
 	//! return a pointer to the data dictionary at ID (id)
 	// ----
@@ -410,7 +413,7 @@ QDict<QString>* SaXStorage::getTablePointer ( int id ) {
 //====================================
 // Get dict ptr for current section ID
 //------------------------------------
-QDict<QString>* SaXStorage::getCurrentTablePointer ( void ) {
+Q3Dict<QString>* SaXStorage::getCurrentTablePointer ( void ) {
 	// .../
 	//! return a pointer to the data dictionary at the current ID
 	// ----
@@ -429,9 +432,9 @@ int SaXStorage::getCount (bool noEmptyItem) {
 	// ----
 	int count = 0;
 	if (noEmptyItem) {
-		QListIterator< QDict<QString> > it (mData);
-		for (; it.current();++it) {
-		if (! it.current()->isEmpty()) {
+		Q3Dict<QString>* it;
+		foreach (it,mData) {
+		if (! it->isEmpty()) {
 			count++;
 		}
 		}
@@ -453,16 +456,17 @@ void SaXStorage::addGroup (
 	//! the value (value) in a two dimensional data dictionary 
 	// ----
 	if ( ! mCDB[group] ) {
-		mCDB.insert (group, new QDict<QString>);
+		mCDB.insert (group, new Q3Dict<QString>);
 	}
-	mCDB[group]->insert (key,new QString(value));
+		mCDB[group]->insert (key,new QString(value));
+
 }
 
 
 //====================================
 // return CDB data pointer
 //------------------------------------
-QDict< QDict<QString> > SaXStorage::getTablePointerCDB ( void ) {
+Q3Dict< Q3Dict<QString> > SaXStorage::getTablePointerCDB ( void ) {
 	// .../
 	//! A method for the CDB interface only. Return a copy of the 
 	//! two dimensional CDB data dictionary
@@ -473,7 +477,7 @@ QDict< QDict<QString> > SaXStorage::getTablePointerCDB ( void ) {
 //====================================
 // return CDB entry pointer 
 //------------------------------------
-QList< QDict<QString> > SaXStorage::getTablePointerCDB_DATA (
+Q3PtrList< Q3Dict<QString> > SaXStorage::getTablePointerCDB_DATA (
 	const QString & group
 ) {
 	// .../
@@ -482,7 +486,7 @@ QList< QDict<QString> > SaXStorage::getTablePointerCDB_DATA (
 	//! is appended to a list because in most cases the return
 	//! value is used as parmeter to the merge() method
 	// ----
-	QList< QDict<QString> > list;
+	Q3PtrList< Q3Dict<QString> > list;
 	if ( mCDB[group] ) {
 		list.append (mCDB[group]);
 	}
@@ -492,7 +496,7 @@ QList< QDict<QString> > SaXStorage::getTablePointerCDB_DATA (
 //====================================
 // return mData data pointer
 //------------------------------------
-QList< QDict<QString> > SaXStorage::getTablePointerDATA ( void ) {
+Q3PtrList< Q3Dict<QString> > SaXStorage::getTablePointerDATA ( void ) {
 	// .../
 	//! return a pointer list of the complete data dictionary
 	//! including all ISAX data records

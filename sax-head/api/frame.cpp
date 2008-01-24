@@ -18,6 +18,17 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "frame.h"
+//Added by qt3to4:
+#include <Q3HBoxLayout>
+#include <QKeyEvent>
+#include <QLabel>
+#include <Q3GridLayout>
+#include <QPixmap>
+#include <Q3Frame>
+#include <QEvent>
+#include <Q3VBoxLayout>
+#include <QCloseEvent>
+#include <QDesktopWidget>
 
 //=====================================
 // Globals
@@ -31,7 +42,7 @@ namespace SaXGUI {
 SCCFrame::SCCFrame (
 	bool fullscreen, int mode, bool setinfo, bool checkpacs,
 	bool yastmode , bool xidle, QString* xidlePID, bool middle,
-	QString* requestedDialog, WFlags wflags
+	QString* requestedDialog, Qt::WFlags wflags
 ) : QWidget ( 0,0, wflags ) {
 	// .../
 	// create main frame for the complete application. This
@@ -40,8 +51,8 @@ SCCFrame::SCCFrame (
 	// displaying it first
 	// ----
 	mYaSTMode = yastmode;
-	mTextPtr  = new QDict<QString>;
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	mTextPtr  = new Q3Dict<QString>;
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 	loadText();
 	//=====================================
 	// check text orientation
@@ -53,7 +64,7 @@ SCCFrame::SCCFrame (
 	// show information box if set
 	//-------------------------------------
 	if (setinfo) {
-		QProcess* proc = new QProcess ();
+		Q3Process* proc = new Q3Process ();
 		proc -> addArgument ( XQUERY );
 		proc -> addArgument ( "-M" );
 		proc -> addArgument ( "--display" );
@@ -90,7 +101,7 @@ SCCFrame::SCCFrame (
 	// check for missing packages
 	//-------------------------------------
 	if (checkpacs) {
-		QProcess* proc = new QProcess ();
+		Q3Process* proc = new Q3Process ();
 		proc -> addArgument ( GET3D );
 		if ( ! proc -> start() ) {
 			return;
@@ -119,7 +130,7 @@ SCCFrame::SCCFrame (
 			exitSaX();
 		}
 		if (package != "<none>") {
-			QProcess* proc = new QProcess ();
+			Q3Process* proc = new Q3Process ();
 			proc -> addArgument ( XQUERY );
 			proc -> addArgument ( "-M" );
 			proc -> addArgument ( "--display" );
@@ -145,7 +156,7 @@ SCCFrame::SCCFrame (
 			mMessageBox -> setGeometry ( posx,posy,400,150 );
 			QString result = mMessageBox -> showMessage();
 			if (result == mText["Yes"]) {
-				QProcess* proc = new QProcess (); 
+				Q3Process* proc = new Q3Process (); 
 				proc -> addArgument ( GETINSTALLED );
 				proc -> addArgument ( package );
 				if ( ! proc -> start() ) { 
@@ -176,7 +187,7 @@ SCCFrame::SCCFrame (
 	int height = qApp->desktop()->height();
 	if (! fullscreen) {
 		if (middle) {
-			QProcess* proc = new QProcess ();
+			Q3Process* proc = new Q3Process ();
 			proc -> addArgument ( XQUERY );
 			proc -> addArgument ( "-M" );
 			proc -> addArgument ( "--display" );
@@ -211,54 +222,54 @@ SCCFrame::SCCFrame (
 	//=====================================
 	// create layout
 	//-------------------------------------
-	QGridLayout* baseLayout = new QGridLayout ( this,1,1 );
-	mMainFrame = new QFrame ( this );
+	Q3GridLayout* baseLayout = new Q3GridLayout ( this,1,1 );
+	mMainFrame = new Q3Frame ( this );
 	baseLayout -> addWidget ( mMainFrame,0,0 );
 
 	//=====================================
 	// create seperator
 	//-------------------------------------
-	mSeperator = new QFrame ( mMainFrame );
+	mSeperator = new Q3Frame ( mMainFrame );
 	mSeperator -> setFixedHeight (2);
 	mSeperator -> setFrameStyle (
-		QFrame::HLine | QFrame::Raised
+		Q3Frame::HLine | Q3Frame::Raised
 	);
 
 	//=====================================
 	// create area panels
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout  ( mMainFrame );
+	mMainLayout = new Q3VBoxLayout  ( mMainFrame );
 	mMainLayout -> setMargin  (10);
-	mTitleLayout= new QHBoxLayout ( mMainLayout );
-	mWorkLayout = new QHBoxLayout ( mMainLayout );
+	mTitleLayout= new Q3HBoxLayout ( mMainLayout );
+	mWorkLayout = new Q3HBoxLayout ( mMainLayout );
 	mMainLayout -> addSpacing (10);
 	mMainLayout -> addWidget      ( mSeperator  );
 	mMainLayout -> addSpacing (5);
-	mDoneLayout = new QHBoxLayout ( mMainLayout );
+	mDoneLayout = new Q3HBoxLayout ( mMainLayout );
 
 	//=====================================
 	// create module listbox (mWorkLayout)
 	//-------------------------------------
-	mModuleBox  = new QHBox ( mMainFrame );
-	mModuleList = new QListBox ( mModuleBox );
+	mModuleBox  = new Q3HBox ( mMainFrame );
+	mModuleList = new Q3ListBox ( mModuleBox );
 	QLabel* moduleSpace = new QLabel ( mModuleBox );
 	moduleSpace -> setFixedWidth ( 10 );
 	mModuleList -> setMinimumWidth ( 210 );
 	mModuleList -> setFrameStyle (
-		QFrame::Box | QFrame::Raised
+		Q3Frame::Box | Q3Frame::Raised
 	);
 
 	//=====================================
 	// create dialog vbox (mWorkLayout)
 	//-------------------------------------
-	QVBox* mDialogBox = new QVBox ( mMainFrame );
+	Q3VBox* mDialogBox = new Q3VBox ( mMainFrame );
 	mDialogBox -> setFrameStyle (
-		QFrame::Box | QFrame::NoFrame
+		Q3Frame::Box | Q3Frame::NoFrame
 	);
-	mModuleTitleBox  = new QHBox  ( mDialogBox );
+	mModuleTitleBox  = new Q3HBox  ( mDialogBox );
 	mModuleTitleIcon = new QLabel ( mModuleTitleBox );
 	mModuleTitleBox -> setSpacing ( 10 );
-	mModuleTitleLabel = new QVBox ( mModuleTitleBox );
+	mModuleTitleLabel = new Q3VBox ( mModuleTitleBox );
 	mModuleTitleBox -> setStretchFactor ( mModuleTitleLabel, 20 );
 	mModuleTitle = new QLabel ( mModuleTitleLabel );
 	QFont mTitleFont (font());
@@ -269,7 +280,7 @@ SCCFrame::SCCFrame (
 	// create widget stack (mWorkLayout)
 	//-------------------------------------
 	mDialogBox -> setSpacing ( 15 );
-	mDialogStack = new QWidgetStack ( mDialogBox );
+	mDialogStack = new Q3WidgetStack ( mDialogBox );
 	mDialogBox -> setStretchFactor  ( mDialogStack,20 );
 
 	//=====================================
@@ -307,8 +318,8 @@ SCCFrame::SCCFrame (
 		this     , SLOT   (slotHelp  ())
 	);
 	QObject::connect(
-		mModuleList, SIGNAL (selectionChanged ( QListBoxItem* )),
-		this       , SLOT   (slotSelected     ( QListBoxItem* ))
+		mModuleList, SIGNAL (selectionChanged ( Q3ListBoxItem* )),
+		this       , SLOT   (slotSelected     ( Q3ListBoxItem* ))
 	);
 
 	//=====================================
@@ -367,7 +378,7 @@ void SCCFrame::setupModules ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 
 	//=====================================
 	// insert modules for selection
@@ -415,7 +426,7 @@ void SCCFrame::setupModules ( void ) {
 //=====================================
 // slotSelected
 //-------------------------------------
-void SCCFrame::slotSelected ( QListBoxItem* item ) {
+void SCCFrame::slotSelected ( Q3ListBoxItem* item ) {
 	// .../
 	// if the selection has changed this method is called.
 	// the selection will be copied to be shown as module title
@@ -424,7 +435,7 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 
 	//=====================================
 	// prepare module title text/pixmap
@@ -468,11 +479,11 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 //=====================================
 // slotRunDialog
 //-------------------------------------
-void SCCFrame::runDialog ( QListBoxItem* item ) {
+void SCCFrame::runDialog ( Q3ListBoxItem* item ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 
 	//=====================================
 	// check selected item and raise dialog
@@ -540,7 +551,7 @@ void SCCFrame::runDialog ( QListBoxItem* item ) {
 //-------------------------------------
 void SCCFrame::slotCancel ( void ) {
 	if ( ! mYaSTMode ) {
-		SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+		SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 		SCCMessage* mMessageBox = new SCCMessage (
 			this, getTextPtr(), SaXMessage::YES_NO, "ExitSaX"
 		);
@@ -598,7 +609,7 @@ void SCCFrame::loadApplication ( void ) {
 	// store the SaXImport pointers within the dictionary named
 	// mSection.
 	// ----
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 	//=====================================
 	// check MD5 sum if available
 	//-------------------------------------
@@ -609,7 +620,7 @@ void SCCFrame::loadApplication ( void ) {
 	//=====================================
 	// create progress dialog
 	//-------------------------------------
-	QProgressDialog mProgress (
+	Q3ProgressDialog mProgress (
 		mText["ImportDataFiles"],mText["Cancel"],8,this,"progress",true
 	);
 	mProgress.setFixedWidth ( 350 );
@@ -671,7 +682,7 @@ void SCCFrame::loadApplication ( void ) {
 // slotFinish
 //-------------------------------------
 void SCCFrame::slotFinish ( void ) {
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 	SCCMessage* mMessageBox = new SCCMessage (
 		this, getTextPtr(), SaXMessage::FINISH,
 		"FinalSaX","MessageCaption"
@@ -730,7 +741,7 @@ void SCCFrame::saveConfiguration ( void ) {
 		return;
 	}
 	mConfig -> setMode (SAX_NEW);
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 	if ( ! mConfig -> createConfiguration() ) {
 		QString message;
 		QString library = mConfig->errorString();
@@ -772,7 +783,7 @@ void SCCFrame::testConfiguration ( void ) {
 		return;
 	}
 	mConfig -> setMode (SAX_NEW);
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 	qApp->setOverrideCursor ( Qt::forbiddenCursor );
 	mModuleList -> setDisabled ( true );
 	mFinish -> setDisabled ( true );
@@ -861,7 +872,7 @@ bool SCCFrame::startDialog ( const QString& dialog ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (getTextPtr());
+	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 
 	//=====================================
 	// hide unneeded frames
@@ -872,7 +883,7 @@ bool SCCFrame::startDialog ( const QString& dialog ) {
 	//=====================================
 	// raiseDialog
 	//-------------------------------------
-	QListBoxItem* mItem = 0;
+	Q3ListBoxItem* mItem = 0;
 	if (dialog == "Monitor") {
 		mItem = mModuleList -> findItem ( mText["MonitorModule"] );
 	}
@@ -911,22 +922,20 @@ void SCCFrame::loadText ( void ) {
 	bindtextdomain ("sax", TDOMAIN);
 	textdomain ("sax");
 
-	QDict<QString> gtx = gtxHandle.readDict();
-	QDictIterator<QString> it (gtx);
+	Q3Dict<QString> gtx = gtxHandle.readDict();
+	Q3DictIterator<QString> it (gtx);
 	for (; it.current(); ++it) {
-		QString* translation = new QString (
-			gettext((char*)it.current()->data())
+		QString* translation = new QString(
+			gettext((const char*)it.current()->latin1())
 		);
-		mTextPtr->insert (
-			it.currentKey(),translation
-		);
+		mTextPtr->insert (it.currentKey(),translation);
 	}
 }
 
 //=====================================
 // getText
 //-------------------------------------
-QDict<QString>* SCCFrame::getTextPtr ( void ) {
+Q3Dict<QString>* SCCFrame::getTextPtr ( void ) {
 	// .../
 	// return a pointer to the translation dictionary
 	// ----
@@ -947,7 +956,7 @@ bool SCCFrame::eventFilter ( QObject* obj, QEvent* event ) {
 		// handle press event
 		//--------------------------------------
 		case 6:
-		if (((QKeyEvent*)event)->key() == Key_Return) {
+		if (((QKeyEvent*)event)->key() == Qt::Key_Return) {
 			QKeyEvent spacePress ( (QEvent::Type)6, Qt::Key_Space, 32 ,0 );
 			QApplication::sendEvent ( (QObject*)btn,&spacePress );
 			return (true);
@@ -957,7 +966,7 @@ bool SCCFrame::eventFilter ( QObject* obj, QEvent* event ) {
 		// handle release event
 		//--------------------------------------
 		case 7:
-		if (((QKeyEvent*)event)->key() == Key_Return) {
+		if (((QKeyEvent*)event)->key() == Qt::Key_Return) {
 			QKeyEvent spaceRelease ( (QEvent::Type)7, Qt::Key_Space, 32 ,0 );
 			QApplication::sendEvent ( (QObject*)btn,&spaceRelease );
 			return (true);

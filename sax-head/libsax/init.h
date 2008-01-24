@@ -82,7 +82,7 @@ class SaXInitIF : public SaXException {
 */
 class SaXInit : public SaXInitIF {
 	private:
-	QList<char> mOptions;
+	QList<const char*> mOptions;
 
 	public:
 	bool needInit (void);
@@ -92,7 +92,7 @@ class SaXInit : public SaXInitIF {
 	void doInit (void);
 
 	public:
-	SaXInit ( QList<char> );
+	SaXInit ( QList<const char*> );
 	SaXInit ( void );
 };
 } // end namespace

@@ -20,7 +20,7 @@ STATUS        : Status: Development
 #ifndef SCCPROFILE_H
 #define SCCPROFILE_H 1
 
-#include <qdict.h>
+#include <q3dict.h>
 
 #include "../libsax/sax.h"
 
@@ -30,7 +30,7 @@ namespace SaXGUI {
 //------------------------------------
 class SCCWidgetProfile {
 	private:
-	QDict <SaXImportProfile> mProfile;
+	Q3Dict <SaXImportProfile> mProfile;
 
 	public:
 	SaXImportProfile* getProfile ( const QString& );

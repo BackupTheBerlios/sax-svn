@@ -24,13 +24,13 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCTouchScreen::SCCTouchScreen (
-	QWidgetStack* stack,QDict<QString>* text,
-	QDict<SaXImport> section, QWidget* parent
+	Q3WidgetStack* stack,Q3Dict<QString>* text,
+	Q3Dict<SaXImport> section, QWidget* parent
 ) : SCCDialog ( stack,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// check for graphics cards
@@ -110,9 +110,9 @@ bool SCCTouchScreen::exportData ( void ) {
 	//====================================
 	// add touchpanel if enabled
 	//------------------------------------
-	QListIterator<SCCTouchSelection> it (mTouchDisplay);
-	for (; it.current() ; ++it) {
-		SCCTouchSelection* toucher = (SCCTouchSelection*)it.current();
+	SCCTouchSelection* it;
+	foreach (it,mTouchDisplay) {
+		SCCTouchSelection* toucher = it;
 		if (toucher->isEnabled()) {
 			QString vendor = toucher->getVendor();
 			QString model  = toucher->getModel();

@@ -21,7 +21,7 @@ STATUS        : Status: Development
 #include <stdlib.h>
 #include <string.h>
 #include <qlist.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstring.h>
 
 //====================================
@@ -37,8 +37,8 @@ extern int  yystdin;
 //====================================
 // External Variables...
 //------------------------------------
-extern QDict<QString> keyHash;
-extern QDict<QString> varHash;
+extern Q3Dict<QString> keyHash;
+extern Q3Dict<QString> varHash;
 
 //====================================
 // Variables...
@@ -101,7 +101,7 @@ void yycmd ( const QString& c, const QString& v = "" ) {
 // yykey
 //------------------------------------
 void yykey ( const QString& pk ) {
-	QString k = pk.stripWhiteSpace();
+	QString k = pk.trimmed();
 	if (key.isEmpty()) {
 		key.append ( k );
 	} else {
@@ -112,7 +112,7 @@ void yykey ( const QString& pk ) {
 // yyvalue
 //------------------------------------
 void yyvalue ( const QString& pv, bool isKey=false ) {
-	QString v = pv.stripWhiteSpace();
+	QString v = pv.trimmed();
 	if (! isKey) {
 		QString* k = new QString (key);
 		keyHash.insert (*k,new QString(v));
@@ -129,15 +129,15 @@ void yyvalue ( const QString& pv, bool isKey=false ) {
 // yyvariable
 //------------------------------------
 void yyvariable ( const QString& pvname ) {
-	QString vname = pvname.stripWhiteSpace();
+	QString vname = pvname.trimmed();
 	if (keyHash[key]) {
 		QString* k = new QString (key);
 		varHash.insert (*k,new QString(vname));
 	}
 }
 void yyvariable ( const QString& pvname, const QString& pvval ) {
-	QString vname = pvname.stripWhiteSpace();
-	QString vval  = pvval.stripWhiteSpace();
+	QString vname = pvname.trimmed();
+	QString vval  = pvval.trimmed();
 	varHash.insert (vname,new QString(vval));
 }
 

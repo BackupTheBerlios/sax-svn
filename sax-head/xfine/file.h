@@ -17,12 +17,12 @@ STATUS        : Status: Up-to-date
 #define XFILE_H 1
 
 #include <qapplication.h>
-#include <qprogressdialog.h>
+#include <q3progressdialog.h>
 #include <qwidget.h>
 #include <stdio.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qlist.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qlist.h>
 #include <qfile.h>
 
@@ -37,7 +37,7 @@ class XFile : public QFile {
 	char*    mRaw;
 
 	private:
-	QDict<char>   gtx;  // gettext key file
+	Q3Dict<char>   gtx;  // gettext key file
 
 	private:
 	void fileOpen (void);
@@ -45,10 +45,10 @@ class XFile : public QFile {
 	public:
 	XFile (const char* name);
 	~XFile (void);
-	QDict<char> gtxRead (void);
+	Q3Dict<char> gtxRead (void);
 	int fileSize    (void);
 	int filePos     (void);
-	QDict<char> getGTX    (void);
+	Q3Dict<char> getGTX    (void);
 };
 
 #endif

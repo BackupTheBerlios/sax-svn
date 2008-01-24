@@ -3,7 +3,7 @@ FILE          : card.cpp
 ***************
 PROJECT       : SaX2 - library interface
               :
-AUTHOR        : Marcus Schäfer <ms@suse.de>
+AUTHOR        : Marcus Schäfer <ms@@suse.de>
               :
 BELONGS TO    : SaX2 - SuSE advanced X11 configuration 
               : 
@@ -90,7 +90,7 @@ void SaXManipulateCard::addCardExternal ( const QString& ident ) {
 		return;
 	}
 	QString val;
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if ( options["SaXExternal"] ) {
 		val = *options["SaXExternal"]+"+"+"Identifier&"+ident;
 	} else {
@@ -115,7 +115,7 @@ void SaXManipulateCard::addCardExternalOption (
 		return;
 	}
 	QString val;
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if ( options["SaXExternal"] ) {
 		val = *options["SaXExternal"]+"+"+keyword+"&"+value;
 	} else {
@@ -140,7 +140,7 @@ void SaXManipulateCard::setCardOption (
 	}
 	QString key (keyword);
 	QString val (value);
-	if (! value) {
+	if ( value.isNull()) {
 		//====================================
 		// set bool option
 		//------------------------------------
@@ -168,7 +168,7 @@ void SaXManipulateCard::addCardOption (
 	}
 	QString key (keyword);
 	QString val (value);
-	if (! value) {
+	if ( value.isNull()) {
 		//====================================
 		// add bool option
 		//------------------------------------
@@ -397,7 +397,7 @@ QString SaXManipulateCard::getRotationDirection (void) {
 //====================================
 // getOptions
 //------------------------------------
-QDict<QString> SaXManipulateCard::getOptions (void) {
+Q3Dict<QString> SaXManipulateCard::getOptions (void) {
 	// .../
 	//! retrieve an option list of all options set for the
 	//! selected card. The storage is a dictionary saving the
@@ -406,9 +406,9 @@ QDict<QString> SaXManipulateCard::getOptions (void) {
 	//! (bool options) the value for the key is the (null) string
 	// ----
 	if (! mImport) {
-		return QDict<QString>();
+		return Q3Dict<QString>();
 	}
-	QDict<QString> result;
+	Q3Dict<QString> result;
 	QString stdOptions = mImport -> getItem ("Option");
 	QString rawOptions = mImport -> getItem ("RawData");
 	//====================================
@@ -460,10 +460,10 @@ QList<QString> SaXManipulateCard::getCardDrivers ( void ) {
 		mCDBCardModules = new SaXProcess ();
 		mCDBCardModules -> start (CDB_CARDMODULES);
 	}
-	QDict< QDict<QString> > CDBModules = mCDBCardModules->getTablePointerCDB();
-	QDictIterator< QDict<QString> > it (CDBModules);
+	Q3Dict< Q3Dict<QString> > CDBModules = mCDBCardModules->getTablePointerCDB();
+	Q3DictIterator< Q3Dict<QString> > it (CDBModules);
 	for (; it.current(); ++it) {
-		mCDBCardDrivers.append (new QString(it.currentKey()));
+		mCDBCardDrivers.append (QString(it.currentKey()));
 	}
 	return mCDBCardDrivers;
 }
@@ -471,7 +471,7 @@ QList<QString> SaXManipulateCard::getCardDrivers ( void ) {
 //====================================
 // getCardOptions
 //------------------------------------
-QDict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
+Q3Dict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 	// .../
 	//! retrieve a list of card options for the given driver
 	//! name (driver). A list of drivers can be obtained using the
@@ -482,22 +482,22 @@ QDict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 		mCDBCardModules = new SaXProcess ();
 		mCDBCardModules -> start (CDB_CARDMODULES);
 	}
-	QList< QDict<QString> > opts;
+	Q3PtrList< Q3Dict<QString> > opts;
 	opts = mCDBCardModules -> getTablePointerCDB_DATA (
 		driver
 	);
 	if (opts.isEmpty()) {
 		excCDBRecordNotFound (driver);
 		qError (errorString(),EXC_CDBRECORDNOTFOUND);
-		return QDict<QString>();
+		return Q3Dict<QString>();
 	}
-	QList< QDict<QString> > xaaopts;
+	Q3PtrList< Q3Dict<QString> > xaaopts;
 	xaaopts = mCDBCardModules -> getTablePointerCDB_DATA (
 		"xaa"
 	);
 	mCDBCardOptions = *opts.at(0);
 	if (!xaaopts.isEmpty()) {
-		QDictIterator<QString> it (*xaaopts.at(0));
+		Q3DictIterator<QString> it (*xaaopts.at(0));
 		for (; it.current(); ++it) {
 			mCDBCardOptions.insert (it.currentKey(),it.current());
 		}
@@ -552,7 +552,7 @@ int SaXManipulateCard::getCards ( void ) {
 	}
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
 	pCard -> doImport();
-	if (pCard->getItem("Detected")) {
+	if (!(pCard->getItem("Detected")).isNull()) {
 		return pCard->getItem("Detected").toInt();
 	}
 	return -1;
@@ -608,7 +608,7 @@ int SaXManipulateCard::getHeads ( void ) {
 	//------------------------------------
 	SaXProcess* pCDB = new SaXProcess();
 	pCDB -> start ( CDB_CARDS );
-	QDict< QDict<QString> > CDBData = pCDB -> getTablePointerCDB();
+	Q3Dict< Q3Dict<QString> > CDBData = pCDB -> getTablePointerCDB();
 	//====================================
 	// check profile names
 	//------------------------------------
@@ -622,7 +622,7 @@ int SaXManipulateCard::getHeads ( void ) {
 		}
 		selectCard (realCount);
 		if ( CDBData[mCardName] ) {
-			QDict<QString> CDBTable = *CDBData[mCardName];
+			Q3Dict<QString> CDBTable = *CDBData[mCardName];
 			if (CDBTable["Profile"]) {
 				QString mProfile = *CDBTable["Profile"];
 				if (mProfile == "NVidia_DualHead_DriverOptions") {

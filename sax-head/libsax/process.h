@@ -97,7 +97,7 @@ namespace SaX {
 */
 class SaXProcessIF : public SaXStorage {
 	public:
-	virtual void start ( QList<char>,int = SAX_ISAX ) = 0;
+	virtual void start ( QList<const char*>,int = SAX_ISAX ) = 0;
 	virtual void start ( int ) = 0;
 
 	public:
@@ -138,7 +138,7 @@ class SaXProcess : public SaXProcessIF {
 	void storeDataSYS  ( int  );
 
 	public:
-	void start ( QList<char>, int = SAX_ISAX );
+	void start ( QList<const char*>, int = SAX_ISAX );
 	void start ( int );
 
 	public:

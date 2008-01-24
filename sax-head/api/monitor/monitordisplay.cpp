@@ -18,6 +18,10 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "monitordisplay.h"
+//Added by qt3to4:
+#include <QLabel>
+#include <QPixmap>
+#include <Q3VBoxLayout>
 
 //====================================
 // Globals
@@ -29,18 +33,18 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMonitorDisplay::SCCMonitorDisplay (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int display, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
@@ -48,18 +52,18 @@ SCCMonitorDisplay::SCCMonitorDisplay (
 	// toplevel activate check box
 	mCheckEnable = new QCheckBox ( mText["ActivateDisplay"],this );
 	// first group with card and monitor name
-	mCardMonitorGroup = new QButtonGroup (
-		1,Horizontal,"",this
+	mCardMonitorGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,"",this
 	);
-	QHBox* CMBox = new QHBox ( mCardMonitorGroup );
-	QVBox* leftCMBox  = new QVBox ( CMBox );
+	Q3HBox* CMBox = new Q3HBox ( mCardMonitorGroup );
+	Q3VBox* leftCMBox  = new Q3VBox ( CMBox );
 	leftCMBox -> setSpacing ( 10 );
-	QVBox* rightCMBox = new QVBox ( CMBox );
+	Q3VBox* rightCMBox = new Q3VBox ( CMBox );
 	rightCMBox -> setSpacing ( 10 );
 	mLabelCardText    = new QLabel ( mText["Card"]+": ",leftCMBox );
 	mLabelMonitorText = new QLabel ( mText["Monitor"]+": ",leftCMBox );
-	QHBox* cardBox = new QHBox ( rightCMBox );
-	QHBox* moniBox = new QHBox ( rightCMBox );
+	Q3HBox* cardBox = new Q3HBox ( rightCMBox );
+	Q3HBox* moniBox = new Q3HBox ( rightCMBox );
 	mLabelCardName = new QLabel ( cardBox );
 	mCardOptions   = new QPushButton ( mText["Options"],cardBox);
 	cardBox -> setStretchFactor ( mLabelCardName, 20 );
@@ -67,13 +71,13 @@ SCCMonitorDisplay::SCCMonitorDisplay (
 	mChangeMonitor    = new QPushButton ( mText["Change"],moniBox);
 	moniBox -> setStretchFactor ( mLabelMonitorName, 20 );
 	// second group with properties
-	mPropertyGroup = new QButtonGroup (
-		1,Vertical,mText["Properties"],this
+	mPropertyGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["Properties"],this
 	);
-	QVBox* resBox = new QVBox  ( mPropertyGroup );
+	Q3VBox* resBox = new Q3VBox  ( mPropertyGroup );
 	QLabel* space = new QLabel ( mPropertyGroup );
 	space -> setFixedWidth ( 10 );
-	QVBox* colBox = new QVBox  ( mPropertyGroup );
+	Q3VBox* colBox = new Q3VBox  ( mPropertyGroup );
 	mLabelResolution = new QLabel ( mText["Resolution"],resBox );
 	resBox -> setSpacing ( 10 );
 	mResolution  = new QComboBox ( false, resBox );
@@ -81,11 +85,11 @@ SCCMonitorDisplay::SCCMonitorDisplay (
 	colBox -> setSpacing ( 10 );
 	mColors      = new QComboBox ( false, colBox );
 	// third group with dual head mode
-	mDualHeadGroup = new QButtonGroup (
-		1,Horizontal,mText["DualHeadMode"],this
+	mDualHeadGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["DualHeadMode"],this
 	);
-	QHBox* dualBox = new QHBox ( mDualHeadGroup );
-	QHBox* infoBox = new QHBox ( mDualHeadGroup );
+	Q3HBox* dualBox = new Q3HBox ( mDualHeadGroup );
+	Q3HBox* infoBox = new Q3HBox ( mDualHeadGroup );
 	mCheckDualHead = new QCheckBox ( mText["ActivateDualHead"],dualBox );
 	mConfigureDualHead = new QPushButton ( mText["Configure"],dualBox );
 	dualBox -> setStretchFactor ( mCheckDualHead, 20 );
@@ -252,12 +256,12 @@ void SCCMonitorDisplay::init ( void ) {
 	QList<QString> toBeRemoved;
 	if (! reference.isEmpty()) {
 		mResolutionDict.setAutoDelete(true);
-		QDictIterator<QString> ir (mResolutionDict);
+		Q3DictIterator<QString> ir (mResolutionDict);
 		for (; ir.current(); ++ir) {
 			bool foundInReference = false;
-			QListIterator<QString> dd (reference);
-			for (; dd.current(); ++dd) {
-				if (*dd.current() == ir.currentKey()) {
+			QString dd;
+			foreach (dd,reference) {
+				if (dd == ir.currentKey()) {
 					foundInReference = true;
 					break;
 				}
@@ -271,26 +275,26 @@ void SCCMonitorDisplay::init ( void ) {
 			log (L_INFO,"SCCMonitorDisplay::resolution %s:\tNO\n",
 				ir.currentKey().ascii()
 			);
-			toBeRemoved.append (new QString(ir.currentKey()));
+			toBeRemoved.append (QString(ir.currentKey()));
 		}
 	}
-	QListIterator<QString> il (toBeRemoved);
-	for (; il.current(); ++il) {
-		mResolutionDict.remove(*il.current());
+	QString il;
+	foreach (il,toBeRemoved) {
+		mResolutionDict.remove(il);
 	}
 	//====================================
 	// insert remaining resolutions
 	//------------------------------------
-	QDict<QString> metaResolution;
+	Q3Dict<QString> metaResolution;
 	long sortResolution[mResolutionDict.count()];
-	QDictIterator<QString> ir (mResolutionDict);
+	Q3DictIterator<QString> ir (mResolutionDict);
 	int count = 0;
 	for (; ir.current(); ++ir) {
 		QStringList tokens = QStringList::split ( "x", ir.currentKey() );
 		int x = tokens.first().toInt();
 		int y = tokens.last().toInt();
 		long pixels = x * y;
-		QString* key = new QString;
+		QString* key = new QString();
 		QTextOStream (key) << pixels;
 		metaResolution.insert (*key,ir.current());
 		sortResolution[count] = pixels;
@@ -306,16 +310,16 @@ void SCCMonitorDisplay::init ( void ) {
 	}	
 	}
 	for (int n=0;n<count;n++) {
-		QString key;
-		QTextOStream (&key) << sortResolution[n];
-		mResolution -> insertItem ( *metaResolution[key] );
+		QString* key = new QString();
+		QTextOStream (key) << sortResolution[n];
+		mResolution -> insertItem ( *metaResolution[*key] );
 	}
 	//====================================
 	// insert available colors
 	//------------------------------------
 	SCCFile colHandle ( COL_FILE );
 	mColorDict = colHandle.readDict();
-	QDictIterator<QString> ic (mColorDict);
+	Q3DictIterator<QString> ic (mColorDict);
 	int index  = 0;
 	int maxcol = 0;
 	int colKey[mColorDict.count()];
@@ -347,7 +351,7 @@ void SCCMonitorDisplay::import ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// create needed manipulators
@@ -367,7 +371,7 @@ void SCCMonitorDisplay::import ( void ) {
 	//====================================
 	// get options defined for the card
 	//------------------------------------
-	QDict<QString> mOptions = saxCard.getOptions();
+	Q3Dict<QString> mOptions = saxCard.getOptions();
 
 	//====================================
 	// handle card name
@@ -411,7 +415,7 @@ void SCCMonitorDisplay::import ( void ) {
 			mSelectedColor
 		);
 		log (L_WARN,"SCCMonitorDisplay::Mode from server: %s\n",
-			mSelectedResolution.at(0)->ascii()
+			mSelectedResolution.at(0).ascii()
 		);
 	}
 
@@ -475,7 +479,7 @@ void SCCMonitorDisplay::import ( void ) {
 	QTextOStream (&colorKey) << mSelectedColor;
 	mColors -> setCurrentText (*mColorDict[colorKey]);
 	// set primary resolution
-	QString resolutionKey = *mSelectedResolution.at(0);
+	QString resolutionKey = mSelectedResolution.at(0);
 	if (! mResolutionDict[resolutionKey]) {
 		log (L_WARN,
 			"SCCMonitorDisplay::Warning: res key %s is missing\n",
@@ -663,26 +667,26 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 	//------------------------------------
 	QString selected = mResolution->text(index);
 	if (mIsFbdevBased) {
-		QDictIterator<QString> it (mResolutionDict);
-		QString* baseResolution = 0;
+		Q3DictIterator<QString> it (mResolutionDict);
+		QString baseResolution;
 		for (; it.current(); ++it) {
 		if (*it.current() == selected) {
-			baseResolution = new QString (it.currentKey());
+			baseResolution = (it.currentKey());
 		}
 		}
-		if (baseResolution) {
+		if (!baseResolution.isNull()) {
 			int mode = mSaxDesktop->getFBKernelMode (
-				*baseResolution,mSelectedColor
+				baseResolution,mSelectedColor
 			);
 			if (! mode > 0) {
-				SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+				SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 				SCCMessage* mMessageBox = new SCCMessage (
 					this, mTextPtr, SaXMessage::OK,
 					mText["FBWarning"],"MessageCaption",SaXMessage::Warning
 				);
 				mMessageBox -> showMessage();
 				mResolution->setCurrentText(
-					*mResolutionDict.find(*mSelectedResolution.at(0))
+					*mResolutionDict.find(mSelectedResolution.at(0))
 				);
 				return;
 			}
@@ -691,15 +695,15 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 	//====================================
 	// find first startup resolution
 	//------------------------------------
-	QDictIterator<QString> it (mResolutionDict);
+	Q3DictIterator<QString> it (mResolutionDict);
 	long basePixels  = 0;
 	int  basePixelsX = 0;
 	int  basePixelsY = 0;
 	mSelectedResolution.clear();
 	for (; it.current(); ++it) {
 		if (*it.current() == selected) {
-			QString* baseResolution = new QString (it.currentKey());
-			QStringList tokens = QStringList::split ( "x", *baseResolution );
+			QString baseResolution = it.currentKey();
+			QStringList tokens = QStringList::split ( "x", baseResolution );
 			int x = tokens.first().toInt();
 			int y = tokens.last().toInt();
 			basePixels  = x * y;
@@ -713,18 +717,18 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 	//------------------------------------
 	it.toFirst();
 	int count = 0;
-	QDict<QString> metaResolution;
+	Q3Dict<QString> metaResolution;
 	long sortResolution[mResolutionDict.count()];
 	for (; it.current(); ++it) {
-		QString* addResolution = new QString (it.currentKey());
-		QStringList tokens = QStringList::split ( "x", *addResolution );
+		QString addResolution = it.currentKey();
+		QStringList tokens = QStringList::split ( "x", addResolution );
 		int x = tokens.first().toInt();
 		int y = tokens.last().toInt();
 		int pixelSpace = x * y;
 		if ((pixelSpace < basePixels) && (x<=basePixelsX) && (y<=basePixelsY)) {
 			QString key;
 			QTextOStream (&key) << pixelSpace;
-			metaResolution.insert ( key,addResolution );
+			metaResolution.insert ( key,&addResolution );
 			sortResolution[count] = pixelSpace;
 			count++;
 		}
@@ -739,9 +743,9 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 	}
 	}
 	for (int n=0;n<count;n++) {
-		QString key;
-		QTextOStream (&key) << sortResolution[n];
-		mSelectedResolution.append ( metaResolution[key] );
+		QString* key = new QString();
+		QTextOStream (key) << sortResolution[n];
+		mSelectedResolution.append ( *metaResolution[*key] );
 	}
 }
 //====================================
@@ -753,7 +757,7 @@ void SCCMonitorDisplay::slotColors ( int index ) {
 	//------------------------------------
 	QString selected = mColors->text(index);
 	if (mIsFbdevBased) {
-		QDictIterator<QString> it (mColorDict);
+		Q3DictIterator<QString> it (mColorDict);
 		int color = 0;
 		for (; it.current(); ++it) {
 		if (*it.current() == selected) {
@@ -762,10 +766,10 @@ void SCCMonitorDisplay::slotColors ( int index ) {
 		}
 		if (color) {
 			int mode = mSaxDesktop->getFBKernelMode (
-				*mSelectedResolution.at(0),color
+				mSelectedResolution.at(0),color
 			);
 			if (! mode > 0) {
-				SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+				SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 				SCCMessage* mMessageBox = new SCCMessage (
 					this, mTextPtr, SaXMessage::OK,
 					mText["FBWarning"],"MessageCaption",SaXMessage::Warning
@@ -783,7 +787,7 @@ void SCCMonitorDisplay::slotColors ( int index ) {
 	//====================================
 	// Set color depth
 	//------------------------------------
-	QDictIterator<QString> it (mColorDict);
+	Q3DictIterator<QString> it (mColorDict);
 	for (; it.current(); ++it) {
 		if (*it.current() == selected) {
 			mSelectedColor = it.currentKey().toInt();
@@ -818,19 +822,20 @@ void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
 	QString* ys = new QString();
 	desktop -> setID (mDisplay);
 	desktop -> doImport();
-	if (! desktop->getItem("Size")) {
+	QString size = desktop->getItem("Size");
+	if (size.isNull()) {
 		return;
 	}
 	QString displaySize1 = desktop->getItem("Size");
 	QStringList tokens1 = QStringList::split ( "x", displaySize1 );
 	int x = tokens1.first().toInt();
 	int y = tokens1.last().toInt();
-	QTextOStream (xs) << x; combined.append (xs);
-	QTextOStream (ys) << y; combined.append (ys);
+	QTextOStream (xs) << x; combined.append (*xs);
+	QTextOStream (ys) << y; combined.append (*ys);
 	if (! combinedSize) {
 		getMonitorData() -> setDisplaySize ( combined );
 	} else {
-		if (! desktop->getItem("Size[2]")) {
+		if (desktop->getItem(QString("Size[2]")).isNull())
 			log (L_WARN,"SCCMonitorDisplay::No DDC2 size info available\n");
 			return;
 		}
@@ -856,12 +861,12 @@ void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
 			break;
 		}
 		combined.clear();
-		QTextOStream (xs) << x; combined.append (xs);
-		QTextOStream (ys) << y; combined.append (ys);
+		QTextOStream (xs) << x; combined.append (*xs);
+		QTextOStream (ys) << y; combined.append (*ys);
 		getMonitorData() -> setDisplaySize ( combined );
-	}
+	
 	if ((mShowDisplaySizeMessage) && (isVisible())) {
-		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+		SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 		SCCMessage* mMessageBox = new SCCMessage (
 			this, mTextPtr, SaXMessage::OK,
 			mText["DisplaySizeInfo"],"MessageCaption",SaXMessage::Information

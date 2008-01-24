@@ -19,6 +19,7 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "exception.h"
+#include <QTextOStream>
 
 namespace SaX {
 //====================================
@@ -495,7 +496,7 @@ void SaXException::excXKBLayoutUndefined ( const char* layout ) {
 //! 2D/3D driver from CDB doesn't match current driver
 void SaXException::excDriverMismatch ( const char* cdb,const char* cur) {
 	setErrorCode (ECDBMISMATCH,ECDBMISMATCHID);
-	setErrorValue (QString(cdb)+" -> "+QString(cur));
+	setErrorValue ((QString(cdb)+" -> "+QString(cur)).latin1());
 	emit saxGlobalException (EXC_DRIVERMISMATCH);
 	emit saxDriverMismatch (cdb,cur);
 }

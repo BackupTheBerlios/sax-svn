@@ -72,9 +72,11 @@ HEADERS   += monitor/monitormodel.h
 HEADERS   += message.h
 HEADERS   += common/log.h
 
+QT += qt3support
+
 CONFIG    += thread warn_on release
 unix:LIBS += -lm -lXss -lxkbfile -lcrypt
-TARGET    += xapi
+TARGET    = xapi
 
 RPM_OPT_FLAGS ?= -O2
 
@@ -82,4 +84,4 @@ QMAKE_CXXFLAGS = $(RPM_OPT_FLAGS) -fno-strict-aliasing
 unix:INCLUDEPATH += /usr/X11R6/include
 unix:INCLUDEPATH += /usr/include/X11
 unix:INCLUDEPATH += /usr/include/xorg
-unix:LIBS += -L/usr/X11R6/lib -L../libsax -lsax
+unix:LIBS += -L/usr/X11R6/lib ../libsax/libsax.so 

@@ -29,23 +29,23 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMonitorCard::SCCMonitorCard (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	const QString& cardname, int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mCardTab = new QHBox ( this );
+	mCardTab = new Q3HBox ( this );
 
 	//=====================================
 	// prepare tabed dialog
 	//-------------------------------------
-	mCardDialog = new QTabDialog ( this,0,true );
+	mCardDialog = new Q3TabDialog ( this,0,true );
 	mCardDialog -> setCaption  ( mText["CardCaption"] );
 	mCardDialog -> setOkButton ( mText["Ok"] );
 	mCardDialog -> setCancelButton ( mText["Cancel"] );
@@ -61,14 +61,14 @@ SCCMonitorCard::SCCMonitorCard (
 	// create macro widget
 	//-------------------------------------
 	mCardTab -> setMargin ( 15 );
-	mOptionGroup = new QButtonGroup (
-		1,Horizontal,mText["CardOptions"],mCardTab
+	mOptionGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["CardOptions"],mCardTab
 	);
-	mOption = new QListBox ( mOptionGroup );
-	mOption  -> setSelectionMode ( QListBox::Multi );
+	mOption = new Q3ListBox ( mOptionGroup );
+	mOption  -> setSelectionMode ( Q3ListBox::Multi );
 	mCardTab -> setSpacing ( 15 );
-	mRotateGroup = new QButtonGroup (
-		1,Horizontal,mText["Rotate"],mCardTab
+	mRotateGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["Rotate"],mCardTab
 	);
 	mCardTab -> setStretchFactor ( mOptionGroup,10 );
 	mRotateNot   = new QRadioButton (
@@ -89,8 +89,8 @@ SCCMonitorCard::SCCMonitorCard (
 		this        , SLOT   (slotOk ( void ))
 	);
 	QObject::connect (
-		mOption     , SIGNAL (clicked    ( QListBoxItem*)),
-		this        , SLOT   (slotOption ( QListBoxItem*))
+		mOption     , SIGNAL (clicked    ( Q3ListBoxItem*)),
+		this        , SLOT   (slotOption ( Q3ListBoxItem*))
 	);
 }
 //=====================================
@@ -141,7 +141,7 @@ void SCCMonitorCard::init ( void ) {
 	bool hasRotateSupport = false;
 	QString driver = saxCard.getCardDriver();
 	mOptDict = saxCard.getCardOptions ( driver );
-	QDictIterator<QString> it (mOptDict);
+	Q3DictIterator<QString> it (mOptDict);
 	for (; it.current(); ++it) {
 	if (! mProfileDriverOptions[it.currentKey()]) {
 		mOption -> insertItem ( it.currentKey() );
@@ -213,8 +213,8 @@ void SCCMonitorCard::import ( void ) {
 	// setup option listbox widget
 	//------------------------------------
 	mOption -> clear();
-	QDictIterator<QString> io (mOptDict);
-	QDictIterator<QString> it (mSelectedOptions);
+	Q3DictIterator<QString> io (mOptDict);
+	Q3DictIterator<QString> it (mSelectedOptions);
 	for (; io.current(); ++io) {
 	if (! mProfileDriverOptions[io.currentKey()]) {
 		mOption -> insertItem ( io.currentKey() );
@@ -228,7 +228,7 @@ void SCCMonitorCard::import ( void ) {
 		} else {
 			QTextOStream (&opt) << it.currentKey() << " >>> " << *it.current();
 		}
-		if ( QListBoxItem* item = mOption->findItem (it.currentKey()) ) {
+		if ( Q3ListBoxItem* item = mOption->findItem (it.currentKey()) ) {
 			int index = mOption->index (item);
 			mOption -> changeItem  ( opt, index );
 			mOption -> setSelected ( index, true );
@@ -254,7 +254,7 @@ int SCCMonitorCard::getRotate ( void ) {
 //=====================================
 // getOptions
 //-------------------------------------
-QDict<QString> SCCMonitorCard::getOptions ( void ) {
+Q3Dict<QString> SCCMonitorCard::getOptions ( void ) {
 	return mSelectedOptions;
 }
 //=====================================
@@ -266,14 +266,14 @@ void SCCMonitorCard::setTitle ( const QString & title ) {
 //=====================================
 // slotOption
 //-------------------------------------
-void SCCMonitorCard::slotOption ( QListBoxItem* boxItem ) {
+void SCCMonitorCard::slotOption ( Q3ListBoxItem* boxItem ) {
 	if (! boxItem) {
 		return;
 	}
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	
 	//=====================================
 	// prepare selection information 
@@ -359,11 +359,11 @@ void SCCMonitorCard::slotOk ( void ) {
 	//-------------------------------------
 	mSelectedOptions.clear();
 	for (unsigned int i=0;i<mOption->count();i++) {
-		QListBoxItem* item = mOption->item (i);
+		Q3ListBoxItem* item = mOption->item (i);
 		if (item->isSelected()) {
 			QStringList tokens = QStringList::split ( " >>> ", item->text() );
 			QString option = tokens.first();
-			QString* value = new QString (tokens.last());
+			QString* value = new QString(tokens.last());
 			if (tokens.count() > 1) {
 				mSelectedOptions.insert (option,value);
 			} else {

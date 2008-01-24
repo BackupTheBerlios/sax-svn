@@ -19,6 +19,7 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "keyboard.h"
+#include <Q3TextStream>
 
 namespace SaX {
 //====================================
@@ -66,7 +67,7 @@ void SaXKeyRules::loadRules(QString file) {
 	}
 	int i;
 	for (i = 0; i < rules->models.num_desc; ++i) {
-		QString* item = new QString (qstrdup( rules->models.desc[i].desc));
+		QString* item = new QString (rules->models.desc[i].desc);
 		if ( item->length() > 50 ) {
 			item->truncate ( 50 ); item->append ("...");
 		}
@@ -77,13 +78,13 @@ void SaXKeyRules::loadRules(QString file) {
 	for (i = 0; i < rules->layouts.num_desc; ++i) {
 		mLayouts.replace (
 			rules->layouts.desc[i].name,
-			new QString (qstrdup( rules->layouts.desc[i].desc))
+			new QString (rules->layouts.desc[i].desc)
 		);
 	}
 	for (i = 0; i < rules->options.num_desc; ++i) {
 		mOptions.replace (
 			rules->options.desc[i].name,
-			new QString (qstrdup( rules->options.desc[i].desc))
+			new QString (rules->options.desc[i].desc)
 		);
 	}
 	XkbRF_Free(rules, true);
@@ -114,8 +115,7 @@ QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 	QStringList* r1 = mVarLists[layout];
 	if ( r1 ) {
 		for ( QStringList::Iterator it=r1->begin(); it != r1->end(); ++it ) {
-			QString* item = new QString (*it);
-			result1.append (item);
+			result1.append (*it);
 		}
 		return result1;
 	}
@@ -123,8 +123,8 @@ QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 	QStringList* result = new QStringList();
 	QString file = mX11Dir + "xkb/symbols/" + layout;
 	QFile f(file);
-	if (f.open(IO_ReadOnly)) {
-		QTextStream ts(&f);
+	if (f.open(QIODevice::ReadOnly)) {
+		Q3TextStream ts(&f);
 		QString line;
 		QString prev_line;
 		while (!ts.eof()) {
@@ -153,8 +153,7 @@ QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 	}
 	mVarLists.insert(layout, result);
 	for ( QStringList::Iterator it=result->begin(); it != result->end();++it) {
-		QString* item = new QString (*it);
-		result2.append (item);
+		result2.append (*it);
 	}
 	return result2;
 }
@@ -162,21 +161,21 @@ QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 //====================================
 // getModels
 //------------------------------------
-QDict<QString> SaXKeyRules::getModels  (void) {
+Q3Dict<QString> SaXKeyRules::getModels  (void) {
 	return mModels;
 }
 
 //====================================
 // getLayouts
 //------------------------------------
-QDict<QString> SaXKeyRules::getLayouts (void) {
+Q3Dict<QString> SaXKeyRules::getLayouts (void) {
 	return mLayouts;
 }
 
 //====================================
 // getOptions
 //------------------------------------
-QDict<QString> SaXKeyRules::getOptions (void) {
+Q3Dict<QString> SaXKeyRules::getOptions (void) {
 	return mOptions;
 }
 
@@ -367,10 +366,10 @@ void SaXManipulateKeyboard::setXKBVariant (
 	QList<QString> lList = getXKBLayout();
 	int varCount = 0;
 	QStringList result;
-	QListIterator<QString> it (lList);
-	for (; it.current();++it) {
+	QString it;
+	foreach (it,lList) {
 		QString item;
-		if (vList.at(varCount)) {
+		if (!(vList.at(varCount).isNull())) {
 			item = *vList.at (varCount);
 		}
 		if (varCount == layoutCount) {
@@ -415,7 +414,7 @@ void SaXManipulateKeyboard::setMapping (
 		(key != XKB_SCROLL_LOCK)    &&
 		(key != XKB_RIGHT_CTL)
 	) {
-		excInvalidArgument (type);
+		excInvalidArgument (type.latin1());
 		qError (errorString(),EXC_INVALIDARGUMENT);
 		return;
 	}
@@ -427,7 +426,7 @@ void SaXManipulateKeyboard::setMapping (
 		(map != XKB_MAP_SCROLLLOCK) &&
 		(map != XKB_MAP_CONTROL)
 	) {
-		excInvalidArgument (mapping);
+		excInvalidArgument (mapping.latin1());
 		qError (errorString(),EXC_INVALIDARGUMENT);
 		return;
 	}
@@ -512,10 +511,10 @@ QString SaXManipulateKeyboard::getXKBVariant ( const QString& layout ) {
 	}
 	int varCount = 0;
 	QList<QString> vList = getXKBVariantList();
-	QListIterator<QString> it (vList);
-	for (; it.current();++it) {
+	QString it;
+	foreach (it,vList) {
 		if (varCount == layoutCount) {
-			return *it.current();
+			return it;
 		}
 		varCount++;
 	}
@@ -576,8 +575,7 @@ QList<QString> SaXManipulateKeyboard::createList ( const QString& data) {
 	QList<QString> result; 
 	QStringList dataList = QStringList::split ( ",", data, true );
 	for (QStringList::Iterator it=dataList.begin(); it!=dataList.end();++ it) {
-		QString* item = new QString (*it);
-		result.append (item);
+		result.append (*it);
 	}
 	return result;
 }

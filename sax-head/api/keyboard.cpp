@@ -18,25 +18,27 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "keyboard.h"
+//Added by qt3to4:
+#include <QLabel>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCKeyboard::SCCKeyboard (
-	QWidgetStack* stack,QDict<QString>* text,
-	QDict<SaXImport> section, QWidget* parent
+	Q3WidgetStack* stack,Q3Dict<QString>* text,
+	Q3Dict<SaXImport> section, QWidget* parent
 ) : SCCDialog ( stack,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create keyboard dialog
 	//-------------------------------------
 	mKeyboardTab   = new QTabWidget  ( mDialogFrame );
-	QHBox* testBox = new QHBox       ( mDialogFrame );
+	Q3HBox* testBox = new Q3HBox       ( mDialogFrame );
 	mTestLabel     = new QLabel      ( mText["Test"],testBox );
 	testBox -> setSpacing ( 10 );
 	mTestField     = new QLineEdit   ( testBox );
@@ -107,7 +109,7 @@ void SCCKeyboard::apply ( void ) {
 		QString complete = "setxkbmap " +
 			layoutApply + " " + optionReset + " " + optionApply;
 		log (L_INFO,"Apply keyboard: %s\n",complete.ascii());
-		QProcess* proc = new QProcess ();
+		Q3Process* proc = new Q3Process ();
 		proc -> addArgument ("/bin/bash");
 		proc -> addArgument ("-c");
 		proc -> addArgument (complete);

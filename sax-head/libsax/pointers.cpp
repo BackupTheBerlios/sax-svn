@@ -144,7 +144,7 @@ void SaXManipulatePointers::setOption (
 	}
 	QString key (keyword);
 	QString val (value);
-	if (! value) {
+	if (value.isNull()) {
 		//====================================
 		// set bool option
 		//------------------------------------
@@ -176,7 +176,7 @@ void SaXManipulatePointers::addOption (
 	}
 	QString key (keyword);
 	QString val (value);
-	if (! value) {
+	if ( value.isNull()) {
 		//====================================
 		// add bool option
 		//------------------------------------
@@ -263,7 +263,7 @@ QString SaXManipulatePointers::getProtocol ( void ) {
 //====================================
 // getOptions
 //------------------------------------
-QDict<QString> SaXManipulatePointers::getOptions (void) {
+Q3Dict<QString> SaXManipulatePointers::getOptions (void) {
 	// .../
 	//! retrieve an option list of all options set for this pointer
 	//! device. The storage is a dictionary saving the
@@ -272,9 +272,9 @@ QDict<QString> SaXManipulatePointers::getOptions (void) {
 	//! (bool options) the value for the key is the (null) string
 	// ----
 	if (! mImport) {
-		return QDict<QString>();
+		return Q3Dict<QString>();
 	}
-	QDict<QString> result;
+	Q3Dict<QString> result;
 	QString stdOptions = mImport -> getItem ("Option");
 	QString rawOptions = mImport -> getItem ("RawOption");
 	//====================================
@@ -680,10 +680,10 @@ QList<QString> SaXManipulateMice::getMouseList (void) {
 		mCDBMice = new SaXProcess ();
 		mCDBMice -> start (CDB_POINTERS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBMice -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBMice -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
-		mCDBMouseList.append (new QString (it.currentKey()));
+		mCDBMouseList.append (QString (it.currentKey()));
 	}
 	return mCDBMouseList;
 }
@@ -698,20 +698,20 @@ QList<QString> SaXManipulateMice::getMouseVendorList (void) {
 	// ----
 	QList<QString> mouseList = getMouseList();
 	mCDBMouseList.clear();
-	QListIterator<QString> it (mouseList);
-	for (; it.current(); ++it) {
-		QStringList vnlist = QStringList::split ( ":", *it.current() );
+	QString it;
+	foreach (it,mouseList) {
+		QStringList vnlist = QStringList::split ( ":", it );
 		QString* vendorName = new QString (vnlist.first());
 		int hasVendor = false;
-		QListIterator<QString> io (mCDBMouseList);
-		for (; io.current(); ++io) {
-		if ( *io.current() == *vendorName ) {
+		QString io;
+		foreach (io,mCDBMouseList) {
+		if ( io == *vendorName ) {
 			hasVendor = true;
 			break;
 		}
 		}
 		if (! hasVendor ) {
-			mCDBMouseList.append ( vendorName );
+			mCDBMouseList.append ( *vendorName );
 		}
 	}
 	return mCDBMouseList;
@@ -729,13 +729,13 @@ QList<QString> SaXManipulateMice::getMouseModelList (
 	// ----
 	QList<QString> mouseList = getMouseList();
 	mCDBMouseList.clear();
-	QListIterator<QString> it (mouseList);
-	for (; it.current(); ++it) {
-		QStringList vnlist = QStringList::split ( ":", *it.current() );
+	QString it;
+	foreach (it,mouseList) {
+		QStringList vnlist = QStringList::split ( ":", it );
 		QString vendorName = vnlist.first();
 		QString* modelName = new QString (vnlist.last());
 		if ( vendorName == vendor ) {
-			mCDBMouseList.append ( modelName );
+			mCDBMouseList.append ( *modelName );
 		}
 	}
 	return mCDBMouseList;
@@ -754,7 +754,7 @@ void SaXManipulateMice::setMouse ( const QString& group ) {
 		mCDBMice = new SaXProcess ();
 		mCDBMice -> start (CDB_POINTERS);
 	}
-	QList< QDict<QString> > data;
+	Q3PtrList< Q3Dict<QString> > data;
 	data = mCDBMice -> getTablePointerCDB_DATA (
 		group
 	);
@@ -762,9 +762,9 @@ void SaXManipulateMice::setMouse ( const QString& group ) {
 	// move the data record to the correct position
 	// refering to the section ID -> mPointer
 	// ----
-	QDict<QString>* record = data.take(0);
+	Q3Dict<QString>* record = data.take(0);
 	for (int n=0;n < mPointer;n++) {
-		data.append(new QDict<QString>());
+		data.append(new Q3Dict<QString>());
 	}
 	data.append ( record );
 	// .../
@@ -800,7 +800,7 @@ void SaXManipulateMice::setMouse (
 //====================================
 // getMouseData
 //------------------------------------
-QDict<QString> SaXManipulateMice::getMouseData (
+Q3Dict<QString> SaXManipulateMice::getMouseData (
 	const QString& group
 ) {
 	// .../
@@ -812,8 +812,8 @@ QDict<QString> SaXManipulateMice::getMouseData (
 		mCDBMice = new SaXProcess ();
 		mCDBMice -> start (CDB_POINTERS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBMice -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBMice -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		if ( it.currentKey() == group ) {
 			mCDBMouseData = *it.current();
@@ -826,7 +826,7 @@ QDict<QString> SaXManipulateMice::getMouseData (
 //====================================
 // getMouseData
 //------------------------------------
-QDict<QString> SaXManipulateMice::getMouseData (
+Q3Dict<QString> SaXManipulateMice::getMouseData (
 	const QString& vendor, const QString& name
 ) {
 	// .../
@@ -1022,10 +1022,10 @@ QList<QString> SaXManipulateTablets::getTabletDrivers (void) {
 		mCDBTabletModules = new SaXProcess ();
 		mCDBTabletModules -> start (CDB_TABLETMODULES);
 	}
-	QDict< QDict<QString> > CDBModules=mCDBTabletModules->getTablePointerCDB();
-	QDictIterator< QDict<QString> > it (CDBModules);
+	Q3Dict< Q3Dict<QString> > CDBModules=mCDBTabletModules->getTablePointerCDB();
+	Q3DictIterator< Q3Dict<QString> > it (CDBModules);
 	for (; it.current(); ++it) {
-		mCDBTabletDrivers.append (new QString(it.currentKey()));
+		mCDBTabletDrivers.append (QString(it.currentKey()));
 	}
 	return mCDBTabletDrivers;
 }
@@ -1033,7 +1033,7 @@ QList<QString> SaXManipulateTablets::getTabletDrivers (void) {
 //====================================
 // getTabletOptions
 //------------------------------------
-QDict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
+Q3Dict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
 	// .../
 	//! retrieve a list of tablet options refering to the tablet
 	//! driver specified by (driver). The result is a dictionary
@@ -1046,14 +1046,14 @@ QDict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
 		mCDBTabletModules = new SaXProcess ();
 		mCDBTabletModules -> start (CDB_TABLETMODULES);
 	}
-	QList< QDict<QString> > opts;
+	Q3PtrList< Q3Dict<QString> > opts;
 	opts = mCDBTabletModules -> getTablePointerCDB_DATA (
 		driver
 	);
 	if (opts.isEmpty()) {
 		excCDBRecordNotFound (driver);
 		qError (errorString(),EXC_CDBRECORDNOTFOUND);
-		return QDict<QString>();
+		return Q3Dict<QString>();
 	}
 	mCDBTabletOptions = *opts.at(0);
 	return mCDBTabletOptions;
@@ -1073,10 +1073,10 @@ QList<QString> SaXManipulateTablets::getTabletList (void) {
 		mCDBTablets = new SaXProcess ();
 		mCDBTablets -> start (CDB_TABLETS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBTablets -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBTablets -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
-		mCDBTabletList.append (new QString (it.currentKey()));
+		mCDBTabletList.append (QString (it.currentKey()));
 	}
 	return mCDBTabletList;
 }
@@ -1091,20 +1091,20 @@ QList<QString> SaXManipulateTablets::getTabletVendorList (void) {
 	// ----
 	QList<QString> tabletList = getTabletList();
 	mCDBTabletList.clear();
-	QListIterator<QString> it (tabletList);
-	for (; it.current(); ++it) {
-		QStringList vnlist = QStringList::split ( ":", *it.current() );
+	QString it;
+	foreach (it,tabletList) {
+		QStringList vnlist = QStringList::split ( ":", it );
 		QString* vendorName = new QString (vnlist.first());
 		int hasVendor = false;
-		QListIterator<QString> io (mCDBTabletList);
-		for (; io.current(); ++io) {
-		if ( *io.current() == *vendorName ) {
+		QString io;
+		foreach (io,mCDBTabletList) {
+		if ( io == *vendorName ) {
 			hasVendor = true;
 			break;
 		}
 		}
 		if (! hasVendor ) {
-			mCDBTabletList.append ( vendorName );
+			mCDBTabletList.append ( *vendorName );
 		}
 	}
 	return mCDBTabletList;
@@ -1122,13 +1122,13 @@ QList<QString> SaXManipulateTablets::getTabletModelList (
 	// ----
 	QList<QString> tabletList = getTabletList();
 	mCDBTabletList.clear();
-	QListIterator<QString> it (tabletList);
-	for (; it.current(); ++it) {
-		QStringList vnlist = QStringList::split ( ":", *it.current() );
+	QString it;
+	foreach (it,tabletList) {
+		QStringList vnlist = QStringList::split ( ":", it );
 		QString vendorName = vnlist.first();
 		QString* modelName = new QString (vnlist.last());
 		if ( vendorName == vendor ) {
-			mCDBTabletList.append ( modelName );
+			mCDBTabletList.append ( *modelName );
 		}
 	}
 	return mCDBTabletList;
@@ -1137,7 +1137,7 @@ QList<QString> SaXManipulateTablets::getTabletModelList (
 //====================================
 // getTabletData
 //------------------------------------
-QDict<QString> SaXManipulateTablets::getTabletData ( const QString& group ) {
+Q3Dict<QString> SaXManipulateTablets::getTabletData ( const QString& group ) {
 	// .../
 	//! return the tablet data dictionary associated with the
 	//! given CDB group name.
@@ -1147,8 +1147,8 @@ QDict<QString> SaXManipulateTablets::getTabletData ( const QString& group ) {
 		mCDBTablets = new SaXProcess ();
 		mCDBTablets -> start (CDB_TABLETS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBTablets -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBTablets -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		if ( it.currentKey() == group ) {
 			mCDBTabletData = *it.current();
@@ -1161,7 +1161,7 @@ QDict<QString> SaXManipulateTablets::getTabletData ( const QString& group ) {
 //====================================
 // getTabletData
 //------------------------------------
-QDict<QString> SaXManipulateTablets::getTabletData (
+Q3Dict<QString> SaXManipulateTablets::getTabletData (
 	const QString& vendor,const QString& name
 ) {
 	// .../
@@ -1174,7 +1174,7 @@ QDict<QString> SaXManipulateTablets::getTabletData (
 //====================================
 // getPenData
 //------------------------------------
-QDict<QString> SaXManipulateTablets::getPenData ( const QString& group ) {
+Q3Dict<QString> SaXManipulateTablets::getPenData ( const QString& group ) {
 	// .../
 	//! return the pen data dictionary associated with the
 	//! given CDB group name.
@@ -1184,8 +1184,8 @@ QDict<QString> SaXManipulateTablets::getPenData ( const QString& group ) {
 		mCDBPens = new SaXProcess ();
 		mCDBPens -> start (CDB_PENS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBPens -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBPens -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		if ( it.currentKey() == group ) {
 			mCDBTabletData = *it.current();
@@ -1198,7 +1198,7 @@ QDict<QString> SaXManipulateTablets::getPenData ( const QString& group ) {
 //====================================
 // getPenData
 //------------------------------------
-QDict<QString> SaXManipulateTablets::getPenData (
+Q3Dict<QString> SaXManipulateTablets::getPenData (
 	const QString& vendor,const QString& name
 ) {
 	// .../
@@ -1222,10 +1222,10 @@ QList<QString> SaXManipulateTablets::getPenList (void) {
 		mCDBPens = new SaXProcess ();
 		mCDBPens -> start (CDB_PENS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBPens -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBPens -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
-		mCDBPenList.append (new QString (it.currentKey()));
+		mCDBPenList.append (QString (it.currentKey()));
 	}
 	return mCDBPenList;
 }
@@ -1243,7 +1243,7 @@ void SaXManipulateTablets::setTablet (const QString& group) {
 		mCDBTablets = new SaXProcess ();
 		mCDBTablets -> start (CDB_TABLETS);
 	}
-	QList< QDict<QString> > data;
+	Q3PtrList< Q3Dict<QString> > data;
 	data = mCDBTablets -> getTablePointerCDB_DATA (
 		group
 	);
@@ -1251,9 +1251,9 @@ void SaXManipulateTablets::setTablet (const QString& group) {
 	// move the data record to the correct position
 	// refering to the section ID -> mPointer
 	// ----
-	QDict<QString>* record = data.take(0);
+	Q3Dict<QString>* record = data.take(0);
 	for (int n=0;n < mPointer;n++) {
-		data.append(new QDict<QString>());
+		data.append(new Q3Dict<QString>());
 	}
 	data.append ( record );
 	// .../
@@ -1300,7 +1300,7 @@ int SaXManipulateTablets::addPad (const QString& group) {
 		mCDBPads = new SaXProcess ();
 		mCDBPads -> start (CDB_PADS);
 	}
-	QList< QDict<QString> > data;
+	Q3PtrList< Q3Dict<QString> > data;
 	data = mCDBPads -> getTablePointerCDB_DATA (
 		group
 	);
@@ -1312,7 +1312,7 @@ int SaXManipulateTablets::addPad (const QString& group) {
 	// .../
 	// set input fashion type for the selected pad
 	// ----
-	QDict<QString> penData = *data.at(0);
+	Q3Dict<QString> penData = *data.at(0);
 	QString* type = penData["TabletType"];
 	if (! type) {
 		excPointerFashionTypeFailed ("undefined");
@@ -1337,9 +1337,9 @@ int SaXManipulateTablets::addPad (const QString& group) {
 	// move the data record to the correct position
 	// refering to the section ID -> mPointer
 	// ----
-	QDict<QString>* record = data.take(0);
+	Q3Dict<QString>* record = data.take(0);
 	for (int n=0;n < mPointer;n++) {
-		data.append(new QDict<QString>());
+		data.append(new Q3Dict<QString>());
 	}
 	data.append ( record );
 	// .../
@@ -1385,7 +1385,7 @@ int SaXManipulateTablets::addPen (const QString& group) {
 		mCDBPens = new SaXProcess ();
 		mCDBPens -> start (CDB_PENS);
 	}
-	QList< QDict<QString> > data;
+	Q3PtrList< Q3Dict<QString> > data;
 	data = mCDBPens -> getTablePointerCDB_DATA (
 		group
 	);
@@ -1397,7 +1397,7 @@ int SaXManipulateTablets::addPen (const QString& group) {
 	// .../
 	// set input fashion type for the selected pen
 	// ----
-	QDict<QString> penData = *data.at(0);
+	Q3Dict<QString> penData = *data.at(0);
 	QString* type = penData["TabletType"];
 	if (! type) {
 		excPointerFashionTypeFailed ("undefined");
@@ -1425,9 +1425,9 @@ int SaXManipulateTablets::addPen (const QString& group) {
 	// move the data record to the correct position
 	// refering to the section ID -> mPointer
 	// ----
-	QDict<QString>* record = data.take(0);
+	Q3Dict<QString>* record = data.take(0);
 	for (int n=0;n < mPointer;n++) {
-		data.append(new QDict<QString>());
+		data.append(new Q3Dict<QString>());
 	}
 	data.append ( record );
 	// .../
@@ -1604,10 +1604,10 @@ QList<QString> SaXManipulateTouchscreens::getPanelList (void) {
 		mCDBPanels = new SaXProcess ();
 		mCDBPanels -> start (CDB_TOUCHERS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBPanels -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBPanels -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
-		mCDBPanelList.append (new QString (it.currentKey()));
+		mCDBPanelList.append (QString (it.currentKey()));
 	}
 	return mCDBPanelList;
 }
@@ -1622,20 +1622,20 @@ QList<QString> SaXManipulateTouchscreens::getPanelVendorList (void) {
 	// ----
 	QList<QString> panelList = getPanelList();
 	mCDBPanelList.clear();
-	QListIterator<QString> it (panelList);
-	for (; it.current(); ++it) {
-		QStringList vnlist = QStringList::split ( ":", *it.current() );
+	QString it;
+	foreach (it,panelList) {
+		QStringList vnlist = QStringList::split ( ":", it );
 		QString* vendorName = new QString (vnlist.first());
 		int hasVendor = false;
-		QListIterator<QString> io (mCDBPanelList);
-		for (; io.current(); ++io) {
-		if ( *io.current() == *vendorName ) {
+		QString io;
+		foreach (io,mCDBPanelList) {
+		if ( io == *vendorName ) {
 			hasVendor = true;
 			break;
 		}
 		}
 		if (! hasVendor ) {
-			mCDBPanelList.append ( vendorName );
+			mCDBPanelList.append ( *vendorName );
 		}
 	}
 	return mCDBPanelList;
@@ -1653,13 +1653,13 @@ QList<QString> SaXManipulateTouchscreens::getPanelModelList (
 	// ----
 	QList<QString> panelList = getPanelList();
 	mCDBPanelList.clear();
-	QListIterator<QString> it (panelList);
-	for (; it.current(); ++it) {
-		QStringList vnlist = QStringList::split ( ":", *it.current() );
+	QString it;
+	foreach (it,panelList) {
+		QStringList vnlist = QStringList::split ( ":", it );
 		QString vendorName = vnlist.first();
 		QString* modelName = new QString (vnlist.last());
 		if ( vendorName == vendor ) {
-			mCDBPanelList.append ( modelName );
+			mCDBPanelList.append ( *modelName );
 		}
 	}
 	return mCDBPanelList;
@@ -1668,7 +1668,7 @@ QList<QString> SaXManipulateTouchscreens::getPanelModelList (
 //====================================
 // getPanelData
 //------------------------------------
-QDict<QString> SaXManipulateTouchscreens::getPanelData (
+Q3Dict<QString> SaXManipulateTouchscreens::getPanelData (
 	const QString& group
 ) {
 	// .../
@@ -1680,8 +1680,8 @@ QDict<QString> SaXManipulateTouchscreens::getPanelData (
 		mCDBPanels = new SaXProcess ();
 		mCDBPanels -> start (CDB_TOUCHERS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBPanels -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBPanels -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		if ( it.currentKey() == group ) {
 			mCDBPanelData = *it.current();
@@ -1694,7 +1694,7 @@ QDict<QString> SaXManipulateTouchscreens::getPanelData (
 //====================================
 // getPanelData
 //------------------------------------
-QDict<QString> SaXManipulateTouchscreens::getPanelData (
+Q3Dict<QString> SaXManipulateTouchscreens::getPanelData (
 	const QString& vendor,const QString& name
 ) {
 	// .../
@@ -1717,7 +1717,7 @@ void SaXManipulateTouchscreens::setTouchPanel (const QString& group) {
 		mCDBPanels = new SaXProcess ();
 		mCDBPanels -> start (CDB_TOUCHERS);
 	}
-	QList< QDict<QString> > data;
+	Q3PtrList< Q3Dict<QString> > data;
 	data = mCDBPanels -> getTablePointerCDB_DATA (
 		group
 	);
@@ -1730,9 +1730,9 @@ void SaXManipulateTouchscreens::setTouchPanel (const QString& group) {
 	// move the data record to the correct position
 	// refering to the section ID -> mPointer
 	// ----
-	QDict<QString>* record = data.take(0);
+	Q3Dict<QString>* record = data.take(0);
 	for (int n=0;n < mPointer;n++) {
-		data.append(new QDict<QString>());
+		data.append(new Q3Dict<QString>());
 	}
 	data.append ( record );
 	// .../

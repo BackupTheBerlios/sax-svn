@@ -25,8 +25,8 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qcheckbox.h>
 #include <qlabel.h>
-#include <qbuttongroup.h>
-#include <qlistbox.h>
+#include <q3buttongroup.h>
+#include <q3listbox.h>
 #include <qcombobox.h>
 
 //=====================================
@@ -59,14 +59,14 @@ class SCCTouchSelection : public SCCDialog {
 	SaXManipulateTouchscreens* mSaxToucher;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 
 	private:
 	QCheckBox*       mCheckEnable;
-	QButtonGroup*    mModelVendorGroup;
-	QListBox*        mVendorList;
-	QListBox*        mModelList;
-	QButtonGroup*    mPortGroup;
+	Q3ButtonGroup*    mModelVendorGroup;
+	Q3ListBox*        mVendorList;
+	Q3ListBox*        mModelList;
+	Q3ButtonGroup*    mPortGroup;
 	QComboBox*       mPortBox;
 
 	public:
@@ -81,15 +81,15 @@ class SCCTouchSelection : public SCCDialog {
 
 	public slots:
 	void slotActivateToucher ( void );
-	void slotVendor ( QListBoxItem* );
-	void slotName   ( QListBoxItem* );
+	void slotVendor ( Q3ListBoxItem* );
+	void slotName   ( Q3ListBoxItem* );
 
 	signals:
 	void sigActivate ( bool );
 
 	public:
 	SCCTouchSelection (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

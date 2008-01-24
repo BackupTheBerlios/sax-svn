@@ -18,24 +18,27 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "mousedisplay.h"
+//Added by qt3to4:
+#include <QLabel>
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCMouseDisplay::SCCMouseDisplay (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int display, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
     
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
    
 	//=====================================
 	// create macro widgets
@@ -43,21 +46,21 @@ SCCMouseDisplay::SCCMouseDisplay (
 	// toplevel activate check box
 	mCheckEnable = new QCheckBox ( mText["ActivateMouse"],this );
 	// first group with mouse name
-	mMouseNameGroup = new QButtonGroup (
-		1,Horizontal,"",this
+	mMouseNameGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,"",this
 	);
-	QHBox* mouseBox = new QHBox ( mMouseNameGroup );
+	Q3HBox* mouseBox = new Q3HBox ( mMouseNameGroup );
 	mLabelMouseName = new QLabel ( mText["Mouse"],mouseBox );
 	mChangeMouse    = new QPushButton ( mText["Change"],mouseBox);
 	mouseBox -> setStretchFactor ( mLabelMouseName, 20 );
 	// create stack widget for different mouse option dialogs
-	mOptionStack    = new QWidgetStack ( this );
+	mOptionStack    = new Q3WidgetStack ( this );
 	// second group with mouse options
-	QHBox* splitMouseBox = new QHBox ( mOptionStack );
+	Q3HBox* splitMouseBox = new Q3HBox ( mOptionStack );
 	// insert standard mouse option dialog
-	QVBox* leftMouseBox  = new QVBox ( splitMouseBox );
-	mMouseOptionGroup = new QButtonGroup (
-		1,Horizontal,mText["MouseOptions"],leftMouseBox
+	Q3VBox* leftMouseBox  = new Q3VBox ( splitMouseBox );
+	mMouseOptionGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["MouseOptions"],leftMouseBox
 	);
 	mCheck3BtnEmulation = new QCheckBox (
 		mText["ButtonEmulation"],mMouseOptionGroup
@@ -74,7 +77,7 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mCheckLeftHand      = new QCheckBox (
 		mText["LeftHand"],mMouseOptionGroup
 	);
-	QHBox* wheelBox = new QHBox ( mMouseOptionGroup );
+	Q3HBox* wheelBox = new Q3HBox ( mMouseOptionGroup );
 	mCheckEmulateWheel = new QCheckBox (
 		mText["EmulateWheel"],wheelBox
 	);
@@ -82,29 +85,29 @@ SCCMouseDisplay::SCCMouseDisplay (
 	mEmulateWheelButton = new QSpinBox ( 1,10,1,wheelBox );
 	// third group with mouse test field
 	splitMouseBox -> setSpacing ( 15 );
-	QVBox* rightMouseBox = new QVBox ( splitMouseBox );
-	mMouseTestGroup = new QButtonGroup (
-		1,Horizontal,mText["MouseTest"],rightMouseBox
+	Q3VBox* rightMouseBox = new Q3VBox ( splitMouseBox );
+	mMouseTestGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["MouseTest"],rightMouseBox
 	);
 	mTestField = new SCCMouseTest (
 		mTextPtr,mMouseTestGroup
 	);
 	splitMouseBox -> setStretchFactor ( leftMouseBox, 20 );
 	// second group with synaptics options
-	QHBox* splitSynapBox = new QHBox ( mOptionStack );
+	Q3HBox* splitSynapBox = new Q3HBox ( mOptionStack );
 	// insert standard synaptics option dialog
-	QVBox* leftSynapticsBox  = new QVBox ( splitSynapBox );
-	mSynapOptionGroup = new QButtonGroup (
-		1,Horizontal,mText["MouseOptions"],leftSynapticsBox
+	Q3VBox* leftSynapticsBox  = new Q3VBox ( splitSynapBox );
+	mSynapOptionGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["MouseOptions"],leftSynapticsBox
 	);
 	// TODO
 	// add code for synaptics options dialog here
 	// ...
 	// third group with synaptics test field
 	splitSynapBox -> setSpacing ( 15 );
-	QVBox* rightSynapBox = new QVBox ( splitSynapBox );
-	mSynapTestGroup = new QButtonGroup (
-		1,Horizontal,mText["MouseTest"],rightSynapBox
+	Q3VBox* rightSynapBox = new Q3VBox ( splitSynapBox );
+	mSynapTestGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["MouseTest"],rightSynapBox
 	);
 	// TODO
 	// add code for synaptics field dialog here
@@ -230,7 +233,7 @@ void SCCMouseDisplay::import ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// check manipulators...
@@ -334,7 +337,7 @@ void SCCMouseDisplay::slotActivateDisplay ( void ) {
 		//====================================
 		// check mouse driver from V/N dialog
 		//------------------------------------
-		QDict<QString> mouseData = mSaxMouse -> getMouseData (
+		Q3Dict<QString> mouseData = mSaxMouse -> getMouseData (
 			mChangeMouseModelDialog->getVendorName(),
 			mChangeMouseModelDialog->getModelName()
 		);
@@ -361,7 +364,7 @@ void SCCMouseDisplay::slotWheelEmulation ( void ) {
 //------------------------------------
 void SCCMouseDisplay::slotLeftHand ( void ) {
 	qApp->setOverrideCursor ( Qt::forbiddenCursor );
-	QProcess* proc = new QProcess ();
+	Q3Process* proc = new Q3Process ();
 	proc -> addArgument ("xmodmap");
 	proc -> addArgument ("-e");
 	if (mCheckLeftHand -> isChecked()) {

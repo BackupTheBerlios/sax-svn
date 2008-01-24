@@ -24,23 +24,23 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCTabletPenProperty::SCCTabletPenProperty (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	const QString& penname, int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mTabletPenTab = new QVBox ( this );
+	mTabletPenTab = new Q3VBox ( this );
 
 	//=====================================
 	// prepare tabed dialog
 	//-------------------------------------
-	mTabletPenDialog = new QTabDialog ( this,0,true );
+	mTabletPenDialog = new Q3TabDialog ( this,0,true );
 	mTabletPenDialog -> setCaption  ( mText["TabletCaption"] );
 	mTabletPenDialog -> setOkButton ( mText["Ok"] );
 	mTabletPenDialog -> setCancelButton ( mText["Cancel"] );
@@ -56,8 +56,8 @@ SCCTabletPenProperty::SCCTabletPenProperty (
 	// create macro widget
 	//-------------------------------------
 	mTabletPenTab -> setMargin ( 20 );
-	mModeGroup = new QButtonGroup (
-		1,Horizontal,mText["PenTabletMode"],mTabletPenTab
+	mModeGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["PenTabletMode"],mTabletPenTab
 	);
 	mRelative = new QRadioButton (
 		mText["Relative"], mModeGroup
@@ -66,11 +66,11 @@ SCCTabletPenProperty::SCCTabletPenProperty (
 		mText["Absolute"], mModeGroup
 	);
 	mTabletPenTab -> setSpacing ( 15 );
-	mOptionGroup = new QButtonGroup (
-		1,Vertical,mText["TabletOptions"],mTabletPenTab
+	mOptionGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["TabletOptions"],mTabletPenTab
 	);
-	mOptionList = new QListBox ( mOptionGroup );
-	mOptionList -> setSelectionMode ( QListBox::Multi );
+	mOptionList = new Q3ListBox ( mOptionGroup );
+	mOptionList -> setSelectionMode ( Q3ListBox::Multi );
 
 	//=====================================
 	// connect widgets
@@ -80,8 +80,8 @@ SCCTabletPenProperty::SCCTabletPenProperty (
 		this             , SLOT   (slotOk ( void ))
 	);
 	QObject::connect (
-		mOptionList , SIGNAL (clicked    ( QListBoxItem*)),
-		this        , SLOT   (slotOption ( QListBoxItem*))
+		mOptionList , SIGNAL (clicked    ( Q3ListBoxItem*)),
+		this        , SLOT   (slotOption ( Q3ListBoxItem*))
 	);
 }
 //=====================================
@@ -167,12 +167,12 @@ void SCCTabletPenProperty::import ( void ) {
 	//------------------------------------
 	if (! mOptionDict.isEmpty()) {
 		mOptionList->clear();
-		QDictIterator<QString> it (mOptionDict);
+		Q3DictIterator<QString> it (mOptionDict);
 		for (; it.current(); ++it) {
 			mOptionList->insertItem ( it.currentKey() );
 		}
 	}
-	QDictIterator<QString> it (mSelectedOptions);
+	Q3DictIterator<QString> it (mSelectedOptions);
 	for (; it.current(); ++it) {
 		QString opt;
 		if ( it.current()->isEmpty()) {
@@ -180,7 +180,7 @@ void SCCTabletPenProperty::import ( void ) {
 		} else {
 			QTextOStream (&opt) << it.currentKey() << " >>> " << *it.current();
 		}
-		if ( QListBoxItem* item = mOptionList->findItem (it.currentKey()) ) {
+		if ( Q3ListBoxItem* item = mOptionList->findItem (it.currentKey()) ) {
 			int index = mOptionList->index (item);
 			mOptionList -> changeItem  ( opt, index );
 			mOptionList -> setSelected ( index, true );
@@ -209,7 +209,7 @@ void SCCTabletPenProperty::setupPen (
 	//====================================
 	// retrieve data record for tablet
 	//------------------------------------
-	QDict<QString> tabletDict = mSaxTablet->getPenData ( vendor,name );
+	Q3Dict<QString> tabletDict = mSaxTablet->getPenData ( vendor,name );
 
 	//====================================
 	// set tablet mode
@@ -230,7 +230,7 @@ void SCCTabletPenProperty::setupPen (
 		mOptionDict = mSaxTablet->getTabletOptions (
 			*tabletDict["Driver"]
 		);
-		QDictIterator<QString> it (mOptionDict);
+		Q3DictIterator<QString> it (mOptionDict);
 		for (; it.current(); ++it) {
 			mOptionList->insertItem ( it.currentKey() );
 		}
@@ -244,7 +244,7 @@ void SCCTabletPenProperty::setupPen (
 			in = tokens.begin(); in != tokens.end(); ++in
 		) {
 			QString opt (*in);
-			if ( QListBoxItem* item = mOptionList->findItem (opt) ) {
+			if ( Q3ListBoxItem* item = mOptionList->findItem (opt) ) {
 				int index = mOptionList->index (item);
 				mOptionList -> setSelected ( index, true );
 			}
@@ -266,7 +266,7 @@ void SCCTabletPenProperty::setupPen (
 			key.replace(QRegExp("\""),"");
 			val.replace(QRegExp("\""),"");
 			QTextOStream (&set) << key << " >>> " << val;
-			if ( QListBoxItem* item = mOptionList->findItem (key) ) {
+			if ( Q3ListBoxItem* item = mOptionList->findItem (key) ) {
 				int index = mOptionList->index (item);
 				mOptionList -> changeItem  ( set, index );
 				mOptionList -> setSelected ( index, true );
@@ -281,11 +281,11 @@ void SCCTabletPenProperty::setupPen (
 //====================================
 // slotOption
 //------------------------------------
-void SCCTabletPenProperty::slotOption ( QListBoxItem* ) {
+void SCCTabletPenProperty::slotOption ( Q3ListBoxItem* ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// prepare selection information 
@@ -380,7 +380,7 @@ int SCCTabletPenProperty::getPenMode ( void ) {
 //====================================
 // getPenOptions
 //------------------------------------
-QDict<QString> SCCTabletPenProperty::getPenOptions ( void ) {
+Q3Dict<QString> SCCTabletPenProperty::getPenOptions ( void ) {
 	return mSelectedOptions;
 }
 //====================================
@@ -399,7 +399,7 @@ void SCCTabletPenProperty::slotOk ( void ) {
 	//-------------------------------------
 	mSelectedOptions.clear();
 	for (unsigned int i=0;i<mOptionList->count();i++) {
-		QListBoxItem* item = mOptionList->item (i);
+		Q3ListBoxItem* item = mOptionList->item (i);
 		if (item->isSelected()) {
 			QStringList tokens = QStringList::split ( " >>> ", item->text() );
 			QString option = tokens.first();

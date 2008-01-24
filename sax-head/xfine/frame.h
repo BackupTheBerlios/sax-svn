@@ -16,15 +16,23 @@ STATUS        : Status: Up-to-date
 #ifndef XFRAME_H
 #define XFRAME_H 1
 
+#undef Bool
+
+
 #include <qapplication.h>
-#include <qmainwindow.h>
+#include <q3mainwindow.h>
 #include <qpushbutton.h>
-#include <qscrollview.h>
+#include <q3scrollview.h>
 #include <qlayout.h>
 #include <qtabwidget.h>
 #include <qstatusbar.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qlist.h>
+//Added by qt3to4:
+#include <QEvent>
+#include <Q3Frame>
+
+#include <Q3PopupMenu>
 #include <stdlib.h>
 
 #include "xfine.h"
@@ -34,7 +42,9 @@ STATUS        : Status: Up-to-date
 //====================================
 // Types...
 //------------------------------------
+
 enum Direction { 
+ 
 	XLeft     = 10, 
 	XRight    = 20, 
 	XUp       = 30,
@@ -49,7 +59,7 @@ enum Direction {
 //====================================
 // Class headers...
 //------------------------------------
-class XFineWindow : public QMainWindow {
+class XFineWindow : public Q3MainWindow {
 	Q_OBJECT
 
 	public:
@@ -67,7 +77,7 @@ class XFineWindow : public QMainWindow {
     int           mVSyncStart,mVSyncStartSave;
     int           mVSyncEnd,mVSyncEndSave;
     int           mVTotal,mVTotalSave;
-	QDict<char>*  mTextPtr;
+	Q3Dict<char>*  mTextPtr;
 	int           mScreen;
 	int           mStep;
 
@@ -75,8 +85,8 @@ class XFineWindow : public QMainWindow {
 	int           stepID[4];
 	bool          stepST[4];
 	bool          mAdjustable;
-	QPopupMenu*   step;
-	QFrame*       mFrame;
+	Q3PopupMenu*   step;
+	Q3Frame*       mFrame;
 	QPushButton*  mCancel;
 	QPushButton*  mSave;
 	QTabWidget*   mTab;

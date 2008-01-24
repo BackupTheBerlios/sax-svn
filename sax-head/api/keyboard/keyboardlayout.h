@@ -23,11 +23,11 @@ STATUS        : Status: Development
 //=====================================
 // Includes
 //-------------------------------------
-#include <qlistview.h>
+#include <q3listview.h>
 #include <qlabel.h>
 #include <qcombobox.h>
-#include <qbuttongroup.h>
-#include <qlistbox.h>
+#include <q3buttongroup.h>
+#include <q3listbox.h>
 #include <qstringlist.h>
 
 //=====================================
@@ -54,22 +54,22 @@ class SCCKeyboardLayout : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString>   mModelDict;
-	QDict<QString>   mLayoutDict;
+	Q3Dict<QString>   mModelDict;
+	Q3Dict<QString>   mLayoutDict;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 
 	private:
-	QButtonGroup*    mPrimaryGroup;
+	Q3ButtonGroup*    mPrimaryGroup;
 	QLabel*          mLabelType;
 	QComboBox*       mTypeBox;
 	QLabel*          mLabelLayout;
 	QComboBox*       mLayoutBox;
 	QLabel*          mLabelVariant;
 	QComboBox*       mVariantBox;
-	QButtonGroup*    mAdditionalGroup;
-	QListView*       mAddLayout;
+	Q3ButtonGroup*    mAdditionalGroup;
+	Q3ListView*       mAddLayout;
 	QLabel*          mLabelAddVariant;
 	QComboBox*       mAddVariantBox;
 	int              mViewStatus;
@@ -96,14 +96,14 @@ class SCCKeyboardLayout : public SCCDialog {
 	void slotType    ( int );
 	void slotVariant ( int );
 	void slotAddVariant ( int );
-	void slotAddLayout  ( QListViewItem* );
+	void slotAddLayout  ( Q3ListViewItem* );
 
 	signals:
 	void sigApply ( void );
 
 	public:
 	SCCKeyboardLayout (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

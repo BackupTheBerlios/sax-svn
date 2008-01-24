@@ -42,7 +42,7 @@ class SCCTouchScreen : public SCCDialog {
 	int mCard;
 
 	private:
-	QList<SCCTouchSelection>  mTouchDisplay;
+	QList<SCCTouchSelection*>  mTouchDisplay;
 
 	private:
 	QTabWidget* mTouchscreenTab;
@@ -54,8 +54,8 @@ class SCCTouchScreen : public SCCDialog {
 
 	public:
 	SCCTouchScreen (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget*
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

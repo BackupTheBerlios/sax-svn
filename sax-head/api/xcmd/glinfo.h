@@ -20,14 +20,14 @@ STATUS        : Status: Development
 #ifndef CAPI3DSTATUS
 #define CAPI3DSTATUS 1
 
-#include <qdict.h>
+#include <q3dict.h>
 
 #include "xcmd.h"
 
 //=====================================
 // Functions...
 //-------------------------------------
-bool get3DStatus ( QDict<SaXImport>,int );
+bool get3DStatus ( Q3Dict<SaXImport>,int );
 
 #endif
 

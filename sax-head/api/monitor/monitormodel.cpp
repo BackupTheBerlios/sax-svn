@@ -18,6 +18,9 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "monitormodel.h"
+//Added by qt3to4:
+#include <QLabel>
+#include <Q3Frame>
 
 #define UNIT_SIZE 128
 
@@ -26,26 +29,26 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMonitorModel::SCCMonitorModel (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	const QString& cardname, const QString& sync, const QString& aspect,
 	int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mModelTab  = new QVBox ( this );
-	mAspectTab = new QVBox ( this );
-	mSyncTab   = new QVBox ( this );
+	mModelTab  = new Q3VBox ( this );
+	mAspectTab = new Q3VBox ( this );
+	mSyncTab   = new Q3VBox ( this );
 
 	//=====================================
 	// prepare tabed dialog
 	//-------------------------------------
-	mModelDialog = new QTabDialog  ( this,0,true );
+	mModelDialog = new Q3TabDialog  ( this,0,true );
 	mModelDialog -> setCaption  ( mText["MonitorCaption"] );
 	mModelDialog -> setOkButton ( mText["Ok"] );
 	mModelDialog -> setCancelButton ( mText["Cancel"] );
@@ -64,13 +67,13 @@ SCCMonitorModel::SCCMonitorModel (
 	// create macro widgets [Model]
 	//-------------------------------------
 	mModelTab -> setMargin ( 20 );
-	mModelVendorGroup = new QButtonGroup (
-		1,Vertical,mText["MonitorSelection"],mModelTab
+	mModelVendorGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["MonitorSelection"],mModelTab
 	);
-	mVendorList = new QListBox ( mModelVendorGroup );
-	mModelList  = new QListBox ( mModelVendorGroup );
+	mVendorList = new Q3ListBox ( mModelVendorGroup );
+	mModelList  = new Q3ListBox ( mModelVendorGroup );
 	mModelTab -> setSpacing ( 15 );
-	mToolBox = new QHBox ( mModelTab );
+	mToolBox = new Q3HBox ( mModelTab );
 	mCheckDPMS = new QCheckBox ( mText["DPMS"],mToolBox );
 	mDisk = new QPushButton ( mText["DiskInfo"],mToolBox );
 	mToolBox -> setStretchFactor ( mCheckDPMS, 10 );
@@ -79,25 +82,25 @@ SCCMonitorModel::SCCMonitorModel (
 	// create macro widgets [Sync]
 	//-------------------------------------
 	mSyncTab -> setMargin ( 20 );
-	mSyncGroup = new QButtonGroup (
-		1,Vertical,mText["SyncSelection"],mSyncTab
+	mSyncGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["SyncSelection"],mSyncTab
 	);
-	QVBox* textBox = new QVBox ( mSyncGroup );
+	Q3VBox* textBox = new Q3VBox ( mSyncGroup );
 	mLabelWarning  = new QLabel ( mText["FrqNote"],textBox );
 	mLabelWarning -> setFixedWidth ( 200 );
 	QLabel* latent1 = new QLabel ( textBox );
 	textBox -> setStretchFactor ( latent1,10 );
 
-	QVBox* seperatorBox = new QVBox ( mSyncGroup );
-	QFrame* seperator   = new QFrame ( seperatorBox );
+	Q3VBox* seperatorBox = new Q3VBox ( mSyncGroup );
+	Q3Frame* seperator   = new Q3Frame ( seperatorBox );
 	seperator -> setFixedWidth (2);
 	seperator -> setFrameStyle (
-		QFrame::VLine | QFrame::Raised
+		Q3Frame::VLine | Q3Frame::Raised
 	);
 	seperatorBox -> setStretchFactor ( seperator,10 );
 
-	mSyncBox = new QVBox ( mSyncGroup );
-	QHBox* mHSyncBox = new QHBox ( mSyncBox );
+	mSyncBox = new Q3VBox ( mSyncGroup );
+	Q3HBox* mHSyncBox = new Q3HBox ( mSyncBox );
 	mLabelHorizontal  = new QLabel ( mText["Horizontal"],mHSyncBox );
 	mHSyncBox -> setSpacing  ( 10 );
 	mHSpinMin = new QSpinBox ( 30,300,1,mHSyncBox );
@@ -113,7 +116,7 @@ SCCMonitorModel::SCCMonitorModel (
 	mHSyncBox -> setStretchFactor ( mHSpinMax,10 );
 
 	mSyncBox -> setSpacing ( 15 );
-	QHBox* mVSyncBox = new QHBox ( mSyncBox );
+	Q3HBox* mVSyncBox = new Q3HBox ( mSyncBox );
 	mLabelVertical  = new QLabel ( mText["Vertical"],mVSyncBox );
 	mVSyncBox -> setSpacing  ( 10 );
 	mVSpinMin = new QSpinBox ( 50,300,1,mVSyncBox );
@@ -145,12 +148,12 @@ SCCMonitorModel::SCCMonitorModel (
 	// create macro widgets [Aspect]
 	//-------------------------------------
 	mAspectTab -> setMargin ( 20 );
-	mAspectGroup = new QButtonGroup (
-		1,Vertical,mText["AspectSelection"],mAspectTab
+	mAspectGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["AspectSelection"],mAspectTab
 	);
-	QVBox* aspectBox = new QVBox ( mAspectGroup );
+	Q3VBox* aspectBox = new Q3VBox ( mAspectGroup );
 	mAspectGroup -> addSpace ( 20 );
-	QVBox* ratioBox  = new QVBox ( mAspectGroup );
+	Q3VBox* ratioBox  = new Q3VBox ( mAspectGroup );
 	mLabelAspect = new QLabel ( mText["Diagonal"],aspectBox );
 	aspectBox -> setSpacing ( 15 );
 	mTraversal = new QComboBox ( aspectBox );
@@ -158,12 +161,12 @@ SCCMonitorModel::SCCMonitorModel (
 	ratioBox  -> setSpacing ( 10 );
 	mAspect = new QComboBox ( ratioBox );
 	mAspectTab -> setSpacing ( 15 );
-	mDisplaySizeGroup = new QButtonGroup (
-		1,Vertical,mText["SizeSelection"],mAspectTab
+	mDisplaySizeGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["SizeSelection"],mAspectTab
 	);
-	QVBox* xBox = new QVBox ( mDisplaySizeGroup );
+	Q3VBox* xBox = new Q3VBox ( mDisplaySizeGroup );
 	mDisplaySizeGroup -> addSpace ( 20 );
-	QVBox* yBox = new QVBox ( mDisplaySizeGroup );
+	Q3VBox* yBox = new Q3VBox ( mDisplaySizeGroup );
 	mLabelX = new QLabel ( mText["XSize"],xBox );
 	xBox -> setSpacing ( 15 );
 	mSizeX = new QSpinBox ( 0,1000,1,xBox );
@@ -183,12 +186,12 @@ SCCMonitorModel::SCCMonitorModel (
 		this         , SLOT   ( slotDisk ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL ( selectionChanged ( QListBoxItem* )),
-		this         , SLOT   ( slotVendor       ( QListBoxItem* ))
+		mVendorList  , SIGNAL ( selectionChanged ( Q3ListBoxItem* )),
+		this         , SLOT   ( slotVendor       ( Q3ListBoxItem* ))
 	);
 	QObject::connect (
-		mModelList   , SIGNAL ( selectionChanged ( QListBoxItem* )),
-		this         , SLOT   ( slotName         ( QListBoxItem* ))
+		mModelList   , SIGNAL ( selectionChanged ( Q3ListBoxItem* )),
+		this         , SLOT   ( slotName         ( Q3ListBoxItem* ))
 	);
 	QObject::connect (
 		mAspect      , SIGNAL ( activated     ( int )),
@@ -218,7 +221,7 @@ void SCCMonitorModel::init ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// create manipulators...
@@ -235,9 +238,9 @@ void SCCMonitorModel::init ( void ) {
 	// insert CDB monitors
 	//------------------------------------
 	mCDBMonitorVendors = mSaxDesktop->getCDBMonitorVendorList();
-	QListIterator<QString> it (mCDBMonitorVendors);
-	for (; it.current(); ++it) {
-		mVendorList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBMonitorVendors) {
+		mVendorList -> insertItem (it);
 	}
 	mVendorList -> sort();
 	
@@ -248,17 +251,17 @@ void SCCMonitorModel::init ( void ) {
 	mTraversal -> insertItem ( mText["NotConfigured"] );
 	SCCFile diagonalFile ( DIAGONAL_FILE );
 	mTraversalList = diagonalFile.readList();
-	QListIterator<QString> io (mTraversalList);
-	for (; io.current(); ++io) {
+	QString io;
+	foreach (io,mTraversalList) {
 		QString item;
-		QTextOStream (&item) << *io.current() << " " << mText["UnitZoll"];
+		QTextOStream (&item) << io << " " << mText["UnitZoll"];
 		mTraversal -> insertItem ( item );
 	}
 	SCCFile aspectFile ( ASPECT_FILE );
 	mAspectList = aspectFile.readList();
-	QListIterator<QString> ia (mAspectList);
-	for (; ia.current(); ++ia) {
-		mAspect -> insertItem (*ia.current());
+	QString ia;
+	foreach (ia,mAspectList) {
+		mAspect -> insertItem (ia);
 	}
 }
 //====================================
@@ -268,7 +271,7 @@ void SCCMonitorModel::import ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	if ( mNeedImport ) {
 		//=====================================
@@ -293,8 +296,8 @@ void SCCMonitorModel::import ( void ) {
 		//------------------------------------
 		QList<QString> displaySize = mSaxDesktop -> getDisplaySize();
 		if (! displaySize.isEmpty()) {
-			mDisplaySizeX = displaySize.at(0)->toInt();
-			mDisplaySizeY = displaySize.at(1)->toInt();
+			mDisplaySizeX = displaySize.at(0).toInt();
+			mDisplaySizeY = displaySize.at(1).toInt();
 		} else {
 			mDisplaySizeX = 305;
 			mDisplaySizeY = 230;
@@ -306,12 +309,12 @@ void SCCMonitorModel::import ( void ) {
 		QList<QString> hsyncRange = mSaxDesktop -> getHsyncRange();
 		QList<QString> vsyncRange = mSaxDesktop -> getVsyncRange();
 		if (! hsyncRange.isEmpty()) {
-			mHsyncMin = hsyncRange.at(0)->toInt();
-			mHsyncMax = hsyncRange.at(1)->toInt();
+			mHsyncMin = hsyncRange.at(0).toInt();
+			mHsyncMax = hsyncRange.at(1).toInt();
 		}
 		if (! vsyncRange.isEmpty()) {
-			mVsyncMin = vsyncRange.at(0)->toInt();
-			mVsyncMax =	vsyncRange.at(1)->toInt();
+			mVsyncMin = vsyncRange.at(0).toInt();
+			mVsyncMax =	vsyncRange.at(1).toInt();
 		}
 
 		//====================================
@@ -322,11 +325,11 @@ void SCCMonitorModel::import ( void ) {
 	//====================================
 	// setup vendor name listboxes
 	//------------------------------------
-	QListBoxItem* vendor = mVendorList -> findItem ( mSelectedMonitorVendor );
+	Q3ListBoxItem* vendor = mVendorList -> findItem ( mSelectedMonitorVendor );
 	if ( vendor ) {
 		mVendorList -> setSelected ( vendor, true );
 		slotVendor ( vendor );
-		QListBoxItem* name = mModelList -> findItem ( mSelectedMonitorName );
+		Q3ListBoxItem* name = mModelList -> findItem ( mSelectedMonitorName );
 		if ( name ) {
 			mModelList -> setSelected ( name, true );
 			slotName ( name );
@@ -439,8 +442,8 @@ void SCCMonitorModel::setTitle ( const QString & title ) {
 // setDisplaySize
 //-------------------------------------
 void SCCMonitorModel::setDisplaySize ( QList<QString> size ) {
-	mDisplaySizeX = size.at(0)->toInt();
-	mDisplaySizeY = size.at(1)->toInt();
+	mDisplaySizeX = size.at(0).toInt();
+	mDisplaySizeY = size.at(1).toInt();
 	mSizeX -> setValue ( mDisplaySizeX );
 	mSizeY -> setValue ( mDisplaySizeY );
 }
@@ -451,7 +454,7 @@ void SCCMonitorModel::slotOk ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// get parent SCCMonitorDisplay ptr
@@ -502,10 +505,8 @@ void SCCMonitorModel::slotOk ( void ) {
 			break;
 		}
 		}
-		QString* substr = new QString (
-			res.mid (rpos,npos)
-		);
-		pDisplay -> setMonitorResolution ( *substr );
+		QString substr(res.mid (rpos,npos));
+		pDisplay -> setMonitorResolution ( substr );
 	}
 	//=====================================
 	// update layout tooltip
@@ -519,7 +520,7 @@ void SCCMonitorModel::slotDisk ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-    SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+    SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// show info message box
@@ -536,7 +537,7 @@ void SCCMonitorModel::slotDisk ( void ) {
 	// read .inf file using getINF script
 	//-------------------------------------
 	qApp->setOverrideCursor ( Qt::forbiddenCursor );
-	QProcess* proc = new QProcess ();
+	Q3Process* proc = new Q3Process ();
 	proc -> addArgument ( GETINF );
 	if ( ! proc -> start() ) {
 		qApp->restoreOverrideCursor();
@@ -572,19 +573,19 @@ void SCCMonitorModel::slotDisk ( void ) {
 		//-------------------------------------
 		mVendorList -> clear();
 		mCDBMonitorVendors = mSaxDesktop->getCDBMonitorVendorList();
-		QListIterator<QString> it (mCDBMonitorVendors);
-		for (; it.current(); ++it) {
-			mVendorList -> insertItem (*it.current());
+		QString it;
+		foreach (it,mCDBMonitorVendors) {
+			mVendorList -> insertItem (it);
 		}
 		mVendorList -> sort();
 		//=====================================
 		// select and apply item
 		//-------------------------------------
-		QListBoxItem* vendorItem = mVendorList -> findItem ( diskVendor );
+		Q3ListBoxItem* vendorItem = mVendorList -> findItem ( diskVendor );
 		if ( vendorItem ) {
 			mVendorList -> setSelected ( vendorItem, true );
 			slotVendor ( vendorItem );
-			QListBoxItem* nameItem = mModelList -> findItem ( diskModel );
+			Q3ListBoxItem* nameItem = mModelList -> findItem ( diskModel );
 			if ( nameItem ) {
 				mModelList -> setSelected ( nameItem, true );
 				slotName ( nameItem );
@@ -606,7 +607,7 @@ void SCCMonitorModel::slotDisk ( void ) {
 //=====================================
 // slotVendor
 //-------------------------------------
-void SCCMonitorModel::slotVendor ( QListBoxItem* item ) {
+void SCCMonitorModel::slotVendor ( Q3ListBoxItem* item ) {
 	if (! mSaxDesktop ) {
 		return;
 	}
@@ -614,20 +615,20 @@ void SCCMonitorModel::slotVendor ( QListBoxItem* item ) {
 	mCDBMonitorModels = mSaxDesktop->getCDBMonitorModelList (
 		item->text()
 	);
-	QListIterator<QString> it (mCDBMonitorModels);	
-	for (; it.current(); ++it) {
-		mModelList -> insertItem (*it.current());
+	QString it;	
+	foreach (it,mCDBMonitorModels) {
+		mModelList -> insertItem (it);
 	}
 	mModelList -> sort();
 }
 //=====================================
 // slotName
 //-------------------------------------
-void SCCMonitorModel::slotName ( QListBoxItem* item ) {
+void SCCMonitorModel::slotName ( Q3ListBoxItem* item ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// check manipulator access
@@ -644,7 +645,7 @@ void SCCMonitorModel::slotName ( QListBoxItem* item ) {
 	mVSpinMin  -> setValue   ( 50 );
 	mVSpinMax  -> setValue   ( 60 );
 	mExtraModeline = "";
-	QDictIterator<QString> it (mCDBMonitorData);
+	Q3DictIterator<QString> it (mCDBMonitorData);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString val = *it.current();

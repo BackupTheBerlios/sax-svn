@@ -19,6 +19,7 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "config.h"
+#include <Q3TextStream>
 
 namespace SaX {
 //====================================
@@ -185,9 +186,9 @@ bool SaXConfig::createConfiguration (void) {
 	if (! setLock()) {
 		return false;
 	}
-	QListIterator<SaXImport> it (mImportList);
-	for (; it.current(); ++it) {
-		SaXExport exportconfig (it.current(),this);
+	SaXImport* it;
+	foreach (it,mImportList) {
+		SaXExport exportconfig (it,this);
 		if (! exportconfig.doExport()) {
 			//excExportSectionFailed ();
 			//qError (errorString(),EXC_EXPORTSECTIONFAILED);
@@ -258,8 +259,8 @@ void SaXConfig::commitConfiguration (void) {
 	// read api created config file
 	//------------------------------------
 	QStringList al;
-	if ( apiConfig.open( IO_ReadOnly ) ) {
-		QTextStream stream( &apiConfig );
+	if ( apiConfig.open( QIODevice::ReadOnly ) ) {
+		Q3TextStream stream( &apiConfig );
 		QString line;
 		while ( !stream.atEnd() ) {
 			line = stream.readLine();
@@ -273,8 +274,8 @@ void SaXConfig::commitConfiguration (void) {
 	// read api created MD5 sum
 	//------------------------------------
 	QStringList ml;
-	if ( apiMD5.open( IO_ReadOnly ) ) {
-		QTextStream stream( &apiMD5 );
+	if ( apiMD5.open( QIODevice::ReadOnly ) ) {
+		Q3TextStream stream( &apiMD5 );
 		QString line;
 		while ( !stream.atEnd() ) {
 			line = stream.readLine();
@@ -288,8 +289,8 @@ void SaXConfig::commitConfiguration (void) {
 	// read current config file
 	//------------------------------------
 	QStringList cl;
-	if ( curConfig.open( IO_ReadOnly ) ) {
-		QTextStream stream( &curConfig );
+	if ( curConfig.open( QIODevice::ReadOnly ) ) {
+		Q3TextStream stream( &curConfig );
 		QString line;
 		while ( !stream.atEnd() ) {
 			line = stream.readLine();
@@ -300,8 +301,8 @@ void SaXConfig::commitConfiguration (void) {
 		//====================================
 		// create a backup copy
 		//------------------------------------
-		if ( secConfig.open( IO_WriteOnly ) ) {
-			QTextStream stream ( &secConfig );
+		if ( secConfig.open( QIODevice::WriteOnly ) ) {
+			Q3TextStream stream ( &secConfig );
 			for (QStringList::Iterator it = cl.begin(); it != cl.end();++it) {
 				stream << *it << "\n";
 			}
@@ -311,8 +312,8 @@ void SaXConfig::commitConfiguration (void) {
 	//====================================
 	// install to system
 	//------------------------------------
-	if ( curConfig.open( IO_WriteOnly ) ) {
-		QTextStream stream ( &curConfig );
+	if ( curConfig.open( QIODevice::WriteOnly ) ) {
+		Q3TextStream stream ( &curConfig );
 		for (QStringList::Iterator it = al.begin(); it != al.end();++it) {
 			stream << *it << "\n";
 		}
@@ -321,8 +322,8 @@ void SaXConfig::commitConfiguration (void) {
 	//====================================
 	// install MD5 sum to system
 	//------------------------------------
-	if ( curMD5.open( IO_WriteOnly ) ) {
-		QTextStream stream ( &curMD5 );
+	if ( curMD5.open( QIODevice::WriteOnly ) ) {
+		Q3TextStream stream ( &curMD5 );
 		for (QStringList::Iterator it = ml.begin(); it != ml.end();++it) {
 			stream << *it << "\n";
 		}
@@ -372,9 +373,9 @@ int SaXConfig::testConfiguration (void) {
 	}
 	int exitCode = 0;
 	QList<QString> data = test -> readStdout();
-	QListIterator<QString> in (data);
-	for (; in.current(); ++in) {
-		QString line (*in.current());
+	QString line;
+	foreach (line,data) {
+//		QString line (*in.current());
 		exitCode = line.toInt();
 	}
 	switch (exitCode) {
@@ -424,10 +425,10 @@ bool SaXConfig::isChecksumOK (void) {
 	//====================================
 	// import stored MD5 sum (sum1)
 	//------------------------------------
-	if ( ! curMDFile.open( IO_ReadOnly ) ) {
+	if ( ! curMDFile.open( QIODevice::ReadOnly ) ) {
 		return true;
 	}
-	QTextStream stream( &curMDFile );
+	Q3TextStream stream( &curMDFile );
 	QString MDSum1 = stream.readLine();
 	curMDFile.close();
 
@@ -443,7 +444,7 @@ bool SaXConfig::isChecksumOK (void) {
 		return true;     
 	}
 	QList<QString> data = md5 -> readStdout();
-	QString MDSum2 = *data.first();
+	QString MDSum2 = data.first();
 
 	//====================================
 	// check sum1 and sum2

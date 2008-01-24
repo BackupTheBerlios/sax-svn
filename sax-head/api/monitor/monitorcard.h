@@ -25,15 +25,15 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qspinbox.h>
 
 //=====================================
@@ -53,7 +53,7 @@ class SCCMonitorCard : public SCCDialog {
 	// private dialog data for exporting
 	//------------------------------------
 	QString        mRotateSetup;
-	QDict<QString> mSelectedOptions;
+	Q3Dict<QString> mSelectedOptions;
 	bool           mNeedImport;
 	int            mDisplay;
 
@@ -61,17 +61,17 @@ class SCCMonitorCard : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString> mProfileDriverOptions;
-	QDict<QString> mOptDict;
+	Q3Dict<QString> mProfileDriverOptions;
+	Q3Dict<QString> mOptDict;
 
 	private:
-	QHBox*         mCardTab;
+	Q3HBox*         mCardTab;
 
 	private:
-	QTabDialog*    mCardDialog;
-	QButtonGroup*  mOptionGroup;
-	QListBox*      mOption;
-	QButtonGroup*  mRotateGroup;
+	Q3TabDialog*    mCardDialog;
+	Q3ButtonGroup*  mOptionGroup;
+	Q3ListBox*      mOption;
+	Q3ButtonGroup*  mRotateGroup;
 	QRadioButton*  mRotateNot;
 	QRadioButton*  mRotateLeft;
 	QRadioButton*  mRotateRight;
@@ -80,7 +80,7 @@ class SCCMonitorCard : public SCCDialog {
 	void show ( void );
 
 	public:
-	QDict<QString> getOptions ( void );
+	Q3Dict<QString> getOptions ( void );
 	int getRotate ( void );
 	void setTitle ( const QString& );
 
@@ -90,11 +90,11 @@ class SCCMonitorCard : public SCCDialog {
 
 	public slots:
 	void slotOk     ( void );
-	void slotOption ( QListBoxItem* );
+	void slotOption ( Q3ListBoxItem* );
 
 	public:
 	SCCMonitorCard (
-		QDict<QString>*,QDict<SaXImport>,
+		Q3Dict<QString>*,Q3Dict<SaXImport>,
 		const QString&,int,QWidget*
 	);
 };

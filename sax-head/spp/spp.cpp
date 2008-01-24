@@ -14,7 +14,9 @@ DESCRIPTION   : SaX2 profile parser
 STATUS        : development
 **************/
 #include "spp.h"
+#include <qstring.h>
 
+#undef XS
 //=====================================
 // Constructor...
 //-------------------------------------
@@ -35,10 +37,10 @@ QList<QString> SPPParse::getVariables ( void ) {
 	// This method returns the variable dictionary
 	// ----
 	QList<QString> result;
-	QDictIterator<QString> it (varHash);
+	Q3DictIterator<QString> it (varHash);
 	for (; it.current(); ++it) {
-		result.append (new QString(it.currentKey()));
-		result.append (new QString(*it.current()));
+		result.append (QString(it.currentKey()));
+		result.append (QString(*it.current()));
 	}
 	varHash.clear();
 	return result;
@@ -55,10 +57,10 @@ QList<QString> SPPParse::getAction ( void ) {
 	// value or a request to do something different
 	// ----
 	QList<QString> result;
-	QDictIterator<QString> it (keyHash);
+	Q3DictIterator<QString> it (keyHash);
 	for (; it.current(); ++it) {
-		result.append (new QString(it.currentKey()));
-		result.append (new QString(*it.current()));
+		result.append (QString(it.currentKey()));
+		result.append (QString(*it.current()));
 	}
 	keyHash.clear();
 	return result;
@@ -93,7 +95,7 @@ bool SPPParse::parseLine ( const QString& line ) {
 		return true;
 	}
 	yyline = (char*)malloc (sizeof(char)*line.length()+1);
-	strcpy (yyline,line.ascii());
+	strcpy (yyline,(line.toLatin1()));
 	yystdin = 0;
 	bool status = parse();
 	yystdin = 1;

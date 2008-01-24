@@ -38,7 +38,7 @@ SaXProcess::SaXProcess ( void ) {
 //====================================
 // start...
 //------------------------------------
-void SaXProcess::start ( QList<char> args, int prog ) {
+void SaXProcess::start ( QList<const char*> args, int prog ) {
 	// .../
 	//! This start method will check if (prog) is a valid
 	//! program and call it by adding the options set in
@@ -62,9 +62,9 @@ void SaXProcess::start ( QList<char> args, int prog ) {
 			mProc -> addArgument ( ISAX );
 		break;
 	}
-	QListIterator<char> it (args);
-	for (; it.current(); ++it) {
-		mProc->addArgument ( it.current() );
+	const char* it;
+	foreach (it,args) {
+		mProc->addArgument ( it );
 	}
 	if ( ! mProc -> start() ) {
 		excProcessFailed();
@@ -171,36 +171,37 @@ void SaXProcess::storeDataCDB (int fileID) {
 			continue;
 		}
 		if ((updateFile->contains(file)) && (entry->d_type != DT_DIR)) {
-			fileList.append (updateFile);
+			fileList.append (*updateFile);
 		}
 	}
 	closedir (CDBDir);
-	fileList.append (&file);
-	QListIterator<QString> it (fileList);
+	fileList.append (file);
+	QString it;
 
 	//====================================
 	// read in file list
 	//------------------------------------
-	for (; it.current(); ++it) {
-		QFile* handle = new QFile (it.current()->ascii());
+	foreach (it,fileList) {
+		QFile* handle = new QFile (it.ascii());
 		if (! handle -> open(IO_ReadOnly)) {
 			excFileOpenFailed ( errno );
 			qError (errorString(),EXC_FILEOPENFAILED);
 			return;
 		}
-		QString line;
+		char line[MAX_LINE_LENGTH];
 		QString group,key,val;
 		while ((handle->readLine (line,MAX_LINE_LENGTH)) != 0) {
-			line.truncate(line.length()-1);
-			if ((line[0] == '#') || (line.isEmpty())) {
+			QString string_line(line);
+			string_line.truncate(string_line.length()-1);
+			if ((string_line[0] == '#') || (string_line.isEmpty())) {
 				if (handle->atEnd()) {
 					break;
 				}
 				continue;
 			}
-			int bp = line.find('{');
+			int bp = string_line.find('{');
 			if (bp >= 0) {
-				QStringList tokens = QStringList::split ( ":", line );
+				QStringList tokens = QStringList::split ( ":", string_line );
 				QString vendor = tokens.first();
 				QString name   = tokens.last();
 				name.truncate(
@@ -210,11 +211,11 @@ void SaXProcess::storeDataCDB (int fileID) {
 				vendor = vendor.stripWhiteSpace();
 				group = vendor+":"+name;
 			} else {
-				bp = line.find('}');
+				bp = string_line.find('}');
 				if (bp >= 0) {
 					continue;
 				}
-				QStringList tokens = QStringList::split ( "=", line );
+				QStringList tokens = QStringList::split ( "=", string_line );
 				key = tokens.first();
 				val = tokens.last();
 				val = val.stripWhiteSpace();
@@ -270,17 +271,18 @@ void SaXProcess::storeDataSYS (int fileID) {
 		qError (errorString(),EXC_FILEOPENFAILED);
 		return;
 	}
-	QString line;
+	char line[MAX_LINE_LENGTH];
 	QString group,key,val;
 	while ((handle->readLine (line,MAX_LINE_LENGTH)) != 0) {
-		line.truncate(line.length()-1);
-		if ((line[0] == '#') || (line.isEmpty())) {
+		QString string_line(line);
+		string_line.truncate(string_line.length()-1);
+		if ((string_line[0] == '#') || (string_line.isEmpty())) {
 			if (handle->atEnd()) {
 				break;
 			}
 			continue;
 		}
-		QStringList tokens = QStringList::split ( "=", line );
+		QStringList tokens = QStringList::split ( "=", string_line );
 		group  = tokens.first();
 		if (group.contains("Format:(")) {
 			continue;
@@ -310,10 +312,10 @@ void SaXProcess::storeDataSysp (void) {
 	// ----
 	QString vesa,vesa2,fbboot;
 	QList<QString> data = mProc->readStdout();
-	QListIterator<QString> in (data);
-	for (; in.current(); ++in) {
+	QString line;
+	foreach (line,data) {
 		int id = 0;
-		QString line (*in.current());
+//		QString line (in);
 		QStringList tokens = QStringList::split ( "=>", line );
 		QString idstr = tokens.first();
 		QString data  = tokens.last();
@@ -367,9 +369,9 @@ void SaXProcess::storeData (void) {
 	//! a previous isax process call
 	// ----
 	QList<QString> data = mProc->readStdout();
-	QListIterator<QString> in (data);
-	for (; in.current(); ++in) {
-		QString line (*in.current());
+	QString line;
+	foreach (line,data) {
+//		QString line (*in.current());
 		QString cnr;
 		QString key;
 		QString val;

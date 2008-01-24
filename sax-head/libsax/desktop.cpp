@@ -240,8 +240,8 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
 	CDBCards -> start (CDB_CARDS);
-	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
-	QDict<QString>* cardData = CDBData.find ( mCardName );
+	Q3Dict< Q3Dict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	Q3Dict<QString>* cardData = CDBData.find( mCardName );
 	if ( cardData ) {
 		QString* flag = cardData -> find ("Flag");
 		if (flag) {
@@ -267,7 +267,7 @@ bool SaXManipulateDesktop::is3DCard (void) {
 	//====================================
 	// No CDB record found for cardName
 	//------------------------------------
-	excEmptyCDBGroup ( mCardName.data() );
+	excEmptyCDBGroup ( mCardName.latin1() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
@@ -289,7 +289,7 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	//===================================
 	// Check SaXMeta data...
 	//-----------------------------------
-	QDict<QString> metaData = getMetaData();
+	Q3Dict<QString> metaData = getMetaData();
 	if (metaData["SAX_NO_CDB_CHECK"]) {
 		QString driver  = mCard -> getItem ("Driver");
 		QString profile = getDriverOptionsDualHeadProfile ( driver );
@@ -321,8 +321,8 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
 	CDBCards -> start (CDB_CARDS);
-	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
-	QDict<QString>* cardData = CDBData.find ( mCardName );
+	Q3Dict< Q3Dict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	Q3Dict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* profile = cardData -> find ("Profile");
 		if ((profile) && (profile->contains("DualHead_DriverOptions"))) {
@@ -349,7 +349,7 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	//====================================
 	// No CDB record found for cardName
 	//------------------------------------
-	excEmptyCDBGroup ( mCardName.data() );
+	excEmptyCDBGroup ( mCardName.latin1() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return QString();
 }
@@ -363,7 +363,7 @@ bool SaXManipulateDesktop::isXineramaMode (void) {
 	// workflow requested to use Xinerama instead of the
 	// default dual mode workflow based on MergedFB
 	// ----
-	QDict<QString> metaData = getMetaData();
+	Q3Dict<QString> metaData = getMetaData();
 	if (metaData["SAX_NO_DUAL_MODE"]) {
 		return true;
 	}
@@ -385,7 +385,7 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	//===================================
 	// Check SaXMeta data...
 	//-----------------------------------
-	QDict<QString> metaData = getMetaData();
+	Q3Dict<QString> metaData = getMetaData();
 	if (metaData["SAX_NO_CDB_CHECK"]) {
 		QString driver  = mCard -> getItem ("Driver");
 		QString profile = getDriverOptionsDualHeadProfile ( driver );
@@ -410,8 +410,8 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
 	CDBCards -> start (CDB_CARDS);
-	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
-	QDict<QString>* cardData = CDBData.find ( mCardName );
+	Q3Dict< Q3Dict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	Q3Dict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* profile = cardData -> find ("Profile");
 		if ((profile) && (profile->contains("DualHead_DriverOptions"))) {
@@ -451,7 +451,7 @@ bool SaXManipulateDesktop::isDualHeadCard (void) {
 	//====================================
 	// No CDB record found for cardName
 	//------------------------------------
-	excEmptyCDBGroup ( mCardName.data() );
+	excEmptyCDBGroup ( mCardName.latin1() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
@@ -490,13 +490,13 @@ bool SaXManipulateDesktop::enable3D (void) {
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
 	CDBCards -> start (CDB_CARDS);
-	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	Q3Dict< Q3Dict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
 
 	//====================================
 	// get Extensions for the active card
 	//------------------------------------
 	SaXManipulateCard cardInfo (mCard,mDesktopID);
-	QDict<QString>* cardData = CDBData.find ( mCardName );
+	Q3Dict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* driver3D= cardData -> find ("3DDriver");
 		QString* driver2D= cardData -> find ("Driver");
@@ -556,7 +556,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 		}
 		if ((driver3D) && (*driver2D != *driver3D)) {
 			SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
-			QDict<QString> driverMap = mapHandle.readDict();
+			Q3Dict<QString> driverMap = mapHandle.readDict();
 			QString driver = cardInfo.getCardDriver();
 			if ((! driver.isEmpty()) && (driverMap[driver])) {
 				QStringList items = QStringList::split ( ",", *driverMap[driver] );
@@ -577,10 +577,10 @@ bool SaXManipulateDesktop::enable3D (void) {
 			//------------------------------------
 			SaXImport* mImportCard = pProfile -> getImport ( SAX_CARD );
 			if ( mImportCard ) {
-				QDict<QString> profileDriverOptions;
+				Q3Dict<QString> profileDriverOptions;
 				SaXManipulateCard saxProfileCard ( mImportCard );
 				profileDriverOptions = saxProfileCard.getOptions();
-				QDictIterator<QString> it ( profileDriverOptions );
+				Q3DictIterator<QString> it ( profileDriverOptions );
 				for (; it.current(); ++it) {
 					QString key = it.currentKey();
 					QString val = *it.current();
@@ -592,7 +592,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 			//------------------------------------
 			SaXImport* mImportDesktop = pProfile -> getImport ( SAX_DESKTOP );
 			if ( mImportDesktop ) {
-				QDict<QString> profileDriverOptions;
+				Q3Dict<QString> profileDriverOptions;
 				SaXManipulateDesktop saxProfileDesktop (
 					mImportDesktop,mCard,mPath
 				);
@@ -610,7 +610,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 	//====================================
 	// No CDB record found for mCardName
 	//------------------------------------
-	excEmptyCDBGroup ( mCardName.data() );
+	excEmptyCDBGroup ( mCardName.latin1() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
@@ -646,13 +646,13 @@ bool SaXManipulateDesktop::disable3D (void) {
 	//------------------------------------
 	SaXProcess* CDBCards = new SaXProcess ();
 	CDBCards -> start (CDB_CARDS);
-	QDict< QDict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
+	Q3Dict< Q3Dict<QString> > CDBData = CDBCards -> getTablePointerCDB ();
 
 	//====================================
 	// get Extensions for the active card
 	//------------------------------------
 	SaXManipulateCard cardInfo (mCard);
-	QDict<QString>* cardData = CDBData.find ( mCardName );
+	Q3Dict<QString>* cardData = CDBData.find ( mCardName );
 	if ( cardData ) {
 		QString* driver3D= cardData -> find ("3DDriver");
 		QString* driver2D= cardData -> find ("Driver");
@@ -707,7 +707,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 		}
 		if ((driver3D) && (*driver2D != *driver3D)) {
 			SaXFile mapHandle (MAP_DIR + QString("Driver.map"));
-			QDict<QString> driverMap = mapHandle.readDict();
+			Q3Dict<QString> driverMap = mapHandle.readDict();
 			if ((driver3D) && (driverMap[*driver3D])) {
 				QStringList items = QStringList::split ( ",",*driverMap[*driver3D] );
 				profiles += items;
@@ -727,10 +727,10 @@ bool SaXManipulateDesktop::disable3D (void) {
 			//------------------------------------
 			SaXImport* mImportCard = pProfile -> getImport ( SAX_CARD );
 			if ( mImportCard ) {
-				QDict<QString> profileDriverOptions;
+				Q3Dict<QString> profileDriverOptions;
 				SaXManipulateCard saxProfileCard ( mImportCard );
 				profileDriverOptions = saxProfileCard.getOptions();
-				QDictIterator<QString> it ( profileDriverOptions );
+				Q3DictIterator<QString> it ( profileDriverOptions );
 				for (; it.current(); ++it) {
 					QString key = it.currentKey();
 					cardInfo.removeCardOption (key);
@@ -742,7 +742,7 @@ bool SaXManipulateDesktop::disable3D (void) {
 	//====================================
 	// No CDB record found for mCardName
 	//------------------------------------
-	excEmptyCDBGroup ( mCardName.data() );
+	excEmptyCDBGroup ( mCardName.latin1() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
 	return false;
 }
@@ -900,9 +900,9 @@ bool SaXManipulateDesktop::is3DEnabled (void) {
 	}
 	SaXManipulatePath pathInfo (mPath);
 	QList<QString> modules = pathInfo.getModules();
-	QListIterator<QString> it (modules);
-	for (; it.current();++it) {
-	if (*it.current() == "dri") {
+	QString it;
+	foreach (it,modules) {
+	if (it == "dri") {
 		return true;
 	}
 	}
@@ -930,8 +930,7 @@ QList<QString> SaXManipulateDesktop::getResolutions (int color) {
 	QList<QString> result;
 	QStringList resList = QStringList::split ( ",", resolutions );
 	for (QStringList::Iterator it=resList.begin(); it!=resList.end();++ it) {
-		QString* data = new QString (*it);
-		result.append (data);
+		result.append (*it);
 	}
 	return result;
 }
@@ -950,7 +949,7 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 		return QList<QString>();
 	}
 	QList<QString> defaultList;
-	defaultList.append (new QString("800x600"));
+	defaultList.append (QString("800x600"));
 	SaXProcessCall* proc = new SaXProcessCall();
 	proc -> addArgument ( XQUERY );
 	proc -> addArgument ( "-r" );
@@ -958,15 +957,15 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 		return defaultList;
 	}
 	QList<QString> data = proc->readStdout();
-	QListIterator<QString> in (data);
-	for (; in.current(); ++in) {
+	QString in;
+	foreach (in,data) {
 		QRegExp modeExp ("(\\d+) (.*)");
-		int rpos = modeExp.search (*in.current(),0);
+		int rpos = modeExp.search (in,0);
 		if (rpos >= 0) {
 			int id = modeExp.cap(1).toInt();
 			if (id == mDesktopID) {
 				QList<QString> result;
-				result.append (new QString (modeExp.cap(2)));
+				result.append (QString (modeExp.cap(2)));
 				return result;
 			}
 		}
@@ -991,7 +990,7 @@ int SaXManipulateDesktop::getFBKernelMode (const QString& res,int depth) {
 	}
 	mSyspDesktop -> setID    ( mDesktopID );
 	mSyspDesktop -> doImport ();
-	if (! mSyspDesktop->getItem("FBBoot")) {
+	if ( mSyspDesktop->getItem("FBBoot").isNull()) {
 		return 0;
 	}
 	QString val = mSyspDesktop->getItem("FBBoot");
@@ -1004,9 +1003,9 @@ int SaXManipulateDesktop::getFBKernelMode (const QString& res,int depth) {
 		QString mode (*it);
 		QStringList record = QStringList::split ( " ", mode );
 		QTextOStream (resolution) << *record.at(0) << "x" << *record.at(1);
-		QString color = *record.at(2);
+		QString color = record.at(2);
 		if ((*resolution == res) && (color.toInt() == depth)) {
-			QString mode = *record.at(3);
+			QString mode = record.at(3);
 			return mode.toInt();
 		}
 	}
@@ -1038,11 +1037,11 @@ int SaXManipulateDesktop::setFBKernelMode (int mode) {
 //------------------------------------
 QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) {
 	QList<QString> result;
-	QDict<QString> hashed;
+	Q3Dict<QString> hashed;
 	SaXImportSysp* desktop = new SaXImportSysp (SYSP_DESKTOP);
 	desktop -> setID    ( mDesktopID );
 	desktop -> doImport ();
-	if (! desktop->getItem(key)) {
+	if ( desktop->getItem(key).isNull()) {
 		return QList<QString>();
 	}
 	if ((key != "FBBoot") && (desktop->getItem("DDC") == "<undefined>")) {
@@ -1066,9 +1065,9 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) 
 	QString* default2 = new QString ("1024x768");
 	hashed.insert (*default1,default1);
 	hashed.insert (*default2,default2);
-	QDictIterator<QString> ir (hashed);
+	Q3DictIterator<QString> ir (hashed);
 	for (; ir.current(); ++ir) {
-		result.append (ir.current());
+		result.append (*ir.current());
 	}
 	return result;
 }
@@ -1115,10 +1114,10 @@ QList<QString> SaXManipulateDesktop::getDisplaySize (void) {
 	QList<QString> result;
 	QStringList sizeList = QStringList::split ( " ", size );
 	result.append (
-		new QString(sizeList.first())
+		QString(sizeList.first())
 	);
 	result.append (
-		new QString(sizeList.last())
+		QString(sizeList.last())
 	);
 	return result;
 }
@@ -1138,8 +1137,8 @@ QString SaXManipulateDesktop::getDisplayTraversal (void) {
 	if (size.isEmpty()) {
 		return QString();
 	}
-	int x = size.at(0)->toInt();
-	int y = size.at(1)->toInt();
+	int x = size.at(0).toInt();
+	int y = size.at(1).toInt();
 	double traversal = sqrt (x*x + y*y) / 25.4;
 	QString result;
 	QTextOStream (&result) << traversal;
@@ -1164,8 +1163,8 @@ QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
 	if (size.isEmpty()) {
 		return QList<QString>();
 	}
-	int x = size.at(0)->toInt();
-	int y = size.at(1)->toInt();
+	int x = size.at(0).toInt();
+	int y = size.at(1).toInt();
 	double ar = (double)x / (double)y;
 	if ( ar > 1.4 ) {
 		*setX = "16";
@@ -1177,8 +1176,8 @@ QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
 		*setX = "5";
 		*setY = "4";
 	}
-	result.append (setX);
-	result.append (setY);
+	result.append (*setX);
+	result.append (*setY);
 	return result;
 }
 
@@ -1201,10 +1200,10 @@ QList<QString> SaXManipulateDesktop::getHsyncRange (void) {
 	QList<QString> result;
 	QStringList rangeList = QStringList::split ( "-", range );
 	result.append (
-		new QString(rangeList.first())
+		QString(rangeList.first())
 	);
 	result.append (
-		new QString(rangeList.last())
+		QString(rangeList.last())
 	);
 	return result;
 }
@@ -1228,10 +1227,10 @@ QList<QString> SaXManipulateDesktop::getVsyncRange (void) {
 	QList<QString> result;
 	QStringList rangeList = QStringList::split ( "-", range );
 	result.append (
-		new QString(rangeList.first())
+		QString(rangeList.first())
 	);
 	result.append (
-		new QString(rangeList.last())
+		QString(rangeList.last())
 	);
 	return result;
 }
@@ -1365,10 +1364,8 @@ void SaXManipulateDesktop::setCDBMonitor ( const QString& group ) {
 		mCDBMonitors = new SaXProcess ();
 		mCDBMonitors -> start (CDB_MONITORS);
 	}
-	QList< QDict<QString> > data;
-	data = mCDBMonitors -> getTablePointerCDB_DATA (
-		group
-	);
+	Q3PtrList< Q3Dict<QString> > data;
+	data = mCDBMonitors -> getTablePointerCDB_DATA (group);
 	if (data.isEmpty()) {
 		excCDBRecordNotFound (group);
 		qError (errorString(),EXC_CDBRECORDNOTFOUND);
@@ -1393,21 +1390,21 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorVendorList ( void ) {
 		mCDBMonitors = new SaXProcess ();
 		mCDBMonitors -> start (CDB_MONITORS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		QStringList vnlist = QStringList::split ( ":", it.currentKey() );
 		QString* vendorName = new QString (vnlist.first());
 		int hasVendor = false;
-		QListIterator<QString> io (mCDBMonitorList);
-		for (; io.current(); ++io) {
-		if ( *io.current() == *vendorName ) {
+		QString io;
+		foreach(io,mCDBMonitorList) {
+		if (io == *vendorName ) {
 			hasVendor = true;
 			break;
 		}
 		}
 		if (! hasVendor ) {
-			mCDBMonitorList.append ( vendorName );
+			mCDBMonitorList.append ( *vendorName );
 		}
 	}
 	return mCDBMonitorList;
@@ -1428,14 +1425,14 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorModelList (
 		mCDBMonitors = new SaXProcess ();
 		mCDBMonitors -> start (CDB_MONITORS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		QStringList vnlist = QStringList::split ( ":", it.currentKey() );
 		QString vendorName = vnlist.first();
 		QString* modelName = new QString (vnlist.last());
 		if ( vendorName == vendor ) {
-			mCDBMonitorList.append ( modelName );
+			mCDBMonitorList.append ( *modelName );
 		}
 	}
 	return mCDBMonitorList;
@@ -1444,7 +1441,7 @@ QList<QString> SaXManipulateDesktop::getCDBMonitorModelList (
 //====================================
 // get data dict for a CDB monitor
 //------------------------------------
-QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
+Q3Dict<QString> SaXManipulateDesktop::getCDBMonitorData (
 	const QString& vendor, const QString& name
 ) {
 	// .../
@@ -1458,8 +1455,8 @@ QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
 		mCDBMonitors = new SaXProcess ();
 		mCDBMonitors -> start (CDB_MONITORS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	for (; it.current(); ++it) {
 		if ( it.currentKey() == key ) {
 			mCDBMonitorData = *it.current();
@@ -1471,7 +1468,7 @@ QDict<QString> SaXManipulateDesktop::getCDBMonitorData (
 //====================================
 // get data dict for a CDB monitor
 //------------------------------------
-QDict<QString> SaXManipulateDesktop::getCDBMonitorIDData (
+Q3Dict<QString> SaXManipulateDesktop::getCDBMonitorIDData (
 	const QString& id
 ) {
 	// .../
@@ -1483,8 +1480,8 @@ QDict<QString> SaXManipulateDesktop::getCDBMonitorIDData (
 		mCDBMonitors = new SaXProcess ();
 		mCDBMonitors -> start (CDB_MONITORS);
 	}
-	QDict< QDict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
-	QDictIterator< QDict<QString> > it (CDBData);
+	Q3Dict< Q3Dict<QString> > CDBData = mCDBMonitors -> getTablePointerCDB ();
+	Q3DictIterator< Q3Dict<QString> > it (CDBData);
 	bool found = false;
 	for (; it.current(); ++it) {
 		mCDBMonitorData = *it.current();
@@ -1538,7 +1535,7 @@ QString SaXManipulateDesktop::getVendorForDriver ( const QString& driver ) {
 		qError (errorString(),EXC_PROCESSFAILED);
 	}
 	QList<QString> data = proc -> readStdout();
-	return *data.first();
+	return data.first();
 }
 //====================================
 // setExtraModelineString
@@ -1649,7 +1646,7 @@ QString SaXManipulateDesktop::calculateModeline (
 			qError (errorString(),EXC_PROCESSFAILED);
 		}
 		QList<QString> data = proc->readStdout();
-		int hs = data.at(0)->toInt();
+		int hs = data.at(0).toInt();
 		result = *data.at(2);
 		if (hs <= hsync) {
 			break;
@@ -1703,7 +1700,7 @@ QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 //====================================
 // getMetaData
 //------------------------------------
-QDict<QString> SaXManipulateDesktop::getMetaData ( void ) {
+Q3Dict<QString> SaXManipulateDesktop::getMetaData ( void ) {
 	// .../
 	//! This private function returns the dictionary asociated
 	//! with the SaXMeta data used in profiles. The data is used
@@ -1712,12 +1709,12 @@ QDict<QString> SaXManipulateDesktop::getMetaData ( void ) {
 	//! ----
 	QString cardID;
 	QTextOStream (&cardID) << mDesktopID;
-	QList<char> metaOptions;
-	metaOptions.append ( "-c" );
-	metaOptions.append ( cardID.ascii() );
+	QList<const char*> metaOptions;
+	metaOptions.append ((const char*) "-c" );
+	metaOptions.append ( (const char*)cardID.latin1() );
 	SaXProcess* proc = new SaXProcess ();
 	proc->start ( metaOptions , SAX_META );
-	QDict<QString> metaData = proc->getCurrentTable();
+	Q3Dict<QString> metaData = proc->getCurrentTable();
 	return metaData;
 }
 } // end namespace

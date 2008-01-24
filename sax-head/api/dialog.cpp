@@ -18,22 +18,25 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "dialog.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
+#include <Q3Frame>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCDialog::SCCDialog (
-	QWidgetStack* stack, QDict<QString>* text,
-	QDict<SaXImport> section, QWidget* parent
+	Q3WidgetStack* stack, Q3Dict<QString>* text,
+	Q3Dict<SaXImport> section, QWidget* parent
 ) {
 	//====================================
 	// add frame and layout to stack
 	//------------------------------------
 	if (stack) {
 		mDialogStack = stack;
-		mDialogFrame  = new QFrame ( mDialogStack );
-		mDialogLayout = new QVBoxLayout ( mDialogFrame );
+		mDialogFrame  = new Q3Frame ( mDialogStack );
+		mDialogLayout = new Q3VBoxLayout ( mDialogFrame );
 		mDialogID = mDialogStack -> addWidget ( mDialogFrame );
 	} else {
 		mDialogID = -1;

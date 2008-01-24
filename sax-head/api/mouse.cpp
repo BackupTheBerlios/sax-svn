@@ -17,6 +17,9 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
               :
 STATUS        : Status: Development
 **************/
+
+#include <QListIterator>
+
 #include "mouse.h"
 
 namespace SaXGUI {
@@ -24,13 +27,13 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMouse::SCCMouse (
-	QWidgetStack* stack,QDict<QString>* text,
-	QDict<SaXImport> section, QWidget* parent
+	Q3WidgetStack* stack,Q3Dict<QString>* text,
+	Q3Dict<SaXImport> section, QWidget* parent
 ) : SCCDialog ( stack,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// check for mouse devices
@@ -109,9 +112,9 @@ void SCCMouse::import ( void ) {
 		if (saxMouse.selectPointer (mouseID)) {
 		if (saxMouse.isMouse()) {
 			bool foundID = false;
-			QListIterator<QString> it (inputLayout);
-			for (; it.current();++it) {
-			if (mouseID == it.current()->toInt()) {
+			QString it;
+			foreach (it,inputLayout) {
+			if (mouseID == it.toInt()) {
 				foundID = true;
 				break;
 			}
@@ -134,9 +137,9 @@ void SCCMouse::import ( void ) {
 //------------------------------------
 void SCCMouse::slotActivate ( void ) {
 	int count = 0;
-	QListIterator<SCCMouseDisplay> it (mMouseDisplay);
-	for (; it.current(); ++it) {
-	if (it.current()->isEnabled()) {
+	SCCMouseDisplay* it;
+	foreach (it,mMouseDisplay) {
+	if (it->isEnabled()) {
 		count++;
 	}
 	}
@@ -157,12 +160,12 @@ void SCCMouse::slotActivate ( void ) {
 //------------------------------------
 bool SCCMouse::exportData ( void ) {
 	int mouseID = 0;
-	QListIterator<SCCMouseDisplay> it (mMouseDisplay);
-	for (; it.current() ; ++it) {
+	SCCMouseDisplay* it;
+	foreach (it,mMouseDisplay) {
 		//====================================
 		// check for mouse display's
 		//------------------------------------
-		SCCMouseDisplay* display = (SCCMouseDisplay*)it.current();
+		SCCMouseDisplay* display = it;
 		//if (display->isEnabled()) {
 		//====================================
 		// create manipulators...
@@ -187,8 +190,8 @@ bool SCCMouse::exportData ( void ) {
 		QString model  = modelData -> getModelName();
 		QString zmap;
 		if (! model.isEmpty() ) {
-			QDict<QString> mData = mSection["Pointers"]->getCurrentTable();
-			QDictIterator<QString> it (mData);
+			Q3Dict<QString> mData = mSection["Pointers"]->getCurrentTable();
+			Q3DictIterator<QString> it (mData);
 			for (; it.current() ; ++it) {
 				QString key = it.currentKey();
 				QString val = *it.current();

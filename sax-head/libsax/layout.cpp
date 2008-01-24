@@ -199,7 +199,7 @@ int SaXManipulateLayout::getMultiheadMode ( void ) {
 		SaXManipulateCard cardData (mCard);
 		for (int card=0;card<mCard->getCount();card++) {
 			cardData.selectCard (card);
-			QDict<QString> options = cardData.getOptions();
+			Q3Dict<QString> options = cardData.getOptions();
 			//====================================
 			// nvidia...
 			//------------------------------------
@@ -293,11 +293,8 @@ QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	}
 	QList<QString> layoutList;
 	QStringList positions = QStringList::split ( " ", layout );
-	for ( QStringList::Iterator
-		in = positions.begin(); in != positions.end(); ++in
-	) {
-		QString* pos = new QString (*in);
-		layoutList.append (pos);
+	for ( QStringList::Iterator in = positions.begin(); in != positions.end(); ++in	) {
+		layoutList.append (*in);
 	}
 	return layoutList;
 }
@@ -318,16 +315,11 @@ QList<QString> SaXManipulateLayout::getInputLayout ( void ) {
 	}
 	QList<QString> inputList;
 	QStringList tokens = QStringList::split ( ",", layout );
-	for ( QStringList::Iterator
-		in = tokens.begin(); in != tokens.end(); ++in
-	) {
-		QString* item = new QString (*in);
+	for ( QStringList::Iterator in = tokens.begin(); in != tokens.end(); ++in ) {
 		QRegExp identifier ("\\[(.+)\\]");
-		int pos = identifier.search (*item);
+		int pos = identifier.search (*in);
 		if (pos >= 0) {
-			inputList.append (
-				new QString (identifier.cap(1))
-			);
+			inputList.append (identifier.cap(1));
 		}
 	}
 	return inputList;

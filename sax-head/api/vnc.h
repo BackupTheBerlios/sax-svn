@@ -49,8 +49,8 @@ class SCCVNC : public SCCDialog {
 
 	public:
 	SCCVNC (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget*
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

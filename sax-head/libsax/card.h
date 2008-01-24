@@ -60,8 +60,8 @@ class SaXManipulateCardIF : public SaXException {
 
 	public:
 	virtual QList<QString> getCardDrivers ( void ) = 0;
-	virtual QDict<QString> getCardOptions ( const QString& ) = 0;
-	virtual QDict<QString> getOptions ( void ) = 0;
+	virtual Q3Dict<QString> getCardOptions ( const QString& ) = 0;
+	virtual Q3Dict<QString> getOptions ( void ) = 0;
 	virtual QString getCardDriver ( void ) = 0;
 	virtual QString getCardName   ( void ) = 0;
 	virtual QString getCardVendor ( void ) = 0;
@@ -133,7 +133,7 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 	SaXImport*     mImport;
 	SaXProcess*    mCDBCardModules;
 	QList<QString> mCDBCardDrivers;
-	QDict<QString> mCDBCardOptions;
+	Q3Dict<QString> mCDBCardOptions;
 	int            mCard;
 
 	public:
@@ -149,8 +149,8 @@ class SaXManipulateCard : public SaXManipulateCardIF {
 
 	public:
 	QList<QString> getCardDrivers ( void );
-	QDict<QString> getCardOptions ( const QString& );
-	QDict<QString> getOptions ( void );
+	Q3Dict<QString> getCardOptions ( const QString& );
+	Q3Dict<QString> getOptions ( void );
 	QString getCardDriver ( void );
 	QString getCardName   ( void );
 	QString getCardVendor ( void );

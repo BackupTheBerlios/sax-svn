@@ -110,7 +110,7 @@ void XStringList::setSeperator (const QString& sep) {
 //=====================================
 // XStringList getList...
 //-------------------------------------
-QList<char> XStringList::getList (void) {
+QList<const char*> XStringList::getList (void) {
 	if (! mText->isEmpty()) {
 	char* item = NULL;
 	char* itemlist = (char*) malloc (mText->length() + 1);
@@ -120,8 +120,8 @@ QList<char> XStringList::getList (void) {
 		if (! item) {
 		break;
 		}
-		QString* insert = new QString ( item );
-		mList.append ( *insert );
+		QString insert = QString ( item );
+		mList.append ( insert.toLatin1().data() );
 		item = strtok (NULL,mSeperator->ascii());
 	}
 	}

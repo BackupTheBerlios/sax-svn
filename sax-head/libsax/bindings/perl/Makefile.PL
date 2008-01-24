@@ -1,11 +1,16 @@
 use ExtUtils::MakeMaker;
 use Env;
 
-$QTDIR=$ENV{QTDIR};
-$CFLAGS = $ENV{RPM_OPT_FLAGS};
+#$QTDIR=$ENV{QTDIR};
+
+$QTLIBS = `pkg-config --libs QtCore QtGui Qt3Support`;
+$QTINC = `pkg-config --cflags QtCore QtGui Qt3Support`;
+chomp $QTINC;
+$QTINC = "$QTINC" ."-I/usr/include/Qt";
+$CFLAGS = $ENV{RPM_OPT_FLAGS} ." $QTINC";
 $CFLAGS =~ s/-Wall//;
 
-$INCPATH="-I$QTDIR/include";
+$INCPATH=$QTINC;
 if (-f "/usr/X11R6/include/xf86Parser.h") {
 	$INCPATH=$INCPATH." -iquote /usr/X11R6/include -I.";
 } else {
@@ -14,7 +19,7 @@ if (-f "/usr/X11R6/include/xf86Parser.h") {
 
 WriteMakefile(
   'NAME'     => 'SaX',
-  'LIBS'     => ["-L/usr/X11R6/lib -L/usr/X11R6/lib64 -L$QTDIR/lib -L$QTDIR/lib64 -lm -lxf86config -lqt-mt -lxkbfile"],
+  'LIBS'     => ["-L/usr/X11R6/lib -L/usr/X11R6/lib64 $QTLIBS -lm -lxf86config -lxkbfile"],
   'dynamic_lib' => { 'OTHERLDFLAGS' => '-L../.. -lsax' },
   'OBJECT'   => 'SaX_wrap.o',
   'INC'      => $INCPATH,

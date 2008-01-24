@@ -24,7 +24,7 @@ STATUS        : Status: Development
 // Includes
 //------------------------------------
 #include <qfile.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstringlist.h>
 #include <errno.h>
 #include <stdlib.h>
@@ -46,7 +46,7 @@ namespace SaXGUI {
 class SCCFile : public QFile {
 	private:
 	QFile* mHandle;
-	QDict<QString> gtx;
+	Q3Dict<QString> gtx;
 	QList<QString> gtxlist;
 
 	private:
@@ -54,10 +54,10 @@ class SCCFile : public QFile {
 	
 	public:
 	QList<QString> readList ( void );
-	QDict<QString> readDict ( void );
+	Q3Dict<QString> readDict ( void );
 
 	public:
-	QDict<QString> getDataDict ( void );
+	Q3Dict<QString> getDataDict ( void );
 	QList<QString> getDataList ( void );
 
 	public:

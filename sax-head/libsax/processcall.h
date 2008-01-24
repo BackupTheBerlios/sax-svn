@@ -26,7 +26,7 @@ STATUS        : Status: Development
 //------------------------------------
 #include <qlist.h>
 #include <qstring.h>
-#include <qtextstream.h>
+#include <q3textstream.h>
 
 //====================================
 // Defines...

@@ -207,7 +207,7 @@ void SaXPluglib::setDebug ( bool enable ) {
 // translate QString to std::string
 //------------------------------------
 std::string SaXPluglib::STLstring (const QString& qstr) {
-	return std::string (qstr.data());
+	return std::string (qstr.latin1());
 }
 
 //====================================
@@ -215,9 +215,9 @@ std::string SaXPluglib::STLstring (const QString& qstr) {
 //------------------------------------
 std::deque<std::string> SaXPluglib::STLdeque (const QList<QString>& qlist) {
 	std::deque<std::string> list;
-	QListIterator<QString> it (qlist);
-	for (; it.current(); ++it) {
-		list.push_back (STLstring(*it.current()));
+	QString it;
+	foreach (it,qlist) {
+		list.push_back (STLstring(it));
 	}
 	return list;
 }
@@ -226,10 +226,10 @@ std::deque<std::string> SaXPluglib::STLdeque (const QList<QString>& qlist) {
 // translate QDict to std::map
 //------------------------------------
 std::map<std::string,std::string> SaXPluglib::STLmap (
-	const QDict<QString>& qdict
+	const Q3Dict<QString>& qdict
 ) {
 	std::map<std::string,std::string> dict;
-	QDictIterator<QString> it (qdict);
+	Q3DictIterator<QString> it (qdict);
 	for (; it.current(); ++it) {
 		dict.insert ( std::make_pair (
 			STLstring(it.currentKey()),STLstring(*it.current())

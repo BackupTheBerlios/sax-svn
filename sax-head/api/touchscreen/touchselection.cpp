@@ -18,24 +18,26 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "touchselection.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCTouchSelection::SCCTouchSelection (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int display, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget 
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
@@ -45,13 +47,13 @@ SCCTouchSelection::SCCTouchSelection (
 	QString translation = mText["AssignToucher"];
 	translation.replace ( QRegExp("\%1"),displayNr );
 	mCheckEnable = new QCheckBox ( translation,this );
-	mModelVendorGroup = new QButtonGroup (
-		1,Vertical,mText["TouchSelection"],this
+	mModelVendorGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["TouchSelection"],this
 	);
-	mVendorList = new QListBox ( mModelVendorGroup );
-	mModelList  = new QListBox ( mModelVendorGroup );
-	mPortGroup = new QButtonGroup (
-		1,Vertical,mText["ConnectionPort"],this
+	mVendorList = new Q3ListBox ( mModelVendorGroup );
+	mModelList  = new Q3ListBox ( mModelVendorGroup );
+	mPortGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["ConnectionPort"],this
 	);
 	mPortBox = new QComboBox ( mPortGroup );
 
@@ -63,12 +65,12 @@ SCCTouchSelection::SCCTouchSelection (
 		this         , SLOT   (slotActivateToucher ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (selectionChanged ( QListBoxItem* )),
-		this         , SLOT   (slotVendor       ( QListBoxItem* ))
+		mVendorList  , SIGNAL (selectionChanged ( Q3ListBoxItem* )),
+		this         , SLOT   (slotVendor       ( Q3ListBoxItem* ))
 	);
 	QObject::connect (
-		mModelList   , SIGNAL (selectionChanged ( QListBoxItem* )),
-		this         , SLOT   (slotName         ( QListBoxItem* ))
+		mModelList   , SIGNAL (selectionChanged ( Q3ListBoxItem* )),
+		this         , SLOT   (slotName         ( Q3ListBoxItem* ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -92,7 +94,7 @@ void SCCTouchSelection::init ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// create manipulators... 
@@ -104,9 +106,9 @@ void SCCTouchSelection::init ( void ) {
 	// insert CDB touchscreen vendors
 	//------------------------------------
 	mCDBTouchScreenVendors = mSaxToucher->getPanelVendorList();
-	QListIterator<QString> it (mCDBTouchScreenVendors);
-	for (; it.current(); ++it) {
-		mVendorList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBTouchScreenVendors) {
+		mVendorList -> insertItem (it);
 	}
 	mVendorList -> sort();
 
@@ -159,11 +161,11 @@ void SCCTouchSelection::import ( void ) {
 	QString vendorName = mSaxToucher -> getVendor();
 	QString modelName  = mSaxToucher -> getName(); 
 	if ((! vendorName.isEmpty()) && (! modelName.isEmpty())) {
-		QListBoxItem* vendor = mVendorList -> findItem ( vendorName );
+		Q3ListBoxItem* vendor = mVendorList -> findItem ( vendorName );
 		if ( vendor ) {
 			mVendorList -> setSelected ( vendor, true );
 			slotVendor ( vendor );
-			QListBoxItem* name = mModelList -> findItem ( modelName );
+			Q3ListBoxItem* name = mModelList -> findItem ( modelName );
 			if ( name ) {
 				mModelList -> setSelected ( name, true );
 				slotName ( name );
@@ -191,10 +193,10 @@ void SCCTouchSelection::import ( void ) {
 	//-------------------------------------
 	SaXManipulateLayout saxLayout ( mSection["Layout"],mSection["Card"] );
 	QList<QString> inputLayout = saxLayout.getInputLayout();
-	QListIterator<QString> it (inputLayout);
+	QString it;
 	bool foundID = false;
-	for (; it.current();++it) {
-		if (touchID[mDisplay] == it.current()->toInt()) {
+	foreach (it,inputLayout) {
+		if (touchID[mDisplay] == it.toInt()) {
 			foundID = true;
 			break;
 		}
@@ -221,7 +223,7 @@ void SCCTouchSelection::slotActivateToucher ( void ) {
 //====================================
 // slotVendor
 //------------------------------------
-void SCCTouchSelection::slotVendor ( QListBoxItem* item ) {
+void SCCTouchSelection::slotVendor ( Q3ListBoxItem* item ) {
 	if (! mSaxToucher ) {
 		return;
 	}
@@ -229,20 +231,20 @@ void SCCTouchSelection::slotVendor ( QListBoxItem* item ) {
 	mCDBTouchScreenModels = mSaxToucher->getPanelModelList (
 		item->text()
 	);
-	QListIterator<QString> it (mCDBTouchScreenModels);
-	for (; it.current(); ++it) {
-		mModelList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBTouchScreenModels) {
+		mModelList -> insertItem (it);
 	}
 	mModelList -> sort();
 }
 //====================================
 // slotName
 //------------------------------------
-void SCCTouchSelection::slotName ( QListBoxItem* item ) {
+void SCCTouchSelection::slotName ( Q3ListBoxItem* item ) {
 	if (! mSaxToucher ) {
 		return;
 	}
-	QDict<QString> dataDict = mSaxToucher->getPanelData (
+	Q3Dict<QString> dataDict = mSaxToucher->getPanelData (
 		mVendorList->currentText(),item->text()
 	);
 	if (dataDict["Device"]) {

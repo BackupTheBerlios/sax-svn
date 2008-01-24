@@ -65,9 +65,9 @@ namespace SaX {
 */
 class SaXKeyRulesIF : public SaXException {
 	public:
-	virtual QDict<QString> getModels   ( void ) = 0;
-	virtual QDict<QString> getLayouts  ( void ) = 0;
-	virtual QDict<QString> getOptions  ( void ) = 0;
+	virtual Q3Dict<QString> getModels   ( void ) = 0;
+	virtual Q3Dict<QString> getLayouts  ( void ) = 0;
+	virtual Q3Dict<QString> getOptions  ( void ) = 0;
 	virtual QList<QString> getVariants ( const QString& ) = 0;
 
 	public:
@@ -87,16 +87,16 @@ class SaXKeyRules : public SaXKeyRulesIF {
 	void loadRules ( QString );
 
 	private:
-	QDict<QString> mModels;
-	QDict<QString> mLayouts;
-	QDict<QString> mOptions;
-	QDict<QStringList> mVarLists;
+	Q3Dict<QString> mModels;
+	Q3Dict<QString> mLayouts;
+	Q3Dict<QString> mOptions;
+	Q3Dict<QStringList> mVarLists;
 	QString mX11Dir;
 
 	public:
-	QDict<QString> getModels   ( void );
-	QDict<QString> getLayouts  ( void );
-	QDict<QString> getOptions  ( void );
+	Q3Dict<QString> getModels   ( void );
+	Q3Dict<QString> getLayouts  ( void );
+	Q3Dict<QString> getOptions  ( void );
 	QList<QString> getVariants ( const QString& );
 
 	public:

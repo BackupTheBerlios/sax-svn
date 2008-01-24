@@ -17,6 +17,10 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
               :
 STATUS        : Status: Development
 **************/
+
+#include <QWidget>
+#include <QDesktopWidget>
+
 #include "xapi.h"
 
 //=====================================
@@ -189,7 +193,8 @@ int main (int argc,char*argv[]) {
 	//=====================================
 	// init program...
 	//-------------------------------------
-	QWidget::WFlags wflags = Qt::WType_TopLevel;
+	Qt::WindowFlags wflags = Qt::WType_TopLevel;
+	//QWidget::WindowFlags wflags = Qt::WType_TopLevel;
 	int width  = qApp->desktop()->width();
 	int height = qApp->desktop()->height();
 	if ((mSizeCheck) && (width == 800) && (height == 600)) {

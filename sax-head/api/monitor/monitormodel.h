@@ -25,16 +25,16 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
 #include <qspinbox.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <math.h>
 
 //=====================================
@@ -81,7 +81,7 @@ class SCCMonitorModel : public SCCDialog {
 	//------------------------------------
 	QList<QString> mCDBMonitorVendors;
 	QList<QString> mCDBMonitorModels;
-	QDict<QString> mCDBMonitorData;
+	Q3Dict<QString> mCDBMonitorData;
 	QList<QString> mTraversalList;
 	QList<QString> mAspectList;
 	QString        mExtraModeline;
@@ -90,23 +90,23 @@ class SCCMonitorModel : public SCCDialog {
 	SaXManipulateDesktop* mSaxDesktop;
 
 	private:
-	QVBox*         mModelTab;
-	QVBox*         mAspectTab;
-	QVBox*         mSyncTab;
+	Q3VBox*         mModelTab;
+	Q3VBox*         mAspectTab;
+	Q3VBox*         mSyncTab;
 
 	private:
-	QTabDialog*    mModelDialog;
-	QButtonGroup*  mModelVendorGroup;
-	QListBox*      mVendorList;
-	QListBox*      mModelList;
-	QHBox*         mToolBox;
+	Q3TabDialog*    mModelDialog;
+	Q3ButtonGroup*  mModelVendorGroup;
+	Q3ListBox*      mVendorList;
+	Q3ListBox*      mModelList;
+	Q3HBox*         mToolBox;
 	QCheckBox*     mCheckDPMS;
 	QPushButton*   mDisk;
 
 	private:
-	QButtonGroup*  mSyncGroup;
+	Q3ButtonGroup*  mSyncGroup;
 	QLabel*        mLabelWarning;
-	QVBox*         mSyncBox;
+	Q3VBox*         mSyncBox;
 	QLabel*        mLabelHorizontal;
 	QSpinBox*      mHSpinMin;
 	QSpinBox*      mHSpinMax;
@@ -117,12 +117,12 @@ class SCCMonitorModel : public SCCDialog {
 	QLabel*        mLabelVUnit;
 
 	private:
-	QButtonGroup*  mAspectGroup;
+	Q3ButtonGroup*  mAspectGroup;
 	QLabel*        mLabelAspect;
 	QLabel*        mLabelRatio;
 	QComboBox*     mAspect;
 	QComboBox*     mTraversal;
-	QButtonGroup*  mDisplaySizeGroup;
+	Q3ButtonGroup*  mDisplaySizeGroup;
 	QLabel*        mLabelX;
 	QLabel*        mLabelY;
 	QSpinBox*      mSizeX;
@@ -157,8 +157,8 @@ class SCCMonitorModel : public SCCDialog {
 	public slots:
 	void slotOk   ( void );
 	void slotDisk ( void );
-	void slotName   ( QListBoxItem* );
-	void slotVendor ( QListBoxItem* );
+	void slotName   ( Q3ListBoxItem* );
+	void slotVendor ( Q3ListBoxItem* );
 	void slotRatio     ( int );
 	void slotTraversal ( int );
 
@@ -167,7 +167,7 @@ class SCCMonitorModel : public SCCDialog {
 
 	public:
 	SCCMonitorModel (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		const QString&,const QString&,const QString&,
 		int,QWidget*
 	);

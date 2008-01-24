@@ -27,9 +27,9 @@
 	$1 = &temp;
 }
 //==================================
-// Allow QDict<QString> return types
+// Allow Q3Dict<QString> return types
 //----------------------------------
-%typemap(out) QDict<QString> {
+%typemap(out) Q3Dict<QString> {
 	HV *hash;
 	SV **svs;
 	int i   = 0;
@@ -37,14 +37,14 @@
 	hash = newHV();
 	len = $1.count();
 	svs = (SV**) malloc(len*sizeof(SV*));
-	QDictIterator<QString> it ($1);
+	Q3DictIterator<QString> it ($1);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString* val = new QString (*it.current());
 		svs[i] = sv_newmortal();
 		hv_store(hash,
-			key.ascii(), key.length(),
-			newSVpv(val->ascii(),val->length()),0
+			key.toAscii(), key.length(),
+			newSVpv(val->toAscii(),val->length()),0
 		);
 		i++;
 	}
@@ -65,7 +65,7 @@
 	svs = (SV **) malloc(len*sizeof(SV *));
 	for (i = 0; i < len ; i++) {
 		svs[i] = sv_newmortal();
-		sv_setpv((SV*)svs[i],$1.at(i)->ascii());
+		sv_setpv((SV*)svs[i],$1.at(i).toAscii());
 	};
 	myav =  av_make(len,svs);
 	free(svs);

@@ -24,6 +24,10 @@ STATUS        : Status: Development
 #include <qpushbutton.h>
 #include <qwidget.h>
 #include <qpainter.h>
+//Added by qt3to4:
+#include <QPaintEvent>
+#include <QMouseEvent>
+#include <QPixmap>
 
 namespace SaXGUI {
 //====================================

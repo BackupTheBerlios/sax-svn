@@ -22,7 +22,7 @@
 %typemap(imtype) QString "string"
 %typemap(cstype) QString "string"
 %typemap(out) QString {
-	$result = SWIG_csharp_string_callback($1.data());
+	$result = SWIG_csharp_string_callback($1.toUtf8().constData());
 }
 %typemap(csin) QString "$csinput"
 %typemap(csout, excode=SWIGEXCODE) QString {

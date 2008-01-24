@@ -18,34 +18,39 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "keyboardlayout.h"
+//Added by qt3to4:
+#include <QLabel>
+#include <Q3VBoxLayout>
+
+#include <QStringList>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCKeyboardLayout::SCCKeyboardLayout (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
-	mPrimaryGroup = new QButtonGroup (
-		1,Horizontal,mText["KBDPrimary"],this
+	mPrimaryGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["KBDPrimary"],this
 	);
-	QHBox* typeBox    = new QHBox ( mPrimaryGroup );
-	QHBox* layoutBox  = new QHBox ( mPrimaryGroup );
-	QHBox* variantBox = new QHBox ( mPrimaryGroup );
+	Q3HBox* typeBox    = new Q3HBox ( mPrimaryGroup );
+	Q3HBox* layoutBox  = new Q3HBox ( mPrimaryGroup );
+	Q3HBox* variantBox = new Q3HBox ( mPrimaryGroup );
 	mLabelType    = new QLabel    (
 		mText["KBDTypeLabel"],typeBox
 	);
@@ -58,40 +63,40 @@ SCCKeyboardLayout::SCCKeyboardLayout (
 		mText["KBDVariantLabel"],variantBox
 	);
 	mVariantBox   = new QComboBox ( FALSE,variantBox );
-	mAdditionalGroup = new QButtonGroup (
-		1,Horizontal,mText["KBDAdditional"],this
+	mAdditionalGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["KBDAdditional"],this
 	);
-	mAddLayout = new QListView  ( mAdditionalGroup );
+	mAddLayout = new Q3ListView  ( mAdditionalGroup );
 	mAddLayout -> setItemMargin ( 2 );
 	mAddLayout -> setAllColumnsShowFocus (true);
 	mViewStatus = mAddLayout -> addColumn ( mText["KBDStatus"] );
 	mViewLayout = mAddLayout -> addColumn ( mText["KBDAddLayout"] );
 	mViewKey    = mAddLayout -> addColumn ( mText["KBDKey"] );
 	mViewVariant= mAddLayout -> addColumn ( mText["KBDVariant"] );
-	mAddLayout -> setResizeMode  ( QListView::LastColumn );
+	mAddLayout -> setResizeMode  ( Q3ListView::LastColumn );
 	mAddLayout -> adjustSize();
 	mAdditionalGroup -> addSpace ( 10 );
-	QHBox* addVariantBox = new QHBox ( mAdditionalGroup );
+	Q3HBox* addVariantBox = new Q3HBox ( mAdditionalGroup );
 	mLabelAddVariant = new QLabel    (
 		mText["KBDVariantLabel"],addVariantBox
 	);
 	mAddVariantBox   = new QComboBox ( FALSE,addVariantBox );
-	QList<QLabel> labelList;
+	QList<QLabel*> labelList;
 	labelList.append ( mLabelType );
 	labelList.append ( mLabelLayout );
 	labelList.append ( mLabelVariant );
 	labelList.append ( mLabelAddVariant );
 	QFontMetrics  metrics ( font() );
-	QListIterator<QLabel> it (labelList);
+	QLabel* it;
 	int maxWidth = 0;
-	for (; it.current(); ++it) {
-	if (metrics.width (it.current()->text()) > maxWidth) {
-		maxWidth = metrics.width (it.current()->text());
+	foreach (it,labelList) {
+	if (metrics.width (it->text()) > maxWidth) {
+		maxWidth = metrics.width (it->text());
 	}
 	}
-	it.toFirst();
-	for (; it.current(); ++it) {
-		it.current()->setFixedWidth ( maxWidth + 15 );
+//	it.toFront();
+	foreach (it,labelList) {
+		it->setFixedWidth ( maxWidth + 15 );
 	}
 	//=====================================
 	// connect widgets
@@ -113,8 +118,8 @@ SCCKeyboardLayout::SCCKeyboardLayout (
 		this           , SLOT   (slotAddVariant ( int ))
 	);
 	QObject::connect(
-		mAddLayout     , SIGNAL (clicked        ( QListViewItem* )),
-		this           , SLOT   (slotAddLayout  ( QListViewItem* ))
+		mAddLayout     , SIGNAL (clicked        ( Q3ListViewItem* )),
+		this           , SLOT   (slotAddLayout  ( Q3ListViewItem* ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -131,7 +136,7 @@ void SCCKeyboardLayout::init ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// query XKB file extension
@@ -143,8 +148,8 @@ void SCCKeyboardLayout::init ( void ) {
 	//====================================
 	// insert available layouts
 	//------------------------------------
-	QListBox* layoutList = new QListBox();
-	QDictIterator<QString> itLayout (mLayoutDict);
+	QStringList layoutList;
+	Q3DictIterator<QString> itLayout (mLayoutDict);
 	for (; itLayout.current(); ++itLayout) {
 		QString val = mText[*itLayout.current()];
 		if (val.isEmpty()) {
@@ -153,27 +158,27 @@ void SCCKeyboardLayout::init ( void ) {
 				itLayout.current()->ascii()
 			);
 		}
-		layoutList -> insertItem ( val );
-		QCheckListItem* item = new QCheckListItem (
-			mAddLayout,"",QCheckListItem::CheckBox
+		layoutList.push_back(val);
+		Q3CheckListItem* item = new Q3CheckListItem (
+			mAddLayout,"",Q3CheckListItem::CheckBox
 		);
 		item->setText ( 1, val );
 		item->setText ( 2, itLayout.currentKey() );
 	}
-	layoutList -> sort ( true );
-	mLayoutBox -> setListBox ( layoutList );
+	layoutList.sort();
+	mLayoutBox -> insertItems ( 0, layoutList );
 
 	//====================================
 	// insert available models
 	//------------------------------------
-	QListBox* typeBox = new QListBox ();
-	QDictIterator<QString> itModel (mModelDict);
+	QStringList typeBox;
+	Q3DictIterator<QString> itModel (mModelDict);
 	for (; itModel.current(); ++itModel) {
 		QString item = *itModel.current();
-		typeBox -> insertItem ( item );
+		typeBox.push_back( item );
 	}
-	typeBox  -> sort ( true );
-	mTypeBox -> setListBox ( typeBox );
+	typeBox.sort( );
+	mTypeBox -> insertItems ( 0, typeBox );
 	mAddLayout -> setSorting (1);
 }
 //====================================
@@ -183,7 +188,7 @@ void SCCKeyboardLayout::import ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// create needed manipulators
@@ -201,7 +206,7 @@ void SCCKeyboardLayout::import ( void ) {
 	//=====================================
 	// select base keyboard model
 	//-------------------------------------
-	QDictIterator<QString> itModel (mModelDict);
+	Q3DictIterator<QString> itModel (mModelDict);
 	for (; itModel.current(); ++itModel) {
 	if (itModel.currentKey() == XKBModel) {
 		mTypeBox -> setCurrentText ( *itModel.current() );
@@ -213,11 +218,11 @@ void SCCKeyboardLayout::import ( void ) {
 	QString baseLayout;
 	QString baseVariant;
 	if (! XKBLayouts.isEmpty()) {
-		baseLayout  = *XKBLayouts.getFirst();
+		baseLayout  = *XKBLayouts.front();
 		XKBLayouts.removeFirst();
 	}
 	if (! XKBVariants.isEmpty()) {
-		baseVariant = *XKBVariants.getFirst();
+		baseVariant = XKBVariants.front();
 		XKBVariants.removeFirst();
 	}
 	int varCount = 0;
@@ -225,7 +230,7 @@ void SCCKeyboardLayout::import ( void ) {
 	// select base/secondary layout(s)
 	//-------------------------------------
 	// 1) primary layout...
-	QDictIterator<QString> itLayout (mLayoutDict);
+	Q3DictIterator<QString> itLayout (mLayoutDict);
 	for (; itLayout.current(); ++itLayout) {
 		if (itLayout.currentKey() == baseLayout) {
 			QString val = mText[*itLayout.current()];
@@ -239,17 +244,17 @@ void SCCKeyboardLayout::import ( void ) {
 		}
 	}
 	// 2) secondary layout and variants...
-	QListIterator<QString> it (XKBLayouts);
-	for (; it.current(); ++it) {
-	QListViewItemIterator itAdd (mAddLayout);
+	QString it;
+	foreach (it,XKBLayouts) {
+	Q3ListViewItemIterator itAdd (mAddLayout);
 	for ( ; itAdd.current(); ++itAdd ) {
-		QCheckListItem* item = (QCheckListItem*)itAdd.current();
+		Q3CheckListItem* item = (Q3CheckListItem*)itAdd.current();
 		QString layout = itAdd.current()->text(2);
-		if (layout == *it.current()) {
+		if (layout == it) {
 			item -> setOn (true);
-			QString* variant = XKBVariants.at (varCount);
-			if ((variant) && (*variant != "!")) {
-				item -> setText ( 3 , *XKBVariants.at(varCount) );
+			QString variant = XKBVariants.at (varCount);
+			if ((!variant.isNull()) && (variant != "!")) {
+				item -> setText ( 3 , XKBVariants.at(varCount) );
 			}
 			mAddLayout -> setSelected (itAdd.current(), true);
 			mAddLayout -> ensureItemVisible (item);
@@ -273,7 +278,7 @@ void SCCKeyboardLayout::import ( void ) {
 // getType
 //------------------------------------
 QString SCCKeyboardLayout::getType ( void ) {
-	QDictIterator<QString> itModel (mModelDict);
+	Q3DictIterator<QString> itModel (mModelDict);
 	for (; itModel.current(); ++itModel) {
 		QString item = *itModel.current();
 		if (item == mTypeBox->currentText()) {
@@ -289,13 +294,13 @@ QString SCCKeyboardLayout::getLayout ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// build full qualified layout string
 	//-------------------------------------
 	mXKBLayout = "";
-	QDictIterator<QString> itLayout (mLayoutDict);
+	Q3DictIterator<QString> itLayout (mLayoutDict);
 	for (; itLayout.current(); ++itLayout) {
 		QString val = mText[*itLayout.current()];
 		if (val.isEmpty()) {
@@ -308,9 +313,9 @@ QString SCCKeyboardLayout::getLayout ( void ) {
 			mXKBLayout = itLayout.currentKey();
 		}
 	}
-	QListViewItemIterator itAdd (mAddLayout);
+	Q3ListViewItemIterator itAdd (mAddLayout);
 	for ( ; itAdd.current(); ++itAdd ) {
-		QCheckListItem* item = (QCheckListItem*)itAdd.current();
+		Q3CheckListItem* item = (Q3CheckListItem*)itAdd.current();
 		if (item->isOn()) {
 			QString layout  = itAdd.current()->text(2);
 			mXKBLayout.sprintf("%s,%s",
@@ -325,15 +330,15 @@ QString SCCKeyboardLayout::getLayout ( void ) {
 //------------------------------------
 QString SCCKeyboardLayout::getVariant ( void ) {
 	mXKBVariant = "";
-	if (mVariantBox->currentText()) {
+	if (!mVariantBox->currentText().isNull()) {
 		mXKBVariant = mVariantBox->currentText();
 	}
-	QListViewItemIterator itAdd (mAddLayout);
+	Q3ListViewItemIterator itAdd (mAddLayout);
 	for ( ; itAdd.current(); ++itAdd ) {
-		QCheckListItem* item = (QCheckListItem*)itAdd.current();
+		Q3CheckListItem* item = (Q3CheckListItem*)itAdd.current();
 		if (item->isOn()) {
 			QString variant = "basic";
-			if (itAdd.current()->text(3)) {
+			if (!itAdd.current()->text(3).isNull()) {
 				variant = itAdd.current()->text(3);
 			}
 			mXKBVariant.sprintf("%s,%s",
@@ -366,7 +371,7 @@ void SCCKeyboardLayout::slotVariant ( int ) {
 // slotAddVariant
 //------------------------------------
 void SCCKeyboardLayout::slotAddVariant ( int ) {
-	QListViewItem* item = mAddLayout -> selectedItem();
+	Q3ListViewItem* item = mAddLayout -> selectedItem();
 	item -> setText (3,"");
 	if (mAddVariantBox->currentText() != "basic") {
 		item -> setText (3, mAddVariantBox->currentText());
@@ -376,7 +381,7 @@ void SCCKeyboardLayout::slotAddVariant ( int ) {
 //====================================
 // slotAddLayout
 //------------------------------------
-void SCCKeyboardLayout::slotAddLayout ( QListViewItem* ) {
+void SCCKeyboardLayout::slotAddLayout ( Q3ListViewItem* ) {
 	updateVariants();
 	emit sigApply();
 }
@@ -408,14 +413,14 @@ void SCCKeyboardLayout::updateVariants ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// 1) Additional Variants...
 	//------------------------------------
 	mAddVariantBox -> clear();
 	SaXKeyRules XKBFile;
-	QListViewItem* item = mAddLayout -> selectedItem();
+	Q3ListViewItem* item = mAddLayout -> selectedItem();
 	if (item) {
 		QList<QString> list = XKBFile.getVariants(item->text (2));
 		if (! list.isEmpty()) {
@@ -424,7 +429,7 @@ void SCCKeyboardLayout::updateVariants ( void ) {
 			mAddVariantBox -> insertItem ("basic");
 		}
 		mAddVariantBox->setCurrentText ("basic");
-		if ((item->text(3)) && (! item->text(3).isEmpty())) {
+		if ((!item->text(3).isNull()) && (! item->text(3).isEmpty())) {
 			mAddVariantBox -> setCurrentText (item->text(3));
 		}
 	}
@@ -434,7 +439,7 @@ void SCCKeyboardLayout::updateVariants ( void ) {
 	int curItem = mVariantBox -> currentItem();
 	QString curText = mVariantBox -> currentText();
 	mVariantBox -> clear();
-	QDictIterator<QString> it (mLayoutDict);
+	Q3DictIterator<QString> it (mLayoutDict);
 	bool emptyVariantList = true;
 	for (; it.current(); ++it) {
 		QString val = mText[*it.current()];
@@ -467,9 +472,9 @@ void SCCKeyboardLayout::updateVariants ( void ) {
 //------------------------------------
 QStringList SCCKeyboardLayout::translateList ( const QList<QString>& list ) {
 	QStringList result;
-	QListIterator<QString> it (list);
-	for (; it.current(); ++it) {
-		result << *it.current();
+	QString it;
+	foreach (it,list) {
+		result << it;
 	}
 	return result;
 }

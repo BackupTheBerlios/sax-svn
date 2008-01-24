@@ -78,10 +78,10 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual void setCDBMonitor ( const QString& ) = 0;
 	virtual QList<QString> getCDBMonitorVendorList ( void ) = 0;
 	virtual QList<QString> getCDBMonitorModelList  ( const QString& ) = 0;
-	virtual QDict<QString> getCDBMonitorData (
+	virtual Q3Dict<QString> getCDBMonitorData (
 		const QString&,const QString&
 	) = 0;
-	virtual QDict<QString> getCDBMonitorIDData (
+	virtual Q3Dict<QString> getCDBMonitorIDData (
 		const QString&
 	) = 0;
 	virtual void setCDBMonitorData (
@@ -187,14 +187,14 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	SaXImportSysp* mSyspDesktop;
 	SaXProcess*    mCDBMonitors;
 	QList<QString> mCDBMonitorList;
-	QDict<QString> mCDBMonitorData;
+	Q3Dict<QString> mCDBMonitorData;
 	int            mDesktopID;
 
 	private:
 	QString getVendorForDriver ( const QString& );
 	QString calculateModeline  ( int,int,int,int );
 	QString getDriverOptionsDualHeadProfile ( const QString& );
-	QDict<QString> getMetaData ( void );
+	Q3Dict<QString> getMetaData ( void );
 	QList<QString> getResolutionsFromDDC ( const QString& );
 
 	public:
@@ -222,8 +222,8 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	void setCDBMonitor ( const QString& );
 	QList<QString> getCDBMonitorVendorList ( void );
 	QList<QString> getCDBMonitorModelList  ( const QString& );
-	QDict<QString> getCDBMonitorData ( const QString&, const QString& );
-	QDict<QString> getCDBMonitorIDData ( const QString& );
+	Q3Dict<QString> getCDBMonitorData ( const QString&, const QString& );
+	Q3Dict<QString> getCDBMonitorIDData ( const QString& );
 	void setCDBMonitorData (
 		const QString&, const QString&,
 		const QString&, const QString&

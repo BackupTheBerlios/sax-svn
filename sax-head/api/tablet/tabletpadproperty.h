@@ -23,12 +23,12 @@ STATUS        : Status: Development
 //=====================================
 // Includes
 //-------------------------------------
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qradiobutton.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qpushbutton.h>
-#include <qtabdialog.h>
-#include <qvbox.h>
+#include <q3tabdialog.h>
+#include <q3vbox.h>
 
 //=====================================
 // Includes
@@ -54,7 +54,7 @@ class SCCTabletPadProperty : public SCCDialog {
 
 	public:
 	SCCTabletPadProperty (
-		QDict<QString>*,QDict<SaXImport>,
+		Q3Dict<QString>*,Q3Dict<SaXImport>,
 		const QString&,int,QWidget*
 	);
 };

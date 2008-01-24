@@ -18,93 +18,95 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "keyboardoptions.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCKeyboardOptions::SCCKeyboardOptions (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
-	mXKBOptionView = new QListView (this);
+	mXKBOptionView = new Q3ListView (this);
 	mXKBOptionView -> addColumn(mText["XKBOptions"]);
-	mXKBOptionView -> setResizeMode (QListView::LastColumn);
+	mXKBOptionView -> setResizeMode (Q3ListView::LastColumn);
 	mXKBOptionView -> setRootIsDecorated(false);
 	mXKBOptionView -> setSorting ( -1 );
 
 	//=====================================
 	// add eurosign: tagged options
 	//-------------------------------------
-	mIDEuroSign = new QCheckListItem (
+	mIDEuroSign = new Q3CheckListItem (
 		mXKBOptionView,mText["XKBEuroSign"]
 	);
-	mIDEuroSignNone = new QCheckListItem (
-		mIDEuroSign,mText["XKBNone"],QCheckListItem::RadioButton
+	mIDEuroSignNone = new Q3CheckListItem (
+		mIDEuroSign,mText["XKBNone"],Q3CheckListItem::RadioButton
 	);
 	//=====================================
 	// add caps: tagged options
 	//-------------------------------------
-	mIDCapsLock = new QCheckListItem (
+	mIDCapsLock = new Q3CheckListItem (
 		mXKBOptionView,mText["XKBCapsLock"]
 	);
-	mIDCapsLockNone = new QCheckListItem (
-		mIDCapsLock,mText["XKBNone"],QCheckListItem::RadioButton
+	mIDCapsLockNone = new Q3CheckListItem (
+		mIDCapsLock,mText["XKBNone"],Q3CheckListItem::RadioButton
 	);
 	//=====================================
 	// add altwin: tagged options
 	//-------------------------------------
-	mIDAltWinKey = new QCheckListItem (
+	mIDAltWinKey = new Q3CheckListItem (
 		mXKBOptionView,mText["XKBAltWinKey"]
 	);
-	mIDAltWinKeyNone = new QCheckListItem (
-		mIDAltWinKey,mText["XKBNone"],QCheckListItem::RadioButton
+	mIDAltWinKeyNone = new Q3CheckListItem (
+		mIDAltWinKey,mText["XKBNone"],Q3CheckListItem::RadioButton
 	); 
 	//=====================================
 	// add lv3: tagged options
 	//-------------------------------------
-	mIDThirdLevel = new QCheckListItem (
-		mXKBOptionView,mText["XKBThirdLevelChooser"],QCheckListItem::CheckBox
+	mIDThirdLevel = new Q3CheckListItem (
+		mXKBOptionView,mText["XKBThirdLevelChooser"],Q3CheckListItem::CheckBox
 	);
 	//=====================================
 	// add ctrl: tagged options
 	//-------------------------------------
-	mIDControl = new QCheckListItem (
+	mIDControl = new Q3CheckListItem (
 		mXKBOptionView,mText["XKBControlKey"]
 	);
-	mIDControlNone = new QCheckListItem (
-		mIDControl,mText["XKBNone"],QCheckListItem::RadioButton
+	mIDControlNone = new Q3CheckListItem (
+		mIDControl,mText["XKBNone"],Q3CheckListItem::RadioButton
 	);
 	//=====================================
 	// add compose: tagged options
 	//-------------------------------------
-	mIDCompose = new QCheckListItem (
-		mXKBOptionView,mText["XKBComposeKey"],QCheckListItem::CheckBox
+	mIDCompose = new Q3CheckListItem (
+		mXKBOptionView,mText["XKBComposeKey"],Q3CheckListItem::CheckBox
 	);
 	//=====================================
 	// add grp_led: tagged options
 	//-------------------------------------
-	mIDKbdLedToShow = new QCheckListItem (
-		mXKBOptionView,mText["XKBUseKbdLed"],QCheckListItem::CheckBox
+	mIDKbdLedToShow = new Q3CheckListItem (
+		mXKBOptionView,mText["XKBUseKbdLed"],Q3CheckListItem::CheckBox
 	);
 	//=====================================
 	// add grp: tagged options
 	//-------------------------------------	
-	mIDGroupShiftLock = new QCheckListItem (
-		mXKBOptionView,mText["XKBShiftLockGroup"],QCheckListItem::CheckBox
+	mIDGroupShiftLock = new Q3CheckListItem (
+		mXKBOptionView,mText["XKBShiftLockGroup"],Q3CheckListItem::CheckBox
 	);
 	//=====================================
 	// opening tree
@@ -122,8 +124,8 @@ SCCKeyboardOptions::SCCKeyboardOptions (
 	// connect widgets
 	//-------------------------------------
 	QObject::connect(
-		mXKBOptionView , SIGNAL (clicked       ( QListViewItem* )),
-		this           , SLOT   (slotXKBOption ( QListViewItem* ))
+		mXKBOptionView , SIGNAL (clicked       ( Q3ListViewItem* )),
+		this           , SLOT   (slotXKBOption ( Q3ListViewItem* ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -138,7 +140,7 @@ void SCCKeyboardOptions::init ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// query XKB file extension
@@ -149,7 +151,7 @@ void SCCKeyboardOptions::init ( void ) {
 	//====================================
 	// insert available XKB options
 	//------------------------------------
-	QDictIterator<QString> it (mOptionDict);
+	Q3DictIterator<QString> it (mOptionDict);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString val = mText[*it.current()];
@@ -160,28 +162,28 @@ void SCCKeyboardOptions::init ( void ) {
 			);
 		}
 		if (key.contains("eurosign:")) {
-			new QCheckListItem (mIDEuroSign,val,QCheckListItem::RadioButton);
+			new Q3CheckListItem (mIDEuroSign,val,Q3CheckListItem::RadioButton);
 		}
 		if (key.contains("caps:")) {
-			new QCheckListItem (mIDCapsLock,val,QCheckListItem::RadioButton);
+			new Q3CheckListItem (mIDCapsLock,val,Q3CheckListItem::RadioButton);
 		}
 		if (key.contains("altwin:")) {
-			new QCheckListItem (mIDAltWinKey,val,QCheckListItem::RadioButton);
+			new Q3CheckListItem (mIDAltWinKey,val,Q3CheckListItem::RadioButton);
 		}
 		if (key.contains("lv3:")) {
-			new QCheckListItem (mIDThirdLevel,val,QCheckListItem::CheckBox);
+			new Q3CheckListItem (mIDThirdLevel,val,Q3CheckListItem::CheckBox);
 		}
 		if (key.contains("ctrl:")) {
-			new QCheckListItem (mIDControl,val,QCheckListItem::RadioButton);
+			new Q3CheckListItem (mIDControl,val,Q3CheckListItem::RadioButton);
 		}
 		if (key.contains("compose:")) {
-			new QCheckListItem (mIDCompose,val,QCheckListItem::CheckBox);
+			new Q3CheckListItem (mIDCompose,val,Q3CheckListItem::CheckBox);
 		}
 		if (key.contains("grp_led:")) {
-			new QCheckListItem (mIDKbdLedToShow,val,QCheckListItem::CheckBox);
+			new Q3CheckListItem (mIDKbdLedToShow,val,Q3CheckListItem::CheckBox);
 		}
 		if (key.contains("grp:")) {
-			new QCheckListItem (mIDGroupShiftLock,val,QCheckListItem::CheckBox);
+			new Q3CheckListItem (mIDGroupShiftLock,val,Q3CheckListItem::CheckBox);
 		}
 	}
 }
@@ -203,12 +205,12 @@ void SCCKeyboardOptions::import ( void ) {
 	//====================================
 	// handle options
 	//------------------------------------
-	QListIterator<QString> it (XKBOptions);
-	for (; it.current(); ++it) {
-		QString XKBOptionTranslation = translateOption (*it.current());
-		QListViewItemIterator io (mXKBOptionView);
+	QString it;
+	foreach (it,XKBOptions) {
+		QString XKBOptionTranslation = translateOption (it);
+		Q3ListViewItemIterator io (mXKBOptionView);
 		for (; io.current(); ++io ) {
-			QCheckListItem* item = (QCheckListItem*)io.current();
+			Q3CheckListItem* item = (Q3CheckListItem*)io.current();
 			if (item->text() == XKBOptionTranslation) {
 				item->setOn   ( true );
 				slotXKBOption ( item );
@@ -220,7 +222,7 @@ void SCCKeyboardOptions::import ( void ) {
 //====================================
 // slotXKBOption
 //------------------------------------
-void SCCKeyboardOptions::slotXKBOption ( QListViewItem* item ) {
+void SCCKeyboardOptions::slotXKBOption ( Q3ListViewItem* item ) {
 	if ((item == mIDCompose)        ||
 		(item == mIDThirdLevel)     ||
 		(item == mIDKbdLedToShow)   || 
@@ -231,17 +233,17 @@ void SCCKeyboardOptions::slotXKBOption ( QListViewItem* item ) {
 		updateTree ( item, false );
 	}
 	QList<QString> usedOptions;
-	QListViewItemIterator it (mXKBOptionView);
+	Q3ListViewItemIterator it (mXKBOptionView);
 	for (; it.current(); ++it ) {
-		QCheckListItem* item = (QCheckListItem*)it.current();
+		Q3CheckListItem* item = (Q3CheckListItem*)it.current();
 		if ((item) && (item->isOn())) {
-			usedOptions.append (new QString(item->text()));
+			usedOptions.append (QString(item->text()));
 		}
 	}
 	mXKBOption = "";
-	QListIterator<QString> io (usedOptions);
-	for (; io.current(); ++io) {
-		QString XKBOptionName = findOption (*io.current());
+	QString io;
+	foreach (io,usedOptions) {
+		QString XKBOptionName = findOption (io);
 		if (! XKBOptionName.isEmpty()) {
 			mXKBOption.sprintf ("%s,%s",
 				mXKBOption.ascii(),XKBOptionName.ascii()
@@ -254,16 +256,16 @@ void SCCKeyboardOptions::slotXKBOption ( QListViewItem* item ) {
 //====================================
 // updateTree
 //------------------------------------
-void SCCKeyboardOptions::updateTree ( QListViewItem* item,bool rootItem ) {
+void SCCKeyboardOptions::updateTree ( Q3ListViewItem* item,bool rootItem ) {
 	if ( rootItem ) {
 		//=====================================
 		// root item selected...
 		//-------------------------------------
-		QListViewItemIterator it (mXKBOptionView);
+		Q3ListViewItemIterator it (mXKBOptionView);
 		for (; it.current(); ++it ) {
-			QCheckListItem* subItem = (QCheckListItem*)it.current();
+			Q3CheckListItem* subItem = (Q3CheckListItem*)it.current();
 			if ((subItem) && (subItem->parent() == item)) {
-				QCheckListItem* baseItem = (QCheckListItem*)item;
+				Q3CheckListItem* baseItem = (Q3CheckListItem*)item;
 				subItem->setOn (baseItem->isOn());
 			}
 		}
@@ -271,8 +273,8 @@ void SCCKeyboardOptions::updateTree ( QListViewItem* item,bool rootItem ) {
 		//=====================================
 		// sub-item selected...
 		//-------------------------------------
-		QCheckListItem* parent   = (QCheckListItem*)item->parent();
-		QCheckListItem* thisItem = (QCheckListItem*)item;
+		Q3CheckListItem* parent   = (Q3CheckListItem*)item->parent();
+		Q3CheckListItem* thisItem = (Q3CheckListItem*)item;
 		if (thisItem -> isOn()) {
 			if (! parent -> isOn()) {
 				parent -> setOn ( true );
@@ -284,10 +286,10 @@ void SCCKeyboardOptions::updateTree ( QListViewItem* item,bool rootItem ) {
 			(parent == mIDKbdLedToShow)   ||
 			(parent == mIDGroupShiftLock)
 		) {
-			QListViewItemIterator it (mXKBOptionView);
+			Q3ListViewItemIterator it (mXKBOptionView);
 			for (; it.current(); ++it ) {
-				QCheckListItem* subItem  = (QCheckListItem*)it.current();
-				QCheckListItem* baseItem = (QCheckListItem*)subItem->parent();
+				Q3CheckListItem* subItem  = (Q3CheckListItem*)it.current();
+				Q3CheckListItem* baseItem = (Q3CheckListItem*)subItem->parent();
 				if ((baseItem == parent) && subItem->isOn() ) {
 					return;
 				}
@@ -303,12 +305,12 @@ QString SCCKeyboardOptions::findOption ( const QString& option ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// search option
 	//-------------------------------------
-	QDictIterator<QString> it (mOptionDict);
+	Q3DictIterator<QString> it (mOptionDict);
 	QString* result = new QString("");
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
@@ -348,7 +350,7 @@ QString SCCKeyboardOptions::translateOption ( const QString& option ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// translate option

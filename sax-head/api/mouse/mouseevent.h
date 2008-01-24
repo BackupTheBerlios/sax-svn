@@ -25,6 +25,8 @@ STATUS        : Status: Development
 //------------------------------------
 #include <qwidget.h>
 #include <qtimer.h>
+//Added by qt3to4:
+#include <QEvent>
 
 //====================================
 // Definitions...

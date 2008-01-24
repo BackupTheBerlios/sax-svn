@@ -18,29 +18,30 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "mousemodel.h"
+#include <QListIterator>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCMouseModel::SCCMouseModel (
-	QDict<QString>* text, QDict<SaXImport> section, const QString& title,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section, const QString& title,
 	int display, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
     
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mModelTab  = new QVBox ( this );
+	mModelTab  = new Q3VBox ( this );
    
 	//=====================================
 	// prepare tabed dialog
 	//-------------------------------------
-	mModelDialog = new QTabDialog  ( this,0,true );
+	mModelDialog = new Q3TabDialog  ( this,0,true );
 	mModelDialog -> setCaption  ( mText["MouseCaption"] );
 	mModelDialog -> setOkButton ( mText["Ok"] );
 	mModelDialog -> setCancelButton ( mText["Cancel"] );
@@ -58,11 +59,11 @@ SCCMouseModel::SCCMouseModel (
 	// create macro widgets [Model]
 	//-------------------------------------
 	mModelTab -> setMargin ( 20 );
-	mModelVendorGroup = new QButtonGroup (
-		1,Vertical,mText["MouseSelection"],mModelTab
+	mModelVendorGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["MouseSelection"],mModelTab
 	);
-	mVendorList = new QListBox ( mModelVendorGroup );
-	mModelList  = new QListBox ( mModelVendorGroup );
+	mVendorList = new Q3ListBox ( mModelVendorGroup );
+	mModelList  = new Q3ListBox ( mModelVendorGroup );
 
 	//=====================================
 	// connect widgets
@@ -72,8 +73,8 @@ SCCMouseModel::SCCMouseModel (
 		this         , SLOT   (slotOk ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (selectionChanged (QListBoxItem *)),
-		this         , SLOT   (slotVendor       (QListBoxItem *))
+		mVendorList  , SIGNAL (selectionChanged (Q3ListBoxItem *)),
+		this         , SLOT   (slotVendor       (Q3ListBoxItem *))
 	);
 }
 //=====================================
@@ -107,9 +108,9 @@ void SCCMouseModel::init ( void ) {
 	// insert CDB mice
 	//------------------------------------
 	mCDBMouseVendors = mSaxMouse->getMouseVendorList();
-	QListIterator<QString> it (mCDBMouseVendors);
-	for (; it.current(); ++it) {
-		mVendorList -> insertItem (*it.current());
+	QString it;
+	foreach (it, mCDBMouseVendors){
+		mVendorList -> insertItem(it);
 	}
 	mVendorList -> sort();
 }
@@ -147,11 +148,11 @@ void SCCMouseModel::import ( void ) {
 	//====================================
 	// setup vendor name listboxes
 	//------------------------------------
-	QListBoxItem* vendor = mVendorList -> findItem ( mSelectedMouseVendor );
+	Q3ListBoxItem* vendor = mVendorList -> findItem ( mSelectedMouseVendor );
 	if ( vendor ) {
 		mVendorList -> setSelected ( vendor, true );
 		slotVendor ( vendor );
-		QListBoxItem* name = mModelList -> findItem ( mSelectedMouseName );
+		Q3ListBoxItem* name = mModelList -> findItem ( mSelectedMouseName );
 		if ( name ) {
 			mModelList -> setSelected ( name, true );
 		}
@@ -178,7 +179,7 @@ bool SCCMouseModel::getOptionState ( void ) {
 //====================================
 // slotVendor
 //------------------------------------
-void SCCMouseModel::slotVendor ( QListBoxItem* item ) {
+void SCCMouseModel::slotVendor ( Q3ListBoxItem* item ) {
 	if (! mSaxMouse ) {
 		return;
 	}
@@ -186,11 +187,12 @@ void SCCMouseModel::slotVendor ( QListBoxItem* item ) {
 	mCDBMouseModels = mSaxMouse->getMouseModelList (
 		item->text()
 	);
-	QListIterator<QString> it (mCDBMouseModels);
-	for (; it.current(); ++it) {
-		mModelList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBMouseModels) {
+		mModelList -> insertItem (it);
 	}
 	mModelList -> sort();
+		
 }
 //====================================
 // slotOk
@@ -199,7 +201,7 @@ void SCCMouseModel::slotOk ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// get parent SCCMouseDisplay ptr
@@ -218,13 +220,13 @@ void SCCMouseModel::slotOk ( void ) {
 	//=====================================
 	// check parents options
 	//-------------------------------------
-	QDict<QString> selectedData = mSaxMouse->getMouseData (
+	Q3Dict<QString> selectedData = mSaxMouse->getMouseData (
 		mSelectedMouseVendor,mSelectedMouseName
 	);
 	pDisplay -> setWheelEmulationEnabled  ( false );
 	pDisplay -> setButtonEmulationEnabled ( false );
 	pDisplay -> setWheelEnabled ( false );
-	QDictIterator<QString> it (selectedData);
+	Q3DictIterator<QString> it (selectedData);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
 		QString val = *it.current();
@@ -246,7 +248,7 @@ void SCCMouseModel::slotOk ( void ) {
 	//-------------------------------------
 	mOptionState = true;
 	pDisplay -> setMouseOptionState ( true );
-	QDict<QString> mouseData = mSaxMouse -> getMouseData (
+	Q3Dict<QString> mouseData = mSaxMouse -> getMouseData (
 		mSelectedMouseVendor,mSelectedMouseName
 	);
 	if (mouseData["Driver"]) {

@@ -18,34 +18,36 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "tabletselection.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCTabletSelection::SCCTabletSelection (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget 
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
 	mCheckEnable = new QCheckBox ( mText["ActivateTablet"],this );
-	mModelVendorGroup = new QButtonGroup (
-		1,Vertical,mText["TabletSelection"],this
+	mModelVendorGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["TabletSelection"],this
 	);
-	mVendorList = new QListBox ( mModelVendorGroup );
-	mModelList  = new QListBox ( mModelVendorGroup );
+	mVendorList = new Q3ListBox ( mModelVendorGroup );
+	mModelList  = new Q3ListBox ( mModelVendorGroup );
 
 	//=====================================
 	// connect widgets
@@ -55,12 +57,12 @@ SCCTabletSelection::SCCTabletSelection (
 		this         , SLOT   (slotActivateTablet ( void ))
 	);
 	QObject::connect (
-		mVendorList  , SIGNAL (selectionChanged ( QListBoxItem* )),
-		this         , SLOT   (slotVendor       ( QListBoxItem* ))
+		mVendorList  , SIGNAL (selectionChanged ( Q3ListBoxItem* )),
+		this         , SLOT   (slotVendor       ( Q3ListBoxItem* ))
 	);
 	QObject::connect (
-		mModelList   , SIGNAL (selectionChanged ( QListBoxItem* )),
-		this         , SLOT   (slotName         ( QListBoxItem* ))
+		mModelList   , SIGNAL (selectionChanged ( Q3ListBoxItem* )),
+		this         , SLOT   (slotName         ( Q3ListBoxItem* ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -84,9 +86,9 @@ void SCCTabletSelection::init ( void ) {
 	// insert CDB mice
 	//------------------------------------
 	mCDBTabletVendors = mSaxTablet->getTabletVendorList();
-	QListIterator<QString> it (mCDBTabletVendors);
-	for (; it.current(); ++it) {
-		mVendorList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBTabletVendors) {
+		mVendorList -> insertItem (it);
 	}
 	mVendorList -> sort();
 
@@ -153,7 +155,7 @@ QString SCCTabletSelection::getModel  ( void ) {
 //====================================
 // slotVendor
 //------------------------------------
-void SCCTabletSelection::slotVendor ( QListBoxItem* item ) {
+void SCCTabletSelection::slotVendor ( Q3ListBoxItem* item ) {
 	if (! mSaxTablet ) {
 		return;
 	}
@@ -161,9 +163,9 @@ void SCCTabletSelection::slotVendor ( QListBoxItem* item ) {
 	mCDBTabletModels = mSaxTablet->getTabletModelList (
 		item->text()
 	);
-	QListIterator<QString> it (mCDBTabletModels);
-	for (; it.current(); ++it) {
-		mModelList -> insertItem (*it.current());
+	QString it;
+	foreach (it,mCDBTabletModels) {
+		mModelList -> insertItem (it);
 	}
 	mModelList -> sort();
 	emit sigActivate ( false );
@@ -172,7 +174,7 @@ void SCCTabletSelection::slotVendor ( QListBoxItem* item ) {
 //====================================
 // slotName
 //------------------------------------
-void SCCTabletSelection::slotName ( QListBoxItem* ) {
+void SCCTabletSelection::slotName ( Q3ListBoxItem* ) {
 	emit sigActivate ( true );
 	emit sigTablet (
 		mVendorList->currentText(),
@@ -188,7 +190,7 @@ void SCCTabletSelection::slotActivateTablet ( void ) {
 		mModelVendorGroup -> setDisabled ( false );
 		if ( mModelList->selectedItem() ) {
 			emit sigActivate ( true );
-			QDict<QString> tabletDict = mSaxTablet->getTabletData (
+			Q3Dict<QString> tabletDict = mSaxTablet->getTabletData (
 				mVendorList->currentText(),
 				mModelList->currentText()
 			);
@@ -219,11 +221,11 @@ void SCCTabletSelection::slotActivateTablet ( void ) {
 void SCCTabletSelection::selectTablet (
 	const QString& vendorName, const QString& modelName
 ) {
-	QListBoxItem* vendor = mVendorList -> findItem ( vendorName );
+	Q3ListBoxItem* vendor = mVendorList -> findItem ( vendorName );
 	if ( vendor ) {
 		mVendorList -> setSelected ( vendor, true );
 		slotVendor ( vendor );
-		QListBoxItem* name = mModelList -> findItem ( modelName );
+		Q3ListBoxItem* name = mModelList -> findItem ( modelName );
 		if ( name ) {
 			mModelList -> setSelected ( name, true );
 			slotName ( name );

@@ -26,7 +26,7 @@ STATUS        : Status: Development
 #include <qcheckbox.h>
 #include <qlabel.h>
 #include <qpushbutton.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 
 //=====================================
 // Includes
@@ -57,13 +57,13 @@ class SCCTabletPens : public SCCDialog {
 	SaXManipulateTablets* mSaxTablet;
 
 	private:
-	QBoxLayout*           mMainLayout;
+	Q3BoxLayout*           mMainLayout;
 
 	private:
-	QHBox*                mPenBox;
-	QHBox*                mEraserBox;
-	QHBox*                mPadBox;
-	QButtonGroup*         mToolGroup;
+	Q3HBox*                mPenBox;
+	Q3HBox*                mEraserBox;
+	Q3HBox*                mPadBox;
+	Q3ButtonGroup*         mToolGroup;
 	QCheckBox*            mCheckPen;
 	QCheckBox*            mCheckEraser;
 	QCheckBox*            mCheckPad;
@@ -93,7 +93,7 @@ class SCCTabletPens : public SCCDialog {
 
 	public:
 	SCCTabletPens (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

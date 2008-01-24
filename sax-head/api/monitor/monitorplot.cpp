@@ -19,6 +19,9 @@ STATUS        : Status: Development
 **************/
 #include <stdlib.h>
 #include <qpainter.h>
+//Added by qt3to4:
+#include <QPaintEvent>
+#include <QResizeEvent>
 #include <stdio.h>
 #include <qlabel.h>
 #include <unistd.h>
@@ -179,8 +182,8 @@ void SCCPlot::buildMatrix ( void ) {
 	// ...
 	// adapt new index situation...
     // ----------------------------
-	QIntDict<SCCFig> freeze = mWidget;
-	QIntDictIterator<SCCFig> it (freeze);
+	Q3IntDict<SCCFig> freeze = mWidget;
+	Q3IntDictIterator<SCCFig> it (freeze);
 	for (; it.current(); ++it) {
 		QPoint pos = it.current()->getPosition();
 		int oindex = it.current()->getIndex();
@@ -217,12 +220,12 @@ int SCCPlot::getColumns ( void ) {
 // remove widget with ID [x] from the matrix
 //--------------------------------------------
 void SCCPlot::removeWidget ( int id ) {
-	QList<SCCLayoutLine> layout = getLayout();
-	QListIterator<SCCLayoutLine> it (layout);
+	QList<SCCLayoutLine*> layout = getLayout();
+	SCCLayoutLine* l;
 	clear();
 	int col = 1;
-	for (; it.current(); ++it) {
-		SCCLayoutLine* l = it.current();
+	foreach(l,layout) {
+//		SCCLayoutLine* l = it;
 		if (l->ID == id) {
 			continue;
 		}
@@ -235,7 +238,7 @@ void SCCPlot::removeWidget ( int id ) {
 // remove all widgets from the matrix
 //--------------------------------------------
 void SCCPlot::clear ( void ) {
-	QIntDictIterator<SCCFig> it (mWidget);
+	Q3IntDictIterator<SCCFig> it (mWidget);
 	for (; it.current(); ++it) {
 		delete (it.current());
 		mFree.remove (it.current()->getIndex());
@@ -249,7 +252,7 @@ void SCCPlot::clear ( void ) {
 // remove all widgets but not the mWidgetStack
 //--------------------------------------------
 void SCCPlot::clearInternal ( void ) {
-	QIntDictIterator<SCCFig> it (mWidget);
+	Q3IntDictIterator<SCCFig> it (mWidget);
 	for (; it.current(); ++it) {
 		delete (it.current());
 		mFree.remove (it.current()->getIndex());
@@ -314,10 +317,10 @@ void SCCPlot::setWidget (
 //--------------------------------------------
 void SCCPlot::setLayout ( int startRow, int startCol ) {
 	unsigned int widgetCount = mWidget.count();
-	QListIterator<SCCMatrixInfo> it (mWidgetStack);
-	for (; it.current(); ++it) {
+	SCCMatrixInfo* current;
+	foreach (current,mWidgetStack) {
 		SCCFig* figure = NULL;
-		SCCMatrixInfo* current = it.current();
+//		SCCMatrixInfo* current = it;
 		// ...
 		// check if widget with ID [current.id] exist, if yes 
 		// continue to next widget
@@ -430,7 +433,7 @@ void SCCPlot::setLayout ( int startRow, int startCol ) {
 // search widget object with ID [x]
 //--------------------------------------------
 SCCFig* SCCPlot::searchWidget ( int id ) {
-	QIntDictIterator<SCCFig> it (mWidget);
+	Q3IntDictIterator<SCCFig> it (mWidget);
 	for (; it.current(); ++it) {
 	if (it.current()->getID() == id) {
 		return (it.current());
@@ -443,7 +446,7 @@ SCCFig* SCCPlot::searchWidget ( int id ) {
 // search widget object at position [x,y]
 //--------------------------------------------
 SCCFig* SCCPlot::searchWidget ( int x, int y ) {
-	QIntDictIterator<SCCFig> it (mWidget);
+	Q3IntDictIterator<SCCFig> it (mWidget);
 	for (; it.current(); ++it) {
 	QPoint pos = it.current()->getPosition();
 	if ((pos.x() == x) && (pos.y() == y)) {
@@ -464,9 +467,9 @@ SCCFig* SCCPlot::searchWidget ( QPoint p ) {
 // get index in the matrox for the given point
 //--------------------------------------------
 int SCCPlot::getPointIndex (int x,int y) {
-	QListIterator<SCCMatrixPoint> it (mPoint);
-	for (; it.current(); ++it) {
-	SCCMatrixPoint* p = it.current();
+	SCCMatrixPoint* p;
+	foreach (p,mPoint) {
+//	SCCMatrixPoint* p = it.current();
 	if ((p->mBasePoint.x() == x) && (p->mBasePoint.y() == y)) {
 		return(p->getIndex());
 	}
@@ -494,9 +497,9 @@ void SCCPlot::gotReleased ( SCCFig* draged ) {
 	// the distance between the draged widget and the other
 	// widgets. Save the index of the nearest widget
 	// ---------------------------------------------
-	QListIterator<SCCMatrixPoint> it (mPoint);
-	for (; it.current(); ++it) {
-	int index = it.current()->getIndex();
+	SCCMatrixPoint* it;
+	foreach (it,mPoint) {
+	int index = it->getIndex();
 	if ((mFree[index]) && (draged->getIndex() != index)) {
 		SCCFig *neighbour = mWidget[index];
 		int dist = draged->getDistance (neighbour->getPosition());
@@ -564,7 +567,7 @@ void SCCPlot::gotReleased ( SCCFig* draged ) {
 	for (unsigned int i=0;i<mWidget.count();i++) {
 		countNeighbours[i] = 0;
 	}
-	QIntDictIterator<SCCFig> i (mWidget);
+	Q3IntDictIterator<SCCFig> i (mWidget);
 	for (; i.current(); ++i) {
 	countWidgets[index] = i.current();
 	QPoint pos    = i.current()->getPosition();
@@ -694,9 +697,9 @@ void SCCPlot::gotReleased ( SCCFig* draged ) {
 //============================================
 // get the current matrix layout
 //--------------------------------------------
-QList<SCCLayoutLine> SCCPlot::getLayout ( void ) {
-	QList<SCCLayoutLine> layout;
-	QIntDictIterator<SCCFig> it (mWidget);
+QList<SCCLayoutLine*> SCCPlot::getLayout ( void ) {
+	QList<SCCLayoutLine*> layout;
+	Q3IntDictIterator<SCCFig> it (mWidget);
 	int IDs[mWidget.count()];
 
 	// ...

@@ -18,39 +18,42 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "monitorarrange.h"
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCMonitorArrange::SCCMonitorArrange (
-	QDict<QString>* text, QDict<SaXImport> section, QWidget* parent
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
-	mModusGroup = new QButtonGroup (
-		1,Horizontal,mText["Modus"],this  
+	mModusGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["Modus"],this  
 	);
 	mTraditional = new QRadioButton ( mText["ModusTraditional"], mModusGroup );
 	mClone       = new QRadioButton ( mText["ModusClone"], mModusGroup );
 	mXinerama    = new QRadioButton ( mText["ModusXinerama"], mModusGroup );
-	mLayoutGroup = new QButtonGroup (
-		1,Horizontal,mText["Arrangement"],this
+	mLayoutGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["Arrangement"],this
 	);
-	QScrollView* mScroll = new QScrollView ( mLayoutGroup );
+	Q3ScrollView* mScroll = new Q3ScrollView ( mLayoutGroup );
 	mMatrix = new SCCPlot ( this,FIGURE_SQUARE );
-	mScroll -> setResizePolicy ( QScrollView::AutoOneFit );
+	mScroll -> setResizePolicy ( Q3ScrollView::AutoOneFit );
 	mScroll -> addChild ( mMatrix );
 	mMatrix -> buildMatrix();
 
@@ -122,7 +125,7 @@ void SCCMonitorArrange::import ( void ) {
 // setDeviceMap
 //------------------------------------
 void SCCMonitorArrange::setDeviceMap (
-	int devices,QList<SCCMonitorDisplay> displays
+	int devices,QList<SCCMonitorDisplay*> displays
 ) {
 	//====================================
 	// obtain enabled device ID's
@@ -130,10 +133,10 @@ void SCCMonitorArrange::setDeviceMap (
 	int count = 0;
 	int index = 0;
 	mCardID = (int*)malloc (devices * sizeof (int));
-	QListIterator<SCCMonitorDisplay> it (displays);
-	for (; it.current(); ++it) {
+	SCCMonitorDisplay* it;
+	foreach (it,displays) {
 		mCardID[count] = -1;
-		if (it.current()->isEnabled()) {
+		if (it->isEnabled()) {
 			mCardID[index] = count;
 			index++;
 		}
@@ -144,12 +147,12 @@ void SCCMonitorArrange::setDeviceMap (
 // setArrangement
 //------------------------------------
 void SCCMonitorArrange::setArrangement (
-	int devices,QList<SCCMonitorDisplay> displays
+	int devices,QList<SCCMonitorDisplay*> displays
 ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mMatrix -> clear();
 
 	//====================================
@@ -173,18 +176,18 @@ void SCCMonitorArrange::setArrangement (
 		if (neighbours.isEmpty()) {
 			continue;
 		}
-		QListIterator<QString> at (neighbours);
+		QString at;
 		int indexList [4];
 		int index = 0;
-		for (; at.current(); ++at) {
-			QString* item = at.current();
-			if (item->contains("none")) {
+		foreach (at,neighbours) {
+			QString item = at;
+			if (item.contains("none")) {
 				indexList[ index ] = -1; index++;
 				continue;
 			}
-			item->replace (QRegExp("Screen\\["),"");
-			item->replace (QRegExp("\\]"),"");
-			indexList[ index ] = item->toInt();
+			item.replace (QRegExp("Screen\\["),"");
+			item.replace (QRegExp("\\]"),"");
+			indexList[ index ] = item.toInt();
 			index++;
 		}
 		SCCMonitorDisplay* displayInfo = displays.at ( mCardID[count] );
@@ -235,12 +238,12 @@ void SCCMonitorArrange::setArrangement (
 // setCleanArrangement
 //------------------------------------
 void SCCMonitorArrange::setCleanArrangement (
-	int devices,QList<SCCMonitorDisplay> displays
+	int devices,QList<SCCMonitorDisplay*> displays
 ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mMatrix -> clear();
 
 	//====================================
@@ -323,7 +326,7 @@ void SCCMonitorArrange::setFigurePixmap ( int id, QPixmap pixmap ) {
 // setToolTip
 //-------------------------------------
 void SCCMonitorArrange::setToolTip ( SCCMonitorDisplay* display ) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	SCCFig* mFig = mMatrix->searchWidget ( display->getDisplay() );
 	if ( mFig ) {
 		SCCMonitorModel* monitorData = display -> getMonitorData();
@@ -370,31 +373,29 @@ int SCCMonitorArrange::getMultiheadMode ( void ) {
 //====================================
 // getArrangement
 //------------------------------------
-QDict<QString> SCCMonitorArrange::getArrangement ( void ) {
-	QDict<QString> result;
-	QList<SCCLayoutLine> layout = mMatrix->getLayout();
-	QListIterator<SCCLayoutLine> it (layout);
-	for (; it.current(); ++it) {
-		QString* key   = new QString();
-		QString* value = new QString();
-		SCCLayoutLine* l = it.current();
+Q3Dict<QString> SCCMonitorArrange::getArrangement ( void ) {
+	Q3Dict<QString> result;
+	QList<SCCLayoutLine*> layout = mMatrix->getLayout();
+	SCCLayoutLine* l;
+	foreach (l,layout) {
+		QString key;
+		QString value;
+//		SCCLayoutLine* l = it.current();
 		int neighbour[4] = {l->mLeft,l->mRight,l->mTop,l->mBottom};
-		key->sprintf("Screen:Screen[%d]",mCardID[l->ID]);
+		key.sprintf("Screen:Screen[%d]",mCardID[l->ID]);
 		for (int n=0;n<4;n++) {
 		if (neighbour[n] == -1) {
-			value->sprintf (
-				"%s <none>",value->ascii()
+			value.sprintf (
+				"%s <none>",value.ascii()
 			);
 		} else {
-			value->sprintf (
-				"%s Screen[%d]",value->ascii(),neighbour[n]
+			value.sprintf (
+				"%s Screen[%d]",value.ascii(),neighbour[n]
 			);
 		}
 		}
-		*value = value->stripWhiteSpace();
-		result.insert (
-			*key,value
-		);
+		value = value.stripWhiteSpace();
+		result.insert (key,&value);
 	}
 	return result;
 }

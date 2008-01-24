@@ -19,6 +19,7 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "processcall.h"
+#include <QTextOStream>
     
 namespace SaX {
 //====================================
@@ -34,7 +35,7 @@ SaXProcessCall::SaXProcessCall ( void ) {
 void SaXProcessCall::addArgument ( const QString& arg ) {
 	QString* argument = new QString;
 	QTextOStream (argument) << "'" << arg << "'";
-	mArguments.append ( argument );
+	mArguments.append ( *argument );
 }
 
 //====================================
@@ -69,9 +70,9 @@ bool SaXProcessCall::start ( void ) {
 	// create program call string
 	//------------------------------------
 	QString program;
-	QListIterator<QString> it ( mArguments );
-	for (; it.current(); ++it ) {
-		program.append (*it.current() + " ");
+	QString it;
+	foreach (it,mArguments) {
+		program.append (it + " ");
 	}
 	//====================================
 	// start program and connect stream
@@ -84,7 +85,7 @@ bool SaXProcessCall::start ( void ) {
 	while (NULL != (fgets(buf,sizeof(buf)-1,fp))) {
 		int line = strlen(buf)-1;
 		buf[line] = 0;
-		mData.append (new QString(buf));
+		mData.append (QString(buf));
 	}
 	mExitCode = pclose(fp);
 	return true;

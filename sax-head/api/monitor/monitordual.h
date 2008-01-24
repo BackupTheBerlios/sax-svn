@@ -25,15 +25,17 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
 #include <qspinbox.h>
+//Added by qt3to4:
+#include <QPixmap>
 
 //=====================================
 // Includes
@@ -105,25 +107,25 @@ class SCCMonitorDual : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString> mResolutionDict;
-	QDict<QString> mProfileDriverOptions;
+	Q3Dict<QString> mResolutionDict;
+	Q3Dict<QString> mProfileDriverOptions;
 
 	private:
-	QVBox*         mCardTab;
+	Q3VBox*         mCardTab;
 	
 	private:
-	QTabDialog*    mDualHeadDialog;
-	QButtonGroup*  mChangeGroup;
-	QHBox*         mMoniBox;
+	Q3TabDialog*    mDualHeadDialog;
+	Q3ButtonGroup*  mChangeGroup;
+	Q3HBox*         mMoniBox;
 	QLabel*        mLabelSecondMonitor;
 	QPushButton*   mChangeMonitor;
-	QHBox*         mResBox;
+	Q3HBox*         mResBox;
 	QLabel*        mLabelSecondResolution;
 	QComboBox*     mResolution;
-	QButtonGroup*  mModeGroup;
+	Q3ButtonGroup*  mModeGroup;
 	QRadioButton*  mClone;
 	QRadioButton*  mXinerama;
-	QButtonGroup*  mOrientationGroup;
+	Q3ButtonGroup*  mOrientationGroup;
 	QPushButton*   mLeftOfPrimary;
 	QPushButton*   mRightOfPrimary;
 	QPushButton*   mAboveOfPrimary;
@@ -162,7 +164,7 @@ class SCCMonitorDual : public SCCDialog {
 
 	public:
 	SCCMonitorDual (
-		QDict<QString>*,QDict<SaXImport>,
+		Q3Dict<QString>*,Q3Dict<SaXImport>,
 		const QString&,int,QWidget*
 	);
 };

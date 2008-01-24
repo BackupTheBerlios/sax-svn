@@ -49,7 +49,7 @@ XFile::~XFile (void) {
 //------------------------------------
 void XFile::fileOpen (void) {
 	if (! mHandle -> isOpen()) {
-	if (! mHandle -> open(IO_ReadOnly)) {
+	if (! mHandle -> open(QIODevice::ReadOnly)) {
 	log (L_ERROR,
 		"XFile::XFile: open failed on: %s -> %s\n",
 		mFileName->ascii(),strerror(errno)
@@ -76,39 +76,40 @@ int XFile::filePos (void) {
 //====================================
 // XFile read translation keys...
 //------------------------------------
-QDict<char> XFile::gtxRead (void) {
+Q3Dict<char> XFile::gtxRead (void) {
 	fileOpen ();
-	QString line;
+	char* line = 0;
 	QString *qVal;
 	char* key = NULL;
 	char* val = NULL;
 	while ((mHandle->readLine(line,4096)) != 0) {
-	line.truncate(line.length()-1);
-	if ((line[0] == '#') || (line.isEmpty())) {
-	if (mHandle->atEnd()) break;
-	continue;
-	}
-	mRaw = (char*) malloc (line.length() + 1);
-	sprintf(mRaw,"%s",line.ascii());
-	key = strtok(mRaw,"=");
-	val = strtok(NULL,"=");
-	qVal = new QString (val);
-	int bslash = qVal->find ('\\');
-	if (bslash >= 0) {
-		*qVal = qVal->replace (bslash,2,"\n");
-		while ( 1 ) {
-		bslash = qVal->find ('\\');
+		QString string_line(line);
+		string_line.truncate(string_line.length()-1);
+		if ((string_line[0] == '#') || (string_line.isEmpty())) {
+			if (mHandle->atEnd()) break;
+				continue;
+		}
+		mRaw = (char*) malloc (string_line.length() + 1);
+		sprintf(mRaw,"%s",string_line.ascii());
+		key = strtok(mRaw,"=");
+		val = strtok(NULL,"=");
+		qVal = new QString (val);
+		int bslash = qVal->find ('\\');
 		if (bslash >= 0) {
-			*qVal  = qVal->replace (bslash,2,"\n");
-		} else {
+			*qVal = qVal->replace (bslash,2,"\n");
+			while ( 1 ) {
+				bslash = qVal->find ('\\');
+				if (bslash >= 0) {
+					*qVal  = qVal->replace (bslash,2,"\n");
+				} else {
+					break;
+				}
+			}
+		}
+		gtx.insert(key,qVal->ascii());
+		if (mHandle->atEnd()) {
 			break;
 		}
-		}
-	}
-	gtx.insert(key,qVal->ascii());
-	if (mHandle->atEnd()) {
-		break;
-	}
 	}
 	mHandle->close();
 	return(gtx);
@@ -117,6 +118,6 @@ QDict<char> XFile::gtxRead (void) {
 //====================================
 // XFile return GTX...
 //------------------------------------
-QDict<char> XFile::getGTX (void) {
+Q3Dict<char> XFile::getGTX (void) {
 	return(gtx);
 }

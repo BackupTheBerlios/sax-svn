@@ -25,13 +25,13 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
 #include <qspinbox.h>
 
@@ -66,7 +66,7 @@ class SCCMonitor : public SCCDialog {
 	QString* mRequestedDialog;
 
 	private:
-	QList<SCCMonitorDisplay>  mMonitorDisplay;
+	QList<SCCMonitorDisplay*>  mMonitorDisplay;
 
 	private:
 	QTabWidget*        mMonitorTab;
@@ -90,8 +90,8 @@ class SCCMonitor : public SCCDialog {
 
 	public:
 	SCCMonitor (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget*
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

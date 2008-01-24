@@ -193,7 +193,7 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 	if (fashion == (char*)SAX_INPUT_VNC) {
 		baseDriver = "rfbmouse";
 	}
-	QDict<QString>* data = mInput->getTablePointer (0);
+	Q3Dict<QString>* data = mInput->getTablePointer (0);
 	int newID = mInput->getCount (true) * 2 + 1;
 	if ((data) && (! data->isEmpty())) {
 		baseDriver ="kbd";
@@ -311,7 +311,7 @@ int SaXManipulateDevices::removeInputDevice (int id) {
 	// select previous input device
 	//------------------------------------
 	for (int i=1;i<=2;i++) {
-		QDict<QString>* data = mInput->getTablePointer (i);
+		Q3Dict<QString>* data = mInput->getTablePointer (i);
 		if ((data) && (! data->isEmpty())) {
 			mInput->setID (i);
 			break;

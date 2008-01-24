@@ -22,7 +22,7 @@
 %typemap(jtype)  QString "String"
 %typemap(jstype) QString "String"
 %typemap(out) QString {
-	$result = jenv->NewStringUTF($1.data());
+	$result = jenv->NewStringUTF($1.toUtf8().constData());
 }
 %typemap(javain)  QString  "$javainput"
 %typemap(javaout) QString {

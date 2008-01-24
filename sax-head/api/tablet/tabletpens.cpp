@@ -18,32 +18,34 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "tabletpens.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCTabletPens::SCCTabletPens (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================  
 	// create layout for this widget 
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );	
+	mMainLayout = new Q3VBoxLayout ( this );	
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
-	mToolGroup = new QButtonGroup (
-		1,Horizontal,mText["TabletTools"],this
+	mToolGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["TabletTools"],this
 	);
-	mPenBox    = new QHBox ( mToolGroup );
+	mPenBox    = new Q3HBox ( mToolGroup );
 	mCheckPen = new QCheckBox (
 		mText["AddPen"],mPenBox
 	);
@@ -51,7 +53,7 @@ SCCTabletPens::SCCTabletPens (
 		mText["Properties"],mPenBox
 	);
 	mPenBox -> setStretchFactor ( mCheckPen,10 );
-	mEraserBox = new QHBox ( mToolGroup );
+	mEraserBox = new Q3HBox ( mToolGroup );
 	mCheckEraser = new QCheckBox (
 		mText["AddEraser"],mEraserBox
 	);
@@ -59,7 +61,7 @@ SCCTabletPens::SCCTabletPens (
 		mText["Properties"],mEraserBox
 	);
 	mEraserBox -> setStretchFactor ( mCheckEraser,10 );
-	mPadBox    = new QHBox ( mToolGroup );
+	mPadBox    = new Q3HBox ( mToolGroup );
 	mCheckPad = new QCheckBox (
 		mText["AddPad"],mPadBox
 	);
@@ -246,7 +248,7 @@ void SCCTabletPens::slotTablet (
 	//====================================
 	// retrieve data record for tablet
 	//------------------------------------
-	QDict<QString> tabletDict = mSaxTablet->getTabletData ( vendor,name );
+	Q3Dict<QString> tabletDict = mSaxTablet->getTabletData ( vendor,name );
 
 	//====================================
 	// check for pen support

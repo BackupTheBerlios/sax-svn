@@ -26,6 +26,8 @@ STATUS        : Status: Development
 #include <qpushbutton.h>
 #include <qtabwidget.h>
 #include <qlineedit.h>
+//Added by qt3to4:
+#include <QLabel>
 
 //=====================================
 // Includes
@@ -58,8 +60,8 @@ class SCCKeyboard : public SCCDialog {
 
 	public:
 	SCCKeyboard (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget*
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

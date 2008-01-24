@@ -18,50 +18,53 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "vncdisplay.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
+#include <QLabel>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCVNCDisplay::SCCVNCDisplay (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget 
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
 	mCheckVNC = new QCheckBox ( mText["EnableVNC"], this );
-	mOptions = new QButtonGroup (
-		1,Horizontal,mText["VNCOptions"],this
+	mOptions = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["VNCOptions"],this
 	);
 	mOptions -> setDisabled (true);
 	mCheckPWD = new QCheckBox ( mText["PWDProtect"], mOptions );
 
-	QHBox* space = new QHBox ( mOptions );
+	Q3HBox* space = new Q3HBox ( mOptions );
 	QLabel* hidden1 = new QLabel ( space );
 	hidden1 -> setFixedWidth ( 22 );
-	mEntries = new QVBox ( space );
+	mEntries = new Q3VBox ( space );
 	mEntries -> setSpacing (5);
 	mEntries -> setDisabled ( true );
 
-	QVBox* pwd1 = new QVBox ( mEntries );
+	Q3VBox* pwd1 = new Q3VBox ( mEntries );
 	QLabel* pwd1text = new QLabel ( pwd1 );
 	pwd1text -> setText ( mText["Password"] );
 	mPWD1 = new QLineEdit ( pwd1 );
 	mPWD1 -> setText ( mText["NewPassword"] );
 	mPWD1 -> setMaximumWidth ( 400 );
 
-	QVBox* pwd2 = new QVBox ( mEntries );
+	Q3VBox* pwd2 = new Q3VBox ( mEntries );
 	QLabel* pwd2text = new QLabel ( pwd2 );
 	pwd2text -> setText ( mText["PasswordVerify"] );
 	mPWD2 = new QLineEdit ( pwd2 );
@@ -74,14 +77,14 @@ SCCVNCDisplay::SCCVNCDisplay (
 	
 	mCheckShared   = new QCheckBox ( mText["VNCShared"], mOptions );
 	mCheckHTTP = new QCheckBox ( mText["VNCHTTP"], mOptions );
-	QHBox* space2 = new QHBox ( mOptions );
+	Q3HBox* space2 = new Q3HBox ( mOptions );
 	QLabel* hidden3 = new QLabel ( space2 );
 	hidden3 -> setFixedWidth ( 22 );
-	mHTTPEntries = new QVBox ( space2 );
+	mHTTPEntries = new Q3VBox ( space2 );
 	mHTTPEntries -> setSpacing (5);
 	mHTTPEntries -> setDisabled ( true );
 
-	QVBox* http = new QVBox ( mHTTPEntries );
+	Q3VBox* http = new Q3VBox ( mHTTPEntries );
 	QLabel* httptext = new QLabel ( http );
 	httptext -> setText ( mText["HTTPPort"] );
 	mHTTP = new QSpinBox (5000,10000,1,http);
@@ -115,7 +118,7 @@ SCCVNCDisplay::SCCVNCDisplay (
 // init
 //------------------------------------
 void SCCVNCDisplay::init ( void ) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mPWD = mText["NewPassword"];
 }
 //====================================
@@ -125,7 +128,7 @@ void SCCVNCDisplay::import ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// create VNC manipulator
@@ -206,7 +209,7 @@ int SCCVNCDisplay::getHTTPPort ( void ) {
 //------------------------------------
 bool SCCVNCDisplay::checkPassword ( void ) {
 	if (mCheckPWD -> isOn()) {
-		SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+		SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 		if (mPWD2 -> isEnabled()) {
 			if (mPWD1->text() != mPWD2->text()) {
 				SCCMessage* mMessageBox = new SCCMessage (

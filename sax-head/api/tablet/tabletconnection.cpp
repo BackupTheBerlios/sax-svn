@@ -18,39 +18,41 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "tabletconnection.h"
+//Added by qt3to4:
+#include <Q3VBoxLayout>
 
 namespace SaXGUI {
 //====================================
 // Constructor
 //------------------------------------
 SCCTabletConnection::SCCTabletConnection (
-	QDict<QString>* text, QDict<SaXImport> section,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section,
 	int, QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================  
 	// create layout for this widget 
 	//-------------------------------------
-	mMainLayout = new QVBoxLayout ( this );
+	mMainLayout = new Q3VBoxLayout ( this );
 
 	//=====================================
 	// create macro widgets
 	//-------------------------------------
-	mPortGroup = new QButtonGroup (
-		1,Vertical,mText["ConnectionPort"],this
+	mPortGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["ConnectionPort"],this
 	);
 	mPortBox = new QComboBox ( mPortGroup );
-	mOptionGroup = new QButtonGroup (
-		1,Vertical,mText["TabletOptions"],this
+	mOptionGroup = new Q3ButtonGroup (
+		1,Qt::Vertical,mText["TabletOptions"],this
 	);
-	mOptionList = new QListBox ( mOptionGroup );
-	mOptionList -> setSelectionMode ( QListBox::Multi );
-	mModeGroup = new QButtonGroup (
-		1,Horizontal,mText["PrimaryTabletMode"],this
+	mOptionList = new Q3ListBox ( mOptionGroup );
+	mOptionList -> setSelectionMode ( Q3ListBox::Multi );
+	mModeGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["PrimaryTabletMode"],this
 	);
 	mRelative = new QRadioButton (
 		mText["Relative"], mModeGroup
@@ -62,8 +64,8 @@ SCCTabletConnection::SCCTabletConnection (
 	// connect widgets
 	//-------------------------------------
 	QObject::connect (
-		mOptionList , SIGNAL (clicked    ( QListBoxItem*)),
-		this        , SLOT   (slotOption ( QListBoxItem*))
+		mOptionList , SIGNAL (clicked    ( Q3ListBoxItem*)),
+		this        , SLOT   (slotOption ( Q3ListBoxItem*))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -82,7 +84,7 @@ void SCCTabletConnection::init ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//====================================
 	// create manipulators... 
@@ -135,10 +137,10 @@ int SCCTabletConnection::getTabletMode ( void ) {
 //====================================
 // getOptions
 //------------------------------------
-QDict<QString> SCCTabletConnection::getOptions ( void ) {
+Q3Dict<QString> SCCTabletConnection::getOptions ( void ) {
 	mSelectedOptions.clear();
 	for (unsigned int i=0;i<mOptionList->count();i++) {
-		QListBoxItem* item = mOptionList->item (i);
+		Q3ListBoxItem* item = mOptionList->item (i);
 		if (item->isSelected()) {
 			QStringList tokens = QStringList::split ( " >>> ", item->text() );
 			QString option = tokens.first();
@@ -185,15 +187,15 @@ void SCCTabletConnection::setPort ( const QString& device ) {
 //====================================
 // setOptions
 //------------------------------------
-void SCCTabletConnection::setOptions ( const QDict<QString>& options ) {
+void SCCTabletConnection::setOptions ( const Q3Dict<QString>& options ) {
 	if (! mOptionDict.isEmpty()) {
 		mOptionList->clear();
-		QDictIterator<QString> it (mOptionDict);
+		Q3DictIterator<QString> it (mOptionDict);
 		for (; it.current(); ++it) {
 			mOptionList->insertItem ( it.currentKey() );
 		}
 	}
-	QDictIterator<QString> it (options);
+	Q3DictIterator<QString> it (options);
 	for (; it.current(); ++it) {
 		QString opt;
 		if ( it.current()->isEmpty()) {
@@ -201,7 +203,7 @@ void SCCTabletConnection::setOptions ( const QDict<QString>& options ) {
 		} else {
 			QTextOStream (&opt) << it.currentKey() << " >>> " << *it.current();
 		}
-		if ( QListBoxItem* item = mOptionList->findItem (it.currentKey()) ) {
+		if ( Q3ListBoxItem* item = mOptionList->findItem (it.currentKey()) ) {
 			int index = mOptionList->index (item);
 			mOptionList -> changeItem  ( opt, index );
 			mOptionList -> setSelected ( index, true );
@@ -212,7 +214,7 @@ void SCCTabletConnection::setOptions ( const QDict<QString>& options ) {
 //====================================
 // slotOption
 //------------------------------------
-void SCCTabletConnection::slotOption ( QListBoxItem* item ) {
+void SCCTabletConnection::slotOption ( Q3ListBoxItem* item ) {
 	//=====================================
 	// check item address
 	//-------------------------------------
@@ -222,7 +224,7 @@ void SCCTabletConnection::slotOption ( QListBoxItem* item ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// prepare selection information 
@@ -316,7 +318,7 @@ void SCCTabletConnection::slotTablet (
 	//====================================
 	// retrieve data record for tablet
 	//------------------------------------
-	QDict<QString> tabletDict = mSaxTablet->getTabletData ( vendor,name );
+	Q3Dict<QString> tabletDict = mSaxTablet->getTabletData ( vendor,name );
 	
 	//====================================
 	// set tablet device
@@ -352,7 +354,7 @@ void SCCTabletConnection::slotTablet (
 		mOptionDict = mSaxTablet->getTabletOptions (
 			*tabletDict["Driver"]
 		);
-		QDictIterator<QString> it (mOptionDict);
+		Q3DictIterator<QString> it (mOptionDict);
 		for (; it.current(); ++it) {
 			mOptionList->insertItem ( it.currentKey() );
 		}
@@ -366,7 +368,7 @@ void SCCTabletConnection::slotTablet (
 			in = tokens.begin(); in != tokens.end(); ++in
 		) {
 			QString opt (*in);
-			if ( QListBoxItem* item = mOptionList->findItem (opt) ) {
+			if ( Q3ListBoxItem* item = mOptionList->findItem (opt) ) {
 				int index = mOptionList->index (item);
 				mOptionList -> setSelected ( index, true );
 			}
@@ -388,7 +390,7 @@ void SCCTabletConnection::slotTablet (
 			key.replace(QRegExp("\""),"");
 			val.replace(QRegExp("\""),"");
 			QTextOStream (&set) << key << " >>> " << val;
-			if ( QListBoxItem* item = mOptionList->findItem (key) ) {
+			if ( Q3ListBoxItem* item = mOptionList->findItem (key) ) {
 				int index = mOptionList->index (item);
 				mOptionList -> changeItem  ( set, index );
 				mOptionList -> setSelected ( index, true );

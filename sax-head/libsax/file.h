@@ -25,7 +25,7 @@ STATUS        : Status: Development
 // Includes
 //------------------------------------
 #include <qfile.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstringlist.h>
 
 #include "exception.h"
@@ -48,8 +48,8 @@ namespace SaX {
 */
 class SaXFileIF : public SaXException {
 	public:
-	virtual QDict<QString> readDict    ( void ) = 0;
-	virtual QDict<QString> getDataDict ( void ) = 0;
+	virtual Q3Dict<QString> readDict    ( void ) = 0;
+	virtual Q3Dict<QString> getDataDict ( void ) = 0;
 
 	public:
 	virtual ~SaXFileIF ( void ) { }
@@ -78,14 +78,14 @@ class SaXFileIF : public SaXException {
 class SaXFile : public SaXFileIF {
 	private:
 	QFile* mHandle;
-	QDict<QString> mDict;
+	Q3Dict<QString> mDict;
 
 	private:
 	void fileOpen ( void );
 	
 	public:
-	QDict<QString> readDict    ( void );
-	QDict<QString> getDataDict ( void );
+	Q3Dict<QString> readDict    ( void );
+	Q3Dict<QString> getDataDict ( void );
 
 	public:
 	SaXFile ( const QString& );

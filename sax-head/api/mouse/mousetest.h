@@ -24,11 +24,13 @@ STATUS        : Status: Development
 // Includes...
 //------------------------------------
 #include <qtimer.h>
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstatusbar.h>
 #include <qlayout.h>
 #include <qpixmap.h>
 #include <qpainter.h>
+//Added by qt3to4:
+#include <QPaintEvent>
 
 //====================================
 // Includes...
@@ -56,7 +58,7 @@ class SCCMouseTest : public SCCMouseEvent {
 
 	private:
 	int mID;
-	QDict<QString>* mTextPtr;
+	Q3Dict<QString>* mTextPtr;
 	QStatusBar*     mStatus;
 	QTimer*         mTimer;
 	QPixmap*        mPixmap[6];
@@ -70,7 +72,7 @@ class SCCMouseTest : public SCCMouseEvent {
 
 	public:
 	void setPixmap (int);
-	SCCMouseTest ( QDict<QString>*, QWidget* = 0 );
+	SCCMouseTest ( Q3Dict<QString>*, QWidget* = 0 );
 	virtual void paintEvent( QPaintEvent* );
 
 	public:

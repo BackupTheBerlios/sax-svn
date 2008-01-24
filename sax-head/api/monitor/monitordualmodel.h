@@ -25,16 +25,16 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
 #include <qspinbox.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 
 //=====================================
 // Includes
@@ -68,26 +68,26 @@ class SCCMonitorDualModel : public SCCDialog {
 	//------------------------------------
 	QList<QString> mCDBMonitorVendors;
 	QList<QString> mCDBMonitorModels;
-	QDict<QString> mCDBMonitorData;
-	QDict<QString> mProfileDriverOptions;
+	Q3Dict<QString> mCDBMonitorData;
+	Q3Dict<QString> mProfileDriverOptions;
 
 	private:
 	SaXManipulateDesktop* mSaxDesktop;
 
 	private:
-	QVBox*         mModelTab;
-	QVBox*         mSyncTab;
+	Q3VBox*         mModelTab;
+	Q3VBox*         mSyncTab;
 
 	private:
-	QTabDialog*    mDualModelDialog;
-	QButtonGroup*  mModelVendorGroup;
-	QListBox*      mVendorList;
-	QListBox*      mModelList;
+	Q3TabDialog*    mDualModelDialog;
+	Q3ButtonGroup*  mModelVendorGroup;
+	Q3ListBox*      mVendorList;
+	Q3ListBox*      mModelList;
 
 	private:
-	QButtonGroup*  mSyncGroup;
+	Q3ButtonGroup*  mSyncGroup;
 	QLabel*        mLabelWarning;
-	QVBox*         mSyncBox;
+	Q3VBox*         mSyncBox;
 	QLabel*        mLabelHorizontal;
 	QSpinBox*      mHSpinMin;
 	QSpinBox*      mHSpinMax;
@@ -115,12 +115,12 @@ class SCCMonitorDualModel : public SCCDialog {
 
 	public slots:
 	void slotOk     ( void );
-	void slotName   ( QListBoxItem* );
-	void slotVendor ( QListBoxItem* );
+	void slotName   ( Q3ListBoxItem* );
+	void slotVendor ( Q3ListBoxItem* );
 
 	public:
 	SCCMonitorDualModel (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		const QString&, const QString&, int, QWidget*
 	);
 };

@@ -18,12 +18,21 @@ STATUS        : Status: Up-to-date
 
 #include <qapplication.h>
 #include <qpushbutton.h>
-#include <qmainwindow.h>
-#include <qpopupmenu.h>
-#include <qtoolbar.h>
+#include <q3mainwindow.h>
+#include <q3popupmenu.h>
+#include <q3toolbar.h>
 #include <qstatusbar.h>
 #include <qregexp.h>
 #include <qmenubar.h>
+//Added by qt3to4:
+#include <Q3HBoxLayout>
+#include <QKeyEvent>
+#include <QLabel>
+#include <Q3GridLayout>
+#include <QPixmap>
+#include <Q3Frame>
+#include <QEvent>
+#include <Q3VBoxLayout>
 #include <locale.h>
 #include <libintl.h>
 #include <sys/types.h>
@@ -46,13 +55,13 @@ STATUS        : Status: Up-to-date
 // XFineWindow Constructor...
 //-------------------------------------
 XFineWindow::XFineWindow (int x,int y,int screen) : 
-	QMainWindow(0,"XFine2",WDestructiveClose) {
+	Q3MainWindow(0,"XFine2",Qt::WDestructiveClose) {
 	// ...
 	// load the gettext hash for international
 	// language support
 	// ---
 	mAdjustable = true;
-	mTextPtr = new QDict<char>;
+	mTextPtr = new Q3Dict<char>;
 	loadText ();
 
 	// ...
@@ -64,7 +73,7 @@ XFineWindow::XFineWindow (int x,int y,int screen) :
 	QString* data = adjustable.run();
 	XStringList adjustData (*data);
 	adjustData.setSeperator ("\n");
-	QList<char> adjustList = adjustData.getList();
+	QList<const char*> adjustList = adjustData.getList();
 	QString currentAdjustable (
 		adjustList.at (screen)
 	);
@@ -99,13 +108,13 @@ XFineWindow::XFineWindow (int x,int y,int screen) :
 void XFineWindow::setFrame (
 	int x,int y, bool adjustable,bool has3D
 ) {
-	XWrapText< QDict<char> > mText (mTextPtr);
+	XWrapText< Q3Dict<char> > mText (mTextPtr);
 	setCaption ("XFine2");
 	setGeometry (
 		x - 225, y - 150, 450,300
 	);
 	delete (statusBar());
-	step = new QPopupMenu (this);
+	step = new Q3PopupMenu (this);
 	//----------------------------------------------
 	// create step menu and menu slots
 	//==============================================
@@ -130,29 +139,29 @@ void XFineWindow::setFrame (
 	//----------------------------------------------
 	// create layout structure...
 	//==============================================
-	mFrame = new QFrame (this);
+	mFrame = new Q3Frame (this);
 	// topview...
 	//=====================================
-	QBoxLayout*  layer1  = new QVBoxLayout (mFrame);
+	Q3BoxLayout*  layer1  = new Q3VBoxLayout (mFrame);
 	layer1 -> setMargin (10);
 
 	// main view, seperator and buttonbar
 	// ====================================
-	QBoxLayout*  layer2  = new QHBoxLayout (layer1);
+	Q3BoxLayout*  layer2  = new Q3HBoxLayout (layer1);
 	layer1 -> addSpacing (10);
-    QBoxLayout*  layer3  = new QHBoxLayout (layer1);
+    Q3BoxLayout*  layer3  = new Q3HBoxLayout (layer1);
 	layer1 -> addSpacing (10);
-	QBoxLayout*  layer4  = new QHBoxLayout (layer1);
+	Q3BoxLayout*  layer4  = new Q3HBoxLayout (layer1);
 
 	// tab and status bar
 	// ====================================
-	QVBox* size = new QVBox (mFrame);
-	QVBox* pos  = new QVBox (mFrame);
-	QFrame* posFrame  = new QFrame (pos);
-	QFrame* sizeFrame = new QFrame (size);
-	QBoxLayout*  layer6  = new QVBoxLayout (layer2);
-	QGridLayout* layer7  = new QGridLayout (sizeFrame,3,3);
-	QGridLayout* layer8  = new QGridLayout (posFrame,3,3);
+	Q3VBox* size = new Q3VBox (mFrame);
+	Q3VBox* pos  = new Q3VBox (mFrame);
+	Q3Frame* posFrame  = new Q3Frame (pos);
+	Q3Frame* sizeFrame = new Q3Frame (size);
+	Q3BoxLayout*  layer6  = new Q3VBoxLayout (layer2);
+	Q3GridLayout* layer7  = new Q3GridLayout (sizeFrame,3,3);
+	Q3GridLayout* layer8  = new Q3GridLayout (posFrame,3,3);
 
 	//----------------------------------------------
 	// create widgets...
@@ -170,9 +179,9 @@ void XFineWindow::setFrame (
 		posIndicator3D  -> setPixmap (*DRIdisabled);
 	}
 	// seperator...
-	QFrame *seperator = new QFrame(mFrame);
+	Q3Frame *seperator = new Q3Frame(mFrame);
 	seperator -> setFixedHeight(2);
-	seperator -> setFrameStyle(QFrame::HLine|QFrame::Raised);
+	seperator -> setFrameStyle(Q3Frame::HLine|Q3Frame::Raised);
 	// button bar...
 	mCancel = new QPushButton (mText["Cancel"], mFrame);
 	mSave   = new QPushButton (mText["Save"], mFrame);
@@ -312,7 +321,7 @@ void XFineWindow::setFrame (
 // XFineWindow setup screen...
 //-------------------------------------
 void XFineWindow::initScreen (bool startup, bool adjustable) {
-	XWrapText< QDict<char> > mText (mTextPtr);
+	XWrapText< Q3Dict<char> > mText (mTextPtr);
 	
 	XQuery frq;
 	frq.setOption ("-f");
@@ -322,7 +331,7 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	QString* data = frq.run();
 	XStringList frqData (*data);
 	frqData.setSeperator ("\n");
-	QList<char> frqList = frqData.getList();
+	QList<const char*> frqList = frqData.getList();
 	QString currentFrequency (
 		frqList.at (mScreen)
 	);
@@ -338,7 +347,7 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	data->replace (QRegExp("\""),"");
 	XStringList modeData (*data);
 	modeData.setSeperator ("\n");
-	QList<char> modeList = modeData.getList();
+	QList<const char*> modeList = modeData.getList();
 	QString currentMode (
 		modeList.at (mScreen)
 	);
@@ -350,7 +359,7 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	}
 	XStringList modeline (currentMode);
 	modeline.setSeperator (" ");
-	QList<char> timing = modeline.getList();
+	QList<const char*> timing = modeline.getList();
 	// ...
 	// disable next screen button if only one
 	// screen is available
@@ -370,7 +379,7 @@ void XFineWindow::initScreen (bool startup, bool adjustable) {
 	// ...
 	// save currently used modeline timings
 	// ---
-	QList<char> timing = modeline.getList();
+	QList<const char*> timing = modeline.getList();
 	for (int count=0;count < (int)timing.count();count++) {
 	int value = QString (timing.at(count)).toInt();
 	switch (count) {
@@ -444,7 +453,7 @@ void XFineWindow::saveMode (void) {
 		return;
 	}
 	QFile* mHandle = new QFile (mFileName);
-	if (! mHandle -> open(IO_WriteOnly)) {
+	if (! mHandle -> open(QIODevice::WriteOnly)) {
 	log (L_ERROR,
 		"XFineWindow::open failed on: %s -> %s\n",
 		mFileName.ascii(),strerror(errno)
@@ -586,7 +595,7 @@ void XFineWindow::slotDown (void) {
 // XFineWindow gettext i18n...
 //-------------------------------------
 void XFineWindow::loadText (void) {
-	QDict<char> gtx;
+	Q3Dict<char> gtx;
 	XFile gtxHandle (XFINEGTX);
 
 	setlocale (LC_ALL,"");
@@ -594,7 +603,7 @@ void XFineWindow::loadText (void) {
 	textdomain ("sax");
 
 	gtx = gtxHandle.gtxRead();
-	QDictIterator<char> it(gtx);
+	Q3DictIterator<char> it(gtx);
 	for (; it.current(); ++it) {
 	mTextPtr -> insert (
 		it.currentKey(),gettext((char*)it.current())
@@ -731,7 +740,7 @@ bool XFineWindow::eventFilter ( QObject* obj, QEvent* event ) {
 		// handle press event
 		//--------------------------------------
 		case 6:
-		if (((QKeyEvent*)event)->key() == Key_Return) {
+		if (((QKeyEvent*)event)->key() == Qt::Key_Return) {
 			QKeyEvent spacePress ( (QEvent::Type)6, Qt::Key_Space, 32 ,0 );
 			QApplication::sendEvent ( (QObject*)btn,&spacePress );
 			return (true);
@@ -741,7 +750,7 @@ bool XFineWindow::eventFilter ( QObject* obj, QEvent* event ) {
 		// handle release event
 		//--------------------------------------
 		case 7:
-		if (((QKeyEvent*)event)->key() == Key_Return) {
+		if (((QKeyEvent*)event)->key() == Qt::Key_Return) {
 			QKeyEvent spaceRelease ( (QEvent::Type)7, Qt::Key_Space, 32 ,0 );
 			QApplication::sendEvent ( (QObject*)btn,&spaceRelease );
 			return (true);

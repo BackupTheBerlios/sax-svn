@@ -41,7 +41,7 @@ void SCCFile::fileOpen (void) {
 	// on error. The file is opened in IO_ReadOnly mode
 	// ----
 	if (! mHandle -> isOpen()) {
-	if (! mHandle -> open(IO_ReadOnly)) {
+	if (! mHandle -> open(QIODevice::ReadOnly)) {
 		log (L_ERROR,
 			"SCCFile::fileOpen: open failed on: %s -> %s\n",
 			mHandle->name().ascii(),strerror(errno)
@@ -54,16 +54,17 @@ void SCCFile::fileOpen (void) {
 //====================================
 // readDict...
 //------------------------------------
-QDict<QString> SCCFile::readDict (void) {
+Q3Dict<QString> SCCFile::readDict (void) {
 	// .../
 	// read the contents of the file whereas the file format
 	// has to use a KEY=VALUE description. Comments starting
 	// with a "#" are allowed
 	// ----
-	QString line;
+	char line[MAX_LINE_LENGTH];
 	while ((mHandle->readLine(line,MAX_LINE_LENGTH)) != 0) {
-		line.truncate(line.length()-1);
-		if ((line[0] == '#') || (line.isEmpty())) {
+		QString string_line(line);
+		string_line.truncate(string_line.length()-1);
+		if ((string_line[0] == '#') || (string_line.isEmpty())) {
 			if (mHandle->atEnd()) {
 				break;
 			}
@@ -71,7 +72,7 @@ QDict<QString> SCCFile::readDict (void) {
 		}
 		QString key;
 		QString* val = new QString();
-		QStringList tokens = QStringList::split ( "=", line );
+		QStringList tokens = QStringList::split ( "=", string_line );
 		key = tokens.first();
 		*val = tokens.last();
 		*val = val->stripWhiteSpace();
@@ -106,16 +107,17 @@ QList<QString> SCCFile::readList (void) {
 	// can be a simple list. Comments starting with a "#" are
 	// allowed
 	// ----
-	QString line;
+	char line[MAX_LINE_LENGTH];
 	while ((mHandle->readLine(line,MAX_LINE_LENGTH)) != 0) {
-		line.truncate(line.length()-1);
-		if ((line[0] == '#') || (line.isEmpty())) {
+		QString string_line(line);
+		string_line.truncate(string_line.length()-1);
+		if ((string_line[0] == '#') || (string_line.isEmpty())) {
 			if (mHandle->atEnd()) {
 				break;
 			}
 			continue;
 		}
-		gtxlist.append ( new QString(line) );
+		gtxlist.append ( string_line);
 		if (mHandle->atEnd()) {
 			break;
 		}
@@ -127,7 +129,7 @@ QList<QString> SCCFile::readList (void) {
 //====================================
 // XFile return GTX dictionary...
 //------------------------------------
-QDict<QString> SCCFile::getDataDict (void) {
+Q3Dict<QString> SCCFile::getDataDict (void) {
 	// .../
 	// return the data dictionary without rereading the
 	// information from file

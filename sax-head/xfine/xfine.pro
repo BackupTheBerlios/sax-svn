@@ -18,6 +18,10 @@ HEADERS   += common/xlock.h
 
 RPM_OPT_FLAGS ?= -O2
 
+QT += qtcore
+QT += qtgui
+QT += qt3support
+
 QMAKE_CXXFLAGS = $(RPM_OPT_FLAGS)
 CONFIG    += thread warn_on release
 unix:LIBS += -lm -lXss -lXinerama -lGL -lXxf86vm

@@ -24,20 +24,23 @@ STATUS        : Status: Development
 // Includes...
 //------------------------------------
 #include <qwidget.h>
-#include <qframe.h>
-#include <qdict.h>
+#include <q3frame.h>
+#include <q3dict.h>
 #include <qstring.h>
 #include <qlayout.h>
 #include <qsplitter.h>
 #include <qpushbutton.h>
-#include <qlistbox.h>
-#include <qwidgetstack.h>
-#include <qprogressdialog.h>
-#include <qlistview.h>
-#include <qprocess.h>
+#include <q3listbox.h>
+#include <q3widgetstack.h>
+#include <q3progressdialog.h>
+#include <q3listview.h>
+#include <q3process.h>
 #include <qlabel.h>
-#include <qvbox.h>
-#include <qdict.h>
+#include <q3vbox.h>
+#include <q3dict.h>
+//Added by qt3to4:
+#include <QEvent>
+#include <QCloseEvent>
 
 #include "../libsax/sax.h"
 
@@ -105,31 +108,31 @@ class SCCFrame : public QWidget {
 	Q_OBJECT
 
 	private:
-	QDict<QString>* mTextPtr;
+	Q3Dict<QString>* mTextPtr;
 
 	private:
 	QString*         mRequestedDialog;
-	QDict<SaXImport> mSection;
+	Q3Dict<SaXImport> mSection;
 	SaXConfig*       mConfig;
 	bool mYaSTMode;
 	int  mGUIMode;
 
 	private:
-	QFrame*       mMainFrame;
-	QFrame*       mSeperator;
-	QBoxLayout*   mMainLayout;
-	QBoxLayout*   mTitleLayout;
-	QBoxLayout*   mWorkLayout;
-	QBoxLayout*   mDoneLayout;
+	Q3Frame*       mMainFrame;
+	Q3Frame*       mSeperator;
+	Q3BoxLayout*   mMainLayout;
+	Q3BoxLayout*   mTitleLayout;
+	Q3BoxLayout*   mWorkLayout;
+	Q3BoxLayout*   mDoneLayout;
 
 	private:
-	QListBox*     mModuleList;
-	QHBox*        mModuleTitleBox;
-	QVBox*        mModuleTitleLabel;
+	Q3ListBox*     mModuleList;
+	Q3HBox*        mModuleTitleBox;
+	Q3VBox*        mModuleTitleLabel;
 	QLabel*       mModuleTitleIcon;
 	QLabel*       mModuleTitle;
-	QWidgetStack* mDialogStack;
-	QHBox*        mModuleBox;
+	Q3WidgetStack* mDialogStack;
+	Q3HBox*        mModuleBox;
 
 	private:
 	QPushButton*  mHelper;
@@ -145,7 +148,7 @@ class SCCFrame : public QWidget {
 	SCCVNC*         mVNC;
 
 	private:
-	void runDialog ( QListBoxItem* );
+	void runDialog ( Q3ListBoxItem* );
 	void hideFrame ( int = FRAME_MODULES );
 	void loadText  ( void );
 	void exitSaX   ( int = 0 );
@@ -160,7 +163,7 @@ class SCCFrame : public QWidget {
 	void evaluateAutoDetection ( void );
 	void setCommonButtonWidth ( void );
 	bool startDialog ( const QString& );
-	QDict<QString>* getTextPtr ( void );
+	Q3Dict<QString>* getTextPtr ( void );
 
 	protected:
 	virtual bool eventFilter ( QObject*, QEvent* );
@@ -172,12 +175,12 @@ class SCCFrame : public QWidget {
 	void slotFinish ( void );
 
 	public slots:
-	void slotSelected ( QListBoxItem* );
+	void slotSelected ( Q3ListBoxItem* );
 	
 	public:
 	SCCFrame (
 		bool, int, bool, bool,
-		bool, bool, QString*, bool, QString*, WFlags=WType_TopLevel
+		bool, bool, QString*, bool, QString*, Qt::WFlags=Qt::WType_TopLevel
 	);
 };
 } // end namespace

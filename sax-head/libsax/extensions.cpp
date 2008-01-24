@@ -317,7 +317,7 @@ bool SaXManipulateVNC::isVNCEnabled (void) {
 	// .../
 	//! check if VNC has been enabled
 	// ----
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if ((options["usevnc"]) && (*options["usevnc"] == "yes")) {
 		return true;
 	}
@@ -331,7 +331,7 @@ bool SaXManipulateVNC::isHTTPAccessEnabled (void) {
 	// .../
 	//! check if HTTP access is enabled
 	// ----
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if (options["httpport"]) {
 		return true;
 	}
@@ -346,7 +346,7 @@ bool SaXManipulateVNC::isMultiConnectEnabled (void) {
 	//! check if multiple connections at the same
 	//! time are allowed
 	// ----
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if (options["alwaysshared"]) {
 		return true;
 	}
@@ -360,7 +360,7 @@ bool SaXManipulateVNC::isPwdProtectionEnabled (void) {
 	// .../
 	//! check if the password protection is enabled
 	// ----
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if (options["rfbauth"]) {
 		return true;
 	}
@@ -375,7 +375,7 @@ int SaXManipulateVNC::getHTTPPort (void) {
 	//! check if HTTP access is activated and return
 	//! the current port number set for HTTP access
 	// ----
-	QDict<QString> options = getOptions();
+	Q3Dict<QString> options = getOptions();
 	if (options["httpport"]) {
 		return options["httpport"]->toInt();
     }

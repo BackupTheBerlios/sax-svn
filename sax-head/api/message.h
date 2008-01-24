@@ -20,8 +20,19 @@ STATUS        : Status: Development
 #ifndef SCCMESSAGE_H
 #define SCCMESSAGE_H 1
 
+#undef Above
+#undef Below
+#undef None
+#undef KeyPress
+#undef KeyRelease
+#undef FocusIn
+#undef FocusOut
+#undef FontChange
+#undef Bool
+
+
 #include <qwidget.h>
-#include <qwidgetstack.h>
+#include <q3widgetstack.h>
 #include <qapplication.h>
 #include <qpushbutton.h>
 #include <qlayout.h>
@@ -31,10 +42,15 @@ STATUS        : Status: Development
 #include <qcombobox.h>
 #include <qspinbox.h>
 #include <qlineedit.h>
-#include <qframe.h>
-#include <qhbox.h>
-#include <qdict.h>
+#include <q3frame.h>
+#include <q3hbox.h>
+#include <q3boxlayout.h>
+#include <q3dict.h>
 #include <qdialog.h>
+//Added by qt3to4:
+#include <QShowEvent>
+#include <QEvent>
+#include <QCloseEvent>
 
 #include "common/log.h"
 #include "wrapper.h"
@@ -92,7 +108,7 @@ class SCCMessage : public QDialog {
 	Q_OBJECT
 
 	private:
-	QDict<QString>*  mTextPtr;
+	Q3Dict<QString>*  mTextPtr;
 	SaXMessage::Icon mIcon;
 
 	private:
@@ -100,12 +116,12 @@ class SCCMessage : public QDialog {
 	QString mClickedText;
 
 	private:
-	QFrame*     mMainFrame;
-	QBoxLayout* mMainLayout;
-	QBoxLayout* mIconLayout;
-	QBoxLayout* mWorkLayout;
-	QBoxLayout* mTitleLayout;
-	QBoxLayout* mDoneLayout;
+	Q3Frame*     mMainFrame;
+	Q3BoxLayout* mMainLayout;
+	Q3BoxLayout* mIconLayout;
+	Q3BoxLayout* mWorkLayout;
+	Q3BoxLayout* mTitleLayout;
+	Q3BoxLayout* mDoneLayout;
 
 	private:
 	QSpinBox*   mSpinBox;
@@ -150,7 +166,7 @@ class SCCMessage : public QDialog {
 
 	public:
 	SCCMessage (
-		QWidget*, QDict<QString>*, SaXMessage::Type, const QString&,
+		QWidget*, Q3Dict<QString>*, SaXMessage::Type, const QString&,
 		const QString& = 0, SaXMessage::Icon = SaXMessage::Information,
 		bool =true, const char* =0
 	);

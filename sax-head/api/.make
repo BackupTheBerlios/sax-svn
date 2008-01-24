@@ -8,5 +8,6 @@
 # --------
 # Status: Up-to-date
 #
-export QMAKESPEC=$QTDIR/mkspecs/linux-g++/
-$QTDIR/bin/qmake -makefile -unix -o Makefile xapi.pro
+export QMAKESPEC=/usr/share/qt4/mkspecs/linux-g++/
+`which qmake` -makefile -unix -o Makefile xapi.pro
+

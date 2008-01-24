@@ -23,7 +23,10 @@ STATUS        : Status: Development
 #include <qapplication.h>
 #include <qlist.h>
 #include <qwidget.h>
-#include <qintdict.h>
+#include <q3intdict.h>
+//Added by qt3to4:
+#include <QResizeEvent>
+#include <QPaintEvent>
 
 #include "monitorfig.h"
 
@@ -93,11 +96,11 @@ class SCCPlot : public QWidget {
 	int mRows;
 	int mColumns;
 	QWidget* mParent;
-	QList<SCCMatrixPoint>  mPoint;
-	QIntDict<char> mFree;
-	QIntDict<SCCFig> mWidget;
+	QList<SCCMatrixPoint*>  mPoint;
+	Q3IntDict<char> mFree;
+	Q3IntDict<SCCFig> mWidget;
 	bool mPainted;
-	QList<SCCMatrixInfo> mWidgetStack;
+	QList<SCCMatrixInfo*> mWidgetStack;
 
 	public:
 	SCCPlot ( QWidget* = 0,int = 40 );
@@ -113,7 +116,7 @@ class SCCPlot : public QWidget {
 	int getPointIndex ( int,int );
 	int getRows ( void );
 	int getColumns ( void );
-	QList<SCCLayoutLine> getLayout ( void );
+	QList<SCCLayoutLine*> getLayout ( void );
 	bool isClean ( void );
 
 	private:

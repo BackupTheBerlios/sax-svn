@@ -20,7 +20,10 @@ STATUS        : Status: Development
 #include <stdio.h>
 #include <qpixmap.h>
 #include <qtooltip.h>
-#include <qframe.h>
+#include <q3frame.h>
+//Added by qt3to4:
+#include <QMouseEvent>
+#include <QPaintEvent>
 #include <math.h>
 
 #include "monitorfig.h"
@@ -59,7 +62,7 @@ SCCFig::~SCCFig ( void ) {
 // SCCFig set tool tip for this widget
 //------------------------------------
 void SCCFig::setToolTip ( const QString& text ) {
-	if (text) {
+	if (!text.isNull()) {
 	tipText->sprintf("%s",text.ascii());
 	QToolTip::add (this,text);
 	}

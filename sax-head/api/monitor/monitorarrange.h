@@ -25,16 +25,18 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
 #include <qradiobutton.h>
-#include <qtabdialog.h>
+#include <q3tabdialog.h>
 #include <qlabel.h>
 #include <qspinbox.h>
-#include <qscrollview.h>
+#include <q3scrollview.h>
+//Added by qt3to4:
+#include <QPixmap>
 
 //=====================================
 // Includes
@@ -69,29 +71,29 @@ class SCCMonitorArrange : public SCCDialog {
 	int* mCardID;
 
 	private:
-	QBoxLayout*    mMainLayout;
+	Q3BoxLayout*    mMainLayout;
 
 	private:
-	QButtonGroup*  mModusGroup;
+	Q3ButtonGroup*  mModusGroup;
 	QRadioButton*  mTraditional;
 	QRadioButton*  mClone;
 	QRadioButton*  mXinerama;
-	QButtonGroup*  mLayoutGroup;
+	Q3ButtonGroup*  mLayoutGroup;
 	SCCPlot*       mMatrix;
 
 	public:
 	void setArrangement (
-		int,QList<SCCMonitorDisplay>
+		int,QList<SCCMonitorDisplay*>
 	);
 	void setCleanArrangement (
-		int,QList<SCCMonitorDisplay>
+		int,QList<SCCMonitorDisplay*>
 	);
 	void setFigurePixmap  (
 		int, QPixmap
 	);
 	void setToolTip ( SCCMonitorDisplay* );
 	int  getMultiheadMode ( void );
-	QDict<QString> getArrangement ( void );
+	Q3Dict<QString> getArrangement ( void );
 
 	public:
 	void init   ( void );
@@ -99,7 +101,7 @@ class SCCMonitorArrange : public SCCDialog {
 
 	private:
 	void setDeviceMap (
-		int,QList<SCCMonitorDisplay>
+		int,QList<SCCMonitorDisplay*>
 	);
 
 	public slots:
@@ -108,7 +110,7 @@ class SCCMonitorArrange : public SCCDialog {
 
 	public:
 	SCCMonitorArrange (
-		QDict<QString>*, QDict<SaXImport>, QWidget*
+		Q3Dict<QString>*, Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

@@ -19,7 +19,7 @@
 // Allow QString return types
 //----------------------------------
 %typemap(out) QString {
-	$result = PyString_FromStringAndSize($1.data(),$1.length());
+	$result = PyString_FromStringAndSize($1.toUtf8().constData(),$1.length());
 }
 //==================================
 // Allow QString refs as parameters
@@ -33,17 +33,17 @@
 	}
 }
 //==================================
-// Allow QDict<QString> return types
+// Allow Q3Dict<QString> return types
 //----------------------------------
-%typemap(out) QDict<QString> {
+%typemap(out) Q3Dict<QString> {
 	$result = PyDict_New();
-	QDictIterator<QString> it ($1);
+	Q3DictIterator<QString> it ($1);
 	for (; it.current(); ++it) {
 		QString* key = new QString (it.currentKey());
 		QString* val = new QString (*it.current());
 		PyDict_SetItemString (
-			$result, (char*)key->ascii(),
-			PyString_FromString((char*)val->ascii())
+			$result, key->toUtf8().constData(),
+			PyString_FromString(val->toUtf8().constData())
 		);
 	}
 }
@@ -52,10 +52,10 @@
 //----------------------------------
 %typemap(out) QList<QString> {
 	$result = PyList_New($1.count());
-	QListIterator<QString> it ($1);
-	for (; it.current(); ++it) {
+	QString it;
+	foreach (it,$1) {
 		PyList_Append(
-			$result,PyString_FromString((char*)it.current()->ascii())
+			$result,PyString_FromString(it.toUtf8().constData())
 		);
 	}
 }
@@ -66,7 +66,7 @@
 	$result = PyList_New($1.count());
 	for ( QStringList::Iterator it=$1.begin(); it != $1.end(); ++it ) {
 		QString item (*it);
-		PyList_Append ($result, PyString_FromString((char*)item.ascii()));
+		PyList_Append ($result, PyString_FromString(item.toUtf8().constData()));
 	}
 }
 

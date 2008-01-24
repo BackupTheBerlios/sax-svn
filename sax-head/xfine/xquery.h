@@ -19,7 +19,7 @@ STATUS        : Status: Up-to-date
 #define XQUERY_H 1
 
 #include <qwidget.h>
-#include <qstring.h>
+#include <QString>
 #include <qlist.h>
 #include <X11/Xlib.h>
 
@@ -44,7 +44,7 @@ class XQuery : public QWidget {
 
 class XStringList {
 	private:
-	QList<char> mList;
+	QList<const char*> mList;
 	QString*    mSeperator;
 	QString*    mText;
 
@@ -52,7 +52,7 @@ class XStringList {
 	XStringList  ( const QString& = "" );
 	void setText ( const QString& );
 	void setSeperator ( const QString& );
-	QList<char> getList ( void );
+	QList<const char*> getList ( void );
 	void clear ( void );
 };
 

@@ -83,7 +83,7 @@ bool SaXExport::doExport (void) {
 		}
 		return false;
 	}
-	if (! mHandle -> open(IO_WriteOnly)) {
+	if (! mHandle -> open(QIODevice::WriteOnly)) {
 		excFileOpenFailed ( errno );
 		qError (errorString(),EXC_FILEOPENFAILED);
 		if (mTo) {
@@ -101,7 +101,7 @@ bool SaXExport::doExport (void) {
 		return false;
 	}
 	for (int id=0; id < mImport->getCount();id++) {
-		QDict<QString>* data = mImport->getTablePointer (id);
+		Q3Dict<QString>* data = mImport->getTablePointer (id);
 		if ( ! data ) {
 			excNoStorage(id);
 			qError (errorString(),EXC_NOSTORAGE);
@@ -110,7 +110,7 @@ bool SaXExport::doExport (void) {
 			}
 			continue;
 		}
-		QDictIterator<QString> it (*data);
+		Q3DictIterator<QString> it (*data);
 		for (; it.current(); ++it) {
 			QString line;
 			line.sprintf ("%d : %-20s : %s\n",

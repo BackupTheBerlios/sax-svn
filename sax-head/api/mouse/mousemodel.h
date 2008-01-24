@@ -24,10 +24,10 @@ STATUS        : Status: Development
 // Includes
 //-------------------------------------
 #include <qpushbutton.h>
-#include <qtabdialog.h>
-#include <qvbox.h>
-#include <qbuttongroup.h>
-#include <qlistbox.h>
+#include <q3tabdialog.h>
+#include <q3vbox.h>
+#include <q3buttongroup.h>
+#include <q3listbox.h>
 
 //=====================================
 // Includes
@@ -63,13 +63,13 @@ class SCCMouseModel : public SCCDialog {
 	SaXManipulateMice* mSaxMouse;
 
 	private:
-	QVBox*         mModelTab;
+	Q3VBox*         mModelTab;
 
 	private:
-	QTabDialog*    mModelDialog;
-	QButtonGroup*  mModelVendorGroup;
-	QListBox*      mVendorList;
-	QListBox*      mModelList;
+	Q3TabDialog*    mModelDialog;
+	Q3ButtonGroup*  mModelVendorGroup;
+	Q3ListBox*      mVendorList;
+	Q3ListBox*      mModelList;
 
 	public:
 	void show ( void );
@@ -85,11 +85,11 @@ class SCCMouseModel : public SCCDialog {
 
 	public slots:
 	void slotOk     ( void );
-    void slotVendor ( QListBoxItem* );
+    void slotVendor ( Q3ListBoxItem* );
 
 	public:
 	SCCMouseModel (
-		QDict<QString>*, QDict<SaXImport>, const QString&,
+		Q3Dict<QString>*, Q3Dict<SaXImport>, const QString&,
 		int, QWidget*
 	);
 };

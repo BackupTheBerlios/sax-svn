@@ -22,7 +22,7 @@ STATUS        : Status: Development
 //=====================================
 // setDefaultColorDepth...
 //-------------------------------------
-bool setDefaultColorDepth ( QDict<SaXImport> section,int desktop,int color ) {
+bool setDefaultColorDepth ( Q3Dict<SaXImport> section,int desktop,int color ) {
 	SaXManipulateDesktop mDesktop (
 		section["Desktop"],section["Card"],section["Path"]
 	);

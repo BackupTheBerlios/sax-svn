@@ -24,18 +24,18 @@ namespace SaX {
 //====================================
 // Constructor...
 //------------------------------------
-SaXInit::SaXInit ( QList<char> opt ) {
+SaXInit::SaXInit ( QList<const char*> opt ) {
 	// .../
 	//! An object of this type is used to initialize the SaX2
 	//! cache. The cache provide the current configuration suggestion
 	//! which can be used to create an automatic X11 config file.
 	//! If additional options are used this constructor will apply it
 	// ----
-	mOptions.append ("--quiet");
-	mOptions.append ("no");
-	QListIterator<char> it (opt);
-	for (; it.current(); ++it) {
-		mOptions.append ( it.current() );
+	mOptions.append ((const char*)"--quiet");
+	mOptions.append ((const char*)"no");
+	const char* it;
+	foreach (it,opt) {
+		mOptions.append ( it );
 	}
 }
 
@@ -48,8 +48,8 @@ SaXInit::SaXInit ( void ) {
 	//! cache. The cache provide the current configuration suggestion
 	//! which can be used to create an automatic X11 config file.
 	// ----
-	mOptions.append ("--quiet");
-	mOptions.append ("no");
+	mOptions.append ((const char*)"--quiet");
+	mOptions.append ((const char*)"no");
 }
 
 //====================================
@@ -82,7 +82,7 @@ void SaXInit::ignoreProfile (void) {
 	//! this will prevent any multihead cards to become configured as
 	//! multihead card
 	// ----
-	mOptions.append ("-i");
+	mOptions.append ((const char*)"-i");
 }
 
 //====================================
@@ -105,9 +105,9 @@ void SaXInit::doInit (void) {
 	}
 	SaXProcessCall* proc = new SaXProcessCall ();
 	proc -> addArgument ( SAX_INIT );
-	QListIterator<char> it (mOptions);
-	for (; it.current(); ++it) {
-		proc -> addArgument ( it.current() );
+	const char* it;
+	foreach (it,mOptions) {
+		proc -> addArgument ( it );
 	}
 	if ( ! proc -> start() ) {
 		excProcessFailed();

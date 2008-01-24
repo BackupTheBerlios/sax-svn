@@ -25,9 +25,9 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qcheckbox.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qlabel.h>
 #include <qspinbox.h>
 
@@ -61,17 +61,17 @@ class SCCMouseDisplay : public SCCDialog {
 	SaXManipulateMice* mSaxMouse;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 	int              mMouseOptID;
     int              mSynapOptID;
 
 	private:
 	QCheckBox*       mCheckEnable;
-	QButtonGroup*    mMouseNameGroup;
+	Q3ButtonGroup*    mMouseNameGroup;
 	QLabel*          mLabelMouseName;
 	QPushButton*     mChangeMouse;
-	QButtonGroup*    mMouseOptionGroup;
-	QButtonGroup*    mSynapOptionGroup;
+	Q3ButtonGroup*    mMouseOptionGroup;
+	Q3ButtonGroup*    mSynapOptionGroup;
 	QCheckBox*       mCheck3BtnEmulation;
 	QCheckBox*       mCheckMouseWheel;
 	QCheckBox*       mCheckEmulateWheel;
@@ -79,11 +79,11 @@ class SCCMouseDisplay : public SCCDialog {
 	QCheckBox*       mCheckInvertYAxis;
 	QCheckBox*       mCheckLeftHand;
 	QSpinBox*        mEmulateWheelButton;
-	QButtonGroup*    mMouseTestGroup;
-	QButtonGroup*    mSynapTestGroup;
+	Q3ButtonGroup*    mMouseTestGroup;
+	Q3ButtonGroup*    mSynapTestGroup;
 	SCCMouseTest*    mTestField;
 	SCCMouseModel*   mChangeMouseModelDialog;
-	QWidgetStack*    mOptionStack;
+	Q3WidgetStack*    mOptionStack;
 
 	public:
 	bool isEnabled  ( void );
@@ -119,7 +119,7 @@ class SCCMouseDisplay : public SCCDialog {
 
 	public:
 	SCCMouseDisplay (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

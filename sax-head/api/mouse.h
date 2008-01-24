@@ -25,6 +25,7 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qpushbutton.h>
 #include <qtabwidget.h>
+#include <qlist.h>
 
 //=====================================
 // Includes
@@ -46,7 +47,7 @@ class SCCMouse : public SCCDialog {
 	int  mMouse;
 
 	private:
-	QList<SCCMouseDisplay>  mMouseDisplay;
+	QList<SCCMouseDisplay*>  mMouseDisplay;
 
 	private:
 	QTabWidget* mMouseTab;
@@ -61,8 +62,8 @@ class SCCMouse : public SCCDialog {
 
 	public:
 	SCCMouse (
-		QWidgetStack*,QDict<QString>*,
-		QDict<SaXImport>, QWidget*
+		Q3WidgetStack*,Q3Dict<QString>*,
+		Q3Dict<SaXImport>, QWidget*
 	);
 };
 } // end namespace

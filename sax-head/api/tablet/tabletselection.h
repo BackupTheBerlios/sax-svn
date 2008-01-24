@@ -25,8 +25,8 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qcheckbox.h>
 #include <qlabel.h>
-#include <qbuttongroup.h>
-#include <qlistbox.h>
+#include <q3buttongroup.h>
+#include <q3listbox.h>
 
 //=====================================
 // Includes
@@ -57,13 +57,13 @@ class SCCTabletSelection : public SCCDialog {
 	SaXManipulateTablets* mSaxTablet;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 
 	private:
 	QCheckBox*       mCheckEnable;
-	QButtonGroup*    mModelVendorGroup;
-	QListBox*        mVendorList;
-	QListBox*        mModelList;
+	Q3ButtonGroup*    mModelVendorGroup;
+	Q3ListBox*        mVendorList;
+	Q3ListBox*        mModelList;
 
 	public:
 	QString getVendor ( void );
@@ -79,8 +79,8 @@ class SCCTabletSelection : public SCCDialog {
 
 	public slots:
 	void slotActivateTablet ( void );
-	void slotVendor ( QListBoxItem* );
-	void slotName   ( QListBoxItem* );
+	void slotVendor ( Q3ListBoxItem* );
+	void slotName   ( Q3ListBoxItem* );
 
 	signals:
 	void sigActivate ( bool );
@@ -88,7 +88,7 @@ class SCCTabletSelection : public SCCDialog {
 
 	public:
 	SCCTabletSelection (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

@@ -18,20 +18,24 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "mousetest.h"
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3VBoxLayout>
+#include <QPaintEvent>
 
 namespace SaXGUI {
 //====================================
 // Constructor...
 //------------------------------------
 SCCMouseTest::SCCMouseTest ( 
-	QDict<QString>* textPtr, QWidget* parent 
+	Q3Dict<QString>* textPtr, QWidget* parent 
 ) : SCCMouseEvent ( parent ) {
 	mX = 0;
 	mY = 0;
 	mTextPtr = textPtr;
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
-	setBackgroundMode( NoBackground );
-	QBoxLayout* layer1 = new QVBoxLayout (this);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
+	setBackgroundMode( Qt::NoBackground );
+	Q3BoxLayout* layer1 = new Q3VBoxLayout (this);
 	mStatus = new QStatusBar ( this );
 	mStatus -> setSizeGripEnabled (false);
 	//mStatus -> setBackgroundColor (QColor(white));
@@ -90,7 +94,7 @@ void SCCMouseTest::setPixmap (int id) {
 // single click...
 //------------------------------------
 void SCCMouseTest::singleClickEvent (int) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mStatus -> message (mText["SingleClick"]);
 }
 
@@ -98,7 +102,7 @@ void SCCMouseTest::singleClickEvent (int) {
 // double click...
 //------------------------------------
 void SCCMouseTest::doubleClickEvent (int) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mStatus -> message (mText["DoubleClick"]);
 }
 
@@ -106,7 +110,7 @@ void SCCMouseTest::doubleClickEvent (int) {
 // wheel click...
 //------------------------------------
 void SCCMouseTest::wheelEvent (int btn) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	if (btn > 0) {
 		setPixmap (4);
 	} else {
@@ -121,7 +125,7 @@ void SCCMouseTest::wheelEvent (int btn) {
 // press event...
 //------------------------------------
 void SCCMouseTest::pressEvent (int btn) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mStatus -> message (mText["ButtonPressed"]);
 	switch (btn) {
 	case 1:
@@ -137,7 +141,7 @@ void SCCMouseTest::pressEvent (int btn) {
 // release event...
 //------------------------------------
 void SCCMouseTest::releaseEvent (int) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mStatus -> message (mText["ButtonReleased"]);
 	setPixmap (0);
 }
@@ -169,7 +173,7 @@ void SCCMouseTest::moveEvent (int x,int y) {
 // Timer for double clicks...
 //------------------------------------
 void SCCMouseTest::timerDone ( void ) {
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mStatus -> message (mText["WheelReleased"]);
 	setPixmap (0);
 }

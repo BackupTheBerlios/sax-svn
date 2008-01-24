@@ -23,7 +23,7 @@ STATUS        : Status: Development
 //=====================================
 // Includes
 //-------------------------------------
-#include <qlistview.h>
+#include <q3listview.h>
 
 //=====================================
 // Includes
@@ -47,28 +47,28 @@ class SCCKeyboardOptions : public SCCDialog {
 	//====================================
 	// private widget data contents
 	//------------------------------------
-	QDict<QString>   mOptionDict;
+	Q3Dict<QString>   mOptionDict;
 
 	private:
-	QBoxLayout*      mMainLayout;
+	Q3BoxLayout*      mMainLayout;
 
 	private:
-	QListView*       mXKBOptionView;
-	QCheckListItem*  mIDGroupShiftLock;
-	QCheckListItem*  mIDKbdLedToShow;
-	QCheckListItem*  mIDCompose;
-	QCheckListItem*  mIDControl;
-	QCheckListItem*  mIDThirdLevel;
-	QCheckListItem*  mIDAltWinKey;
-	QCheckListItem*  mIDEuroSign;
-	QCheckListItem*  mIDEuroSignNone;
-	QCheckListItem*  mIDCapsLock;
-	QCheckListItem*  mIDCapsLockNone;
-	QCheckListItem*	 mIDAltWinKeyNone;
-	QCheckListItem*  mIDControlNone;
+	Q3ListView*       mXKBOptionView;
+	Q3CheckListItem*  mIDGroupShiftLock;
+	Q3CheckListItem*  mIDKbdLedToShow;
+	Q3CheckListItem*  mIDCompose;
+	Q3CheckListItem*  mIDControl;
+	Q3CheckListItem*  mIDThirdLevel;
+	Q3CheckListItem*  mIDAltWinKey;
+	Q3CheckListItem*  mIDEuroSign;
+	Q3CheckListItem*  mIDEuroSignNone;
+	Q3CheckListItem*  mIDCapsLock;
+	Q3CheckListItem*  mIDCapsLockNone;
+	Q3CheckListItem*	 mIDAltWinKeyNone;
+	Q3CheckListItem*  mIDControlNone;
 
 	private:
-	void updateTree ( QListViewItem*,bool );
+	void updateTree ( Q3ListViewItem*,bool );
 	QString findOption ( const QString& );
 	QString translateOption ( const QString& );
 
@@ -81,14 +81,14 @@ class SCCKeyboardOptions : public SCCDialog {
 	void import ( void );
 
 	public slots:
-	void slotXKBOption ( QListViewItem* );
+	void slotXKBOption ( Q3ListViewItem* );
 
 	signals:
 	void sigApply ( void );
 
 	public:
 	SCCKeyboardOptions (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

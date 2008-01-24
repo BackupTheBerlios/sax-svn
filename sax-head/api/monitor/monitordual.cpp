@@ -18,6 +18,11 @@ DESCRIPTION   : SaX2 GUI system using libsax to provide
 STATUS        : Status: Development
 **************/
 #include "monitordual.h"
+//Added by qt3to4:
+#include <Q3GridLayout>
+#include <Q3Frame>
+#include <QPixmap>
+#include <QLabel>
 
 //====================================
 // Globals
@@ -29,23 +34,23 @@ namespace SaXGUI {
 // Constructor
 //------------------------------------
 SCCMonitorDual::SCCMonitorDual (
-	QDict<QString>* text, QDict<SaXImport> section, const QString& cardname,
+	Q3Dict<QString>* text, Q3Dict<SaXImport> section, const QString& cardname,
 	int display,QWidget* parent
 ) : SCCDialog ( 0,text,section,parent ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// create layout for this widget
 	//-------------------------------------
-	mCardTab = new QVBox ( this );
+	mCardTab = new Q3VBox ( this );
 
 	//=====================================
 	// prepare tabed dialog
 	//-------------------------------------
-	mDualHeadDialog = new QTabDialog ( this,0,true );
+	mDualHeadDialog = new Q3TabDialog ( this,0,true );
 	mDualHeadDialog -> setCaption  ( mText["DualHeadCaption"] );
 	mDualHeadDialog -> setOkButton ( mText["Ok"] );
 	mDualHeadDialog -> setCancelButton ( mText["Cancel"] );
@@ -61,37 +66,37 @@ SCCMonitorDual::SCCMonitorDual (
 	// create macro widgets
 	//-------------------------------------
 	mCardTab -> setMargin ( 15 );
-	mChangeGroup = new QButtonGroup (
-		1,Horizontal,"",mCardTab
+	mChangeGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,"",mCardTab
 	);
 	mCardTab -> setSpacing ( 15 );
-	mMoniBox = new QHBox ( mChangeGroup );
+	mMoniBox = new Q3HBox ( mChangeGroup );
 	mLabelSecondMonitor = new QLabel ( mText["SecondMonitor"],mMoniBox );
 	mChangeMonitor = new QPushButton ( mText["Change"],mMoniBox);
 	mMoniBox -> setStretchFactor ( mLabelSecondMonitor, 20 );
-	mResBox = new QHBox ( mChangeGroup );
+	mResBox = new Q3HBox ( mChangeGroup );
 	mLabelSecondResolution = new QLabel (mText["SecondResolution"]+":",mResBox);
 	mResolution = new QComboBox ( false, mResBox );
 	mResBox -> setStretchFactor ( mLabelSecondResolution, 20 );
 	mResolution -> setFixedWidth ( 200 );
 	mChangeMonitor -> setFixedWidth ( 200 );
-	QHBox* toolBox = new QHBox ( mCardTab );
+	Q3HBox* toolBox = new Q3HBox ( mCardTab );
 	mCardTab -> setSpacing ( 15 );
-	mModeGroup = new QButtonGroup (
-		1,Horizontal,mText["DualHeadMode"],toolBox
+	mModeGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["DualHeadMode"],toolBox
 	);
 	toolBox -> setSpacing ( 15 );
     mClone       = new QRadioButton ( mText["ModusClone"], mModeGroup );
     mXinerama    = new QRadioButton ( mText["ModusXinerama"], mModeGroup );
-	mOrientationGroup = new QButtonGroup (
-		1,Horizontal,mText["Arrange"],toolBox
+	mOrientationGroup = new Q3ButtonGroup (
+		1,Qt::Horizontal,mText["Arrange"],toolBox
 	);
-	QButtonGroup* alignGroup = new QButtonGroup ( mOrientationGroup );
+	Q3ButtonGroup* alignGroup = new Q3ButtonGroup ( mOrientationGroup );
 	alignGroup -> setFrameStyle (
-		QFrame::NoFrame
+		Q3Frame::NoFrame
 	);
 	alignGroup -> setFixedSize ( 200,200 );
-	QGridLayout* orientationLayout = new QGridLayout ( alignGroup,2,2 );
+	Q3GridLayout* orientationLayout = new Q3GridLayout ( alignGroup,2,2 );
 
 	QPixmap leftOfPixmap  = QPixmap ( LEFT_OF_PIXMAP  );
 	QPixmap rightOfPixmap = QPixmap ( RIGHT_OF_PIXMAP );
@@ -198,9 +203,9 @@ void SCCMonitorDual::init ( void ) {
 	//------------------------------------
 	SCCFile resHandle ( RES_FILE );
 	mResolutionDict = resHandle.readDict();
-	QDict<QString> metaResolution;
+	Q3Dict<QString> metaResolution;
 	long sortResolution[mResolutionDict.count()];
-	QDictIterator<QString> ir (mResolutionDict);
+	Q3DictIterator<QString> ir (mResolutionDict);
 	int count = 0;
 	for (; ir.current(); ++ir) {
 		QStringList tokens = QStringList::split ( "x", ir.currentKey() );
@@ -246,7 +251,7 @@ void SCCMonitorDual::init ( void ) {
 			//====================================
 			// check avaliable config groups
 			//------------------------------------	
-			QDictIterator<QString> it ( mProfileDriverOptions );
+			Q3DictIterator<QString> it ( mProfileDriverOptions );
 			bool hasHSyncSetup = true;
 			bool hasVSyncSetup = true;
 			bool hasResSetup   = true;
@@ -286,7 +291,7 @@ void SCCMonitorDual::import ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	if ( mNeedImport ) {
 		//====================================
@@ -303,7 +308,7 @@ void SCCMonitorDual::import ( void ) {
 		//====================================
 		// get options defined for the card
 		//------------------------------------
-		QDict<QString> mOptions = saxCard.getOptions();
+		Q3Dict<QString> mOptions = saxCard.getOptions();
 
 		//====================================
 		// handle monitor vendor/model name
@@ -525,7 +530,7 @@ void SCCMonitorDual::setMonitorName (
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// update monitor label
@@ -565,7 +570,7 @@ void SCCMonitorDual::slotOk ( void ) {
 	//=====================================
 	// get translation pointer
 	//-------------------------------------
-	SCCWrapPointer< QDict<QString> > mText (mTextPtr);
+	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 
 	//=====================================
 	// get parent SCCMonitorDisplay ptr
@@ -576,7 +581,7 @@ void SCCMonitorDual::slotOk ( void ) {
 	// save resolution state
 	//-------------------------------------
 	QString selected = mResolution->currentText();
-	QDictIterator<QString> it (mResolutionDict);
+	Q3DictIterator<QString> it (mResolutionDict);
 	for (; it.current(); ++it) {
 		if (*it.current() == selected) {
 			mSelectedResolution = it.currentKey();
@@ -666,7 +671,7 @@ QList<QString> SCCMonitorDual::setupList ( void ) {
 	// find first startup resolution
 	//------------------------------------
 	QString selected = mResolution->currentText();
-	QDictIterator<QString> it (mResolutionDict);
+	Q3DictIterator<QString> it (mResolutionDict);
 	long basePixels  = 0;
 	int  basePixelsX = 0;
 	int  basePixelsY = 0;
@@ -680,7 +685,7 @@ QList<QString> SCCMonitorDual::setupList ( void ) {
 			basePixels  = x * y;
 			basePixelsX = x;
 			basePixelsY = y;
-			mSelectedResolutionList.append ( baseResolution );
+			mSelectedResolutionList.append ( *baseResolution );
 		}
 	}
 	//====================================
@@ -688,7 +693,7 @@ QList<QString> SCCMonitorDual::setupList ( void ) {
 	//------------------------------------
 	it.toFirst();
 	int count = 0;
-	QDict<QString> metaResolution;
+	Q3Dict<QString> metaResolution;
 	long sortResolution[mResolutionDict.count()];
 	for (; it.current(); ++it) {
 		QString* addResolution = new QString (it.currentKey());
@@ -716,7 +721,7 @@ QList<QString> SCCMonitorDual::setupList ( void ) {
 	for (int n=0;n<count;n++) {
 		QString key;
 		QTextOStream (&key) << sortResolution[n];
-		mSelectedResolutionList.append ( metaResolution[key] );
+		mSelectedResolutionList.append ( *metaResolution[key] );
 	}
 	return mSelectedResolutionList;
 } 

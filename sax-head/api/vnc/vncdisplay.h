@@ -25,11 +25,11 @@ STATUS        : Status: Development
 //-------------------------------------
 #include <qcheckbox.h>
 #include <qlabel.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qlineedit.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qspinbox.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 
 //=====================================
 // Includes
@@ -56,18 +56,18 @@ class SCCVNCDisplay : public SCCDialog {
 	QString        mPWD;
 
 	private:
-	QBoxLayout*    mMainLayout;
+	Q3BoxLayout*    mMainLayout;
 
 	private:
 	QCheckBox*     mCheckVNC;
-	QButtonGroup*  mOptions;
+	Q3ButtonGroup*  mOptions;
 	QCheckBox*     mCheckPWD;
-	QVBox*         mEntries;
+	Q3VBox*         mEntries;
 	QLineEdit*     mPWD1;
 	QLineEdit*     mPWD2;
 	QCheckBox*     mCheckShared;
 	QCheckBox*     mCheckHTTP;
-	QVBox*         mHTTPEntries;
+	Q3VBox*         mHTTPEntries;
 	QSpinBox*      mHTTP;
 
 	public:
@@ -91,7 +91,7 @@ class SCCVNCDisplay : public SCCDialog {
 
 	public:
 	SCCVNCDisplay (
-		QDict<QString>*, QDict<SaXImport>,
+		Q3Dict<QString>*, Q3Dict<SaXImport>,
 		int, QWidget*
 	);
 };

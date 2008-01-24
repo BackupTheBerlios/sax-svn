@@ -24,10 +24,11 @@ STATUS        : Status: Development
 //====================================
 // Includes...
 //------------------------------------
-#include <qdict.h>
-#include <qptrlist.h>
+#include <Q3Dict>
+#include <Q3PtrList>
 #include <qstring.h>
-#include <qtextstream.h>
+//#include <Q3TextStream>
+#include <QTextOStream>
 #include <qstringlist.h>
 #include <qregexp.h>
 
@@ -75,22 +76,22 @@ class SaXStorageIF : public SaXException {
 	virtual bool addID ( int ) = 0;
 	virtual bool delID ( int ) = 0;
 	virtual int getCurrentID ( void ) = 0;
-	virtual QDict<QString> getTable ( int ) = 0;
-	virtual QDict<QString>  getCurrentTable ( void ) = 0;
-	virtual QDict<QString>* getTablePointer ( int  ) = 0;
-    virtual QDict<QString>* getCurrentTablePointer ( void ) = 0;
-	virtual void merge ( QList< QDict<QString> > ) = 0;
+	virtual Q3Dict<QString> getTable ( int ) = 0;
+	virtual Q3Dict<QString>  getCurrentTable ( void ) = 0;
+	virtual Q3Dict<QString>* getTablePointer ( int  ) = 0;
+    virtual Q3Dict<QString>* getCurrentTablePointer ( void ) = 0;
+	virtual void merge ( Q3PtrList< Q3Dict<QString> > ) = 0;
 	virtual int getCount ( bool = false ) = 0;
 
 	public:
 	virtual void addGroup (
 		const QString &,const QString &, const QString &
 	) = 0;
-	virtual QDict< QDict<QString> > getTablePointerCDB  ( void ) = 0;
-	virtual QList< QDict<QString> > getTablePointerCDB_DATA (
+	virtual Q3Dict< Q3Dict<QString> > getTablePointerCDB  ( void ) = 0;
+	virtual Q3PtrList< Q3Dict<QString> > getTablePointerCDB_DATA (
 		const QString &
 	) = 0;
-	virtual QList< QDict<QString> > getTablePointerDATA ( void ) = 0;
+	virtual Q3PtrList< Q3Dict<QString> > getTablePointerDATA ( void ) = 0;
 
 	public:
 	virtual ~SaXStorageIF ( void ) { }
@@ -128,8 +129,8 @@ class SaXStorageIF : public SaXException {
 */
 class SaXStorage : public SaXStorageIF {
 	protected:
-	QList< QDict<QString> > mData;
-	QDict< QDict<QString> > mCDB;
+	Q3PtrList< Q3Dict<QString> > mData;
+	Q3Dict< Q3Dict<QString> > mCDB;
 	int mCurrentID;
 
 	public:
@@ -154,24 +155,24 @@ class SaXStorage : public SaXStorageIF {
 	bool addID ( int );
 	bool delID ( int );
 	int getCurrentID ( void );
-	QDict<QString> getTable ( int );
-	QDict<QString>  getCurrentTable ( void );
-	QDict<QString>* getTablePointer ( int  );
-    QDict<QString>* getCurrentTablePointer ( void );
-	void merge ( QList< QDict<QString> > );
+	Q3Dict<QString> getTable ( int );
+	Q3Dict<QString>  getCurrentTable ( void );
+	Q3Dict<QString>* getTablePointer ( int  );
+	Q3Dict<QString>* getCurrentTablePointer ( void );
+	void merge ( Q3PtrList< Q3Dict<QString> > );
 	int getCount ( bool = false );
 
 	public:
 	void addGroup (
 		const QString &,const QString &, const QString &
 	);
-	QDict< QDict<QString> > getTablePointerCDB  ( void );
-	QList< QDict<QString> > getTablePointerCDB_DATA ( const QString & );
-	QList< QDict<QString> > getTablePointerDATA ( void );
+	Q3Dict< Q3Dict<QString> > getTablePointerCDB  ( void );
+	Q3PtrList< Q3Dict<QString> > getTablePointerCDB_DATA ( const QString & );
+	Q3PtrList< Q3Dict<QString> > getTablePointerDATA ( void );
 
 	#ifndef NO_OPERATOR_SUPPORT
 	public:
-	QDict<QString> operator[] ( int id ) {
+	Q3Dict<QString> operator[] ( int id ) {
 		return getTable (id);
 	}
 	QString operator[] ( const QString & key ) {

@@ -22,7 +22,7 @@ STATUS        : Status: Development
 //=====================================
 // get3DStatus...
 //-------------------------------------
-bool get3DStatus ( QDict<SaXImport> section, int desktop ) {
+bool get3DStatus ( Q3Dict<SaXImport> section, int desktop ) {
 	SaXManipulateDesktop mDesktop (
 		section["Desktop"],section["Card"],section["Path"]
 	);

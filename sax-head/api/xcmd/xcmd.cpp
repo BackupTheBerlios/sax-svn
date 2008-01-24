@@ -101,7 +101,7 @@ int main (int argc,char*argv[]) {
 	//=====================================
 	// import configuration data...
 	//-------------------------------------
-	QDict<SaXImport> section;
+	Q3Dict<SaXImport> section;
 	int importID[7] = {
 		SAX_CARD,
 		SAX_DESKTOP,
