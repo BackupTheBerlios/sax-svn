@@ -19,7 +19,11 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "config.h"
+#if QT_VERSION >= 0x040100
 #include <Q3TextStream>
+#else
+typedef QTextStream Q3TextStream;
+#endif
 
 namespace SaX {
 //====================================

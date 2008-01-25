@@ -19,7 +19,11 @@ DESCRIPTION   : native C++ class library to access SaX2
 STATUS        : Status: Development
 **************/
 #include "keyboard.h"
+#if QT_VERSION >= 0x040100
 #include <Q3TextStream>
+#else
+typedef QTextStream Q3TextStream;
+#endif
 
 namespace SaX {
 //====================================
@@ -127,7 +131,7 @@ QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 		Q3TextStream ts(&f);
 		QString line;
 		QString prev_line;
-		while (!ts.eof()) {
+		while (!ts.atEnd()) {
 			prev_line = line;
 			line = ts.readLine().simplifyWhiteSpace();
 			if (line[0] == '#' || line.left(2) == "//" || line.isEmpty()) {

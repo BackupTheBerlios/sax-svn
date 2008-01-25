@@ -27,7 +27,6 @@ STATUS        : Status: Development
 #include <Q3Dict>
 #include <Q3PtrList>
 #include <qstring.h>
-//#include <Q3TextStream>
 #include <QTextOStream>
 #include <qstringlist.h>
 #include <qregexp.h>
