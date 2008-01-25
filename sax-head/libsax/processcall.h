@@ -29,6 +29,7 @@ STATUS        : Status: Development
 #if QT_VERSION > 0x040100
 #include <Q3TextStream>
 #else
+#include <qtextstream.h>
 typedef QTextStream Q3TextStream;
 #endif
 

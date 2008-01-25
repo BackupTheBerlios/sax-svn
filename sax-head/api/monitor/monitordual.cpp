@@ -92,9 +92,11 @@ SCCMonitorDual::SCCMonitorDual (
 		1,Qt::Horizontal,mText["Arrange"],toolBox
 	);
 	Q3ButtonGroup* alignGroup = new Q3ButtonGroup ( mOrientationGroup );
+	#if QT_VERSION > 0x040100
 	alignGroup -> setFrameStyle (
 		Q3Frame::NoFrame
 	);
+	#endif
 	alignGroup -> setFixedSize ( 200,200 );
 	Q3GridLayout* orientationLayout = new Q3GridLayout ( alignGroup,2,2 );
 
