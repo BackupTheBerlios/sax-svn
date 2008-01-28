@@ -29,6 +29,9 @@ sub getProfile {
 		/^nvidia/    && do {
 			return "$dir/NVidia_DualHead_DriverOptions";
 		};
+		/^radeonhd/    && do {
+			return "$dir/RadeonHD_DualHead_DriverOptions";
+		};
 		/^radeon/    && do {
 			return "$dir/Radeon_DualHead_DriverOptions";
 		};

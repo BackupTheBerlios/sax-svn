@@ -573,4 +573,73 @@ sub ProfileSortRandrData {
 	return @sortedChannels;
 }
 
+#=====================================
+# ProfileSortRandrData
+#-------------------------------------
+sub ProfileSortRandrDataForRadeonHD {
+	my $rroutput = shift;
+	my @channels = split ("%",$rroutput);
+	my @sortedChannels = ();
+	my $index = -1;
+	# /.../
+	# assume first channel is internal display
+	# skip the internal display
+	# ----
+	foreach my $channel (@channels) {
+		my @data = split (" ",$channel); $index++;
+		if ( $data[1] ne "connected") {
+			next;
+		}
+		delete $channels[$index];
+		last;
+	}
+	$index = 10;
+	foreach my $channel (@channels) {
+		my @data = split (" ",$channel);
+		my $outputName  = $data[0];
+		my $outputState = $data[1];
+		# /.../
+		# activate all connected output channels
+		# in a specific order
+		# ----
+		if ($outputState ne "connected") {
+			next;
+		}
+		if ($outputName eq "PANEL") {
+			$sortedChannels[0] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-I_1/) {
+			$sortedChannels[1] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-I_2/) {
+			$sortedChannels[2] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-D_1/) {
+			$sortedChannels[3] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-D_2/) {
+			$sortedChannels[4] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-I/) {
+			$sortedChannels[5] = $outputName;
+		}
+		elsif ($outputName =~ /^DVI-D/) {
+			$sortedChannels[6] = $outputName;
+		}
+		elsif ($outputName =~ /^VGA_1/) {
+			$sortedChannels[7] = $outputName;
+		}
+		elsif ($outputName =~ /^VGA_2/) {
+			$sortedChannels[8] = $outputName;
+		}
+		elsif ($outputName =~ /^VGA/) {
+			$sortedChannels[9] = $outputName;
+		} else {
+			$sortedChannels[$index] = $outputName;
+			$index++;
+		}
+	}
+	return @sortedChannels;
+}
+
 1;

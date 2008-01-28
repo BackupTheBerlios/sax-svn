@@ -1679,6 +1679,10 @@ QString SaXManipulateDesktop::getDriverOptionsDualHeadProfile (
 		QTextOStream (&result)
 			<< PROFILE_DIR << "NVidia_DualHead_DriverOptions";
 	}
+	if (driver == "radeonhd") {
+		QTextOStream (&result)
+			<< PROFILE_DIR << "RadeonHD_DualHead_DriverOptions";
+	}
 	if (driver == "radeon") {
 		QTextOStream (&result)
 			<< PROFILE_DIR << "Radeon_DualHead_DriverOptions";
