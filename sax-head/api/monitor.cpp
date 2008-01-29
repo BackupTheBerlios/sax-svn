@@ -1169,14 +1169,9 @@ bool SCCMonitor::exportData ( void ) {
 	//====================================
 	// save default color depth
 	//------------------------------------
-
-	Q3Dict<QString> arrangeDict = mMonitorArrange->getArrangement();
-	Q3DictIterator<QString> it (arrangeDict);
-
-//	it.toFirst(); 
 	card = 0;
-	for (; it.current() ; ++it) {
-		SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
+	foreach (display, mMonitorDisplay) {
+		//SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
 		SaXManipulateDesktop saxDesktop (
 			mSection["Desktop"],mSection["Card"],mSection["Path"]
 		);
