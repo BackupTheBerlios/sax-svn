@@ -120,7 +120,7 @@ Authors:
 %package -n sax2-gui
 %if %{?suse_version:1}0
 # SuSE Requires...
-Requires:       netpbm sax2-tools icewm-bin sax2
+Requires:       netpbm sax2-tools icewm-lite sax2
 %else
 # FC5 Requires...
 Requires:       netpbm sax2-tools qt sax2
@@ -141,7 +141,7 @@ Authors:
 %package -n sax2-libsax
 %if %{?suse_version:1}0
 # SuSE Requires...
-Requires:       sax2-tools sax2-libsax-perl icewm-bin
+Requires:       sax2-tools sax2-libsax-perl icewm-lite
 %if %{suse_version} <= 1020
 %ifarch       %ix86 x86_64
 Requires:       915resolution
