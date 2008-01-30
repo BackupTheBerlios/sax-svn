@@ -32,11 +32,13 @@ STATUS        : Status: Up-to-date
 #define TWM       "twm"
 #define MWM       "mwm"
 #define FVWM      "fvwm2"
+#define ICEWM     "icewm"
 #define MIN_X     800
 #define MIN_Y     600
 #define MIN_DEPTH 15
 
-#define FVWMRC    "fvwmrc.yast2"
+#define FVWMRC     "fvwmrc.yast2"
+#define ICEWMPREFS "preferences.yast2"
 
 //======================================
 // Globals
@@ -198,6 +200,7 @@ int RunWindowManager (void) {
 		return (0);
 	break;
 	case 0:
+		execlp(ICEWM,"icewm","-c",ICEWMPREFS,NULL);
 		execlp(FVWM,"fvwm2","-f",FVWMRC,NULL);
 		execlp(MWM,"mwm",NULL);
 		execlp(TWM,"twm",NULL);
