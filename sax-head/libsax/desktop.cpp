@@ -336,7 +336,7 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 				((CDB2DDriver) && (syspDriver == *CDB2DDriver)) ||
 				((CDB3DDriver) && (syspDriver == *CDB2DDriver))
 			) {
-				QTextOStream (&result) << PROFILE_DIR << *profile;
+				QTextOStream (&result) << PROFILE_DIR << profile;
 				return result;
 			}
 			//====================================
@@ -1002,7 +1002,7 @@ int SaXManipulateDesktop::getFBKernelMode (const QString& res,int depth) {
 		QString* resolution = new QString();
 		QString mode (*it);
 		QStringList record = QStringList::split ( " ", mode );
-		QTextOStream (resolution) << *record.at(0) << "x" << *record.at(1);
+		QTextOStream (resolution) << record.at(0) << "x" << record.at(1);
 		QString color = record.at(2);
 		if ((*resolution == res) && (color.toInt() == depth)) {
 			QString mode = record.at(3);
@@ -1055,8 +1055,8 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) 
 	) {
 		QString* data = new QString();
 		QString mode (*it);
-		QStringList resolution = QStringList::split ( " ", mode );
-		QTextOStream (data) << *resolution.at(0) << "x" << *resolution.at(1);
+		QStringList resolution = QStringList::split (" ", mode);
+		QTextOStream (data) << resolution.at(0) << "x" << resolution.at(1);
 		if (! hashed[*data]) {
 			hashed.insert (*data,data);
 		}

@@ -178,7 +178,7 @@ void SCCTabletPenProperty::import ( void ) {
 		if ( it.current()->isEmpty()) {
 			QTextOStream (&opt) << it.currentKey();
 		} else {
-			QTextOStream (&opt) << it.currentKey() << " >>> " << *it.current();
+			QTextOStream (&opt) << it.currentKey() << " >>> " << it.current();
 		}
 		if ( Q3ListBoxItem* item = mOptionList->findItem (it.currentKey()) ) {
 			int index = mOptionList->index (item);

@@ -226,7 +226,7 @@ void SCCMonitorCard::import ( void ) {
 		if ( it.current()->isEmpty()) {
 			QTextOStream (&opt) << it.currentKey();
 		} else {
-			QTextOStream (&opt) << it.currentKey() << " >>> " << *it.current();
+			QTextOStream (&opt) << it.currentKey() << " >>> " << it.current();
 		}
 		if ( Q3ListBoxItem* item = mOption->findItem (it.currentKey()) ) {
 			int index = mOption->index (item);
