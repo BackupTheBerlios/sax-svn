@@ -635,7 +635,7 @@ void SCCMonitorDual::slotOk ( void ) {
 	translation.replace ( QRegExp("\%1"),dualMode );
 	translation.replace ( QRegExp("\%2"),dualResolution );
 	pDisplay -> setDualModeInfo ( translation );
-	pDisplay -> setCombinedDisplaySize (true);
+	pDisplay -> setCombinedDisplaySize (false);
 
 	//=====================================
 	// update layout pixmap

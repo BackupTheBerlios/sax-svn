@@ -649,7 +649,7 @@ void SCCMonitorDisplay::slotActivateDualHead ( void ) {
 		mDualHeadEnabled = true;
 		mDualHeadInfoLabel -> setDisabled (false);
 		mConfigureDualHead -> setDisabled (false);
-		setCombinedDisplaySize (true);
+		setCombinedDisplaySize (false);
 	} else {
 		mDualHeadEnabled = false;
 		mDualHeadInfoLabel -> setDisabled (true);
