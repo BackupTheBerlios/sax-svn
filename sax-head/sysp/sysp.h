@@ -780,7 +780,7 @@ string SPReadFile<T>::Transform(string s, int direction) {
 	int  size  = 0;
 
 	size = s.length();
-	part = (char*)malloc(size);
+	part = (char*)malloc(size+1);
 
 	for(int n=0;n<size;n++) {
 	if (direction == 0) {

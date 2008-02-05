@@ -305,7 +305,10 @@ PciData* PciGetData(void) {
    first = p;
   last = p;
  }
+ /* we can't clean this up as we use the return data
  pci_cleanup(pacc);
+ */
+ pacc = 0;
  return(first);
 }
 

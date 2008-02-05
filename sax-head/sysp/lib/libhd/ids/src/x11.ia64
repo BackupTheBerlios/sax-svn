@@ -3122,6 +3122,11 @@
 +driver.xfree		4|nv
 
  vendor.id		pci 0x10de
+&device.id		pci 0x0429
++device.name		Quadro NVS 140M
++driver.xfree		4|nv
+
+ vendor.id		pci 0x10de
 &device.id		pci 0x042a
 +device.name		Quadro NVS 130M
 +driver.xfree		4|nv
@@ -3153,27 +3158,6 @@
 &device.id		pci 0x9135
 +device.name		Imstt3D
 +driver.xfree		4|imstt
-
- vendor.id		pci 0x1106
-+vendor.name		VIA Technologies, Inc.
-
- vendor.id		pci 0x1106
-&device.id		pci 0x3122
-+device.name		CLE266
-+driver.xfree		4|via|||dri
-
- vendor.id		pci 0x1106
-&device.id		pci 0x7205
-+device.name		KM400
-+driver.xfree		4|via|||dri
-
- vendor.id		pci 0x1106
-&device.id		pci 0x7205
-&subvendor.id		pci 0x1025
-&subdevice.id		pci 0x0033
-+subdevice.name		Aspire 1353LC KM400
-+driver.xfree		4|via|||dri
-+driver.xfree.config	Option "VBEModes" "true"
 
  vendor.id		pci 0x1142
 +vendor.name		Alliance Semiconductor Corporation
@@ -3351,11 +3335,6 @@
 +driver.xfree		4|s3virge
 
  vendor.id		pci 0x5333
-&device.id		pci 0x8811
-+device.name		86c764/765 [Trio32/64/64V+]
-+driver.xfree		4|s3
-
- vendor.id		pci 0x5333
 &device.id		pci 0x8812
 +device.name		86cM65 [Aurora64V+]
 +driver.xfree		4|s3
@@ -3369,11 +3348,6 @@
 &device.id		pci 0x883d
 +device.name		86c988 [ViRGE/VX]
 +driver.xfree		4|s3virge
-
- vendor.id		pci 0x5333
-&device.id		pci 0x8901
-+device.name		Trio 64V2/DX or /GX
-+driver.xfree		4|s3
 
  vendor.id		pci 0x5333
 &device.id		pci 0x8904
@@ -3574,6 +3548,12 @@
 
  vendor.id		pci 0x8086
 &device.id		pci 0x2592
+&subvendor.id		pci 0x1014
+&subdevice.id		pci 0x0582
++subdevice.name		915 GM - IBM
+
+ vendor.id		pci 0x8086
+&device.id		pci 0x2592
 &subvendor.id		pci 0x1584
 &subdevice.id		pci 0x9800
 +subdevice.name		915 GM
@@ -3594,13 +3574,6 @@
 &subvendor.id		pci 0x10cf
 &subdevice.id		pci 0x137a
 +subdevice.name		945 GM FSC Lifebook E8110
-
- vendor.id		pci 0x8086
-&device.id		pci 0x27a2
-&subvendor.id		pci 0x1734
-&subdevice.id		pci 0x10ad
-+subdevice.name		945 GM (FSC Amilo Si1520)
-+driver.xfree		4|fbdev
 
  vendor.id		pci 0x8086
 &device.id		pci 0x27ae
