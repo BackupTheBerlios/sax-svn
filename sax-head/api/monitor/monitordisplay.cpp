@@ -246,8 +246,9 @@ void SCCMonitorDisplay::init ( void ) {
 		reference = mSaxDesktop->getResolutionsFromFrameBuffer();
 		mIsFbdevBased = true;
 	} else {
-		log (L_INFO,"SCCMonitorDisplay::using DDC reference resolutions\n");
-		reference = mSaxDesktop->getResolutionsFromDDC1();
+		// disabled due to bug: #358346
+		//log (L_INFO,"SCCMonitorDisplay::using DDC reference resolutions\n");
+		//reference = mSaxDesktop->getResolutionsFromDDC1();
 		mIsFbdevBased = false;
 	}
 	//====================================
