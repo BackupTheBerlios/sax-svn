@@ -1,4 +1,7 @@
-!remove InputDevice -> [X] -> Option -> Device
+# Xen mouse
+# Normally no device should be needed, but because of bug #359500
+# we leave the device as part of the configuration for now
+# !remove InputDevice -> [X] -> Option -> Device
 
 InputDevice -> [X] -> Identifier = Mouse[[X]]
 InputDevice -> [X] -> Driver     = evdev
