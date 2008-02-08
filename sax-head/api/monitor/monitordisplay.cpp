@@ -721,27 +721,27 @@ void SCCMonitorDisplay::slotResolution ( int index ) {
 	Q3Dict<QString> metaResolution;
 	long sortResolution[mResolutionDict.count()];
 	for (; it.current(); ++it) {
-		QString addResolution = it.currentKey();
-		QStringList tokens = QStringList::split ( "x", addResolution );
+		QString* addResolution = new QString (it.currentKey());
+		QStringList tokens = QStringList::split ( "x", *addResolution );
 		int x = tokens.first().toInt();
 		int y = tokens.last().toInt();
-		int pixelSpace = x * y;
+		long pixelSpace = x * y;
 		if ((pixelSpace < basePixels) && (x<=basePixelsX) && (y<=basePixelsY)) {
 			QString key;
 			QTextOStream (&key) << pixelSpace;
-			metaResolution.insert ( key,&addResolution );
+			metaResolution.insert ( key,addResolution );
 			sortResolution[count] = pixelSpace;
 			count++;
 		}
 	}
 	for (int n=0;n<count;n++) {
-	for (int i=n+1;i<count;i++) {
-		if (sortResolution[n] < sortResolution[i]) {
-			long save = sortResolution[n];
-			sortResolution[n] = sortResolution[i];
-			sortResolution[i] = save;
+		for (int i=n+1;i<count;i++) {
+			if (sortResolution[n] < sortResolution[i]) {
+				long save = sortResolution[n];
+				sortResolution[n] = sortResolution[i];
+				sortResolution[i] = save;
+			}
 		}
-	}
 	}
 	for (int n=0;n<count;n++) {
 		QString* key = new QString();

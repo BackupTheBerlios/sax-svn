@@ -136,7 +136,7 @@ void SaXManipulateDesktop::addResolution (int c,int x,int y) {
 	if (! mDesktop -> getItem (key).isEmpty()) {
 		val = mDesktop -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << x << "x" << y;
+	QTextOStream (&val) << "," << x << "x" << y;
 	val.replace (QRegExp("^,"),"");
 	mDesktop -> setItem ( key,val );
 }
