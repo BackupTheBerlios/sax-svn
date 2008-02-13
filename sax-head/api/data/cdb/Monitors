@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue Jan  1 15:43:34 2008
+# Author: Marcus Schaefer <sax@suse.de>, Wed Feb 13 14:46:05 2008
 #
 # Template for monitor data
 # --------------------------
@@ -31411,6 +31411,18 @@ SAMSUNG:7E (CKB72*)  {
 SAMSUNG:CFA-7679L  {
  Hsync=31-82
  Vsync=50-120
+}
+
+#==============================================
+# LE23R8
+#----------------------------------------------
+SAMSUNG:LE23R8  {
+ DDC=SAM23F8
+ Option=DPMS
+ Hsync=47-48
+ Resolution=1360x768
+ Vsync=50-60
+ DPI=510x287
 }
 
 #==============================================
