@@ -473,6 +473,14 @@ Xen:Virtual Pointer {
 }
 
 # =========================================
+# HP Virtual Management Device
+# -----------------------------------------
+HP:Virtual Pointer {
+ Driver       = evdev
+ Device       = /dev/input/js0
+}
+
+# =========================================
 # Touchpads (NoteBooks)
 # -----------------------------------------
 Synaptics:Touchpad {
