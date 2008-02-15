@@ -1,7 +1,19 @@
 -------------------------------------------------------------------
-Fri Feb  8 10:42:27 CET 2008 - ms@suse.de
+Fri Feb 15 14:56:12 CET 2008 - ms@suse.de
 
 - leave mouse device as part of the configuration in Xen (bnc #359500)
+
+-------------------------------------------------------------------
+Mon Jan 28 18:11:31 CET 2008 - sndirsch@suse.de
+
+- disabled hp-virt_man_dev.diff (Bug #355911, comment #8)
+
+-------------------------------------------------------------------
+Fri Jan 25 22:35:20 CET 2008 - sndirsch@suse.de
+
+- hp-virt_man_dev.diff
+  * suport for HP Virtual Management Device (Bug #355911, 
+    FATE #302599) 
 
 -------------------------------------------------------------------
 Thu Jan 24 10:10:22 CET 2008 - ms@suse.de
@@ -5919,15 +5931,6 @@ Mon Jul 10 18:16:51 MEST 2000 - ms@suse.de
   ( option -w to ommit this )
 
 -------------------------------------------------------------------
-Sun Jun 18 11:07:25 CEST 2000 - ms@suse.de
-
-- fixed xw.pl (zombie) while using firegl1 module
-- fixed demo font
-- fixed rpm call to test for sax package
-- fixed 24 bit detection on firegl1
-- add ken wimer`s xfine logo ( thank you ken )
-
--------------------------------------------------------------------
 Mon Jul  3 12:59:02 MEST 2000 - ms@suse.de
 
 - changed black image to midnight blue image
@@ -6005,10 +6008,22 @@ Wed Jun 21 13:11:10 MEST 2000 - ms@suse.de
 - set maximum devices to 6
 
 --------------------------------------------------------------
+Tue Jun 20 19:04:43 MEST 2000 - ms@suse.de
+
+- add xbound root window bounding program
+- add french translation (beta)
+
+--------------------------------------------------------------
 Tue Jun 20 12:31:11 MEST 2000 - ms@suse.de
 
 - fixed scanpci ( if there is no lspci ) remove option -s
 - add spanish texts
+
+--------------------------------------------------------------
+Tue Jun 20 01:24:04 MEST 2000 - ms@suse.de
+
+- add xbanner to X11 configuration
+- add restore code to xc.pl
 
 --------------------------------------------------------------
 Mon Jun 19 14:43:48 MEST 2000 - ms@suse.de
@@ -6016,6 +6031,15 @@ Mon Jun 19 14:43:48 MEST 2000 - ms@suse.de
 - add subpackage saxtools for YaST2
 - add usage message for xmset
 - create pac file for saxtools.rpm
+
+-------------------------------------------------------------------
+Sun Jun 18 11:07:25 CEST 2000 - ms@suse.de
+
+- fixed xw.pl (zombie) while using firegl1 module
+- fixed demo font
+- fixed rpm call to test for sax package
+- fixed 24 bit detection on firegl1
+- add ken wimer`s xfine logo ( thank you ken )
 
 --------------------------------------------------------------
 Fri Jun 16 14:28:29 MEST 2000 -ms@suse.de
@@ -6037,18 +6061,6 @@ Wed Jun 14 12:47:58 MEST 2000 - ms@suse.de
 - fixed plog parser ( numbers in module identification )
 - add options for Matrox G200 cards
 - fixed RestoreDisplay() in MainWindowCallback.pm
-
---------------------------------------------------------------
-Tue Jun 20 19:04:43 MEST 2000 - ms@suse.de
-
-- add xbound root window bounding program
-- add french translation (beta)
-
---------------------------------------------------------------
-Tue Jun 20 01:24:04 MEST 2000 - ms@suse.de
-
-- add xbanner to X11 configuration
-- add restore code to xc.pl
 
 --------------------------------------------------------------
 Thu Jun  8 12:24:46 MEST 2000 - ms@suse.de
@@ -6291,6 +6303,14 @@ Wed Mar 15 15:05:16 MET 2000 - ms@suse.de
 - fixed keyboard detection
 
 --------------------------------------------------------------
+Tue Mar 14 00:05:17 MET 2000 - ms@suse.de
+
+- create driver list according to the installed modules
+- fixed Makefile
+- add mode switch possibility to xfine
+- moved BrowseEntry to BrowseEntrySaX
+
+--------------------------------------------------------------
 Mon Mar 13 18:10:07 MET 2000 - ms@suse.de
 
 - fixed bug in parsing non standard VESA modes
@@ -6337,14 +6357,6 @@ Mon Mar  6 11:19:08 MET 2000 - ms@suse.de
   Note: xfine for XFree4.0 is located at /usr/X11R6/lib/xfine/...
   until SuSE 7.0 is released
 - fixed startup script
-
---------------------------------------------------------------
-Tue Mar 14 00:05:17 MET 2000 - ms@suse.de
-
-- create driver list according to the installed modules
-- fixed Makefile
-- add mode switch possibility to xfine
-- moved BrowseEntry to BrowseEntrySaX
 
 --------------------------------------------------------------
 Wed Mar  1 16:48:19 MET 2000 - ms@suse.de
