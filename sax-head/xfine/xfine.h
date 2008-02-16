@@ -47,8 +47,14 @@ class XWrapText {
 	void init (T* typ) {
 		pM = typ;
 	}
-	QString operator[] (const char* key) {
-		return(QString::fromLocal8Bit(pM->operator[](key)));
+	QString operator[] (const QString& key) {
+		if (pM->operator[](key)) {
+			return(QString::fromLocal8Bit( *pM->operator[](key) ));
+		}
+		return QString("");
+	}
+	void insert (const QString & key,QString* val) {
+		pM->insert (key,val);
 	}
 };
 

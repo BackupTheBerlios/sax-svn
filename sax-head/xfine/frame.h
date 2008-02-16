@@ -77,7 +77,7 @@ class XFineWindow : public Q3MainWindow {
     int           mVSyncStart,mVSyncStartSave;
     int           mVSyncEnd,mVSyncEndSave;
     int           mVTotal,mVTotalSave;
-	Q3Dict<char>*  mTextPtr;
+	Q3Dict<QString>*  mTextPtr;
 	int           mScreen;
 	int           mStep;
 

@@ -78,11 +78,12 @@ int XFile::filePos (void) {
 //------------------------------------
 Q3Dict<char> XFile::gtxRead (void) {
 	fileOpen ();
-	char* line = 0;
+
+	char line[MAX_LINE_LENGTH];
 	QString *qVal;
 	char* key = NULL;
 	char* val = NULL;
-	while ((mHandle->readLine(line,4096)) != 0) {
+	while ((mHandle->readLine(line,MAX_LINE_LENGTH)) != 0) {
 		QString string_line(line);
 		string_line.truncate(string_line.length()-1);
 		if ((string_line[0] == '#') || (string_line.isEmpty())) {

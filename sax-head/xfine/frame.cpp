@@ -61,7 +61,7 @@ XFineWindow::XFineWindow (int x,int y,int screen) :
 	// language support
 	// ---
 	mAdjustable = true;
-	mTextPtr = new Q3Dict<char>;
+	mTextPtr = new Q3Dict<QString>;
 	loadText ();
 
 	// ...
@@ -108,7 +108,7 @@ XFineWindow::XFineWindow (int x,int y,int screen) :
 void XFineWindow::setFrame (
 	int x,int y, bool adjustable,bool has3D
 ) {
-	XWrapText< Q3Dict<char> > mText (mTextPtr);
+	XWrapText< Q3Dict<QString> > mText (mTextPtr);
 	setCaption ("XFine2");
 	setGeometry (
 		x - 225, y - 150, 450,300
@@ -321,7 +321,7 @@ void XFineWindow::setFrame (
 // XFineWindow setup screen...
 //-------------------------------------
 void XFineWindow::initScreen (bool startup, bool adjustable) {
-	XWrapText< Q3Dict<char> > mText (mTextPtr);
+	XWrapText< Q3Dict<QString> > mText (mTextPtr);
 	
 	XQuery frq;
 	frq.setOption ("-f");
@@ -605,9 +605,10 @@ void XFineWindow::loadText (void) {
 	gtx = gtxHandle.gtxRead();
 	Q3DictIterator<char> it(gtx);
 	for (; it.current(); ++it) {
-	mTextPtr -> insert (
-		it.currentKey(),gettext((char*)it.current())
-	);
+		QString* translation = new QString(
+			gettext((const char*)it.current())
+		);
+		mTextPtr->insert (it.currentKey(),translation);
 	}
 }
 

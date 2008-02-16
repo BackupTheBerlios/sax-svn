@@ -29,6 +29,8 @@ STATUS        : Status: Up-to-date
 #include "../api/common/log.h"
 #include "config.h"
 
+#define MAX_LINE_LENGTH    8192
+
 class XFile : public QFile {
 	private:
 	QString* mFileName;
