@@ -481,6 +481,22 @@ HP:Virtual Pointer {
 }
 
 # =========================================
+# Virtualbox vboxmouse
+# -----------------------------------------
+VirtualBox:vboxmouse {
+ Driver       = vboxmouse
+ Device       = /dev/input/mice
+}
+
+# =========================================
+# VMware vmmouse
+# -----------------------------------------
+VMware:vmmouse {
+ Driver       = vmmouse
+ Device       = /dev/input/mice
+}
+
+# =========================================
 # Touchpads (NoteBooks)
 # -----------------------------------------
 Synaptics:Touchpad {
