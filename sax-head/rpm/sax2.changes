@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Feb 18 12:03:05 CET 2008 - ms@suse.de
+
+- cleanup spec file, avoid java to be part of the buildsystem if
+  it is not requested with the macro build_java
+
+-------------------------------------------------------------------
 Mon Feb 18 11:42:25 CET 2008 - ms@suse.de
 
 - make icewem the default windowmanager for xw

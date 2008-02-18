@@ -13,46 +13,36 @@
 Name:           sax2
 URL:            http://sax.berlios.de
 %define build_java 0
-%if %{?suse_version:1}0
-# SuSE Build Requires...
 %if %{suse_version} > 1010
-BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std graphviz hal-devel java-1_4_2-gcj-compat-devel python-devel libqt4 libqt4-qt3support libqt4-devel libqt4-x11 readline-devel swig sysfsutils update-desktop-files xorg-x11-server-sdk hwinfo-devel
-%else
-BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages python-devel qt qt-devel qt-x11 qt-qt3support readline-devel swig sysfsutils update-desktop-files gcc-c++ libpng-devel freetype2-devel
+BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std
+BuildRequires:  graphviz hal-devel python-devel
+BuildRequires:  libqt4 libqt4-qt3support libqt4-devel libqt4-x11
+BuildRequires:  readline-devel swig sysfsutils update-desktop-files
+BuildRequires:  xorg-x11-server-sdk hwinfo-devel
+%if %{build_java}
+BuildRequires: java-1_4_2-gcj-compat-devel
 %endif
-%else
-# FC5 Build Requires...
-BuildRequires:  doxygen gcc-c++ graphviz hal-devel java-gcj-compat-devel libxkbfile-devel python-devel libqt4 libqt4-qt3support libqt4-devel libqt4-x11 readline readline-devel swig sysfsutils sysfsutils-devel xorg-x11-server-sdk
-%define __perl_requires %{nil}
-%define py_sitedir /usr/%{_lib}/python2.4/site-packages
 %endif
-%if %{?suse_version:1}0
-# SuSE Requires...
+%if %{suse_version} <= 1010
+BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel python-devel
+BuildRequires:  qt qt-devel qt-x11 qt-qt3support
+BuildRequires:  readline-devel swig sysfsutils update-desktop-files gcc-c++
+BuildRequires:  libpng-devel freetype2-devel
+%if %{build_java}
+BuildRequires: java2-devel-packages
+%endif
+%endif
 Requires:       perl readline ncurses hal dbus-1 sax2-libsax
 Requires:       sax2-ident sax2-tools
 Requires:       xorg-x11-server
-%else
-# FC5 Requires...
-Requires:       perl readline ncurses hal dbus sax2-libsax
-Requires:       sax2-ident sax2-tools
-Requires:       xorg-x11-server-Xorg
-%endif
-%if %{?suse_version:1}0
-# SuSE pre Requires...
 PreReq:         /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
-%else
-# FC5 pre Requires...
-%endif
 Summary:        SuSE advanced X Window System-configuration
 Version:        8.1
 Release:        126
 Group:          System/X11/Utilities
 License:        GNU General Public License (GPL)
 Source:         sax2.tar.bz2
-%if %{?suse_version:1}0
-# SuSE Source...
 Source1:        sax2.desktop
-%endif
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 ExcludeArch:  s390
 %if %{suse_version} > 1020
