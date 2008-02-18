@@ -342,6 +342,7 @@ fi
 %{_sbindir}/xcmd
 %{_datadir}/sax/api/data/fvwmrc.sax
 %{_datadir}/sax/api/data/twmrc.sax
+%{_datadir}/sax/api/data/icerc.sax
 %{_datadir}/sax/api/data/CardModules
 %{_datadir}/sax/api/data/LangCodes
 %{_datadir}/sax/api/data/PointerDevice
