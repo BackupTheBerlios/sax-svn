@@ -1,7 +1,13 @@
 # Xen mouse
-# Normally no device should be needed, but because of bug #359500
-# we leave the device as part of the configuration for now
-# !remove InputDevice -> [X] -> Option -> Device
+# dynamic profile which enables the Xen pointer. The Xen pointer
+# requires the real device /dev/input/... to be set as device. The
+# static part of the profile will set /dev/input/mice as fixed device
+# and the dynamic part will replace that information with the detected
+# real device information
+#====================================
+# Variables
+#------------------------------------
+$Device = /dev/input/mice
 
 InputDevice -> [X] -> Identifier = Mouse[[X]]
 InputDevice -> [X] -> Driver     = evdev
@@ -9,4 +15,4 @@ InputDevice -> [X] -> Option -> InputFashion   = Mouse
 InputDevice -> [X] -> Option -> Name           = Xen Virtual Pointer
 InputDevice -> [X] -> Option -> Pass           = 3
 InputDevice -> [X] -> Option -> Buttons        = 5
-
+InputDevice -> [X] -> Option -> Device         = ${Device}

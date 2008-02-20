@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb 20 09:57:37 CET 2008 - ms@suse.de
+
+- added dynamic xen-mouse.pl profile to use the RealDevice for
+  the Xen Virtual Pointer VID 0x0210 DID 0x0018 (bnc #359500)
+
+-------------------------------------------------------------------
 Mon Feb 18 12:03:05 CET 2008 - ms@suse.de
 
 - cleanup spec file, avoid java to be part of the buildsystem if
