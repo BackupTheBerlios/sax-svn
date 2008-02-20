@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb 20 09:57:37 CET 2008 - ms@suse.de
+
+- added dynamic xen-mouse.pl profile to use the RealDevice for
+  the Xen Virtual Pointer VID 0x0210 DID 0x0018 (bnc #359500)
+
+-------------------------------------------------------------------
 Fri Feb 15 14:56:12 CET 2008 - ms@suse.de
 
 - leave mouse device as part of the configuration in Xen (bnc #359500)
