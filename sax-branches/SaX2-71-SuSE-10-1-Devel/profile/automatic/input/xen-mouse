@@ -1,9 +1,7 @@
 # Xen mouse
 # dynamic profile which enables the Xen pointer. The Xen pointer
-# requires the real device /dev/input/... to be set as device. The
-# static part of the profile will set /dev/input/mice as fixed device
-# and the dynamic part will replace that information with the detected
-# real device information
+# requires the real input device to be set as device node. Therefore
+# the dynamic part replaces the static multiplexer device
 #====================================
 # Variables
 #------------------------------------
