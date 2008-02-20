@@ -467,7 +467,6 @@ Logitech:MX310 {
 Xen:Virtual Pointer {
  Driver       = evdev
  Protocol     = ExplorerPS/2
- Device       = /dev/input/xenmouse
  ZAxisMapping = 4 5
  Buttons      = 5
 }
