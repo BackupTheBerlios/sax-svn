@@ -342,6 +342,24 @@ sub ProfileCreatePreliminaryConfig {
 }
 
 #=====================================
+# ProfileGetRealMouseDevice
+#-------------------------------------
+sub ProfileGetRealMouseDevice {
+	my $card = $_[0];
+	#=====================================
+	# get SYSP mouse...
+	#-------------------------------------
+	my $mouse = new SaX::SaXImportSysp ($SaX::SYSP_MOUSE);
+	$mouse->doImport();
+	$mouse->setID ($card);
+	my $device = $mouse->getItem("RealDevice");
+	if (! defined $device) {
+		return;
+	}
+	return $device;
+}
+
+#=====================================
 # ProfileGetDDC2Data
 #-------------------------------------
 sub ProfileGetDDC2Data {
