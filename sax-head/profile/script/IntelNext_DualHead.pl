@@ -24,7 +24,7 @@ my $profile = ProfileInitScript();
 my $mlayout = ProfileIntelSetupMonitorLayout ($profile);
 
 open (FD,">>",$profile) ||
-	die "Intel_DualHead: Can't open $profile: $!";
+	die "IntelNext_DualHead: Can't open $profile: $!";
 print FD "Device->[X]->Raw->20->Option=\"MonitorLayout\" \"$mlayout\"\n";
 print FD "Device->[X+1]->Raw->20->Option=\"MonitorLayout\" \"$mlayout\"\n";
 #====================================
