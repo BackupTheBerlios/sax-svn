@@ -104,6 +104,7 @@ Provides:       sax2:/usr/sbin/xapi
 This package contains the GUI for the SuSE Advanced X-Configuration
 
 %package -n sax2-libsax
+Requires:       perl = %{perl_version}
 Requires:       sax2-tools sax2-libsax-perl icewm-bin
 %if %{suse_version} <= 1020
 %ifarch       %ix86 x86_64
@@ -118,7 +119,7 @@ Provides:       sax2:/usr/%{_lib}/libsax.so
 libsax provides a C++ written library to manage X11 configurations
 
 %package -n sax2-libsax-devel
-Requires:       sax2-libsax
+Requires:       sax2-libsax = %version
 Summary:        SaX management library header files for X Window System-configuration development
 Group:          Development/Libraries/X11
 
@@ -136,6 +137,7 @@ This package provides a wrapper to be able to use libsax in perl
 written programs
 
 %package -n sax2-libsax-python
+Requires:       python >= %pyver
 Requires:       sax2-libsax
 Summary:        Language binding to use libsax with python
 Group:          Development/Libraries/X11
@@ -204,7 +206,7 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 #=================================================
 # update desktop file 
 #-------------------------------------------------
-%suse_update_desktop_file -i %name System SystemSetup
+%suse_update_desktop_file -i %name X-System X-SystemSetup
 #=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
