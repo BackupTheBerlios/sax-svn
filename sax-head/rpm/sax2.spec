@@ -206,7 +206,7 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 #=================================================
 # update desktop file 
 #-------------------------------------------------
-%suse_update_desktop_file -i %name X-System X-SystemSetup
+%suse_update_desktop_file -i %name System SystemSetup
 #=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
