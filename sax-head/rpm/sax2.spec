@@ -108,13 +108,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-gui
-%if %{?suse_version:1}0
-# SuSE Requires...
 Requires:       netpbm sax2-tools icewm-bin sax2
-%else
-# FC5 Requires...
-Requires:       netpbm sax2-tools qt sax2
-%endif
 Summary:        SuSE advanced X Window System-configuration GUI
 Group:          System/X11/Utilities
 Provides:       sax2:/usr/sbin/xapi
@@ -129,17 +123,11 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax
-%if %{?suse_version:1}0
-# SuSE Requires...
 Requires:       sax2-tools sax2-libsax-perl icewm-bin
 %if %{suse_version} <= 1020
 %ifarch       %ix86 x86_64
 Requires:       915resolution
 %endif
-%endif
-%else
-# FC5 Requires...
-Requires:       sax2-tools qt sax2
 %endif
 Summary:        SaX library
 Group:          Development/Libraries/X11
@@ -259,28 +247,19 @@ make buildroot=$RPM_BUILD_ROOT \
 	 install
 find $RPM_BUILD_ROOT -name "*.bs" | xargs rm -f
 %find_lang sax
-%if %{?suse_version:1}0
-	# SuSE specific build instructions...
-	#=================================================
-	# check perl .packlist...
-	#-------------------------------------------------
-	%perl_process_packlist
-	#=================================================
-	# remove unpacked sources... 
-	#-------------------------------------------------
-	rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
-	#=================================================
-	# update desktop file 
-	#-------------------------------------------------
-	%suse_update_desktop_file -i %name System SystemSetup
-%else
-	# FC5 specific build instructions...
-	#=================================================
-	# remove unpacked sources... 
-	#-------------------------------------------------
-	rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
-	rm -f $RPM_BUILD_ROOT/%{perl_archlib}/perllocal.pod
-%endif
+# SuSE specific build instructions...
+#=================================================
+# check perl .packlist...
+#-------------------------------------------------
+%perl_process_packlist
+#=================================================
+# remove unpacked sources... 
+#-------------------------------------------------
+rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
+#=================================================
+# update desktop file 
+#-------------------------------------------------
+%suse_update_desktop_file -i %name System SystemSetup
 #=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
@@ -353,20 +332,6 @@ fi
 %{_datadir}/sax/sysp/script/psection.pl
 %{_datadir}/sax/sysp/script/profiledriver.pl
 %{_datadir}/sax/sysp/script/vendor.pl
-%{perl_vendorarch}/XFree.pm
-%{perl_vendorarch}/auto/XFree
-%{perl_vendorarch}/PLog.pm
-%{perl_vendorarch}/auto/PLog
-%{perl_vendorarch}/SPP.pm
-%{perl_vendorarch}/auto/SPP
-%{perl_vendorarch}/FBSet.pm
-%{perl_vendorarch}/auto/FBSet
-%{perl_vendorarch}/CVT.pm
-%{perl_vendorarch}/auto/CVT
-%if %{?suse_version:1}0
-# SuSE files...
-/var/adm/perl-modules/sax2
-%endif
 %doc %{_defaultdocdir}/sax2/LICENSE
 %doc %{_defaultdocdir}/sax2/README
 #=================================================
@@ -384,10 +349,7 @@ fi
 %{_datadir}/sax/api/data/xapi.gtx
 %{_sbindir}/xapi
 %{_sbindir}/xfine
-%if %{?suse_version:1}0
-# SuSE files...
 %{_datadir}/applications/sax2.desktop
-%endif
 #=================================================
 # SaX-Tools file list...  
 # ------------------------------------------------
@@ -439,6 +401,17 @@ fi
 %files -n sax2-libsax
 %defattr(-,root,root)
 %{_prefix}/%{_lib}/libsax.so.*
+%{perl_vendorarch}/XFree.pm
+%{perl_vendorarch}/auto/XFree
+%{perl_vendorarch}/PLog.pm
+%{perl_vendorarch}/auto/PLog
+%{perl_vendorarch}/SPP.pm
+%{perl_vendorarch}/auto/SPP
+%{perl_vendorarch}/FBSet.pm
+%{perl_vendorarch}/auto/FBSet
+%{perl_vendorarch}/CVT.pm
+%{perl_vendorarch}/auto/CVT
+/var/adm/perl-modules/sax2
 #=================================================
 # SaX-libsax-devel file list...  
 # ------------------------------------------------
