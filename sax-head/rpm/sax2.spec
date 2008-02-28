@@ -137,10 +137,10 @@ This package provides a wrapper to be able to use libsax in perl
 written programs
 
 %package -n sax2-libsax-python
-Requires:       python >= %pyver
 Requires:       sax2-libsax
 Summary:        Language binding to use libsax with python
 Group:          Development/Libraries/X11
+%py_requires
 
 %description -n sax2-libsax-python
 This package provides a wrapper to be able to use libsax in python
