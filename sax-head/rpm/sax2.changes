@@ -1,4 +1,19 @@
 -------------------------------------------------------------------
+Mon Mar  3 12:54:51 CET 2008 - ms@suse.de
+
+- flex 2.5.31 and newer has a "feature" that it declares the yylineno
+  variable in the generated scanner even if the generated code won't use
+  it (flex wasn't run with --yylineno). I used to patch this out, because
+  it caused unnecessary trouble for packages happen to use a private
+  'yylineno' variable (sax2 being one of them). Unfortunately the
+  testsuite in newer flex explicitly checks that yylineno is always
+  declared, therefore I'd like to remove the patch. Also sax2 seems to be
+  the only package that still breaks due to yylineno. The best option IMO
+  is to rename the variable to something else
+
+  ==> renamed yylineno to lineno
+
+-------------------------------------------------------------------
 Fri Feb 29 13:28:51 CET 2008 - ms@suse.de
 
 - added DELL 1908FP monitor to CDB (bnc #362174)

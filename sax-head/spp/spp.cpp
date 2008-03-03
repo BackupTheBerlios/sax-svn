@@ -110,7 +110,7 @@ void SPPParse::reload ( void ) {
 	// This method is used to reset the parser to its
 	// default values
 	// ----
-	yylineno = 1;
+	lineno   = 1;
 	yyletter = 0;
 	yystop   = 0;
 	yyline   = 0;

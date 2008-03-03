@@ -35,7 +35,7 @@ STATUS        : Status: Development
 // Global Variables
 //-----------------------------------
 int   yystdin  = 1;
-int   yylineno = 1;
+int   lineno   = 1;
 int   yyletter = 0;
 int   yystop   = 0;
 char* yyline   = 0;
@@ -57,7 +57,7 @@ int evalGetInput (char *buf, int maxlen) {
 	}
 	if (yystdin) {
 		char prompt[80];
-		sprintf (prompt,"(%d) SaX: ",yylineno);
+		sprintf (prompt,"(%d) SaX: ",lineno);
 		yyline = readline (prompt);
 		if ((! yyline) || ((strcmp(yyline,"exit") == 0))) {
 			buf[0]=EOF;
@@ -109,12 +109,12 @@ V ^\$[a-zA-Z0-9]+
  /*=================================*/
  /* ignore empty lines              */
  /*---------------------------------*/
-^{L}*\n         { yylineno++; copylv; return (RET); }
+^{L}*\n         { lineno++; copylv; return (RET); }
 
  /*=================================*/
  /* remove EOL at end of line       */
  /*---------------------------------*/
-\n              { yylineno++; copylv; return (RET); }
+\n              { lineno++; copylv; return (RET); }
 
  /*=================================*/
  /* remove tabs and spaces          */

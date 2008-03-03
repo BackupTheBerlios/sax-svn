@@ -34,7 +34,7 @@ extern int yyparse (void);
 //------------------------------
 extern int yystop;
 extern int yystdin;
-extern int yylineno;
+extern int lineno;
 extern int yyletter;
 extern char* yyline;
 
