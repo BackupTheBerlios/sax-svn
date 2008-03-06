@@ -437,7 +437,7 @@ sub ProfileGetDDC2Data {
 	my $xstuff = new SaX::SaXImportSysp ($SaX::SYSP_DESKTOP);
 	$xstuff->doImport();
 	my $ddc = $xstuff->getItem("DDC[2]");
-	if (! defined $ddc) {
+	if ((! defined $ddc) || ($ddc eq "")) {
 		return %result;
 	}
 	#=====================================

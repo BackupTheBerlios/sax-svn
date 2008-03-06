@@ -200,7 +200,7 @@ int RunWindowManager (void) {
 		return (0);
 	break;
 	case 0:
-		execlp(ICEWM,"icewm","-c",ICEWMPREFS,NULL);
+		execlp(ICEWM,"icewm","-c",ICEWMPREFS,"-t","yast2",NULL);
 		execlp(FVWM,"fvwm2","-f",FVWMRC,NULL);
 		execlp(MWM,"mwm",NULL);
 		execlp(TWM,"twm",NULL);

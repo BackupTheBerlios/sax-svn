@@ -32,7 +32,8 @@ STATUS        : development
 // Functions...
 //---------------------------------
 char* qx(const char*command,int channel,int anz,const char* format,...) {
-	char data[30] = "/tmp/data";
+	const char prefix[30] = "/tmp/data";
+	char data[30] = "";
 	char *result  = NULL;
 	char *arg[anz+2];
 	va_list ap;
@@ -51,7 +52,7 @@ char* qx(const char*command,int channel,int anz,const char* format,...) {
 	//=================================
 	// prepare data file...
 	//---------------------------------
-	sprintf(data,"%s-%d",data,getpid());
+	sprintf(data,"%s-%d",prefix,getpid());
 
 	//=================================
 	// get arguments...

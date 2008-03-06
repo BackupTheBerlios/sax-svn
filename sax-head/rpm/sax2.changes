@@ -1,6 +1,9 @@
 -------------------------------------------------------------------
 Thu Mar  6 09:28:56 CET 2008 - ms@suse.de
 
+- changed xtest to call icewem with -t yast2
+- fixed qx.c to use sprintf in a correct way (bnc #351627)
+- fixed Profile.pm to detect if there is no DDC2 data (bnc #351627)
 - update hwinfo source
 
 -------------------------------------------------------------------
