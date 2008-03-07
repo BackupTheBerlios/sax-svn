@@ -195,7 +195,7 @@ void SaXStorage::removeRawItem (
 	}
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
 	if (currentValue) {
-		QStringList	optlist = QStringList::split ( expression, *currentValue );
+		QStringList optlist = QStringList::split ( expression, *currentValue );
 		QStringList result;
 		for ( QStringList::Iterator
 			in = optlist.begin(); in != optlist.end(); ++in
@@ -407,7 +407,7 @@ Q3Dict<QString>* SaXStorage::getTablePointer ( int id ) {
 	// .../
 	//! return a pointer to the data dictionary at ID (id)
 	// ----
-    return mData.at (id);
+	return mData.at (id);
 }
 
 //====================================
@@ -417,7 +417,7 @@ Q3Dict<QString>* SaXStorage::getCurrentTablePointer ( void ) {
 	// .../
 	//! return a pointer to the data dictionary at the current ID
 	// ----
-    return mData.at (mCurrentID);
+	return mData.at (mCurrentID);
 }
 
 //====================================
@@ -458,8 +458,7 @@ void SaXStorage::addGroup (
 	if ( ! mCDB[group] ) {
 		mCDB.insert (group, new Q3Dict<QString>);
 	}
-		mCDB[group]->insert (key,new QString(value));
-
+	mCDB[group]->insert (key,new QString(value));
 }
 
 
