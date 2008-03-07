@@ -836,7 +836,7 @@ void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
 	if (! combinedSize) {
 		getMonitorData() -> setDisplaySize ( combined );
 	} else {
-		if (desktop->getItem(QString("Size[2]")).isNull())
+		if (desktop->getItem(QString("Size[2]")).isNull()) {
 			log (L_WARN,"SCCMonitorDisplay::No DDC2 size info available\n");
 			return;
 		}
@@ -865,7 +865,7 @@ void SCCMonitorDisplay::setCombinedDisplaySize ( bool combinedSize ) {
 		QTextOStream (xs) << x; combined.append (*xs);
 		QTextOStream (ys) << y; combined.append (*ys);
 		getMonitorData() -> setDisplaySize ( combined );
-	
+	}
 	if ((mShowDisplaySizeMessage) && (isVisible())) {
 		SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 		SCCMessage* mMessageBox = new SCCMessage (
