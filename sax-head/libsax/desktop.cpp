@@ -818,6 +818,20 @@ void SaXManipulateDesktop::setVsyncRange (double vsmin,double vsmax) {
 }
 
 //====================================
+// setPreferredMode
+//------------------------------------
+void SaXManipulateDesktop::setPreferredMode (const QString& mode) {
+	// .../
+	//! set the PreferredMode which is required because randr12
+	//! based drivers will ignore any Modes setup, great
+	// ----
+	if ((! mDesktop) || (! mCard) || (! mPath)) {
+		return;
+	}
+	mDesktop -> setItem ( "PreferredMode",mode);
+}
+
+//====================================
 // enableDPMS
 //------------------------------------
 void SaXManipulateDesktop::enableDPMS (void) {

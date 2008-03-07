@@ -23,6 +23,8 @@ $Model  = Monitor -> [X] -> ModelName
 
 Device  -> [X] -> Option = TwinView,SaXDualHead
 
+Monitor -> [X] -> PreferredMode = ${Modes[0]}
+
 Device  -> [X] -> Raw -> 11 -> Option = "TwinViewOrientation" "Clone"
 Device  -> [X] -> Raw -> 12 -> Option = "ConnectedMonitor" "[MONITORLAYOUT]"
 Device  -> [X] -> Raw -> 13 -> Option = "SaXDualOrientation" "RightOf"

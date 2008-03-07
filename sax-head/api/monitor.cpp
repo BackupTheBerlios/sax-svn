@@ -1167,11 +1167,10 @@ bool SCCMonitor::exportData ( void ) {
 		saxDesktop.enable3D();
 	}
 	//====================================
-	// save default color depth
+	// save default color and pref mode
 	//------------------------------------
 	card = 0;
 	foreach (display, mMonitorDisplay) {
-		//SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
 		SaXManipulateDesktop saxDesktop (
 			mSection["Desktop"],mSection["Card"],mSection["Path"]
 		);
@@ -1182,6 +1181,9 @@ bool SCCMonitor::exportData ( void ) {
 		saxCard.selectCard ( card );
 		if (saxCard.getCardDriver() != "fbdev") {
 			saxDesktop.setColorDepth ( display->getColorDepth() );
+			saxDesktop.setPreferredMode (
+				display->getResolution().at(0)
+			);
 		}
 		card++;
 	}

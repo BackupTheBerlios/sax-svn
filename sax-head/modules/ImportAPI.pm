@@ -1059,6 +1059,12 @@ sub ApiImportDesktop {
 		last SWITCH;
 		};
 
+		/^PreferredMode/      && do {
+			if ($value ne "") {
+				$var{Monitor}{$card}{PreferredMode} = $value;
+			}
+		};
+
 		/^CalcAlgorithm/      && do {
 		$var{Monitor}{$card}{CalcAlgorithm} = $value;
 		if ($value =~ /CheckDesktopGeometry/i) {

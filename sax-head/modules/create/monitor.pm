@@ -105,6 +105,17 @@ sub CreateMonitorSection {
 				last SWITCH;
 			};
 			#===========================================
+			# PreferredMode...
+			#-------------------------------------------
+			/^PreferredMode/  && do {
+				foreach $n (@list) {
+				if ($n ne "") {
+					push(@result,PrintLine("Option","\"$i\" \"$n\""));
+				}
+				}
+				last SWITCH;
+			};
+			#===========================================
 			# default setting...
 			#------------------------------------------- 
 			foreach $n (@list) {

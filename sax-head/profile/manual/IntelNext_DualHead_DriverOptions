@@ -12,6 +12,8 @@ $Model  = Monitor -> [X] -> ModelName
 
 Device  -> [X] -> Option = SaXDualHead
 
+Monitor -> [X] -> PreferredMode = ${Modes[0]}
+
 Device  -> [X] -> Raw -> 21 -> Option = "SaXDualMode" "Clone"
 Device  -> [X] -> Raw -> 22 -> Option = "SaXDualOrientation" "LeftOf"
 Device  -> [X] -> Raw -> 23 -> Option = "SaXDualHSync" "${Hsync}"

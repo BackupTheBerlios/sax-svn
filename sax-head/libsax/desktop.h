@@ -71,6 +71,7 @@ class SaXManipulateDesktopIF : public SaXException {
 	virtual void setDisplayRatioAndTraversal ( double ,int, int ) = 0;
 	virtual void setHsyncRange ( double,double ) = 0;
 	virtual void setVsyncRange ( double,double ) = 0;
+	virtual void setPreferredMode ( const QString& ) = 0;
 	virtual void enableDPMS  ( void ) = 0;
 	virtual void disableDPMS ( void ) = 0;
 	virtual void setMonitorVendor ( const QString& ) = 0;
@@ -215,6 +216,7 @@ class SaXManipulateDesktop : public SaXManipulateDesktopIF {
 	void setDisplayRatioAndTraversal ( double ,int, int );
 	void setHsyncRange ( double,double );
 	void setVsyncRange ( double,double );
+	void setPreferredMode ( const QString& );
 	void enableDPMS  ( void );
 	void disableDPMS ( void );
 	void setMonitorVendor ( const QString& );
