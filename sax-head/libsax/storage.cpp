@@ -167,7 +167,7 @@ void SaXStorage::addRawItem (
 	if ((currentValue) && (! currentValue->isEmpty())) {
 		QString newValue;
 		QString newOptVal (optname+" "+optval);
-		QTextOStream(&newValue) << currentValue << "," << newOptVal;
+		QTextOStream(&newValue) << *currentValue << "," << newOptVal;
 		newValue.replace (QRegExp("^,"),"");
 		setItem (key,newValue);
 	} else {
