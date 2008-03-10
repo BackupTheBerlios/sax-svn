@@ -504,7 +504,6 @@ char* GetProfileDriver ( string profile ) {
 void PrintMouseData(ScanMouse m) {
 	MouseData data;
 	int mouse = 0;
-	int buttonCount = -1;
 	int devices[m.Count()];
 	if (m.Count() == 1) {
 		//============================================
@@ -584,24 +583,21 @@ void PrintMouseData(ScanMouse m) {
 		//--------------------------------------------
 		for (int i = m.Count()-1; i >= 0; i--) {
 			data = m.Pop();
+			// ...
+			// sort out device which has a profile set except those
+			// profiles which use the standard mouse driver
+			// ---
 			if (devices[i] == 0) {
-			if (data.buttons > buttonCount) {
-				buttonCount = data.buttons;
-			}
-			}
-		}
-		m.Reset();
-		for (int i = m.Count()-1; i >= 0; i--) {
-			data = m.Pop();
-			if (devices[i] == 0) {
-			if (strcmp(data.profile,"<undefined>") != 0) {
-				devices[i] = 1;
-				break;
-			}
-			if (data.buttons == buttonCount) {
-				devices[i] = 1;
-				break;
-			}
+				if (
+					(strcmp(data.profile,"<undefined>") != 0)    &&
+					(strcmp(data.profile,"ibm-trackpoint") != 0) &&
+					(strcmp(data.profile,"logitech-MX310") != 0) &&
+					(strcmp(data.profile,"logitech-MX900") != 0) &&
+					(strcmp(data.profile,"logitech-TrackManOptical") != 0)
+				) {
+					devices[i] = 1;
+					break;
+				}
 			}
 		}
 		m.Reset();
@@ -613,28 +609,27 @@ void PrintMouseData(ScanMouse m) {
 	for (int i = m.Count()-1; i >= 0; i--) {
 		// ...
 		// check for the standard mouse which use /dev/input/mice and
-		// and the standard mouse pointer. If there is no such mouse
+		// the standard mouse pointer. If there is no such mouse
 		// left we will add a default section at the end
 		// ---
 		data = m.Pop();
 		if (
 			(strcmp(data.device,"/dev/input/mice") == 0) && (
-				(strcmp(data.profile,"<undefined>") == 0) || (
+				(strcmp(data.profile,"<undefined>") == 0)    ||
 				// core conflict for alps driver
-				(strcmp(data.profile,"alps") != 0)           &&
+				(strcmp(data.profile,"alps") == 0)           ||
 				// core conflict for synaptics driver
-				(strcmp(data.profile,"synaptics") != 0)      &&
+				(strcmp(data.profile,"synaptics") == 0)      ||
 				// core conflict for wacom driver
-				(strcmp(data.profile,"wacom") != 0)          &&
-				// uses standard mouse driver
-				(strcmp(data.profile,"ibm-trackpoint") != 0) &&
-				// uses standard mouse driver
-				(strcmp(data.profile,"logitech-MX310") != 0) &&
-				// uses standard mouse driver
-				(strcmp(data.profile,"logitech-MX900") != 0) &&
-				// uses standard mouse driver
-				(strcmp(data.profile,"logitech-TrackManOptical") != 0)
-			)
+				(strcmp(data.profile,"wacom") == 0)          ||
+				// uses mouse driver
+				(strcmp(data.profile,"ibm-trackpoint") == 0) ||
+				// uses mouse driver
+				(strcmp(data.profile,"logitech-MX310") == 0) ||
+				// uses mouse driver
+				(strcmp(data.profile,"logitech-MX900") == 0) ||
+				// uses mouse driver
+				(strcmp(data.profile,"logitech-TrackManOptical") == 0)
 			)
 		) {
 			haveStandardMouse = true;
