@@ -1,26 +1,16 @@
-# translation of sax.po to 
-# translation of sax.po to
-# translation of sax.it.po to
-# translation of sax.it.po to
-# translation of sax.it.po to
-# translation of sax.it.po to
-# domain sax.mo
-# Italian message file for sax2 (sax.it).
-# Copyright (C) SuSE GmbH, 2000.
-# Federico Cozzi <federico.cozzi@sns.it>, 2002.
-# Franca Delcarlo <francd@attglobal.net>, 2000,2003, 2004, 2005.
-# 
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 09:39\n"
+"PO-Revision-Date: 2008-03-14 10:51\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -296,7 +286,7 @@ msgstr "Attivato in modalità %1 con %2"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr "Attivato in modalità default driver"
+msgstr "Attivato in modalità impostazione predefinita driver"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
@@ -760,7 +750,7 @@ msgstr "Super mappato su tasti Win (default)."
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Alt e Meta su tasti Alt (default)."
+msgstr "Alt e Meta su tasti Alt (impostazione predefinita)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
@@ -768,7 +758,7 @@ msgstr "Aggiungere comportamento standard a tasto Menu."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Alt e Meta sono su tasti Alt (default)."
+msgstr "Alt e Meta sono su tasti Alt (impostazione predefinita."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
@@ -928,7 +918,7 @@ msgstr "Opzioni VNC"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr "Attiva protezione parola d'ordine"
+msgstr "Attiva protezione password"
 
 #. LineEdit label: enter password
 msgid "Password"
@@ -936,15 +926,15 @@ msgstr "Password"
 
 #. LineEdit contents: enter new password
 msgid "<Enter new password>"
-msgstr "<Immetti nuova parola d'ordine>"
+msgstr "<Immetti nuova password>"
 
 #. LineEdit contents: change password
 msgid "<Change password>"
-msgstr "<Cambia parola d'ordine>"
+msgstr "<Cambia password>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr "<Verifica parola d'ordine>"
+msgstr "<Verifica password>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
@@ -963,17 +953,16 @@ msgid ""
 "<b>VNC Password Mismatch</b><hr>The first and the second version of the "
 "password do not match."
 msgstr ""
-"<b>Errata corrispondenza parola d'ordine VNC</b><hr>La prima e la seconda "
-"versione della parola d'ordine non corrispondono."
+"<b>Errata corrispondenza password VNC</b><hr>La prima e la seconda versione "
+"della password non corrispondono."
 
 #. VNC message box appearing if password is too short
 msgid ""
 "<b>VNC Password Fault</b><hr>The password field has been left empty or the "
 "password is too short. Enter a password with at least six characters."
 msgstr ""
-"<b>Errore parola d'ordine VNC</b><hr>Il campo Parola d'ordine è stato "
-"lasciato vuoto o la parola d'ordine è troppo corta. Immettere una parola "
-"d'ordine di almeno sei caratteri."
+"<b>Errore password VNC</b><hr>Il campo password è stato lasciato vuoto o la "
+"password è troppo corta. Immettere una password di almeno sei caratteri."
 
 #. Install missing packages box
 msgid ""
@@ -1044,7 +1033,7 @@ msgstr "Aggiungi simbolo Euro al tasto 5."
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
-msgstr "Comportamento tasto BlocMaiusc"
+msgstr "Comportamento tasto CapsLock"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
@@ -1181,8 +1170,8 @@ msgstr "Rimangono..."
 #~ "<b>VNC Password Fault</b><hr>The password is too long. Enter a password "
 #~ "with a maximum of eight characters."
 #~ msgstr ""
-#~ "<b>Errore parola d'ordine VNC</b><hr>La parola d'ordine è troppo lunga. "
-#~ "Immettere una parola d'ordine costituita da un massimo di otto caratteri."
+#~ "<b>Errore password VNC</b><hr>La password è troppo lunga. Immettere una "
+#~ "password costituita da un massimo di otto caratteri."
 
 #~ msgid "Arabic"
 #~ msgstr "Arabo"
