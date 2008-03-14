@@ -588,13 +588,15 @@ void PrintMouseData(ScanMouse m) {
 			// profiles which use the standard mouse driver
 			// ---
 			if (devices[i] == 0) {
-				if (
-					(strcmp(data.profile,"<undefined>") != 0)    &&
-					(strcmp(data.profile,"ibm-trackpoint") != 0) &&
-					(strcmp(data.profile,"logitech-MX310") != 0) &&
-					(strcmp(data.profile,"logitech-MX900") != 0) &&
-					(strcmp(data.profile,"logitech-TrackManOptical") != 0)
+				if ((strcmp(data.profile,"ibm-trackpoint") == 0) ||
+					(strcmp(data.profile,"logitech-MX310") == 0) ||
+					(strcmp(data.profile,"logitech-MX900") == 0) ||
+					(strcmp(data.profile,"logitech-TrackManOptical") == 0)
 				) {
+					devices[i] = 1;
+					break;
+				}
+				if (strcmp(data.profile,"<undefined>") == 0) {
 					devices[i] = 1;
 					break;
 				}
