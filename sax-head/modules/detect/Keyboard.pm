@@ -60,6 +60,15 @@ sub AutoDetectKeyboard {
 		if ($i =~ /Profile/)     {
 			$idp{KeyboardProfile}{0} = $value;
 		}
+		if ($i =~ /evBits/)      {
+			$var{InputDevice}{0}{Option}{evBits}      = $value;
+		}
+		if ($i =~ /keyBits/)     {
+			$var{InputDevice}{0}{Option}{keyBits}     = $value;
+		}
+		if ($i =~ /Pass/)        {
+			$var{InputDevice}{0}{Option}{Pass}        = $value;
+		}
 	}
 	return(%var);
 }
