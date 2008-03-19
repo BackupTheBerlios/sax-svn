@@ -361,6 +361,21 @@ sub ApiImportKeyboard {
 		$var{InputDevice}{0}{Option}{XkbKeymap} = $value;
 		last SWITCH;
 		};
+
+		/^evBits/       && do {
+        $var{InputDevice}{0}{Option}{evBits} = $value;
+        last SWITCH;
+        };
+
+		/^keyBits/      && do {
+        $var{InputDevice}{0}{Option}{keyBits} = $value;
+        last SWITCH;
+        };
+
+        /^Pass/         && do {
+        $var{InputDevice}{0}{Option}{Pass} = $value;
+        last SWITCH;
+        };
 	}
 	}
 	return(%var);
