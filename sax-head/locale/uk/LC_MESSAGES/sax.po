@@ -1,15 +1,17 @@
+# translation of sax.po to Ukrainian
 # Translation of sax.uk.po to Ukrainian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Ivan Petrouchtchak <iip@telus.net>, 2005.
 # Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>, 2005, 2006, 2007.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.uk\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-08-22 22:24-0700\n"
-"Last-Translator: Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>\n"
+"PO-Revision-Date: 2008-02-13 21:15+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +27,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr "Інтернаціоналізація"
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -79,7 +81,7 @@ msgid ""
 "layout."
 msgstr ""
 "<b>Змінено розмір екрана</b><hr>Розмір екрана було адаптовано до нового "
-"росположення."
+"формату."
 
 #. Help Button text
 msgid "&Help"
@@ -634,7 +636,7 @@ msgstr "Естонія"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "Backspace у стилі NICOLA-F "
 
 #. XKBFile extension text
 msgid "Right Alt key never chooses 3rd level."
@@ -866,7 +868,7 @@ msgstr "Вживати клавіатуру з додатками юнікоду
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Примусово використовувати стандартну клавіатуру"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
@@ -901,15 +903,16 @@ msgstr "Клавіша пробілу видає символ нерозривн
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Поміняти місцями коди двох клавіш, якщо клавіатуру для Mac неправильно "
+"визначено ядром kernel."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
 msgstr "Номерна клавіатура працює як в Mac."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Kana Lock key is locking"
-msgstr "Клавіша Caps Lock тепер неактивна."
+msgstr "Клавіша перемикання на кана замикає"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
@@ -1417,7 +1420,7 @@ msgid ""
 "of the password do not match."
 msgstr ""
 "<b>Не збігається пароль віддаленого доступу</b><hr>Перша та друга версія "
-"пароля не співпадають між собою."
+"пароля не збігаються між собою."
 
 #. VNC message box appearing if password is too short
 msgid ""

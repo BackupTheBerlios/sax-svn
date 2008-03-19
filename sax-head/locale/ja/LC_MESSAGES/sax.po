@@ -1,17 +1,20 @@
+# translation of sax.po to Japanese
 # Japanese message file for SaX  -*- coding: utf-8 -*-
 # Copyright (C) SuSE Linux AG, 2002
-# Mike Fabian <mfabian@suse.de>, 2002
-# 
+#
+# Mike Fabian <mfabian@suse.de>, 2002.
+# Yasuhiko Kamata <belphegor@belbel.or.jp>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: SaX\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-16 14:06\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2007-10-16 14:51+0900\n"
+"Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -20,7 +23,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "多言語対応"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -28,15 +31,18 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
-"SaX2提案<hr>現在起動しているグラフィックスシステムはSaX2で作成された提案に基"
-"づいています。 この提案を受け入れる場合、OKをクリックします。  それ以外の場"
-"合、設定を変更してください。"
+"<b>SaX2 の提案</b><hr>現在のグラフィクスシステムは SaX2 が作成した設定で起動"
+"しています。この設定でよろしければ <b>OK</b> を、そうでなければ設定を変更して"
+"ください。"
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D アクセラレーションには対応していません</b><hr>お使いのグラフィックカー"
+"ドまたはドライバが 3D に対応していないため、 SaX2 は 3D のサブシステムを有効"
+"化できませんでした"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -45,10 +51,13 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D アクセラレーションには対応していません</b><hr>Xinerama ベースのデュアル"
+"ヘッド表示をお使いのため、 3D サブシステムを有効化できませんでした。複数の画"
+"面を接合するための Xorg Xinerama 拡張は全ての画面では 3D に対応していません"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
-msgstr "自動グラフィックスシステムセットアップ"
+msgstr "自動グラフィックスシステム設定"
 
 #. Caption text for informing the user
 msgid "Information..."
@@ -56,17 +65,19 @@ msgstr "情報..."
 
 #. Caption text for the main window
 msgid "SaX2: X11 Configuration"
-msgstr "SaX2: X11設定"
+msgstr "SaX2: X11 設定"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr "SaXコントロールセンター"
+msgstr "SaX コントロールセンター"
 
 #. Info message about display size changes
 msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>ディスプレイのサイズが変更されました</b><hr>ディスプレイのサイズを新しいレ"
+"イアウトに適応させました。"
 
 #. Help Button text
 msgid "&Help"
@@ -74,7 +85,7 @@ msgstr "ヘルプ (&H)"
 
 #. Ok Button text
 msgid "O&K"
-msgstr "OK(&K)"
+msgstr "OK (&K)"
 
 #. Yes Button text
 msgid "&Yes"
@@ -91,7 +102,7 @@ msgstr "キャンセル (&C)"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr "SaX2の終了<hr>SaX2を今終了しますか?"
+msgstr "<b>SaX2の終了</b><hr> SaX2を終了しますか？"
 
 #. Message box default caption text
 msgid "Message"
@@ -99,16 +110,16 @@ msgstr "メッセージ"
 
 #. Change configuration Button text
 msgid "C&hange Configuration"
-msgstr "環境設定の変更(&h)"
+msgstr "設定の変更 (&H)"
 
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "モニター"
+msgstr "モニタ"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "カードとモニターのプロパティ"
+msgstr "カードとモニタの設定"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -117,7 +128,7 @@ msgstr "マウス"
 
 #. title of module dialog
 msgid "Mouse Properties"
-msgstr "マウスのプロパティ"
+msgstr "マウスの設定"
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
@@ -125,7 +136,7 @@ msgstr "キーボード"
 
 #. title of module dialog
 msgid "Keyboard Properties"
-msgstr "キーボードのプロパティ"
+msgstr "キーボードの設定"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
@@ -134,7 +145,7 @@ msgstr "タブレット"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr "タブレットのプロパティ"
+msgstr "タブレットの設定"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -143,7 +154,7 @@ msgstr "タッチスクリーン"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr "タッチスクリーンのプロパティ"
+msgstr "タッチスクリーンの設定"
 
 #. Short description of the VNC module
 msgid "Remote Access"
@@ -151,12 +162,11 @@ msgstr "リモートアクセス"
 
 #. title of module dialog
 msgid "Remote Access Properties"
-msgstr "リモートアクセスのプロパティ"
+msgstr "リモートアクセスの設定"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "表示"
+msgstr "ディスプレイ %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -172,15 +182,15 @@ msgstr "カード"
 
 #. Change data
 msgid "&Change..."
-msgstr "変更(&C)..."
+msgstr "変更 (&C)..."
 
 #. Set options for some kind of data
 msgid "&Options..."
-msgstr "オプション(&O)..."
+msgstr "オプション (&O)..."
 
 #. Configure some data
 msgid "Con&figure..."
-msgstr "設定(&f)..."
+msgstr "設定 (&F)..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
@@ -192,7 +202,7 @@ msgstr "デュアルヘッドモード"
 #. Group box title for tablet options
 #. Group box title for the VNC options
 msgid "Options"
-msgstr "オプション(O)"
+msgstr "オプション"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
@@ -200,24 +210,23 @@ msgstr "マウスホイールを有効にする"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr "X軸を反転させる"
+msgstr "X 軸を反転させる"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr "Y軸を反転させる"
+msgstr "Y 軸を反転させる"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "3ボタンエミュレーションを有効にする"
+msgstr "左利き用のボタン配置を有効にする"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr "3ボタンエミュレーションを有効にする"
+msgstr "3 ボタンエミュレーションを有効にする"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr "マウスボタンでホイールをエミュレート"
+msgstr "マウスボタンでホイールを疑似"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
@@ -226,11 +235,11 @@ msgstr "画面の回転"
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr "テスト(T)"
+msgstr "テスト"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
-msgstr "テスト(&T)"
+msgstr "テスト (&T)"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -248,11 +257,11 @@ msgstr "テストの準備ができました"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr "シングルクリック:完了"
+msgstr "シングルクリック: 完了"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr "ダブルクリック:完了"
+msgstr "ダブルクリック: 完了"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
@@ -268,7 +277,7 @@ msgstr "ボタンから手を離しています"
 
 #. Status line of mouse test field: wheel stopped
 msgid "Stopped: Done"
-msgstr "停止:完了"
+msgstr "停止: 完了"
 
 #. Group box title for properties
 msgid "Properties"
@@ -288,7 +297,7 @@ msgstr "色"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr "3Dアクセラレーションを有効にする"
+msgstr "3D アクセラレーションを有効にする"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
@@ -296,11 +305,11 @@ msgstr "カードのモニタ"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr "2番目のモニタ: カード"
+msgstr "カードの 2 番目のモニタ"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
-msgstr "同期化周波数"
+msgstr "同期周波数"
 
 #. Tab title: Setup display size
 msgid "Display Size"
@@ -313,11 +322,11 @@ msgstr "配列"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr "%2の%1モードで有効にされています"
+msgstr "%2 の %1 モードが有効になっています"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr "ドライバのデフォルトモードで有効にされています"
+msgstr "ドライバのデフォルト設定で有効にされています"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
@@ -331,20 +340,20 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"すべてのディスプレイを無効にできません<hr><nobr>少なくとも1つのディスプレイを"
-"アクティブにする必要があります。</nobr>"
+"<b>ディスプレイを全て無効にすることはできません</b><hr><nobr>少なくとも 1 つ"
+"のディスプレイを有効にする必要があります。</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
-msgstr "使用できる設定がありません"
+msgstr "設定できません"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
-"伝統的なマルチヘッド設定:\n"
-"それぞれが独立画面になります。"
+"旧来のマルチヘッド設定:\n"
+"それぞれが独立した画面になります。"
 
 #. Radiobutton for cloned multihead mode
 msgid ""
@@ -352,7 +361,7 @@ msgid ""
 "Each display is a clone of the primary display"
 msgstr ""
 "クローンのマルチヘッド設定:\n"
-"それぞれの画面は本画面のクローンになります。"
+"それぞれの画面には同じものが表示されます。"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
@@ -360,7 +369,7 @@ msgid ""
 "Build one big display out of all screens"
 msgstr ""
 "Xinerama マルチヘッド設定:\n"
-"全ての画面を統合する。"
+"全ての画面を合わせて 1 つの大きなディスプレイにします。"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -376,7 +385,7 @@ msgstr "不明なモニタ:"
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
-msgstr "1次モニタ:"
+msgstr "メインモニタ:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
@@ -389,7 +398,7 @@ msgstr "マウス設定"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
-msgstr "グラフィックスカード設定"
+msgstr "グラフィックカード設定"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
@@ -397,7 +406,7 @@ msgstr "デュアルヘッド設定"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
-msgstr "回転せず"
+msgstr "回転しない"
 
 #. Radiobutton rotate to the left side
 msgid "To the Left"
@@ -413,29 +422,31 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>不正な色と解像度の組み合わせ</b><hr>選択した解像度と色の組み合わせはこのグ"
+"ラフィックカードで利用できません。"
 
 #. Popup message to ask the user for an option value
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"オプションには値が必要です<hr><nobr>オプション%1に対して値をセットアップしま"
-"す。</nobr>"
+"<b>オプションには値が必要です</b><hr><nobr>オプション %1 に対して値を設定して"
+"ください。</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr "モニタ: ベンダと名前の選択"
+msgstr "モニタ: 製造元と名前の選択"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr "マウス: ベンダと名前の選択"
+msgstr "マウス: 製造元と名前の選択"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr "手動同期化周波数設定"
+msgstr "手動での同期周波数設定"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr "対角およびアスペクト比"
+msgstr "対角とアスペクト比"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
@@ -447,17 +458,17 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>注意:</b>同期化の範囲を間違えると、モニタが損傷することがあります。 設定に"
-"ついては、モニタマニュアルを参照してください。モニタをその最大定格で使用しな"
-"い場合、同期化範囲を減少してください。"
+"<b>注意:</b> 同期周波数の範囲を間違えるとモニタが損傷することがあります。設定"
+"する値についてはモニタの説明書を参照してください。<br><br>モニタを設定可能な"
+"最大値で使用したくない場合、同期周波数の範囲を減らしてください。"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr "DPMSを有効にする"
+msgstr "DPMS を有効にする"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr "ユーティリティーディスク ..."
+msgstr "ユーティリティーディスク..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
@@ -465,7 +476,7 @@ msgstr "水平"
 
 #. Label text for second monitor name
 msgid "Second Monitor:"
-msgstr "2番目のモニタ:"
+msgstr "2番目のモニタ :"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
@@ -501,7 +512,7 @@ msgstr "Y軸[mm]"
 
 #. Something is not configured
 msgid "Not configured"
-msgstr "まだ設定されていません"
+msgstr "設定されていません"
 
 #. Unit name for inches in german zoll
 msgid "inches"
@@ -512,21 +523,21 @@ msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"CDまたはディスクの挿入<hr>モニタベンダのディスプレイユーティリティCDまたは"
-"ディスクを挿入します。"
+"<b>CDまたはディスクの挿入</b><hr>モニタ製造元のディスプレイユーティリティ CD "
+"またはディスクを挿入してください。"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
-"読み込みエラー<hr>CDまたはディスクから読み込めませんでした。 このエラーは、損"
-"傷を受けたメディアまたは間違ってフォーマットされた情報ファイルを指しているこ"
-"とがあります。"
+"<b>読み込みエラー</b><hr>CD またはディスクから読み込むことができませんでし"
+"た。傷のあるメディアまたは誤ったフォーマットの情報ファイルである可能性があり"
+"ます。"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
-msgstr "伝統的"
+msgstr "旧来の方法"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
@@ -546,12 +557,12 @@ msgstr "基本の設定"
 
 #. Label text for the primary keyboard type
 msgid "Type"
-msgstr "タイプ"
+msgstr "種類"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
 msgid "Variant"
-msgstr "基本キー配列の型"
+msgstr "配列補助指定"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
@@ -567,15 +578,15 @@ msgstr "キーマップ"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr "グループシフト/ロック動作"
+msgstr "グループシフト／ロック動作"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "キーボード LED を別グループの表示に使用する"
+msgstr "キーボード LED でのレイアウト表示"
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Composeキーの位置"
+msgstr "Compose キーの位置"
 
 #. List View root item text
 #. XKBFile extension text
@@ -584,20 +595,19 @@ msgstr "コントロールキーの位置"
 
 #. List View root item text
 msgid "Third Level Chooser"
-msgstr "3番目のレベルChooser"
+msgstr "3 番目のレベル選択"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr "Alt/Winキーの動作"
+msgstr "Alt/Win キーの動作"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "コントロールキーの位置"
+msgstr "ユーロ記号のキー位置"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr "CapsLockキーの動作"
+msgstr "CapsLock キーの動作"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -608,7 +618,6 @@ msgid "Morocco"
 msgstr "モロッコ"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
 msgstr "ブラジル"
 
@@ -618,400 +627,347 @@ msgstr "エチオピア"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "NICOLA-F 形式のバックスペース"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "右Altキーで3 番目のレベルを選択します。"
+msgstr "右 Alt キーでは 3 番目のレベルを選択しない"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "左 Altキーを押すと、グループが変換されます。"
+msgstr "左 Alt キーでレイアウトを切り替える"
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "スペースキーでは何も出力しない"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numeric keypad keys."
-msgstr "デフォルトルート OK"
+msgstr "既定のテンキー"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "両方の Ctrlキーでグループを変更します。"
+msgstr "両方の Ctrl キー同時押しでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "スペースキーで改行不許可のスペースを入力する"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "右Shiftキーでグループを切り替えます。"
+msgstr "右 Shift キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "左Winキーでグループを切り替えます。"
+msgstr "左 Win キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Shiftを押すと、グループが変更されます。"
+msgstr "左 Ctrl + 左 Shift でレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "左Altキーでグループを切り替えます。"
+msgstr "左 Alt キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "両方のWinキーを押すと、グループが変換されます"
+msgstr "両方の Win キー同時押しでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "右Ctrlキーを押すと、グループが変換されます"
+msgstr "右 Ctrl キーでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift+CapsLockを押すと、グループが変更されます。"
+msgstr "Shift+CapsLock キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
-msgstr "右Altを押すと、グループが変換されます。"
+msgstr "右 Alt キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "言語とキーボードのレイアウト選択"
+msgstr "テンキーのレイアウト選択"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "右Ctrlキーでグループを切り替えます。"
+msgstr "右 Ctrl キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Shift+CapsLockを押すと、グループが変更されます。"
+msgstr "Alt+CapsLock キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "HyperはWinキーにマップされます。"
+msgstr "Super は Win キーに割り当てる"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "ScrollLock LED を別グループの表示に使います。"
+msgstr "ScrollLock LED でレイアウト表示を行なう"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "両側のShiftキーを同時に押してグループを切り替えます。"
+msgstr "両方の Shift キー同時押しでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
+msgstr "2 番目のレベルの際、スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "右Winキーでグループを切り替えます。"
+msgstr "右 Win キーでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
+msgstr "3 番目のレベルの際、スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr ""
-"numpadキーとシフトを同時に押すと、MS Windowsの場合と同じように機能します。"
+msgstr "テンキーを Mac と同じように機能させる"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "CapsLock LEDを別グループの表示に使います。"
+msgstr "CapsLock LED でレイアウト表示を行なう"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "NumLock LEDを別グループの表示に使います。"
+msgstr "NumLock LED でレイアウト表示を行なう"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "左Shiftキーでグループを切替えます。"
+msgstr "左 Shift キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "左Winキーを押すと、グループが変換されます"
+msgstr "左 Win キーでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
+msgstr "4 番目のレベルの際、スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "両側のAltキーでグループを同時に押してグループを切替えます。"
+msgstr "両方の Alt キー同時押しでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "CapsLockキーでグループを切替えます。"
+msgstr "CapsLock キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "SuperはWinキーにマップされます(デフォルト)。"
-
-#. XKBFile extension text
-#, fuzzy
-msgid "Right Alt key changes layout."
-msgstr "右Altキーでグループを切替えます。"
-
-#. XKBFile extension text
-#, fuzzy
-msgid "Shift with numeric keypad keys works as in MS Windows."
 msgstr ""
-"numpadキーとシフトを同時に押すと、MS Windowsの場合と同じように機能します。"
+"コントロールキーは Win キーに割り当てる (通常のコントロールキーの機能も残す)"
 
 #. XKBFile extension text
-#, fuzzy
+msgid "Right Alt key changes layout."
+msgstr "右 Alt キーでレイアウトを変更"
+
+#. XKBFile extension text
+msgid "Shift with numeric keypad keys works as in MS Windows."
+msgstr "Shift キーを押しながらテンキーを押すと MS Windows と同じ機能"
+
+#. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys."
-msgstr "AltとMetaはAltキーにあります(デフォルト)。"
+msgstr "Alt と Meta はいずれも Alt キーに割り当て"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt とシフトキーを同時に押してグループを切替えます。"
+msgstr "Alt+Shift キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Shiftを押すと、グループが変更されます。"
+msgstr "Ctrl+Shift キーでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr ""
+msgstr "スペースキーは通常のスペースキー機能のままとする"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
-msgstr "キーボードオプション"
+msgstr "日本語キーボードのオプション"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
-msgstr "キーボードLEDを別グループの表示に使用します。"
+msgstr "キーボード LED でレイアウト表示を行なう"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "左Ctrlキーでグループを切替えます。"
+msgstr "左 Ctrl キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "Menuキーでグループを切替えます。"
+msgstr "Menu キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "AltとCtrlキーを同時に押してグループを切替えます。"
+msgstr "Alt+Ctrl キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "右Winキーを押すと、グループが変換されます。"
+msgstr "右 Win キーでレイアウトを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Layout switching"
-msgstr "ユーザの切り替えを許可"
+msgstr "レイアウト切り替え"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "左 Altキーを押すと、グループが変換されます。"
+msgstr "左 Alt キーでレイアウトを変更"
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr "両方の Ctrlキーでグループを変更します。"
+msgstr "両方の Ctrlキーでグループを変更"
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr "右Shiftキーでグループを切り替えます。"
+msgstr "右 Shift キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
-msgstr "左Winキーでグループを切り替えます。"
+msgstr "左 Win キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr "左Altキーでグループを切り替えます。"
+msgstr "左 Alt キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
-msgstr "両方のWinキーを押すと、グループが変換されます"
+msgstr "両方の Win キー同時押しでグループを変更"
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches group while pressed."
-msgstr "右Ctrlキーを押すと、グループが変換されます"
+msgstr "右 Ctrl キーでグループを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Metaは左Winキーにマップされます。"
+msgstr "左 Alt キーと左 Win キーを入れ替え"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "デフォルトルート OK"
+msgstr "既定のテンキー"
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "スペースキーに改行不許可のキーシンボルを追加"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "旧来のテンキー機能を強制する"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr ""
-"CapsLockは内部の大文字を使用します。 シフトを押してもCapsLockはキャンセルされ"
-"ません。"
+"CapsLock によりアルファベットを大文字化する。Shift キーは CapsLock に影響を与"
+"えない"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "言語とキーボードのレイアウト選択"
+msgstr "テンキーのレイアウト選択"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Shift+CapsLockを押すと、グループが変更されます。"
+msgstr "Alt+CapsLock キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "2 番目のレベルの際、スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr ""
-"CapsLockはロックしたシフトとして機能します。 シフトを押してもCapsLockはキャン"
-"セルされません。"
+"CapsLock は Shift キーのロックとして機能させる。Shift キーは CapsLock に影響"
+"を与えない"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
-"CapsLockは内部の大文字を使用します。 シフトを押すとCapsLockがキャンセルされま"
-"す。"
+msgstr "CapsLock によりアルファベットを大文字化する。Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "3 番目のレベルの際、スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Mac のキーボードをカーネルで誤って検出した際、 2 つのキーのキーコードを入れ替"
+"える"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr ""
-"numpadキーとシフトを同時に押すと、MS Windowsの場合と同じように機能します。"
+msgstr "テンキーを Mac と同じように機能させる"
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "カナキーがロックされている"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "4 番目のレベルの際、スペースキーで改行不許可のスペースを入力"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "右WinキーにComposeを割り当てます。"
+msgstr "左 Win キーに Compose を割り当てる"
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "右Altキーで3 番目のレベルを選択します。"
+msgstr ""
+"右 Alt キーで 3 番目のレベルを選択。 Shift+右 Alt キーは Multi_Key とする"
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "スペースキーでスペースを入力する"
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "日本語キーボードのオプション"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr ""
-"CapsLockはロックしたシフトとして機能します。 シフトを押すとCapsLockがキャンセ"
-"ルされます。"
+msgstr "CapsLock は Shift キーのロックとして機能させる。 Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 msgstr ""
-"CapsLockは内部の大文字を使用します。 シフトを押してもCapsLockはキャンセルされ"
-"ません。"
+"CapsLock によりアルファベットを大文字化する。 Shift キーでは CapsLock をキャ"
+"ンセルしない"
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr "CapsLockを押すとシフト修飾キーがロックされます。"
+msgstr "CapsLock を単純に Shift キーのロックとする"
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
-"CapsLockを押すと、アルファベット文字の通常の大文字使用が切り替わります。"
+msgstr "CapsLock でアルファベットの大文字／小文字が切り替わります。"
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "CapsLockはシフトを切り替えるため、すべてのキーに影響が出ます。"
+msgstr ""
+"CapsLock は Shift キーの状態を切り替えるため、すべてのキーに影響が出ます。"
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr "右WinキーにComposeを割り当てます。"
+msgstr "右 Win キーに Compose を割り当てる"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
-msgstr "Shift+CapsLockを押すと、グループが変更されます。"
+msgstr "Shift+CapsLock キーでグループを変更"
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr "右Altを押すと、グループが変換されます。"
+msgstr "右 Alt キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr "右コントロールキーは右Altとして機能します。"
+msgstr "右コントロールキーは右 Alt として機能させる"
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -1019,194 +975,194 @@ msgstr "Ctrl キーは左下隅にあります"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Winキーで 3番目のレベルを選択します。"
+msgstr "Win キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "右Altキーで3 番目のレベルを選択します。"
+msgstr "右 Alt キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
-msgstr "右Ctrlキーでグループを切り替えます。"
+msgstr "右 Ctrl キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
-msgstr "右AltキーにComposeを割り当てます。"
+msgstr "右 Alt キーに Compose を割り当てる"
 
 #. XKBFile extension text
 msgid "Right Ctrl is Compose."
-msgstr "右CtrlキーにComposeを割り当てます。"
+msgstr "右 Ctrl キーに Compose を割り当てる"
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
-msgstr "ScrollLock LED を別グループの表示に使います。"
+msgstr "ScrollLock LED でグループ表示を行なう"
 
 #. XKBFile extension text
 msgid "Control key at left of -A-"
-msgstr "-A-の左側のコントロールキー"
+msgstr "-A- の左側にあるコントロールキー"
 
 #. XKBFile extension text
 msgid "Third level choosers"
-msgstr "第三レベルの選択"
+msgstr "3 番目のレベル選択"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
-msgstr "両側のShiftキーを同時に押してグループを切り替えます。"
+msgstr "両方の Shift キー同時押しでグループを変更"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 msgstr ""
-"CapsLockはロックしたシフトとして機能します。 シフトを押してもCapsLockはキャン"
-"セルされません。"
+"CapsLock は Shift キーのロックとして機能させる。 Shift を押しても CapsLock は"
+"キャンセルしない"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 msgstr ""
-"CapsLockは内部の大文字を使用します。 シフトを押すとCapsLockがキャンセルされま"
-"す。"
+"CapsLock によりアルファベットを大文字化する。 Shift で CapsLock をキャンセル"
+"する"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
-msgstr "CapsLockもControlとして使用します。"
+msgstr "CapsLock を Control として使用"
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "左Winキーで3番目のレベルを選択します。"
+msgstr "左 Win キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr "右Winキーでグループを切り替えます。"
+msgstr "右 Win キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
-msgstr "Metaは左Winキーにマップされます。"
+msgstr "Meta は左 Win キーに割り当てる"
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative group."
-msgstr "CapsLock LEDを別グループの表示に使います。"
+msgstr "CapsLock LED でグループ表示を行なう"
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative group."
-msgstr "NumLock LEDを別グループの表示に使います。"
+msgstr "NumLock LED でグループ表示を行なう"
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
-msgstr "左Shiftキーでグループを切替えます。"
+msgstr "左 Shift キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
-msgstr "左Winキーを押すと、グループが変換されます"
+msgstr "左 Win キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Menu is Compose."
-msgstr "メニューキーにComposeを割り当てます。"
+msgstr "メニューキーに Compose を割り当てる"
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr "両側のAltキーでグループを同時に押してグループを切替えます。"
+msgstr "両方の Alt キー同時押しでグループを変更"
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
-msgstr "CapsLockキーでグループを切替えます。"
+msgstr "CapsLock キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr "コントロールとCapsLockをスワップします。"
+msgstr "コントロールキーと CapsLock キーを入れ替える"
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Altキーで番目のレベルを選択します。"
+msgstr "いずれかの Alt キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
-msgstr "右Altキーでグループを切替えます。"
+msgstr "右 Alt キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
 msgstr ""
-"numpadキーとシフトを同時に押すと、MS Windowsの場合と同じように機能します。"
+"Shift キーを押しながらテンキーを押すと MS Windows の場合と同じように機能する"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
-msgstr "サーバで処理される特殊キー(Ctrl+Alt+<key>)。"
+msgstr "サーバで処理される特殊キー (Ctrl+Alt+<key>) "
 
 #. XKBFile extension text
 msgid "Hyper is mapped to the Win-keys."
-msgstr "HyperはWinキーにマップされます。"
+msgstr "Hyper は Win キーに割り当てる"
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Altは右Winキーとスーパーメニューにマップされます。"
+msgstr "Alt キーは右 Win キーと Super キーに割り当てる"
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
-msgstr "SuperはWinキーにマップされます(デフォルト)。"
+msgstr "Super は Win キーに割り当てる (既定)"
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "AltキーのAltとMeta(デフォルト)。"
+msgstr "Alt キーを Alt と Meta の両方に割り当て (既定)"
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr "標準動作をメニューキーに追加します。"
+msgstr "標準動作を Menu キーに追加"
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "AltとMetaはAltキーにあります(デフォルト)。"
+msgstr "Alt キーを Alt と Meta の両方に割り当て (既定)"
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "右コントロールキーで3番目のレベルを選択します。"
+msgstr "右コントロールキーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
-msgstr "Alt とシフトキーを同時に押してグループを切替えます。"
+msgstr "Alt+Shift キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr "コントロールとシフトキーを同時に押してグループを切替えます。"
+msgstr "コントロール +Shift キーでグループを変更"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
 msgstr ""
-"CapsLockはロックしたシフトとして機能します。 シフトを押すとCapsLockがキャンセ"
-"ルされます。"
+"CapsLock は Shift キーのロックとして機能させる。 Shift で CapsLock をキャンセ"
+"ルする"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr "キーボードLEDを別グループの表示に使用します。"
+msgstr "キーボード LED でグループ表示を行なう"
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "右Winキーで3番目のレベルを選択します。"
+msgstr "右 Win キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "左Altキーで3番目のレベルを選択します。"
+msgstr "左 Alt キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
-msgstr "MetaはWinキーにマップされます。"
+msgstr "Meta は Win キーに割り当て"
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr "メニューキーで3番目のレベルを選択します。"
+msgstr "メニューキーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
-msgstr "左Ctrlキーでグループを切替えます。"
+msgstr "左 Ctrl キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr "Menuキーでグループを切替えます。"
+msgstr "Menu キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr "Altとコントロールキーを同時に押してグループを切替えます。"
+msgstr "Alt+ コントロールキーでグループを変更"
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr "右Winキーを押すと、グループが変換されます。"
+msgstr "右 Win キーでグループを変更"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1235,7 +1191,7 @@ msgstr "USB"
 #. XKBFile extension text
 #, fuzzy
 msgid "Add the EuroSign to the 4 key."
-msgstr "EuroSignを5キーに追加します。"
+msgstr "ユーロ通貨記号を 5 キーに追加"
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
@@ -1250,8 +1206,9 @@ msgid "Four-level key with abstract separators"
 msgstr ""
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1260,18 +1217,19 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Shift cancels CapsLock."
-msgstr "CtrlとCapsLockをスワップします。"
+msgstr "Ctrl と CapsLock を入れ替える"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Swap ESC and CapsLock."
-msgstr "CtrlとCapsLockをスワップします。"
+msgstr "Ctrl と CapsLock を入れ替える"
 
 #. XKBFile extension text
+#, fuzzy
 msgid ""
 "Wang 724 keypad with unicode additions (arrows and math operators). Math "
 "operators on default level."
-msgstr ""
+msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1282,10 +1240,11 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
+#, fuzzy
 msgid ""
 "Keypad with unicode additions (arrows and math operators). Math operators on "
 "default level."
-msgstr ""
+msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1298,11 +1257,12 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Numeric keypad delete key behaviour"
-msgstr "言語とキーボードのレイアウト選択"
+msgstr "テンキーのレイアウト選択"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1318,7 +1278,7 @@ msgstr "このタブレットを有効にする"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
-msgstr "タブレット: ベンダと名前の選択"
+msgstr "タブレット: 製造元と名前の選択"
 
 #. Group box title for tablet port combobox
 msgid "Connection Port"
@@ -1353,14 +1313,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1375,9 +1333,8 @@ msgid "Add Eraser"
 msgstr "消しゴムの追加"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "ペンの追加"
+msgstr "パッドの追加"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1385,24 +1342,23 @@ msgstr "ペンまたは消しゴム設定"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
-msgstr "ペンのプロパティ"
+msgstr "ペンの設定"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "ペンのプロパティ"
+msgstr "パッドの設定"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
-msgstr "消しゴムのプロパティ"
+msgstr "消しゴムの設定"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr "タッチスクリーンをディスプレイ番号%1に割り当て"
+msgstr "タッチスクリーンをディスプレイ番号 %1 に割り当て"
 
 #. Group box title for the touchscreen vendor and name selection
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "タッチスクリーン: ベンダと名前の選択"
+msgstr "タッチスクリーン: 製造元と名前の選択"
 
 #. Finish configuration message box
 msgid ""
@@ -1411,18 +1367,20 @@ msgid ""
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
-"最終ステップ<hr>最後のステップは新しい環境設定を保存します。 保存する前に、新"
-"しい環境設定をテストすることをお勧めします。 テストサーバが破損したデスクトッ"
-"プを表示する場合、<b>[ Ctrl+Alt+Backspace ]</b>を押してサーバをキルしてくださ"
-"い。"
+"<b>最終ステップ</b><hr>最後のステップで新しい環境設定を保存します。保存する前"
+"に環境設定をテストすることをお勧めします。もしテストの際に表示がおかしくなっ"
+"たときは、 <b> Ctrl+Alt+Backspace </b> を同時に押してサーバを強制終了させてく"
+"ださい。"
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr "Xサーバーのリモートコントロール"
+msgstr "X サーバーのリモートコントロール"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr "お使いのXサーバのディスプレイとキーボード/マウスへのアクセスを許可する"
+msgstr ""
+"お使いの X サーバのディスプレイ・キーボード・マウスに対しアクセスすることを許"
+"可"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1446,7 +1404,7 @@ msgstr "<パスワードの確認>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
-msgstr "HTTPアクセスを有効にする"
+msgstr "HTTP アクセスを有効にする"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
@@ -1461,8 +1419,8 @@ msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
-"<b>リモートアクセスパスワードの不一致</b><hr>パスワードの最初と2番目のバー"
-"ジョンが一致しません。"
+"<b>リモートアクセスパスワードの不一致</b><hr>1 回目と 2 回目に入力したパス"
+"ワードが合っていません。"
 
 #. VNC message box appearing if password is too short
 msgid ""
@@ -1470,9 +1428,8 @@ msgid ""
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
-"<b>リモートアクセスパスワードの誤り</b><hr>パスワードフィールドが空白のままに"
-"なっているか、パスワードが短すぎます。6文字以上でパスワードを入力してくださ"
-"い。"
+"<b>リモートアクセスパスワードの誤り</b><hr>パスワードの項目が未入力かパスワー"
+"ドが短すぎます。6文字以上でパスワードを設定してください。"
 
 #. VNC message box appearing if password is too long
 msgid ""
@@ -1487,8 +1444,8 @@ msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
-"ソフトウェアのインストール<hr>一部のパッケージが見つかりません。 見つからない"
-"パッケージを今インストールしますか?"
+"<b>ソフトウェアのインストール</b><hr>一部のパッケージが見つかりません。 見つ"
+"からないパッケージを今インストールしますか？"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1496,11 +1453,11 @@ msgstr "パッケージのインストール"
 
 #. Progress bar title text
 msgid "Importing module"
-msgstr "モジュールをインポー中"
+msgstr "モジュールを取り込み中"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr "SaX2:データをインポート中..."
+msgstr "SaX2: データを取り込み中..."
 
 #. Progress window label text
 msgid "Initialize cache..."
@@ -1509,15 +1466,15 @@ msgstr "キャッシュを初期化中..."
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "設定の保存に失敗しました<hr>次のレポートが作成されています:"
+msgstr "<b>設定の保存に失敗</b><hr>次のレポートが作成されました:"
 
 #. Message box test: configuration has been saved
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
-"保存された環境設定<hr>変更は次にグラフィックスシステムを再起動するときに有効"
-"になります。 SaX2を今終了しますか?"
+"<b>環境設定を保存しました</b><hr>変更した内容は次にグラフィックスシステムを起"
+"動するときから有効になります。 SaX2 を今終了しますか？"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1525,9 +1482,8 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
-"環境設定をテストできませんでした<hr>詳細については、ファイル<tt>/var/log/"
-"Xorg.99.log</tt>を参照してください。 次のレポートは呼び出しインスタンスから作"
-"成されています:"
+"<b>設定テストに失敗しました<hr>詳細については、ファイル <tt>/var/log/Xorg.99."
+"log</tt> を参照してください。 次の出力は呼び出し段階で作成されているものです:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1535,9 +1491,9 @@ msgid ""
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
-"<b>リモートアクセス設定情報</b><hr>リモートアクセスサービスではTCPポート5900"
-"およびHTTPポート(デフォルトでは5800)がファイアウォールで開いていることが要求"
-"されます。YaSTでこれを設定できます。"
+"<b>リモートアクセス設定情報</b><hr>リモートアクセスサービスを利用するには "
+"TCP ポート 5900 および HTTP ポート (デフォルトでは 5800) をファイアウォールで"
+"開いている必要があります。 YaST でこれを設定できます。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1545,79 +1501,79 @@ msgstr "その他の互換性オプション"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr "EuroSignを5キーに追加します。"
+msgstr "ユーロ通貨記号を 5 キーに追加"
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
-msgstr "CapsLockキーの動作"
+msgstr "CapsLock キーの動作"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr "Alt/Winキーの動作"
+msgstr "Alt/Win キーの動作"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
-msgstr "EuroSignを特定のキーに追加中"
+msgstr "ユーロを特定のキーに追加"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr "Caps LockはComposeです。"
+msgstr "Caps Lock は Compose です。"
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
-msgstr "右Ctrlキーは右Altとして機能します。"
+msgstr "右 Ctrl キーを右 Alt として機能させる"
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
-msgstr "左下のCtrlキー"
+msgstr "左下の Ctrl キー"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr "「A」の左側のCtrlキー"
+msgstr "'A' の左側の Ctrl キー"
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
-msgstr "CapsLockもCtrlとして使用します。"
+msgstr "CapsLock も Ctrl として使用"
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr "CtrlとCapsLockをスワップします。"
+msgstr "Ctrl と CapsLock を入れ替える"
 
 #. XKBFile extension text
 msgid "Ctrl key position"
-msgstr "Ctrlキーの位置"
+msgstr "Ctrl キーの位置"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "サーバで処理される特殊キー(Ctrl+Alt+&lt;key&gt;)。"
+msgstr "サーバで処理される特殊キー (Ctrl+Alt+&lt;key&gt;)"
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "右Ctrlキーで3番目のレベルを選択します。"
+msgstr "右 Ctrl キーで 3 番目のレベルを選択"
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
-msgstr "Ctrl+Shiftを押すと、グループが変更されます。"
+msgstr "Ctrl+Shift でグループを変更"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr "EuroSignをEキーに追加します。"
+msgstr "ユーロ通貨記号を E キーに追加"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr "EuroSignを2キーに追加します。"
+msgstr "ユーロ通貨記号を 2 キーに追加"
 
 #. XKBFile extension text
 msgid "key Compose key position"
-msgstr "Composeキーの位置"
+msgstr "Compose キーの位置"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
-msgstr "AltとCtrlキーを同時に押してグループを切替えます。"
+msgstr "Alt+Ctrl キーでグループを変更"
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr "グループシフト/ロック動作"
+msgstr "グループシフト／ロック動作"
 
 #. XKBFile extension text
 msgid "Arabic"
@@ -1628,14 +1584,12 @@ msgid "Nepal"
 msgstr "ネパール"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "ラオス人民民主共和国"
+msgstr "コンゴ民主共和国"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "チェコ共和国"
+msgstr "韓国"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1646,9 +1600,8 @@ msgid "Nigeria"
 msgstr "ナイジェリア"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xxシリーズ"
+msgstr "日本 (PC-98xx シリーズ)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1656,7 +1609,7 @@ msgstr "エストニア"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr "ミヤンマー"
+msgstr "ミャンマー"
 
 #. XKBFile extension text
 msgid "Norway"
@@ -1796,7 +1749,7 @@ msgstr "南アフリカ"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr "ペルシア語"
+msgstr "近代ペルシャ語"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1812,7 +1765,7 @@ msgstr "アイスランド"
 
 #. XKBFile extension text
 msgid "Croatia"
-msgstr "クロアティア"
+msgstr "クロアチア"
 
 #. XKBFile extension text
 msgid "Latvia"
@@ -1888,7 +1841,7 @@ msgstr "ジョージア"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr "米語"
+msgstr "英語 (アメリカ)"
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1896,7 +1849,7 @@ msgstr "トルコ語"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr "PC-98xxシリーズ"
+msgstr "PC-98xx シリーズ"
 
 #. XKBFile extension text
 msgid "Netherlands"
@@ -1904,7 +1857,7 @@ msgstr "オランダ"
 
 #. XKBFile extension text
 msgid "Macedonia"
-msgstr "マセドニア"
+msgstr "マケドニア"
 
 #. XKBFile extension text
 msgid "Canada"
@@ -1953,7 +1906,7 @@ msgstr "トルコ"
 #.
 #. Maximum length: 40  characters
 msgid "&Step size"
-msgstr "増やすサイズ(&S)"
+msgstr "増やすサイズ (&S)"
 
 #. Maximum length: 40  characters
 msgid "Small"
@@ -2002,4 +1955,4 @@ msgid "Configuration on display"
 msgstr "画面の設定:"
 
 msgid "Idle timer..."
-msgstr "アイドルタイマ ..."
+msgstr "無操作タイマー ..."

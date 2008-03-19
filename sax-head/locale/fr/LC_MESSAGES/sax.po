@@ -1,25 +1,26 @@
-# translation of sax.po to 
-# translation of sax.po to français
-# translation of sax.fr.po to Français
+# translation of sax.po to French
+# translation of sax.po to
 # domain "sax.mo"
 # French message file for SaX.
 # Copyright (C)  SuSE GmbH, 2000..2001
+#
 # Francoise Lermen <flermen@suse.de>, 2000..2001.
 # Patricia Vaz <Patricia.Vaz@suse.de>, 2003,2004.
 # Patricia Vaz <patricia.vaz@suse.com>, 2004.
 # Patricia Vaz <patricia@suse.de>, 2005.
-# 
+# Benoit Verduyn <benoit.verduyn@videotron.ca>, 2007.
+# Guillaume GARDET <guillaume.gardet@free.fr>, 2008
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-06-01 08:45\n"
-"Last-Translator: Novell Language <language@novell.com>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2008-03-07 22:41+0100\n"
+"Last-Translator: Guillaume GARDET <guillaume.gardet@free.fr>\n"
+"Language-Team: French Team <opensuse-fr@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -28,7 +29,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -45,6 +46,9 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b> L'acceleration 3D n'est pas supporté</b><hr>SaX2 ne peut pas offrir "
+"l'activation du sous système 3D car votre carte graphique ou son pilote ne "
+"supporte pas la 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -53,6 +57,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b> L'acceleration 3D n'est pas supporté</b><hr>SaX2 ne peut pas offrir "
+"l'activation du sous système 3D car le mode Xinerama basé sur le mode duplex "
+"est utilisé. L'extension Xinerama de Xorg pour combiner les écrans "
+"graphiques ne supporte pas la 3D sur toutes les 'têtes'"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -75,6 +83,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>La taille d'affichage à été modifié</b><hr>La taille de l'affichage a été "
+"adapté à la nouvelle disposition."
 
 #. Help Button text
 msgid "&Help"
@@ -162,9 +172,8 @@ msgid "Remote Access Properties"
 msgstr "Propriétés d'accès à distance"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Affichage"
+msgstr "Affichage %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -215,9 +224,8 @@ msgid "Invert Y-Axis"
 msgstr "Inverser l'axe des Y"
 
 #. CheckBox label to activate left hand mouse
-#, fuzzy
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Activer l'émulation 3 boutons"
+msgstr "Inverser les boutons pour les gauchers"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -421,6 +429,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>Combinaison invalide de couleur/résolution :</b><hr><nobr>La résolution "
+"sélectionnée et/ou les paramètres de couleur</nobr> ne sont pas supportés "
+"par le framebuffer de la carte graphique."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -600,9 +611,8 @@ msgid "Alt/Win Key Behavior"
 msgstr "Comportement des touches Alt/Win"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Position de la touche Contrôle"
+msgstr "Position de la touche Euro"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -617,9 +627,8 @@ msgid "Morocco"
 msgstr "Maroc"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "Brésil"
+msgstr "Braille"
 
 #. XKBFile extension text
 msgid "Ethiopia"
@@ -627,17 +636,15 @@ msgstr "Éthiopie"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "Retour arrière comme dans la disposition NICOLA-F"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "Appuyez sur la touche Win droite pour choisir le troisième niveau."
+msgstr "La touche Alt droite ne choisit jamais le troisième niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "La touche Alt gauche change de groupe."
+msgstr "La touche Alt gauche change la disposition pendant l'appui."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
@@ -645,215 +652,179 @@ msgstr ""
 
 # TLABEL kinternet_2002_02_20_2255__44
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numeric keypad keys."
-msgstr "Route par défaut ok."
+msgstr "Touches du pavé numérique par défaut."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "Les deux touches Ctrl simultanément changent de groupe."
+msgstr "Les deux touches Ctrl simultanément changent la disposition."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "Utiliser la touche espace pour entrer le caractère espace insécable"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "La touche Maj droite change de groupe."
+msgstr "La touche Maj droite change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "La touche Win gauche change de groupe."
+msgstr "La touche Win gauche change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Maj change de groupe."
+msgstr "Ctrl+Maj change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "La touche Alt gauche change de groupe."
+msgstr "La touche Alt gauche change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "Les deux touches Win changent de groupe."
+msgstr "Les deux touches Win changent la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "La touche Ctrl droite change de groupe."
+msgstr "La touche Ctrl droite change la disposition."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "La touche espace génère un espace insécable."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "Maj+VerrMaj change de groupe."
+msgstr "Maj+VerrMaj change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
-msgstr "Alt droite change de groupe."
+msgstr "Alt droite change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "Sélection de la langue et de la disposition du clavier"
+msgstr "Sélection de la disposition du pavé numérique"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "La touche Ctrl droite change de groupe."
+msgstr "La touche Ctrl droite change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "Maj+VerrMaj change de groupe."
+msgstr "Maj+VerrMaj change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "Hyper correspond aux touches Win."
+msgstr "Super correspond aux touches Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "La diode Arrêt défilement montre un groupe alternatif."
+msgstr "La diode Arrêt défilement montre la disposition alternative."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "Les deux touches Maj simultanément changent de groupe."
+msgstr "L'appui simultané des deux touches Maj (Shift) change la disposition."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
+msgstr "La touche espace produit un espace insécable au deuxième niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "La touche Win droite change de groupe."
+msgstr "La touche Win droite change la disposition."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
+msgstr "La touche espace produit un espace insécable au troisième niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr ""
-"Maj avec les touches du pavé numérique fonctionne comme sous Microsoft "
-"Windows."
+msgstr "Les touches du pavé numérique fonctionne comme sous Mac."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "La diode VerrMaj montre un groupe alternatif."
+msgstr "La diode VerrMaj (CapsLock) montre une disposition alternative."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "La diode VerrNum montre un groupe alternatif."
+msgstr "La diode VerrNum (NumLock) montre une disposition alternative."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "La touche Maj gauche change de groupe."
+msgstr "La touche Maj (Shift) gauche change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "La touche Win gauche change de groupe."
+msgstr "La touche Win gauche change la disposition."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
+msgstr "La touche espace produit un espace insécable au quatrième niveau"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "Les deux touches Alt simultanément changent de groupe."
+msgstr "L'appui simultané des deux touches Alt change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "La touche VerrMaj change de groupe."
+msgstr "La touche VerrMaj (CapsLock) change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Super correspond aux touches Win (par défaut)."
+msgstr "Control est relié aux touches Win (Super) (et aussi aux touches Ctrl)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
-msgstr "La touche Alt droite change de groupe."
+msgstr "La touche Alt droite change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "Maj avec les touches du pavé numérique fonctionne comme sous Windows."
+msgstr ""
+"Maj (Shift) avec les touches du pavé numérique fonctionne comme sous MS "
+"Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt et Méta sur les touches Alt (par défaut)."
+msgstr "Alt et Meta sont sur les touches Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "Alt+Maj change de groupe"
+msgstr "Alt+Maj change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Maj change de groupe."
+msgstr "Ctrl+Maj change la disposition."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr ""
+msgstr "La touche espace produit un espace sécable à tous les niveaux"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
-msgstr "Options du clavier"
+msgstr "Options de clavier Japonnais"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
-msgstr "Utiliser les diodes du clavier pour montrer un groupe alternatif."
+msgstr ""
+"Utiliser les diodes du clavier pour indiquer une disposition alternative."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "La touche Ctrl gauche change de groupe."
+msgstr "La touche Ctrl gauche change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "La touche Menu change de groupe."
+msgstr "La touche Menu change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl change de groupe."
+msgstr "Alt+Ctrl change la disposition"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "La touche Win droite change de groupe."
+msgstr "La touche Win droite change la disposition."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Layout switching"
-msgstr "Autoriser le changement d'utilisateur"
+msgstr "Changement de disposition"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -884,15 +855,13 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "La touche Ctrl droite change de groupe."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Méta correspond à la touche Win gauche."
+msgstr "La touche Alt gauche est permutée avec la touche Win gauche."
 
 # TLABEL kinternet_2002_02_20_2255__44
 #. XKBFile extension text
-#, fuzzy
 msgid "Default numpad keys."
-msgstr "Route par défaut ok."
+msgstr "Touches du pavé numérique par défaut."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
@@ -904,52 +873,47 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "Force la disposition de clavier standard."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "VerrMaj utilise la capitalisation interne. Maj n'annule pas VerrMaj."
+msgstr ""
+"VerrMaj utilise la capitalisation interne. Maj n'annule pas le verrouillage."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad layout selection"
-msgstr "Sélection de la langue et de la disposition du clavier"
+msgstr "Sélection de la disposition du clavier"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes group."
-msgstr "Maj+VerrMaj change de groupe."
+msgstr "Maj+VerrMaj change la disposition."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "La touche espace génère un espace insécable au deuxième niveau"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "VerrMaj agit comme Maj avec verrouillage. Maj n'annule pas VerrMaj."
+msgstr ""
+"VerrMaj agit comme Maj avec verrouillage. Maj n'annule pas le verrouillage."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr ""
-"VerrMaj utilise la capitalisation interne. La touche Maj annule VerrMaj."
+msgstr "VerrMaj (CapsLock) utilise la capitalisation interne. Maj (Shift) "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "La touche espace génère un espace insécable au troisième niveau"
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr ""
+"Échange les codes de 2 touches quand des claviers Mac ne sont pas "
+"correctement détectés par le noyau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr ""
-"Maj avec les touches du pavé numérique fonctionne comme sous Microsoft "
-"Windows."
+msgstr "Les touches du pavé numérique fonctionne comme sous Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -957,32 +921,31 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "La touche espace produit un espace insécable au quatième niveau."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "La touche Win droite est Compose."
+msgstr "La touche Win droite est la touche Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Appuyez sur la touche Win droite pour choisir le troisième niveau."
+msgstr ""
+"Appuyez sur la touche Alt droite pour choisir le troisième niveau. La "
+"combinaison Maj + Alt droit est la touche Compose."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "La touche espace produit un espace à tous niveaux."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "Options de clavier Japonnais"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
 msgstr ""
-"VerrMaj agit comme Maj avec verrouillage. La touche Maj annule CapsLock."
+"VerrMaj (CapsLock) agit comme Maj (Shift) avec verrouillage. Maj (Shift) "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1301,7 +1264,7 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Numeric keypad delete key behaviour"
-msgstr "Sélection de la langue et de la disposition du clavier"
+msgstr "Sélection de la disposition du pavé numérique"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
@@ -1356,14 +1319,12 @@ msgid "COM-2 [ /dev/ttyS1 ]"
 msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
-#, fuzzy
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
-#, fuzzy
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1380,7 +1341,7 @@ msgstr "Ajouter gomme"
 #. Add Pad Checkbox
 #, fuzzy
 msgid "Add Pad"
-msgstr "Ajouter crayon"
+msgstr "Ajouter un Pad"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1393,7 +1354,7 @@ msgstr "Propriétés du stylo"
 #. Tab title: Pad properties
 #, fuzzy
 msgid "Pad Properties"
-msgstr "Propriétés du stylo"
+msgstr "Propriétés du pad"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1635,27 +1596,24 @@ msgid "Nepal"
 msgstr "Népal"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Congo, Democratic Republic of the"
-msgstr "République démocratique populaire du Laos"
+msgstr "Congo, République Démocratique du"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "République Tchèque"
+msgstr "Corée, République de"
 
 #. XKBFile extension text
 msgid "Iraq"
-msgstr "Iraq"
+msgstr "Irak"
 
 #. XKBFile extension text
 msgid "Nigeria"
 msgstr "Nigeria"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "Série PC-98xx"
+msgstr "Japon (Série PC-98xx)"
 
 #. XKBFile extension text
 msgid "Estonia"
