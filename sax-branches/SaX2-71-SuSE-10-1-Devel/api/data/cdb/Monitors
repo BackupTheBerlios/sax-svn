@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon Apr 24 17:05:58 2006
+# Author: Marcus Schaefer <sax@suse.de>, Fri Feb 29 13:28:15 2008
 #
 # Template for monitor data
 # --------------------------
@@ -89,7 +89,6 @@
 --> LCD:1280X600@60HZ  {
  Option=DPMS
  Hsync=31-38
- Modeline="1280x600" 61.50 1280 1336 1464 1648 600 601 604 622
  Vsync=50-61
 }
 
@@ -99,7 +98,6 @@
 --> LCD:1280X768@60HZ  {
  Option=DPMS
  Hsync=30-50
- Modeline="1280x768" 80.14 1280 1344 1480 1680 768 769 772 795
  Vsync=50-61
 }
 
@@ -109,7 +107,6 @@
 --> LCD:1280X800@60HZ  {
  Option=DPMS
  Hsync=30-52
- Modeline="1280x800" 83.46 1280 1344 1480 1680 800 801 804 828
  Vsync=50-60
 }
 
@@ -119,7 +116,6 @@
 --> LCD:1280X800@75HZ  {
  Option=DPMS
  Hsync=30-82
- Modeline="1280x800" 104.35 1280 1360 1496 1712 800 801 804 835
  Vsync=58-75
 }
 
@@ -161,6 +157,15 @@
  Hsync=30-90
  Modeline="1400x1050" 155.85 1400 1496 1648 1896 1050 1051 1054 1096
  Vsync=58-78
+}
+
+#==============================================
+# 1440X900@60HZ
+#----------------------------------------------
+--> LCD:1440X900@60HZ  {
+ Hsync=50-70
+ Modeline="1440x900" 106.47 1440 1520 1672 1904 900 901 904 932
+ Vsync=50-60
 }
 
 #==============================================
@@ -362,6 +367,15 @@
 }
 
 #==============================================
+# 1440X900@60HZ
+#----------------------------------------------
+--> VESA:1440X900@60HZ  {
+ Hsync=50-70
+ Modeline="1440x900" 106.47 1440 1520 1672 1904 900 901 904 932
+ Vsync=50-60
+}
+
+#==============================================
 # 1600X1200@60HZ
 #----------------------------------------------
 --> VESA:1600X1200@60HZ  {
@@ -545,9 +559,9 @@
 # 800X600@75HZ
 #----------------------------------------------
 --> VESA:800X600@75HZ  {
- Hsync=31-46
+ Hsync=31-47
  Modeline="800x600" 49.5 800 816 896 1056 600 601 604 625 +hsync +vsync
- Vsync=50-75
+ Vsync=50-76
 }
 
 #==============================================
@@ -2886,7 +2900,7 @@ APOLLO:8398  {
 #==============================================
 # 12" Color Display (M1299)
 #----------------------------------------------
-APPLE:12" COLOR DISPLAY (M1299)  {
+APPLE:12 COLOR DISPLAY (M1299)  {
  Hsync=31-24
  Vsync=50-60
 }
@@ -2894,7 +2908,7 @@ APPLE:12" COLOR DISPLAY (M1299)  {
 #==============================================
 # 12" Monochrome (M0298LL/A)
 #----------------------------------------------
-APPLE:12" MONOCHROME (M0298LL/A)  {
+APPLE:12 MONOCHROME (M0298LL/A)  {
  Hsync=31-35
  Vsync=50-66
 }
@@ -2902,7 +2916,7 @@ APPLE:12" MONOCHROME (M0298LL/A)  {
 #==============================================
 # 15" TFT STUDIO-DISPLAY
 #----------------------------------------------
-APPLE:15" TFT STUDIO-DISPLAY  {
+APPLE:15 TFT STUDIO-DISPLAY  {
  Hsync=30-33
  Vsync=40-70
 }
@@ -2910,7 +2924,7 @@ APPLE:15" TFT STUDIO-DISPLAY  {
 #==============================================
 # 16" Color Display (M1298)
 #----------------------------------------------
-APPLE:16" COLOR DISPLAY (M1298)  {
+APPLE:16 COLOR DISPLAY (M1298)  {
  Hsync=31-50
  Vsync=50-75
 }
@@ -2918,7 +2932,7 @@ APPLE:16" COLOR DISPLAY (M1298)  {
 #==============================================
 # 17" DIGITAL STUDIO-DISPLAY
 #----------------------------------------------
-APPLE:17" DIGITAL STUDIO-DISPLAY  {
+APPLE:17 DIGITAL STUDIO-DISPLAY  {
  Hsync=30-80
  Vsync=60-160
 }
@@ -2934,7 +2948,7 @@ APPLE:1710AV  {
 #==============================================
 # 21" Color Display, (M3502)
 #----------------------------------------------
-APPLE:21" COLOR DISPLAY, (M3502)  {
+APPLE:21 COLOR DISPLAY, (M3502)  {
  Hsync=31-68
  Vsync=50-75
 }
@@ -2942,7 +2956,7 @@ APPLE:21" COLOR DISPLAY, (M3502)  {
 #==============================================
 # 22" CINEMA
 #----------------------------------------------
-APPLE:22" CINEMA  {
+APPLE:22 CINEMA  {
  Hsync=30-70
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=30-75
@@ -2969,7 +2983,7 @@ APPLE:APPLEVISION 1710AV  {
 #==============================================
 # AudioVision 14" Display
 #----------------------------------------------
-APPLE:AUDIOVISION 14" DISPLAY  {
+APPLE:AUDIOVISION 14 DISPLAY  {
  Hsync=31-35
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=50-66
@@ -2987,7 +3001,7 @@ APPLE:BASIC COLOR (M1595LL/A)  {
 #==============================================
 # Cinema Display 20" Widescreen (DIGITAL)
 #----------------------------------------------
-APPLE:CINEMA DISPLAY 20" WIDESCREEN (DIGITAL)  {
+APPLE:CINEMA DISPLAY 20 WIDESCREEN (DIGITAL)  {
  DDC=APP921D
  Option=DPMS
  Hsync=30-66
@@ -3003,6 +3017,18 @@ APPLE:COLOR 14 DISPLAY  {
  Hsync=31-35
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=50-66
+}
+
+#==============================================
+# COLOR DISPLAY (9C5E)
+#----------------------------------------------
+APPLE:COLOR DISPLAY (9C5E)  {
+ DDC=APP9C5E
+ Option=DPMS
+ Hsync=30-52
+ Resolution=1280x800
+ Vsync=50-60
+ DPI=268x178
 }
 
 #==============================================
@@ -3046,7 +3072,7 @@ APPLE:COLOR PLUS 14 (M1787)  {
 #==============================================
 # COLORSYNC 17"
 #----------------------------------------------
-APPLE:COLORSYNC 17"  {
+APPLE:COLORSYNC 17  {
  Hsync=40-80
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=40-120
@@ -3055,7 +3081,7 @@ APPLE:COLORSYNC 17"  {
 #==============================================
 # COLORSYNC 20"
 #----------------------------------------------
-APPLE:COLORSYNC 20"  {
+APPLE:COLORSYNC 20  {
  Hsync=30-94
  Modeline="1600x1024" 103 1600 1600 1656 1664 1024 1024 1029 1030 +Hsync +Vsync
  Vsync=48-120
@@ -3096,7 +3122,7 @@ APPLE:MULTIPLE SCAN 14 (M4222)  {
 #==============================================
 # Multiple Scan 15" (M3089LL/A)
 #----------------------------------------------
-APPLE:MULTIPLE SCAN 15" (M3089LL/A)  {
+APPLE:MULTIPLE SCAN 15 (M3089LL/A)  {
  Hsync=31-57
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3107,7 +3133,7 @@ APPLE:MULTIPLE SCAN 15" (M3089LL/A)  {
 #==============================================
 # Multiple Scan 15"AV (M4681)
 #----------------------------------------------
-APPLE:MULTIPLE SCAN 15"AV (M4681)  {
+APPLE:MULTIPLE SCAN 15AV (M4681)  {
  Hsync=31-57
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3130,7 +3156,7 @@ APPLE:MULTIPLE SCAN 17  {
 #==============================================
 # MULTIPLE SCAN 17"
 #----------------------------------------------
-APPLE:MULTIPLE SCAN 17"  {
+APPLE:MULTIPLE SCAN 17  {
  Option=DPMS
  Hsync=31-60
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
@@ -3225,7 +3251,7 @@ APPLE:POWERBOOK-1024X768  {
 #==============================================
 # STD9745" (M2943)
 #----------------------------------------------
-APPLE:STD9745" (M2943)  {
+APPLE:STD9745 (M2943)  {
  Hsync=31-68
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3236,7 +3262,7 @@ APPLE:STD9745" (M2943)  {
 #==============================================
 # Studio Display 17" (M6221LL/A)
 #----------------------------------------------
-APPLE:STUDIO DISPLAY 17" (M6221LL/A)  {
+APPLE:STUDIO DISPLAY 17 (M6221LL/A)  {
  Hsync=30-85
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -3247,7 +3273,7 @@ APPLE:STUDIO DISPLAY 17" (M6221LL/A)  {
 #==============================================
 # Studio Display 21" (M6204LL/A)
 #----------------------------------------------
-APPLE:STUDIO DISPLAY 21" (M6204LL/A)  {
+APPLE:STUDIO DISPLAY 21 (M6204LL/A)  {
  Hsync=31-107
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5256,6 +5282,17 @@ BELINEA:106070  {
 }
 
 #==============================================
+# 106075
+#----------------------------------------------
+BELINEA:106075  {
+ DDC=MAX17BB
+ Option=DPMS
+ Hsync=30-98
+ Resolution=1280x960
+ Vsync=50-160
+}
+
+#==============================================
 # 106080
 #----------------------------------------------
 BELINEA:106080  {
@@ -5555,6 +5592,16 @@ BERMON:2082-LR  {
 }
 
 #==============================================
+# BM10A
+#----------------------------------------------
+BRIDGE:BM10A  {
+ DDC=BRG0064
+ Hsync=30-50
+ Resolution=1024x768
+ Vsync=50-90
+}
+
+#==============================================
 # BM17C
 #----------------------------------------------
 BRIDGE:BM17C  {
@@ -5602,7 +5649,7 @@ BTM:17 TOUCH SCREEN  {
 #==============================================
 # 19" Enlarging Monitor
 #----------------------------------------------
-BTM:19" ENLARGING MONITOR  {
+BTM:19 ENLARGING MONITOR  {
  Hsync=31-31
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5622,7 +5669,7 @@ BUS COMPUTER SYSTEMS:COMPUTER SYSTEMS BUS_VGA  {
 #==============================================
 # 21" ChromaVision
 #----------------------------------------------
-CALCOMP:21" CHROMAVISION  {
+CALCOMP:21 CHROMAVISION  {
  Hsync=31-68
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5633,7 +5680,7 @@ CALCOMP:21" CHROMAVISION  {
 #==============================================
 # 21" GrayVision
 #----------------------------------------------
-CALCOMP:21" GRAYVISION  {
+CALCOMP:21 GRAYVISION  {
  Hsync=32-49
  Modeline="800x600" 64.06 800 840 968 1040 600 612 621 648 +hsync +vsync
  Modeline="1024x768" 78.75 1024 1040 1136 1312 768 769 772 800 +hsync +vsync
@@ -5644,7 +5691,7 @@ CALCOMP:21" GRAYVISION  {
 #==============================================
 # [vshop]21" CHROMAVISION
 #----------------------------------------------
-CALCOMP:[VSHOP]21" CHROMAVISION  {
+CALCOMP:[VSHOP]21 CHROMAVISION  {
  Hsync=31-68
  Vsync=50-75
 }
@@ -5652,7 +5699,7 @@ CALCOMP:[VSHOP]21" CHROMAVISION  {
 #==============================================
 # [vshop]21" GRAYVISION
 #----------------------------------------------
-CALCOMP:[VSHOP]21" GRAYVISION  {
+CALCOMP:[VSHOP]21 GRAYVISION  {
  Hsync=32-49
  Vsync=45-100
 }
@@ -6761,7 +6808,7 @@ COMPUTER_2000:PC-2000F 1785T  {
 #==============================================
 # COLORLINE 15"
 #----------------------------------------------
-COMTECH:COLORLINE 15"  {
+COMTECH:COLORLINE 15  {
  Hsync=31-70
  Vsync=50-112
 }
@@ -9585,6 +9632,29 @@ DELL:1905FP (ANALOG)  {
 }
 
 #==============================================
+# 1907FPT
+#----------------------------------------------
+DELL:1907FPT  {
+ DDC=DEL4014
+ Option=DPMS
+ Hsync=30-81
+ Modeline="1280x1024" 108.0 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync 
+ Resolution=1280x1024
+ Vsync=43-60
+}
+
+#==============================================
+# 1908FP
+#----------------------------------------------
+DELL:1908FP  {
+ DDC=DEL4025
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-76
+}
+
+#==============================================
 # 2000FP
 #----------------------------------------------
 DELL:2000FP  {
@@ -9654,6 +9724,18 @@ DELL:2005FPW (DIGITAL)  {
 }
 
 #==============================================
+# 2007FP
+#----------------------------------------------
+DELL:2007FP  {
+ DDC=DELA020
+ Option=DPMS
+ Hsync=30-83
+ Modeline="1600x1200" 162 1600 1664 1856 2160 1200 1201 1204 1250
+ Resolution=1600x1200
+ Vsync=56-60
+}
+
+#==============================================
 # 2405 FPW
 #----------------------------------------------
 DELL:2405 FPW  {
@@ -9663,6 +9745,17 @@ DELL:2405 FPW  {
  Modeline="1920x1200" 154.00 1920 1976 2008 2080 1200 1203 1209 1235 +hsync +vsync
  Resolution=1920x1200
  Vsync=56-76
+}
+
+#==============================================
+# 3007WFP
+#----------------------------------------------
+DELL:3007WFP  {
+ DDC=DEL4016
+ Option=DPMS
+ Hsync=50-98
+ Resolution=2560x1600
+ Vsync=50-60
 }
 
 #==============================================
@@ -9831,6 +9924,17 @@ DELL:D828L  {
  DDC=DEL32FE
  Hsync=31-54
  Vsync=50-120
+}
+
+#==============================================
+# DRAC5
+#----------------------------------------------
+DELL:DRAC5  {
+ DDC=DEL1000
+ Hsync=30-70
+ Profile=DEL1000
+ Resolution=1024x768
+ Vsync=60-75
 }
 
 #==============================================
@@ -10346,6 +10450,7 @@ DELL:P990  {
  DDC=DEL50DD
  Hsync=30-96
  Vsync=48-120
+ DPI=366x274
 }
 
 #==============================================
@@ -10356,6 +10461,7 @@ DELL:P991  {
  Option=DPMS
  Hsync=30-107
  Vsync=48-120
+ DPI=366x274
 }
 
 #==============================================
@@ -10366,6 +10472,7 @@ DELL:P992  {
  Option=DPMS
  Hsync=30-107
  Vsync=48-170
+ DPI=366x274
 }
 
 #==============================================
@@ -14259,8 +14366,10 @@ FUJITSU SIEMENS:21P3  {
 # 21P4
 #----------------------------------------------
 FUJITSU SIEMENS:21P4  {
+ DDC=FUS0436
  Option=DPMS
  Hsync=30-113
+ Resolution=1280x1024
  Vsync=50-160
 }
 
@@ -14285,6 +14394,18 @@ FUJITSU SIEMENS:463V-FA  {
  Hsync=30-83
  Modeline="1280x1024" 108.00 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync
  Vsync=50-85
+}
+
+#==============================================
+# AMILO Pro V3205
+#----------------------------------------------
+FUJITSU SIEMENS:AMILO PRO V3205  {
+ DDC=CMO1210
+ Option=DPMS
+ Hsync=30-52
+ Resolution=1280x800
+ Vsync=50-60
+ DPI=392x248
 }
 
 #==============================================
@@ -15352,7 +15473,7 @@ HANTAREX:TECNO 1439 E  {
 #==============================================
 # 1024 LCD FLAT PANEL 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:1024 LCD FLAT PANEL 14-INCH DISPLAY  {
+HP:1024 LCD FLAT PANEL 14-INCH DISPLAY  {
  Hsync=32-61
  Vsync=50-90
 }
@@ -15360,7 +15481,7 @@ HEWLETT-PACKARD:1024 LCD FLAT PANEL 14-INCH DISPLAY  {
 #==============================================
 # 1024 LE FLAT PANEL 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:1024 LE FLAT PANEL 14-INCH DISPLAY  {
+HP:1024 LE FLAT PANEL 14-INCH DISPLAY  {
  Hsync=32-54
  Vsync=50-105
 }
@@ -15368,7 +15489,7 @@ HEWLETT-PACKARD:1024 LE FLAT PANEL 14-INCH DISPLAY  {
 #==============================================
 # 15 ERGO NEW/D 2808 A
 #----------------------------------------------
-HEWLETT-PACKARD:15 ERGO NEW/D 2808 A  {
+HP:15 ERGO NEW/D 2808 A  {
  Hsync=31-50
  Vsync=50-100
 }
@@ -15376,7 +15497,7 @@ HEWLETT-PACKARD:15 ERGO NEW/D 2808 A  {
 #==============================================
 # 15 ERGO/D 2806 B
 #----------------------------------------------
-HEWLETT-PACKARD:15 ERGO/D 2806 B  {
+HP:15 ERGO/D 2806 B  {
  Hsync=31-64
  Vsync=50-100
 }
@@ -15384,7 +15505,7 @@ HEWLETT-PACKARD:15 ERGO/D 2806 B  {
 #==============================================
 # 17 ULTRA VGA 1280 EXTRA/D 2819 A
 #----------------------------------------------
-HEWLETT-PACKARD:17 ULTRA VGA 1280 EXTRA/D 2819 A  {
+HP:17 ULTRA VGA 1280 EXTRA/D 2819 A  {
  Hsync=31-64
  Vsync=50-120
 }
@@ -15392,7 +15513,7 @@ HEWLETT-PACKARD:17 ULTRA VGA 1280 EXTRA/D 2819 A  {
 #==============================================
 # 17 ULTRA VGA 1280/D 2818 A
 #----------------------------------------------
-HEWLETT-PACKARD:17 ULTRA VGA 1280/D 2818 A  {
+HP:17 ULTRA VGA 1280/D 2818 A  {
  Hsync=31-64
  Vsync=50-120
 }
@@ -15400,7 +15521,7 @@ HEWLETT-PACKARD:17 ULTRA VGA 1280/D 2818 A  {
 #==============================================
 # A1295A 24-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:A1295A 24-INCH DISPLAY  {
+HP:A1295A 24-INCH DISPLAY  {
  Hsync=30-96
  Vsync=50-160
 }
@@ -15408,7 +15529,7 @@ HEWLETT-PACKARD:A1295A 24-INCH DISPLAY  {
 #==============================================
 # A4033A 21-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:A4033A 21-INCH DISPLAY  {
+HP:A4033A 21-INCH DISPLAY  {
  Hsync=30-80
  Vsync=50-120
 }
@@ -15416,7 +15537,7 @@ HEWLETT-PACKARD:A4033A 21-INCH DISPLAY  {
 #==============================================
 # A4331A 20-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:A4331A 20-INCH DISPLAY  {
+HP:A4331A 20-INCH DISPLAY  {
  Hsync=30-82
  Vsync=48-150
 }
@@ -15424,7 +15545,7 @@ HEWLETT-PACKARD:A4331A 20-INCH DISPLAY  {
 #==============================================
 # A4576A (P1100) 21-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:A4576A (P1100) 21-INCH DISPLAY  {
+HP:A4576A (P1100) 21-INCH DISPLAY  {
  Hsync=30-107
  Vsync=50-160
 }
@@ -15432,7 +15553,7 @@ HEWLETT-PACKARD:A4576A (P1100) 21-INCH DISPLAY  {
 #==============================================
 # Compaq nc6220
 #----------------------------------------------
-HEWLETT-PACKARD:COMPAQ NC6220  {
+HP:COMPAQ NC6220  {
  DDC=AUO0E11
  Option=DPMS
  Hsync=31-60
@@ -15443,7 +15564,7 @@ HEWLETT-PACKARD:COMPAQ NC6220  {
 #==============================================
 # D1187A 20-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1187A 20-INCH DISPLAY  {
+HP:D1187A 20-INCH DISPLAY  {
  Hsync=30-64
  Vsync=50-90
 }
@@ -15451,7 +15572,7 @@ HEWLETT-PACKARD:D1187A 20-INCH DISPLAY  {
 #==============================================
 # D1188A 20-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1188A 20-INCH DISPLAY  {
+HP:D1188A 20-INCH DISPLAY  {
  Hsync=30-64
  Vsync=50-90
 }
@@ -15459,7 +15580,7 @@ HEWLETT-PACKARD:D1188A 20-INCH DISPLAY  {
 #==============================================
 # D1192A VGA MONOCHROME 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1192A VGA MONOCHROME 14-INCH DISPLAY  {
+HP:D1192A VGA MONOCHROME 14-INCH DISPLAY  {
  Hsync=29-31
  Vsync=50-70
 }
@@ -15467,7 +15588,7 @@ HEWLETT-PACKARD:D1192A VGA MONOCHROME 14-INCH DISPLAY  {
 #==============================================
 # D1192B VGA MONOCHROME 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1192B VGA MONOCHROME 14-INCH DISPLAY  {
+HP:D1192B VGA MONOCHROME 14-INCH DISPLAY  {
  Hsync=29-31
  Vsync=50-70
 }
@@ -15475,7 +15596,7 @@ HEWLETT-PACKARD:D1192B VGA MONOCHROME 14-INCH DISPLAY  {
 #==============================================
 # D1193A ULTRA VGA 17-INCH
 #----------------------------------------------
-HEWLETT-PACKARD:D1193A ULTRA VGA 17-INCH  {
+HP:D1193A ULTRA VGA 17-INCH  {
  Hsync=30-64
  Vsync=50-90
 }
@@ -15483,7 +15604,7 @@ HEWLETT-PACKARD:D1193A ULTRA VGA 17-INCH  {
 #==============================================
 # D1194A SVGA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1194A SVGA 14-INCH DISPLAY  {
+HP:D1194A SVGA 14-INCH DISPLAY  {
  Hsync=30-37
  Vsync=50-72
 }
@@ -15491,7 +15612,7 @@ HEWLETT-PACKARD:D1194A SVGA 14-INCH DISPLAY  {
 #==============================================
 # D1195A ERGO-SVGA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1195A ERGO-SVGA 14-INCH DISPLAY  {
+HP:D1195A ERGO-SVGA 14-INCH DISPLAY  {
  Hsync=30-48
  Vsync=50-72
 }
@@ -15499,7 +15620,7 @@ HEWLETT-PACKARD:D1195A ERGO-SVGA 14-INCH DISPLAY  {
 #==============================================
 # D1196A ERGO ULTRA VGA 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1196A ERGO ULTRA VGA 15-INCH DISPLAY  {
+HP:D1196A ERGO ULTRA VGA 15-INCH DISPLAY  {
  Hsync=30-56
  Vsync=50-72
 }
@@ -15507,7 +15628,7 @@ HEWLETT-PACKARD:D1196A ERGO ULTRA VGA 15-INCH DISPLAY  {
 #==============================================
 # D1197A COLOR VGA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1197A COLOR VGA 14-INCH DISPLAY  {
+HP:D1197A COLOR VGA 14-INCH DISPLAY  {
  Hsync=29-31
  Vsync=50-70
 }
@@ -15515,7 +15636,7 @@ HEWLETT-PACKARD:D1197A COLOR VGA 14-INCH DISPLAY  {
 #==============================================
 # D1198A SVGA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1198A SVGA 14-INCH DISPLAY  {
+HP:D1198A SVGA 14-INCH DISPLAY  {
  Hsync=30-37
  Vsync=50-70
 }
@@ -15523,7 +15644,7 @@ HEWLETT-PACKARD:D1198A SVGA 14-INCH DISPLAY  {
 #==============================================
 # D1199A ULTRA VGA 1600 21-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1199A ULTRA VGA 1600 21-INCH DISPLAY  {
+HP:D1199A ULTRA VGA 1600 21-INCH DISPLAY  {
  Hsync=30-82
  Vsync=50-152
 }
@@ -15531,7 +15652,7 @@ HEWLETT-PACKARD:D1199A ULTRA VGA 1600 21-INCH DISPLAY  {
 #==============================================
 # D1815A  14 1024
 #----------------------------------------------
-HEWLETT-PACKARD:D1815A  14 1024  {
+HP:D1815A  14 1024  {
  DDC=HWP0AFF
  Hsync=31-48
  Vsync=50-100
@@ -15540,7 +15661,7 @@ HEWLETT-PACKARD:D1815A  14 1024  {
 #==============================================
 # D1815A 1024 LOW EMISSIONS 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D1815A 1024 LOW EMISSIONS 14-INCH DISPLAY  {
+HP:D1815A 1024 LOW EMISSIONS 14-INCH DISPLAY  {
  DDC=HWP0AFF
  Hsync=31-48
  Vsync=50-100
@@ -15549,7 +15670,7 @@ HEWLETT-PACKARD:D1815A 1024 LOW EMISSIONS 14-INCH DISPLAY  {
 #==============================================
 # D2800 ULTRA VGA 1600 21-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2800 ULTRA VGA 1600 21-INCH DISPLAY  {
+HP:D2800 ULTRA VGA 1600 21-INCH DISPLAY  {
  DDC=HWP0AF0
  Hsync=30-85
  Vsync=50-160
@@ -15558,7 +15679,7 @@ HEWLETT-PACKARD:D2800 ULTRA VGA 1600 21-INCH DISPLAY  {
 #==============================================
 # D2800A 21
 #----------------------------------------------
-HEWLETT-PACKARD:D2800A 21  {
+HP:D2800A 21  {
  DDC=HWP0AF0
  Hsync=30-82
  Vsync=50-160
@@ -15567,7 +15688,7 @@ HEWLETT-PACKARD:D2800A 21  {
 #==============================================
 # D2801 MONOCHROME VGA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2801 MONOCHROME VGA 14-INCH DISPLAY  {
+HP:D2801 MONOCHROME VGA 14-INCH DISPLAY  {
  DDC=HWP0AF1
  Hsync=29-31
  Vsync=50-60
@@ -15576,7 +15697,7 @@ HEWLETT-PACKARD:D2801 MONOCHROME VGA 14-INCH DISPLAY  {
 #==============================================
 # D2802 ENTRY-LEVEL SVGA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2802 ENTRY-LEVEL SVGA 14-INCH DISPLAY  {
+HP:D2802 ENTRY-LEVEL SVGA 14-INCH DISPLAY  {
  DDC=HWP0AF2
  Hsync=30-35
  Vsync=40-43
@@ -15585,7 +15706,7 @@ HEWLETT-PACKARD:D2802 ENTRY-LEVEL SVGA 14-INCH DISPLAY  {
 #==============================================
 # D2803 SUPER VGA 1024I 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2803 SUPER VGA 1024I 14-INCH DISPLAY  {
+HP:D2803 SUPER VGA 1024I 14-INCH DISPLAY  {
  DDC=HWP0AF3
  Hsync=30-35
  Vsync=40-43
@@ -15594,7 +15715,7 @@ HEWLETT-PACKARD:D2803 SUPER VGA 1024I 14-INCH DISPLAY  {
 #==============================================
 # D2804 SUPER VGA 1024I 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2804 SUPER VGA 1024I 14-INCH DISPLAY  {
+HP:D2804 SUPER VGA 1024I 14-INCH DISPLAY  {
  DDC=HWP0AF4
  Hsync=30-35
  Vsync=40-43
@@ -15603,7 +15724,7 @@ HEWLETT-PACKARD:D2804 SUPER VGA 1024I 14-INCH DISPLAY  {
 #==============================================
 # D2805 ERGO 1024 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2805 ERGO 1024 14-INCH DISPLAY  {
+HP:D2805 ERGO 1024 14-INCH DISPLAY  {
  DDC=HWP0AF5
  Hsync=30-62
  Vsync=50-100
@@ -15612,7 +15733,7 @@ HEWLETT-PACKARD:D2805 ERGO 1024 14-INCH DISPLAY  {
 #==============================================
 # D2806 ERGO ULTRA VGA 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2806 ERGO ULTRA VGA 15-INCH DISPLAY  {
+HP:D2806 ERGO ULTRA VGA 15-INCH DISPLAY  {
  DDC=HWP0AF6
  Hsync=30-64
  Vsync=50-100
@@ -15621,7 +15742,7 @@ HEWLETT-PACKARD:D2806 ERGO ULTRA VGA 15-INCH DISPLAY  {
 #==============================================
 # D2806A 15
 #----------------------------------------------
-HEWLETT-PACKARD:D2806A 15  {
+HP:D2806A 15  {
  DDC=HWP0AF6
  Hsync=30-64
  Vsync=50-100
@@ -15630,7 +15751,7 @@ HEWLETT-PACKARD:D2806A 15  {
 #==============================================
 # D2807 ULTRA VGA 1280 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2807 ULTRA VGA 1280 17-INCH DISPLAY  {
+HP:D2807 ULTRA VGA 1280 17-INCH DISPLAY  {
  DDC=HWP0AF7
  Hsync=30-64
  Vsync=50-100
@@ -15639,7 +15760,7 @@ HEWLETT-PACKARD:D2807 ULTRA VGA 1280 17-INCH DISPLAY  {
 #==============================================
 # D2808 1024 LOW EMISSIONS 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2808 1024 LOW EMISSIONS 15-INCH DISPLAY  {
+HP:D2808 1024 LOW EMISSIONS 15-INCH DISPLAY  {
  DDC=HWP0AF8
  Hsync=30-48
  Vsync=50-100
@@ -15648,7 +15769,7 @@ HEWLETT-PACKARD:D2808 1024 LOW EMISSIONS 15-INCH DISPLAY  {
 #==============================================
 # D2809 1024 LOW EMISSIONS MM 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2809 1024 LOW EMISSIONS MM 15-INCH DISPLAY  {
+HP:D2809 1024 LOW EMISSIONS MM 15-INCH DISPLAY  {
  DDC=HWP0AF9
  Hsync=30-48
  Vsync=50-100
@@ -15657,7 +15778,7 @@ HEWLETT-PACKARD:D2809 1024 LOW EMISSIONS MM 15-INCH DISPLAY  {
 #==============================================
 # D2810 1024 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2810 1024 14-INCH DISPLAY  {
+HP:D2810 1024 14-INCH DISPLAY  {
  DDC=HWP0AFA
  Hsync=40-48
  Vsync=50-60
@@ -15666,7 +15787,7 @@ HEWLETT-PACKARD:D2810 1024 14-INCH DISPLAY  {
 #==============================================
 # D2811 1024 LOW EMISSIONS 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2811 1024 LOW EMISSIONS 14-INCH DISPLAY  {
+HP:D2811 1024 LOW EMISSIONS 14-INCH DISPLAY  {
  DDC=HWP0AFB
  Hsync=30-48
  Vsync=50-60
@@ -15675,7 +15796,7 @@ HEWLETT-PACKARD:D2811 1024 LOW EMISSIONS 14-INCH DISPLAY  {
 #==============================================
 # D2813 1024 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2813 1024 14-INCH DISPLAY  {
+HP:D2813 1024 14-INCH DISPLAY  {
  DDC=HWP0AFD
  Hsync=31-49
  Vsync=50-100
@@ -15684,7 +15805,7 @@ HEWLETT-PACKARD:D2813 1024 14-INCH DISPLAY  {
 #==============================================
 # D2814 SUPER VGA LOW EMISSIONS 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2814 SUPER VGA LOW EMISSIONS 14-INCH DISPLAY  {
+HP:D2814 SUPER VGA LOW EMISSIONS 14-INCH DISPLAY  {
  DDC=HWP0AFE
  Hsync=30-35
  Vsync=40-43
@@ -15693,7 +15814,7 @@ HEWLETT-PACKARD:D2814 SUPER VGA LOW EMISSIONS 14-INCH DISPLAY  {
 #==============================================
 # D2815 1024 LOW EMISSIONS 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2815 1024 LOW EMISSIONS 14-INCH DISPLAY  {
+HP:D2815 1024 LOW EMISSIONS 14-INCH DISPLAY  {
  DDC=HWP0AFF
  Hsync=31-49
  Vsync=50-100
@@ -15702,7 +15823,7 @@ HEWLETT-PACKARD:D2815 1024 LOW EMISSIONS 14-INCH DISPLAY  {
 #==============================================
 # D2817 ULTRA VGA 1280 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2817 ULTRA VGA 1280 17-INCH DISPLAY  {
+HP:D2817 ULTRA VGA 1280 17-INCH DISPLAY  {
  DDC=HWP0B01
  Hsync=30-64
  Vsync=50-160
@@ -15711,7 +15832,7 @@ HEWLETT-PACKARD:D2817 ULTRA VGA 1280 17-INCH DISPLAY  {
 #==============================================
 # D2818 ULTRA VGA 1280 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2818 ULTRA VGA 1280 17-INCH DISPLAY  {
+HP:D2818 ULTRA VGA 1280 17-INCH DISPLAY  {
  DDC=HWP0B02
  Hsync=30-64
  Vsync=50-120
@@ -15720,7 +15841,7 @@ HEWLETT-PACKARD:D2818 ULTRA VGA 1280 17-INCH DISPLAY  {
 #==============================================
 # D2819 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2819 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY  {
+HP:D2819 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY  {
  DDC=HWP0B03
  Hsync=30-64
  Vsync=50-120
@@ -15729,7 +15850,7 @@ HEWLETT-PACKARD:D2819 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY  {
 #==============================================
 # D2821 1024 LOW EMISSIONS 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2821 1024 LOW EMISSIONS 14-INCH DISPLAY  {
+HP:D2821 1024 LOW EMISSIONS 14-INCH DISPLAY  {
  DDC=HWP0B05
  Hsync=31-54
  Vsync=50-110
@@ -15738,7 +15859,7 @@ HEWLETT-PACKARD:D2821 1024 LOW EMISSIONS 14-INCH DISPLAY  {
 #==============================================
 # D2825 ULTRA VGA 1024 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2825 ULTRA VGA 1024 15-INCH DISPLAY  {
+HP:D2825 ULTRA VGA 1024 15-INCH DISPLAY  {
  DDC=HWP0B09
  Hsync=31-54
  Vsync=50-120
@@ -15747,7 +15868,7 @@ HEWLETT-PACKARD:D2825 ULTRA VGA 1024 15-INCH DISPLAY  {
 #==============================================
 # D2826 HP 50 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2826 HP 50 15-INCH DISPLAY  {
+HP:D2826 HP 50 15-INCH DISPLAY  {
  DDC=HWP0B0A
  Hsync=31-54
  Vsync=50-120
@@ -15756,7 +15877,7 @@ HEWLETT-PACKARD:D2826 HP 50 15-INCH DISPLAY  {
 #==============================================
 # D2826-MONITOR (15 ZOLL)
 #----------------------------------------------
-HEWLETT-PACKARD:D2826-MONITOR (15 ZOLL)  {
+HP:D2826-MONITOR (15 ZOLL)  {
  DDC=HWP0B0A
  Hsync=31-54
  Vsync=50-120
@@ -15765,7 +15886,7 @@ HEWLETT-PACKARD:D2826-MONITOR (15 ZOLL)  {
 #==============================================
 # D2827 HP 51 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2827 HP 51 15-INCH DISPLAY  {
+HP:D2827 HP 51 15-INCH DISPLAY  {
  DDC=HWP0B0B
  Hsync=31-54
  Vsync=50-120
@@ -15774,7 +15895,7 @@ HEWLETT-PACKARD:D2827 HP 51 15-INCH DISPLAY  {
 #==============================================
 # D2828 HP 52 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D2828 HP 52 15-INCH MONITOR  {
+HP:D2828 HP 52 15-INCH MONITOR  {
  DDC=HWP0B0C
  Hsync=30-54
  Vsync=50-120
@@ -15783,7 +15904,7 @@ HEWLETT-PACKARD:D2828 HP 52 15-INCH MONITOR  {
 #==============================================
 # D2830 ERGO 1024 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2830 ERGO 1024 15-INCH DISPLAY  {
+HP:D2830 ERGO 1024 15-INCH DISPLAY  {
  DDC=HWP0B0E
  Hsync=30-69
  Vsync=50-160
@@ -15792,7 +15913,7 @@ HEWLETT-PACKARD:D2830 ERGO 1024 15-INCH DISPLAY  {
 #==============================================
 # D2831 ERGO 1024 EXTRA LOW EMISSIONS 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2831 ERGO 1024 EXTRA LOW EMISSIONS 15-INCH DISPLAY  {
+HP:D2831 ERGO 1024 EXTRA LOW EMISSIONS 15-INCH DISPLAY  {
  DDC=HWP0B0F
  Hsync=30-69
  Vsync=50-160
@@ -15801,7 +15922,7 @@ HEWLETT-PACKARD:D2831 ERGO 1024 EXTRA LOW EMISSIONS 15-INCH DISPLAY  {
 #==============================================
 # D2832 HP 500 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D2832 HP 500 15-INCH MONITOR  {
+HP:D2832 HP 500 15-INCH MONITOR  {
  DDC=HWP0B10
  Hsync=30-70
  Vsync=50-120
@@ -15810,7 +15931,7 @@ HEWLETT-PACKARD:D2832 HP 500 15-INCH MONITOR  {
 #==============================================
 # D2832A
 #----------------------------------------------
-HEWLETT-PACKARD:D2832A  {
+HP:D2832A  {
  DDC=HWP0B10
  Hsync=30-70
  Vsync=50-120
@@ -15819,7 +15940,7 @@ HEWLETT-PACKARD:D2832A  {
 #==============================================
 # D2835
 #----------------------------------------------
-HEWLETT-PACKARD:D2835  {
+HP:D2835  {
  DDC=HWP0B13
  Hsync=30-69
  Vsync=50-160
@@ -15828,7 +15949,7 @@ HEWLETT-PACKARD:D2835  {
 #==============================================
 # D2835 ULTRA VGA 1280 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2835 ULTRA VGA 1280 17-INCH DISPLAY  {
+HP:D2835 ULTRA VGA 1280 17-INCH DISPLAY  {
  DDC=HWP0B13
  Hsync=30-69
  Vsync=50-160
@@ -15837,7 +15958,7 @@ HEWLETT-PACKARD:D2835 ULTRA VGA 1280 17-INCH DISPLAY  {
 #==============================================
 # D2836 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2836 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY  {
+HP:D2836 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY  {
  DDC=HWP0B14
  Hsync=30-69
  Vsync=50-160
@@ -15846,7 +15967,7 @@ HEWLETT-PACKARD:D2836 ULTRA VGA 1280 EXTRA LOW EMISSIONS 17-INCH DISPLAY  {
 #==============================================
 # D2837 HP 70 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2837 HP 70 17-INCH DISPLAY  {
+HP:D2837 HP 70 17-INCH DISPLAY  {
  DDC=HWP0B15
  Hsync=31-70
  Vsync=50-120
@@ -15855,7 +15976,7 @@ HEWLETT-PACKARD:D2837 HP 70 17-INCH DISPLAY  {
 #==============================================
 # D2838 M700 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2838 M700 17-INCH DISPLAY  {
+HP:D2838 M700 17-INCH DISPLAY  {
  DDC=HWP0B16
  Hsync=30-86
  Vsync=50-160
@@ -15864,7 +15985,7 @@ HEWLETT-PACKARD:D2838 M700 17-INCH DISPLAY  {
 #==============================================
 # D2839 HP 70 17-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D2839 HP 70 17-INCH MONITOR  {
+HP:D2839 HP 70 17-INCH MONITOR  {
  DDC=HWP0B17
  Hsync=31-70
  Vsync=50-120
@@ -15873,7 +15994,7 @@ HEWLETT-PACKARD:D2839 HP 70 17-INCH MONITOR  {
 #==============================================
 # D2840 ERGO 1280
 #----------------------------------------------
-HEWLETT-PACKARD:D2840 ERGO 1280  {
+HP:D2840 ERGO 1280  {
  DDC=HWP0B18
  Hsync=31-92
  Vsync=50-150
@@ -15882,7 +16003,7 @@ HEWLETT-PACKARD:D2840 ERGO 1280  {
 #==============================================
 # D2840 ERGO 1280 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2840 ERGO 1280 17-INCH DISPLAY  {
+HP:D2840 ERGO 1280 17-INCH DISPLAY  {
  DDC=HWP0B18
  Hsync=31-92
  Vsync=50-150
@@ -15891,7 +16012,7 @@ HEWLETT-PACKARD:D2840 ERGO 1280 17-INCH DISPLAY  {
 #==============================================
 # D2842 HP 90 19-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2842 HP 90 19-INCH DISPLAY  {
+HP:D2842 HP 90 19-INCH DISPLAY  {
  DDC=HWP0B1A
  Hsync=30-96
  Vsync=50-160
@@ -15900,7 +16021,7 @@ HEWLETT-PACKARD:D2842 HP 90 19-INCH DISPLAY  {
 #==============================================
 # D2843 M900 19-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D2843 M900 19-INCH MONITOR  {
+HP:D2843 M900 19-INCH MONITOR  {
  DDC=HWP0B1B
  Hsync=31-95
  Vsync=50-160
@@ -15909,7 +16030,7 @@ HEWLETT-PACKARD:D2843 M900 19-INCH MONITOR  {
 #==============================================
 # D2843A M900
 #----------------------------------------------
-HEWLETT-PACKARD:D2843A M900  {
+HP:D2843A M900  {
  Hsync=30-92
  Vsync=50-150
 }
@@ -15917,7 +16038,7 @@ HEWLETT-PACKARD:D2843A M900  {
 #==============================================
 # D2845 ERGO 1600
 #----------------------------------------------
-HEWLETT-PACKARD:D2845 ERGO 1600  {
+HP:D2845 ERGO 1600  {
  DDC=HWP0B1D
  Hsync=31-95
  Vsync=50-160
@@ -15926,7 +16047,7 @@ HEWLETT-PACKARD:D2845 ERGO 1600  {
 #==============================================
 # D2845 ERGO 1600 21-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D2845 ERGO 1600 21-INCH DISPLAY  {
+HP:D2845 ERGO 1600 21-INCH DISPLAY  {
  DDC=HWP0B1D
  Hsync=32-95
  Vsync=50-160
@@ -15935,7 +16056,7 @@ HEWLETT-PACKARD:D2845 ERGO 1600 21-INCH DISPLAY  {
 #==============================================
 # D2846 P1100 21-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D2846 P1100 21-INCH MONITOR  {
+HP:D2846 P1100 21-INCH MONITOR  {
  DDC=HWP0B1E
  Hsync=30-107
  Vsync=48-160
@@ -15944,7 +16065,7 @@ HEWLETT-PACKARD:D2846 P1100 21-INCH MONITOR  {
 #==============================================
 # D2847 P1110 21-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D2847 P1110 21-INCH MONITOR  {
+HP:D2847 P1110 21-INCH MONITOR  {
  DDC=HWP0B1F
  Hsync=29-121
  Vsync=50-180
@@ -15953,7 +16074,7 @@ HEWLETT-PACKARD:D2847 P1110 21-INCH MONITOR  {
 #==============================================
 # D3857A 15
 #----------------------------------------------
-HEWLETT-PACKARD:D3857A 15  {
+HP:D3857A 15  {
  DDC=HWP0F11
  Hsync=31-48
  Vsync=40-60
@@ -15962,7 +16083,7 @@ HEWLETT-PACKARD:D3857A 15  {
 #==============================================
 # D3857A MULTI MEDIA 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D3857A MULTI MEDIA 15-INCH DISPLAY  {
+HP:D3857A MULTI MEDIA 15-INCH DISPLAY  {
  DDC=HWP0F11
  Hsync=31-48
  Vsync=40-60
@@ -15971,7 +16092,7 @@ HEWLETT-PACKARD:D3857A MULTI MEDIA 15-INCH DISPLAY  {
 #==============================================
 # D3858A 14
 #----------------------------------------------
-HEWLETT-PACKARD:D3858A 14  {
+HP:D3858A 14  {
  DDC=HWP0F12
  Hsync=31-48
  Vsync=40-60
@@ -15980,7 +16101,7 @@ HEWLETT-PACKARD:D3858A 14  {
 #==============================================
 # D3858A MULTI MEDIA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D3858A MULTI MEDIA 14-INCH DISPLAY  {
+HP:D3858A MULTI MEDIA 14-INCH DISPLAY  {
  DDC=HWP0F12
  Hsync=32-50
  Vsync=56-75
@@ -15989,7 +16110,7 @@ HEWLETT-PACKARD:D3858A MULTI MEDIA 14-INCH DISPLAY  {
 #==============================================
 # D3859A MULTI MEDIA 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D3859A MULTI MEDIA 17-INCH DISPLAY  {
+HP:D3859A MULTI MEDIA 17-INCH DISPLAY  {
  DDC=HWP0F13
  Hsync=30-68
  Vsync=56-85
@@ -15998,7 +16119,7 @@ HEWLETT-PACKARD:D3859A MULTI MEDIA 17-INCH DISPLAY  {
 #==============================================
 # D3861A MULTI SCAN 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D3861A MULTI SCAN 14-INCH DISPLAY  {
+HP:D3861A MULTI SCAN 14-INCH DISPLAY  {
  DDC=HWP0F15
  Hsync=32-50
  Vsync=56-75
@@ -16007,7 +16128,7 @@ HEWLETT-PACKARD:D3861A MULTI SCAN 14-INCH DISPLAY  {
 #==============================================
 # D3899A MULTI MEDIA 14-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D3899A MULTI MEDIA 14-INCH DISPLAY  {
+HP:D3899A MULTI MEDIA 14-INCH DISPLAY  {
  DDC=HWP0F3B
  Hsync=32-50
  Vsync=56-75
@@ -16016,7 +16137,7 @@ HEWLETT-PACKARD:D3899A MULTI MEDIA 14-INCH DISPLAY  {
 #==============================================
 # D5060 1024x768 LCD
 #----------------------------------------------
-HEWLETT-PACKARD:D5060 1024X768 LCD  {
+HP:D5060 1024X768 LCD  {
  DDC=HWP13C4
  Option=DPMS
  Hsync=32-61
@@ -16027,7 +16148,7 @@ HEWLETT-PACKARD:D5060 1024X768 LCD  {
 #==============================================
 # D5061 L1500 15-INCH LCD MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D5061 L1500 15-INCH LCD MONITOR  {
+HP:D5061 L1500 15-INCH LCD MONITOR  {
  DDC=HWP13C5
  Hsync=31-69
  Vsync=56-85
@@ -16036,7 +16157,7 @@ HEWLETT-PACKARD:D5061 L1500 15-INCH LCD MONITOR  {
 #==============================================
 # D5065 L1800 18.1-INCH LCD MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D5065 L1800 18.1-INCH LCD MONITOR  {
+HP:D5065 L1800 18.1-INCH LCD MONITOR  {
  DDC=HWP13C9
  Option=DPMS
  Hsync=30-80
@@ -16047,7 +16168,7 @@ HEWLETT-PACKARD:D5065 L1800 18.1-INCH LCD MONITOR  {
 #==============================================
 # D5065 L1800 LCD
 #----------------------------------------------
-HEWLETT-PACKARD:D5065 L1800 LCD  {
+HP:D5065 L1800 LCD  {
  DDC=HWP13C9
  Option=DPMS
  Hsync=30-80
@@ -16058,7 +16179,7 @@ HEWLETT-PACKARD:D5065 L1800 LCD  {
 #==============================================
 # D5069 L1810 LCD
 #----------------------------------------------
-HEWLETT-PACKARD:D5069 L1810 LCD  {
+HP:D5069 L1810 LCD  {
  DDC=HWP13CD
  Option=DPMS
  Hsync=30-80
@@ -16069,7 +16190,7 @@ HEWLETT-PACKARD:D5069 L1810 LCD  {
 #==============================================
 # D5258A PAVILION M50 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D5258A PAVILION M50 MONITOR  {
+HP:D5258A PAVILION M50 MONITOR  {
  DDC=HWP0102
  Hsync=32-54
  Vsync=56-85
@@ -16078,7 +16199,7 @@ HEWLETT-PACKARD:D5258A PAVILION M50 MONITOR  {
 #==============================================
 # D5259A PAVILION M70 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D5259A PAVILION M70 MONITOR  {
+HP:D5259A PAVILION M70 MONITOR  {
  DDC=HWP0487
  Hsync=30-70
  Vsync=50-120
@@ -16087,7 +16208,7 @@ HEWLETT-PACKARD:D5259A PAVILION M70 MONITOR  {
 #==============================================
 # D5269A PAVILION M40 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D5269A PAVILION M40 MONITOR  {
+HP:D5269A PAVILION M40 MONITOR  {
  DDC=HWP0491
  Hsync=32-54
  Vsync=56-85
@@ -16096,7 +16217,7 @@ HEWLETT-PACKARD:D5269A PAVILION M40 MONITOR  {
 #==============================================
 # D6433A PAVILION M90 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D6433A PAVILION M90 MONITOR  {
+HP:D6433A PAVILION M90 MONITOR  {
  DDC=HWP1921
  Hsync=32-98
  Vsync=56-85
@@ -16105,7 +16226,7 @@ HEWLETT-PACKARD:D6433A PAVILION M90 MONITOR  {
 #==============================================
 # D7739A PAVILION S50 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D7739A PAVILION S50 MONITOR  {
+HP:D7739A PAVILION S50 MONITOR  {
  DDC=HWP1E3B
  Hsync=32-54
  Vsync=56-85
@@ -16114,7 +16235,7 @@ HEWLETT-PACKARD:D7739A PAVILION S50 MONITOR  {
 #==============================================
 # D7740A PAVILION S70 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D7740A PAVILION S70 MONITOR  {
+HP:D7740A PAVILION S70 MONITOR  {
  DDC=HWP1E3C
  Hsync=32-71
  Vsync=56-85
@@ -16123,7 +16244,7 @@ HEWLETT-PACKARD:D7740A PAVILION S70 MONITOR  {
 #==============================================
 # D8891 HP 40 14-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8891 HP 40 14-INCH MONITOR  {
+HP:D8891 HP 40 14-INCH MONITOR  {
  DDC=HWP22BB
  Hsync=30-50
  Vsync=50-90
@@ -16132,7 +16253,7 @@ HEWLETT-PACKARD:D8891 HP 40 14-INCH MONITOR  {
 #==============================================
 # D8894 HP 55 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8894 HP 55 15-INCH MONITOR  {
+HP:D8894 HP 55 15-INCH MONITOR  {
  DDC=HWP22BE
  Hsync=30-54
  Vsync=50-90
@@ -16141,7 +16262,7 @@ HEWLETT-PACKARD:D8894 HP 55 15-INCH MONITOR  {
 #==============================================
 # D8895 HP 55 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8895 HP 55 15-INCH MONITOR  {
+HP:D8895 HP 55 15-INCH MONITOR  {
  DDC=HWP22BF
  Hsync=30-54
  Vsync=50-90
@@ -16150,7 +16271,7 @@ HEWLETT-PACKARD:D8895 HP 55 15-INCH MONITOR  {
 #==============================================
 # D8896 HP 55 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8896 HP 55 15-INCH MONITOR  {
+HP:D8896 HP 55 15-INCH MONITOR  {
  DDC=HWP22C0
  Hsync=30-54
  Vsync=50-120
@@ -16159,7 +16280,7 @@ HEWLETT-PACKARD:D8896 HP 55 15-INCH MONITOR  {
 #==============================================
 # D8897 HP 55 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8897 HP 55 15-INCH MONITOR  {
+HP:D8897 HP 55 15-INCH MONITOR  {
  DDC=HWP22C1
  Hsync=30-54
  Vsync=50-120
@@ -16168,7 +16289,7 @@ HEWLETT-PACKARD:D8897 HP 55 15-INCH MONITOR  {
 #==============================================
 # D8898 HP 55 TCO95 15-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8898 HP 55 TCO95 15-INCH MONITOR  {
+HP:D8898 HP 55 TCO95 15-INCH MONITOR  {
  DDC=HWP22C2
  Hsync=30-69
  Vsync=50-120
@@ -16177,7 +16298,7 @@ HEWLETT-PACKARD:D8898 HP 55 TCO95 15-INCH MONITOR  {
 #==============================================
 # D8899 HP54
 #----------------------------------------------
-HEWLETT-PACKARD:D8899 HP54  {
+HP:D8899 HP54  {
  DDC=HWPC322
  Option=DPMS
  Hsync=30-55
@@ -16187,7 +16308,7 @@ HEWLETT-PACKARD:D8899 HP54  {
 #==============================================
 # D8900 HP 75 17-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8900 HP 75 17-INCH MONITOR  {
+HP:D8900 HP 75 17-INCH MONITOR  {
  DDC=HWP22C4
  Hsync=31-86
  Vsync=50-160
@@ -16196,7 +16317,7 @@ HEWLETT-PACKARD:D8900 HP 75 17-INCH MONITOR  {
 #==============================================
 # D8901A HP 71 17-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8901A HP 71 17-INCH MONITOR  {
+HP:D8901A HP 71 17-INCH MONITOR  {
  DDC=HWP22C5
  Hsync=31-70
  Vsync=50-120
@@ -16205,7 +16326,7 @@ HEWLETT-PACKARD:D8901A HP 71 17-INCH MONITOR  {
 #==============================================
 # D8902A HP 71 17-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8902A HP 71 17-INCH MONITOR  {
+HP:D8902A HP 71 17-INCH MONITOR  {
  DDC=HWP22C6
  Hsync=31-72
  Vsync=50-120
@@ -16214,7 +16335,7 @@ HEWLETT-PACKARD:D8902A HP 71 17-INCH MONITOR  {
 #==============================================
 # D8903A HP 71 17-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8903A HP 71 17-INCH MONITOR  {
+HP:D8903A HP 71 17-INCH MONITOR  {
  DDC=HWP22C7
  Hsync=31-70
  Vsync=50-120
@@ -16223,7 +16344,7 @@ HEWLETT-PACKARD:D8903A HP 71 17-INCH MONITOR  {
 #==============================================
 # D8904 DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:D8904 DISPLAY  {
+HP:D8904 DISPLAY  {
  DDC=HWP22C8
  Option=DPMS
  Hsync=31-70
@@ -16233,7 +16354,7 @@ HEWLETT-PACKARD:D8904 DISPLAY  {
 #==============================================
 # D8906A HP P700 17-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8906A HP P700 17-INCH MONITOR  {
+HP:D8906A HP P700 17-INCH MONITOR  {
  DDC=HWP22CA
  Hsync=30-86
  Vsync=50-160
@@ -16242,7 +16363,7 @@ HEWLETT-PACKARD:D8906A HP P700 17-INCH MONITOR  {
 #==============================================
 # D8907 P720
 #----------------------------------------------
-HEWLETT-PACKARD:D8907 P720  {
+HP:D8907 P720  {
  DDC=HWP22CB
  Option=DPMS
  Hsync=30-85
@@ -16253,7 +16374,7 @@ HEWLETT-PACKARD:D8907 P720  {
 #==============================================
 # D8910A HP P910 19-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8910A HP P910 19-INCH MONITOR  {
+HP:D8910A HP P910 19-INCH MONITOR  {
  DDC=HWP22CE
  Hsync=29-107
  Vsync=50-150
@@ -16262,7 +16383,7 @@ HEWLETT-PACKARD:D8910A HP P910 19-INCH MONITOR  {
 #==============================================
 # D8911A HP 91 19-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8911A HP 91 19-INCH MONITOR  {
+HP:D8911A HP 91 19-INCH MONITOR  {
  DDC=HWP22CF
  Hsync=30-95
  Vsync=50-160
@@ -16271,7 +16392,7 @@ HEWLETT-PACKARD:D8911A HP 91 19-INCH MONITOR  {
 #==============================================
 # D8912A HP P920 19-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8912A HP P920 19-INCH MONITOR  {
+HP:D8912A HP P920 19-INCH MONITOR  {
  DDC=HWP22D0
  Hsync=30-107
  Vsync=50-160
@@ -16280,7 +16401,7 @@ HEWLETT-PACKARD:D8912A HP P920 19-INCH MONITOR  {
 #==============================================
 # D8915A HP P1120 21-INCH MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:D8915A HP P1120 21-INCH MONITOR  {
+HP:D8915A HP P1120 21-INCH MONITOR  {
  DDC=HWP22D3
  Hsync=30-121
  Vsync=48-160
@@ -16289,7 +16410,7 @@ HEWLETT-PACKARD:D8915A HP P1120 21-INCH MONITOR  {
 #==============================================
 # ERGO 1024/D 2830 A
 #----------------------------------------------
-HEWLETT-PACKARD:ERGO 1024/D 2830 A  {
+HP:ERGO 1024/D 2830 A  {
  Hsync=31-69
  Vsync=50-160
 }
@@ -16297,7 +16418,7 @@ HEWLETT-PACKARD:ERGO 1024/D 2830 A  {
 #==============================================
 # ERGO 1280
 #----------------------------------------------
-HEWLETT-PACKARD:ERGO 1280  {
+HP:ERGO 1280  {
  Hsync=31-92
  Vsync=50-160
 }
@@ -16305,7 +16426,7 @@ HEWLETT-PACKARD:ERGO 1280  {
 #==============================================
 # ERGO 1280/D 2840 A
 #----------------------------------------------
-HEWLETT-PACKARD:ERGO 1280/D 2840 A  {
+HP:ERGO 1280/D 2840 A  {
  Hsync=31-95
  Vsync=50-150
 }
@@ -16313,7 +16434,7 @@ HEWLETT-PACKARD:ERGO 1280/D 2840 A  {
 #==============================================
 # ERGO 1600/D 2845
 #----------------------------------------------
-HEWLETT-PACKARD:ERGO 1600/D 2845  {
+HP:ERGO 1600/D 2845  {
  Hsync=31-95
  Vsync=50-160
 }
@@ -16321,7 +16442,7 @@ HEWLETT-PACKARD:ERGO 1600/D 2845  {
 #==============================================
 # HP D2838 M700 17"
 #----------------------------------------------
-HEWLETT-PACKARD:HP D2838 M700 17"  {
+HP:HP D2838 M700 17  {
  DDC=HWP0B16
  Hsync=30-86
  Vsync=50-160
@@ -16330,7 +16451,7 @@ HEWLETT-PACKARD:HP D2838 M700 17"  {
 #==============================================
 # HP D2846 21
 #----------------------------------------------
-HEWLETT-PACKARD:HP D2846 21  {
+HP:HP D2846 21  {
  DDC=HWP0B1E
  Hsync=30-107
  Resolution=1600x1200
@@ -16340,7 +16461,7 @@ HEWLETT-PACKARD:HP D2846 21  {
 #==============================================
 # L1510
 #----------------------------------------------
-HEWLETT-PACKARD:L1510  {
+HP:L1510  {
  DDC=HWP13C6
  Option=DPMS
  Hsync=31-60
@@ -16350,7 +16471,7 @@ HEWLETT-PACKARD:L1510  {
 #==============================================
 # L1810
 #----------------------------------------------
-HEWLETT-PACKARD:L1810  {
+HP:L1810  {
  DDC=HWP13CD
  Option=DPMS
  Hsync=30-80
@@ -16360,7 +16481,7 @@ HEWLETT-PACKARD:L1810  {
 #==============================================
 # M500 15-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:M500 15-INCH DISPLAY  {
+HP:M500 15-INCH DISPLAY  {
  Hsync=30-70
  Vsync=50-120
 }
@@ -16368,7 +16489,7 @@ HEWLETT-PACKARD:M500 15-INCH DISPLAY  {
 #==============================================
 # M700
 #----------------------------------------------
-HEWLETT-PACKARD:M700  {
+HP:M700  {
  Option=DPMS
  Hsync=30-86
  Vsync=50-160
@@ -16377,7 +16498,7 @@ HEWLETT-PACKARD:M700  {
 #==============================================
 # M700 17-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:M700 17-INCH DISPLAY  {
+HP:M700 17-INCH DISPLAY  {
  Hsync=30-86
  Vsync=50-160
 }
@@ -16385,7 +16506,7 @@ HEWLETT-PACKARD:M700 17-INCH DISPLAY  {
 #==============================================
 # M900
 #----------------------------------------------
-HEWLETT-PACKARD:M900  {
+HP:M900  {
  Option=DPMS
  Hsync=30-92
  Vsync=50-150
@@ -16394,7 +16515,7 @@ HEWLETT-PACKARD:M900  {
 #==============================================
 # M900 19-INCH DISPLAY
 #----------------------------------------------
-HEWLETT-PACKARD:M900 19-INCH DISPLAY  {
+HP:M900 19-INCH DISPLAY  {
  Hsync=31-95
  Vsync=50-150
 }
@@ -16402,7 +16523,7 @@ HEWLETT-PACKARD:M900 19-INCH DISPLAY  {
 #==============================================
 # PAVILION FX50
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION FX50  {
+HP:PAVILION FX50  {
  DDC=HWP0F3D
  Option=DPMS
  Hsync=31-60
@@ -16412,7 +16533,7 @@ HEWLETT-PACKARD:PAVILION FX50  {
 #==============================================
 # PAVILION M45/S40 MONITOR
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION M45/S40 MONITOR  {
+HP:PAVILION M45/S40 MONITOR  {
  DDC=HWP14B2
  Hsync=32-50
  Vsync=56-75
@@ -16421,7 +16542,7 @@ HEWLETT-PACKARD:PAVILION M45/S40 MONITOR  {
 #==============================================
 # PAVILION MX50
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION MX50  {
+HP:PAVILION MX50  {
  DDC=HWP0502
  Option=DPMS
  Hsync=30-54
@@ -16431,7 +16552,7 @@ HEWLETT-PACKARD:PAVILION MX50  {
 #==============================================
 # PAVILION MX70
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION MX70  {
+HP:PAVILION MX70  {
  DDC=HWP0503
  Option=DPMS
  Hsync=30-70
@@ -16441,7 +16562,7 @@ HEWLETT-PACKARD:PAVILION MX70  {
 #==============================================
 # PAVILION MX75
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION MX75  {
+HP:PAVILION MX75  {
  DDC=HWP05DB
  Option=DPMS
  Hsync=30-70
@@ -16451,7 +16572,7 @@ HEWLETT-PACKARD:PAVILION MX75  {
 #==============================================
 # PAVILION MX90
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION MX90  {
+HP:PAVILION MX90  {
  DDC=HWP0504
  Option=DPMS
  Hsync=30-95
@@ -16461,7 +16582,7 @@ HEWLETT-PACKARD:PAVILION MX90  {
 #==============================================
 # PAVILION V50
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION V50  {
+HP:PAVILION V50  {
  DDC=HWP148A
  Option=DPMS
  Hsync=28-57
@@ -16471,7 +16592,7 @@ HEWLETT-PACKARD:PAVILION V50  {
 #==============================================
 # PAVILION V70
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION V70  {
+HP:PAVILION V70  {
  DDC=HWP148B
  Option=DPMS
  Hsync=30-70
@@ -16481,7 +16602,7 @@ HEWLETT-PACKARD:PAVILION V70  {
 #==============================================
 # PAVILION V70S
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION V70S  {
+HP:PAVILION V70S  {
  DDC=HWP0F3E
  Option=DPMS
  Hsync=30-70
@@ -16491,7 +16612,7 @@ HEWLETT-PACKARD:PAVILION V70S  {
 #==============================================
 # PAVILION V90
 #----------------------------------------------
-HEWLETT-PACKARD:PAVILION V90  {
+HP:PAVILION V90  {
  DDC=HWP0546
  Option=DPMS
  Hsync=30-95
@@ -16501,7 +16622,7 @@ HEWLETT-PACKARD:PAVILION V90  {
 #==============================================
 # ULTRA VGA 1024/D 2825 A
 #----------------------------------------------
-HEWLETT-PACKARD:ULTRA VGA 1024/D 2825 A  {
+HP:ULTRA VGA 1024/D 2825 A  {
  Option=DPMS
  Hsync=30-69
  Vsync=50-160
@@ -17903,6 +18024,17 @@ HITACHI:SUPERSCAN LC150 (CML150-512)  {
  Option=DPMS
  Hsync=31-60
  Vsync=56-75
+}
+
+#==============================================
+# LP2065
+#----------------------------------------------
+HP:LP2065  {
+ DDC=HWP0A71
+ Option=DPMS
+ Hsync=30-90
+ Resolution=1600x1200
+ Vsync=48-60
 }
 
 #==============================================
@@ -21204,6 +21336,18 @@ IQ AUTOMATION:Q17  {
 }
 
 #==============================================
+# L70S
+#----------------------------------------------
+IQT:L70S  {
+ DDC=IQT0703
+ Option=DPMS
+ Hsync=29-78
+ Modeline="1280x1024" 108 1280 1328 1440 1688 1024 1025 1028 1066
+ Resolution=1280x1024
+ Vsync=50-75
+}
+
+#==============================================
 # DH1570
 #----------------------------------------------
 ISI:DH1570  {
@@ -23765,6 +23909,17 @@ MAXTECH:XT-9882  {
  Option=DPMS
  Hsync=30-96
  Vsync=50-150
+}
+
+#==============================================
+# e-Tron 998
+#----------------------------------------------
+MBO:E-TRON 998  {
+ DDC=MBOE998
+ Option=DPMS
+ Hsync=30-98
+ Resolution=1280x1024
+ Vsync=50-160
 }
 
 #==============================================
@@ -28880,6 +29035,7 @@ PHILIPS:200W (DIGITAL)  {
  Profile=PHL0832
  Resolution=1680x1050
  Vsync=56-85
+ DPI=433x271
 }
 
 #==============================================
@@ -30238,6 +30394,18 @@ PROVIEW:860  {
 }
 
 #==============================================
+# PL713S
+#----------------------------------------------
+PROVIEW:PL713S  {
+ DDC=PTS2117
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-76
+ DPI=338x270
+}
+
+#==============================================
 # PRO-400
 #----------------------------------------------
 PROVIEW:PRO-400  {
@@ -31257,6 +31425,18 @@ SAMSUNG:CFA-7679L  {
 }
 
 #==============================================
+# LE23R8
+#----------------------------------------------
+SAMSUNG:LE23R8  {
+ DDC=SAM23F8
+ Option=DPMS
+ Hsync=47-48
+ Resolution=1360x768
+ Vsync=50-60
+ DPI=510x287
+}
+
+#==============================================
 # SAMTRON 40B
 #----------------------------------------------
 SAMSUNG:SAMTRON 40B  {
@@ -31813,7 +31993,7 @@ SAMSUNG:SYNCMASTER 213T  {
  DDC=SAM0091
  Option=DPMS
  Hsync=30-81
- Modeline="1600x1200" 140.00 1600 1632 2024 2052 1200 1200 1208 1216
+ Modeline="1600x1200" 130.37 1600 1648 1680 1760 1200 1202 1206 1235 
  Resolution=1600x1200
  Vsync=56-75
 }
@@ -31827,6 +32007,17 @@ SAMSUNG:SYNCMASTER 21GLS  {
  Hsync=30-85
  Resolution=1280x1024
  Vsync=50-160
+}
+
+#==============================================
+# SyncMaster 226BW
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 226BW  {
+ DDC=SAM027F
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1680x1050
+ Vsync=56-75
 }
 
 #==============================================
@@ -32733,6 +32924,49 @@ SAMSUNG:SYNCMASTER 920T (DIGITAL)  {
 }
 
 #==============================================
+# SyncMaster 931C (Analog)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 931C (ANALOG)  {
+ DDC=SAM0258
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 931C (Digital)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 931C (DIGITAL)  {
+ DDC=SAM0259
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 940BW
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 940BW  {
+ DDC=SAM0225
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# Syncmaster 940T
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 940T  {
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
 # SYNCMASTER 950IFT(T)951IFT
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 950IFT(T)951IFT  {
@@ -32871,8 +33105,8 @@ SAMSUNG:SYNCMASTER SM950P(T)  {
 SAMSUNG:V550  {
  DDC=SAM12B6
  Option=DPMS
- Hsync=30-55
- Resolution=1280x1024
+ Hsync=30-48
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -33241,7 +33475,7 @@ SCHWEMBERGER:FTP1503A  {
 #==============================================
 # 15" ANALOG LCD PROFESSIONAL LI
 #----------------------------------------------
-SCOTT:15" ANALOG LCD PROFESSIONAL LI  {
+SCOTT:15 ANALOG LCD PROFESSIONAL LI  {
  Hsync=31-60
  Vsync=56-85
 }
@@ -33249,7 +33483,7 @@ SCOTT:15" ANALOG LCD PROFESSIONAL LI  {
 #==============================================
 # 15" Analog LCD Professional Line
 #----------------------------------------------
-SCOTT:15" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:15 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-60
  Vsync=56-85
 }
@@ -33265,7 +33499,7 @@ SCOTT:1769 BUSINESS LINE  {
 #==============================================
 # 18,1" ANALOG LCD PROFESSIONAL
 #----------------------------------------------
-SCOTT:18,1" ANALOG LCD PROFESSIONAL  {
+SCOTT:18,1 ANALOG LCD PROFESSIONAL  {
  Hsync=31-80
  Vsync=56-85
 }
@@ -33273,7 +33507,7 @@ SCOTT:18,1" ANALOG LCD PROFESSIONAL  {
 #==============================================
 # 18,1" Analog LCD Professional Line
 #----------------------------------------------
-SCOTT:18,1" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:18,1 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-80
  Vsync=56-85
 }
@@ -33345,7 +33579,7 @@ SCOTT:995 PROFESSIONAL LINE  {
 #==============================================
 # [vshop]15" ANALOG LCD PROFESSIONAL LINE
 #----------------------------------------------
-SCOTT:[VSHOP]15" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:[VSHOP]15 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-60
  Vsync=56-85
 }
@@ -33353,7 +33587,7 @@ SCOTT:[VSHOP]15" ANALOG LCD PROFESSIONAL LINE  {
 #==============================================
 # [vshop]18,1" ANALOG LCD PROFESSIONAL LINE
 #----------------------------------------------
-SCOTT:[VSHOP]18,1" ANALOG LCD PROFESSIONAL LINE  {
+SCOTT:[VSHOP]18,1 ANALOG LCD PROFESSIONAL LINE  {
  Hsync=31-80
  Vsync=56-85
 }
@@ -33509,6 +33743,17 @@ SGI:FLATPANEL-1600SW  {
  Hsync=31-64
  Modeline="1600x1024" 106.9 1600 1632 1656 1672 1024 1027 1030 1067
  Vsync=30-60
+}
+
+#==============================================
+# GDM-5411
+#----------------------------------------------
+SGI:GDM-5411  {
+ DDC=SGX0200
+ Option=DPMS
+ Hsync=37-115
+ Resolution=1600x1200
+ Vsync=60-160
 }
 
 #==============================================
@@ -35607,6 +35852,16 @@ SONY:TFT-L 150  {
 }
 
 #==============================================
+# Vaio VGN-TX1XP
+#----------------------------------------------
+SONY:VAIO VGN-TX1XP  {
+ Option=DPMS
+ Hsync=31-90
+ Modeline="1366x768" 88.03 1366 1424 1680 1816 768 770 782 808
+ Vsync=30-60
+}
+
+#==============================================
 # VMU-1000
 #----------------------------------------------
 SONY:VMU-1000  {
@@ -36415,6 +36670,18 @@ Sun:X7121A  {
 }
 
 #==============================================
+# LCD Multi-Media Display
+#----------------------------------------------
+SYNTAX OLEVIA:LCD MULTI-MEDIA DISPLAY  {
+ DDC=DMI0000
+ Option=DPMS
+ Hsync=50-63
+ Resolution=1280x1024
+ DPI=578x324
+ Vsync=55-60
+}
+
+#==============================================
 # ErgoScan 17C
 #----------------------------------------------
 TANDBERG:ERGOSCAN 17C  {
@@ -36473,7 +36740,7 @@ TARGA:CM1420  {
 #==============================================
 # SMILE 9"
 #----------------------------------------------
-TARGA:SMILE 9"  {
+TARGA:SMILE 9  {
  Option=DPMS
  Hsync=31-31
  Vsync=50-70
@@ -36564,8 +36831,10 @@ TARGA:TM3866-1  {
 # TM3867-1
 #----------------------------------------------
 TARGA:TM3867-1  {
+ DDC=ACT0F1B
  Option=DPMS
- Hsync=31-69
+ Hsync=30-69
+ Resolution=1024x768
  Vsync=50-120
 }
 
@@ -38969,6 +39238,16 @@ VIEWSONIC:14ES  {
 }
 
 #==============================================
+# 15
+#----------------------------------------------
+VIEWSONIC:15  {
+ Option=DPMS
+ Hsync=30-64
+ Vsync=50-90
+ DPI=260x195
+}
+
+#==============================================
 # 15ES-2
 #----------------------------------------------
 VIEWSONIC:15ES-2  {
@@ -39002,6 +39281,16 @@ VIEWSONIC:15GS-3  {
  DDC=VSC3145
  Hsync=30-69
  Vsync=50-120
+}
+
+#==============================================
+# 17
+#----------------------------------------------
+VIEWSONIC:17  {
+ Option=DPMS
+ Hsync=30-65
+ Vsync=50-110
+ DPI=310x230
 }
 
 #==============================================
@@ -40719,7 +41008,7 @@ YAKUMO:PS1564  {
 #==============================================
 # V500 (12")
 #----------------------------------------------
-Z-AXIS:V500 (12")  {
+Z-AXIS:V500 (12)  {
  Hsync=15-35
  Vsync=50-90
 }
@@ -40727,7 +41016,7 @@ Z-AXIS:V500 (12")  {
 #==============================================
 # V500 (14")
 #----------------------------------------------
-Z-AXIS:V500 (14")  {
+Z-AXIS:V500 (14)  {
  Hsync=15-35
  Vsync=50-90
 }
@@ -40735,7 +41024,7 @@ Z-AXIS:V500 (14")  {
 #==============================================
 # V500 (27")
 #----------------------------------------------
-Z-AXIS:V500 (27")  {
+Z-AXIS:V500 (27)  {
  Hsync=15-35
  Vsync=50-90
 }
