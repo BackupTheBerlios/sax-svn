@@ -218,11 +218,15 @@ void SCCKeyboardLayout::import ( void ) {
 	QString baseLayout;
 	QString baseVariant;
 	if (! XKBLayouts.isEmpty()) {
-		baseLayout  = *XKBLayouts.front();
+		foreach (baseLayout,XKBLayouts) {
+			break;
+		}
 		XKBLayouts.removeFirst();
 	}
 	if (! XKBVariants.isEmpty()) {
-		baseVariant = XKBVariants.front();
+		foreach (baseVariant,XKBVariants) {
+			break;
+		}
 		XKBVariants.removeFirst();
 	}
 	int varCount = 0;
