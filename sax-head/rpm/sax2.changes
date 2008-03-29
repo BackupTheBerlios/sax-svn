@@ -1,13 +1,14 @@
 -------------------------------------------------------------------
-Fri Mar 28 12:38:47 CET 2008 - ms@suse.de
+Sat Mar 29 13:29:39 CET 2008 - ms@suse.de
 
 - yet another gt3 to qt4 porting bug, fixed importing
   keyboard configuration information (bnc #373700)
 
 -------------------------------------------------------------------
-Mon Mar 24 17:15:50 CET 2008 - ms@suse.de
+Fri Mar 21 22:00:33 CET 2008 - sndirsch@suse.de
 
-- fixed hp-mouse profile (bnc #266002)
+- disable-vmmouse.diff
+  * no longer use vmmouse driver by default (bnc #372189) 
 
 -------------------------------------------------------------------
 Thu Mar 20 14:27:11 CET 2008 - sndirsch@suse.de

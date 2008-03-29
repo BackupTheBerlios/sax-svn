@@ -25,7 +25,8 @@
 0x0210 : 0x0018 : xen-mouse
 0x03f0 : 0x1126 : hp-mouse
 0x80ee : 0x0100 : vbox-mouse
-0x15ad : 0x0100 : vmware-mouse
+# Bug 372189
+#0x15ad : 0x0100 : vmware-mouse
 # Keyboards
 # Microsoft Natural Ergonomic Keyboard 4000
 # ---> is profile: microsoft-natural
