@@ -398,9 +398,11 @@ void SCCFrame::setupModules ( void ) {
 	mModuleList -> insertItem (
 		QPixmap(TOUCHERS_PIXMAP), mText["ToucherModule"]
 	);
+#if 0
 	mModuleList -> insertItem (
 		QPixmap(VNCSERVE_PIXMAP), mText["VNCModule"]
 	);
+#endif
 
 	//=====================================
 	// import all configuration data
@@ -535,6 +537,7 @@ void SCCFrame::runDialog ( Q3ListBoxItem* item ) {
 			mToucher -> import();
 		}
 	}
+#if 0
 	if (selection == mText["VNCModule"]) {
 		mDialogStack -> raiseWidget ( mVNC -> getDialogID() );
 		if ( mVNC -> needInit() ) {
@@ -544,6 +547,7 @@ void SCCFrame::runDialog ( Q3ListBoxItem* item ) {
 			mVNC -> import();
 		}
 	}
+#endif
 }
 
 //=====================================
