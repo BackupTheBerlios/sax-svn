@@ -6,15 +6,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: YaST (@memory@)\n"
+"Project-Id-Version: sax.ko\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2001-07-18 11:05+0200\n"
-"Last-Translator: Hwang, Sang-Jin <violiet@suse.de>\n"
-"Language-Team: Korean <i18n@suse.de>\n"
+"PO-Revision-Date: 2008-03-21 23:51+0900\n"
+"Last-Translator: YunSeok Choi <xein@naver.com>\n"
+"Language-Team: Korean <xein@naver.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Language: Korean\n"
+"X-Poedit-Country: KOREA, REPUBLIC OF\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -23,7 +26,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -31,12 +34,17 @@ msgid ""
 "a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
 "Otherwise, change the configuration."
 msgstr ""
+"<b>SaX2 제안</b><hr>현재 시작된 그래픽 시스템은 SaX2의 제안으로 기동한것입니"
+"다. 이 방식을 계속 쓰시려면 <b>확인</b>을 누르세요. 그렇지않으면 설정을 변경"
+"합니다."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
+"<b>3D 가속이 지원되지 않음</b><hr>SaX2는 3D 서브시스템 활성화 제공을 할 수 없"
+"습니다. 그래픽카드 또는 드라이버가 3D 지원을 하지 않습니다."
 
 #. RTF text: 3D acceleration not supported with Xinerama
 msgid ""
@@ -45,39 +53,41 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
+"<b>3D 가속이 지원되지 않음</b><hr>SaX2는 3D 서브시스템 활성화 제공을 할 수 없"
+"습니다. Xinerama 기반 듀얼 헤드 모드가 사용중입니다. 그래픽 화면을 결합시키"
+"기 위한 Xorg Xinerama 확장 기능은 3D를 지원하지 않습니다."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
-msgstr ""
+msgstr "자동 그래픽 시스템 설정"
 
 #. Caption text for informing the user
 msgid "Information..."
-msgstr ""
+msgstr "정보..."
 
 #. Caption text for the main window
-#, fuzzy
 msgid "SaX2: X11 Configuration"
-msgstr "구성"
+msgstr "SaX2: X11 구성"
 
 #. Title text on the left side
-#, fuzzy
 msgid "SaX Control Center"
-msgstr "ISDN 컨트롤러"
+msgstr "SaX 제어판"
 
 #. Info message about display size changes
 msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
+"<b>디스플레이 크기가 변경되었음</b><hr>디스플레이 크기가 새 레이아웃으로 변경"
+"되었습니다."
 
 #. Help Button text
-#, fuzzy
 msgid "&Help"
-msgstr "도움말"
+msgstr "도움말(&H)"
 
 #. Ok Button text
 msgid "O&K"
-msgstr ""
+msgstr "확인(&K)"
 
 #. Yes Button text
 msgid "&Yes"
@@ -89,22 +99,20 @@ msgstr "아니오(&N)"
 
 #. Cancel Button text
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "&Cancel"
-msgstr "프랑스"
+msgstr "취소(&C)"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
-msgstr ""
+msgstr "<b>SaX2 종료</b><hr>SaX2를 지금 종료하시겠습니까?"
 
 #. Message box default caption text
 msgid "Message"
-msgstr ""
+msgstr "메시지"
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "구성"
+msgstr "구성 변경(&H)"
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -113,7 +121,7 @@ msgstr "모니터"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr ""
+msgstr "카드와  모니터 속성"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -122,7 +130,7 @@ msgstr "마우스"
 
 #. title of module dialog
 msgid "Mouse Properties"
-msgstr ""
+msgstr "마우스 속성"
 
 #. Short description of the Keyboard module
 msgid "Keyboard"
@@ -130,144 +138,140 @@ msgstr "키보드"
 
 #. title of module dialog
 msgid "Keyboard Properties"
-msgstr ""
+msgstr "키보드 속성"
 
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
 msgid "Tablet"
-msgstr ""
+msgstr "타블렛"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr ""
+msgstr "타블렛 속성"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
-msgstr ""
+msgstr "터치 스크린"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr ""
+msgstr "터치스크린 속성"
 
 #. Short description of the VNC module
 msgid "Remote Access"
-msgstr ""
+msgstr "원격 접속"
 
 #. title of module dialog
 msgid "Remote Access Properties"
-msgstr ""
+msgstr "원격 접속 속성"
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "디스플레이"
+msgstr "디스플레이 %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr ""
+msgstr "이 디스플레이 활성화"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr ""
+msgstr "이 포인터 활성화"
 
 #. Graphics Card name label
-#, fuzzy
 msgid "Card"
-msgstr "TV 카드"
+msgstr "카드"
 
 #. Change data
 msgid "&Change..."
-msgstr ""
+msgstr "변경(&C)..."
 
 #. Set options for some kind of data
-#, fuzzy
 msgid "&Options..."
-msgstr "옵션"
+msgstr "옵션(&O)..."
 
 #. Configure some data
 msgid "Con&figure..."
-msgstr ""
+msgstr "설정(&F)..."
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr ""
+msgstr "듀얼 헤드 모드"
 
 #. Group box title for card options
 #. Group box title for mouse options
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
 #. Group box title for the VNC options
-#, fuzzy
 msgid "Options"
 msgstr "옵션"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
-msgstr ""
+msgstr "마우스 휠 활성화"
 
 #. CheckBox label to invert the mouse X axis
 msgid "Invert X-Axis"
-msgstr ""
+msgstr "X-축 반전"
 
 #. CheckBox label to invert the mouse Y axis
 msgid "Invert Y-Axis"
-msgstr ""
+msgstr "Y-축 반전"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr ""
+msgstr "왼손용 버튼 구성 활성화"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
-msgstr ""
+msgstr "3-버튼 흉내 활성화"
 
 #. CheckBox label to activate the wheel emulation
 msgid "Emulate Wheel with Mouse Button"
-msgstr ""
+msgstr "마우스 버튼과 함께 휠 흉내"
 
 #. Group box title for card rotation
 msgid "Rotate Screen"
-msgstr ""
+msgstr "화면 회전"
 
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr ""
+msgstr "검사"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
-msgstr ""
+msgstr "검사(&T)"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
-msgstr ""
+msgstr "저장(&S)"
 
 #. Tab text for a layout tab of the keyboard dialog
 #. Label text for the primary keyboard layout
 #. Table topic text describing the keyboard layout column
 msgid "Layout"
-msgstr ""
+msgstr "배치"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
-msgstr ""
+msgstr "검사 준비"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr ""
+msgstr "한번 누름: 완료"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
-msgstr ""
+msgstr "두번 누름: 완료"
 
 #. Status line of mouse test field: wheel moved
 msgid "Scrolling"
-msgstr ""
+msgstr "굴리기"
 
 #. Status line of mouse test field: button pressed
 msgid "Button pressed"
-msgstr ""
+msgstr "단추 누름"
 
 #. Status line of mouse test field: button released
 #, fuzzy
@@ -276,142 +280,144 @@ msgstr "%d: 잠금 풀림\n"
 
 #. Status line of mouse test field: wheel stopped
 msgid "Stopped: Done"
-msgstr ""
+msgstr "멈줌: 완료"
 
 #. Group box title for properties
 msgid "Properties"
-msgstr ""
+msgstr "속성"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr ""
+msgstr "듀얼 헤드 모드 활성화"
 
 #. Set display resolution
 msgid "Resolution"
-msgstr ""
+msgstr "해결"
 
 #. Set display colors
 msgid "Colors"
-msgstr ""
+msgstr "색상"
 
 #. Activate 3D checkboc
 msgid "Activate 3D Acceleration"
-msgstr ""
+msgstr "3D 가속 활성화"
 
 #. Tab title: Setup monitor properties for card X
-#, fuzzy
 msgid "Monitor for Card"
-msgstr "모니터"
+msgstr "모니터의 카드"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr ""
+msgstr "카드의 두번째 모니터"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
-msgstr ""
+msgstr "주파수 동조"
 
 #. Tab title: Setup display size
-#, fuzzy
 msgid "Display Size"
-msgstr "디스플레이"
+msgstr "디스플레이 크기"
 
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr ""
+msgstr "배치"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
-msgstr ""
+msgstr "%1 모드에 %2 활성화"
 
 #. Short Information that something has been activated
 msgid "Activated in driver default mode"
-msgstr ""
+msgstr "드라이버 기본 모드 활성화"
 
 #. rwalter
 #. Monitor Model is unknown and should be changed
 #. rwalter
 #. Mouse Model is unknown and should be changed
 msgid "Unconfigured"
-msgstr ""
+msgstr "설정되지 않음"
 
 #. Message appears when user is trying to deactivate all displays
 msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
+"<b>모든 디스플레이 비활성화 할 수 없음</b><hr><nobr>최소 한개의 디스플레이가 "
+"활성화되어야 합니다.</nobr>"
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "구성"
+msgstr "사용 가능한 설정 없음"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
 msgstr ""
+"전통적인 멀티헤드:\n"
+"각각의 화면은 독립적입니다."
 
 #. Radiobutton for cloned multihead mode
 msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
 msgstr ""
+"복제 멀티헤드:\n"
+"각각 화면은 첫번째 디스플레이의 복제 입니다."
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
 msgstr ""
+"Xinerama 멀티헤드:\n"
+"1개의 큰 디스플레이를 만들어 모든 스크린에 출력합니다."
 
 #. Title for multihead modi
 msgid "Multihead Mode"
-msgstr ""
+msgstr "멀티헤드 모드"
 
 #. Monitor X - connected to - CardY
 msgid "Connected To"
-msgstr ""
+msgstr "연결됨"
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "알수 없음`"
+msgstr "알 수 없는 모니터:"
 
 #. Tooltip text for primary monitor
-#, fuzzy
 msgid "Primary Monitor:"
-msgstr "모니터"
+msgstr "첫번째 모니터:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
-#, fuzzy
 msgid "Monitor Settings"
-msgstr "모니터"
+msgstr "모니터 설정"
 
 #. Windowanager title for the mouse mode setup
 msgid "Mouse Settings"
-msgstr ""
+msgstr "마우스 설정"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
-msgstr ""
+msgstr "그래픽 카드 설정"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr ""
+msgstr "듀얼 헤드 설정"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
-msgstr ""
+msgstr "회전 안됨"
 
 #. Radiobutton rotate to the left side
 msgid "To the Left"
-msgstr ""
+msgstr "왼쪽으로"
 
 #. Radiobutton rotate to the right side
 msgid "To the Right"
-msgstr ""
+msgstr "오른쪽으로"
 
 #. Popup message to inform the user about fbdev restrictions
 msgid ""
@@ -419,31 +425,33 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
+"<b>잘못된 색상/해상도 배합:</b><hr><nobr>선택된 해상도와 색상 설정</nobr>은 "
+"그래픽 카드 프레임버퍼에서 지원하지 않습니다."
 
 #. Popup message to ask the user for an option value
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
+msgstr "<b>옵션에는 값이 필요</b><hr><nobr>%1 옵션의 값을 지정.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr ""
+msgstr "모니터: 제조사 및 이름 선택"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr ""
+msgstr "마우스: 제조사 및 이름 선택"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr ""
+msgstr "수동 주파수 동조 설정"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
-msgstr ""
+msgstr "대각선 및 종횡비"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
-msgstr ""
+msgstr "디스플레이 크기 [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
@@ -451,98 +459,99 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
+"<b>메모:</b> 잘못된 주파수 범위는 모니터를 손상시킬 수 있습니다. <br><br>만"
+"약 모니터 최대치에서 감소시키는 주파수 범위를 사용하지 않을것이라면, 모니터 "
+"수동 설정에 조언을 구하는것이 좋습니다."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
-msgstr ""
+msgstr "DPMS 활성화"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr ""
+msgstr "유틸리티 디스크..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
-msgstr ""
+msgstr "수평"
 
 #. Label text for second monitor name
-#, fuzzy
 msgid "Second Monitor:"
-msgstr "모니터"
+msgstr "두번째 모니터:"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr ""
+msgstr "두번째 모니터 해상도"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
-msgstr ""
+msgstr "수직"
 
 #. Label text for hsync unit
 msgid "KHz"
-msgstr ""
+msgstr "KHz"
 
 #. Label text for vsync unit
 msgid "Hz"
-msgstr ""
+msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr ""
+msgstr "종횡비"
 
 #. Label text for the diagonal length combo box
-#, fuzzy
 msgid "Diagonal"
-msgstr "옵션"
+msgstr "대각선"
 
 #. Label text for the display size X-Axis
 msgid "X Axis [mm]"
-msgstr ""
+msgstr "X 축 [mm]"
 
 #. Label text for the display size Y-Axis
 msgid "Y Axis [mm]"
-msgstr ""
+msgstr "Y 축 [mm]"
 
 #. Something is not configured
 msgid "Not configured"
-msgstr ""
+msgstr "설정되지 않음"
 
 #. Unit name for inches in german zoll
 msgid "inches"
-msgstr ""
+msgstr "인치"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
 msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
-msgstr ""
+msgstr "<b>CD 나 디스크 삽입</b><hr>모니터 제조사에서 제공하는 CD 디스크 삽입"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
+"<b>읽기 오류</b><hr>CD나 디스크를 읽을 수 없습니다. 매체가 손상되었거나, 잘못"
+"된 정보의 파일입니다."
 
 #. First gap of the ActivateInfo text: Multihead mode name
-#, fuzzy
 msgid "Traditional"
-msgstr "옵션"
+msgstr "전통적"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Clone"
-msgstr ""
+msgstr "복제"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Xinerama"
-msgstr ""
+msgstr "Xinerama"
 
 #. Tab text for the mouse model dialog
-#, fuzzy
 msgid "Mouse Model"
-msgstr "마우스"
+msgstr "마우스 모델"
 
 #. Group box title for the primary keyboard setup
 msgid "Primary Setup"
-msgstr ""
+msgstr "첫번째 셋업"
 
 #. Label text for the primary keyboard type
 msgid "Type"
@@ -550,13 +559,12 @@ msgstr "타입"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
-#, fuzzy
 msgid "Variant"
-msgstr "불가리아어"
+msgstr "변종"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
-msgstr ""
+msgstr "추가 배치"
 
 #. Table topic text describing the status column
 msgid "Status"
@@ -564,15 +572,15 @@ msgstr "상태"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr ""
+msgstr "키 테이블"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr ""
+msgstr "Shift/Lock 함께 동작"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr ""
+msgstr "키보드 LED를 대체 그룹 표시에 사용"
 
 #. List View root item text
 msgid "Compose Key Position"
@@ -581,7 +589,7 @@ msgstr ""
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr ""
+msgstr "키 위치 제어"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -589,15 +597,15 @@ msgstr ""
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr ""
+msgstr "Alt/윈도우 키 동작"
 
 #. List View root item text
 msgid "EuroSign Key Position"
-msgstr ""
+msgstr "EuroSign 키 위치"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr ""
+msgstr "CapsLock 키 동작"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -609,9 +617,8 @@ msgstr "모로코"
 
 # BR
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "브라질"
+msgstr "점자(브라유식)"
 
 # ET
 #. XKBFile extension text
@@ -780,7 +787,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Japanese keyboard options"
-msgstr ""
+msgstr "일본어 키보드 옵션"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative layout."
@@ -840,7 +847,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Default numpad keys."
-msgstr ""
+msgstr "기본 num패드 키."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
@@ -860,7 +867,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
-msgstr ""
+msgstr "키보드 배치 선택"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
@@ -913,7 +920,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "일본어 키보드 옵션"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift "
@@ -1151,8 +1158,9 @@ msgid "Guinea"
 msgstr ""
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Montenegro"
-msgstr ""
+msgstr "세르비아 몬테그로"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1165,8 +1173,9 @@ msgid "USA"
 msgstr "USB"
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Add the EuroSign to the 4 key."
-msgstr ""
+msgstr "유로사인을 5 키에 추가"
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
@@ -1234,40 +1243,39 @@ msgstr ""
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
-msgstr ""
+msgstr "포트 및 모드"
 
 #. Tab title: Tablet electronic pens (pen,eraser)
 msgid "Electronic Pens"
-msgstr ""
+msgstr "전자 펜"
 
 #. Activate tablet checkbox
 msgid "Activate This Tablet"
-msgstr ""
+msgstr "이 타블렛 활성화"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
-msgstr ""
+msgstr "타블렛: 제조사 및 이름 선택"
 
 #. Group box title for tablet port combobox
 msgid "Connection Port"
-msgstr ""
+msgstr "연결 포트"
 
 #. Group box title for tablet mode
 msgid "Primary Tablet Mode"
-msgstr ""
+msgstr "첫번째 타블렛 모드"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
-msgstr ""
+msgstr "펜 또는 지우개 모드"
 
 #. Radiobutton for relative tablet mode
 msgid "Relative"
-msgstr ""
+msgstr "관계"
 
 #. Radiobutton for absolute tablet mode
-#, fuzzy
 msgid "Absolute"
-msgstr "오래됨:"
+msgstr "절대"
 
 #. Combobox item text for tablet port: USB
 msgid "USB"
@@ -1275,60 +1283,59 @@ msgstr "USB"
 
 #. Combobox item text for tablet port: ttyS0
 msgid "COM-1 [ /dev/ttyS0 ]"
-msgstr ""
+msgstr "COM-1 [ /dev/ttyS0 ]"
 
 #. Combobox item text for tablet port: ttyS1
 msgid "COM-2 [ /dev/ttyS1 ]"
-msgstr ""
+msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr ""
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr ""
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
-#, fuzzy
 msgid "Tools"
-msgstr "리눅스 툴"
+msgstr "도구"
 
 #. Add Pen Checkbox
 msgid "Add Pen"
-msgstr ""
+msgstr "펜 추가"
 
 #. Add Eraser Checkbox
 msgid "Add Eraser"
-msgstr ""
+msgstr "지우개 추가"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
-msgstr ""
+msgstr "패드 추가"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
-msgstr ""
+msgstr "펜 또는 지우개 설정"
 
 #. Tab title: Pen properties
 msgid "Pen Properties"
-msgstr ""
+msgstr "펜 속성"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
-msgstr ""
+msgstr "패드 속성"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
-msgstr ""
+msgstr "지우개 속성"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr ""
+msgstr "터치스크린에 디스플레이 번호 %1 할당"
 
 #. Group box title for the touchscreen vendor and name selection
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr ""
+msgstr "터치스크린: 제조사 및 이름 선택"
 
 #. Finish configuration message box
 msgid ""
@@ -1337,52 +1344,58 @@ msgid ""
 "server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> to "
 "kill the server."
 msgstr ""
+"<b>최종 단계</b><hr>마지막 단계로 새로운 설정을 저장하고. 새 설정을 저장하기 "
+"전에 검사해보는것을 추천합니다. 만약 검사 도중에 문제(화면이 보이지 않거나 깨"
+"지는)가 생기면 <b>[ Ctrl+Alt+Backspace ]</b> 를 눌러 서버를 죽일 수 있습니다."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "X 서버 원격 제어"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "디스플레이 및 X 서버의 키보드/마우스 접근 허용"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
-msgstr ""
+msgstr "열쇠 글 보호 활성화"
 
+# password dialog title
 #. LineEdit label: enter password
 msgid "Password"
-msgstr ""
+msgstr "열쇠글"
 
 #. LineEdit contents: enter new password
 msgid "<Enter new password>"
-msgstr ""
+msgstr "<새로운 열쇠 글 입력>"
 
 #. LineEdit contents: change password
 msgid "<Change password>"
-msgstr ""
+msgstr "<열쇠 글 변경>"
 
 #. LineEdit contents: verify password
 msgid "<Verify password>"
-msgstr ""
+msgstr "<열쇠 글 확인>"
 
 #. Activate HTTP access checkbox
 msgid "Activate HTTP Access"
-msgstr ""
+msgstr "HTTP 접근 활성화"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
-msgstr ""
+msgstr "복수 접근 허용"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
-msgstr ""
+msgstr "HTTP 포트"
 
 #. VNC message box appearing if password strings doesn't match
 msgid ""
 "<b>Remote Access Password Mismatch</b><hr>The first and the second version "
 "of the password do not match."
 msgstr ""
+"<b>원격 접속 열쇠 글이 서로 다름</b><hr>처음 입력한것과 뒤에 입력한 열쇠 글"
+"이 일치하지 않습니다."
 
 #. VNC message box appearing if password is too short
 msgid ""
@@ -1390,45 +1403,53 @@ msgid ""
 "empty or the password is too short. Enter a password with at least six "
 "characters."
 msgstr ""
+"<b>원격 접속 열쇠 글 장애</b><hr>열쇠 글이 비어있거나 너무 짧습니다. 영문/숫"
+"자 6자로 된 열쇠글을 입력해 주세요."
 
 #. VNC message box appearing if password is too long
 msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
+"<b>원격 접속 열쇠 글 장애</b><hr>열쇠 글이 너무 깁니다. 최대 길이 8자로된 열"
+"쇠 글을 입력해 주세요."
 
 #. Install missing packages box
 msgid ""
 "<b>Software Installation:</b><hr>Some packages are missing. Install the "
 "missing packages now?"
 msgstr ""
+"<b>소프트웨어 설치:</b><hr>일부 패키지가 없습니다. 이 패키지들을 지금 설치하"
+"시겠습니까?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
-msgstr ""
+msgstr "패키지 설치"
 
 #. Progress bar title text
 msgid "Importing module"
-msgstr ""
+msgstr "모듈 가져오는 중"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr ""
+msgstr "SaX2: 데이터 가져오는 중..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr ""
+msgstr "캐시 초기화..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
 "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
+msgstr "<b>구성 저장에 실패</b><hr>다음 보고서가 작성되었습니다:"
 
 #. Message box test: configuration has been saved
 msgid ""
 "<b>Configuration Saved</b><hr>Your modifications will take effect the next "
 "time the graphics system is restarted. Exit SaX2 now?"
 msgstr ""
+"<b>구성 저장됨</b><hr>변경된 설정사항의 효과는 그래픽 시스템을 재시작한 뒤 표"
+"시됩니다. 지금 SaX2를 종료하시겠습니까?"
 
 #. Message box text: testing the configuration has failed
 msgid ""
@@ -1436,6 +1457,8 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
+"<b>구성 검사에 실패</b><hr>추가 정보를 <tt>/var/log/Xorg.99.log</tt> 파일에 "
+"보냈습니다. 다음과 같은 요구사항 보고서가 작성되었습니다.:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1443,22 +1466,25 @@ msgid ""
 "requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
 "in the firewall. You can configure this with YaST."
 msgstr ""
+"<b>원격 접속 구성 정보</b><hr>원격 접속 서비스는 TCP포트 5900 및 HTTP포트(기"
+"본 5800) 방화벽에서 열어줘야 사용할 수 있습니다. 이것은 YaST에서 설정할 수 있"
+"습니다."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
-msgstr ""
+msgstr "잡동사니 호환성 옵션"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr ""
+msgstr "유로사인을 5 키에 추가"
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
-msgstr ""
+msgstr "CapsLock 키 동작"
 
 #. XKBFile extension text
 msgid "Alt/Win key behavior"
-msgstr ""
+msgstr "Alt/윈도우 키 동작"
 
 #. XKBFile extension text
 msgid "Adding the EuroSign to certain keys"
@@ -1490,7 +1516,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Ctrl key position"
-msgstr ""
+msgstr "Ctrl 버튼 위치"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
@@ -1506,11 +1532,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr ""
+msgstr "유로사인을 E 키에 추가"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr ""
+msgstr "유로사인을 2 키에 추가"
 
 #. XKBFile extension text
 msgid "key Compose key position"
@@ -1535,12 +1561,11 @@ msgstr "네팔"
 
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
-msgstr ""
+msgstr "콩고"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "체코 공화국"
+msgstr "대한민국"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1553,7 +1578,7 @@ msgstr "나이지리아"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr ""
+msgstr "일본 (PC-98xx 시리즈)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1561,7 +1586,7 @@ msgstr "에스토니아"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr ""
+msgstr "미얀마"
 
 #. XKBFile extension text
 msgid "Norway"
@@ -1588,7 +1613,7 @@ msgstr "방글라데시"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "중남미어"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1607,7 +1632,6 @@ msgid "Sweden"
 msgstr "스웨덴"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Russia"
 msgstr "러시아어"
 
@@ -1621,7 +1645,7 @@ msgstr "한국어"
 
 #. XKBFile extension text
 msgid "Maori"
-msgstr ""
+msgstr "마오리어"
 
 #. XKBFile extension text
 msgid "Uzbekistan"
@@ -1641,7 +1665,7 @@ msgstr "인도"
 
 #. XKBFile extension text
 msgid "Bengali"
-msgstr ""
+msgstr "벵골어"
 
 #. XKBFile extension text
 msgid "Switzerland"
@@ -1649,7 +1673,7 @@ msgstr "스위스"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr ""
+msgstr "라오스"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1662,7 +1686,6 @@ msgid "Syria"
 msgstr "수리남"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Czechia"
 msgstr "체코어"
 
@@ -1688,7 +1711,7 @@ msgstr "말타"
 
 #. XKBFile extension text
 msgid "Azerbaijan"
-msgstr ""
+msgstr "아제르바이잔"
 
 #. XKBFile extension text
 msgid "Lithuania"
@@ -1710,7 +1733,7 @@ msgstr "남아프리카공화국"
 
 #. XKBFile extension text
 msgid "Farsi"
-msgstr ""
+msgstr "페르시아어"
 
 #. XKBFile extension text
 msgid "Slovakia"
@@ -1810,9 +1833,8 @@ msgid "Georgia"
 msgstr "조지아"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "U.S. English"
-msgstr "영어"
+msgstr "영어(US)"
 
 #. XKBFile extension text
 msgid "Turkish"
@@ -1820,7 +1842,7 @@ msgstr "터어키어"
 
 #. XKBFile extension text
 msgid "PC-98xx Series"
-msgstr ""
+msgstr "PC-98xx 시리즈"
 
 #. XKBFile extension text
 msgid "Netherlands"
@@ -1836,15 +1858,15 @@ msgstr "캐나다"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr ""
+msgstr "스리 랑카"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "보스니아 헤르체코비나"
 
 #. XKBFile extension text
 msgid "Serbia and Montenegro"
-msgstr ""
+msgstr "세르비아 몬테그로"
 
 # BR
 #. XKBFile extension text
@@ -1872,7 +1894,7 @@ msgstr "에스페란토어"
 
 #. XKBFile extension text
 msgid "Turkey"
-msgstr "터어키"
+msgstr "터키"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1881,54 +1903,53 @@ msgstr "터어키"
 #.
 #. Maximum length: 40  characters
 msgid "&Step size"
-msgstr ""
+msgstr "크기 단계(&S)"
 
 #. Maximum length: 40  characters
 msgid "Small"
-msgstr ""
+msgstr "작게"
 
 #. Maximum length: 40  characters
 msgid "Normal"
-msgstr ""
+msgstr "보통"
 
 #. Maximum length: 40  characters
 msgid "Big"
-msgstr ""
+msgstr "크게"
 
 #. Maximum length: 40  characters
 msgid "Huge"
-msgstr ""
+msgstr "아주 크게"
 
 #. Maximum length: 40  characters
 msgid "&Next Screen"
-msgstr ""
+msgstr "다음 화면(&N)"
 
 #. Maximum length: 40  characters
 msgid "S&ave"
-msgstr ""
+msgstr "저장(&A)"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
-msgstr ""
+msgstr "위치 변경(&P)"
 
 #. Maximum length: 40  characters
 msgid "C&hange Size"
-msgstr ""
+msgstr "크기 변경(&H)"
 
 #. Maximum length: 40  characters
 msgid "Screen"
-msgstr ""
+msgstr "화면"
 
 #. Maximum length: 60  characters
 msgid "No video mode tuning available"
-msgstr ""
+msgstr "조정 가능한 비디오 모드 없음"
 
 msgid "Display"
 msgstr "디스플레이"
 
-#, fuzzy
 msgid "Configuration on display"
-msgstr "구성"
+msgstr "디스플레이 구성"
 
 msgid "Idle timer..."
-msgstr ""
+msgstr "Idle 타이머..."
