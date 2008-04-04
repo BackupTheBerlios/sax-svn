@@ -25,105 +25,252 @@
 #  EraserLink           = string
 # }
 
-#--------------------------#
-# Wacom Intuos tablet      #
-#--------------------------#
-WACOM:GRAPHIRE / INTUOS (SERIAL) {
+#-------------------------------#
+# Wacom Intuos tablet           #
+#-------------------------------#
+WACOM:INTUOS v1+2 (SERIAL) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
  Device           = /dev/ttyS0
  SendCoreEvents   = on
- StylusLink       = GRAPHIRE / INTUOS Stylus (SERIAL)
- EraserLink       = GRAPHIRE / INTUOS Eraser (SERIAL)
+ StylusLink       = INTUOS v1+2 Stylus (SERIAL)
+ EraserLink       = INTUOS v1+2 Eraser (SERIAL)
 }
 
-#--------------------------#
-# Wacom Intuos tablet USB  #
-#--------------------------#
-WACOM:GRAPHIRE / INTUOS (USB) {
+#-------------------------------#
+# Wacom Graphire tablet         #
+#-------------------------------#
+WACOM:GRAPHIRE v1+2 (SERIAL) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
- Device           = /dev/input/event0
- Option           = Tilt,USB
+ Device           = /dev/ttyS0
  SendCoreEvents   = on
- KernelLoad       = wacom
- StylusLink       = GRAPHIRE / INTUOS Stylus (USB)
- EraserLink       = GRAPHIRE / INTUOS Eraser (USB)
+ StylusLink       = GRAPHIRE v1+2 Stylus (SERIAL)
+ EraserLink       = GRAPHIRE v1+2 Eraser (SERIAL)
 }
 
-#--------------------------#
-# Wacom Graphire tablet USB  #
-#--------------------------#
-WACOM:GRAPHIRE-3 CLASSIC (USB) {
+#-------------------------------#
+# Wacom Intuos tablet USB       #
+#-------------------------------#
+WACOM:INTUOS v1-3 (USB) {
  TabletType       = cursor
  TabletMode       = Absolute
  Driver           = wacom
- Device           = /dev/input/event0
+ Device           = /dev/input/wacom
  Option           = Tilt,USB
  SendCoreEvents   = on
  KernelLoad       = wacom
- StylusLink       = GRAPHIRE-3 CLASSIC Stylus (USB)
- EraserLink       = GRAPHIRE-3 CLASSIC Eraser (USB)
+ StylusLink       = INTUOS v1-3 Stylus (USB)
+ EraserLink       = INTUOS v1-3 Eraser (USB)
 }
 
-#--------------------------#
-# Tevion/Aiptek Tablet     #
-#--------------------------#
+#-------------------------------#
+# Wacom Graphire tablet USB     #
+#-------------------------------#
+WACOM:GRAPHIRE v1-4 (USB) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/input/wacom
+ Option           = USB
+ SendCoreEvents   = on
+ KernelLoad       = wacom
+ StylusLink       = GRAPHIRE v1-4 Stylus (USB)
+ EraserLink       = GRAPHIRE v1-4 Eraser (USB)
+ PadLink          = GRAPHIRE v1-4 Pad (USB)
+}
+
+#-------------------------------#
+# Tevion/Aiptek Tablet          #
+#-------------------------------#
 TEVION / AIPTEK:ALDI Tablet (SERIAL) {
  Driver              = hyperpen
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
- BaudRate            = 19200
- RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus"
+ RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus","BaudRate" "19200"
  Load                = HyperPen
 }
 
-#--------------------------#
-# Aiptek HyperPen 6000     #
-#--------------------------#
+#-------------------------------#
+# Tevion/Aiptek HyperPen 6000   #
+#-------------------------------#
 TEVION / AIPTEK:HyperPen 6000 (SERIAL) {
  Driver              = hyperpen
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
- BaudRate            = 19200
- RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus"
+ RawOption           = "XSize" "600","YSize" "450","Cursor" "Stylus","BaudRate" "19200"
  Load                = HyperPen
 }
 
-#--------------------------#
-# Summagraphics Tablet     #
-#--------------------------#
+#-------------------------------#
+# Summagraphics Tablet          #
+#-------------------------------#
 SUMMAGRAPHICS:SUMMASKETCH {
  Driver              = summa
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore
- BaudRate            = 19200
- RawOption           = "Cursor" "Stylus"
+ RawOption           = "Cursor" "Stylus","BaudRate" "19200"
 }
 
-#--------------------------#
-# Numonics Tablet          #
-#--------------------------#
+#-------------------------------#
+# Numonics Tablet               #
+#-------------------------------#
 NUMONICS:GRIDMASTER {
  Driver              = summa
  TabletMode          = Absolute
  Device              = /dev/ttyS0
  Option              = AlwaysCore,Compatible
- BaudRate            = 19200
- RawOption           = "Cursor" "Stylus"
+ RawOption           = "Cursor" "Stylus","BaudRate" "19200"
 }
 
-#--------------------------#
-# ACECAD Tablet            #
-#--------------------------#
+#-------------------------------#
+# ACECAD Tablet                 #
+#-------------------------------#
 ACECAD:ACECAT FLAIR {
   Driver             = acecad
   Device             = AUTO
   TabletMode         = Absolute
   RawOption          = "Model" "Flair","ReportSpeed" "85"
 }
+
+#--------------------------------------------#
+# TABLET PCs: ACER TM C300/C301/C302 (+XMi)  #
+#--------------------------------------------#
+TABLET PCs:ACER TravelMate C30x series (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4","BottomX" "28800","BottomY" "21760"
+ StylusLink       = ACER TravelMate C30x series Stylus (SERIAL)
+ EraserLink       = ACER TravelMate C30x series Eraser (SERIAL)
+}
+
+#--------------------------------------------#
+# TABLET PCs: Fujitsu Lifebook T series      #
+# "BottomX" "24576","BottomY" "18432"        #
+#--------------------------------------------#
+TABLET PCs:Fujitsu Lifebook T series (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
+ EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
+}
+
+#-------------------------------#
+# FinePoint Tablet HP TC1000    #
+#-------------------------------#
+TABLET PCs:HP Compaq TC1000 (FPI2002) {
+  Driver             = fpit
+  Device             = /dev/ttyS0
+  Option             = AlwaysCore,InvertY
+  SendCoreEvents     = on
+  RawOption          = "MaximumXPosition" "8600","MaximumYPosition" "6485","MinimumXPosition" "154","MinimumYPosition" "110","BaudRate" "19200"
+}
+
+#----------------------------------#
+# TABLET PCs: HP Compaq TC4200     #
+#----------------------------------#
+TABLET PCs:HP Compaq TC4200 (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS2
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = HP Compaq TC4200 Stylus (SERIAL)
+ EraserLink       = HP Compaq TC4200 Eraser (SERIAL)
+}
+
+#----------------------------------#
+# TABLET PCs: IBM X41 Tablet PC    #
+#----------------------------------#
+TABLET PCs:IBM X41 TABLET PC (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = IBM X41 TABLET PC Stylus (SERIAL)
+ EraserLink       = IBM X41 TABLET PC Eraser (SERIAL)
+}
+
+#-------------------------------------#
+# TABLET PCs: Lenovo X61 Tablet PC    #
+#-------------------------------------#
+TABLET PCs:Lenovo X61 TABLET PC (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4","MultiTouch" "off"
+ StylusLink       = Lenovo X61 TABLET PC Stylus (SERIAL)
+ EraserLink       = Lenovo X61 TABLET PC Eraser (SERIAL)
+}
+
+#----------------------------------#
+# TABLET PCs: Motion M1200         #
+#----------------------------------#
+TABLET PCs:Motion M1200 (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ BaudRate         = 38400
+ RawOption        = "ForceDevice" "ISDV4","TopX" "297","TopY" "123"
+ StylusLink       = Motion M1200 Stylus (SERIAL)
+ EraserLink       = Motion M1200 Eraser (SERIAL)
+}
+
+#----------------------------------#
+# TABLET PCs: Motion M1400         #
+#----------------------------------#
+TABLET PCs:Motion M1400 (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = Motion M1400 Stylus (SERIAL)
+}
+
+#----------------------------------#
+# TABLET PCs: Wacom ISDV4 Serial   #
+#----------------------------------#
+TABLET PCs:Wacom ISDV4 TABLET PC (SERIAL) {
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
+ EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
+}
+
+#-------------------------------#
+# FinePoint Tablet GateWay      #
+#-------------------------------#
+TABLET PCs:GATEWAY (Finepoint FPI2004) {
+  Driver             = fpit
+  Device             = /dev/ttyS0
+  Option             = AlwaysCore,InvertY
+  SendCoreEvents     = on
+  RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400","BaudRate" "19200"
+}
+
+
