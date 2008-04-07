@@ -208,9 +208,9 @@ void SCCKeyboardLayout::import ( void ) {
 	//-------------------------------------
 	Q3DictIterator<QString> itModel (mModelDict);
 	for (; itModel.current(); ++itModel) {
-	if (itModel.currentKey() == XKBModel) {
-		mTypeBox -> setCurrentText ( *itModel.current() );
-	}
+		if (itModel.currentKey() == XKBModel) {
+			mTypeBox -> setCurrentText (*itModel.current());
+		}
 	}
 	//=====================================
 	// get layout/variant lists
@@ -256,9 +256,11 @@ void SCCKeyboardLayout::import ( void ) {
 		QString layout = itAdd.current()->text(2);
 		if (layout == it) {
 			item -> setOn (true);
-			QString variant = XKBVariants.at (varCount);
-			if ((!variant.isNull()) && (variant != "!")) {
-				item -> setText ( 3 , XKBVariants.at(varCount) );
+			if (! XKBVariants.isEmpty()) {
+				QString variant = XKBVariants.at (varCount);
+				if ((!variant.isNull()) && (variant != "!")) {
+					item -> setText ( 3 , XKBVariants.at(varCount) );
+				}
 			}
 			mAddLayout -> setSelected (itAdd.current(), true);
 			mAddLayout -> ensureItemVisible (item);
@@ -271,6 +273,7 @@ void SCCKeyboardLayout::import ( void ) {
 	//=====================================
 	// select base variant
 	//-------------------------------------
+	mVariantBox -> setCurrentText (mVariantBox->text (0));
 	for (int n=0;n<mVariantBox->count();n++) {
 		QString item = mVariantBox->text (n);
 		if (item == baseVariant) {
