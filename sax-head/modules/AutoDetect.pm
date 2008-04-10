@@ -183,7 +183,27 @@ sub sortres {
 	foreach my $i (sort numerisch keys %index) {
 		push(@list,$index{$i});
 	}
-	return(@list);
+	# /.../
+	# check list do not use resolutions whose X value doesn't fit
+	# into the sort order. The pixel value of X*Y is correct but
+	# we don't want a virtual screen. Example:
+	# 1280x1024 1440x900 -> remove 1280x1024
+	# ----
+	my $count = @list;
+	my @list_new = ();
+	for (my $i=0;$i<$count;$i++) {
+		if (! $list[$i+1]) {
+			push (@list_new,$list[$i]); last;
+		}
+		my @res_this = split(/x/,$list[$i]);
+		my @res_next = split(/x/,$list[$i+1]);
+		my $x_this = $res_this[0];
+		my $x_next = $res_next[0];
+		if ($x_this > $x_next) {
+			push (@list_new,$list[$i]);
+		}
+	}
+	return(@list_new);
 }
 
 #-----[ numbers ]-----#
