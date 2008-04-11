@@ -57,6 +57,7 @@ class SCCKeyboard : public SCCDialog {
 
 	public slots:
 	void apply  ( void );
+	void applyDefault ( void );
 
 	public:
 	SCCKeyboard (

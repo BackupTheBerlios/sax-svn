@@ -42,6 +42,7 @@ class SCCKeyboardOptions : public SCCDialog {
 	// private dialog data for exporting
 	//------------------------------------
 	QString          mXKBOption;
+	QString          mDefaultOption;
 
 	private:
 	//====================================
@@ -75,6 +76,7 @@ class SCCKeyboardOptions : public SCCDialog {
 	public:
 	QString getOptions     ( void );
 	QString getApplyString ( void );
+	QString getDefaultOption ( void );
 
 	public:
 	void init   ( void );

@@ -49,6 +49,7 @@ class SCCKeyboardLayout : public SCCDialog {
 	QString          mXKBModel;
 	QString          mXKBLayout;
 	QString          mXKBVariant;
+	QString          mDefaultLayout;
 
 	private:
 	//====================================
@@ -86,6 +87,7 @@ class SCCKeyboardLayout : public SCCDialog {
 	QString getLayout  ( void );
 	QString getVariant ( void );
 	QString getApplyString ( void );
+	QString getDefaultLayout ( void );
 
 	public:
 	void init   ( void );

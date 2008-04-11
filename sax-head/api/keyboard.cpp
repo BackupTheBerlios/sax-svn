@@ -98,6 +98,30 @@ void SCCKeyboard::import ( void ) {
 	needImportData = false;
 }
 //====================================
+// apply default keyboard
+//------------------------------------
+void SCCKeyboard::applyDefault ( void ) {
+	qApp->setOverrideCursor ( Qt::forbiddenCursor );
+	QString layoutApply = mKeyboardLayout  -> getDefaultLayout();
+	QString optionApply = mKeyboardOptions -> getDefaultOption();
+	QString optionReset = "-option \"\"";
+	QString complete = "setxkbmap " +
+		layoutApply + " " + optionReset + " " + optionApply;
+	log (L_INFO,"Apply default keyboard: %s\n",complete.ascii());
+	Q3Process* proc = new Q3Process ();
+	proc -> addArgument ("/bin/bash");
+	proc -> addArgument ("-c");
+	proc -> addArgument (complete);
+	if ( ! proc -> start() ) {
+		qApp->restoreOverrideCursor();
+		return;
+	}
+	while (proc->isRunning()) {
+		usleep (1000);
+	}
+	qApp->restoreOverrideCursor();
+}
+//====================================
 // apply keyboard
 //------------------------------------
 void SCCKeyboard::apply ( void ) {

@@ -280,7 +280,18 @@ void SCCKeyboardLayout::import ( void ) {
 			mVariantBox -> setCurrentText (baseVariant);
 		}
 	}
+	//=====================================
+	// store initial apply string
+	//-------------------------------------
+	mDefaultLayout = getApplyString();
 }
+//====================================
+// getDefaultLayout
+//------------------------------------
+QString SCCKeyboardLayout::getDefaultLayout ( void ) {
+	return mDefaultLayout;
+}
+
 //====================================
 // getType
 //------------------------------------

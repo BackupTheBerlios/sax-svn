@@ -554,6 +554,13 @@ void SCCFrame::runDialog ( Q3ListBoxItem* item ) {
 // slotCancel
 //-------------------------------------
 void SCCFrame::slotCancel ( void ) {
+	//=====================================
+	// reset to default keyboard
+	//-------------------------------------
+	mKeyboard -> applyDefault();
+	//=====================================
+	// show message if not in yast mode
+	//-------------------------------------
 	if ( ! mYaSTMode ) {
 		SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
 		SCCMessage* mMessageBox = new SCCMessage (

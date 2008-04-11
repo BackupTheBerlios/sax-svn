@@ -218,7 +218,18 @@ void SCCKeyboardOptions::import ( void ) {
 			}
 		}
 	}
+	//=====================================
+	// store initial apply string
+	//-------------------------------------
+	mDefaultOption = getApplyString();
 }
+//====================================
+// getDefaultOption
+//------------------------------------
+QString SCCKeyboardOptions::getDefaultOption ( void ) {
+	return mDefaultOption;
+}
+
 //====================================
 // slotXKBOption
 //------------------------------------
