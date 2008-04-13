@@ -1,21 +1,24 @@
+# translation of sax.hr.po to Croatian
 # Croatian message file for YaST2 (@memory@)
 # Copyright (C) 2005 SUSE Linux Products GmbH.
 # Copyright (C) 2002 SuSE Linux AG.
 # Copyright (C) 2001 SuSE GmbH.
-# Vlatko Kosturjak <kost@iname.com>, 2001
 #
+# Vlatko Kosturjak <kost@iname.com>, 2001.
+# Krešimir Jozić <kjozic@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: YaST (@memory@)\n"
+"Project-Id-Version: sax.hr\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2001-07-17 16:22+0200\n"
-"Last-Translator: Vlatko Kosturjak <kost@iname.com>\n"
-"Language-Team: Croatian <i18n@suse.de>\n"
+"PO-Revision-Date: 2008-04-12 20:20+0200\n"
+"Last-Translator: Krešimir Jozić <kjozic@gmail.com>\n"
+"Language-Team: Croatian <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -24,7 +27,7 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "I18N"
 
 #. RTF text: Startup information for the user
 msgid ""
@@ -56,9 +59,8 @@ msgid "Information..."
 msgstr ""
 
 #. Caption text for the main window
-#, fuzzy
 msgid "SaX2: X11 Configuration"
-msgstr "Postavka"
+msgstr "SaX2: X11 postavke"
 
 #. Title text on the left side
 msgid "SaX Control Center"
@@ -71,9 +73,8 @@ msgid ""
 msgstr ""
 
 #. Help Button text
-#, fuzzy
 msgid "&Help"
-msgstr "Pomoć"
+msgstr "&Pomoć"
 
 #. Ok Button text
 msgid "O&K"
@@ -89,9 +90,8 @@ msgstr "&Ne"
 
 #. Cancel Button text
 #. Maximum length: 40  characters
-#, fuzzy
 msgid "&Cancel"
-msgstr "Francuska"
+msgstr "&Otkaži"
 
 #. RTF text: exit SaX message
 msgid "<b>Exit SaX2</b><hr>Exit SaX2 now?"
@@ -102,9 +102,8 @@ msgid "Message"
 msgstr ""
 
 #. Change configuration Button text
-#, fuzzy
 msgid "C&hange Configuration"
-msgstr "Postavka"
+msgstr ""
 
 #. Short description of the Monitor module
 #. Monitor name label
@@ -159,9 +158,8 @@ msgid "Remote Access Properties"
 msgstr ""
 
 #. Tab text for a display tab of the monitor dialog
-#, fuzzy
 msgid "Display %1"
-msgstr "Prikaz"
+msgstr "Prikaz %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -196,9 +194,8 @@ msgstr ""
 #. Tab text for an options tab of the keyboard dialog
 #. Group box title for tablet options
 #. Group box title for the VNC options
-#, fuzzy
 msgid "Options"
-msgstr "Akcija"
+msgstr "Izbori"
 
 #. CheckBox label to activate the mouse wheel
 msgid "Activate Mouse Wheel"
@@ -338,9 +335,8 @@ msgid ""
 msgstr ""
 
 #. Info label for dual head checkbox
-#, fuzzy
 msgid "No configuration available"
-msgstr "Postavka"
+msgstr "Postavke nisu dostupne"
 
 #. Radiobutton for traditional multihead mode
 msgid ""
@@ -369,9 +365,8 @@ msgid "Connected To"
 msgstr ""
 
 #. Tooltip text if monitor is unknown
-#, fuzzy
 msgid "Unknown Monitor:"
-msgstr "Nepoznato"
+msgstr "Nepoznat monitor: "
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
@@ -539,9 +534,8 @@ msgstr "Vrsta"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
-#, fuzzy
 msgid "Variant"
-msgstr "Bugarski"
+msgstr "Varijanta"
 
 #. Group box title for the additional keyboard setup
 msgid "Additional Layouts"
@@ -598,9 +592,8 @@ msgstr "Maroko"
 
 # BR
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "Brazil"
+msgstr "Braille"
 
 # ET
 #. XKBFile extension text
@@ -1129,24 +1122,24 @@ msgstr ""
 msgid "Right Win-key switches group while pressed."
 msgstr ""
 
-# AZ
 #. XKBFile extension text
 #, fuzzy
 msgid "Serbia"
-msgstr "Azerbedžan"
+msgstr "Sirija"
 
 #. XKBFile extension text
 msgid "Guinea"
 msgstr ""
 
 #. XKBFile extension text
+#, fuzzy
 msgid "Montenegro"
-msgstr ""
+msgstr "Srbija i Crna Gora"
 
 #. XKBFile extension text
 #, fuzzy
 msgid "China"
-msgstr "Češki"
+msgstr "Češka"
 
 #. XKBFile extension text
 #, fuzzy
@@ -1519,25 +1512,23 @@ msgstr "Arapski"
 
 #. XKBFile extension text
 msgid "Nepal"
-msgstr ""
+msgstr "Nepal"
 
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "Republika Česka"
+msgstr "Republika Koreja"
 
 #. XKBFile extension text
 msgid "Iraq"
 msgstr "Irak"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Nigeria"
-msgstr "Alžir"
+msgstr "Nigerija"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
@@ -1549,7 +1540,7 @@ msgstr "Estonija"
 
 #. XKBFile extension text
 msgid "Myanmar"
-msgstr ""
+msgstr "Mianmar"
 
 #. XKBFile extension text
 msgid "Norway"
@@ -1562,9 +1553,8 @@ msgstr "Njemačka"
 
 # AO
 #. XKBFile extension text
-#, fuzzy
 msgid "Mongolia"
-msgstr "Angola"
+msgstr "Mongolija"
 
 # BT
 #. XKBFile extension text
@@ -1578,7 +1568,7 @@ msgstr "Bangladeš"
 
 #. XKBFile extension text
 msgid "Latin American"
-msgstr ""
+msgstr "Latinska Amerika"
 
 #. XKBFile extension text
 msgid "Belgium"
@@ -1597,9 +1587,8 @@ msgid "Sweden"
 msgstr "Švedska"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Russia"
-msgstr "Ruski"
+msgstr "Rusija"
 
 #. XKBFile extension text
 msgid "Portugal"
@@ -1639,7 +1628,7 @@ msgstr "Švicarska"
 
 #. XKBFile extension text
 msgid "Laos"
-msgstr ""
+msgstr "Laos"
 
 #. XKBFile extension text
 msgid "Japan"
@@ -1647,12 +1636,11 @@ msgstr "Japan"
 
 #. XKBFile extension text
 msgid "Syria"
-msgstr ""
+msgstr "Sirija"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Czechia"
-msgstr "Češki"
+msgstr "Češka"
 
 #. XKBFile extension text
 msgid "Belarus"
@@ -1709,7 +1697,7 @@ msgstr "Slovačka"
 # fuzzy
 #. XKBFile extension text
 msgid "Maldives"
-msgstr "Mali"
+msgstr "Maldivi"
 
 #. XKBFile extension text
 msgid "Iceland"
@@ -1738,7 +1726,7 @@ msgstr "Grčka"
 
 #. XKBFile extension text
 msgid "United Kingdom"
-msgstr "Engleska"
+msgstr "Ujedinjeno Kraljevstvo"
 
 #. XKBFile extension text
 msgid "France"
@@ -1761,7 +1749,7 @@ msgstr "Poljska"
 # fuzzy
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "Kyrgyzstan"
+msgstr "Kirgistan"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1779,7 +1767,7 @@ msgstr "Kambodža"
 
 #. XKBFile extension text
 msgid "Spain"
-msgstr ""
+msgstr "Španjolska"
 
 #. XKBFile extension text
 msgid "Ukraine"
@@ -1793,7 +1781,7 @@ msgstr "Rumunjska"
 # fuzzy
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr "Kazakhstan"
+msgstr "Kazahstan"
 
 #. XKBFile extension text
 msgid "Georgia"
@@ -1825,16 +1813,12 @@ msgstr "Kanada"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr ""
+msgstr "Šri Lanka"
 
 # BA
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
 msgstr "Bosna i Hercegovina"
-
-#. XKBFile extension text
-msgid "Serbia and Montenegro"
-msgstr ""
 
 # BR
 #. XKBFile extension text
@@ -1923,6 +1907,5 @@ msgstr "Postavka"
 msgid "Idle timer..."
 msgstr ""
 
-#, fuzzy
-#~ msgid "VNC Server"
-#~ msgstr "Poslužitelj"
+#~ msgid "Serbia and Montenegro"
+#~ msgstr "Srbija i Crna Gora"
