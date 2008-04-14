@@ -51,6 +51,7 @@ static void hd_read_macio(hd_data_t *hd_data);
 static void hd_read_vio(hd_data_t *hd_data);
 static void hd_read_xen(hd_data_t *hd_data);
 static void hd_read_ps3_system_bus(hd_data_t *hd_data);
+static void hd_read_vm(hd_data_t *hd_data);
 static void add_mv643xx_eth(hd_data_t *hd_data, char *platform_type);
 static void hd_read_platform(hd_data_t *hd_data);
 static void hd_read_of_platform(hd_data_t *hd_data);
@@ -79,18 +80,15 @@ void hd_scan_sysfs_pci(hd_data_t *hd_data)
   add_pci_data(hd_data);
 
   PROGRESS(3, 0, "macio");
-
   hd_read_macio(hd_data);
 
   PROGRESS(4, 0, "vio");
-
   hd_read_vio(hd_data);
 
   PROGRESS(5, 0, "xen");
-
   hd_read_xen(hd_data);
-  PROGRESS(6, 0, "ps3");
 
+  PROGRESS(6, 0, "ps3");
   hd_read_ps3_system_bus(hd_data);
   
   PROGRESS(7, 0, "platform");
@@ -98,6 +96,9 @@ void hd_scan_sysfs_pci(hd_data_t *hd_data)
 
   PROGRESS(8, 0, "of_platform");
   hd_read_of_platform(hd_data);
+
+  PROGRESS(9, 0, "vm");
+  hd_read_vm(hd_data);
 }
 
 
@@ -815,7 +816,7 @@ void hd_read_platform(hd_data_t *hd_data)
       platform_type = canon_str(s, strlen(s));
       ADD2LOG("    type = \"%s\"\n", platform_type);
       if(
-        !strcmp(platform_type, "mv643xx_eth") &&
+        strstr(platform_type, "mv643xx_eth") &&
         !mv643xx_eth_seen++
       ) {
         add_mv643xx_eth(hd_data, platform_type);
@@ -932,10 +933,10 @@ void hd_read_of_platform(hd_data_t *hd_data)
 void hd_read_ps3_system_bus(hd_data_t *hd_data)
 {
   char *s, *ps3_name;
-  int scsi_cnt = 0;
+  int scsi_cnt = 0, eth_cnt = 0, wlan_cnt = 0;
   hd_t *hd;
-  str_list_t *sf_bus, *sf_bus_e;
-  char *sf_dev;
+  str_list_t *sf_bus, *sf_bus_e, *sf_eth_dev, *sf_eth_dev_e;
+  char *sf_dev, *sf_eth_net, *sf_eth_wireless;
 
   sf_bus = reverse_str_list(read_dir("/sys/bus/ps3_system_bus/devices", 'l'));
 
@@ -960,23 +961,41 @@ void hd_read_ps3_system_bus(hd_data_t *hd_data)
       ADD2LOG("    modalias = \"%s\"\n", ps3_name);
     }
 
-    if( ps3_name && !strcmp(ps3_name, "ps3:3")) {
-      hd = add_hd_entry(hd_data, __LINE__, 0);
-      hd->bus.id = bus_ps3_system_bus;
+    /* network devices */
+    if(ps3_name && !strcmp(ps3_name, "ps3:3")) {
+      /* read list of available devices */
+      sf_eth_net = new_str(hd_read_sysfs_link(sf_dev, "net"));
+      sf_eth_dev = read_dir(sf_eth_net, 'd');
 
-      hd->vendor.id = MAKE_ID(TAG_PCI, 0x104d); /* Sony */
+      /* add entries for available devices */
+      for(sf_eth_dev_e = sf_eth_dev; sf_eth_dev_e; sf_eth_dev_e = sf_eth_dev_e->next) {
+        hd = add_hd_entry(hd_data, __LINE__, 0);
+        hd->bus.id = bus_ps3_system_bus;
+        hd->sysfs_bus_id = new_str(sf_bus_e->str);
+        hd->slot = eth_cnt + wlan_cnt;
+        hd->vendor.id = MAKE_ID(TAG_PCI, 0x104d);		/* Sony */
+        hd->device.id = MAKE_ID(TAG_SPECIAL, 0x1003);		/* PS3_DEV_TYPE_SB_GELIC */
+        hd->base_class.id = bc_network;
+        hd->sysfs_id = new_str(hd_sysfs_id(sf_dev));
+        hd->modalias = new_str(ps3_name);
+        hd->unix_dev_name = new_str(sf_eth_dev_e->str);		/* this is needed to correctly link to interfaces later */
 
-      hd->base_class.id = bc_network;
-      hd->sub_class.id = 0;	/* ethernet */
-      hd->device.id = MAKE_ID(TAG_SPECIAL, 0x1003); /* PS3_DEV_TYPE_SB_GELIC */
-      str_printf(&hd->device.name, 0, "PS3 Ethernet card %d", hd->slot);
+        /* ethernet and wireless differ only by directory "wireless" so check for it */
+        sf_eth_wireless = hd_read_sysfs_link(hd_read_sysfs_link(sf_eth_net, sf_eth_dev_e->str), "wireless");
+        if(sf_eth_wireless) {
+          hd->sub_class.id = 0x82;	/* wireless */
+          str_printf(&hd->device.name, 0, "PS3 Wireless card %d", wlan_cnt++);
+        }
+        else {
+          hd->sub_class.id = 0;		/* ethernet */
+          str_printf(&hd->device.name, 0, "PS3 Ethernet card %d", eth_cnt++);
+        }
+        s = hd_sysfs_find_driver(hd_data, hd->sysfs_id, 1);
+        if(s) add_str_list(&hd->drivers, s);
+      }
 
-      hd->modalias = new_str(ps3_name);
-
-      hd->sysfs_id = new_str(hd_sysfs_id(sf_dev));
-      hd->sysfs_bus_id = new_str(sf_bus_e->str);
-      s = hd_sysfs_find_driver(hd_data, hd->sysfs_id, 1);
-      if(s) add_str_list(&hd->drivers, s);
+      sf_eth_net = free_mem(sf_eth_net);
+      sf_eth_dev = free_str_list(sf_eth_dev);
     }
 
     if ( ps3_name && !strcmp(ps3_name, "ps3:7")) {
@@ -1188,6 +1207,69 @@ void add_xen_storage(hd_data_t *hd_data)
   hd->vendor.id = MAKE_ID(TAG_SPECIAL, 0x6011);	/* xen */
   hd->device.id = MAKE_ID(TAG_SPECIAL, 0x1002);	/* xen-vbd */
   hd->device.name = new_str("Virtual Storage");
+}
+
+
+/*
+ * Get microsoft vm (network) data from sysfs.
+ */
+void hd_read_vm(hd_data_t *hd_data)
+{
+  int eth_cnt = 0;
+  hd_t *hd;
+  str_list_t *sf_bus, *sf_bus_e;
+  char *sf_dev, *drv, *drv_name;
+
+  sf_bus = reverse_str_list(read_dir("/sys/bus/vmbus/devices", 'l'));
+
+  if(!sf_bus) {
+    ADD2LOG("sysfs: no such bus: vm\n");
+    return;
+  }
+
+  for(sf_bus_e = sf_bus; sf_bus_e; sf_bus_e = sf_bus_e->next) {
+    sf_dev = new_str(hd_read_sysfs_link("/sys/bus/vmbus/devices", sf_bus_e->str));
+
+    ADD2LOG(
+      "  vm device: name = %s\n    path = %s\n",
+      sf_bus_e->str,
+      hd_sysfs_id(sf_dev)
+    );
+
+    drv_name = NULL;
+    drv = new_str(hd_read_sysfs_link(sf_dev, "driver"));
+    if(drv) {
+      drv_name = strrchr(drv, '/');
+      if(drv_name) drv_name++;
+    }
+
+    ADD2LOG("    driver = \"%s\"\n", drv_name);
+
+    if(
+      drv_name &&
+      !strcmp(drv_name, "netvsc")
+    ) {
+      hd = add_hd_entry(hd_data, __LINE__, 0);
+      hd->bus.id = bus_none;
+
+      hd->vendor.id = MAKE_ID(TAG_SPECIAL, 0x6013);	/* virtual */
+
+      hd->base_class.id = bc_network;
+      hd->sub_class.id = 0;	/* ethernet */
+      hd->slot = eth_cnt++;
+      hd->device.id = MAKE_ID(TAG_SPECIAL, 1);
+      str_printf(&hd->device.name, 0, "Virtual Ethernet Card %d", hd->slot);
+
+      hd->sysfs_id = new_str(hd_sysfs_id(sf_dev));
+      hd->sysfs_bus_id = new_str(sf_bus_e->str);
+      if(drv_name) add_str_list(&hd->drivers, drv_name);
+    }
+
+    free_mem(sf_dev);
+    free_mem(drv);
+  }
+
+  free_str_list(sf_bus);
 }
 
 

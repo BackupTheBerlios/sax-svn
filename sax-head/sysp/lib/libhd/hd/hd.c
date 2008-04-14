@@ -295,8 +295,8 @@ static struct s_pr_flags {
   { pr_parallel_lp,   pr_parallel,    4|2|1, "parallel.lp"   },
   { pr_parallel_zip,  pr_parallel,    4|2|1, "parallel.zip"  },
   { pr_parallel_imm,  0,                  0, "parallel.imm"  },
-  { pr_isa,           0,              4|2|1, "isa"           },
-  { pr_isa_isdn,      pr_isa,         4|2|1, "isa.isdn"      },
+  { pr_isa,           0,                  0, "isa"           },
+  { pr_isa_isdn,      pr_isa,             0, "isa.isdn"      },
   { pr_isdn,          0,              4|2|1, "isdn"          },
   { pr_kbd,           0,            8|4|2|1, "kbd"           },
   { pr_prom,          0,            8|4|2|1, "prom"          },
@@ -625,7 +625,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       hd_set_probe_feature(hd_data, pr_pcmcia);
       hd_set_probe_feature(hd_data, pr_isapnp);
       hd_set_probe_feature(hd_data, pr_isapnp_mod);
-      hd_set_probe_feature(hd_data, pr_isa_isdn);
+      // hd_set_probe_feature(hd_data, pr_isa_isdn);
       hd_set_probe_feature(hd_data, pr_usb);
       hd_set_probe_feature(hd_data, pr_isdn);
       break;
@@ -5746,6 +5746,30 @@ hd_t *hd_find_sysfs_id(hd_data_t *hd_data, char *id)
   if(id && *id) {
     for(hd = hd_data->hd; hd; hd = hd->next) {
       if(hd->sysfs_id && !strcmp(hd->sysfs_id, id)) return hd;
+    }
+  }
+
+  return NULL;
+}
+
+
+hd_t *hd_find_sysfs_id_devname(hd_data_t *hd_data, char *id, char *devname)
+{
+  hd_t *hd;
+
+  if(id && *id && devname) {
+    for(hd = hd_data->hd; hd; hd = hd->next) {
+      if(
+        hd->sysfs_id &&
+        !strcmp(hd->sysfs_id, id) &&
+        (
+          !hd->unix_dev_name ||
+          (
+            hd->unix_dev_name &&
+            !strcmp(hd->unix_dev_name, devname)
+          )
+        )
+      ) return hd;
     }
   }
 
