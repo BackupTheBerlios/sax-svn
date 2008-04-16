@@ -566,15 +566,24 @@ sub checkForIntelBoard {
 	my $size = @data;
 	my $chip = -1;
 	if ($size == 2) {
+		my $hasIntel = 0;
+		foreach my $line (@data) {
+			if ($line =~ /(i810|intel)$/) {
+				$hasIntel = 1; last;
+			}
+		}
+		if (! $hasIntel) {
+			return;
+		}
 		foreach my $line (@data) {
 			$chip++;
 			if ($line =~ /(i810|intel)$/) {
 				$chip = $chip ^ 1; last;
 			}
 		}
-	}
-	if ($chip >= 0) {
-		$CardNumber = $chip;
+		if ($chip >= 0) {
+			$CardNumber = $chip;
+		}
 	}
 }
 
