@@ -194,6 +194,8 @@ modinfo_t *parse_modinfo(str_list_t *file)
       if(!(s = get_mi_field(s, "i", 2, &m->pci.prog_if, &u))) continue;
       m->pci.has.prog_if = u;
 
+      if(!strcmp(module, "i2o_core")) strcpy(module, "i2o_block");	/* map i2o module */
+
       m->module = new_str(module);
       m->alias = new_str(alias);
       m++->type = mi_pci;
@@ -260,7 +262,7 @@ modinfo_t *parse_modinfo(str_list_t *file)
 
 
 /* return prio, 0: no match */
-int match_modinfo(modinfo_t *db, modinfo_t *match)
+int match_modinfo(hd_data_t *hd_data, modinfo_t *db, modinfo_t *match)
 {
   int prio = 0;
   char *s;
@@ -271,7 +273,7 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
     case mi_pci:
       if(db->pci.has.base_class) {
         if(match->pci.has.base_class && db->pci.base_class == match->pci.base_class) {
-          prio = 1;
+          prio = 10;
         }
         else {
           prio = 0;
@@ -280,7 +282,7 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
       }
       if(db->pci.has.sub_class) {
         if(match->pci.has.sub_class && db->pci.sub_class == match->pci.sub_class) {
-          prio = 1;
+          prio = 10;
         }
         else {
           prio = 0;
@@ -289,7 +291,7 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
       }
       if(db->pci.has.prog_if) {
         if(match->pci.has.prog_if && db->pci.prog_if == match->pci.prog_if) {
-          prio = 1;
+          prio = 10;
         }
         else {
           prio = 0;
@@ -298,7 +300,7 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
       }
       if(db->pci.has.vendor) {
         if(match->pci.has.vendor && db->pci.vendor == match->pci.vendor) {
-          prio = 2;
+          prio = 20;
         }
         else {
           prio = 0;
@@ -307,7 +309,7 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
       }
       if(db->pci.has.device) {
         if(match->pci.has.device && db->pci.device == match->pci.device) {
-          prio = 3;
+          prio = 30;
         }
         else {
           prio = 0;
@@ -316,7 +318,7 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
       }
       if(db->pci.has.sub_vendor) {
         if(match->pci.has.sub_vendor && db->pci.sub_vendor == match->pci.sub_vendor) {
-          prio = 4;
+          prio = 40;
         }
         else {
           prio = 0;
@@ -325,12 +327,22 @@ int match_modinfo(modinfo_t *db, modinfo_t *match)
       }
       if(db->pci.has.sub_device) {
         if(match->pci.has.sub_device && db->pci.sub_device == match->pci.sub_device) {
-          prio = 5;
+          prio = 50;
         }
         else {
           prio = 0;
           break;
         }
+      }
+      if(prio && db->module) {
+        if(!strncmp(db->module, "pata_", sizeof "pata_" - 1)) {
+          prio += hd_data->flags.pata ? 1 : -1;
+        }
+        if(!strcmp(db->module, "piix")) {	/* ata_piix vs. piix */
+          prio += hd_data->flags.pata ? -1 : 1;
+        }
+        if(!strcmp(db->module, "generic")) prio -= 2;
+        if(!strcmp(db->module, "i2o_block")) prio -= 1;
       }
       break;
 
@@ -428,7 +440,7 @@ driver_info_t *hd_modinfo_db(hd_data_t *hd_data, modinfo_t *modinfo_db, hd_t *hd
   }
 
   for(mod_list_len = 0; modinfo_db->type; modinfo_db++) {
-    if((prio = match_modinfo(modinfo_db, &match))) {
+    if((prio = match_modinfo(hd_data, modinfo_db, &match))) {
       for(di2 = drv_info; di2; di2 = di2->next) {
         if(
           di2->any.type == di_module &&
@@ -2228,7 +2240,7 @@ driver_info_t *kbd_driver(hd_data_t *hd_data, hd_t *hd)
     case arch_x86_64:
     case arch_alpha:
       ki->XkbRules = new_str("xfree86");
-      ki->XkbModel = new_str("pc104");
+      ki->XkbModel = new_str(hd->vendor.id == MAKE_ID(TAG_USB, 0x05ac) ? "macintosh" : "pc104");
       break;
 
     case arch_ppc:
@@ -2249,6 +2261,10 @@ driver_info_t *kbd_driver(hd_data_t *hd_data, hd_t *hd)
             ki->XkbModel = new_str("pc104");
           }
         }
+      }
+      if(ID_TAG(hd->vendor.id) == TAG_USB) {
+        free_mem(ki->XkbModel);
+        ki->XkbModel = new_str(hd->vendor.id == MAKE_ID(TAG_USB, 0x05ac) ? "macintosh" : "pc104");
       }
       break;
 
@@ -2410,6 +2426,7 @@ driver_info_t *monitor_driver(hd_data_t *hd_data, hd_t *hd)
     ddi->max_vsync = mi->max_vsync;
     ddi->min_hsync = mi->min_hsync;
     ddi->max_hsync = mi->max_hsync;
+    ddi->bandwidth = mi->clock / 1000;
 
     for(res = hd->res; res; res = res->next) {
       if(res->any.type == res_monitor) {

@@ -23,142 +23,6 @@
 &device.id		pci 0x0096
 +driver.module.modprobe	ibmsis
 
-# modinfo
- vendor.id		pci 0x1000
-&device.id		pci 0x0407
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-|vendor.id		pci 0x101e
-&device.id		pci 0x1960
-|vendor.id		pci 0x101e
-&device.id		pci 0x9010
-|vendor.id		pci 0x101e
-&device.id		pci 0x9060
-|vendor.id		pci 0x1028
-&device.id		pci 0x000e+0x0002
-|vendor.id		pci 0x8086
-&device.id		pci 0x1960
-+driver.module.modprobe	megaraid
-
-# modinfo
- vendor.id		pci 0x1000
-&device.id		pci 0x0407
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x0530+0x0003
-|vendor.id		pci 0x1000
-&device.id		pci 0x0407
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0531
-|vendor.id		pci 0x1000
-&device.id		pci 0x0407
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x0530
-|vendor.id		pci 0x1000
-&device.id		pci 0x0407
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x0532
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x0001+0x0002
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x1025
-&subdevice.id		pci 0x004d
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0001+0x0002
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x1734
-&subdevice.id		pci 0x1065
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x0002
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x3431
-|vendor.id		pci 0x1000
-&device.id		pci 0x0408
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x3499
-|vendor.id		pci 0x1000
-&device.id		pci 0x0409
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x3004
-|vendor.id		pci 0x1000
-&device.id		pci 0x0409
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x3008
-|vendor.id		pci 0x1000
-&device.id		pci 0x0409
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x3008
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x0518
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x0520
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x0522+0x0002
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0x4523
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1000
-&subdevice.id		pci 0xa520
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0518
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0520
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x0520
-|vendor.id		pci 0x1000
-&device.id		pci 0x1960
-&subvendor.id		pci 0x8086
-&subdevice.id		pci 0x0523
-|vendor.id		pci 0x101e
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0471
-|vendor.id		pci 0x101e
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0475
-|vendor.id		pci 0x101e
-&device.id		pci 0x1960
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0493
-|vendor.id		pci 0x1028
-&device.id		pci 0x000e
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x0123
-|vendor.id		pci 0x1028
-&device.id		pci 0x000f
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x014a
-|vendor.id		pci 0x1028
-&device.id		pci 0x0013
-&subvendor.id		pci 0x1028
-&subdevice.id		pci 0x016c+0x0005
-+driver.module.modprobe	megaraid_mbox
-
 # override qla1280 info (#26325)
  vendor.id		pci 0x1077
 &device.id		pci 0x1216
@@ -185,17 +49,6 @@
 &device.id		pci 0xa400
 +driver.module.modprobe	eata
 
-# scsi/dpti.c
- baseclass.id           0x00e
-&subclass.id            0x00
-&vendor.id		pci 0x1044
-&device.id		pci 0xa501
-|baseclass.id           0x00e
-&subclass.id            0x00
-&vendor.id		pci 0x1044
-&device.id		pci 0xa511
-+driver.module.modprobe	dpt_i2o
-
 # scsi/BusLogic.c
  vendor.id		pci 0x104b
 &device.id		pci 0x0140
@@ -205,39 +58,10 @@
 &device.id		pci 0x8130
 +driver.module.modprobe	BusLogic
 
-# scsi/qla1280.c
- vendor.id		pci 0x1077
-&device.id		pci 0x1016
-|vendor.id		pci 0x1077
-&device.id		pci 0x1080
-|vendor.id		pci 0x1077
-&device.id		pci 0x1216
-|vendor.id		pci 0x1077
-&device.id		pci 0x1240
-|vendor.id		pci 0x1077
-&device.id		pci 0x1280
-+driver.module.modprobe	qla1280
-
 # scsi/qlogicisp.c
  vendor.id		pci 0x1077
 &device.id		pci 0x1020
 +driver.module.modprobe	qlogicisp
-
-# scsi/qlogicfc.c
- vendor.id		pci 0x1077
-&device.id		pci 0x2100
-+driver.module.modprobe	qlogicfc
-
- vendor.id		pci 0x1077
-&device.id		pci 0x2200
-+driver.module.modprobe	qla2200
-+driver.module.modprobe	qlogicfc
-
- vendor.id		pci 0x1077
-&device.id		pci 0x2300
-|vendor.id		pci 0x1077
-&device.id		pci 0x2312
-+driver.module.modprobe	qla2300
 
 # scsi/inia100.c
  vendor.id		pci 0x1101
@@ -493,10 +317,6 @@
 &device.id		special 0x0040
 +driver.module.modprobe	swim3
 
- baseclass.id		0x00e
-&subclass.id		0x00+2
-+driver.module.insmod	i2o_pci|i2o_core|i2o_config|i2o_block
-
 # scsi/aacraid/linit.c
  vendor.id		pci 0x1028
 &device.id		pci 0x0001
@@ -643,6 +463,72 @@
 &device.id		pci 0x100a
 +driver.module.modprobe	sgiioc4
 +baseclass.id		0x001
+
+# module.alias qla*
+ vendor.id		pci 0x1077
+&device.id		pci 0x1016
+|vendor.id		pci 0x1077
+&device.id		pci 0x1020
+|vendor.id		pci 0x1077
+&device.id		pci 0x1080
+|vendor.id		pci 0x1077
+&device.id		pci 0x1216
+|vendor.id		pci 0x1077
+&device.id		pci 0x1240
+|vendor.id		pci 0x1077
+&device.id		pci 0x1280
++driver.module.modprobe	qla1280
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2100
++driver.module.modprobe	qla2100
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2200
++driver.module.modprobe	qla2200
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2300
+|vendor.id		pci 0x1077
+&device.id		pci 0x2312
++driver.module.modprobe	qla2300
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2322
++driver.module.modprobe	qla2322
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x2422
+|vendor.id		pci 0x1077
+&device.id		pci 0x2432
++driver.module.modprobe	qla2400
++requires		qlogic-firmware
+
+ vendor.id		pci 0x1077
+&device.id		pci 0x6312
+|vendor.id		pci 0x1077
+&device.id		pci 0x6322
++driver.module.modprobe	qla6312
++requires		qlogic-firmware
+
+# module.alias, #141069
+ vendor.id		pci 0x1077
+&device.id		pci 0x4010
+|vendor.id		pci 0x1077
+&device.id		pci 0x4022
++hwclass		storage
++driver.module.modprobe	qla4xxx
++requires		qlogic-firmware
+
+# ahci/ata_piix (#355983, #304134)
+ vendor.id		pci 0x8086
+&device.id		pci 0x2652+0x0002
++driver.module.modprobe ahci|ata_piix
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

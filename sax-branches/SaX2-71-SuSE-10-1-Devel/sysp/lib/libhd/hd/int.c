@@ -659,6 +659,46 @@ void int_mouse(hd_data_t *hd_data)
   hd_t *hd;
   bios_info_t *bt = NULL;
 
+#if 0
+  str_list_t *sl;
+  int is_mouse;
+
+  for(hd = hd_data->hd; hd; hd = hd->next) {
+    if(
+      hd->bus.id != bus_usb ||
+      hd->base_class.id != bc_mouse ||
+      hd->sub_class.id != sc_mou_usb ||
+      !search_str_list(hd->drivers, "usbhid")
+    ) continue;
+
+    is_mouse = 0;
+
+    for(sl = hd->unix_dev_names; sl; sl = sl->next) {
+      if(strstr(sl->str, "/mice") || strstr(sl->str, "/mouse")) {
+        is_mouse = 1;
+        break;
+      }
+    }
+
+    if(!is_mouse) {
+      if(
+        (hd->unix_dev_name && strstr(hd->unix_dev_name, "/mice")) ||
+        (hd->unix_dev_name2 && strstr(hd->unix_dev_name2, "/mouse"))
+      ) {
+        is_mouse = 1;
+      }
+    }
+
+    /* not really a mouse */
+    if(!is_mouse) {
+      hd->base_class.id = 0;
+      hd->sub_class.id = 0;
+      hd->compat_vendor.id = 0;
+      hd->compat_device.id = 0;
+    }
+  }
+#endif
+
   for(hd = hd_data->hd; hd; hd = hd->next) {
     if(
       hd->detail &&
@@ -794,6 +834,8 @@ void int_wlan(hd_data_t *hd_data)
     "ipw2100",
     "ipw2200",
     "ipw3945",
+    "iwl3945",
+    "iwl4965",
     "netwave_cs",
     "orinoco_cs",
     "orinoco_pci",

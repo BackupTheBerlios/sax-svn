@@ -641,15 +641,52 @@
 +driver.module.modprobe	ibmveth
 
 
+# IBM ehea
+ vendor.id		special 0x6001
+&device.id		special 0x1003
++driver.module.modprobe	ehea
+
+
 # UML veth
  vendor.id		special 0x6010
 +vendor.name		UML
 
 
-# Xen veth
+# Xen network & storage
  vendor.id		special 0x6011
 +vendor.name		Xen
 
+ vendor.id		special 0x6011
+&device.id		special 0x0001
++driver.module.modprobe	xennet
+
+ vendor.id		special 0x6011
+&device.id		special 0x0002
++driver.module.modprobe	xen-vnif
+
+ vendor.id		special 0x6011
+&device.id		special 0x1001
++driver.module.modprobe	xenblk
+
+ vendor.id		special 0x6011
+&device.id		special 0x1002
++driver.module.modprobe	xen-vbd
+
+# VirtualIron
+ vendor.id		special 0x6012
++vendor.name		VirtualIron
+
+ vendor.id		special 0x6012
+&device.id		special 0x0001
++driver.module.modprobe	kveth2
+
+# vm network & storage
+ vendor.id		special 0x6013
++vendor.name		Virtual
+
+ vendor.id		special 0x6013
+&device.id		special 0x0001
++driver.module.modprobe	netvsc
 
 # internal: usb scanner driver list
  vendor.id		special 0xf000
@@ -693,4 +730,13 @@
 &device.id		special 0x0001
 +device.name		Cross Partition Network adapter
 +driver.module.modprobe	xpnet
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# fingerprint reader
+
+ vendor.id		usb 0x0483
+&device.id		usb 0x2016
++baseclass.id		0x116
++subclass.id		0x00
 

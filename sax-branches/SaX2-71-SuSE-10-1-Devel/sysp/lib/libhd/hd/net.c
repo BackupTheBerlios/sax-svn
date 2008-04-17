@@ -36,7 +36,6 @@ static void add_mv(hd_data_t *hdata);
 static void add_iseries(hd_data_t *hdata);
 static void add_uml(hd_data_t *hdata);
 static void add_kma(hd_data_t *hdata);
-static void add_xen(hd_data_t *hdata);
 static void add_if_name(hd_t *hd_card, hd_t *hd);
 
 /*
@@ -124,8 +123,6 @@ void hd_scan_net(hd_data_t *hd_data)
       add_res_entry(&hd->res, res1);
     }
 
-    hw_addr = free_mem(hw_addr);
-
     hd->unix_dev_name = new_str(sf_cdev->name);
     hd->sysfs_id = new_str(hd_sysfs_id(sf_cdev->path));
 
@@ -135,6 +132,8 @@ void hd_scan_net(hd_data_t *hd_data)
     else if(hd->res) {
       get_driverinfo(hd_data, hd);
     }
+
+    hd_card = NULL;
 
     if(sf_dev) {
       hd->sysfs_device_link = new_str(hd_sysfs_id(sf_dev->path)); 
@@ -169,6 +168,29 @@ void hd_scan_net(hd_data_t *hd_data)
         add_if_name(hd_card, hd);
       }
     }
+
+    if(!hd_card && hw_addr) {
+      /* try to find card based on hwaddr (for prom-based cards) */
+
+      for(hd_card = hd_data->hd; hd_card; hd_card = hd_card->next) {
+        if(
+          hd_card->base_class.id != bc_network ||
+          hd_card->sub_class.id != 0
+        ) continue;
+        for(res = hd_card->res; res; res = res->next) {
+          if(
+            res->any.type == res_hwaddr &&
+            !strcmp(hw_addr, res->hwaddr.addr)
+          ) break;
+        }
+        if(res) {
+          hd->attached_to = hd_card->idx;
+          break;
+        }
+      }
+    }
+
+    hw_addr = free_mem(hw_addr);
 
 #if 0
     "ctc"	sc_nif_ctc
@@ -289,7 +311,6 @@ void hd_scan_net(hd_data_t *hd_data)
   if(hd_is_sgi_altix(hd_data)) add_xpnet(hd_data);
   if(hd_is_iseries(hd_data)) add_iseries(hd_data);
   add_uml(hd_data);
-  add_xen(hd_data);
   add_kma(hd_data);
   add_mv(hd_data);
 
@@ -522,7 +543,10 @@ void add_iseries(hd_data_t *hd_data)
     if(
       hd->module == hd_data->module &&
       hd->base_class.id == bc_network_interface &&
-      search_str_list(hd->drivers, "veth")
+      (
+        search_str_list(hd->drivers, "veth") ||
+        search_str_list(hd->drivers, "iseries_veth")
+      )
     ) {
       hd_card = add_hd_entry(hd_data, __LINE__, 0);
       hd_card->base_class.id = bc_network;
@@ -659,54 +683,6 @@ void add_kma(hd_data_t *hd_data)
       add_if_name(hd_card, hd);
     }
   }
-}
-
-
-/*
- * XEN veth devices.
- */
-void add_xen(hd_data_t *hd_data)
-{
-  hd_t *hd, *hd_card;
-  hd_res_t *res, *res2;
-  unsigned card_cnt = 0;
-  char *s = NULL;
-  struct stat sbuf;
-
-  for(hd = hd_data->hd ; hd; hd = hd->next) {
-    if(
-      hd->module == hd_data->module &&
-      hd->base_class.id == bc_network_interface
-    ) {
-      str_printf(&s, 0, "/proc/xen/net/%s", hd->unix_dev_name);
-      if(stat(s, &sbuf) || !S_ISDIR(sbuf.st_mode)) continue;
-
-      hd_card = add_hd_entry(hd_data, __LINE__, 0);
-      hd_card->base_class.id = bc_network;
-      hd_card->sub_class.id = 0x00;
-      hd_card->vendor.id = MAKE_ID(TAG_SPECIAL, 0x6011);	// Xen
-      hd_card->device.id = MAKE_ID(TAG_SPECIAL, 0x0001);
-      hd_card->slot = card_cnt++;
-      str_printf(&hd_card->device.name, 0, "Virtual Ethernet card %d", hd_card->slot);
-
-      hd->attached_to = hd_card->idx;
-
-      for(res = hd->res; res; res = res->next) {
-        if(res->any.type == res_hwaddr) break;
-      }
-
-      if(res) {
-        res2 = new_mem(sizeof *res2);
-        res2->hwaddr.type = res_hwaddr;
-        res2->hwaddr.addr = new_str(res->hwaddr.addr);
-        add_res_entry(&hd_card->res, res2);
-      }
-
-      add_if_name(hd_card, hd);
-    }
-  }
-
-  free_mem(s);
 }
 
 

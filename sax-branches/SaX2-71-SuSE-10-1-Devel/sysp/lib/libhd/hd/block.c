@@ -52,10 +52,13 @@ void hd_scan_sysfs_block(hd_data_t *hd_data)
 
   if(hd_probe_feature(hd_data, pr_block_mods)) {
     PROGRESS(1, 0, "block modules");
-    load_module(hd_data, "ide_cd");
+    load_module(hd_data, "ide-cd");
+    load_module(hd_data, "ide-disk");
     load_module(hd_data, "sr_mod");
     load_module(hd_data, "sd_mod");
+#if !defined(__s390__) && !defined(__s390x__)
     load_module(hd_data, "st");
+#endif
   }
 
   PROGRESS(2, 0, "sysfs drivers");
@@ -754,6 +757,8 @@ void add_scsi_sysfs_info(hd_data_t *hd_data, hd_t *hd, struct sysfs_device *sf_d
     /* it's a bit of a hack, actually */
     t = new_str(hd_sysfs_id(sf_dev->path));
     if(t) {
+      if((s = strrchr(t, '/'))) *s = 0;
+      if((s = strrchr(t, '/'))) *s = 0;
       if((s = strrchr(t, '/'))) *s = 0;
       if((s = strrchr(t, '/'))) *s = 0;
       if((s = strrchr(t, '/'))) {

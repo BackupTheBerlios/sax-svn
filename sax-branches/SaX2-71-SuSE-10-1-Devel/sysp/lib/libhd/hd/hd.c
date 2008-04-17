@@ -1,3 +1,4 @@
+#define _GNU_SOURCE			/* strcasestr() */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -307,7 +308,8 @@ static struct s_pr_flags {
   { pr_edd_mod,       pr_edd,       8|4|2|1, "edd.mod"       },
   { pr_input,         0,            8|4|2|1, "input"         },
   { pr_wlan,          0,            8|4|2|1, "wlan"          },
-  { pr_hal,           0,                  0, "hal"           }
+  { pr_hal,           0,                  0, "hal"           },
+  { pr_modules_pata,  0,                  0, "modules.pata"  }
 };
 
 struct s_pr_flags *get_pr_flags(enum probe_feature feature)
@@ -716,6 +718,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
 
     case hw_usb:
       hd_set_probe_feature(hd_data, pr_usb);
+      hd_set_probe_feature(hd_data, pr_input);
       hd_set_probe_feature(hd_data, pr_isdn);	// need pr_misc, too?
       hd_set_probe_feature(hd_data, pr_block);
       hd_set_probe_feature(hd_data, pr_block_mods);
@@ -758,6 +761,7 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
       hd_set_probe_feature(hd_data, pr_block);
       hd_set_probe_feature(hd_data, pr_block_mods);
       hd_set_probe_feature(hd_data, pr_scsi);
+      hd_set_probe_feature(hd_data, pr_usb);
       break;
 
     case hw_ide:
@@ -789,6 +793,10 @@ void hd_set_probe_feature_hw(hd_data_t *hd_data, hd_hw_item_t item)
     case hw_bluetooth:
       hd_set_probe_feature(hd_data, pr_usb);
       hd_set_probe_feature(hd_data, pr_isdn);	// need pr_misc, too?
+      break;
+
+    case hw_fingerprint:
+      hd_set_probe_feature(hd_data, pr_usb);
       break;
 
     case hw_all:
@@ -1278,6 +1286,9 @@ hd_t *free_hd_entry(hd_t *hd)
 
   free_mem(hd->modalias);
 
+  hd_free_hal_properties(hd->hal_prop);
+  hd_free_hal_properties(hd->persistent_prop);
+
   memset(hd, 0, sizeof *hd);
 
   return NULL;
@@ -1747,6 +1758,7 @@ void hd_scan(hd_data_t *hd_data)
     if(hd_probe_feature(hd_data, pr_udev)) hd_data->flags.udev = 1;
     if(!hd_probe_feature(hd_data, pr_bios_crc)) hd_data->flags.nobioscrc = 1;
     if(hd_probe_feature(hd_data, pr_bios_vram)) hd_data->flags.biosvram = 1;
+    if(hd_probe_feature(hd_data, pr_modules_pata)) hd_data->flags.pata = 1;
   }
 
   /* get shm segment, if we didn't do it already */
@@ -2365,6 +2377,23 @@ str_list_t *free_str_list(str_list_t *list)
 }
 
 
+/** \relates s_str_list_t
+ * Reverse string list.
+ */
+str_list_t *reverse_str_list(str_list_t *list)
+{
+  str_list_t *sl, *sl_new = NULL, *next;
+
+  for(sl = list; sl; sl = next) {
+    next = sl->next;
+    sl->next = sl_new;
+    sl_new = sl;
+  }
+
+  return sl_new;
+}
+
+
 /*
  * Read a file; return a linked list of lines.
  *
@@ -2496,10 +2525,46 @@ char *hd_read_symlink(char *link_name)
   static char buf[256];
   int i;
 
+  if(!link_name) {
+    *buf = 0;
+
+    return buf;
+  }
+
   i = readlink(link_name, buf, sizeof buf);
   buf[sizeof buf - 1] = 0;
   if(i >= 0 && (unsigned) i < sizeof buf) buf[i] = 0;
   if(i < 0) *buf = 0;
+
+  return buf;
+}
+
+
+char *hd_read_sysfs_link(char *base_dir, char *link_name)
+{
+  char *s = NULL, *l, *t;
+  static char *buf = NULL;
+
+  if(!base_dir || !link_name) return NULL;
+
+  str_printf(&s, 0, "%s/%s", base_dir, link_name);
+  l = hd_read_symlink(s);
+  if(!*l) return NULL;
+
+  free_mem(buf);
+
+  buf = new_mem(strlen(base_dir) + strlen(l) + 2);
+
+  s[strlen(base_dir)] = 0;
+
+  while(!strncmp(l, "../", 3)) {
+    if((t = strrchr(s, '/'))) *t = 0;
+    l += 3;
+  }
+
+  sprintf(buf, "%s/%s", s, l);
+
+  free_mem(s);
 
   return buf;
 }
@@ -3074,6 +3139,49 @@ int hd_is_iseries(hd_data_t *hd_data)
   struct stat sbuf;
 
   return stat(PROC_ISERIES, &sbuf) ? 0 : 1;
+}
+
+
+/*
+ * check for xen hypervisor
+ */
+int hd_is_xen(hd_data_t *hd_data)
+{
+#if defined(__i386__) || defined(__x86_64__)
+
+  char signature[13];
+  unsigned u, foo;
+
+  __asm__(
+#ifdef __i386__
+    "push %%ebx\n\t"
+    "cpuid\n\t"
+    "mov %%ebx,(%%esi)\n\t"
+    "mov %%ecx,4(%%esi)\n\t"
+    "mov %%edx,8(%%esi)\n\t"
+    "pop %%ebx"
+#else
+    "push %%rbx\n\t"
+    "cpuid\n\t"
+    "mov %%ebx,(%%rsi)\n\t"
+    "mov %%ecx,4(%%rsi)\n\t"
+    "mov %%edx,8(%%rsi)\n\t"
+    "pop %%rbx"
+#endif
+    : "=a" (u), "=c" (foo)
+    : "a" (0x40000000), "c" (0), "S" (signature)
+    : "%edx"
+  );
+
+  signature[12] = 0;
+
+  return u < 0x40000002 || strcmp(signature, "XenVMMXenVMM") ? 0 : 1;
+
+#else
+
+  return 0;
+
+#endif
 }
 
 
@@ -4568,6 +4676,10 @@ void assign_hw_class(hd_data_t *hd_data, hd_t *hd)
           base_class = bc_bluetooth;
           break;
 
+        case hw_fingerprint:
+          base_class = bc_fingerprint;
+          break;
+
         case hw_wlan:
         case hw_block:
         case hw_tape:
@@ -4761,9 +4873,25 @@ void create_model_name(hd_data_t *hd_data, hd_t *hd)
 
     dev = new_str(hd->sub_device.name);
 
-    if(!vend) vend = new_str(hd->vendor.name);
+    /* catch strange subdevice names */
+    if(
+      dev &&
+      (
+        (strcasestr(dev, "motherboard") && !strcasestr(dev, "on motherboard")) ||
+        strcasestr(dev, "mainboard") ||
+        strcasestr(dev, "primergy") ||
+        strcasestr(dev, "poweredge")
+      )
+    ) {
+      dev = free_mem(dev);
+    }
 
-    if(!dev) dev = new_str(hd->device.name);
+    if(!vend || !dev) {
+      vend = free_mem(vend);
+      dev = free_mem(dev);
+      vend = new_str(hd->vendor.name);
+      dev = new_str(hd->device.name);
+    }
 
     if(dev) {
       if(vend) {
@@ -5780,5 +5908,33 @@ char *hd_get_hddb_path(char *sub)
 
   return dir;
 }
+
+
+/*
+ * must be able to read more than one line
+ */
+char *get_sysfs_attr_by_path(const char* path, const char* attr)
+{
+  static char buf[1024];
+  int i, fd;
+
+  sprintf(buf, "%s/%s", path, attr);
+  fd = open(buf, O_RDONLY);
+  if(fd >= 0) {
+    i = read(fd, buf, sizeof buf - 1);
+    close(fd);
+    if(i >= 0) {
+      buf[i] = 0;
+    }
+    else {
+      return NULL;
+    }
+  }
+  else {
+    return NULL;
+  }
+
+  return buf;
+}  
 
 

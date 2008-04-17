@@ -70,6 +70,7 @@ static struct {
   { 305, 230, 1400, 1050, "Samsung Electronics", "SX20S", "Revision PR" },
   { 290, 200, 1280,  800, "TOSHIBA", "Satellite M30X", "PSA72E-00J020GR" },
   { 305, 230, 1400, 1050, "ASUSTeK Computer Inc.", "M6V", "1.0" },
+  { 248, 189,  640,  480, "IBM CORPORATION", "4851514", NULL },
 };
 
 #define BIOS_TEST
@@ -380,6 +381,15 @@ void hd_scan_bios(hd_data_t *hd_data)
   if(bt->smp.ok && bt->smp.mpconfig) {
     mem.start = bt->smp.mpconfig;
     mem.size = 1 << 16;
+
+    /*
+     * xen is somewhat picky, bug 154681:
+     * reduce size to not overlap 1MB border, but not below 0x40 bytes
+     */
+    if(mem.start < (1 << 20) - 0x40 && mem.start > ((1 << 20) - mem.size)) {
+      mem.size = (1 << 20) - mem.start;
+    }
+
     mem.data = NULL;
     read_memory(hd_data, &mem);
     parse_mpconfig(hd_data, &mem, &bt->smp);
@@ -615,23 +625,36 @@ void smbios_get_info(hd_data_t *hd_data, memory_range_t *mem, bios_info_t *bt)
   memory_range_t memory;
   hd_smbios_t *sm;
 
-  if(!mem->data || mem->size < 0x100) return;
+  if(!mem->data || mem->size < 0x10) return;
 
-  for(u = ok = 0; u <= mem->size - 0x100; u += 0x10) {
+  for(u = ok = 0; u <= mem->size - 0x10; u += 0x10) {
     if(*(unsigned *) (mem->data + u) == 0x5f4d535f) {	/* "_SM_" */
       hlen = mem->data[u + 5];
+      if(hlen < 0x1e || u + hlen > mem->size) continue;
       addr = *(unsigned *) (mem->data + u + 0x18);
       len = *(unsigned short *) (mem->data + u + 0x16);
       structs = *(unsigned short *) (mem->data + u + 0x1c);
-      if(hlen < 0x1e) continue;
       ok = crc(mem->data + u, hlen) == 0 && len;
-      if(ok) break;
+      if(ok) {
+        bt->smbios_ver = (mem->data[u + 6] << 8) + mem->data[u + 7];
+        break;
+      }
+    }
+    /* Also look for legacy DMI entry point */
+    if(memcmp(mem->data + u, "_DMI_", 5) == 0) {
+      hlen = 0x0f;
+      addr = *(unsigned *) (mem->data + u + 0x08);
+      len = *(unsigned short *) (mem->data + u + 0x06);
+      structs = *(unsigned short *) (mem->data + u + 0x0c);
+      ok = crc(mem->data + u, hlen) == 0 && len;
+      if(ok) {
+        bt->smbios_ver = ((mem->data[u + 0x0e] & 0xf0) << 4) + (mem->data[u + 0x0e] & 0x0f);
+        break;
+      }
     }
   }
 
   if(!ok) return;
-
-  bt->smbios_ver = (mem->data[u + 6] << 8) + mem->data[u + 7];
 
   hd_data->smbios = smbios_free(hd_data->smbios);
 

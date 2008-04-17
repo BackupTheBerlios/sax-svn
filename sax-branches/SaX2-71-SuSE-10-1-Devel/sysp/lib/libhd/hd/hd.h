@@ -106,7 +106,7 @@ typedef enum probe_feature {
   pr_block, pr_block_cdrom, pr_block_part, pr_edd, pr_edd_mod, pr_bios_ddc,
   pr_bios_fb, pr_bios_mode, pr_input, pr_block_mods, pr_bios_vesa,
   pr_cpuemu_debug, pr_scsi_noserial, pr_wlan, pr_bios_crc, pr_hal,
-  pr_bios_vram,
+  pr_bios_vram, pr_modules_pata,
   pr_max, pr_lxrc, pr_default, pr_all		/* pr_all must be last */
 } hd_probe_feature_t;
 
@@ -127,7 +127,7 @@ typedef enum hw_item {
   hw_isapnp, hw_bridge, hw_hub, hw_scsi, hw_ide, hw_memory, hw_dvb,
   hw_pcmcia, hw_pcmcia_ctrl, hw_ieee1394, hw_ieee1394_ctrl, hw_hotplug,
   hw_hotplug_ctrl, hw_zip, hw_pppoe, hw_wlan, hw_redasd, hw_dsl, hw_block,
-  hw_tape, hw_vbe, hw_bluetooth,
+  hw_tape, hw_vbe, hw_bluetooth, hw_fingerprint,
   /* append new entries here */
   hw_unknown, hw_all					/* hw_all must be last */
 } hd_hw_item_t;
@@ -148,7 +148,7 @@ typedef enum base_classes {
   bc_monitor = 0x100, bc_internal, bc_modem, bc_isdn, bc_ps2, bc_mouse,
   bc_storage_device, bc_network_interface, bc_keyboard, bc_printer,
   bc_hub, bc_braille, bc_scanner, bc_joystick, bc_chipcard, bc_camera,
-  bc_framebuffer, bc_dvb, bc_tv, bc_partition, bc_dsl, bc_bluetooth
+  bc_framebuffer, bc_dvb, bc_tv, bc_partition, bc_dsl, bc_bluetooth, bc_fingerprint
 } hd_base_classes_t;
 
 /* subclass values of bc_monitor */
@@ -2341,6 +2341,8 @@ typedef struct {
     unsigned keep_kmods:2;	/**< internal: don't reread kmods */
     unsigned nobioscrc:1;	/**< internal: don't check VBIOS crc */
     unsigned biosvram:1;	/**< internal: map Video BIOS RAM (128k at 0xa0000) */
+    unsigned nowpa:1;		/**< do not probe WPA capabilities */
+    unsigned pata:1;		/**< use new libata modules instead of classical ide modules */
   } flags;
 
 
@@ -2457,6 +2459,7 @@ int hd_smp_support(hd_data_t *hd_data);
 int hd_mac_color(hd_data_t *hd_data);
 int hd_color(hd_data_t *hd_data);
 int hd_is_uml(hd_data_t *hd_data);
+int hd_is_xen(hd_data_t *hd_data);
 unsigned hd_display_adapter(hd_data_t *hd_data);
 unsigned hd_boot_disk(hd_data_t *hd_data, int *matches);
 enum cpu_arch hd_cpu_arch(hd_data_t *hd_data);

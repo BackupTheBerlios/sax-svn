@@ -28,8 +28,7 @@ static void read_devtree(hd_data_t *hd_data);
 static void add_pci_prom_devices(hd_data_t *hd_data, hd_t *hd_parent, devtree_t *parent);
 static void add_legacy_prom_devices(hd_data_t *hd_data, devtree_t *dt);
 static int add_prom_display(hd_data_t *hd_data, devtree_t *dt);
-static int add_prom_vscsi(hd_data_t *hd_data, devtree_t *dt);
-static int add_prom_veth(hd_data_t *hd_data, devtree_t *dt);
+static void add_prom_ehea(hd_data_t *hd_data, devtree_t *dt);
 static void add_devices(hd_data_t *hd_data);
 static void dump_devtree_data(hd_data_t *hd_data);
 
@@ -458,9 +457,9 @@ void add_legacy_prom_devices(hd_data_t *hd_data, devtree_t *dt)
 {
   if(dt->pci) return;
 
+  add_prom_ehea(hd_data, dt);
+
   if(add_prom_display(hd_data, dt)) return;
-  if(add_prom_vscsi(hd_data, dt)) return;
-  if(add_prom_veth(hd_data, dt)) return;
 }
 
 int add_prom_display(hd_data_t *hd_data, devtree_t *dt)
@@ -509,80 +508,62 @@ int add_prom_display(hd_data_t *hd_data, devtree_t *dt)
   return 0;
 }
 
-int add_prom_vscsi(hd_data_t *hd_data, devtree_t *dt)
+void add_prom_ehea(hd_data_t *hd_data, devtree_t *dt)
 {
   hd_t *hd;
-  char *s, *id;
+  hd_res_t *res;
+  char *path = NULL;
+  unsigned char *hw_addr_bin = NULL;
+  char *hw_addr = NULL;
+  int slot;
 
   if(
-    dt->path &&
-    dt->device_type &&
-    !strcmp(dt->device_type, "vscsi")
-  ) {
-    /* vscsi storage */
-
-    if(
-      (s = strstr(dt->path, "v-scsi@")) &&
-      *(id = s + sizeof "v-scsi@" - 1)
-    ) {
-      hd = add_hd_entry(hd_data, __LINE__, 0);
-      hd->bus.id = bus_vio;
-      hd->base_class.id = bc_storage;
-      hd->sub_class.id = sc_sto_scsi;
-      hd->slot = veth_cnt++;
-
-      hd->vendor.id = MAKE_ID(TAG_SPECIAL, 0x6001);
-      hd->device.id = MAKE_ID(TAG_SPECIAL, 0x1001);
-      str_printf(&hd->device.name, 0, "Virtual SCSI %d", hd->slot);
-      hd->rom_id = new_str(dt->path);
-
-      str_printf(&hd->sysfs_id, 0, "/devices/vio/%s", id);
-      str_printf(&hd->sysfs_bus_id, 0, "%s", id);
-
-      return 1;
-    }
-  }
-
-  return 0;
-}
-
-int add_prom_veth(hd_data_t *hd_data, devtree_t *dt)
-{
-  hd_t *hd;
-  char *s, *id;
-
-  if(
-    dt->path &&
     dt->device_type &&
     dt->compatible &&
     !strcmp(dt->device_type, "network") &&
-    !strcmp(dt->compatible, "IBM,l-lan")
+    !strcmp(dt->compatible, "IBM,lhea-ethernet")
   ) {
-    /* veth network */
+    str_printf(&path, 0, PROC_PROM "/%s", dt->path);
 
-    if(
-      (s = strstr(dt->path, "l-lan@")) &&
-      *(id = s + sizeof "l-lan@" - 1)
-    ) {
-      hd = add_hd_entry(hd_data, __LINE__, 0);
-      hd->bus.id = bus_vio;
-      hd->base_class.id = bc_network;
-      hd->sub_class.id = 0x00;
-      hd->slot = veth_cnt++;
+    ADD2LOG("  ehea: %s\n", path);
 
-      hd->vendor.id = MAKE_ID(TAG_SPECIAL, 0x6001);
-      hd->device.id = MAKE_ID(TAG_SPECIAL, 0x1002);
-      str_printf(&hd->device.name, 0, "Virtual Ethernet card %d", hd->slot);
-      hd->rom_id = new_str(dt->path);
+    hd = add_hd_entry(hd_data, __LINE__, 0);
+    hd->bus.id = bus_none;
+    hd->base_class.id = bc_network;
+    hd->sub_class.id = 0;	/* ethernet */
 
-      str_printf(&hd->sysfs_id, 0, "/devices/vio/%s", id);
-      str_printf(&hd->sysfs_bus_id, 0, "%s", id);
+    hd->vendor.id = MAKE_ID(TAG_SPECIAL, 0x6001);
+    hd->device.id = MAKE_ID(TAG_SPECIAL, 0x1003);
+    hd->rom_id = new_str(dt->path);
 
-      return 1;
+    read_int(path, "ibm,hea-port-no", &slot);
+    hd->slot = slot;
+
+    read_str(path, "ibm,fw-adapter-name", &hd->device.name);
+    if(!hd->device.name) {
+      hd->device.name = new_str("IBM Host Ethernet Adapter");
+    }
+
+    // "mac-address" or "local-mac-address" ?
+    read_mem(path, "local-mac-address", &hw_addr_bin, 6);
+
+    if(hw_addr_bin) {
+      str_printf(
+        &hw_addr, 0, "%02x:%02x:%02x:%02x:%02x:%02x",
+        hw_addr_bin[0], hw_addr_bin[1],
+        hw_addr_bin[2], hw_addr_bin[3],
+        hw_addr_bin[4], hw_addr_bin[5]
+      );
+      res = new_mem(sizeof *res);
+      res->hwaddr.type = res_hwaddr;
+      res->hwaddr.addr = new_str(hw_addr);
+      add_res_entry(&hd->res, res);
     }
   }
 
-  return 0;
+  free_mem(hw_addr_bin);
+  free_mem(hw_addr);
+  free_mem(path);
 }
 
 void add_devices(hd_data_t *hd_data)

@@ -40,7 +40,7 @@
 
  baseclass.id		0x001
 &subclass.id		0x80
-+subclass.name		Unknown mass storage controller
++subclass.name		Storage controller
 
  baseclass.id		0x002
 +baseclass.name		Network controller
@@ -957,4 +957,7 @@
 
  baseclass.id		0x115
 +baseclass.name		Bluetooth Device
+
+ baseclass.id		0x116
++baseclass.name		Fingerprint Reader
 
