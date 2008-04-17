@@ -1,0 +1,12 @@
+!remove InputDevice -> [X] -> Option -> Device
+!remove InputDevice -> [X] -> Option -> Buttons
+!remove InputDevice -> [X] -> Option -> Protocol
+!remove InputDevice -> [X] -> Option -> ZAxisMapping
+
+InputDevice -> [X] -> Identifier = Mouse[[X]]
+InputDevice -> [X] -> Driver     = evdev
+InputDevice -> [X] -> Option -> InputFashion         = Mouse
+InputDevice -> [X] -> Option -> Name                 = Logitech USB Receiver
+InputDevice -> [X] -> Option -> evendor              = 046d
+InputDevice -> [X] -> Option -> product              = c521
+InputDevice -> [X] -> Option -> HWHEELRelativeAxisButtons = 7 6

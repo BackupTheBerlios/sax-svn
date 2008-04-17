@@ -69,6 +69,15 @@ sub AutoDetectKeyboard {
 		if ($i =~ /Pass/)        {
 			$var{InputDevice}{0}{Option}{Pass}        = $value;
 		}
+		if ($i =~ /HWHEELRelativeAxisButtons/) {
+			$var{InputDevice}{0}{Option}{HWHEELRelativeAxisButtons} = $value;
+		}
+		if ($i =~ /evendor/)     {
+			$var{InputDevice}{0}{Option}{evendor}     = $value;
+		}
+		if ($i =~ /product/)     {
+			$var{InputDevice}{0}{Option}{product}     = $value;
+		}
 	}
 	return(%var);
 }

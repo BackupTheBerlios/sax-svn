@@ -376,6 +376,21 @@ sub ApiImportKeyboard {
         $var{InputDevice}{0}{Option}{Pass} = $value;
         last SWITCH;
         };
+
+		/^HWHEELRelativeAxisButtons/ && do {
+		$var{InputDevice}{0}{Option}{HWHEELRelativeAxisButtons} = $value;
+		last SWITCH;
+		};
+
+		/^evendor/ && do {
+		$var{InputDevice}{0}{Option}{evendor} = $value;
+		last SWITCH;
+		};
+
+		/^product/ && do {
+		$var{InputDevice}{0}{Option}{product} = $value;
+		last SWITCH;
+		};
 	}
 	}
 	return(%var);
