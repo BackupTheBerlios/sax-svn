@@ -187,6 +187,13 @@ sub AutoDetectResolution {
 			}
 		}
 		}
+		# ...
+		# add PreferredMode to the Monitor setup
+		# ---
+		my @mlist = split (/,/,$mode);
+		if ($mlist[0]) {
+			$var{Monitor}{$i}{PreferredMode} = $mlist[0];
+		}
 	}
 	}
 
