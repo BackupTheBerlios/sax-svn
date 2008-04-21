@@ -3,14 +3,14 @@
 # Copyright (C) SuSE Linux AG, 2002
 #
 # Mike Fabian <mfabian@suse.de>, 2002.
-# Yasuhiko Kamata <belphegor@belbel.or.jp>, 2007.
+# Yasuhiko Kamata <belphegor@belbel.or.jp>, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-10-16 14:51+0900\n"
+"PO-Revision-Date: 2008-04-16 23:09+0900\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese\n"
+"Language-Team: Japanese <opensuse-ja@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1165,104 +1165,96 @@ msgid "Right Win-key switches group while pressed."
 msgstr "右 Win キーでグループを変更"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Serbia"
-msgstr "シリア"
+msgstr "セルビア"
 
 #. XKBFile extension text
 msgid "Guinea"
-msgstr ""
+msgstr "ギニア"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Montenegro"
-msgstr "セルビアモンテネグロ"
+msgstr "モンテネグロ"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "China"
-msgstr "チェコ"
+msgstr "中国"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "USA"
-msgstr "USB"
+msgstr "USA"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the EuroSign to the 4 key."
-msgstr "ユーロ通貨記号を 5 キーに追加"
+msgstr "ユーロ通貨記号を 4 キーに追加"
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
-msgstr ""
+msgstr "ドット付きの 4 レベルのキー"
 
 #. XKBFile extension text
 msgid "Legacy Wang 724 keypad"
-msgstr ""
+msgstr "古くからの Wang 724 テンキー"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
-msgstr ""
+msgstr "抽象的な区切り文字のある 4 レベルのキー"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad with unicode additions (arrows and math operators)"
 msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
-msgstr ""
+msgstr "古くからのテンキー"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift cancels CapsLock."
-msgstr "Ctrl と CapsLock を入れ替える"
+msgstr "Shift キーで CapsLock をキャンセルする"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap ESC and CapsLock."
-msgstr "Ctrl と CapsLock を入れ替える"
+msgstr "ESC と CapsLock を入れ替える"
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Wang 724 keypad with unicode additions (arrows and math operators). Math "
 "operators on default level."
-msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
+msgstr ""
+"Wang 724 テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など) 数学演算子"
+"は既定のレベル"
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
-msgstr ""
+msgstr "カンマ付きの 4 レベルのキー"
 
 #. XKBFile extension text
 msgid "Legacy key with comma"
-msgstr ""
+msgstr "カンマ付きで古くからあるキー"
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Keypad with unicode additions (arrows and math operators). Math operators on "
 "default level."
-msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
+msgstr ""
+"テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など) 数学演算子は既定のレ"
+"ベル"
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
-msgstr ""
+msgstr "ドット付きで歩くからあるキー"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr ""
+msgstr "momayyez 付きの 4 レベルのキー"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad delete key behaviour"
-msgstr "テンキーのレイアウト選択"
+msgstr "テンキーの DEL キーの振る舞い"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
+msgstr "Wang 724 テンキーに UNICODE 追加文字を設定 (矢印や数学演算子など)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1482,8 +1474,9 @@ msgid ""
 "file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
 "from the calling instance:"
 msgstr ""
-"<b>設定テストに失敗しました<hr>詳細については、ファイル <tt>/var/log/Xorg.99."
-"log</tt> を参照してください。 次の出力は呼び出し段階で作成されているものです:"
+"<b>設定テストに失敗しました</b><hr>詳細については、ファイル <tt>/var/log/"
+"Xorg.99.log</tt> を参照してください。 次の出力は呼び出し段階で作成されている"
+"ものです:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid ""
@@ -1952,6 +1945,3 @@ msgstr "画面の設定:"
 
 msgid "Idle timer..."
 msgstr "無操作タイマー ..."
-
-#~ msgid "Serbia and Montenegro"
-#~ msgstr "セルビアモンテネグロ"

@@ -6,7 +6,7 @@
 # Szabolcs Varga <shirokuma@shirokuma.hu>, 2004, 2005.
 # Papp Zsolt <zpapp@novell.com>, 2006.
 # Keresztes Ákos <xsak@c2.hu>, 2006.
-# Kalman Kemenczy <kkemenczy@novell.com>, 2006, 2007.
+# Kalman Kemenczy <kkemenczy@novell.com>, 2006, 2007, 2008.
 # Gabor Kelemen <kelemeng@gnome.hu>, 2007.
 # translation of sax.hu.po to
 # Hungarian message file for SaX.
@@ -15,16 +15,16 @@
 # Rev. 8.1: 2002.07.23 Marcel Hilzinger <hili@suselinux.hu>
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2007-09-01 16:04+0200\n"
+"PO-Revision-Date: 2008-04-15 15:11+0200\n"
 "Last-Translator: Kalman Kemenczy <kkemenczy@novell.com>\n"
 "Language-Team:  <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1248,34 +1248,31 @@ msgstr "Az Alt+Ctrl billentyűkombináció vált csoportot."
 msgid "Right Win-key switches group while pressed."
 msgstr "A jobb Win billentyű megnyomása csoportot vált."
 
+# src/trans.h:311
 #. XKBFile extension text
-#, fuzzy
 msgid "Serbia"
-msgstr "Szíria"
+msgstr "Szerbia"
 
+# GN
 #. XKBFile extension text
 msgid "Guinea"
-msgstr ""
+msgstr "Guinea"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Montenegro"
-msgstr "Szerbia-Montenegró"
+msgstr "Montenegró"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "China"
-msgstr "Csehország"
+msgstr "Kína"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "USA"
-msgstr "USB"
+msgstr "USA"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the EuroSign to the 4 key."
-msgstr "Az euro jel hozzáadása az 5 billentyűhöz."
+msgstr "Az euro jel hozzáadása a 4-es billentyűhöz."
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
@@ -2070,6 +2067,3 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenségi időzítő..."
-
-#~ msgid "Serbia and Montenegro"
-#~ msgstr "Szerbia-Montenegró"
