@@ -63,6 +63,9 @@ sub AutoDetectKeyboard {
 		if ($i =~ /evBits/)      {
 			$var{InputDevice}{0}{Option}{evBits}      = $value;
 		}
+		if ($i =~ /absBits/)      {
+			$var{InputDevice}{0}{Option}{absBits}     = $value;
+		}
 		if ($i =~ /keyBits/)     {
 			$var{InputDevice}{0}{Option}{keyBits}     = $value;
 		}

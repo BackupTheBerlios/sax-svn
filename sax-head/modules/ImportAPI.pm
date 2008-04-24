@@ -367,6 +367,11 @@ sub ApiImportKeyboard {
         last SWITCH;
         };
 
+		/^absBits/       && do {
+		$var{InputDevice}{0}{Option}{absBits} = $value;
+		last SWITCH;
+		};
+
 		/^keyBits/      && do {
         $var{InputDevice}{0}{Option}{keyBits} = $value;
         last SWITCH;
