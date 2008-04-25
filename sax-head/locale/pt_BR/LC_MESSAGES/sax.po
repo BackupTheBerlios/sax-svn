@@ -1,20 +1,25 @@
-# translation of sax.po to Português Brasileiro
+# translation of sax.po to
 # SaX Translations.
 # Craig Jeffares cjeffares@novell.com
 #
 #
 # Luiz Fernando Ranghetti <elchevive68@gmail.com>, 2008.
+# Rafael Reuber <psico.indie@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-04-17 03:08-0300\n"
+"PO-Revision-Date: 2008-04-22 13:58-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
-"Language-Team: Português Brasileiro <opensuse-translation-pt@opensuse.org>\n"
+"Language-Team: Brazilian Portuguese <opensuse-pt@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -32,15 +37,15 @@ msgid ""
 "Otherwise, change the configuration."
 msgstr ""
 "<b>Sugestão do SaX2</b><hr>O sistema gráfico iniciado atualmente é baseado "
-"em uma sugestão feita pelo SaX2. Se isso for aceitável, clique em <b>OK</"
-"b>.  Caso contrário, mude a configuração."
+"em uma sugestões feitas pelo SaX2. Se a configuração for aceitável, clique "
+"em <b>OK</b>.  Caso contrário, altere a configuração."
 
 #. RTF text: 3D acceleration not supported with this card
 msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
-"<b>Aceleração 3D não suportada</b><hr>SaX2 não pode oferecer ativação do "
+"<b>Aceleração 3D não suportada</b><hr>SaX2 não pode fornecer ativação do "
 "subsistema 3D pois sua placa/driver gráfica não possuem suporte 3D."
 
 #. RTF text: 3D acceleration not supported with Xinerama
@@ -50,7 +55,7 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
-"<b>Aceleração 3D não suportada</b><hr>SaX2 não pode oferecer ativação do "
+"<b>Aceleração 3D não suportada</b><hr>SaX2 não pode fornecer ativação do "
 "subsistema 3D pois  modo dual head baseado no Xinerama está em uso. A "
 "extensão Xinerama do Xorg para combinar telas gráficas não suporta 3D em "
 "todas as telas."
@@ -65,7 +70,7 @@ msgstr "Informação..."
 
 #. Caption text for the main window
 msgid "SaX2: X11 Configuration"
-msgstr "SaX2: Configuração X11"
+msgstr "SaX2: Configuração do X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
@@ -76,8 +81,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
-"<b>Tamanha da exibição mudou</b><hr>O tamanho da exibição fou adaptado ao "
-"novo layout."
+"<b>Tamanho da tela mudada</b><hr>O tamanho da tela foi adaptado para o novo "
+"layout."
 
 #. Help Button text
 msgid "&Help"
@@ -119,7 +124,7 @@ msgstr "Monitor"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "Propriedades da Placa e do Monitor"
+msgstr "Propriedades da Placa de Vídeo e do Monitor"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -141,11 +146,11 @@ msgstr "Propriedades do Teclado"
 #. Short description of the Tablet module
 #. Tab title: Tablet vendor name selection
 msgid "Tablet"
-msgstr "Mesa Digitalizadora"
+msgstr "Tablet"
 
 #. title of module dialog
 msgid "Tablet Properties"
-msgstr "Propriedades da Mesa Digitalizadora"
+msgstr "Propriedades do Tablet"
 
 #. Short description of the Touchscreen module
 #. Tab text for a touchscreen tab of the touchscreen dialog
@@ -166,11 +171,11 @@ msgstr "Propriedades do Acesso Remoto"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
-msgstr "Exibição %1"
+msgstr "Tela %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
-msgstr "Ativar esta Exibição"
+msgstr "Ativar esta Tela"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
@@ -257,7 +262,7 @@ msgstr "Teste pronto"
 
 #. Status line of mouse test field: single button click
 msgid "Single Click: Done"
-msgstr "Único Clique: Concluído"
+msgstr "Clique Único: Concluído"
 
 #. Status line of mouse test field: double button click
 msgid "Double Click: Done"
@@ -301,15 +306,15 @@ msgstr "Ativar Aceleração 3D"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
-msgstr "Monitor para Placa"
+msgstr "Monitor para Placa de Vídeo"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr "Segundo Monitor para Placa"
+msgstr "Segundo Monitor para Placa de Video"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
-msgstr "Freqüências de Sincronização"
+msgstr "Frequências de Sincronização"
 
 #. Tab title: Setup display size
 msgid "Display Size"
@@ -318,7 +323,7 @@ msgstr "Tamanho da Tela"
 #. Tab title: Setup the monitor arrangement
 #. Title for the multihead arrangement
 msgid "Arrangement"
-msgstr "Localização"
+msgstr "Organização"
 
 #. Information about dual head mode. %1=the dual head modus %2=the resolution
 msgid "Activated in %1 mode with %2"
@@ -394,7 +399,7 @@ msgstr "Configurações do Monitor"
 
 #. Windowanager title for the mouse mode setup
 msgid "Mouse Settings"
-msgstr "Configurações do Monitor"
+msgstr "Configurações do Mouse"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
@@ -422,9 +427,9 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
-"<b>Comibinação Cor/Resolução inválida:</b><hr><nobr>A resolução selecionada "
-"e/ou configuração de cor</nobr> não são suportadas pelo framebuffer da placa "
-"gráfica."
+"<b>Comibinação de Cor/Resolução inválida:</b><hr><nobr>A resolução "
+"selecionada e/ou configuração de cor</nobr> não são suportadas pelo "
+"framebuffer da placa de vídeo."
 
 #. Popup message to ask the user for an option value
 msgid ""
@@ -435,15 +440,15 @@ msgstr ""
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Monitor: Seleção de Fornecedor e Nome"
+msgstr "Monitor: Seleção do Fabricante e do Nome"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr "Mouse: Seleção de Fornecedor e Nome"
+msgstr "Mouse: Seleção do Fabricante e do Nome"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr "Configuração Manual de Freqüência de Sincronização"
+msgstr "Configuração Manual da Frequência de Sincronização"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
@@ -451,7 +456,7 @@ msgstr "Diagonal e Proporção"
 
 #. Group box title for the display size setup
 msgid "Display Size in [ mm ]"
-msgstr "Tamanho do Vídeo em [ mm ]"
+msgstr "Tamanho da Tela em [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid ""
@@ -461,7 +466,7 @@ msgid ""
 msgstr ""
 "<b>Nota:</b> Faixas de sincronização incorretas podem danificar o monitor. "
 "Consulte o manual do monitor para obter as configurações.<br><br>Se quiser "
-"que o monitor não use sua classificação máxima, reduza as faixas de "
+"que o monitor não use sua configuração máxima de faixas, reduza as faixas de "
 "sincronização."
 
 #. Checkbox to activate DPMS
@@ -470,7 +475,7 @@ msgstr "Ativar DPMS"
 
 #. Button to popup the disk dialog for reading the monitor utility disk
 msgid "Utility Disk..."
-msgstr "Disco de Utilitários..."
+msgstr "Utilitário de Disco..."
 
 #. Label text for horizontal sync frequency
 msgid "Horizontal"
@@ -525,16 +530,17 @@ msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>Inserir CD ou Disco</b><hr>Insira o CD ou o disco do utilitário do "
-"fornecedor do monitor."
+"<b>Inserir CD ou Disquete</b><hr>Insira o CD ou Disquete do utilitário do "
+"fabricante do monitor."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
 "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
 "damaged medium or incorrectly formatted information files."
 msgstr ""
-"<b>Erro de Leitura</b><hr>Impossível ler do CD ou disco. Isso pode indicar "
-"uma mídia danificada ou arquivos de informações incorretamente formatados."
+"<b>Erro de Leitura</b><hr>Impossível ler o CD ou Disquete. Isso pode indicar "
+"que a mídia está danificada ou  os arquivos de informações estão formatados "
+"incorretamente."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -579,11 +585,11 @@ msgstr "Tabela de Chaves"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr "Comportamento Deslocar/Bloquear Grupo "
+msgstr "Comportamento Trocar/Bloquear Grupo "
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Usar LED do Teclado para Mostrar Grupo Alternativo"
+msgstr "Usar LED do Teclado para Exibir Grupo Alternativo"
 
 #. List View root item text
 msgid "Compose Key Position"
@@ -636,7 +642,7 @@ msgstr "Pressione a tecla Alt direita para escolher o 3o. nível."
 
 #. XKBFile extension text
 msgid "Left Alt key switches layout while pressed."
-msgstr "A tecla Alt esquerda alterna o layout quando pressionada."
+msgstr "A tecla Alt esquerda alterna o layout enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
@@ -648,11 +654,11 @@ msgstr "Teclas padrão do teclado numérico."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change layout."
-msgstr "As teclas Ctrl juntas alternam o layout."
+msgstr "Ambas a teclas Ctrl juntas alternam o layout."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr "Utilizando a tecla de espaço para inserir caracter non-breakable"
+msgstr "Utilizando a tecla de espaço para inserir caractere non-breakable"
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
@@ -680,7 +686,7 @@ msgstr "A tecla Ctrl direita alterna o layout quando pressionada."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr "Tecla de espaço retorna caracter de espaço non-breakable "
+msgstr "Tecla de espaço gera um espaço sem quebra de linha entre caracteres"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes layout."
@@ -696,7 +702,7 @@ msgstr "Seleção do layout do teclado numérico."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes layout."
-msgstr "A tecla Ctrl direita alterna o layout."
+msgstr "A tecla Ctrl direita muda o layout."
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes layout."
@@ -712,12 +718,13 @@ msgstr "O LED ScrollLock mostra o layout alternativo."
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
-msgstr "As teclas Shift juntas alternam o layout."
+msgstr "Ambas as teclas Shift juntas alternam o layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
 msgstr ""
-"Tecla de espaço retorna caracter de espaço non-breakable no segundo nível."
+"Tecla de espaço retorna caracter de espaço sem quebra de linha no segundo "
+"nível."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
@@ -726,7 +733,8 @@ msgstr "A tecla Windows direita alterna o layout."
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
 msgstr ""
-"Tecla de espaço retorna caracter de espaço non-breakable no terceiro nível."
+"Tecla de espaço retorna caracter de espaço sem quebra de linha no terceiro "
+"nível."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -742,20 +750,21 @@ msgstr "O LED NumLock mostra o layout alternativo."
 
 #. XKBFile extension text
 msgid "Left Shift key changes layout."
-msgstr "A tecla Shift esquerda alterna o layout."
+msgstr "A tecla Shift esquerda muda o layout."
 
 #. XKBFile extension text
 msgid "Left Win-key switches layout while pressed."
-msgstr "A tecla Windows esquerda alterna o layout quando pressionada."
+msgstr "A tecla Windows esquerda alterna o layout enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
 msgstr ""
-"Tecla de espaço retorna caracter de espaço non-breakable no quarto nível."
+"Tecla de espaço retorna caracter de espaço sem quebra de linha no quarto "
+"nível."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
-msgstr "As teclas Alt juntas alternam o layout."
+msgstr "Ambas as teclas Alt juntas mudam o layout."
 
 #. XKBFile extension text
 msgid "CapsLock key changes layout."
@@ -767,7 +776,7 @@ msgstr "Control é mapeado para as teclas Windows (e as teclas Ctrl usuais)."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
-msgstr "A tecla Alt direita alterna o layout."
+msgstr "A tecla Alt direita muda o layout."
 
 #. XKBFile extension text
 msgid "Shift with numeric keypad keys works as in MS Windows."
@@ -779,7 +788,7 @@ msgstr "Alt e Meta estão nas teclas Alt."
 
 #. XKBFile extension text
 msgid "Alt+Shift change layout."
-msgstr "Alt+Shift alterna o layout."
+msgstr "Alt+Shift muda o layout."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift change layout."
@@ -799,7 +808,7 @@ msgstr "Usar LED do teclado para mostrar layout alternativo."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes layout."
-msgstr "A tecla Ctrl esquerda alterna o layout."
+msgstr "A tecla Ctrl esquerda muda o layout."
 
 #. XKBFile extension text
 msgid "Menu key changes layout."
@@ -811,7 +820,7 @@ msgstr "Alt+Ctrl muda o layout."
 
 #. XKBFile extension text
 msgid "Right Win-key switches layout while pressed."
-msgstr "A tecla Windows direita muda o layout quando pressionada."
+msgstr "A tecla Windows direita muda o layout enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Layout switching"
@@ -819,23 +828,23 @@ msgstr "Mudança de Layout"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "A tecla Alt esquerda alterna o grupo quando pressionada."
+msgstr "A tecla Alt esquerda alterna o grupo enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
-msgstr "As teclas Ctrl juntas alternam o grupo."
+msgstr "Ambas as teclas Ctrl juntas mudam o grupo."
 
 #. XKBFile extension text
 msgid "Right Shift key changes group."
-msgstr "A tecla Shift direita alterna o grupo."
+msgstr "A tecla Shift direita muda o grupo."
 
 #. XKBFile extension text
 msgid "Left Win key changes group."
-msgstr "A tecla Win esquerda alterna o grupo."
+msgstr "A tecla Win esquerda muda o grupo."
 
 #. XKBFile extension text
 msgid "Left Alt key changes group."
-msgstr "A tecla Alt esquerda alterna o grupo."
+msgstr "A tecla Alt esquerda muda o grupo."
 
 #. XKBFile extension text
 msgid "Both Win keys switch group while pressed."
@@ -859,11 +868,13 @@ msgstr "Adicionando a keysym nobreakspace a tecla de espaço."
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr "Use teclas com a adições unicode (setas e operadores matemáticos)"
+msgstr ""
+"Use teclado com caracteres unicode adicionais (acentos e operadores "
+"matemáticos)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr "Forçar teclas clássicas padrão"
+msgstr "Forçar padrão pro teclado legado"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
@@ -919,8 +930,8 @@ msgstr "A tecla esquerda Windows é Compose."
 msgid ""
 "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr ""
-"Pressione a tecla Alt direita para escolher o 3o. nível, Shift+Right Alt key "
-"é Multi_Key."
+"Pressione a tecla Alt direita para escolher o 3o. nível, Shift+ Alt direito "
+"key é Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -960,11 +971,11 @@ msgstr "Shift+CapsLock muda o grupo."
 
 #. XKBFile extension text
 msgid "R-Alt switches group while pressed."
-msgstr "A tecla R-Alt alterna o grupo quando pressionada."
+msgstr "A tecla R-Alt alterna o grupo enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr "A tecla Control direita funciona como Alt direita."
+msgstr "A tecla Control direita funciona como Alt direito."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -980,7 +991,7 @@ msgstr "Pressione a tecla Alt direita para escolher o 3o. nível."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
-msgstr "A tecla Ctrl direita alterna o grupo."
+msgstr "A tecla Ctrl direita muda o grupo."
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
@@ -1004,7 +1015,7 @@ msgstr "Seletores de terceiro nível"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change group."
-msgstr "As teclas Shift juntas alternam o grupo."
+msgstr "Ambas as teclas Shift juntas alternam o grupo."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
@@ -1024,7 +1035,7 @@ msgstr "Pressione a tecla Windows esquerda para escolher o 3o. nível."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr "A tecla Windows direita alterna o grupo."
+msgstr "A tecla Windows direita muda o grupo."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
@@ -1040,27 +1051,27 @@ msgstr "O LED NumLock mostra o grupo alternativo."
 
 #. XKBFile extension text
 msgid "Left Shift key changes group."
-msgstr "A tecla Shift esquerda alterna o grupo."
+msgstr "A tecla Shift esquerda muda o grupo."
 
 #. XKBFile extension text
 msgid "Left Win-key switches group while pressed."
-msgstr "A tecla Windows esquerda alterna o grupo quando pressionada."
+msgstr "A tecla Windows esquerda alterna o grupo enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
-msgstr "O Menu é Compose."
+msgstr "Menu é Compose."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
-msgstr "As teclas Alt juntas alternam o grupo."
+msgstr "Ambas as teclas Alt juntas mudam o grupo."
 
 #. XKBFile extension text
 msgid "CapsLock key changes group."
-msgstr "A tecla CapsLock alterna o grupo."
+msgstr "A tecla CapsLock muda o grupo."
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr "Controle de Troca e CapsLock."
+msgstr "Troca de Control e CapsLock"
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
@@ -1068,11 +1079,11 @@ msgstr "Pressione qualquer uma das teclas Alt para escolher o 3o. nível."
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
-msgstr "A tecla Alt direita alterna o grupo."
+msgstr "A tecla Alt direita muda o grupo."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr "Shift com teclas do teclado numérico funciona como no MS Windows."
+msgstr "Shift com teclas do teclado numérico funcionam como no MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1104,15 +1115,15 @@ msgstr "Alt e Meta estão nas teclas Alt (padrão)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "Pressione a tecla Control direita para escolher o 3o. nível."
+msgstr "Pressione a tecla Control da direita para escolher o 3o. nível."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
-msgstr "Alt+Shift alterna o grupo."
+msgstr "Alt+Shift muda o grupo."
 
 #. XKBFile extension text
 msgid "Control+Shift changes group."
-msgstr "Control+Shift alterna o grupo."
+msgstr "Control+Shift muda o grupo."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
@@ -1140,19 +1151,19 @@ msgstr "Pressione a tecla Menu para escolher o 3o. nível."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
-msgstr "A tecla Ctrl esquerda alterna o grupo."
+msgstr "A tecla Ctrl esquerda muda o grupo."
 
 #. XKBFile extension text
 msgid "Menu key changes group."
-msgstr "A tecla Menu alterna o grupo."
+msgstr "A tecla Menu muda o grupo."
 
 #. XKBFile extension text
 msgid "Alt+Control changes group."
-msgstr "Alt+Control alterna o grupo."
+msgstr "Alt+Control muda o grupo."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr "A tecla Windows direita alterna o grupo quando pressionada."
+msgstr "A tecla Windows direita alterna o grupo enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Serbia"
@@ -1175,80 +1186,79 @@ msgid "USA"
 msgstr "EUA"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the EuroSign to the 4 key."
-msgstr "Adicionar o símbolo do euro à tecla 5."
+msgstr "Adicionar o símbolo do Euro à tecla 4."
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
-msgstr ""
+msgstr "Quarto-nível com ponto"
 
 #. XKBFile extension text
 msgid "Legacy Wang 724 keypad"
-msgstr ""
+msgstr "Teclado Legado Wang 724"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
-msgstr ""
+msgstr "Quarto-nível com separadores de resumo"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr "Use teclas com a adições unicode (setas e operadores matemáticos)"
+msgstr ""
+"Teclado com caracteres unicode adicionais (setas e operadores matemáticos)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
-msgstr ""
+msgstr "Teclado legado"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift cancels CapsLock."
-msgstr "Trocar Ctrl e CapsLock."
+msgstr "Shift cancela CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap ESC and CapsLock."
-msgstr "Trocar Ctrl e CapsLock."
+msgstr "Trocar ESC e CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Wang 724 keypad with unicode additions (arrows and math operators). Math "
 "operators on default level."
-msgstr "Use teclas com a adições unicode (setas e operadores matemáticos)"
+msgstr ""
+"Teclado Wang 724 com caracteres unicode adicionais. (setas e operadores "
+"matemáticos). Operadores matemáticos em nível padrão."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
-msgstr ""
+msgstr "Tecla quarto-nível com vírgula"
 
 #. XKBFile extension text
 msgid "Legacy key with comma"
-msgstr ""
+msgstr "Tecla legada com vírgula"
 
 #. XKBFile extension text
-#, fuzzy
 msgid ""
 "Keypad with unicode additions (arrows and math operators). Math operators on "
 "default level."
-msgstr "Use teclas com a adições unicode (setas e operadores matemáticos)"
+msgstr ""
+"Teclado com caracteres unicode adicionais (setas e operadores matemáticos). "
+"Operadores matemáticos em nível padrão."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
-msgstr ""
+msgstr "Tecla legada com ponto"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr ""
+msgstr "Tecla Quarto-nível com momayyez"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad delete key behaviour"
-msgstr "Seleção do layout do teclado numérico."
+msgstr "Comportamento da tecla delete do teclado numérico"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "Use teclas com a adições unicode (setas e operadores matemáticos)"
+msgstr ""
+"Teclado Wang 724 com caracteres unicode adicionais (acentos e operadores "
+"matemáticos)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1260,11 +1270,11 @@ msgstr "Canetas Eletrônicas"
 
 #. Activate tablet checkbox
 msgid "Activate This Tablet"
-msgstr "Ativar esta Mesa Digitalizadora"
+msgstr "Ativar este Tablet"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
-msgstr "Mesa Digitalizadora: Seleção de Fornecedor e Nome"
+msgstr "Tablet: Seleção de Fabricante e Nome"
 
 #. Group box title for tablet port combobox
 msgid "Connection Port"
@@ -1272,7 +1282,7 @@ msgstr "Porta de Conexão"
 
 #. Group box title for tablet mode
 msgid "Primary Tablet Mode"
-msgstr "Modo da Mesa Digitalizadora Principal"
+msgstr "Modo do Tablet Principal"
 
 #. Group box title for pen/eraser tablet mode
 msgid "Pen or Eraser Mode"
@@ -1340,11 +1350,11 @@ msgstr "Propriedades da Borracha"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
-msgstr "Atribuir Tela Sensível ao Toque ao Número de Exibição %1"
+msgstr "Atribuir Tela Sensível ao Toque à Tela de Exibição %1"
 
 #. Group box title for the touchscreen vendor and name selection
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "Tela Sensível ao Toque: Seleção de Fornecedor e Nome"
+msgstr "Tela Sensível ao Toque: Seleção de Fabricante e Nome"
 
 #. Finish configuration message box
 msgid ""
@@ -1355,8 +1365,8 @@ msgid ""
 msgstr ""
 "<b>Etapas Finais</b><hr>A última etapa é gravar sua nova configuração. "
 "Recomenda-se testar a nova configuração antes de salvá-la. Se o servidor de "
-"teste mostrar uma área de trabalho corrompida, pressione <b>[ Ctrl+Alt"
-"+Backspace ]</b> para desativar o servidor."
+"teste mostrar uma área de trabalho indesejável, pressione <b>[ Ctrl+Alt"
+"+Backspace ]</b> para reiniciar o servidor X."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1420,7 +1430,7 @@ msgid ""
 "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
 "password with a maximum of eight characters."
 msgstr ""
-"<b>Falha de Senha de Acesso Remoto</b><hr>A senha é muito longa. Digite uma "
+"<b>Falha na Senha de Acesso Remoto</b><hr>A senha é muito longa. Digite uma "
 "senha com no máximo oito caracteres."
 
 #. Install missing packages box
@@ -1478,7 +1488,7 @@ msgid ""
 "in the firewall. You can configure this with YaST."
 msgstr ""
 "<b>Informações de configuração de Acesso Remoto</b><hr>O serviço de Acesso "
-"Remoto requer que a porta TCP 5900 e uma porta HTTP (5800 por padrão) sejam "
+"Remoto requer que a porta TCP 5900 e uma porta HTTP (5800 o padrão) estejam "
 "abertas pelo firewall. Você pode configurar isso com o YaST."
 
 #. XKBFile extension text
@@ -1507,7 +1517,7 @@ msgstr "CapsLock é Compose."
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
-msgstr "A tecla Ctrl direita funciona como Alt direita."
+msgstr "A tecla Ctrl direita funciona como Alt direito."
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
@@ -1559,7 +1569,7 @@ msgstr "Alt+Ctrl muda o grupo."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr "Comportamento Deslocar/Bloquear Grupo "
+msgstr "Comportamento Trocar/Bloquear Grupo "
 
 #. XKBFile extension text
 msgid "Arabic"
@@ -1827,7 +1837,7 @@ msgstr "Geórgia"
 
 #. XKBFile extension text
 msgid "U.S. English"
-msgstr "Inglês americano"
+msgstr "Inglês Americano"
 
 #. XKBFile extension text
 msgid "Turkish"
