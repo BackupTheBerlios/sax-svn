@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Apr 28 14:51:49 CEST 2008 - ms@suse.de
+
+- removed invalid synaptics profile script which adds 
+  additional InputDevice sections. This is done in sysp directly
+  now (bnc #373176)
+
+-------------------------------------------------------------------
 Mon Apr 28 10:07:43 CEST 2008 - ms@suse.de
 
 - fixed build
