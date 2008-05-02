@@ -141,7 +141,8 @@ QString SCCTabletSelection::getVendor ( void ) {
 	if (mVendorList->selectedItem()) {
 		return mVendorList->selectedItem()->text();
 	}
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 //====================================
 // getModel
@@ -150,7 +151,8 @@ QString SCCTabletSelection::getModel  ( void ) {
 	if (mModelList->selectedItem()) {
 		return mModelList->selectedItem()->text();
 	}
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 //====================================
 // slotVendor

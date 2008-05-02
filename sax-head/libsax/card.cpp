@@ -265,7 +265,8 @@ QString SaXManipulateCard::getCardName (void) {
 	//! separated by a colon from the currently selected card
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	//====================================
 	// search name in SYSP data
@@ -296,7 +297,8 @@ QString SaXManipulateCard::getCardVendor (void) {
 	//! interface
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	//====================================
 	// search vendor in SYSP data
@@ -321,7 +323,8 @@ QString SaXManipulateCard::getCardModel (void) {
 	//! interface
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	//====================================
 	// search model in SYSP data
@@ -346,7 +349,8 @@ QString SaXManipulateCard::getBusID (void) {
 	//! selected card
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("BusID");
 }
@@ -360,7 +364,8 @@ QString SaXManipulateCard::getCardDriver (void) {
 	//! selected card
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Driver");
 }
@@ -374,7 +379,8 @@ QString SaXManipulateCard::getScreenID (void) {
 	//! selected card. This value is always 0 for non multihead cards
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Screen");
 }
@@ -389,7 +395,8 @@ QString SaXManipulateCard::getRotationDirection (void) {
 	//! empty QString is returned
 	// ---- 
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Rotate");
 }
@@ -406,7 +413,8 @@ Q3Dict<QString> SaXManipulateCard::getOptions (void) {
 	//! (bool options) the value for the key is the (null) string
 	// ----
 	if (! mImport) {
-		return Q3Dict<QString>();
+		Q3Dict<QString>* nope = new Q3Dict<QString>;
+		return *nope;
 	}
 	Q3Dict<QString> result;
 	QString stdOptions = mImport -> getItem ("Option");
@@ -489,7 +497,8 @@ Q3Dict<QString> SaXManipulateCard::getCardOptions ( const QString& driver ) {
 	if (opts.isEmpty()) {
 		excCDBRecordNotFound (driver);
 		qError (errorString(),EXC_CDBRECORDNOTFOUND);
-		return Q3Dict<QString>();
+		Q3Dict<QString>* nope = new Q3Dict<QString>;
+		return *nope;
 	}
 	Q3PtrList< Q3Dict<QString> > xaaopts;
 	xaaopts = mCDBCardModules -> getTablePointerCDB_DATA (

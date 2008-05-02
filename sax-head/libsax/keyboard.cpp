@@ -113,7 +113,8 @@ QList<QString> SaXKeyRules::getVariants (const QString& layout) {
 	//! given baselayout.
 	// ----
 	if ( layout.isEmpty() || ! getLayouts().find(layout) ) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result1;
 	QStringList* r1 = mVarLists[layout];
@@ -445,7 +446,8 @@ QString SaXManipulateKeyboard::getDriver (void) {
 	//! return the driver used for this keyboard device
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Driver");
 }
@@ -458,7 +460,8 @@ QList<QString> SaXManipulateKeyboard::getXKBOptionList (void) {
 	//! return a list of XKB options set for the core keyboard
 	// ----
 	if (! mImport) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString options = mImport -> getItem ("XkbOptions");
 	return createList (options);
@@ -473,7 +476,8 @@ QList<QString> SaXManipulateKeyboard::getXKBLayout (void) {
 	//! the first element of the list os the core layout
 	// ----
 	if (! mImport) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString layouts = mImport -> getItem ("XkbLayout");
 	return createList (layouts);
@@ -488,7 +492,8 @@ QList<QString> SaXManipulateKeyboard::getXKBVariantList (void) {
 	//! defined keyboard layouts
 	// ----
 	if (! mImport) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString variants = mImport -> getItem ("XkbVariant");
 	return createList (variants);
@@ -505,13 +510,15 @@ QString SaXManipulateKeyboard::getXKBVariant ( const QString& layout ) {
 	//! be throwed and an empty string is returned
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	int layoutCount = findLayout (layout);
 	if (layoutCount < 0) {
 		excXKBLayoutUndefined (layout);
 		qError (errorString(),EXC_XKBLAYOUTUNDEFINED);
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	int varCount = 0;
 	QList<QString> vList = getXKBVariantList();
@@ -522,7 +529,8 @@ QString SaXManipulateKeyboard::getXKBVariant ( const QString& layout ) {
 		}
 		varCount++;
 	}
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 
 //====================================
@@ -534,7 +542,8 @@ QString SaXManipulateKeyboard::getXKBModel (void) {
 	//! keyboard. Only one model can be defined and active
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("XkbModel");
 }
@@ -574,7 +583,8 @@ QList<QString> SaXManipulateKeyboard::createList ( const QString& data) {
 	//! empty items (,,) are allowed using this method
 	// ----
 	if (data.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result; 
 	QStringList dataList = QStringList::split ( ",", data, true );

@@ -115,7 +115,8 @@ QString SaXStorage::getItem ( const QString & key ) {
 	//! to the current data record
 	// ----
 	if (! mData.at (mCurrentID) -> operator[] (key)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return *mData.at (mCurrentID) -> operator[] (key);
 }
@@ -386,7 +387,8 @@ Q3Dict<QString> SaXStorage::getTable ( int id ) {
 	if (mData.at (id)) {
 		return *mData.at (id);
 	} else {
-		return Q3Dict<QString>();
+		Q3Dict<QString>* nope = new Q3Dict<QString>;
+		return *nope;
 	}
 }
 

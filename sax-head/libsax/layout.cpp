@@ -280,7 +280,8 @@ QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	// ----
 	SaXManipulateCard cardData (mCard);
 	if (! cardData.selectCard (screen)) {
-		return QList<QString> ();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString idString; idString.sprintf ("%d",screen);
 	QString layout = mLayout -> getItem (
@@ -289,7 +290,8 @@ QList<QString> SaXManipulateLayout::getXOrgLayout ( int screen ) {
 	if (layout.isEmpty()) {
 		excGetScreenLayoutFailed (screen);
 		qError (errorString(),EXC_GETSCREENLAYOUTFAILED);
-		return QList<QString> ();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> layoutList;
 	QStringList positions = QStringList::split ( " ", layout );
@@ -311,7 +313,8 @@ QList<QString> SaXManipulateLayout::getInputLayout ( void ) {
 	if (layout.isEmpty()) {
 		excGetInputLayoutFailed ();
 		qError (errorString(),EXC_GETINPUTLAYOUTFAILED);
-		return QList<QString> ();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> inputList;
 	QStringList tokens = QStringList::split ( ",", layout );

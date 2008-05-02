@@ -229,7 +229,8 @@ QString SaXManipulatePointers::getDevice ( void ) {
 	//! concerning the type of the pointer device
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Device");
 }
@@ -242,7 +243,8 @@ QString SaXManipulatePointers::getDriver ( void ) {
 	//! return the driver used for this pointer device
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Driver");
 }
@@ -255,7 +257,8 @@ QString SaXManipulatePointers::getProtocol ( void ) {
 	//! return the protocol used for this pointer device
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Protocol");
 }
@@ -272,7 +275,8 @@ Q3Dict<QString> SaXManipulatePointers::getOptions (void) {
 	//! (bool options) the value for the key is the (null) string
 	// ----
 	if (! mImport) {
-		return Q3Dict<QString>();
+		Q3Dict<QString>* nope = new Q3Dict<QString>;
+		return *nope;
 	}
 	Q3Dict<QString> result;
 	QString stdOptions = mImport -> getItem ("Option");
@@ -963,7 +967,8 @@ QString SaXManipulateTablets::getName (void) {
 	//! return the CDB model name of this tablet
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Name");
 }
@@ -976,7 +981,8 @@ QString SaXManipulateTablets::getVendor (void) {
 	//! return the CDB vendor name of this tablet
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("Vendor");
 }
@@ -990,7 +996,8 @@ QString SaXManipulateTablets::getType (void) {
 	//! can be: cursor,stylus or eraser
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("TabletType");
 }
@@ -1004,7 +1011,8 @@ QString SaXManipulateTablets::getMode (void) {
 	//! can be either Absolute or Relative
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("TabletMode");	
 }
@@ -1053,7 +1061,8 @@ Q3Dict<QString> SaXManipulateTablets::getTabletOptions (const QString& driver) {
 	if (opts.isEmpty()) {
 		excCDBRecordNotFound (driver);
 		qError (errorString(),EXC_CDBRECORDNOTFOUND);
-		return Q3Dict<QString>();
+		Q3Dict<QString>* nope = new Q3Dict<QString>;
+		return *nope;
 	}
 	mCDBTabletOptions = *opts.at(0);
 	return mCDBTabletOptions;
@@ -1551,7 +1560,8 @@ QString SaXManipulateTouchscreens::getName ( void ) {
 	//! separated by a semi-colon
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	QString name = mImport -> getItem ("Name");
 	QStringList vnlist = QStringList::split ( ";", name );
@@ -1568,7 +1578,8 @@ QString SaXManipulateTouchscreens::getVendor ( void ) {
 	//! separated by a semi-colon
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	QString name = mImport -> getItem ("Name");
 	QStringList vnlist = QStringList::split ( ";", name );
@@ -1585,7 +1596,8 @@ QString SaXManipulateTouchscreens::getType (void) {
 	//! is handled with the same key: TabletType
 	// ----
 	if (! mImport) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mImport -> getItem ("TabletType");
 }

@@ -284,7 +284,8 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	//! method will return an empty QString
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	//===================================
 	// Check SaXMeta data...
@@ -311,7 +312,8 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	SaXImportSysp* pCard = new SaXImportSysp (SYSP_CARD);
 	pCard -> doImport();
 	if (! pCard -> setID ( mDesktopID )) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	QString mCardName;
 	QTextOStream (&mCardName) <<
@@ -351,7 +353,8 @@ QString SaXManipulateDesktop::getDualHeadProfile ( void ) {
 	//------------------------------------
 	excEmptyCDBGroup ( mCardName.latin1() );
 	qError (errorString(),EXC_EMPTYCDBGROUP);
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 
 //====================================
@@ -933,13 +936,15 @@ QList<QString> SaXManipulateDesktop::getResolutions (int color) {
 	//! color an empty list is returned
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString modes;
 	modes.sprintf ("Modes:%d",color);
 	QString resolutions = mDesktop -> getItem (modes);
 	if (resolutions.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result;
 	QStringList resList = QStringList::split ( ",", resolutions );
@@ -960,7 +965,8 @@ QList<QString> SaXManipulateDesktop::getResolutionFromServer ( void ) {
 	//! the resolution
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> defaultList;
 	defaultList.append (QString("800x600"));
@@ -1056,10 +1062,12 @@ QList<QString> SaXManipulateDesktop::getResolutionsFromDDC (const QString& key) 
 	desktop -> setID    ( mDesktopID );
 	desktop -> doImport ();
 	if ( desktop->getItem(key).isNull()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	if ((key != "FBBoot") && (desktop->getItem("DDC") == "<undefined>")) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString val = desktop->getItem(key);
 	QStringList items = QStringList::split ( ",", val );
@@ -1119,11 +1127,13 @@ QList<QString> SaXManipulateDesktop::getDisplaySize (void) {
 	//! returned
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString size = mDesktop -> getItem ("DisplaySize");
 	if (size.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result;
 	QStringList sizeList = QStringList::split ( " ", size );
@@ -1145,11 +1155,13 @@ QString SaXManipulateDesktop::getDisplayTraversal (void) {
 	//! from the getDisplaySize() method
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	QList<QString> size = getDisplaySize();
 	if (size.isEmpty()) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	int x = size.at(0).toInt();
 	int y = size.at(1).toInt();
@@ -1168,14 +1180,16 @@ QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
 	//! information from the getDisplaySize() method
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString* setX = new QString ("4");
 	QString* setY = new QString ("3");
 	QList<QString> result;
 	QList<QString> size = getDisplaySize();
 	if (size.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	int x = size.at(0).toInt();
 	int y = size.at(1).toInt();
@@ -1205,11 +1219,13 @@ QList<QString> SaXManipulateDesktop::getHsyncRange (void) {
 	//! value specify the end of the range
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString range = mDesktop -> getItem ("HorizSync");
 	if (range.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result;
 	QStringList rangeList = QStringList::split ( "-", range );
@@ -1232,11 +1248,13 @@ QList<QString> SaXManipulateDesktop::getVsyncRange (void) {
 	//! value specify the end of the range
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString range = mDesktop -> getItem ("VertRefresh");
 	if (range.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result;
 	QStringList rangeList = QStringList::split ( "-", range );
@@ -1277,7 +1295,8 @@ QString SaXManipulateDesktop::getMonitorVendor (void) {
 	//! currently selected desktop
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mDesktop -> getItem ("VendorName");
 }
@@ -1291,7 +1310,8 @@ QString SaXManipulateDesktop::getMonitorName (void) {
 	//! currently selected desktop
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mDesktop -> getItem ("ModelName");
 }
@@ -1305,7 +1325,8 @@ QString SaXManipulateDesktop::getColorDepth (void) {
 	//! the active desktop
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mDesktop -> getItem ("ColorDepth");
 }
@@ -1318,7 +1339,8 @@ QString SaXManipulateDesktop::getModelineAlgorithm (void) {
 	//! get the currently used modeline algorithm method
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	return mDesktop -> getItem ("CalcAlgorithm");
 }
@@ -1351,14 +1373,16 @@ QString SaXManipulateDesktop::getVirtualResolution (int color) {
 	//! string is returned
 	// ----
 	if ((! mDesktop) || (! mCard) || (! mPath)) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	QString key;
 	QString val;
 	key.sprintf ("Virtual:%d",color);
 	val = mDesktop -> getItem (key);
 	if (val.isEmpty()) {
-		return QString();
+		QString* nope = new QString;
+		return *nope;
 	}
 	QStringList resList = QStringList::split ( " ", val );
 	QString result (resList.join("x"));

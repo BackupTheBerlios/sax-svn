@@ -278,7 +278,8 @@ QString SCCVNCDisplay::getPassword ( void ) {
 	if (mCheckPWD -> isOn()) {
 		return mPWD1->text();
 	}
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 //====================================
 // slotActivateVNC

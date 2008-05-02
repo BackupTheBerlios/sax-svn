@@ -214,7 +214,8 @@ QList<QString> SaXManipulatePath::getFontPaths (void) {
 	//! this X11 configuration
 	// ----
 	if (! mImport) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString paths = mImport -> getItem ("FontPath");
 	return createList (paths);
@@ -229,7 +230,8 @@ QList<QString> SaXManipulatePath::getModules (void) {
 	//! X11 configuration
 	// ----
 	if (! mImport) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString modules = mImport -> getItem ("ModuleLoad");
 	return createList (modules);
@@ -244,7 +246,8 @@ QList<QString> SaXManipulatePath::getServerFlags (void) {
 	//! X11 configuration
 	// ----
 	if (! mImport) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QString modules = mImport -> getItem ("ServerFlags");
 	return createList (modules);
@@ -259,7 +262,8 @@ QList<QString> SaXManipulatePath::createList ( const QString& data) {
 	//! empty items will be ignored using this method
 	// ----
 	if (data.isEmpty()) {
-		return QList<QString>();
+		QList<QString>* nope = new QList<QString>;
+		return *nope;
 	}
 	QList<QString> result; 
 	QStringList dataList = QStringList::split ( ",", data );

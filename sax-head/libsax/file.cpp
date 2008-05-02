@@ -59,7 +59,8 @@ Q3Dict<QString> SaXFile::readDict (void) {
 	//! with a "#" are allowed
 	// ----
 	if (! mHandle -> isOpen()) {
-		return Q3Dict<QString>();
+		Q3Dict<QString>* nope = new Q3Dict<QString>;
+		return *nope;
 	}
 	char line[MAX_LINE_LENGTH];
 	while ((mHandle->readLine(line,MAX_LINE_LENGTH)) != 0) {

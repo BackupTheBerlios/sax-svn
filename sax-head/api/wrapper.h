@@ -43,7 +43,8 @@ class SCCWrapPointer {
 		if (pM->operator[](key)) {
 			return(QString::fromLocal8Bit( *pM->operator[](key) ));
 		}
-		return QString("");
+		QString* nope = new QString;
+		return *nope;
 	}
 	void insert (const QString & key,QString* val) {
 		pM->insert (key,val);

@@ -491,7 +491,8 @@ QString SaXConfig::getParseErrorValue (void) {
 	//! error occured an empty string is returned
 	// ----
 	if (mParseErrorValue->isEmpty()) {
-		return QString("");
+		QString* nope = new QString("");
+		return *nope;
 	}
 	return *mParseErrorValue;
 }
@@ -505,7 +506,8 @@ QString SaXConfig::getParseError (void) {
 	//! error occured an empty string is returned
 	// ----
 	if (mParseErrorString->isEmpty()) {
-		return QString("");
+		QString* nope = new QString("");
+		return *nope;
 	}
 	return *mParseErrorString;
 }

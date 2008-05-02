@@ -268,7 +268,8 @@ QString SCCTouchSelection::getVendor ( void ) {
 	if (mVendorList->selectedItem()) {
 		return mVendorList->selectedItem()->text();
 	}
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 //====================================
 // getModel
@@ -277,7 +278,8 @@ QString SCCTouchSelection::getModel ( void ) {
 	if (mModelList->selectedItem()) {
 		return mModelList->selectedItem()->text();
 	}
-	return QString();
+	QString* nope = new QString;
+	return *nope;
 }
 //====================================
 // getPortName
