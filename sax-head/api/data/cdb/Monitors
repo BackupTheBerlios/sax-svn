@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri Feb 29 13:28:15 2008
+# Author: Marcus Schaefer <sax@suse.de>, Tue May  6 16:42:47 2008
 #
 # Template for monitor data
 # --------------------------
@@ -9641,17 +9641,6 @@ DELL:1907FPT  {
  Modeline="1280x1024" 108.0 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync 
  Resolution=1280x1024
  Vsync=43-60
-}
-
-#==============================================
-# 1908FP
-#----------------------------------------------
-DELL:1908FP  {
- DDC=DEL4025
- Option=DPMS
- Hsync=30-81
- Resolution=1280x1024
- Vsync=56-76
 }
 
 #==============================================
@@ -31425,18 +31414,6 @@ SAMSUNG:CFA-7679L  {
 }
 
 #==============================================
-# LE23R8
-#----------------------------------------------
-SAMSUNG:LE23R8  {
- DDC=SAM23F8
- Option=DPMS
- Hsync=47-48
- Resolution=1360x768
- Vsync=50-60
- DPI=510x287
-}
-
-#==============================================
 # SAMTRON 40B
 #----------------------------------------------
 SAMSUNG:SAMTRON 40B  {
@@ -31661,6 +31638,7 @@ SAMSUNG:SAMTRON SC-428PT(L)  {
  Option=DPMS
  Hsync=26-31
  Vsync=50-60
+ DPI=510x287
 }
 
 #==============================================
@@ -31993,7 +31971,7 @@ SAMSUNG:SYNCMASTER 213T  {
  DDC=SAM0091
  Option=DPMS
  Hsync=30-81
- Modeline="1600x1200" 130.37 1600 1648 1680 1760 1200 1202 1206 1235 
+ Modeline="1600x1200" 140.00 1600 1632 2024 2052 1200 1200 1208 1216
  Resolution=1600x1200
  Vsync=56-75
 }
@@ -32950,6 +32928,17 @@ SAMSUNG:SYNCMASTER 931C (DIGITAL)  {
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 940BW  {
  DDC=SAM0225
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1280x1024
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 940FN
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 940FN  {
+ DDC=SAM01E9
  Option=DPMS
  Hsync=30-81
  Resolution=1280x1024
