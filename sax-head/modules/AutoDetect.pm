@@ -199,7 +199,7 @@ sub sortres {
 		my @res_next = split(/x/,$list[$i+1]);
 		my $x_this = $res_this[0];
 		my $x_next = $res_next[0];
-		if ($x_this > $x_next) {
+		if ($x_this >= $x_next) {
 			push (@list_new,$list[$i]);
 		}
 	}
