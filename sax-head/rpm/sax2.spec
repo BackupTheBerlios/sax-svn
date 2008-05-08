@@ -339,7 +339,13 @@ fi
 %{_datadir}/sax/sysp/maps/Input.map
 %{_datadir}/sax/sysp/maps/Driver.map
 %{_datadir}/sax/sysp/maps/IntelPatch.map
-%{_datadir}/sax/api/data/cdb/*
+%{_datadir}/sax/api/data/cdb/Cards
+%{_datadir}/sax/api/data/cdb/Pads
+%{_datadir}/sax/api/data/cdb/Pens
+%{_datadir}/sax/api/data/cdb/Pointers
+%{_datadir}/sax/api/data/cdb/Tablets
+%{_datadir}/sax/api/data/cdb/Touchscreens
+%config %{_datadir}/sax/api/data/cdb/Monitors
 %{_datadir}/sax/profile
 #=================================================
 # SaX-libsax file list...  
