@@ -82,6 +82,7 @@ void SaXException::setErrorCode (int id) {
 	//! coresponding string concering to errno.h
 	// ----
 	mErrorCode   = id;
+	*mErrorString = "";
 	QTextOStream (mErrorString) << strerror (mErrorCode);
 }
 
@@ -94,6 +95,7 @@ void SaXException::setErrorCode (const char* msg, int id) {
 	//! and the error string provided by <msg>
 	// ----
 	mErrorCode   = id;
+	*mErrorString = "";
 	QTextOStream (mErrorString) << msg;
 }
 
@@ -136,6 +138,7 @@ void SaXException::errorReset ( void ) {
 	//! error message and the error value
 	// ----
 	mErrorCode   = 0;
+	*mErrorString = "";
 	QTextOStream (mErrorString) << strerror (mErrorCode);
 	QTextOStream (mErrorValue)  << "(null)";
 }
