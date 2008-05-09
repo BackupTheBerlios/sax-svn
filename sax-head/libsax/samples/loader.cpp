@@ -35,7 +35,7 @@ int main (void) {
 		SAX_PATH,
 		SAX_EXTENSIONS
 	};
-	QList<SaXImport> section;
+	QList<SaXImport*> section;
 	SaXConfig* config = LiMal->saxConfig();
 	for (int id=0; id<7; id++) {
 		printf ("Importing data...\n");

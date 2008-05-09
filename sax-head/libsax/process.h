@@ -117,7 +117,7 @@ class SaXProcessIF : public SaXStorage {
 * \code
 * #include <sax/sax.h>
 *
-* QList<char> sysp_options;
+* QList<const char*> sysp_options;
 * sysp_options.append ( "-q" );
 * sysp_options.append ( "server" );
 * SaXProcess* proc = new SaXProcess ();
