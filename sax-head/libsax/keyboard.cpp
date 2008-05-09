@@ -369,19 +369,17 @@ void SaXManipulateKeyboard::setXKBVariant (
 	}
 	QList<QString> vList = getXKBVariantList();
 	QList<QString> lList = getXKBLayout();
-	int varCount = 0;
 	QStringList result;
 	QString it;
-	foreach (it,lList) {
+	for (int varCount = 0; varCount < lList.count(); varCount++) {
 		QString item;
-		if (!(vList.at(varCount).isNull())) {
-			item = *vList.at (varCount);
+		if (!vList.value(varCount).isNull()) {
+			item = vList.value(varCount);
 		}
 		if (varCount == layoutCount) {
 			item = variant;
 		}
 		result += item;
-		varCount++;
 	}
 	mImport -> setItem ("XkbVariant",result.join(","));
 }

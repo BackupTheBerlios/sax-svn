@@ -39,11 +39,9 @@
 	$result = PyDict_New();
 	Q3DictIterator<QString> it ($1);
 	for (; it.current(); ++it) {
-		QString* key = new QString (it.currentKey());
-		QString* val = new QString (*it.current());
 		PyDict_SetItemString (
-			$result, key->toUtf8().constData(),
-			PyString_FromString(val->toUtf8().constData())
+			$result, it.currentKey().toUtf8().constData(),
+			PyString_FromString(it.current()->toUtf8().constData())
 		);
 	}
 }

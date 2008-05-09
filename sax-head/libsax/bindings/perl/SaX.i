@@ -15,7 +15,8 @@
 //----------------------------------
 %typemap(out) QString {
 	if (argvi >= items) EXTEND(sp, 1);
-	char *data = const_cast<char*>($1.toUtf8().data());
+        QByteArray utf8 = $1.toUtf8();
+	char *data = const_cast<char*>(utf8.data());
 	sv_setpvn($result = sv_newmortal(), data, $1.length());
 	++argvi;
 }
