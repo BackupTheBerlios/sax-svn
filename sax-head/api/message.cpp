@@ -334,6 +334,7 @@ void SCCMessage::setIcon ( SaXMessage::Icon icon ) {
 void SCCMessage::setText ( const QString& text ) {
 	QLabel* boxText = new QLabel ( mMainFrame );
 	boxText -> setText ( text );
+	boxText -> setWordWrap( true );
 	mTitleLayout -> addWidget ( boxText );
 }
 
