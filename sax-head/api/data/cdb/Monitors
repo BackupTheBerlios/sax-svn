@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue May  6 16:42:47 2008
+# Author: Marcus Schaefer <sax@suse.de>, Fri May  9 11:15:45 2008
 #
 # Template for monitor data
 # --------------------------
@@ -225,6 +225,15 @@
  Hsync=30-95
  Modeline="1900x1200" 236.71 1904 2040 2248 2592 1200 1201 1204 1251
  Vsync=60-75
+}
+
+#==============================================
+# 1920X1200@60HZ
+#----------------------------------------------
+--> LCD:1920X1200@60HZ  {
+ Option=DPMS
+ Hsync=30-85
+ Vsync=50-60
 }
 
 #==============================================
