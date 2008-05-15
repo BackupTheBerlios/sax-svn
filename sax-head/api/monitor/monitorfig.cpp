@@ -129,7 +129,6 @@ void SCCFig::mouseReleaseEvent ( QMouseEvent* ) {
 //------------------------------------
 void SCCFig::paintEvent ( QPaintEvent * p ) {
 	QPushButton::paintEvent (p);
-	setPixmap (*mPixmap);
 }
 
 //====================================

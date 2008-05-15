@@ -497,16 +497,16 @@ int SCCMonitorDual::getLayout ( void ) {
 // getLayoutPixmap
 //------------------------------------
 QPixmap SCCMonitorDual::getLayoutPixmap ( void ) {
-	if (mLeftOfPrimary -> isOn()) {
+	if (mLeftOfPrimary -> isOn() && mLeftOfPrimary->pixmap()) {
 		return *mLeftOfPrimary->pixmap();
 	}
-	if (mRightOfPrimary -> isOn()) {
+	if (mRightOfPrimary -> isOn() && mRightOfPrimary->pixmap() ) {
 		return *mRightOfPrimary->pixmap();
 	}
-	if (mAboveOfPrimary -> isOn()) {
+	if (mAboveOfPrimary -> isOn() && mAboveOfPrimary->pixmap() ) {
 		return *mAboveOfPrimary->pixmap();
 	}
-	if (mBelowOfPrimary -> isOn()) {
+	if (mBelowOfPrimary -> isOn() && mBelowOfPrimary->pixmap() ) {
 		return *mBelowOfPrimary->pixmap();
 	}
 	return QPixmap ( FIGURE_SINGLE );

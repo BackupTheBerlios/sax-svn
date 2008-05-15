@@ -136,7 +136,7 @@ void SCCMonitorArrange::setDeviceMap (
 	SCCMonitorDisplay* it;
 	foreach (it,displays) {
 		mCardID[count] = -1;
-		if (it->isEnabled()) {
+		if ((it->isEnabled()) && (index < devices)) {
 			mCardID[index] = count;
 			index++;
 		}
@@ -379,23 +379,22 @@ Q3Dict<QString> SCCMonitorArrange::getArrangement ( void ) {
 	SCCLayoutLine* l;
 	foreach (l,layout) {
 		QString key;
-		QString value;
-//		SCCLayoutLine* l = it.current();
+		QString* value = new QString;
 		int neighbour[4] = {l->mLeft,l->mRight,l->mTop,l->mBottom};
 		key.sprintf("Screen:Screen[%d]",mCardID[l->ID]);
 		for (int n=0;n<4;n++) {
-		if (neighbour[n] == -1) {
-			value.sprintf (
-				"%s <none>",value.ascii()
-			);
-		} else {
-			value.sprintf (
-				"%s Screen[%d]",value.ascii(),neighbour[n]
-			);
+			if (neighbour[n] == -1) {
+				value->sprintf (
+					"%s <none>",value->ascii()
+				);
+			} else {
+				value->sprintf (
+					"%s Screen[%d]",value->ascii(),neighbour[n]
+				);
+			}
 		}
-		}
-		value = value.stripWhiteSpace();
-		result.insert (key,&value);
+		*value = value->stripWhiteSpace();
+		result.insert (key,value);
 	}
 	return result;
 }

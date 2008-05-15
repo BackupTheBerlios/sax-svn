@@ -320,7 +320,7 @@ bool SCCMonitor::exportData ( void ) {
 		//====================================
 		// check for monitor display's
 		//------------------------------------
-//		SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
+		//SCCMonitorDisplay* display = (SCCMonitorDisplay*)it.current();
 		//if (display->isEnabled()) {
 		//====================================
 		// create manipulators...

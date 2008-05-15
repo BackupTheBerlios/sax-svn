@@ -289,7 +289,7 @@ SCCFig* SCCPlot::addWidget (
 		figure, SIGNAL  (sigPressed (int)),
 		this ,  SLOT    (gotPressed (int))
 	);
-	figure->show();
+	//figure->show();
 
 	mFree.insert   (index,"used");
 	mWidget.insert (index,figure);
@@ -317,10 +317,10 @@ void SCCPlot::setWidget (
 //--------------------------------------------
 void SCCPlot::setLayout ( int startRow, int startCol ) {
 	unsigned int widgetCount = mWidget.count();
-	SCCMatrixInfo* current;
-	foreach (current,mWidgetStack) {
+	QListIterator<SCCMatrixInfo*> it (mWidgetStack);
+	while (it.hasNext()) {
 		SCCFig* figure = NULL;
-//		SCCMatrixInfo* current = it;
+		SCCMatrixInfo* current = it.next();
 		// ...
 		// check if widget with ID [current.id] exist, if yes 
 		// continue to next widget

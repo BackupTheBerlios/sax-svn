@@ -370,9 +370,7 @@ sub ParseServerLayoutSection {
 			if ($id =~ /.*-(.*)/) {
 				$id = $1;
 			}
-			if ($scr =~ /.*-(.*\]),(.*)/) {
-				$scr = "$1,$2";
-			}
+			#$scr =~ s/Screen\[(.*?)\]/\1/g;
 			$parse{Layout}{$count}{Identifier} = $id;
 
 			#========================================
