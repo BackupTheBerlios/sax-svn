@@ -81,6 +81,7 @@ void ScanMouse::Scan (void) {
 			input = rcinput.Pop();
 			if ((input.did == lp->did) && (input.vid == lp->vid)) {
 				strcpy (lp->profile,input.profile.c_str());
+				strcpy (lp->driver,input.driver.c_str());
 				break;
 			}
 		}

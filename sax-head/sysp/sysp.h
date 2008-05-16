@@ -66,6 +66,7 @@ struct Input {
 	string vid;
 	string did;
 	string profile;
+	string driver;
 };
 
 struct Driver {
@@ -681,6 +682,10 @@ void SPReadFile<T>::ImportInputMap(void) {
 
 			case 1:
 			id.profile = token;
+			break;
+
+			case 2:
+			id.driver = token;
 			break;
 
 			default:

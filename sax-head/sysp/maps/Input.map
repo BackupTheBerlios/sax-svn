@@ -4,37 +4,37 @@
 # Vendor ID | Device ID | Profile
 # -----------------------------------------------------
 # Mice
-0x0212 : 0x0002 : alps
-0x0212 : 0x0001 : synaptics
-0x0002 : 0x0007 : synaptics
-0x046d : 0xc705 : logitech-MX900
-0x046d : 0xc50e : logitech-MediaPlay
-0x046d : 0xc508 : logitech-TrackManOptical
-0x046d : 0xc01b : logitech-MX310
-0x046d : 0xc041 : logitech-Gaming
-0x0210 : 0x0028 : logitech-mxlaser
-0x046d : 0xc521 : logitech-vxnano
-0x045e : 0x0095 : microsoft-IntelliMouse-Explorer
-0x046d : 0xc040 : logitech-optical
-0x0210 : 0x0003 : ibm-trackpoint
-0x0002 : 0x000a : ibm-trackpoint
-0x056a : 0x0013 : wacom
-0x05ac : 0x030b : alps
-0x05ac : 0x1000 : alps
-0x0002 : 0x0008 : alps
-0x1943 : 0x5000 : fujitsu
-0x0210 : 0x0018 : xen-mouse
-0x03f0 : 0x1126 : hp-mouse
-0x80ee : 0x0100 : vbox-mouse
+0x0212 : 0x0002 : alps : synaptics
+0x0212 : 0x0001 : synaptics : synaptics
+0x0002 : 0x0007 : synaptics : synaptics
+0x046d : 0xc705 : logitech-MX900 : mouse
+0x046d : 0xc50e : logitech-MediaPlay : evdev
+0x046d : 0xc508 : logitech-TrackManOptical : mouse
+0x046d : 0xc01b : logitech-MX310 : mouse
+0x046d : 0xc041 : logitech-Gaming : evdev
+0x0210 : 0x0028 : logitech-mxlaser : evdev
+0x046d : 0xc521 : logitech-vxnano : evdev
+0x045e : 0x0095 : microsoft-IntelliMouse-Explorer : evdev
+0x046d : 0xc040 : logitech-optical : evdev
+0x0210 : 0x0003 : ibm-trackpoint : mouse
+0x0002 : 0x000a : ibm-trackpoint : mouse
+0x056a : 0x0013 : wacom : wacom
+0x05ac : 0x030b : alps : synaptics
+0x05ac : 0x1000 : alps : synaptics
+0x0002 : 0x0008 : alps : synaptics
+0x1943 : 0x5000 : fujitsu : fujitsu
+0x0210 : 0x0018 : xen-mouse : evdev
+0x03f0 : 0x1126 : hp-mouse : evdev
+0x80ee : 0x0100 : vbox-mouse : vboxmouse
 # Bug 372189
 #0x15ad : 0x0100 : vmware-mouse
 # Keyboards
 # Microsoft Natural Ergonomic Keyboard 4000
 # ---> is profile: microsoft-natural
-0x045e : 0x00db : microsoft-natural
+0x045e : 0x00db : microsoft-natural : evdev
 # Chicony Electronics USB Wireless HID Receiver
 # ---> is profile: no information yet
-0x04f2 : 0x0200 : <undefined>
+0x04f2 : 0x0200 : <undefined> : kbd
 # Cherry Mikroschalter Keyboard
 # ---> is profile: no information yet
-0x046a : 0x0023 : <undefined>
+0x046a : 0x0023 : <undefined> : kbd

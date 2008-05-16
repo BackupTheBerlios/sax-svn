@@ -118,6 +118,7 @@ typedef struct MouseData_t {
  str did;
  str vid;
  str profile;
+ str driver;
  str realdev;
  int emulate;
  int wheel;
