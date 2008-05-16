@@ -512,7 +512,7 @@ void PrintMouseData(ScanMouse m) {
 		devices[0] = 1;
 	} else {
 		//============================================
-		// sort out serial devices
+		// initialize and sort out serial devices
 		//--------------------------------------------
 		for (int i = m.Count()-1; i >= 0; i--) {
 			data = m.Pop();
