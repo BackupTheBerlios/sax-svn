@@ -77,6 +77,7 @@ void ScanMouse::Scan (void) {
 	// ---
 	for (MouseData* lp=mp; lp; lp=lp->next) {
 		strcpy (lp->profile,"<undefined>");
+		strcpy (lp->driver,"mouse");
 		for (int i = rcinput.Count(); i > 0; i--) {
 			input = rcinput.Pop();
 			if ((input.did == lp->did) && (input.vid == lp->vid)) {
