@@ -1,20 +1,22 @@
+# translation of sax.de.po to German
 # @TITLE@
 # Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # This file is distributed under the same license as @PACKAGE@ package. FIRST
 #
+# Michael Skiba <trans@michael-skiba.de>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: @PACKAGE@\n"
+"Project-Id-Version: sax.de\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Marko Schugardt <mail.sapex@gmx.de>\n"
-"Language-Team: Novell Language <language@novell.com>\n"
+"PO-Revision-Date: 2008-04-27 18:17+0200\n"
+"Last-Translator: Michael Skiba <trans@michael-skiba.de>\n"
+"Language-Team: German <opensuse-translation-de@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -40,8 +42,8 @@ msgid ""
 "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
 "3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
-"<b>3D-Beschleunigung nicht unterstützt</b><hr>SaX2 kann keine Aktivierung "
-"des 3D-Untersystems anbieten, weil Ihre Grafikkarte bzw. Ihr "
+"<b>3D-Beschleunigung wird nicht unterstützt</b><hr>SaX2 kann keine "
+"Aktivierung des 3D-Untersystems anbieten, weil Ihre Grafikkarte bzw. Ihr "
 "Grafikkartentreiber kein 3D untersützt."
 
 #. RTF text: 3D acceleration not supported with Xinerama
@@ -51,10 +53,10 @@ msgid ""
 "Xinerama extension for combining graphics screens doesn't support 3D on all "
 "heads"
 msgstr ""
-"<b>3D-Beschleunigung nicht unterstützt</b><hr>SaX2 kann keine Aktivierung "
-"des 3D-Untersystems anbieten, weil der Xinerama-basierte Dual Head-Modus "
-"benutzt wird. Die Xorg-Xinerama-Erweiterung für kombinierte Bildschirme "
-"unterstützt kein 3D auf allen Heads."
+"<b>3D-Beschleunigung wird nicht unterstützt</b><hr>SaX2 kann keine "
+"Aktivierung des 3D-Untersystems anbieten, weil der Xinerama-basierte Dual "
+"Head-Modus benutzt wird. Die Xorg-Xinerama-Erweiterung für kombinierte "
+"Bildschirme unterstützt kein 3D auf allen Ausgabegeräten."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -77,8 +79,8 @@ msgid ""
 "<b>Display size changed</b><hr>The display size has been adapted to the new "
 "layout."
 msgstr ""
-"<b>Bildschirmgröße geändert</b><hr>Die Bildschirmgröße wurde an das neue "
-"Layout angepasst."
+"<b>Bildschirmgröße wurde geändert</b><hr>Die Bildschirmgröße wurde an das "
+"neue Layout angepasst."
 
 #. Help Button text
 msgid "&Help"
@@ -341,8 +343,8 @@ msgid ""
 "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
 "active.</nobr>"
 msgstr ""
-"<b>Deaktivieren aller Anzeigen nicht möglich</b><hr><nobr>Mindestens eine "
-"Anzeige muss aktiv sein.</nobr>"
+"<b>Deaktivieren aller Anzeigen ist nicht möglich</b><hr><nobr>Mindestens "
+"eine Anzeige muss aktiv sein.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -362,7 +364,7 @@ msgid ""
 "Each display is a clone of the primary display"
 msgstr ""
 "Cloned Multihead:\n"
-"Jeder Bildschirm ist ein Clone des primären Bildschirms"
+"Jeder Bildschirm ist ein Klon des primären Bildschirms"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
@@ -423,15 +425,15 @@ msgid ""
 "resolution and/or color settings</nobr> are not supported by the graphics "
 "cards framebuffer."
 msgstr ""
-"<b>Ungültige Farben/Auflösungs-Kombination:</b><hr><nobr>Die gewählte "
-"Auflösung und/oder die gewählten Farbeinstellungen</nobr> werden nicht "
-"unterstützt vom Grafikkarten-Framebuffer."
+"<b>Ungültige Kombination von Farben/Auflösung:</b><hr><nobr>Die gewählte "
+"Auflösung und/oder die gewählten Farbeinstellungen</nobr> werden nicht vom "
+"Grafikkarten-Framebuffer unterstützt."
 
 #. Popup message to ask the user for an option value
 msgid ""
 "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
-"<b>Wert für Option erforderlich</b><hr><nobr>Richten Sie einen Wert für %1 "
+"<b>Diese Option benötigt einen Wert</b><hr><nobr>Geben Sie einen Wert für %1 "
 "ein.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
@@ -527,8 +529,8 @@ msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>CD oder Diskette einlegen</b><hr>Legen Sie die CD bzw. Diskette mit dem "
-"Anzeigedienstprogramm ein, die Sie vom Monitorhersteller erhalten haben."
+"<b>CD oder Diskette einlegen</b><hr>Legen Sie bitte die CD bzw. Diskette mit "
+"dem Anzeigedienstprogramm ein, die Sie vom Monitorhersteller erhalten haben."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
@@ -578,7 +580,7 @@ msgstr "Status"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
-msgstr "Keytable"
+msgstr "Tastaturtabelle"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
@@ -656,32 +658,32 @@ msgstr "Beide Strg-Tasten zusammen ändern das Layout."
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
 msgstr ""
-"Nutze Space-Taste, um nicht-zerbrechliches Leerzeichen (nobreakspace) "
+"Nutze Space-Taste, um nicht-zerbrechliche Leerzeichen (nobreakspace) "
 "einzugeben."
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
-msgstr "Rechte Umschalttaste ändert Layout."
+msgstr "Rechte Umschalttaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Left Win-key changes layout."
-msgstr "Linke Win-Taste ändert Layout."
+msgstr "Linke Win-Taste ändert das Layout."
 
 #. XKBFile extension text
 msgid "LCtrl+LShift change layout."
-msgstr "Linke Strg-Taste + Linke Umschalttaste ändert Layout."
+msgstr "Linke Strg-Taste + Linke Umschalttaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Left Alt key changes layout."
-msgstr "Linke Alt-Taste ändert Layout."
+msgstr "Linke Alt-Taste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Both Win-keys switch layout while pressed."
-msgstr "Drücken beider Win-Tasten wechselt Layout."
+msgstr "Drücken beider Win-Tasten wechselt das Layout."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Drücken der rechten Strg-Taste wechselt Layout."
+msgstr "Drücken der rechten Strg-Taste wechselt das Layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
@@ -689,11 +691,11 @@ msgstr "Space-Taste gibt nicht-zerbrechliches Leerzeichen (nobreakspace) aus."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes layout."
-msgstr "Umschalttaste+Feststelltaste ändert Layout."
+msgstr "Umschalttaste+Feststelltaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "R-Alt switches layout while pressed."
-msgstr "Drücken der rechten Alt-Taste wechselt Layout."
+msgstr "Drücken der rechten Alt-Taste wechselt das Layout."
 
 #. XKBFile extension text
 msgid "Numeric keypad layout selection"
@@ -701,15 +703,15 @@ msgstr "Layoutauswahl Zahlenblock."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes layout."
-msgstr "Rechte Strg-Taste ändert Layout."
+msgstr "Rechte Strg-Taste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes layout."
-msgstr "Alt+Feststelltaste ändert Layout."
+msgstr "Alt+Feststelltaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys."
-msgstr "Super ist den Win-Tasten zugeordnet."
+msgstr "Super ist den Windows-Tasten zugeordnet."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative layout."
@@ -717,7 +719,7 @@ msgstr "ScrollLock-LED zeigt alternatives Layout an."
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
-msgstr "Beide Umschalttasten zusammen ändern Layout."
+msgstr "Beide Umschalttasten zusammen ändern das Layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
@@ -727,7 +729,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
-msgstr "Rechte Win-Taste ändert Layout."
+msgstr "Rechte Win-Taste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
@@ -737,7 +739,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Zahlenblock funktioniert wie bei Mac."
+msgstr "Zahlenblock funktioniert wie beim Mac."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative layout."
@@ -749,11 +751,11 @@ msgstr "NumLock-LED zeigt alternatives Layout an."
 
 #. XKBFile extension text
 msgid "Left Shift key changes layout."
-msgstr "Linke Umschalttaste ändert Layout."
+msgstr "Linke Umschalttaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Left Win-key switches layout while pressed."
-msgstr "Drücken der linken Win-Taste wechselt Layout."
+msgstr "Drücken der linken Win-Taste wechselt das Layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
@@ -763,11 +765,11 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
-msgstr "Beide Alt-Tasten zusammen ändern Layout."
+msgstr "Beide Alt-Tasten zusammen ändern das Layout."
 
 #. XKBFile extension text
 msgid "CapsLock key changes layout."
-msgstr "Feststelltaste ändert Layout."
+msgstr "Feststelltaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
@@ -776,7 +778,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
-msgstr "Rechte Alt-Taste ändert Layout."
+msgstr "Rechte Alt-Taste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Shift with numeric keypad keys works as in MS Windows."
@@ -788,11 +790,11 @@ msgstr "Alt und Meta sind auf den Alt-Tasten."
 
 #. XKBFile extension text
 msgid "Alt+Shift change layout."
-msgstr "Alt+Shift ändert Layout."
+msgstr "Alt+Shift ändert das Layout."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift change layout."
-msgstr "Strg+Umschalttaste ändert Layout."
+msgstr "Strg+Umschalttaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
@@ -808,19 +810,19 @@ msgstr "Nutze Tastatur-LED zur Anzeige alternativer Layouts."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes layout."
-msgstr "Linke Strg-Taste ändert Layout."
+msgstr "Linke Strg-Taste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Menu key changes layout."
-msgstr "Menütaste ändert Layout."
+msgstr "Menütaste ändert das Layout."
 
 #. XKBFile extension text
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Strg ändert Layout."
+msgstr "Alt+Strg ändert das Layout."
 
 #. XKBFile extension text
 msgid "Right Win-key switches layout while pressed."
-msgstr "Drücken der rechten Win-Taste wechselt Layout."
+msgstr "Drücken der rechten Win-Taste wechselt das Layout."
 
 #. XKBFile extension text
 msgid "Layout switching"
@@ -828,7 +830,7 @@ msgstr "Layout wechseln"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "Drücken der linken Alt-Taste wechselt Gruppe."
+msgstr "Drücken der linken Alt-Taste wechselt die Gruppe."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
@@ -884,7 +886,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
-msgstr "Auswahl Tastaturlayout"
+msgstr "Tastaturlayout auswählen"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
@@ -920,7 +922,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
-msgstr "Zahlenblocktasten funktionieren wie bei Mac."
+msgstr "Zahlenblocktasten funktionieren wie beim Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -1385,15 +1387,15 @@ msgstr "Touchscreen: Auswahl von Hersteller und Namen"
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>Ctrl+Alt+Backspace ]</b> and <b>"
-"[Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
 "server."
 msgstr ""
 "<b>Abschließende Schritte</b><hr>Der letzte Schritt besteht in der "
 "Speicherung der neuen Konfiguration. Die neue Konfiguration sollte vor dem "
 "Speichern getestet werden. Wenn der Desktop auf dem Testserver nicht "
 "ordnungsgemäß angezeigt wird, drücken Sie <b>[Strg+Alt+Rücktaste]</b>, um "
-"einen Server zwangsweise zu beenden."
+"den Server zwangsweise zu beenden."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1483,7 +1485,7 @@ msgstr "SaX2: Daten werden importiert ..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr "Cache initialisieren ..."
+msgstr "Initialisieren Zwischenspeicher..."
 
 #. Message box text: configuration cannot be saved
 msgid ""
