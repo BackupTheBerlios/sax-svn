@@ -192,6 +192,7 @@ void SCCMonitor::init ( void ) {
 	if ( (! has3DCapabilities) || (isMultiheaded) ) {
 		mCheck3D -> setDisabled ( true  );
 		mCheck3D -> setChecked  ( false );
+		#if 0
 		if (mShow3DMessage) {
 			SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 			QString message = mText["3DInfo"];
@@ -205,6 +206,7 @@ void SCCMonitor::init ( void ) {
 			mMessageBox -> showMessage();
 			mShow3DMessage = false;
 		}
+		#endif
 	}
 	//====================================
 	// check monitor arrangement
