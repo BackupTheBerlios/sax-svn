@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Fri May  9 11:15:45 2008
+# Author: Marcus Schaefer <sax@suse.de>, Tue May 20 11:39:51 2008
 #
 # Template for monitor data
 # --------------------------
@@ -32908,6 +32908,15 @@ SAMSUNG:SYNCMASTER 920T (DIGITAL)  {
  Hsync=30-81
  Resolution=1280x1024
  Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 930B
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 930B  {
+ Option=DPMS
+ Hsync=30-81
+ Vsync=50-75
 }
 
 #==============================================
