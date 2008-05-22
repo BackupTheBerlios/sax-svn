@@ -341,7 +341,7 @@ void SaXConfig::commitConfiguration (void) {
 	// is located in /usr/bin and doesn't need to be linked
 	// ----
 	QFile loader (SAX_X11_LOADER);
-	if (loader.exists()) {
+	if ((loader.exists()) && (access ("/var/X11R6/bin/X",F_OK) != 0)) {
 		unlink  ("/usr/X11R6/bin/X");
 		unlink  ("/var/X11R6/bin/X");
 		if ((symlink ("/var/X11R6/bin/X","/usr/X11R6/bin/X")) != 0) {

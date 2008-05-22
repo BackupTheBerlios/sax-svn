@@ -667,7 +667,7 @@ sub LinkConfiguration {
 	#==========================================
 	# Create startup links
 	#------------------------------------------
-	if (-f $server) {
+	if ((-f $server) && (! -l "/var/X11R6/bin/X")) {
 		qx (rm -f /usr/X11R6/bin/X);
 		qx (rm -f /var/X11R6/bin/X);
 		qx (ln -s /var/X11R6/bin/X /usr/X11R6/bin/X);
