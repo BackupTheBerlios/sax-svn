@@ -235,6 +235,7 @@ void SCCKeyboardLayout::import ( void ) {
 	//-------------------------------------
 	// 1) primary layout...
 	Q3DictIterator<QString> itLayout (mLayoutDict);
+	int found = 0;
 	for (; itLayout.current(); ++itLayout) {
 		if (itLayout.currentKey() == baseLayout) {
 			QString val = mText[*itLayout.current()];
@@ -245,6 +246,23 @@ void SCCKeyboardLayout::import ( void ) {
 				);
 			}
 			mLayoutBox -> setCurrentText ( val );
+			found = 1; break;
+		}
+	}
+	if (! found) {
+		itLayout.toFirst();
+		baseLayout = "us";
+		for (; itLayout.current(); ++itLayout) {
+			if (itLayout.currentKey() == baseLayout) {
+				QString val = mText[*itLayout.current()];
+				if (val.isEmpty()) {
+					log (L_WARN,
+						"SCCKeyboardLayout::Warning: unknown XKB key: %s\n",
+						itLayout.current()->ascii()
+					);
+				}
+				mLayoutBox -> setCurrentText ( val );
+			}
 		}
 	}
 	// 2) secondary layout and variants...
