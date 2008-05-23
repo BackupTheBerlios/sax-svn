@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-04-21 13:07+0800\n"
+"PO-Revision-Date: 2008-05-17 15:25+0800\n"
 "Last-Translator: Eric Shan <ericalways@gmail.com>\n"
 "Language-Team: Simplified Chinese\n"
 "MIME-Version: 1.0\n"
@@ -106,11 +106,11 @@ msgstr "更改配置(&H)"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "监视器"
+msgstr "显示器"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "卡和监视器属性"
+msgstr "卡和显示器属性"
 
 #. Short description of the Mouse module
 #. Tab text for a display tab of the mouse dialog
@@ -292,11 +292,11 @@ msgstr "激活 3D 加速"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
-msgstr "卡的监视器"
+msgstr "卡的显示器"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr "卡的第二个监视器"
+msgstr "卡的第二个显示器"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
@@ -371,16 +371,16 @@ msgstr "已连接到"
 
 #. Tooltip text if monitor is unknown
 msgid "Unknown Monitor:"
-msgstr "未知监视器："
+msgstr "未知显示器："
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
-msgstr "主监视器："
+msgstr "主显示器："
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
 msgid "Monitor Settings"
-msgstr "监视器设置"
+msgstr "显示器设置"
 
 #. Windowanager title for the mouse mode setup
 msgid "Mouse Settings"
@@ -422,7 +422,7 @@ msgstr "<b>选项需要值</b><hr><nobr>为选项 %1 设置一个值。</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr "监视器：供应商和名称选择"
+msgstr "显示器：供应商和名称选择"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
@@ -446,8 +446,8 @@ msgid ""
 "manual for the settings.<br><br>If you want your monitor not to use its "
 "maximum rating, decrease the sync ranges."
 msgstr ""
-"<b>注意：</b>错误的同步范围可能损坏您的监视器。有关设置的信息，请参考您的监视"
-"器手册。<br><br>如果不想监视器使用其最大频率，请缩小同步范围。"
+"<b>注意：</b>错误的同步范围可能损坏您的显示器。有关设置的信息，请参考您的显示"
+"器手册。<br><br>如果不想显示器使用其最大频率，请缩小同步范围。"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -463,11 +463,11 @@ msgstr "横向"
 
 #. Label text for second monitor name
 msgid "Second Monitor:"
-msgstr "第二个监视器："
+msgstr "第二个显示器："
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr "第二个监视器的分辨率"
+msgstr "第二个显示器的分辨率"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
@@ -510,7 +510,7 @@ msgid ""
 "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
 "monitor vendor."
 msgstr ""
-"<b>插入 CD 或磁盘</b><hr>插入监视器供应商提供的显示器实用程序 CD 或磁盘。"
+"<b>插入 CD 或磁盘</b><hr>插入显示器供应商提供的显示器实用程序 CD 或磁盘。"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid ""
@@ -1319,7 +1319,6 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "触摸屏：供应商和名称选择"
 
 #. Finish configuration message box
-#, fuzzy
 msgid ""
 "<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
 "recommended to test the new configuration before saving it. If the test "
@@ -1328,7 +1327,8 @@ msgid ""
 "server."
 msgstr ""
 "<b>最终步骤</b><hr>最后一步为保存您的新配置。建议在保存之前测试新配置。如果测"
-"试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ] 键</b>停止服务器。"
+"试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ]</b> 和 <b>[ Ctrl+Alt"
+"+Backspace ]</b> 听到一个大声的警告后(哔)，就可以停止服务器。"
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
