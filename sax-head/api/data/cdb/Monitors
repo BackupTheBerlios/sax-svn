@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Tue May 20 11:39:51 2008
+# Author: Marcus Schaefer <sax@suse.de>, Mon May 26 09:45:46 2008
 #
 # Template for monitor data
 # --------------------------
@@ -35212,6 +35212,17 @@ SONY:CPD-L200M151  {
  Option=DPMS
  Hsync=30-61
  Vsync=50-65
+}
+
+#==============================================
+# E430
+#----------------------------------------------
+SONY:E430  {
+ DDC=SNY0C90
+ Option=DPMS
+ Hsync=30-96
+ Resolution=1600x1200
+ Vsync=48-170
 }
 
 #==============================================
