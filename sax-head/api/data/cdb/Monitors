@@ -1,7 +1,7 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
-# Author: Marcus Schaefer <sax@suse.de>, Mon May 26 09:45:46 2008
+# Author: Marcus Schaefer <sax@suse.de>, Mon May 26 17:50:46 2008
 #
 # Template for monitor data
 # --------------------------
@@ -31668,6 +31668,18 @@ SAMSUNG:SEC 1024  {
  Option=DPMS
  Hsync=31-60
  Vsync=30-60
+}
+
+#==============================================
+# SEC3346
+#----------------------------------------------
+SAMSUNG:SEC3346  {
+ DDC=SEC3346
+ Option=DPMS
+ Hsync=64-65
+ Modeline="1680x1050" 121.00 1680 1704 1792 1876 1050 1051 1054 1065
+ Resolution=1680x1050
+ Vsync=60-61
 }
 
 #==============================================
