@@ -1628,7 +1628,7 @@ void SaXManipulateDesktop::addExtraModeline (
 	if (! mDesktop -> getItem (key).isEmpty()) {
 		val = mDesktop -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << mode;
+	QTextOStream (&val) << "," << mode;
 	val.replace (QRegExp("^,"),"");
 	mDesktop -> setItem ( key,val );
 }

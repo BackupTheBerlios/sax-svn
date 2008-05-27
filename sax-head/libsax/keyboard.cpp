@@ -274,7 +274,7 @@ void SaXManipulateKeyboard::addXKBLayout (const QString& layout) {
 	if (! mImport -> getItem (key).isEmpty()) {
 		val = mImport -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << layout;
+	QTextOStream (&val) << "," << layout;
 	mImport -> setItem ( key,val );
 }
 
@@ -326,7 +326,7 @@ void SaXManipulateKeyboard::addXKBOption (const QString& option) {
 	if (! mImport -> getItem (key).isEmpty()) {
 		val = mImport -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << option;
+	QTextOStream (&val) << "," << option;
 	mImport -> setItem ( key,val );
 }
 

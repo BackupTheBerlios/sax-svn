@@ -61,7 +61,7 @@ void SaXStorage::addItem ( const QString & key, const QString & val ) {
 	QString* currentValue = mData.at (mCurrentID) -> take (key);
 	if ((currentValue) && (! currentValue->isEmpty())) {
 		QString newValue;
-		QTextOStream(&newValue) << currentValue << "," << val;
+		QTextOStream(&newValue) << *currentValue << "," << val;
 		newValue.replace (QRegExp("^,"),"");
 		setItem (key,newValue);
 	} else {

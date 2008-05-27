@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Tue May 27 11:47:20 CEST 2008 - ms@suse.de
+
+- fixed keyboard layout/varian setup. The libsax functions which
+  adds additional layouts and/or variants uses a QTextStream (QString)
+  object which was overwritten no matter what data was in the QString.
+  With Qt4 this behavior has changed and the information is now used.
+  Therefore the code QTextOStream (&val) << val << "," << option;
+  needs to be changed into QTextOStream (&val) << "," << option;
+  This fix is related to (bnc #394579)
+
+-------------------------------------------------------------------
 Mon May 26 17:52:22 CEST 2008 - ms@suse.de
 
 - fixed DDC data for Samsung SEC3346 (bnc #394523)

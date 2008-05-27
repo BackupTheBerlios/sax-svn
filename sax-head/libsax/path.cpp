@@ -76,7 +76,7 @@ void SaXManipulatePath::addFontPath (const QString& path) {
 	if (! mImport -> getItem (key).isEmpty()) {
 		val = mImport -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << path;
+	QTextOStream (&val) << "," << path;
 	mImport -> setItem ( key,val );
 }
 
@@ -129,7 +129,7 @@ void SaXManipulatePath::addLoadableModule (const QString& module) {
 	if (! mImport -> getItem (key).isEmpty()) {
 		val = mImport -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << module;
+	QTextOStream (&val) << "," << module;
 	mImport -> setItem ( key,val );
 }
 
@@ -182,7 +182,7 @@ void SaXManipulatePath::addServerFlag (const QString& flag) {
 	if (! mImport -> getItem (key).isEmpty()) {
 		val = mImport -> getItem (key);
 	}
-	QTextOStream (&val) << val << "," << flag;
+	QTextOStream (&val) << "," << flag;
 	mImport -> setItem ( key,val );
 }
 
