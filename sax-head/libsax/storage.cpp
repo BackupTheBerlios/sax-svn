@@ -230,10 +230,10 @@ void SaXStorage::merge (Q3PtrList< Q3Dict<QString> > data) {
 	// ----
 	for (unsigned int n=0;n<data.count();n++) {
 		Q3Dict<QString>* table = data.at(n);
-		Q3DictIterator<QString> it (*table);
 		if (! table) {
 			continue;
 		}
+		Q3DictIterator<QString> it (*table);
 		addID (n);
 		setID (n);
 		for (; it.current(); ++it) {
