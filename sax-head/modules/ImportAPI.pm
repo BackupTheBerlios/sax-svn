@@ -272,7 +272,9 @@ sub ApiImportKeyboard {
 		};
 
 		/^XkbVariant/     && do {
-		$var{InputDevice}{0}{Option}{XkbVariant} = $value;
+		if ($value ne "basic") {
+			$var{InputDevice}{0}{Option}{XkbVariant} = $value;
+		}
 		last SWITCH;
 		};
 
