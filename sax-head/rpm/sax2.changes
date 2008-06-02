@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
 Mon Jun  2 10:05:22 CEST 2008 - ms@suse.de
 
-- fixed segmentation in SaXStorage::merge (bnc #396127)
+- fixed segmentation fault in SaXStorage::merge (bnc #396127)
 - don't include variant basic (bnc #396117)
 
 -------------------------------------------------------------------
