@@ -237,7 +237,7 @@ sub init {
 	$var{Monitor}{0}{VendorName}                = "Unknown";
 	$var{Monitor}{0}{ModelName}                 = "Unknown";
 	$var{Monitor}{0}{HorizSync}                 = "29-70";
-	$var{Monitor}{0}{VertRefresh}               = "40-90";
+	$var{Monitor}{0}{VertRefresh}               = "50-90";
 	$var{Monitor}{0}{Option}                    = "DPMS";
 	$var{Desktop}{0}{CalcModelines}             = "on";
 
