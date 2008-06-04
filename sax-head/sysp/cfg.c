@@ -331,16 +331,19 @@ string XF86ConfigFile::CallRandR (str file) {
 	//=======================================
 	// Call a server and open the display
 	//---------------------------------------
-	int disp = GetDisplay();
+	//int disp = GetDisplay();
+	int disp = 99;
 	str scr  ; sprintf(scr,":%d",disp);
 	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,disp);
+	str lgv  ; sprintf(lgv,"255");
 	Display   *dpy  = NULL;
 	int spid    = 0;
 	int hasRR12 = False;
 	int major, minor;
 	string result = "";
 	string proc = qx(
-		XWRAPPER,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
+		XWRAPPER,STDOUT,7,"%s %s %s %s %s %s %s",
+		XW_LOG,BLANK,VERBOSE,lgv,CONFIG,file,scr
 	);
 	spid = atoi(proc.c_str());
 	dpy = XOpenDisplay (scr);
@@ -446,9 +449,11 @@ string XF86ConfigFile::CallRandR (str file) {
 // XF86ConfigFile: call XF86 loader...
 //-----------------------------------------
 void XF86ConfigFile::CallXF86Loader (str file) {
-	int dpy  = GetDisplay();
+	//int dpy  = GetDisplay();
+	int dpy = 99;
 	str scr  ; sprintf(scr,":%d",dpy);
 	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,dpy);
+	str lgv  ; sprintf(lgv,"255");
 	MsgDetect *parse = NULL;
 	Display   *disp  = NULL;
 	int spid  = 0;
@@ -456,7 +461,8 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 
 	if (access(log,R_OK) != 0) {
 		string proc = qx(
-			XWRAPPER,STDOUT,5,"%s %s %s %s %s",XW_LOG,BLANK,CONFIG,file,scr
+			XWRAPPER,STDOUT,7,"%s %s %s %s %s %s %s",
+			XW_LOG,BLANK,VERBOSE,lgv,CONFIG,file,scr
 		);
 		disp = XOpenDisplay (scr);
 		if (disp) {
@@ -467,7 +473,7 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 		ShutdownServer (spid,dpy);
 	}
 	parse = PLogGetData(log);
-	unlink(log);
+	//unlink(log);
  
 	if (parse != NULL) { 
 	for (int i=0;i<parse[0].cards;i++) {

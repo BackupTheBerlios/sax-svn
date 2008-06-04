@@ -14,13 +14,22 @@
 use strict;
 use Env;
 
-my $param = "-probeonly -logverbose 255 -verbose -xf86config $ARGV[0]";
-my $video = qx (X $param :99 2>&1 | grep -i videoram);
-my $code = $? >> 8;
-if ($code != 0 ) {
-	$video = qx (X $param :99 2>&1 | grep -i memory:);
+my $code = 0;
+my $logs = "/var/log/Xorg.99.log";
+my $video;
+if (! -f $logs) {
+	my $param = "-probeonly -logverbose 255 -verbose -xf86config $ARGV[0]";
+	qx (X $param :99 2>&1);
+	$code = $? >> 8;
 }
-if ($video =~ /(\d+) kByte/) {
+if ($code == 0 ) {
+	$video = qx (cat $logs | grep -i videoram);
+	$code = $? >> 8;
+	if ($code != 0 ) {
+		$video = qx (cat $logs | grep -i memory);
+	}
+}
+if ($video =~ /(\d+) kB/i) {
 	print "$1\n";
 } else {
 	print "0\n";

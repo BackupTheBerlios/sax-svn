@@ -47,6 +47,7 @@ STATUS        : Status: Up-to-date
 #define PROBE             "-probeonly"
 #define CONFIG            "-xf86config"
 #define BLANK             "-blank"
+#define VERBOSE           "-logverbose"
 #define NO_FLAG_QUESTION  99
 #define FB_DEV            "/dev/fb0"
 #define KILL              "/usr/bin/killall"

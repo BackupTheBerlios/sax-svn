@@ -53,6 +53,9 @@ int main (int argc,char*argv[]) {
 	bool mYaSTMode   = false;
 	bool mMiddle     = false;
 	bool mSizeCheck  = false;
+	if (getenv("DISPLAY") != NULL) {
+		SaXDisplay = getenv("DISPLAY");
+	}
 
 	//=====================================
 	// init variables...

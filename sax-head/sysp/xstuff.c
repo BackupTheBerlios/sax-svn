@@ -247,12 +247,6 @@ void ScanXStuff::Scan (void) {
 	char* config = createProbeonlyConfig (srvmsg,card,graphics);
 
 	//======================================
-	// try to detect memory size
-	//--------------------------------------
-	if (graphics.size() == 1) {
-		VBEmem  = MemorySize(config);
-	}
-	//======================================
 	// try to detect the output plugin
 	//--------------------------------------
 	if (graphics[0].module == "intel" || graphics[0].module == "radeonhd") {
@@ -260,6 +254,12 @@ void ScanXStuff::Scan (void) {
 		if (rroutput.empty()) {
 			rroutput = "<undefined>";
 		}
+	}
+	//======================================
+	// try to detect memory size
+	//--------------------------------------
+	if (graphics.size() == 1) {
+		VBEmem  = MemorySize(config);
 	}
 	// .../
 	// it is not sure to get any server message data this depend on
