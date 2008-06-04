@@ -114,7 +114,7 @@ sub AutoDetectSyncRanges {
 	# ------------------------------------------
 	for($i=0;$i<@vsync_list;$i++) {
 		$vsmax = int($vsync_list[$i]);
-		$vsmin = 30;
+		$vsmin = 50;
 		$var{Monitor}{$i}{VertRefresh} = "$vsmin-$vsmax";
 	}
 
@@ -130,7 +130,7 @@ sub AutoDetectSyncRanges {
 		# we did not get any VESA information therefore we set the 
 		# sync ranges to save values to avoid any monitor damage
 		# ----------------------------------------------------------
-		$var{Monitor}{$i}{VertRefresh} = "43-75";
+		$var{Monitor}{$i}{VertRefresh} = "50-75";
 		$var{Monitor}{$i}{HorizSync}   = "30-40"; 
 		$var{Monitor}{$i}{VendorName}  = "Unknown";
 		$var{Monitor}{$i}{ModelName}   = "Unknown";

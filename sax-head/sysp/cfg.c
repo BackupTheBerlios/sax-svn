@@ -114,7 +114,7 @@ string XF86ConfigFile::DoMonitorSection (void) {
 	section = "Section \"Monitor\"\n";
 	section = section + ident;
 	section = section + " HorizSync     30-33\n";
-	section = section + " VertRefresh   43-72\n";
+	section = section + " VertRefresh   50-72\n";
 	section = section + "EndSection\n"; 
 	return(section);
 }
