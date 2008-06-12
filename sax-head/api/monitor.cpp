@@ -617,7 +617,7 @@ bool SCCMonitor::exportData ( void ) {
 						//====================================
 						// setup profile IntelNext
 						//------------------------------------
-						if ((driver == "intel") || (driver == "radeonhd")) {
+						if ((driver == "intel") || (driver == "radeonhd") || (driver == "radeon")) {
 							// search monitor-* outputs and re-add them
 							QRegExp itemExp ("monitor-(.*)");
 							int pos = itemExp.search (key);

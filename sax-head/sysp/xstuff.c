@@ -249,7 +249,9 @@ void ScanXStuff::Scan (void) {
 	//======================================
 	// try to detect the output plugin
 	//--------------------------------------
-	if (graphics[0].module == "intel" || graphics[0].module == "radeonhd") {
+	if (graphics[0].module == "intel" || 
+            graphics[0].module == "radeonhd" ||
+            graphics[0].module == "radeon" ) {
 		rroutput = srvmsg->CallRandR(config);
 		if (rroutput.empty()) {
 			rroutput = "<undefined>";
