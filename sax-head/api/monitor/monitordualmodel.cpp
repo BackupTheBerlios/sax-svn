@@ -83,6 +83,7 @@ SCCMonitorDualModel::SCCMonitorDualModel (
 	Q3VBox* textBox = new Q3VBox ( mSyncGroup );
 	mLabelWarning  = new QLabel ( mText["FrqNote"],textBox );
 	mLabelWarning -> setFixedWidth ( 200 );
+	mLabelWarning -> setWordWrap( true );
 	QLabel* latent1 = new QLabel ( textBox );
 	textBox -> setStretchFactor ( latent1,10 );
 
