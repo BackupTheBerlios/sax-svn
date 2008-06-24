@@ -15,7 +15,7 @@ tmplang=${LANGUAGE-${LC_ALL-${LC_MESSAGES-${LANG-en_US}}}}
 # ---
 export LC_ALL=`echo ${tmplang} |sed -e 's/[.@:].*//'`.UTF-8
 
-ICERC=/usr/share/sax/api/data/icerc.sax
+ICERC=icerc.sax
 TWMRC=/usr/share/sax/api/data/twmrc.sax
 
 which icewm &>/dev/null && exec icewm -c $ICERC "$@"

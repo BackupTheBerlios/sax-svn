@@ -116,6 +116,8 @@ class SCCFrame : public QWidget {
 	SaXConfig*       mConfig;
 	bool mYaSTMode;
 	int  mGUIMode;
+	int mX;
+	int mY;
 
 	private:
 	Q3Frame*       mMainFrame;

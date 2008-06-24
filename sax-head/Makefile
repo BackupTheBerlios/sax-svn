@@ -255,6 +255,11 @@ install:install-docs
 	done
 
 	#============================================
+	# move icerc.sax file to /etc/icewm
+	#--------------------------------------------
+	mkdir -p /etc/icewm && mv ${APIDATAVZ}/icerc.sax /etc/icewm
+
+	#============================================
 	# install tools...
 	#--------------------------------------------
 	${MAKE} -C ./tools install

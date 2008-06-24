@@ -61,32 +61,36 @@ SCCFrame::SCCFrame (
 		qApp->setReverseLayout( true );
 	}
 	//=====================================
+	// get the middle position
+	//-------------------------------------
+	Q3Process* proc = new Q3Process ();
+	proc -> addArgument ( XQUERY );
+	proc -> addArgument ( "-M" );
+	proc -> addArgument ( "--display" );
+	proc -> addArgument ( SaXDisplay );
+	if ( ! proc -> start() ) {
+		exitSaX (1);
+	}
+	while (proc->isRunning()) {
+		usleep (1000);
+	}
+	QByteArray data = proc->readStdout();
+	QStringList lines = QStringList::split ("\n",data);
+	QStringList position = QStringList::split (" ",lines.first());
+	QStringList reslist  = QStringList::split (":",position.last());
+	mX = reslist.first().toInt();
+	mY = reslist.last().toInt();
+	//=====================================
 	// show information box if set
 	//-------------------------------------
 	if (setinfo) {
-		Q3Process* proc = new Q3Process ();
-		proc -> addArgument ( XQUERY );
-		proc -> addArgument ( "-M" );
-		proc -> addArgument ( "--display" );
-		proc -> addArgument ( SaXDisplay );
-		if ( ! proc -> start() ) {
-			exitSaX (1);
-		}
-		while (proc->isRunning()) {
-			usleep (1000);
-		}
-		QByteArray data = proc->readStdout();
-		QStringList lines = QStringList::split ("\n",data);
-		QStringList position = QStringList::split (" ",lines.first());
-		QStringList reslist  = QStringList::split (":",position.last());
-		int posx = reslist.first().toInt();
-		int posy = reslist.last().toInt();
-		posx = posx - 225;
-		posy = posy - 75;
+		int posx = mX - 225;
+		int posy = mY - 75;
 		SCCMessage* mMessageBox = new SCCMessage (
 			this, getTextPtr(), SaXMessage::INTRO,
 			"Suggestion","SuggestionCaption"
 		);
+		mMessageBox -> setGeometry ( posx,posy,400,150 );
 		QString result = mMessageBox -> showMessage();
 		if (result == mText["Cancel"]) {
 			exitSaX (2);	
@@ -130,25 +134,8 @@ SCCFrame::SCCFrame (
 			exitSaX();
 		}
 		if (package != "<none>") {
-			Q3Process* proc = new Q3Process ();
-			proc -> addArgument ( XQUERY );
-			proc -> addArgument ( "-M" );
-			proc -> addArgument ( "--display" );
-			proc -> addArgument ( SaXDisplay );
-			if ( ! proc -> start() ) {
-				exitSaX (1);
-			}
-			while (proc->isRunning()) {
-				usleep (1000);
-			}
-			QByteArray data = proc->readStdout();
-			QStringList lines = QStringList::split ("\n",data);
-			QStringList position = QStringList::split (" ",lines.first());
-			QStringList reslist  = QStringList::split (":",position.last());
-			int posx = reslist.first().toInt();
-			int posy = reslist.last().toInt();
-			posx = posx - 200;
-			posy = posy - 75;
+			int posx = mX - 200;
+			int posy = mY - 75;
 			SCCMessage* mMessageBox = new SCCMessage (
 				this, getTextPtr(), SaXMessage::YES_NO,
 				"InstallPackage","InstallPackageCaption"
@@ -187,25 +174,8 @@ SCCFrame::SCCFrame (
 	int height = qApp->desktop()->height();
 	if (! fullscreen) {
 		if (middle) {
-			Q3Process* proc = new Q3Process ();
-			proc -> addArgument ( XQUERY );
-			proc -> addArgument ( "-M" );
-			proc -> addArgument ( "--display" );
-			proc -> addArgument ( SaXDisplay );
-			if ( ! proc -> start() ) {
-				return; 
-			}
-			while (proc->isRunning()) {
-				usleep (1000);
-			}
-			QByteArray data = proc->readStdout();
-			QStringList lines = QStringList::split ("\n",data);
-			QStringList position = QStringList::split (" ",lines.first());
-			QStringList reslist  = QStringList::split (":",position.last());
-			int posx = reslist.first().toInt();
-			int posy = reslist.last().toInt();
-			posx = posx - 400;
-			posy = posy - 300;
+			int posx = mX - 400;
+			int posy = mY - 300;
 			setGeometry ( posx,posy,800,600 );
 		} else {
 			resize ( 800,600 );
@@ -637,6 +607,9 @@ void SCCFrame::loadApplication ( void ) {
 	mProgress.setFixedWidth ( 350 );
 	mProgress.setCaption (mText["ImportDataCaption"]);
 	mProgress.setLabelText (mText["InitCache"]);
+	int posx = mX - 175;
+	int posy = mY - 75;
+	mProgress.setGeometry ( posx,posy,350,150 );
 	mProgress.setProgress ( 1 );
 	qApp->processEvents();
 	//=====================================
