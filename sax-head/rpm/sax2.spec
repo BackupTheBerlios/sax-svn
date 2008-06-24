@@ -243,6 +243,7 @@ fi
 %dir /var/cache/sax/files
 %dir /var/cache/sax
 %dir /var/cache/xfine
+%dir /etc/icewm
 %{_datadir}/sax/libsax/*
 %{_datadir}/pixmaps/sax2.png
 %{_datadir}/sax/svnbuild
@@ -258,7 +259,7 @@ fi
 %{_sbindir}/xcmd
 %{_datadir}/sax/api/data/fvwmrc.sax
 %{_datadir}/sax/api/data/twmrc.sax
-/etc/icewm/icerc.sax
+%config /etc/icewm/icerc.sax
 %{_datadir}/sax/api/data/CardModules
 %{_datadir}/sax/api/data/LangCodes
 %{_datadir}/sax/api/data/PointerDevice
