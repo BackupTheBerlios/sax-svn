@@ -166,7 +166,6 @@ bool SCCMouse::exportData ( void ) {
 		// check for mouse display's
 		//------------------------------------
 		SCCMouseDisplay* display = it;
-		//if (display->isEnabled()) {
 		//====================================
 		// create manipulators...
 		//------------------------------------
@@ -201,7 +200,7 @@ bool SCCMouse::exportData ( void ) {
 				if (key == "ZAxisMapping") {
 					zmap = val;
 				}
-				mSection["Pointers"]->removeEntry ( key );
+				//mSection["Pointers"]->removeEntry ( key );
 			}
 			saxMouse.setMouse ( vendor,model );
 		}
@@ -261,7 +260,6 @@ bool SCCMouse::exportData ( void ) {
 		if (display->isEnabled()) {
 			saxLayout.addInputLayout (mouseID);
 		}
-		//}
 	}
 	return true;
 }
