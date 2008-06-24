@@ -37,6 +37,7 @@ MANVZ          = ${man_prefix}/man1
 PACKDOCVZ      = ${doc_prefix}/sax2
 SBINVZ         = ${buildroot}/usr/sbin
 LIBSAXVZ       = ${buildroot}/var/lib/sax
+ICERCVZ        = ${buildroot}/etc/icewm
 SAXBINVZ       = ${sax_prefix}
 APIVZ          = ${sax_prefix}/api
 APIDATAVZ      = ${sax_prefix}/api/data
@@ -135,7 +136,7 @@ install:install-docs
 	# Install base directories
 	#--------------------------------------------
 	install -d -m 755 ${APIVZ} ${APIDATAVZ} ${USRLIBVZ}
-	install -d -m 755 ${CDBVZ} ${PIXVZ} ${INCVZ}
+	install -d -m 755 ${CDBVZ} ${PIXVZ} ${INCVZ} ${ICERCVZ}
 	install -d -m 755 ${MODULEVZ} ${SYSPVZ} ${MAPVZ} ${FILES} ${DETECTVZ}
 	install -d -m 755 ${RDBMS} ${SCRIPTVZ} ${SAXTOOLS} ${LIBVZ}
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
@@ -257,7 +258,7 @@ install:install-docs
 	#============================================
 	# move icerc.sax file to /etc/icewm
 	#--------------------------------------------
-	mkdir -p /etc/icewm && mv ${APIDATAVZ}/icerc.sax /etc/icewm
+	mv ${APIDATAVZ}/icerc.sax ${ICERCVZ}
 
 	#============================================
 	# install tools...
