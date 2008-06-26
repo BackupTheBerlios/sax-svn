@@ -1,6 +1,6 @@
 # /.../
 # Copyright (c) 2001 SuSE GmbH Nuernberg, Germany. All rights reserved.
-# Author: Marcus Schaefer <sax@suse.de>, 2001
+# Author: Marcus Schaefer <sax@suse.de>, 2001 
 #
 # Makefile for SaX2
 # X-Server configuration program
