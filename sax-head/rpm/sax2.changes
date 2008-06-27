@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Jun 27 17:00:13 CEST 2008 - sndirsch@suse.de
+
+- reverted r1619, which broke the VerticalScroll support for a lot
+  of ALPS touchpads (bnc #401661)
+- added alps-macbook profile and use it for Macbook ALPS touchpad 
+  (bnc #250427)
+
+-------------------------------------------------------------------
 Wed Jun 25 11:05:58 CEST 2008 - sndirsch@suse.de
 
 - disable horizontal scroll on ALPS touchpads by default
