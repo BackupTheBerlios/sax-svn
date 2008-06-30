@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Jun 30 13:07:33 CEST 2008 - sndirsch@suse.de
+
+- dynamic profile for wacom no longer required since udev rule is
+  now used to create /dev/input/wacom for Wacom USB tablets
+  (bnc #404847)
+
+-------------------------------------------------------------------
 Mon Jun 30 11:39:32 CEST 2008 - sndirsch@suse.de
 
 - added Resolution/DPI entries to Samsung SyncMaster 930B
