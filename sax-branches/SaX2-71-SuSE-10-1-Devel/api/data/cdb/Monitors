@@ -41101,3 +41101,20 @@ ZENITH:ZCM-1740  {
  Vsync=50-100
 }
 
+#==============================================
+# AUO LCD MONITOR
+#----------------------------------------------
+AUO:AUO LCD MONITOR {
+ DDC=AUO10C2
+ Resolution=1024x600
+ Profile=AUO10C2
+}
+
+#==============================================
+# CMO LCD Monitor
+#----------------------------------------------
+CMO:CMO LCD Monitor {
+ DDC=CMO0800
+ Resolution=1280x768
+ Profile=CMO0800
+}

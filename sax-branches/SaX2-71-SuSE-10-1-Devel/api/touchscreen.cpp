@@ -132,6 +132,12 @@ bool SCCTouchScreen::exportData ( void ) {
 			if (port.contains ("ttyS1")) {
 				saxToucher.setDevice ( "/dev/ttyS1" );
 			}
+			if (port.contains ("ttyS2")) {
+				saxToucher.setDevice ( "/dev/ttyS2" );
+			}
+			if (port.contains ("ttyS3")) {
+				saxToucher.setDevice ( "/dev/ttyS3" );
+			}
 			if (port.contains ("USB")) {
 				saxToucher.setDevice ( "/dev/input/mice" );
 			}			
