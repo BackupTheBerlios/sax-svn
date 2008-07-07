@@ -17,8 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -30,34 +29,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>Пропозиція SaX2</b><hr>В даний час запущено графічну систему, "
-"запропоновану програмою SaX2. Якщо вона підходить, натисніть <b>Гаразд</b>. "
-"Інакше, змініть конфігурацію."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>Пропозиція SaX2</b><hr>В даний час запущено графічну систему, запропоновану програмою SaX2. Якщо вона підходить, натисніть <b>Гаразд</b>. Інакше, змініть конфігурацію."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>Акселерація 3D не підтримується</b><hr>SaX2 не може увімкнути тривимірну "
-"підсистему, бо ваша графічна плата або драйвер не підтримує 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>Акселерація 3D не підтримується</b><hr>SaX2 не може увімкнути тривимірну підсистему, бо ваша графічна плата або драйвер не підтримує 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>Акселерація 3D не підтримується</b><hr>SaX2 не може увімкнути тривимірну "
-"підсистему, бо вживається мультимоніторний режим на основі Xinerama. "
-"Розширення Xorg Xinerama для поєднання графічних екранів не підтримує 3D на "
-"всіх моніторах."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>Акселерація 3D не підтримується</b><hr>SaX2 не може увімкнути тривимірну підсистему, бо вживається мультимоніторний режим на основі Xinerama. Розширення Xorg Xinerama для поєднання графічних екранів не підтримує 3D на всіх моніторах."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -76,12 +57,8 @@ msgid "SaX Control Center"
 msgstr "Центр керування SaX"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Змінено розмір екрана</b><hr>Розмір екрана було адаптовано до нового "
-"формату."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Змінено розмір екрана</b><hr>Розмір екрана було адаптовано до нового формату."
 
 #. Help Button text
 msgid "&Help"
@@ -340,12 +317,8 @@ msgid "Unconfigured"
 msgstr "Не налаштовано"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Неможливо вимкнути всі дисплеї</b><hr><nobr>Принаймні один дисплей мусить "
-"бути активним.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Неможливо вимкнути всі дисплеї</b><hr><nobr>Принаймні один дисплей мусить бути активним.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -421,21 +394,12 @@ msgid "To the Right"
 msgstr "Праворуч"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Не чинне поєднання кольору/роздільності:</b><hr><nobr>Вибрані параметри "
-"роздільної здатності і/або кольору</nobr> не підтримуються буфером кадрів "
-"графічної плати."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Не чинне поєднання кольору/роздільності:</b><hr><nobr>Вибрані параметри роздільної здатності і/або кольору</nobr> не підтримуються буфером кадрів графічної плати."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Параметр потребує значення</b><hr><nobr>Встановіть значення для параметра "
-"%1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Параметр потребує значення</b><hr><nobr>Встановіть значення для параметра %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -458,15 +422,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Розмір дисплея в [мм]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Примітка:</b><hr>Неправильні діапазони синхронізації можуть пошкодити ваш "
-"монітор. Перегляньте інструкцію монітора щодо параметрів.<br><br>Якщо ви не "
-"хочете, щоб монітор використовував максимальні значення, зменшіть діапазони "
-"синхронізації."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Примітка:</b><hr>Неправильні діапазони синхронізації можуть пошкодити ваш монітор. Перегляньте інструкцію монітора щодо параметрів.<br><br>Якщо ви не хочете, щоб монітор використовував максимальні значення, зменшіть діапазони синхронізації."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -525,21 +482,12 @@ msgid "inches"
 msgstr "дюймів"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Вставте КД або дискету</b><hr>Вставте КД або дискету з утилітами від "
-"постачальника монітора."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Вставте КД або дискету</b><hr>Вставте КД або дискету з утилітами від постачальника монітора."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Помилка читання</b><hr>Не вдалось прочитати з КД або дискети. Це може "
-"вказувати на пошкоджений носій або неправильно відформатовані інформаційні "
-"файли."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Помилка читання</b><hr>Не вдалось прочитати з КД або дискети. Це може вказувати на пошкоджений носій або неправильно відформатовані інформаційні файли."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -872,9 +820,7 @@ msgstr "Примусово використовувати стандартну �
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock вживає внутрішній механізм великих літер. Shift не впливає на "
-"CapsLock."
+msgstr "CapsLock вживає внутрішній механізм великих літер. Shift не впливає на CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -902,9 +848,7 @@ msgstr "Клавіша пробілу видає символ нерозривн
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Поміняти місцями коди двох клавіш, якщо клавіатуру для Mac неправильно "
-"визначено ядром kernel."
+msgstr "Поміняти місцями коди двох клавіш, якщо клавіатуру для Mac неправильно визначено ядром kernel."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -923,11 +867,8 @@ msgid "Left Win-key is Compose."
 msgstr "Права клавіша Win як Compose."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Натисніть праву клавішу Alt, щоб вибрати 3-й рівень, Shift+права клавіша Alt "
-"- Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Натисніть праву клавішу Alt, щоб вибрати 3-й рівень, Shift+права клавіша Alt - Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -943,9 +884,7 @@ msgstr "CapsLock діє, як Shift з фіксацією. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock вживає внутрішній механізм великих літер. Shift не скасовує "
-"CapsLock."
+msgstr "CapsLock вживає внутрішній механізм великих літер. Shift не скасовує CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1021,8 +960,7 @@ msgstr "CapsLock діє, як Shift з фіксацією. Shift не скасо
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr ""
-"CapsLock вживає внутрішній механізм великих літер. Shift скасовує CapsLock."
+msgstr "CapsLock вживає внутрішній механізм великих літер. Shift скасовує CapsLock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1220,12 +1158,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Обміняти місцями клавіші ESC і CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Бічна клавіатура Wang 724 з додатками юнікоду (стрілки і математичні дії). "
-"На типовому рівні — математичні оператори."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Бічна клавіатура Wang 724 з додатками юнікоду (стрілки і математичні дії). На типовому рівні — математичні оператори."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1236,12 +1170,8 @@ msgid "Legacy key with comma"
 msgstr "Успадкована клавіша з комою"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Бічна клавіатура з додатками юнікоду (стрілки і математичні дії). На "
-"типовому рівні — математичні оператори."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Бічна клавіатура з додатками юнікоду (стрілки і математичні дії). На типовому рівні — математичні оператори."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1257,8 +1187,7 @@ msgstr "Поведінка клавіші Delete на цифровій клав�
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Бічна клавіатура Wang 724 з додатками юнікоду (стрілки і математичні дії)"
+msgstr "Бічна клавіатура Wang 724 з додатками юнікоду (стрілки і математичні дії)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1357,18 +1286,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Сенсорний екран: Вибір назви та постачальника"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Останні кроки:</b><hr>Останній крок — збереження нових налаштувань. "
-"Рекомендується перед збереженням перевірити нові налаштування. Якщо тестовий "
-"сервер покаже спотворену стільницю, натисніть <b>[ Ctrl+Alt+Backspace ]</b> "
-"і ще раз <b>[ Ctrl+Alt+Backspace ]</b> невдовзі після звукового попередження "
-"(гудка), щоб знищити процес сервера."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Останні кроки:</b><hr>Останній крок — збереження нових налаштувань. Рекомендується перед збереженням перевірити нові налаштування. Якщо тестовий сервер покаже спотворену стільницю, натисніть <b>[ Ctrl+Alt+Backspace ]</b> і ще раз <b>[ Ctrl+Alt+Backspace ]</b> невдовзі після звукового попередження (гудка), щоб знищити процес сервера."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1411,38 +1330,20 @@ msgid "HTTP Port"
 msgstr "Порт HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Не збігається пароль віддаленого доступу</b><hr>Перша та друга версія "
-"пароля не збігаються між собою."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Не збігається пароль віддаленого доступу</b><hr>Перша та друга версія пароля не збігаються між собою."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Помилка пароля віддаленого доступу</b><hr>Поле пароля порожнє або пароль "
-"занадто короткий. Введіть пароль, який складається з шести або більше "
-"символів."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Помилка пароля віддаленого доступу</b><hr>Поле пароля порожнє або пароль занадто короткий. Введіть пароль, який складається з шести або більше символів."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Помилка пароля віддаленого доступу</b><hr>Пароль занадто довгий. Введіть "
-"пароль, який має не більше восьми символів."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Помилка пароля віддаленого доступу</b><hr>Пароль занадто довгий. Введіть пароль, який має не більше восьми символів."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Встановлення ПЗ:</b><hr>Деякі пакунки відсутні. Встановити тепер пакунки, "
-"яких не вистачає?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Встановлення ПЗ:</b><hr>Деякі пакунки відсутні. Встановити тепер пакунки, яких не вистачає?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1461,37 +1362,20 @@ msgid "Initialize cache..."
 msgstr "Започаткування кешу..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Не вдалось зберегти конфігурацію</b><hr>Було створено наступний звіт:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Не вдалось зберегти конфігурацію</b><hr>Було створено наступний звіт:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після "
-"наступного перезапуску графічної системи. Вийти з SaX2 вже тепер?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Конфігурацію збережено:</b><hr>Ваші зміни наберуть чинності після наступного перезапуску графічної системи. Вийти з SaX2 вже тепер?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Не вдалось перевірити конфігурацію</b><hr>Для подальшої інформації, див. "
-"у файл <tt>/var/log/Xorg.99.log</tt>. Було створено наступний звіт:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Не вдалось перевірити конфігурацію</b><hr>Для подальшої інформації, див. у файл <tt>/var/log/Xorg.99.log</tt>. Було створено наступний звіт:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Інформація про налаштування віддаленого доступу</b><hr>Служба віддаленого "
-"доступу потребує, щоб порт TCP 5900 і порт HTTP (5800 типово) були відкриті "
-"в фаєрволі. Це можна налаштувати через YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Інформація про налаштування віддаленого доступу</b><hr>Служба віддаленого доступу потребує, щоб порт TCP 5900 і порт HTTP (5800 типово) були відкриті в фаєрволі. Це можна налаштувати через YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1974,3 +1858,4 @@ msgstr "Конфігурація на дисплеї"
 
 msgid "Idle timer..."
 msgstr "Бездіяльний таймер..."
+
