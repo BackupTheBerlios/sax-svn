@@ -1,0 +1,32 @@
+--- ../sax.orig/parse/XFree.h	2008-07-04 15:42:05.000000000 +0000
++++ parse/XFree.h	2008-07-04 15:48:06.000000000 +0000
+@@ -9,7 +9,6 @@
+ /* Files Section... */
+ extern char* GetModulePath (XF86ConfigPtr conf);
+ extern char* GetFontPath (XF86ConfigPtr conf);
+-extern char* GetRgbPath (XF86ConfigPtr conf);
+ extern char* GetLogFile (XF86ConfigPtr conf);
+ 
+ /* Module Section... */
+--- ../sax.orig/parse/parse.c	2008-07-04 15:42:05.000000000 +0000
++++ parse/parse.c	2008-07-04 15:48:24.000000000 +0000
+@@ -43,7 +43,6 @@
+ /* Files Section... */
+ char* GetModulePath (XF86ConfigPtr conf);
+ char* GetFontPath (XF86ConfigPtr conf);
+-char* GetRgbPath (XF86ConfigPtr conf);
+ char* GetLogFile (XF86ConfigPtr conf);
+ 
+ /* Module Section... */
+@@ -137,11 +136,6 @@
+ 	return(conf->conf_files->file_fontpath);
+ }
+ 
+-char* GetRgbPath (XF86ConfigPtr conf) {
+-	if (conf == NULL) return("null");
+-	return(conf->conf_files->file_rgbpath);
+-}
+-
+ char* GetLogFile (XF86ConfigPtr conf) {
+ 	if (conf == NULL) return("null");
+ 	return(conf->conf_files->file_logfile);

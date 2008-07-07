@@ -49,6 +49,7 @@ ExcludeArch:  s390
 %if %{suse_version} > 1020
 Patch:          sax2.dif
 %endif
+Patch1:         xorg-server-1_5.diff
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -162,6 +163,7 @@ written programs
 %if %{suse_version} > 1020
 %patch
 %endif
+%patch1
 
 %build
 test -e /.buildenv && . /.buildenv
