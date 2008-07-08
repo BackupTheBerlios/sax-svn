@@ -30,3 +30,26 @@
  char* GetLogFile (XF86ConfigPtr conf) {
  	if (conf == NULL) return("null");
  	return(conf->conf_files->file_logfile);
+Index: modules/ParseConfig.pm
+===================================================================
+--- modules/ParseConfig.pm	(revision 1651)
++++ modules/ParseConfig.pm	(working copy)
+@@ -93,18 +93,6 @@
+ 		}
+ 	}
+ 	#========================================
+-	# RgbPath...
+-	#---------------------------------------
+-	$result = XFree::GetRgbPath($ptr);
+-	if (defined $result) {
+-		$count  = 0;
+-		@list   = split(/,/,$result);
+-		foreach $i (@list) {
+-			$parse{RgbPath}{$count} = $i;
+-			$count++;
+-		}
+-	}
+-	#========================================
+ 	# LogFile...
+ 	#----------------------------------------
+ 	$result = XFree::GetLogFile($ptr);
