@@ -219,6 +219,7 @@ bool SCCKeyboard::exportData ( void ) {
 	//====================================
 	// run yast keyboard module 
 	//------------------------------------
+	qApp->setOverrideCursor ( Qt::forbiddenCursor );
 	QString baseLayout = *layouts.begin();
 	QString complete = "/usr/share/sax/api/macros/setconsolekeyboard.sh " 
 		+ baseLayout;
@@ -231,6 +232,7 @@ bool SCCKeyboard::exportData ( void ) {
 	while (proc->isRunning()) {
 		usleep (1000);
 	}
+	qApp->restoreOverrideCursor();
 	return true;
 }
 } // end namespace
