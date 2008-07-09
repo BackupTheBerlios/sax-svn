@@ -216,6 +216,25 @@ bool SCCKeyboard::exportData ( void ) {
 	if ((kbcnt > 1) && (option.isEmpty())) {
 		saxKeyboard.setXKBOption ( "grp:alt_shift_toggle" );
 	}
+	//====================================
+	// run yast keyboard module 
+	//------------------------------------
+	{ 
+	    // the base layout is this one:
+	    QString layout = *layouts.begin();
+	    //printf ("layout: %s\n",layout.toLatin1().data());
+	    QString complete = "/usr/share/sax/libsax/setconsolekeyboard.sh " 
+                               + layout;
+	    log (L_INFO,"Run YaST keyboard module (console keyboard)\n");
+	    Q3Process* proc = new Q3Process ();
+	    proc -> addArgument ("/bin/bash");
+	    proc -> addArgument ("-c");
+	    proc -> addArgument (complete);
+	    proc -> start();
+	    while (proc->isRunning()) {
+		usleep (1000);
+	    }
+	}
 	return true;
 }
 } // end namespace
