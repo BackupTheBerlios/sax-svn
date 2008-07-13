@@ -274,6 +274,15 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 #-------------------------------------------------
 %suse_update_desktop_file -i %name System SystemSetup
 #=================================================
+# hwinfo data (bnc #408436)
+#-------------------------------------------------
+mkdir -p $RPM_BUILD_ROOT/var/lib/hardware/ids
+cat > $RPM_BUILD_ROOT/var/lib/hardware/ids/sax2-ident << EOF
+ vendor.id              usb 0x04e7
+&device.id              usb 0x0030
+ +hwclass                mouse
+EOF
+#=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
 
@@ -282,6 +291,27 @@ chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
 	mkdir -p /var/cache/xfine
 fi
+
+%post -n sax2-ident
+if ls var/lib/hardware/ids/* &> /dev/null; then
+  >  var/lib/hardware/hd.ids
+  for i in var/lib/hardware/ids/*; do
+    cat $i >> var/lib/hardware/hd.ids
+  done
+fi
+
+%postun -n sax2-ident
+if [ "$1" -eq 0 ]; then
+  if ls var/lib/hardware/ids/* &> /dev/null; then
+    >  var/lib/hardware/hd.ids
+    for i in var/lib/hardware/ids/*; do
+      cat $i >> var/lib/hardware/hd.ids
+    done
+  else
+    rm -f var/lib/hardware/hd.ids
+  fi
+fi
+
 #=================================================
 # SaX files...      
 #-------------------------------------------------
@@ -456,6 +486,7 @@ fi
 %dir /usr/share/sax/api/data
 %dir /usr/share/sax/sysp/maps
 %dir /usr/share/sax/sysp
+%dir /var/lib/hardware
 /usr/share/sax/sysp/maps/Identity.map
 /usr/share/sax/sysp/maps/Keyboard.map
 /usr/share/sax/sysp/maps/Vendor.map
@@ -463,6 +494,7 @@ fi
 /usr/share/sax/sysp/maps/Driver.map
 /usr/share/sax/api/data/cdb/*
 /usr/share/sax/profile
+/var/lib/hardware/ids
 #=================================================
 # SaX-libsax file list...  
 # ------------------------------------------------
