@@ -192,6 +192,9 @@ bool SCCTablet::exportData ( void ) {
 		if (saxTablet.isEraser()) {
 			saxDevice.removeInputDevice (i);
 		}
+		if (saxTablet.isPad()) {
+			saxDevice.removeInputDevice (i);
+		}
 		}
 	}
 	//====================================
