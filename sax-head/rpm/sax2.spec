@@ -324,6 +324,7 @@ fi
 %{_sbindir}/xquery
 %{_sbindir}/vncp
 %{_sbindir}/xw
+%{_sbindir}/getPrimary
 #=================================================
 # SaX-Ident file list...  
 # ------------------------------------------------

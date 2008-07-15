@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Jul 15 17:37:02 CEST 2008 - sndirsch@suse.de
+
+- configure only primary VGA card by default, i.e. no multicard
+  setups any more by default; you can still force SaX2 to create
+  a mulitcard setup with "-c 0,1" (bnc #381644)
+
+-------------------------------------------------------------------
 Mon Jul 14 18:08:54 CEST 2008 - ms@suse.de
 
 - fixed missing pad removal before writing new config (bnc #408737)
