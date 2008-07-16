@@ -29,7 +29,7 @@ sax_id=""
 bus_slot_function=$(/sbin/lspci -vv | \
                     grep -B2 "Control: I/O+" | \
                     grep "VGA compatible" | \
-                    awk '{print $1}')
+                    awk '{print $1}' | head -n 1)
 test "$bus_slot_function" == "" && fallback
 
 # search for SaX2 ChipID ("sysp -c" is the same as "sax2 -p")
