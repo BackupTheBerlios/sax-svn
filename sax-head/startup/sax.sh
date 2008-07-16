@@ -54,7 +54,8 @@ IGNORE_PROFILE=""
 DIALOG=""
 REINIT=0
 FULLSCREEN=""
-NOINTELMAGIC=""
+### obsoleted by single card setup, which we use as default now
+NOINTELMAGIC="--nointelmagic"
 
 #==================================
 # Functions...
