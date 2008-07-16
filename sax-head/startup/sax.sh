@@ -28,7 +28,13 @@ CMDLINE=$*
 FASTPATH=""
 QUICK_START=""
 GPMSTATUS=3
-BATCH_MODE=""
+### no longer write BusID by default if there is only one possible
+### primary device
+if [ $(/usr/sbin/sysp -c | wc -l) -lt 2 ]; then 
+	BATCH_MODE="-b nobus"
+else
+	BATCH_MODE=""
+fi
 CMD_LINE=""
 AUTO_CONF=""
 LOW_RES=""
@@ -284,7 +290,13 @@ while true ; do
 	shift 2 ;;                  # this resolution @ vsync
 
 	-c|--chip)                  # set chip(s) to configure...
-		CHIP="-c $2"     
+		CHIP="-c $2"   
+		### we still need BusID for Multicard setups
+		if echo "$2" | grep -q ","; then
+			if [ "$BATCH_MODE" == "-b nobus" ]; then
+				BATCH_MODE=""
+			fi 
+		fi
 	shift 2 ;;
 
 	-n|--node)                  # set device node for primary mouse
