@@ -10,7 +10,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
 "PO-Revision-Date: 2008-05-18 13:51-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <opensuse-pt@opensuse.org>\n"
@@ -33,16 +32,34 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>Sugestão do SaX2</b><hr>O sistema gráfico iniciado atualmente é baseado em uma sugestões feitas pelo SaX2. Se a configuração for aceitável, clique em <b>OK</b>.  Caso contrário, altere a configuração."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Sugestão do SaX2</b><hr>O sistema gráfico iniciado atualmente é baseado "
+"em uma sugestões feitas pelo SaX2. Se a configuração for aceitável, clique "
+"em <b>OK</b>.  Caso contrário, altere a configuração."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr "<b>Aceleração 3D não suportada</b><hr>O SaX2 não pode fornecer a ativação do subsistema 3D pois sua placa/driver de vídeo não possui suporte a 3D."
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr ""
+"<b>Aceleração 3D não suportada</b><hr>O SaX2 não pode fornecer a ativação do "
+"subsistema 3D pois sua placa/driver de vídeo não possui suporte a 3D."
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
-msgstr "<b>Aceleração 3D não suportada</b><hr>SaX2 não pode fornecer ativação do subsistema 3D pois o modo de cabeça dupla baseado no Xinerama está em uso. A extensão Xinerama do Xorg para combinar telas gráficas não suporta 3D em todas as telas."
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
+msgstr ""
+"<b>Aceleração 3D não suportada</b><hr>SaX2 não pode fornecer ativação do "
+"subsistema 3D pois o modo de cabeça dupla baseado no Xinerama está em uso. A "
+"extensão Xinerama do Xorg para combinar telas gráficas não suporta 3D em "
+"todas as telas."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -61,8 +78,12 @@ msgid "SaX Control Center"
 msgstr "Centro de Controle do SaX"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
-msgstr "<b>Tamanho da tela alterada</b><hr>O tamanho da tela foi adaptado para o novo layout."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+"<b>Tamanho da tela alterada</b><hr>O tamanho da tela foi adaptado para o "
+"novo layout."
 
 #. Help Button text
 msgid "&Help"
@@ -107,7 +128,7 @@ msgid "Card and Monitor Properties"
 msgstr "Propriedades da Placa de Vídeo e do Monitor"
 
 #. Short description of the Mouse module
-#. Tab text for a display tab of the mouse dialog
+#. Simple mouse text for the mouse tab
 msgid "Mouse"
 msgstr "Mouse"
 
@@ -133,7 +154,6 @@ msgid "Tablet Properties"
 msgstr "Propriedades do Tablet"
 
 #. Short description of the Touchscreen module
-#. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Tela Sensível ao Toque"
 
@@ -152,6 +172,11 @@ msgstr "Propriedades do Acesso Remoto"
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
 msgstr "Tela %1"
+
+#. Tab text for a display tab of the mouse dialog
+#, fuzzy
+msgid "Mouse %1"
+msgstr "Mouse"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -321,8 +346,12 @@ msgid "Unconfigured"
 msgstr "Não configurado"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>Não Foi Possível Desativar Todas as Telas</b><hr><nobr>Pelo menos uma tela deve estar ativa.</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Não Foi Possível Desativar Todas as Telas</b><hr><nobr>Pelo menos uma "
+"tela deve estar ativa.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -398,12 +427,21 @@ msgid "To the Right"
 msgstr "Para a Direita"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
-msgstr "<b>Comibinação de Cor/Resolução inválida:</b><hr><nobr>A resolução selecionada e/ou configuração de cor</nobr> não são suportadas pelo framebuffer da placa de vídeo."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
+msgstr ""
+"<b>Comibinação de Cor/Resolução inválida:</b><hr><nobr>A resolução "
+"selecionada e/ou configuração de cor</nobr> não são suportadas pelo "
+"framebuffer da placa de vídeo."
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>A Opção Precisa de um Valor</b><hr><nobr>Configure um valor para a opção %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>A Opção Precisa de um Valor</b><hr><nobr>Configure um valor para a opção %"
+"1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -426,8 +464,15 @@ msgid "Display Size in [ mm ]"
 msgstr "Tamanho da Tela em [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>Nota:</b> Faixas de sincronização incorretas podem danificar o monitor. Consulte o manual do monitor para obter as configurações.<br><br>Se quiser que o monitor não use sua configuração máxima de faixas, reduza as faixas de sincronização."
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Nota:</b> Faixas de sincronização incorretas podem danificar o monitor. "
+"Consulte o manual do monitor para obter as configurações.<br><br>Se quiser "
+"que o monitor não use sua configuração máxima de faixas, reduza as faixas de "
+"sincronização."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -486,12 +531,21 @@ msgid "inches"
 msgstr "polegadas"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Inserir CD ou Disquete</b><hr>Insira o CD ou Disquete do utilitário do fabricante do monitor."
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Inserir CD ou Disquete</b><hr>Insira o CD ou Disquete do utilitário do "
+"fabricante do monitor."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Erro de Leitura</b><hr>Não foi possível ler o CD ou o Disquete. Isso pode indicar que a mídia está danificada ou os arquivos de informações estão formatados incorretamente."
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Erro de Leitura</b><hr>Não foi possível ler o CD ou o Disquete. Isso pode "
+"indicar que a mídia está danificada ou os arquivos de informações estão "
+"formatados incorretamente."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -673,7 +727,9 @@ msgstr "Ambas as teclas Shift juntas alternam o layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no segundo nível."
+msgstr ""
+"Tecla de espaço retorna caractere de espaço sem quebra de linha no segundo "
+"nível."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
@@ -681,7 +737,9 @@ msgstr "A tecla Windows direita alterna o layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no terceiro nível."
+msgstr ""
+"Tecla de espaço retorna caractere de espaço sem quebra de linha no terceiro "
+"nível."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -705,7 +763,9 @@ msgstr "A tecla Windows esquerda alterna o layout enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no quarto nível."
+msgstr ""
+"Tecla de espaço retorna caractere de espaço sem quebra de linha no quarto "
+"nível."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
@@ -813,7 +873,9 @@ msgstr "Adicionando a keysym nobreakspace a tecla de espaço."
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr "Use teclado com caracteres unicode adicionais (acentos e operadores matemáticos)"
+msgstr ""
+"Use teclado com caracteres unicode adicionais (acentos e operadores "
+"matemáticos)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -849,7 +911,9 @@ msgstr "Tecla de espaço retorna nobreakspace no terceiro nível."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr "Trocar keycodes de duas  teclas quando teclados Mac são errôneamente detectados pelo kernel."
+msgstr ""
+"Trocar keycodes de duas  teclas quando teclados Mac são errôneamente "
+"detectados pelo kernel."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -868,8 +932,11 @@ msgid "Left Win-key is Compose."
 msgstr "A tecla esquerda Windows é Compose."
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Pressione a tecla Alt direita para escolher o 3o. nível, Shift+ Alt direito key é Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr ""
+"Pressione a tecla Alt direita para escolher o 3o. nível, Shift+ Alt direito "
+"key é Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -1141,7 +1208,8 @@ msgstr "Quarto-nível com separadores de resumo"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr "Teclado com caracteres unicode adicionais (setas e operadores matemáticos)"
+msgstr ""
+"Teclado com caracteres unicode adicionais (setas e operadores matemáticos)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1156,8 +1224,12 @@ msgid "Swap ESC and CapsLock."
 msgstr "Trocar ESC e CapsLock."
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "Teclado Wang 724 com caracteres unicode adicionais. (setas e operadores matemáticos). Operadores matemáticos em nível padrão."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
+msgstr ""
+"Teclado Wang 724 com caracteres unicode adicionais. (setas e operadores "
+"matemáticos). Operadores matemáticos em nível padrão."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1168,8 +1240,12 @@ msgid "Legacy key with comma"
 msgstr "Tecla legada com vírgula"
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "Teclado com caracteres unicode adicionais (setas e operadores matemáticos). Operadores matemáticos em nível padrão."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
+msgstr ""
+"Teclado com caracteres unicode adicionais (setas e operadores matemáticos). "
+"Operadores matemáticos em nível padrão."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1185,7 +1261,9 @@ msgstr "Comportamento da tecla Del do teclado numérico"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "Teclado Wang 724 com caracteres unicode adicionais (acentos e operadores matemáticos)"
+msgstr ""
+"Teclado Wang 724 com caracteres unicode adicionais (acentos e operadores "
+"matemáticos)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1275,6 +1353,11 @@ msgstr "Propriedades do Pad"
 msgid "Eraser Properties"
 msgstr "Propriedades da Borracha"
 
+#. Tab text for a touchscreen tab of the touchscreen dialog
+#, fuzzy
+msgid "Touchscreen %1"
+msgstr "Tela Sensível ao Toque"
+
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "Atribuir Tela Sensível ao Toque à Tela de Exibição %1"
@@ -1284,8 +1367,18 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Tela Sensível ao Toque: Seleção de Fabricante e Nome"
 
 #. Finish configuration message box
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Etapas Finais</b><hr>A última etapa é salvar sua nova configuração. Recomenda-se testar a nova configuração antes de salvá-la. Se o servidor de teste exibir uma área de trabalho corrompida, pressione <b>[ Ctrl+Alt+Backspace ]</b> e <b>[ Ctrl+Alt+Backspace ]</b> rapidamente após o sinal do sistema (bip) para matar o servidor."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Etapas Finais</b><hr>A última etapa é salvar sua nova configuração. "
+"Recomenda-se testar a nova configuração antes de salvá-la. Se o servidor de "
+"teste exibir uma área de trabalho corrompida, pressione <b>[ Ctrl+Alt"
+"+Backspace ]</b> e <b>[ Ctrl+Alt+Backspace ]</b> rapidamente após o sinal do "
+"sistema (bip) para matar o servidor."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1328,20 +1421,37 @@ msgid "HTTP Port"
 msgstr "Porta HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
-msgstr "<b>Incompatibilidade de Senha de Acesso Remoto</b><hr>A primeira e a segunda versões da senha não correspondem."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
+msgstr ""
+"<b>Incompatibilidade de Senha de Acesso Remoto</b><hr>A primeira e a segunda "
+"versões da senha não correspondem."
 
 #. VNC message box appearing if password is too short
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>Falha de Senha de Acesso Remoto</b><hr>O campo de senha foi deixado vazio ou a senha é muito curta. Digite uma senha com pelo menos seis caracteres."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>Falha de Senha de Acesso Remoto</b><hr>O campo de senha foi deixado vazio "
+"ou a senha é muito curta. Digite uma senha com pelo menos seis caracteres."
 
 #. VNC message box appearing if password is too long
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
-msgstr "<b>Falha na Senha de Acesso Remoto</b><hr>A senha é muito longa. Digite uma senha com no máximo oito caracteres."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
+msgstr ""
+"<b>Falha na Senha de Acesso Remoto</b><hr>A senha é muito longa. Digite uma "
+"senha com no máximo oito caracteres."
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
-msgstr "<b>Instalação de Software:</b><hr>Alguns pacotes estão faltando. Instalar pacotes ausentes agora?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Instalação de Software:</b><hr>Alguns pacotes estão faltando. Instalar "
+"pacotes ausentes agora?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1360,20 +1470,38 @@ msgid "Initialize cache..."
 msgstr "Inicializar cache..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "<b>Falha ao Salvar a Configuração</b><hr>O seguinte relatório foi criado: "
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+"<b>Falha ao Salvar a Configuração</b><hr>O seguinte relatório foi criado: "
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>Configuração Salva</b><hr>Suas alterações entrarão em vigor na próxima vez em que o sistema gráfico for reiniciado. Sair do SaX2 agora?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Configuração Salva</b><hr>Suas alterações entrarão em vigor na próxima "
+"vez em que o sistema gráfico for reiniciado. Sair do SaX2 agora?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>Falha no Teste de Configuração</b><hr>Para obter mais informações, consulte o arquivo <tt>/var/log/Xorg.99.log</tt>. O seguinte relatório foi criado da instância de chamada:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Falha no Teste de Configuração</b><hr>Para obter mais informações, "
+"consulte o arquivo <tt>/var/log/Xorg.99.log</tt>. O seguinte relatório foi "
+"criado da instância de chamada:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
-msgstr "<b>Informações de configuração de Acesso Remoto</b><hr>O serviço de Acesso Remoto requer que a porta TCP 5900 e uma porta HTTP (5800 o padrão) estejam abertas pelo firewall. Você pode configurar isso com o YaST."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
+msgstr ""
+"<b>Informações de configuração de Acesso Remoto</b><hr>O serviço de Acesso "
+"Remoto requer que a porta TCP 5900 e uma porta HTTP (5800 o padrão) estejam "
+"abertas pelo firewall. Você pode configurar isso com o YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1832,4 +1960,3 @@ msgstr "Configuração no vídeo"
 
 msgid "Idle timer..."
 msgstr "Temporizador ocioso..."
-

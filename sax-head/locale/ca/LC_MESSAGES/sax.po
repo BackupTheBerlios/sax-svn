@@ -4,7 +4,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SAX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
 "PO-Revision-Date: 2007-02-24 09:48+0100\n"
 "Last-Translator: Anna Mititieri <mitipeiro@yahoo.es>\n"
 "Language-Team: Catalan\n"
@@ -22,15 +21,27 @@ msgid "I18N"
 msgstr ""
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>Suggeriment del SaX2</b><hr>El sistema gràfic iniciat actualment està basat en un suggeriment fet pel SaX2. Si és acceptable, feu clic a <b>D'acord</b>. Altrament, canvieu la configuració."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Suggeriment del SaX2</b><hr>El sistema gràfic iniciat actualment està "
+"basat en un suggeriment fet pel SaX2. Si és acceptable, feu clic a "
+"<b>D'acord</b>. Altrament, canvieu la configuració."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
 msgstr ""
 
 #. Caption text for the startup information window
@@ -50,7 +61,9 @@ msgid "SaX Control Center"
 msgstr "Centre de control del SaX"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
 msgstr ""
 
 #. Help Button text
@@ -96,7 +109,7 @@ msgid "Card and Monitor Properties"
 msgstr "Propietats de la targeta i el monitor"
 
 #. Short description of the Mouse module
-#. Tab text for a display tab of the mouse dialog
+#. Simple mouse text for the mouse tab
 msgid "Mouse"
 msgstr "Ratolí"
 
@@ -122,7 +135,6 @@ msgid "Tablet Properties"
 msgstr "Propietats de la taula"
 
 #. Short description of the Touchscreen module
-#. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Pantalla tàctil"
 
@@ -143,6 +155,11 @@ msgstr "Propietats de l'accés remot"
 #, fuzzy
 msgid "Display %1"
 msgstr "Retard en ms"
+
+#. Tab text for a display tab of the mouse dialog
+#, fuzzy
+msgid "Mouse %1"
+msgstr "Ratolí"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -313,8 +330,12 @@ msgid "Unconfigured"
 msgstr "Sense configurar"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>No es poden desactivar totes les pantalles</b><hr><nobr>Almenys una pantalla ha d'estar activa.</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>No es poden desactivar totes les pantalles</b><hr><nobr>Almenys una "
+"pantalla ha d'estar activa.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -390,12 +411,18 @@ msgid "To the Right"
 msgstr "A la dreta"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>L'opció necessita un valor</b><hr><nobr>Definiu un valor per a l'opció %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>L'opció necessita un valor</b><hr><nobr>Definiu un valor per a l'opció %1."
+"</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -418,8 +445,15 @@ msgid "Display Size in [ mm ]"
 msgstr "Mida de la pantalla en [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>Nota:</b> un rang de sincronització incorrecte pot malmetre el monitor. Consulteu el manual del monitor per a conèixer la configuració adequada.<br><br>Si voleu que el monitor no faci servir els valors màxims, disminuïu els rangs de sincronització."
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Nota:</b> un rang de sincronització incorrecte pot malmetre el monitor. "
+"Consulteu el manual del monitor per a conèixer la configuració adequada."
+"<br><br>Si voleu que el monitor no faci servir els valors màxims, disminuïu "
+"els rangs de sincronització."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -478,12 +512,21 @@ msgid "inches"
 msgstr "polzades"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Inseriu el CD o el disc</b><hr>Inseriu el disc o el CD d'utilitats del proveïdor del monitor."
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Inseriu el CD o el disc</b><hr>Inseriu el disc o el CD d'utilitats del "
+"proveïdor del monitor."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>S'ha produït un error de lectura</b><hr>No s'ha pogut llegir el CD o el disc. Això pot indicar que hi ha un suport malmès o que els fitxers d'informació no tenen el format correcte."
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>S'ha produït un error de lectura</b><hr>No s'ha pogut llegir el CD o el "
+"disc. Això pot indicar que hi ha un suport malmès o que els fitxers "
+"d'informació no tenen el format correcte."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -904,7 +947,8 @@ msgid "Left Win-key is Compose."
 msgstr "Mapejat d'Alt Dret"
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr ""
 
 #. XKBFile extension text
@@ -921,7 +965,9 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "Bloq Majús permet utilitzar majúscules internes. La tecla Majús no cancel·la Bloq Majús."
+msgstr ""
+"Bloq Majús permet utilitzar majúscules internes. La tecla Majús no cancel·la "
+"Bloq Majús."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -929,11 +975,14 @@ msgstr "Bloq Majús bloqueja el modificador de Majús."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr "Bloq Majús permet canviar entre les majúscules i minúscules normals dels caràcters alfabètics."
+msgstr ""
+"Bloq Majús permet canviar entre les majúscules i minúscules normals dels "
+"caràcters alfabètics."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "Bloq Majús permet canviar Majús perquè totes les tecles es vegin afectades."
+msgstr ""
+"Bloq Majús permet canviar Majús perquè totes les tecles es vegin afectades."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -993,11 +1042,15 @@ msgstr "Si premeu ambdues tecles Majús, es canvia de grup."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "Bloq Majús actua com a tecla Majús amb bloqueig. La tecla Majús no cancel·la Bloq Majús."
+msgstr ""
+"Bloq Majús actua com a tecla Majús amb bloqueig. La tecla Majús no cancel·la "
+"Bloq Majús."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "Bloq Majús utilitza les majúscules internes. La tecla Majús cancel·la Bloq Majús."
+msgstr ""
+"Bloq Majús utilitza les majúscules internes. La tecla Majús cancel·la Bloq "
+"Majús."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1089,7 +1142,8 @@ msgstr "Alt i Meta són a les tecles Alt (per defecte)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "Premeu la tecla Control de la dreta per a seleccionar el tercer nivell."
+msgstr ""
+"Premeu la tecla Control de la dreta per a seleccionar el tercer nivell."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
@@ -1101,7 +1155,9 @@ msgstr "Si premeu Control i Majús, es canvia de grup."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "Bloq Majús actua com a la tecla Majús amb bloqueig. La tecla Majús cancel·la Bloq Majús."
+msgstr ""
+"Bloq Majús actua com a la tecla Majús amb bloqueig. La tecla Majús cancel·la "
+"Bloq Majús."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1200,7 +1256,9 @@ msgid "Swap ESC and CapsLock."
 msgstr "Canvia entre Control i Bloq Majús."
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1212,7 +1270,9 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1322,6 +1382,11 @@ msgstr "Propietats"
 msgid "Eraser Properties"
 msgstr "Propietats de la goma d'esborrar"
 
+#. Tab text for a touchscreen tab of the touchscreen dialog
+#, fuzzy
+msgid "Touchscreen %1"
+msgstr "Pantalla tàctil"
+
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "Assigna una pantalla tàctil al número de pantalla %1"
@@ -1332,8 +1397,17 @@ msgstr "Pantalla tàctil: selecció de nom i proveïdor"
 
 #. Finish configuration message box
 #, fuzzy
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Passos finals</b><hr>L'últim pas és desar la nova configuració. Es recomana provar la nova configuració abans de desar-la. Si el servidor de prova mostra un escriptori malmès, premeu <b>[Control+Alt+Retrocés]</b> per a finalitzar el servidor."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Passos finals</b><hr>L'últim pas és desar la nova configuració. Es "
+"recomana provar la nova configuració abans de desar-la. Si el servidor de "
+"prova mostra un escriptori malmès, premeu <b>[Control+Alt+Retrocés]</b> per "
+"a finalitzar el servidor."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1376,20 +1450,31 @@ msgid "HTTP Port"
 msgstr "Port HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr ""
 
 #. VNC message box appearing if password is too short
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
 msgstr ""
 
 #. VNC message box appearing if password is too long
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr ""
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
-msgstr "<b>Instal·lació de programari:</b><hr>falten alguns paquets. Voleu instal·lar ara els paquets que falten?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Instal·lació de programari:</b><hr>falten alguns paquets. Voleu "
+"instal·lar ara els paquets que falten?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1408,19 +1493,35 @@ msgid "Initialize cache..."
 msgstr "S'està inicialitzant la memòria cau..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "<b>La configuració no s'ha desat correctament</b><hr>S'ha generat l'informe següent:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+"<b>La configuració no s'ha desat correctament</b><hr>S'ha generat l'informe "
+"següent:"
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>S'ha desat la configuració</b><hr>Les modificacions s'aplicaran el proper cop que es reiniciï el sistema gràfic. Voleu sortir ara del SaX2?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>S'ha desat la configuració</b><hr>Les modificacions s'aplicaran el proper "
+"cop que es reiniciï el sistema gràfic. Voleu sortir ara del SaX2?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>La configuració no s'ha provat correctament</b><hr>Si voleu més informació, consulteu el fitxer <tt>/var/log/Xorg.99.log</tt>. S'ha generat l'informe següent a partir de la instància que ha cridat el procés:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>La configuració no s'ha provat correctament</b><hr>Si voleu més "
+"informació, consulteu el fitxer <tt>/var/log/Xorg.99.log</tt>. S'ha generat "
+"l'informe següent a partir de la instància que ha cridat el procés:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 
 #. XKBFile extension text
@@ -1473,11 +1574,13 @@ msgstr "Posició de la tecla Control"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "Tecles especials (Control+Alt+&lt;tecla&gt;) gestionades en un servidor."
+msgstr ""
+"Tecles especials (Control+Alt+&lt;tecla&gt;) gestionades en un servidor."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Premeu la tecla Control de la dreta per a seleccionar el tercer nivell."
+msgstr ""
+"Premeu la tecla Control de la dreta per a seleccionar el tercer nivell."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."

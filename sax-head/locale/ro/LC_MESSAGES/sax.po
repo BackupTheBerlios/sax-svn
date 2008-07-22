@@ -2,14 +2,13 @@
 # Romanian message file for YaST2 (@memory@).
 # Copyright (C) 2005 SUSE Linux Products GmbH.
 # Copyright (C) 2003 SuSE Linux AG.
-#
+# 
 # Alexandru Romanescu <a_romanescu@yahoo.co.uk>, 2008.
 # Andrei Cipu <strainu10@gmail.com>, 2008
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-15 15:07+0200\n"
 "PO-Revision-Date: 2008-04-25 15:03+0200\n"
 "Last-Translator: Andrei Cipu <strainu10@gmail.com>\n"
 "Language-Team: romanian <ro@li.org>\n"
@@ -127,7 +126,7 @@ msgid "Card and Monitor Properties"
 msgstr "Proprietăţile Cartelei Grafice şi ale Monitorului"
 
 #. Short description of the Mouse module
-#. Tab text for a display tab of the mouse dialog
+#. Simple mouse text for the mouse tab
 msgid "Mouse"
 msgstr "Maus"
 
@@ -153,7 +152,6 @@ msgid "Tablet Properties"
 msgstr "Proprietăţile Tabletei"
 
 #. Short description of the Touchscreen module
-#. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Ecran Tactil"
 
@@ -172,6 +170,11 @@ msgstr "Proprietăţile Accesului la Distanţă"
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
 msgstr "Ecran %1"
+
+#. Tab text for a display tab of the mouse dialog
+#, fuzzy
+msgid "Mouse %1"
+msgstr "Maus"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -1359,6 +1362,11 @@ msgstr "Proprietăţi pad"
 msgid "Eraser Properties"
 msgstr "Proprietăţi gumă"
 
+#. Tab text for a touchscreen tab of the touchscreen dialog
+#, fuzzy
+msgid "Touchscreen %1"
+msgstr "Ecran Tactil"
+
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "Alocă un ecran tactil la afişajul numărul %1"
@@ -1369,8 +1377,17 @@ msgstr "Ecran tactil: Selectarea producătorului şi a numelui"
 
 #. Finish configuration message box
 #, fuzzy
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Ultimii paşi</b><hr>Ultimul pas este salvarea noii configuraţii. Este recomandat să testaţi noua configuraţie înainte de a o salva. Dacă serverul de test arată un ecran deteriorat, apăsaţi <b>[ Ctrl+Alt+Backspace ]</b> pentru a omorî serverul."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Ultimii paşi</b><hr>Ultimul pas este salvarea noii configuraţii. Este "
+"recomandat să testaţi noua configuraţie înainte de a o salva. Dacă serverul "
+"de test arată un ecran deteriorat, apăsaţi <b>[ Ctrl+Alt+Backspace ]</b> "
+"pentru a omorî serverul."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"

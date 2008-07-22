@@ -163,7 +163,9 @@ written programs
 %if %{suse_version} > 1020
 %patch
 %endif
+%if %{suse_version} > 1100
 %patch1
+%endif
 
 %build
 test -e /.buildenv && . /.buildenv

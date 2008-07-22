@@ -93,6 +93,9 @@ VNCModuleTopic=Remote Access Properties
 Display=Display %1
 
 # Tab text for a display tab of the mouse dialog
+MouseTab=Mouse %1
+
+# Simple mouse text for the mouse tab
 Mouse=Mouse
 
 # Activate display checkbox, Display=screen
@@ -965,7 +968,7 @@ PadProperties=Pad Properties
 EraserProperties=Eraser Properties
 
 # Tab text for a touchscreen tab of the touchscreen dialog
-Touchscreen=Touchscreen
+Touchscreen=Touchscreen %1
 
 # Activate/Assign touchscreen checkbox
 AssignToucher=Assign a Touchscreen to Display Number %1

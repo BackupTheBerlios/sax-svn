@@ -6,7 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
 "PO-Revision-Date: 2008-06-02 02:07+0800\n"
 "Last-Translator: Thruth Wang <lihaow@opera.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -24,16 +23,30 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>SaX2 建议</b><hr>当前启动的图形系统基于 SaX2 的建议。如果可以接受，请单击<b>确定</b>。否则，请更改设置。"
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 建议</b><hr>当前启动的图形系统基于 SaX2 的建议。如果可以接受，请单击"
+"<b>确定</b>。否则，请更改设置。"
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr "<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为您的图形卡/驱动不支持 3D"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr ""
+"<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为您的图形卡/驱动不支持 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
-msgstr "<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为基于 Xinerama 的双头输出模式被使用。Xorg Xinerama 扩展复合屏幕不在所有 Head 上支持 3D 。"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
+msgstr ""
+"<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为基于 Xinerama 的双头输出"
+"模式被使用。Xorg Xinerama 扩展复合屏幕不在所有 Head 上支持 3D 。"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -52,7 +65,9 @@ msgid "SaX Control Center"
 msgstr "SaX 控制中心"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
 msgstr "<b>显示大小改变</b><hr>显示大小在调整适应新输出。"
 
 #. Help Button text
@@ -98,7 +113,7 @@ msgid "Card and Monitor Properties"
 msgstr "卡和显示器属性"
 
 #. Short description of the Mouse module
-#. Tab text for a display tab of the mouse dialog
+#. Simple mouse text for the mouse tab
 msgid "Mouse"
 msgstr "鼠标"
 
@@ -124,7 +139,6 @@ msgid "Tablet Properties"
 msgstr "图形输入板属性"
 
 #. Short description of the Touchscreen module
-#. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "触摸屏"
 
@@ -143,6 +157,11 @@ msgstr "远程访问属性"
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
 msgstr "显示 %1"
+
+#. Tab text for a display tab of the mouse dialog
+#, fuzzy
+msgid "Mouse %1"
+msgstr "鼠标"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -312,8 +331,11 @@ msgid "Unconfigured"
 msgstr "未配置"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>无法取消激活所有显示器</b><hr><nobr>必须至少有一台显示器是活动的。</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>无法取消激活所有显示器</b><hr><nobr>必须至少有一台显示器是活动的。</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -389,11 +411,17 @@ msgid "To the Right"
 msgstr "向右"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
-msgstr "<b>无效颜色／分辨率组合：</b><hr><nobr>选定的分辨率和／或颜色设置</nobr>不被图形卡 framebuffer 支持。"
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
+msgstr ""
+"<b>无效颜色／分辨率组合：</b><hr><nobr>选定的分辨率和／或颜色设置</nobr>不被"
+"图形卡 framebuffer 支持。"
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>选项需要值</b><hr><nobr>为选项 %1 设置一个值。</nobr>"
 
 #. Group box title for the monitor vendor and name selection
@@ -417,8 +445,13 @@ msgid "Display Size in [ mm ]"
 msgstr "显示大小（毫米）"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>注意：</b>错误的同步范围可能损坏您的显示器。有关设置的信息，请参考您的显示器手册。<br><br>如果不想显示器使用其最大频率，请缩小同步范围。"
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>注意：</b>错误的同步范围可能损坏您的显示器。有关设置的信息，请参考您的显示"
+"器手册。<br><br>如果不想显示器使用其最大频率，请缩小同步范围。"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -477,12 +510,19 @@ msgid "inches"
 msgstr "英寸"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>插入 CD 或磁盘</b><hr>插入显示器供应商提供的显示器实用程序 CD 或磁盘。"
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>插入 CD 或磁盘</b><hr>插入显示器供应商提供的显示器实用程序 CD 或磁盘。"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>读取错误</b><hr>无法从 CD 或磁盘读取。可能表示介质损坏或格式化信息文件不正确。"
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>读取错误</b><hr>无法从 CD 或磁盘读取。可能表示介质损坏或格式化信息文件不正"
+"确。"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -859,7 +899,8 @@ msgid "Left Win-key is Compose."
 msgstr "左 Win 键是 Compose 键。"
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr "按右 Alt 键可选择第 3 级，Shift+右 Alt 键作为 Multi_Key"
 
 #. XKBFile extension text
@@ -1147,8 +1188,12 @@ msgid "Swap ESC and CapsLock."
 msgstr "交换 ESC 和 CapsLock 键。"
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "在 Wang 724 键盘中使用 unicode 的附加字符(箭头和数学运算符)。数学运算符在默认级"
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
+msgstr ""
+"在 Wang 724 键盘中使用 unicode 的附加字符(箭头和数学运算符)。数学运算符在默认"
+"级"
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1159,8 +1204,11 @@ msgid "Legacy key with comma"
 msgstr "老式按键包括逗号"
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "在键盘中使用 unicode 的附加字符(箭头和数学运算符)。数学运算符在默认级。"
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
+msgstr ""
+"在键盘中使用 unicode 的附加字符(箭头和数学运算符)。数学运算符在默认级。"
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1266,6 +1314,11 @@ msgstr "Pad 属性"
 msgid "Eraser Properties"
 msgstr "橡皮属性"
 
+#. Tab text for a touchscreen tab of the touchscreen dialog
+#, fuzzy
+msgid "Touchscreen %1"
+msgstr "触摸屏"
+
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "指派触摸屏显示数字 %1"
@@ -1275,8 +1328,16 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "触摸屏：供应商和名称选择"
 
 #. Finish configuration message box
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>最终步骤</b><hr>最后一步为保存您的新配置。建议在保存之前测试新配置。如果测试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ]</b> 和 <b>[ Ctrl+Alt+Backspace ]</b> 听到一个大声的警告后(哔)，就可以停止服务器。"
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>最终步骤</b><hr>最后一步为保存您的新配置。建议在保存之前测试新配置。如果测"
+"试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ]</b> 和 <b>[ Ctrl+Alt"
+"+Backspace ]</b> 听到一个大声的警告后(哔)，就可以停止服务器。"
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1319,19 +1380,30 @@ msgid "HTTP Port"
 msgstr "HTTP 端口"
 
 #. VNC message box appearing if password strings doesn't match
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr "<b>远程访问口令不匹配</b><hr>口令的第一个和第二个版本不匹配。"
 
 #. VNC message box appearing if password is too short
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>远程访问口令错误</b><hr>口令字段被留空或口令太短。请输入至少有 6 个字符的口令。"
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>远程访问口令错误</b><hr>口令字段被留空或口令太短。请输入至少有 6 个字符的"
+"口令。"
 
 #. VNC message box appearing if password is too long
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
 msgstr "<b>远程访问口令错误</b><hr>口令太长。请输入至多有 8 个字符的口令。"
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
 msgstr "<b>软件安装：</b><hr>缺少某些包。是否立即安装缺少的包？"
 
 #. Caption text for the missing package info window
@@ -1351,20 +1423,35 @@ msgid "Initialize cache..."
 msgstr "初始化超速缓存..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>保存配置文件失败</b><hr>已创建下列报告："
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>配置已保存</b><hr>您的修改将在下次图形系统重启动时生效。是否立即退出 SaX2？"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>配置已保存</b><hr>您的修改将在下次图形系统重启动时生效。是否立即退出 "
+"SaX2？"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>测试配置失败</b><hr>有关更多信息，请参阅文件 <tt>/var/log/Xorg.99.log</tt>。根据调用的实例创建了下列报告："
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>测试配置失败</b><hr>有关更多信息，请参阅文件 <tt>/var/log/Xorg.99.log</"
+"tt>。根据调用的实例创建了下列报告："
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
-msgstr "<b>远程访问配置信息</b><hr>远程访问服务需要防火墙上的 TCP 端口 5900 和 HTTP 端口（默认情况下为 5800）打开。可以使用 YaST 配置它。"
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
+msgstr ""
+"<b>远程访问配置信息</b><hr>远程访问服务需要防火墙上的 TCP 端口 5900 和 HTTP "
+"端口（默认情况下为 5800）打开。可以使用 YaST 配置它。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1823,4 +1910,3 @@ msgstr "显示器配置"
 
 msgid "Idle timer..."
 msgstr "空闲计时器..."
-

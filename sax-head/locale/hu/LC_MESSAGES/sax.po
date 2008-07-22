@@ -36,16 +36,35 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>Ez a SaX2 javaslata</b><hr>A most látható grafikus felület a SaX2 javaslata az automatikus beállításhoz. Ha tetszik ez a beállítás, egyszerűen kattintson az <b>OK</b> gombra. Ha nem megfelelő a beállítás, megváltoztathatja a konfigurációt."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Ez a SaX2 javaslata</b><hr>A most látható grafikus felület a SaX2 "
+"javaslata az automatikus beállításhoz. Ha tetszik ez a beállítás, egyszerűen "
+"kattintson az <b>OK</b> gombra. Ha nem megfelelő a beállítás, "
+"megváltoztathatja a konfigurációt."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr "<b>A 3D gyorsítás nem támogatott</b><hr>SaX2 nem ajánlja fel a 3D gyorsítás bekapcsolását, mert azt a grafikus kártya, vagy annak meghajtója nem támogatja"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr ""
+"<b>A 3D gyorsítás nem támogatott</b><hr>SaX2 nem ajánlja fel a 3D gyorsítás "
+"bekapcsolását, mert azt a grafikus kártya, vagy annak meghajtója nem "
+"támogatja"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
-msgstr "<b>A 3D gyorsítás nem támogatott</b><hr>SaX2 nem ajánlja fel a 3D gyorsítás bekapcsolását, mert Xinerama-alapú többképernyős mód van beállítva. Az Xorg Xinerama nem támogatja a 3D gyorsítást az összes kimeneten"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
+msgstr ""
+"<b>A 3D gyorsítás nem támogatott</b><hr>SaX2 nem ajánlja fel a 3D gyorsítás "
+"bekapcsolását, mert Xinerama-alapú többképernyős mód van beállítva. Az Xorg "
+"Xinerama nem támogatja a 3D gyorsítást az összes kimeneten"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -64,8 +83,12 @@ msgid "SaX Control Center"
 msgstr "SaX vezérlőközpont"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
-msgstr "<b>A képernyő felbontása megváltozott</b><hr>Az képernyő mérete az új elrendezéshez igazodik."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+"<b>A képernyő felbontása megváltozott</b><hr>Az képernyő mérete az új "
+"elrendezéshez igazodik."
 
 # /tmp/xapi:11
 #. Help Button text
@@ -120,7 +143,7 @@ msgstr "Kártya- és képernyő-tulajdonságok"
 
 # /tmp/xapi:113
 #. Short description of the Mouse module
-#. Tab text for a display tab of the mouse dialog
+#. Simple mouse text for the mouse tab
 msgid "Mouse"
 msgstr "Egér"
 
@@ -151,7 +174,6 @@ msgid "Tablet Properties"
 msgstr "Rajztábla tulajdonságai"
 
 #. Short description of the Touchscreen module
-#. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Érintőképernyő"
 
@@ -174,6 +196,12 @@ msgstr "Távoli hozzáférés tulajdonságai"
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
 msgstr "%1. képernyő"
+
+# /tmp/xapi:113
+#. Tab text for a display tab of the mouse dialog
+#, fuzzy
+msgid "Mouse %1"
+msgstr "Egér"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -363,8 +391,12 @@ msgid "Unconfigured"
 msgstr "Nincs beállítva"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>Az összes kijelző nem deaktiválható</b><hr><nobr>Legalább egy kijelzőnek aktívnak kell maradnia.</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Az összes kijelző nem deaktiválható</b><hr><nobr>Legalább egy kijelzőnek "
+"aktívnak kell maradnia.</nobr>"
 
 # /tmp/xapi:49
 #. Info label for dual head checkbox
@@ -445,12 +477,21 @@ msgid "To the Right"
 msgstr "Jobbra"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
-msgstr "<b>Érvénytelen szín- és felbontás kombináció:</b><hr><nobr>A kijelölt felbontás- és /vagy színbeállításokat</nobr> nem támogatja a grafikus kártyák framebuffere."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
+msgstr ""
+"<b>Érvénytelen szín- és felbontás kombináció:</b><hr><nobr>A kijelölt "
+"felbontás- és /vagy színbeállításokat</nobr> nem támogatja a grafikus "
+"kártyák framebuffere."
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Adjon meg egy értéket a(z) %1 opcióhoz.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Adjon meg egy értéket "
+"a(z) %1 opcióhoz.</nobr>"
 
 # /tmp/xapi:301
 #. Group box title for the monitor vendor and name selection
@@ -478,8 +519,15 @@ msgstr "Képernyő mérete [ mm ]-ben"
 
 # /tmp/xapi:357
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>Figyelem:</b> <hr>A nem megfelelő szinkronbeállítás tönkreteheti a képernyőjét! Olvassa el a képernyő kézikönyvét az alábbi beállításokhoz.<br><br>Ha nem akarja a képernyőből a maximumot kihozni, csökkentse a szinkrontartományokat."
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Figyelem:</b> <hr>A nem megfelelő szinkronbeállítás tönkreteheti a "
+"képernyőjét! Olvassa el a képernyő kézikönyvét az alábbi beállításokhoz."
+"<br><br>Ha nem akarja a képernyőből a maximumot kihozni, csökkentse a "
+"szinkrontartományokat."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -547,13 +595,21 @@ msgstr "hüvelyk"
 
 # /tmp/xapi:479
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Tegye be a lemezt vagy CD-t</b><hr>Tegye be a képernyőhöz mellékelt segédprogram-lemezt vagy CD-t."
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Tegye be a lemezt vagy CD-t</b><hr>Tegye be a képernyőhöz mellékelt "
+"segédprogram-lemezt vagy CD-t."
 
 # /tmp/xapi:481
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Olvasási hiba</b><hr>A lemezről vagy CD-ről nem lehet olvasni. Lehet hogy sérült a lemez, vagy rossz formátumú információs fájl van a lemezen."
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Olvasási hiba</b><hr>A lemezről vagy CD-ről nem lehet olvasni. Lehet hogy "
+"sérült a lemez, vagy rossz formátumú információs fájl van a lemezen."
 
 # /tmp/xapi:401
 #. First gap of the ActivateInfo text: Multihead mode name
@@ -604,7 +660,8 @@ msgstr "Shift/CapsLock csoport viselkedése"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Billentyűzet LED-ek használata az alternatív csoportok megjelenítéséhez"
+msgstr ""
+"Billentyűzet LED-ek használata az alternatív csoportok megjelenítéséhez"
 
 #. List View root item text
 msgid "Compose Key Position"
@@ -782,7 +839,8 @@ msgstr "A Caps Lock billentyű kiosztást vált."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "A Control a Win billentyűkhöz van rendelve (és a megszokott Ctrl billentyűk)."
+msgstr ""
+"A Control a Win billentyűkhöz van rendelve (és a megszokott Ctrl billentyűk)."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
@@ -790,7 +848,9 @@ msgstr "A jobb Alt billentyű kiosztást vált."
 
 #. XKBFile extension text
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "A Shift és a számbillentyűzet gombjai ugyanúgy működnek, mint MS Windows alatt."
+msgstr ""
+"A Shift és a számbillentyűzet gombjai ugyanúgy működnek, mint MS Windows "
+"alatt."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys."
@@ -879,7 +939,9 @@ msgstr "Nem törhető szóköz szimbólum hozzáadása a szóköz billentyűhöz
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr "A számbillentyűk használata unicode kiegészítésekkel (nyilak és matematikai operátorok)"
+msgstr ""
+"A számbillentyűk használata unicode kiegészítésekkel (nyilak és matematikai "
+"operátorok)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -887,7 +949,9 @@ msgstr "Szabványos hagyományos billentyűzet kényszerítése"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "A CapsLock belső nagybetűsítést használ. A Shift nem oldja fel a nagybetűs módot."
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift nem oldja fel a nagybetűs "
+"módot."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -903,7 +967,9 @@ msgstr "A szóköz nem törhető szóközt ad a második szinten."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "A CapsLock Shiftként működik zárolással. A Shift nem befolyásolja a nagybetűsítést."
+msgstr ""
+"A CapsLock Shiftként működik zárolással. A Shift nem befolyásolja a "
+"nagybetűsítést."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift "
@@ -915,7 +981,9 @@ msgstr "A szóköz nem törhető szóközt ad a harmadik szinten."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr "Két billentyű kódjának felcserélése, ha a kernel nem megfelelően észleli a Mac billentyűzetet."
+msgstr ""
+"Két billentyű kódjának felcserélése, ha a kernel nem megfelelően észleli a "
+"Mac billentyűzetet."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -934,8 +1002,11 @@ msgid "Left Win-key is Compose."
 msgstr "A bal Win billentyű a kombináló (Compose)."
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "A jobb Alt billentyűvel lehet a harmadik szintet választani, a Shift+jobb Alt a Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr ""
+"A jobb Alt billentyűvel lehet a harmadik szintet választani, a Shift+jobb "
+"Alt a Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -952,7 +1023,9 @@ msgstr "A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "A CapsLock belső nagybetűsítést használ. A Shift nem oldja fel a nagybetűs módot."
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift nem oldja fel a nagybetűs "
+"módot."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1026,11 +1099,14 @@ msgstr "Mindkét Shift billentyű megnyomása vált csoportot."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift nem oldja fel a nagybetűs módot."
+msgstr ""
+"A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift nem oldja fel a "
+"nagybetűs módot."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "A CapsLock belső nagybetűsítést használ. A Shift feloldja a nagybetűs módot."
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift feloldja a nagybetűs módot."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1090,7 +1166,9 @@ msgstr "A jobb Alt billentyű vált csoportot."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr "A Shift és a számbillentyűzet gombjai ugyanúgy működnek, mint MS Windows alatt."
+msgstr ""
+"A Shift és a számbillentyűzet gombjai ugyanúgy működnek, mint MS Windows "
+"alatt."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1102,7 +1180,8 @@ msgstr "A Hyper a Win billentyűkhöz van hozzárendelve."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Az Alt a jobb Win billentyűhöz van rendelve, a Super pedig a Menü gombhoz."
+msgstr ""
+"Az Alt a jobb Win billentyűhöz van rendelve, a Super pedig a Menü gombhoz."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
@@ -1134,7 +1213,9 @@ msgstr "A Ctrl+Shift billentyűkombináció vált csoportot."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift feloldja a CapsLock módot."
+msgstr ""
+"A CapsLock ugyanúgy működik, mint egy lezárt Shift. A Shift feloldja a "
+"CapsLock módot."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1227,8 +1308,12 @@ msgid "Swap ESC and CapsLock."
 msgstr "ESC és Caps Lock felcserélése."
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "Wang 724 számbillentyűzet unicode bővítésekkel (nyilak és műveleti jelek). A műveleti jelek az alapértelmezett szinten."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
+msgstr ""
+"Wang 724 számbillentyűzet unicode bővítésekkel (nyilak és műveleti jelek). A "
+"műveleti jelek az alapértelmezett szinten."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1239,8 +1324,12 @@ msgid "Legacy key with comma"
 msgstr "Hagyományos számbillentyűzet vesszővel"
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "Számbillentyűzet Unicode kiegészítésekkel (nyilak és műveleti jelek). A műveleti jelek bekapcsolva az alapértelmezett szinten."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
+msgstr ""
+"Számbillentyűzet Unicode kiegészítésekkel (nyilak és műveleti jelek). A "
+"műveleti jelek bekapcsolva az alapértelmezett szinten."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1256,7 +1345,8 @@ msgstr "Számbillentyűzet Delete billentyűjének viselkedése"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "Wang 724 számbillentyűzet unicode bővítésekkel (nyilak és műveleti jelek)"
+msgstr ""
+"Wang 724 számbillentyűzet unicode bővítésekkel (nyilak és műveleti jelek)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1353,6 +1443,11 @@ msgstr "Tábla tulajdonságai"
 msgid "Eraser Properties"
 msgstr "Radír tulajdonságai"
 
+#. Tab text for a touchscreen tab of the touchscreen dialog
+#, fuzzy
+msgid "Touchscreen %1"
+msgstr "Érintőképernyő"
+
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "Érintőképernyő hozzárendelése a(z) %1 számú kijelzőhöz"
@@ -1363,8 +1458,18 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Érintőképernyő: Gyártó/név kiválasztása"
 
 #. Finish configuration message box
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Utolsó lépések</b><hr>Utolsó lépésként menteni kell az új konfigurációt. Javasoljuk, hogy a mentés előtt tesztelje az új beállításokat. Ha nem tiszta a kép, csíkos vagy nagyon vibrál, nyomja meg a <b>[ Ctrl+Alt+Backspace ]</b> és a <b>[ Ctrl+Alt+Backspace ]</b> billentyűket közvetlenül a hangos figyelmeztető sípszó után az X-kiszolgáló leállításához."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Utolsó lépések</b><hr>Utolsó lépésként menteni kell az új konfigurációt. "
+"Javasoljuk, hogy a mentés előtt tesztelje az új beállításokat. Ha nem tiszta "
+"a kép, csíkos vagy nagyon vibrál, nyomja meg a <b>[ Ctrl+Alt+Backspace ]</b> "
+"és a <b>[ Ctrl+Alt+Backspace ]</b> billentyűket közvetlenül a hangos "
+"figyelmeztető sípszó után az X-kiszolgáló leállításához."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1408,20 +1513,38 @@ msgid "HTTP Port"
 msgstr "HTTP port"
 
 #. VNC message box appearing if password strings doesn't match
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
-msgstr "<b>A távoli elérés jelszavai nem egyeznek</b><hr>A jelszó első és második változata nem egyezik meg egymással."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
+msgstr ""
+"<b>A távoli elérés jelszavai nem egyeznek</b><hr>A jelszó első és második "
+"változata nem egyezik meg egymással."
 
 #. VNC message box appearing if password is too short
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>A jelszó nem megfelelő a távoli eléréshez</b><hr>A jelszómező üresen maradt, vagy a jelszó túl rövid. Adjon meg egy legalább hatkarakteres jelszót."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>A jelszó nem megfelelő a távoli eléréshez</b><hr>A jelszómező üresen "
+"maradt, vagy a jelszó túl rövid. Adjon meg egy legalább hatkarakteres "
+"jelszót."
 
 #. VNC message box appearing if password is too long
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
-msgstr "<b>A jelszó nem megfelelő a távoli eléréshez</b><hr>A jelszó túl hosszú. Adjon meg egy legfeljebb nyolckarakteres jelszót."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
+msgstr ""
+"<b>A jelszó nem megfelelő a távoli eléréshez</b><hr>A jelszó túl hosszú. "
+"Adjon meg egy legfeljebb nyolckarakteres jelszót."
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
-msgstr "<b>Szoftvertelepítés:</b><hr>Egyes csomagok hiányoznak. Akarja ezeket most telepíteni?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Szoftvertelepítés:</b><hr>Egyes csomagok hiányoznak. Akarja ezeket most "
+"telepíteni?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1440,20 +1563,40 @@ msgid "Initialize cache..."
 msgstr "Gyorsítótár előkészítése..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "<b>A beállítás mentése meghiúsult</b><hr>Az alábbi jelentés készült el:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+"<b>A beállítás mentése meghiúsult</b><hr>Az alábbi jelentés készült el:"
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>Beállítások mentése sikerült</b><hr>Vegye figyelembe, hogy a módosítások csak a grafikus felület következő újraindításakor lépnek érvénybe. Kilép most a SaX2-ből?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Beállítások mentése sikerült</b><hr>Vegye figyelembe, hogy a módosítások "
+"csak a grafikus felület következő újraindításakor lépnek érvénybe. Kilép "
+"most a SaX2-ből?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>Tesztkonfiguráció meghiúsult</b><hr>További információt a <tt>/var/log/Xorg.99.log</tt> fájlban talál. A hívó példányból az alábbi jelentés készült el:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Tesztkonfiguráció meghiúsult</b><hr>További információt a <tt>/var/log/"
+"Xorg.99.log</tt> fájlban talál. A hívó példányból az alábbi jelentés készült "
+"el:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
-msgstr "<b>Távoli elérés beállítási információk</b><hr>A távoli elérés szolgáltatásnak szüksége van arra, hogy az 5900-as TCP és egy HTTP port (alapértelmezetten az 5800-as) nyitott legyen a tűzfalon. Ez a YaST segítségével beállítható."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
+msgstr ""
+"<b>Távoli elérés beállítási információk</b><hr>A távoli elérés "
+"szolgáltatásnak szüksége van arra, hogy az 5900-as TCP és egy HTTP port "
+"(alapértelmezetten az 5800-as) nyitott legyen a tűzfalon. Ez a YaST "
+"segítségével beállítható."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1505,7 +1648,8 @@ msgstr "Ctrl billentyűk elhelyezése"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "A speciális billentyűket (Ctrl+Alt+&lt;billentyű&gt;) egy kiszolgáló kezeli."
+msgstr ""
+"A speciális billentyűket (Ctrl+Alt+&lt;billentyű&gt;) egy kiszolgáló kezeli."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
@@ -1925,4 +2069,3 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenségi időzítő..."
-

@@ -22,15 +22,27 @@ msgid "I18N"
 msgstr ""
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>Icebiso le-SaX2 </b><hr>Isixokelelwano segrafu esiqaliswe ngoku sisekwe kwicebiso elenziwe yi-SaX2. Ukuba oku kwamkelekile, nqomfa ku-<b>KULUNGILE</b>.  Kungenjalo, guqula ubumbeko."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Icebiso le-SaX2 </b><hr>Isixokelelwano segrafu esiqaliswe ngoku sisekwe "
+"kwicebiso elenziwe yi-SaX2. Ukuba oku kwamkelekile, nqomfa ku-<b>KULUNGILE</"
+"b>.  Kungenjalo, guqula ubumbeko."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
 msgstr ""
 
 #. Caption text for the startup information window
@@ -50,7 +62,9 @@ msgid "SaX Control Center"
 msgstr "Iziko Lolawulo lwe-SaX"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
 msgstr ""
 
 #. Help Button text
@@ -96,7 +110,7 @@ msgid "Card and Monitor Properties"
 msgstr "Faka Ikhadi uze Ulandele Ngoqwalaselo Iimpawu"
 
 #. Short description of the Mouse module
-#. Tab text for a display tab of the mouse dialog
+#. Simple mouse text for the mouse tab
 msgid "Mouse"
 msgstr "Impuku"
 
@@ -122,7 +136,6 @@ msgid "Tablet Properties"
 msgstr "Iimpawu Zecwecwe Lokubhalela"
 
 #. Short description of the Touchscreen module
-#. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen"
 msgstr "Isikrinisokuchukumisa"
 
@@ -143,6 +156,11 @@ msgstr "Iimpawu Zofikeleleko Lwamgama"
 #, fuzzy
 msgid "Display %1"
 msgstr "Bonisa Ubukhulu"
+
+#. Tab text for a display tab of the mouse dialog
+#, fuzzy
+msgid "Mouse %1"
+msgstr "Impuku"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -313,8 +331,12 @@ msgid "Unconfigured"
 msgstr "Kuyekwe ubumbeko"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>Akukwazi Ukususeka Ukusebenza Kwayo Yonke Imiboniso</b><hr><nobr>Mawube mnye umboniso osebenzayo obona buncinci.</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Akukwazi Ukususeka Ukusebenza Kwayo Yonke Imiboniso</b><hr><nobr>Mawube "
+"mnye umboniso osebenzayo obona buncinci.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -390,12 +412,18 @@ msgid "To the Right"
 msgstr "Ukuya Ekunene"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>Isikhethwa Sifuna Ixabiso</b><hr><nobr>Misela ixabiso lesikhethwa %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Isikhethwa Sifuna Ixabiso</b><hr><nobr>Misela ixabiso lesikhethwa %1.</"
+"nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -407,7 +435,9 @@ msgstr "Impuku: Umthengisi kunye Nokukhethwa Kwegama"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr "Indlela Yokumisela Isantya Sophindaphindo Lesingqisho Esihambelanayo Ngokwenza Ngesandla"
+msgstr ""
+"Indlela Yokumisela Isantya Sophindaphindo Lesingqisho Esihambelanayo "
+"Ngokwenza Ngesandla"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
@@ -418,8 +448,16 @@ msgid "Display Size in [ mm ]"
 msgstr "Bonisa Ubukhulu ngokwe-[ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>Qaphela:</b> Izintlu zesingqisho esihambelanayo esingalunganga zisenokonakalisa iqokobhe lesikrini sakho. Zidibanise nemimiselo eyenziwa ngesandla yeqokobhe lesikrinini.<br><br>Ukuba ufuna ukuba iqokobhe lakho lesikrini lingasebenzisi kubekwa ngokwesantya esisesona siphezulu, cutha izintlu zezingqisho ezihambelanayo."
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Qaphela:</b> Izintlu zesingqisho esihambelanayo esingalunganga "
+"zisenokonakalisa iqokobhe lesikrini sakho. Zidibanise nemimiselo eyenziwa "
+"ngesandla yeqokobhe lesikrinini.<br><br>Ukuba ufuna ukuba iqokobhe lakho "
+"lesikrini lingasebenzisi kubekwa ngokwesantya esisesona siphezulu, cutha "
+"izintlu zezingqisho ezihambelanayo."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -478,12 +516,21 @@ msgid "inches"
 msgstr "ii-intshi"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Faka i-CD okanye i-Diski</b><hr>Faka ukusebenziseka komboniso we-CD okanye idiski ukusuka kumthengisi weqokobhe lesikrini."
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Faka i-CD okanye i-Diski</b><hr>Faka ukusebenziseka komboniso we-CD "
+"okanye idiski ukusuka kumthengisi weqokobhe lesikrini."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Funda Imposiso</b><hr>Akukwazekanga ukufunda kwi-CD okanye kwidiski. Oku kunokwalatha isilondolozi esonakeleyo okanye iifayili zolwazi ezinolungiselelo olungachanekanga."
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Funda Imposiso</b><hr>Akukwazekanga ukufunda kwi-CD okanye kwidiski. Oku "
+"kunokwalatha isilondolozi esonakeleyo okanye iifayili zolwazi "
+"ezinolungiselelo olungachanekanga."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -699,7 +746,8 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
+msgstr ""
+"Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
 
 #. XKBFile extension text
 #, fuzzy
@@ -748,12 +796,14 @@ msgstr "Iqhosha Lokukokunye Lasekunene liguqula iqela."
 #. XKBFile extension text
 #, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
+msgstr ""
+"Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
 
 #. XKBFile extension text
 #, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Okukokunye Nolongamelo akumaqhosha Okukokunye (ngendlela ehlala ikhona)."
+msgstr ""
+"Okukokunye Nolongamelo akumaqhosha Okukokunye (ngendlela ehlala ikhona)."
 
 #. XKBFile extension text
 #, fuzzy
@@ -855,7 +905,9 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba kwangaphakathi. Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba "
+"kwangaphakathi. Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
 
 #. XKBFile extension text
 #, fuzzy
@@ -874,12 +926,16 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. "
+"Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
 
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba abakhulu kwangaphakathi. Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba abakhulu "
+"kwangaphakathi. Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -892,7 +948,8 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
+msgstr ""
+"Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -909,7 +966,8 @@ msgstr "Iqhosha le-Win Lasekunene Kukuqamba."
 
 #. XKBFile extension text
 #, fuzzy
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr "Cinezele iqhosha Lasekunene Elilelinye ukukhetha inqanaba les-3"
 
 #. XKBFile extension text
@@ -923,11 +981,15 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. "
+"Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba kwangaphakathi. Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba "
+"kwangaphakathi. Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -935,11 +997,15 @@ msgstr "Ukutshixeka Koonobumba kutshixa kuphela isihlengahlengisi Sobhekeliso."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr "Ukutshixeka koonobumba abakhulu kutshintsha ngendlela efanayo ukwenziwa koonobumba abakhulu okuqhelekileyo kweempawu ezithatha izithuba ze-alfabethi."
+msgstr ""
+"Ukutshixeka koonobumba abakhulu kutshintsha ngendlela efanayo ukwenziwa "
+"koonobumba abakhulu okuqhelekileyo kweempawu ezithatha izithuba ze-alfabethi."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "Ukutshixeka koonobumba abakhulu kutshintsha ngendlela efanayo Ubhekeliso ukuze onke amaqhosha achaphazeleke."
+msgstr ""
+"Ukutshixeka koonobumba abakhulu kutshintsha ngendlela efanayo Ubhekeliso "
+"ukuze onke amaqhosha achaphazeleke."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -999,11 +1065,15 @@ msgstr "Omabini amaqhosha Okubhekelisa kunye aguqula iqela."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. "
+"Ubhekeliso akukurhoxisi Ukutshixeka Koonobumba."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba abakhulu kwangaphakathi. Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenzisa ukwenziwa koonobumba abakhulu "
+"kwangaphakathi. Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1063,7 +1133,8 @@ msgstr "Iqhosha Lokukokunye Lasekunene liguqula iqela."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr "Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
+msgstr ""
+"Ukubhekelisa ngamaqhosha esikhuseli samanani kusebenza njengakwi-MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1075,7 +1146,8 @@ msgstr "Ulongamelo lugulelwa kumaqhosha e-Win."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Okukokunye kuguqulelwa ngasekunene kweqhosha le-Win kwaye Kongamela Imenyu."
+msgstr ""
+"Okukokunye kuguqulelwa ngasekunene kweqhosha le-Win kwaye Kongamela Imenyu."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
@@ -1083,7 +1155,8 @@ msgstr "Ulongamelo luguqulelwa kumaqhosha e-Win (ngendlela ehlala ikhona)."
 
 #. XKBFile extension text
 msgid "Alt and Meta on the Alt keys (default)."
-msgstr "Okukokunye Nolongamelo kumaqhosha Okukokunye (ngendlela ehlala ikhona)."
+msgstr ""
+"Okukokunye Nolongamelo kumaqhosha Okukokunye (ngendlela ehlala ikhona)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
@@ -1091,7 +1164,8 @@ msgstr "Fakela ukuziphatha kwesiqhelo kwiqhosha Lemenyu."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
-msgstr "Okukokunye Nolongamelo akumaqhosha Okukokunye (ngendlela ehlala ikhona)."
+msgstr ""
+"Okukokunye Nolongamelo akumaqhosha Okukokunye (ngendlela ehlala ikhona)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
@@ -1107,7 +1181,9 @@ msgstr "Ukulawula+Ubhekeliso kuguqula iqela."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
+msgstr ""
+"Ukutshixeka Koonobumba abakhulu kusebenza ngesiBhekeliso xa kutshixwa. "
+"Ubhekeliso lurhoxisa Ukutshixeka Koonobumba Abakhulu."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1204,7 +1280,9 @@ msgid "Swap ESC and CapsLock."
 msgstr "Ulawulo Lotshintshiselwano kunye Nokutshixeka Koonobumba abakhulu."
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1216,7 +1294,9 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1328,6 +1408,11 @@ msgstr "Iimpawu Zosiba"
 msgid "Eraser Properties"
 msgstr "Iimpawu Zokusula"
 
+#. Tab text for a touchscreen tab of the touchscreen dialog
+#, fuzzy
+msgid "Touchscreen %1"
+msgstr "Isikrinisokuchukumisa"
+
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
 msgstr "Isa Inani %1"
@@ -1338,8 +1423,18 @@ msgstr "Isikrinisokuchukumisa: Umthengisi kunye Nokukhethwa Kwegama"
 
 #. Finish configuration message box
 #, fuzzy
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Amanyathelo Okugqibela</b><hr>Inyathelo lokugqibela ligcina ubumbeko lwakho olutsha. Kucetyiswa ukuvavanya ubumbeko olutsha phambi kokulugcina. Ukuba iseva yovavanyo ibonisa ulwazi olusesikrinini olungcolisekileyo, cinezela <b>[Ukulawula+Okukokunye_Ukubuya Umva Ngesithuba]</b> ukuze kubulawe iseva."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Amanyathelo Okugqibela</b><hr>Inyathelo lokugqibela ligcina ubumbeko "
+"lwakho olutsha. Kucetyiswa ukuvavanya ubumbeko olutsha phambi kokulugcina. "
+"Ukuba iseva yovavanyo ibonisa ulwazi olusesikrinini olungcolisekileyo, "
+"cinezela <b>[Ukulawula+Okukokunye_Ukubuya Umva Ngesithuba]</b> ukuze "
+"kubulawe iseva."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1384,22 +1479,42 @@ msgstr "Isiqhagamshelanisi se-HTTP"
 
 #. VNC message box appearing if password strings doesn't match
 #, fuzzy
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
-msgstr "<b>Ukungangqinelani Kwegama Lokugqithisa le-VNC </b><hr>Uguqulelo lokuqala nolwesibini lwegama lokugqithisa azingqinelani."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
+msgstr ""
+"<b>Ukungangqinelani Kwegama Lokugqithisa le-VNC </b><hr>Uguqulelo lokuqala "
+"nolwesibini lwegama lokugqithisa azingqinelani."
 
 #. VNC message box appearing if password is too short
 #, fuzzy
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>Impazamo Yegama lokugqithisa le-VNC</b><hr>Ummandla wegama lokugqithisa lishiywe lilikhamte okanye igama lokugqithisa lifutshane kakhulu. Ngenisa igama lokugqithisa elineempawu ezithatha izithuba ezithandathu obona buncinci."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>Impazamo Yegama lokugqithisa le-VNC</b><hr>Ummandla wegama lokugqithisa "
+"lishiywe lilikhamte okanye igama lokugqithisa lifutshane kakhulu. Ngenisa "
+"igama lokugqithisa elineempawu ezithatha izithuba ezithandathu obona "
+"buncinci."
 
 #. VNC message box appearing if password is too long
 #, fuzzy
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
-msgstr "<b>Impazamo Yegama Lokugqithisa le-VNC</b><hr>Igama lokugqithisa lide kakhulu. Ngenisa igama lokugqithisa elithatha izithuba ezisibhozo obona bukhulu."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
+msgstr ""
+"<b>Impazamo Yegama Lokugqithisa le-VNC</b><hr>Igama lokugqithisa lide "
+"kakhulu. Ngenisa igama lokugqithisa elithatha izithuba ezisibhozo obona "
+"bukhulu."
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
-msgstr "<b>Kufakwa Okwangaphakathi Ekhompyutheni:</b><hr>Eminye imibekelelo ilahlekile. Uhlohla imibekelelo elahlekileyo ngoku?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Kufakwa Okwangaphakathi Ekhompyutheni:</b><hr>Eminye imibekelelo "
+"ilahlekile. Uhlohla imibekelelo elahlekileyo ngoku?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1418,21 +1533,38 @@ msgid "Initialize cache..."
 msgstr "Kundululwa uvimba wethutyana..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>Ukugcinwa Kobumbeko Kusilele</b><hr>Ingxelo elandelayo idalekile:"
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>Ubumbeko Lugciniwe</b><hr>Iziganeko zohlengahlengiso ziya kwenzeka kwixesha elizayo lokuqaliswa ngokutsha kweegrafu. Uyaphuma kwi-SaX2 ngoku?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Ubumbeko Lugciniwe</b><hr>Iziganeko zohlengahlengiso ziya kwenzeka "
+"kwixesha elizayo lokuqaliswa ngokutsha kweegrafu. Uyaphuma kwi-SaX2 ngoku?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>Ukuvavanya Ubumbeko Kusilele</b><hr>Ngolwazi olungaphaya kolu bhekisela kwifayili <tt>/var/log/Xorg.99.log</tt>. Ingxelo elandelayo idalwe kumzekelo wokubiza:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Ukuvavanya Ubumbeko Kusilele</b><hr>Ngolwazi olungaphaya kolu bhekisela "
+"kwifayili <tt>/var/log/Xorg.99.log</tt>. Ingxelo elandelayo idalwe kumzekelo "
+"wokubiza:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 #, fuzzy
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
-msgstr "<b>Ulwazi Lobumbeko lwe-VNC</b><hr>Inkonzo ye-VNC ifuna ukuba isiqhagamshelanisi se-TCP 5900 nesiqhagamshelanisi se-HTTP (5800 ehlala ikhona) sivuleke kwi-firewall.  Unako ukwenza ubumbeko neYaST."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
+msgstr ""
+"<b>Ulwazi Lobumbeko lwe-VNC</b><hr>Inkonzo ye-VNC ifuna ukuba "
+"isiqhagamshelanisi se-TCP 5900 nesiqhagamshelanisi se-HTTP (5800 ehlala "
+"ikhona) sivuleke kwi-firewall.  Unako ukwenza ubumbeko neYaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"

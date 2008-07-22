@@ -64,7 +64,11 @@ SCCMouse::SCCMouse (
 	int mouseID = SAX_CORE_POINTER;
 	for (int n=0;n<mMouse;n++) {
 		QString displayName;
-		QTextOStream (&displayName) << mText["Mouse"] << " " << (n + 1);
+		QString tabNumber;
+		QString translation = mText["MouseTab"];
+		QTextOStream (&tabNumber) << (n + 1);
+		translation.replace ( QRegExp("\%1"), tabNumber);
+		QTextOStream (&displayName) << translation;
 		SCCMouseDisplay* mouse = new SCCMouseDisplay (
 			text,section,mouseID,this
 		);

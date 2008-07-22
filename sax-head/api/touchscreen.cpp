@@ -53,7 +53,11 @@ SCCTouchScreen::SCCTouchScreen (
 	//-------------------------------------
 	for ( int n=0;n<mCard;n++) {
 		QString toucherName;
-		QTextOStream (&toucherName) << mText["Touchscreen"] << " " << (n + 1);
+		QString tabNumber;
+		QString translation = mText["Touchscreen"];
+		QTextOStream (&tabNumber) << (n + 1);
+		translation.replace ( QRegExp("\%1"), tabNumber);
+		QTextOStream (&toucherName) << translation;
 		SCCTouchSelection* toucher = new SCCTouchSelection  (
 			text,section,n,this
 		);
