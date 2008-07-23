@@ -126,7 +126,7 @@ MouseData* MouseGetData(void) {
 		if (hd->unix_dev_names && hd->unix_dev_names->next) {
 			str_list_t* str = hd->unix_dev_names;
 			for (; str; str = str->next) {
-			if (strstr (str->str,"by-id")) {
+			if (strstr (str->str,"event")) {
 				strcpy(data->realdev,str->str);
 			}
 			}
