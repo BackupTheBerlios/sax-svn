@@ -12,7 +12,6 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 #----[ CheckPackage ]----------#
 sub CheckPackage {

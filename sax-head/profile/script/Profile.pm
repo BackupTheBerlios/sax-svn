@@ -3,7 +3,6 @@
 use lib   '/usr/share/sax/modules';
 
 use strict;
-use Env;
 use CreateSections;
 use Storable;
 use SaX;

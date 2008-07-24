@@ -12,7 +12,6 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 my $machine = qx(awk '/^machine/ { print $3 }' < /proc/cpuinfo);
 SWITCH: for ($machine) {

@@ -12,11 +12,11 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 use Getopt::Long;
 use FileHandle;
 use POSIX;
+use English;
 
 #=========================
 # Globals...
@@ -54,8 +54,7 @@ sub main {
 	if ($Display eq "") {
 		$Display = ":2.0";
 	}
-	my $user = qx(whoami);
-	if ($user !~ /root/i) {
+	if ($UID != 0) {
 		die "createTST: only root can do this";
 	}
 	#========================================

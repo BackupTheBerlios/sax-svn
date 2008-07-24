@@ -10,7 +10,6 @@
 # Status: Up-to-date
 #
 use Getopt::Long;
-use Env;
 
 #---[ lets start :-) ]----#
 init(); main();

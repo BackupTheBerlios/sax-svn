@@ -1,5 +1,4 @@
 use ExtUtils::MakeMaker;
-use Env;
 
 #$QTDIR=$ENV{QTDIR};
 #$QTDIR='/usr/include/Qt';

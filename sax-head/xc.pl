@@ -10,7 +10,6 @@
 #
 use lib   '/usr/share/sax/modules';
 use strict;
-use Env;
 
 use FileHandle;
 use CreateSections;
@@ -20,6 +19,7 @@ use Getopt::Long;
 use Storable;
 use XFree; 
 use SaX;
+use English;
 
 #==========================================
 # Globals
@@ -526,8 +526,7 @@ sub init {
 	#==========================================
 	# Test for root privileges
 	#------------------------------------------
-	my $user = qx (whoami);
-	if ($user !~ /root/i) {
+	if ($UID != 0) {
 		print "xc: only root can do this\n";
 		exit(0);
 	}

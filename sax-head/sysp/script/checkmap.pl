@@ -12,7 +12,6 @@
 #
 use strict;
 use FileHandle;
-use Env;
 
 #----[ CheckMap ]----------#
 sub CheckMap {

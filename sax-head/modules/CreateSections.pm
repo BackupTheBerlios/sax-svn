@@ -13,7 +13,6 @@
 #
 use lib '/usr/share/sax/modules/create';
 
-use Env;
 use device;
 use dri;
 use files;

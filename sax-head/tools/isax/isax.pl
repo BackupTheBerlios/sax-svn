@@ -14,7 +14,6 @@ no strict "subs";
 
 use lib '/usr/share/sax/modules';
 
-use Env;
 use XFree;
 use FBSet;
 use ParseConfig;
@@ -24,6 +23,7 @@ use HashMap;
 use Storable;
 use ExportAPI;
 use Getopt::Long;
+use English;
 
 use Storable qw(freeze thaw);
 
@@ -74,7 +74,7 @@ sub init {
 		usage();
 	}
 	if ( ! defined $ListSection ) {
-	if (qx(whoami) !~ /root/) {
+	if ($UID != 0) {
 		die "ISaX: only root can do this";
 	}
 	}

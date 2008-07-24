@@ -11,7 +11,6 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 #---[ CountSections ]-----#
 sub CountSections {

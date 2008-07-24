@@ -12,7 +12,6 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 my $code = 0;
 my $logs = "/var/log/Xorg.99.log";

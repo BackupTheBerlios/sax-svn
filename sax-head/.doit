@@ -18,7 +18,7 @@
 #
 use strict;
 use Getopt::Long;
-use Env;
+use English;
 
 #=====================================
 # Globals...
@@ -69,8 +69,7 @@ sub main {
 	#==============================================
 	# Check user privileges...
 	#----------------------------------------------
-	my $user = qx(whoami);
-	if ((defined $Build) && ($user !~ /root/i)) {
+	if ((defined $Build) && ($UID != 0)) {
 		die "Only root can do this... abort";
 	}
 	if ((! defined $Build) && (! defined $Prepare)) {

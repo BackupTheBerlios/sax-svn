@@ -1,5 +1,4 @@
 use ExtUtils::MakeMaker;
-use Env;
 
 $CFLAGS = $ENV{RPM_OPT_FLAGS};
 $CFLAGS =~ s/-Wall//;

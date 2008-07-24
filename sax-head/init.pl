@@ -10,7 +10,6 @@
 #
 use lib   '/usr/share/sax/modules';
 use strict;
-use Env;
 
 use Getopt::Long;
 use Storable;

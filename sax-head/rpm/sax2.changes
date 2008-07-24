@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Jul 24 16:41:12 CEST 2008 - sndirsch@suse.de
+
+- remove "Use vnc" to reduce dependancies (bnc #411766)
+- replace qx(whoami) with $UID (bnc #411766)
+
+-------------------------------------------------------------------
 Wed Jul 23 16:22:19 CEST 2008 - sndirsch@suse.de
 
 - new Ids for Xen mouse; use "event" instead of "by-id" (again) to

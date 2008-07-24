@@ -7,7 +7,6 @@
 # Status: Development
 #
 use strict;
-use Env;
 
 #---[ setupBootLoaderVGA ]----#
 sub setupBootLoaderVGA {

@@ -12,7 +12,6 @@
 # --------
 # Status: Up-to-date
 #
-use Env;
 
 #---[ GetDisplay ]-----#
 sub GetDisplay {

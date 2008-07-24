@@ -14,7 +14,6 @@
 # Status: Up-to-date
 #
 use strict;
-use Env;
 
 sub profileCount {
 	my $profile = $_[0];
