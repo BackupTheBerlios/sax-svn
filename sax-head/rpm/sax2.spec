@@ -88,6 +88,7 @@ Provides:       sax2:/usr/share/sax/sysp/maps/Identity.map
 Provides:       sax2-tools:/usr/share/sax/sysp/maps/Identity.map
 Provides:       saxident
 Obsoletes:      saxident
+Requires:       sax2 sax2-libsax-perl
 
 %description -n sax2-ident
 This package contains information about the supported graphics hardware
