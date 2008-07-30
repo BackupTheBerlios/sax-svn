@@ -1,0 +1,1 @@
+KERNEL=="event[0-9]*", SYSFS{idVendor}=="04e7", SYSFS{idProduct}=="0030", SYMLINK+="input/elo"

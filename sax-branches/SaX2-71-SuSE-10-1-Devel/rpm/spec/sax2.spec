@@ -32,6 +32,7 @@ Group:        System/X11/Utilities
 License:      Other License(s), see package, GPL
 Source:       sax2.tar.bz2
 Source1:      sax2.desktop
+Source2:      66-elo.rules
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 %if %{suse_version} > 820
 Provides:     sax xfine
@@ -283,6 +284,12 @@ cat > $RPM_BUILD_ROOT/var/lib/hardware/ids/sax2-ident << EOF
  +hwclass                mouse
 EOF
 #=================================================
+# udev rule for creating /dev/input/elo symlink (Bug #410315)
+#-------------------------------------------------
+mkdir -p $RPM_BUILD_ROOT/etc/udev/rules.d
+install -m 644 $RPM_SOURCE_DIR/66-elo.rules \
+               $RPM_BUILD_ROOT/etc/udev/rules.d
+#=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
 
@@ -480,6 +487,7 @@ fi
 
 %files -n sax2-ident
 %defattr(-,root,root)
+%dir /etc/udev/rules.d
 %dir /usr/share/sax
 %dir /usr/share/sax/api
 %dir /usr/share/sax/api/data/cdb
@@ -487,6 +495,7 @@ fi
 %dir /usr/share/sax/sysp/maps
 %dir /usr/share/sax/sysp
 %dir /var/lib/hardware
+/etc/udev/rules.d/66-elo.rules
 /usr/share/sax/sysp/maps/Identity.map
 /usr/share/sax/sysp/maps/Keyboard.map
 /usr/share/sax/sysp/maps/Vendor.map
