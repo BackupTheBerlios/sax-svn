@@ -211,11 +211,11 @@ TABLET PCs:Lenovo X61 TABLET PC Eraser (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = eraser
- RawOption           = "ForceDevice" "ISDV4","MultiTouch" "off"
+ RawOption           = "ForceDevice" "ISDV4"
 }
 
 #-----------------------------------------#
-# TABLET PCs: IBM X41 TabletPC Stylus     #
+# TABLET PCs: IBM X61 TabletPC Stylus     #
 #-----------------------------------------#
 TABLET PCs:Lenovo X61 TABLET PC Stylus (SERIAL) {
  Device              = /dev/ttyS0
@@ -223,7 +223,19 @@ TABLET PCs:Lenovo X61 TABLET PC Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","MultiTouch" "off"
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-----------------------------------------#
+# TABLET PCs: IBM X61 TabletPC Touch      #
+#-----------------------------------------#
+TABLET PCs:Lenovo X61 TABLET PC Touch (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "915","BottomY" "950","TopX" "48","TopY" "79"
 }
 
 #-------------------------------------------#

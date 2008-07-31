@@ -35,6 +35,7 @@ namespace SaX {
 #define SAX_INPUT_PEN         "Pen"
 #define SAX_INPUT_PAD         "Pad"
 #define SAX_INPUT_ERASER      "Eraser"
+#define SAX_INPUT_TOUCH       "Touch"
 #define SAX_INPUT_MOUSE       "Mouse"
 #define SAX_INPUT_VNC         "VNC"
 #define SAX_INPUT_KEYBOARD    "Keyboard"

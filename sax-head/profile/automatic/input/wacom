@@ -58,9 +58,27 @@ ServerLayout -> all -> InputDevice -> [X+4] -> id = Mouse[[X+4]]
 ServerLayout -> all -> InputDevice -> [X+4] -> usage = SendCoreEvents
 
 #====================================
+# Add Touch
+#------------------------------------
+InputDevice -> [X+4] -> Identifier = Mouse[[X+6]]
+InputDevice -> [X+4] -> Driver     = wacom
+InputDevice -> [X+4] -> Option -> InputFashion   = Touch
+InputDevice -> [X+4] -> Option -> Vendor         = WACOM
+InputDevice -> [X+4] -> Option -> Name           = GRAPHIRE v1-4 Eraser __OB__USB__CB__
+InputDevice -> [X+4] -> Option -> Mode           = Absolute
+InputDevice -> [X+4] -> Option -> SendCoreEvents = on
+InputDevice -> [X+4] -> Option -> Type           = touch
+InputDevice -> [X+4] -> Option -> USB            = on
+InputDevice -> [X+4] -> Option -> Protocol       = Auto
+InputDevice -> [X+4] -> Option -> Device         = ${Device}
+
+ServerLayout -> all -> InputDevice -> [X+6] -> id = Mouse[[X+6]]
+ServerLayout -> all -> InputDevice -> [X+6] -> usage = SendCoreEvents
+
+#====================================
 # Add pad (ExpressKeys)
 #------------------------------------
-InputDevice -> [X+6] -> Identifier = Mouse[[X+6]]
+InputDevice -> [X+6] -> Identifier = Mouse[[X+8]]
 InputDevice -> [X+6] -> Driver     = wacom
 InputDevice -> [X+6] -> Option -> InputFashion   = Pad
 InputDevice -> [X+6] -> Option -> Vendor         = WACOM
@@ -69,5 +87,5 @@ InputDevice -> [X+6] -> Option -> Type           = pad
 InputDevice -> [X+6] -> Option -> USB            = on
 InputDevice -> [X+6] -> Option -> Device         = ${Device}
 
-ServerLayout -> all -> InputDevice -> [X+6] -> id = Mouse[[X+6]]
-ServerLayout -> all -> InputDevice -> [X+6] -> usage = none
+ServerLayout -> all -> InputDevice -> [X+8] -> id = Mouse[[X+8]]
+ServerLayout -> all -> InputDevice -> [X+8] -> usage = none

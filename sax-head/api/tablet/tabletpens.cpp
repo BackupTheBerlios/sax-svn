@@ -61,6 +61,14 @@ SCCTabletPens::SCCTabletPens (
 		mText["Properties"],mEraserBox
 	);
 	mEraserBox -> setStretchFactor ( mCheckEraser,10 );
+	mTouchBox = new Q3HBox ( mToolGroup );
+	mCheckTouch = new QCheckBox (
+		mText["AddTouch"],mTouchBox
+	);
+	mTouchProperties = new QPushButton (
+		mText["Properties"],mTouchBox
+	);
+	mTouchBox -> setStretchFactor ( mCheckTouch,10 );
 	mPadBox    = new Q3HBox ( mToolGroup );
 	mCheckPad = new QCheckBox (
 		mText["AddPad"],mPadBox
@@ -75,6 +83,9 @@ SCCTabletPens::SCCTabletPens (
 	);
 	mEraserPropertyDialog = new SCCTabletPenProperty (
 		text,section,mText["EraserProperties"],0,this
+	);
+	mTouchPropertyDialog = new SCCTabletPenProperty (
+		text,section,mText["TouchProperties"],0,this
 	);
 	mPadPropertyDialog = new SCCTabletPadProperty (
 		text,section,mText["PadProperties"],0,this
@@ -91,12 +102,20 @@ SCCTabletPens::SCCTabletPens (
 		this              , SLOT   ( slotEraser         ( void ))
 	);
 	QObject::connect (
+		mTouchProperties  , SIGNAL ( clicked            ( void )),
+		this              , SLOT   ( slotTouch          ( void ))
+	);
+	QObject::connect (
 		mCheckPen         , SIGNAL ( clicked            ( void )),
 		this              , SLOT   ( slotActivatePen    ( void ))
 	);
 	QObject::connect (
 		mCheckEraser      , SIGNAL ( clicked            ( void )),
 		this              , SLOT   ( slotActivateEraser ( void ))
+	);
+	QObject::connect (
+		mCheckTouch       , SIGNAL ( clicked            ( void )),
+		this              , SLOT   ( slotActivateTouch  ( void ))
 	);
 	//=====================================
 	// add widgets to the layout
@@ -120,6 +139,7 @@ void SCCTabletPens::init ( void ) {
 	//-------------------------------------
 	int penID    = 0;
 	int eraserID = 0;
+	int touchID  = 0;
 	int padID    = 0;
 	for (int i=SAX_CORE_POINTER;i<mSection["Pointers"]->getCount();i+=2) {
 		if (mSaxTablet->selectPointer (i)) {
@@ -128,6 +148,9 @@ void SCCTabletPens::init ( void ) {
 		}
 		if (mSaxTablet->isEraser()) {
 			eraserID = i;
+		}
+		if (mSaxTablet->isTouch()) {
+			touchID = i;
 		}
 		if (mSaxTablet->isPad()) {
 			padID = i;
@@ -141,6 +164,8 @@ void SCCTabletPens::init ( void ) {
 	mPenPropertyDialog    -> init();
 	mEraserPropertyDialog -> setID ( eraserID );
 	mEraserPropertyDialog -> init();
+	mTouchPropertyDialog  -> setID ( touchID );
+	mTouchPropertyDialog  -> init();
 	mPadPropertyDialog    -> setID ( padID );
 
 	//====================================
@@ -148,6 +173,7 @@ void SCCTabletPens::init ( void ) {
 	//------------------------------------
 	mPenProperties    -> setDisabled ( true );
 	mEraserProperties -> setDisabled ( true );
+	mTouchProperties  -> setDisabled ( true );
 }
 //====================================
 // import
@@ -208,6 +234,10 @@ void SCCTabletPens::import ( void ) {
 		mCheckEraser -> setChecked ( true );
 		slotActivateEraser();
 	} 
+	if (mTouchPropertyDialog -> getID() > 0) {
+		mCheckTouch -> setChecked ( true );
+		slotActivateTouch();
+	} 
 	if (mPadPropertyDialog -> getID() > 0) {
 		mCheckPad -> setChecked ( true );
 	}
@@ -219,6 +249,9 @@ void SCCTabletPens::import ( void ) {
 	}
 	if (mEraserPropertyDialog -> getID() > 0) {
 		mEraserPropertyDialog -> import();
+	}
+	if (mTouchPropertyDialog -> getID() > 0) {
+		mTouchPropertyDialog -> import();
 	}
 }
 //====================================
@@ -232,6 +265,12 @@ bool SCCTabletPens::hasPen ( void ) {
 //------------------------------------
 bool SCCTabletPens::hasEraser ( void ) {
 	return mCheckEraser->isChecked();
+}
+//====================================
+// hasTouch
+//------------------------------------
+bool SCCTabletPens::hasTouch ( void ) {
+	return mCheckTouch->isChecked();
 }
 //====================================
 // hasPad
@@ -275,6 +314,18 @@ void SCCTabletPens::slotTablet (
 		hasEraser = true;
 	}
 	//====================================
+	// check for touch support
+	//------------------------------------
+	bool hasTouch = false;
+	mTouchBox -> setDisabled ( true );
+	if (tabletDict["TouchLink"]) {
+		mTouchPropertyDialog -> setupPen ( vendor, *tabletDict["TouchLink"] );
+		mTouchBox -> setDisabled ( false );
+		mCheckTouch -> setChecked ( false );
+		slotActivateTouch();
+		hasTouch = true;
+	}
+	//====================================
 	// check for pad support
 	//------------------------------------
 	bool hasPad = false;
@@ -294,16 +345,22 @@ void SCCTabletPens::slotTablet (
 	}
 }
 //====================================
+// slotPen
+//------------------------------------
+void SCCTabletPens::slotPen ( void ) {
+	mPenPropertyDialog -> show();
+}
+//====================================
 // slotEraser
 //------------------------------------
 void SCCTabletPens::slotEraser ( void ) {
 	mEraserPropertyDialog -> show();
 }
 //====================================
-// slotPen
+// slotTouch
 //------------------------------------
-void SCCTabletPens::slotPen ( void ) {
-	mPenPropertyDialog -> show();
+void SCCTabletPens::slotTouch ( void ) {
+	mTouchPropertyDialog -> show();
 }
 //====================================
 // slotActivatePen
@@ -324,6 +381,15 @@ void SCCTabletPens::slotActivateEraser ( void ) {
 	}
 }
 //====================================
+// slotActivateTouch
+//------------------------------------
+void SCCTabletPens::slotActivateTouch ( void ) {
+	mTouchProperties -> setDisabled ( true );
+	if (mCheckTouch->isChecked()) {
+		mTouchProperties -> setDisabled ( false );
+	}
+}
+//====================================
 // getPenPropertyData
 //------------------------------------
 SCCTabletPenProperty* SCCTabletPens::getPenPropertyData ( void ) {
@@ -334,5 +400,11 @@ SCCTabletPenProperty* SCCTabletPens::getPenPropertyData ( void ) {
 //------------------------------------
 SCCTabletPenProperty* SCCTabletPens::getEraserPropertyData ( void ) {
 	return mEraserPropertyDialog;
+}
+//====================================
+// getTouchPropertyData
+//------------------------------------
+SCCTabletPenProperty* SCCTabletPens::getTouchPropertyData ( void ) {
+	return mTouchPropertyDialog;
 }
 } // end namespace

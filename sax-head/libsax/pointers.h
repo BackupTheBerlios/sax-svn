@@ -286,6 +286,7 @@ class SaXManipulateTabletsIF : public SaXManipulatePointers {
 	virtual bool isTablet     ( void ) = 0;
 	virtual bool isPen        ( void ) = 0;
 	virtual bool isEraser     ( void ) = 0;
+	virtual bool isTouch      ( void ) = 0;
 	virtual bool isPad        ( void ) = 0;
 
 	public:
@@ -398,8 +399,9 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	int  addPen    ( const QString&,const QString& );
 	int  addPad    ( const QString& );
 	int  addPad    ( const QString&,const QString& );
-	int  removePen ( int );
-	int  removePad ( int );
+	int  removePen   ( int );
+	int  removeTouch ( int );
+	int  removePad   ( int );
 
 	public:
 	QString getName   ( void );
@@ -409,6 +411,7 @@ class SaXManipulateTablets : public SaXManipulateTabletsIF {
 	bool isTablet     ( void );
 	bool isPen        ( void );
 	bool isEraser     ( void );
+	bool isTouch      ( void );
 	bool isPad        ( void );
 
 	public:

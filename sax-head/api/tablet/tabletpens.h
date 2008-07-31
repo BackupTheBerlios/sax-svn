@@ -62,23 +62,29 @@ class SCCTabletPens : public SCCDialog {
 	private:
 	Q3HBox*                mPenBox;
 	Q3HBox*                mEraserBox;
+	Q3HBox*                mTouchBox;
 	Q3HBox*                mPadBox;
 	Q3ButtonGroup*         mToolGroup;
 	QCheckBox*            mCheckPen;
 	QCheckBox*            mCheckEraser;
+	QCheckBox*            mCheckTouch;
 	QCheckBox*            mCheckPad;
 	QPushButton*          mPenProperties;
 	QPushButton*          mEraserProperties;
+	QPushButton*          mTouchProperties;
 	SCCTabletPenProperty* mPenPropertyDialog;
 	SCCTabletPenProperty* mEraserPropertyDialog;
+	SCCTabletPenProperty* mTouchPropertyDialog;
 	SCCTabletPadProperty* mPadPropertyDialog;
 
 	public:
 	bool hasPen    ( void );
 	bool hasEraser ( void );
+	bool hasTouch  ( void );
 	bool hasPad    ( void );
 	SCCTabletPenProperty* getPenPropertyData    ( void );
 	SCCTabletPenProperty* getEraserPropertyData ( void );
+	SCCTabletPenProperty* getTouchPropertyData  ( void );
 
 	public:
 	void init   ( void );
@@ -88,7 +94,9 @@ class SCCTabletPens : public SCCDialog {
 	void slotTablet ( const QString&,const QString& );
 	void slotActivatePen ( void );
 	void slotActivateEraser ( void );
+	void slotActivateTouch ( void );
 	void slotEraser ( void );
+	void slotTouch  ( void );
 	void slotPen    ( void );
 
 	public:

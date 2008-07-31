@@ -23,6 +23,7 @@
 #  KernelLoad           = string,string
 #  StylusLink           = string
 #  EraserLink           = string
+#  TouchLink            = string
 # }
 
 #-------------------------------#
@@ -215,9 +216,10 @@ TABLET PCs:Lenovo X61 TABLET PC (SERIAL) {
  Driver           = wacom
  Device           = /dev/ttyS0
  SendCoreEvents   = on
- RawOption        = "ForceDevice" "ISDV4","MultiTouch" "off"
+ RawOption        = "ForceDevice" "ISDV4"
  StylusLink       = Lenovo X61 TABLET PC Stylus (SERIAL)
  EraserLink       = Lenovo X61 TABLET PC Eraser (SERIAL)
+ TouchLink        = Lenovo X61 TABLET PC Touch (SERIAL)
 }
 
 #----------------------------------#

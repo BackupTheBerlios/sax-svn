@@ -175,6 +175,7 @@ int SaXManipulateDevices::addInputDevice (const char* fashion) {
 		(inputFashion != SAX_INPUT_TOUCHPANEL) &&
 		(inputFashion != SAX_INPUT_TABLET)     &&
 		(inputFashion != SAX_INPUT_PEN)        &&
+		(inputFashion != SAX_INPUT_TOUCH)      &&
 		(inputFashion != SAX_INPUT_PAD)        &&
 		(inputFashion != SAX_INPUT_ERASER)     &&
 		(inputFashion != SAX_INPUT_MOUSE)      &&

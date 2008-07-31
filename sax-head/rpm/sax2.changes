@@ -1,4 +1,20 @@
 -------------------------------------------------------------------
+Thu Jul 31 16:40:26 CEST 2008 - sndirsch@suse.de
+
+- Added support for the new Touch support of Wacom TabletPC
+  devices (as e.g. the WACf008 in the Lenovo ThinkPad X61t) to
+  Sax2  (Danny Kukawka) This patch includes:
+  * new pen type Touch 
+  * extended Wacom template for Touch devices and an updated
+    Lenovo ThinkPad X61t entry, added values to calibrate the touch
+    device
+  * removed Multitouch parameter from supported Wacom parameter
+    list
+  * update for German po-file
+  * fixed Makefile to prevent trouble with RPM if a patch get added
+    (ignore *.orig files)
+
+-------------------------------------------------------------------
 Mon Jul 28 15:50:20 CEST 2008 - sndirsch@suse.de
 
 - sax2-ident requires sax2 and sax2-libsax-perl 

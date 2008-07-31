@@ -537,6 +537,8 @@ bool SaXManipulateMice::isMouse (void) {
 	if ((fashion != "Tablet")     &&
 		(fashion != "Pen")        &&
 		(fashion != "Eraser")     &&
+		(fashion != "Touch")      &&
+		(fashion != "Pad")        &&
 		(fashion != "VNC")        &&
 		(fashion != "Keyboard")   &&
 		(fashion != "Touchpanel")
@@ -936,6 +938,25 @@ bool SaXManipulateTablets::isEraser (void) {
 	}
 	QString fashion = mImport -> getItem ("InputFashion");
 	if (fashion == "Eraser") {
+		return true;
+	}
+	return false;
+}
+
+//====================================
+// isTouch
+//------------------------------------
+bool SaXManipulateTablets::isTouch (void) {
+	// .../
+	//! check if the current device is a tablet touch device.
+	//! This is done by checking the InputFashion
+	//! parameter.
+	// ----
+	if (! mImport) {
+		return false;
+	}
+	QString fashion = mImport -> getItem ("InputFashion");
+	if (fashion == "Touch") {
 		return true;
 	}
 	return false;
@@ -1413,7 +1434,7 @@ int SaXManipulateTablets::addPen (const QString& group) {
 		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
 		return -1;
 	}
-	if ((*type != "stylus") && (*type != "eraser")) {
+	if ((*type != "stylus") && (*type != "eraser") && (*type != "touch")) {
 		excPointerFashionTypeFailed (*type);
 		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
 		return -1;
@@ -1421,6 +1442,9 @@ int SaXManipulateTablets::addPen (const QString& group) {
 	QString fashion (SAX_INPUT_PEN);
 	if (*type == "eraser") {
 		fashion = SAX_INPUT_ERASER;
+	}
+	if (*type == "touch") {
+		fashion = SAX_INPUT_TOUCH;
 	}
 	// .../
 	// create new input device for the pen and make
@@ -1486,6 +1510,30 @@ int SaXManipulateTablets::removePen ( int id ) {
 		(fashion != QString(SAX_INPUT_PEN ))   &&
 		(fashion != QString(SAX_INPUT_ERASER))
 	) {
+		excPointerFashionTypeFailed (fashion);
+		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
+		return -1;
+	}
+	return mManipInputDevices->removeInputDevice (id);
+}
+
+//====================================
+// removeTouch
+//------------------------------------
+int SaXManipulateTablets::removeTouch ( int id ) {
+	// .../
+	//! remove the Touch located at section ID (id)
+	//! If the InputFashion type is a valid SAX_INPUT_TOUCH
+	//! the method will remove the pointer device and return
+	//! the new current ID
+	// ----
+	if (! selectPointer ( id )) {
+		return -1;
+	}
+	QString fashion (
+		mImport->getItem("InputFashion")
+	);
+	if (fashion != QString(SAX_INPUT_TOUCH)) {
 		excPointerFashionTypeFailed (fashion);
 		qError (errorString(),EXC_POINTERFASHIONTYPEFAILED);
 		return -1;

@@ -249,7 +249,7 @@ install:install-docs
 	#============================================
 	# install API data files...
 	#--------------------------------------------
-	for i in `find ./api/data -maxdepth 1 -name "*"`; do \
+	for i in `find ./api/data -maxdepth 1 -name "*" | grep -v .orig`; do \
 	if [ -f $$i ];then \
 		install -m 644 $$i  ${APIDATAVZ} ;\
 	fi \

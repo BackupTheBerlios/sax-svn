@@ -192,6 +192,9 @@ bool SCCTablet::exportData ( void ) {
 		if (saxTablet.isEraser()) {
 			saxDevice.removeInputDevice (i);
 		}
+		if (saxTablet.isTouch()) {
+			saxDevice.removeInputDevice (i);
+		}
 		if (saxTablet.isPad()) {
 			saxDevice.removeInputDevice (i);
 		}
@@ -263,7 +266,7 @@ bool SCCTablet::exportData ( void ) {
 			} else {
 				saxTablet.setMode ("Absolute");
 			}
-			int sticks[2] = {-1,-1};
+			int sticks[3] = {-1,-1,-1};
 			//====================================
 			// handle Tablet Pen
 			//------------------------------------
@@ -279,6 +282,13 @@ bool SCCTablet::exportData ( void ) {
 				sticks[1] = saxTablet.addPen ( vendor,eraserLink );
 			}
 			//====================================
+			// handle Tablet Touch
+			//------------------------------------
+			if (mTabletPens->hasTouch()) {
+				QString TouchLink = *tabletDict["TouchLink"];
+				sticks[2] = saxTablet.addPen ( vendor,TouchLink );
+			}
+			//====================================
 			// handle Tablet Pad
 			//------------------------------------
 			if (mTabletPens->hasPad()) {
@@ -289,12 +299,13 @@ bool SCCTablet::exportData ( void ) {
 			//====================================
 			// save pen/eraser data
 			//------------------------------------
-			for (int n=0;n<2;n++) {
+			for (int n=0;n<3;n++) {
 			if (sticks[n] > 0) {
 				SCCTabletPenProperty* pen = 0;
 				switch (n) {
 					case 0: pen = mTabletPens->getPenPropertyData();    break;
 					case 1: pen = mTabletPens->getEraserPropertyData(); break;
+					case 2: pen = mTabletPens->getTouchPropertyData();  break;
 				}
 				//====================================
 				// create manipulators... 
