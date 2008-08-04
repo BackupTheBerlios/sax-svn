@@ -5,11 +5,11 @@
 # -----------------------------------------------------
 nv       : Depth24,NVidia,NoModelines,NoComposite
 nvidia   : Depth24,NVidia,NoModelines,Composite
-radeon   : Depth24,Radeon
+radeon   : Depth24,Radeon,Virtual
 i810     : Depth24,NoDDC,LinearAlloc
 sis      : SiS,Depth24
 fglrx    : FireGL,AIGLX,Composite
 tseng    : VideoRAM
 intel    : Depth24,Intel,AIGLX,Composite
 fbdev    : NoModelines
-radeonhd : Depth24,RadeonHD
+radeonhd : Depth24,RadeonHD,Virtual

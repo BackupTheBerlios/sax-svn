@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Aug  4 17:03:50 CEST 2008 - sndirsch@suse.de
+
+- added 'Virtual' profile for RANDR 1.2 drivers, since framebuffer
+  size cannot be changed on-the-fly at the moment; currently used
+  by radeon, radeonhd drivers and Intel 965 series (bnc #414156)
+
+-------------------------------------------------------------------
 Thu Jul 31 16:40:26 CEST 2008 - sndirsch@suse.de
 
 - Added support for the new Touch support of Wacom TabletPC
