@@ -1,4 +1,19 @@
 -------------------------------------------------------------------
+Mon Aug  4 20:50:36 CEST 2008 - sndirsch@suse.de
+
+- HP Preload:
+  * added monitor entries and profiles
+- SLEPOS:
+  * use evdev driver for elo touchscreen (bnc #408436)
+  * Identity.map/Identity.map.i386:
+    - 855GM IBM hardware needs swcursor + noaccel (bnc #408994)
+    - use DDC profile for IBM 855G device to make additionally
+      required options (Noaccel,SWcursor) available again 
+      (bnc #408994)
+  * added elo udev rule to use /dev/input/elo as device for elo
+    profile; adjusted elo profile (bnc #410315)
+
+-------------------------------------------------------------------
 Mon Aug  4 17:03:50 CEST 2008 - sndirsch@suse.de
 
 - added 'Virtual' profile for RANDR 1.2 drivers, since framebuffer

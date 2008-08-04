@@ -44,6 +44,7 @@ Group:          System/X11/Utilities
 License:        GNU General Public License (GPL)
 Source:         sax2.tar.bz2
 Source1:        sax2.desktop
+Source2:        66-elo.rules
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 ExcludeArch:  s390
 %if %{suse_version} > 1020
@@ -213,6 +214,21 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 #-------------------------------------------------
 %suse_update_desktop_file -i %name System SystemSetup
 #=================================================
+# hwinfo data (bnc #408436)
+#-------------------------------------------------
+mkdir -p $RPM_BUILD_ROOT/var/lib/hardware/ids
+cat > $RPM_BUILD_ROOT/var/lib/hardware/ids/sax2-ident << EOF
+ vendor.id              usb 0x04e7
+&device.id              usb 0x0030
+ +hwclass                mouse
+EOF
+#=================================================
+# udev rule for creating /dev/input/elo symlink (Bug #410315)
+#-------------------------------------------------
+mkdir -p $RPM_BUILD_ROOT/etc/udev/rules.d
+install -m 644 $RPM_SOURCE_DIR/66-elo.rules \
+               $RPM_BUILD_ROOT/etc/udev/rules.d
+#=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
 
@@ -220,6 +236,26 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
 	mkdir -p /var/cache/xfine
+fi
+
+%post -n sax2-ident
+if ls var/lib/hardware/ids/* &> /dev/null; then
+  >  var/lib/hardware/hd.ids
+  for i in var/lib/hardware/ids/*; do
+    cat $i >> var/lib/hardware/hd.ids
+  done
+fi
+
+%postun -n sax2-ident
+if [ "$1" -eq 0 ]; then
+  if ls var/lib/hardware/ids/* &> /dev/null; then
+    >  var/lib/hardware/hd.ids
+    for i in var/lib/hardware/ids/*; do
+      cat $i >> var/lib/hardware/hd.ids
+    done
+  else
+    rm -f var/lib/hardware/hd.ids
+  fi
 fi
 
 %post -n sax2-libsax
@@ -334,12 +370,15 @@ fi
 
 %files -n sax2-ident
 %defattr(-,root,root)
+%dir /etc/udev/rules.d
 %dir %{_datadir}/sax
 %dir %{_datadir}/sax/api
 %dir %{_datadir}/sax/api/data/cdb
 %dir %{_datadir}/sax/api/data
 %dir %{_datadir}/sax/sysp/maps
 %dir %{_datadir}/sax/sysp
+%dir /var/lib/hardware
+/etc/udev/rules.d/66-elo.rules
 %{_datadir}/sax/sysp/maps/Identity.map
 %{_datadir}/sax/sysp/maps/Keyboard.map
 %{_datadir}/sax/sysp/maps/Vendor.map
@@ -354,6 +393,7 @@ fi
 %{_datadir}/sax/api/data/cdb/Touchscreens
 %config %{_datadir}/sax/api/data/cdb/Monitors
 %{_datadir}/sax/profile
+/var/lib/hardware/ids
 #=================================================
 # SaX-libsax file list...  
 # ------------------------------------------------
