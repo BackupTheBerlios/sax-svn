@@ -176,7 +176,7 @@ sub init {
 	#==========================================
 	# Module specification                     
 	#------------------------------------------
-	$var{Module}{0}{Load}      = "dbe,type1,freetype,extmod,glx";
+	$var{Module}{0}{Load}      = "dbe,freetype,extmod,glx";
 
 	#==========================================
 	# ServerFlags specification                

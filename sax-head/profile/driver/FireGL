@@ -12,7 +12,7 @@ ServerFlags-> 0 -> IgnoreABI = on
 !remove Monitor -> [X] -> Modeline
 
 Screen->[X]->DefaultDepth    = 24
-Module->[X]->Load            = dbe,type1,freetype,extmod,glx,dri
+Module->[X]->Load            = dbe,freetype,extmod,glx,dri
 Device->[X]->Raw->11->Option = "Capabilities" "0x00000000"
 Device->[X]->Raw->12->Option = "VideoOverlay" "on"
 Device->[X]->Raw->13->Option = "OpenGLOverlay" "off"
