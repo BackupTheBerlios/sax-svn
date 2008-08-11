@@ -10,6 +10,6 @@ i810     : Depth24,NoDDC,LinearAlloc
 sis      : SiS,Depth24
 fglrx    : FireGL,AIGLX,Composite
 tseng    : VideoRAM
-intel    : Depth24,Intel,AIGLX,Composite
+intel    : Depth24,Intel,AIGLX,Composite,Virtual2k
 fbdev    : NoModelines
 radeonhd : Depth24,RadeonHD,Virtual
