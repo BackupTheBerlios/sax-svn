@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Aug 13 12:07:29 CEST 2008 - sndirsch@suse.de
+
+- alps-macbook profile:
+  * no longer set *Edge values; these are now detected and set by
+    the synaptics driver itself, which appears to work fine at
+    least on ALPS touchpads used in Macbooks
+
+-------------------------------------------------------------------
 Mon Aug 11 22:42:43 CEST 2008 - sndirsch@suse.de
 
 - added 'Virtual2k' for Intel < 965; still useful for hotplugging
