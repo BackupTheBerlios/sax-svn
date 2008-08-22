@@ -285,7 +285,6 @@ TABLET PCs:ISDV4 TABLET PC Eraser (SERIAL) {
  RawOption           = "ForceDevice" "ISDV4"
 }
 
-
 #-------------------------------------------#
 # TABLET PCs: Wacom ISDV4 TabletPC Stylus   #
 #-------------------------------------------#
@@ -298,6 +297,44 @@ TABLET PCs:ISDV4 TABLET PC Stylus (SERIAL) {
  RawOption           = "ForceDevice" "ISDV4"
 }
 
+#-------------------------------------------#
+# TABLET PCs: Wacom ISDV4 TabletPC Touch    #
+#-------------------------------------------#
+TABLET PCs:ISDV4 TABLET PC Touch (SERIAL) {
+ Device              = /dev/ttyS0
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+
+#------------------------------------------------#
+# TABLET PCs: Wacom ISDV4 TabletPC Eraser (USB)  #
+#------------------------------------------------#
+TABLET PCs:ISDV4 TABLET PC Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#------------------------------------------------#
+# TABLET PCs: Wacom ISDV4 TabletPC Stylus (USB)  #
+#------------------------------------------------#
+TABLET PCs:ISDV4 TABLET PC Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4"
+}
 #-------------------------------------------#
 # TABLET PCs: ASUS R1E Eraser (USB)         #
 #-------------------------------------------#
