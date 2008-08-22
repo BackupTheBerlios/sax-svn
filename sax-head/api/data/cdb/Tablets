@@ -275,4 +275,33 @@ TABLET PCs:GATEWAY (Finepoint FPI2004) {
   RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400","BaudRate" "19200"
 }
 
+#----------------------------------#
+# TABLET PCs: ASUS R1E (USB)       #
+#----------------------------------#
+TABLET PCs:ASUS R1E (USB) {
+ Driver           = wacom
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option           = USB
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ASUS R1E Stylus (USB)
+ EraserLink       = ASUS R1E Eraser (USB)
+}
+
+#----------------------------------#
+# TABLET PCs: ASUS R1F (USB)       #
+#----------------------------------#
+TABLET PCs:ASUS R1F (USB) {
+ Driver           = wacom
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option           = USB
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ASUS R1F Stylus (USB)
+ EraserLink       = ASUS R1F Eraser (USB)
+}
 

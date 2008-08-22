@@ -298,3 +298,57 @@ TABLET PCs:ISDV4 TABLET PC Stylus (SERIAL) {
  RawOption           = "ForceDevice" "ISDV4"
 }
 
+#-------------------------------------------#
+# TABLET PCs: ASUS R1E Eraser (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1E Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------------------------#
+# TABLET PCs: ASUS R1E Stylus (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1E Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "26365","BottomY" "16488","TopX" "0","TopY" "0"
+}
+
+
+#-------------------------------------------#
+# TABLET PCs: ASUS R1F Eraser (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1F Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------------------------#
+# TABLET PCs: ASUS R1F Stylus (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1F Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "28606","BottomY" "17876","TopX" "0","TopY" "0"
+}
+
+

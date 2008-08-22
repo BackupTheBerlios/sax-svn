@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Aug 22 22:09:04 CEST 2008 - sndirsch@suse.de
+
+- Added new entries for TabletPCs with internal WACOM USB Tablet
+  devices from ASUS (R1E and R1F).
+  (Danny Kukawka)
+
+-------------------------------------------------------------------
 Fri Aug 22 22:05:08 CEST 2008 - sndirsch@suse.de
 
 - This patch allows to use for Tablets (as also TabletPCs) devices
@@ -8,6 +15,7 @@ Fri Aug 22 22:05:08 CEST 2008 - sndirsch@suse.de
   * /dev/input/by-path/*
   This allows to use persistend device names as e.g. needed for 
   new Wacom USB based TabletPC devices.
+  (Danny Kukawka)
 
 -------------------------------------------------------------------
 Fri Aug 22 22:02:23 CEST 2008 - sndirsch@suse.de
