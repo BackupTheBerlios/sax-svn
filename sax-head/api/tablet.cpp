@@ -231,15 +231,21 @@ bool SCCTablet::exportData ( void ) {
 					saxTablet.setDevice ( "/dev/ttyS3" );
 				}
 				if (port.contains ("USB")) {
-					Q3Process* proc = new Q3Process ();
-					proc -> addArgument ( USB_PORT );
-					if (proc -> start()) {
-						while (proc->isRunning()) {
-							usleep (1000);
+					QString _device = *tabletDict["Device"];
+					if (! _device.isEmpty()) {
+						saxTablet.setDevice ( _device );
+					} else {
+				
+						Q3Process* proc = new Q3Process ();
+						proc -> addArgument ( USB_PORT );
+						if (proc -> start()) {
+							while (proc->isRunning()) {
+								usleep (1000);
+							}
+							QByteArray data = proc->readStdout();
+							QStringList lines = QStringList::split ("\n",data);
+							saxTablet.setDevice ( lines.first() );
 						}
-						QByteArray data = proc->readStdout();
-						QStringList lines = QStringList::split ("\n",data);
-						saxTablet.setDevice ( lines.first() );
 					}
 				}
 			}

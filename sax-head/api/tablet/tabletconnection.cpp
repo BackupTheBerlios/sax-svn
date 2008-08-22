@@ -167,7 +167,7 @@ void SCCTabletConnection::setMode ( const QString& mode ) {
 // setPort
 //------------------------------------
 void SCCTabletConnection::setPort ( const QString& device ) {
-	QRegExp identifier ("/dev/input/event");
+	QRegExp identifier ("/dev/input/(by-id|by-path|event|wacom)");
 	if (identifier.search (device) >= 0) {
 		mPortBox -> setCurrentItem ( 0 );
 	}
@@ -329,7 +329,7 @@ void SCCTabletConnection::slotTablet (
 		if (device == "AUTO") {
 			mPortGroup -> setDisabled ( true );
 		}
-		QRegExp identifier ("/dev/input/event");
+		QRegExp identifier ("/dev/input/(by-id|by-path|event|wacom)");
 		if (identifier.search (device) >= 0) {
 			mPortBox -> setCurrentItem ( 0 );
 		}

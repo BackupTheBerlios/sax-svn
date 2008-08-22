@@ -1228,7 +1228,9 @@ sub ApiImportLayout {
 			my $inputf = $api{Mouse}{"$count InputFashion"};
 			if (
 				(! defined $entity{$driver}{$device}) ||
-				($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/)
+				($device =~ /ttyS/) || ($device =~ /\/dev\/input\/event/) ||
+				($device =~ /\/dev\/input\/by-id\//) || ($device =~ /\/dev\/input\/by-path\//) || 
+				($device =~ /\/dev\/input\/wacom/)
 			) {
 				my $l = "ServerLayout";
 				$var{$l}{all}{InputDevice}{$count}{id}    = $list[$i];
