@@ -178,10 +178,10 @@ void SCCTabletConnection::setPort ( const QString& device ) {
 		mPortBox -> setCurrentItem ( 2 );
 	}
 	if (device == "/dev/ttyS2") {
-		mPortBox -> setCurrentItem ( 2 );
+		mPortBox -> setCurrentItem ( 3 );
 	}
 	if (device == "/dev/ttyS3") {
-		mPortBox -> setCurrentItem ( 3 );
+		mPortBox -> setCurrentItem ( 4 );
 	}
 }
 //====================================
@@ -340,10 +340,10 @@ void SCCTabletConnection::slotTablet (
 			mPortBox -> setCurrentItem ( 2 );
 		}
 		if (device == "/dev/ttyS2") {
-			mPortBox -> setCurrentItem ( 2 );
+			mPortBox -> setCurrentItem ( 3 );
 		}
 		if (device == "/dev/ttyS3") {
-			mPortBox -> setCurrentItem ( 3 );
+			mPortBox -> setCurrentItem ( 4 );
 		}
 	}
 	//====================================
