@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Aug 27 03:44:28 CEST 2008 - sndirsch@suse.de
+
+- the logic in existing dynamic Radeon.pl profile was obsolete since
+  a long time - AFAIK; replaced with the logic also used by Intel.pl,
+  RadeonHD.pl, which make sure that 'Option "monitor-<output>"' is
+  used (bnc #420124)
+
+-------------------------------------------------------------------
 Fri Aug 22 22:11:03 CEST 2008 - sndirsch@suse.de
 
 - Extended existing serial 'Wacom ISDV4 TabletPC' entry with Touch
