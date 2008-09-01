@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Sep  1 16:21:55 CEST 2008 - sndirsch@suse.de
+
+- borderless SaX2 for xres <= 800 or yres <=600; this was hardcoded
+  to 800x600 before and resulted in problems with famous Netbook
+  resolution 1024x600 (bnc #419304)
+
+-------------------------------------------------------------------
 Wed Aug 27 03:44:28 CEST 2008 - sndirsch@suse.de
 
 - the logic in existing dynamic Radeon.pl profile was obsolete since
