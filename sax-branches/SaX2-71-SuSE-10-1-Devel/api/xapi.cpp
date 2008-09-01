@@ -192,7 +192,7 @@ int main (int argc,char*argv[]) {
 	QWidget::WFlags wflags = Qt::WType_TopLevel;
 	int width  = qApp->desktop()->width();
 	int height = qApp->desktop()->height();
-	if ((mSizeCheck) && (width == 800) && (height == 600)) {
+	if ((mSizeCheck) && ((width <= 800) || (height <= 600))) {
 		wflags |= Qt::WStyle_Customize | Qt::WStyle_NoBorder;
 	}
 	sccGUI = new SaXGUI::SCCFrame (

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Sep  1 16:13:50 CEST 2008 - sndirsch@suse.de
+
+- borderless SaX2 for xres <= 800 or yres <=600; this was hardcoded
+  to 800x600 before and resulted in problems with famous Netbook
+  resolution 1024x600 (bnc #419304)
+
+-------------------------------------------------------------------
 Wed Jul 30 11:41:52 CEST 2008 - sndirsch@suse.de
 
 - added elo udev rule to use /dev/input/elo as device for elo
