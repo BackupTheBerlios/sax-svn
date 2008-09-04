@@ -86,6 +86,33 @@ void SaXInit::ignoreProfile (void) {
 }
 
 //====================================
+// setValidBusID...
+//------------------------------------
+void SaXInit::setValidBusID (void) {
+	// .../
+	//! apply the nobus profile if only one card has been
+	//! detected. For single card configurations the busID
+	//! should not be set
+	// ----
+	SaXProcessCall* proc = new SaXProcessCall ();
+	QString sysp = "/usr/sbin/sysp -c | wc -l";
+	proc -> addArgument ( GET_BASH );
+	proc -> addArgument ( "-c" );
+	proc -> addArgument ( sysp.ascii() );
+	if ( ! proc -> start() ) {
+		excProcessFailed();
+		qError (errorString(),EXC_PROCESSFAILED);
+		return;
+	}
+	QString optc;
+	QString data = proc->readStdout().at(0);
+	int count = data.toInt();
+	if (count < 2) {
+		mOptions.append ((const char*)"-b nobus");
+	}
+}
+
+//====================================
 // setPrimaryChip...
 //------------------------------------
 void SaXInit::setPrimaryChip (void) {
@@ -107,7 +134,7 @@ void SaXInit::setPrimaryChip (void) {
 	int id = data.toInt();
 	QTextOStream (&optc) << "-c " << id;
 	mOptions.append ((const char*)optc.ascii());
-	mOptions.append ((const char*)"-b nobus");
+	setValidBusID();
 }
 
 //====================================

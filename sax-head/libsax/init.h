@@ -38,6 +38,7 @@ namespace SaX {
 #define SAX_INIT        "/usr/share/sax/init.pl"
 #define CACHE_CONFIG    "/var/cache/sax/files/config"
 #define GET_PRIMARY     "/usr/sbin/getPrimary"
+#define GET_BASH        "/bin/bash"
 
 //====================================
 // Interface class for dlopen ability
@@ -54,6 +55,7 @@ class SaXInitIF : public SaXException {
 	virtual bool needInit (void) = 0;
 	virtual void ignoreProfile (void) = 0;
 	virtual void setPrimaryChip (void) = 0;
+	virtual void setValidBusID (void) = 0;
 
 	public:
 	virtual void doInit (void) = 0;
@@ -89,8 +91,9 @@ class SaXInit : public SaXInitIF {
 
 	public:
 	bool needInit (void);
-	void ignoreProfile (void);
+	void ignoreProfile  (void);
 	void setPrimaryChip (void);
+	void setValidBusID  (void);
 
 	public:
 	void doInit (void);
