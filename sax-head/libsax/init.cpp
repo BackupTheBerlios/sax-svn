@@ -86,6 +86,31 @@ void SaXInit::ignoreProfile (void) {
 }
 
 //====================================
+// setPrimaryChip...
+//------------------------------------
+void SaXInit::setPrimaryChip (void) {
+	// .../
+	//! pass the option -c to init.pl and use only the primary
+	//! graphics chip for the configuration. In that case also
+	//! apply the nobus profile and prevent a busID to be written
+	//! on single card configuration
+	// ----
+	SaXProcessCall* proc = new SaXProcessCall ();
+	proc -> addArgument ( GET_PRIMARY );
+	if ( ! proc -> start() ) {
+		excProcessFailed();
+		qError (errorString(),EXC_PROCESSFAILED);
+		return;
+	}
+	QString optc;
+	QString data = proc->readStdout().at(0);
+	int id = data.toInt();
+	QTextOStream (&optc) << "-c " << id;
+	mOptions.append ((const char*)optc.ascii());
+	mOptions.append ((const char*)"-b nobus");
+}
+
+//====================================
 // doInit...
 //------------------------------------
 void SaXInit::doInit (void) {

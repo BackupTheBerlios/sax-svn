@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Sep  4 12:25:03 CEST 2008 - ms@suse.de
+
+- added setPrimaryChip function in init.cpp to allow setup
+  of primary chip and nobus profile in libsax (bnc #417575)
+
+-------------------------------------------------------------------
 Mon Sep  1 16:21:55 CEST 2008 - sndirsch@suse.de
 
 - borderless SaX2 for xres <= 800 or yres <=600; this was hardcoded
