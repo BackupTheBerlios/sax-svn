@@ -209,7 +209,7 @@ SCCFrame::SCCFrame (
 	// create area panels
 	//-------------------------------------
 	mMainLayout = new Q3VBoxLayout  ( mMainFrame );
-	//mMainLayout -> setMargin  (10);
+	mMainLayout -> setMargin  (5);
 	mTitleLayout= new Q3HBoxLayout ( mMainLayout );
 	mWorkLayout = new Q3HBoxLayout ( mMainLayout );
 	//mMainLayout -> addSpacing (10);
@@ -224,7 +224,7 @@ SCCFrame::SCCFrame (
 	mModuleList = new Q3ListBox ( mModuleBox );
 	QLabel* moduleSpace = new QLabel ( mModuleBox );
 	moduleSpace -> setFixedWidth ( 10 );
-	mModuleList -> setMinimumWidth ( 210 );
+	mModuleList -> setMinimumWidth ( 190 );
 	mModuleList -> setFrameStyle (
 		Q3Frame::Box | Q3Frame::Raised
 	);
