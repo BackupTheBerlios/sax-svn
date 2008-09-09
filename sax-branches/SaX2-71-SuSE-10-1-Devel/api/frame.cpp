@@ -189,9 +189,9 @@ SCCFrame::SCCFrame (
 			int posy = reslist.last().toInt();
 			posx = posx - 400;
 			posy = posy - 300;
-			setGeometry ( posx,posy,800,600 );
+			setGeometry ( posx,posy,800,550 );
 		} else {
-			resize ( 800,600 );
+			resize ( 800,550 );
 		}
 	} else {
 		setGeometry ( 0,0,width,height );
@@ -222,10 +222,10 @@ SCCFrame::SCCFrame (
 	// create area panels
 	//-------------------------------------
 	mMainLayout = new QVBoxLayout  ( mMainFrame );
-	mMainLayout -> setMargin  (10);
+	mMainLayout -> setMargin  (5);
 	mTitleLayout= new QHBoxLayout ( mMainLayout );
 	mWorkLayout = new QHBoxLayout ( mMainLayout );
-	mMainLayout -> addSpacing (10);
+	//mMainLayout -> addSpacing (10);
 	mMainLayout -> addWidget      ( mSeperator  );
 	mMainLayout -> addSpacing (5);
 	mDoneLayout = new QHBoxLayout ( mMainLayout );
@@ -237,7 +237,7 @@ SCCFrame::SCCFrame (
 	mModuleList = new QListBox ( mModuleBox );
 	QLabel* moduleSpace = new QLabel ( mModuleBox );
 	moduleSpace -> setFixedWidth ( 10 );
-	mModuleList -> setMinimumWidth ( 210 );
+	mModuleList -> setMinimumWidth ( 190 );
 	mModuleList -> setFrameStyle (
 		QFrame::Box | QFrame::Raised
 	);
@@ -249,15 +249,17 @@ SCCFrame::SCCFrame (
 	mDialogBox -> setFrameStyle (
 		QFrame::Box | QFrame::NoFrame
 	);
-	mModuleTitleBox  = new QHBox  ( mDialogBox );
-	mModuleTitleIcon = new QLabel ( mModuleTitleBox );
-	mModuleTitleBox -> setSpacing ( 10 );
-	mModuleTitleLabel = new QVBox ( mModuleTitleBox );
-	mModuleTitleBox -> setStretchFactor ( mModuleTitleLabel, 20 );
-	mModuleTitle = new QLabel ( mModuleTitleLabel );
-	QFont mTitleFont (font());
-	mTitleFont.setPointSize (font().pointSize() + 5 );
-	mModuleTitle -> setFont ( mTitleFont );
+	if (qApp->desktop()->height() > 600) {
+		mModuleTitleBox  = new QHBox  ( mDialogBox );
+		mModuleTitleIcon = new QLabel ( mModuleTitleBox );
+		mModuleTitleBox -> setSpacing ( 10 );
+		mModuleTitleLabel = new QVBox ( mModuleTitleBox );
+		mModuleTitleBox -> setStretchFactor ( mModuleTitleLabel, 20 );
+		mModuleTitle = new QLabel ( mModuleTitleLabel );
+		QFont mTitleFont (font());
+		mTitleFont.setPointSize (font().pointSize() + 5 );
+		mModuleTitle -> setFont ( mTitleFont );
+	}
 
 	//=====================================
 	// create widget stack (mWorkLayout)
@@ -444,9 +446,10 @@ void SCCFrame::slotSelected ( QListBoxItem* item ) {
 		titletext   = mText["VNCModuleTopic"];
 		titlePixmap = QPixmap ( SMALL_VNCSERVE_PIXMAP );
 	}
-	mModuleTitle -> setText ( titletext );
-	mModuleTitleIcon -> setPixmap ( titlePixmap );
-
+	if (qApp->desktop()->height() > 600) {
+		mModuleTitle -> setText ( titletext );
+		mModuleTitleIcon -> setPixmap ( titlePixmap );
+	}
 	//=====================================
 	// run the selected dialog
 	//-------------------------------------
