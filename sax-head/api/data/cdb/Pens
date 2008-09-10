@@ -335,6 +335,21 @@ TABLET PCs:ISDV4 TABLET PC Stylus (USB) {
  TabletType          = stylus
  RawOption           = "ForceDevice" "ISDV4"
 }
+
+#------------------------------------------------#
+# TABLET PCs: Wacom ISDV4 TabletPC Touch (USB)   #
+#------------------------------------------------#
+TABLET PCs:ISDV4 TABLET PC Touch (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-touch
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+
 #-------------------------------------------#
 # TABLET PCs: ASUS R1E Eraser (USB)         #
 #-------------------------------------------#
