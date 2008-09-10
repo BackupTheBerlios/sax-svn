@@ -83,17 +83,65 @@ ELO:2300-TOUCHSCREEN  {
  SendCoreEvents       = on
 }
 
-#--------------------------#
-# P-SERIES LIFEBOOK TOUCH  #
-#--------------------------#
-FUJITSU:P-SERIES LIFEBOOK TOUCHSCREEN {
+#---------------------------------------#
+# TABLET PCs:Fujitsu P-SERIES Lifebook  #
+#---------------------------------------#
+TABLET PCs:Fujitsu P-SERIES Lifebook {
  Driver               = fujitsu
  Device               = /dev/ttyS0
  RawOption            = "SwapX" "false","ButtonlessDevice" "On","Emulate3Timeout" "50","TapTimer" "90","LongTouchTimer" "160","OneandahalfTimer" "150","MoveLimit" "180"
  ReportingMode        = Raw
  SendCoreEvents       = on
  MinX                 = 82
+ MinY                 = 146
+ MaxX                 = 4036
+ MaxY                 = 3999
+}
+
+#---------------------------------#
+# TABLET PCs: LG C1 (fujitouch)   #
+#---------------------------------#
+TABLET PCs:LG C1 (fujitouch) {
+ Driver               = fujitsu
+ Device               = /dev/ttyS0
+ SendCoreEvents       = on
+ MinX                 = 82
  MaxX                 = 4036
  MinY                 = 146
  MaxY                 = 3999
 }
+
+#------------------------------------#
+# TABLET PCs:Clevo TN120R (evtouch)  #
+#------------------------------------#
+TABLET PCs:Clevo TN120R (evtouch) {
+ Driver               = evtouch
+ Device               = /dev/input/evtouch_event
+ RawOption            = "TapTimer" "50","LongTouchTimer" "30","MoveLimit" "15"
+ ReportingMode        = Raw
+ SendCoreEvents       = on
+ Emulate3Buttons      = on
+ Emulate3Timeout      = 50
+ MinX                 = 116
+ MinY                 = 268
+ MaxX                 = 7940
+ MaxY                 = 7828
+}
+
+#----------------------------------------#
+# TABLET PCs:Samsung Q1-Ultra (evtouch)  #
+#----------------------------------------#
+TABLET PCs:Samsung Q1-Ultra (evtouch) {
+ Driver               = evtouch
+ Device               = /dev/input/evtouch_event
+ RawOption            = "TapTimer" "200","LongTouchTimer" "400"
+ ReportingMode        = Raw
+ SendCoreEvents       = on
+ Emulate3Buttons      = on
+ Emulate3Timeout      = 50
+ MinX                 = 145
+ MinY                 = 193
+ MaxX                 = 3973
+ MaxY                 = 3898
+}
+
