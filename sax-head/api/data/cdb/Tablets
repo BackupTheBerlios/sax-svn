@@ -203,9 +203,9 @@ TABLET PCs:Fujitsu Lifebook T series (SERIAL) {
 }
 
 #-----------------------------------------#
-# TABLET PCs: Gateway E-155C		  #
+# TABLET PCs: Gateway C-120X/E-155C       #
 #-----------------------------------------#
-TABLET PCs:Gateway E-155C (USB) {
+TABLET PCs:Gateway C-120X/E-155C (USB) {
  Driver           = wacom
  Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option           = USB
@@ -216,6 +216,20 @@ TABLET PCs:Gateway E-155C (USB) {
  StylusLink       = Gateway E-155C Stylus (USB)
  EraserLink       = Gateway E-155C Eraser (USB)
  TouchLink        = Gateway E-155C Touch (USB) 
+}
+
+#------------------------------------#
+# TABLET PCs: Gateway C-140X/E-295C  #
+#------------------------------------#
+TABLET PCs:Gateway C-140X/E-295C (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
+ EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
 }
 
 #------------------------------------#
@@ -481,10 +495,10 @@ TABLET PCs:Wacom ISDV4 TABLET PC (USB) {
 # 	  		   TABLET PC Section (other)					  #
 #-----------------------------------------------------------------------------------------#
 
-#-----------------------------------#
-# TABLET PCs: Gateway M280E (fpit)  #
-#-----------------------------------#
-TABLET PCs:Gateway M280E (Finepoint FPI2004) {
+#-----------------------------------------#
+# TABLET PCs: Gateway C210X/M280E (fpit)  #
+#-----------------------------------------#
+TABLET PCs:Gateway C210X/M280E (Finepoint FPI2004) {
   Driver             = fpit
   Device             = /dev/ttyS0
   Option             = AlwaysCore,InvertY
