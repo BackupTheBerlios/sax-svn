@@ -140,7 +140,7 @@ ACECAD:ACECAT FLAIR {
 }
 
 #-----------------------------------------------------------------------------------------#
-#		   		   TABLET PC Section					  #
+# 	  		   TABLET PC Section (WACOM)					  #
 #-----------------------------------------------------------------------------------------#
 
 #--------------------------------------------#
@@ -200,6 +200,22 @@ TABLET PCs:Fujitsu Lifebook T series (SERIAL) {
  RawOption        = "ForceDevice" "ISDV4"
  StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
  EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
+}
+
+#-----------------------------------------#
+# TABLET PCs: Gateway E-155C		  #
+#-----------------------------------------#
+TABLET PCs:Gateway E-155C (USB) {
+ Driver           = wacom
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option           = USB
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = Gateway E-155C Stylus (USB)
+ EraserLink       = Gateway E-155C Eraser (USB)
+ TouchLink        = Gateway E-155C Touch (USB) 
 }
 
 #-------------------------------#
@@ -447,11 +463,14 @@ TABLET PCs:Wacom ISDV4 TABLET PC (USB) {
  TouchLink        = ISDV4 TABLET PC Touch (USB)
 }
 
+#-----------------------------------------------------------------------------------------#
+# 	  		   TABLET PC Section (other)					  #
+#-----------------------------------------------------------------------------------------#
 
 #-------------------------------#
 # FinePoint Tablet GateWay      #
 #-------------------------------#
-TABLET PCs:GATEWAY (Finepoint FPI2004) {
+TABLET PCs:Gateway M280E (Finepoint FPI2004) {
   Driver             = fpit
   Device             = /dev/ttyS0
   Option             = AlwaysCore,InvertY

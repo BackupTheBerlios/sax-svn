@@ -132,6 +132,10 @@ WACOM:GRAPHIRE v1-4 Stylus (USB) {
  SendCoreEvents      = on
 }
 
+#-----------------------------------------------------------------------------------------#
+#                          TABLET PC Section (WACOM)                                      #
+#-----------------------------------------------------------------------------------------#
+
 #------------------------------------------------------#
 # TABLET PCs: ACER TravelMate C30x series Eraser       #
 #------------------------------------------------------#
@@ -156,6 +160,98 @@ TABLET PCs:ACER TravelMate C30x series Stylus (SERIAL) {
 }
 
 #-------------------------------------------#
+# TABLET PCs: ASUS R1E Eraser (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1E Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------------------------#
+# TABLET PCs: ASUS R1E Stylus (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1E Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "26365","BottomY" "16488","TopX" "0","TopY" "0"
+}
+
+
+#-------------------------------------------#
+# TABLET PCs: ASUS R1F Eraser (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1F Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#-------------------------------------------#
+# TABLET PCs: ASUS R1F Stylus (USB)         #
+#-------------------------------------------#
+TABLET PCs:ASUS R1F Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "28606","BottomY" "17876","TopX" "0","TopY" "0"
+}
+
+#---------------------------------------------#
+# TABLET PCs: Gateway E-155C Eraser (USB)     #
+#---------------------------------------------#
+TABLET PCs:Gateway E-155C Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "26294","BottomY" "16376","TopX" "44","TopY" "229"
+}
+
+#---------------------------------------------#
+# TABLET PCs: Gateway E-155C Stylus (USB)     #
+#---------------------------------------------#
+TABLET PCs:Gateway E-155C Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "26294","BottomY" "16376","TopX" "44","TopY" "229"
+}
+
+#---------------------------------------------#
+# TABLET PCs: Gateway E-155C Touch (USB)      #
+#---------------------------------------------#
+TABLET PCs:Gateway E-155C Touch (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-touch
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "4083","BottomY" "4110","TopX" "-19","TopY" "44"
+}
+
+#-------------------------------------------#
 # TABLET PCs: HP Compaq TC4200 Eraser       #
 #-------------------------------------------#
 TABLET PCs:HP Compaq TC4200 Eraser (SERIAL) {
@@ -176,6 +272,45 @@ TABLET PCs:HP Compaq TC4200 Stylus (SERIAL) {
  Protocol            = Auto
  TabletType          = stylus
  RawOption           = "ForceDevice" "ISDV4"
+}
+
+#---------------------------------------------#
+# TABLET PCs: HP Pavilion tx2000 Eraser (USB) #
+#---------------------------------------------#
+TABLET PCs:HP Pavilion tx2000 Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#---------------------------------------------#
+# TABLET PCs: HP Pavilion tx2000 Stylus (USB) #
+#---------------------------------------------#
+TABLET PCs:HP Pavilion tx2000 Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "26300","BottomY" "16375","TopX" "225","TopY" "225"
+}
+
+#---------------------------------------------#
+# TABLET PCs: HP Pavilion tx2000 Touch (USB)  #
+#---------------------------------------------#
+TABLET PCs:HP Pavilion tx2000 Touch (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-touch
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "4000","BottomY" "3875","TopX" "200","TopY" "225"
 }
 
 #------------------------------------------#
@@ -215,7 +350,7 @@ TABLET PCs:Lenovo X61 TABLET PC Eraser (SERIAL) {
 }
 
 #-----------------------------------------#
-# TABLET PCs: IBM X61 TabletPC Stylus     #
+# TABLET PCs: Lenovo X61 TabletPC Stylus  #
 #-----------------------------------------#
 TABLET PCs:Lenovo X61 TABLET PC Stylus (SERIAL) {
  Device              = /dev/ttyS0
@@ -227,7 +362,7 @@ TABLET PCs:Lenovo X61 TABLET PC Stylus (SERIAL) {
 }
 
 #-----------------------------------------#
-# TABLET PCs: IBM X61 TabletPC Touch      #
+# TABLET PCs: Lenovo X61 TabletPC Touch   #
 #-----------------------------------------#
 TABLET PCs:Lenovo X61 TABLET PC Touch (SERIAL) {
  Device              = /dev/ttyS0
@@ -349,96 +484,4 @@ TABLET PCs:ISDV4 TABLET PC Touch (USB) {
  RawOption           = "ForceDevice" "ISDV4"
 }
 
-
-#-------------------------------------------#
-# TABLET PCs: ASUS R1E Eraser (USB)         #
-#-------------------------------------------#
-TABLET PCs:ASUS R1E Eraser (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = eraser
- RawOption           = "ForceDevice" "ISDV4"
-}
-
-#-------------------------------------------#
-# TABLET PCs: ASUS R1E Stylus (USB)         #
-#-------------------------------------------#
-TABLET PCs:ASUS R1E Stylus (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "26365","BottomY" "16488","TopX" "0","TopY" "0"
-}
-
-
-#-------------------------------------------#
-# TABLET PCs: ASUS R1F Eraser (USB)         #
-#-------------------------------------------#
-TABLET PCs:ASUS R1F Eraser (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = eraser
- RawOption           = "ForceDevice" "ISDV4"
-}
-
-#-------------------------------------------#
-# TABLET PCs: ASUS R1F Stylus (USB)         #
-#-------------------------------------------#
-TABLET PCs:ASUS R1F Stylus (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "28606","BottomY" "17876","TopX" "0","TopY" "0"
-}
-
-#---------------------------------------------#
-# TABLET PCs: HP Pavilion tx2000 Eraser (USB) #
-#---------------------------------------------#
-TABLET PCs:HP Pavilion tx2000 Eraser (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = eraser
- RawOption           = "ForceDevice" "ISDV4"
-}
-
-#---------------------------------------------#
-# TABLET PCs: HP Pavilion tx2000 Stylus (USB) #
-#---------------------------------------------#
-TABLET PCs:HP Pavilion tx2000 Stylus (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "26300","BottomY" "16375","TopX" "225","TopY" "225"
-}
-
-#---------------------------------------------#
-# TABLET PCs: HP Pavilion tx2000 Touch (USB)  #
-#---------------------------------------------#
-TABLET PCs:HP Pavilion tx2000 Touch (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-touch
- Option              = USB
- TabletMode          = Absolute
- Driver              = wacom
- Protocol            = Auto
- TabletType          = touch
- RawOption           = "ForceDevice" "ISDV4","BottomX" "4000","BottomY" "3875","TopX" "200","TopY" "225"
-}
 
