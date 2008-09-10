@@ -314,7 +314,7 @@ TABLET PCs:ISDV4 TABLET PC Touch (SERIAL) {
 # TABLET PCs: Wacom ISDV4 TabletPC Eraser (USB)  #
 #------------------------------------------------#
 TABLET PCs:ISDV4 TABLET PC Eraser (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom
@@ -327,7 +327,7 @@ TABLET PCs:ISDV4 TABLET PC Eraser (USB) {
 # TABLET PCs: Wacom ISDV4 TabletPC Stylus (USB)  #
 #------------------------------------------------#
 TABLET PCs:ISDV4 TABLET PC Stylus (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom
@@ -339,7 +339,7 @@ TABLET PCs:ISDV4 TABLET PC Stylus (USB) {
 # TABLET PCs: ASUS R1E Eraser (USB)         #
 #-------------------------------------------#
 TABLET PCs:ASUS R1E Eraser (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom
@@ -352,7 +352,7 @@ TABLET PCs:ASUS R1E Eraser (USB) {
 # TABLET PCs: ASUS R1E Stylus (USB)         #
 #-------------------------------------------#
 TABLET PCs:ASUS R1E Stylus (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom
@@ -366,7 +366,7 @@ TABLET PCs:ASUS R1E Stylus (USB) {
 # TABLET PCs: ASUS R1F Eraser (USB)         #
 #-------------------------------------------#
 TABLET PCs:ASUS R1F Eraser (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom
@@ -379,7 +379,7 @@ TABLET PCs:ASUS R1F Eraser (USB) {
 # TABLET PCs: ASUS R1F Stylus (USB)         #
 #-------------------------------------------#
 TABLET PCs:ASUS R1F Stylus (USB) {
- Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom

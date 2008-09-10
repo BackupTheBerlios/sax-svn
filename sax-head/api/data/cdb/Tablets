@@ -270,7 +270,7 @@ TABLET PCs:Wacom ISDV4 TABLET PC (SERIAL) {
 #----------------------------------#
 TABLET PCs:Wacom ISDV4 TABLET PC (USB) {
  Driver           = wacom
- Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option           = USB
  SendCoreEvents   = on
  TabletType       = cursor
@@ -297,7 +297,7 @@ TABLET PCs:GATEWAY (Finepoint FPI2004) {
 #----------------------------------#
 TABLET PCs:ASUS R1E (USB) {
  Driver           = wacom
- Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option           = USB
  SendCoreEvents   = on
  TabletType       = cursor
@@ -312,7 +312,7 @@ TABLET PCs:ASUS R1E (USB) {
 #----------------------------------#
 TABLET PCs:ASUS R1F (USB) {
  Driver           = wacom
- Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-mouse
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
  Option           = USB
  SendCoreEvents   = on
  TabletType       = cursor
