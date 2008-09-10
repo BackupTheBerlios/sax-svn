@@ -247,14 +247,16 @@ TABLET PCs:HP Compaq 2710p/2730p (SERIAL) {
 }
 
 #-------------------------------#
-# FinePoint Tablet HP TC1000    #
+# TABLET PCs: HP TC1100         #
 #-------------------------------#
-TABLET PCs:HP Compaq TC1000 (FPI2002) {
-  Driver             = fpit
-  Device             = /dev/ttyS0
-  Option             = AlwaysCore,InvertY
-  SendCoreEvents     = on
-  RawOption          = "MaximumXPosition" "8600","MaximumYPosition" "6485","MinimumXPosition" "154","MinimumYPosition" "110","BaudRate" "19200"
+TABLET PCs:HP Compaq TC1100 (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
 }
 
 #----------------------------------#
@@ -504,5 +506,16 @@ TABLET PCs:Gateway C210X/M280E (Finepoint FPI2004) {
   Option             = AlwaysCore,InvertY
   SendCoreEvents     = on
   RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400","BaudRate" "19200"
+}
+
+#-------------------------------#
+# FinePoint Tablet HP TC1000    #
+#-------------------------------#
+TABLET PCs:HP Compaq TC1000 (FPI2002) {
+  Driver             = fpit
+  Device             = /dev/ttyS0
+  Option             = AlwaysCore,InvertY
+  SendCoreEvents     = on
+  RawOption          = "MaximumXPosition" "8600","MaximumYPosition" "6485","MinimumXPosition" "154","MinimumYPosition" "110","BaudRate" "19200"
 }
 
