@@ -406,6 +406,20 @@ TABLET PCs:Motion M1400 (SERIAL) {
  StylusLink       = Motion M1400 Stylus (SERIAL)
 }
 
+#----------------------------------#
+# TABLET PCs: OQO 02               #
+#----------------------------------#
+TABLET PCs:OQO 02 (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS1
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = OQO 02 Stylus (SERIAL)
+ EraserLink       = OQO 02 Eraser (SERIAL)
+}
+
 #---------------------------------------#
 # TABLET PCs: Panasonic Toughbook CF-18 #
 #---------------------------------------#
