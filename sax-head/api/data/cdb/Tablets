@@ -227,6 +227,20 @@ TABLET PCs:HP Compaq TC4200 (SERIAL) {
  EraserLink       = HP Compaq TC4200 Eraser (SERIAL)
 }
 
+#----------------------------------#
+# TABLET PCs: HP Compaq TC4400     #
+#----------------------------------#
+TABLET PCs:HP Compaq TC4400 (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
+ EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
+}
+
 #-----------------------------------------#
 # TABLET PCs: HP Pavilion tx2000 series   #
 #-----------------------------------------#
