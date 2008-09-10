@@ -194,6 +194,38 @@ TABLET PCs:HP Compaq TC4200 (SERIAL) {
 }
 
 #-----------------------------------------#
+# TABLET PCs: HP Pavilion tx2000 series   #
+#-----------------------------------------#
+TABLET PCs:HP Pavilion tx2000 series (USB) {
+ Driver           = wacom
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option           = USB
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = HP Pavilion tx2000 Stylus (USB)
+ EraserLink       = HP Pavilion tx2000 Eraser (USB)
+ TouchLink        = HP Pavilion tx2000 Touch (USB) 
+}
+
+#-----------------------------------------#
+# TABLET PCs: HP Pavilion tx2100 series   #
+#-----------------------------------------#
+TABLET PCs:HP Pavilion tx2100 series (USB) {
+ Driver           = wacom
+ Device           = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option           = USB
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = HP Pavilion tx2000 Stylus (USB)
+ EraserLink       = HP Pavilion tx2000 Eraser (USB)
+ TouchLink        = HP Pavilion tx2000 Touch (USB) 
+}
+
+#-----------------------------------------#
 # TABLET PCs: HP Pavilion tx2500 series   #
 #-----------------------------------------#
 TABLET PCs:HP Pavilion tx2500 series (USB) {
@@ -204,9 +236,9 @@ TABLET PCs:HP Pavilion tx2500 series (USB) {
  TabletType       = cursor
  TabletMode       = Absolute
  RawOption        = "ForceDevice" "ISDV4"
- StylusLink       = HP Pavilion tx2500 Stylus (USB)
- EraserLink       = HP Pavilion tx2500 Eraser (USB)
- TouchLink        = HP Pavilion tx2500 Touch (USB) 
+ StylusLink       = HP Pavilion tx2000 Stylus (USB)
+ EraserLink       = HP Pavilion tx2000 Eraser (USB)
+ TouchLink        = HP Pavilion tx2000 Touch (USB) 
 }
 
 #----------------------------------#
