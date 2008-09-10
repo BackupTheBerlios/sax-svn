@@ -126,6 +126,9 @@ bool SCCTouchScreen::exportData ( void ) {
 			int touchID = saxDevice.addInputDevice (SAX_INPUT_TOUCHPANEL);
 			saxToucher.selectPointer ( touchID );
 			saxToucher.setTouchPanel ( vendor,model );
+			Q3Dict<QString> touchDict = saxToucher.getPanelData (
+                                vendor,model
+                        );
 			//====================================
 			// save touchpanel connection port
 			//------------------------------------
@@ -143,7 +146,12 @@ bool SCCTouchScreen::exportData ( void ) {
 				saxToucher.setDevice ( "/dev/ttyS3" );
 			}
 			if (port.contains ("USB")) {
-				saxToucher.setDevice ( "/dev/input/mice" );
+				QString _device = *touchDict["Device"];
+				if (! _device.isEmpty()) {
+					saxToucher.setDevice ( _device );
+				} else {
+					saxToucher.setDevice ( "/dev/input/mice" );
+				}
 			}			
 		}
 	}

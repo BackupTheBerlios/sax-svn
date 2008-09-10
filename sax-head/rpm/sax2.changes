@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Sep 10 15:36:25 CEST 2008 - sndirsch@suse.de
+
+- fixed port handling for Touchscreens. Enable also ttyS2/ttyS3
+  and allow also /dev/input/(elo|evtouch_event|touchscreen)
+  (Danny Kukawka <dkukawka@suse.de>)
+
+-------------------------------------------------------------------
 Wed Sep 10 15:35:12 CEST 2008 - sndirsch@suse.de
 
 - set the stylus/pen button for all Wacom TabletPC devices to the 

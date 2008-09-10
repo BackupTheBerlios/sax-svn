@@ -178,7 +178,8 @@ void SCCTouchSelection::import ( void ) {
 	// setup port
 	//-------------------------------------
 	QString device = mSaxToucher -> getDevice();
-	QRegExp identifier ("/dev/input/mice");
+
+	QRegExp identifier ("/dev/input/(elo|evtouch_event|mice|touchscreen)");
 	if (identifier.search (device) >= 0) {
 		mPortBox -> setCurrentItem ( 0 );
 		mPortBox -> setCurrentText (device);
@@ -189,6 +190,12 @@ void SCCTouchSelection::import ( void ) {
 	if (device == "/dev/ttyS1") {
 		mPortBox -> setCurrentItem ( 2 );
 	}
+	if (device == "/dev/ttyS2") {
+		mPortBox -> setCurrentItem ( 3 );
+	}
+	if (device == "/dev/ttyS3") {
+		mPortBox -> setCurrentItem ( 4 );
+	} 
 
 	//=====================================
 	// setup touchscreen display state
@@ -251,9 +258,10 @@ void SCCTouchSelection::slotName ( Q3ListBoxItem* item ) {
 	);
 	if (dataDict["Device"]) {
 		QString device = *dataDict["Device"];
-		QRegExp identifier ("/dev/input/event");
+		QRegExp identifier ("/dev/input/(elo|evtouch_event|mice|touchscreen)");
 		if (identifier.search (device) >= 0) {
 			mPortBox -> setCurrentItem ( 0 );
+			mPortBox -> setCurrentText (device);
 		}
 		if (device == "/dev/ttyS0") {
 			mPortBox -> setCurrentItem ( 1 );
@@ -261,6 +269,12 @@ void SCCTouchSelection::slotName ( Q3ListBoxItem* item ) {
 		if (device == "/dev/ttyS1") {
 			mPortBox -> setCurrentItem ( 2 );
 		}
+		if (device == "/dev/ttyS2") {
+			mPortBox -> setCurrentItem ( 3 );
+		}
+		if (device == "/dev/ttyS3") {
+			mPortBox -> setCurrentItem ( 4 );
+		} 
 	}
 }
 //====================================
