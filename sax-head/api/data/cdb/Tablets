@@ -467,9 +467,9 @@ TABLET PCs:Wacom ISDV4 TABLET PC (USB) {
 # 	  		   TABLET PC Section (other)					  #
 #-----------------------------------------------------------------------------------------#
 
-#-------------------------------#
-# FinePoint Tablet GateWay      #
-#-------------------------------#
+#-----------------------------------#
+# TABLET PCs: Gateway M280E (fpit)  #
+#-----------------------------------#
 TABLET PCs:Gateway M280E (Finepoint FPI2004) {
   Driver             = fpit
   Device             = /dev/ttyS0
@@ -477,3 +477,14 @@ TABLET PCs:Gateway M280E (Finepoint FPI2004) {
   SendCoreEvents     = on
   RawOption          = "MaximumXPosition" "12550","MaximumYPosition" "7650","MinimumXPosition" "400","MinimumYPosition" "400","BaudRate" "19200"
 }
+
+#---------------------------------#
+# TABLET PCs: LG C1 (fujitouch)   #
+#---------------------------------#
+TABLET PCs:LG C1 (fujitouch) {
+  Driver             = fujitsu
+  Device             = /dev/ttyS0
+  SendCoreEvents     = on
+  RawOption          = "MinX" "82","MinY" "146","MaxX" "4036","MaxY" "3999"
+}
+
