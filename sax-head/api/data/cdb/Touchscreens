@@ -112,6 +112,23 @@ TABLET PCs:LG C1 (fujitouch) {
 }
 
 #------------------------------------#
+# TABLET PCs:Asus R2H (evtouch)      #
+#------------------------------------#
+TABLET PCs:Clevo TN120R (evtouch) {
+ Driver               = evtouch
+ Device               = /dev/input/evtouch_event
+ RawOption            = "LongTouchTimer" "5","MoveLimit" "5"
+ ReportingMode        = Raw
+ SendCoreEvents       = on
+ Emulate3Buttons      = on
+ Emulate3Timeout      = 50
+ MinX                 = 95
+ MinY                 = 142
+ MaxX                 = 4007
+ MaxY                 = 3919
+}
+
+#------------------------------------#
 # TABLET PCs:Clevo TN120R (evtouch)  #
 #------------------------------------#
 TABLET PCs:Clevo TN120R (evtouch) {
