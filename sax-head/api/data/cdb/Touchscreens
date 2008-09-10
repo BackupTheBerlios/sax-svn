@@ -146,6 +146,22 @@ TABLET PCs:Clevo TN120R (evtouch) {
 }
 
 #----------------------------------------#
+# TABLET PCs:Samsung Q1 (evtouch)  #
+#----------------------------------------#
+TABLET PCs:Samsung Q1 (evtouch) {
+ Driver               = evtouch
+ Device               = /dev/input/evtouch_event
+ ReportingMode        = Raw
+ SendCoreEvents       = on
+ Emulate3Buttons      = on
+ Emulate3Timeout      = 50
+ MinX                 = 82
+ MinY                 = 195
+ MaxX                 = 3900
+ MaxY                 = 3960
+}
+
+#----------------------------------------#
 # TABLET PCs:Samsung Q1-Ultra (evtouch)  #
 #----------------------------------------#
 TABLET PCs:Samsung Q1-Ultra (evtouch) {
