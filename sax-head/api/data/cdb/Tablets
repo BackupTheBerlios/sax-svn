@@ -218,6 +218,20 @@ TABLET PCs:Gateway E-155C (USB) {
  TouchLink        = Gateway E-155C Touch (USB) 
 }
 
+#------------------------------------#
+# TABLET PCs: HP Compaq 2710p/2730p  #
+#------------------------------------#
+TABLET PCs:HP Compaq 2710p/2730p (SERIAL) {
+ TabletType       = cursor
+ TabletMode       = Absolute
+ Driver           = wacom
+ Device           = /dev/ttyS0
+ SendCoreEvents   = on
+ RawOption        = "ForceDevice" "ISDV4"
+ StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
+ EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
+}
+
 #-------------------------------#
 # FinePoint Tablet HP TC1000    #
 #-------------------------------#
