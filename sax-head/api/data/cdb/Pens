@@ -156,7 +156,7 @@ TABLET PCs:ACER TravelMate C30x series Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "28800","BottomY" "21760"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3","BottomX" "28800","BottomY" "21760"
 }
 
 #-------------------------------------------#
@@ -182,7 +182,7 @@ TABLET PCs:ASUS R1E Stylus (USB) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "26365","BottomY" "16488","TopX" "0","TopY" "0"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3","BottomX" "26365","BottomY" "16488","TopX" "0","TopY" "0"
 }
 
 
@@ -209,7 +209,7 @@ TABLET PCs:ASUS R1F Stylus (USB) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "28606","BottomY" "17876","TopX" "0","TopY" "0"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3","BottomX" "28606","BottomY" "17876","TopX" "0","TopY" "0"
 }
 
 #---------------------------------------------#
@@ -235,7 +235,7 @@ TABLET PCs:Gateway E-155C Stylus (USB) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "26294","BottomY" "16376","TopX" "44","TopY" "229"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3","BottomX" "26294","BottomY" "16376","TopX" "44","TopY" "229"
 }
 
 #---------------------------------------------#
@@ -271,7 +271,7 @@ TABLET PCs:HP Compaq TC4200 Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
 }
 
 #---------------------------------------------#
@@ -297,7 +297,7 @@ TABLET PCs:HP Pavilion tx2000 Stylus (USB) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","BottomX" "26300","BottomY" "16375","TopX" "225","TopY" "225"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3","BottomX" "26300","BottomY" "16375","TopX" "225","TopY" "225"
 }
 
 #---------------------------------------------#
@@ -334,7 +334,7 @@ TABLET PCs:IBM X41 TABLET PC Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
 }
 
 #---------------------------------------------#
@@ -358,7 +358,7 @@ TABLET PCs:Lenovo X61 TABLET PC Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
 }
 
 #-----------------------------------------#
@@ -393,7 +393,7 @@ TABLET PCs:Motion M1200 Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4","TopX" "297","TopY" "123"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3","TopX" "297","TopY" "123"
 }
 
 #-------------------------------------------#
@@ -405,7 +405,7 @@ TABLET PCs:Motion M1400 Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
 }
 
 #-------------------------------------------#
@@ -429,7 +429,7 @@ TABLET PCs:ISDV4 TABLET PC Stylus (SERIAL) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
 }
 
 #-------------------------------------------#
@@ -468,7 +468,7 @@ TABLET PCs:ISDV4 TABLET PC Stylus (USB) {
  Driver              = wacom
  Protocol            = Auto
  TabletType          = stylus
- RawOption           = "ForceDevice" "ISDV4"
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
 }
 
 #------------------------------------------------#
