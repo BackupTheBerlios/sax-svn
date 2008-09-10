@@ -388,4 +388,42 @@ TABLET PCs:ASUS R1F Stylus (USB) {
  RawOption           = "ForceDevice" "ISDV4","BottomX" "28606","BottomY" "17876","TopX" "0","TopY" "0"
 }
 
+#---------------------------------------------#
+# TABLET PCs: HP Pavilion tx2500 Eraser (USB) #
+#---------------------------------------------#
+TABLET PCs:HP Pavilion tx2500 Eraser (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = eraser
+ RawOption           = "ForceDevice" "ISDV4"
+}
+
+#---------------------------------------------#
+# TABLET PCs: HP Pavilion tx2500 Stylus (USB) #
+#---------------------------------------------#
+TABLET PCs:HP Pavilion tx2500 Stylus (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-stylus
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "26300","BottomY" "16375","TopX" "225","TopY" "225"
+}
+
+#---------------------------------------------#
+# TABLET PCs: HP Pavilion tx2500 Touch (USB)  #
+#---------------------------------------------#
+TABLET PCs:HP Pavilion tx2500 Touch (USB) {
+ Device              = /dev/input/by-id/usb-Tablet_ISD-V4-event-touch
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "4000","BottomY" "3875","TopX" "200","TopY" "225"
+}
 
