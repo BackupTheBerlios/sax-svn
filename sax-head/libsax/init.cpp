@@ -108,7 +108,8 @@ void SaXInit::setValidBusID (void) {
 	QString data = proc->readStdout().at(0);
 	int count = data.toInt();
 	if (count < 2) {
-		mOptions.append ((const char*)"-b nobus");
+		mOptions.append ((const char*)"-b");
+		mOptions.append ((const char*)"nobus");
 	}
 }
 
@@ -132,7 +133,8 @@ void SaXInit::setPrimaryChip (void) {
 	QString optc;
 	QString data = proc->readStdout().at(0);
 	int id = data.toInt();
-	QTextOStream (&optc) << "-c " << id;
+	QTextOStream (&optc) << id;
+	mOptions.append ((const char*)"-c");
 	mOptions.append ((const char*)optc.ascii());
 	setValidBusID();
 }
