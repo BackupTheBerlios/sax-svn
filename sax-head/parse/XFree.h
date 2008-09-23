@@ -14,6 +14,7 @@ extern char* GetLogFile (XF86ConfigPtr conf);
 
 /* Module Section... */
 extern char* GetModuleSpecs (XF86ConfigPtr conf);
+extern char* GetModuleDisableSpecs (XF86ConfigPtr conf);
 extern char* GetModuleSubSpecs (XF86ConfigPtr conf);
 
 /* InputDevice Section... */

@@ -75,7 +75,6 @@ sub MergeParseResult {
 	my $blue;
 	my $hashref;
 	my $idc;
-	my @modlist;
 	my $rawcount;
 	my $newopt;
 	my $modelines;
@@ -179,6 +178,7 @@ sub MergeParseResult {
 	foreach $key (keys %module) {
 	SWITCH: for ($key) {
 	/^Load/i          && do {
+		my @modlist = ();
 		foreach (keys %{$module{$key}}) {
 			push(@modlist,$module{$key}{$_});
 		}
@@ -186,6 +186,17 @@ sub MergeParseResult {
 		$modstring =~ s/ +//g; 
 		$modstring =~ s/^,//; $modstring =~ s/,$//;
 		$result{Module}{0}{Load} = join(",",@modlist);
+		last SWITCH;
+	};
+	/^Disable/i       && do {
+		my @modlist = ();
+		foreach (keys %{$module{$key}}) {
+			push(@modlist,$module{$key}{$_});
+		}
+		$modstring = join(",",@modlist);
+		$modstring =~ s/ +//g;
+		$modstring =~ s/^,//; $modstring =~ s/,$//;
+		$result{Module}{0}{Disable} = join(",",@modlist);
 		last SWITCH;
 	};
 	/^extmod/i        && do {
@@ -1022,6 +1033,8 @@ sub KeyboardGetInputDevice {
 	}
 	$value = $dialog{Module}{0}{Load};
 	push(@result,DLine("0","ModuleLoad",$value));
+	$value = $dialog{Module}{0}{Disable};
+	push(@result,DLine("0","ModuleDisable",$value));
 	push(@result,"}\n\n");
 	return(@result);
 }

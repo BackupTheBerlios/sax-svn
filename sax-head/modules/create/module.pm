@@ -18,7 +18,7 @@ sub CreateModuleSection {
 # extmod subsection...
 #
 	my (%var)       = %{$_[0]};  # configuration hash (argument)
-	my ($dlist)     = $_[1];     # do not set modules of this string (glx,dri,fgl1)
+	my ($dlist)     = $_[1];     # do not set modules part of dlist
 	my $setting;                 # member of hash element
 	my @result;                  # section result list
 	my $size;                    # sizeof list @list
@@ -60,6 +60,26 @@ sub CreateModuleSection {
 					foreach $cm (@critical) {
 					if ($cm eq $n) { 
 						$notset = 1; last; 
+					}
+					}
+					if (($n ne "") && ($notset == 0)) {
+						$n =~ s/^ +//g; $n =~ s/ +$//g;
+						push(@result,PrintLine($i,"\"$n\""));
+					}
+				}
+				last SWITCH;
+			};
+			#===========================================
+			# Disable setting...
+			#-------------------------------------------
+			/^Disable/ && do {
+				@critical = split(/,/,$dlist);
+				foreach $n (@list) {
+					$n =~ s/ +//g;
+					$notset = 0;
+					foreach $cm (@critical) {
+					if ($cm eq $n) {
+						$notset = 1; last;
 					}
 					}
 					if (($n ne "") && ($notset == 0)) {

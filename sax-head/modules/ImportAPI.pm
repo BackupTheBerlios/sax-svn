@@ -141,6 +141,11 @@ sub ApiImportPath {
 		last SWITCH;
 		};
 
+		/^ModuleDisable/ && do {
+		$var{Module}{0}{Disable} = $value;
+		last SWITCH;
+		};
+
 		/^Extmod/        && do {
 		@list = split(/\\n/,$value);
 		foreach (@list) {

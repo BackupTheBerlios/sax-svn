@@ -114,6 +114,20 @@ void SaXManipulatePath::setLoadableModule (const QString& module) {
 }
 
 //====================================
+// setDisableModule
+//------------------------------------
+void SaXManipulatePath::setDisableModule (const QString& module) {
+	// .../
+	//! set global module to be disabled for this configuration. Using
+	//! this function will overwrite the current module list
+	// ----
+	if (! mImport) {
+		return;
+	}
+	mImport -> setItem ( "ModuleDisable",module );
+}
+
+//====================================
 // addLoadableModule
 //------------------------------------
 void SaXManipulatePath::addLoadableModule (const QString& module) {
@@ -126,6 +140,26 @@ void SaXManipulatePath::addLoadableModule (const QString& module) {
 	}
 	QString val;
 	QString key ("ModuleLoad");
+	if (! mImport -> getItem (key).isEmpty()) {
+		val = mImport -> getItem (key);
+	}
+	QTextOStream (&val) << "," << module;
+	mImport -> setItem ( key,val );
+}
+
+//====================================
+// addDisableModule
+//------------------------------------
+void SaXManipulatePath::addDisableModule (const QString& module) {
+	// .../
+	//! add module name to the current list of disabled modules. The
+	//! comma separator is used for each item
+	// ----
+	if (! mImport) {
+		return;
+	}
+	QString val;
+	QString key ("ModuleDisable");
 	if (! mImport -> getItem (key).isEmpty()) {
 		val = mImport -> getItem (key);
 	}
@@ -147,6 +181,25 @@ void SaXManipulatePath::removeLoadableModule (const QString& module) {
 	}
 	QString val (module);
 	QString key ("ModuleLoad");
+	if (! mImport -> getItem (key).isEmpty()) {
+		mImport -> removeItem (key,val);
+	}
+}
+
+//====================================
+// removeDisableModule
+//------------------------------------
+void SaXManipulatePath::removeDisableModule (const QString& module) {
+	// .../
+	//! remove the given module (module) from the current
+	//! list of disabled modules. If the module doesn't exist nothing
+	//! will be changed
+	// ----
+	if (! mImport) {
+		return;
+	}
+	QString val (module);
+	QString key ("ModuleDisable");
 	if (! mImport -> getItem (key).isEmpty()) {
 		mImport -> removeItem (key,val);
 	}

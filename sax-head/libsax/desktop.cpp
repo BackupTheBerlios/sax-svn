@@ -530,6 +530,7 @@ bool SaXManipulateDesktop::enable3D (void) {
 		//----------------------------------------
 		if (extends) {
 			SaXManipulatePath pathInfo (mPath);
+			pathInfo.removeDisableModule (*extends);
 			pathInfo.removeLoadableModule (*extends);
 			pathInfo.addLoadableModule (*extends);
 		}
@@ -683,6 +684,8 @@ bool SaXManipulateDesktop::disable3D (void) {
 		if (extends) {
 			SaXManipulatePath pathInfo (mPath);
 			pathInfo.removeLoadableModule (*extends);
+			pathInfo.removeDisableModule (*extends);
+			pathInfo.addDisableModule (*extends);
 		}
 		//========================================
 		// set driver to use with 2D

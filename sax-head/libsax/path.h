@@ -47,6 +47,9 @@ class SaXManipulatePathIF : public SaXException {
 	virtual void setLoadableModule ( const QString& ) = 0;
 	virtual void addLoadableModule ( const QString& ) = 0;
 	virtual void removeLoadableModule ( const QString& ) = 0;
+	virtual void setDisableModule ( const QString& ) = 0;
+	virtual void addDisableModule ( const QString& ) = 0;
+	virtual void removeDisableModule ( const QString& ) = 0;
 
 	public:
 	virtual void setServerFlag ( const QString& ) = 0;
@@ -126,6 +129,9 @@ class SaXManipulatePath : public SaXManipulatePathIF {
 	void setLoadableModule ( const QString& );
 	void addLoadableModule ( const QString& );
 	void removeLoadableModule ( const QString& );
+	void setDisableModule ( const QString& );
+	void addDisableModule ( const QString& );
+	void removeDisableModule ( const QString& );
 
 	public:
 	void setServerFlag ( const QString& );

@@ -142,6 +142,19 @@ sub ParseModuleSection {
 	}
 
 	#========================================
+	# Disable...
+	#----------------------------------------
+	$result = XFree::GetModuleDisableSpecs($ptr);
+	if (defined $result) {
+		$count  = 0;
+		@list   = split(/,/,$result);
+		foreach $i (@list) {
+			$parse{Disable}{$count} = $i;
+			$count++;
+		}
+	}
+
+	#========================================
 	# Subsection extmod....
 	#----------------------------------------
 	$result = XFree::GetModuleSubSpecs($ptr);

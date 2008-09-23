@@ -47,7 +47,9 @@ char* GetRgbPath (XF86ConfigPtr conf);
 char* GetLogFile (XF86ConfigPtr conf);
 
 /* Module Section... */
+char* GetModuleSpecsBase (XF86ConfigPtr conf,int t);
 char* GetModuleSpecs (XF86ConfigPtr conf);
+char* GetModuleDisableSpecs (XF86ConfigPtr conf);
 char* GetModuleSubSpecs (XF86ConfigPtr conf);
 
 /* InputDevice Section... */
@@ -152,6 +154,14 @@ char* GetLogFile (XF86ConfigPtr conf) {
  Module Section... 
 **********************/
 char* GetModuleSpecs (XF86ConfigPtr conf) {
+	return GetModuleSpecsBase (conf,XF86_LOAD_MODULE);
+}
+
+char* GetModuleDisableSpecs (XF86ConfigPtr conf) {
+	return GetModuleSpecsBase (conf,XF86_DISABLE_MODULE);
+}
+
+char* GetModuleSpecsBase (XF86ConfigPtr conf,int t) {
 	int  count       = 0;
 	char *result     = NULL; 
 	char name[SIZE]  = "";
@@ -161,7 +171,11 @@ char* GetModuleSpecs (XF86ConfigPtr conf) {
 	XF86LoadPtr       lp;
 
 	if (conf == NULL) return("null");
-	lp = (XF86LoadPtr) conf->conf_modules->mod_load_lst;
+	if (t == XF86_DISABLE_MODULE) {
+		lp = (XF86LoadPtr) conf->conf_modules->mod_disable_lst;
+	} else {
+		lp = (XF86LoadPtr) conf->conf_modules->mod_load_lst;
+	}
 	if (lp == NULL) {
 		return (NULL);
 	}
@@ -171,6 +185,9 @@ char* GetModuleSpecs (XF86ConfigPtr conf) {
 
 	for (lp;lp;lp=lp->list.next) {
 		type = lp->load_type;
+		if (type != t) {
+			continue;
+		}
 		strcpy(name,lp->load_name);
 		if (count == 0) {
 			sprintf(line,"%s",name);
