@@ -431,9 +431,6 @@ IN_OPT="$IN_OPT $GPM $NODE $TYPE $VESA $DBMNEW $IGNORE_PROFILE"
 #----------------------------------
 IN_TRIGGER=0
 IN_OPT=`echo $IN_OPT`
-if [ ! -z "$IN_OPT" ];then
-	IN_TRIGGER=1
-fi
 if [ ! -f $API ];then
 	SYS_CONFIG=""
 	IN_TRIGGER=1
