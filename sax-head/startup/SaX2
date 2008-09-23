@@ -33,7 +33,7 @@ function isTTY {
 #----------------------------------------
 ERR="/var/log/SaX.log"
 SHC="/bin/sh"
-SUX="sux"
+SUX="su"
 REI=""
 
 #========================================
@@ -84,7 +84,7 @@ if [ ! "$UID" = 0 ];then
 
 	echo -n "SaX: root "
 	if [ -f "$SUX" ];then
-		sux -c "/usr/sbin/SaX2 $*"
+		$SUX -c "/usr/sbin/SaX2 $*"
 	else
 		xhost + localhost > /dev/null 2>/dev/null
 		su - -c "/usr/sbin/SaX2 $*"
