@@ -132,16 +132,5 @@ if ($patchBIOS ne "ok") {
 			qx (cat $file | sed -e s!$key=.*!$key=\\""yes"\\"! > $file.tmp);
 			qx (mv $file.tmp $file);
 		}
-		# make sure that 1024x600 mode is available on Netbooks
-		$result = qx ($tool 3a 1024 600 2>&1);
-		$args = "3a 1024 600";
-		$key  = "VIDEOBIOS_PARAMETERS_MODE2";
-		if (-f $file) {
-			qx (cat $file | sed -e s!$key=.*!$key=\\""$args"\\"! > $file.tmp);
-			qx (mv $file.tmp $file);
-			$key = "VIDEOBIOS_PATCH";
-			qx (cat $file | sed -e s!$key=.*!$key=\\""yes"\\"! > $file.tmp);
-			qx (mv $file.tmp $file);
-		}
 	}
 }

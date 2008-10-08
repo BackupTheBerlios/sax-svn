@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Oct  8 05:54:32 CEST 2008 - sndirsch@suse.de
+
+- no longer overwrite a second BIOS mode (3a) for 1024x600 mode;
+  Netbook vendors need to provide their favorite 915resolution 
+  commands for their favorite resolutions themselves
+
+-------------------------------------------------------------------
 Tue Oct  7 15:03:00 CEST 2008 - sndirsch@suse.de
 
 - change the default from caps:shiftlock to caps:capslock for
