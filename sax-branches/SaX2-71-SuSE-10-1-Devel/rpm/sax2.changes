@@ -1,9 +1,15 @@
 -------------------------------------------------------------------
+Wed Oct  8 15:52:15 CEST 2008 - sndirsch@suse.de
+
+- added 1024x576 as possible monitor resolution for GUI
+  (bnc #431290)
+
+-------------------------------------------------------------------
 Wed Oct  8 05:54:32 CEST 2008 - sndirsch@suse.de
 
 - no longer overwrite a second BIOS mode (3a) for 1024x600 mode;
   Netbook vendors need to provide their favorite 915resolution 
-  commands for their favorite resolutions themselves
+  commands for their favorite resolutions themselves (bnc #431290)
 
 -------------------------------------------------------------------
 Tue Oct  7 15:03:00 CEST 2008 - sndirsch@suse.de
