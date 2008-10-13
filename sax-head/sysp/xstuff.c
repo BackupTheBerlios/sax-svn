@@ -20,7 +20,7 @@ STATUS        : Status: Up-to-date
 #include "mouse.h"
 #include "xstuff.h"
 
-#define VESA_LIST 22
+#define VESA_LIST 23
 
 //======================================
 // ScanXStuff: constructor...
@@ -209,6 +209,7 @@ void ScanXStuff::Scan (void) {
 	vesaStandard[19].x = 2800; vesaStandard[19].y = 2100;
 	vesaStandard[20].x = 3200; vesaStandard[20].y = 2400;
 	vesaStandard[21].x = 1024; vesaStandard[21].y = 600;
+	vesaStandard[22].x = 1024; vesaStandard[22].y = 600;
 
 	//======================================
 	// lookup framebuffer timing
