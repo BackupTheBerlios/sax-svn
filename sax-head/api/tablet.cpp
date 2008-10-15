@@ -230,6 +230,9 @@ bool SCCTablet::exportData ( void ) {
 				if (port.contains ("ttyS3")) {
 					saxTablet.setDevice ( "/dev/ttyS3" );
 				}
+				if (port.contains ("ttyS4")) {
+					saxTablet.setDevice ( "/dev/ttyS4" );
+				}
 				if (port.contains ("USB")) {
 					QString _device = *tabletDict["Device"];
 					if (! _device.isEmpty()) {

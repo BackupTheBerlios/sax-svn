@@ -196,6 +196,9 @@ void SCCTouchSelection::import ( void ) {
 	if (device == "/dev/ttyS3") {
 		mPortBox -> setCurrentItem ( 4 );
 	} 
+	if (device == "/dev/ttyS4") {
+		mPortBox -> setCurrentItem ( 5 );
+	} 
 
 	//=====================================
 	// setup touchscreen display state
@@ -274,6 +277,9 @@ void SCCTouchSelection::slotName ( Q3ListBoxItem* item ) {
 		}
 		if (device == "/dev/ttyS3") {
 			mPortBox -> setCurrentItem ( 4 );
+		} 
+		if (device == "/dev/ttyS4") {
+			mPortBox -> setCurrentItem ( 5 );
 		} 
 	}
 }

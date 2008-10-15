@@ -183,6 +183,9 @@ void SCCTabletConnection::setPort ( const QString& device ) {
 	if (device == "/dev/ttyS3") {
 		mPortBox -> setCurrentItem ( 4 );
 	}
+	if (device == "/dev/ttyS4") {
+		mPortBox -> setCurrentItem ( 5 );
+	}
 }
 //====================================
 // setOptions
@@ -344,6 +347,9 @@ void SCCTabletConnection::slotTablet (
 		}
 		if (device == "/dev/ttyS3") {
 			mPortBox -> setCurrentItem ( 4 );
+		}
+		if (device == "/dev/ttyS4") {
+			mPortBox -> setCurrentItem ( 5 );
 		}
 	}
 	//====================================

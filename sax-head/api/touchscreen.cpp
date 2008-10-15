@@ -145,6 +145,9 @@ bool SCCTouchScreen::exportData ( void ) {
 			if (port.contains ("ttyS3")) {
 				saxToucher.setDevice ( "/dev/ttyS3" );
 			}
+			if (port.contains ("ttyS4")) {
+				saxToucher.setDevice ( "/dev/ttyS4" );
+			}
 			if (port.contains ("USB")) {
 				QString _device = *touchDict["Device"];
 				if (! _device.isEmpty()) {
