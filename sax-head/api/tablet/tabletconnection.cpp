@@ -100,6 +100,7 @@ void SCCTabletConnection::init ( void ) {
 	mPortBox -> insertItem ( mText["Serial2"] );
 	mPortBox -> insertItem ( mText["Serial3"] );
 	mPortBox -> insertItem ( mText["Serial4"] );
+	mPortBox -> insertItem ( mText["Serial5"] );
 
 	//=====================================
 	// set default tablet mode to relative
