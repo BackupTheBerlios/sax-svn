@@ -33,7 +33,7 @@ STATUS        : Status: Up-to-date
 #define MWM       "/usr/X11R6/bin/mwm"
 #define FVWM      "/usr/X11R6/bin/fvwm2"
 #define MIN_X     800
-#define MIN_Y     600
+#define MIN_Y     576
 #define MIN_DEPTH 15
 
 #define FVWMRC    "/usr/X11R6/share/fvwm/fvwmrc.yast2"
@@ -223,7 +223,7 @@ int validColorDepth (Display* dpy) {
 }
 
 //=========================================
-// validResolution ( >= 800x600 )
+// validResolution ( >= 800x576 )
 //-----------------------------------------
 int validResolution (Display* dpy) {
 	int x = DisplayWidth  (dpy, DefaultScreen(dpy));
