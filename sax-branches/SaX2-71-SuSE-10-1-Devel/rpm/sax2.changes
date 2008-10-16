@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Oct 16 12:49:24 CEST 2008 - sndirsch@suse.de
+
+- use NoBorder layout if ((X <= 800) || (Y <= 600)), and *not*
+  if ((X <= 800) && (Y <= 600)); makes Ok/Cancel button visible
+  on Netbooks with 1024x600/1024x576 display panels (bnc #431290)
+
+-------------------------------------------------------------------
 Thu Oct 16 06:37:31 CEST 2008 - sndirsch@suse.de
 
 - testX: changed minimum resolution to 800x576 due to new Netbook
