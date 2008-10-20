@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Oct 20 22:19:16 CEST 2008 - sndirsch@suse.de
+
+- removed HP preload monitor entries and profile, since these are
+  no longer required; fixes also bnc #436905
+
+-------------------------------------------------------------------
 Thu Oct 16 12:57:12 CEST 2008 - sndirsch@suse.de
 
 - use NoBorder layout if ((X <= 800) || (Y <= 600)), and *not*
