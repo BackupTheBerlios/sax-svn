@@ -8,7 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.ko\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-06-13 11:05+0900\n"
+"POT-Creation-Date: 2006-05-15 15:07+0200\n"
+"PO-Revision-Date: 2008-08-12 18:39+0900\n"
 "Last-Translator: YunSeok Choi <xein@naver.com>\n"
 "Language-Team: Korean <xein@naver.com>\n"
 "MIME-Version: 1.0\n"
@@ -29,33 +30,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2 제안</b><hr>현재 시작된 그래픽 시스템은 SaX2의 제안으로 기동한것입니"
-"다. 이 방식을 계속 쓰시려면 <b>확인</b>을 누르세요. 그렇지않으면 설정을 변경"
-"합니다."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2 제안</b><hr>현재 시작된 그래픽 시스템은 SaX2의 제안으로 기동한것입니다. 이 방식을 계속 쓰시려면 <b>확인</b>을 누르세요. 그렇지않으면 설정을 변경합니다."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D 가속이 지원되지 않음</b><hr>SaX2는 3D 서브시스템 활성화 제공을 할 수 없"
-"습니다. 그래픽카드 또는 드라이버가 3D 지원을 하지 않습니다."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D 가속이 지원되지 않음</b><hr>SaX2는 3D 서브시스템 활성화 제공을 할 수 없습니다. 그래픽카드 또는 드라이버가 3D 지원을 하지 않습니다."
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D 가속이 지원되지 않음</b><hr>SaX2는 3D 서브시스템 활성화 제공을 할 수 없"
-"습니다. Xinerama 기반 듀얼 헤드 모드가 사용 중입니다. 그래픽 화면을 결합시키"
-"기 위한 Xorg Xinerama 확장 기능은 3D를 지원하지 않습니다."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D 가속이 지원되지 않음</b><hr>SaX2는 3D 서브시스템 활성화 제공을 할 수 없습니다. Xinerama 기반 듀얼 헤드 모드가 사용 중입니다. 그래픽 화면을 결합시키기 위한 Xorg Xinerama 확장 기능은 3D를 지원하지 않습니다."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -74,12 +58,8 @@ msgid "SaX Control Center"
 msgstr "SaX 제어판"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>디스플레이 크기가 변경되었음</b><hr>디스플레이 크기가 새 레이아웃으로 변경"
-"되었습니다."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>디스플레이 크기가 변경되었음</b><hr>디스플레이 크기가 새 레이아웃으로 변경되었습니다."
 
 #. Help Button text
 msgid "&Help"
@@ -170,9 +150,8 @@ msgid "Display %1"
 msgstr "디스플레이 %1"
 
 #. Tab text for a display tab of the mouse dialog
-#, fuzzy
 msgid "Mouse %1"
-msgstr "마우스"
+msgstr "마우스 %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -342,12 +321,8 @@ msgid "Unconfigured"
 msgstr "설정되지 않음"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>모든 디스플레이 비활성화 할 수 없음</b><hr><nobr>최소 한개의 디스플레이가 "
-"활성화되어야 합니다.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>모든 디스플레이 비활성화 할 수 없음</b><hr><nobr>최소 한개의 디스플레이가 활성화되어야 합니다.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -423,17 +398,11 @@ msgid "To the Right"
 msgstr "오른쪽으로"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>잘못된 색상/해상도 배합:</b><hr><nobr>선택된 해상도와 색상 설정</nobr>은 "
-"그래픽 카드 프레임버퍼에서 지원하지 않습니다."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>잘못된 색상/해상도 배합:</b><hr><nobr>선택된 해상도와 색상 설정</nobr>은 그래픽 카드 프레임버퍼에서 지원하지 않습니다."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>옵션에는 값이 필요</b><hr><nobr>%1 옵션의 값을 지정.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
@@ -457,14 +426,8 @@ msgid "Display Size in [ mm ]"
 msgstr "디스플레이 크기 [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>메모:</b> 잘못된 주파수 범위는 모니터를 손상시킬 수 있습니다. <br><br>만"
-"약 모니터 최대치에서 감소시키는 주파수 범위를 사용하지 않을것이라면, 모니터 "
-"수동 설정에 조언을 구하는것이 좋습니다."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>메모:</b> 잘못된 주파수 범위는 모니터를 손상시킬 수 있습니다. <br><br>만약 모니터 최대치에서 감소시키는 주파수 범위를 사용하지 않을것이라면, 모니터 수동 설정에 조언을 구하는것이 좋습니다."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -523,18 +486,12 @@ msgid "inches"
 msgstr "인치"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
 msgstr "<b>CD 나 디스크 삽입</b><hr>모니터 제조사에서 제공하는 CD 디스크 삽입"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>읽기 오류</b><hr>CD나 디스크를 읽을 수 없습니다. 매체가 손상되었거나, 잘못"
-"된 정보의 파일입니다."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>읽기 오류</b><hr>CD나 디스크를 읽을 수 없습니다. 매체가 손상되었거나, 잘못된 정보의 파일입니다."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -866,9 +823,7 @@ msgstr "오래된 숫자 패드 기능을 강제"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock 에 의해 알파벳을 대문자화 한다. Shift 키는 CapsLock 에 영향을 주지 "
-"않는다."
+msgstr "CapsLock 에 의해 알파벳을 대문자화 한다. Shift 키는 CapsLock 에 영향을 주지 않는다."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -884,9 +839,7 @@ msgstr "두번째 레벨때, 스페이스 키로 개행 불허의 스페이스�
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock 는 Shift 키의 잠금기능으로 만듭니다. Shift 키는 CapsLock 에 영향을 "
-"주지 않습니다."
+msgstr "CapsLock 는 Shift 키의 잠금기능으로 만듭니다. Shift 키는 CapsLock 에 영향을 주지 않습니다."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift "
@@ -917,11 +870,8 @@ msgid "Left Win-key is Compose."
 msgstr "왼쪽 윈도우키에 Compose 를 할당 합니다."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"오른쪽 Alt 키로 세번째의 레벨을 선택, Shift+오른쪽 Alt 키는 Multi_Key로 이용 "
-"합니다."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "오른쪽 Alt 키로 세번째의 레벨을 선택, Shift+오른쪽 Alt 키는 Multi_Key로 이용 합니다."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -937,9 +887,7 @@ msgstr "CapsLock 은 Shift 키의 잠금으로 기능 시킵니다. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock 으로 알파벳을 대문자화 합니다. Shift 키로 CapsLock 을 취소하지 않습"
-"니다."
+msgstr "CapsLock 으로 알파벳을 대문자화 합니다. Shift 키로 CapsLock 을 취소하지 않습니다."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1011,9 +959,7 @@ msgstr "양쪽 Shift 키 동시 누르기로 그룹을 변경 합니다."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock 는 Shift 키의 잠금으로 동작 시킵니다. Shift 를 눌러도 CapsLock 은 취"
-"소하지 않습니다."
+msgstr "CapsLock 는 Shift 키의 잠금으로 동작 시킵니다. Shift 를 눌러도 CapsLock 은 취소하지 않습니다."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
@@ -1121,8 +1067,7 @@ msgstr "Control+Shift 로 그룹을 변경 합니다."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr ""
-"CapsLock 은 Shitf 의 잠금으로 작동 합니다. Shift 로 CapsLock 을 취소 합니다."
+msgstr "CapsLock 은 Shitf 의 잠금으로 작동 합니다. Shift 로 CapsLock 을 취소 합니다."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1213,12 +1158,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "ESC 와 CapsLock 을 바꿔 넣습니다."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Wang 724 숫자 패드에 유니코드 추가 문자를 설정 (화살표나 수학 연산자 등). 수"
-"학 연산자는 기본 레벨 입니다."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Wang 724 숫자 패드에 유니코드 추가 문자를 설정 (화살표나 수학 연산자 등). 수학 연산자는 기본 레벨 입니다."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1229,12 +1170,8 @@ msgid "Legacy key with comma"
 msgstr "콤마 포함의 구형의 키"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"숫자 패드에 유니코드 추가 문자를 설정 (화살표 나 수학 연산자 등). 수학 연산자"
-"는 기본 레벨입니다."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "숫자 패드에 유니코드 추가 문자를 설정 (화살표 나 수학 연산자 등). 수학 연산자는 기본 레벨입니다."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1250,8 +1187,7 @@ msgstr "숫자 패드의 Delete 키 동작"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Wang 724 숫자 패드에 유니코드 추가 문자를 설정 (화살표나 수학 연산자 등)"
+msgstr "Wang 724 숫자 패드에 유니코드 추가 문자를 설정 (화살표나 수학 연산자 등)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1328,7 +1264,7 @@ msgstr "지우개 추가"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr ""
+msgstr "터치 추가"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1351,14 +1287,12 @@ msgid "Eraser Properties"
 msgstr "지우개 속성"
 
 #. Tab title: Touch properties
-#, fuzzy
 msgid "Touch Properties"
-msgstr "터치스크린 속성"
+msgstr "터치 속성"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
-#, fuzzy
 msgid "Touchscreen %1"
-msgstr "터치 스크린"
+msgstr "터치스크린 %1"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
@@ -1369,17 +1303,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "터치스크린: 제조사 및 이름 선택"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>최종 단계</b><hr>마지막 단계로 새로운 설정을 저장합니다. 새 설정을 저장하"
-"기 전에 검사해보는것을 추천합니다. 만약 검사 도중에 문제(화면이 보이지 않거"
-"나 깨지는)가 생기면 <b>[ Ctrl+Alt+Backspace ]</b> 를 눌러 서버를 죽일 수 있습"
-"니다."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>최종 단계</b><hr>마지막 단계로 새로운 설정을 저장합니다. 새 설정을 저장하기 전에 검사해보는것을 추천합니다. 만약 검사 도중에 문제(화면이 보이지 않거나 깨지는)가 생기면 <b>[ Ctrl+Alt+Backspace ]</b> 를 눌러 서버를 죽일 수 있습니다."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1423,37 +1348,20 @@ msgid "HTTP Port"
 msgstr "HTTP 포트"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>원격 접속 열쇠 글이 서로 다름</b><hr>처음 입력한것과 뒤에 입력한 열쇠 글"
-"이 일치하지 않습니다."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>원격 접속 열쇠 글이 서로 다름</b><hr>처음 입력한것과 뒤에 입력한 열쇠 글이 일치하지 않습니다."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>원격 접속 열쇠 글 장애</b><hr>열쇠 글이 비어있거나 너무 짧습니다. 영문/숫"
-"자 6자로 된 열쇠글을 입력해 주세요."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>원격 접속 열쇠 글 장애</b><hr>열쇠 글이 비어있거나 너무 짧습니다. 영문/숫자 6자로 된 열쇠글을 입력해 주세요."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>원격 접속 열쇠 글 장애</b><hr>열쇠 글이 너무 깁니다. 최대 길이 8자로된 열"
-"쇠 글을 입력해 주세요."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>원격 접속 열쇠 글 장애</b><hr>열쇠 글이 너무 깁니다. 최대 길이 8자로된 열쇠 글을 입력해 주세요."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>소프트웨어 설치:</b><hr>일부 꾸러미가 없습니다. 이 꾸러미들을 지금 설치하"
-"시겠습니까?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>소프트웨어 설치:</b><hr>일부 꾸러미가 없습니다. 이 꾸러미들을 지금 설치하시겠습니까?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1472,36 +1380,20 @@ msgid "Initialize cache..."
 msgstr "캐시 초기화..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>구성 저장에 실패</b><hr>다음 보고서가 작성되었습니다:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>구성 저장됨</b><hr>변경된 설정사항의 효과는 그래픽 시스템을 재시작한 뒤 표"
-"시됩니다. 지금 SaX2를 종료하시겠습니까?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>구성 저장됨</b><hr>변경된 설정사항의 효과는 그래픽 시스템을 재시작한 뒤 표시됩니다. 지금 SaX2를 종료하시겠습니까?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>구성 검사에 실패</b><hr>추가 정보를 <tt>/var/log/Xorg.99.log</tt> 파일에 "
-"보냈습니다. 다음과 같은 요구사항 보고서가 작성되었습니다.:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>구성 검사에 실패</b><hr>추가 정보를 <tt>/var/log/Xorg.99.log</tt> 파일에 보냈습니다. 다음과 같은 요구사항 보고서가 작성되었습니다.:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>원격 접속 구성 정보</b><hr>원격 접속 서비스는 TCP포트 5900 및 HTTP포트(기"
-"본 5800) 방화벽에서 열어줘야 사용할 수 있습니다. 이것은 YaST에서 설정할 수 있"
-"습니다."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>원격 접속 구성 정보</b><hr>원격 접속 서비스는 TCP포트 5900 및 HTTP포트(기본 5800) 방화벽에서 열어줘야 사용할 수 있습니다. 이것은 YaST에서 설정할 수 있습니다."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"

@@ -3,6 +3,7 @@
 # Daniël Huisman <d.d.huisman@gmail.com>, 2005, 2006.
 # Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006, 2007, 2008.
 # Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2008.
+# Freek de Kruijf <freek@opensuse.org>, 2008.
 # domain "sax.mo"
 # Dutch message file for Sax.
 # Copyright (C) SuSE GmbH, 2000.
@@ -10,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-06-03 17:19+0200\n"
-"Last-Translator: Freek de Kruijf <f.de.kruijf@hetnet.nl>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"PO-Revision-Date: 2008-09-23 17:30+0300\n"
+"Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,34 +30,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2-suggestie</b><hr>Het huidige opgestarte grafische systeem is "
-"gebaseerd op een door SaX2 gemaakte suggestie. Klik op <b>OK</b> wanneer dit "
-"acceptabel is. Zo niet: wijzig de configuratie."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2-suggestie</b><hr>Het huidige opgestarte grafische systeem is gebaseerd op een door SaX2 gemaakte suggestie. Klik op <b>OK</b> wanneer dit acceptabel is. Zo niet: wijzig de configuratie."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D-versnelling wordt niet ondersteund</b><hr>Sax2 kan het 3D-subssysteem "
-"niet activeren omdat uw grafische kaart/stuurprogramma dit niet ondersteunt."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D-versnelling wordt niet ondersteund</b><hr>Sax2 kan het 3D-subssysteem niet activeren omdat uw grafische kaart/stuurprogramma dit niet ondersteunt."
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D-versnelling niet ondersteund</b><hr>SaX2 kan het 3D-subsysteem niet "
-"activeren omdat er gebruik wordt gemaakt van Xinerama-gebaseerde dual-head. "
-"De Xorg Xinerama-extensie voor het combineren van grafische schermen biedt "
-"geen ondersteuning voor 3D op alle heads."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D-versnelling niet ondersteund</b><hr>SaX2 kan het 3D-subsysteem niet activeren omdat er gebruik wordt gemaakt van Xinerama-gebaseerde dual-head. De Xorg Xinerama-extensie voor het combineren van grafische schermen biedt geen ondersteuning voor 3D op alle heads."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -75,12 +58,8 @@ msgid "SaX Control Center"
 msgstr "SaX Configuratiecentrum"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Weergavegrootte gewijzigd</b><hr>De weergavegrootte is aangepast aan de "
-"nieuwe indeling."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Weergavegrootte gewijzigd</b><hr>De weergavegrootte is aangepast aan de nieuwe indeling."
 
 #. Help Button text
 msgid "&Help"
@@ -171,9 +150,8 @@ msgid "Display %1"
 msgstr "Scherm %1"
 
 #. Tab text for a display tab of the mouse dialog
-#, fuzzy
 msgid "Mouse %1"
-msgstr "Muis"
+msgstr "Muis %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -343,12 +321,8 @@ msgid "Unconfigured"
 msgstr "Niet-geconfigureerd"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Kan niet alle schermen uitschakelen</b><hr><nobr>Er moet minimaal één "
-"scherm actief zijn</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Kan niet alle schermen uitschakelen</b><hr><nobr>Er moet minimaal één scherm actief zijn</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -424,21 +398,12 @@ msgid "To the Right"
 msgstr "Naar rechts"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Ongeldige kleur/resolutie-combinatie:</b><hr><nobr>De gekozen resolutie- "
-"en/of kleurinstellingen</nobr> worden niet ondersteund door de framebuffer "
-"van de grafische kaart."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Ongeldige kleur/resolutie-combinatie:</b><hr><nobr>De gekozen resolutie- en/of kleurinstellingen</nobr> worden niet ondersteund door de framebuffer van de grafische kaart."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Optie %1 heeft een waarde nodig</b><hr><nobr>Geef deze optie een waarde.</"
-"nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Optie %1 heeft een waarde nodig</b><hr><nobr>Geef deze optie een waarde.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -461,15 +426,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Beeldschermgrootte in [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Opmerking:</b><h>Foutieve vernieuwingsfrequenties kunnen uw monitor "
-"beschadigen. Raadpleeg voor de instellingen het monitorhandboek.<br><br>Als "
-"u niet het maximale bereik van de monitor wilt gebruiken, gebruik een lagere "
-"vernieuwingsfrequentie."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Opmerking:</b><h>Foutieve vernieuwingsfrequenties kunnen uw monitor beschadigen. Raadpleeg voor de instellingen het monitorhandboek.<br><br>Als u niet het maximale bereik van de monitor wilt gebruiken, gebruik een lagere vernieuwingsfrequentie."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -528,21 +486,12 @@ msgid "inches"
 msgstr "inches"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>CD of diskette plaatsen</b><hr>Plaats de CD of diskette van de "
-"monitorleverancier."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>CD of diskette plaatsen</b><hr>Plaats de CD of diskette van de monitorleverancier."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Leesfout</b><hr>Kan de CD of diskette niet lezen. Dit kan duiden op een "
-"beschadigd medium of op het medium aanwezige incorrect geformatteerde "
-"informatiebestanden."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Leesfout</b><hr>Kan de CD of diskette niet lezen. Dit kan duiden op een beschadigd medium of op het medium aanwezige incorrect geformatteerde informatiebestanden."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -768,9 +717,7 @@ msgstr "CapsLock-toets wijzigt de indeling."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr ""
-"Control is aan de Win-toetsen toegewezen (en aan de gebruikelijke Ctrl-"
-"toetsen)."
+msgstr "Control is aan de Win-toetsen toegewezen (en aan de gebruikelijke Ctrl-toetsen)."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
@@ -866,8 +813,7 @@ msgstr "Voegt het niet-afbreekbare spatieteken toe aan spatietoets"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Klavier gebruiken met unicode-toevoegingen (pijlen en wiskunde-operators)"
+msgstr "Klavier gebruiken met unicode-toevoegingen (pijlen en wiskunde-operators)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -875,8 +821,7 @@ msgstr "Standaard geërfd klavier forceren"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock gebruikt interne kapitalisatie. Shift heeft geen effect op CapsLock."
+msgstr "CapsLock gebruikt interne kapitalisatie. Shift heeft geen effect op CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -892,9 +837,7 @@ msgstr "Spatietoets geeft vast spatieteken op tweede niveau."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock gedraagt zich als vergrendelde Shift-toets. Shift heeft geen effect "
-"op CapsLock."
+msgstr "CapsLock gedraagt zich als vergrendelde Shift-toets. Shift heeft geen effect op CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift "
@@ -906,9 +849,7 @@ msgstr "Spatietoets geeft vast spatieteken op derde niveau."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Toetsencodes van twee toetsen omwisselen als Mac-toetsenborden onjuist "
-"worden gedetecteerd door de kernel."
+msgstr "Toetsencodes van twee toetsen omwisselen als Mac-toetsenborden onjuist worden gedetecteerd door de kernel."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -927,11 +868,8 @@ msgid "Left Win-key is Compose."
 msgstr "Linker Win-toets is samensteltoets."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Rechter Alt-toets selecteert het 3de niveau, Shift+rechter Alt-toets is "
-"Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Rechter Alt-toets selecteert het 3de niveau, Shift+rechter Alt-toets is Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -947,8 +885,7 @@ msgstr "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock niet."
+msgstr "CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock niet."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1020,9 +957,7 @@ msgstr "Beide Shift-toetsen samen wijzigen de indeling."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock "
-"niet annuleren."
+msgstr "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock niet annuleren."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
@@ -1130,9 +1065,7 @@ msgstr "Control+Shift wijzigt de groep."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr ""
-"CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock "
-"annuleren."
+msgstr "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock annuleren."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1208,8 +1141,7 @@ msgstr "Vier-niveau-toets met abstractie scheidingstekens"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Toetsenbord gebruiken met unicode-toevoegingen (pijlen en wiskunde-operators)"
+msgstr "Toetsenbord gebruiken met unicode-toevoegingen (pijlen en wiskunde-operators)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1224,12 +1156,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "ESC en CapsLock verwisselen."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Wang 724 toetsenbord gebruiken met unicode-toevoegingen (pijlen en wiskunde-"
-"operators). Wiskunde-operators op standaard niveau."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Wang 724 toetsenbord gebruiken met unicode-toevoegingen (pijlen en wiskunde-operators). Wiskunde-operators op standaard niveau."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1240,12 +1168,8 @@ msgid "Legacy key with comma"
 msgstr "Legacy toets met komma"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Toetsenbord met unicode-toevoegingen (pijlen en wiskunde-operators). "
-"Wiskunde-operators op standaard niveau."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Toetsenbord met unicode-toevoegingen (pijlen en wiskunde-operators). Wiskunde-operators op standaard niveau."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1261,8 +1185,7 @@ msgstr "Gedrag van del-toets op numeriek toetsenbord"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Wang 724 toetsenbord met unicode-toevoegingen (pijlen en wiskunde-operators)"
+msgstr "Wang 724 toetsenbord met unicode-toevoegingen (pijlen en wiskunde-operators)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1339,7 +1262,7 @@ msgstr "Gum toevoegen"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr ""
+msgstr "Aanraakscherm toevoegen"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1362,14 +1285,12 @@ msgid "Eraser Properties"
 msgstr "Eigenschappen gum"
 
 #. Tab title: Touch properties
-#, fuzzy
 msgid "Touch Properties"
 msgstr "Eigenschappen aanraakscherm"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
-#, fuzzy
 msgid "Touchscreen %1"
-msgstr "Aanraakbeeldscherm"
+msgstr "Aanraakbeeldscherm %1"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
@@ -1380,18 +1301,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Aanraakscherm: selectie leverancier en naam"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Laatste stappen:</b><hr>Het opslaan van uw nieuwe configuratie is de "
-"laatste stap. Het wordt aanbevolen om de nieuwe configuratie eerst te testen "
-"voordat u deze opslaat. Wanneer deze een verknoeide desktop laat zien druk "
-"op <b>[ Ctrl-Alt-Backspace ]</b> en <b>[ Ctrl-Alt-Backspace ]</b> kort na "
-"een luide waarschuwing (piep) om de server af te breken ."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Laatste stappen:</b><hr>Het opslaan van uw nieuwe configuratie is de laatste stap. Het wordt aanbevolen om de nieuwe configuratie eerst te testen voordat u deze opslaat. Wanneer deze een verknoeide desktop laat zien druk op <b>[ Ctrl-Alt-Backspace ]</b> en <b>[ Ctrl-Alt-Backspace ]</b> kort na een luide waarschuwing (piep) om de server af te breken ."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1434,38 +1345,20 @@ msgid "HTTP Port"
 msgstr "HTTP-poort"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Wachtwoorden komt niet overeen</b><hr>De eerste en de tweede versie van "
-"het wachtwoord komen niet overeen."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Wachtwoorden komt niet overeen</b><hr>De eerste en de tweede versie van het wachtwoord komen niet overeen."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Wachtwoordfout</b><hr>Het wachtwoordveld is leeg gelaten of het "
-"wachtwoord is te kort. Geef een wachtwoord op dat minstens zes lettertekens "
-"lang is."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Wachtwoordfout</b><hr>Het wachtwoordveld is leeg gelaten of het wachtwoord is te kort. Geef een wachtwoord op dat minstens zes lettertekens lang is."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Wachtwoordfout</b><hr>Het wachtwoord is te lang. Voer een wachtwoord in "
-"van maximaal acht lettertekens."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Wachtwoordfout</b><hr>Het wachtwoord is te lang. Voer een wachtwoord in van maximaal acht lettertekens."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Software-installatie:</b><hr>Enkele pakketten ontbreken. De ontbrekende "
-"pakketten nu installeren?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Software-installatie:</b><hr>Enkele pakketten ontbreken. De ontbrekende pakketten nu installeren?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1484,39 +1377,20 @@ msgid "Initialize cache..."
 msgstr "Cache wordt geïnitialiseerd..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Fout tijdens het opslaan van de configuratie</b><hr>Het volgende rapport "
-"is gemaakt:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Fout tijdens het opslaan van de configuratie</b><hr>Het volgende rapport is gemaakt:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>De configuratie is opgeslagen:</b><hr>Uw wijzigingen hebben pas effect "
-"wanneer u het grafische systeem opnieuw heeft opgestart. SaX2 nu afsluiten?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>De configuratie is opgeslagen:</b><hr>Uw wijzigingen hebben pas effect wanneer u het grafische systeem opnieuw heeft opgestart. SaX2 nu afsluiten?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Configuratietest is mislukt</b><hr>Kijk voor meer informatie in het "
-"bestand <tt>/var/log/Xorg.99.log</tt>. Het volgende rapport is gemaakt "
-"tijdens het proces:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Configuratietest is mislukt</b><hr>Kijk voor meer informatie in het bestand <tt>/var/log/Xorg.99.log</tt>. Het volgende rapport is gemaakt tijdens het proces:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Informatie over VNC-configuratie</b><hr>De VNC-service vereist dat de TCP-"
-"poort 5900 en een HTTP-poort (standaard 5800) in de firewall worden geopend. "
-"U kunt dit met YaST instellen."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Informatie over VNC-configuratie</b><hr>De VNC-service vereist dat de TCP-poort 5900 en een HTTP-poort (standaard 5800) in de firewall worden geopend. U kunt dit met YaST instellen."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"

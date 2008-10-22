@@ -26,32 +26,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2 建議</b><hr>目前啟動的圖形系統是以 SaX2 的建議為基礎。如果可以接受，"
-"請按一下<b>確定</b>。否則，請變更組態。"
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2 建議</b><hr>目前啟動的圖形系統是以 SaX2 的建議為基礎。如果可以接受，請按一下<b>確定</b>。否則，請變更組態。"
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>不支援 3D 加速</b><hr>SaX2 無法啟動 3D 次系統，因為您的顯示卡/驅動程式不支"
-"援 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>不支援 3D 加速</b><hr>SaX2 無法啟動 3D 次系統，因為您的顯示卡/驅動程式不支援 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>不支援 3D 加速</b><hr>SaX2 無法啟動 3D 次系統，因為您使用 Xinerama 為基礎"
-"的雙顯示模式。Xorg 用來組成多螢幕圖形的 Xinerama 擴充功能無法在所有螢幕上支"
-"援 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>不支援 3D 加速</b><hr>SaX2 無法啟動 3D 次系統，因為您使用 Xinerama 為基礎的雙顯示模式。Xorg 用來組成多螢幕圖形的 Xinerama 擴充功能無法在所有螢幕上支援 3D"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -70,9 +54,7 @@ msgid "SaX Control Center"
 msgstr "SaX 控制中心"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
 msgstr "<b>顯示尺寸已變更</b><hr>顯示尺寸已被調整為新的配置。"
 
 #. Help Button text
@@ -336,9 +318,7 @@ msgid "Unconfigured"
 msgstr "未設定"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
 msgstr "<b>無法停用所有顯示器</b><hr><nobr>至少要有一台顯示器是作用中。</nobr>"
 
 #. Info label for dual head checkbox
@@ -415,17 +395,11 @@ msgid "To the Right"
 msgstr "向右"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>不適用的色彩/解析度組合：</b><hr><nobr>所選擇的解析度和/或色彩設定</nobr>"
-"不被顯示卡的 framebuffer 所支援。"
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>不適用的色彩/解析度組合：</b><hr><nobr>所選擇的解析度和/或色彩設定</nobr>不被顯示卡的 framebuffer 所支援。"
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>選項需要值</b><hr><nobr>請為選項 %1 設定一個值。</nobr>"
 
 #. Group box title for the monitor vendor and name selection
@@ -449,13 +423,8 @@ msgid "Display Size in [ mm ]"
 msgstr "顯示大小 [ 公釐 ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>注意事項：</b>錯誤的同步範圍可能會損毀您的顯示器。請參閱顯示器手冊進行設"
-"定。<br><br>如果您希望您的顯示器不要使用最大等級，請降低同步範圍。"
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>注意事項：</b>錯誤的同步範圍可能會損毀您的顯示器。請參閱顯示器手冊進行設定。<br><br>如果您希望您的顯示器不要使用最大等級，請降低同步範圍。"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -514,18 +483,12 @@ msgid "inches"
 msgstr "英吋"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
 msgstr "<b>插入 CD 或磁片</b><hr>插入顯示器公用程式 CD 或顯示器廠商的磁片。"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>讀取錯誤</b><hr>無法從 CD 或磁片讀取。這可能是因為媒體已損毀或資訊檔案的格"
-"式錯誤。"
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>讀取錯誤</b><hr>無法從 CD 或磁片讀取。這可能是因為媒體已損毀或資訊檔案的格式錯誤。"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -902,8 +865,7 @@ msgid "Left Win-key is Compose."
 msgstr "左方 Win 鍵為 Compose。"
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr "按右方 Alt 鍵選擇第三層，Shift+右方 Alt 鍵為 Multi_Key。"
 
 #. XKBFile extension text
@@ -1191,9 +1153,7 @@ msgid "Swap ESC and CapsLock."
 msgstr "交換 ESC 與 CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1205,9 +1165,7 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1342,16 +1300,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "觸控式螢幕：廠商和名稱選項"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>最終步驟</b><hr>最後一個步驟是儲存您新的組態。建議在儲存之前，先測試新的組"
-"態。如果測試伺服器顯示損毀的桌面，請按 <b>[Ctrl+Alt+Backspace]</b> 並在震耳警"
-"告(嗶！)之後按 <b>[Ctrl+Alt+Backspace]</b> 刪除伺服器。"
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>最終步驟</b><hr>最後一個步驟是儲存您新的組態。建議在儲存之前，先測試新的組態。如果測試伺服器顯示損毀的桌面，請按 <b>[Ctrl+Alt+Backspace]</b> 並在震耳警告(嗶！)之後按 <b>[Ctrl+Alt+Backspace]</b> 刪除伺服器。"
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1394,30 +1344,19 @@ msgid "HTTP Port"
 msgstr "HTTP 埠"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
 msgstr "<b>遠端存取密碼不相符</b><hr>第一版和第二版密碼不相符。"
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>遠端存取密碼錯誤</b><hr>密碼欄位保留為空白，或密碼過短。請輸入最少為 6 個"
-"字元的密碼。"
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>遠端存取密碼錯誤</b><hr>密碼欄位保留為空白，或密碼過短。請輸入最少為 6 個字元的密碼。"
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
 msgstr "<b>遠端存取密碼錯誤</b><hr>密碼過長。請輸入最多為  8 個字元的密碼。"
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
 msgstr "<b>軟體安裝：</b><hr>缺少部份套裝軟體。立即安裝缺少的套裝軟體？"
 
 #. Caption text for the missing package info window
@@ -1437,35 +1376,20 @@ msgid "Initialize cache..."
 msgstr "起始快取..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>儲存組態失敗</b><hr>已建立下列報告："
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>組態已儲存</b><hr>下次重新啟動圖形系統時，您所做的修改將會生效。現在結束 "
-"SaX2？"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>組態已儲存</b><hr>下次重新啟動圖形系統時，您所做的修改將會生效。現在結束 SaX2？"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>測試組態失敗</b><hr>如需詳細資訊，請參閱 <tt>/var/log/Xorg.99.log</tt> 檔"
-"案。下列報告已經透過呼叫實例建立："
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>測試組態失敗</b><hr>如需詳細資訊，請參閱 <tt>/var/log/Xorg.99.log</tt> 檔案。下列報告已經透過呼叫實例建立："
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>遠端存取組態資訊</b><hr>遠端存取服務需要開啟防火牆中的 TCP 埠 5900 和 "
-"HTTP 埠 (預設值為 5800)。您可以使用 YaST 來設定。"
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>遠端存取組態資訊</b><hr>遠端存取服務需要開啟防火牆中的 TCP 埠 5900 和 HTTP 埠 (預設值為 5800)。您可以使用 YaST 來設定。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"

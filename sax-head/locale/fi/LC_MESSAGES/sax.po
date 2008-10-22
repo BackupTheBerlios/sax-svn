@@ -1,3 +1,4 @@
+# translation of sax.fi.po to suomi
 # translation of UUSIsax.po to
 # translation of sax.po to
 # translation of sax.fi.po to
@@ -11,17 +12,18 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Mikko Piippo <mikko.piippo@opensuse.fi>, 2008.
 # Jyri Palokangas <jyri.palokangas@opensuse.org>, 2008.
+# Jyri Palokangas <jmp@opensuse.org>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-05-25 18:22+0300\n"
+"PO-Revision-Date: 2008-08-23 11:40+0300\n"
 "Last-Translator: Mikko Piippo <mikko.piippo@opensuse.fi>\n"
-"Language-Team:  <fi@li.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@lists.kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: LoKalize 0.2\n"
 "Plural-Forms:  nplurals=2; plural=n != 1;\n"
 
 #. /.../
@@ -34,33 +36,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2-ehdotus</b><hr>Tällä hetkellä käytössä oleva grafiikkajärjestelmä "
-"perustuu SaX2:n tekemään ehdotukseen. Jos hyväksyt sen, napsauta <b>OK</b>. "
-"Muussa tapauksessa muuta määritystä."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2-ehdotus</b><hr>Tällä hetkellä käytössä oleva grafiikkajärjestelmä perustuu SaX2:n tekemään ehdotukseen. Jos hyväksyt sen, napsauta <b>OK</b>. Muussa tapauksessa muuta määritystä."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D-kiihdytystä ei tueta.</b><hr>SaX2 ei voi tarjota 3D-alijärjestelmän "
-"käyttöönottoa, koska näytönohjaimesi tai sen ajuri ei tue 3D:tä"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D-kiihdytystä ei tueta.</b><hr>SaX2 ei voi tarjota 3D-alijärjestelmän käyttöönottoa, koska näytönohjaimesi tai sen ajuri ei tue 3D:tä"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D-kiihdytystä ei tueta</b><hr>SaX2 ei voi tarjota 3D-alijärjestelmän "
-"käyttöönottoa, koska Xinerama-pohjainen moninäyttötila on käytössä. Xorg "
-"Xinerama -laajennus näyttöjen yhdistämiseen ei tue 3D:tä kaikilla näytöillä"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D-kiihdytystä ei tueta</b><hr>SaX2 ei voi tarjota 3D-alijärjestelmän käyttöönottoa, koska Xinerama-pohjainen moninäyttötila on käytössä. Xorg Xinerama -laajennus näyttöjen yhdistämiseen ei tue 3D:tä kaikilla näytöillä"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -79,11 +64,8 @@ msgid "SaX Control Center"
 msgstr "SaX Ohjauskeskus"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Näyttökoko vaihdettiin</b><hr>Näytön koko mukautettiin uuteen asetteluun."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Näyttökoko vaihdettiin</b><hr>Näytön koko mukautettiin uuteen asetteluun."
 
 #. Help Button text
 msgid "&Help"
@@ -174,9 +156,8 @@ msgid "Display %1"
 msgstr "Näyttö %1"
 
 #. Tab text for a display tab of the mouse dialog
-#, fuzzy
 msgid "Mouse %1"
-msgstr "Hiiri"
+msgstr "Hiiri %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -346,12 +327,8 @@ msgid "Unconfigured"
 msgstr "Määrittämätön"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Kaikkia näyttöjä ei voida poistaa käytöstä</b><hr> <nobr>Ainakin yhden "
-"näytön tulee olla käytössä.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Kaikkia näyttöjä ei voida poistaa käytöstä</b><hr> <nobr>Ainakin yhden näytön tulee olla käytössä.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -427,19 +404,12 @@ msgid "To the Right"
 msgstr "Oikealle"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Virheellinen värin ja kuvakoon yhdistelmä:</b><hr>Näytönohjaimen "
-"kuvapuskuri ei tue <nobr>valittua kuvakokoa ja/tai väriasetuksia</nobr>."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Virheellinen värin ja kuvakoon yhdistelmä:</b><hr>Näytönohjaimen kuvapuskuri ei tue <nobr>valittua kuvakokoa ja/tai väriasetuksia</nobr>."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Valinta tarvitsee arvon</b><hr><nobr>Aseta arvo valinnalle %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Valinta tarvitsee arvon</b><hr><nobr>Aseta arvo valinnalle %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -462,14 +432,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Näytön koko [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Huomaa:</b> Väärät taajuusalueet voivat vahingoittaa monitoriasi. "
-"Tarkista asetukset monitorisi käyttöoppaasta.<br><br>Jos et halua monitorisi "
-"käyttävän sen ylimpiä arvoja, pienennä taajuusaluetta."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Huomaa:</b> Väärät taajuusalueet voivat vahingoittaa monitoriasi. Tarkista asetukset monitorisi käyttöoppaasta.<br><br>Jos et halua monitorisi käyttävän sen ylimpiä arvoja, pienennä taajuusaluetta."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -528,21 +492,12 @@ msgid "inches"
 msgstr "tuumaa"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Syötä CD tai levyke</b><hr>Syötä monitorin valmistajan ajuri-/ohjelma-CD "
-"tai -levyke."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Syötä CD tai levyke</b><hr>Syötä monitorin valmistajan ajuri-/ohjelma-CD tai -levyke."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Lukuvirhe</b><hr>CD:n tai levykkeen lukeminen ei onnistu. Tämä voi johtua "
-"viallisesta tallennusvälineestä tai väärin muodostetuista "
-"informaatiotiedostoista."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Lukuvirhe</b><hr>CD:n tai levykkeen lukeminen ei onnistu. Tämä voi johtua viallisesta tallennusvälineestä tai väärin muodostetuista informaatiotiedostoista."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -632,7 +587,6 @@ msgid "Braille"
 msgstr "Sokeainnäyttö"
 
 # ET
-# fuzzy
 #. XKBFile extension text
 msgid "Ethiopia"
 msgstr "Etiopia"
@@ -779,9 +733,7 @@ msgstr "Oikea Alt vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr ""
-"Numeronäppäimistön painikkeet vaihtonäppäimen kanssa toimivat kuten MS "
-"Windowsissa."
+msgstr "Numeronäppäimistön painikkeet vaihtonäppäimen kanssa toimivat kuten MS Windowsissa."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys."
@@ -869,8 +821,7 @@ msgstr "Asetetaan välilyönti käyttämään sitovan välin näppäinsymbolia"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Käytä näppäimistöä unicode-lisäyksillä (nuolet ja matemaattiset operaattorit)"
+msgstr "Käytä näppäimistöä unicode-lisäyksillä (nuolet ja matemaattiset operaattorit)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -878,8 +829,7 @@ msgstr "Pakota oletusnäppäinasettelu"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock käyttää sisäistä kapitalisointia. Vaihto ei ota CapsLockia pois."
+msgstr "CapsLock käyttää sisäistä kapitalisointia. Vaihto ei ota CapsLockia pois."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -907,9 +857,7 @@ msgstr "Kolmannella tasolla välilyönti on sitova"
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Vaihda kahden näppäimen näppäinkoodeja, kun ydin tunnistaa Mac-näppäimistön "
-"väärin."
+msgstr "Vaihda kahden näppäimen näppäinkoodeja, kun ydin tunnistaa Mac-näppäimistön väärin."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -928,11 +876,8 @@ msgid "Left Win-key is Compose."
 msgstr "Oikea Win-näppäin on Kirjoita uusi."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Paina oikeaa Alt-näppäintä siirtyäksesi 3. tasolle, Shift ja oikea Alt-"
-"näppäin on Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Paina oikeaa Alt-näppäintä siirtyäksesi 3. tasolle, Shift ja oikea Alt-näppäin on Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -948,8 +893,7 @@ msgstr "CapsLock toimi kuten Vaihto lukituksella. Vaihto poistaa CapsLockin."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock käyttää sisäistä kapitalisointia. Vaihto  ei ota CapsLockia pois."
+msgstr "CapsLock käyttää sisäistä kapitalisointia. Vaihto  ei ota CapsLockia pois."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -961,8 +905,7 @@ msgstr "CapsLock vaihtaa kirjainten merkkikokoa."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
-"CapsLock vaihtaa vaihtonäppäimen, joten tämä vaikuttaa kaikkiin näppäimiin."
+msgstr "CapsLock vaihtaa vaihtonäppäimen, joten tämä vaikuttaa kaikkiin näppäimiin."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -1026,8 +969,7 @@ msgstr "CapsLock toimi kuten Vaihto lukituksella. Vaihto ei poista CapsLockia."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr ""
-"CapsLock käyttää sisäistä kapitalisointia. Vaihto ottaa CapsLockin pois."
+msgstr "CapsLock käyttää sisäistä kapitalisointia. Vaihto ottaa CapsLockin pois."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1087,8 +1029,7 @@ msgstr "Oikea Alt vaihtaa ryhmää."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
-"Numeronäppäimistön painikkeet ja vaihtonäppäin toimivat kuten MS Windowsissa."
+msgstr "Numeronäppäimistön painikkeet ja vaihtonäppäin toimivat kuten MS Windowsissa."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1210,8 +1151,7 @@ msgstr "4.tason näppäin metaerottimella"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Käytä näppäimistöä unicode-lisäyksillä (nuolet ja matemaattiset operaattorit)"
+msgstr "Käytä näppäimistöä unicode-lisäyksillä (nuolet ja matemaattiset operaattorit)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1226,12 +1166,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Vaihda Esc ja CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Wang 724 -sormio Unicode-lisäyksin (nuolet sekä matematiikkaoperaatiot). "
-"Matematiikkaoperaatiot oletustasolla."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Wang 724 -sormio Unicode-lisäyksin (nuolet sekä matematiikkaoperaatiot). Matematiikkaoperaatiot oletustasolla."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1242,12 +1178,8 @@ msgid "Legacy key with comma"
 msgstr "Vanha näppäin pilkulla"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Sormio unicode-lisäosilla (nuolet ja matematiikkatoiminnot). "
-"Matematiikkatoiminnot oletustasolla."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Sormio unicode-lisäosilla (nuolet ja matematiikkatoiminnot). Matematiikkatoiminnot oletustasolla."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1263,8 +1195,7 @@ msgstr "Numerosormion Del-näppäimen toiminta"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Wang 724 -sormio Unicode-lisäyksin (nuolet sekä matematiikkaoperaatiot)"
+msgstr "Wang 724 -sormio Unicode-lisäyksin (nuolet sekä matematiikkaoperaatiot)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1341,7 +1272,7 @@ msgstr "Lisää pyyhekumi"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr ""
+msgstr "Lisää kosketusnäyttö"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1364,14 +1295,12 @@ msgid "Eraser Properties"
 msgstr "Pyyhekumin ominaisuudet"
 
 #. Tab title: Touch properties
-#, fuzzy
 msgid "Touch Properties"
 msgstr "Kosketusnäytön ominaisuudet"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
-#, fuzzy
 msgid "Touchscreen %1"
-msgstr "Kosketusnäyttö"
+msgstr "Kosketusnäyttö %1"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
@@ -1382,17 +1311,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Kosketusnäyttö: Valmistajan ja nimen valinta"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Viimeiset vaiheet</b><hr>Viimeinen vaihe on uuden määrityksen "
-"tallentaminen. Uutta määritystä kannattaa kokeilla ennen sen tallennusta. "
-"Jos koepalvelin näyttää työpöydän väärin, paina <b>[ Ctrl+Alt+Backspace ]</"
-"b> lopettaaksesi palvelinohjelman suorituksen äänimerkin jälkeen."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Viimeiset vaiheet</b><hr>Viimeinen vaihe on uuden määrityksen tallentaminen. Uutta määritystä kannattaa kokeilla ennen sen tallennusta. Jos koepalvelin näyttää työpöydän väärin, paina <b>[ Ctrl+Alt+Backspace ]</b> lopettaaksesi palvelinohjelman suorituksen äänimerkin jälkeen."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1435,37 +1355,20 @@ msgid "HTTP Port"
 msgstr "HTTP-portti"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Etäyhteyden salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan "
-"versio eivät täsmää."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Etäyhteyden salasanat eivät täsmää</b><hr>Ensimmäinen ja toinen salasanan versio eivät täsmää."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Etäyhteyden salasanavirhe</b><hr>Salasanakenttä on jätetty tyhjäksi tai "
-"salasana on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Etäyhteyden salasanavirhe</b><hr>Salasanakenttä on jätetty tyhjäksi tai salasana on liian lyhyt. Anna salasana, joka on vähintään kuusi merkkiä."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Etäyhteyden salasanavirhe</b><hr>Salasana on liian pitkä. Anna salasana, "
-"joka on enintään kahdeksan merkkiä pitkä."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Etäyhteyden salasanavirhe</b><hr>Salasana on liian pitkä. Anna salasana, joka on enintään kahdeksan merkkiä pitkä."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Ohjelmien asennus:</b><hr>Osa tarvittavista paketeista puuttuu. "
-"Asennetaanko puuttuvat paketit nyt?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Ohjelmien asennus:</b><hr>Osa tarvittavista paketeista puuttuu. Asennetaanko puuttuvat paketit nyt?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1484,36 +1387,20 @@ msgid "Initialize cache..."
 msgstr "Alustetaan välimuistia..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>Määrityksen tallennus epäonnistui</b><hr>Seuraava raportti luotiin:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Määritys tallennettiin</b><hr>Muutokset tulevat voimaan seuraavan kerran, "
-"kun grafiikkajärjestelmä uudelleen käynnistetään. Lopetetaanko SaX2 nyt?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Määritys tallennettiin</b><hr>Muutokset tulevat voimaan seuraavan kerran, kun grafiikkajärjestelmä uudelleen käynnistetään. Lopetetaanko SaX2 nyt?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja tiedostosta <tt>/"
-"var/log/Xorg.99.log</tt>. Seuraava raportti luotiin kutsuvasta ilmentymästä:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Määrityksen kokeileminen epäonnistui</b><hr>Lisätietoja tiedostosta <tt>/var/log/Xorg.99.log</tt>. Seuraava raportti luotiin kutsuvasta ilmentymästä:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Etäyhteyden määritystietoja</b><hr>Etäyhteyspalvelu vaatii, että TCP "
-"portti 5900 ja HTTP-portti (oletuksena 5800) ovat auki palomuurissa. Voit "
-"määrittää tämän YaST:lla."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Etäyhteyden määritystietoja</b><hr>Etäyhteyspalvelu vaatii, että TCP portti 5900 ja HTTP-portti (oletuksena 5800) ovat auki palomuurissa. Voit määrittää tämän YaST:lla."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1608,19 +1495,16 @@ msgid "Congo, Democratic Republic of the"
 msgstr "Kongon demokraattinen tasavalta"
 
 # CZ
-# fuzzy
 #. XKBFile extension text
 msgid "Korea, Republic of"
 msgstr "Korean kansantasavalta"
 
 # IQ
-# fuzzy
 #. XKBFile extension text
 msgid "Iraq"
 msgstr "Irak"
 
 # NG
-# fuzzy
 #. XKBFile extension text
 msgid "Nigeria"
 msgstr "Nigeria"
@@ -1635,7 +1519,6 @@ msgid "Estonia"
 msgstr "Viro"
 
 # MM
-# fuzzy
 #. XKBFile extension text
 msgid "Myanmar"
 msgstr "Myanmar"
@@ -1653,13 +1536,11 @@ msgid "Mongolia"
 msgstr "Mongolia"
 
 # BH
-# fuzzy
 #. XKBFile extension text
 msgid "Bhutan"
 msgstr "Bhutan"
 
 # BD
-# fuzzy
 #. XKBFile extension text
 msgid "Bangladesh"
 msgstr "Bangladesh"
@@ -1699,7 +1580,6 @@ msgid "Korean"
 msgstr "Korea"
 
 # ML
-# fuzzy
 #. XKBFile extension text
 msgid "Maori"
 msgstr "Maori"
@@ -1718,13 +1598,11 @@ msgid "Thailand"
 msgstr "Thaimaa"
 
 # IN
-# fuzzy
 #. XKBFile extension text
 msgid "India"
 msgstr "Intia"
 
 # BZ
-# fuzzy
 #. XKBFile extension text
 msgid "Bengali"
 msgstr "Bengali"
@@ -1744,7 +1622,6 @@ msgid "Japan"
 msgstr "Japani"
 
 # SY
-# fuzzy
 #. XKBFile extension text
 msgid "Syria"
 msgstr "Syyria"
@@ -1754,13 +1631,11 @@ msgid "Czechia"
 msgstr "Tšekki"
 
 # BY
-# fuzzy
 #. XKBFile extension text
 msgid "Belarus"
 msgstr "Valko-Venäjä"
 
 # TJ
-# fuzzy
 #. XKBFile extension text
 msgid "Tajikistan"
 msgstr "Tadžikistan"
@@ -1790,13 +1665,11 @@ msgid "Lithuania"
 msgstr "Liettua"
 
 # VN
-# fuzzy
 #. XKBFile extension text
 msgid "Vietnam"
 msgstr "Vietnam"
 
 # FO
-# fuzzy
 #. XKBFile extension text
 msgid "Faroe Islands"
 msgstr "Färsaaret"
@@ -1811,13 +1684,11 @@ msgid "Farsi"
 msgstr "Farsi"
 
 # SK
-# fuzzy
 #. XKBFile extension text
 msgid "Slovakia"
 msgstr "Slovakia"
 
 # MV
-# fuzzy
 #. XKBFile extension text
 msgid "Maldives"
 msgstr "Malediivit"
@@ -1858,7 +1729,6 @@ msgid "France"
 msgstr "Ranska"
 
 # AM
-# fuzzy
 #. XKBFile extension text
 msgid "Armenia"
 msgstr "Armenia"
@@ -1873,7 +1743,6 @@ msgid "Poland"
 msgstr "Puola"
 
 # KZ
-# fuzzy
 #. XKBFile extension text
 msgid "Kyrgyzstan"
 msgstr "Kirgisia"
@@ -1889,7 +1758,6 @@ msgid "Hungary"
 msgstr "Unkari"
 
 # KH
-# fuzzy
 #. XKBFile extension text
 msgid "Cambodia"
 msgstr "Kambodža"
@@ -1909,13 +1777,11 @@ msgid "Romania"
 msgstr "Romania"
 
 # KZ
-# fuzzy
 #. XKBFile extension text
 msgid "Kazakhstan"
 msgstr "Kazakstan"
 
 # GE
-# fuzzy
 #. XKBFile extension text
 msgid "Georgia"
 msgstr "Georgia"
@@ -1960,7 +1826,6 @@ msgid "Brazil"
 msgstr "Brasilia"
 
 # GH
-# fuzzy
 #. XKBFile extension text
 msgid "Ghana"
 msgstr "Ghana"
