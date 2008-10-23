@@ -130,12 +130,12 @@ void SaXInit::setPrimaryChip (void) {
 		qError (errorString(),EXC_PROCESSFAILED);
 		return;
 	}
-	QString optc;
+	QString* optc = new QString;
 	QString data = proc->readStdout().at(0);
 	int id = data.toInt();
-	QTextOStream (&optc) << id;
+	QTextOStream (optc) << id;
 	mOptions.append ((const char*)"-c");
-	mOptions.append ((const char*)optc.ascii());
+	mOptions.append ((const char*)optc->ascii());
 	setValidBusID();
 }
 

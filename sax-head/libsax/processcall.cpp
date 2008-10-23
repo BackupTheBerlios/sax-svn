@@ -78,13 +78,15 @@ bool SaXProcessCall::start ( void ) {
 	// start program and connect stream
 	//------------------------------------
 	char buf[LINESIZE];
+	//fprintf (stderr,"++++ DEBUG: %s\n",program.ascii());
 	FILE* fp = popen (program.ascii(),"r");
 	if ( ! fp ) {
 		return false;
 	}
-	while (NULL != (fgets(buf,sizeof(buf)-1,fp))) {
-		int line = strlen(buf)-1;
-		buf[line] = 0;
+	while (NULL != (fgets(buf,sizeof(buf),fp))) {
+		int line = strlen(buf);
+		buf[line-1] = '\0';
+		//fprintf (stderr,"__%s__\n",buf);
 		mData.append (QString(buf));
 	}
 	mExitCode = pclose(fp);
