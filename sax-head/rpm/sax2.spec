@@ -49,7 +49,6 @@ Source:         sax2.tar.bz2
 Source1:        sax2.desktop
 Source2:        66-elo.rules
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-ExcludeArch:    s390
 Patch:          xorg-server-1_5.diff
 
 %description
