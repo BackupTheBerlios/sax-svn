@@ -304,3 +304,6 @@ install-docs:
 	for i in `ls -1 ./doc/sax-man`;do \
 		install -m 644 ./doc/sax-man/$$i ${MANVZ}/$$i.1 ;\
 	done
+
+build:
+	./.doit -p --local

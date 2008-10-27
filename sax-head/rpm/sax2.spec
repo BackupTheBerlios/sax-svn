@@ -17,8 +17,11 @@ URL:            http://sax.berlios.de
 BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std
 BuildRequires:  graphviz hal-devel python-devel
 BuildRequires:  libqt4 libqt4-qt3support libqt4-devel libqt4-x11
-BuildRequires:  readline-devel swig sysfsutils update-desktop-files
-BuildRequires:  xorg-x11-server-sdk hwinfo-devel
+BuildRequires:  readline-devel swig sysfsutils update-desktop-files hwinfo-devel
+BuildRequires:  xorg-x11-server-sdk
+%if %{suse_version} > 1020
+BuildRequires:  fdupes
+%endif
 %if %{build_java}
 BuildRequires: java-1_4_2-gcj-compat-devel
 %endif
@@ -46,11 +49,8 @@ Source:         sax2.tar.bz2
 Source1:        sax2.desktop
 Source2:        66-elo.rules
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-ExcludeArch:  s390
-%if %{suse_version} > 1020
-Patch:          sax2.dif
-%endif
-Patch1:         xorg-server-1_5.diff
+ExcludeArch:    s390
+Patch:          xorg-server-1_5.diff
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -162,11 +162,8 @@ written programs
 
 %prep
 %setup -n sax
-%if %{suse_version} > 1020
-%patch
-%endif
 %if %{suse_version} > 1100
-%patch1
+%patch
 %endif
 
 %build
@@ -228,9 +225,15 @@ EOF
 mkdir -p $RPM_BUILD_ROOT/etc/udev/rules.d
 install -m 644 $RPM_SOURCE_DIR/66-elo.rules \
                $RPM_BUILD_ROOT/etc/udev/rules.d
+%if %{suse_version} > 1020
+%fdupes $RPM_BUILD_ROOT/usr/share/sax/api/figures
+%endif
 #=================================================
 # uninstall script stage:[previous]
 #-------------------------------------------------
+
+%postin
+touch /var/log/SaX.log
 
 %preun
 chroot . rm -f /var/cache/xfine/*
@@ -378,7 +381,7 @@ fi
 %dir %{_datadir}/sax/sysp/maps
 %dir %{_datadir}/sax/sysp
 %dir /var/lib/hardware
-/etc/udev/rules.d/66-elo.rules
+%config /etc/udev/rules.d/66-elo.rules
 %{_datadir}/sax/sysp/maps/Identity.map
 %{_datadir}/sax/sysp/maps/Keyboard.map
 %{_datadir}/sax/sysp/maps/Vendor.map

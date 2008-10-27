@@ -22,7 +22,7 @@ STATUS        : development
 #include <string.h>
 #include <unistd.h>
 
-#include "../libhd/hd/hd.h"
+#include "hd.h"
 #include "../syslib.h"
 #include "../../config.h"
 

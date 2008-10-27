@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Mon Oct 27 17:25:25 CET 2008 - ms@suse.de
+
+- prepared for building on s390x, not completed (bnc #432738)
+- removed local copy of libhd, other distros will now complain
+  because libhd is not a public open source project AI snwint
+- added rpmlintrc
+
+-------------------------------------------------------------------
 Sun Oct 26 16:33:08 CET 2008 - sndirsch@suse.de
 
 - Identity.map: renamed "AST1000/2000" to "ASPEED Graphics Family"
