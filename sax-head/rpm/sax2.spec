@@ -232,9 +232,6 @@ install -m 644 $RPM_SOURCE_DIR/66-elo.rules \
 # uninstall script stage:[previous]
 #-------------------------------------------------
 
-%postin
-touch /var/log/SaX.log
-
 %preun
 chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
