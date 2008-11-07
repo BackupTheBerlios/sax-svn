@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Nov  7 12:22:40 CET 2008 - sndirsch@suse.de
+
+- no longer use intel driver for i845, since the support for this
+  GPU is currently completely broken (bfo #18270)
+
+-------------------------------------------------------------------
 Wed Nov  5 08:33:27 CET 2008 - sndirsch@suse.de
 
 - accept vboxmouse as standard mouse, i.e. no longer add default
