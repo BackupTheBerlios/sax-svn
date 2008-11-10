@@ -26,6 +26,9 @@ $ptr = XFree::ReadConfigFile("/etc/X11/xorg.conf");
 
 # print "+++ $ptr\n";
 
+$ver = XFree::GetParserVersion();
+print "Parser Version: $ver\n";
+
 #$erg = XFree::GetModulePath($ptr);
 #print "$erg\n";
 

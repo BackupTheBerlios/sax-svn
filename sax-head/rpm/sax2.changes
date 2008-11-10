@@ -2,6 +2,9 @@
 Mon Nov 10 15:06:44 CET 2008 - ms@suse.de
 
 - fixed standard mouse detection (bnc #433339)
+- removed xorg-server-1_5.diff, added check for XORG_VERSION_MINOR
+- created udev directory in svn, moved udev rule to that
+  directory instead of maintaining it as source
 
 -------------------------------------------------------------------
 Mon Nov 10 14:28:38 CET 2008 - sndirsch@suse.de

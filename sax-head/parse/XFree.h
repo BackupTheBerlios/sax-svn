@@ -2,14 +2,31 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <ctype.h>
+
+#ifdef HAVE_XORG_SERVER_HEADER
+#undef HAS_SHM
+#include "xorg-server.h"
+#include "xorgVersion.h"
+#define PARSER_VERSION XORG_VERSION_MINOR
+#else
+#define PARSER_VERSION 3
+#endif
+
 #include "xf86Parser.h"
 
 extern XF86ConfigPtr ReadConfigFile (char *filename);
 
+/* Parser Version... */
+extern int GetParserVersion (void) {
+	return PARSER_VERSION;
+}
+
 /* Files Section... */
 extern char* GetModulePath (XF86ConfigPtr conf);
 extern char* GetFontPath (XF86ConfigPtr conf);
+#if XORG_VERSION_MINOR <= 4
 extern char* GetRgbPath (XF86ConfigPtr conf);
+#endif
 extern char* GetLogFile (XF86ConfigPtr conf);
 
 /* Module Section... */

@@ -55,10 +55,8 @@ Group:          System/X11/Utilities
 License:        GPL v2 or later
 Source:         sax2.tar.bz2
 Source1:        sax2.desktop
-Source2:        66-elo.rules
-Source3:        sax2-rpmlintrc
+Source2:        sax2-rpmlintrc
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Patch:          xorg-server-1_5.diff
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -230,9 +228,6 @@ Authors:
 
 %prep
 %setup -n sax
-%if %{suse_version} > 1100
-%patch
-%endif
 
 %build
 test -e /.buildenv && . /.buildenv
@@ -280,20 +275,8 @@ rm -f $RPM_BUILD_ROOT/%{perl_vendorarch}/*.pl
 #-------------------------------------------------
 %suse_update_desktop_file -i %name System SystemSetup
 #=================================================
-# hwinfo data (bnc #408436)
+# file duplicates
 #-------------------------------------------------
-mkdir -p $RPM_BUILD_ROOT/var/lib/hardware/ids
-cat > $RPM_BUILD_ROOT/var/lib/hardware/ids/sax2-ident << EOF
- vendor.id              usb 0x04e7
-&device.id              usb 0x0030
- +hwclass                mouse
-EOF
-#=================================================
-# udev rule for creating /dev/input/elo symlink (Bug #410315)
-#-------------------------------------------------
-mkdir -p $RPM_BUILD_ROOT/etc/udev/rules.d
-install -m 644 $RPM_SOURCE_DIR/66-elo.rules \
-               $RPM_BUILD_ROOT/etc/udev/rules.d
 %if %{suse_version} > 1020
 %fdupes $RPM_BUILD_ROOT/usr/share/sax/api/figures
 %endif

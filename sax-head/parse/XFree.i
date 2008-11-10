@@ -3,4 +3,3 @@
 #include "XFree.h"
 %}
 %include XFree.h
-

@@ -95,13 +95,15 @@ sub ParseFileSection {
 	#========================================
 	# RgbPath...
 	#---------------------------------------
-	$result = XFree::GetRgbPath($ptr);
-	if (defined $result) {
-		$count  = 0;
-		@list   = split(/,/,$result);
-		foreach $i (@list) {
-			$parse{RgbPath}{$count} = $i;
-			$count++;
+	if (XFree::GetParserVersion() <= 4) {
+		$result = XFree::GetRgbPath($ptr);
+		if (defined $result) {
+			$count  = 0;
+			@list   = split(/,/,$result);
+			foreach $i (@list) {
+				$parse{RgbPath}{$count} = $i;
+				$count++;
+			}
 		}
 	}
 	#========================================

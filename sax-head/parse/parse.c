@@ -18,8 +18,14 @@ STATUS        : Status: Up-to-date
 #include <stdlib.h>
 #include <stdarg.h>
 #include <ctype.h>
-#include "xf86Parser.h"
 #include <string.h>
+
+#ifdef HAVE_XORG_SERVER_HEADER
+#include "xorg-server.h"
+#include "xorgVersion.h"
+#endif
+
+#include "xf86Parser.h"
 
 #define XF86CONF_PHSYNC    0x0001
 #define XF86CONF_NHSYNC    0x0002
@@ -43,7 +49,9 @@ XF86ConfigPtr ReadConfigFile (char *filename);
 /* Files Section... */
 char* GetModulePath (XF86ConfigPtr conf);
 char* GetFontPath (XF86ConfigPtr conf);
+#if XORG_VERSION_MINOR <= 4
 char* GetRgbPath (XF86ConfigPtr conf);
+#endif
 char* GetLogFile (XF86ConfigPtr conf);
 
 /* Module Section... */
@@ -139,10 +147,12 @@ char* GetFontPath (XF86ConfigPtr conf) {
 	return(conf->conf_files->file_fontpath);
 }
 
+#if XORG_VERSION_MINOR <= 4
 char* GetRgbPath (XF86ConfigPtr conf) {
 	if (conf == NULL) return("null");
 	return(conf->conf_files->file_rgbpath);
 }
+#endif
 
 char* GetLogFile (XF86ConfigPtr conf) {
 	if (conf == NULL) return("null");

@@ -22,6 +22,7 @@ export
 #============================================
 # Prefixs...
 #--------------------------------------------
+etc_prefix     = ${buildroot}/etc
 usr_prefix     = ${buildroot}/usr
 sax_prefix     = ${buildroot}/usr/share/sax
 xfi_prefix     = ${buildroot}/usr/share/xfine
@@ -63,6 +64,8 @@ XFINEBINVZ     = ${xfi_prefix}
 XFINEPIXMAPS   = ${xfi_prefix}/figures
 LIBDOCDIR      = ${doc_prefix}/libsax
 LIBTOOLDIR     = ${sax_prefix}/libsax
+UDEVDIR        = ${etc_prefix}/etc/udev/rules.d
+HWIDSDIR       = ${buildroot}/var/lib/hardware/ids 
 
 #============================================
 # Helpers
@@ -142,6 +145,21 @@ install:install-docs
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
 	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
 	install -d -m 755 ${LIBDOCDIR} ${LIBTOOLDIR} ${LIBSAXVZ}
+	install -d -m 755 ${UDEVDIR} ${HWIDSDIR}
+
+	#============================================
+	# hwinfo data
+	#--------------------------------------------
+	cat > ${HWIDSDIR}/sax2-ident <<- EOF
+		vendor.id         usb 0x04e7
+		&device.id        usb 0x0030
+		+hwclass          mouse
+	EOF
+
+	#============================================
+	# udev rules
+	#--------------------------------------------
+	install -m 644 udev/* ${UDEVDIR}
 
 	#============================================
 	# install X11 parser...
