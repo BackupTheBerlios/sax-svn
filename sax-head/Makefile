@@ -150,11 +150,9 @@ install:install-docs
 	#============================================
 	# hwinfo data
 	#--------------------------------------------
-	cat > ${HWIDSDIR}/sax2-ident <<- EOF
-		vendor.id         usb 0x04e7
-		&device.id        usb 0x0030
-		+hwclass          mouse
-	EOF
+	echo  "vendor.id         usb 0x04e7" >  ${HWIDSDIR}/sax2-ident
+	echo  "&device.id        usb 0x0030" >> ${HWIDSDIR}/sax2-ident
+	echo  "+hwclass          mouse"      >> ${HWIDSDIR}/sax2-ident
 
 	#============================================
 	# udev rules
