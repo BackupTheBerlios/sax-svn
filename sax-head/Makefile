@@ -65,7 +65,7 @@ XFINEPIXMAPS   = ${xfi_prefix}/figures
 LIBDOCDIR      = ${doc_prefix}/libsax
 LIBTOOLDIR     = ${sax_prefix}/libsax
 UDEVDIR        = ${etc_prefix}/etc/udev/rules.d
-HWIDSDIR       = ${buildroot}/var/lib/hardware/ids 
+HWIDSDIR       = ${buildroot}/var/lib/hardware/ids
 
 #============================================
 # Helpers
