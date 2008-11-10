@@ -578,10 +578,10 @@ void PrintMouseData(ScanMouse m) {
 		if (strcmp(data.driver,"mouse") == 0) {
 			haveStandardMouse = true;
 		}
-		if (strcmp(data.profile,"vmware-mouse") == 0) {
+		if (strcmp(data.driver,"vmmouse") == 0) {
 			haveStandardMouse = true;
 		}
-		if (strcmp(data.profile,"vbox-mouse") == 0) {
+		if (strcmp(data.driver,"vboxmouse") == 0) {
 			haveStandardMouse = true;
 		}
 		bool deviceIsANutShell = false;
