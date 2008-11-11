@@ -16627,6 +16627,39 @@ HP:ULTRA VGA 1024/D 2825 A  {
 }
 
 #==============================================
+# LP2275w (Analog)
+#----------------------------------------------
+HP:LP2275w (ANALOG) {
+ DDC=HWP2806
+ Option=DPMS
+ Hsync=30-93
+ Resolution=1680x1050
+ Vsync=48-85
+}
+
+#==============================================
+# LP2275w (Digital)
+#----------------------------------------------
+HP:LP2275w (DIGITAL) {
+ DDC=HWP2807
+ Option=DPMS
+ Hsync=30-93
+ Resolution=1680x1050
+ Vsync=48-85
+}
+
+#==============================================
+# LP2275w (DisplayPort)
+#----------------------------------------------
+HP:LP2275w (DISPLAYPORT) {
+ DDC=HWP2808
+ Option=DPMS
+ Hsync=30-93
+ Resolution=1680x1050
+ Vsync=48-85
+}
+
+#==============================================
 # 1024ESMS
 #----------------------------------------------
 HIGHSCREEN:1024ESMS  {
@@ -33144,6 +33177,28 @@ SAMSUNG:V550  {
  Hsync=30-48
  Resolution=1024x768
  Vsync=50-120
+}
+
+#==============================================
+# SyncMaster 245B/245BW/245BPlus (Analog)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 245B/245BW/245BPlus (ANALOG) {
+ DDC=SAM02B5
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1920x1200
+ Vsync=56-75
+}
+
+#==============================================
+# SyncMaster 245B/245BW/245BPlus (Digital)
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 245B/245BW/245BPlus (DIGITAL) {
+ DDC=SAM02B6
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1920x1200
+ Vsync=56-75
 }
 
 #==============================================
