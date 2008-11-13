@@ -145,7 +145,8 @@ install:install-docs
 	install -d -m 755 ${PROFILE} ${SBINVZ} ${SAXCACHEVZ} ${XFICACHEVZ}
 	install -d -m 755 ${CREATEVZ} ${APITOOLS} ${XFINEBINVZ} ${XFINEPIXMAPS}
 	install -d -m 755 ${LIBDOCDIR} ${LIBTOOLDIR} ${LIBSAXVZ}
-	install -d -m 755 ${UDEVDIR} ${HWIDSDIR}
+	install -d -m 755 ${HWIDSDIR}
+	#install -d -m 755 ${UDEVDIR}
 
 	#============================================
 	# hwinfo data
@@ -157,7 +158,7 @@ install:install-docs
 	#============================================
 	# udev rules
 	#--------------------------------------------
-	install -m 644 udev/* ${UDEVDIR}
+	#install -m 644 udev/* ${UDEVDIR}
 
 	#============================================
 	# install X11 parser...

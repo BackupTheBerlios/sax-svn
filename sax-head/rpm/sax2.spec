@@ -446,7 +446,7 @@ fi
 
 %files -n sax2-ident
 %defattr(-,root,root)
-%dir /etc/udev/rules.d
+#%dir /etc/udev/rules.d
 %dir %{_datadir}/sax
 %dir %{_datadir}/sax/api
 %dir %{_datadir}/sax/api/data/cdb
@@ -454,7 +454,7 @@ fi
 %dir %{_datadir}/sax/sysp/maps
 %dir %{_datadir}/sax/sysp
 %dir /var/lib/hardware
-%config /etc/udev/rules.d/66-elo.rules
+#%config /etc/udev/rules.d/*.rules
 %{_datadir}/sax/sysp/maps/Identity.map
 %{_datadir}/sax/sysp/maps/Keyboard.map
 %{_datadir}/sax/sysp/maps/Vendor.map
