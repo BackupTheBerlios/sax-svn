@@ -28,7 +28,8 @@
 0x0030 : 0x0000 : touchscreen : evdev
 0x04e7 : 0x0030 : touchscreen : evdev
 0x0596 : 0x0001 : touchscreen : evdev
-0x80ee : 0x0100 : vbox-mouse : vboxmouse
+# Bug #444747
+#0x80ee : 0x0100 : vbox-mouse : vboxmouse
 0x15ad : 0x0100 : vmware-mouse : vmmouse
 # Keyboards
 # Microsoft Natural Ergonomic Keyboard 4000
