@@ -316,6 +316,9 @@ void SaXProcess::storeDataSysp (void) {
 	foreach (line,data) {
 		int id = 0;
 //		QString line (in);
+		if (line.isEmpty()) {
+			continue;
+		}
 		QStringList tokens = QStringList::split ( "=>", line );
 		QString idstr = tokens.first();
 		QString data  = tokens.last();
@@ -330,6 +333,7 @@ void SaXProcess::storeDataSysp (void) {
 		addID (id);
 		val = val.stripWhiteSpace();
 		key = key.stripWhiteSpace();
+		//printf ("+++ %s %s\n",key.toLatin1().data(),val.toLatin1().data());
 		if (key == "Vesa") {
 			vesa.append (val);
 			vesa.append (",");
