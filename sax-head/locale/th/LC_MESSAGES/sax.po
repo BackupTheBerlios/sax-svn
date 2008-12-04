@@ -6,7 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-03 17:06+0100\n"
 "PO-Revision-Date: 2008-11-03 13:40+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -26,15 +25,24 @@ msgid "I18N"
 msgstr ""
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
 msgstr ""
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
 msgstr ""
 
 #. Caption text for the startup information window
@@ -55,8 +63,11 @@ msgstr "ศูนย์ควบคุม SaX"
 
 #. Info message about display size changes
 #, fuzzy
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
-msgstr "<b>ขนาดของการแสดงผลมีการเปลี่ยนแปลง</b><hr>ขนาดของการแสดงผลถูกปรับเป็นขนาดใหม่แล้ว"
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+"<b>ขนาดของการแสดงผลมีการเปลี่ยนแปลง</b><hr>ขนาดของการแสดงผลถูกปรับเป็นขนาดใหม่แล้ว"
 
 #. Help Button text
 msgid "&Help"
@@ -110,6 +121,7 @@ msgid "Mouse Properties"
 msgstr "คุณสมบัติของเมาส์"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "แป้นพิมพ์"
 
@@ -161,6 +173,29 @@ msgstr "เปิดใช้ตัวชี้นี้"
 #. Graphics Card name label
 msgid "Card"
 msgstr "แผงวงจร"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr ""
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr ""
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "ผังแป้นพิมพ์"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr ""
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr ""
 
 #. Change data
 msgid "&Change..."
@@ -226,12 +261,6 @@ msgstr "&ทดสอบ"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&จัดเก็บ"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "ผังแป้นพิมพ์"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -318,8 +347,12 @@ msgid "Unconfigured"
 msgstr "ยังไม่ได้ตั้งค่า"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>ไม่สามารถปิดการทำงานจอแสดงผลทั้งหมดได้</b><hr><nobr>จะต้องมีจอแสดงผลอย่างน้อยหนึ่งจอที่ทำงานอยู่</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>ไม่สามารถปิดการทำงานจอแสดงผลทั้งหมดได้</"
+"b><hr><nobr>จะต้องมีจอแสดงผลอย่างน้อยหนึ่งจอที่ทำงานอยู่</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -329,19 +362,25 @@ msgstr "ไม่มีการปรับแต่งค่าอยู่"
 msgid ""
 "Traditional Multihead:\n"
 "Each screen is an independent display"
-msgstr "แสดงหลายจอภาพโหมดดั้งเดิม:\n แต่ละจอภาพจะแสดงผลเป็นอิสระต่อกัน"
+msgstr ""
+"แสดงหลายจอภาพโหมดดั้งเดิม:\n"
+" แต่ละจอภาพจะแสดงผลเป็นอิสระต่อกัน"
 
 #. Radiobutton for cloned multihead mode
 msgid ""
 "Cloned Multihead:\n"
 "Each display is a clone of the primary display"
-msgstr "แสดงหลายจอภาพโหมดโคลน:\n แต่ละจอภาพจะแสดงผลโดยโคลนจากจอแสดงผลหลัก"
+msgstr ""
+"แสดงหลายจอภาพโหมดโคลน:\n"
+" แต่ละจอภาพจะแสดงผลโดยโคลนจากจอแสดงผลหลัก"
 
 #. Radiobutton for xinerama multihead mode
 msgid ""
 "Xinerama Multihead:\n"
 "Build one big display out of all screens"
-msgstr "แสดงหลายจอภาพโหมดรวมเป็นจอเดียว (Xinerama):\n ผนวกจอทั้งหมดรวมเป็นจอภาพใหญ่ ๆ จอเดียว"
+msgstr ""
+"แสดงหลายจอภาพโหมดรวมเป็นจอเดียว (Xinerama):\n"
+" ผนวกจอทั้งหมดรวมเป็นจอภาพใหญ่ ๆ จอเดียว"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -390,13 +429,17 @@ msgstr "หมุนไปทางขวา"
 
 #. Popup message to inform the user about fbdev restrictions
 #, fuzzy
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
 "\n"
 "เฟรมบัฟเฟอร์ของการ์ดแสดงผลนี้ไม่สามารถรองรับความละเอียด และ/หรือ การตั้งค่าสีที่เลือกไว้\n"
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>ตัวเลือกต้องการค่า</b><hr><nobr>ตั้งค่าค่าสำหรับตัวเลือก %1</nobr>"
 
 #. Group box title for the monitor vendor and name selection
@@ -420,8 +463,15 @@ msgid "Display Size in [ mm ]"
 msgstr "ขนาดการแสดงผล [ ม.ม. ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>โปรดทราบ:</b> การตั้งค่าช่วงค่าความถี่การแสดงผลที่ไม่ถูกต้อง อาจจะทำให้จอภาพของคุณได้รับความเสียหายได้ โปรดศึกษาหรือติดต่อผู้ผลิตจอภาพ เพื่อดูข้อมูลในการตั้งค่าด้วยตนเอง<br><br>หากคุณไม่อยากให้จอภาพของคุณต้องใช้ค่าช่วงความถี่สูงสุด ให้ทำการลดค่าช่วงความถี่ลงมา"
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>โปรดทราบ:</b> การตั้งค่าช่วงค่าความถี่การแสดงผลที่ไม่ถูกต้อง "
+"อาจจะทำให้จอภาพของคุณได้รับความเสียหายได้ โปรดศึกษาหรือติดต่อผู้ผลิตจอภาพ "
+"เพื่อดูข้อมูลในการตั้งค่าด้วยตนเอง<br><br>หากคุณไม่อยากให้จอภาพของคุณต้องใช้ค่าช่วงความถี่สูงสุด "
+"ให้ทำการลดค่าช่วงความถี่ลงมา"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -480,12 +530,20 @@ msgid "inches"
 msgstr "นิ้ว"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>ใส่แผ่นดิสก์หรือซีดี</b><hr>ใส่แผ่นดิสก์หรือซีดีโปรแกรมอรรถประโยชน์ของจอแสดงผลที่ได้มาจากผู้ผลิต"
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>ใส่แผ่นดิสก์หรือซีดี</"
+"b><hr>ใส่แผ่นดิสก์หรือซีดีโปรแกรมอรรถประโยชน์ของจอแสดงผลที่ได้มาจากผู้ผลิต"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>การอ่านผิดพลาด</b><hr>ไม่สามารถอ่านข้อมูลจากแผ่นดิสก์หรือซีดีได้ อาจจะเนื่องจากแผ่นเสียหรือมีรูปแบบแฟ้มที่ไม่ถูกต้อง"
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>การอ่านผิดพลาด</b><hr>ไม่สามารถอ่านข้อมูลจากแผ่นดิสก์หรือซีดีได้ "
+"อาจจะเนื่องจากแผ่นเสียหรือมีรูปแบบแฟ้มที่ไม่ถูกต้อง"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -864,7 +922,8 @@ msgid "Left Win-key is Compose."
 msgstr ""
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr ""
 
 #. XKBFile extension text
@@ -1152,7 +1211,9 @@ msgid "Swap ESC and CapsLock."
 msgstr ""
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1164,7 +1225,9 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1298,9 +1361,17 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "จอสัมผัส: เลือกผู้ผลิตและชื่อของจอสัมผัส"
 
 #. Finish configuration message box
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
 msgstr ""
-"<b>ขั้นตอนสุดท้าย</b><hr>ขั้นตอนสุดท้ายนี้ จะทำการจัดเก็บค่าปรับแต่งใหม่ของคุณไว้ เราขอแนะนำให้คุณทำการทดสอบการปรับแต่งค่าของคุณก่อนจะทำการจัดเก็บค่า หากการทดสอบแสดงถึงหน้าจอที่ผิดพลาด ให้กดปุ่มพิมพ์ <b>[ Ctrl+Alt+Backspace ]</b> และ <b>[ Ctrl+Alt+Backspace ]</b> สั้น ๆ หลังจากนั้นจะได้ยินออดเตือน (เสียงบี๊บ) "
+"<b>ขั้นตอนสุดท้าย</b><hr>ขั้นตอนสุดท้ายนี้ จะทำการจัดเก็บค่าปรับแต่งใหม่ของคุณไว้ "
+"เราขอแนะนำให้คุณทำการทดสอบการปรับแต่งค่าของคุณก่อนจะทำการจัดเก็บค่า "
+"หากการทดสอบแสดงถึงหน้าจอที่ผิดพลาด ให้กดปุ่มพิมพ์ <b>[ Ctrl+Alt+Backspace ]</b> และ <b>"
+"[ Ctrl+Alt+Backspace ]</b> สั้น ๆ หลังจากนั้นจะได้ยินออดเตือน (เสียงบี๊บ) "
 "เพื่อบังคับให้ยุติการทำงานของเซิร์ฟเวอร์"
 
 #. Tab title: VNC Server configuration
@@ -1344,20 +1415,35 @@ msgid "HTTP Port"
 msgstr "พอร์ตของ HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
 msgstr "<b>รหัสผ่านการเข้าใช้งานทางไกลไม่ตรงกัน</b><hr>ค่ารหัสผ่านและรหัสผ่านยืนยันไม่ตรงกัน"
 
 #. VNC message box appearing if password is too short
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>รหัสผ่านการเข้าใช้งานทางไกลผิดพลาด</b><hr>ช่องรหัสผ่านถูกปล่อยว่างเอาไว้ หรือป้อนรหัสผ่านสั้นเกินไป โปรดป้อนรหัสผ่านใหม่โดยมีความยาวอย่างน้อยหกตัวอักษร"
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>รหัสผ่านการเข้าใช้งานทางไกลผิดพลาด</b><hr>ช่องรหัสผ่านถูกปล่อยว่างเอาไว้ "
+"หรือป้อนรหัสผ่านสั้นเกินไป โปรดป้อนรหัสผ่านใหม่โดยมีความยาวอย่างน้อยหกตัวอักษร"
 
 #. VNC message box appearing if password is too long
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
-msgstr "<b>รหัสผ่านการเข้าใช้งานทางไกลผิดพลาด</b><hr>รหัสผ่านมีความยาวมากเกินไป โปรดป้อนรหัสผ่านใหม่โดยมีความยาวไม่เกินแปดตัวอักษร"
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
+msgstr ""
+"<b>รหัสผ่านการเข้าใช้งานทางไกลผิดพลาด</b><hr>รหัสผ่านมีความยาวมากเกินไป "
+"โปรดป้อนรหัสผ่านใหม่โดยมีความยาวไม่เกินแปดตัวอักษร"
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
-msgstr "<b>การติดตั้งซอฟต์แวร์:</b><hr>ไม่พบแพกเกจที่ต้องการบางแพกเกจ ต้องการติดตั้งพวกมันเดี๋ยวนี้หรือไม่ ?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>การติดตั้งซอฟต์แวร์:</b><hr>ไม่พบแพกเกจที่ต้องการบางแพกเกจ "
+"ต้องการติดตั้งพวกมันเดี๋ยวนี้หรือไม่ ?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1376,19 +1462,33 @@ msgid "Initialize cache..."
 msgstr "เตรียมการใช้งานแคช..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>การจัดเก็บค่าปรับแต่งล้มเหลว</b><hr>รายงานต่อไปนี้ได้ถูกสร้างขึ้น:"
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>จัดเก็บค่าปรับแต่งแล้ว</b><hr>การแก้ไขของคุณจะมีผลในการเริ่มการทำงานระบบกราฟิกในครั้งต่อไป ต้องการจะออกจาก SaX2 ในตอนนี้หรือไม่ ?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>จัดเก็บค่าปรับแต่งแล้ว</"
+"b><hr>การแก้ไขของคุณจะมีผลในการเริ่มการทำงานระบบกราฟิกในครั้งต่อไป ต้องการจะออกจาก "
+"SaX2 ในตอนนี้หรือไม่ ?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>การทดสอบค่าปรับแต่งล้มเหลว</b><hr>หากต้องการดูรายละเอียดเพิ่มเติม ให้ดูได้ที่แฟ้ม <tt>/var/log/Xorg.99.log</tt> รายงานต่อไปนี้ถูกสร้างขึ้นจากการเรียกทำงาน:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>การทดสอบค่าปรับแต่งล้มเหลว</b><hr>หากต้องการดูรายละเอียดเพิ่มเติม ให้ดูได้ที่แฟ้ม <tt>/"
+"var/log/Xorg.99.log</tt> รายงานต่อไปนี้ถูกสร้างขึ้นจากการเรียกทำงาน:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
 msgstr ""
 
 #. XKBFile extension text
@@ -1851,4 +1951,3 @@ msgstr "การปรับแต่งค่าจอแสดงผล"
 
 msgid "Idle timer..."
 msgstr "ตัวจับเวลาไม่มีการกระทำใด ๆ"
-

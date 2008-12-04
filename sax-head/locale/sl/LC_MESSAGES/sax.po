@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 "n%100==4 ? 2 : 3);\n"
 "n%100==4 ? 2 : 3);\n"
 
@@ -31,15 +32,27 @@ msgid "I18N"
 msgstr ""
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>SaX2 predlog</b><hr>Trenutno zagnan grafični sistem temelji na predlogih, ki jih je podal SaX2. Če vam je okolje všeč, ga lahko potrdite s pritiskom na <b>V redu</b> ali nastavitve sistema spremenite po svojih željah."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>SaX2 predlog</b><hr>Trenutno zagnan grafični sistem temelji na predlogih, "
+"ki jih je podal SaX2. Če vam je okolje všeč, ga lahko potrdite s pritiskom "
+"na <b>V redu</b> ali nastavitve sistema spremenite po svojih željah."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
 msgstr ""
 
 #. Caption text for the startup information window
@@ -60,7 +73,9 @@ msgid "SaX Control Center"
 msgstr "SaX Nadzorna plošča"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
 msgstr ""
 
 #. Help Button text
@@ -116,6 +131,7 @@ msgid "Mouse Properties"
 msgstr "Lastnosti miške"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Tipkovnca"
 
@@ -170,6 +186,29 @@ msgstr "Aktiviraj ta kazalec"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Kartica"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr ""
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr ""
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Izgled"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr ""
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr ""
 
 #. Change data
 msgid "&Change..."
@@ -236,12 +275,6 @@ msgstr "&Test"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Shrani"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Izgled"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -328,8 +361,12 @@ msgid "Unconfigured"
 msgstr "Neprilagojeno"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>Vseh zaslonov ni možno deaktivirati</b><hr><nobr>Najmanj en zaslon mora biti aktiviran.</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Vseh zaslonov ni možno deaktivirati</b><hr><nobr>Najmanj en zaslon mora "
+"biti aktiviran.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -405,12 +442,18 @@ msgid "To the Right"
 msgstr "V desno"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
 msgstr ""
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>Možnost mora imeti vrednost</b><hr><nobr>Prosim vnesite vrednost za možnost %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Možnost mora imeti vrednost</b><hr><nobr>Prosim vnesite vrednost za "
+"možnost %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -433,8 +476,14 @@ msgid "Display Size in [ mm ]"
 msgstr "Velikost zaslona v [mm]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>Opomba:</b><hr>Napačno območje sync frekvenc lahko poškoduje vaš monitor. Za naslednje nastavitve poglejte navodila za monitor.<br><br>Če ne želite uporabljati največjih vrednosti frekvenc, zmanjšanje njihovo območje."
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Opomba:</b><hr>Napačno območje sync frekvenc lahko poškoduje vaš monitor. "
+"Za naslednje nastavitve poglejte navodila za monitor.<br><br>Če ne želite "
+"uporabljati največjih vrednosti frekvenc, zmanjšanje njihovo območje."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -493,12 +542,21 @@ msgid "inches"
 msgstr "inčev"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Vstavite CD ali disketo</b><hr>Prosim vstavite CD ali disketo proizvajalca monitorja."
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Vstavite CD ali disketo</b><hr>Prosim vstavite CD ali disketo "
+"proizvajalca monitorja."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Napaka pri branju</b><hr>S CDja ali diskete ni možno brati. To je lahko posledica poškodovanega diska ali napačne oblike datotek(e) z informacijami na mediju."
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Napaka pri branju</b><hr>S CDja ali diskete ni možno brati. To je lahko "
+"posledica poškodovanega diska ali napačne oblike datotek(e) z informacijami "
+"na mediju."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -715,7 +773,8 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
+msgstr ""
+"Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
 
 #. XKBFile extension text
 #, fuzzy
@@ -764,7 +823,8 @@ msgstr "Desna Alt tipka zamenja skupino."
 #. XKBFile extension text
 #, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr "Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
+msgstr ""
+"Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
 
 #. XKBFile extension text
 #, fuzzy
@@ -871,7 +931,9 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine delovanje tipke CapsLock."
+msgstr ""
+"Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine "
+"delovanje tipke CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -889,12 +951,16 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi CapsLock."
+msgstr ""
+"Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi "
+"CapsLock."
 
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock uses internal capitalization. Shift "
-msgstr "Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine delovanje tipke CapsLock."
+msgstr ""
+"Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine "
+"delovanje tipke CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -907,7 +973,8 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
+msgstr ""
+"Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
@@ -924,7 +991,8 @@ msgstr "Desna Win-tipka sodeluje pri sestavljanju."
 
 #. XKBFile extension text
 #, fuzzy
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr "Pritisnite desno Win-tipko za izbiro tretjega nivoja."
 
 #. XKBFile extension text
@@ -938,12 +1006,16 @@ msgstr ""
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi CapsLock."
+msgstr ""
+"Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi "
+"CapsLock."
 
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine delovanje tipke CapsLock."
+msgstr ""
+"Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine "
+"delovanje tipke CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1016,11 +1088,15 @@ msgstr "Obe tipki Shift skupaj zamenjata skupino."
 #. XKBFile extension text
 #, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi CapsLock."
+msgstr ""
+"Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi "
+"CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine delovanje tipke CapsLock."
+msgstr ""
+"Tipka CaspLock uporabi notranjo spremembo velikosti črk. Tipka Shift prekine "
+"delovanje tipke CapsLock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1080,7 +1156,8 @@ msgstr "Desna Alt tipka zamenja skupino."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr "Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
+msgstr ""
+"Tipka Shift skupaj s tipkami na numeričnem delu deluje kot v MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1124,7 +1201,9 @@ msgstr "Pritisk na tipki Control in Shift zamenja skupino."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi CapsLock."
+msgstr ""
+"Tipka CapsLock se vede kot tipka Shift z zaklepanjem. Tipka Shift izključi "
+"CapsLock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1221,7 +1300,9 @@ msgid "Swap ESC and CapsLock."
 msgstr "Zamenjanj tipki Control in CapsLock."
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1233,7 +1314,9 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1373,8 +1456,17 @@ msgstr "Zaslon na dotik: izbira proizvajalca in imena"
 
 #. Finish configuration message box
 #, fuzzy
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Zaključni koraki:</b><hr>Zadnji korak je shranitev vaših nastavitev. Priporočljivo je nove nastavitve preizkusiti, preden jih shranite. Če se testni strežnik naloži z nepopolnim namizjem, pritisnite <b>[ Ctrl+Alt+Backspace ]</b> za zaustavitev strežnika."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Zaključni koraki:</b><hr>Zadnji korak je shranitev vaših nastavitev. "
+"Priporočljivo je nove nastavitve preizkusiti, preden jih shranite. Če se "
+"testni strežnik naloži z nepopolnim namizjem, pritisnite <b>[ Ctrl+Alt"
+"+Backspace ]</b> za zaustavitev strežnika."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1419,21 +1511,35 @@ msgstr "HTTP vrata"
 
 #. VNC message box appearing if password strings doesn't match
 #, fuzzy
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
-msgstr "<b>Razlika med VNC gesli</b><hr>Prva in druga verzija gesla se razlikujeta."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
+msgstr ""
+"<b>Razlika med VNC gesli</b><hr>Prva in druga verzija gesla se razlikujeta."
 
 #. VNC message box appearing if password is too short
 #, fuzzy
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>Napaka v VNC geslu</b><hr>Polje za vpis gesla je prazno ali pa je geslo prekratko. Vnesite geslo, ki je dolgo najmanj 6 (šest) znakov."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>Napaka v VNC geslu</b><hr>Polje za vpis gesla je prazno ali pa je geslo "
+"prekratko. Vnesite geslo, ki je dolgo najmanj 6 (šest) znakov."
 
 #. VNC message box appearing if password is too long
 #, fuzzy
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
-msgstr "<b>Napaka v VNC geslu</b><hr>Polje za vpis gesla je prazno ali pa je geslo prekratko. Vnesite geslo, ki je dolgo najmanj 6 (šest) znakov."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
+msgstr ""
+"<b>Napaka v VNC geslu</b><hr>Polje za vpis gesla je prazno ali pa je geslo "
+"prekratko. Vnesite geslo, ki je dolgo najmanj 6 (šest) znakov."
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
 msgstr ""
 "<b>Namestitev programske opreme:</b><hr>Nekateri paketki manjkajo. \n"
 "Ali želite sedaj namestiti manjkajoče paketke?"
@@ -1455,21 +1561,40 @@ msgid "Initialize cache..."
 msgstr "Inicializacija medpomnilnika..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "<b>Shranitev nastavitev ni uspela</b><hr>Izdelano je bilo naslednje poročilo:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+"<b>Shranitev nastavitev ni uspela</b><hr>Izdelano je bilo naslednje poročilo:"
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>Prilagoditev shranjena</b><hr>Vaše spremembe bodo upoštevane ob naslednjem zagonu grafičnega sistema. Želite zaključiti z uporabo programa SaX2?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Prilagoditev shranjena</b><hr>Vaše spremembe bodo upoštevane ob "
+"naslednjem zagonu grafičnega sistema. Želite zaključiti z uporabo programa "
+"SaX2?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>Testna prilagoditev ni uspela</b><hr>Za dodatne informacije poglejte vsebino datoteke <tt>/var/log/Xorg.99.log</tt>. Izdelano je bilo naslednje poročilo:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Testna prilagoditev ni uspela</b><hr>Za dodatne informacije poglejte "
+"vsebino datoteke <tt>/var/log/Xorg.99.log</tt>. Izdelano je bilo naslednje "
+"poročilo:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 #, fuzzy
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
-msgstr "<b>Informacije o nastavitvi VNC</b><hr>Storitev VNC za delovanje zahteva, da so na požarnem zidu odprta: TCP vrata 5900 in HTTP vrata (privzeta vrednost je 5800). To lahko nastavite z YaST."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
+msgstr ""
+"<b>Informacije o nastavitvi VNC</b><hr>Storitev VNC za delovanje zahteva, da "
+"so na požarnem zidu odprta: TCP vrata 5900 in HTTP vrata (privzeta vrednost "
+"je 5800). To lahko nastavite z YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"

@@ -8,7 +8,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-15 12:33+0200\n"
 "PO-Revision-Date: 2008-11-12 00:16+0300\n"
 "Last-Translator: Alexander Melentiev <alex239@gmail.com>\n"
 "Language-Team: Russian <opensuse-translation-ru@opensuse.org>\n"
@@ -16,7 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 0.3\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -28,16 +28,34 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
-msgstr "<b>Предложение SaX2</b><hr>Запущенная на данный момент графическая система основана на предложении, сделанном SaX2. Если это приемлемо, нажмите кнопку <b>ОК</b>. В противном случае измените конфигурацию."
+msgid ""
+"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
+"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
+"Otherwise, change the configuration."
+msgstr ""
+"<b>Предложение SaX2</b><hr>Запущенная на данный момент графическая система "
+"основана на предложении, сделанном SaX2. Если это приемлемо, нажмите кнопку "
+"<b>ОК</b>. В противном случае измените конфигурацию."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr "<b>3D-ускорение не поддерживается</b><hr>SaX2 не может включить подсистему 3D, так как ваша графическая карта/драйвер не поддерживает 3D"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr ""
+"<b>3D-ускорение не поддерживается</b><hr>SaX2 не может включить подсистему "
+"3D, так как ваша графическая карта/драйвер не поддерживает 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
-msgstr "<b>3D-ускорение не поддерживается</b><hr>SaX2 не может включить подсистему 3D, так как используется режим двух мониторов на основе Xinerama. Расширение Xorg для комбинирования графических экранов Xinerama не поддерживает 3D на всех мониторах"
+msgid ""
+"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
+"3D subsystem because Xinerama based dual head mode is used. The Xorg "
+"Xinerama extension for combining graphics screens doesn't support 3D on all "
+"heads"
+msgstr ""
+"<b>3D-ускорение не поддерживается</b><hr>SaX2 не может включить подсистему "
+"3D, так как используется режим двух мониторов на основе Xinerama. Расширение "
+"Xorg для комбинирования графических экранов Xinerama не поддерживает 3D на "
+"всех мониторах"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -56,8 +74,11 @@ msgid "SaX Control Center"
 msgstr "Центр управления SaX"
 
 #. Info message about display size changes
-msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
-msgstr "<b>Размер экрана изменён</b><hr>Размер экрана адаптирован к новой раскладке."
+msgid ""
+"<b>Display size changed</b><hr>The display size has been adapted to the new "
+"layout."
+msgstr ""
+"<b>Размер экрана изменён</b><hr>Размер экрана адаптирован к новой раскладке."
 
 #. Help Button text
 msgid "&Help"
@@ -111,6 +132,7 @@ msgid "Mouse Properties"
 msgstr "Свойства мыши"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Клавиатура"
 
@@ -162,6 +184,29 @@ msgstr "Включить этот указатель"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Карта"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr ""
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr ""
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Раскладка клавиатуры"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr ""
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr ""
 
 #. Change data
 msgid "&Change..."
@@ -227,12 +272,6 @@ msgstr "&Проверить"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Сохранить"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Раскладка клавиатуры"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -319,8 +358,12 @@ msgid "Unconfigured"
 msgstr "Не настроено"
 
 #. Message appears when user is trying to deactivate all displays
-msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>Невозможно отключить все экраны</b><hr><nobr>Хотя бы один экран должен быть включён.</nobr>"
+msgid ""
+"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
+"active.</nobr>"
+msgstr ""
+"<b>Невозможно отключить все экраны</b><hr><nobr>Хотя бы один экран должен "
+"быть включён.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -396,12 +439,20 @@ msgid "To the Right"
 msgstr "Вправо"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
-msgstr "<b>Неверная кобинация Цвет/Разрешение:</b><hr><nobr>Выбранные настройки разрешения и/или цвета</nobr> не поддерживаются фреймбуфером видеокарты."
+msgid ""
+"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
+"resolution and/or color settings</nobr> are not supported by the graphics "
+"cards framebuffer."
+msgstr ""
+"<b>Неверная кобинация Цвет/Разрешение:</b><hr><nobr>Выбранные настройки "
+"разрешения и/или цвета</nobr> не поддерживаются фреймбуфером видеокарты."
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr "<b>Параметр должен иметь значение</b><hr><nobr>Задайте значение для параметра %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr ""
+"<b>Параметр должен иметь значение</b><hr><nobr>Задайте значение для "
+"параметра %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -424,8 +475,14 @@ msgid "Display Size in [ mm ]"
 msgstr "Размер экрана в [мм] "
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr "<b>Замечание:</b>Неверные диапазоны синхронизации могут повредить монитор. Уточните настройки в руководстве к монитору.<br><br>Если использование максимальных частот нежелательно, уменьшите диапазоны синхронизации."
+msgid ""
+"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
+"manual for the settings.<br><br>If you want your monitor not to use its "
+"maximum rating, decrease the sync ranges."
+msgstr ""
+"<b>Замечание:</b>Неверные диапазоны синхронизации могут повредить монитор. "
+"Уточните настройки в руководстве к монитору.<br><br>Если использование "
+"максимальных частот нежелательно, уменьшите диапазоны синхронизации."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -484,12 +541,21 @@ msgid "inches"
 msgstr "дюймы"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Вставьте CD или диск</b><hr>Вставьте CD или диск с утилитой к монитору, поставляемый производителем."
+msgid ""
+"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
+"monitor vendor."
+msgstr ""
+"<b>Вставьте CD или диск</b><hr>Вставьте CD или диск с утилитой к монитору, "
+"поставляемый производителем."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Ошибка чтения</b><hr>Невозможно прочитать с CD или диска. Это может произойти, потому что поврежден носитель или файлы сведений имеют неверный формат."
+msgid ""
+"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
+"damaged medium or incorrectly formatted information files."
+msgstr ""
+"<b>Ошибка чтения</b><hr>Невозможно прочитать с CD или диска. Это может "
+"произойти, потому что поврежден носитель или файлы сведений имеют неверный "
+"формат."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -538,7 +604,8 @@ msgstr "Изменение и переключение групп"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Использовать индикаторы клавиатуры, чтобы показать альтернативную группу"
+msgstr ""
+"Использовать индикаторы клавиатуры, чтобы показать альтернативную группу"
 
 #. List View root item text
 msgid "Compose Key Position"
@@ -606,7 +673,8 @@ msgstr "Цифровые клавиши по умолчанию."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change layout."
-msgstr "Нажатие обеих клавиши Ctrl одновременно переключает раскладку клавиатуры."
+msgstr ""
+"Нажатие обеих клавиши Ctrl одновременно переключает раскладку клавиатуры."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
@@ -670,7 +738,8 @@ msgstr "Индикатор ScrollLock показывает альтернати�
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
-msgstr "Нажатие обеих клавиш Shift одновременно переключает раскладку клавиатуры."
+msgstr ""
+"Нажатие обеих клавиш Shift одновременно переключает раскладку клавиатуры."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
@@ -706,11 +775,13 @@ msgstr "Левый Win переключает раскладку клавиат�
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr "Клавиша пробела выводит символ непрерывного пробела на четвёртом уровне."
+msgstr ""
+"Клавиша пробела выводит символ непрерывного пробела на четвёртом уровне."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
-msgstr "Нажатие обеих клавиш Alt одновременно переключает раскладку клавиатуры."
+msgstr ""
+"Нажатие обеих клавиш Alt одновременно переключает раскладку клавиатуры."
 
 #. XKBFile extension text
 msgid "CapsLock key changes layout."
@@ -750,7 +821,9 @@ msgstr "Параметры японской клавиатуры"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative layout."
-msgstr "Использовать индикаторы клавиатуры, чтобы показать альтернативную раскладку клавиатуры."
+msgstr ""
+"Использовать индикаторы клавиатуры, чтобы показать альтернативную раскладку "
+"клавиатуры."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes layout."
@@ -814,7 +887,9 @@ msgstr "Добавление символа nobreakspace к клавише пр�
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr "Использовать цифровую клавиатуру с расширениями Unicode(стрелки и математические операции)"
+msgstr ""
+"Использовать цифровую клавиатуру с расширениями Unicode(стрелки и "
+"математические операции)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -822,7 +897,9 @@ msgstr "Принудительно использовать устаревшую
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "CapsLock использует внутреннее преобразование букв в прописные. Shift не отменяет CapsLock."
+msgstr ""
+"CapsLock использует внутреннее преобразование букв в прописные. Shift не "
+"отменяет CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -838,7 +915,8 @@ msgstr "Клавиша пробела выводит nobreakspace на втор�
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "CapsLock действует как Shift с блокировкой. Shift не влияет на CapsLock."
+msgstr ""
+"CapsLock действует как Shift с блокировкой. Shift не влияет на CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift "
@@ -850,7 +928,9 @@ msgstr "Клавиша пробела выводит nobreakspace на трет�
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr "Поменять местами скан-коды двух клавиш, когда Mac-клавиатура не определяется ядром."
+msgstr ""
+"Поменять местами скан-коды двух клавиш, когда Mac-клавиатура не определяется "
+"ядром."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -869,8 +949,10 @@ msgid "Left Win-key is Compose."
 msgstr "Левый Win - Compose"
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Нажмите правый Alt, чтобы выбрать 3-ий уровень, Shift+правый Alt - Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr ""
+"Нажмите правый Alt, чтобы выбрать 3-ий уровень, Shift+правый Alt - Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -886,7 +968,9 @@ msgstr "CapsLock действует как Shift с блокировкой. Shif
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "CapsLock использует внутреннее преобразование прописных букв. Shift не отменяет CapsLock."
+msgstr ""
+"CapsLock использует внутреннее преобразование прописных букв. Shift не "
+"отменяет CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -894,7 +978,9 @@ msgstr "Клавиша CapsLock просто блокирует действие
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr "Клавиша CapsLock переключает режим обычного преобразования алфавитных символов в прописные."
+msgstr ""
+"Клавиша CapsLock переключает режим обычного преобразования алфавитных "
+"символов в прописные."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
@@ -958,11 +1044,15 @@ msgstr "Обе клавиши Shift одновременно - изменени�
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr "Клавиша CapsLock действует как клавиша Shift с блокировкой. Клавиша Shift не отменяет действия клавиши CapsLock."
+msgstr ""
+"Клавиша CapsLock действует как клавиша Shift с блокировкой. Клавиша Shift не "
+"отменяет действия клавиши CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "CapsLock использует внутреннее преобразование прописных букв. Shift отменяет действие CapsLock."
+msgstr ""
+"CapsLock использует внутреннее преобразование прописных букв. Shift отменяет "
+"действие CapsLock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1066,11 +1156,14 @@ msgstr "Ctrl+Shift - изменение группы."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr "Клавиша CapsLock действует как клавиша Shift с блокировкой. Shift отменяет действие CapsLock."
+msgstr ""
+"Клавиша CapsLock действует как клавиша Shift с блокировкой. Shift отменяет "
+"действие CapsLock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr "Использовать индикаторы клавиатуры, чтобы показать альтернативную группу."
+msgstr ""
+"Использовать индикаторы клавиатуры, чтобы показать альтернативную группу."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
@@ -1142,7 +1235,8 @@ msgstr "Клавиша 4 уровня с абстрактным разделит
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr "Цифровая клавиатура с расширениями Unicode(стрелки и математические операции)"
+msgstr ""
+"Цифровая клавиатура с расширениями Unicode(стрелки и математические операции)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1157,8 +1251,12 @@ msgid "Swap ESC and CapsLock."
 msgstr "Поменять местами клавиши ESC и CapsLock."
 
 #. XKBFile extension text
-msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "Клавиатура Wang 724 с расширения Unicode(стрелки и математические операции). Математические операции на уровне по умолчанию."
+msgid ""
+"Wang 724 keypad with unicode additions (arrows and math operators). Math "
+"operators on default level."
+msgstr ""
+"Клавиатура Wang 724 с расширения Unicode(стрелки и математические операции). "
+"Математические операции на уровне по умолчанию."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1169,8 +1267,12 @@ msgid "Legacy key with comma"
 msgstr "Устаревшая клавиша с запятой"
 
 #. XKBFile extension text
-msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr "Клавиатура с расширения Unicode(стрелки и математические операции). Математические операции на уровне по умолчанию."
+msgid ""
+"Keypad with unicode additions (arrows and math operators). Math operators on "
+"default level."
+msgstr ""
+"Клавиатура с расширения Unicode(стрелки и математические операции). "
+"Математические операции на уровне по умолчанию."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1186,7 +1288,8 @@ msgstr "Действие клавиши delete на цифровой клави�
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "Клавиатура Wang 724 с расширения Unicode(стрелки и математические операции)"
+msgstr ""
+"Клавиатура Wang 724 с расширения Unicode(стрелки и математические операции)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1301,8 +1404,18 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Сенсорный экран: выбор производителя и названия"
 
 #. Finish configuration message box
-msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
-msgstr "<b>Заключительные шаги</b><hr>Последним шагом является сохранение новой конфигурации. Рекомендуется протестировать новую конфигурацию перед сохранением. Если сервер проверки показывает повреждённый рабочий стол, нажмите клавиши <b>[ Ctrl+Alt+Backspace ]<b>, а потом ещё раз после сигнала, чтобы убить сервер."
+msgid ""
+"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
+"recommended to test the new configuration before saving it. If the test "
+"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
+"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
+"server."
+msgstr ""
+"<b>Заключительные шаги</b><hr>Последним шагом является сохранение новой "
+"конфигурации. Рекомендуется протестировать новую конфигурацию перед "
+"сохранением. Если сервер проверки показывает повреждённый рабочий стол, "
+"нажмите клавиши <b>[ Ctrl+Alt+Backspace ]<b>, а потом ещё раз после сигнала, "
+"чтобы убить сервер."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1346,20 +1459,37 @@ msgid "HTTP Port"
 msgstr "Порт HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
-msgstr "<b>Пароли удалённого доступа не совпадают</b><hr>Первый и второй пароль не совпадают."
+msgid ""
+"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
+"of the password do not match."
+msgstr ""
+"<b>Пароли удалённого доступа не совпадают</b><hr>Первый и второй пароль не "
+"совпадают."
 
 #. VNC message box appearing if password is too short
-msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
-msgstr "<b>Неудачный пароль удалённого доступа</b><hr>Поле пароля пустое или пароль слишком короткий. Введите пароль как минимум шесть знаков."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password field has been left "
+"empty or the password is too short. Enter a password with at least six "
+"characters."
+msgstr ""
+"<b>Неудачный пароль удалённого доступа</b><hr>Поле пароля пустое или пароль "
+"слишком короткий. Введите пароль как минимум шесть знаков."
 
 #. VNC message box appearing if password is too long
-msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
-msgstr "<b>Неудачный пароль удалённого доступа</b><hr>Пароль слишком длинный. Введите пароль как максимум восемь знаков."
+msgid ""
+"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
+"password with a maximum of eight characters."
+msgstr ""
+"<b>Неудачный пароль удалённого доступа</b><hr>Пароль слишком длинный. "
+"Введите пароль как максимум восемь знаков."
 
 #. Install missing packages box
-msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
-msgstr "<b>Установка программного обеспечения:</b><hr>Некоторые пакеты отсутствуют. Установить отсутствующие пакеты сейчас?"
+msgid ""
+"<b>Software Installation:</b><hr>Some packages are missing. Install the "
+"missing packages now?"
+msgstr ""
+"<b>Установка программного обеспечения:</b><hr>Некоторые пакеты отсутствуют. "
+"Установить отсутствующие пакеты сейчас?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1378,20 +1508,37 @@ msgid "Initialize cache..."
 msgstr "Инициализация кеша..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>Не удалось сохранить конфигурацию</b><hr>Создан следующий отчёт:"
 
 #. Message box test: configuration has been saved
-msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr "<b>Конфигурация сохранена</b><hr>Изменения вступят в силу после перезагрузки графической системы. Выйти из SaX2?"
+msgid ""
+"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
+"time the graphics system is restarted. Exit SaX2 now?"
+msgstr ""
+"<b>Конфигурация сохранена</b><hr>Изменения вступят в силу после перезагрузки "
+"графической системы. Выйти из SaX2?"
 
 #. Message box text: testing the configuration has failed
-msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>Не удалось проверить конфигурацию</b><hr>Для дополнительной информации смотри файл <tt>/var/log/Xorg.99.log</tt>. Следующий отчёт создан из вызывающего экземпляра:"
+msgid ""
+"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
+"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
+"from the calling instance:"
+msgstr ""
+"<b>Не удалось проверить конфигурацию</b><hr>Для дополнительной информации "
+"смотри файл <tt>/var/log/Xorg.99.log</tt>. Следующий отчёт создан из "
+"вызывающего экземпляра:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
-msgstr "<b>Информация о конфигурации удалённого доступа</b><hr>Служба Удалённого доступа требует, чтобы TCP-порт 5900 и HTTP-порт (5800 по умолчанию) были открыты в брандмауэре. Вы можете настроить это при помощи YaST."
+msgid ""
+"<b>Remote Access configuration information</b><hr>The Remote Access service "
+"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
+"in the firewall. You can configure this with YaST."
+msgstr ""
+"<b>Информация о конфигурации удалённого доступа</b><hr>Служба Удалённого "
+"доступа требует, чтобы TCP-порт 5900 и HTTP-порт (5800 по умолчанию) были "
+"открыты в брандмауэре. Вы можете настроить это при помощи YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1443,7 +1590,8 @@ msgstr "Позиция клавиши Ctrl"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "Специальные клавиши (Ctrl+Alt+&lt;клавиша&gt;), обрабатываемые сервером."
+msgstr ""
+"Специальные клавиши (Ctrl+Alt+&lt;клавиша&gt;), обрабатываемые сервером."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
@@ -1874,4 +2022,3 @@ msgstr "Настройка экрана"
 
 msgid "Idle timer..."
 msgstr "Таймер простоя..."
-

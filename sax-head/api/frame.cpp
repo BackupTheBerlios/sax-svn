@@ -652,7 +652,7 @@ void SCCFrame::loadApplication ( void ) {
 		import  -> doImport();
 		mConfig -> addImport (import);
 		mProgress.setLabelText (
-			mText["ImportDataFiles"]+": "+import->getSectionName()
+			mText["ImportDataFiles"]+": "+mText[import->getSectionName()]
 		);
 		log (L_INFO,"Imported: %s\n",
 			import->getSectionName().ascii()
