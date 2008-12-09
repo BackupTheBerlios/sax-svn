@@ -23,6 +23,9 @@ STATUS        : Status: Up-to-date
 #ifdef HAVE_XORG_SERVER_HEADER
 #include "xorg-server.h"
 #include "xorgVersion.h"
+#else
+#define XORG_VERSION_MAJOR 1
+#define XORG_VERSION_MINOR 5
 #endif
 
 #include "xf86Parser.h"

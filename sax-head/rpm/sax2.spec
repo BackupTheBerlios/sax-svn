@@ -50,7 +50,7 @@ Requires:       xorg-x11-server
 PreReq:         /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 Summary:        SuSE advanced X Window System-configuration
 Version:        8.1
-Release:        530
+Release:        545
 Group:          System/X11/Utilities
 License:        GPL v2 or later
 Source:         sax2.tar.bz2
@@ -96,6 +96,8 @@ mouse and keyboard.
 Authors:
 --------
     Marcus Schaefer <ms@suse.de>
+
+%ifnarch s390 s390x
 
 %package -n sax2-ident
 License:        LGPL v2.1 or later
@@ -225,6 +227,7 @@ Authors:
     Marcus Schaefer <ms@suse.de>
 
 %endif
+%endif
 
 %prep
 %setup -n sax
@@ -308,6 +311,7 @@ chroot . rm -f /var/cache/xfine/*
 if [ ! -d /var/cache/xfine ];then
 	mkdir -p /var/cache/xfine
 fi
+%ifnarch s390 s390x
 
 %post -n sax2-ident
 if ls var/lib/hardware/ids/* &> /dev/null; then
@@ -332,8 +336,6 @@ fi
 %post -n sax2-libsax -p /sbin/ldconfig
 
 %postun -n sax2-libsax -p /sbin/ldconfig
-
-%ifnarch s390 s390x
 
 %files
 %defattr(-,root,root)
@@ -410,9 +412,7 @@ fi
 %{_sbindir}/xapi
 %{_sbindir}/xfine
 %{_datadir}/applications/sax2.desktop
-
 %endif
-
 #=================================================
 # SaX-Tools file list...
 # ------------------------------------------------
@@ -437,9 +437,7 @@ fi
 %{_sbindir}/vncp
 %{_sbindir}/xw
 %{_sbindir}/getPrimary
-
 %ifnarch s390 s390x
-
 #=================================================
 # SaX-Ident file list...
 # ------------------------------------------------
@@ -529,5 +527,5 @@ fi
 %{_datadir}/java/SaX.jar
 %{_prefix}/%{_lib}/sax/plugins/SaX.so
 %endif
-
 %endif
+
