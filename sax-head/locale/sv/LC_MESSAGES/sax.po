@@ -919,8 +919,10 @@ msgstr ""
 "Caps Lock fungerar som Skift med låsning. Skift påverkar inte Caps Lock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "Caps Lock använder internationellt skiftläge. Skift "
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr ""
+"Caps Lock använder internationellt skiftläge. Skift upphäver Caps Lock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -964,8 +966,9 @@ msgid "Japanese Keyboard Options"
 msgstr "Inställningar för japanskt tangentbord"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Caps Lock fungerar som Skift med låsning. Skift "
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "Caps Lock fungerar som Skift med låsning. Skift upphäver Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -2013,3 +2016,9 @@ msgstr "Inställningar på skärmen"
 
 msgid "Idle timer..."
 msgstr "Inaktivitetstidur..."
+
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "Caps Lock använder internationellt skiftläge. Skift "
+
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "Caps Lock fungerar som Skift med låsning. Skift "
