@@ -103,7 +103,7 @@ sub ProfileReadXLogFile {
 	my $xorglogname = "/var/log/Xorg.99.log";
 	if (($ENV{HW_UPDATE} == 1) || (! -f $xorglogname)) {
 		my $xc = ProfileCreatePreliminaryConfig();
-		qx (Xorg -probeonly -logverbose 255 -xf86config $xc :99 >/dev/null 2>&1);
+		qx (Xorg -probeonly -logverbose 255 -xf86config $xc -br :99 >/dev/null 2>&1);
 	}
 	local $/;
 	open (FD, "<$xorglogname") ||
