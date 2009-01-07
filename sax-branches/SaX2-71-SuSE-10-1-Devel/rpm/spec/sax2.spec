@@ -214,6 +214,7 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %endif
+%ifnarch ppc
 %package -n sax2-libsax-csharp
 Version:      7.1
 Release:      70
@@ -230,6 +231,7 @@ programs
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
+%endif
 
 %prep
 %setup -n sax
@@ -554,6 +556,7 @@ fi
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
+%ifnarch ppc
 
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
@@ -562,3 +565,4 @@ fi
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
+%endif

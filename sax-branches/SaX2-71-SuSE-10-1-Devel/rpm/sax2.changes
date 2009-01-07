@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Jan  7 10:59:15 CET 2009 - ms@suse.de
+
+- disabled building of csharp binding on ppc architecture. mono
+  doesn't work there. Building on ppc64 works
+
+-------------------------------------------------------------------
 Thu Oct 16 12:49:24 CEST 2008 - sndirsch@suse.de
 
 - use NoBorder layout if ((X <= 800) || (Y <= 600)), and *not*
