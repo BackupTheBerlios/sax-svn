@@ -194,7 +194,7 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%ifnarch ppc64 s390x
+%ifnarch ppc ppc64 s390x
 %package -n sax2-libsax-java
 Version:      7.1
 Release:      70
@@ -213,7 +213,6 @@ Authors:
 --------
     Marcus Schäfer <ms@suse.de>
 
-%endif
 %package -n sax2-libsax-csharp
 Version:      7.1
 Release:      70
@@ -230,6 +229,7 @@ programs
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
+%endif
 
 %prep
 %setup -n sax
@@ -542,7 +542,7 @@ fi
 #=================================================
 # SaX-libsax-java file list...  
 # ------------------------------------------------
-%ifnarch ppc64 s390x
+%ifnarch ppc ppc64 s390x
 
 %files -n sax2-libsax-java
 %defattr(-,root,root)
@@ -550,7 +550,6 @@ fi
 %dir /usr/%{_lib}/sax/plugins
 /usr/share/java/SaX.jar
 /usr/%{_lib}/sax/plugins/SaX.so
-%endif
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
@@ -562,3 +561,4 @@ fi
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
+%endif
