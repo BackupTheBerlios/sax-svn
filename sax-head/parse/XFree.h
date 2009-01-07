@@ -24,7 +24,7 @@ extern int GetParserVersion (void) {
 /* Files Section... */
 extern char* GetModulePath (XF86ConfigPtr conf);
 extern char* GetFontPath (XF86ConfigPtr conf);
-#if XORG_VERSION_MINOR <= 4
+#if PARSER_VERSION <= 4
 extern char* GetRgbPath (XF86ConfigPtr conf);
 #endif
 extern char* GetLogFile (XF86ConfigPtr conf);
