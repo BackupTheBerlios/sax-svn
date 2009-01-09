@@ -336,14 +336,15 @@ string XF86ConfigFile::CallRandR (str file) {
 	str scr  ; sprintf(scr,":%d",disp);
 	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,disp);
 	str lgv  ; sprintf(lgv,"255");
+	str bground; sprintf(bground,"-br");
 	Display   *dpy  = NULL;
 	int spid    = 0;
 	int hasRR12 = False;
 	int major, minor;
 	string result = "";
 	string proc = qx(
-		XWRAPPER,STDOUT,7,"%s %s %s %s %s %s %s",
-		XW_LOG,BLANK,VERBOSE,lgv,CONFIG,file,scr
+		XWRAPPER,STDOUT,8,"%s %s %s %s %s %s %s %s",
+		XW_LOG,BLANK,VERBOSE,lgv,CONFIG,file,bground,scr
 	);
 	spid = atoi(proc.c_str());
 	dpy = XOpenDisplay (scr);
@@ -454,6 +455,7 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 	str scr  ; sprintf(scr,":%d",dpy);
 	str log  ; sprintf(log,"/var/log/%s.%d.log",LOADER_NAME,dpy);
 	str lgv  ; sprintf(lgv,"255");
+	str bground; sprintf(bground,"-br");
 	MsgDetect *parse = NULL;
 	Display   *disp  = NULL;
 	int spid  = 0;
@@ -461,8 +463,8 @@ void XF86ConfigFile::CallXF86Loader (str file) {
 
 	if (access(log,R_OK) != 0) {
 		string proc = qx(
-			XWRAPPER,STDOUT,7,"%s %s %s %s %s %s %s",
-			XW_LOG,BLANK,VERBOSE,lgv,CONFIG,file,scr
+			XWRAPPER,STDOUT,8,"%s %s %s %s %s %s %s %s",
+			XW_LOG,BLANK,VERBOSE,lgv,CONFIG,file,bground,scr
 		);
 		disp = XOpenDisplay (scr);
 		if (disp) {

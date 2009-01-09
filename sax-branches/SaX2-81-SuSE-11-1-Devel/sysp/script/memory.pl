@@ -17,7 +17,7 @@ my $code = 0;
 my $logs = "/var/log/Xorg.99.log";
 my $video;
 if (! -f $logs) {
-	my $param = "-probeonly -logverbose 255 -verbose -xf86config $ARGV[0]";
+	my $param = "-probeonly -logverbose 255 -verbose -xf86config $ARGV[0] -br";
 	qx (X $param :99 2>&1);
 	$code = $? >> 8;
 }
