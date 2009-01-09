@@ -919,8 +919,9 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock age como Shift com bloqueio. Shift não afeta CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock usa capitalização interna. Shift "
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock usa capitalização interna. Shift cancela CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -964,8 +965,9 @@ msgid "Japanese Keyboard Options"
 msgstr "Opções de teclado japonês"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock age como Shift com bloqueio. Shift"
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock age como Shift com bloqueio. Shift cancela CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1989,3 +1991,9 @@ msgstr "Configuração no monitor"
 
 msgid "Idle timer..."
 msgstr "Temporizador ocioso..."
+
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "CapsLock usa capitalização interna. Shift "
+
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "CapsLock age como Shift com bloqueio. Shift"

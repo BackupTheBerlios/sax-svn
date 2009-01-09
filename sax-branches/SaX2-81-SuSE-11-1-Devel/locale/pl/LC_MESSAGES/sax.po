@@ -918,9 +918,10 @@ msgstr ""
 "Klawisz CapsLock działa jak Shift z blokowaniem. Shift nie anuluje CapsLock"
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
 msgstr ""
-"Klawisz CapsLock przełącza na pisanie wielkimi literami. Shift anuluje "
+"Klawisz CapsLock przełącza na pisanie wielkimi literami; Shift anuluje "
 "CapsLock"
 
 #. XKBFile extension text
@@ -964,7 +965,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Opcje klawiatury japońskiej"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
 msgstr "Klawisz CapsLock działa jak Shift z blokowaniem; Shift anuluje Caps"
 
 #. XKBFile extension text
@@ -2003,3 +2005,11 @@ msgstr "Konfiguracja na wyświetlaczu"
 
 msgid "Idle timer..."
 msgstr "Licznik bezczynności..."
+
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr ""
+#~ "Klawisz CapsLock przełącza na pisanie wielkimi literami. Shift anuluje "
+#~ "CapsLock"
+
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "Klawisz CapsLock działa jak Shift z blokowaniem; Shift anuluje Caps"

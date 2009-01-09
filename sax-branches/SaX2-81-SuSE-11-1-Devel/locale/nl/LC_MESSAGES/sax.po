@@ -915,8 +915,9 @@ msgstr ""
 "op CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock gebruikt interne kapitalisatie. Shift "
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock gebruikt interne kapitalisatie. Shift annuleert CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -960,8 +961,11 @@ msgid "Japanese Keyboard Options"
 msgstr "Opties voor Japans toetsenbord"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift "
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr ""
+"CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift zal CapsLock "
+"annuleren."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1990,3 +1994,9 @@ msgstr "Configuratie op beeldscherm"
 
 msgid "Idle timer..."
 msgstr "Idle timer..."
+
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "CapsLock gebruikt interne kapitalisatie. Shift "
+
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift "

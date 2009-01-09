@@ -888,8 +888,9 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift 不影响 CapsLock。"
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock 用于内部大写转换。Shift "
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock 用于内部大写转换。Shift 键取消 CapsLock 键。"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -929,8 +930,9 @@ msgid "Japanese Keyboard Options"
 msgstr "日本键盘选项"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift "
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift 键取消 CapsLock 键。"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1939,3 +1941,9 @@ msgstr "显示器配置"
 
 msgid "Idle timer..."
 msgstr "空闲计时器..."
+
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "CapsLock 用于内部大写转换。Shift "
+
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift "
