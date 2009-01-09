@@ -221,8 +221,9 @@ bool SCCKeyboard::exportData ( void ) {
 	//------------------------------------
 	qApp->setOverrideCursor ( Qt::forbiddenCursor );
 	QString baseLayout = *layouts.begin();
+	QString baseVariant = *variants.begin();
 	QString complete = "/usr/share/sax/api/macros/setconsolekeyboard.sh " 
-		+ baseLayout;
+		+ baseLayout + " " + baseVariant;
 	log (L_INFO,"Run YaST keyboard module (console keyboard)\n");
 	Q3Process* proc = new Q3Process ();
 	proc -> addArgument ("/bin/bash");
