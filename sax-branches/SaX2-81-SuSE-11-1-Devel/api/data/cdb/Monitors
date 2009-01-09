@@ -32030,6 +32030,16 @@ SAMSUNG:SYNCMASTER 20GLSI  {
 }
 
 #==============================================
+# SyncMaster 206BW
+#----------------------------------------------
+SAMSUNG:SYNCMASTER 206BW  {
+ Option=DPMS
+ Hsync=30-81
+ Resolution=1680x1050
+ Vsync=56-75
+}
+
+#==============================================
 # SYNCMASTER 210T(A)210MP MAGICSYNCMASTER LXA210T(A)
 #----------------------------------------------
 SAMSUNG:SYNCMASTER 210T(A)210MP MAGICSYNCMASTER LXA210T(A)  {
