@@ -347,16 +347,6 @@ if test -r "$temp_QT_HOME_DIR/qtrc"; then
 fi
 
 #==================================
-# export LANG from user environment
-#----------------------------------
-TMPFILE=`ls -1 /tmp/sax_lenv* 2>/dev/null` 
-if [ -f "$TMPFILE" ];then
-	export LANG=`cat $TMPFILE`
-else
-	export LANG=$LANG 
-fi
-
-#==================================
 # run the dots...
 #----------------------------------
 nice -n 19 $DOTS &
@@ -365,7 +355,7 @@ sleep 1
 #==================================
 # clean sweep...
 #----------------------------------
-rm -f  $TMPFILE $REF
+rm -f  $REF
 rm -rf $XFT $ERR
 if [ "$REINIT" = 1 ];then
 	rm -f /var/cache/sax/files/*
