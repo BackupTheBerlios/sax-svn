@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Jan 12 18:16:29 CET 2009 - sndirsch@suse.de
+
+- Identity.map: 
+  * use "EXANoComposite" option for Intel 965/965GM; fixes various
+    Xserver crashes and shouldn't harm desktop performance
+
+-------------------------------------------------------------------
 Fri Jan  9 17:02:00 CET 2009 - sndirsch@suse.de
 
 - Input.map: added another device (0x04b3:0x300f) to use
