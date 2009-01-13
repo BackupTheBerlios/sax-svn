@@ -136,7 +136,7 @@ class SCCMessage : public QDialog {
 	void createOptionIntBox ( void );
 	void createOptionStringBox ( void );
 	void createIntroBox  ( void );
-	void createFinishBox ( void );
+	void createFinishBox ( QString* );
 
 	private:
 	void setIcon ( SaXMessage::Icon );
@@ -168,7 +168,7 @@ class SCCMessage : public QDialog {
 	SCCMessage (
 		QWidget*, Q3Dict<QString>*, SaXMessage::Type, const QString&,
 		const QString& = 0, SaXMessage::Icon = SaXMessage::Information,
-		bool =true, const char* =0
+		QString* = 0, bool =true, const char* =0
 	);
 };
 } // end namespace

@@ -669,9 +669,14 @@ void SCCFrame::loadApplication ( void ) {
 //-------------------------------------
 void SCCFrame::slotFinish ( void ) {
 	SCCWrapPointer< Q3Dict<QString> > mText (getTextPtr());
+	QString messageText = "FinalSaX";
+	if (mRequestedDialog) {
+		messageText = "FinalSaXNoTest";
+	}
 	SCCMessage* mMessageBox = new SCCMessage (
 		this, getTextPtr(), SaXMessage::FINISH,
-		"FinalSaX","MessageCaption"
+		messageText,"MessageCaption",SaXMessage::Information,
+		mRequestedDialog
 	);
 	QString result = mMessageBox -> showMessage();
 	if (result == mText["FinalSave"]) {

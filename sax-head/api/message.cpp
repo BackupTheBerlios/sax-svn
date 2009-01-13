@@ -178,7 +178,7 @@ void SCCButton::slotClicked (void) {
 SCCMessage::SCCMessage (
 	QWidget* parent, Q3Dict<QString>* textPtr, SaXMessage::Type type,
 	const QString& message, const QString& caption, SaXMessage::Icon icon,
-	bool modal, const char* name
+	QString* requestedDialog, bool modal, const char* name
 ) : QDialog (
 	parent,name,modal,
 	Qt::WStyle_Customize | Qt::WStyle_DialogBorder | Qt::WStyle_Title | Qt::WStyle_SysMenu
@@ -242,7 +242,7 @@ SCCMessage::SCCMessage (
 			createIntroBox();
 		break;
 		case SaXMessage::FINISH:
-			createFinishBox();
+			createFinishBox (requestedDialog);
 		break;
 		default:
 			log (L_ERROR,"No such message box");
@@ -489,7 +489,7 @@ void SCCMessage::createIntroBox ( void ) {
 //=====================================
 // createFinishBox
 //-------------------------------------
-void SCCMessage::createFinishBox ( void ) {
+void SCCMessage::createFinishBox ( QString* requestedDialog ) {
 	//=====================================
 	// create layout add Icon and Text
 	//-------------------------------------
@@ -502,7 +502,7 @@ void SCCMessage::createFinishBox ( void ) {
 	//-------------------------------------
 	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
 	mDoneLayout -> addStretch ( 5 );
-	SCCButton* mButtonTest = new SCCButton   (mText["FinalTest"],mMainFrame);
+	SCCButton* mButtonTest = new SCCButton (mText["FinalTest"],mMainFrame);
 	mDoneLayout -> addWidget  ( mButtonTest );
 	mDoneLayout -> addSpacing ( 10 );
 	SCCButton* mButtonSave = new SCCButton   (mText["FinalSave"],mMainFrame);
@@ -527,6 +527,13 @@ void SCCMessage::createFinishBox ( void ) {
 		mButtonCancel , SIGNAL ( clickedButton (QPushButton*) ),
 		this          , SLOT   ( slotButton    (QPushButton*) )
 	);
+
+	//=====================================
+	// hide test button in dialog mode 
+	//-------------------------------------
+	if (requestedDialog) {
+		mButtonTest -> hide();
+	}
 	adjustSize();
 }
 
