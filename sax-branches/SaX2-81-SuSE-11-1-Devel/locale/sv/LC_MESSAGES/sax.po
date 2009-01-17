@@ -1,26 +1,16 @@
-# translation of sax.sv.po to Swedish
-# translation of sax.po to
-# Översättning sax.po till Svenska
-# Översättning av sax.sv.po till Svenska
-# Swedish language file for SaX2.
-# Copyright (C) SuSE AG.
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
-# Gudmund Areskoug <fta@algonet.se>, 2001.
-# Mattias Newzella <newzella@linux.nu>, 2002,2003, 2004.
-# Mattias Newzella <newzella@linux.se>, 2005, 2007.
-# Jonas Björk <jonas@jonasbjork.net>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.sv\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-11-08 12:54+0100\n"
-"Last-Translator: Jonas Björk <jonas@jonasbjork.net>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2009-01-08 11:46\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -32,33 +22,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2-förslag</b><hr>Det nu startade grafiksystemet bygger på ett förslag "
-"från SaX2. Om du accepterar det klickar du på <b>OK</b>. Om inte, ändra "
-"inställningarna."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2-förslag</b><hr>Det nu startade grafiksystemet bygger på ett förslag från SaX2. Om du accepterar det klickar du på <b>OK</b>. Om inte, ändra inställningarna."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D-acceleration stödjs inte</b><hr>SaX2 kan inte aktivera 3D eftersom "
-"ditt grafikkort/drivrutin inte stödjer 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D-acceleration stöds inte</b><hr>SaX2 kan inte erbjuda aktivering av 3D-delsystemet eftersom grafikkortet eller grafikkortets drivrutin inte stöder 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D-acceleration stödjs inte</b><hr>SaX2 kan inte aktivera 3D eftersom "
-"Xinerama används med dubbla skärmar. Xorg Xinerama stödjer inte 3D över "
-"flera skärmar."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D-acceleration stöds inte</b><hr>SaX2 kan inte tillhandahålla aktivering av 3D-delsystemet eftersom Xinerama-baserat flerhuvudläge används. Xorg Xinerama-tillägget för kombination av skärmar med grafikinnehåll stöder inte 3D i alla huvuden"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -77,12 +50,8 @@ msgid "SaX Control Center"
 msgstr "SaX inställningscentral"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Skärmstorleken ändrades</b><hr>Skärmstorleken anpassades till din nya "
-"layout."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Visa ändrad storlek</b><hr>Visningsstorleken har anpassats till den nya layouten."
 
 #. Help Button text
 msgid "&Help"
@@ -124,7 +93,7 @@ msgstr "Bildskärm"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "Kort- och bildskärmsegenskaper"
+msgstr "Kort och bildskärmsegenskaper"
 
 #. Short description of the Mouse module
 #. Simple mouse text for the mouse tab
@@ -136,7 +105,6 @@ msgid "Mouse Properties"
 msgstr "Musegenskaper"
 
 #. Short description of the Keyboard module
-#. Keyboard name label
 msgid "Keyboard"
 msgstr "Tangentbord"
 
@@ -189,29 +157,6 @@ msgstr "Aktivera den här pekaren"
 msgid "Card"
 msgstr "Kort"
 
-#. Desktop name label
-msgid "Desktop"
-msgstr ""
-
-#. Pointers name label, global name for input devices
-msgid "Pointers"
-msgstr ""
-
-#. Layout name label, desktop layout
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Layout"
-
-#. Path name label, search paths
-msgid "Path"
-msgstr ""
-
-#. Extensions name label, X11 extensions
-msgid "Extensions"
-msgstr ""
-
 #. Change data
 msgid "&Change..."
 msgstr "&Ändra..."
@@ -250,7 +195,7 @@ msgstr "Invertera Y-axel"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Aktivera vänsterhandsmus"
+msgstr "Aktivera knappmappning för vänsterhänta"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -276,6 +221,12 @@ msgstr "&Testa"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Spara"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Layout"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -362,40 +313,24 @@ msgid "Unconfigured"
 msgstr "Inte inställd"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Kan inte inaktivera alla skärmar</b><hr><nobr>Minst en skärm måste vara "
-"aktiv.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Kan inte inaktivera alla skärmar</b><hr><nobr>Minst en skärm måste vara aktiv.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
 msgstr "Ingen inställning tillgänglig"
 
 #. Radiobutton for traditional multihead mode
-msgid ""
-"Traditional Multihead:\n"
-"Each screen is an independent display"
-msgstr ""
-"Traditionellt flerhuvudläge:\n"
-"Varje skärm är självständig."
+msgid "Traditional Multihead:\nEach screen is an independent display"
+msgstr "Traditionellt flerhuvudläge:\nVarje skärm är självständig."
 
 #. Radiobutton for cloned multihead mode
-msgid ""
-"Cloned Multihead:\n"
-"Each display is a clone of the primary display"
-msgstr ""
-"Klonat flerhuvudläge:\n"
-"Varje skärm är en klon av första skärmen."
+msgid "Cloned Multihead:\nEach display is a clone of the primary display"
+msgstr "Klonat flerhuvudläge:\nVarje skärm är en klon av första skärmen."
 
 #. Radiobutton for xinerama multihead mode
-msgid ""
-"Xinerama Multihead:\n"
-"Build one big display out of all screens"
-msgstr ""
-"Xinerama flerhuvudläge:\n"
-"Gör en stor skärm av alla skärmar."
+msgid "Xinerama Multihead:\nBuild one big display out of all screens"
+msgstr "Xinerama flerhuvudläge:\nGör en stor skärm av alla skärmar."
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -443,20 +378,12 @@ msgid "To the Right"
 msgstr "Åt höger"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Ogiltig färgdjup/upplösningskombination:</b><hr><nobr>Den valda "
-"upplösningen och/eller färgdjupet stöds inte av grafikkortets framebuffer."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Ogiltig kombination av färg och upplösning:</b><hr><nobr>De valda inställningarna för upplösning och/eller färg</nobr> stöds inte av grafikkortens rambuffert."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Alternativet behöver ett värde</b><hr><nobr>Ställ in ett värde för "
-"alternativet %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Alternativet behöver ett värde</b><hr><nobr>Ställ in ett värde för alternativet %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -479,15 +406,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Skärmstorlek i mm"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Obs!</b> Ett felaktigt synkroniseringsintervall kan skada skärmen. "
-"Kontrollera vilka inställningar som kan göras i handboken till skärmen."
-"<br><br>Om du inte vill att skärmen ska använda den maximala prestandan ska "
-"du minska synkroniseringsintervallen."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Obs!</b> Ett felaktigt synkroniseringsintervall kan skada skärmen. Kontrollera vilka inställningar som kan göras i handboken till skärmen.<br><br>Om du inte vill att skärmen ska använda den maximala prestandan ska du minska synkroniseringsintervallen."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -546,20 +466,12 @@ msgid "inches"
 msgstr "tum"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Sätt i cd eller diskett</b><hr>Sätt in drivrutins-cd:n eller disketten "
-"från bildskärmsleverantören."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Sätt i cd eller diskett</b><hr>Sätt in drivrutins-cd:n eller disketten från bildskärmsleverantören."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Läsfel</b><hr>Kunde inte läsa från cd eller diskett. Det kan bero på "
-"felaktig media eller ett felaktigt format på informationsfilen på mediat."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Läsfel</b><hr>Kunde inte läsa från cd eller diskett. Det kan bero på felaktig media eller ett felaktigt format på informationsfilen på mediat."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -629,7 +541,7 @@ msgstr "Alt/win-tangenternas beteende"
 
 #. List View root item text
 msgid "EuroSign Key Position"
-msgstr "Tangentposition för Euro-tecknet"
+msgstr "Tangentposition för eurosymbolen"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -643,35 +555,33 @@ msgstr "Ingen"
 msgid "Morocco"
 msgstr "Marocko"
 
-# BR
 #. XKBFile extension text
 msgid "Braille"
 msgstr "Braille"
 
-# ET
 #. XKBFile extension text
 msgid "Ethiopia"
 msgstr "Etiopien"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr "NICOLA-F style Backspace"
+msgstr "Backsteg i NICOLA-F-format"
 
 #. XKBFile extension text
 msgid "Right Alt key never chooses 3rd level."
-msgstr "Tryck höger Alt-tangent för att välja tredje nivån."
+msgstr "Höger Alt-tangent väljer aldrig tredje nivån."
 
 #. XKBFile extension text
 msgid "Left Alt key switches layout while pressed."
-msgstr "Vänster Alt-tangent byter layout när den hålls nere."
+msgstr "Vänster Alt-tangent byter layout när den hålls ned."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr "Mellanslag ger inte"
+msgstr "Blankstegstangenten skriver icke-brytande"
 
 #. XKBFile extension text
 msgid "Default numeric keypad keys."
-msgstr "Numeriska tangentbordets standardtangenter"
+msgstr "Standardtangenter för numeriskt tangentbord."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change layout."
@@ -679,7 +589,7 @@ msgstr "Båda Ctrl-tangenterna tillsammans byter layout."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr "Använder mellanslag för att mata in icke-brytbart mellanslagstecken"
+msgstr "Använder blankstegstangenten för att skriva icke-brytande blankstegstecken"
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
@@ -691,7 +601,7 @@ msgstr "Vänster Win-tangent byter layout."
 
 #. XKBFile extension text
 msgid "LCtrl+LShift change layout."
-msgstr "Ctrl+Skift byter grupp."
+msgstr "VCtrl+VSkift byter layout."
 
 #. XKBFile extension text
 msgid "Left Alt key changes layout."
@@ -699,15 +609,15 @@ msgstr "Vänster Alt-tangent byter layout."
 
 #. XKBFile extension text
 msgid "Both Win-keys switch layout while pressed."
-msgstr "Båda win-tangenterna byter layout när de hålls nere."
+msgstr "Båda win-tangenterna byter layout när de hålls ned."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Höger Ctrl-tangent byter layout när den hålls nere."
+msgstr "Höger Ctrl-tangent byter layout när den hålls ned."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr "Mellanslag ger icke-brytbart mellanslagstecken"
+msgstr "Blankstegstangenten skriver icke-brytande blankstegstecken"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes layout."
@@ -715,11 +625,11 @@ msgstr "Skift + Caps Lock byter layout."
 
 #. XKBFile extension text
 msgid "R-Alt switches layout while pressed."
-msgstr "R-Alt byter layout när nedtryckt."
+msgstr "R-Alt byter layout när den hålls nere."
 
 #. XKBFile extension text
 msgid "Numeric keypad layout selection"
-msgstr "Val av layout för numeriska tangentbordet"
+msgstr "Val av layout för det numeriska tangentbordet"
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes layout."
@@ -731,7 +641,7 @@ msgstr "Alt + Caps Lock byter layout."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys."
-msgstr "Super mappas till windowstangenterna"
+msgstr "Super kopplas till Win-tangenterna."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative layout."
@@ -739,33 +649,31 @@ msgstr "Scroll Lock LED visar alternativ layout."
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
-msgstr "Båda skift-tangenterna samtidigt byter layout."
+msgstr "Båda Skift-tangenterna samtidigt byter layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
-"Mellanslagstangenten ger ett icke-brytbart mellanslagstecken på andra nivån"
+msgstr "Blankstegstangenten skriver icke-brytande blankstegstecken på den andra nivån."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
-msgstr "Höger win-tangent byter layout."
+msgstr "Höger Win-tangent byter layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
-"Mellanslagstangenten ger ett icke-brytbart mellanslagstecken på tredje nivån."
+msgstr "Blankstegstangenten skriver icke-brytande blankstegstecken på den tredje nivån."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
-msgstr "Numeriska tangenter fungerar som i Mac."
+msgstr "Numeriska tangenter fungerar som för Mac."
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative layout."
-msgstr "Caps Lock LED visar alternativ layout."
+msgstr "CapsLock-lampan anger alternativ layout."
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative layout."
-msgstr "Num Lock LED visar alternativ layout."
+msgstr "NumLock-lampan anger alternativ layout."
 
 #. XKBFile extension text
 msgid "Left Shift key changes layout."
@@ -773,13 +681,11 @@ msgstr "Vänster Skift-tangent byter layout."
 
 #. XKBFile extension text
 msgid "Left Win-key switches layout while pressed."
-msgstr "Vänster win-tangent byter layout när den hålls nere."
+msgstr "Vänster Win-tangent byter layout när den hålls ned."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
-"Mellanslagstangenten ger ett icke-brytbart mellanslagstecken på den fjärde "
-"nivån."
+msgstr "Blankstegstangenten skriver icke-brytande blankstegstecken på den fjärde nivån."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
@@ -791,7 +697,7 @@ msgstr "Caps Lock-tangenten byter layout."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "CTRL mappas till windowstangenterna (och de vanliga CTRL-tangenterna)."
+msgstr "Control har kopplats till Win-tangenterna (och de vanliga Ctrl-tangenterna)."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
@@ -803,19 +709,19 @@ msgstr "Skift med numeriska tangenter fungerar som i MS Windows."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt och meta på alt-tangenterna."
+msgstr "Alt och Meta på Alt-tangenterna."
 
 #. XKBFile extension text
 msgid "Alt+Shift change layout."
-msgstr "Alt+skift byter layout."
+msgstr "Alt + Skift byter layout."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Skift byter layout."
+msgstr "Ctrl + Skift byter layout."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr "Mellanslagstangenten ger ett vanligt mellanslag på alla nivåer."
+msgstr "Blankstegstangenten skriver vanliga blanksteg på alla nivåer."
 
 #. XKBFile extension text
 msgid "Japanese keyboard options"
@@ -823,7 +729,7 @@ msgstr "Japanska tangentbordsalternativ"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative layout."
-msgstr "Använd tangentbordets LED för att visa alternativ layout."
+msgstr "Visa alternativ layout med tangentbordets LED."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes layout."
@@ -835,11 +741,11 @@ msgstr "Meny-tangenten byter layout."
 
 #. XKBFile extension text
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl byter layout."
+msgstr "Alt + Ctrl byter layout."
 
 #. XKBFile extension text
 msgid "Right Win-key switches layout while pressed."
-msgstr "Höger win-tangent byter layout när den hålls nere."
+msgstr "Höger Win-tangent byter layout när den hålls ned."
 
 #. XKBFile extension text
 msgid "Layout switching"
@@ -875,7 +781,7 @@ msgstr "Höger Ctrl-tangent byter grupp när den hålls nere."
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Vänster ALT byter plats med den vänstra windowstangenten."
+msgstr "Vänster Alt-tangent och vänster Win-tangent byter plats."
 
 #. XKBFile extension text
 msgid "Default numpad keys."
@@ -883,27 +789,23 @@ msgstr "Standardtangenter för det numeriska tangentbordet."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
-"Lägg till ickebrytmellanslag tangentsymbolen till mellanslagstangenten."
+msgstr "Lägger till tangentsymbolen för icke-brytande blanksteg till blankstegstangenten"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Använd det numeriska tangentbordet med unicode-tilläggen (pilar och "
-"matematiktecken)"
+msgstr "Använd det numeriska tangentbordet med Unicode-tillägg (pilar och matematiska operatorer)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr "Tvinga standardbeteende för numeriska tangentbordet"
+msgstr "Använd äldre förvalt numeriskt tangentbord"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"Caps Lock använder internationellt skiftläge. Skift påverkar inte Caps Lock."
+msgstr "Caps Lock använder internationellt skiftläge. Skift påverkar inte Caps Lock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
-msgstr "Layout för det numeriska tangentbordet"
+msgstr "Val av layout för det numeriska tangentbordet"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
@@ -911,69 +813,59 @@ msgstr "Alt + Caps Lock byter grupp."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr "Mellanslagstangenten ger ett ickebrytmellanslag på den andra nivån."
+msgstr "Blankstegstangenten skriver icke-brytande blanksteg på den andra nivån."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr ""
-"Caps Lock fungerar som Skift med låsning. Skift påverkar inte Caps Lock."
+msgstr "Caps Lock fungerar som Skift med låsning. Skift påverkar inte Caps Lock."
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr ""
-"Caps Lock använder internationellt skiftläge. Skift upphäver Caps Lock."
+msgid "CapsLock uses internal capitalization. Shift "
+msgstr "Caps Lock använder internationellt skiftläge. Skift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr "Mellanslagstangenten ger ett ickebrytmellanslag på den tredje nivån."
+msgstr "Blankstegstangenten skriver icke-brytande blanksteg på den tredje nivån."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Växlingsteckenkoderna för två tangenter för Mactangentbordet identifierades "
-"felaktigt av kärnan."
+msgstr "Byt tangentkoder för två tangenter om Mac-tangentbord inte identifieras korrekt av kärnan."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
-msgstr "Numeriska tangenter fungerar som i Mac."
+msgstr "Numeriska tangenter fungerar som för Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr "Kana låstangenten låser"
+msgstr "Kana Lock-tangent låser"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr "Mellanslagstangenten ger ett ickebrytmellanslag på den fjärde nivån."
+msgstr "Blankstegstangenten skriver icke-brytande blanksteg på den fjärde nivån."
 
 #. XKBFile extension text
 msgid "Left Win-key is Compose."
 msgstr "Vänster win-tangent är komponera."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Tryck höger Alt-tangent för att välja tredje nivån.Shift+Höger Alt är "
-"Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Tryck på höger Alt-tangent om du vill välja den tredje nivån, Skift+höger Alt-tangent är multi_key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr "Mellanslagstangenten ger ett mellanslag på alla nivåer."
+msgstr "Blankstegstangenten skriver blanksteg på alla nivåer."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr "Inställningar för japanskt tangentbord"
+msgstr "Japanska tangentbordsalternativ"
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "Caps Lock fungerar som Skift med låsning. Skift upphäver Caps Lock."
+msgid "CapsLock acts as Shift with locking. Shift "
+msgstr "Caps Lock fungerar som Skift med låsning. Skift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"Caps Lock använder ett internt skiftläge. Skift upphäver inte Caps Lock."
+msgstr "Caps Lock använder ett internt skiftläge. Skift upphäver inte Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1045,13 +937,11 @@ msgstr "Båda skift-tangenterna samtidigt byter grupp."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr ""
-"Caps Lock fungerar som Skift med låsning. Skift upphäver inte Caps Lock."
+msgstr "Caps Lock fungerar som Skift med låsning. Skift upphäver inte Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr ""
-"Caps Lock använder internationellt skiftläge. Skift upphäver Caps Lock."
+msgstr "Caps Lock använder internationellt skiftläge. Skift upphäver Caps Lock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1197,12 +1087,10 @@ msgstr "Höger win-tangent byter grupp när den hålls nere."
 msgid "Serbia"
 msgstr "Serbien"
 
-# GN
 #. XKBFile extension text
 msgid "Guinea"
 msgstr "Guinea"
 
-# name for SCG
 #. XKBFile extension text
 msgid "Montenegro"
 msgstr "Montenegro"
@@ -1217,25 +1105,23 @@ msgstr "USA"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 4 key."
-msgstr "Lägg till Euro-tecknet till tangenten 5."
+msgstr "Lägg till Euro-tecknet till tangenten 4."
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
-msgstr "Tangent för fjärde nivån med punkt"
+msgstr "Tangent på fjärde nivån med punkt"
 
 #. XKBFile extension text
 msgid "Legacy Wang 724 keypad"
-msgstr "Äldre Wang 724 numeriskt tangentbord"
+msgstr "Äldre numeriskt Wang 724-tangentbord"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
-msgstr "Tangent för fjärde nivån med abstrakta skiljetecken"
+msgstr "Tangent på fjärde nivån med abstrakta avgränsare"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Använd det numeriska tangentbordet med unicode-tilläggen (pilar och "
-"matematiktecken)"
+msgstr "Numeriskt tangentbord med Unicode-tillägg (pilar och matematiska operatorer)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1243,35 +1129,27 @@ msgstr "Äldre numeriskt tangentbord"
 
 #. XKBFile extension text
 msgid "Shift cancels CapsLock."
-msgstr "Shift avbryter CapsLock."
+msgstr "Skift inaktiverar CapsLock."
 
 #. XKBFile extension text
 msgid "Swap ESC and CapsLock."
 msgstr "Byt plats på ESC och CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Wang 724 numeriskt tangentbord med unicode-tilläggen (pilar och "
-"matematiktecken). Matematiktecken på standardnivån."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Numeriskt Wang 724-tangentbord med Unicode-tillägg (pilar och matematiska operatorer). Matematiska operatorer på standardnivån."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
-msgstr "Tangent för fjärde nivån med kommatecken."
+msgstr "Tangent på fjärde nivån med komma"
 
 #. XKBFile extension text
 msgid "Legacy key with comma"
-msgstr "Äldre tangent med kommatecken"
+msgstr "Äldre tangent med komma"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Använd det numeriska tangentbordet med unicode-tilläggen (pilar och "
-"matematiktecken). Matematiktecken på standardnivån."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Numeriskt tangentbord med Unicode-tillägg (pilar och matematiska operatorer). Matematiska operatorer på standardnivån."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1279,17 +1157,15 @@ msgstr "Äldre tangent med punkt"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr "Tangent för fjärde nivån med momayyez"
+msgstr "Tangent på fjärde nivån med momayyez"
 
 #. XKBFile extension text
 msgid "Numeric keypad delete key behaviour"
-msgstr "Beteende för deletetangenten på det numeriska tangentbordet"
+msgstr "Beteende för Del-tangenten på det numeriska tangentbordet"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Wang 724 numeriskt tangentbord med unicode-tilläggen (pilar och "
-"matematiktecken)"
+msgstr "Numeriskt Wang 724-tangentbord med Unicode-tillägg (pilar och matematiska operatorer)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1347,10 +1223,6 @@ msgstr "COM-3 [/dev/ttyS2]"
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [/dev/ttyS3]"
 
-#. Combobox item text for tablet port: ttyS4
-msgid "COM-5 [ /dev/ttyS4 ]"
-msgstr "COM-5 [/dev/ttyS4]"
-
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
 msgstr "Verktyg"
@@ -1365,11 +1237,11 @@ msgstr "Lägg till raderare"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr "Lägg till tryck"
+msgstr "Lägg till pekskärm"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
-msgstr "Lägg till platta"
+msgstr "Lägg till numeriskt tangentbord"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1381,7 +1253,7 @@ msgstr "Egenskaper för penna"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
-msgstr "Egenskaper för platta"
+msgstr "Egenskaper för numeriskt tangentbord"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1389,7 +1261,7 @@ msgstr "Egenskaper för raderare"
 
 #. Tab title: Touch properties
 msgid "Touch Properties"
-msgstr "Tryckegenskaper"
+msgstr "Egenskaper för pekskärmen"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen %1"
@@ -1404,17 +1276,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Pekskärm: Välj leverantör och namn"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>De sista stegen</b><hr>Det sista steget är att spara de nya "
-"inställningarna. Du rekommenderas att först testa de nya inställningarna. Om "
-"testservern visar en dålig skärmbild trycker du på <b>[Ctrl+Alt+Backsteg]</"
-"b> två gånger för att stoppa servern."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>De sista stegen</b><hr>Det sista steget är att spara den nya konfigurationen. Testa den nya konfigurationen innan du sparar den. Om ett felaktigt skrivbord visas trycker du på <b>[Ctrl+Alt+Backsteg]</b> och <b>[ Ctrl+Alt+Backsteg]</b> för att stoppa testservern strax efter det att en hög varningssignal avges."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1422,7 +1285,7 @@ msgstr "Kontroll för X-fjärrserver"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr "Tillåter åtkomst till skärm och tangentbord/mus på din X-server"
+msgstr "Tillåt åtkomst till X-serverns skärm och tangentbord/mus"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1457,37 +1320,20 @@ msgid "HTTP Port"
 msgstr "HTTP-port"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Lösenord för fjärråtkomst överensstämmer inte</b><hr>Det första och andra "
-"lösenordet överensstämmer inte."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Lösenord för fjärråtkomst överensstämmer inte</b><hr>Det första och andra lösenordet stämmer inte överens."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Fel på fjärråtkomstlösenord</b><hr>Lösenordsfältet har lämnats tomt eller "
-"så är lösenordet för kort. Ange ett lösenord med minst sex tecken."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Fel på fjärråtkomstlösenord</b><hr>Lösenordsfältet har lämnats tomt eller så är lösenordet för kort. Ange ett lösenord med minst sex tecken."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Fel på fjärråtkomstlösenord</b><hr>Lösenordet är för långt. Ange ett "
-"lösenord med maximalt åtta tecken."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Fel på fjärråtkomstlösenord</b><hr>Lösenordet är för långt. Ange ett lösenord med maximalt åtta tecken."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Programinstallation:</b><hr>Några paket saknas. Installera de saknade "
-"paketen nu?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Programinstallation:</b><hr>Några paket saknas. Installera de saknade paketen nu?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1506,39 +1352,20 @@ msgid "Initialize cache..."
 msgstr "Initiera cache..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Misslyckades med att spara inställning</b><hr>Följande rapport har "
-"skapats:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Misslyckades med att spara inställning</b><hr>Följande rapport har skapats:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Inställningarna har sparats</b><hr>Observera att ändringarna träder i "
-"kraft nästa gång grafiksystemet startas om. Avsluta SaX2 nu?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Inställningarna har sparats</b><hr>Observera att ändringarna träder i kraft nästa gång grafiksystemet startas om. Avsluta SaX2 nu?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Misslyckades med att testa inställningar</b><hr>Se filen <tt>/var/log/"
-"Xorg.99.log</tt> för mer information. Följande rapport har skapats från "
-"anropande instans:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Misslyckades med att testa inställningar</b><hr>Se filen <tt>/var/log/Xorg.99.log</tt> för mer information. Följande rapport har skapats från anropande instans:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Information om fjärråtkomstinställningar</b><hr>Fjärråtkomsttjänsten "
-"kräver att TCP-port 5900 och HTTP-port (5800 som standard) öppnas i "
-"brandväggen. Du kan ställa in detta med YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Information om fjärråtkomstinställningar</b><hr>För fjärråtkomsttjänsten krävs att TCP-port 5900 och en HTTP-port (5800 som standard) öppnas i brandväggen. Du kan ställa in detta med YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1624,25 +1451,22 @@ msgstr "Skift/Lock-gruppbeteende"
 msgid "Arabic"
 msgstr "Arabiska"
 
-# NP
 #. XKBFile extension text
 msgid "Nepal"
 msgstr "Nepal"
 
-# CD
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
-msgstr "Demokratiska folkrepubliken Kongo"
+msgstr "Demokratiska republiken Kongo"
 
 #. XKBFile extension text
 msgid "Korea, Republic of"
-msgstr "Republiken Korean"
+msgstr "Republiken Korea"
 
 #. XKBFile extension text
 msgid "Iraq"
 msgstr "Irak"
 
-# NG
 #. XKBFile extension text
 msgid "Nigeria"
 msgstr "Nigeria"
@@ -1655,7 +1479,6 @@ msgstr "Japan (PC-98xx-serien)"
 msgid "Estonia"
 msgstr "Estland"
 
-# MM
 #. XKBFile extension text
 msgid "Myanmar"
 msgstr "Myanmar"
@@ -1668,12 +1491,10 @@ msgstr "Norge"
 msgid "Germany"
 msgstr "Tyskland"
 
-# MN
 #. XKBFile extension text
 msgid "Mongolia"
 msgstr "Mongoliet"
 
-# BT
 #. XKBFile extension text
 msgid "Bhutan"
 msgstr "Bhutan"
@@ -1750,7 +1571,6 @@ msgstr "Laos"
 msgid "Japan"
 msgstr "Japan"
 
-# Libris vill ha det så.
 #. XKBFile extension text
 msgid "Syria"
 msgstr "Syrien"
@@ -1779,7 +1599,6 @@ msgstr "Slovenien"
 msgid "Malta"
 msgstr "Malta"
 
-# AZ
 #. XKBFile extension text
 msgid "Azerbaijan"
 msgstr "Azerbajdzjan"
@@ -1808,7 +1627,6 @@ msgstr "Farsi"
 msgid "Slovakia"
 msgstr "Slovakien"
 
-# MV
 #. XKBFile extension text
 msgid "Maldives"
 msgstr "Maldiverna"
@@ -1845,7 +1663,6 @@ msgstr "Storbritannien"
 msgid "France"
 msgstr "Frankrike"
 
-# AM
 #. XKBFile extension text
 msgid "Armenia"
 msgstr "Armenien"
@@ -1858,7 +1675,6 @@ msgstr "Pakistan"
 msgid "Poland"
 msgstr "Polen"
 
-# KG
 #. XKBFile extension text
 msgid "Kyrgyzstan"
 msgstr "Kirgisistan"
@@ -1871,7 +1687,6 @@ msgstr "Irland"
 msgid "Hungary"
 msgstr "Ungern"
 
-# KH
 #. XKBFile extension text
 msgid "Cambodia"
 msgstr "Kambodja"
@@ -1888,7 +1703,6 @@ msgstr "Ukraina"
 msgid "Romania"
 msgstr "Rumänien"
 
-# KZ
 #. XKBFile extension text
 msgid "Kazakhstan"
 msgstr "Kazakstan"
@@ -1921,32 +1735,26 @@ msgstr "Makedonien"
 msgid "Canada"
 msgstr "Kanada"
 
-# LK
 #. XKBFile extension text
 msgid "Sri Lanka"
 msgstr "Sri Lanka"
 
-# BA
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
 msgstr "Bosnien-Hercegovina"
 
-# BR
 #. XKBFile extension text
 msgid "Brazil"
 msgstr "Brasilien"
 
-# GH
 #. XKBFile extension text
 msgid "Ghana"
 msgstr "Ghana"
 
-# AD
 #. XKBFile extension text
 msgid "Andorra"
 msgstr "Andorra"
 
-# AF
 #. XKBFile extension text
 msgid "Afghanistan"
 msgstr "Afganistan"
@@ -1958,29 +1766,6 @@ msgstr "Esperanto"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "Turkiet"
-
-#. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
-
-#. XKBFile extension text
-msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
-
-#. XKBFile extension text
-msgid "Less-than/Greater-than is Compose."
-msgstr ""
-
-#. XKBFile extension text
-#, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr ""
-"Mellanslagstangenten ger ett icke-brytbart mellanslagstecken på den fjärde "
-"nivån."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2040,8 +1825,3 @@ msgstr "Inställningar på skärmen"
 msgid "Idle timer..."
 msgstr "Inaktivitetstidur..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
-#~ msgstr "Caps Lock använder internationellt skiftläge. Skift "
-
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "Caps Lock fungerar som Skift med låsning. Skift "

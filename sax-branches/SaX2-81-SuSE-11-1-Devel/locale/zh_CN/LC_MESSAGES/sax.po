@@ -1,14 +1,13 @@
-# SaX Translations.
-# Craig Jeffares cjeffares@novell.com
-# Eric Shan <ericalways@gmail.com>, 2008.
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Sax\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-10-21 12:27+0800\n"
-"Last-Translator: Eric Shan <ericalways@gmail.com>\n"
-"Language-Team: Simplified Chinese\n"
+"PO-Revision-Date: 2009-01-05 08:04\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,30 +22,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2 建议</b><hr>当前启动的图形系统基于 SaX2 的建议。如果可以接受，请单击"
-"<b>确定</b>。否则，请更改设置。"
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2 建议</b><hr>当前启动的图形系统基于 SaX2 的建议。如果可以接受，请单击<b>确定</b>。否则，请更改设置。"
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为您的图形卡/驱动不支持 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>不支持 3D 加速</b><hr>SaX2 无法激活 3D 子系统，因为您的图形卡/驱动程序不支持 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D 加速不被支持</b><hr>SaX2 无法激活 3D 子系统因为基于 Xinerama 的双头输出"
-"模式被使用。Xorg Xinerama 扩展复合屏幕不在所有 Head 上支持 3D 。"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>不支持 3D 加速</b><hr>SaX2 无法激活 3D 子系统，因为使用了基于 Xinerama 的双传感头模式。用于组合图形屏幕的 Xorg Xinerama 扩展不支持所有传感头上的 3D"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -65,10 +50,8 @@ msgid "SaX Control Center"
 msgstr "SaX 控制中心"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr "<b>显示大小改变</b><hr>显示大小在调整适应新输出。"
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>显示大小更改</b><hr>显示大小已调整为适应新布局。"
 
 #. Help Button text
 msgid "&Help"
@@ -106,11 +89,11 @@ msgstr "更改配置(&H)"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "显示器"
+msgstr "监视器"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "卡和显示器属性"
+msgstr "卡和监视器属性"
 
 #. Short description of the Mouse module
 #. Simple mouse text for the mouse tab
@@ -122,7 +105,6 @@ msgid "Mouse Properties"
 msgstr "鼠标属性"
 
 #. Short description of the Keyboard module
-#. Keyboard name label
 msgid "Keyboard"
 msgstr "键盘"
 
@@ -157,7 +139,7 @@ msgstr "远程访问属性"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
-msgstr "显示 %1"
+msgstr "显示器 %1"
 
 #. Tab text for a display tab of the mouse dialog
 msgid "Mouse %1"
@@ -174,29 +156,6 @@ msgstr "激活此指针"
 #. Graphics Card name label
 msgid "Card"
 msgstr "卡"
-
-#. Desktop name label
-msgid "Desktop"
-msgstr ""
-
-#. Pointers name label, global name for input devices
-msgid "Pointers"
-msgstr ""
-
-#. Layout name label, desktop layout
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "布局"
-
-#. Path name label, search paths
-msgid "Path"
-msgstr ""
-
-#. Extensions name label, X11 extensions
-msgid "Extensions"
-msgstr ""
 
 #. Change data
 msgid "&Change..."
@@ -236,7 +195,7 @@ msgstr "翻转 Y 轴"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr "激活左手按钮映射"
+msgstr "激活左手键映射"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -262,6 +221,12 @@ msgstr "测试(&T)"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "保存(&S)"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "布局"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -313,11 +278,11 @@ msgstr "激活 3D 加速"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
-msgstr "卡的显示器"
+msgstr "卡的监视器"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr "卡的第二个显示器"
+msgstr "卡的第二个监视器"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
@@ -348,39 +313,24 @@ msgid "Unconfigured"
 msgstr "未配置"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>无法取消激活所有显示器</b><hr><nobr>必须至少有一台显示器是活动的。</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>无法取消激活所有显示器</b><hr><nobr>必须至少有一台显示器是活动的。</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
 msgstr "没有可用的配置"
 
 #. Radiobutton for traditional multihead mode
-msgid ""
-"Traditional Multihead:\n"
-"Each screen is an independent display"
-msgstr ""
-"传统的多传感头：\n"
-"每个屏幕都是一个独立的显示器"
+msgid "Traditional Multihead:\nEach screen is an independent display"
+msgstr "传统的多传感头：\n每个屏幕都是一个独立的显示器"
 
 #. Radiobutton for cloned multihead mode
-msgid ""
-"Cloned Multihead:\n"
-"Each display is a clone of the primary display"
-msgstr ""
-"复制的多传感头：\n"
-"每个显示器都是主显示器的复制品"
+msgid "Cloned Multihead:\nEach display is a clone of the primary display"
+msgstr "复制的多传感头：\n每个显示器都是主显示器的复制品"
 
 #. Radiobutton for xinerama multihead mode
-msgid ""
-"Xinerama Multihead:\n"
-"Build one big display out of all screens"
-msgstr ""
-"Xinerama 多传感头：\n"
-"用所有屏幕构建一个大显示屏幕"
+msgid "Xinerama Multihead:\nBuild one big display out of all screens"
+msgstr "Xinerama 多传感头：\n用所有屏幕构建一个大显示屏幕"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -392,16 +342,16 @@ msgstr "已连接到"
 
 #. Tooltip text if monitor is unknown
 msgid "Unknown Monitor:"
-msgstr "未知显示器："
+msgstr "未知监视器："
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
-msgstr "主显示器："
+msgstr "主监视器："
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
 msgid "Monitor Settings"
-msgstr "显示器设置"
+msgstr "监视器设置"
 
 #. Windowanager title for the mouse mode setup
 msgid "Mouse Settings"
@@ -428,22 +378,16 @@ msgid "To the Right"
 msgstr "向右"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>无效颜色／分辨率组合：</b><hr><nobr>选定的分辨率和／或颜色设置</nobr>不被"
-"图形卡 framebuffer 支持。"
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>无效颜色/分辨率组合：</b><hr><nobr>选定的分辨率和/或颜色设置</nobr>不受图形卡帧缓冲设备支持。"
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>选项需要值</b><hr><nobr>为选项 %1 设置一个值。</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr "显示器：供应商和名称选择"
+msgstr "监视器：供应商和名称选择"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
@@ -451,7 +395,7 @@ msgstr "鼠标：供应商和名称选择"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
-msgstr "手工同步频率设置"
+msgstr "手动同步频率设置"
 
 #. Group box title for the aspect/ratio selection
 msgid "Diagonal and Aspect Ratio"
@@ -462,13 +406,8 @@ msgid "Display Size in [ mm ]"
 msgstr "显示大小（毫米）"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>注意：</b>错误的同步范围可能损坏您的显示器。有关设置的信息，请参考您的显示"
-"器手册。<br><br>如果不想显示器使用其最大频率，请缩小同步范围。"
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>注意：</b>错误的同步范围可能损坏您的监视器。有关设置的信息，请参考您的监视器手册。<br><br>如果不想监视器使用其最大频率，请缩小同步范围。"
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -484,11 +423,11 @@ msgstr "横向"
 
 #. Label text for second monitor name
 msgid "Second Monitor:"
-msgstr "第二个显示器："
+msgstr "第二个监视器："
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr "第二个显示器的分辨率"
+msgstr "第二个监视器的分辨率"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
@@ -527,19 +466,12 @@ msgid "inches"
 msgstr "英寸"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>插入 CD 或磁盘</b><hr>插入显示器供应商提供的显示器实用程序 CD 或磁盘。"
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>插入 CD 或磁盘</b><hr>插入监视器供应商提供的显示器实用程序 CD 或磁盘。"
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>读取错误</b><hr>无法从 CD 或磁盘读取。可能表示介质损坏或格式化信息文件不正"
-"确。"
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>读取错误</b><hr>无法从 CD 或磁盘读取。可能表示媒体损坏或格式化信息文件不正确。"
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -609,7 +541,7 @@ msgstr "Alt/Win 键行为"
 
 #. List View root item text
 msgid "EuroSign Key Position"
-msgstr "欧元键的位置"
+msgstr "欧元符号键的位置"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -633,15 +565,15 @@ msgstr "埃塞俄比亚"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr "NICOLA-F 风格退格键"
+msgstr "NICOLA-F 风格 Backspace"
 
 #. XKBFile extension text
 msgid "Right Alt key never chooses 3rd level."
-msgstr "按右 Alt 键不到第 3 级。"
+msgstr "按右 Alt 键不选择第 3 级。"
 
 #. XKBFile extension text
 msgid "Left Alt key switches layout while pressed."
-msgstr "按下左 Alt 键后切换布局。"
+msgstr "按左 Alt 键后切换布局。"
 
 #. XKBFile extension text
 msgid "Space key outputs non"
@@ -677,11 +609,11 @@ msgstr "左 Alt 键更改布局。"
 
 #. XKBFile extension text
 msgid "Both Win-keys switch layout while pressed."
-msgstr "按下两个 Win 键后切换布局。"
+msgstr "按两个 Win 键后切换布局。"
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "按下右 Ctrl 键后切换布局。"
+msgstr "按右 Ctrl 键后切换布局。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
@@ -689,11 +621,11 @@ msgstr "空格键输出不可断空格字符"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift＋CapsLock 转换布局。"
+msgstr "Shift＋CapsLock 更改布局。"
 
 #. XKBFile extension text
 msgid "R-Alt switches layout while pressed."
-msgstr "按下右 Alt 键后切换布局。"
+msgstr "按右 Alt 键后切换布局。"
 
 #. XKBFile extension text
 msgid "Numeric keypad layout selection"
@@ -709,11 +641,11 @@ msgstr "Alt+CapsLock 更改布局。"
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys."
-msgstr "Super 被映射到 Win 键。"
+msgstr "将 Super 映射到 Win 键。"
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative layout."
-msgstr "ScrollLock LED 显示替换布局。"
+msgstr "ScrollLock LED 显示备用布局。"
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
@@ -721,7 +653,7 @@ msgstr "两个 Shift 键一起更改布局。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr "在第2级，空格键输出不间断的空格字符。"
+msgstr "在第 2 级，空格键输出不可断空格字符。"
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
@@ -729,7 +661,7 @@ msgstr "右 Win 键更改布局。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr "在第3级，空格键输出不间断的空格字符。"
+msgstr "在第 3 级，空格键输出不可断空格字符。"
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -737,11 +669,11 @@ msgstr "数字键盘的作用和在 Mac 中的一样。"
 
 #. XKBFile extension text
 msgid "CapsLock LED shows alternative layout."
-msgstr "CapsLock LED 显示替换布局。"
+msgstr "CapsLock LED 显示备用布局。"
 
 #. XKBFile extension text
 msgid "NumLock LED shows alternative layout."
-msgstr "NumLock LED 显示替换布局。"
+msgstr "NumLock LED 显示备用布局。"
 
 #. XKBFile extension text
 msgid "Left Shift key changes layout."
@@ -749,11 +681,11 @@ msgstr "左 Shift 键更改布局。"
 
 #. XKBFile extension text
 msgid "Left Win-key switches layout while pressed."
-msgstr "按下左 Win 键后切换布局。"
+msgstr "按左 Win 键后切换布局。"
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr "在第4级，空格键输出不间断的空格字符。"
+msgstr "在第 4 级，空格键输出不可断空格字符。"
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
@@ -765,7 +697,7 @@ msgstr "CapsLock 键更改布局。"
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Control 映射到 Win 键(和通常的 Ctrl 键)。"
+msgstr "将 Control 映射到 Win 键（和通常的 Ctrl 键）。"
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
@@ -785,7 +717,7 @@ msgstr "Alt+Shift 更改布局。"
 
 #. XKBFile extension text
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl+Shift 键更改布局。"
+msgstr "Ctrl+Shift 更改布局。"
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
@@ -793,11 +725,11 @@ msgstr "在任何级别，空格键都输出通常的空格。"
 
 #. XKBFile extension text
 msgid "Japanese keyboard options"
-msgstr "日本键盘选项"
+msgstr "日语键盘选项"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative layout."
-msgstr "使用键盘 LED 显示替换布局。"
+msgstr "使用键盘 LED 显示备用布局。"
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes layout."
@@ -809,15 +741,15 @@ msgstr "Menu 键更改布局。"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl 键更改布局。"
+msgstr "Alt+Ctrl 更改布局。"
 
 #. XKBFile extension text
 msgid "Right Win-key switches layout while pressed."
-msgstr "按下右 Win 键后切换布局。"
+msgstr "按右 Win 键后切换布局。"
 
 #. XKBFile extension text
 msgid "Layout switching"
-msgstr "输出切换"
+msgstr "布局切换"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -857,19 +789,19 @@ msgstr "默认数字键盘键。"
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr "把不间断空格的按键代号添加到空格键"
+msgstr "把不可断空格的按键符号添加到空格键"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr "在键盘中使用 unicode 的附加字符(箭头和数学运算符)"
+msgstr "在键盘中使用 unicode 的附加字符（箭头和数学运算符）"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr "强制标准传统小键盘"
+msgstr "实施标准传统小键盘"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "CapsLock 用于内部大写转换。 Shift 不影响 CapsLock。"
+msgstr "CapsLock 用于内部大写转换。Shift 不影响 CapsLock。"
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -877,28 +809,27 @@ msgstr "键盘布局选择"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
-msgstr "Shift＋CapsLock 转换组。"
+msgstr "Shift＋CapsLock 更改组。"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr "空格键在第二级输出不间断空格"
+msgstr "空格键在第二级输出不可断空格。"
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift 不影响 CapsLock。"
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr "CapsLock 用于内部大写转换。Shift 键取消 CapsLock 键。"
+msgid "CapsLock uses internal capitalization. Shift "
+msgstr "CapsLock 用于内部大写转换。Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr "空格键在第三级输出不间断空格"
+msgstr "空格键在第三级输出不可断空格。"
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr "当 Mac 键盘被内核错误探测时，交换两个按键的键码。"
+msgstr "当 Mac 键盘由内核误测到时，交换两个按键的键码。"
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -906,33 +837,31 @@ msgstr "Numpad 键的作用和在 Mac 中的一样。"
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr "假名 Lock 键被锁定"
+msgstr "假名 Lock 键锁定"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr "空格键在第四级输出不间断空格"
+msgstr "空格键在第四级输出不可断空格。"
 
 #. XKBFile extension text
 msgid "Left Win-key is Compose."
-msgstr "左 Win 键是 Compose 键。"
+msgstr "左 Win 键是 Compose。"
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "按右 Alt 键可选择第 3 级，Shift+右 Alt 键作为 Multi_Key"
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "按右 Alt 键可选择第 3 级，Shift+右 Alt 键作为 Multi_Key。"
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr "空格键在任何级都输出空格"
+msgstr "空格键在任何级都输出空格。"
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr "日本键盘选项"
+msgstr "日语键盘选项"
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift 键取消 CapsLock 键。"
+msgid "CapsLock acts as Shift with locking. Shift "
+msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1172,7 +1101,7 @@ msgstr "中国"
 
 #. XKBFile extension text
 msgid "USA"
-msgstr "USA"
+msgstr "美国"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 4 key."
@@ -1184,7 +1113,7 @@ msgstr "四级键包括点"
 
 #. XKBFile extension text
 msgid "Legacy Wang 724 keypad"
-msgstr "老式的 Wang 724 键盘"
+msgstr "旧式 Wang 724 键盘"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
@@ -1192,50 +1121,43 @@ msgstr "四级键包括抽象分隔符"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr "在键盘中使用 unicode 的附加字符(箭头和数学运算符)"
+msgstr "在键盘中使用 unicode 的附加字符（箭头和数学运算符）"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
-msgstr "老式键盘"
+msgstr "旧式键盘"
 
 #. XKBFile extension text
 msgid "Shift cancels CapsLock."
-msgstr "Shift 取消 CapsLock 键。"
+msgstr "Shift 取消 CapsLock。"
 
 #. XKBFile extension text
 msgid "Swap ESC and CapsLock."
-msgstr "交换 ESC 和 CapsLock 键。"
+msgstr "交换 ESC 和 CapsLock。"
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"在 Wang 724 键盘中使用 unicode 的附加字符(箭头和数学运算符)。数学运算符在默认"
-"级"
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "在 Wang 724 键盘中使用 unicode 的附加字符（箭头和数学运算符）。数学运算符在默认级。"
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
-msgstr "四级按键包括逗号"
+msgstr "四级键包括逗号"
 
 #. XKBFile extension text
 msgid "Legacy key with comma"
-msgstr "老式按键包括逗号"
+msgstr "旧式键包括逗号"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"在键盘中使用 unicode 的附加字符(箭头和数学运算符)。数学运算符在默认级。"
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "在键盘中使用 unicode 的附加字符（箭头和数学运算符）。数学运算符在默认级。"
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
-msgstr "老式按键包括点"
+msgstr "旧式键包括点"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr "四级按键包括 momayyez"
+msgstr "四级键包括 momayyez"
 
 #. XKBFile extension text
 msgid "Numeric keypad delete key behaviour"
@@ -1243,7 +1165,7 @@ msgstr "数字键盘删除键的行为"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "在 Wang 724 键盘中使用 unicode 的附加字符(箭头和数学运算符)"
+msgstr "在 Wang 724 键盘中使用 unicode 的附加字符（箭头和数学运算符）"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1301,11 +1223,6 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
 
-#. Combobox item text for tablet port: ttyS4
-#, fuzzy
-msgid "COM-5 [ /dev/ttyS4 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
-
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
 msgstr "工具"
@@ -1320,11 +1237,11 @@ msgstr "添加橡皮"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr "添加触摸"
+msgstr "添加触板"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
-msgstr "添加 Pad"
+msgstr "添加写字板"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1336,7 +1253,7 @@ msgstr "笔属性"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
-msgstr "Pad 属性"
+msgstr "写字板属性"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
@@ -1359,16 +1276,8 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "触摸屏：供应商和名称选择"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>最终步骤</b><hr>最后一步为保存您的新配置。建议在保存之前测试新配置。如果测"
-"试服务器显示损坏的桌面，按下<b>[ Ctrl+Alt+Backspace ]</b> 和 <b>[ Ctrl+Alt"
-"+Backspace ]</b> 听到一个大声的警告后(哔)，就可以停止服务器。"
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>最终步骤</b><hr>最后一步为保存您的新配置。建议在保存之前测试新配置。如果测试服务器显示损坏的桌面，按 <b>[ Ctrl+Alt+Backspace ]</b> 和 <b>[ Ctrl+Alt+Backspace ]</b> 稍后听到大声的警告（哔）时即可停止服务器。"
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1411,30 +1320,19 @@ msgid "HTTP Port"
 msgstr "HTTP 端口"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr "<b>远程访问口令不匹配</b><hr>口令的第一个和第二个版本不匹配。"
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>远程访问密码不匹配</b><hr>密码的第一个和第二个版本不匹配。"
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>远程访问口令错误</b><hr>口令字段被留空或口令太短。请输入至少有 6 个字符的"
-"口令。"
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>远程访问密码错误</b><hr>密码字段已保留为空或密码太短。请输入至少有 6 个字符的密码。"
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr "<b>远程访问口令错误</b><hr>口令太长。请输入至多有 8 个字符的口令。"
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>远程访问密码错误</b><hr>密码太长。请输入最多有 8 个字符的密码。"
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
 msgstr "<b>软件安装：</b><hr>缺少某些包。是否立即安装缺少的包？"
 
 #. Caption text for the missing package info window
@@ -1454,35 +1352,20 @@ msgid "Initialize cache..."
 msgstr "初始化超速缓存..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>保存配置文件失败</b><hr>已创建下列报告："
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>配置已保存</b><hr>您的修改将在下次图形系统重启动时生效。是否立即退出 "
-"SaX2？"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>配置已保存</b><hr>您的修改将在下次图形系统重启动时生效。是否立即退出 SaX2？"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>测试配置失败</b><hr>有关更多信息，请参阅文件 <tt>/var/log/Xorg.99.log</"
-"tt>。根据调用的实例创建了下列报告："
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>测试配置失败</b><hr>有关更多信息，请参阅文件 <tt>/var/log/Xorg.99.log</tt>。根据调用的实例创建了下列报告："
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>远程访问配置信息</b><hr>远程访问服务需要防火墙上的 TCP 端口 5900 和 HTTP "
-"端口（默认情况下为 5800）打开。可以使用 YaST 配置它。"
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>远程访问配置信息</b><hr>远程访问服务需要防火墙内的 TCP 端口 5900 和 HTTP 端口（默认情况下为 5800）打开。可以使用 YaST 配置它。"
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1574,7 +1457,7 @@ msgstr "尼泊尔"
 
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
-msgstr "刚果（金）"
+msgstr "刚果人民民主共和国"
 
 #. XKBFile extension text
 msgid "Korea, Republic of"
@@ -1590,7 +1473,7 @@ msgstr "尼日利亚"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr "日本 (PC-98xx 系列)"
+msgstr "日本（PC-98xx 系列）"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1884,27 +1767,6 @@ msgstr "世界语"
 msgid "Turkey"
 msgstr "土耳其"
 
-#. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
-
-#. XKBFile extension text
-msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
-
-#. XKBFile extension text
-msgid "Less-than/Greater-than is Compose."
-msgstr ""
-
-#. XKBFile extension text
-#, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr "在第4级，空格键输出不间断的空格字符。"
-
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #. This file contains the gettext keys used within a gettext call in the
@@ -1963,8 +1825,3 @@ msgstr "显示器配置"
 msgid "Idle timer..."
 msgstr "空闲计时器..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
-#~ msgstr "CapsLock 用于内部大写转换。Shift "
-
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "CapsLock 键的作用相当于 Shift 键加上锁定。Shift "

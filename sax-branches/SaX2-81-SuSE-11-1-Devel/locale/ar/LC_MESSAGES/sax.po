@@ -1,13 +1,11 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2006-12-12 12:23:50+CET\n"
+"PO-Revision-Date: 2009-01-08 15:35\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -21,30 +19,19 @@ msgstr ""
 #.
 #. Dear Translator, translate this string as 'RTL' if your language is right-to-left
 msgid "I18N"
-msgstr ""
+msgstr "التدويل"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>اقتراح SaX2</b><hr>تستند الرسومات التي يتم تشغيلها حاليًا على اقتراح SaX2. "
-"إذا كان هذا مقبولاً، فانقر فوق <b>موافق</b>.  وفي غير ذلك، قم بتغيير التكوين."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>اقتراح SaX2</b><hr>تستند الرسومات التي يتم تشغيلها حاليًا على اقتراح SaX2. إذا كان هذا مقبولاً، فانقر فوق <b>موافق</b>.  وفي غير ذلك، قم بتغيير التكوين."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>التسريع ثلاثي الأبعاد غير معتمد</b><hr>لا يمكن أن يوفر SaX2 تنشيط النظام الفرعي ثلاثي الأبعاد نظرًا لأن بطاقة الرسومات/برنامج التشغيل الخاص بك لا يدعم ثلاثية الأبعاد"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>التسريع ثلاثي الأبعاد غير معتمد</b><hr>لا يمكن أن يوفر SaX2 تنشيط النظام الفرعي ثلاثي الأبعاد نظرًا لاستخدام وضع العرض على شاشتين المستند إلى Xinerama. ولا يدعم امتداد Xorg Xinerama لتضمين شاشات الرسومات ثلاثية الأبعاد على كافة الشاشات"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -63,10 +50,8 @@ msgid "SaX Control Center"
 msgstr "مركز تحكم SaX"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>تم تغيير حجم جهاز العرض</b><hr>تم توفيق حجم جهاز العرض مع التخطيط الجديد."
 
 #. Help Button text
 msgid "&Help"
@@ -120,7 +105,6 @@ msgid "Mouse Properties"
 msgstr "خصائص الماوس"
 
 #. Short description of the Keyboard module
-#. Keyboard name label
 msgid "Keyboard"
 msgstr "لوحة المفاتيح"
 
@@ -147,7 +131,7 @@ msgstr "خصائص الشاشة باللمس"
 
 #. Short description of the VNC module
 msgid "Remote Access"
-msgstr ""
+msgstr "الوصول عن بُعد"
 
 #. title of module dialog
 msgid "Remote Access Properties"
@@ -155,12 +139,11 @@ msgstr "خصائص الوصول عن بعد"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
-msgstr ""
+msgstr "جهاز العرض %1"
 
 #. Tab text for a display tab of the mouse dialog
-#, fuzzy
 msgid "Mouse %1"
-msgstr "الماوس"
+msgstr "الماوس %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -173,29 +156,6 @@ msgstr "تنشيط هذا المؤشر"
 #. Graphics Card name label
 msgid "Card"
 msgstr "البطاقة"
-
-#. Desktop name label
-msgid "Desktop"
-msgstr ""
-
-#. Pointers name label, global name for input devices
-msgid "Pointers"
-msgstr ""
-
-#. Layout name label, desktop layout
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "تخطيط"
-
-#. Path name label, search paths
-msgid "Path"
-msgstr ""
-
-#. Extensions name label, X11 extensions
-msgid "Extensions"
-msgstr ""
 
 #. Change data
 msgid "&Change..."
@@ -235,7 +195,7 @@ msgstr "عكس المحور ص"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr ""
+msgstr "تنشيط تعيين الزر الأيسر"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -261,6 +221,12 @@ msgstr "&اختبار"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "حف&ظ"
+
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "تخطيط"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -347,40 +313,24 @@ msgid "Unconfigured"
 msgstr "غير مكوّن"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>يتعذر إلغاء تنشيط كافة أجهزة العرض</b><hr><nobr>لا بد من وجود جهاز عرض "
-"واحد نشط على الأقل.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>يتعذر إلغاء تنشيط كافة أجهزة العرض</b><hr><nobr>لا بد من وجود جهاز عرض واحد نشط على الأقل.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
 msgstr "لا يوجد تكوين متاح"
 
 #. Radiobutton for traditional multihead mode
-msgid ""
-"Traditional Multihead:\n"
-"Each screen is an independent display"
-msgstr ""
-"عرض تقليدي على عدة شاشات:\n"
-"تُعدّ كل شاشة شاشة عرض مستقلة"
+msgid "Traditional Multihead:\nEach screen is an independent display"
+msgstr "عرض تقليدي على عدة شاشات:\nتُعدّ كل شاشة شاشة عرض مستقلة"
 
 #. Radiobutton for cloned multihead mode
-msgid ""
-"Cloned Multihead:\n"
-"Each display is a clone of the primary display"
-msgstr ""
-"عرض مستنسخ على عدة شاشات:\n"
-"تُعدّ كل شاشة عرض نسخة مماثلة من شاشة العرض الرئيسية"
+msgid "Cloned Multihead:\nEach display is a clone of the primary display"
+msgstr "عرض مستنسخ على عدة شاشات:\nتُعدّ كل شاشة عرض نسخة مماثلة من شاشة العرض الرئيسية"
 
 #. Radiobutton for xinerama multihead mode
-msgid ""
-"Xinerama Multihead:\n"
-"Build one big display out of all screens"
-msgstr ""
-"عرض Xinerama على عدة شاشات\n"
-"يكوّن عرضًا واحدًا من كافة الشاشات"
+msgid "Xinerama Multihead:\nBuild one big display out of all screens"
+msgstr "عرض Xinerama على عدة شاشات\nيكوّن عرضًا واحدًا من كافة الشاشات"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -428,15 +378,11 @@ msgid "To the Right"
 msgstr "إلى اليمين"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>مجموعة اللون/الدقة غير صالحة:</b><hr><nobr>إعدادات الدقة و/أو اللون المحددة</nobr> لا يدعمها مخزن الإطارات المؤقت لبطاقات الرسومات."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>يحتاج الخيار قيمة</b><hr><nobr>قم بإعداد قيمة للخيار %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
@@ -460,14 +406,8 @@ msgid "Display Size in [ mm ]"
 msgstr "حجم جهاز العرض بـ [مم]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>ملاحظة:</b>قد تتسبب نطاقات المزامنة الخاطئة في تلف جهاز العرض. راجع دليل "
-"جهاز العرض الخاص بالإعدادات.<br><br> إذا كنت لا تريد أن يستخدم جهاز العرض "
-"الحد الأقصى من التصنيف، فقم بتقليل نطاقات المزامنة."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>ملاحظة:</b>قد تتسبب نطاقات المزامنة الخاطئة في تلف جهاز العرض. راجع دليل جهاز العرض الخاص بالإعدادات.<br><br> إذا كنت لا تريد أن يستخدم جهاز العرض الحد الأقصى من التصنيف، فقم بتقليل نطاقات المزامنة."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -526,20 +466,12 @@ msgid "inches"
 msgstr "بوصات"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>إدخال القرص المضغوط أو القرص</b><hr>أدخل القرص المضغوط أو قرص البرنامج "
-"الإضافي لجهاز العرض من بائع أجهزة العرض."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>إدخال القرص المضغوط أو القرص</b><hr>أدخل القرص المضغوط أو قرص البرنامج الإضافي لجهاز العرض من بائع أجهزة العرض."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>خطأ في القراءة</b><hr>تتعذر القراءة من القرص المضغوط أو من القرص. قد يشير "
-"هذا الخطأ إلى وسيط تالف أو إلى ملفات معلومات لم يتم تنسيقها بشكل صحيح."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>خطأ في القراءة</b><hr>تتعذر القراءة من القرص المضغوط أو من القرص. قد يشير هذا الخطأ إلى وسيط تالف أو إلى ملفات معلومات لم يتم تنسيقها بشكل صحيح."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -563,7 +495,7 @@ msgstr "الإعداد الرئيسي"
 
 #. Label text for the primary keyboard type
 msgid "Type"
-msgstr "نوع"
+msgstr "النوع"
 
 #. Label text for the primary keyboard variant
 #. Table topic text describing the variant column
@@ -609,7 +541,7 @@ msgstr "سلوك المفتاح Alt/Win"
 
 #. List View root item text
 msgid "EuroSign Key Position"
-msgstr ""
+msgstr "موضع مفتاح علامة اليورو"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
@@ -624,9 +556,8 @@ msgid "Morocco"
 msgstr "المغرب"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "البرازيل"
+msgstr "طريقة برايل"
 
 #. XKBFile extension text
 msgid "Ethiopia"
@@ -634,229 +565,191 @@ msgstr "إثيوبيا"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
-msgstr ""
+msgstr "مسافة للخلف لنمط NICOLA-F"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key never chooses 3rd level."
-msgstr "اضغط المفتاح Alt الأيمن لاختيار المستوى الثالث."
+msgstr "لا يختار مفتاح Alt الأيمن المستوى الثالث مطلقًا."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key switches layout while pressed."
-msgstr "يقوم مفتاح Alt الأيسر بتبديل المجموعة أثناء الضغط."
+msgstr "يقوم مفتاح Alt الأيسر بتبديل التخطيط أثناء ضغطه."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "لا يُصدر مفتاح المسافة أية أحرف"
 
 #. XKBFile extension text
 msgid "Default numeric keypad keys."
-msgstr ""
+msgstr "مفاتيح لوحة المفاتيح الرقمية الافتراضية."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Ctrl keys together change layout."
-msgstr "يقوم مفتاحي Ctrl معًا بتغيير المجموعة."
+msgstr "يقوم مفتاحا Ctrl معًا بتغيير التخطيط."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
+msgstr "استخدام مفتاح المسافة لإدخال حرف مسافة غير قابل للتقسيم"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Shift key changes layout."
-msgstr "يقوم مفتاح Shift الأيمن بتغيير المجموعة."
+msgstr "يقوم مفتاح Shift الأيمن بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key changes layout."
-msgstr "يقوم مفتاح Win الأيسر بتغيير المجموعة."
+msgstr "يقوم مفتاح Win الأيسر بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "LCtrl+LShift change layout."
-msgstr "يؤدي ضغط Ctrl+Shift إلى تغيير المجموعة."
+msgstr "يقوم المفتاح Ctrl مع المفتاح Shift بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Alt key changes layout."
-msgstr "يقوم المفتاح الأيمن بتغيير المجموعة."
+msgstr "يقوم مفتاح Alt الأيسر بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Win-keys switch layout while pressed."
-msgstr "يقوم كل من مفتاحي Win بتبديل المجموعة أثناء الضغط."
+msgstr "يقوم مفتاحا Win بتبديل التخطيط أثناء ضغطهما."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "يقوم مفتاح Ctrl الأيمن بتبديل المجموعة أثناء الضغط."
+msgstr "يقوم مفتاح Ctrl الأيمن بتبديل التخطيط أثناء ضغطه."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr ""
+msgstr "يُصدر مفتاح المسافة حرف مسافة غير قابل للتقسيم"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift+CapsLock changes layout."
-msgstr "يؤدي ضغط Shift+CapsLock إلى تغيير المجموعة."
+msgstr "يقوم المفتاح Shift مع المفتاح CapsLock بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "R-Alt switches layout while pressed."
-msgstr "يقوم المفتاح Alt الأيمن بتبديل المجموعة أثناء الضغط."
+msgstr "يقوم مفتاح Alt الأيمن بتبديل التخطيط أثناء ضغطه."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad layout selection"
-msgstr "تحديد اللغة وتخطيط لوحة المفاتيح"
+msgstr "تحديد تخطيط لوحة المفاتيح الرقمية"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Ctrl key changes layout."
-msgstr "يقوم مفتاح Ctrl الأيمن بتغيير المجموعة."
+msgstr "يقوم مفتاح Ctrl الأيمن بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+CapsLock changes layout."
-msgstr "يؤدي ضغط Shift+CapsLock إلى تغيير المجموعة."
+msgstr "يقوم المفتاح Alt مع المفتاح CapsLock بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Super is mapped to the Win-keys."
-msgstr "تم تعيين المفتاح Hyper لمفتاحي Win."
+msgstr "تم تعيين المفتاح Super إلى مفتاحي Win."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "ScrollLock LED shows alternative layout."
-msgstr "تُظهر لمبة المفتاح ScrollLock المجموعة البديلة."
+msgstr "تُظهر لمبة المفتاح ScrollLock التخطيط البديل."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Shift keys together change layout."
-msgstr "يقوم مفتاحي Shift معًا بتغيير المجموعة."
+msgstr "يقوم مفتاحا Ctrl معًا بتغيير التخطيط."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة حرف مسافة غير قابل للتقسيم على المستوى الثاني."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key changes layout."
-msgstr "يقوم مفتاح Win الأيمن بتغيير المجموعة."
+msgstr "يقوم مفتاح Win الأيمن بتغيير التخطيط."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة حرف مسافة غير قابل للتقسيم على المستوى الثالث."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
-msgstr ""
+msgstr "تعمل مفاتيح لوحة المفاتيح كما تعمل في نظام التشغيل Mac."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock LED shows alternative layout."
-msgstr "تُظهر لمبة المفتاح ScrollLock المجموعة البديلة."
+msgstr "تُظهر لمبة المفتاح CapsLock التخطيط البديل."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "NumLock LED shows alternative layout."
-msgstr "تُظهر لمبة المفتاح NumLock المجموعة البديلة."
+msgstr "تُظهر لمبة المفتاح NumLock التخطيط البديل."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Shift key changes layout."
-msgstr "يقوم المفتاح الأيسر بتغيير المجموعة."
+msgstr "يقوم مفتاح Shift الأيسر بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Win-key switches layout while pressed."
-msgstr "يقوم مفتاح Win الأيسر بتبديل المجموعة أثناء الضغط."
+msgstr "يقوم مفتاح Win الأيسر بتبديل التخطيط أثناء ضغطه."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة حرف مسافة غير قابل للتقسيم على المستوى الثالث."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Both Alt keys together change layout."
-msgstr "يقوم مفتاحي Alt معًا بتغيير المجموعة."
+msgstr "يقوم مفتاحا Alt معًا بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock key changes layout."
-msgstr "يقوم المفتاح CapsLock بتغيير المجموعة."
+msgstr "يقوم المفتاح CapsLock بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "تم تعيين المفتاح Super لمفتاحي Win (افتراضي)."
+msgstr "يتم تعيين التحكم إلى مفتاحي Win (ومفاتيح Ctrl المعتادة)."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Alt key changes layout."
-msgstr "يقوم المفتاح Alt الأيمن بتغيير المجموعة."
+msgstr "يقوم مفتاح Alt الأيمن بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift with numeric keypad keys works as in MS Windows."
-msgstr ""
-"يعمل المفتاح Shift مع مفاتيح اللوحة الرقمية كما في أنظمة تشغيل MS Windows."
+msgstr "يعمل المفتاح Shift مع مفاتيح لوحة المفاتيح الرقمية كما في أنظمة تشغيل MS Windows."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt and Meta are on the Alt keys."
-msgstr "مفتاحي Alt وMeta على مفتاحي Alt (افتراضي)."
+msgstr "يعمل مفتاحا Alt وMeta على مفتاحي Alt."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Shift change layout."
-msgstr "يؤدي ضغط Alt+Shift إلى تغيير المجموعة."
+msgstr "يقوم المفتاح Alt مع المفتاح Shift بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Ctrl+Shift change layout."
-msgstr "يؤدي ضغط Ctrl+Shift إلى تغيير المجموعة."
+msgstr "يقوم المفتاح Ctrl مع المفتاح Shift بتغيير التخطيط."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة حرف مسافة غير قابل للتقطيع بأي مستوى."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Japanese keyboard options"
-msgstr "خيارات الشبكة"
+msgstr "خيارات لوحة المفاتيح اليابانية"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Use keyboard LED to show alternative layout."
-msgstr "استخدم لمبة لوحة المفاتيح لإظهار المجموعة البديلة."
+msgstr "استخدم لمبة لوحة المفاتيح لإظهار التخطيط البديل"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Left Ctrl key changes layout."
-msgstr "يقوم المفتاح Ctrl الأيسر بتغيير المجموعة."
+msgstr "يقوم مفتاح Ctrl الأيسر بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Menu key changes layout."
-msgstr "يقوم مفتاح \"القائمة\" بتغيير المجموعة."
+msgstr "يقوم مفتاح \"القائمة\" بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Alt+Ctrl change layout."
-msgstr "يؤدي ضغط Alt+Ctrl إلى تغيير المجموعة."
+msgstr "يقوم المفتاح Alt مع المفتاح Ctrl بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Right Win-key switches layout while pressed."
-msgstr "يقوم مفتاح Win الأيمن بتبديل المجموعة أثناء الضغط."
+msgstr "يقوم المفتاح Alt مع المفتاح Ctrl بتغيير التخطيط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Layout switching"
-msgstr "السماح بتبديل المستخدم"
+msgstr "تبديل التخطيطات"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
@@ -888,100 +781,91 @@ msgstr "يقوم مفتاح Ctrl الأيمن بتبديل المجموعة أث
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
-msgstr ""
+msgstr "يتم استبدال المفتاح Win الأيسر بالمفتاح Alt الأيسر."
 
 #. XKBFile extension text
 msgid "Default numpad keys."
-msgstr ""
+msgstr "مفاتيح اللوحة الرقمية الافتراضية."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "إضافة نظام مفاتيح المسافة غير القابلة للتقسيم إلى مفتاح المسافة"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "استخدام لوحة المفاتيح الرقمية بإضافات unicode ( وأسهم ومعاملات رياضية)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
-msgstr ""
+msgstr "فرض لوحة المفاتيح الرقمية القديمة القياسية"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
+msgstr "يستخدم المفتاح CapsLock الكتابة بالأحرف اللاتينية الكبيرة الداخلية. ولا يؤثر المفتاح Shift على المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
-msgstr ""
+msgstr "تحديد تخطيط لوحة المفاتيح الرقمية"
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes group."
-msgstr ""
+msgstr "يقوم المفتاح Alt مع المفتاح CapsLock بتغيير المجموعة."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة مسافة غير قابلة للتقسيم على المستوى الثاني."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr ""
+msgstr "يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. ولا يؤثر المفتاح Shift على المفتاح CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr ""
-"يستخدم المفتاح CapsLock الكتابة بالحروف الكبيرة الداخلية. يقوم المفتاح Shift "
-"بإلغاء المفتاح CapsLock."
+msgid "CapsLock uses internal capitalization. Shift "
+msgstr "يستخدم المفتاح CapsLock نظام الكتابة بالأحرف اللاتينية الكبيرة الداخلي. المفتاح Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة مسافة غير قابلة للتقسيم على المستوى الثالث."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
+msgstr "تبديل رموز المفاتيح لمفتاحين عندما لا تكتشف kernel لوحات مفاتيح Mac."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
-msgstr ""
+msgstr "تعمل مفاتيح اللوحة الرقمية كما تعمل في أنظمة تشغيل Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "يتم الآن قفل Kana Lock"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة مسافة غير قابلة للتقسيم على المستوى الرابع"
 
 #. XKBFile extension text
 msgid "Left Win-key is Compose."
-msgstr ""
+msgstr "يُعد مفتاح Win الأيسر مفتاح إنشاء."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "اضغط مفتاح Alt الأيمن لاختيار المستوى ثلاثي الأبعاد، ويعتبر المفتاح Shift+ Alt الأيمن مفتاحًا مت_عددًا."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "يُصدر مفتاح المسافة مسافة بأي مستوى."
 
 #. XKBFile extension text
 msgid "Japanese Keyboard Options"
-msgstr ""
+msgstr "خيارات لوحة المفاتيح اليابانية"
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr ""
-"يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. يقوم المفتاح Shift بإلغاء "
-"المفتاح CapsLock."
+msgid "CapsLock acts as Shift with locking. Shift "
+msgstr "يعمل المفتاح CapsLock كما يعمل المفتاح Shift مع وظيفة القفل. المفتاح Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"يستخدم المفتاح CapsLock الكتابة بالحروف الكبيرة الداخلية. لا يقوم المفتاح "
-"Shift بإلغاء المفتاح CapsLock."
+msgstr "يستخدم المفتاح CapsLock الكتابة بالحروف الكبيرة الداخلية. لا يقوم المفتاح Shift بإلغاء المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -989,13 +873,11 @@ msgstr "يقوم المفتاح CapsLock بقفل معدِّل المفتاح Sh
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
-"يقوم المفتاح CapsLock بتبديل الكتابة بالحروف الكبيرة العادية للحروف الهجائية."
+msgstr "يقوم المفتاح CapsLock بتبديل الكتابة بالحروف الكبيرة العادية للحروف الهجائية."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
-"يقوم المفتاح CapsLock بتبديل المفتاح Shift حتى يتم التأثير على كافة المفاتيح."
+msgstr "يقوم المفتاح CapsLock بتبديل المفتاح Shift حتى يتم التأثير على كافة المفاتيح."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -1055,15 +937,11 @@ msgstr "يقوم مفتاحي Shift معًا بتغيير المجموعة."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr ""
-"يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. لا يقوم المفتاح Shift بإلغاء "
-"المفتاح CapsLock."
+msgstr "يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. لا يقوم المفتاح Shift بإلغاء المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr ""
-"يستخدم المفتاح CapsLock الكتابة بالحروف الكبيرة الداخلية. يقوم المفتاح Shift "
-"بإلغاء المفتاح CapsLock."
+msgstr "يستخدم المفتاح CapsLock الكتابة بالحروف الكبيرة الداخلية. يقوم المفتاح Shift بإلغاء المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1123,8 +1001,7 @@ msgstr "يقوم المفتاح Alt الأيمن بتغيير المجموعة."
 
 #. XKBFile extension text
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr ""
-"يعمل المفتاح Shift مع مفاتيح اللوحة الرقمية كما في أنظمة تشغيل MS Windows."
+msgstr "يعمل المفتاح Shift مع مفاتيح اللوحة الرقمية كما في أنظمة تشغيل MS Windows."
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+<key>) handled in a server."
@@ -1168,9 +1045,7 @@ msgstr "يؤدي ضغط مفتاح التحكم+المفتاح Shift إلى تغ
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
-msgstr ""
-"يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. يقوم المفتاح Shift بإلغاء "
-"المفتاح CapsLock."
+msgstr "يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. يقوم المفتاح Shift بإلغاء المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
@@ -1209,99 +1084,88 @@ msgid "Right Win-key switches group while pressed."
 msgstr "يقوم مفتاح Win الأيمن بتبديل المجموعة أثناء الضغط."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Serbia"
-msgstr "الصربية"
+msgstr "صربيا"
 
 #. XKBFile extension text
 msgid "Guinea"
 msgstr "غينيا"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Montenegro"
-msgstr "صربيا ومونتنيجرو"
+msgstr "الجبل الأسود"
 
 #. XKBFile extension text
 msgid "China"
 msgstr "الصين"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "USA"
-msgstr "USB"
+msgstr "الولايات المتحدة الأمريكية"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Add the EuroSign to the 4 key."
-msgstr "قم بإضافة EuroSign إلى المفتاح 5."
+msgstr "أضف علامة اليورو إلى المفتاح 4."
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
-msgstr ""
+msgstr "مفتاح بأربعة مستويات بنقطة"
 
 #. XKBFile extension text
 msgid "Legacy Wang 724 keypad"
-msgstr ""
+msgstr "لوحة مفاتيح Wang 724 قديمة"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
-msgstr ""
+msgstr "مفتاح بأربعة مستويات بفواصل مجردة"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "لوحة مفاتيح رقمية بإضافات unicode (أسهم ومعاملات رياضية)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
-msgstr ""
+msgstr "لوحة مفاتيح رقمية قديمة"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Shift cancels CapsLock."
-msgstr "التبديل بين المفتاح Ctrl والمفتاح CapsLock."
+msgstr "يلغي المفتاح Shift المفتاح CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Swap ESC and CapsLock."
-msgstr "التبديل بين المفتاح Ctrl والمفتاح CapsLock."
+msgstr "التبديل بين مفتاح ESC والمفتاح CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "لوحة المفاتيح الرقمية Wang 724 (أسهم ومعاملات رياضية). المعاملات الرياضية على المستوى الافتراضي."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
-msgstr ""
+msgstr "مفتاح بأربعة مستويات بفاصلة"
 
 #. XKBFile extension text
 msgid "Legacy key with comma"
-msgstr ""
+msgstr "مفتاح قديم بفاصلة"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "لوحة مفاتيح رقمية بإضافات unicode (أسهم ومعاملات رياضية). المعاملات الرياضية على المستوى الافتراضي."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
-msgstr ""
+msgstr "مفتاح قديم بنقطة"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr ""
+msgstr "مفتاح بأربعة مستويات بمميز"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Numeric keypad delete key behaviour"
-msgstr "تحديد اللغة وتخطيط لوحة المفاتيح"
+msgstr "سلوك مفتاح الحذف في لوحة المفاتيح الرقمية"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "لوحة المفاتيح الرقمية Wang 724 بإضافات unicode (أسهم ومعاملات رياضية)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1353,16 +1217,11 @@ msgstr "COM-2 [ /dev/ttyS1 ]"
 
 #. Combobox item text for tablet port: ttyS2
 msgid "COM-3 [ /dev/ttyS2 ]"
-msgstr ""
+msgstr "COM-3 [ /dev/ttyS2 ]"
 
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
-msgstr ""
-
-#. Combobox item text for tablet port: ttyS4
-#, fuzzy
-msgid "COM-5 [ /dev/ttyS4 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1378,11 +1237,11 @@ msgstr "إضافة ممحاة"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr ""
+msgstr "إضافة شاشة باللمس"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
-msgstr ""
+msgstr "إضافة لوحة"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1394,21 +1253,19 @@ msgstr "خصائص القلم"
 
 #. Tab title: Pad properties
 msgid "Pad Properties"
-msgstr ""
+msgstr "خصائص اللوحة"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
 msgstr "خصائص الممحاة"
 
 #. Tab title: Touch properties
-#, fuzzy
 msgid "Touch Properties"
-msgstr "خصائص الشاشة باللمس"
+msgstr "خصائص اللمس"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
-#, fuzzy
 msgid "Touchscreen %1"
-msgstr "شاشة باللمس"
+msgstr "شاشة باللمس %1"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
@@ -1419,25 +1276,16 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "شاشة باللمس: اختيار البائع والاسم"
 
 #. Finish configuration message box
-#, fuzzy
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>الخطوات النهائية</b><hr>الخطوة الأخيرة هي حفظ التكوين الجديد الذي قمت به. "
-"من المستحسن اختبار التكوين الجديد قبل حفظه. إذا كان خادم الاختبار يُظهر سطح "
-"مكتب تالفًا، فاضغط على<b>[ Ctrl+Alt+مسافة للخلف ]</b> لإنهاء الخادم."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>الخطوات النهائية</b><hr>الخطوة الأخيرة هي حفظ التكوين الجديد الذي قمت به. من المستحسن اختبار التكوين الجديد قبل حفظه. إذا كان خادم الاختبار يُظهر سطح مكتب تالفًا، فاضغط <b>[ Ctrl+Alt+مسافة للخلف ]</b> ثم <b>[ Ctrl+Alt+مسافة للخلف ]</b> بعد مدة قصيرة من صدور (صوت) تحذير عالٍ لإنهاء تشغيل الخادم."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
-msgstr ""
+msgstr "التحكم عن بُعد في الخادم X"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
+msgstr "السماح بالوصول إلى جهاز العرض ولوحة المفاتيح/الماوس الخاص بالخادم X الخاص بك"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1465,38 +1313,27 @@ msgstr "تنشيط الوصول إلى HTTP"
 
 #. Activate multiple VNC connection checkbox
 msgid "Allow Multiple Connections"
-msgstr ""
+msgstr "السماح باتصالات متعددة"
 
 #. SpinBox label to setup the HTTP port number
 msgid "HTTP Port"
 msgstr "منفذ HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>عدم تطابق كلمات سر الوصول عن بُعد</b><hr>لا يتطابق الإصداران الأول والثاني من كلمة السر."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>خطأ في كلمة سر الوصول عن بُعد</b><hr>إما أن حقل كلمة السر قد ترك فارغًا أو أن كلمة السر قصيرة جدًا. أدخل كلمة سر تحتوي على ستة أحرف على الأقل."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>خطأ في كلمة سر الوصول عن بُعد</b><hr>كلمة السر طويلة جدًا. أدخل كلمة سر تحتوي على ثمانية أحرف كحد أقصى."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>تثبيت البرنامج:</b><hr>بعض الحزم مفقودة. هل تريد تثبيت الحزم المفقودة "
-"الآن؟"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>تثبيت البرنامج:</b><hr>بعض الحزم مفقودة. هل تريد تثبيت الحزم المفقودة الآن؟"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1515,33 +1352,20 @@ msgid "Initialize cache..."
 msgstr "تهيئة الذاكرة المؤقتة..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>فشل في حفظ التكوين</b><hr>تم إنشاء التقرير التالي:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>تم حفظ التكوين</b><hr>ستصبح التعديلات التي قمت بها نافذة المفعول عند "
-"إعادة تشغيل نظام الرسومات في المرة القادمة. هل تريد الخروج من SaX2 الآن؟"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>تم حفظ التكوين</b><hr>ستصبح التعديلات التي قمت بها نافذة المفعول عند إعادة تشغيل نظام الرسومات في المرة القادمة. هل تريد الخروج من SaX2 الآن؟"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>فشل اختبار التكوين</b><hr>للحصول على مزيد من المعلومات، راجع الملف <tt>/"
-"var/log/Xorg.99.log</tt>. تم إنشاء التقرير التالي من مثيل الاتصال:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>فشل اختبار التكوين</b><hr>للحصول على مزيد من المعلومات، راجع الملف <tt>/var/log/Xorg.99.log</tt>. تم إنشاء التقرير التالي من مثيل الاتصال:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>معلومات تكوين الوصول عن بُعد</b><hr>تتطلب خدمة الوصول عن بُعد أن يكون منفذ TCP رقم 5900 ومنفذ HTTP (رقم 5800 بشكل افتراضي) مفتوحين في جدار الحماية. ويمكن تكوين ذلك باستخدام YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1621,7 +1445,7 @@ msgstr "يؤدي ضغط Alt+Ctrl إلى تغيير المجموعة."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
-msgstr "سلوك تبديل/قفل المجموعة"
+msgstr "مجموعة تبديل/قفل السلوك"
 
 #. XKBFile extension text
 msgid "Arabic"
@@ -1633,12 +1457,11 @@ msgstr "نيبال"
 
 #. XKBFile extension text
 msgid "Congo, Democratic Republic of the"
-msgstr ""
+msgstr "جمهورية الكونغو الديمقراطية"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Korea, Republic of"
-msgstr "جمهورية الدومينيكان"
+msgstr "جمهورية كوريا"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1650,7 +1473,7 @@ msgstr "نيجيريا"
 
 #. XKBFile extension text
 msgid "Japan (PC-98xx Series)"
-msgstr ""
+msgstr "اليابان (PC-98xx Series)"
 
 #. XKBFile extension text
 msgid "Estonia"
@@ -1862,7 +1685,7 @@ msgstr "أيرلندا"
 
 #. XKBFile extension text
 msgid "Hungary"
-msgstr "هنغاريا (المجر)"
+msgstr "المجر"
 
 #. XKBFile extension text
 msgid "Cambodia"
@@ -1944,26 +1767,6 @@ msgstr "الإسبرانتو"
 msgid "Turkey"
 msgstr "تركيا"
 
-#. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
-
-#. XKBFile extension text
-msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
-
-#. XKBFile extension text
-msgid "Less-than/Greater-than is Compose."
-msgstr ""
-
-#. XKBFile extension text
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr ""
-
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #. This file contains the gettext keys used within a gettext call in the
@@ -2021,3 +1824,4 @@ msgstr "تكوين على جهاز العرض"
 
 msgid "Idle timer..."
 msgstr "ميقاتي خامل..."
+
