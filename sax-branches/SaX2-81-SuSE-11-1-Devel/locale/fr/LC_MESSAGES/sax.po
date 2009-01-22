@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-07 15:48\n"
+"PO-Revision-Date: 2009-01-21 16:42\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "Propriétés de la souris"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Clavier"
 
@@ -156,6 +157,29 @@ msgstr "Activer ce pointeur"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Carte"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "Bureau"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "Pointeurs"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Disposition"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "Chemin d'accès"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "Extensions"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "&Tester"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Enregistrer"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Disposition"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "VerrMaj agit comme Maj avec verrouillage. Maj n'annule pas le verrouillage."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "VerrMaj utilise la capitalisation interne. Maj "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "VerrMaj utilise la capitalisation interne. Maj \"annule\" le verrouillage des majuscules."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Options de clavier Japonnais"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "VerrMaj agit comme Maj avec verrouillage. Maj "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "VerrMaj agit comme Maj avec verrouillage. Maj \"annule\" le verrouillage des majuscules."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS4 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1766,6 +1788,22 @@ msgstr "Espéranto"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "Turquie"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "La touche VerrMaj change la disposition du clavier et la combinaison Alt+VerrMaj revient à la disposition d'origine des majuscules."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "VerrMaj passe à la première disposition et Maj+VerrMaj passe à la dernière disposition."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "Inférieur à/Supérieur à est Compose."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "La touche espace produit un espace insécable au quatrième niveau, un espace insécable fin au sixième niveau (via Ctrl+Maj)"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

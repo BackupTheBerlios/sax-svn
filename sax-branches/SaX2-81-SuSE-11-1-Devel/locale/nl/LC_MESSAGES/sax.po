@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-08 15:48\n"
+"PO-Revision-Date: 2009-01-22 09:04\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "Eigenschappen muis..."
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Toetsenbord"
 
@@ -156,6 +157,29 @@ msgstr "Deze aanwijzer activeren"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Kaart"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "Aanwijzingen"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Indeling"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "Pad"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "Extensies"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "&Test"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Opslaan"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Indeling"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock gedraagt zich als vergrendelde Shift-toets. Shift heeft geen effect op CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock gebruikt interne kapitalisatie. Shift "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock gebruikt intern hoofdlettergebruik. Met Shift kan CapsLock worden gepauzeerd."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Opties voor Japanse toetsenborden"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock gedraagt zich als een vergrendelde Shift-toets. Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock gedraagt zich als vergrendelde Shift-toets. Met Shift kan CapsLock worden gepauzeerd."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1766,6 +1788,22 @@ msgstr "Esperanto"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "Turkije"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "Met de CapsLock-toets wordt de lay-out aangepast. Met Alt+CapsLock wordt de de gebruikelijke CapsLock-functie ingeschakeld."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "Met CapsLock gaat u naar de eerste lay-out; met Shift+CapsLock gaat u naar de laatste lay-out."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "Opstellen met kleiner dan/groter dan."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "De spatiebalk geeft op het vierde niveau als uitvoer een vast spatieteken en op het zesde niveau (met Ctrl+Shift) een smal vast spatieteken."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

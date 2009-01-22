@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-06 10:47\n"
+"PO-Revision-Date: 2009-01-21 13:40\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "滑鼠內容"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "鍵盤"
 
@@ -156,6 +157,29 @@ msgstr "啟用此指標"
 #. Graphics Card name label
 msgid "Card"
 msgstr "介面卡"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "桌面"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "指標"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "配置"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "路徑"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "延伸"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "測試(&T)"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "儲存(&S)"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "配置"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock 功能與鎖定的 Shift 相同。不會受到 Shift  的影響。"
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock 使用內建的大寫功能。Shift "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock 使用內建的大寫功能。Shift 可暫停 CapsLock。"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "日本鍵盤選項"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock 功能與鎖定的 Shift 相同。Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock 功能與鎖定的 Shift 相同。Shift 可暫停 CapsLock。"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1766,6 +1788,22 @@ msgstr "世界語"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "土耳其"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "按 CapsLock 鍵可以切換配置，按 Alt+CapsLock 可以執行原始 capslock 動作。"
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "按 CapsLock 可以切換到第一個配置，按 Shift+CapsLock 可以切換到最後一個配置。"
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "按左箭頭/右箭頭可以進行編輯。"
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "空格鍵在第四層輸出不可斷行的空白字元，在第六層輸出不可斷行的細空白字元 (按 Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
