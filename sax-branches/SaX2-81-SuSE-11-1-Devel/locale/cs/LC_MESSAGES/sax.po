@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-09 10:52\n"
+"PO-Revision-Date: 2009-01-23 10:24\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "Vlastnosti myši"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Klávesnice"
 
@@ -156,6 +157,29 @@ msgstr "Povolit ukazatel"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Karta"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "Plocha"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "Ukazatele"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Rozložení"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "Cesta"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "Rozšíření"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "&Test"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Uložit"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Rozložení"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -467,11 +485,11 @@ msgstr "palců"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
 msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>Vložit disketu nebo CD</b><hr>Prosím vložte disketu nebo CD s nástroji od výrobce monitoru."
+msgstr "<b>Vložit disketu nebo disk CD</b><hr>Prosím vložte disketu nebo disk CD s nástroji od výrobce monitoru."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Chyba při čtení</b><hr>Není možné číst z diskety nebo CD. Asi máte poškozené médium nebo neplatné soubory na médiu."
+msgstr "<b>Chyba při čtení</b><hr>Není možné číst z diskety nebo disku CD. Asi máte poškozené médium nebo neplatné soubory na médiu."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -569,11 +587,11 @@ msgstr "Backspace stylu NICOLA-F"
 
 #. XKBFile extension text
 msgid "Right Alt key never chooses 3rd level."
-msgstr "K volbě třetí úrovně stiskněte pravý Alt."
+msgstr "Třetí úroveň nastavíte stisknutím pravé klávesy Alt."
 
 #. XKBFile extension text
 msgid "Left Alt key switches layout while pressed."
-msgstr "Levý Alt přepíná skupinu při stisknutí."
+msgstr "Levá klávesa Alt přepíná skupinu při stisknutí."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
@@ -593,19 +611,19 @@ msgstr "Mezerník dělá nedělitelné mezery"
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
-msgstr "Pravý Shift mění rozložení."
+msgstr "Pravá klávesa Shift mění rozložení."
 
 #. XKBFile extension text
 msgid "Left Win-key changes layout."
-msgstr "Levá Win mění rozložení."
+msgstr "Levá klávesa Win mění rozložení."
 
 #. XKBFile extension text
 msgid "LCtrl+LShift change layout."
-msgstr "LCtrl+Shift mění rozložení."
+msgstr "Levá klávesa Ctrl a Shift mění rozložení."
 
 #. XKBFile extension text
 msgid "Left Alt key changes layout."
-msgstr "Levý Alt mění rozložení."
+msgstr "Levá klávesa Alt mění rozložení."
 
 #. XKBFile extension text
 msgid "Both Win-keys switch layout while pressed."
@@ -613,7 +631,7 @@ msgstr "Obě klávesy Win přepínají při stisknutí rozložení."
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Pravá Ctrl přepíná při stisknutí rozložení."
+msgstr "Pravá klávesa Ctrl přepíná při stisknutí rozložení."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
@@ -621,11 +639,11 @@ msgstr "Mezerník dělá nedělitelné mezery"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes layout."
-msgstr "Shift+Caps Lock mění rozložení."
+msgstr "Klávesy Shift+Caps Lock mění rozložení."
 
 #. XKBFile extension text
 msgid "R-Alt switches layout while pressed."
-msgstr "Pravý Alt přepíná při stisknutí rozložení."
+msgstr "Pravý klávesa Alt přepíná při stisknutí rozložení."
 
 #. XKBFile extension text
 msgid "Numeric keypad layout selection"
@@ -633,11 +651,11 @@ msgstr "Výběr rozložení numerické klávesnice"
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes layout."
-msgstr "Pravý Ctrl mění rozložení."
+msgstr "Pravá klávesa Ctrl mění rozložení."
 
 #. XKBFile extension text
 msgid "Alt+CapsLock changes layout."
-msgstr "Alt+Caps Lock mění rozložení."
+msgstr "Klávesy Alt+Caps Lock mění rozložení."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys."
@@ -649,7 +667,7 @@ msgstr "Scroll Lock LED zobrazuje alternativní rozložení."
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
-msgstr "Oba Shifty mění rozložení."
+msgstr "Obě klávesy Shift mění rozložení."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
@@ -657,7 +675,7 @@ msgstr "Mezerník na druhé úrovni vytváří nedělitelné mezery."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
-msgstr "Pravá Win klávesa mění rozložení."
+msgstr "Pravá klávesa Win mění rozložení."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
@@ -677,7 +695,7 @@ msgstr "Num Lock LED zobrazuje alternativní rozložení."
 
 #. XKBFile extension text
 msgid "Left Shift key changes layout."
-msgstr "Levý Shift mění rozložení."
+msgstr "Levá klávesa Shift mění rozložení."
 
 #. XKBFile extension text
 msgid "Left Win-key switches layout while pressed."
@@ -693,15 +711,15 @@ msgstr "Oba Alty mění rozložení."
 
 #. XKBFile extension text
 msgid "CapsLock key changes layout."
-msgstr "Caps Lock mění rozložení."
+msgstr "Klávesa Caps Lock mění rozložení."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Control je namapovaná na klávesách Win (a obvyklé Ctrl klávesy)."
+msgstr "Control je namapovaná na klávesách Win (a obvyklé klávesách Ctrl )."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
-msgstr "Pravý Alt mění rozložení."
+msgstr "Pravý klávesa Alt mění rozložení."
 
 #. XKBFile extension text
 msgid "Shift with numeric keypad keys works as in MS Windows."
@@ -709,7 +727,7 @@ msgstr "Shift a numerické klávesy jako ve Windows."
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt a Meta na klávese Alt."
+msgstr "Alt a Meta na klávese Alt"
 
 #. XKBFile extension text
 msgid "Alt+Shift change layout."
@@ -717,7 +735,7 @@ msgstr "Alt a Shift mění rozložení."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift change layout."
-msgstr "Ctrl a Shift mění rozložení."
+msgstr "Klávesy Ctrl a Shift mění rozložení."
 
 #. XKBFile extension text
 msgid "Space key outputs usual space at any level."
@@ -741,11 +759,11 @@ msgstr "Klávesa Menu mění rozložení."
 
 #. XKBFile extension text
 msgid "Alt+Ctrl change layout."
-msgstr "Alt+Ctrl mění rozložení."
+msgstr "Klávesy Alt a Ctrl mění rozložení."
 
 #. XKBFile extension text
 msgid "Right Win-key switches layout while pressed."
-msgstr "Pravá Win přepíná při stisknutí rozložení."
+msgstr "Pravá klávesa Win přepíná při stisknutí rozložení."
 
 #. XKBFile extension text
 msgid "Layout switching"
@@ -753,7 +771,7 @@ msgstr "Přepínání rozložení"
 
 #. XKBFile extension text
 msgid "Left Alt key switches group while pressed."
-msgstr "Levý Alt přepíná skupinu při stisknutí."
+msgstr "Levá klávesa Alt přepíná skupinu při stisknutí."
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change group."
@@ -781,7 +799,7 @@ msgstr "Pravá Ctrl přepíná skupinu při stisknutí."
 
 #. XKBFile extension text
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Levý Alt je prohozen s levou klávesou Win"
+msgstr "Levá klávesa Alt je zaměněna s levou klávesou Win"
 
 #. XKBFile extension text
 msgid "Default numpad keys."
@@ -801,7 +819,7 @@ msgstr "Vynutit standardní numerickou klávesnici"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr "Caps Lock používá interní kapitalizaci. Shift nevyruší Caps Lock."
+msgstr "Klávesa Caps Lock používá interní kapitalizaci. Klávesa Shift nevyruší klávesu Caps Lock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -817,11 +835,11 @@ msgstr "Mezerník na druhé úrovni vytváří nedělitelné mezery."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "CapsLock je jako Shift se zámkem. Shift neovlivňuje CapsLock."
+msgstr "Klávesa Caps Lock je jako klávesa Shift se zámkem. Klávesa Shift neovlivňuje klávesa Caps Lock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock používá interní kapitalizaci. Shift"
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "Klávesa Caps Lock používá interní psaní velkých písmen. Klávesa Shift „zastaví“ použití klávesy Caps Lock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -845,7 +863,7 @@ msgstr "Mezerník dělá na čtvrté úrovni nedělitelné mezery."
 
 #. XKBFile extension text
 msgid "Left Win-key is Compose."
-msgstr "levá klávesa Win je Compose."
+msgstr "Levá klávesa Win je Compose."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
@@ -860,28 +878,28 @@ msgid "Japanese Keyboard Options"
 msgstr "Možnosti japonské klávesnice"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Caps Lock funguje jako Shift se zámkem. Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "Klávesa Caps Lock se chová jako klávesa Shift se zámkem. Klávesa Shift „zastaví“ použití klávesy Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr "Caps Lock používá interní nastavení. Shift nevyruší Caps Lock."
+msgstr "Klávesa Caps Lock používá interní nastavení. Klávesa Shift nevyruší klávesu Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr "CapsLock již zamkl Shift."
+msgstr "CapsLock již zamkl klávesu Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr "Caps Lock aktivuje standardní velká písmena."
+msgstr "Klávesa Caps Lock aktivuje standardní velká písmena."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "Caps Lock aktivuje Shift, takže jsou ovlivněny všechny klávesy."
+msgstr "Klávesa Caps Lock aktivuje klávesu Shift, takže jsou ovlivněny všechny klávesy."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr "Pravá Win je Compose."
+msgstr "Pravá klávesa Win je Compose."
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
@@ -893,7 +911,7 @@ msgstr "Pravý Alt přepíná skupinu při stisknutí."
 
 #. XKBFile extension text
 msgid "Right Control key works as Right Alt."
-msgstr "Pravá klávesa Ctrl jako pravý Alt."
+msgstr "Pravá klávesa Ctrl jako pravý klávesa Alt."
 
 #. XKBFile extension text
 msgid "Control key at bottom left"
@@ -905,7 +923,7 @@ msgstr "Třetí úroveň nastavíte stisknutím klávesy Win."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "K volbě třetí úrovně stiskněte pravý Alt."
+msgstr "Třetí úroveň nastavíte stisknutím pravé klávesy Alt."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
@@ -913,11 +931,11 @@ msgstr "Pravý Ctrl mění skupinu."
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
-msgstr "Pravý Alt je Compose."
+msgstr "Pravá klávesa Alt je Compose."
 
 #. XKBFile extension text
 msgid "Right Ctrl is Compose."
-msgstr "Pravý Alt je Compose."
+msgstr "Pravá klávesa Alt je Compose."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
@@ -941,7 +959,7 @@ msgstr "Caps Lock je jako Shift se zámkem. Shift neruší Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "Caps Lock používá interní nastavení. Shift vyruší Caps Lock."
+msgstr "Klávesa Caps Lock používá interní nastavení. Shift vyruší Caps Lock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -953,7 +971,7 @@ msgstr "Třetí úroveň zvolíte stisknutím levé klávesy Win."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
-msgstr "Pravá Win klávesa mění skupinu."
+msgstr "Pravá klávesa Win mění skupinu."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the left Win-key."
@@ -989,7 +1007,7 @@ msgstr "Caps Lock mění skupinu."
 
 #. XKBFile extension text
 msgid "Swap Control and CapsLock."
-msgstr "Zaměnit Ctrl a Caps Lock."
+msgstr "Zaměnit klávesy Ctrl a Caps Lock."
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
@@ -1013,7 +1031,7 @@ msgstr "Hyper je výchozí na klávesách Win."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Alt je mapovaná na pravou klávesu Win a Super na Menu."
+msgstr "Alt je mapovaná na pravou klávesu Win a Super na klávesu Menu."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
@@ -1025,7 +1043,7 @@ msgstr "Alt a Meta na klávese Alt (výchozí)."
 
 #. XKBFile extension text
 msgid "Add the standard behavior to Menu key."
-msgstr "Přidat standardní chování do klávesy Menu."
+msgstr "Přidat standardní chování do klávesy Menu"
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys (default)."
@@ -1033,7 +1051,7 @@ msgstr "Alt a Meta na klávese Alt (výchozí)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "Třetí úroveň zvolíte stisknutím pravého Ctrl."
+msgstr "Třetí úroveň zvolíte stisknutím pravého klávesy Ctrl."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
@@ -1053,7 +1071,7 @@ msgstr "Použít k zobrazení alternativní skupiny LED."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "K volbě třetí úrovně stiskněte pravý Win."
+msgstr "Třetí úroveň nastavíte stisknutím pravé klávesy Win."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
@@ -1081,7 +1099,7 @@ msgstr "Alt a Ctrl mění skupinu."
 
 #. XKBFile extension text
 msgid "Right Win-key switches group while pressed."
-msgstr "Pravá Win přepíná skupinu při stisknutí."
+msgstr "Pravá klávesa Win přepíná skupinu při stisknutí."
 
 #. XKBFile extension text
 msgid "Serbia"
@@ -1105,7 +1123,7 @@ msgstr "USA"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 4 key."
-msgstr "Euro na klávese 4."
+msgstr "Euro na klávese 4"
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
@@ -1133,7 +1151,7 @@ msgstr "Shift ruší Caps Lock."
 
 #. XKBFile extension text
 msgid "Swap ESC and CapsLock."
-msgstr "Zaměnit ESC a Caps Lock."
+msgstr "Zaměnit klávesy ESC a Caps Lock."
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1373,7 +1395,7 @@ msgstr "Různé volby související s kompatibilitou"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 5 key."
-msgstr "Euro na klávese 5."
+msgstr "Euro na klávese 5"
 
 #. XKBFile extension text
 msgid "CapsLock key behavior"
@@ -1389,11 +1411,11 @@ msgstr "Ukládá se nastavení Eura na klávesy"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr "Caps Lock je Compose."
+msgstr "Klávesa Caps Lock je Compose."
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
-msgstr "Pravá klávesa Ctrl jako pravý Alt."
+msgstr "Pravá klávesa Ctrl jako pravý klávesa Alt."
 
 #. XKBFile extension text
 msgid "Ctrl key at bottom left"
@@ -1401,7 +1423,7 @@ msgstr "Klávesa Ctrl vlevo dole"
 
 #. XKBFile extension text
 msgid "Ctrl key at left of 'A'"
-msgstr "Klávesa Ctrl vlevo od 'A'"
+msgstr "Klávesa Ctrl vlevo od ,,A\""
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Ctrl."
@@ -1409,7 +1431,7 @@ msgstr "Caps Lock jako další ovládací klávesa."
 
 #. XKBFile extension text
 msgid "Swap Ctrl and CapsLock."
-msgstr "Zaměnit Ctrl a Caps Lock."
+msgstr "Zaměnit klávesy Ctrl a Caps Lock."
 
 #. XKBFile extension text
 msgid "Ctrl key position"
@@ -1421,7 +1443,7 @@ msgstr "Zvláštní klávesy (Ctrl+Alt+&lt;klávesa&gt;>) spravované serverem."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Třetí úroveň zvolíte stisknutím pravého Ctrl."
+msgstr "Třetí úroveň zvolíte stisknutím pravého klávesy Ctrl."
 
 #. XKBFile extension text
 msgid "Ctrl+Shift changes group."
@@ -1429,11 +1451,11 @@ msgstr "Ctrl a Shift mění skupinu."
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the E key."
-msgstr "Euro na klávese E."
+msgstr "Euro na klávese E"
 
 #. XKBFile extension text
 msgid "Add the EuroSign to the 2 key."
-msgstr "Euro na klávese 2."
+msgstr "Euro na klávese 2"
 
 #. XKBFile extension text
 msgid "key Compose key position"
@@ -1766,6 +1788,22 @@ msgstr "Esperanto"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "Turecko"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "Stisknutí klávesy CapsLock změní rozložení klávesnice, původní akci klávesy CapsLock provádí kombinace kláves Alt+CapsLock ."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "Stisknutí klávesy CapsLock přepne na první rozložení klávesnice, stisknutí kláves Shift+CapsLock přepne na poslední rozložení klávesnice."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "Klávesy „<“ a „>“ jsou Compose."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Mezerník vytváří na čtvrté úrovni znak pevné mezery, na šesté úrovni krátkou pevnou mezeru (pomocí kláves Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

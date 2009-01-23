@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-08 15:35\n"
+"PO-Revision-Date: 2009-01-22 19:06\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "خصائص الماوس"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "لوحة المفاتيح"
 
@@ -156,6 +157,29 @@ msgstr "تنشيط هذا المؤشر"
 #. Graphics Card name label
 msgid "Card"
 msgstr "البطاقة"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "سطح المكتب"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "المؤشرات"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "تخطيط"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "المسار"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "الملحقات"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "&اختبار"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "حف&ظ"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "تخطيط"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "يعمل المفتاح CapsLock كالمفتاح Shift مع القفل. ولا يؤثر المفتاح Shift على المفتاح CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "يستخدم المفتاح CapsLock نظام الكتابة بالأحرف اللاتينية الكبيرة الداخلي. المفتاح Shift "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "يستخدم المفتاح CapsLock الكتابة بالأحرف اللاتينية الكبيرة الداخلية. و\"يعطل\" المفتاح Shift عمل المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "خيارات لوحة المفاتيح اليابانية"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "يعمل المفتاح CapsLock كما يعمل المفتاح Shift مع وظيفة القفل. المفتاح Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "يؤدي المفتاح CapsLock نفس عمل المفتاح Shift بالنسبة لميزة القفل. و\"يعطل\" المفتاح Shift عمل المفتاح CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1766,6 +1788,22 @@ msgstr "الإسبرانتو"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "تركيا"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "يقوم المفتاح CapsLock بتبديل التخطيط أثناء ضغطه، ويؤدي ضغط Alt+CapsLock إلى تنفيذ نفس إجراء capslock الأصلي."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "يقوم CapsLock بالتبديل إلى التخطيط الأول، بينما يؤدي ضغط Shift+CapsLock إلى التبديل إلى التخطيط الأخير."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "تعتبر العلامتين أقل من/أكبر من مفتاح إنشاء."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "يضيف مفتاح المسافة حرف مسافة غير قابل للتقطيع عند المستوى الرابع، كما يضيف حرف مسافة رفيعًا غير قابل للتقطيع عند المستوى السادس (بضغط Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-06 09:41\n"
+"PO-Revision-Date: 2009-01-22 13:34\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "Propiedades del ratón"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Teclado"
 
@@ -156,6 +157,29 @@ msgstr "Activar este puntero"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Tarjeta"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "Escritorio"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "Punteros"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Distribución"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "Ruta"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "Extensiones"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "&Probar"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Guardar"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Distribución"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "Bloq Mayús actúa como la tecla Mayús con bloqueo. Pulsar Mayús no afecta a Bloq Mayús."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "Con Bloq Mayús se utilizan las mayúsculas internas. La tecla Mayús"
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "La tecla Bloq Mayús utiliza las mayúsculas internas. Al pulsar Mayús se detiene temporalmente el efecto de Bloq Mayús."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Opciones de teclado japonés"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "La tecla Bloq Mayús actúa como la tecla Mayús con bloqueo. La tecla Mayús"
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "La tecla Bloq Mayús actúa como la tecla Mayús con bloqueo. Al pulsar Mayús se detiene temporalmente el efecto de Bloq Mayús."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [/dev/ttyS2]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [/dev/ttyS3]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1766,6 +1788,22 @@ msgstr "Esperanto"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "Turquía"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "La tecla Bloq Mayús cambia la distribución mientras esté presionada. La combinación Alt + Bloq Mayús realiza la acción original de Bloq Mayús."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "La tecla Bloq Mayús cambia a la primera distribución, Mayús + Bloq Mayús cambia a la última distribución."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "La tecla de mayor que y menor que permite realizar una composición."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "La barra espaciadora produce un espacio duro en el cuarto nivel y un espacio duro estrecho en el sexto nivel (mediante Ctrl + Mayús)."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

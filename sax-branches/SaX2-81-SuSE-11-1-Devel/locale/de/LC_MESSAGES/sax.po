@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-08 15:19\n"
+"PO-Revision-Date: 2009-01-23 10:00\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "Mauseigenschaften"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "Tastatur"
 
@@ -156,6 +157,29 @@ msgstr "Diesen Zeiger aktivieren"
 #. Graphics Card name label
 msgid "Card"
 msgstr "Karte"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "Desktop"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "Verweise"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "Layout"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "Pfad"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "Erweiterungen"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "&Test"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "&Speichern"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "Layout"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "Feststelltaste verhält sich wie Umschalttaste mit Sperre. Umschalttaste beeinflusst Feststelltaste nicht."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "Die Feststelltaste verwendet die interne Großschreibung. Umschalttaste"
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "Feststelltaste verwendet interne Großschreibung. Die Umschalttaste \"unterbricht\" die Feststelltaste."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Japanische Tastaturoptionen"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Die Feststelltaste verhält sich wie die Umschalttaste mit Sperre. Umschalttaste"
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "Feststelltaste verhält sich wie Umschalttaste mit Sperre. Umschalttaste \"unterbricht\" die Feststelltaste."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1766,6 +1788,22 @@ msgstr "Esperanto"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "Türkei"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "Mit der Feststelltaste wird das Layout gewechselt, während durch Drücken von Alt + Feststelltaste die ursprüngliche Feststellaktion ausgeführt wird."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "Mit der Feststelltaste wird zum ersten Layout gewechselt, mit Shift + Feststelltaste zum letzten Layout."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "Kleiner als / Größer als ist Compose."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Durch Drücken der Leertaste wird das geschützte Leerzeichen auf der vierten Ebene ausgegeben, das schmale geschützte Leerzeichen auf der sechsten Ebene (mit Strg+Umstelltaste)"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

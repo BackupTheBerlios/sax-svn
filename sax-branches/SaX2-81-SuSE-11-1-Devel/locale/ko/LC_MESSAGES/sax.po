@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-08 13:45\n"
+"PO-Revision-Date: 2009-01-23 10:16\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,7 @@ msgid "Mouse Properties"
 msgstr "마우스 속성"
 
 #. Short description of the Keyboard module
+#. Keyboard name label
 msgid "Keyboard"
 msgstr "키보드"
 
@@ -156,6 +157,29 @@ msgstr "이 포인터 활성화"
 #. Graphics Card name label
 msgid "Card"
 msgstr "카드"
+
+#. Desktop name label
+msgid "Desktop"
+msgstr "데스크톱"
+
+#. Pointers name label, global name for input devices
+msgid "Pointers"
+msgstr "포인터"
+
+#. Layout name label, desktop layout
+#. Tab text for a layout tab of the keyboard dialog
+#. Label text for the primary keyboard layout
+#. Table topic text describing the keyboard layout column
+msgid "Layout"
+msgstr "레이아웃"
+
+#. Path name label, search paths
+msgid "Path"
+msgstr "경로"
+
+#. Extensions name label, X11 extensions
+msgid "Extensions"
+msgstr "확장"
 
 #. Change data
 msgid "&Change..."
@@ -221,12 +245,6 @@ msgstr "테스트(&T)"
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
 msgstr "저장(&S)"
-
-#. Tab text for a layout tab of the keyboard dialog
-#. Label text for the primary keyboard layout
-#. Table topic text describing the keyboard layout column
-msgid "Layout"
-msgstr "레이아웃"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -387,11 +405,11 @@ msgstr "<b>옵션에 값이 필요함</b><hr><nobr>옵션 %1에 대한 값을 �
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr "모니터: 공급업체 및 이름 선택"
+msgstr "모니터: 제조업체 및 이름 선택"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
-msgstr "마우스: 공급업체 및 이름 선택"
+msgstr "마우스: 제조업체 및 이름 선택"
 
 #. Group box title for the manual sync frequency set up
 msgid "Manual Sync Frequency Setup"
@@ -467,7 +485,7 @@ msgstr "인치"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
 msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
-msgstr "<b>CD 또는 디스크 넣기</b><hr>모니터 공급업체에서 제공하는 디스플레이 유틸리티 CD 또는 디스크를 넣습니다."
+msgstr "<b>CD 또는 디스크 넣기</b><hr>모니터 제조업체에서 제공하는 디스플레이 유틸리티 CD 또는 디스크를 넣습니다."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
@@ -820,8 +838,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock 키는 잠금 기능이 있는 Shift 키처럼 작동합니다. Shift 키는 CapsLock에 영향을 주지 않습니다."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock은 내부 대문자화 기능을 사용합니다. Shift 키는 "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock 키는 내부 대문자 표시 기능을 사용합니다. Shift 키를 누르면 CapsLock이 \"일시 중지\"합니다."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -860,8 +878,8 @@ msgid "Japanese Keyboard Options"
 msgstr "일본어 키보드 옵션"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock 키는 잠금 기능이 있는 Shift 키처럼 작동합니다. Shift 키는"
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock 키는 잠금 기능이 있는 Shift 키처럼 작동합니다. Shift 키를 누르면 CapsLock이 \"일시 중지\"합니다."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1181,7 +1199,7 @@ msgstr "이 타블렛 활성화"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
-msgstr "타블렛: 공급업체 및 이름 선택"
+msgstr "타블렛: 제조업체 및 이름 선택"
 
 #. Group box title for tablet port combobox
 msgid "Connection Port"
@@ -1222,6 +1240,10 @@ msgstr "COM-3 [ /dev/ttyS2 ]"
 #. Combobox item text for tablet port: ttyS3
 msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
+
+#. Combobox item text for tablet port: ttyS4
+msgid "COM-5 [ /dev/ttyS4 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1273,7 +1295,7 @@ msgstr "터치스크린을 디스플레이 번호 %1에 할당"
 
 #. Group box title for the touchscreen vendor and name selection
 msgid "Touchscreen: Vendor and Name Selection"
-msgstr "터치스크린: 공급업체 및 이름 선택"
+msgstr "터치스크린: 제조업체 및 이름 선택"
 
 #. Finish configuration message box
 msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
@@ -1766,6 +1788,22 @@ msgstr "에스페란토어"
 #. XKBFile extension text
 msgid "Turkey"
 msgstr "터키"
+
+#. XKBFile extension text
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "CapsLock 키를 누르면 레이아웃이 변경되고 Alt+CapsLock을 누르면 원래 CapsLock 작업이 수행됩니다."
+
+#. XKBFile extension text
+msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
+msgstr "CapsLock 키를 누르면 첫 번째 레이아웃이 변경되고 Shift+CapsLock을 누르면 마지막 레이아웃이 변경됩니다."
+
+#. XKBFile extension text
+msgid "Less-than/Greater-than is Compose."
+msgstr "Less-than/Greater-than이 Compose입니다."
+
+#. XKBFile extension text
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "스페이스 키를 누르면 네 번째 레벨에서 nobreakspace 문자가 출력되고 Ctrl+Shift를 누르면 여섯 번째 레벨에서 씬 nobreakspace 문자가 출력됩니다."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
