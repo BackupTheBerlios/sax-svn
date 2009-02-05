@@ -919,11 +919,8 @@ msgstr ""
 "CapsLock действует как Shift с блокировкой. Shift не влияет на CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr ""
-"CapsLock использует внутреннее преобразование прописных букв. Shift отменяет "
-"действие CapsLock."
+msgid "CapsLock uses internal capitalization. Shift "
+msgstr "CapsLock использует внутреннее преобразование букв в прописные. Shift "
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -966,11 +963,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Параметры японской клавиатуры"
 
 #. XKBFile extension text
-#, fuzzy
-msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr ""
-"Клавиша CapsLock действует как клавиша Shift с блокировкой. Shift отменяет "
-"действие CapsLock."
+msgid "CapsLock acts as Shift with locking. Shift "
+msgstr "CapsLock действует как Shift с блокировкой. Shift "
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -2057,9 +2051,14 @@ msgstr "Настройка экрана"
 msgid "Idle timer..."
 msgstr "Таймер простоя..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
+#, fuzzy
+#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
 #~ msgstr ""
-#~ "CapsLock использует внутреннее преобразование букв в прописные. Shift "
+#~ "CapsLock использует внутреннее преобразование прописных букв. Shift "
+#~ "отменяет действие CapsLock."
 
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "CapsLock действует как Shift с блокировкой. Shift "
+#, fuzzy
+#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+#~ msgstr ""
+#~ "Клавиша CapsLock действует как клавиша Shift с блокировкой. Shift "
+#~ "отменяет действие CapsLock."
