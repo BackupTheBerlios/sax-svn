@@ -4,7 +4,7 @@
 # Vendor ID | Device ID | Profile
 # -----------------------------------------------------
 # Mice
-0x0212 : 0x0002 : alps : synaptics
+0x0212 : 0x0002 : synaptics : synaptics
 0x0212 : 0x0001 : synaptics : synaptics
 0x0002 : 0x0007 : synaptics : synaptics
 0x046d : 0xc705 : logitech-MX900 : mouse
@@ -20,9 +20,9 @@
 0x0002 : 0x000a : ibm-trackpoint : mouse
 0x04b3 : 0x300f : ibm-trackpoint : mouse
 0x056a : 0x0013 : wacom : wacom
-0x05ac : 0x030b : alps : synaptics
-0x05ac : 0x1000 : alps-macbook : synaptics
-0x0002 : 0x0008 : alps : synaptics
+0x05ac : 0x030b : synaptics : synaptics
+0x05ac : 0x1000 : synaptics : synaptics
+0x0002 : 0x0008 : synaptics : synaptics
 0x1943 : 0x5000 : fujitsu : fujitsu
 0x5853 : 0xfffe : xen-mouse : evdev
 0x03f0 : 0x1126 : hp-mouse : evdev
