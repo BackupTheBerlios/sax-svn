@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Sun Mar  8 20:39:09 CET 2009 - sndirsch@suse.de
+
+- removed invalid synaptics driver options (ZAxisMapping,
+  Emulate3Buttons) in alps/alps-macbook/synaptics profiles
+- no longer apply synaptics/mouse/evdev/vmmouse/kbd profiles via
+  Input.map (evdev/synaptics is now loaded via HAL; evdev
+  replaces mouse/kbd/vmmouse)
+
+-------------------------------------------------------------------
 Mon Mar  2 16:57:14 CET 2009 - ms@suse.de
 
 - fixed panel detection for panels of 1366x768 (bnc #473910)
