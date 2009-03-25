@@ -20,7 +20,7 @@ STATUS        : Status: Up-to-date
 #include "mouse.h"
 #include "xstuff.h"
 
-#define VESA_LIST 24
+#define VESA_LIST 27
 
 //======================================
 // ScanXStuff: constructor...
@@ -187,30 +187,33 @@ void ScanXStuff::Scan (void) {
 	// Allow following resolutions
 	//--------------------------------------
 	XMode vesaStandard[VESA_LIST];
-	vesaStandard[0].x  = 800;  vesaStandard[0].y  = 600;
-	vesaStandard[1].x  = 1024; vesaStandard[1].y  = 768;
-	vesaStandard[2].x  = 1152; vesaStandard[2].y  = 864;
-	vesaStandard[3].x  = 1280; vesaStandard[3].y  = 768;
-	vesaStandard[4].x  = 1280; vesaStandard[4].y  = 800;
-	vesaStandard[5].x  = 1280; vesaStandard[5].y  = 960;
-	vesaStandard[6].x  = 1280; vesaStandard[6].y  = 1024;
-	vesaStandard[7].x  = 1366; vesaStandard[7].y  = 768;
-	vesaStandard[8].x  = 1440; vesaStandard[8].y  = 900;
-	vesaStandard[9].x  = 1400; vesaStandard[9].y  = 1050;
-	vesaStandard[10].x = 1600; vesaStandard[10].y = 1000;
-	vesaStandard[11].x = 1600; vesaStandard[11].y = 1024;
-	vesaStandard[12].x = 1600; vesaStandard[12].y = 1200;
-	vesaStandard[13].x = 1680; vesaStandard[13].y = 1050;
-	vesaStandard[14].x = 1900; vesaStandard[14].y = 1200;
-	vesaStandard[15].x = 1920; vesaStandard[15].y = 1200;
-	vesaStandard[16].x = 1920; vesaStandard[16].y = 1440;
-	vesaStandard[17].x = 2048; vesaStandard[17].y = 1536;
-	vesaStandard[18].x = 2560; vesaStandard[18].y = 1600;
-	vesaStandard[19].x = 2560; vesaStandard[19].y = 2048;
-	vesaStandard[20].x = 2800; vesaStandard[20].y = 2100;
-	vesaStandard[21].x = 3200; vesaStandard[21].y = 2400;
-	vesaStandard[22].x = 1024; vesaStandard[22].y = 600;
-	vesaStandard[23].x = 1024; vesaStandard[23].y = 576;
+	vesaStandard[0].x  = 800;  vesaStandard[0].y  = 480;
+	vesaStandard[1].x  = 800;  vesaStandard[1].y  = 600;
+	vesaStandard[2].x  = 1024; vesaStandard[2].y  = 480;
+	vesaStandard[3].x  = 1024; vesaStandard[3].y  = 576;
+	vesaStandard[4].x  = 1024; vesaStandard[4].y  = 600;
+	vesaStandard[5].x  = 1024; vesaStandard[5].y  = 768;
+	vesaStandard[6].x  = 1152; vesaStandard[6].y  = 864;
+	vesaStandard[7].x  = 1280; vesaStandard[7].y  = 768;
+	vesaStandard[8].x  = 1280; vesaStandard[8].y  = 720;
+	vesaStandard[9].x  = 1280; vesaStandard[9].y  = 800;
+	vesaStandard[10].x = 1280; vesaStandard[10].y = 960;
+	vesaStandard[11].x = 1280; vesaStandard[11].y = 1024;
+	vesaStandard[12].x = 1366; vesaStandard[12].y = 768;
+	vesaStandard[13].x = 1400; vesaStandard[13].y = 1050;
+	vesaStandard[14].x = 1440; vesaStandard[14].y = 900;
+	vesaStandard[15].x = 1600; vesaStandard[15].y = 1000;
+	vesaStandard[16].x = 1600; vesaStandard[16].y = 1024;
+	vesaStandard[17].x = 1600; vesaStandard[17].y = 1200;
+	vesaStandard[18].x = 1680; vesaStandard[18].y = 1050;
+	vesaStandard[19].x = 1900; vesaStandard[19].y = 1200;
+	vesaStandard[20].x = 1920; vesaStandard[20].y = 1200;
+	vesaStandard[21].x = 1920; vesaStandard[21].y = 1440;
+	vesaStandard[22].x = 2048; vesaStandard[22].y = 1536;
+	vesaStandard[23].x = 2560; vesaStandard[23].y = 1600;
+	vesaStandard[24].x = 2560; vesaStandard[24].y = 2048;
+	vesaStandard[25].x = 2800; vesaStandard[25].y = 2100;
+	vesaStandard[26].x = 3200; vesaStandard[26].y = 2400;
 
 	//======================================
 	// lookup framebuffer timing
