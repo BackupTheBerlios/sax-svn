@@ -22,6 +22,7 @@ STATUS        : Status: Development
 #include <QMouseEvent>
 #include <QEvent>
 #include <QWheelEvent>
+#include <stdio.h>
 
 namespace SaXGUI {
 //====================================
