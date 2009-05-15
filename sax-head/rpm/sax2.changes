@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri May 15 16:12:36 CEST 2009 - sndirsch@suse.de
+
+- use special profile for MSI AE1900 (bnc #500853) 
+- switch to "ru,us" as default (before: "us,ru")
+
+-------------------------------------------------------------------
 Tue Apr 28 10:39:26 CEST 2009 - sndirsch@suse.de
 
 - added missing include (<stdio.h>) to fix build for gcc 4.4 
