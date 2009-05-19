@@ -241,7 +241,7 @@ TABLET PCs:HP Compaq 2710p/2730p (SERIAL) {
  Driver           = wacom
  Device           = /dev/ttyS0
  SendCoreEvents   = on
- RawOption        = "ForceDevice" "ISDV4"
+ RawOption        = "ForceDevice" "ISDV4","SendCoreEvents" "on","TopX" "0","TopY" "0","BottomX" "16520","BottomY" "26312"
  StylusLink       = ISDV4 TABLET PC Stylus (SERIAL)
  EraserLink       = ISDV4 TABLET PC Eraser (SERIAL)
 }
