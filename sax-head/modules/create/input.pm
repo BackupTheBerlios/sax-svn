@@ -81,6 +81,10 @@ sub CreateInputDeviceSection {
 			/^Driver/    && do {
 				foreach $n (@list) {
 				if ($n ne "") {
+					if ($n eq "kbd" || $n eq "mouse" || $n eq "vmmouse") {
+						push(@result,PrintLine("# Driver \"$n\" will be disabled unless 'Option \"AutoAddDevices\" \"off\"'"));
+						push(@result,PrintLine("# is set in \"ServerFlags\" section."));
+					}
 					push(@result,PrintLine($i,"\"$n\""));
 				}
 				}

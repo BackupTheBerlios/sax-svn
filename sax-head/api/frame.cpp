@@ -357,12 +357,14 @@ void SCCFrame::setupModules ( void ) {
 	mModuleList -> insertItem (
 		QPixmap(MONITORS_PIXMAP), mText["MonitorModule"]
 	);
+#if 0
 	mModuleList -> insertItem (
 		QPixmap(POINTERS_PIXMAP), mText["MouseModule"]
 	);
 	mModuleList -> insertItem (
 		QPixmap(KEYBOARD_PIXMAP), mText["KeyboardModule"]
 	);
+#endif
 	mModuleList -> insertItem (
 		QPixmap(XTABLETS_PIXMAP), mText["TabletModule"]
 	);
@@ -473,6 +475,7 @@ void SCCFrame::runDialog ( Q3ListBoxItem* item ) {
 			mMonitor -> import();
 		}
 	}
+#if 0
 	if (selection == mText["MouseModule"]) {
 		mDialogStack -> raiseWidget ( mMouse -> getDialogID() );
 		if ( mMouse -> needInit() ) {
@@ -491,6 +494,7 @@ void SCCFrame::runDialog ( Q3ListBoxItem* item ) {
 			mKeyboard -> import();
 		}
 	}
+#endif
 	if (selection == mText["TabletModule"]) {
 		mDialogStack -> raiseWidget ( mTablet -> getDialogID() );
 		if ( mTablet -> needInit() ) {
