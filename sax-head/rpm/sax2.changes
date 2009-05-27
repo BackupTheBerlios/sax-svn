@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed May 27 17:04:05 CEST 2009 - sndirsch@suse.de
+
+- getPrimary.sh:
+  * only run 'lspci -vv' for VGA devices (bnc #478164)
+
+-------------------------------------------------------------------
 Thu May 21 05:08:27 CEST 2009 - sndirsch@suse.de
 
 - use special profile for ACER-EZ1600 (bnc #504710) 
