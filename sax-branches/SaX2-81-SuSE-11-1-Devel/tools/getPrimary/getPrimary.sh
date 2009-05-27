@@ -26,10 +26,14 @@ sax_id=""
 #  the PCI config space. You can see it in a "lspci -v -v" output. Check  
 #  for "Control I/O+" instead of "Control I/O-" for the VGA compatible
 #  devices."
-bus_slot_function=$(/sbin/lspci -vv | \
-                    grep -B2 "Control: I/O+" | \
-                    grep "VGA compatible" | \
-                    awk '{print $1}' | head -n 1)
+for busid in $(/sbin/lspci -n | grep 0300 | cut -d " " -f 1); do
+  /sbin/lspci -s $busid -vv | grep -q "Control: I/O+"
+  if test $? -eq 0; then
+    bus_slot_function=$busid
+    break;
+  fi
+done
+
 test "$bus_slot_function" == "" && fallback
 
 # search for SaX2 ChipID ("sysp -c" is the same as "sax2 -p")
