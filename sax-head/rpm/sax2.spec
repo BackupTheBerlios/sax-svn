@@ -25,7 +25,7 @@ Url:            http://sax.berlios.de
 BuildRequires:  antlr bison doxygen flex gettext-devel ghostscript-fonts-std
 BuildRequires:  graphviz hal-devel python-devel
 BuildRequires:  libqt4 libqt4-devel libqt4-qt3support libqt4-x11
-BuildRequires:  hwinfo-devel readline-devel swig sysfsutils update-desktop-files
+BuildRequires:  hwinfo-devel readline-devel swig update-desktop-files
 BuildRequires:  xorg-x11-server-sdk
 %if %{suse_version} > 1020
 BuildRequires:  fdupes
