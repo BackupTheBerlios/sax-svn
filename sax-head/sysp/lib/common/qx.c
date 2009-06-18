@@ -178,18 +178,42 @@ int getfd (void) {
 //=====================================
 // Change virtual terminal
 //-------------------------------------
+// bnc 504728: on some machines the intel agpgart takes a long time
+// for memory cleanup, thus a race condition triggers and the VT_ACTIVATE
+// never gets through. Thus do it every second.
+static int chvt_fd, chvt_num, chvt_ret;
+static void chvt_alrm_handler (int signum)
+{
+	if (ioctl(chvt_fd, VT_ACTIVATE, chvt_num)) {
+		chvt_ret = 0;
+	}
+	alarm (1);
+}
 int chvt (int num) {
 	int fd = getfd();
+	int ret;
+	struct sigaction act;
 	if (fd < 0) {
 		return 0;
 	}
+	memset (&act, 0, sizeof(struct sigaction));
+	act.sa_handler = chvt_alrm_handler;
+	act.sa_flags   = SA_RESTART;
+	sigaction (SIGALRM, &act, NULL);
+	// Yes, this is not multithread-proof. And ugly.
+	chvt_fd  = fd;
+	chvt_num = num;
+	chvt_ret = 1;
+	alarm (1);
 	if (ioctl(fd,VT_ACTIVATE,num)) {
 		return 0;
 	}
-	if (ioctl(fd,VT_WAITACTIVE,num)) {
-		return 0;
-	}
-	return 1;
+	while ( (ret = ioctl(fd,VT_WAITACTIVE,num)) == -1 && errno == EINTR && chvt_ret)
+		;
+	alarm (0);
+	act.sa_handler = SIG_DFL;
+	sigaction (SIGALRM, &act, NULL);
+	return (ret == 0);
 }   
 
 //=====================================

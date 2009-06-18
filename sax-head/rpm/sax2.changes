@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Jun 18 18:53:03 CEST 2009 - mhopf@suse.de
+
+- fix bnc 504728: on some machines the intel agpgart takes a long time
+  for memory cleanup, thus a race condition triggers and the VT_ACTIVATE
+  never gets through. Thus do it every second.
+
+-------------------------------------------------------------------
 Mon Jun  1 20:40:32 CEST 2009 - sndirsch@suse.de
 
 - fixed MSI-AE1900 and MSI-N011 profiles (bnc #507437, bnc #497963) 
