@@ -196,6 +196,9 @@ int chvt (int num) {
 	if (fd < 0) {
 		return 0;
 	}
+	if (ioctl(fd,VT_ACTIVATE,num)) {
+		return 0;
+	}
 	memset (&act, 0, sizeof(struct sigaction));
 	act.sa_handler = chvt_alrm_handler;
 	act.sa_flags   = SA_RESTART;
@@ -205,9 +208,6 @@ int chvt (int num) {
 	chvt_num = num;
 	chvt_ret = 1;
 	alarm (1);
-	if (ioctl(fd,VT_ACTIVATE,num)) {
-		return 0;
-	}
 	while ( (ret = ioctl(fd,VT_WAITACTIVE,num)) == -1 && errno == EINTR && chvt_ret)
 		;
 	alarm (0);
