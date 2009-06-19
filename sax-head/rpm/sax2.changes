@@ -1,4 +1,17 @@
 -------------------------------------------------------------------
+Fri Jun 19 11:42:48 CEST 2009 - sndirsch@suse.de
+
+- redo VT_ACTIVATE until it succeeds (bnc #504728)
+  This fixes a case Matthias hasn't thought of before. It's more
+  theoretical, though, we never had this issue so far. 
+  *Theoretically*, the ioctl() for VT_ACTIVATE could fail. In this
+  case, sax2 wouldn't switch back to the correct VT, and the
+  configuration would fail like we see in this bug - so this never
+  has happened so far. In this case the previous change wouldn't
+  kill the alarm() and cleanup the signal handler. This is fixed by
+  this change. Bears testing, but is trivial. 
+
+-------------------------------------------------------------------
 Thu Jun 18 18:53:03 CEST 2009 - mhopf@suse.de
 
 - fix bnc 504728: on some machines the intel agpgart takes a long time
