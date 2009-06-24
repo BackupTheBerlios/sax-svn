@@ -1,4 +1,10 @@
 # translation of sax.po to norsk bokmål
+# translation of sax.po to
+# translation of sax.nb.po to
+# translation of sax.nb.po to
+# Oversetting av sax.nb.po till norsk
+# Norwegian language file for SaX2.
+# Copyright (C) SuSE AG.
 # Gudmund Areskoug <fta@algonet.se>, 2001.
 # Mattias Newzella <newzella@linux.nu>, 2002,2003.
 # Olav Pettershagen <olav.pettershagen@trysil.online.no>, 2004.
@@ -6,23 +12,18 @@
 # Sveinung Marvik <sveinung.marvik@ntnu.no>, 2007.
 # Rune Nordbøe Skillingstad <rune@skillingstad.no>, 2007.
 # Olav Pettershagen <olav.pet@gmail.com>, 2008.
-# translation of sax.po to
-# translation of sax.nb.po to
-# translation of sax.nb.po to
-# Oversetting av sax.nb.po till norsk
-# Norwegian language file for SaX2.
-# Copyright (C) SuSE AG.
+# Olav P. <olav.pet@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-10-23 09:57+0200\n"
-"Last-Translator: Olav Pettershagen <olav.pet@gmail.com>\n"
-"Language-Team: norsk bokmål\n"
+"PO-Revision-Date: 2009-01-31 22:00+0100\n"
+"Last-Translator: Olav P. <olav.pet@gmail.com>\n"
+"Language-Team: Norwegian Bokmål <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 0.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. /.../
@@ -35,34 +36,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>SaX2-forslag</b><hr>Dette grafiske oppsettet er basert på et forslag fra "
-"SaX2. Hvis forslaget er akseptabelt, klikk <b>OK</b>.Hvis ikke, kan du endre "
-"konfigurasjonen."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>SaX2-forslag</b><hr>Dette grafiske oppsettet er basert på et forslag fra SaX2. Hvis forslaget er akseptabelt, klikk <b>OK</b>.Hvis ikke, kan du endre konfigurasjonen."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D-akselerasjon er ikke støttet</b><hr>SaX2 kan ikke tilby aktivering av "
-"3D-subsystemet fordi grafikk-kortet eller driveren ikke støtter 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D-akselerasjon er ikke støttet</b><hr>SaX2 kan ikke tilby aktivering av 3D-subsystemet fordi grafikk-kortet eller driveren ikke støtter 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D-akselerasjon er ikke støttet</b><hr>SaX2 kan ikke tilby aktivering av "
-"3D-subsystemet fordi Xineramabasert toskjermsmodus er i bruk. Xorg Xinerama-"
-"utvidelsen som brukes for sammenslåing av skjermer støtter ikke 3D på alle "
-"skjermer"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D-akselerasjon er ikke støttet</b><hr>SaX2 kan ikke tilby aktivering av 3D-subsystemet fordi Xineramabasert toskjermsmodus er i bruk. Xorg Xinerama-utvidelsen som brukes for sammenslåing av skjermer støtter ikke 3D på alle skjermer"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -81,12 +64,8 @@ msgid "SaX Control Center"
 msgstr "SaX-kontrollsenter"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Skjermstørrelse endret</b><hr>Skjermstørrelsen har blitt tilpasset nytt "
-"sideoppsett."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Skjermstørrelse endret</b><hr>Skjermstørrelsen har blitt tilpasset nytt sideoppsett."
 
 #. Help Button text
 msgid "&Help"
@@ -195,11 +174,11 @@ msgstr "Kort"
 
 #. Desktop name label
 msgid "Desktop"
-msgstr ""
+msgstr "Skrivebord"
 
 #. Pointers name label, global name for input devices
 msgid "Pointers"
-msgstr ""
+msgstr "Pekere"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -210,11 +189,11 @@ msgstr "Oppsett"
 
 #. Path name label, search paths
 msgid "Path"
-msgstr ""
+msgstr "Sti"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Utvidelser"
 
 #. Change data
 msgid "&Change..."
@@ -366,12 +345,8 @@ msgid "Unconfigured"
 msgstr "Ikke konfigurert"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Kan ikke deaktivere alle skjermoppsett</b><hr><nobr>Minst ett "
-"skjermoppsett må være aktivt.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Kan ikke deaktivere alle skjermoppsett</b><hr><nobr>Minst ett skjermoppsett må være aktivt.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -447,21 +422,12 @@ msgid "To the Right"
 msgstr "Mot høyre"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Ugyldig farge-/oppløsningskombinasjon:</b><hr><nobr>Den valgte "
-"oppløsningen og/eller fargeoppsettet</nobr>støttes ikke av skjermkortets "
-"framebuffer."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Ugyldig farge-/oppløsningskombinasjon:</b><hr><nobr>Den valgte oppløsningen og/eller fargeoppsettet</nobr>støttes ikke av skjermkortets framebuffer."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Alternativet må ha en verdi</b><hr><nobr>Angi en verdi for alternativet %"
-"1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Alternativet må ha en verdi</b><hr><nobr>Angi en verdi for alternativet %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -484,15 +450,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Skjermstørrelse i [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Merk:</b><hr>Feilinnstilte synkroniseringsområder kan skade skjermen. Du "
-"finner riktige innstillinger i brukerveiledningen for skjermen."
-"<br><br>Reduser synkroniseringsområdene hvis du ikke vil at skjermen skal "
-"bruke maksimalverdiene."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Merk:</b><hr>Feilinnstilte synkroniseringsområder kan skade skjermen. Du finner riktige innstillinger i brukerveiledningen for skjermen.<br><br>Reduser synkroniseringsområdene hvis du ikke vil at skjermen skal bruke maksimalverdiene."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -551,20 +510,12 @@ msgid "inches"
 msgstr "tommer"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Sett inn CD-en eller disketten</b><hr>Sett inn CD-en eller disketten fra "
-"skjermprodusenten."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Sett inn CD-en eller disketten</b><hr>Sett inn CD-en eller disketten fra skjermprodusenten."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Lesefeil</b><hr>Kunne ikke lese fra CD eller diskett. Dette kan skyldes "
-"skader på mediet eller feilformaterte informasjonsfiler."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Lesefeil</b><hr>Kunne ikke lese fra CD eller diskett. Dette kan skyldes skader på mediet eller feilformaterte informasjonsfiler."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -889,8 +840,7 @@ msgstr "Legge til hardt mellomrom på mellomromstasten"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Bruk talltastatur med unicode-tillegg (piler og matematiske operatorer)"
+msgstr "Bruk talltastatur med unicode-tillegg (piler og matematiske operatorer)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -898,8 +848,7 @@ msgstr "Påtvinge tastatur i kompatibilitetsmodus"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock bruker store bokstaver internt. Shift annullerer ikke CapsLock."
+msgstr "CapsLock bruker store bokstaver internt. Shift annullerer ikke CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -918,8 +867,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock fungerer som Shift med låsing. Shift påvirker ikke CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock bruker store bokstaver internt. Shift påvirker ikke CapsLock"
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock bruker store bokstaver internt. Shift «opphever» CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -927,8 +876,7 @@ msgstr "Mellomromstasten skriver hardt mellomrom på tredje nivå."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Bytt tastekoder for to taster når Mac-tastatur blir oppdaget feil av kjernen."
+msgstr "Bytt tastekoder for to taster når Mac-tastatur blir oppdaget feil av kjernen."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -947,11 +895,8 @@ msgid "Left Win-key is Compose."
 msgstr "Venstre Win-tast er kombinasjonstast."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Trykk høyre Alt-tast for å velge tredje nivå, Shift+Høyre Alt-tast er "
-"Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Trykk høyre Alt-tast for å velge tredje nivå, Shift+Høyre Alt-tast er Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -962,13 +907,12 @@ msgid "Japanese Keyboard Options"
 msgstr "Japanske tastaturvalg"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock fungerer som Shift med låsing. Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock fungerer som Shift med låsing. Shift «opphever» CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock bruker store bokstaver internt. Shift annullerer ikke CapsLock."
+msgstr "CapsLock bruker store bokstaver internt. Shift annullerer ikke CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -1040,8 +984,7 @@ msgstr "Begge Shift-tastene sammen bytter gruppe."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock fungerer som Shift med låsing. Shift annullerer ikke CapsLock."
+msgstr "CapsLock fungerer som Shift med låsing. Shift annullerer ikke CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
@@ -1240,12 +1183,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Bytt om ESC og CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Wang 724-talltastatur med unicode-tillegg (piler og matematiske operatorer), "
-"matematiske operatorer på standardnivå."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Wang 724-talltastatur med unicode-tillegg (piler og matematiske operatorer), matematiske operatorer på standardnivå."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1256,12 +1195,8 @@ msgid "Legacy key with comma"
 msgstr "Eldre tasttype med komma"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Talltastatur med unicode-tillegg (piler og matematiske operatorer), "
-"matematiske operatorer på standardnivå."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Talltastatur med unicode-tillegg (piler og matematiske operatorer), matematiske operatorer på standardnivå."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1277,8 +1212,7 @@ msgstr "Talltastatur sletter tastfunksjon"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Wang 724-talltastatur med unicode-tillegg (piler og matematiske operatorer)"
+msgstr "Wang 724-talltastatur med unicode-tillegg (piler og matematiske operatorer)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1393,23 +1327,11 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Berøringsskjerm: Valg av produsent og navn"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Avsluttende trinn:</b><hr>Det siste trinnet er å lagre det nye oppsettet. "
-"Vi anbefaler at du tester den nye oppsettet før du lagrer. Hvis testen viser "
-"et uleselig skrivebord, kan du drepe serveren ved å trykke <b>[ Ctrl+Alt"
-"+Backspace ]</b> og deretter <b>[ Ctrl+Alt+Backspace ]</b> en gang til "
-"straks etter et høyt lydsignal (pip)."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Avsluttende trinn:</b><hr>Det siste trinnet er å lagre det nye oppsettet. Vi anbefaler at du tester den nye oppsettet før du lagrer. Hvis testen viser et uleselig skrivebord, kan du drepe serveren ved å trykke <b>[ Ctrl+Alt+Backspace ]</b> og deretter <b>[ Ctrl+Alt+Backspace ]</b> en gang til straks etter et høyt lydsignal (pip)."
 
 #. Finish configuration message box (without test)
-msgid ""
-"<b>Saving the configuration</b><hr>Click on Save to store the configuration. "
-"Your changes will become effective on next X-Server restart."
+msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
 msgstr ""
 
 #. Tab title: VNC Server configuration
@@ -1453,37 +1375,20 @@ msgid "HTTP Port"
 msgstr "HTTP-port"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Passord for ekstern tilgang samsvarer ikke</b><hr>Første og andre versjon "
-"av passordet er ikke like."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Passord for ekstern tilgang samsvarer ikke</b><hr>Første og andre versjon av passordet er ikke like."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Ugyldig passord for ekstern tilgang</b><hr>Passordfeltet er tomt, eller "
-"passordet er for kort. Angi et passord med minst seks tegn."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Ugyldig passord for ekstern tilgang</b><hr>Passordfeltet er tomt, eller passordet er for kort. Angi et passord med minst seks tegn."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Ugyldig passord for ekstern tilgang</b><hr>Passordet er for langt. Angi "
-"et passord med maksimalt åtte tegn."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Ugyldig passord for ekstern tilgang</b><hr>Passordet er for langt. Angi et passord med maksimalt åtte tegn."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Programvareinstallasjon:</b><hr>Noen pakker mangler. Vil du installere de "
-"manglende pakkene nå?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Programvareinstallasjon:</b><hr>Noen pakker mangler. Vil du installere de manglende pakkene nå?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1502,37 +1407,20 @@ msgid "Initialize cache..."
 msgstr "Inititialiser mellomlager..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Konfigurasjonen kunne ikke lagres</b><hr>Følgende rapport ble generert:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Konfigurasjonen kunne ikke lagres</b><hr>Følgende rapport ble generert:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Konfigurasjonen er lagret:</b><hr>Endringene blir aktivert når du starter "
-"grafikksystemet på nytt. Vil du avslutte SaX2 nå?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Konfigurasjonen er lagret:</b><hr>Endringene blir aktivert når du starter grafikksystemet på nytt. Vil du avslutte SaX2 nå?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Testingen av oppsettet mislyktes</b><hr>Du finner mer informasjon i filen "
-"<tt>/var/log/Xorg.99.log</tt>. Prosessen genererte følgende rapport:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Testingen av oppsettet mislyktes</b><hr>Du finner mer informasjon i filen <tt>/var/log/Xorg.99.log</tt>. Prosessen genererte følgende rapport:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Informasjon om konfigurasjon for ekstern tilgang</b><hr> Tjenesten for "
-"ekstern tilgang krever at TCP-port 5900 og en HTTP-port (5800 er standard) "
-"er åpnet i brannmuren. Du kan konfigurere dette i YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Informasjon om konfigurasjon for ekstern tilgang</b><hr> Tjenesten for ekstern tilgang krever at TCP-port 5900 og en HTTP-port (5800 er standard) er åpnet i brannmuren. Du kan konfigurere dette i YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1957,25 +1845,20 @@ msgid "Turkey"
 msgstr "Tyrkia"
 
 #. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "CapsLock bytter oppsett når den trykkes inn, Alt+CapsLock utfører opprinnelig CapsLock-handling."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "CapsLock bytter til første oppsett, Shift+CapsLock bytter til siste oppsett."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "Mindre enn / Større-tasten fungerer som sammensetningstast."
 
 #. XKBFile extension text
-#, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr "Mellomromstasten skriver hardt mellomrom på fjerdenivå."
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Mellomromstasten skriver hardt mellomrom på fjerdenivå, lite og hardt mellomrom på sjette nivå (via Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2035,10 +1918,8 @@ msgstr "Konfigurasjon av skjermbilde"
 msgid "Idle timer..."
 msgstr "Tidsur for inaktivitet..."
 
-#, fuzzy
-#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-#~ msgstr "CapsLock bruker store bokstaver internt. Shift annullerer CapsLock."
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "CapsLock bruker store bokstaver internt. Shift påvirker ikke CapsLock"
 
-#, fuzzy
-#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-#~ msgstr "CapsLock fungerer som Shift med låsing. Shift annullerer CapsLock."
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "CapsLock fungerer som Shift med låsing. Shift "

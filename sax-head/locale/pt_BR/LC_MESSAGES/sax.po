@@ -1,26 +1,21 @@
-# translation of sax.pt_BR.po to Brazilian Portuguese
-# translation of sax.po to
-# SaX Translations.
-# Craig Jeffares cjeffares@novell.com
+# translation of sax.po to Brazilian Portuguese
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 #
-#
-# Luiz Fernando Ranghetti <elchevive68@gmail.com>, 2008.
-# Rafael Reuber <psico.indie@gmail.com>, 2008.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.pt_BR\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-10-22 14:27-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <opensuse-pt@opensuse.org>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2009-03-26 20:23-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@mail.kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -32,34 +27,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>Sugestão do SaX2</b><hr>O sistema gráfico iniciado atualmente é baseado "
-"em uma sugestões feitas pelo SaX2. Se a configuração for aceitável, clique "
-"em <b>OK</b>. Caso contrário, altere a configuração."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>Sugestão do SaX2</b><hr>O sistema gráfico iniciado atualmente é baseado em uma sugestões feitas pelo SaX2. Se a configuração for aceitável, clique em <b>OK</b>. Caso contrário, altere a configuração."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>Aceleração 3D não suportada</b><hr>O SaX2 não pode fornecer a ativação do "
-"subsistema 3D pois sua placa/driver de vídeo não possui suporte a 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>Aceleração 3D não suportada</b><hr>O SaX2 não pode fornecer a ativação do subsistema 3D pois sua placa/driver de vídeo não possui suporte a 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>Aceleração 3D não suportada</b><hr>SaX2 não pode fornecer ativação do "
-"subsistema 3D pois o modo de cabeça dupla baseado no Xinerama está em uso. A "
-"extensão Xinerama do Xorg para combinar telas gráficas não suporta 3D em "
-"todas as telas"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>Aceleração 3D não suportada</b><hr>SaX2 não pode fornecer ativação do subsistema 3D pois o modo de cabeça dupla baseado no Xinerama está em uso. A extensão Xinerama do Xorg para combinar telas gráficas não suporta 3D em todas as telas"
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -78,12 +55,8 @@ msgid "SaX Control Center"
 msgstr "Centro de controle do SaX"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Tamanho do monitor alterado</b><hr>O tamanho do monitor foi adaptado para "
-"o novo layout."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Tamanho do monitor alterado</b><hr>O tamanho do monitor foi adaptado para o novo layout."
 
 #. Help Button text
 msgid "&Help"
@@ -184,7 +157,7 @@ msgstr "Ativar este monitor"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr "Ativar este Ponteiro"
+msgstr "Ativar este ponteiro"
 
 #. Graphics Card name label
 msgid "Card"
@@ -192,11 +165,11 @@ msgstr "Placa"
 
 #. Desktop name label
 msgid "Desktop"
-msgstr ""
+msgstr "Área de trabalho"
 
 #. Pointers name label, global name for input devices
 msgid "Pointers"
-msgstr ""
+msgstr "Ponteiros"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -207,11 +180,11 @@ msgstr "Layout"
 
 #. Path name label, search paths
 msgid "Path"
-msgstr ""
+msgstr "Caminho"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Extensões"
 
 #. Change data
 msgid "&Change..."
@@ -251,7 +224,7 @@ msgstr "Inverter eixo Y"
 
 #. CheckBox label to activate left hand mouse
 msgid "Activate Left-Hand Button Mapping"
-msgstr "Ativar Mapeamento de botões de Canhoto"
+msgstr "Ativar mapeamento de botões para canhoto"
 
 #. CheckBox label to activate the 3 Button emulation
 msgid "Activate 3-Button Emulation"
@@ -363,12 +336,8 @@ msgid "Unconfigured"
 msgstr "Não configurado"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Não foi possível desativar todos os monitores</b><hr><nobr>Pelo menos um "
-"monitor deve estar ativo.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Não foi possível desativar todos os monitores</b><hr><nobr>Pelo menos um monitor deve estar ativo.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -444,21 +413,12 @@ msgid "To the Right"
 msgstr "Para a direita"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Comibinação de Cor/Resolução inválida:</b><hr><nobr>A resolução "
-"selecionada e/ou configuração de cor</nobr> não são suportadas pelo "
-"framebuffer da placa de vídeo."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Comibinação de cor/resolução inválida:</b><hr><nobr>A resolução selecionada e/ou configuração de cor</nobr> não são suportadas pelo framebuffer da placa de vídeo."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>A Opção Precisa de um Valor</b><hr><nobr>Configure um valor para a opção %"
-"1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>A opção precisa de um valor</b><hr><nobr>Configure um valor para a opção %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -481,15 +441,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Tamanho do monitor em (mm)"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Nota:</b> Faixas de sincronização incorretas podem danificar o monitor. "
-"Consulte o manual do monitor para obter as configurações.<br><br>Se quiser "
-"que o monitor não use sua configuração máxima de faixas, reduza as faixas de "
-"sincronização."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Nota:</b> Faixas de sincronização incorretas podem danificar o monitor. Consulte o manual do monitor para obter as configurações.<br><br>Se quiser que o monitor não use sua configuração máxima de faixas, reduza as faixas de sincronização."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -525,7 +478,7 @@ msgstr "Hz"
 
 #. Label text for the aspect ratio combo box
 msgid "Aspect Ratio"
-msgstr "Proporção"
+msgstr "Taxa de proporção"
 
 #. Label text for the diagonal length combo box
 msgid "Diagonal"
@@ -548,21 +501,12 @@ msgid "inches"
 msgstr "polegadas"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Inserir CD ou disquete</b><hr>Insira o CD ou disquete do utilitário do "
-"fabricante do monitor."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Inserir CD ou disco</b><hr>Insira o CD ou disco do utilitário do fabricante do monitor."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Erro de Leitura</b><hr>Não foi possível ler o CD ou o Disquete. Isso pode "
-"indicar que a mídia está danificada ou os arquivos de informações estão "
-"formatados incorretamente."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Erro de leitura</b><hr>Não foi possível ler o CD ou o disco. Isso pode indicar que a mídia está danificada ou os arquivos de informações estão formatados incorretamente."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -599,7 +543,7 @@ msgstr "Layouts adicionais"
 
 #. Table topic text describing the status column
 msgid "Status"
-msgstr "Status"
+msgstr "Estado"
 
 #. Table topic text describing the keytable column
 msgid "Keytable"
@@ -660,7 +604,7 @@ msgstr "Backspace estilo NICOLA-F "
 
 #. XKBFile extension text
 msgid "Right Alt key never chooses 3rd level."
-msgstr "Pressione a tecla Alt direita para escolher o 3o. nível."
+msgstr "Pressione a tecla Alt direita para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Left Alt key switches layout while pressed."
@@ -744,9 +688,7 @@ msgstr "Ambas as teclas Shift juntas alternam o layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
-"Tecla de espaço retorna caractere de espaço sem quebra de linha no segundo "
-"nível."
+msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no segundo nível."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
@@ -754,9 +696,7 @@ msgstr "A tecla Windows direita alterna o layout."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
-"Tecla de espaço retorna caractere de espaço sem quebra de linha no terceiro "
-"nível."
+msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no terceiro nível."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -780,9 +720,7 @@ msgstr "A tecla Windows esquerda alterna o layout enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
-"Tecla de espaço retorna caractere de espaço sem quebra de linha no quarto "
-"nível."
+msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no quarto nível."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
@@ -890,9 +828,7 @@ msgstr "Adicionando a keysym nobreakspace a tecla de espaço"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Usar teclado numérico com caracteres unicode adicionais (acentos e "
-"operadores matemáticos)"
+msgstr "Usar teclado numérico com caracteres unicode adicionais (acentos e operadores matemáticos)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -919,8 +855,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock age como Shift com bloqueio. Shift não afeta CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock usa capitalização interna. Shift "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock usa capitalização interna. Shift \"pausa\" o CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -928,9 +864,7 @@ msgstr "Tecla de espaço retorna nobreakspace no terceiro nível."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Trocar keycodes de duas teclas quando teclados Mac são errôneamente "
-"detectados pelo kernel."
+msgstr "Trocar keycodes de duas teclas quando teclados Mac são errôneamente detectados pelo kernel."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -949,11 +883,8 @@ msgid "Left Win-key is Compose."
 msgstr "A tecla esquerda Windows é Compose."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Pressione a tecla Alt direita para escolher o 3o. nível, Shift+ Alt direito "
-"key é Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Pressione a tecla Alt direita para escolher o 3º nível, Shift+ Alt direito key é Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -964,8 +895,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Opções de teclado japonês"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock age como Shift com bloqueio. Shift"
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock age como Shift com bloqueio. Shift \"pausa\" o CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1005,11 +936,11 @@ msgstr "Tecla Controla na parte inferior esquerda"
 
 #. XKBFile extension text
 msgid "Press any of Win-keys to choose 3rd level."
-msgstr "Pressione qualquer uma das teclas Windows para escolher o 3o. nível."
+msgstr "Pressione qualquer uma das teclas Windows para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Press Right Alt key to choose 3rd level."
-msgstr "Pressione a tecla Alt direita para escolher o 3o. nível."
+msgstr "Pressione a tecla Alt direita para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Right Ctrl key changes group."
@@ -1053,7 +984,7 @@ msgstr "Tornar CapsLock uma tecla Controla adicional."
 
 #. XKBFile extension text
 msgid "Press Left Win-key to choose 3rd level."
-msgstr "Pressione a tecla Windows esquerda para escolher o 3o. nível."
+msgstr "Pressione a tecla Windows esquerda para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Right Win-key changes group."
@@ -1081,7 +1012,7 @@ msgstr "A tecla Windows esquerda alterna o grupo enquanto pressionada."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
-msgstr "o menu é compose."
+msgstr "o Menu é compose."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
@@ -1097,7 +1028,7 @@ msgstr "Trocar Ctrl e CapsLock."
 
 #. XKBFile extension text
 msgid "Press any of Alt keys to choose 3rd level."
-msgstr "Pressione qualquer uma das teclas Alt para escolher o 3o. nível."
+msgstr "Pressione qualquer uma das teclas Alt para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Right Alt key changes group."
@@ -1137,7 +1068,7 @@ msgstr "Alt e Meta estão nas teclas Alt (padrão)."
 
 #. XKBFile extension text
 msgid "Press Right Control to choose 3rd level."
-msgstr "Pressione a tecla Controla da direita para escolher o 3o. nível."
+msgstr "Pressione a tecla Ctrl da direita para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Alt+Shift changes group."
@@ -1157,11 +1088,11 @@ msgstr "Usar LED do teclado para exibe o grupo alternativo."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
-msgstr "Pressione a tecla Windows direita para escolher o 3o. nível."
+msgstr "Pressione a tecla Windows direita para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Press Left Alt key to choose 3rd level."
-msgstr "Pressione a tecla Alt esquerda para escolher o 3o. nível."
+msgstr "Pressione a tecla Alt esquerda para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Meta is mapped to the Win-keys."
@@ -1169,7 +1100,7 @@ msgstr "Meta é mapeado para as teclas Windows."
 
 #. XKBFile extension text
 msgid "Press Menu key to choose 3rd level."
-msgstr "Pressione a tecla Menu para escolher o 3o. nível."
+msgstr "Pressione a tecla Menu para escolher o 3º nível."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes group."
@@ -1225,9 +1156,7 @@ msgstr "Quarto-nível com separadores de resumo"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Teclado numérico com caracteres unicode adicionais (setas e operadores "
-"matemáticos)"
+msgstr "Teclado numérico com caracteres unicode adicionais (setas e operadores matemáticos)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1242,12 +1171,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Trocar ESC e CapsLock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Teclado numérico Wang 724 com caracteres unicode adicionais. (setas e "
-"operadores matemáticos). Operadores matemáticos no  nível padrão."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Teclado numérico Wang 724 com caracteres unicode adicionais. (setas e operadores matemáticos). Operadores matemáticos no  nível padrão."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1258,12 +1183,8 @@ msgid "Legacy key with comma"
 msgstr "Tecla legada com vírgula"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Teclado numérico com caracteres unicode adicionais (setas e operadores "
-"matemáticos). Operadores matemáticos no nível padrão."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Teclado numérico com caracteres unicode adicionais (setas e operadores matemáticos). Operadores matemáticos no nível padrão."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1279,9 +1200,7 @@ msgstr "Comportamento da tecla Del do teclado numérico"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Teclado numérico Wang 724 com caracteres unicode adicionais (acentos e "
-"operadores matemáticos)"
+msgstr "Teclado numérico Wang 724 com caracteres unicode adicionais (acentos e operadores matemáticos)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1293,7 +1212,7 @@ msgstr "Canetas eletrônicas"
 
 #. Activate tablet checkbox
 msgid "Activate This Tablet"
-msgstr "Ativar este Tablet"
+msgstr "Ativar este tablet"
 
 #. Group box title for the tablet vendor and name selection
 msgid "Tablet: Vendor and Name Selection"
@@ -1396,24 +1315,12 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Tela sensível ao toque: seleção de fabricante e nome"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Etapas Finais</b><hr>A última etapa é salvar sua nova configuração. "
-"Recomenda-se testar a nova configuração antes de salvá-la. Se o servidor de "
-"teste exibir uma área de trabalho corrompida, pressione <b>(Ctrl+Alt"
-"+Backspace)</b> e <b>(Ctrl+Alt+Backspace)</b> rapidamente após o sinal do "
-"sistema (bip) para matar o servidor."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Etapas finais</b><hr>A última etapa é salvar sua nova configuração. Recomenda-se testar a nova configuração antes de salvá-la. Se o servidor de teste exibir uma área de trabalho corrompida, pressione <b>(Ctrl+Alt+Backspace)</b> e <b>(Ctrl+Alt+Backspace)</b> rapidamente após o sinal do sistema (bip) para matar o servidor."
 
 #. Finish configuration message box (without test)
-msgid ""
-"<b>Saving the configuration</b><hr>Click on Save to store the configuration. "
-"Your changes will become effective on next X-Server restart."
-msgstr ""
+msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
+msgstr "<b>Salvando a configuração</b><hr>Clique em Salvar para guardar a configuração. Suas alterações terão efeito na próxima inicialização do servidor X."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1456,37 +1363,20 @@ msgid "HTTP Port"
 msgstr "Porta HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Incompatibilidade de Senha de Acesso Remoto</b><hr>A primeira e a segunda "
-"versões da senha não correspondem."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Incompatibilidade da senha de acesso remoto</b><hr>A primeira e a segunda versões da senha não correspondem."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Falha de Senha de Acesso Remoto</b><hr>O campo de senha foi deixado vazio "
-"ou a senha é muito curta. Digite uma senha com pelo menos seis caracteres."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Falha da senha de acesso remoto</b><hr>O campo de senha foi deixado vazio ou a senha é muito curta. Digite uma senha com pelo menos seis caracteres."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Falha na Senha de Acesso Remoto</b><hr>A senha é muito longa. Digite uma "
-"senha com no máximo oito caracteres."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Falha na senha de acesso remoto</b><hr>A senha é muito longa. Digite uma senha com no máximo oito caracteres."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Instalação de Software:</b><hr>Alguns pacotes estão faltando. Instalar "
-"pacotes ausentes agora?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Instalação de software:</b><hr>Alguns pacotes estão faltando. Instalar os pacotes faltantes agora?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1498,45 +1388,27 @@ msgstr "Importando módulo"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr "SaX2: Importando dados..."
+msgstr "SaX2: importando dados..."
 
 #. Progress window label text
 msgid "Initialize cache..."
-msgstr "Inicializar cache..."
+msgstr "Inicializar o cache..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Falha ao Salvar a Configuração</b><hr>O seguinte relatório foi criado:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Falha ao salvar a configuração</b><hr>O seguinte relatório foi criado:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Configuração Salva</b><hr>Suas alterações entrarão em vigor na próxima "
-"vez em que o sistema gráfico for reiniciado. Sair do SaX2 agora?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Configuração salva</b><hr>Suas alterações entrarão em vigor na próxima vez em que o sistema gráfico for reiniciado. Sair do SaX2 agora?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Falha no Teste de Configuração</b><hr>Para obter mais informações, "
-"consulte o arquivo <tt>/var/log/Xorg.99.log</tt>. O seguinte relatório foi "
-"criado da instância de chamada:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Falha no teste de configuração</b><hr>Para obter mais informações, consulte o arquivo <tt>/var/log/Xorg.99.log</tt>. O seguinte relatório foi criado da instância de chamada:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Informações de configuração de Acesso Remoto</b><hr>O serviço de Acesso "
-"Remoto requer que a porta TCP 5900 e uma porta HTTP (5800 o padrão) estejam "
-"abertas pelo firewall. Você pode configurar isso com o YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Informações de configuração de acesso remoto</b><hr>O serviço de acesso remoto requer que a porta TCP 5900 e uma porta HTTP (5800 o padrão) estejam abertas pelo firewall. Você pode configurar isso com o YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1560,7 +1432,7 @@ msgstr "Adicionando o símbolo do euro a certas teclas"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr "CapsLock é compose."
+msgstr "CapsLock é Compose."
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
@@ -1632,7 +1504,7 @@ msgstr "Republica Democrática do Congo"
 
 #. XKBFile extension text
 msgid "Korea, Republic of"
-msgstr "República da Coréia"
+msgstr "República da Coreia"
 
 #. XKBFile extension text
 msgid "Iraq"
@@ -1939,27 +1811,20 @@ msgid "Turkey"
 msgstr "Turquia"
 
 #. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "A tecla CapsLock alterna o layout enquanto pressionada, Alt+CapsLock faz a ação original do CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "CapsLock alterna para o primeiro layout, Shift+CapsLock alterna para o último layout."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "Menor que/maior que é Compose."
 
 #. XKBFile extension text
-#, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr ""
-"Tecla de espaço retorna caractere de espaço sem quebra de linha no quarto "
-"nível."
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Tecla de espaço retorna caractere de espaço sem quebra de linha no quarto nível e caractere de espaço sem quebra de linha no sexto nível (via Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2019,10 +1884,3 @@ msgstr "Configuração no monitor"
 msgid "Idle timer..."
 msgstr "Temporizador ocioso..."
 
-#, fuzzy
-#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-#~ msgstr "CapsLock usa capitalização interna. Shift cancela CapsLock."
-
-#, fuzzy
-#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-#~ msgstr "CapsLock age como Shift com bloqueio. Shift cancela CapsLock."

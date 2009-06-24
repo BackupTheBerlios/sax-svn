@@ -1,4 +1,4 @@
-# translation of sax.po to czech
+# translation of sax.cs.po to
 # translation of sax.po to
 # domain "sax.mo"
 # Czech message file for SaX 2.
@@ -12,13 +12,14 @@
 # Klára Cihlářová <koty@seznam.cz>, 2007.
 # Marek Stopka <mstopka@opensuse.org>, 2008.
 # Vojtěch Zeisek <vojta.sc@seznam.cz>, 2008.
+# Radomír Černoch <radomir.cernoch@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax\n"
+"Project-Id-Version: sax.cs\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-11-17 15:00+0100\n"
-"Last-Translator: Vojtěch Zeisek <vojta.sc@seznam.cz>\n"
-"Language-Team: czech <cs@li.org>\n"
+"PO-Revision-Date: 2009-01-15 21:53+0000\n"
+"Last-Translator: Radomír Černoch <radomir.cernoch@gmail.com>\n"
+"Language-Team:  <opensuse-cz@opensuse.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,33 +36,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>Návrh konfigurace</b><hr>Právě spuštěný grafický systém vychází z návrhu "
-"konfigurace vytvořené programem SaX2. Pokud vám současné nastavení vyhovuje, "
-"stiskněte <b>OK</b>. V opačném případě změňte konfiguraci."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>Návrh konfigurace</b><hr>Právě spuštěný grafický systém vychází z návrhu konfigurace vytvořené programem SaX2. Pokud vám současné nastavení vyhovuje, stiskněte <b>OK</b>. V opačném případě změňte konfiguraci."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D akcelerace není podporována</b><hr>SaX2 nemůže umožnit aktivaci 3D "
-"podpory, protože vaše karta/ovladač nemá 3D podporu."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D akcelerace není podporována</b><hr>SaX2 nemůže umožnit aktivaci 3D podpory, protože vaše karta/ovladač nemá 3D podporu."
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D akcelerace není podporována</b><hr>SaX2 nemůže umožnit aktivaci 3D "
-"podpory, protože je použit dualhead režim. Xorg rozšíření Xinerama "
-"nepodporuje 3D na všech monitorech."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D akcelerace není podporována</b><hr>SaX2 nemůže umožnit aktivaci 3D podpory, protože je použit dualhead režim. Xorg rozšíření Xinerama nepodporuje 3D na všech monitorech."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -80,12 +64,8 @@ msgid "SaX Control Center"
 msgstr "SaX ovládací centrum"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Změnila se velikost obrazovky</b><hr>Velikost obrazovky byla přizpůsobena "
-"novému rozlvržení."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Změnila se velikost obrazovky</b><hr>Velikost obrazovky byla přizpůsobena novému rozlvržení."
 
 #. Help Button text
 msgid "&Help"
@@ -194,11 +174,11 @@ msgstr "Karta"
 
 #. Desktop name label
 msgid "Desktop"
-msgstr ""
+msgstr "Plocha"
 
 #. Pointers name label, global name for input devices
 msgid "Pointers"
-msgstr ""
+msgstr "Ukazatele"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -209,11 +189,11 @@ msgstr "Rozložení"
 
 #. Path name label, search paths
 msgid "Path"
-msgstr ""
+msgstr "Cesta"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Rozšíření"
 
 #. Change data
 msgid "&Change..."
@@ -365,12 +345,8 @@ msgid "Unconfigured"
 msgstr "Není nastaveno"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Nelze deaktivovat všechny obrazovky</b><hr><nobr>Alespoň jedna obrazovka "
-"musí zůstat aktivní.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Nelze deaktivovat všechny obrazovky</b><hr><nobr>Alespoň jedna obrazovka musí zůstat aktivní.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -446,17 +422,11 @@ msgid "To the Right"
 msgstr "Doprava"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Neplatná kombinace barev/rozlišení:</b><hr><nobr>Vybrané rozlišení a/nebo "
-"nastavení barev</nobr> není podporováno framebufferem grafické karty."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Neplatná kombinace barev/rozlišení:</b><hr><nobr>Vybrané rozlišení a/nebo nastavení barev</nobr> není podporováno framebufferem grafické karty."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr "<b>Volba vyžaduje hodnotu</b><hr>Prosím nastavte hodnotu pro volbu %1."
 
 #. Group box title for the monitor vendor and name selection
@@ -480,15 +450,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Velikost zobrazení v [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Poznámka:</b> Chybné nastavení synchronizace může poškodit monitor. "
-"Ověřte si prosím následující nastavení v příručce monitoru.<br><br>Pokud "
-"nechcete používat maximální nastavení monitoru, snižte hodnoty sync. "
-"frekvencí."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Poznámka:</b> Chybné nastavení synchronizace může poškodit monitor. Ověřte si prosím následující nastavení v příručce monitoru.<br><br>Pokud nechcete používat maximální nastavení monitoru, snižte hodnoty sync. frekvencí."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -547,20 +510,12 @@ msgid "inches"
 msgstr "palců"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Vložit disketu nebo CD</b><hr>Prosím vložte disketu nebo CD s nástroji od "
-"výrobce monitoru."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Vložit disketu nebo CD</b><hr>Prosím vložte disketu nebo CD s nástroji od výrobce monitoru."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Chyba při čtení</b><hr>Není možné číst z diskety nebo CD. Asi máte "
-"poškozené médium nebo neplatné soubory na médiu."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Chyba při čtení</b><hr>Není možné číst z diskety nebo CD. Asi máte poškozené médium nebo neplatné soubory na médiu."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -613,12 +568,12 @@ msgstr "Použít k zobrazení alternativní skupiny LED"
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Změna umístění kláves"
+msgstr "Poloha klávesy Compose"
 
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Změna umístění kláves"
+msgstr "Poloha klávesy Control"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -884,9 +839,7 @@ msgstr "Přidání simulace nedělitelné mezery mezerníku"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Používat numerickou klávesnici s Unicode rozšířeními (šipky a matematické "
-"operátory)"
+msgstr "Používat numerickou klávesnici s Unicode rozšířeními (šipky a matematické operátory)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -913,8 +866,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock je jako Shift se zámkem. Shift neovlivňuje CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock používá interní kapitalizaci. Shift"
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "Caps Lock používá interní nastavení. Shift dočasně vyruší Caps Lock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -922,9 +875,7 @@ msgstr "Mezerník na třetí úrovni vytváří nedělitelné mezery."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Přehodit klávesové kódy dvou kláves při špatné detekci Macintosh klávesnic "
-"jádrem."
+msgstr "Přehodit klávesové kódy dvou kláves při špatné detekci Macintosh klávesnic jádrem."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -943,11 +894,8 @@ msgid "Left Win-key is Compose."
 msgstr "levá klávesa Win je Compose."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Pro volbu třetí úrovně stiskněte pravou klávesu Alt, Shift+AltGr je "
-"Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Pro volbu třetí úrovně stiskněte pravou klávesu Alt, Shift+AltGr je Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -959,8 +907,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Volby japonské klávesnice"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "Caps Lock funguje jako Shift se zámkem. Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "Caps Lock se chová jako Shift se zámkem. Shift dočasně ruší Caps Lock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1221,9 +1169,7 @@ msgstr "Čtyřúrovňová klávesa s abstraktními separátory"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Používat numerickou klávesnici s Unicode rozšířeními (šipky a matematické "
-"operátory)"
+msgstr "Používat numerickou klávesnici s Unicode rozšířeními (šipky a matematické operátory)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1238,12 +1184,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Zaměnit ESC a Caps Lock."
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Používat Wang 72 klávesnici s Unicode rozšířeními (šipky a matematické "
-"operátory). Na výchozí úrovni matematické operátory."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Používat Wang 72 klávesnici s Unicode rozšířeními (šipky a matematické operátory). Na výchozí úrovni matematické operátory."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1254,12 +1196,8 @@ msgid "Legacy key with comma"
 msgstr "Zastaralá klávesnice s čárkou"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Klávesnice s Unicode rozšířeními (šipky a matematické operátory). Na výchozí "
-"úrovní matematické operátory."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Klávesnice s Unicode rozšířeními (šipky a matematické operátory). Na výchozí úrovní matematické operátory."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1275,8 +1213,7 @@ msgstr "Numerická klávesnice maže chování klávesy"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Wang 724 klávesnice s Unicode rozšířeními (šipky a matematické operátory)"
+msgstr "Wang 724 klávesnice s Unicode rozšířeními (šipky a matematické operátory)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1391,22 +1328,11 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Dotykový displej: Výběr typu a výrobce"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Poslední krok</b><hr>Závěrečným krokem je uložení konfigurace. Před "
-"uložením doporučujeme novou konfiguraci otestovat. Pokud nebude obraz čistý, "
-"pak stiskněte <b>[ Ctrl+Alt+Backspace ]</b> a po pípnutí ještě jednou a "
-"okamžitě zastavíte spuštěný X server. "
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Poslední krok</b><hr>Závěrečným krokem je uložení konfigurace. Před uložením doporučujeme novou konfiguraci otestovat. Pokud nebude obraz čistý, pak stiskněte <b>[ Ctrl+Alt+Backspace ]</b> a po pípnutí ještě jednou a okamžitě zastavíte spuštěný X server. "
 
 #. Finish configuration message box (without test)
-msgid ""
-"<b>Saving the configuration</b><hr>Click on Save to store the configuration. "
-"Your changes will become effective on next X-Server restart."
+msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
 msgstr ""
 
 # 52914 AttribValues/label
@@ -1451,37 +1377,20 @@ msgid "HTTP Port"
 msgstr "HTTP port"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Chybné heslo vzdáleného přístupu</b><hr>První a druhá verze hesla "
-"nesouhlasí."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Chybné heslo vzdáleného přístupu</b><hr>První a druhá verze hesla nesouhlasí."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Chybné heslo vzdáleného přístupu</b><hr>Heslo je příliš krátké nebo "
-"nebylo zadáno. Heslo musí obsahovat alespoň 6 znaků."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Chybné heslo vzdáleného přístupu</b><hr>Heslo je příliš krátké nebo nebylo zadáno. Heslo musí obsahovat alespoň 6 znaků."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Chybné heslo vzdáleného přístupu</b><hr>Heslo je příliš dlouhé. Zadejte "
-"heslo dlouhé maximálně osm znaků."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Chybné heslo vzdáleného přístupu</b><hr>Heslo je příliš dlouhé. Zadejte heslo dlouhé maximálně osm znaků."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Instalace softwaru:</b><hr>Chybí některé balíky. Chcete je instalovat "
-"nyní?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Instalace softwaru:</b><hr>Chybí některé balíky. Chcete je instalovat nyní?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1500,37 +1409,20 @@ msgid "Initialize cache..."
 msgstr "Inicializuje se cache..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Uložení konfigurace selhalo</b><hr>Vytvořeno bylo následující hlášení:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Uložení konfigurace selhalo</b><hr>Vytvořeno bylo následující hlášení:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Konfigurace byla uložena</b><hr>Vaše změny se projeví po restartu "
-"grafického prostředí. Ukončit SaX2?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Konfigurace byla uložena</b><hr>Vaše změny se projeví po restartu grafického prostředí. Ukončit SaX2?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Test nastavení selhal</b><hr>Podrobnější informace najdete v souboru <tt>/"
-"var/log/Xorg.99.log</tt>. Následující výstup byl vytvořen voláním instance:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Test nastavení selhal</b><hr>Podrobnější informace najdete v souboru <tt>/var/log/Xorg.99.log</tt>. Následující výstup byl vytvořen voláním instance:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Informace o konfiguraci vzdáleného přístupu</b><hr>Služba vzdáleného "
-"přístupu vyžaduje otevřený TCP port 5900 a HTTP port (obvykle 5800). Otevřít "
-"je můžete v nastavení firewallu v programu YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Informace o konfiguraci vzdáleného přístupu</b><hr>Služba vzdáleného přístupu vyžaduje otevřený TCP port 5900 a HTTP port (obvykle 5800). Otevřít je můžete v nastavení firewallu v programu YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1937,25 +1829,20 @@ msgid "Turkey"
 msgstr "Turecko"
 
 #. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "CapsLock při zmáčknutí přepíná rozložení, Alt+CapsLock má funkci původního CapsLocku."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "CapsLock přepíná na první rozložení, Shift+CapsLock přepíná na poslední rozložení."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "Menšítko/Většítko je Compose."
 
 #. XKBFile extension text
-#, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr "Mezerník dělá na čtvrté úrovni nedělitelné mezery."
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Mezerník dělá na čtvrté úrovni nedělitelné mezery, tenkou nedělitelkou mezeru na šesté úrovni (přes Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2014,11 +1901,3 @@ msgstr "Konfigurace na obrazovce"
 
 msgid "Idle timer..."
 msgstr "Čekání..."
-
-#, fuzzy
-#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-#~ msgstr "Caps Lock používá interní nastavení. Shift vyruší Caps Lock."
-
-#, fuzzy
-#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-#~ msgstr "Caps Lock je jako Shift se zámkem. Shift ruší Caps Lock."

@@ -8,6 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-15 15:07+0200\n"
 "PO-Revision-Date: 2008-11-06 23:11+0100\n"
 "Last-Translator: openSUSE translation\n"
 "Language-Team: romana\n"
@@ -27,34 +28,16 @@ msgid "I18N"
 msgstr "I18N"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>Sugestie SaX2 </b><hr>Sistemul grafic pornit este bazat pe o sugestie "
-"făcută de SaX2. Dacă aceasta este în regulă, apăsați<b>OK</b>. Altfel, "
-"schimbați configurația."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>Sugestie SaX2 </b><hr>Sistemul grafic pornit este bazat pe o sugestie făcută de SaX2. Dacă aceasta este în regulă, apăsați<b>OK</b>. Altfel, schimbați configurația."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>Accelerarea 3D nu este suportată</b><hr>SaX2 nu poate oferi activarea "
-"subsistemului 3D fiindcă placa dumneavoastră grafică (sau driverul acesteia) "
-"nu suportă 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>Accelerarea 3D nu este suportată</b><hr>SaX2 nu poate oferi activarea subsistemului 3D fiindcă placa dumneavoastră grafică (sau driverul acesteia) nu suportă 3D"
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>Accelerarea 3D nu este suportată</b><hr>SaX2 nu poate oferi activarea "
-"subsistemului 3D fiindcă este folosit modul Dublu Ecran bazat pe Xinerama. "
-"Extensia Xorg Xinerama, nu suportă 3D pe toate ecranele."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>Accelerarea 3D nu este suportată</b><hr>SaX2 nu poate oferi activarea subsistemului 3D fiindcă este folosit modul Dublu Ecran bazat pe Xinerama. Extensia Xorg Xinerama, nu suportă 3D pe toate ecranele."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -73,12 +56,8 @@ msgid "SaX Control Center"
 msgstr "Centrul de Control SaX2"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Dimensiunea ecranului modificată</b><hr>Dimensiunea ecranului a fost "
-"adaptată noului aranjament."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Dimensiunea ecranului modificată</b><hr>Dimensiunea ecranului a fost adaptată noului aranjament."
 
 #. Help Button text
 msgid "&Help"
@@ -189,11 +168,12 @@ msgstr "Cartelă"
 
 #. Desktop name label
 msgid "Desktop"
-msgstr ""
+msgstr "Ecran"
 
 #. Pointers name label, global name for input devices
+#, fuzzy
 msgid "Pointers"
-msgstr ""
+msgstr "Imprimantă"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -204,7 +184,7 @@ msgstr "Așezare"
 
 #. Path name label, search paths
 msgid "Path"
-msgstr ""
+msgstr "Cale"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
@@ -360,12 +340,8 @@ msgid "Unconfigured"
 msgstr "Neconfigurat"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Nu pot dezactiva toate ecranele</b><hr><nobr>Cel puțin un afișaj trebuie "
-"sa fie activ.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Nu pot dezactiva toate ecranele</b><hr><nobr>Cel puțin un afișaj trebuie sa fie activ.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -441,21 +417,12 @@ msgid "To the Right"
 msgstr "La Dreapta"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Combinație Culori/Rezoluție nevalidă:</b><hr><nobr> Configurațiile "
-"selectate pentru rezoluție și/sau culori</nobr> nu sunt suportate de "
-"framebuffer-ul cartelei grafice."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Combinație Culori/Rezoluție nevalidă:</b><hr><nobr> Configurațiile selectate pentru rezoluție și/sau culori</nobr> nu sunt suportate de framebuffer-ul cartelei grafice."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Opțiunea necesită o valoare</b><hr><nobr> Setați o valoare pentru "
-"opțiunea %1.<b>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Opțiunea necesită o valoare</b><hr><nobr> Setați o valoare pentru opțiunea %1.<b>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -478,14 +445,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Dimensiunea afișajului în [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Notă:</b> Limite greșite ale frecvenței de sincronizare pot strica "
-"monitorul. Consultați manualul monitorului.<br><br>Dacă vreți ca monitorul "
-"sa nu își folosească rata maximă, micșorați limitele."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Notă:</b> Limite greșite ale frecvenței de sincronizare pot strica monitorul. Consultați manualul monitorului.<br><br>Dacă vreți ca monitorul sa nu își folosească rata maximă, micșorați limitele."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -544,21 +505,12 @@ msgid "inches"
 msgstr "inci"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Introduceți CD sau disc</b><hr>Introduceți CDul utilitar al ecranului sau "
-"discul de la furnizorul monitorului."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Introduceți CD sau disc</b><hr>Introduceți CDul utilitar al ecranului sau discul de la furnizorul monitorului."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Eroare de citire</b><hr>Nu pot citi de pe CD sau disc. Aceasta se poate "
-"datora unui mediu deteriorat sau a unor fișiere de informație formatate "
-"incorect."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Eroare de citire</b><hr>Nu pot citi de pe CD sau disc. Aceasta se poate datora unui mediu deteriorat sau a unor fișiere de informație formatate incorect."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -676,8 +628,7 @@ msgstr "Ambele taste Ctrl simultan schimbă aranjamentul."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr ""
-"Folosire tasta Spațiu pentru a introduce un caracter spațiu indivizibil"
+msgstr "Folosire tasta Spațiu pentru a introduce un caracter spațiu indivizibil"
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
@@ -741,8 +692,7 @@ msgstr "Ambele taste Shift deodată schimbă tastatura."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr ""
-"Tasta spațiu furnizează caracterul spațiu indivizibil pe nivelul secundar."
+msgstr "Tasta spațiu furnizează caracterul spațiu indivizibil pe nivelul secundar."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
@@ -750,8 +700,7 @@ msgstr "Tasta Win-dreapta schimbă aranjamentul."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr ""
-"Tasta spațiu furnizează caracterul spațiu indivizibil pe al treilea nivel."
+msgstr "Tasta spațiu furnizează caracterul spațiu indivizibil pe al treilea nivel."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -775,8 +724,7 @@ msgstr "Tasta Win-stânga schimbă aranjamentul cât timp e apasată."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr ""
-"Tasta spațiu furnizează caracterul spațiu indivizibil pe al patrulea nivel."
+msgstr "Tasta spațiu furnizează caracterul spațiu indivizibil pe al patrulea nivel."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
@@ -884,9 +832,7 @@ msgstr "Adaugă nobreakspace keysym la tasta spațiu"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Folosește tastatura numerică cu suplimente unicod (sâgeți și operații "
-"matematice)"
+msgstr "Folosește tastatura numerică cu suplimente unicod (sâgeți și operații matematice)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -894,9 +840,7 @@ msgstr "Forțează tastatura numerica standard în stil vechi"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock folosește transformarea în litere mari internă. Shift nu afectează "
-"CapsLock."
+msgstr "CapsLock folosește transformarea în litere mari internă. Shift nu afectează CapsLock."
 
 #. XKBFile extension text
 msgid "Keypad layout selection"
@@ -908,29 +852,24 @@ msgstr "Alt+CapsLock schimbă grupul."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr ""
-"Tasta spațiu furnizează spațiu fără întrerupere (nobreakspace) la nivelul "
-"secund."
+msgstr "Tasta spațiu furnizează spațiu fără întrerupere (nobreakspace) la nivelul secund."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock se comportă ca Shift cu blocare. Shift nu afectează CapsLock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "CapsLock folosește transformare în litere mari internă. Shift"
+#, fuzzy
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock folosește transformare internă în litere mari. Shift anulează CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
-msgstr ""
-"Tasta spațiu furnizează spațiu fără întrerupere (nobreakspace) la nivelul al "
-"treilea."
+msgstr "Tasta spațiu furnizează spațiu fără întrerupere (nobreakspace) la nivelul al treilea."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Interschimbă codurile a două taste când tastaturile Mac sunt detectate "
-"greșit de către kernel."
+msgstr "Interschimbă codurile a două taste când tastaturile Mac sunt detectate greșit de către kernel."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -942,20 +881,15 @@ msgstr "Tasta de blocare Kana (Kana Lock) blochează."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
-"Tasta spațiu furnizează spațiu fără întrerupere (nobreakspace) la nivelul al "
-"patrulea."
+msgstr "Tasta spațiu furnizează spațiu fără întrerupere (nobreakspace) la nivelul al patrulea."
 
 #. XKBFile extension text
 msgid "Left Win-key is Compose."
 msgstr "Tasta Win-stânga este Compose."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Apasă tasta Alt-dreapta pentru a selecta al treilea nivel, Shift+Alt-dreapta "
-"este Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Apasă tasta Alt-dreapta pentru a selecta al treilea nivel, Shift+Alt-dreapta este Multi_Key."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -966,14 +900,13 @@ msgid "Japanese Keyboard Options"
 msgstr "Opțiun pentru tastatură Japoneză"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock se comportă ca Shift cu blocare. Shift"
+#, fuzzy
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock se comportă ca Shift cu blocare. Shift anulează CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
-msgstr ""
-"CapsLock folosește transformarea în litere mari internă. Shift nu anulează "
-"efectul CapsLock."
+msgstr "CapsLock folosește transformarea în litere mari internă. Shift nu anulează efectul CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
@@ -981,13 +914,11 @@ msgstr "CapsLock doar blochează modificatorul Shift."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr ""
-"CapsLock atrage transformarea in litere mari a caracterelor alfabetice."
+msgstr "CapsLock atrage transformarea in litere mari a caracterelor alfabetice."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr ""
-"CapsLock simulează apăsarea tastei Shift (toate tastele sunt afectate)."
+msgstr "CapsLock simulează apăsarea tastei Shift (toate tastele sunt afectate)."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -1051,9 +982,7 @@ msgstr "CapsLock se comportă ca Shift cu blocare. Shift nu anulează CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr ""
-"CapsLock folosește transformare internă în litere mari. Shift anulează "
-"CapsLock."
+msgstr "CapsLock folosește transformare internă în litere mari. Shift anulează CapsLock."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1233,8 +1162,7 @@ msgstr "Tastă de 4 nivele cu separatori abstracți"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Tastatură numerică cu suplimente unicod (săgeți și operatori matematici)"
+msgstr "Tastatură numerică cu suplimente unicod (săgeți și operatori matematici)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
@@ -1249,12 +1177,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Interschimbă ESC și CapsLock"
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Tastatură numerică Wang 724 cu suplimete unicod (săgeți și operatori "
-"matematici). Operatorii matematici pe nivelul implicit."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Tastatură numerică Wang 724 cu suplimete unicod (săgeți și operatori matematici). Operatorii matematici pe nivelul implicit."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1265,12 +1189,8 @@ msgid "Legacy key with comma"
 msgstr "Tastă în stil vechi cu virgulă"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Tastatură numerică cu suplimente unicod (săgeți și operatori matematici). "
-"Operatorii matematici pe nivelul implicit."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Tastatură numerică cu suplimente unicod (săgeți și operatori matematici). Operatorii matematici pe nivelul implicit."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1286,9 +1206,7 @@ msgstr "Comportamentul tastei delete de pe tastatura numerică"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Tastatură numerică Wang 724 cu suplimente unicod (săgeți și operatori "
-"matematici)"
+msgstr "Tastatură numerică Wang 724 cu suplimente unicod (săgeți și operatori matematici)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1403,18 +1321,11 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Ecran tactil: Selectarea producătorului și a numelui"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
 msgstr ""
 
 #. Finish configuration message box (without test)
-msgid ""
-"<b>Saving the configuration</b><hr>Click on Save to store the configuration. "
-"Your changes will become effective on next X-Server restart."
+msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
 msgstr ""
 
 #. Tab title: VNC Server configuration
@@ -1423,8 +1334,7 @@ msgstr "Control la distanță al serverului X"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
-"Permite accesul la afișajul și tastatura/mausul serverului dumneavoastră X"
+msgstr "Permite accesul la afișajul și tastatura/mausul serverului dumneavoastră X"
 
 #. Activate VNC password protection checkbox
 msgid "Activate Password Protection"
@@ -1460,38 +1370,20 @@ msgid "HTTP Port"
 msgstr "Port HTTP"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Nepotrivirea parolei pentru accesul la distanță</b><hr>Prima și a doua "
-"versiune a parolei nu se potrivesc."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Nepotrivirea parolei pentru accesul la distanță</b><hr>Prima și a doua versiune a parolei nu se potrivesc."
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Eroare la parola pentru acces la distanță</b><hr>Câmpul de parolă fie a "
-"fost lăsat gol, fie parola este prea scurtă. Introduceți o parolă de cel "
-"puțin 6 caractere."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Eroare la parola pentru acces la distanță</b><hr>Câmpul de parolă fie a fost lăsat gol, fie parola este prea scurtă. Introduceți o parolă de cel puțin 6 caractere."
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Eroare la parola pentru acces la distanță</b><hr>Parola este prea lungă. "
-"Introduceți o parolă de maxim 8 caractere."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Eroare la parola pentru acces la distanță</b><hr>Parola este prea lungă. Introduceți o parolă de maxim 8 caractere."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Instalare software:</b><hr>Câteva pachete lipsesc. Să instalez pachetele "
-"lipsă acum?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Instalare software:</b><hr>Câteva pachete lipsesc. Să instalez pachetele lipsă acum?"
 
 # dialog title for ftp installation
 #. Caption text for the missing package info window
@@ -1511,38 +1403,20 @@ msgid "Initialize cache..."
 msgstr "Inițializare cache..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr ""
-"<b>Salvarea configurației a eșuat</b><hr>Următorul raport a fost creat:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr "<b>Salvarea configurației a eșuat</b><hr>Următorul raport a fost creat:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Configurație salvată</b><hr>Modificările dumneavoastră vor avea efect de "
-"la următoarea repornire a sistemului grafic. Ieșiți din SaX2 acum?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Configurație salvată</b><hr>Modificările dumneavoastră vor avea efect de la următoarea repornire a sistemului grafic. Ieșiți din SaX2 acum?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Testarea configurației a eșuat</b><hr>Pentru informații suplimentare "
-"urmăriți fișierul <tt>/var/log/Xorg.99.log</tt>. Următorul raport a fost "
-"creat:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Testarea configurației a eșuat</b><hr>Pentru informații suplimentare urmăriți fișierul <tt>/var/log/Xorg.99.log</tt>. Următorul raport a fost creat:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Informații privind configurarea accesului la distanță</b><hr>Serviciul de "
-"acces la distanță necesită ca porturile TCP 5900 și un port HTTP (5800 "
-"implicit) să fie deschise în firewall. Puteți configura asta cu YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Informații privind configurarea accesului la distanță</b><hr>Serviciul de acces la distanță necesită ca porturile TCP 5900 și un port HTTP (5800 implicit) să fie deschise în firewall. Puteți configura asta cu YaST."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1945,9 +1819,7 @@ msgid "Turkey"
 msgstr "Turcia"
 
 #. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
 msgstr ""
 
 #. XKBFile extension text
@@ -1960,11 +1832,8 @@ msgstr ""
 
 #. XKBFile extension text
 #, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr ""
-"Tasta spațiu furnizează caracterul spațiu indivizibil pe al patrulea nivel."
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Tasta spațiu furnizează caracterul spațiu indivizibil pe al patrulea nivel."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2025,12 +1894,8 @@ msgstr "Configurarea pe ecran"
 msgid "Idle timer..."
 msgstr ""
 
-#, fuzzy
-#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-#~ msgstr ""
-#~ "CapsLock folosește transformare internă în litere mari. Shift anulează "
-#~ "CapsLock."
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "CapsLock folosește transformare în litere mari internă. Shift"
 
-#, fuzzy
-#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-#~ msgstr "CapsLock se comportă ca Shift cu blocare. Shift anulează CapsLock."
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "CapsLock se comportă ca Shift cu blocare. Shift"

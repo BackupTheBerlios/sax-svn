@@ -2,6 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nis\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-02-05 18:49+0100\n"
 "PO-Revision-Date: 2006-11-11 18:41+0530\n"
 "Last-Translator: Priyavert Sharma<priyavert.sharma@agreeya.com>\n"
 "Language-Team: AgreeYa Solutions<linux_team@agreeya.com>\n"
@@ -20,27 +21,15 @@ msgid "I18N"
 msgstr ""
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-" <b>SaX2 સૂચન </b><hr> અત્યારની શરૂ કરાયેલી ગ્રાફિક્સ સિસ્ટમ SaX2 દ્વારા બનાવેલી સૂચન "
-"આધારિત છે. જો આ સ્વીકારપાત્ર હોય તો, <b>બરાબર</b> ક્લિક કરો. અન્યથા, કન્ફિગ્યુરેશન "
-"બદલો."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr " <b>SaX2 સૂચન </b><hr> અત્યારની શરૂ કરાયેલી ગ્રાફિક્સ સિસ્ટમ SaX2 દ્વારા બનાવેલી સૂચન આધારિત છે. જો આ સ્વીકારપાત્ર હોય તો, <b>બરાબર</b> ક્લિક કરો. અન્યથા, કન્ફિગ્યુરેશન બદલો."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
 msgstr ""
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
 msgstr ""
 
 #. Caption text for the startup information window
@@ -60,9 +49,7 @@ msgid "SaX Control Center"
 msgstr "SaX  નિયંત્રણ કેન્દ્ર"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
 msgstr ""
 
 #. Help Button text
@@ -175,11 +162,12 @@ msgstr "કાર્ડ"
 
 #. Desktop name label
 msgid "Desktop"
-msgstr ""
+msgstr "ડેસ્કટોપ"
 
 #. Pointers name label, global name for input devices
+#, fuzzy
 msgid "Pointers"
-msgstr ""
+msgstr "પ્રિન્ટર"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -190,7 +178,7 @@ msgstr "લેઆઉટ"
 
 #. Path name label, search paths
 msgid "Path"
-msgstr ""
+msgstr "માર્ગ"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
@@ -346,12 +334,8 @@ msgid "Unconfigured"
 msgstr "કન્ફિગર વગરનુંÅ"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>બધા પ્રદર્શનોને નિષ્ક્રિય કરી શકાતા નથી </b><hr><nobr> ઓછામાં ઓછું એક પ્રદર્શન "
-"સક્રિય હોવું જોઇએ.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>બધા પ્રદર્શનોને નિષ્ક્રિય કરી શકાતા નથી </b><hr><nobr> ઓછામાં ઓછું એક પ્રદર્શન સક્રિય હોવું જોઇએ.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -427,17 +411,12 @@ msgid "To the Right"
 msgstr "જમણી બાજુ"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
 msgstr ""
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>વિકલ્પ માટે મૂલ્ય જરૂરી</b><hr><nobr> વિકલ્પ %1 માટે એક મૂલ્ય સેટ અપ કરો. </nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>વિકલ્પ માટે મૂલ્ય જરૂરી</b><hr><nobr> વિકલ્પ %1 માટે એક મૂલ્ય સેટ અપ કરો. </nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -460,14 +439,8 @@ msgid "Display Size in [ mm ]"
 msgstr "કદને [મિમિ ]માં પ્રદર્શિત કરો"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b> નોંધ: </b> ખોટી સહકાલીનતા શ્રેણીઓ તમારા મોનિટરને નુકસાન કરી શકે છે. સેટિંગ્સ માટે "
-"મોનિટર મેન્યુઅલનો સંદર્ભ કરો. <br><br>જો તમે તમારા મોનિટરને તેના અધિકતમ ક્રમનો ઉપયોગ "
-"કરવા દેવા માગતા ન હોવ તો સહકાલીનતાની શ્રેણીઓ ઘટાડો."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b> નોંધ: </b> ખોટી સહકાલીનતા શ્રેણીઓ તમારા મોનિટરને નુકસાન કરી શકે છે. સેટિંગ્સ માટે મોનિટર મેન્યુઅલનો સંદર્ભ કરો. <br><br>જો તમે તમારા મોનિટરને તેના અધિકતમ ક્રમનો ઉપયોગ કરવા દેવા માગતા ન હોવ તો સહકાલીનતાની શ્રેણીઓ ઘટાડો."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -526,20 +499,12 @@ msgid "inches"
 msgstr "ઇંચ"
 
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>સીડી અથવા ડિસ્ક દાખલ કરો</b><hr> બીજા મોનિટર વિક્રેતા પાસેથી પ્રદર્શિત કરવાની "
-"યુટિલિટી સીડી અથવા ડિસ્ક દાખલ કરો."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>સીડી અથવા ડિસ્ક દાખલ કરો</b><hr> બીજા મોનિટર વિક્રેતા પાસેથી પ્રદર્શિત કરવાની યુટિલિટી સીડી અથવા ડિસ્ક દાખલ કરો."
 
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>વાંચવામાં ભૂલ</b><hr> સીડી અથવા ડિસ્ક માંથી વાંચી શકતા નથી. આ ખરાબ થઇ ગયેલ માધ્યમ "
-"અથવા ખોટી રીતે ફોર્મેટ થયેલી માહિતી ફાઈલો સૂચવે છે."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>વાંચવામાં ભૂલ</b><hr> સીડી અથવા ડિસ્ક માંથી વાંચી શકતા નથી. આ ખરાબ થઇ ગયેલ માધ્યમ અથવા ખોટી રીતે ફોર્મેટ થયેલી માહિતી ફાઈલો સૂચવે છે."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -894,7 +859,7 @@ msgstr ""
 
 #. XKBFile extension text
 #, fuzzy
-msgid "CapsLock uses internal capitalization. Shift "
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
 msgstr " CapsLock આંતરિક કેપિટલાઇઝેશનનો ઉપયોગ કરે છે. શિફ્ટ CapsLock ને રદ કરે છે. "
 
 #. XKBFile extension text
@@ -922,8 +887,7 @@ msgid "Left Win-key is Compose."
 msgstr ""
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr ""
 
 #. XKBFile extension text
@@ -936,7 +900,7 @@ msgstr ""
 
 #. XKBFile extension text
 #, fuzzy
-msgid "CapsLock acts as Shift with locking. Shift "
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
 msgstr " CapsLock લોક સાથે શિફ્ટ તરીકે વર્તે છે. શિફ્ટ CapsLock ને રદ કરે છે. "
 
 #. XKBFile extension text
@@ -1218,9 +1182,7 @@ msgid "Swap ESC and CapsLock."
 msgstr " Ctrl અને CapsLock ની અદલાબદલી કરો. "
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1232,9 +1194,7 @@ msgid "Legacy key with comma"
 msgstr ""
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
 msgstr ""
 
 #. XKBFile extension text
@@ -1371,21 +1331,11 @@ msgstr " ટચસ્ક્રિન : વિક્રેતા અને ના
 
 #. Finish configuration message box
 #, fuzzy
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-" <b>અંતિમ પગલાઓ</b><hr> તમારું નવું કન્ફિગ્યુરેશનને સાચવવું એ છેલ્લું પગલું છે. તે સાચવતા પહેલાં "
-"નવા કન્ફિગ્યુરેશનનું પરીક્ષણ કરવાની ભલામણ છે. જો પરીક્ષણ સર્વર બગડેલું ડેસ્કટોપ દર્શાવે તો, "
-"સર્વરને મારી નાખવા <b>[ Ctrl+Alt+Backspace ]</b> દબાવો. "
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr " <b>અંતિમ પગલાઓ</b><hr> તમારું નવું કન્ફિગ્યુરેશનને સાચવવું એ છેલ્લું પગલું છે. તે સાચવતા પહેલાં નવા કન્ફિગ્યુરેશનનું પરીક્ષણ કરવાની ભલામણ છે. જો પરીક્ષણ સર્વર બગડેલું ડેસ્કટોપ દર્શાવે તો, સર્વરને મારી નાખવા <b>[ Ctrl+Alt+Backspace ]</b> દબાવો. "
 
 #. Finish configuration message box (without test)
-msgid ""
-"<b>Saving the configuration</b><hr>Click on Save to store the configuration. "
-"Your changes will become effective on next X-Server restart."
+msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
 msgstr ""
 
 #. Tab title: VNC Server configuration
@@ -1429,30 +1379,20 @@ msgid "HTTP Port"
 msgstr "HTTP પોર્ટò"
 
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
 msgstr ""
 
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
 msgstr ""
 
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
 msgstr ""
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-" <b>સોફ્ટવેર સ્થાપન:</b><hr> કેટલાક પેકેજ છૂટી ગયેલા છે. હમણા છૂટી ગયેલા પેકેજ સ્થાપવા છે? "
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr " <b>સોફ્ટવેર સ્થાપન:</b><hr> કેટલાક પેકેજ છૂટી ગયેલા છે. હમણા છૂટી ગયેલા પેકેજ સ્થાપવા છે? "
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1471,32 +1411,19 @@ msgid "Initialize cache..."
 msgstr "કેશનો પ્રારંભ કરો..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr " <b>કન્ફિગ્યુરેશન સાચવવામાં નિષ્ફળ</b><hr> નીચે પ્રમાણેનો અહેવાલ બનાવાયો: "
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b> કન્ફિગ્યુરેશન સાચવ્યું</b><hr> તમારા બદલાવો હવે પછી ગ્રાફિક્સ સિસ્ટમ ફરી શરૂ થશે ત્યારે "
-"અસર પામશે. હમણા SaX2 માંથી બહાર જવું છે? "
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b> કન્ફિગ્યુરેશન સાચવ્યું</b><hr> તમારા બદલાવો હવે પછી ગ્રાફિક્સ સિસ્ટમ ફરી શરૂ થશે ત્યારે અસર પામશે. હમણા SaX2 માંથી બહાર જવું છે? "
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-" <b>કન્ફિગ્યુરેશનનું પરીક્ષણ નિષ્ફળ </b><hr> વધુ માહિતી માટે, <tt>/var/log/Xorg.99."
-"log</tt> ફાઇલનો સંદર્ભ કરો. કોલ કરતી વખતે નીચે પ્રમાણેનો અહેવાલ બનાવાયો: "
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr " <b>કન્ફિગ્યુરેશનનું પરીક્ષણ નિષ્ફળ </b><hr> વધુ માહિતી માટે, <tt>/var/log/Xorg.99.log</tt> ફાઇલનો સંદર્ભ કરો. કોલ કરતી વખતે નીચે પ્રમાણેનો અહેવાલ બનાવાયો: "
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
 msgstr ""
 
 #. XKBFile extension text
@@ -1900,9 +1827,7 @@ msgid "Turkey"
 msgstr "ટર્કી"
 
 #. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
 msgstr ""
 
 #. XKBFile extension text
@@ -1914,9 +1839,7 @@ msgid "Less-than/Greater-than is Compose."
 msgstr ""
 
 #. XKBFile extension text
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
 msgstr ""
 
 #. /.../
@@ -1976,11 +1899,3 @@ msgstr "પ્રદર્શન પર કન્ફિગ્યુરેશન"
 
 msgid "Idle timer..."
 msgstr "નવરું ટાઇમર..."
-
-#, fuzzy
-#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-#~ msgstr " CapsLock આંતરિક કેપિટલાઇઝેશનનો ઉપયોગ કરે છે. શિફ્ટ CapsLock ને રદ કરે છે. "
-
-#, fuzzy
-#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-#~ msgstr " CapsLock લોક સાથે શિફ્ટ તરીકે વર્તે છે. શિફ્ટ CapsLock ને રદ કરે છે. "

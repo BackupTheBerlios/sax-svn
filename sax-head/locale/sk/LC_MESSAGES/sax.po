@@ -11,14 +11,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-05-19 11:40+0100\n"
-"Last-Translator: Ladislav Michnovič <lmichnovic@suse.cz>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2009-03-20 21:49+0100\n"
+"Last-Translator: Rastislav Krupanský <rastislav.krupansky@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Language: Slovak\n"
+"X-Poedit-Country: SLOVAKIA\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -30,35 +33,16 @@ msgid "I18N"
 msgstr "LTR"
 
 #. RTF text: Startup information for the user
-msgid ""
-"<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on "
-"a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. "
-"Otherwise, change the configuration."
-msgstr ""
-"<b>Návrh SaX2</b><hr>Momentálne spustený grafický systém je založený na "
-"návrhu, ktorý pripravil SaX2. Ak je použiteľný, stlačte <b>OK</b>, inak "
-"nastavenie upravte."
+msgid "<b>SaX2 Suggestion</b><hr>The currently-started graphics system is based on a suggestion made by SaX2. If this is acceptable, click <b>OK</b>. Otherwise, change the configuration."
+msgstr "<b>Návrh SaX2</b><hr>Momentálne spustený grafický systém je založený na návrhu, ktorý pripravil SaX2. Ak je použiteľný, stlačte <b>OK</b>, inak nastavenie upravte."
 
 #. RTF text: 3D acceleration not supported with this card
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because your graphics card/driver doesn't support 3D"
-msgstr ""
-"<b>3D akcelerácia nie je podporovaná</b><hr>SaX2 vám nemúže ponúknut "
-"aktiváciu 3D podpory, pretože to nepodporuje vaša grafická karta, reps. jej "
-"ovládač."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because your graphics card/driver doesn't support 3D"
+msgstr "<b>3D akcelerácia nie je podporovaná</b><hr>SaX2 vám nemôže ponúknuť aktiváciu 3D podpory, pretože to nepodporuje vaša grafická karta, reps. jej ovládač."
 
 #. RTF text: 3D acceleration not supported with Xinerama
-msgid ""
-"<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the "
-"3D subsystem because Xinerama based dual head mode is used. The Xorg "
-"Xinerama extension for combining graphics screens doesn't support 3D on all "
-"heads"
-msgstr ""
-"<b>3D akcelerácia nie je podporovaná</b><hr>SaX2 vám nemúže ponúknuť "
-"aktivovanie 3D akcelerácie, pretože sa používa Xinerama rozšírenie módu "
-"dvoch výstupov. Rozšírenie Xorg o Xineramu pre kombinovanie grafických "
-"výstupov nepodporuje 3D akceleráciu na oboch výstupoch."
+msgid "<b>3D acceleration not supported</b><hr>SaX2 cannot offer activation of the 3D subsystem because Xinerama based dual head mode is used. The Xorg Xinerama extension for combining graphics screens doesn't support 3D on all heads"
+msgstr "<b>3D akcelerácia nie je podporovaná</b><hr>SaX2 vám nemôže ponúknuť aktivovanie 3D akcelerácie, pretože sa používa Xinerama rozšírenie módu dvoch výstupov. Rozšírenie Xorg o Xineramu pre kombinovanie grafických výstupov nepodporuje 3D akceleráciu na oboch výstupoch."
 
 #. Caption text for the startup information window
 msgid "Automatic Graphics System Setup"
@@ -74,15 +58,11 @@ msgstr "SaX2: Konfigurácia X11"
 
 #. Title text on the left side
 msgid "SaX Control Center"
-msgstr "Sax ovládacie centrum"
+msgstr "SaX ovládacie centrum"
 
 #. Info message about display size changes
-msgid ""
-"<b>Display size changed</b><hr>The display size has been adapted to the new "
-"layout."
-msgstr ""
-"<b>Zmenila sa veľkosť obrazovky</b><hr>Veľkosť obrazovky bola zmenená, aby "
-"zodpovedala novému rozloženiu."
+msgid "<b>Display size changed</b><hr>The display size has been adapted to the new layout."
+msgstr "<b>Zmenila sa veľkosť obrazovky</b><hr>Veľkosť obrazovky bola zmenená, aby zodpovedala novému rozloženiu."
 
 #. Help Button text
 msgid "&Help"
@@ -161,7 +141,7 @@ msgstr "Dotyková obrazovka"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr "Vlastnosti dotykového displeja"
+msgstr "Vlastnosti dotykovej obrazovky"
 
 #. Short description of the VNC module
 msgid "Remote Access"
@@ -176,9 +156,8 @@ msgid "Display %1"
 msgstr "Obrazovka %1"
 
 #. Tab text for a display tab of the mouse dialog
-#, fuzzy
 msgid "Mouse %1"
-msgstr "Myš"
+msgstr "Myš %1"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -186,7 +165,7 @@ msgstr "Aktivovať túto obrazovku"
 
 #. Activate mouse checkbox
 msgid "Activate This Pointer"
-msgstr "Aktivovať toto polohovacie zariadenie"
+msgstr "Aktivovať tento ukazovateľ"
 
 #. Graphics Card name label
 msgid "Card"
@@ -194,11 +173,11 @@ msgstr "Karta"
 
 #. Desktop name label
 msgid "Desktop"
-msgstr ""
+msgstr "Plocha"
 
 #. Pointers name label, global name for input devices
 msgid "Pointers"
-msgstr ""
+msgstr "Ukazovatele"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -209,11 +188,11 @@ msgstr "Rozloženie klávesov"
 
 #. Path name label, search paths
 msgid "Path"
-msgstr ""
+msgstr "Cesta"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Rozšírenia"
 
 #  Maximum length: 60  characters
 #. Change data
@@ -368,12 +347,8 @@ msgid "Unconfigured"
 msgstr "Nenastavené"
 
 #. Message appears when user is trying to deactivate all displays
-msgid ""
-"<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be "
-"active.</nobr>"
-msgstr ""
-"<b>Nemôžem deaktivovať všetky obrazovky</b><hr><nobr>Aspoň jedna obrazovka "
-"musí ostať aktívna.</nobr>"
+msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
+msgstr "<b>Nemôžem deaktivovať všetky obrazovky</b><hr><nobr>Aspoň jedna obrazovka musí ostať aktívna.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -449,21 +424,12 @@ msgid "To the Right"
 msgstr "Doprava"
 
 #. Popup message to inform the user about fbdev restrictions
-msgid ""
-"<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected "
-"resolution and/or color settings</nobr> are not supported by the graphics "
-"cards framebuffer."
-msgstr ""
-"<b>Neplatná kombinácia farebnej hĺbky a rozlíšenia:</b><hr><nobr>Zvolené "
-"rozlíšenie a farebná hĺbka</nobr> nie je podporovaná grafickou kartou pre "
-"framebuffer."
+msgid "<b>Invalid Color/Resolution combination:</b><hr><nobr>The selected resolution and/or color settings</nobr> are not supported by the graphics cards framebuffer."
+msgstr "<b>Neplatná kombinácia farebnej hĺbky a rozlíšenia:</b><hr><nobr>Zvolené rozlíšenie a farebná hĺbka</nobr> nie je podporovaná grafickou kartou pre framebuffer."
 
 #. Popup message to ask the user for an option value
-msgid ""
-"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
-msgstr ""
-"<b>Voľba vyžaduje nejakú hodnotu</b><hr><nobr>Prosím, nastavte hodnotu pre "
-"voľbu %1.</nobr>"
+msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgstr "<b>Voľba vyžaduje nejakú hodnotu</b><hr><nobr>Prosím, nastavte hodnotu pre voľbu %1.</nobr>"
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
@@ -486,14 +452,8 @@ msgid "Display Size in [ mm ]"
 msgstr "Veľkosť obrazovky v mm"
 
 #. Text message telling to be carefull with the monitor sync frequencies
-msgid ""
-"<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor "
-"manual for the settings.<br><br>If you want your monitor not to use its "
-"maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Poznámka:</b>Nesprávne nastavenie synchronizácie môže poškodiť váš "
-"monitor. Pre nasledujúce nastavenie konzultujte návod k vášmu monitoru."
-"<br><br>Ak nechcete, aby váš monitor išiel na doraz, znížte hodnoty."
+msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
+msgstr "<b>Poznámka:</b>Nesprávne nastavenie synchronizácie môže poškodiť váš monitor. Pre nasledujúce nastavenie konzultujte návod k vášmu monitoru.<br><br>Ak nechcete, aby váš monitor išiel na doraz, znížte hodnoty."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -553,21 +513,13 @@ msgstr "palcov"
 
 #  RTF text: no limit
 #. Message box of type Ok, telling to user to insert a CD or disk
-msgid ""
-"<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the "
-"monitor vendor."
-msgstr ""
-"<b>Vložte CD alebo disketu</b><hr>Vložte disketu alebo CD s nástrojmi od "
-"výrobcu monitora."
+msgid "<b>Insert CD or Disk</b><hr>Insert the display utility CD or disk from the monitor vendor."
+msgstr "<b>Vložte CD alebo disketu</b><hr>Vložte disketu alebo CD s nástrojmi od výrobcu monitora."
 
 #  RTF text: no limit
 #. Message box of type Error, telling that the utility disk cannot be opened
-msgid ""
-"<b>Read Error</b><hr>Could not read from CD or disk. This may point to a "
-"damaged medium or incorrectly formatted information files."
-msgstr ""
-"<b>Chyba pri čítaní</b><hr>Nepodarilo sa prečítať CD resp. disketu. Možno je "
-"médium poškodené alebo nie sú informácie v správnom formáte."
+msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
+msgstr "<b>Chyba pri čítaní</b><hr>Nepodarilo sa prečítať CD resp. disketu. Možno je médium poškodené alebo nie sú informácie v správnom formáte."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -675,7 +627,7 @@ msgstr "Ľavý Alt prepína rozloženie dokiaľ je stlačený."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr "Medzerník generuje nedelitelnú medzeru"
+msgstr "Medzerník generuje nedeliteľnú medzeru"
 
 #. XKBFile extension text
 msgid "Default numeric keypad keys."
@@ -687,7 +639,7 @@ msgstr "Stlačenie oboch klávesov Ctrl zmení rozloženie klávesov."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr "Používať medzerník pre zadávanie nedelitelnej medzery."
+msgstr "Používať medzerník pre zadávanie nedeliteľnej medzery."
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
@@ -699,7 +651,7 @@ msgstr "Ľavý Win-kláves zmení rozloženie klávesov."
 
 #. XKBFile extension text
 msgid "LCtrl+LShift change layout."
-msgstr "Ľavý Ctrl + ľavy Shift zmení rozloženie klávesov."
+msgstr "Ľavý Ctrl + ľavý Shift zmení rozloženie klávesov."
 
 #. XKBFile extension text
 msgid "Left Alt key changes layout."
@@ -711,7 +663,7 @@ msgstr "Stlačenie oboch Win-klávesov mení rozloženie dokiaľ sú stlačené.
 
 #. XKBFile extension text
 msgid "Right Ctrl key switches layout while pressed."
-msgstr "Pravý Ctrl mení rozloženie, dokiaľ je stlačený."
+msgstr "Pravý Ctrl mení rozloženie, pokým je stlačený."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
@@ -828,8 +780,7 @@ msgstr "Voľby japonského rozloženia klávesov"
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative layout."
-msgstr ""
-"Použiť LED na klávesnici pre zobrazenie alternatívneho rozloženia klávesov."
+msgstr "Použiť LED na klávesnici pre zobrazenie alternatívneho rozloženia klávesov."
 
 #. XKBFile extension text
 msgid "Left Ctrl key changes layout."
@@ -893,8 +844,7 @@ msgstr "Priradenie nedeliteľnej medzery na medzerník"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Používať klávesnicu s rozšíreniami unikódu (šipky a matematické operátory)"
+msgstr "Používať klávesnicu s rozšíreniami unikódu (šipky a matematické operátory)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -921,8 +871,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "Caps Lock funguje ako Shift so zámkom. Shift neruší Caps Lock."
 
 #. XKBFile extension text
-msgid "CapsLock uses internal capitalization. Shift "
-msgstr "Caps Lock používa vnútorné veľké písmená. Shift ruší Caps."
+msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
+msgstr "CapsLock používa veľké písmená. Shift dočasne ruší CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -930,8 +880,7 @@ msgstr "Medzerník generuje nedeliteľnú medzeru v tretej úrovni."
 
 #. XKBFile extension text
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-"Zameniť kódy dvoch klávesov, ak jadro chybne deteguje Mac-ovskú klávesnicu."
+msgstr "Zameniť kódy dvoch klávesov, ak jadro chybne deteguje Mac-ovskú klávesnicu."
 
 #. XKBFile extension text
 msgid "Numpad keys work as with Mac."
@@ -950,11 +899,8 @@ msgid "Left Win-key is Compose."
 msgstr "Ľavý Win-kláves je Compose."
 
 #. XKBFile extension text
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"Stlačenie pravého Alt-klávesu volí 3. úroveň, Shift + pravý Alt je kláves "
-"Multi."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Stlačenie pravého Alt-klávesu volí 3. úroveň, Shift + pravý Alt je kláves Multi."
 
 #. XKBFile extension text
 msgid "Space key output space at any level."
@@ -965,8 +911,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Možnosti japonského rozloženia klávesov"
 
 #. XKBFile extension text
-msgid "CapsLock acts as Shift with locking. Shift "
-msgstr "CapsLock funguje ako Shift so zámkom. Shift ruší Caps."
+msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
+msgstr "CapsLock funguje ako Shift so zámkom. Shift dočasne ruší CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1154,8 +1100,7 @@ msgstr "Caps Lock funguje ako Shift so zámkom. Shift ruší Caps Lock."
 
 #. XKBFile extension text
 msgid "Use keyboard LED to show alternative group."
-msgstr ""
-"Použiť LED na klávesnici pre zobrazenie alternatívneho rozloženia klávesov."
+msgstr "Použiť LED na klávesnici pre zobrazenie alternatívneho rozloženia klávesov."
 
 #. XKBFile extension text
 msgid "Press Right Win-key to choose 3rd level."
@@ -1225,7 +1170,7 @@ msgstr "Prídavná klávesnica Wang 724"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
-msgstr "Káves štvrtej úrovne s abstraktnými oddeľovačmi"
+msgstr "Klávesa štvrtej úrovne s abstraktnými oddeľovačmi"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
@@ -1244,12 +1189,8 @@ msgid "Swap ESC and CapsLock."
 msgstr "Prehodiť Esc a Caps Lock"
 
 #. XKBFile extension text
-msgid ""
-"Wang 724 keypad with unicode additions (arrows and math operators). Math "
-"operators on default level."
-msgstr ""
-"Klávesnica Wang 724 s rozšíreniami unikódu (šipky a matematické operátory). "
-"Matematické operátory sú prednastavené."
+msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Klávesnica Wang 724 s rozšíreniami unikódu (šipky a matematické operátory). Matematické operátory sú prednastavené."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
@@ -1260,12 +1201,8 @@ msgid "Legacy key with comma"
 msgstr "Odkazový kláves s čiarkou"
 
 #. XKBFile extension text
-msgid ""
-"Keypad with unicode additions (arrows and math operators). Math operators on "
-"default level."
-msgstr ""
-"Klávesnica s rozšíreniami unikódu (šipky a matematické operátory). "
-"Matematické operátory sú predvolené."
+msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
+msgstr "Klávesnica s rozšíreniami unikódu (šipky a matematické operátory). Matematické operátory sú predvolené."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
@@ -1281,8 +1218,7 @@ msgstr "Chovanie delete klávesu na numerickej klávesnici"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
-"Klávesnica Wang 724 s rozšíreniami unikódu (šipky a matematické operátory)"
+msgstr "Klávesnica Wang 724 s rozšíreniami unikódu (šipky a matematické operátory)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1349,9 +1285,8 @@ msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #  Maximum length: 20  characters
 #. Combobox item text for tablet port: ttyS4
-#, fuzzy
 msgid "COM-5 [ /dev/ttyS4 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1367,7 +1302,7 @@ msgstr "Pridať gumu"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr ""
+msgstr "Pridať dotykovú obrazovku"
 
 #. Add Pad Checkbox
 msgid "Add Pad"
@@ -1392,14 +1327,12 @@ msgid "Eraser Properties"
 msgstr "Vlastnosti gumy"
 
 #. Tab title: Touch properties
-#, fuzzy
 msgid "Touch Properties"
-msgstr "Vlastnosti dotykového displeja"
+msgstr "Vlastnosti dotykovej obrazovky"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
-#, fuzzy
 msgid "Touchscreen %1"
-msgstr "Dotyková obrazovka"
+msgstr "Dotyková obrazovka %1"
 
 #. Activate/Assign touchscreen checkbox
 msgid "Assign a Touchscreen to Display Number %1"
@@ -1410,23 +1343,12 @@ msgid "Touchscreen: Vendor and Name Selection"
 msgstr "Dotyková obrazovka: výber výrobcu a mena"
 
 #. Finish configuration message box
-msgid ""
-"<b>Final Steps</b><hr>The last step is saving your new configuration. It is "
-"recommended to test the new configuration before saving it. If the test "
-"server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>"
-"[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the "
-"server."
-msgstr ""
-"<b>Záverečné kroky</b><hr>Posledný krok je uloženie nového nastavenia. Pred "
-"uložením odporúčame otestovať nové nastavenie. Ak testovací server zobrazí "
-"plochu nesprávne, stlačte <b>[ Ctrl+Alt+Backspace ]</b> a znova <b>[ Ctrl+Alt"
-"+Backspace ]</b> po krátkom pípnutí, čím ho ukončíte."
+msgid "<b>Final Steps</b><hr>The last step is saving your new configuration. It is recommended to test the new configuration before saving it. If the test server shows a corrupted desktop, press <b>[ Ctrl+Alt+Backspace ]</b> and <b>[ Ctrl+Alt+Backspace ]</b> shortly after a loud warning (beep) to kill the server."
+msgstr "<b>Záverečné kroky</b><hr>Posledný krok je uloženie nového nastavenia. Pred uložením odporúčame otestovať nové nastavenie. Ak testovací server zobrazí plochu nesprávne, stlačte <b>[ Ctrl+Alt+Backspace ]</b> a znova <b>[ Ctrl+Alt+Backspace ]</b> po krátkom pípnutí, čím ho ukončíte."
 
 #. Finish configuration message box (without test)
-msgid ""
-"<b>Saving the configuration</b><hr>Click on Save to store the configuration. "
-"Your changes will become effective on next X-Server restart."
-msgstr ""
+msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
+msgstr "<b>Uloženie konfigurácie</b><hr>Kliknutím na Uložiť sa uloží konfigurácia. Zmeny sa prejavia pri nasledujúcom reštarte X-Servera."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1434,8 +1356,7 @@ msgstr "Vzdialená správa X serveru"
 
 #. Activate VNC server checkbox
 msgid "Allow access to display and keyboard/mouse of your X Server"
-msgstr ""
-"Povoliť vzdialený prístup k obrazovke, klávesnici a myši vášho X servera"
+msgstr "Povoliť vzdialený prístup k obrazovke, klávesnici a myši vášho X servera"
 
 #  Maximum length: 60  characters
 #. Activate VNC password protection checkbox
@@ -1479,39 +1400,22 @@ msgstr "HTTP port"
 
 #  RTF text: no limit
 #. VNC message box appearing if password strings doesn't match
-msgid ""
-"<b>Remote Access Password Mismatch</b><hr>The first and the second version "
-"of the password do not match."
-msgstr ""
-"<b>Heslá pre vzdialené pripojenie sa nezhodujú</b><hr>Prvá a druhá verzia "
-"hesla sa nezhodujú!"
+msgid "<b>Remote Access Password Mismatch</b><hr>The first and the second version of the password do not match."
+msgstr "<b>Heslá pre vzdialené pripojenie sa nezhodujú</b><hr>Prvá a druhá verzia hesla sa nezhodujú!"
 
 #  RTF text: no limit
 #. VNC message box appearing if password is too short
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password field has been left "
-"empty or the password is too short. Enter a password with at least six "
-"characters."
-msgstr ""
-"<b>Chybné heslo pre vzdialený prístup</b><hr>Pole pre heslo ostalo prázdne, "
-"alebo je heslo prikrátke. Prosím, zadajte heslo s aspoň šiestimi znakmi."
+msgid "<b>Remote Access Password Fault</b><hr>The password field has been left empty or the password is too short. Enter a password with at least six characters."
+msgstr "<b>Chybné heslo pre vzdialený prístup</b><hr>Pole pre heslo ostalo prázdne, alebo je heslo prikrátke. Prosím, zadajte heslo s aspoň šiestimi znakmi."
 
 #  RTF text: no limit
 #. VNC message box appearing if password is too long
-msgid ""
-"<b>Remote Access Password Fault</b><hr>The password is too long. Enter a "
-"password with a maximum of eight characters."
-msgstr ""
-"<b>Chybné heslo pre vzdialené pripojenie</b><hr>Heslo je príliš dlhé. "
-"Prosím, zadajte heslo s maximálne ôsmimi znakmi."
+msgid "<b>Remote Access Password Fault</b><hr>The password is too long. Enter a password with a maximum of eight characters."
+msgstr "<b>Chybné heslo pre vzdialené pripojenie</b><hr>Heslo je príliš dlhé. Prosím, zadajte heslo s maximálne ôsmimi znakmi."
 
 #. Install missing packages box
-msgid ""
-"<b>Software Installation:</b><hr>Some packages are missing. Install the "
-"missing packages now?"
-msgstr ""
-"<b>Inštalácia softvéru:</b><hr>Nemáte nainštalované niektoré balíky. Chcete "
-"ich nainštalovať teraz?"
+msgid "<b>Software Installation:</b><hr>Some packages are missing. Install the missing packages now?"
+msgstr "<b>Inštalácia softvéru:</b><hr>Nemáte nainštalované niektoré balíky. Chcete ich nainštalovať teraz?"
 
 #. Caption text for the missing package info window
 msgid "Package Installation"
@@ -1530,37 +1434,20 @@ msgid "Initialize cache..."
 msgstr "Inicializujem vyrovnávaciu pamäť..."
 
 #. Message box text: configuration cannot be saved
-msgid ""
-"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
 msgstr "<b>Zlyhalo ukladanie nastavenia</b><hr>Bol vytvorený tento záznam:"
 
 #. Message box test: configuration has been saved
-msgid ""
-"<b>Configuration Saved</b><hr>Your modifications will take effect the next "
-"time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Nastavenie bolo uložené</b><hr>Vaše zmeny sa prejavia pri budúcom štarte "
-"grafického systému. Želáte si ukončiť SaX2?"
+msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
+msgstr "<b>Nastavenie bolo uložené</b><hr>Vaše zmeny sa prejavia pri budúcom štarte grafického systému. Želáte si ukončiť SaX2?"
 
 #. Message box text: testing the configuration has failed
-msgid ""
-"<b>Testing Configuration Failed</b><hr>For further information, refer to the "
-"file <tt>/var/log/Xorg.99.log</tt>. The following report has been created "
-"from the calling instance:"
-msgstr ""
-"<b>Zlyhalo otestovanie nastavenia</b><hr>Ďalšie informácie nájdete v "
-"súbore<tt>/var/log/Xorg.99.log</tt>. Nasledujúci záznam bol vytvorený "
-"volaním:"
+msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
+msgstr "<b>Zlyhalo otestovanie nastavenia</b><hr>Ďalšie informácie nájdete v súbore<tt>/var/log/Xorg.99.log</tt>. Nasledujúci záznam bol vytvorený volaním:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
-msgid ""
-"<b>Remote Access configuration information</b><hr>The Remote Access service "
-"requires that the TCP port 5900 and an HTTP port (5800 by default) be open "
-"in the firewall. You can configure this with YaST."
-msgstr ""
-"<b>Informácia nastavenia vzdialeného prístupu</b><hr>Služba vvzdialeného "
-"prístupu vyžaduje, aby boli TCP port 5900 a HTTP port (štandardne 5800) "
-"otvorené vo nastavení firewallu. Zatiaľ to nejde nastaviť pomocou YaSTu."
+msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
+msgstr "<b>Informácia nastavenia vzdialeného prístupu</b><hr>Služba vzdialeného prístupu vyžaduje, aby boli TCP port 5900 a HTTP port (štandardne 5800) otvorené vo nastavení firewallu. Zatiaľ to nejde nastaviť pomocou YaSTu."
 
 #. XKBFile extension text
 msgid "Miscellaneous compatibility options"
@@ -1649,7 +1536,7 @@ msgstr "Arabské"
 # NP
 #. XKBFile extension text
 msgid "Nepal"
-msgstr "Nepal"
+msgstr "Nepál"
 
 # CD
 # fuzzy
@@ -1743,7 +1630,7 @@ msgstr "Maorské"
 
 #. XKBFile extension text
 msgid "Uzbekistan"
-msgstr "Uzbekistanské"
+msgstr "Uzbecké"
 
 #. XKBFile extension text
 msgid "Bulgaria"
@@ -1789,7 +1676,7 @@ msgstr "Bieloruské"
 
 #. XKBFile extension text
 msgid "Tajikistan"
-msgstr "Tadžikistánske"
+msgstr "Tadžické"
 
 #. XKBFile extension text
 msgid "Denmark"
@@ -1889,7 +1776,7 @@ msgstr "Poľské"
 # fuzzy
 #. XKBFile extension text
 msgid "Kyrgyzstan"
-msgstr "Kirgistanské"
+msgstr "Kirgizské"
 
 #. XKBFile extension text
 msgid "Ireland"
@@ -1920,7 +1807,7 @@ msgstr "Rumunské"
 # fuzzy
 #. XKBFile extension text
 msgid "Kazakhstan"
-msgstr "Kazachstanské"
+msgstr "Kazašské"
 
 #. XKBFile extension text
 msgid "Georgia"
@@ -1978,7 +1865,7 @@ msgstr "Andorské"
 # AF
 #. XKBFile extension text
 msgid "Afghanistan"
-msgstr "Afganistanské"
+msgstr "Afgánske"
 
 #. XKBFile extension text
 msgid "Esperanto"
@@ -1989,25 +1876,20 @@ msgid "Turkey"
 msgstr "Turecké"
 
 #. XKBFile extension text
-msgid ""
-"CapsLock key switches layout while pressed, Alt+CapsLock does the original "
-"capslock action."
-msgstr ""
+msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
+msgstr "CapsLock pri stlačení prepína rozloženie, Alt+CapsLock má pôvodnú funkciu CapsLocku."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "CapsLock prepína na prvé rozloženie, Shift+CapsLock prepína na posledné rozloženie."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "Menšie ako/Väčšie ako je Compose"
 
 #. XKBFile extension text
-#, fuzzy
-msgid ""
-"Space key outputs non-breakable space character at fourth level, thin non-"
-"breakable space character at sixth level (via Ctrl+Shift"
-msgstr "Medzerník generuje nedeliteľnú medzeru vo štvrtej úrovni."
+msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
+msgstr "Medzerník generuje nedeliteľnú medzeru vo štvrtej úrovni, tenkú nedeliteľnú medzeru na šiestej úrovni (cez Ctrl+Shift"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2067,10 +1949,8 @@ msgstr "Nastavenie na obrazovke"
 msgid "Idle timer..."
 msgstr "Čakanie..."
 
-#, fuzzy
-#~ msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-#~ msgstr "Caps Lock používa veľké písmená. Shift ruší Caps Lock."
+#~ msgid "CapsLock uses internal capitalization. Shift "
+#~ msgstr "Caps Lock používa vnútorné veľké písmená. Shift ruší Caps."
+#~ msgid "CapsLock acts as Shift with locking. Shift "
+#~ msgstr "CapsLock funguje ako Shift so zámkom. Shift ruší Caps."
 
-#, fuzzy
-#~ msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-#~ msgstr "Caps Lock funguje ako Shift so zámkom. Shift ruší Caps Lock."
