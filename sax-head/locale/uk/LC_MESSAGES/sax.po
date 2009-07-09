@@ -6,12 +6,12 @@
 # Ivan Petrouchtchak <iip@telus.net>, 2005.
 # Ivan Petrouchtchak <ivanpetrouchtchak@yahoo.com>, 2005, 2006, 2007.
 # Yuri Chornoivan <yurchor@ukr.net>, 2008.
-# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2008.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax.uk\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-10-22 22:48-0700\n"
+"PO-Revision-Date: 2009-07-03 11:17-0700\n"
 "Last-Translator: Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
@@ -171,9 +171,8 @@ msgid "Desktop"
 msgstr "Стільниця"
 
 #. Pointers name label, global name for input devices
-#, fuzzy
 msgid "Pointers"
-msgstr "Принтер"
+msgstr "Вказівники"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -188,7 +187,7 @@ msgstr "Шлях"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Розширення"
 
 #. Change data
 msgid "&Change..."
@@ -862,9 +861,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock діє, як Shift з фіксацією. Shift не впливає на CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr "CapsLock вживає внутрішній механізм великих літер. Shift скасовує CapsLock."
+msgstr "CapsLock вживає внутрішній механізм великих літер. Shift «призупиняє» CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -903,9 +901,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Параметри японської клавіатури"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "CapsLock діє, як Shift з фіксацією. Shift скасовує CapsLock."
+msgstr "CapsLock діє як Shift з фіксацією. Shift «призупиняє» CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1332,7 +1329,7 @@ msgstr "<b>Останні кроки:</b><hr>Останній крок — зб�
 
 #. Finish configuration message box (without test)
 msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
-msgstr ""
+msgstr "<b>Збереження налаштування</b><hr>Натисніть на кнопку Зберегти, щоб зберегти конфігурацію. Ваші зміни увійдуть в дію після наступного перезапуску X-сервера."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1848,20 +1845,19 @@ msgstr "Туреччина"
 
 #. XKBFile extension text
 msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
-msgstr ""
+msgstr "Клавіша CapsLock перемикає розкладку, Alt+CapsLock діє як capslock."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "Клавіша CapsLock перемикає до першої розкладки, Shift+CapsLock перемикає до наступної."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "Compose як менше-ніж/більше-ніж."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
-msgstr "Клавіша пробілу видає символ нерозривного пробілу в четвертому рівні."
+msgstr "Клавіша пробілу видає символ нерозривного пробілу в четвертому рівні, вузький нерозривний пробіл в шостому рівні (через Ctrl+Shift)"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1921,8 +1917,3 @@ msgstr "Конфігурація на дисплеї"
 msgid "Idle timer..."
 msgstr "Бездіяльний таймер..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
-#~ msgstr "CapsLock вживає внутрішній механізм великих літер. Shift "
-
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "CapsLock діє, як Shift з фіксацією. Shift "
