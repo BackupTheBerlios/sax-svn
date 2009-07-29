@@ -20,7 +20,7 @@ STATUS        : Status: Up-to-date
 #include "mouse.h"
 #include "xstuff.h"
 
-#define VESA_LIST 27
+#define VESA_LIST 28
 
 //======================================
 // ScanXStuff: constructor...
@@ -202,18 +202,19 @@ void ScanXStuff::Scan (void) {
 	vesaStandard[12].x = 1366; vesaStandard[12].y = 768;
 	vesaStandard[13].x = 1400; vesaStandard[13].y = 1050;
 	vesaStandard[14].x = 1440; vesaStandard[14].y = 900;
-	vesaStandard[15].x = 1600; vesaStandard[15].y = 1000;
-	vesaStandard[16].x = 1600; vesaStandard[16].y = 1024;
-	vesaStandard[17].x = 1600; vesaStandard[17].y = 1200;
-	vesaStandard[18].x = 1680; vesaStandard[18].y = 1050;
-	vesaStandard[19].x = 1900; vesaStandard[19].y = 1200;
-	vesaStandard[20].x = 1920; vesaStandard[20].y = 1200;
-	vesaStandard[21].x = 1920; vesaStandard[21].y = 1440;
-	vesaStandard[22].x = 2048; vesaStandard[22].y = 1536;
-	vesaStandard[23].x = 2560; vesaStandard[23].y = 1600;
-	vesaStandard[24].x = 2560; vesaStandard[24].y = 2048;
-	vesaStandard[25].x = 2800; vesaStandard[25].y = 2100;
-	vesaStandard[26].x = 3200; vesaStandard[26].y = 2400;
+	vesaStandard[15].x = 1600; vesaStandard[15].y = 900;
+	vesaStandard[16].x = 1600; vesaStandard[16].y = 1000;
+	vesaStandard[17].x = 1600; vesaStandard[17].y = 1024;
+	vesaStandard[18].x = 1600; vesaStandard[18].y = 1200;
+	vesaStandard[19].x = 1680; vesaStandard[19].y = 1050;
+	vesaStandard[20].x = 1900; vesaStandard[20].y = 1200;
+	vesaStandard[21].x = 1920; vesaStandard[21].y = 1200;
+	vesaStandard[22].x = 1920; vesaStandard[22].y = 1440;
+	vesaStandard[23].x = 2048; vesaStandard[23].y = 1536;
+	vesaStandard[24].x = 2560; vesaStandard[24].y = 1600;
+	vesaStandard[25].x = 2560; vesaStandard[25].y = 2048;
+	vesaStandard[26].x = 2800; vesaStandard[26].y = 2100;
+	vesaStandard[27].x = 3200; vesaStandard[27].y = 2400;
 
 	//======================================
 	// lookup framebuffer timing
