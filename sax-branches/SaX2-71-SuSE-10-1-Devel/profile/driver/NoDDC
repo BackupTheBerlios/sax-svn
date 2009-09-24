@@ -1,6 +1,6 @@
-# .../
-# Driver dependant DDC profile, disable use of X-Server
-# detected DDC information. Sometimes usefull especially for
-# i810 based graphics devices
+# /.../
+# NoDDC profile, adds 'Option "NoDDC"' for i810/i815/i830/i845/i865/E7221
+# 
 # ---- 
-Device->[X]->Option = NoDDC
+# dynamic profile
+#
