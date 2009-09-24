@@ -1,47 +1,56 @@
 #
 # spec file for package sax2 (Version 7.1)
 #
-# Copyright (c) 2006 SUSE LINUX Products GmbH, Nuernberg, Germany.
-# This file and all modifications and additions to the pristine
-# package are under the same license as the package itself.
+# Copyright (c) 2009 SUSE LINUX Products GmbH, Nuernberg, Germany.
 #
-# Please submit bugfixes or comments via http://bugs.opensuse.org
+# All modifications and additions to the file contributed by third parties
+# remain the property of their copyright owners, unless otherwise agreed
+# upon. The license for this file, and modifications and additions to the
+# file, is the same license as for the pristine package itself (unless the
+# license for the pristine package is not an Open Source License, in which
+# case the license is the MIT License). An "Open Source License" is a
+# license that conforms to the Open Source Definition (Version 1.9)
+# published by the Open Source Initiative.
+
+# Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
 
-Name:         sax2
-BuildRequires: doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages libdrm-devel libjpeg-devel mono-basic mono-data-sqlite mono-devel python-devel qt3-devel readline-devel swig sysfsutils udev update-desktop-files wireless-tools xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi
-Requires:     perl readline ncurses hal dbus-1 binutils
-Requires:     sax2-ident sax2-tools
+Url:            http://sax.berlios.de
+
+Name:           sax2
+BuildRequires:  doxygen ghostscript-fonts-std graphviz hal-devel java2-devel-packages libdrm-devel libjpeg-devel mono-basic mono-data-sqlite mono-devel python-devel qt3-devel readline-devel swig sysfsutils udev update-desktop-files wireless-tools xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi
+Requires:       perl readline ncurses hal dbus-1 binutils
+Requires:       sax2-ident sax2-tools
 %if %{suse_version} >= 810
-PreReq:       /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
+PreReq:         /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 %endif
 %if %{suse_version} > 810
 %if %{suse_version} > 910
-Requires:     xorg-x11-server
+Requires:       xorg-x11-server
 %else
-Requires:     XFree86-server
+Requires:       XFree86-server
 %endif
 %else
-Requires:     xloader
+Requires:       xloader
 %endif
-Summary:      SuSE advanced X Window System-configuration
-Version:      7.1
-Release:      70
-Group:        System/X11/Utilities
-License:      Other License(s), see package, GPL
-Source:       sax2.tar.bz2
-Source1:      sax2.desktop
-Source2:      66-elo.rules
-BuildRoot:    %{_tmppath}/%{name}-%{version}-build
+Summary:        SuSE advanced X Window System-configuration
+Version:        7.1
+Release:        125.<RELEASE62>
+Group:          System/X11/Utilities
+License:        GPL v2 or later
+Source:         sax2.tar.bz2
+Source1:        sax2.desktop
+Source2:        66-elo.rules
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 %if %{suse_version} > 820
-Provides:     sax xfine
-Obsoletes:    sax xfine
+Provides:       sax xfine
+Obsoletes:      sax xfine
 %endif
 %ifarch sparc sparc64
-Requires:     sax2_sbus
+Requires:       sax2_sbus
 %endif
-ExcludeArch:  s390
+ExcludeArch:    s390
 
 %description
 This package contains the SuSE Advanced X-Configuration
@@ -53,24 +62,25 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-tools
-Version:      2.7
-Release:      70
-Summary:      X Window System tools for SaX2
-Group:        System/X11/Utilities
-Requires:     coreutils
-Provides:     saxtools
-Obsoletes:    saxtools
+License:        GPL v2 or later
+Version:        2.7
+Release:        125.<RELEASE62>
+Summary:        X Window System tools for SaX2
+Group:          System/X11/Utilities
+Requires:       coreutils
+Provides:       saxtools
+Obsoletes:      saxtools
 %ifarch s390x
-Provides:     sax2
-Obsoletes:    sax2
-Provides:     sax2-gui
-Obsoletes:    sax2-gui
-Provides:     sax2-libsax
-Obsoletes:    sax2-libsax
-Provides:     sax2-libsax-perl
-Obsoletes:    sax2-libsax-perl
-Provides:     sax2-ident
-Obsoletes:    sax2-ident
+Provides:       sax2
+Obsoletes:      sax2
+Provides:       sax2-gui
+Obsoletes:      sax2-gui
+Provides:       sax2-libsax
+Obsoletes:      sax2-libsax
+Provides:       sax2-libsax-perl
+Obsoletes:      sax2-libsax-perl
+Provides:       sax2-ident
+Obsoletes:      sax2-ident
 %endif
 
 %description -n sax2-tools
@@ -84,15 +94,16 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-ident
-Version:      1.7
-Release:      70
-Summary:      SaX2 identity and profile information
-Group:        System/X11/Utilities
-Requires:     sax2-libsax-perl
-Provides:     sax2:/usr/share/sax/sysp/maps/Identity.map
-Provides:     sax2-tools:/usr/share/sax/sysp/maps/Identity.map
-Provides:     saxident
-Obsoletes:    saxident
+License:        GPL v2 or later
+Version:        1.7
+Release:        125.<RELEASE63>
+Summary:        SaX2 identity and profile information
+Group:          System/X11/Utilities
+Requires:       sax2-libsax-perl
+Provides:       sax2:/usr/share/sax/sysp/maps/Identity.map
+Provides:       sax2-tools:/usr/share/sax/sysp/maps/Identity.map
+Provides:       saxident
+Obsoletes:      saxident
 
 %description -n sax2-ident
 This package contains information about the supported graphics hardware
@@ -107,13 +118,14 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-gui
-Version:      1.7
-Release:      70
-Requires:     netpbm sax2-tools qt3 fvwm2 sax2
-Summary:      SuSE advanced X Window System-configuration GUI
-Group:        System/X11/Utilities
-Provides:     sax2:/usr/X11R6/lib/sax/xapi
-Provides:     sax2:/usr/sbin/xapi
+License:        GPL v2 or later
+Version:        1.7
+Release:        125.<RELEASE62>
+Requires:       netpbm sax2-tools qt3 fvwm2 sax2
+Summary:        SuSE advanced X Window System-configuration GUI
+Group:          System/X11/Utilities
+Provides:       sax2:/usr/X11R6/lib/sax/xapi
+Provides:       sax2:/usr/sbin/xapi
 
 %description -n sax2-gui
 This package contains the GUI for the SuSE Advanced X-Configuration
@@ -125,12 +137,13 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax
-Version:      7.1
-Release:      70
-Requires:     sax2-tools qt3 fvwm2 sax2
-Summary:      SaX management library for X Window System-configuration
-Group:        Development/Libraries/X11
-Provides:     sax2:/usr/%{_lib}/libsax.so
+License:        GPL v2 or later
+Version:        7.1
+Release:        125.<RELEASE62>
+Requires:       sax2-tools qt3 fvwm2 sax2
+Summary:        SaX management library for X Window System-configuration
+Group:          Development/Libraries/X11
+Provides:       sax2:/usr/%{_lib}/libsax.so
 
 %description -n sax2-libsax
 libsax provides a C++ written library to manage X11 configurations
@@ -142,11 +155,12 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-devel
-Version:      7.1
-Release:      70
-Requires:     sax2-libsax
-Summary:      SaX management library header files for X Window System-configuration development
-Group:        Development/Libraries/X11
+License:        GPL v2 or later
+Version:        7.1
+Release:        125.<RELEASE61>
+Requires:       sax2-libsax
+Summary:        SaX management library header files for X Window System-configuration development
+Group:          Development/Libraries/X11
 
 %description -n sax2-libsax-devel
 The devel package of libsax provides all header files needed to use
@@ -159,11 +173,12 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-perl
-Version:      7.1
-Release:      70
-Requires:     sax2-libsax
-Summary:      Language binding to use libsax with perl
-Group:        Development/Libraries/X11
+License:        GPL v2 or later
+Version:        7.1
+Release:        125.<RELEASE62>
+Requires:       sax2-libsax
+Summary:        Language binding to use libsax with perl
+Group:          Development/Libraries/X11
 
 %description -n sax2-libsax-perl
 This package provides a wrapper to be able to use libsax in perl
@@ -176,13 +191,13 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %package -n sax2-libsax-python
-Version:      7.1 
-Release:      70
-Requires:     sax2-libsax
+License:        GPL v2 or later
+Version:        7.1 
+Release:        125.<RELEASE61>
+Requires:       sax2-libsax
 %{py_requires}
-Summary:      Language binding to use libsax with python
-Group:        Development/Libraries/X11
-    
+Summary:        Language binding to use libsax with python
+Group:          Development/Libraries/X11
 
 %description -n sax2-libsax-python
 This package provides a wrapper to be able to use libsax in python
@@ -195,13 +210,14 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %ifnarch ppc64 s390x
+
 %package -n sax2-libsax-java
-Version:      7.1
-Release:      70
-Requires:     sax2-libsax jre1.2.x
-Summary:      Language binding to use libsax with java
-Group:        Development/Libraries/X11
-    
+License:        GPL v2 or later
+Version:        7.1
+Release:        125.<RELEASE61>
+Requires:       sax2-libsax jre1.2.x
+Summary:        Language binding to use libsax with java
+Group:          Development/Libraries/X11
 
 %description -n sax2-libsax-java
 This package provides a wrapper to be able to use libsax in java
@@ -214,13 +230,14 @@ Authors:
     Marcus Schäfer <ms@suse.de>
 
 %endif
-%ifnarch ppc
+
 %package -n sax2-libsax-csharp
-Version:      7.1
-Release:      70
-Requires:     sax2-libsax mono
-Summary:      Language binding to use libsax with C#
-Group:        Development/Libraries/X11
+License:        GPL v2 or later
+Version:        7.1
+Release:        121.<RELEASE63>
+Requires:       sax2-libsax mono
+Summary:        Language binding to use libsax with C#
+Group:          Development/Libraries/X11
 
 %description -n sax2-libsax-csharp
 This package provides a wrapper to be able to use libsax in C# written
@@ -231,7 +248,6 @@ programs
 Authors:
 --------
     Marcus Schäfer <ms@suse.de>
-%endif
 
 %prep
 %setup -n sax
@@ -320,7 +336,6 @@ if [ "$1" -eq 0 ]; then
     rm -f var/lib/hardware/hd.ids
   fi
 fi
-
 #=================================================
 # SaX files...      
 #-------------------------------------------------
@@ -556,7 +571,6 @@ fi
 #=================================================
 # SaX-libsax-csharp file list...  
 # ------------------------------------------------
-%ifnarch ppc
 
 %files -n sax2-libsax-csharp
 %defattr(-,root,root)
@@ -565,4 +579,5 @@ fi
 %dir /usr/%{_lib}/mono/gac/SaX
 /usr/%{_lib}/mono/gac/SaX/*
 /usr/%{_lib}/libSaX.so
-%endif
+
+%changelog
