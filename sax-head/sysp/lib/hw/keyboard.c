@@ -77,5 +77,6 @@ KbdData* KeyboardGetData(void) {
 		}
 		last = data;
 	}
+	free(hd_data);
 	return(first);
 }
