@@ -513,7 +513,7 @@ TABLET PCs:ISDV4 TABLET PC Touch (USB) {
 # TABLET PCs: HP tx2-12nnxx Stylus            #
 #---------------------------------------------#
 TABLET PCs:HP tx2-12nnxx Stylus {
- Device              = /dev/input/by-path/pci-0000:00:14.5-usb-0:2:1.0-event-mouse
+ Device              = /dev/input/by-id/usb-1b96_0001-event-mouse
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom
@@ -526,7 +526,7 @@ TABLET PCs:HP tx2-12nnxx Stylus {
 # TABLET PCs: HP tx2-12nnxx Touch             #
 #---------------------------------------------#
 TABLET PCs:HP tx2-12nnxx Touch {
- Device              = /dev/input/by-path/pci-0000:00:14.5-usb-0:2:1.0-event-mouse
+ Device              = /dev/input/by-id/usb-1b96_0001-event-mouse
  Option              = USB
  TabletMode          = Absolute
  Driver              = wacom

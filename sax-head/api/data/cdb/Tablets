@@ -551,7 +551,7 @@ TABLET PCs:HP Compaq TC1000 (FPI2002) {
 #-----------------------------------------#
 TABLET PCs:HP tx2-12nnxx {
  Driver           = wacom
- Device           = /dev/input/by-path/pci-0000:00:14.5-usb-0:2:1.0-event-mouse
+ Device           = /dev/input/by-id/usb-1b96_0001-event-mouse
  Option           = USB
  SendCoreEvents   = on
  TabletType       = cursor
