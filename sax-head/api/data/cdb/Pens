@@ -509,4 +509,29 @@ TABLET PCs:ISDV4 TABLET PC Touch (USB) {
  RawOption           = "ForceDevice" "ISDV4"
 }
 
+#---------------------------------------------#
+# TABLET PCs: HP tx2-12nnxx Stylus            #
+#---------------------------------------------#
+TABLET PCs:HP tx2-12nnxx Stylus {
+ Device              = /dev/input/by-path/pci-0000:00:14.5-usb-0:2:1.0-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = stylus
+ RawOption           = "ForceDevice" "ISDV4","Button2" "3"
+}
+
+#---------------------------------------------#
+# TABLET PCs: HP tx2-12nnxx Touch             #
+#---------------------------------------------#
+TABLET PCs:HP tx2-12nnxx Touch {
+ Device              = /dev/input/by-path/pci-0000:00:14.5-usb-0:2:1.0-event-mouse
+ Option              = USB
+ TabletMode          = Absolute
+ Driver              = wacom
+ Protocol            = Auto
+ TabletType          = touch
+ RawOption           = "ForceDevice" "ISDV4","BottomX" "9600","BottomY" "7200"
+}
 

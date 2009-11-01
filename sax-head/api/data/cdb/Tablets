@@ -546,3 +546,17 @@ TABLET PCs:HP Compaq TC1000 (FPI2002) {
   RawOption          = "MaximumXPosition" "8600","MaximumYPosition" "6485","MinimumXPosition" "154","MinimumYPosition" "110","BaudRate" "19200"
 }
 
+#-----------------------------------------#
+# TABLET PCs: HP tx2-12nnxx               #
+#-----------------------------------------#
+TABLET PCs:HP tx2-12nnxx {
+ Driver           = wacom
+ Device           = /dev/input/by-path/pci-0000:00:14.5-usb-0:2:1.0-event-mouse
+ Option           = USB
+ SendCoreEvents   = on
+ TabletType       = cursor
+ TabletMode       = Absolute
+ StylusLink       = HP tx2-12nnxx Stylus
+ TouchLink        = HP tx2-12nnxx Touch
+}
+
