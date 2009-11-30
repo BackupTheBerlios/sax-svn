@@ -21,6 +21,7 @@ STATUS        : development
 #include <fcntl.h>
 #include <errno.h>
 #include <unistd.h>
+#define new __new
 #include <linux/vt.h>
 #include <linux/kd.h>
 #include <stdarg.h>

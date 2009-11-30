@@ -22,6 +22,7 @@ STATUS        : development
 #include <sys/ioctl.h>
 #include <fcntl.h>
 #include <errno.h>
+#define new __new
 #include <linux/vt.h> 
 #include <linux/kd.h>
 #include <string.h>
