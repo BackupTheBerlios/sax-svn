@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Mon Feb 22 15:16:59 CET 2010 - sndirsch@suse.de
+
+- no longer make use of evdev-driven input profiles due to radical
+  changes in evdev driver configuration of SLE11-SP1. Use 
+  'Option "AutoAddDevices" "on"' in ServerFlags section of xorg.conf
+  in case you rely on evdev driver. (bnc #577481)
+
+-------------------------------------------------------------------
 Wed Aug 12 00:08:00 CEST 2009 - sndirsch@suse.de
 
 - added missing 16:9 modes as valid modes requested by HP
