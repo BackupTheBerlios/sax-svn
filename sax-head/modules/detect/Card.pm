@@ -61,7 +61,8 @@ sub AutoDetectServer {
 		$dom  = hex($dom_list[$i]);
 		$arch = qx(/bin/arch);
 		chomp $arch;
-		if ($arch eq "ia64") {
+		# specify domain if > 0 (bnc #583359)
+		if ($dom > 0) {
 			$busid = "PCI:$bus\@$dom:$slot:$func";
 		} else {
 			$busid = "$bus:$slot:$func";
