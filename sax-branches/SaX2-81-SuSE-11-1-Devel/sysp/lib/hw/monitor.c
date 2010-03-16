@@ -21,8 +21,11 @@ STATUS        : development
 #include <fcntl.h>
 #include <errno.h>
 #include <unistd.h>
+/* workaround kernel headers using new as variable name */
+#define new new_protected
 #include <linux/vt.h>
 #include <linux/kd.h>
+#undef new
 #include <stdarg.h>
 #include <dirent.h>
 #include <math.h>

@@ -24,7 +24,10 @@ STATUS        : Status: Up-to-date
 #include <string.h>
 #include <sys/types.h>
 #include <sys/ioctl.h>
+/* workaround kernel headers using new as variable name */
+#define new new_protected
 #include <linux/vt.h>
+#undef new
 #include <stdlib.h>
 #include <fcntl.h>
 #include <errno.h>

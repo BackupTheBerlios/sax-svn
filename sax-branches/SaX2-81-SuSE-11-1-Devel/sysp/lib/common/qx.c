@@ -22,8 +22,11 @@ STATUS        : development
 #include <sys/ioctl.h>
 #include <fcntl.h>
 #include <errno.h>
+/* workaround kernel headers using new as variable name */
+#define new new_protected
 #include <linux/vt.h> 
 #include <linux/kd.h>
+#undef new
 #include <string.h>
 
 #include "../syslib.h"

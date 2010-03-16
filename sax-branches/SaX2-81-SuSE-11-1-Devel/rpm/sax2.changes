@@ -4,6 +4,12 @@ Tue Mar 16 04:50:51 CET 2010 - sndirsch@suse.de
 - specify domain in BusID if > 0 (bnc #583359)
 
 -------------------------------------------------------------------
+Tue Feb 23 00:58:10 CET 2010 - ro@suse.de
+- buildfix: define new to new_protected before including linux/vt.h
+  when compiling with g++. might not be a really good idea to call
+  a structure member "new". 
+
+-------------------------------------------------------------------
 Mon Feb 22 15:16:59 CET 2010 - sndirsch@suse.de
 
 - no longer make use of evdev-driven input profiles due to radical
