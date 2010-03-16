@@ -1,9 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-X-KDE-SubstituteUID=true
-Exec=/usr/sbin/sax2
+Exec=/usr/bin/xdg-su -c /usr/sbin/sax2
 Name=SaX2
 Icon=sax2
 GenericName=Configure X11 System
-

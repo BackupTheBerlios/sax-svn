@@ -47,6 +47,7 @@ Requires:       perl = %{perl_version}
 Requires:       readline ncurses hal dbus-1 sax2-libsax
 Requires:       sax2-ident sax2-tools
 Requires:       xorg-x11-server
+Requires:       xdg-utils
 PreReq:         /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 Summary:        SuSE advanced X Window System-configuration
 Version:        8.1
