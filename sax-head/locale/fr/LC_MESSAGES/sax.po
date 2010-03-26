@@ -16,12 +16,13 @@ msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2009-06-10 08:46+0100\n"
-"Last-Translator: Guillaume GARDET <guillaume.gardet@free.fr>\n"
+"PO-Revision-Date: 2009-08-09 21:31+0100\n"
+"Last-Translator: Laurent Espitallier <laurent.espitallier@laposte.net>\n"
 "Language-Team: French Team <opensuse-fr@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Bookmarks: 441,139,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. /.../
 #. Copyright (c) 2005 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -175,7 +176,6 @@ msgstr "Bureau"
 
 # TLABEL printer_2002_08_07_0216__217
 #. Pointers name label, global name for input devices
-#, fuzzy
 msgid "Pointers"
 msgstr "Pointeurs"
 
@@ -192,7 +192,6 @@ msgid "Path"
 msgstr "Chemin d'accès"
 
 #. Extensions name label, X11 extensions
-#, fuzzy
 msgid "Extensions"
 msgstr "Extensions"
 
@@ -622,7 +621,7 @@ msgstr "La touche Alt gauche change la disposition pendant l'appui."
 
 #. XKBFile extension text
 msgid "Space key outputs non"
-msgstr ""
+msgstr "La barre d'espacement renvoie non"
 
 # TLABEL kinternet_2002_02_20_2255__44
 #. XKBFile extension text
@@ -836,11 +835,11 @@ msgstr "Touches du pavé numérique par défaut."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Ajout du keysym espace insécable à la barre d'espace"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "Utilisez le pavé numérique avec ajouts unicode (flèches et opérateurs mathématiques)"
 
 #. XKBFile extension text
 msgid "Force standard legacy keypad"
@@ -867,9 +866,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "VerrMaj agit comme Maj avec verrouillage. Maj n'annule pas le verrouillage."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr "VerrMaj utilise la capitalisation interne. La touche Maj annule VerrMaj."
+msgstr "VerrMaj utilise la capitalisation interne. La touche Maj \"annule\" VerrMaj."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -885,7 +883,7 @@ msgstr "Les touches du pavé numérique fonctionne comme sous Mac."
 
 #. XKBFile extension text
 msgid "Kana Lock key is locking"
-msgstr ""
+msgstr "La touche de verrouillage Kana agit comme touche de verrouillage"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at fourth level."
@@ -908,9 +906,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Options de clavier Japonnais"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "VerrMaj agit comme Maj avec verrouillage. La touche Maj annule CapsLock."
+msgstr "VerrMaj agit comme Maj avec verrouillage. La touche Maj \"annule\" VerrMaj."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1158,23 +1155,23 @@ msgstr "Ajouter le signe Euro à la touche 4."
 
 #. XKBFile extension text
 msgid "Four-level key with dot"
-msgstr ""
+msgstr "Touche à  quatre niveaux avec point"
 
 #. XKBFile extension text
 msgid "Legacy Wang 724 keypad"
-msgstr ""
+msgstr "Ancien pavé numérique Wang 724"
 
 #. XKBFile extension text
 msgid "Four-level key with abstract separators"
-msgstr ""
+msgstr "Touche à  quatre niveaux avec séparateurs abstraits"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "Pavé numérique avec extensions unicode (flèches et opérateurs mathématiques)"
 
 #. XKBFile extension text
 msgid "Legacy keypad"
-msgstr ""
+msgstr "Ancien pavé numérique"
 
 #. XKBFile extension text
 msgid "Shift cancels CapsLock."
@@ -1186,27 +1183,27 @@ msgstr "Permuter Echap et VerrMaj."
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr ""
+msgstr "Le pavé numérique Wang 724 avec ajouts unicode (touches fléchées et opérateurs mathématiques). Opérateurs mathématiques au niveau par défaut."
 
 #. XKBFile extension text
 msgid "Four-level key with comma"
-msgstr ""
+msgstr "Touches à quatre niveaux avec virgule"
 
 #. XKBFile extension text
 msgid "Legacy key with comma"
-msgstr ""
+msgstr "Ancienne touche avec virgule"
 
 #. XKBFile extension text
 msgid "Keypad with unicode additions (arrows and math operators). Math operators on default level."
-msgstr ""
+msgstr "pavé numérique avec ajouts unicode (touches fléchées et opérateurs mathématiques). Les opérateurs mathématiques sont au niveau par défaut."
 
 #. XKBFile extension text
 msgid "Legacy key with dot"
-msgstr ""
+msgstr "Ancienne touche avec point"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr ""
+msgstr "Touche à quatre niveaux avec momayyez"
 
 #. XKBFile extension text
 msgid "Numeric keypad delete key behaviour"
@@ -1214,7 +1211,7 @@ msgstr "Comportement de la touche Supprimer du pavé numérique"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr ""
+msgstr "Clavier Wang 724 avec extensions unicode (touches fléchées et opérateurs mathématiques)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1290,12 +1287,11 @@ msgstr "Ajouter gomme"
 
 #. Add Touch Checkbox
 msgid "Add Touch"
-msgstr ""
+msgstr "Ajouter contact"
 
 #. Add Pad Checkbox
-#, fuzzy
 msgid "Add Pad"
-msgstr "Ajouter un Pad"
+msgstr "Ajouter un pavé"
 
 #. Windowanager title for the tablet pen options dialog
 msgid "Pen or Eraser Settings"
@@ -1306,18 +1302,16 @@ msgid "Pen Properties"
 msgstr "Propriétés du stylo"
 
 #. Tab title: Pad properties
-#, fuzzy
 msgid "Pad Properties"
-msgstr "Propriétés du pad"
+msgstr "Propriétés du pavé"
 
 #. Tab title: Eraser properties
 msgid "Eraser Properties"
 msgstr "Propriétés de la gomme"
 
 #. Tab title: Touch properties
-#, fuzzy
 msgid "Touch Properties"
-msgstr "Propriétés de l'écran tactile"
+msgstr "Propriétés tactiles"
 
 #. Tab text for a touchscreen tab of the touchscreen dialog
 msgid "Touchscreen %1"
@@ -1829,20 +1823,19 @@ msgstr "Turquie"
 
 #. XKBFile extension text
 msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
-msgstr ""
+msgstr "Presser VerrMaj change de disposition, Alt+VerrMaj revient à utiliser l'action VerrMaj initiale."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "VerrMaj passe à la première disposition, Maj+VerrMaj passe à la dernière disposition."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "Plus petit que/Plus grand que est Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
-msgstr "La touche espace produit un espace insécable au quatrième niveau"
+msgstr "La touche espace produit un espace insécable au quatrième niveau, un espace insécable fin au sixième niveau (via Ctrl+Maj)"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.

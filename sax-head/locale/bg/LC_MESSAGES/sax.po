@@ -1,14 +1,14 @@
+# translation of sax.po to Bulgarian
 # translation of sax.bg.po to
-# translation of sax.bg.po to Bulgarian
-# Copyright (C) 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 #
-# Borislav Mitev <morbid_viper@tkzs.org>, 2004, 2005, 2006, 2008.
+# Borislav Mitev <morbid_viper@tkzs.org>, 2004, 2005, 2006, 2008, 2009.
 # Velislav Varbanov <varbanov@bglinux.org>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.bg\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-10-14 20:34+0300\n"
+"PO-Revision-Date: 2009-09-29 22:06+0300\n"
 "Last-Translator: Borislav Mitev <morbid_viper@tkzs.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -128,11 +128,11 @@ msgstr "Свойства на таблета"
 
 #. Short description of the Touchscreen module
 msgid "Touchscreen"
-msgstr "Touchscreen"
+msgstr "Екран с докосване"
 
 #. title of module dialog
 msgid "Touchscreen Properties"
-msgstr "Свойства на touchscreen-а"
+msgstr "Свойства на активния екран"
 
 #. Short description of the VNC module
 msgid "Remote Access"
@@ -163,14 +163,12 @@ msgid "Card"
 msgstr "Карта"
 
 #. Desktop name label
-#, fuzzy
 msgid "Desktop"
-msgstr "Работна среда KDE"
+msgstr "Работен плот"
 
 #. Pointers name label, global name for input devices
-#, fuzzy
 msgid "Pointers"
-msgstr "Принтер"
+msgstr "Показатели"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -185,7 +183,7 @@ msgstr "Път"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Разширения"
 
 #. Change data
 msgid "&Change..."
@@ -201,7 +199,7 @@ msgstr "&Настройка"
 
 #. Group box title for dual head setup
 msgid "Dual Head Mode"
-msgstr "Dual Head режим"
+msgstr "Режим „Две карти“"
 
 #. Group box title for card options
 #. Group box title for mouse options
@@ -250,7 +248,7 @@ msgstr "Про&ба"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
-msgstr "&Запис..."
+msgstr "&Запис"
 
 #. Status line of mouse test field: ready
 msgid "Test ready"
@@ -286,7 +284,7 @@ msgstr "Свойства"
 
 #. Activate dual head mode checkbox
 msgid "Activate Dual Head Mode"
-msgstr "Активиране на Dual Head режим"
+msgstr "Активиране на режим „Две карти“"
 
 #. Set display resolution
 msgid "Resolution"
@@ -399,7 +397,7 @@ msgstr "Настройки на видеокартата"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr "Настройки за Dual Head"
+msgstr "Настройки за „Две карти“"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -560,7 +558,7 @@ msgstr "Използване на диодите на клавиатурата �
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Позиция на клавиша Control"
+msgstr "Позиция на клавиша Compose"
 
 #. List View root item text
 #. XKBFile extension text
@@ -573,7 +571,7 @@ msgstr "Превключватели за трето ниво"
 
 #. List View root item text
 msgid "Alt/Win Key Behavior"
-msgstr "Поведение на Alt/Win клавишите "
+msgstr "Поведение на клавиша Alt/Win"
 
 #. List View root item text
 msgid "EuroSign Key Position"
@@ -594,7 +592,7 @@ msgstr "Мароко"
 # BR
 #. XKBFile extension text
 msgid "Braille"
-msgstr "Браил"
+msgstr "Брайл"
 
 # ET
 #. XKBFile extension text
@@ -627,7 +625,7 @@ msgstr "Двата Ctrl-a превключват групата."
 
 #. XKBFile extension text
 msgid "Using space key to input non-breakable space character"
-msgstr "Използване на интервала за въвеждане на не разделян интервал."
+msgstr "Използване на интервала за въвеждане на неразделян интервал."
 
 #. XKBFile extension text
 msgid "Right Shift key changes layout."
@@ -655,7 +653,7 @@ msgstr "Десният Ctrl клавиш превключва групата, к
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character"
-msgstr "Интервалът извежда не разделим символ за интервал"
+msgstr "Интервалът извежда неразделим символ за интервал"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes layout."
@@ -683,7 +681,7 @@ msgstr "Super е определен за Win клавишите."
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative layout."
-msgstr "Диода ScrollLock показва алтернативната група."
+msgstr "Диодът за ScrollLock показва алтернативната група."
 
 #. XKBFile extension text
 msgid "Both Shift keys together change layout."
@@ -691,7 +689,7 @@ msgstr "Двата Shift-a заедно превключват групата."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at second level."
-msgstr "Интервалът идвежда не разделим символ за интервал при второ ниво."
+msgstr "Интервалът извежда неразделим символ за интервал при второ ниво."
 
 #. XKBFile extension text
 msgid "Right Win-key changes layout."
@@ -699,7 +697,7 @@ msgstr "Десният Win клавиш превключва групата."
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at third level."
-msgstr "Интервалът идвежда не разделим символ за интервал при трето ниво."
+msgstr "Интервалът извежда неразделим символ за интервал при трето ниво."
 
 #. XKBFile extension text
 msgid "Numeric keypad keys work as with Mac."
@@ -723,7 +721,7 @@ msgstr "Левият Win клавиш превключва групата, ко�
 
 #. XKBFile extension text
 msgid "Space key outputs non-breakable space character at fourth level."
-msgstr "Интервалът идвежда не разделим символ за интервал при четвърто ниво."
+msgstr "Интервалът извежда неразделим символ за интервал при четвърто ниво."
 
 #. XKBFile extension text
 msgid "Both Alt keys together change layout."
@@ -735,7 +733,7 @@ msgstr "Клавишът CapsLock превключва групата."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "Super е определен за Win клавишите (и стандартните Ctrl кравиши)."
+msgstr "Super е определен за Win клавишите (и стандартните Ctrl клавиши)."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
@@ -747,7 +745,7 @@ msgstr "Shift с клавишите от цифровата клавиатура
 
 #. XKBFile extension text
 msgid "Alt and Meta are on the Alt keys."
-msgstr "Alt и Meta на Alt клавишите."
+msgstr "Alt и Meta на клавишите Alt."
 
 #. XKBFile extension text
 msgid "Alt+Shift change layout."
@@ -827,7 +825,7 @@ msgstr "Цифрови клавиши по подразбиране."
 
 #. XKBFile extension text
 msgid "Adding the nobreakspace keysym to space key"
-msgstr "Прибавяне на не прекъснат интервал към интервалния клавиш"
+msgstr "Прибавяне на непрекъснат интервал към интервалния клавиш"
 
 #. XKBFile extension text
 msgid "Use keypad with unicode additions (arrows and math operators)"
@@ -851,16 +849,15 @@ msgstr "Alt+CapsLock превключва групата."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at second level."
-msgstr "Интервалът извежда не разделим интервал при второ ниво."
+msgstr "Интервалът извежда неразделим интервал при второ ниво."
 
 #. XKBFile extension text
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock работи като Shift със заключване. Shift не влияе на CapsLock."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr "CapsLock използва вътрешен метод за главните букви. Shift прекъсва CapsLock."
+msgstr "CapsLock използва вътрешен метод за главните букви. Shift обръща CapsLock."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -899,9 +896,8 @@ msgid "Japanese Keyboard Options"
 msgstr "Натройка за японска клавиатура"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "CapsLock работи като Shift със заключване. Shift прекъсва CapsLock."
+msgstr "CapsLock работи като Shift със заключване. Shift обръща CapsLock."
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1265,9 +1261,8 @@ msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Combobox item text for tablet port: ttyS4
-#, fuzzy
 msgid "COM-5 [ /dev/ttyS4 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1327,7 +1322,7 @@ msgstr "<b>Последни стъпки</b><hr>Последната стъпк�
 
 #. Finish configuration message box (without test)
 msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
-msgstr ""
+msgstr "<b>Запазване на настройката</b><hr>Щракнете върху „Запис“ за да съхраните настройката. Промените ще влязат в действие при следващото пускане на X сървъра."
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1847,20 +1842,19 @@ msgstr "Турция"
 
 #. XKBFile extension text
 msgid "CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action."
-msgstr ""
+msgstr "Клавишът CapsLock превключва подредбата докато е натиснат, Alt+CapsLock прави стандартното действие на capslock."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr ""
+msgstr "CapsLock превключва първата подредба, Shift+CapsLock – последната."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
-msgstr ""
+msgstr "„По-малко“/„по-голямо“ е Compose."
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
-msgstr "Интервалът идвежда не разделим символ за интервал при четвърто ниво."
+msgstr "Интервалът извежда неразделим символ за интервал при четвърто ниво. Тънък неразделим интервал при шесто ниво (чрез Ctrl+Shift)."
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1893,7 +1887,7 @@ msgstr "Следва&щ екран"
 
 #. Maximum length: 40  characters
 msgid "S&ave"
-msgstr "З&аписване"
+msgstr "З&апис"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
@@ -1920,8 +1914,3 @@ msgstr "Настройка на екрана"
 msgid "Idle timer..."
 msgstr "Време на бездействие..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
-#~ msgstr "CapsLock използва вътрешен метод за главните букви. Shift прекъсва CapsLock."
-
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "CapsLock работи като Shift със заключване. Shift прекъсва CapsLock."

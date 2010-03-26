@@ -1,19 +1,22 @@
+# translation of sax.po to Lietuvių
 # translation of sax.po.lt to Lietuvių
-# Copyright (C) 2004, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2006, 2009 Free Software Foundation, Inc.
 # Linas Spraunius <mail@operis.org>, 2004.
 # Andrius Štikonas <stikonas@gmail.com>, 2006.
+# Mindaugas Baranauskas <embar@super.lt>, 2009.
+# Mindaugas Baranauskas <embar@users.berlios.de>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.lt\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2008-05-15 19:54+0300\n"
-"Last-Translator: Andrius Štikonas <stikonas@gmail.com>\n"
-"Language-Team: Lietuvių <komp_lt@konf.lt>\n"
+"PO-Revision-Date: 2009-12-31 13:47+0200\n"
+"Last-Translator: Mindaugas Baranauskas <embar@users.berlios.de>\n"
+"Language-Team: Lithuanian <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. /.../
@@ -93,11 +96,11 @@ msgstr "Pa&keisti konfigūraciją"
 #. Short description of the Monitor module
 #. Monitor name label
 msgid "Monitor"
-msgstr "Monitorius"
+msgstr "Vaizduoklis"
 
 #. title of module dialog
 msgid "Card and Monitor Properties"
-msgstr "Plokštės ir monitoriaus savybės"
+msgstr "Plokštės ir vaizduoklio savybės"
 
 #. Short description of the Mouse module
 #. Simple mouse text for the mouse tab
@@ -140,16 +143,15 @@ msgstr "Nuotolinė prieiga"
 
 #. title of module dialog
 msgid "Remote Access Properties"
-msgstr "Nuotolinės prieigus savybės"
+msgstr "Nuotolinės prieigos savybės"
 
 #. Tab text for a display tab of the monitor dialog
 msgid "Display %1"
 msgstr "Ekranas %1"
 
 #. Tab text for a display tab of the mouse dialog
-#, fuzzy
 msgid "Mouse %1"
-msgstr "Pelė"
+msgstr "%1 pelė"
 
 #. Activate display checkbox, Display=screen
 msgid "Activate This Display"
@@ -164,14 +166,12 @@ msgid "Card"
 msgstr "Plokštė"
 
 #. Desktop name label
-#, fuzzy
 msgid "Desktop"
-msgstr "Darbastaliai"
+msgstr "Darbastalis"
 
 #. Pointers name label, global name for input devices
-#, fuzzy
 msgid "Pointers"
-msgstr "Spausdintuvas"
+msgstr "Žymekliai"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -186,7 +186,7 @@ msgstr "Kelias"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "Plėtiniai"
 
 #. Change data
 msgid "&Change..."
@@ -243,11 +243,11 @@ msgstr "Sukti ekraną"
 #. Group box title for the mouse test field
 #. Line edit label pointing to the keyboard test field
 msgid "Test"
-msgstr "Bandymas"
+msgstr "Bandyti"
 
 #. Button text in final step message box for testing the configuration
 msgid "&Test"
-msgstr "&Bandymas"
+msgstr "&Bandyti"
 
 #. Button text in final step message box for saving the configuration
 msgid "&Save"
@@ -291,7 +291,7 @@ msgstr "Aktyvuoti dviekranę veikseną"
 
 #. Set display resolution
 msgid "Resolution"
-msgstr "Raiška"
+msgstr "Skiriamoji geba"
 
 #. Set display colors
 msgid "Colors"
@@ -303,11 +303,11 @@ msgstr "Aktyvuoti 3D spartinimą"
 
 #. Tab title: Setup monitor properties for card X
 msgid "Monitor for Card"
-msgstr "Monitorius plokštei"
+msgstr "Vaizduoklio plokštei"
 
 #. Tab title: Setup monitor for second channel on card X
 msgid "Second Monitor for Card"
-msgstr "Antrasis monitorius plokštei"
+msgstr "Antrasis vaizduoklis plokštei"
 
 #. Tab title: Setup sync frequencies
 msgid "Sync Frequencies"
@@ -339,7 +339,7 @@ msgstr "Nesukonfigūruotas"
 
 #. Message appears when user is trying to deactivate all displays
 msgid "<b>Cannot Deactivate All Displays</b><hr><nobr>At least one display must be active.</nobr>"
-msgstr "<b>Nepavykste deaktyvuoti visų ekranų</b><hr><nobr>Mažiausiai vienas ekranas turi būti aktyvus.</nobr>"
+msgstr "<b>Nepavyksta deaktyvuoti visų ekranų</b><hr><nobr>Bent vienas ekranas turi būti aktyvus.</nobr>"
 
 #. Info label for dual head checkbox
 msgid "No configuration available"
@@ -379,20 +379,20 @@ msgstr "Prijungtas prie"
 
 #. Tooltip text if monitor is unknown
 msgid "Unknown Monitor:"
-msgstr "Nežinomas monitorius:"
+msgstr "Nežinomas vaizduoklis:"
 
 #. Tooltip text for primary monitor
 msgid "Primary Monitor:"
-msgstr "Pirminis monitorius:"
+msgstr "Pagrindinis vaizduoklis:"
 
 #. Windowanager title for the monitor model setup
 #. Windowanager title for the second monitor model setup
 msgid "Monitor Settings"
-msgstr "Monitoriaus nustatymai"
+msgstr "Vaizduoklio nuostatos"
 
 #. Windowanager title for the mouse mode setup
 msgid "Mouse Settings"
-msgstr "Pelės nustatymai"
+msgstr "Pelės nuostatos"
 
 #. Windowanager title for the card options dialog
 msgid "Graphics Card Settings"
@@ -400,7 +400,7 @@ msgstr "Vaizdo plokštės nuostatos"
 
 #. Windowanager title for the dual head setup
 msgid "Dual Head Settings"
-msgstr "Dviekranės veiksenos nustatymai"
+msgstr "Dviekranės veiksenos nuostatos"
 
 #. Radiobutton don't rotate
 msgid "Not Rotated"
@@ -424,7 +424,7 @@ msgstr "<b>Parametrui reikia vertės</b><hr><nobr>Nustatykite vertę parametrui 
 
 #. Group box title for the monitor vendor and name selection
 msgid "Monitor: Vendor and Name Selection"
-msgstr "Monitorius: Gamintojo ir pavadinimo pasirinkimas"
+msgstr "Vaizduoklis: Gamintojo ir pavadinimo pasirinkimas"
 
 #. Group box title for the mouse vendor and name selection
 msgid "Mouse: Vendor and Name Selection"
@@ -464,7 +464,7 @@ msgstr "Antrasis monitorius:"
 
 #. Label text for second monitor resolution
 msgid "Second Monitor Resolution"
-msgstr "Antrojo monitoriaus raiška"
+msgstr "Antrojo monitoriaus skiriamoji geba"
 
 #. Label text for vertical sync frequency
 msgid "Vertical"
@@ -508,7 +508,7 @@ msgstr "<b>Įdėkite CD arba diską</b><hr>Įdėkite displėjaus pagalbinį CD a
 
 #. Message box of type Error, telling that the utility disk cannot be opened
 msgid "<b>Read Error</b><hr>Could not read from CD or disk. This may point to a damaged medium or incorrectly formatted information files."
-msgstr "<b>Skaitymo klaida</b><hr>Nepavyksta perskaityti iš CD arba disko. Tai gali būti dėl pažeisto disko arba blogo formato failų."
+msgstr "<b>Skaitymo klaida</b><hr>Nepavyksta perskaityti iš CD arba disko. Tai gali būti dėl pažeisto disko arba blogo formato rinkmenų."
 
 #. First gap of the ActivateInfo text: Multihead mode name
 msgid "Traditional"
@@ -553,7 +553,7 @@ msgstr "Klavišų lentelė"
 
 #. List View root item text
 msgid "Group Shift/Lock Behavior"
-msgstr "Grupės Shift/Lock elgsena"
+msgstr "Grupės Lyg2(Shift)/Lock elgsena"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
@@ -567,7 +567,7 @@ msgstr "Compose klavišo pozicija"
 #. List View root item text
 #. XKBFile extension text
 msgid "Control Key Position"
-msgstr "Control klavišo pozicija"
+msgstr "Valdymo(Control) klavišo padėtis"
 
 #. List View root item text
 msgid "Third Level Chooser"
@@ -578,13 +578,12 @@ msgid "Alt/Win Key Behavior"
 msgstr "Alt/Win klavišo elgsena"
 
 #. List View root item text
-#, fuzzy
 msgid "EuroSign Key Position"
-msgstr "Control klavišo pozicija"
+msgstr "Euro simbolio klavišo padėtis"
 
 #. List View root item text
 msgid "CapsLock Key Behavior"
-msgstr "CapsLock klavišo elgsena"
+msgstr "Didž.(CapsLock) klavišo elgsena"
 
 #. List View item text: Radiobutton no item selected
 msgid "None"
@@ -596,15 +595,14 @@ msgstr "Marokas"
 
 # BR
 #. XKBFile extension text
-#, fuzzy
 msgid "Braille"
-msgstr "Brazilija"
+msgstr "Brailis"
 
 # ET
 # fuzzy
 #. XKBFile extension text
 msgid "Ethiopia"
-msgstr "Estija"
+msgstr "Etiopija"
 
 #. XKBFile extension text
 msgid "NICOLA-F style Backspace"
@@ -631,7 +629,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Both Ctrl keys together change layout."
-msgstr "Abu Ctrl klavišai kartu keičia išdėstymą."
+msgstr "Abu Vald(Ctrl) klavišai kartu keičia išdėstymą."
 
 #. XKBFile extension text
 #, fuzzy
@@ -1300,9 +1298,8 @@ msgid "COM-4 [ /dev/ttyS3 ]"
 msgstr "COM-4 [ /dev/ttyS3 ]"
 
 #. Combobox item text for tablet port: ttyS4
-#, fuzzy
 msgid "COM-5 [ /dev/ttyS4 ]"
-msgstr "COM-1 [ /dev/ttyS0 ]"
+msgstr "COM-5 [ /dev/ttyS4 ]"
 
 #. Group box title for the tablet tools (pen/eraser)
 msgid "Tools"
@@ -1451,7 +1448,7 @@ msgstr "<b>Konfigūracija išsaugota:</b><hr>Pakeitimai pradės galioti tik iš 
 
 #. Message box text: testing the configuration has failed
 msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
-msgstr "<b>Nepavyko išbandyti konfigūracijos</b><hr>Detaliau žiūrėkite faile <tt>/var/log/Xorg.99.log</tt>. Sukurtas toks pranešimas:"
+msgstr "<b>Nepavyko išbandyti konfigūracijos</b><hr>Detaliau žiūrėkite rinkmenoje <tt>/var/log/Xorg.99.log</tt>. Sukurtas toks pranešimas:"
 
 #. Message box text: if VNC has been enabled the firewall should be checked
 msgid "<b>Remote Access configuration information</b><hr>The Remote Access service requires that the TCP port 5900 and an HTTP port (5800 by default) be open in the firewall. You can configure this with YaST."
@@ -1532,7 +1529,7 @@ msgstr "Compose klavišo pozicija"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
-msgstr "Alt+Ctrl keičia grupę."
+msgstr "Alt+Vald(Ctrl) keičia grupę."
 
 #. XKBFile extension text
 msgid "Group Shift/Lock behavior"
@@ -1932,7 +1929,7 @@ msgstr "Išs&augoti"
 
 #. Maximum length: 40  characters
 msgid "Change &Position"
-msgstr "&Pakeisti poziciją"
+msgstr "&Pakeisti padėtį"
 
 #. Maximum length: 40  characters
 msgid "C&hange Size"
@@ -1953,13 +1950,6 @@ msgid "Configuration on display"
 msgstr "Ekrano konfigūracija"
 
 msgid "Idle timer..."
-msgstr "Tuščios eigos taimeris..."
+msgstr "Tuščios eigos laikmatis..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
-#~ msgstr "CapsLock naudoja vidinį raidžių didinimą. Shift "
 
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "CapsLock veikia kaip Shift su rakinimu. Shift "
-
-#~ msgid "<b>Please note:</b><hr>The configuration is <i>Framebuffer</i> based and your system does not support changes for resolution and/or color settings."
-#~ msgstr "<b>Prašome įsidėmėti:</b><hr>Konfigūracija remiasi <i>framebuferiu</i> ir jūsų sistema nepalaiko raiškos arba spalvų nustatymų pakeitimų."

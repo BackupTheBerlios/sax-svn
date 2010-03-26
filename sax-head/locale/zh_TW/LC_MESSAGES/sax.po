@@ -1,17 +1,17 @@
-# translation of sax.po to Traditional Chinese
+# translation of sax.po to Chinese Traditional
 # translation of sax.po to
 # SaX Translations.
 # Craig Jeffares cjeffares@novell.com
 #
 #
-# swyear <swyear@gmail.com>, 2008.
+# swyear <swyear@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2008-11-21 21:28+0800\n"
+"PO-Revision-Date: 2009-09-18 17:36+0800\n"
 "Last-Translator: swyear <swyear@gmail.com>\n"
-"Language-Team: Traditional Chinese <opensuse-translation@opensuse.org>\n"
+"Language-Team: Chinese Traditional <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -168,9 +168,8 @@ msgid "Desktop"
 msgstr "桌面"
 
 #. Pointers name label, global name for input devices
-#, fuzzy
 msgid "Pointers"
-msgstr "印表機"
+msgstr "指向裝置"
 
 #. Layout name label, desktop layout
 #. Tab text for a layout tab of the keyboard dialog
@@ -185,7 +184,7 @@ msgstr "路徑"
 
 #. Extensions name label, X11 extensions
 msgid "Extensions"
-msgstr ""
+msgstr "擴充"
 
 #. Change data
 msgid "&Change..."
@@ -856,9 +855,8 @@ msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
 msgstr "CapsLock 當成 Shift 鎖定。 Shift 不會影響 CapsLock。"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr "CapsLock 使用內容大寫。Shift 會取消 CapsLock。"
+msgstr "CapsLock 使用內容大寫。Shift 會 \"暫停\" CapsLock。"
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -897,9 +895,8 @@ msgid "Japanese Keyboard Options"
 msgstr "日本鍵盤選項"
 
 #. XKBFile extension text
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "CapsLock 當成 Shift 鎖定。Shift 會取消 CapsLock。"
+msgstr "CapsLock 當成 Shift 鎖定。Shift 會 \"暫停\" CapsLock。"
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
@@ -1167,7 +1164,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "Shift cancels CapsLock."
-msgstr ""
+msgstr "Shift 取消 CapsLock。"
 
 #. XKBFile extension text
 msgid "Swap ESC and CapsLock."
@@ -1323,7 +1320,7 @@ msgstr "<b>最終步驟</b><hr>最後一個步驟是儲存您新的組態。建�
 
 #. Finish configuration message box (without test)
 msgid "<b>Saving the configuration</b><hr>Click on Save to store the configuration. Your changes will become effective on next X-Server restart."
-msgstr ""
+msgstr "<b>儲存設定組態</b><hr>按儲存來儲存組態。您的變更將在下次 X-伺服器啟動時生效。"
 
 #. Tab title: VNC Server configuration
 msgid "X Server Remote Control"
@@ -1826,9 +1823,8 @@ msgid "Less-than/Greater-than is Compose."
 msgstr ""
 
 #. XKBFile extension text
-#, fuzzy
 msgid "Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift"
-msgstr "空白鍵輸出不斷行的空白字元在第四級。"
+msgstr ""
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -1888,8 +1884,3 @@ msgstr "顯示器組態"
 msgid "Idle timer..."
 msgstr "閒置計時器..."
 
-#~ msgid "CapsLock uses internal capitalization. Shift "
-#~ msgstr "CapsLock 使用內容大寫。Shift "
-
-#~ msgid "CapsLock acts as Shift with locking. Shift "
-#~ msgstr "CapsLock 當成 Shift 鎖定。Shift "
