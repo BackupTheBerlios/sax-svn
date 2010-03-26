@@ -1,4 +1,4 @@
-# translation of sax.hu.po to Hungarian
+# translation of sax.po to Hungarian
 # Steve Varadi <svaradi@usa.com>, 2000.
 # Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Peter Breuer <comp@suselinux.hu>, 2003.
@@ -16,9 +16,9 @@
 # Rev. 8.1: 2002.07.23 Marcel Hilzinger <hili@suselinux.hu>
 msgid ""
 msgstr ""
-"Project-Id-Version: sax.hu\n"
+"Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-01-08 18:01+0100\n"
+"PO-Revision-Date: 2009-10-12 19:54+0200\n"
 "Last-Translator: Kalman Kemenczy <kkemenczy@novell.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr ""
 # /tmp/xapi:11
 #. Help Button text
 msgid "&Help"
-msgstr "&Segítség"
+msgstr "&Súgó"
 
 # /tmp/intro:62 /tmp/xapi:65
 #. Ok Button text
@@ -505,7 +505,8 @@ msgstr ""
 "kártyák framebuffere."
 
 #. Popup message to ask the user for an option value
-msgid "<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
+msgid ""
+"<b>Option Needs a Value</b><hr><nobr>Set up a value for option %1.</nobr>"
 msgstr ""
 "<b>Az opcióhoz meg kell adnia egy értéket</b><hr><nobr>Adjon meg egy értéket "
 "a(z) %1 opcióhoz.</nobr>"
@@ -677,7 +678,8 @@ msgstr "Shift/CapsLock csoport viselkedése"
 
 #. List View root item text
 msgid "Use Keyboard LED to Show Alternate Group"
-msgstr "Billentyűzet LED-ek használata az alternatív csoportok megjelenítéséhez"
+msgstr ""
+"Billentyűzet LED-ek használata az alternatív csoportok megjelenítéséhez"
 
 #. List View root item text
 msgid "Compose Key Position"
@@ -855,7 +857,8 @@ msgstr "A CapsLock billentyű kiosztást vált."
 
 #. XKBFile extension text
 msgid "Control is mapped to the Win-keys (and the usual Ctrl keys)."
-msgstr "A Control a Win billentyűkhöz van rendelve (és a megszokott Ctrl billentyűk)."
+msgstr ""
+"A Control a Win billentyűkhöz van rendelve (és a megszokott Ctrl billentyűk)."
 
 #. XKBFile extension text
 msgid "Right Alt key changes layout."
@@ -988,7 +991,9 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr "A CapsLock belső nagybetűsítést használ. A Shift\" feloldja\" a nagybetűs módot."
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift\" feloldja\" a nagybetűs "
+"módot."
 
 #. XKBFile extension text
 msgid "Space key output nobreakspace at third level."
@@ -1017,7 +1022,8 @@ msgid "Left Win-key is Compose."
 msgstr "A bal Win billentyű a kombináló (Compose)."
 
 #. XKBFile extension text
-msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgid ""
+"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr ""
 "A jobb Alt billentyűvel lehet a harmadik szintet választani, a Shift+jobb "
 "Alt a Multi_Key."
@@ -1045,7 +1051,7 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock just locks the Shift modifier."
-msgstr "A CapsLock csak a Shift-módosítót zárolja."
+msgstr "A CapsLock csak a Shift módosítót zárolja."
 
 #. XKBFile extension text
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
@@ -1053,7 +1059,7 @@ msgstr "A CapsLock az ábécékarakterek normál nagybetűsítését váltja."
 
 #. XKBFile extension text
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "A CapsLock a Shift-billentyűt zárolja, vagyis minden billentyűre hat."
+msgstr "A CapsLock a Shift billentyűt zárolja, vagyis minden billentyűre hat."
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
@@ -1121,7 +1127,8 @@ msgstr ""
 
 #. XKBFile extension text
 msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
-msgstr "A CapsLock belső nagybetűsítést használ. A Shift feloldja a nagybetűs módot."
+msgstr ""
+"A CapsLock belső nagybetűsítést használ. A Shift feloldja a nagybetűs módot."
 
 #. XKBFile extension text
 msgid "Make CapsLock an additional Control."
@@ -1195,7 +1202,8 @@ msgstr "A Hyper a Win billentyűkhöz van hozzárendelve."
 
 #. XKBFile extension text
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Az Alt a jobb Win billentyűhöz van rendelve, a Super pedig a Menü gombhoz."
+msgstr ""
+"Az Alt a jobb Win billentyűhöz van rendelve, a Super pedig a Menü gombhoz."
 
 #. XKBFile extension text
 msgid "Super is mapped to the Win-keys (default)."
@@ -1351,7 +1359,7 @@ msgstr "Hagyományos számbillentyűzet ponttal"
 
 #. XKBFile extension text
 msgid "Four-level key with momayyez"
-msgstr "egyedik szintű billentyű momayyez-val"
+msgstr "Negyedik szintű billentyű momayyez-zel"
 
 #. XKBFile extension text
 msgid "Numeric keypad delete key behaviour"
@@ -1359,7 +1367,8 @@ msgstr "Számbillentyűzet Delete billentyűjének viselkedése"
 
 #. XKBFile extension text
 msgid "Wang 724 keypad with unicode additions (arrows and math operators)"
-msgstr "Wang 724 számbillentyűzet unicode bővítésekkel (nyilak és műveleti jelek)"
+msgstr ""
+"Wang 724 számbillentyűzet unicode bővítésekkel (nyilak és műveleti jelek)"
 
 #. Tab title: Tablet port and mode selection
 msgid "Port and Mode"
@@ -1588,8 +1597,10 @@ msgid "Initialize cache..."
 msgstr "Gyorsítótár előkészítése..."
 
 #. Message box text: configuration cannot be saved
-msgid "<b>Saving Configuration Failed</b><hr>The following report has been created:"
-msgstr "<b>A beállítás mentése meghiúsult</b><hr>Az alábbi jelentés készült el:"
+msgid ""
+"<b>Saving Configuration Failed</b><hr>The following report has been created:"
+msgstr ""
+"<b>A beállítás mentése meghiúsult</b><hr>Az alábbi jelentés készült el:"
 
 #. Message box test: configuration has been saved
 msgid ""
@@ -1671,7 +1682,8 @@ msgstr "Ctrl billentyűk elhelyezése"
 
 #. XKBFile extension text
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
-msgstr "A speciális billentyűket (Ctrl+Alt+&lt;billentyű&gt;) egy kiszolgáló kezeli."
+msgstr ""
+"A speciális billentyűket (Ctrl+Alt+&lt;billentyű&gt;) egy kiszolgáló kezeli."
 
 #. XKBFile extension text
 msgid "Press Right Ctrl to choose 3rd level."
@@ -1997,7 +2009,7 @@ msgstr "Kanada"
 
 #. XKBFile extension text
 msgid "Sri Lanka"
-msgstr "Sri Lanka"
+msgstr "Srí Lanka"
 
 #. XKBFile extension text
 msgid "Bosnia and Herzegovina"
@@ -2031,11 +2043,15 @@ msgstr "Törökország"
 msgid ""
 "CapsLock key switches layout while pressed, Alt+CapsLock does the original "
 "capslock action."
-msgstr "A CapsLock billentyű megnyomásakor módosítja a billentyűkiosztást, Alt+CapsLock végzi az eredeti capslock műveletet."
+msgstr ""
+"A CapsLock billentyű megnyomásakor módosítja a billentyűkiosztást, Alt"
+"+CapsLock végzi az eredeti capslock műveletet."
 
 #. XKBFile extension text
 msgid "CapsLock switch to first layout, Shift+CapsLock switch to last layout."
-msgstr "A CapsLock az első billentyűzetkiosztásra vált, a Shift+CapsLock pedig az utolsóra."
+msgstr ""
+"A CapsLock az első billentyűzetkiosztásra vált, a Shift+CapsLock pedig az "
+"utolsóra."
 
 #. XKBFile extension text
 msgid "Less-than/Greater-than is Compose."
@@ -2045,7 +2061,9 @@ msgstr "A Kisebb/Nagyobb jel kombinálható (Compose)."
 msgid ""
 "Space key outputs non-breakable space character at fourth level, thin non-"
 "breakable space character at sixth level (via Ctrl+Shift"
-msgstr "A szóköz billentyű nem törhető szóközt ad a negyedik szinten, keskeny nem törhető szóközt a hatodik szinten (a Ctrl+Shift segítségével)"
+msgstr ""
+"A szóköz billentyű nem törhető szóközt ad a negyedik szinten, keskeny nem "
+"törhető szóközt a hatodik szinten (a Ctrl+Shift segítségével)"
 
 #. /.../
 #. Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
@@ -2111,4 +2129,3 @@ msgstr "Beállítás a képernyőn"
 
 msgid "Idle timer..."
 msgstr "Tétlenségi időzítő..."
-

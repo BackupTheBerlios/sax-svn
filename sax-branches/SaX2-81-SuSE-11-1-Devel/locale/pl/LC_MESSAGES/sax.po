@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sax\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2009-02-03 00:14\n"
+"PO-Revision-Date: 2010-03-09 15:19\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -339,28 +339,16 @@ msgid "No configuration available"
 msgstr "Brak dostępnej konfiguracji"
 
 #. Radiobutton for traditional multihead mode
-msgid ""
-"Traditional Multihead:\n"
-"Each screen is an independent display"
-msgstr ""
-"Tryb wieloekranowy - tradycyjny:\n"
-"Każdy ekran jest niezależny"
+msgid "Traditional Multihead:\nEach screen is an independent display"
+msgstr "Tryb wieloekranowy - tradycyjny:\nKażdy ekran jest niezależny"
 
 #. Radiobutton for cloned multihead mode
-msgid ""
-"Cloned Multihead:\n"
-"Each display is a clone of the primary display"
-msgstr ""
-"Tryb wieloekranowy - klonowanie:\n"
-"Każdy ekran jest klonem ekranu głównego"
+msgid "Cloned Multihead:\nEach display is a clone of the primary display"
+msgstr "Tryb wieloekranowy - klonowanie:\nKażdy ekran jest klonem ekranu głównego"
 
 #. Radiobutton for xinerama multihead mode
-msgid ""
-"Xinerama Multihead:\n"
-"Build one big display out of all screens"
-msgstr ""
-"Tryb wieloekranowy - Xinerama:\n"
-"Utworzenie jednego dużego ekranu ze wszystkich monitorów"
+msgid "Xinerama Multihead:\nBuild one big display out of all screens"
+msgstr "Tryb wieloekranowy - Xinerama:\nUtworzenie jednego dużego ekranu ze wszystkich monitorów"
 
 #. Title for multihead modi
 msgid "Multihead Mode"
@@ -437,10 +425,7 @@ msgstr "Wymiary ekranu w [ mm ]"
 
 #. Text message telling to be carefull with the monitor sync frequencies
 msgid "<b>Note:</b> Wrong sync ranges may damage your monitor. Consult the monitor manual for the settings.<br><br>If you want your monitor not to use its maximum rating, decrease the sync ranges."
-msgstr ""
-"<b>Uwaga:</b> błędne zakresy częstotliwości mogą zniszczyć monitor.\n"
-"Proszę sprawdzić poniższe ustawienie w dokumentacji.<br><br> Aby monitor \n"
-"nie używał maksymalnych wartości, należy zmniejszyć zakresy częstotliwości."
+msgstr "<b>Uwaga:</b> błędne zakresy częstotliwości mogą zniszczyć monitor. Proszę sprawdzić poniższe ustawienie w dokumentacji.<br><br> Aby monitor nie używał maksymalnych wartości, należy zmniejszyć zakresy częstotliwości."
 
 #. Checkbox to activate DPMS
 msgid "Activate DPMS"
@@ -557,7 +542,7 @@ msgstr "Używaj diod klawiatury do pokazania alternatywnych grup"
 
 #. List View root item text
 msgid "Compose Key Position"
-msgstr "Pozycja klawisza do szybkiego uruchamiania aplikacji"
+msgstr "Pozycja klawisza do szybkiego uruchamiania programów"
 
 #. List View root item text
 #. XKBFile extension text
@@ -914,7 +899,7 @@ msgstr "Klawisz CapsLock przełącza Shift, zmieniane są wszystkie klawisze"
 
 #. XKBFile extension text
 msgid "Right Win-key is Compose."
-msgstr "Prawy klawisz Win do szybkiego uruchamiania aplikacji"
+msgstr "Prawy klawisz Win do szybkiego uruchamiania programów"
 
 #. XKBFile extension text
 msgid "Shift+CapsLock changes group."
@@ -946,11 +931,11 @@ msgstr "Prawy klawisz Ctrl zmienia grupę"
 
 #. XKBFile extension text
 msgid "Right Alt is Compose."
-msgstr "Prawy klawisz Alt do szybkiego uruchamiania aplikacji"
+msgstr "Prawy klawisz Alt do szybkiego uruchamiania programów"
 
 #. XKBFile extension text
 msgid "Right Ctrl is Compose."
-msgstr "Prawy klawisz Ctrl do szybkiego uruchamiania aplikacji"
+msgstr "Prawy klawisz Ctrl do szybkiego uruchamiania programów"
 
 #. XKBFile extension text
 msgid "ScrollLock LED shows alternative group."
@@ -1010,7 +995,7 @@ msgstr "Naciśnięcie lewego klawisza Win zmienia grupę."
 
 #. XKBFile extension text
 msgid "Menu is Compose."
-msgstr "Menu do szybkiego uruchamiania aplikacji"
+msgstr "Menu do szybkiego uruchamiania programów"
 
 #. XKBFile extension text
 msgid "Both Alt keys together change group."
@@ -1382,7 +1367,7 @@ msgstr "Import modułu"
 
 #. Progress window caption text
 msgid "SaX2: Importing data..."
-msgstr "SaX2: Importowanie danych... "
+msgstr "SaX2: Importowanie danych..."
 
 #. Progress window label text
 msgid "Initialize cache..."
@@ -1394,9 +1379,7 @@ msgstr "<b>Zapisanie konfiguracji nie powiodło się.<b/><hr>Raport:"
 
 #. Message box test: configuration has been saved
 msgid "<b>Configuration Saved</b><hr>Your modifications will take effect the next time the graphics system is restarted. Exit SaX2 now?"
-msgstr ""
-"<b>Konfiguracja została zapisana:</b><hr>Ustawienia zadziałają po najbliższym \n"
-"ponownym uruchomieniu systemu graficznego. Zakończyć pracę programu SaX2?>"
+msgstr "<b>Konfiguracja została zapisana:</b><hr>Ustawienia zadziałają po najbliższym ponownym uruchomieniu systemu graficznego. Zakończyć pracę programu SaX2?"
 
 #. Message box text: testing the configuration has failed
 msgid "<b>Testing Configuration Failed</b><hr>For further information, refer to the file <tt>/var/log/Xorg.99.log</tt>. The following report has been created from the calling instance:"
@@ -1428,7 +1411,7 @@ msgstr "Dodawanie znaku Euro do klawiszy"
 
 #. XKBFile extension text
 msgid "Caps Lock is Compose."
-msgstr "Klawisz CapsLock do szybkiego uruchamiania aplikacji"
+msgstr "Klawisz CapsLock do szybkiego uruchamiania programów"
 
 #. XKBFile extension text
 msgid "Right Ctrl key works as Right Alt."
@@ -1476,7 +1459,7 @@ msgstr "Dodaj znak Euro do klawisza 2"
 
 #. XKBFile extension text
 msgid "key Compose key position"
-msgstr "Położenie klawiszy do szybkiego uruchamiania aplikacji"
+msgstr "Położenie klawiszy do szybkiego uruchamiania programów"
 
 #. XKBFile extension text
 msgid "Alt+Ctrl changes group."
@@ -1879,3 +1862,4 @@ msgstr "Konfiguracja na wyświetlaczu"
 
 msgid "Idle timer..."
 msgstr "Licznik bezczynności..."
+
