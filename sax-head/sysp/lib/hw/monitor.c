@@ -170,8 +170,7 @@ MsgDetect* MonitorGetData (void) {
 		//===================================
 		// Save Monitor DDC ID ...
 		//-----------------------------------
-		sprintf(display->ddc,"%c",'\0');
-		snprintf(display->ddc, strlen(display->ddc) - 1, "%s%04x",
+		snprintf(display->ddc, sizeof(display->ddc), "%s%04x",
 			vend_id2str(hd->vendor.id),ID_VALUE(hd->device.id)
 		);
 		toUpper (display->ddc);
