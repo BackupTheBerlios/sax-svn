@@ -34,7 +34,7 @@ our %spec;
 # define the minimum specifications to 
 # use AutoDetectFontPath()
 #----------------------------------------
-if (! defined %spec) {
+if (! %spec) {
 	my $dataDir = "/usr/share/sax/api/data";
 	$spec{StaticFontPathList}  = "$dataDir/StaticFontPathList";
 	$spec{LangFirstPath}       = "$dataDir/LangFirstPath";

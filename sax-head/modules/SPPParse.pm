@@ -170,7 +170,7 @@ sub handleAction {
 	#==========================================
 	# update variable hash
 	#------------------------------------------
-	if (defined %info) {
+	if (%info) {
 		updateVariableHash ( \%info );
 	} else {
 		updateVariableHash ( \%data );

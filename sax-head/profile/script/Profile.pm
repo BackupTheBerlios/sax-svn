@@ -481,7 +481,7 @@ sub ProfileGetDDC2Data {
 		$section{Desktop},$section{Card},$section{Path}
 	);
 	my %data = %{$mDesktop->getCDBMonitorIDData ($ddc)};
-	if (defined %data) {
+	if (%data) {
 		#=====================================
 		# Found monitor in the CDB
 		#-------------------------------------
