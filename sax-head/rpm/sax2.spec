@@ -18,7 +18,7 @@
 # norootforbuild
 
 %if %{suse_version} > 1120
-%define use_gcc43 1
+%define use_gcc43 0
 %else
 %define use_gcc43 0
 %endif
@@ -36,7 +36,7 @@ BuildRequires:  xorg-x11-server-sdk
 BuildRequires:  fdupes
 %endif
 %if %use_gcc43
-BuildRequires:  -gcc45 -gcc45-c++ gcc43 gcc43-c++
+BuildRequires:  gcc43 gcc43-c++ -gcc
 %endif
 %if %{build_java}
 BuildRequires:  java-1_4_2-gcj-compat-devel
