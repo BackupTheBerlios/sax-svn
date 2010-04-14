@@ -117,7 +117,7 @@ XF86ConfigPtr ReadConfigFile (char *filename) {
 
 	char CONFPATH[SIZE]=
 		"%A,%R,/etc/%R,%P/etc/X11/%R,%E,%F,/etc/X11/%F," \
-		"%P/etc/X11/%F,%D/%X,/etc/X11/%X,/etc/%X,%P/etc/X11/%X.%H," \
+		"%P/etc/X11/%F,/etc/X11/%X,/etc/%X,%P/etc/X11/%X.%H," \
 		"%P/etc/X11/%X,%P/lib/X11/%X.%H,%P/lib/X11/%X";
 
 	//===================================
