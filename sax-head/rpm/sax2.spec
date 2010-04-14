@@ -31,7 +31,7 @@ BuildRequires:  xorg-x11-server-sdk
 BuildRequires:  fdupes
 %endif
 %if %{suse_version} > 1120
-BuildRequires:  gcc43 gcc43-c++ -gcc45 -gcc45-c++
+BuildRequires:  -gcc45 -gcc45-c++ gcc43 gcc43-c++
 %endif
 %if %{build_java}
 BuildRequires:  java-1_4_2-gcj-compat-devel
@@ -54,7 +54,7 @@ Requires:       xdg-utils
 PreReq:         /bin/rm /bin/mkdir /usr/bin/chroot %fillup_prereq %insserv_prereq
 Summary:        SuSE advanced X Window System-configuration
 Version:        8.1
-Release:        588
+Release:        591
 Group:          System/X11/Utilities
 License:        GPLv2+
 Source:         sax2.tar.bz2
@@ -81,6 +81,7 @@ Group:          System/X11/Utilities
 Requires:       coreutils
 Provides:       saxtools
 Obsoletes:      saxtools
+Supplements:    packageand(yast2-installation:xorg-x11)
 %ifarch s390x
 Provides:       sax2
 Obsoletes:      sax2
@@ -545,5 +546,6 @@ fi
 %{_prefix}/%{_lib}/sax/plugins/SaX.so
 %endif
 %endif
+
 
 %changelog
