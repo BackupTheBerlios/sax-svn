@@ -17,6 +17,11 @@
 
 # norootforbuild
 
+%if %{suse_version} > 1120
+%define use_gcc43 1
+%else
+%define use_gcc43 0
+%endif
 
 Name:           sax2
 Url:            http://sax.berlios.de
@@ -30,7 +35,7 @@ BuildRequires:  xorg-x11-server-sdk
 %if %{suse_version} > 1020
 BuildRequires:  fdupes
 %endif
-%if %{suse_version} > 1120
+%if %use_gcc43
 BuildRequires:  -gcc45 -gcc45-c++ gcc43 gcc43-c++
 %endif
 %if %{build_java}
@@ -60,7 +65,7 @@ License:        GPLv2+
 Source:         sax2.tar.bz2
 Source1:        sax2.desktop
 Source2:        sax2-rpmlintrc
-%if %{suse_version} > 1120
+%if %use_gcc43
 Patch0:         sax2-gcc43.diff
 %endif
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -239,12 +244,12 @@ Authors:
 
 %prep
 %setup -n sax
-%if %{suse_version} > 1120
+%if %use_gcc43
 %patch0 -p1
 %endif
 
 %build
-%if %{suse_version} > 1120
+%if %use_gcc43
 CC=gcc-4.3
 CXX=g++-4.3
 export CC CXX
