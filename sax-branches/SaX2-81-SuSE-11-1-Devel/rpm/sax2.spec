@@ -315,16 +315,17 @@ fi
 
 %post -n sax2-ident
 if ls var/lib/hardware/ids/* &> /dev/null; then
-  >  var/lib/hardware/hd.ids
+  rm -f var/lib/hardware/hd.ids
   for i in var/lib/hardware/ids/*; do
     cat $i >> var/lib/hardware/hd.ids
   done
 fi
+exit 0
 
 %postun -n sax2-ident
 if [ "$1" -eq 0 ]; then
   if ls var/lib/hardware/ids/* &> /dev/null; then
-    >  var/lib/hardware/hd.ids
+    rm -f var/lib/hardware/hd.ids
     for i in var/lib/hardware/ids/*; do
       cat $i >> var/lib/hardware/hd.ids
     done
@@ -332,6 +333,7 @@ if [ "$1" -eq 0 ]; then
     rm -f var/lib/hardware/hd.ids
   fi
 fi
+exit 0
 
 %post -n sax2-libsax -p /sbin/ldconfig
 

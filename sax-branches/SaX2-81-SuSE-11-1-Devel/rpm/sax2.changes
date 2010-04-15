@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Apr 15 15:51:14 CEST 2010 - sndirsch@suse.de
+
+- %post/%postun
+  * remove hd.ids before creating it, since it could be a dead
+    symlink
+  * exit 0 in any case 
+
+-------------------------------------------------------------------
 Fri Mar 26 10:09:17 CET 2010 - sndirsch@suse.de
 
 - Vendor Translation - LCN translations Drop4 for SLE11-SP1
