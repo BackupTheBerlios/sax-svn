@@ -31,9 +31,9 @@ defkeymap       : microsoftpro : us           : x            : xfree86 : x : x :
 defkeymap_V1.0  : microsoftpro : us           : x            : xfree86 : x : x : x : x : x
 dk-latin1       : microsoftpro : dk           : x            : xfree86 : x : x : x : x : x
 dk              : microsoftpro : dk           : x            : xfree86 : x : x : x : x : x
-dvorak-l        : microsoftpro : dvorak,us    : x            : xfree86 : x : x : x : x : grp:alt_shift_toggle
-dvorak-r        : microsoftpro : dvorak,us    : x            : xfree86 : x : x : x : x : grp:alt_shift_toggle
-dvorak          : microsoftpro : dvorak,us    : x            : xfree86 : x : x : x : x : grp:alt_shift_toggle
+dvorak-l        : microsoftpro : dvorak,us    : x            : xfree86 : x : x : x : x : grp:shift_toggle
+dvorak-r        : microsoftpro : dvorak,us    : x            : xfree86 : x : x : x : x : grp:shift_toggle
+dvorak          : microsoftpro : dvorak,us    : x            : xfree86 : x : x : x : x : grp:shift_toggle
 emacs           : microsoftpro : us           : x            : xfree86 : x : x : x : x : x
 emacs2          : microsoftpro : us           : x            : xfree86 : x : x : x : x : x
 es              : microsoftpro : es           : x            : xfree86 : x : x : x : x : x
@@ -44,8 +44,8 @@ fr-pc           : microsoftpro : fr           : x            : xfree86 : x : x :
 fr              : microsoftpro : fr           : x            : xfree86 : x : x : x : x : caps:capslock
 fr_CH-latin1    : microsoftpro : ch           : fr           : xfree86 : x : x : x : x : x
 fr_CH           : microsoftpro : ch           : fr           : xfree86 : x : x : x : x : x
-gr-pc           : microsoftpro : us,gr        : ,extended    : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
-gr              : microsoftpro : us,gr        : ,extended    : xfree86 : x : x : x : x : grp:alt_shift_toggle,grp_led:scroll
+gr-pc           : microsoftpro : us,gr        : ,extended    : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+gr              : microsoftpro : us,gr        : ,extended    : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
 hebrew          : microsoftpro : he           : x            : xfree86 : x : x : x : x : x
 hu              : microsoftpro : hu           : x            : xfree86 : x : x : x : x : x
 hu101           : microsoftpro : hu           : x            : xfree86 : x : x : x : x : x
@@ -94,13 +94,13 @@ pt              : microsoftpro : pt           : x            : xfree86 : x : x :
 pt2             : microsoftpro : pt           : x            : xfree86 : x : x : x : x : x
 pt-latin9       : microsoftpro : pt           : x            : xfree86 : x : x : x : x : x
 pt-latin1       : microsoftpro : pt           : x            : xfree86 : x : x : x : x : x
-ru-cp1251       : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-ru              : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-ru1             : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-ru2             : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-ru_win          : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-russian         : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
-ruwin_alt-UTF-8 : microsoftpro : ru,us        : winkeys,     : xfree86 : x : x : x : x : grp:ctrl_shift_toggle,grp_led:scroll
+ru-cp1251       : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+ru              : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+ru1             : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+ru2             : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+ru_win          : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+russian         : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
+ruwin_alt-UTF-8 : microsoftpro : us,ru        : ,winkeys     : xfree86 : x : x : x : x : grp:shift_toggle,grp_led:scroll
 sv-latin1       : microsoftpro : se           : x            : xfree86 : x : x : x : x : x
 se-latin1       : microsoftpro : se           : x            : xfree86 : x : x : x : x : x
 sg-l1-lk450     : microsoftpro : ch           : de           : xfree86 : x : x : x : x : x
@@ -139,6 +139,6 @@ de-latin1-nodeadkeys : microsoftpro : de  : nodeadkeys   : xfree86 : x : x : x :
 mac-de-latin1-nodeadkeys:macintosh: de : nodeadkeys   : xfree86 : x : x : x : x : x
 nl              : microsoftpro : nl           : x            : xfree86 : x : x : x : x : x
 nl2             : microsoftpro : nl           : x            : xfree86 : x : x : x : x : x
-khmer           : microsoftpro : us,kh        : x            : xfree86 : x : x : x : x : grp:alt_shift_toggle
+khmer           : microsoftpro : us,kh        : x            : xfree86 : x : x : x : x : grp:shift_toggle
 korean          : microsoftpro : kr           : x            : xfree86 : x : x : x : x : x
 cn-latin1       : microsoftpro : ca           : multix       : xfree86 : x : x : x : x : x
