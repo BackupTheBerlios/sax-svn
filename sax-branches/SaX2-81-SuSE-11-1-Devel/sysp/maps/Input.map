@@ -42,3 +42,6 @@
 # Cherry Mikroschalter Keyboard
 # ---> is profile: no information yet
 0x046a : 0x0023 : <undefined> : kbd
+# BMC needs evdev driver (bnc #612306)
+0x046b : 0xff10 : BMC : mouse
+0x0624 : 0x0248 : BMC : mouse
