@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Sep 16 16:39:14 CEST 2010 - sndirsch@suse.de
+
+- modules/ImportAPI.pm
+  * avoid division by zero during hsync check due to truncated
+    modelines (bnc #609048)
+
+-------------------------------------------------------------------
 Tue Jun 22 17:58:01 CEST 2010 - sndirsch@suse.de
 
 - Input.map, "BMC" profile

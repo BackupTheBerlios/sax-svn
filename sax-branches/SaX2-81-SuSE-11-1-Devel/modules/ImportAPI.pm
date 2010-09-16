@@ -1437,6 +1437,9 @@ sub GetModelines {
 				my $dcf = $param[1]; $dcf = $dcf * 1e6;
 				my $hfl = $param[5]; 
 				my $vfl = $param[9];
+				if (($hfl == 0) || ($vfl == 0)) {
+					redo;
+				}
 				my $zf = int ($dcf/$hfl); 
 				my $rr = int ($zf/$vfl);
 				my $zf = int ($zf / 1e3) * 1e3;
