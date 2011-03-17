@@ -3,14 +3,17 @@
 # requires the real input device to be set as device node. Therefore
 # the dynamic part replaces the static multiplexer device
 #====================================
-# Variables
-#------------------------------------
-$Device = /dev/input/mice
+
+!remove InputDevice -> [X] -> Option -> Device
+!remove InputDevice -> [X] -> Option -> Protocol
+!remove InputDevice -> [X] -> Option -> Buttons
+!remove InputDevice -> [X] -> Option -> ZAxisMapping
 
 InputDevice -> [X] -> Identifier = Mouse[[X]]
 InputDevice -> [X] -> Driver     = evdev
 InputDevice -> [X] -> Option -> InputFashion   = Mouse
 InputDevice -> [X] -> Option -> Name           = Xen Virtual Pointer
 InputDevice -> [X] -> Option -> Pass           = 3
-InputDevice -> [X] -> Option -> Buttons        = 5
-InputDevice -> [X] -> Option -> Device         = ${Device}
+InputDevice -> [X] -> Option -> Vendor         = 0x5853
+InputDevice -> [X] -> Option -> Product        = 0xfffe
+

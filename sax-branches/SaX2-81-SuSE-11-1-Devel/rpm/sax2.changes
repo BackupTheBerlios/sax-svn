@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Mar 16 13:12:44 CET 2011 - sndirsch@suse.de
+
+- reenabled use of evdev driver for Xen mouse (new "xen-mouse"
+  profile, which obsoletes "xen-mouse.pl" script due to device
+  scanning being added to SLE11-SP1 evdev driver) (bnc #670465)
+
+-------------------------------------------------------------------
 Fri Feb 25 14:10:08 CET 2011 - sndirsch@suse.de
 
 - Keyboard.map
