@@ -1,0 +1,8 @@
+# /.../
+# Do not generate any Modes lines for DRM drivers
+# ----
+
+!remove Screen->[X]->Depth->8->Modes
+!remove Screen->[X]->Depth->15->Modes
+!remove Screen->[X]->Depth->16->Modes
+!remove Screen->[X]->Depth->24->Modes

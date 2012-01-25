@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Wed Jan 25 12:24:59 CET 2012 - sndirsch@suse.de
+
+- No longer generate any modes and modelines for DRM based drivers
+  intel/radeon, since monitor detection via libhd is not expected
+  to work reliably with DRM active and the fallback to a low
+  resolution is not what we want with DRM drivers. The X driver
+  should use what has been detected already via DRM. (bnc#731866)
+- Use a wider range of hsync values for monitors, which could not
+  be detected by SaX2, so a resolution of 1024x768 is still
+  possible. (bnc#731866)
+
+-------------------------------------------------------------------
 Mon Oct 17 13:52:13 CEST 2011 - sndirsch@suse.de
 
 - enabled use of evdev driver for hyper-v guests; patch by Olaf
