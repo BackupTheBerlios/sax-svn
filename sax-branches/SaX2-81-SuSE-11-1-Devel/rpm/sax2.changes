@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb 15 12:15:39 CET 2012 - sndirsch@suse.de
+
+- switched from "radeon(KMS)" to "vesa" driver for ATI ES1000 GPUs
+  since "radeon(UMS)" is not working either (bnc #746526)
+
+-------------------------------------------------------------------
 Wed Jan 25 12:24:59 CET 2012 - sndirsch@suse.de
 
 - No longer generate any modes and modelines for DRM based drivers
