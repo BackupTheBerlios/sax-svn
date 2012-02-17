@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Feb 15 16:33:21 CET 2012 - sndirsch@suse.de
+
+- forgot ES1000 entries for arch specific maps; also no longer use
+  Depth16,NoVirtual profiles for ES1000; makes no sense for vesa
+  driver ... (bnc#746526)
+
+-------------------------------------------------------------------
 Wed Feb 15 12:15:39 CET 2012 - sndirsch@suse.de
 
 - switched from "radeon(KMS)" to "vesa" driver for ATI ES1000 GPUs
