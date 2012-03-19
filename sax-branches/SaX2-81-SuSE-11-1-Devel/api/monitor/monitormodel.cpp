@@ -756,7 +756,10 @@ QPoint SCCMonitorModel::getRatio (int x,int y) {
 	result.setX (4);
 	result.setY (3);
 	double ar = (double)x / (double)y;
-	if ( ar > 1.4 ) {
+	if ( ar > 1.7) {
+		result.setX (16);
+		result.setY (9);	
+	} else if (( ar <=  1.7 ) && ( ar > 1.4 )) {
 		result.setX (16);
 		result.setY (10);
 	} else if (( ar <= 1.4 ) && ( ar > 1.3 )) {

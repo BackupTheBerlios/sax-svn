@@ -1197,7 +1197,10 @@ QList<QString> SaXManipulateDesktop::getDisplayRatio (void) {
 	int x = size.at(0).toInt();
 	int y = size.at(1).toInt();
 	double ar = (double)x / (double)y;
-	if ( ar > 1.4 ) {
+	if ( ar > 1.7) {
+		*setX = "16";
+		*setY = "9";
+	} else if (( ar <=  1.7 ) && ( ar > 1.4 )) {
 		*setX = "16";
 		*setY = "10";
 	} else if (( ar <= 1.4 ) && ( ar > 1.3 )) {
