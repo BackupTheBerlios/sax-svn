@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Jan 15 15:32:27 CET 2013 - sndirsch@suse.de
+
+- prefer "modesetting" X driver when KMS is active and neither
+  Intel nor Radeon KMS driver is active; useful for secure boot
+  mode with Matrox, AST or Cirrus (Qemu) graphics (FATE#314488)
+
+-------------------------------------------------------------------
 Mon Mar 19 16:52:02 UTC 2012 - sndirsch@suse.com
 
 - fixed 16:9 displayratio setting (bnc#732732)
