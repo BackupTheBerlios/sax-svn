@@ -131,7 +131,7 @@ sub AutoDetectSyncRanges {
 		# sync ranges to save values to avoid any monitor damage
 		# ----------------------------------------------------------
 		$var{Monitor}{$i}{VertRefresh} = "50-75";
-		$var{Monitor}{$i}{HorizSync}   = "31-60";
+		$var{Monitor}{$i}{HorizSync}   = "31-100";
 		$var{Monitor}{$i}{VendorName}  = "Unknown";
 		$var{Monitor}{$i}{ModelName}   = "Unknown";
 	}
