@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Tue Feb  5 17:19:25 UTC 2013 - sndirsch@suse.com
+
+- Use hsync range up to 100 kHz since apparently on modern machines
+  hwinfo/libhd always fails to detect the monitor and a limit to 60kHz
+  breaks resolutions used nowadays. This should be safe since you
+  can't break modern monitors that easy any longer. Also the mode
+  chosen depends on being detected/supported by KMS in most cases
+  now anyway.
+
+-------------------------------------------------------------------
 Mon Jan 28 11:04:17 CET 2013 - sndirsch@suse.de
 
 - switch back from "vesa" to "radeon" driver for ES1000
