@@ -33,7 +33,7 @@ GPMSTATUS=3
 if [ $(/usr/sbin/sysp -c | wc -l) -lt 2 ]; then 
 	BATCH_MODE="-b nobus -b ModeSetting"
 else
-	BATCH_MODE="-b Modesetting"
+	BATCH_MODE="-b ModeSetting"
 fi
 CMD_LINE=""
 AUTO_CONF=""
