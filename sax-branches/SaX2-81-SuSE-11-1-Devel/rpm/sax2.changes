@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Mar 12 10:55:30 CET 2013 - sndirsch@suse.de
+
+- no longer use 16bit as default color depth for ATI Radeon ES1000
+  GPUs (bnc#807702)
+
+-------------------------------------------------------------------
 Fri Feb 15 11:57:13 CET 2013 - sndirsch@suse.de
 
 - fixed typo in ModeSetting profile name, which broke SaX2 on *any*
