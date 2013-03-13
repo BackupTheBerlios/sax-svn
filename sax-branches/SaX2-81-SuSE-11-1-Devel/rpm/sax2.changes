@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Wed Mar 13 15:34:44 CET 2013 - sndirsch@suse.de
+
+- Again: Use hsync range up to 100 kHz since apparently on modern
+  machines hwinfo/libhd always fails to detect the monitor and a
+  limit to 60kHz breaks resolutions used nowadays. This should be
+  safe since you can't break modern monitors that easy any longer.
+  Also the mode chosen depends on being detected/supported by KMS
+  in most cases now anyway.
+  This time do this also for detected monitors, since monitor
+  detection apparently often is completely bogus. (bcn#798466)
+
+-------------------------------------------------------------------
 Tue Mar 12 10:55:30 CET 2013 - sndirsch@suse.de
 
 - no longer use 16bit as default color depth for ATI Radeon ES1000
