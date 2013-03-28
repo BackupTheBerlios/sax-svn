@@ -5,8 +5,8 @@ use lib '/usr/share/sax/profile';
 use strict;
 use Profile;
 
-sub KMSAndNotIntelOrAMD {
-  my $ret = qx(/usr/share/sax/profile/KMSAndNotIntelOrAMD.sh);
+sub DrvSelectInSecBootMode {
+  my $ret = qx(/usr/share/sax/profile/DrvSelectInSecBootMode.sh);
   chomp($ret);
   return $ret;
 }
@@ -21,11 +21,16 @@ open (FD,">",$profile) ||
 #==========================================
 # Check if modesetting driver is neccessary
 #------------------------------------------
-if ( KMSAndNotIntelOrAMD() eq "yes") {
-        print STDERR "modesetting driver required\n";
+if ( DrvSelectInSecBootMode () eq "modesetting") {
+	print STDERR "modesetting driver required\n";
 	print FD "Device -> [X] -> Driver = modesetting\n";
+	print FD "!remove Screen->[X]->DefaultDepth\n";
+} elsif ( DrvSelectInSecBootMode () eq "fbdev") {
+	print STDERR "fbdev driver required\n";
+	print FD "Device -> [X] -> Driver = fbdev\n";
+	print FD "!remove Screen->[X]->DefaultDepth\n";
 } else {
-	print STDERR "modesetting driver not neccessary\n";
+	print STDERR "native driver can be used\n";
         # just to make SaX happy and overwrite the possibly
         # existing modesetting driver entry in the profile
 	print FD "Device -> [X] -> Option -> Dummy = yes";

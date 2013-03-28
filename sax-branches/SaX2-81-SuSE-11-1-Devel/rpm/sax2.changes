@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Thu Mar 28 13:38:00 CET 2013 - sndirsch@suse.de
+
+- fall back to fbdev in secureboot mode with ast KMS driver,
+  UEFI VGA and other currently unknown frame buffer drivers
+
+-------------------------------------------------------------------
+Fri Mar 22 13:50:15 CET 2013 - sndirsch@suse.de
+
+- remove DefaultDepth entry for "modesetting" driver; default
+  color depth of KMS should be used (bnc#806526)
+
+-------------------------------------------------------------------
 Wed Mar 13 15:34:44 CET 2013 - sndirsch@suse.de
 
 - Again: Use hsync range up to 100 kHz since apparently on modern
