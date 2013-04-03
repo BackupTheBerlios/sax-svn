@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Wed Apr  3 16:44:29 CEST 2013 - sndirsch@suse.de
+
+- No longer apply ModeSetting profile in any case, but only for
+  graphics drivers, which can still be in use on modern hardware
+  with secureboot (intel, radeon, nvidia, mga, ast, cirrus). This
+  is now done via the Driver.map, so this works also with
+  yast2-x11 during installation. (bnc#813137)
+- dummy secure boot mode is now also considered by Modesetting
+  helper script
+
+-------------------------------------------------------------------
 Thu Mar 28 13:38:00 CET 2013 - sndirsch@suse.de
 
 - fall back to fbdev in secureboot mode with ast KMS driver,

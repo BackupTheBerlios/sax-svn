@@ -31,9 +31,9 @@ GPMSTATUS=3
 ### no longer write BusID by default if there is only one possible
 ### primary device
 if [ $(/usr/sbin/sysp -c | wc -l) -lt 2 ]; then 
-	BATCH_MODE="-b nobus -b ModeSetting"
+	BATCH_MODE="-b nobus"
 else
-	BATCH_MODE="-b ModeSetting"
+	BATCH_MODE=""
 fi
 CMD_LINE=""
 AUTO_CONF=""

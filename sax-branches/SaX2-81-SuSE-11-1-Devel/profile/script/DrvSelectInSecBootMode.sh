@@ -22,11 +22,13 @@ function Fbdev()
 }
 
 secureboot=off
-if mokutil --sb-state | grep -q "SecureBoot enabled"; then
+if mokutil --sb-state 2>/dev/null | grep -q "SecureBoot enabled"; then
     secureboot=on
 elif xxd -p \
-    /sys/firmware/efi/vars/SecureBoot-8be4df61-93ca-11d2-aa0d-00e098032b8c/data | \
+    /sys/firmware/efi/vars/SecureBoot-8be4df61-93ca-11d2-aa0d-00e098032b8c/data 2>/dev/null | \
     grep -q "01"; then
+    secureboot=on
+elif cat /proc/cmdline | grep -q "secureboot_enable=1"; then
     secureboot=on
 fi
 

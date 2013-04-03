@@ -4,12 +4,15 @@
 # Driver Name | Profile
 # -----------------------------------------------------
 nv       : Depth24,NVidia,NoModelines,NoComposite
-nvidia   : Depth24,NVidia,NoModelines,Composite
-radeon   : Depth24,Radeon,Virtual,NoModelines,NoModes
+nvidia   : Depth24,NVidia,NoModelines,Composite,ModeSetting
+radeon   : Depth24,Radeon,Virtual,NoModelines,NoModes,ModeSetting
 i810     : Depth24,NoDDC,LinearAlloc
 sis      : SiS,Depth24
 fglrx    : FireGL,AIGLX,Composite
 tseng    : VideoRAM
-intel    : Depth24,Intel,AIGLX,Composite,Virtual2k,NoModelines,NoModes
+intel    : Depth24,Intel,AIGLX,Composite,Virtual2k,NoModelines,NoModes,ModeSetting
 fbdev    : NoModelines
 radeonhd : Depth24,RadeonHD,Virtual
+mga      : ModeSetting,NoModelines,NoModes
+cirrus   : ModeSetting,NoModelines,NoModes
+ast:     : ModeSetting,NoModelines,NoModes
