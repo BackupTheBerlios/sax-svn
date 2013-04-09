@@ -21,10 +21,14 @@ open (FD,">",$profile) ||
 #==========================================
 # Check if modesetting driver is neccessary
 #------------------------------------------
-if ( DrvSelectInSecBootMode () eq "modesetting") {
-	print STDERR "modesetting driver required\n";
+if ( DrvSelectInSecBootMode () eq "modesetting16") {
+	print STDERR "modesetting driver (16bit) required\n";
 	print FD "Device -> [X] -> Driver = modesetting\n";
-	print FD "!remove Screen->[X]->DefaultDepth\n";
+	print FD "Screen->[X]->DefaultDepth = 16"
+} elsif ( DrvSelectInSecBootMode () eq "modesetting24") {
+	print STDERR "modesetting driver (24 bit) required\n";
+	print FD "Device -> [X] -> Driver = modesetting\n";
+	print FD "Screen->[X]->DefaultDepth = 24"
 } elsif ( DrvSelectInSecBootMode () eq "fbdev") {
 	print STDERR "fbdev driver required\n";
 	print FD "Device -> [X] -> Driver = fbdev\n";

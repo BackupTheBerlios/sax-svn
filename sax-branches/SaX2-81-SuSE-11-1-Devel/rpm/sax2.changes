@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Apr  9 16:55:10 CEST 2013 - sndirsch@suse.de
+
+- Write different color depth entries for modesetting/Matrox and
+  modesetting/Cirrus; and keep writing no color depth entry for
+  fbdev at all (bnc#814306)
+
+-------------------------------------------------------------------
 Wed Apr  3 16:44:29 CEST 2013 - sndirsch@suse.de
 
 - No longer apply ModeSetting profile in any case, but only for

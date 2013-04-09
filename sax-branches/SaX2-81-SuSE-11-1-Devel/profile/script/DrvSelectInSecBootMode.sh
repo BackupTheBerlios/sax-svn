@@ -9,9 +9,15 @@ function Native()
     exit 0
 }
 
-function Modesetting() 
+function Modesetting16() 
 {
-    echo "modesetting"
+    echo "modesetting16"
+    exit 0
+}
+
+function Modesetting24() 
+{
+    echo "modesetting24"
     exit 0
 }
 
@@ -49,9 +55,11 @@ else
             *intel*) 
 		Native 
 		;;
-	    *mga*|\
+	    *mga*)
+		Modesetting24
+		;;
             *cirrus*)
-		Modesetting
+		Modesetting16
 		;;
             #astdrmfb, UEFI VGA
             *)
