@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Apr 18 04:35:52 CEST 2013 - sndirsch@suse.de
+
+- limit hsync max to 94kHz to avoid 1024x768 doublescan mode, 
+  which confuses HP iLO consoles (bnc#810193)
+
+-------------------------------------------------------------------
 Tue Apr 16 12:40:16 CEST 2013 - sndirsch@suse.de
 
 - added iLO profile

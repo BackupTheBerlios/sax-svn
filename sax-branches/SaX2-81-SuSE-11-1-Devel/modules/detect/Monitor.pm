@@ -107,7 +107,7 @@ sub AutoDetectSyncRanges {
 	for($i=0;$i<@hsync_list;$i++) {
 		$hsmax = int($hsync_list[$i]);
 		$hsmin = 15;
-		$var{Monitor}{$i}{HorizSync}  = "31-100";
+		$var{Monitor}{$i}{HorizSync}  = "31-94";
 	}
  
 	# set detected monitor VertRefresh setting...
@@ -131,7 +131,7 @@ sub AutoDetectSyncRanges {
 		# sync ranges to save values to avoid any monitor damage
 		# ----------------------------------------------------------
 		$var{Monitor}{$i}{VertRefresh} = "50-75";
-		$var{Monitor}{$i}{HorizSync}   = "31-100";
+		$var{Monitor}{$i}{HorizSync}   = "31-94";
 		$var{Monitor}{$i}{VendorName}  = "Unknown";
 		$var{Monitor}{$i}{ModelName}   = "Unknown";
 	}
@@ -163,7 +163,7 @@ sub AutoDetectSyncRanges {
 		# ------------------------------------------------------- 
 		$var{Monitor}{$i}{VendorName}  = "$record[0]";
 		$var{Monitor}{$i}{ModelName}   = "$record[1]"; 
-		$var{Monitor}{$i}{HorizSync}   = "31-100";
+		$var{Monitor}{$i}{HorizSync}   = "31-94";
 		$var{Monitor}{$i}{VertRefresh} = "50-75";
 		if ($record[8] ne "") {
 		foreach my $bpp (8,15,16,24) {
@@ -205,7 +205,7 @@ sub AutoDetectSyncRanges {
 		if ($rsize > 0) {
 			$var{Monitor}{$i}{VendorName}  = "$record[0]";
 			$var{Monitor}{$i}{ModelName}   = "$record[1]";
-			$var{Monitor}{$i}{HorizSync}   = "31-100";
+			$var{Monitor}{$i}{HorizSync}   = "31-94";
 			$var{Monitor}{$i}{VertRefresh} = "50-75";
 			# /.../
 			# look for modeline defined...
@@ -221,7 +221,7 @@ sub AutoDetectSyncRanges {
 		if ($rsize > 0) {
 			$var{Monitor}{$i}{VendorName}  = "$record[0]";
 			$var{Monitor}{$i}{ModelName}   = "$record[1]";
-			$var{Monitor}{$i}{HorizSync}   = "31-100";
+			$var{Monitor}{$i}{HorizSync}   = "31-94";
 			$var{Monitor}{$i}{VertRefresh} = "50-75";
 			# /.../
 			# look for modeline defined...
