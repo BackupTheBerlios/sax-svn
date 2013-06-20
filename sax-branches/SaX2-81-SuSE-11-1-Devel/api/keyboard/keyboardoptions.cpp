@@ -137,11 +137,6 @@ SCCKeyboardOptions::SCCKeyboardOptions (
 // init
 //------------------------------------
 void SCCKeyboardOptions::init ( void ) {
-	//=====================================
-	// get translation pointer
-	//-------------------------------------
-	SCCWrapPointer< Q3Dict<QString> > mText (mTextPtr);
-
 	//====================================
 	// query XKB file extension
 	//------------------------------------
@@ -154,8 +149,13 @@ void SCCKeyboardOptions::init ( void ) {
 	Q3DictIterator<QString> it (mOptionDict);
 	for (; it.current(); ++it) {
 		QString key = it.currentKey();
-		QString val = mText[*it.current()];
-		if (val.isEmpty()) {
+		QString *pval = mTextPtr->operator[](*it.current());
+		QString val;
+		if (pval) {
+			val = *pval;
+		} else {
+			val = *it.current();
+
 			log (L_WARN,
 				"SCCKeyboardOptions::Warning: unknown XKB key: %s\n",
 				it.current()->ascii()
